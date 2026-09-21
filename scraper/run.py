@@ -250,9 +250,10 @@ def main():
         list(ex.map(completar_detalle, unicas))
     unicas = [n for n in unicas if not n.get("url_muerta")]
 
-    # 3) Confirmacion con Claude
-    if args.sin_ia:
-        print("\n--sin-ia: se omite la confirmacion. La salida es la del diccionario.")
+    # 3) Confirmacion con IA — APAGADA por defecto (ver GUARDA_IA arriba)
+    if not args.con_ia:
+        print("\nSin clasificador de IA (es el default, y es gratis): la salida es la del "
+              "diccionario.")
         finales = unicas
         for n in finales:
             n.setdefault("tipo", "")
