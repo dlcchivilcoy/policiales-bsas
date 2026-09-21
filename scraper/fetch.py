@@ -285,6 +285,24 @@ _ROTULO_MENU = re.compile(
     re.IGNORECASE)
 
 
+# Los temas de WordPress ponen en el aria-label/title del link un rotulo para
+# lectores de pantalla ("Read article: <titular>", "Permalink to: <titular>").
+# Cuando el link es la foto y hay que caer al atributo, ese rotulo viene pegado al
+# titular y termina impreso en la placa del reel. Se saca aca, en el origen.
+_PREFIJO_LECTOR = re.compile(
+    r"^\s*(read (article|more)|leer (articulo|artículo|mas|más|nota)|"
+    r"permalink to|enlace permanente a|ver (nota|mas|más))\s*[:\-–]\s*",
+    re.IGNORECASE)
+
+
+# Los archivos por fecha ponen la fecha como texto del link ("17 septiembre, 2023").
+# Pasa el largo minimo y se cuela como si fuera un titular.
+_SOLO_FECHA = re.compile(
+    r"^\s*\d{1,2}\s*(de\s+)?(enero|febrero|marzo|abril|mayo|junio|julio|agosto|"
+    r"setiembre|septiembre|octubre|noviembre|diciembre)\s*,?\s*(de\s+)?\d{4}"
+    r"[\s\d]*$", re.IGNORECASE)
+
+
 def listar_por_html(base, limite=40, permitir_navegador=False):
     """Descubre links de nota en la home por heuristica.
 
@@ -337,6 +355,9 @@ def listar_por_html(base, limite=40, permitir_navegador=False):
                 cont = a.find_parent(["article", "li", "div"])
                 h = cont.find(["h1", "h2", "h3"]) if cont else None
                 titulo = limpiar(h.get_text(" ", strip=True)) if h else ""
+        titulo = _PREFIJO_LECTOR.sub("", titulo).strip()
+        if _SOLO_FECHA.match(_sin_tildes(titulo)):
+            continue
         if len(titulo) < 20 or href in vistas:
             continue
         if _ROTULO_MENU.match(_sin_tildes(limpiar(titulo)).strip(" |·-")):
@@ -378,6 +399,12 @@ RUTAS_SECCION = [
     "/policiales.html", "/secciones/policiales", "/noticias/policiales",
     # varios medios usan "seguridad" o "sucesos" en vez de "policiales"
     "/categoria/seguridad/feed/", "/seccion/seguridad/", "/tag/sucesos/",
+    # Y otros la nombran en SINGULAR. Parece un detalle y no lo es: Suipacha Hoy
+    # tiene /category/policial/ y esta sonda lo daba por "sin seccion" solo por la
+    # "es" final, degradandolo a feed general (1 policial cada 36 notas).
+    "/policial/feed/", "/categoria/policial/feed/", "/category/policial/feed/",
+    "/categoria/policial/", "/category/policial/", "/seccion/policial/",
+    "/tag/policial/", "/policial",
 ]
 
 
@@ -387,7 +414,28 @@ def descubrir_seccion_policial(base, minimo=3, permitir_navegador=False):
     Devuelve {"url", "rss", "n"} o None. Solo la acepta si trae al menos `minimo`
     notas: hay sitios que responden 200 a cualquier ruta con una pagina de "no se
     encontraron resultados", y tomar eso por una seccion viva es peor que no tenerla.
+
+    Y hay una trampa peor que el 404, porque no se ve: ante una categoria que no
+    existe, WordPress no falla — sirve el FEED GENERAL con 200. El feed viene lleno
+    de notas de verdad, pasa el minimo, y queda anotado como "seccion de policiales"
+    un feed donde hay golf y presentaciones de libros. Despues run.py confia en esa
+    seccion y afloja el filtro justamente ahi. Por eso, antes de aceptar un feed se
+    lo compara con el general: si trae lo mismo, es humo.
     """
+    general = None      # se baja una sola vez, y solo si hace falta
+
+    def _es_el_feed_general(urls_seccion):
+        nonlocal general
+        if general is None:
+            rss_gen = descubrir_rss(base)
+            general = {n["url"].rstrip("/") for n in listar_por_rss(rss_gen, 20)} \
+                if rss_gen else set()
+        if not general or not urls_seccion:
+            return False
+        # 90% y no 100%: en un medio chico que publica poco, la seccion legitima
+        # comparte casi todo con el feed general sin ser el mismo feed.
+        return len(urls_seccion & general) / len(urls_seccion) >= 0.9
+
     for ruta in RUTAS_SECCION:
         url = base.rstrip("/") + ruta
         es_feed = ruta.endswith("/feed/") or ruta.endswith("feed")
@@ -401,6 +449,10 @@ def descubrir_seccion_policial(base, minimo=3, permitir_navegador=False):
                     continue
                 feed = feedparser.parse(r.content)
                 if len(feed.entries) >= minimo:
+                    urls = {(e.get("link") or "").rstrip("/") for e in feed.entries}
+                    urls.discard("")
+                    if _es_el_feed_general(urls):
+                        continue
                     return {"url": url, "rss": url, "n": len(feed.entries)}
             else:
                 notas = listar_por_html(url, limite=40, permitir_navegador=permitir_navegador)

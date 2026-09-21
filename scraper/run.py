@@ -82,7 +82,15 @@ def recolectar(medio, horas, usar_navegador):
         # ahi el diccionario solo tiene que descartar lo obviamente ajeno, no exigir
         # que el titular repita palabras del rubro ("Lo condenaron a 8 años" no las
         # tiene y es policial). Sin seccion, el diccionario decide solo.
-        entra = p["probable"] or (medio["seccion"] and p["score"] > -5)
+        #
+        # Pero esa confianza vale SOLO si la seccion se leyo por RSS, donde el feed
+        # trae los items de la seccion y nada mas. Cuando hay que raspar el HTML de
+        # la pagina de la seccion, entra tambien lo que la rodea — el menu, la
+        # columna de "ultimas noticias", el pie — y ahi el rubro ya no esta acotado:
+        # la seccion de policiales de Suipacha Hoy devolvio 14 de 14, con Milei y el
+        # paro universitario adentro. Con HTML, decide el diccionario.
+        seccion_confiable = bool(medio["seccion"]) and bool(medio["seccion_rss"])
+        entra = p["probable"] or (seccion_confiable and p["score"] > -5)
         if entra:
             n.update({"localidad_medio": medio["localidad"], "medio": medio["nombre"],
                       "dominio": medio["dominio"], "score_keywords": p["score"],
@@ -249,6 +257,19 @@ def main():
     with ThreadPoolExecutor(max_workers=HILOS) as ex:
         list(ex.map(completar_detalle, unicas))
     unicas = [n for n in unicas if not n.get("url_muerta")]
+
+    # Segundo filtro por fecha, y no sobra. En el listado hay medios que no publican
+    # la fecha (tipico del raspado HTML), y `_es_reciente` los deja pasar a proposito
+    # para no perder una nota de hoy. La fecha REAL recien aparece aca, al bajar la
+    # nota. Sin este corte, el archivo de una seccion paginada entra entero: la
+    # primera corrida de Minuto Arrecifes metio 24 notas, la mas vieja de agosto de
+    # 2022, y el sistema las habria tratado como policiales de las ultimas 72 horas.
+    # Un reel de un choque de hace tres anos publicado como noticia de hoy.
+    antes = len(unicas)
+    unicas = [n for n in unicas if _es_reciente(n.get("publicado"), args.horas)]
+    if len(unicas) < antes:
+        print(f"{antes - len(unicas)} notas descartadas por viejas al conocerse su "
+              f"fecha real (el listado no la traia)")
 
     # 3) Confirmacion con IA — APAGADA por defecto (ver GUARDA_IA arriba)
     if not args.con_ia:

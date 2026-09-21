@@ -11,6 +11,25 @@ Correr:  venv\\Scripts\\python.exe tools\\generar_registro.py
 import sys, os, json
 from datetime import date
 
+COLA_APORTADOS = """
+
+# Los medios aportados a mano por el editor. Van DESPUES de la lista generada y en
+# su propio modulo porque este archivo se reescribe entero cada vez que se corre
+# tools/generar_registro.py: si vivieran aca adentro, la proxima regeneracion se
+# los llevaria puestos sin que nadie se entere.
+from scraper.medios_aportados import APORTADOS as _APORTADOS
+
+_YA = {m['dominio'] for m in MEDIOS}
+MEDIOS = MEDIOS + [m for m in _APORTADOS if m['dominio'] not in _YA]
+
+
+LOCALIDADES = sorted({m['localidad'] for m in MEDIOS})
+
+
+def por_localidad(localidad):
+    return [m for m in MEDIOS if m['localidad'] == localidad]
+"""
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Nombres lindos para mostrar (el sondeo solo conoce el dominio).
@@ -224,10 +243,10 @@ def main():
             if fila["nota"]:
                 f.write(f"        # {fila['nota']}\n")
             f.write("    },\n")
-        f.write("]\n\n\n")
-        f.write("LOCALIDADES = sorted({m['localidad'] for m in MEDIOS})\n\n\n")
-        f.write("def por_localidad(localidad):\n")
-        f.write("    return [m for m in MEDIOS if m['localidad'] == localidad]\n")
+        f.write("]\n")
+        # La cola que vuelve a enganchar los medios aportados a mano. Sin esto,
+        # cada regeneracion del padron se los llevaria puestos en silencio.
+        f.write(COLA_APORTADOS)
 
     print(f"{len(filas)} medios en {len(ranking)} localidades -> {ruta}")
     con_seccion = sum(1 for f_ in filas if f_["seccion"])

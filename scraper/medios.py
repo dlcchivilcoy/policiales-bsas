@@ -812,6 +812,16 @@ MEDIOS = [
 ]
 
 
+# Los medios aportados a mano por el editor. Van DESPUES de la lista generada y en
+# su propio modulo porque este archivo se reescribe entero cada vez que se corre
+# tools/generar_registro.py: si vivieran aca adentro, la proxima regeneracion se
+# los llevaria puestos sin que nadie se entere.
+from scraper.medios_aportados import APORTADOS as _APORTADOS
+
+_YA = {m['dominio'] for m in MEDIOS}
+MEDIOS = MEDIOS + [m for m in _APORTADOS if m['dominio'] not in _YA]
+
+
 LOCALIDADES = sorted({m['localidad'] for m in MEDIOS})
 
 

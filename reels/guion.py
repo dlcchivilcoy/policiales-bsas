@@ -111,9 +111,24 @@ Respondé SOLO con el JSON, sin texto adicional."""
 # Limpieza del material scrapeado
 # =============================================================================
 
+_ROTULOS = (r"policiales?|seguridad|urgente|ultimo momento|último momento|"
+            r"aten[cs]i[oó]n|video|fotos?|audio")
+
+# Con separador a la vista: «Policiales | Robo en…», «Policiales / Allanamientos».
 _PREFIJOS = re.compile(
-    r"^\s*(?:policiales?|seguridad|urgente|ultimo momento|último momento|"
-    r"aten[cs]i[oó]n|video|fotos?|audio)\s*[:|\-–—]\s*", re.IGNORECASE)
+    r"^\s*(?:" + _ROTULOS + r")\s*[:|/\-–—»·]\s*", re.IGNORECASE)
+
+# Y sin separador ninguno, que es como lo pega Junin Digital: «Policiales Allanaron
+# una vivienda…». Acá hay que hilar más fino, porque «Policiales» también puede ser
+# el sujeto de la oración. Se pide que lo que sigue arranque en mayúscula (un rótulo
+# pegado deja el titular con su mayúscula original) y que queden al menos cinco
+# palabras, para no descabezar un titular corto que empiece hablando de policiales.
+# El (?i:...) es a proposito y no se puede cambiar por el flag global: con
+# re.IGNORECASE el [A-ZÁÉÍÓÚÑ] del lookahead tambien casaria minusculas, y entonces
+# «Policiales piden colaboracion» —donde «Policiales» es el sujeto— quedaba
+# descabezado en «piden colaboracion».
+_PREFIJO_PEGADO = re.compile(
+    r"^\s*(?i:" + _ROTULOS + r")\s+(?=[A-ZÁÉÍÓÚÑ])(?=(?:\S+\s+){4}\S)")
 
 
 # Siglas que SÍ se dejan en mayúsculas al desarmar un titular gritado. Es una lista
@@ -188,10 +203,16 @@ def limpiar_titular(texto: str) -> str:
     while t != anterior:                 # algunos encadenan dos rótulos
         anterior = t
         t = _PREFIJOS.sub("", t)
+        t = _PREFIJO_PEGADO.sub("", t)
     t = separar_copete(t)
     t = _desmayusculizar(t)
     t = re.sub(r"\s+([:;,.])", r"\1", t)
-    return t.strip(" \t:–—-|·").rstrip(".").strip()
+    t = t.strip(" \t:–—-|·").rstrip(".").strip()
+    # Sacar el rotulo deja el titular arrancando en minuscula («Seguridad: refuerzan
+    # los controles» -> «refuerzan los controles»), y asi va impreso a la placa.
+    if t[:1].islower():
+        t = t[0].upper() + t[1:]
+    return t
 
 
 def _acortar(texto: str, maximo: int) -> str:
