@@ -118,6 +118,22 @@ _ROTULOS = (r"policiales?|seguridad|urgente|ultimo momento|último momento|"
 _PREFIJOS = re.compile(
     r"^\s*(?:" + _ROTULOS + r")\s*[:|/\-–—»·]\s*", re.IGNORECASE)
 
+# La fecha adelante: «19/09 | PREVENCION DEL DELITO Smith ya cuenta con…».
+_FECHA_PEGADA = re.compile(r"^\s*\d{1,2}[/\-]\d{1,2}(?:[/\-]\d{2,4})?\s*[|:\-–—·]\s*")
+
+# La volanta en mayusculas pegada al titular, que es lo que queda despues de sacar
+# la fecha. Se reconoce porque son dos o mas palabras TODAS en mayusculas seguidas
+# de una palabra Capitalizada normal: ahi termina la volanta y empieza el titular.
+#
+# Las dos condiciones importan. Pedir dos palabras evita descabezar un titular que
+# arranca con una sigla («DDI Junin allano una vivienda»). Y pedir que lo que sigue
+# sea Capitalizada-con-minusculas evita romper los titulares que vienen ENTEROS en
+# mayusculas, como los de Diario El Salado: ahi no hay ninguna palabra en minuscula
+# despues, asi que esto no engancha y el titular pasa entero a _desmayusculizar().
+_VOLANTA_CAPS = re.compile(
+    r"^\s*[A-ZÁÉÍÓÚÑ0-9]{2,}(?:\s+[A-ZÁÉÍÓÚÑ0-9]{2,})+\s+(?=[A-ZÁÉÍÓÚÑ][a-záéíóúñ])")
+
+
 # Y sin separador ninguno, que es como lo pega Junin Digital: «Policiales Allanaron
 # una vivienda…». Acá hay que hilar más fino, porque «Policiales» también puede ser
 # el sujeto de la oración. Se pide que lo que sigue arranque en mayúscula (un rótulo
@@ -202,8 +218,10 @@ def limpiar_titular(texto: str) -> str:
     anterior = None
     while t != anterior:                 # algunos encadenan dos rótulos
         anterior = t
+        t = _FECHA_PEGADA.sub("", t)
         t = _PREFIJOS.sub("", t)
         t = _PREFIJO_PEGADO.sub("", t)
+        t = _VOLANTA_CAPS.sub("", t)
     t = separar_copete(t)
     t = _desmayusculizar(t)
     t = re.sub(r"\s+([:;,.])", r"\1", t)

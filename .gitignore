@@ -19,3 +19,7 @@ data/candidatos_directorio.json
 # ÚNICO que tiene que sobrevivir entre las pasadas. Cada corrida de GitHub Actions arranca
 # en una máquina vacía, así que si esto se ignorara, el sistema repetiría los mismos reels
 # tres veces por día.
+
+# Lo escribe salud.py solo cuando hay una falla, para que el workflow lo meta en el
+# issue de aviso. Es de una corrida: no tiene por que quedar en el repo.
+informe_salud.md

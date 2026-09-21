@@ -66,7 +66,7 @@ venv\Scripts\python.exe -m scraper.run
 
 | Opción | Qué hace |
 |---|---|
-| `--horas 48` | Antigüedad máxima de las notas (por defecto 24). |
+| `--ventana hoy` | Qué tan atrás mirar. **Por defecto `hoy`**: solo las notas publicadas hoy (día calendario argentino), que es lo que corre en las 3 pasadas. Se le puede pasar un número de horas (`--ventana 48`) para probar. |
 | `--localidad Junin,Bragado` | Solo esas localidades. |
 | *(nada)* | Por defecto: solo diccionario. Gratis e instantáneo. |
 | `--con-ia` | ⛔ Clasifica las ~340 notas con IA. **Cuesta ~US$41/mes** y está frenado por una cláusula — ver abajo. |

@@ -4,8 +4,8 @@
     listar notas  ->  filtro por diccionario  ->  detalle  ->  Claude confirma  ->  CSV/JSON
 
 Uso:
-    venv\\Scripts\\python.exe -m scraper.run                  # todo, ultimas 24h
-    venv\\Scripts\\python.exe -m scraper.run --horas 48
+    venv\\Scripts\\python.exe -m scraper.run                  # todo, las notas de HOY
+    venv\\Scripts\\python.exe -m scraper.run --ventana 48     # una ventana de horas, para probar
     venv\\Scripts\\python.exe -m scraper.run --localidad Junin,Bragado
     venv\\Scripts\\python.exe -m scraper.run --sin-ia         # solo diccionario (gratis)
     venv\\Scripts\\python.exe -m scraper.run --sin-navegador  # saltea los 4 sitios lentos
@@ -48,34 +48,120 @@ def _cargar_env():
             os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
-def _es_reciente(publicado, horas):
-    """Sin fecha devuelve True: preferimos revisar una nota vieja de mas antes que
-    perder una de hoy porque el medio no publica la fecha."""
+# Argentina es UTC-3 todo el ano: no tiene horario de verano desde 2009, asi que
+# alcanza con un offset fijo y no hace falta una libreria de zonas horarias.
+TZ_AR = timezone(timedelta(hours=-3))
+
+
+def _momento(publicado):
+    """La fecha/hora de una nota como datetime con zona, o None si no se sabe.
+
+    Las fechas sin zona se toman como UTC porque asi las entrega feedparser, que es
+    de donde vienen casi todas: normaliza el pubDate del RSS a UTC y devuelve un
+    struct_time sin tzinfo. Tomarlas como hora argentina correria todo 3 horas."""
     if not publicado:
-        return True
+        return None
     try:
-        d = datetime.fromisoformat(publicado.replace("Z", "+00:00"))
-        if d.tzinfo is None:
-            d = d.replace(tzinfo=timezone.utc)
-        return d >= datetime.now(timezone.utc) - timedelta(hours=horas)
+        d = datetime.fromisoformat(str(publicado).replace("Z", "+00:00"))
+        return d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
     except Exception:
-        return True
+        return None
 
 
-def recolectar(medio, horas, usar_navegador):
-    """Lista las notas de un medio y se queda con las que huelen a policial."""
-    nav = medio["navegador"] and usar_navegador
-    url = medio["seccion"] or medio["base"]
-    rss = medio["seccion_rss"] or (None if medio["seccion"] else medio["rss"])
+def _hoy_ar():
+    return datetime.now(TZ_AR).date()
 
+
+def _en_ventana(publicado, ventana, sin_fecha=True):
+    """¿La nota entra en la ventana pedida?
+
+    `ventana` es "hoy" (el dia calendario argentino, que es lo que se usa en las 3
+    pasadas) o un numero de horas hacia atras, util para probar.
+
+    `sin_fecha` es lo que se contesta cuando la nota no trae fecha. En el listado se
+    dice True a proposito: hay medios que no publican la fecha ahi, y perder una nota
+    de hoy es peor que revisar una vieja de mas. Despues de bajar la nota se dice
+    False, porque a esa altura ya no hay excusa: si sigue sin fecha no hay forma de
+    probar que es de hoy, y el sistema publica sin que nadie lo mire."""
+    d = _momento(publicado)
+    if d is None:
+        return sin_fecha
+    if ventana == "hoy":
+        return d.astimezone(TZ_AR).date() == _hoy_ar()
+    return d >= datetime.now(timezone.utc) - timedelta(hours=int(ventana))
+
+
+def _describir_ventana(ventana):
+    return "las notas de HOY" if ventana == "hoy" else f"las ultimas {ventana}h"
+
+
+def _listar(url, rss, limite, nav):
+    """Lista de una fuente sin dejar que un fallo tumbe al medio entero."""
     try:
-        notas = fetch.listar_notas(url, rss, LIMITE_POR_MEDIO, permitir_navegador=nav)
+        return fetch.listar_notas(url, rss, limite, permitir_navegador=nav), None
     except Exception as e:
-        return medio, [], f"{type(e).__name__}: {e}"
+        return [], f"{type(e).__name__}: {e}"
+
+
+def recolectar(medio, ventana, usar_navegador):
+    """Lista las notas de un medio y se queda con las que huelen a policial.
+
+    Mira DOS fuentes y no una:
+
+      - la seccion de policiales, que viene acotada al rubro; y
+      - la home / ultimas noticias, que es donde esta la actualidad.
+
+    Las dos, siempre, aunque el medio tenga seccion. La razon es que en estos
+    diarios la seccion se actualiza tarde y a mano: la nota sale primero en la
+    portada y recien despues alguien la categoriza, si se acuerda. Un medio puede
+    tener la seccion de policiales parada hace una semana y estar publicando un
+    choque hace media hora en la home. Mirando solo la seccion, ese choque no
+    existe.
+
+    La contracara es que la home trae de todo. Por eso el rubro lo decide el
+    diccionario para lo que viene de la home, y la regla blanda —dejar pasar con
+    puntaje bajo porque la seccion ya acota el tema— se aplica solo a lo que vino
+    de una seccion leida por RSS.
+    """
+    nav = medio["navegador"] and usar_navegador
+    fuentes, errores = [], []
+
+    if medio["seccion"]:
+        notas_sec, err = _listar(medio["seccion"], medio["seccion_rss"],
+                                 LIMITE_POR_MEDIO, nav)
+        # La seccion se da por confiable solo si la leimos por RSS. Raspando el HTML
+        # de la pagina entran tambien el menu y la columna de "ultimas noticias".
+        confiable = bool(medio["seccion_rss"])
+        fuentes.append(("seccion", notas_sec, confiable))
+        if err:
+            errores.append(f"seccion: {err}")
+
+    notas_home, err = _listar(medio["base"], medio["rss"], LIMITE_POR_MEDIO, nav)
+    fuentes.append(("home", notas_home, False))
+    if err:
+        errores.append(f"home: {err}")
+
+    # Una nota que esta en las dos fuentes se queda con la version de la seccion,
+    # que es la que trae la marca de confiable.
+    notas, vistas = [], set()
+    for via, lista, confiable in fuentes:
+        for n in lista:
+            clave = (n.get("url") or "").rstrip("/")
+            if not clave or clave in vistas:
+                continue
+            vistas.add(clave)
+            n["via_listado"] = via
+            n["seccion_confiable"] = confiable
+            notas.append(n)
+
+    # Solo es un fallo del medio si NINGUNA fuente trajo nada.
+    err = "; ".join(errores) if (errores and not notas) else None
+    if err:
+        return medio, [], err
 
     candidatas = []
     for n in notas:
-        if not _es_reciente(n.get("publicado"), horas):
+        if not _en_ventana(n.get("publicado"), ventana, sin_fecha=True):
             continue
         p = puntuar(n["titulo"], n.get("copete", ""))
         # Si el medio tiene seccion propia de policiales, el tema ya viene acotado:
@@ -89,8 +175,7 @@ def recolectar(medio, horas, usar_navegador):
         # columna de "ultimas noticias", el pie — y ahi el rubro ya no esta acotado:
         # la seccion de policiales de Suipacha Hoy devolvio 14 de 14, con Milei y el
         # paro universitario adentro. Con HTML, decide el diccionario.
-        seccion_confiable = bool(medio["seccion"]) and bool(medio["seccion_rss"])
-        entra = p["probable"] or (seccion_confiable and p["score"] > -5)
+        entra = p["probable"] or (n.get("seccion_confiable") and p["score"] > -5)
         if entra:
             n.update({"localidad_medio": medio["localidad"], "medio": medio["nombre"],
                       "dominio": medio["dominio"], "score_keywords": p["score"],
@@ -145,6 +230,32 @@ def escribir(notas, etiqueta):
     return base
 
 
+DIAGNOSTICO = os.path.join(RAIZ, "estado", "ultima_corrida.json")
+
+
+def guardar_diagnostico(ventana, medios, candidatas, finales):
+    """Deja por escrito como le fue a cada medio en esta pasada.
+
+    Es lo que lee salud.py para decidir si avisar. Va en estado/ y no en salida/
+    porque salida/ se borra y esto tiene que sobrevivir entre pasadas: un medio que
+    falla una vez es ruido de red, uno que falla seis pasadas seguidas esta muerto y
+    hay que enterarse. El historial queda ademas en los commits del ledger."""
+    try:
+        os.makedirs(os.path.dirname(DIAGNOSTICO), exist_ok=True)
+        with open(DIAGNOSTICO, "w", encoding="utf-8") as f:
+            json.dump({
+                "cuando": datetime.now(timezone.utc).isoformat(),
+                "cuando_ar": datetime.now(TZ_AR).strftime("%Y-%m-%d %H:%M"),
+                "ventana": ventana,
+                "candidatas": candidatas,
+                "finales": finales,
+                "medios": sorted(medios, key=lambda m: (m["localidad"], m["nombre"])),
+            }, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        # Un diagnostico que no se pudo escribir no puede tumbar la corrida.
+        print(f"(no se pudo guardar el diagnostico: {e})")
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # CLAUSULA DE COSTO — no sacar sin entender lo que se esta activando
 # ─────────────────────────────────────────────────────────────────────────────
@@ -190,7 +301,13 @@ AVISO_IA = """
 
 def main():
     ap = argparse.ArgumentParser(description="Scraper de policiales — 28 localidades bonaerenses")
-    ap.add_argument("--horas", type=int, default=24, help="antiguedad maxima (default 24)")
+    # "hoy" es el default a proposito: las 3 pasadas tienen que traer la actualidad
+    # del dia y nada mas. Un numero de horas sirve para probar sin esperar al dia
+    # siguiente, pero no es lo que corre en la nube.
+    ap.add_argument("--ventana", default="hoy",
+                    help='"hoy" (default) o un numero de horas hacia atras')
+    ap.add_argument("--horas", type=int, default=None,
+                    help="atajo viejo: equivale a --ventana N")
     ap.add_argument("--localidad", help="lista separada por comas; vacio = todas")
     # OJO: la IA del scraper esta APAGADA por defecto, a proposito. Ver GUARDA_IA abajo.
     ap.add_argument("--con-ia", action="store_true",
@@ -200,6 +317,16 @@ def main():
     ap.add_argument("--sin-navegador", action="store_true", help="saltea los sitios que necesitan Playwright")
     ap.add_argument("--limite-ia", type=int, default=400, help="tope de notas a mandar a Claude")
     args = ap.parse_args()
+
+    ventana = args.ventana
+    if args.horas is not None:          # el flag viejo sigue andando
+        ventana = str(args.horas)
+    if ventana != "hoy":
+        try:
+            int(ventana)
+        except ValueError:
+            print(f'--ventana tiene que ser "hoy" o un numero de horas, no {ventana!r}')
+            return 1
 
     _cargar_env()
 
@@ -219,17 +346,21 @@ def main():
                   "\n  ".join(LOCALIDADES))
             return 1
 
-    print(f"=== Policiales — {len(medios)} medios, ultimas {args.horas}h ===\n")
+    print(f"=== Policiales — {len(medios)} medios, {_describir_ventana(ventana)} ===")
+    print(f"    (hoy en Argentina es {_hoy_ar().isoformat()})\n")
     t0 = time.time()
 
     # 1) Listar y filtrar por diccionario
-    candidatas, fallos = [], []
+    candidatas, fallos, diagnostico = [], [], []
     with ThreadPoolExecutor(max_workers=HILOS) as ex:
-        futuros = {ex.submit(recolectar, m, args.horas, usar_navegador): m for m in medios}
+        futuros = {ex.submit(recolectar, m, ventana, usar_navegador): m for m in medios}
         for i, fut in enumerate(as_completed(futuros), 1):
             medio, notas, err = fut.result()
             if err:
                 fallos.append((medio["dominio"], err))
+            diagnostico.append({"dominio": medio["dominio"], "nombre": medio["nombre"],
+                                "localidad": medio["localidad"],
+                                "candidatas": len(notas), "error": err})
             candidatas += notas
             print(f"[{i:>2}/{len(medios)}] {medio['localidad'][:18]:<18} "
                   f"{medio['nombre'][:26]:<26} {len(notas):>3} candidatas "
@@ -259,17 +390,25 @@ def main():
     unicas = [n for n in unicas if not n.get("url_muerta")]
 
     # Segundo filtro por fecha, y no sobra. En el listado hay medios que no publican
-    # la fecha (tipico del raspado HTML), y `_es_reciente` los deja pasar a proposito
-    # para no perder una nota de hoy. La fecha REAL recien aparece aca, al bajar la
-    # nota. Sin este corte, el archivo de una seccion paginada entra entero: la
-    # primera corrida de Minuto Arrecifes metio 24 notas, la mas vieja de agosto de
-    # 2022, y el sistema las habria tratado como policiales de las ultimas 72 horas.
-    # Un reel de un choque de hace tres anos publicado como noticia de hoy.
+    # la fecha, y ahi se los deja pasar a proposito para no perder una nota de hoy.
+    # La fecha REAL recien aparece aca, al bajar la nota. Sin este corte, el archivo
+    # de una seccion paginada entra entero: la primera corrida de Minuto Arrecifes
+    # metio 24 notas, la mas vieja de agosto de 2022, y el sistema las habria tratado
+    # como policiales del dia. Un reel de un choque de hace tres anos publicado como
+    # noticia de hoy.
+    #
+    # Aca `sin_fecha=False`: la que sigue sin fecha despues de bajarla se cae. Es lo
+    # contrario de lo que hace el listado, y es a proposito. Nadie mira esto antes de
+    # que salga publicado, asi que una nota que no puede probar que es de hoy no
+    # entra. Se pierde alguna nota buena de un medio que no fecha nada; se evita
+    # publicar una vieja como si fuera de hoy, que es mucho peor.
     antes = len(unicas)
-    unicas = [n for n in unicas if _es_reciente(n.get("publicado"), args.horas)]
+    unicas = [n for n in unicas if _en_ventana(n.get("publicado"), ventana,
+                                               sin_fecha=False)]
     if len(unicas) < antes:
-        print(f"{antes - len(unicas)} notas descartadas por viejas al conocerse su "
-              f"fecha real (el listado no la traia)")
+        cual = "de hoy" if ventana == "hoy" else f"de las ultimas {ventana}h"
+        print(f"{antes - len(unicas)} notas descartadas al conocerse su fecha real: "
+              f"no son {cual}")
 
     # 3) Confirmacion con IA — APAGADA por defecto (ver GUARDA_IA arriba)
     if not args.con_ia:
@@ -310,6 +449,8 @@ def main():
     finales.sort(key=lambda n: (n.get("localidad_medio", ""), n.get("publicado") or ""))
     etiqueta = datetime.now().strftime("%Y-%m-%d_%H%M")
     base = escribir(finales, etiqueta)
+
+    guardar_diagnostico(ventana, diagnostico, len(candidatas), len(finales))
 
     print(f"\n=== {len(finales)} notas policiales en {time.time() - t0:.0f}s ===")
     print(f"  {base}.csv\n  {base}.json")

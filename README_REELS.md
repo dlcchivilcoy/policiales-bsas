@@ -216,7 +216,7 @@ alguna vez querés la otra variante.
 ## Uso
 
 ```bash
-venv\Scripts\python.exe -m scraper.run --horas 12              # traer noticias (sin IA, gratis)
+venv\Scripts\python.exe -m scraper.run                        # traer las noticias de HOY (sin IA, gratis)
 venv\Scripts\python.exe -m reels.flujo --cuantos 5             # armar los reels
 ```
 

@@ -21,9 +21,9 @@ on:
       cuantos:
         description: "Cuántos reels generar"
         default: "5"
-      horas:
-        description: "Antigüedad máxima de las noticias"
-        default: "12"
+      ventana:
+        description: '"hoy" (lo que corre siempre) o un número de horas, para probar'
+        default: "hoy"
 
 # Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
 concurrency:
@@ -32,6 +32,7 @@ concurrency:
 
 permissions:
   contents: write             # para commitear el ledger de vuelta al repo
+  issues: write               # para abrir el issue de aviso cuando algo falla
 
 jobs:
   generar:
@@ -52,9 +53,11 @@ jobs:
         # fijada. Es a propósito — apt a veces se cuelga y tumba la corrida entera.
 
       - name: Traer las noticias
+        # "hoy" es el día calendario argentino. Cada pasada trae SOLO lo del día: no se
+        # arrastra nada de ayer, aunque el medio lo haya publicado hace 20 horas.
         run: |
           python -m scraper.run --sin-navegador \
-            --horas "${{ github.event.inputs.horas || '12' }}"
+            --ventana "${{ github.event.inputs.ventana || 'hoy' }}"
 
       - name: Armar los reels
         env:
@@ -83,12 +86,34 @@ jobs:
           retention-days: 1
           compression-level: 0  # los .mp4 ya están comprimidos; recomprimir es tiempo tirado
 
+      # ─────────────────────────────────────────────────────────────────────────
+      # El aviso cuando algo se rompe, sin pagar nada.
+      #
+      # salud.py termina en error si encuentra una falla. Eso hace fallar la corrida,
+      # y GitHub manda el mail de "workflow failed" por su cuenta: no hace falta un
+      # servicio de mail, ni un webhook, ni un secreto más. El paso siguiente agrega
+      # el detalle en un issue del repo, que también llega por mail.
+      #
+      # Va ANTES del commit del ledger a propósito, para que estado/salud.json —donde
+      # lleva la cuenta de cuántas pasadas seguidas falla cada medio— quede guardado
+      # en el mismo commit. Sin eso, la cuenta arrancaría de cero cada pasada y un
+      # medio muerto no se detectaría nunca.
+      # ─────────────────────────────────────────────────────────────────────────
+      - name: Revisar cómo salió la pasada
+        id: salud
+        if: always()
+        run: python -m salud
+
       - name: Recordar qué notas ya salieron
         # El ledger es lo ÚNICO que tiene que sobrevivir entre pasadas. Como cada corrida
         # arranca en una máquina vacía, se commitea de vuelta al repo: es lo más simple que
         # funciona y además queda auditable en el historial. Se poda solo a los 5 días.
         # [skip ci] para no disparar otros workflows con este commit.
-        if: success()
+        #
+        # if: always() y no success(): si la pasada se marcó como fallada porque salud.py
+        # encontró un problema, los reels que SÍ se hicieron ya existen, y no anotarlos
+        # haría que la pasada siguiente los repita. Ese era justo el problema a evitar.
+        if: always()
         run: |
           if [ -z "$(git status --porcelain estado/)" ]; then
             echo "El ledger no cambió (no se hizo ningún reel nuevo)."
@@ -101,6 +126,33 @@ jobs:
           # La pasada anterior puede haber commiteado mientras esta corría.
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # GitHub lo da solo: no hay que cargarlo
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="Los reels de policiales fallaron"
+          # Un issue y no uno por pasada: si el problema dura tres días, son 9 corridas
+          # fallidas y 9 issues idénticos que no aportan nada. Se comenta el que ya está
+          # abierto, que además deja ver desde cuándo viene pasando.
+          if [ -f informe_salud.md ]; then
+            CUERPO="$(cat informe_salud.md)"
+          else
+            CUERPO="La corrida falló antes de llegar a la revisión: el informe no se generó."
+          fi
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+            echo "Comentado en el issue #$EXISTENTE"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
 
       - name: Qué se generó
         if: always()

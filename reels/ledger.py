@@ -15,7 +15,9 @@ Se poda solo: las entradas de más de `DIAS_MEMORIA` días se borran, así el ar
 crece para siempre. 15 reels por día × 30 días son ~450 líneas, nada.
 """
 import json
+import re
 import time
+import unicodedata
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -43,15 +45,89 @@ def _clave(nota: dict) -> str:
     return (nota.get("url") or "").rstrip("/")
 
 
+# Palabras que aparecen en cualquier titular policial y no distinguen un hecho de
+# otro. Si se dejan, dos choques distintos se parecen demasiado y el segundo se
+# descarta por error.
+_VACIAS = {
+    "para", "como", "desde", "hasta", "sobre", "entre", "tras", "este", "esta",
+    "estos", "estas", "pero", "porque", "cuando", "donde", "fueron", "fue",
+    "habia", "hubo", "tenia", "sus", "una", "unos", "unas", "del", "los", "las",
+    "que", "con", "por", "anos", "ano", "hoy", "ayer", "noche", "madrugada",
+    "manana", "tarde", "local", "nuevo", "nueva", "gran", "toda", "todo",
+}
+
+
+def _norm(texto: str) -> str:
+    t = unicodedata.normalize("NFD", (texto or "").lower())
+    return "".join(c for c in t if unicodedata.category(c) != "Mn")
+
+
+def _huella(nota: dict) -> frozenset:
+    """Las palabras con contenido del titular, sin tildes ni relleno.
+
+    Para que sirve: la misma noticia sale en varios medios de la zona con titulares
+    parecidos pero URLs distintas, asi que la URL sola no alcanza para no repetir.
+    Un allanamiento en Chacabuco puede salir en Diario Democracia y en Chacabuco en
+    Red el mismo dia, y son dos reels del mismo hecho."""
+    palabras = re.findall(r"[a-z0-9]+", _norm(nota.get("titulo") or ""))
+    return frozenset(p for p in palabras if len(p) >= 4 and p not in _VACIAS)
+
+
+def _se_parecen(a: frozenset, b: frozenset, umbral: float = 0.6) -> bool:
+    """Jaccard sobre las palabras con contenido.
+
+    0,6 salio de mirar casos reales: dos versiones del mismo allanamiento comparten
+    entre el 65% y el 80% de las palabras, y dos hechos distintos de la misma
+    localidad rara vez pasan del 40%. Se pide ademas un minimo de 4 palabras a cada
+    lado, porque con titulares muy cortos cualquier umbral da falsos positivos."""
+    if len(a) < 4 or len(b) < 4:
+        return False
+    return len(a & b) / len(a | b) >= umbral
+
+
+def _huellas_recordadas(hechos: dict) -> list:
+    hs = []
+    for v in hechos.values():
+        if isinstance(v, dict):
+            h = frozenset(v.get("huella") or ())
+            if h:
+                hs.append(h)
+    return hs
+
+
 def ya_hecha(nota: dict, hechos: dict = None) -> bool:
     hechos = _cargar() if hechos is None else hechos
-    return _clave(nota) in hechos
+    if _clave(nota) in hechos:
+        return True
+    h = _huella(nota)
+    return any(_se_parecen(h, otra) for otra in _huellas_recordadas(hechos))
 
 
 def filtrar(notas: list) -> tuple:
-    """Saca las que ya tuvieron reel. Devuelve (pendientes, cuántas se saltearon)."""
+    """Saca las que ya tuvieron reel. Devuelve (pendientes, cuantas se saltearon).
+
+    Filtra por dos motivos: la URL exacta —la misma nota que vuelve a aparecer en la
+    pasada siguiente— y el parecido del titular, que es la unica forma de no hacer
+    dos veces el mismo hecho cuando lo publicaron dos medios distintos.
+
+    Tambien mira las notas ENTRE SI, no solo contra la memoria: en una misma pasada
+    entran los dos medios de una localidad, y si los dos cubrieron el mismo choque
+    hay que quedarse con uno solo."""
     hechos = _cargar()
-    pendientes = [n for n in notas if _clave(n) and _clave(n) not in hechos]
+    urls = set(hechos)
+    huellas = _huellas_recordadas(hechos)
+
+    pendientes = []
+    for n in notas:
+        k = _clave(n)
+        if not k or k in urls:
+            continue
+        h = _huella(n)
+        if any(_se_parecen(h, otra) for otra in huellas):
+            continue
+        huellas.append(h)      # las de esta misma tanda tampoco se repiten entre si
+        urls.add(k)
+        pendientes.append(n)
     return pendientes, len(notas) - len(pendientes)
 
 
@@ -67,6 +143,10 @@ def registrar(notas: list) -> int:
                 "cuando": ahora,
                 "localidad": n.get("localidad") or n.get("localidad_medio") or "",
                 "titular": (n.get("titulo") or "")[:110],
+                # Ordenada para que el archivo sea estable entre corridas: si el
+                # orden bailara, cada pasada generaria un diff aunque no cambie nada
+                # y el commit del ledger seria puro ruido.
+                "huella": sorted(_huella(n)),
             }
 
     corte = ahora - DIAS_MEMORIA * 86400
