@@ -1,0 +1,123 @@
+name: Reels de policiales
+
+# Las 3 pasadas del día. GitHub Actions usa UTC y Argentina es UTC-3.
+#
+# Corre acá y no en Railway porque acá es GRATIS: en repos PÚBLICOS los minutos son
+# ilimitados. Cada pasada tarda ~3 minutos. Es el mismo lugar donde ya corre el bot de
+# corresponsales, así que es una plataforma menos que mantener.
+#
+# ⚠️ El scraper corre SIN clasificador de IA, que es su default desde que se invirtió el
+# flag. Encenderlo costaría ~US$41/mes y además está frenado por la cláusula de
+# scraper/run.py (pide la variable CLASIFICADOR_IA_AUTORIZADO). La IA que SÍ se usa es la
+# de los guiones, con el cupo gratis de Gemini.
+
+on:
+  schedule:
+    - cron: "0 13 * * *"    # 10:00 Argentina
+    - cron: "0 20 * * *"    # 17:00 Argentina
+    - cron: "0 23 * * *"    # 20:00 Argentina
+  workflow_dispatch:
+    inputs:
+      cuantos:
+        description: "Cuántos reels generar"
+        default: "5"
+      horas:
+        description: "Antigüedad máxima de las noticias"
+        default: "12"
+
+# Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
+concurrency:
+  group: reels-policiales
+  cancel-in-progress: false   # NO cancelar: una corrida a medias deja el ledger sin escribir
+
+permissions:
+  contents: write             # para commitear el ledger de vuelta al repo
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20       # si pasa de esto algo se colgó: cortar y no quemar minutos
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip          # sin esto, instalar dependencias son ~90 s POR CORRIDA
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+        # ffmpeg NO se instala por apt: viene adentro de imageio-ffmpeg, con la versión
+        # fijada. Es a propósito — apt a veces se cuelga y tumba la corrida entera.
+
+      - name: Traer las noticias
+        run: |
+          python -m scraper.run --sin-navegador \
+            --horas "${{ github.event.inputs.horas || '12' }}"
+
+      - name: Armar los reels
+        env:
+          # Pool de claves de Gemini: cada una es de un proyecto distinto de Google AI
+          # Studio y tiene su PROPIO cupo gratis. reels/ia.py rota entre ellas ante un 429.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          # Respaldo pago, solo si se agotaron todas las gratis. Puede quedar vacío.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python -m reels.flujo --con-ia \
+            --cuantos "${{ github.event.inputs.cuantos || '5' }}"
+
+      - name: Guardar los reels
+        uses: actions/upload-artifact@v4
+        if: always()           # aunque algo falle, subir lo que se haya armado
+        with:
+          name: reels-${{ github.run_number }}
+          path: |
+            salida_reels/**/*.mp4
+            salida_reels/**/*.jpg
+            salida_reels/**/*.json
+          # ⬇️ El borrado diario, sin una línea de código: GitHub lo hace solo.
+          retention-days: 1
+          compression-level: 0  # los .mp4 ya están comprimidos; recomprimir es tiempo tirado
+
+      - name: Recordar qué notas ya salieron
+        # El ledger es lo ÚNICO que tiene que sobrevivir entre pasadas. Como cada corrida
+        # arranca en una máquina vacía, se commitea de vuelta al repo: es lo más simple que
+        # funciona y además queda auditable en el historial. Se poda solo a los 5 días.
+        # [skip ci] para no disparar otros workflows con este commit.
+        if: success()
+        run: |
+          if [ -z "$(git status --porcelain estado/)" ]; then
+            echo "El ledger no cambió (no se hizo ningún reel nuevo)."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estado/
+          git commit -m "Reels de $(date -u +'%Y-%m-%d %H:%M') UTC [skip ci]"
+          # La pasada anterior puede haber commiteado mientras esta corría.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Qué se generó
+        if: always()
+        run: |
+          echo "### Reels de esta pasada" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          python - <<'PY' >> $GITHUB_STEP_SUMMARY
+          import glob, json
+          hubo = False
+          for ruta in sorted(glob.glob("salida_reels/*/[0-9]*.json")):
+              hubo = True
+              d = json.load(open(ruta, encoding="utf-8"))
+              g = d["guion"]
+              apto = "OK" if d.get("apto_para_publicar") else "NO PUBLICABLE"
+              print(f"**{d['localidad']}** — {g['titular']}  ")
+              print(f"_{g['volanta']}_ · {d['tipo']} · {apto} · via `{g['via']}`  ")
+              print("")
+          if not hubo:
+              print("_No se generó ningún reel en esta pasada._")
+          PY

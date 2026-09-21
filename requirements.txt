@@ -1,0 +1,9 @@
+httpx>=0.27
+beautifulsoup4>=4.12
+feedparser>=6.0
+lxml>=5.0
+anthropic>=0.40
+python-dotenv>=1.0
+# Solo hace falta para los 4 medios que bloquean clientes automaticos.
+# Usa el Chrome del sistema (channel="chrome"), no baja Chromium.
+playwright>=1.44
