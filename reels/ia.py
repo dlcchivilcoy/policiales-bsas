@@ -74,7 +74,16 @@ def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
         "contents": [{"role": "user", "parts": [{"text": material}]}],
         "generationConfig": {
             "temperature": 0.3,
-            "maxOutputTokens": 900,
+            # 900 era poco y cortaba. El guion completo son volanta + titular +
+            # bajada de hasta 280 caracteres + zocalo + pie + una descripcion de
+            # cuatro parrafos + hashtags; en castellano eso pasa holgado los 900
+            # tokens. Cuando se pasaba, la respuesta volvia cortada a mitad de una
+            # cadena, el JSON no parseaba y la pieza caia a reglas — justo en las
+            # notas mas importantes, que son las que tienen mas para contar.
+            #
+            # Subirlo no cuesta nada: es un TECHO, no un cargo. Se paga lo que el
+            # modelo escribe, y escribe lo mismo que antes.
+            "maxOutputTokens": 2000,
             # Se pide JSON de verdad, no «un JSON dentro de un bloque de código». Ahorra
             # el limpiado de ```json y los cortes a mitad de llave.
             "responseMimeType": "application/json",
@@ -152,14 +161,25 @@ def redactar(system: str, material: str, preferir: str = "") -> tuple:
                                          else ["claude"])
     errores = []
     for cual in orden:
-        try:
-            texto, detalle = (redactar_gemini(system, material) if cual == "gemini"
-                              else redactar_claude(system, material))
-            return _parsear(texto), detalle
-        except SinProveedor as e:
-            errores.append(f"{cual}: {e}")
-        except Exception as e:
-            errores.append(f"{cual}: {type(e).__name__}: {e}")
+        # Dos intentos con el MISMO proveedor antes de pasar al siguiente. Un JSON que
+        # no parsea casi siempre es una respuesta que salio cortada o con una coma de
+        # mas: es del intento, no del proveedor, y volver a pedirlo lo resuelve. Sin
+        # esto, un tropiezo de formato hacia caer la pieza a reglas aunque la clave
+        # estuviera perfecta.
+        for intento in (1, 2):
+            try:
+                texto, detalle = (redactar_gemini(system, material) if cual == "gemini"
+                                  else redactar_claude(system, material))
+                return _parsear(texto), detalle
+            except SinProveedor as e:
+                errores.append(f"{cual}: {e}")
+                break                     # sin credencial no hay segundo intento que valga
+            except json.JSONDecodeError as e:
+                errores.append(f"{cual}: intento {intento}: JSON cortado: {e}")
+                continue
+            except Exception as e:
+                errores.append(f"{cual}: {type(e).__name__}: {e}")
+                break
     raise RuntimeError(" | ".join(errores) or "no hay proveedor de IA configurado")
 
 
