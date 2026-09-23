@@ -35,17 +35,11 @@ LIMITE_POR_MEDIO = 40
 
 
 def _cargar_env():
-    """Lee el .env del proyecto si existe, sin pisar lo que ya este en el entorno."""
-    ruta = os.path.join(RAIZ, ".env")
-    if not os.path.exists(ruta):
-        return
-    with open(ruta, encoding="utf-8") as f:
-        for linea in f:
-            linea = linea.strip()
-            if not linea or linea.startswith("#") or "=" not in linea:
-                continue
-            k, _, v = linea.partition("=")
-            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    """Lee el .env. La implementacion vive en entorno.py porque reels/flujo.py
+    necesita exactamente lo mismo, y tenerlo dos veces fue justo lo que fallo: una
+    copia existia y la otra no."""
+    import entorno
+    entorno.cargar()
 
 
 # Argentina es UTC-3 todo el ano: no tiene horario de verano desde 2009, asi que
@@ -329,6 +323,8 @@ def main():
             return 1
 
     _cargar_env()
+    import entorno
+    entorno.consola_utf8()
 
     # La clausula: --con-ia solo corre si ademas esta la autorizacion explicita.
     if args.con_ia and os.environ.get(GUARDA_IA, "").strip() not in ("1", "si", "true", "yes"):

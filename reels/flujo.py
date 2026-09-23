@@ -34,6 +34,8 @@ from reels import limpieza as L
 from reels import ledger as LD
 from scraper import fetch
 
+import entorno
+
 RAIZ = Path(__file__).resolve().parent.parent
 SALIDA_REELS = RAIZ / "salida_reels"
 SITIO = "www.diariolacampaña.com.ar"   # la web del diario, donde se manda a la gente
@@ -151,6 +153,11 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     img = carpeta / f"{nombre}.jpg"
     informe = P.componer(g, foto, img, capas=hacer_video)
     avisos = P.auditar(informe)
+    # Que el hecho sea de otra localidad que la del medio no rompe la pieza, pero
+    # hay que verlo: cambia el hashtag y el 'Mas noticias de' del posteo.
+    _loc_hecho, _aviso_loc = G.localidad_del_hecho(g, nota)
+    if _aviso_loc:
+        avisos.append(_aviso_loc)
 
     vid = None
     if hacer_video:
@@ -206,6 +213,15 @@ def main():
     ap.add_argument("--conservar-dias", type=int, default=L.DIAS_RETENCION,
                     help=f"cuántos días de corridas guardar (default {L.DIAS_RETENCION}; 0 = no limpiar)")
     args = ap.parse_args()
+
+    # Las claves, antes de cualquier otra cosa. Sin esto --con-ia no puede andar en
+    # una maquina local: en la nube las pone el workflow, pero aca las tiene el .env
+    # y hasta ahora no habia quien lo leyera. El sintoma era un "la IA fallo:
+    # RuntimeError" que no explicaba nada.
+    entorno.consola_utf8()
+    cargadas = entorno.cargar()
+    if args.con_ia and not cargadas:
+        print("(no se leyo ninguna clave del .env; se usa lo que haya en el entorno)")
 
     faltan = M.faltantes()
     if faltan:

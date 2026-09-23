@@ -405,7 +405,11 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     try:
         datos, detalle = ia.redactar(SYSTEM_PROMPT, material, preferir)
     except Exception as e:
-        return dict(guion_simple(nota), via=f"reglas (la IA falló: {type(e).__name__})")
+        # El MOTIVO, no solo el tipo. Un "RuntimeError" pelado no dice si fue la
+        # clave, el cupo, el filtro de contenido o un JSON mal cerrado, y con tres
+        # pasadas por dia sin nadie mirando, esa diferencia es todo.
+        motivo = " ".join(str(e).split())[:160] or type(e).__name__
+        return dict(guion_simple(nota), via=f"reglas (la IA falló: {motivo})")
 
     base = guion_simple(nota)
     salida = {}
@@ -428,6 +432,43 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
 # Descripción final que acompaña al reel
 # =============================================================================
 
+def _norm_frase(t: str) -> str:
+    """Para comparar dos frases sin que las diferencie un punto o un acento."""
+    return re.sub(r"[^a-z0-9 ]", "", _sin_tildes((t or "").lower())).strip()
+
+
+def localidad_del_hecho(guion: dict, nota: dict) -> tuple:
+    """Devuelve (localidad, aviso). La del hecho, no la del medio que lo publico.
+
+    No son lo mismo y confundirlas se ve feo. Un medio de Chacabuco republico un
+    femicidio de Pergamino: la pieza salio etiquetada Chacabuco, con #Chacabuco y
+    con «Mas noticias de Chacabuco», para un hecho que paso a 80 km. El lector de
+    Chacabuco se encuentra con una noticia que no es de su ciudad.
+
+    Se mira que localidad del padron nombra el titular. Si nombra UNA SOLA y no es
+    la del medio, gana esa: el titular habla del hecho, el medio solo lo publico.
+    Si nombra varias o ninguna, se queda la del medio, que es la apuesta segura.
+    """
+    from scraper.medios import LOCALIDADES
+
+    asignada = nombre_localidad(nota.get("localidad") or nota.get("localidad_medio") or "")
+    texto = _sin_tildes(" ".join([guion.get("titular") or "", guion.get("volanta") or ""]).lower())
+
+    nombradas = []
+    for loc in LOCALIDADES:
+        bonito = nombre_localidad(loc)
+        if _sin_tildes(bonito.lower()) in texto:
+            nombradas.append(bonito)
+    # "Junin" esta adentro de nada, pero "Rojas" y "Salto" son palabras comunes: con
+    # una sola nombrada y que ademas no sea la del medio, el riesgo es bajo.
+    nombradas = [n for n in dict.fromkeys(nombradas)]
+
+    if len(nombradas) == 1 and nombradas[0] != asignada:
+        return nombradas[0], (f"El hecho es de {nombradas[0]} pero el medio es de "
+                              f"{asignada}: se usa {nombradas[0]} en la descripcion.")
+    return asignada, ""
+
+
 def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
     """Arma el texto del posteo: descripción + atribución + hashtags.
 
@@ -442,12 +483,30 @@ def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
     cuerpo = (guion.get("descripcion") or "").strip()
     if cuerpo:
         # Cada oración, su propio párrafo. Se lee mucho mejor en el celular.
-        partes.append("\n\n".join(_oraciones(cuerpo)))
+        frases = _oraciones(cuerpo)
+        # El modelo a veces cierra la descripción repitiendo, palabra por palabra, la
+        # frase que ya puso en el pie: queda el mismo texto dos veces en el mismo
+        # posteo. Se saca acá y no pidiéndoselo al prompt, porque esto es una
+        # comparación exacta y el código la hace siempre bien.
+        ya_dicho = {_norm_frase(guion.get(k) or "") for k in ("pie", "bajada")}
+        frases = [f for f in frases if _norm_frase(f) not in ya_dicho]
+        if frases:
+            partes.append("\n\n".join(frases))
 
-    localidad = nombre_localidad(nota.get("localidad") or nota.get("localidad_medio") or "")
+    # Dos localidades distintas y cada una en su lugar. La del HECHO manda en «Más
+    # noticias de» y en el hashtag, porque es de donde es la noticia. La del MEDIO va
+    # en la atribución, porque ahí se está diciendo quién lo publicó: poner la del
+    # hecho daba «Fuente: Diario Democracia (Pergamino)», y Democracia es de
+    # Chacabuco — atribuirle una ciudad que no es la suya.
+    localidad, _aviso = localidad_del_hecho(guion, nota)
+    del_medio = nombre_localidad(nota.get("localidad_medio") or "")
     medio = nota.get("medio") or ""
     if medio:
-        partes.append(f"📰 Fuente: {medio}" + (f" ({localidad})" if localidad else ""))
+        # Varios medios ya llevan la localidad en el nombre —«La Opinión (Pergamino)»—
+        # y agregársela de nuevo daba «La Opinión (Pergamino) (Pergamino)».
+        repetida = del_medio and _sin_tildes(del_medio.lower()) in _sin_tildes(medio.lower())
+        partes.append(f"📰 Fuente: {medio}" +
+                      (f" ({del_medio})" if del_medio and not repetida else ""))
 
     if sitio:
         partes.append(f"📲 Más noticias de {localidad or 'la región'} en {sitio}")

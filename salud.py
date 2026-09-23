@@ -161,6 +161,8 @@ def revisar():
 
 
 def main():
+    import entorno
+    entorno.consola_utf8()
     fallas, avisos, informe = revisar()
 
     lineas = list(informe)
