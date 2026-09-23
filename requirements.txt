@@ -1,9 +1,24 @@
+# Scraping
 httpx>=0.27
 beautifulsoup4>=4.12
 feedparser>=6.0
 lxml>=5.0
+
+# Guiones (respaldo pago; Gemini se llama por HTTP con httpx, sin SDK)
 anthropic>=0.40
 python-dotenv>=1.0
+
+# Reels. Faltaban las dos y por eso la nube no armo ni un reel: pip install -r
+# nunca las instalaba, el paso moria en el `from PIL import ...` y las corridas
+# terminaban con 28 notas y 0 piezas. Localmente estaban en el venv de antes, asi
+# que el agujero no se veia hasta correr en una maquina limpia.
+pillow>=10.0
+# ffmpeg viene ADENTRO de este paquete: no se instala por apt, que a veces se
+# cuelga y tumba la corrida. La version se fija porque de ella depende que binario
+# de ffmpeg se usa, y un ffmpeg distinto puede cambiar como sale el video.
+imageio-ffmpeg==0.6.0
+
 # Solo hace falta para los 4 medios que bloquean clientes automaticos.
 # Usa el Chrome del sistema (channel="chrome"), no baja Chromium.
+# En la nube no se usa: el workflow corre --sin-navegador.
 playwright>=1.44

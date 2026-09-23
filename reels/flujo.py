@@ -170,13 +170,29 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # titular. Sirve para VER el flujo, no para publicar: publicar texto copiado del medio
     # de origen es otra cosa que resumirlo con palabras propias. Queda marcado en el JSON
     # para que ningun paso posterior lo tome por publicable.
-    apto = g.get("via", "").startswith(("claude", "gemini"))
+    # Dos condiciones, y las dos hacen falta. La primera es QUIEN lo escribio: por
+    # reglas no es publicable, porque la bajada repite oraciones del medio de origen.
+    objeciones = []
+    if not g.get("via", "").startswith(("claude", "gemini")):
+        objeciones.append(
+            "Guion armado por reglas: la bajada reproduce oraciones del medio de origen y "
+            "el zocalo es un recorte del titular. Hay que generarlo con --con-ia.")
+
+    # La segunda es QUE dice. Un campo vacio deja un hueco en la placa, y como no hay
+    # nadie revisando antes de que salga, el hueco se publica. Paso de verdad en una
+    # corrida: la bajada salio en blanco y la pieza no objeto nada. El guion por IA
+    # cae a los campos del guion por reglas cuando el modelo deja uno vacio, asi que
+    # el agujero llega igual aunque haya escrito la IA.
+    for campo, minimo in (("titular", 15), ("volanta", 3), ("bajada", 25), ("zocalo", 3)):
+        if len((g.get(campo) or "").strip()) < minimo:
+            objeciones.append(f"El campo '{campo}' quedo vacio o demasiado corto: "
+                              f"en la placa se ve como un hueco.")
+
+    apto = not objeciones
     pieza = {
         "orden": idx,
         "apto_para_publicar": apto,
-        "por_que_no": "" if apto else (
-            "Guion armado por reglas: la bajada reproduce oraciones del medio de origen y "
-            "el zocalo es un recorte del titular. Hay que generarlo con --con-ia."),
+        "por_que_no": " ".join(objeciones),
         "localidad": nota.get("localidad_medio"),
         "medio": nota.get("medio"),
         "tipo": nota.get("tipo") or g.get("tipo") or "(sin clasificar)",
