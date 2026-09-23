@@ -65,7 +65,7 @@ Recibís una nota policial ya publicada por un medio local. Armá el GUION de un
 para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
 
 {
-  "volanta": "antetítulo de 2 a 5 palabras que dé contexto, sin punto final",
+  "volanta": "antetítulo de 2 a 6 palabras que NOMBRE LA LOCALIDAD, sin punto final",
   "titular": "titular claro y fiel al hecho, MÁXIMO 90 caracteres, sin punto final",
   "bajada": "para redes, MÁXIMO 280 caracteres, cerrada SIEMPRE en punto",
   "zocalo": "MÁXIMO 5 PALABRAS, sin punto ni comillas",
@@ -73,6 +73,12 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "descripcion": "2 a 4 frases para la descripción del reel",
   "hashtags": ["#Uno", "#Dos"]
 }
+
+VOLANTA (el antetítulo naranja):
+- Tiene que decir DÓNDE pasó: es lo primero que busca el lector de un pueblo al ver el
+  reel. Usá la localidad que viene en el material, tal cual está escrita.
+- Ej.: "Siniestro vial en Bolívar", "Operativo policial en Chacabuco".
+- La única excepción es que el TITULAR ya nombre la localidad; ahí no la repitas.
 
 REGLAS DE REDACCIÓN (obligatorias):
 - Contá el hecho con TUS PROPIAS PALABRAS. No copies ni parafrasees frases del original.
@@ -472,6 +478,21 @@ def localidad_de_la_nota(nota: dict) -> tuple:
     del_medio = nombre_localidad(nota.get("localidad_medio") or nota.get("localidad") or "")
     titulo = limpiar_titular(nota.get("titulo") or "")
     otra = _localidad_nombrada(titulo, distinta_de=del_medio)
+
+    # Si el titular no la nombra, se mira el arranque del cuerpo. Hace falta porque el
+    # mismo medio titula distinto segun el dia: la prision preventiva del concejal de
+    # Bragado salio un dia como «Bragado 15:12 | EDIL LIBERTARIO PRESO...» y al
+    # siguiente como «Ayer | EDIL LIBERTARIO PRESO...», y en la segunda version la
+    # pieza volvia a quedar atribuida a Carlos Casares.
+    #
+    # Solo el ARRANQUE, no el cuerpo entero: la primera oracion dice donde paso, y mas
+    # abajo la nota nombra pueblos vecinos, antecedentes y juzgados, y ahi ya no se
+    # puede distinguir el lugar del hecho de una mencion al pasar.
+    if not otra:
+        arranque = " ".join((nota.get("resumen") or nota.get("copete")
+                             or nota.get("cuerpo") or "").split())[:200]
+        otra = _localidad_nombrada(arranque, distinta_de=del_medio)
+
     if otra:
         return otra, (f"El hecho es de {otra} pero el medio es de {del_medio}: "
                       f"la pieza se arma como de {otra}.")
@@ -565,6 +586,54 @@ def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
     return texto[:2200]          # tope duro del caption de TikTok, hashtags incluidos
 
 
+# Palabras que no pueden quedar al final de la volanta cuando se la recorta.
+_COLGANTES = {"en", "de", "del", "la", "el", "los", "las", "un", "una", "y", "con",
+              "por", "para", "sobre", "tras", "al", "a", "su", "sus", "territorio",
+              "zona", "region", "ciudad", "localidad", "barrio", "pleno"}
+
+
+def _asegurar_localidad(g: dict, localidad: str) -> dict:
+    """La localidad tiene que leerse en la placa. Si no está, se pone en la volanta.
+
+    Al prompt se le pide, pero pedir no es garantizar: en la tanda del 22/09 el modelo
+    escribió «Justicia bonaerense» y «Operativo policial en la región», y el lector de
+    un pueblo no tiene cómo saber si la noticia es de su ciudad o de una que queda a
+    200 km. Es el dato que más importa en un feed local.
+
+    No se toca nada si el TITULAR ya la nombra: ahí ya está claro, y repetirla arriba
+    y abajo queda como un error de armado.
+    """
+    if not localidad:
+        return g
+    plano_loc = _sin_tildes(localidad.lower())
+    for campo in ("volanta", "titular"):
+        if plano_loc in _sin_tildes((g.get(campo) or "").lower()):
+            return g
+
+    # Si la volanta YA dice un lugar, no se le encima otro. Parece un detalle de
+    # redaccion y no lo es: «Accidente en Sunchales» es un piloto de Pehuajo que
+    # volco en Santa Fe, y agregarle « en Pehuajo» no solo daba «Accidente en
+    # Sunchales en Pehuajo» sino que afirmaba que el hecho paso en Pehuajo.
+    #
+    # Ante la duda se deja como esta: que falte la localidad es una molestia, que
+    # diga la equivocada es un error publicado. El lugar correcto para resolverlo
+    # es el prompt, que ya pide nombrar la localidad.
+    if " en " in f" {(g.get('volanta') or '').strip()} ".lower():
+        return g
+
+    # Hay que meterla en la volanta sin que se vuelva un renglón largo: se recorta la
+    # parte genérica a cuatro palabras y se le engancha el lugar.
+    palabras = (g.get("volanta") or "Policiales").split()[:4]
+    # Y sacando los conectores que queden colgando al final. Sin esto, recortar
+    # «Operativo policial en la region» a cuatro palabras daba «Operativo policial en
+    # la» y el resultado era «Operativo policial en la en Junin».
+    while palabras and _sin_tildes(palabras[-1].lower().strip(",.;:")) in _COLGANTES:
+        palabras.pop()
+    base = " ".join(palabras).rstrip(" ,.;:—-") or "Policiales"
+    g["volanta"] = f"{base} en {localidad}"
+    return g
+
+
 def generar(nota: dict, usar_ia: bool = True, preferir: str = "", sitio: str = "") -> dict:
     """Guion completo + descripción lista para publicar.
 
@@ -576,6 +645,7 @@ def generar(nota: dict, usar_ia: bool = True, preferir: str = "", sitio: str = "
     nota = dict(nota, localidad=loc)
 
     g = guion_ia(nota, preferir) if usar_ia else guion_simple(nota)
+    g = _asegurar_localidad(g, loc)
     g["descripcion_final"] = descripcion_tiktok(g, nota, sitio)
     g["localidad_hecho"] = loc
     g["aviso_localidad"] = aviso

@@ -131,6 +131,12 @@ PLACA_PIE_RENGLONES = 3
 PLACA_PIE_MIN_ALTO = 60           # ni un renglón del cuerpo más chico entra: no se dibuja
 PLACA_PIE_INTERLINEA = 1.24
 
+# Aire entre el borde de abajo de la foto y donde puede empezar el pie. Sin esto el
+# texto arrancaba pegado al filo de la foto apaisada y las dos cosas se leian como un
+# solo bloque. 28 px sobre 1920 es poco en el papel y mucho en la pantalla: alcanza
+# para que el ojo separe la foto del texto sin comerse un renglon.
+PLACA_PIE_AIRE = 28
+
 PLACA_IMG_MIN = 980               # la imagen nunca ocupa menos que esto (51% del cuadro)
 PLACA_FUNDIDO = 110               # px de transición fondo→imagen. Corto a propósito: con
                                   # 240 el desvanecido se comía los márgenes de la foto

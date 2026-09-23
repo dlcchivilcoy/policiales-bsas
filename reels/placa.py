@@ -330,8 +330,21 @@ def componer(guion: dict, foto: Path | None, salida: Path, capas: bool = False) 
             # para que LLENE el cuadro: se pierde algo de los costados y se gana un reel
             # que no parece a medio armar.
             if alto_natural < alto_img and hay_pie:
-                img = original.convert("RGB").resize((M.W, alto_natural), Image.LANCZOS)
+                # La foto se dibuja PLACA_PIE_AIRE mas corta de lo que le tocaria. Ese
+                # es el aire entre la foto y el pie, y sale de la foto a proposito: el
+                # hueco bajo una apaisada es de unos 95 px y el pie lo llena entero,
+                # asi que no hay aire que sacarle al texto — intentarlo dejaba al pie
+                # sin lugar y desaparecia. Recortar 28 px de una foto de ~600 es un
+                # 4% que no se ve; perder el pie si se ve.
+                alto_mostrado = max(M.PLACA_PIE_MIN_ALTO, alto_natural - M.PLACA_PIE_AIRE)
+                escalada = original.convert("RGB").resize((M.W, alto_natural), Image.LANCZOS)
+                img = escalada.crop((0, 0, M.W, alto_mostrado))
                 _fundir_arriba(base, img, y_img, M.PLACA_FUNDIDO)
+                alto_natural = alto_mostrado
+                # La zona es TODO el hueco bajo la foto. El aire de separacion no se
+                # descuenta aca sino al posicionar el texto: recortando la zona, el
+                # pie se quedaba sin lugar y desaparecia entero — se perdia
+                # informacion de la nota para ganar 28 px de margen.
                 informe["pie_zona"] = (y_img + alto_natural, M.H - M.BANDA_SEGURO)
             else:
                 img = _encuadrar(original, M.W, alto_img)
@@ -350,30 +363,49 @@ def componer(guion: dict, foto: Path | None, salida: Path, capas: bool = False) 
     if pie and zona:
         desde, hasta = zona
         hueco = hasta - desde
-        if hueco >= M.PLACA_PIE_MIN_ALTO:
-            elegido = None
+        def _acomodar(disponible):
+            """El cuerpo más grande con el que el pie entra en `disponible` píxeles."""
             for cuerpo in range(M.PLACA_PIE_TAM, M.PLACA_PIE_MIN - 1, -2):
                 f = fuente(M.FUENTE_RESUMEN, cuerpo, M.PESO_RESUMEN)
                 salto = round(cuerpo * M.PLACA_PIE_INTERLINEA)
                 alto_l = _alto_linea(f)
-                if alto_l > hueco:
+                if alto_l > disponible:
                     continue
                 # El hueco es chico y fijo, así que acá manda el hueco: para cada cuerpo se
                 # calcula CUÁNTOS renglones entran y recién ahí se prueba el texto.
-                cabe = min(M.PLACA_PIE_RENGLONES, 1 + max(0, (hueco - alto_l) // salto))
+                cabe = min(M.PLACA_PIE_RENGLONES, 1 + max(0, (disponible - alto_l) // salto))
                 lineas = _texto_cerrado(draw, pie, M.FUENTE_RESUMEN, M.PESO_RESUMEN,
                                         cuerpo, ancho, cabe)
                 if lineas:
-                    elegido = (cuerpo, lineas, salto, (len(lineas) - 1) * salto + alto_l)
-                    break
+                    return cuerpo, lineas, salto, (len(lineas) - 1) * salto + alto_l
+            return None
+
+        if hueco >= M.PLACA_PIE_MIN_ALTO:
+            # Se intenta PRIMERO entrar en el hueco menos el aire, aunque para eso haya
+            # que usar un cuerpo más chico. Es la única forma de separar el pie del filo
+            # de la foto cuando el hueco es justo: si se pide el cuerpo más grande que
+            # entra en el hueco entero, el texto lo llena y no queda aire que dar —
+            # empujarlo hacia abajo después no tiene a dónde, y recortar la zona antes
+            # de componer hacía desaparecer el pie completo.
+            #
+            # Y si ni con el cuerpo mínimo entra con aire, se cede el aire: un pie
+            # apretado se lee, un pie ausente se pierde.
+            con_aire = _acomodar(hueco - M.PLACA_PIE_AIRE)
+            elegido = con_aire or _acomodar(hueco)
+
             if elegido:
                 cuerpo, lineas, salto, alto = elegido
                 f = fuente(M.FUENTE_RESUMEN, cuerpo, M.PESO_RESUMEN)
-                y0 = desde + max(0, (hueco - alto) // 2)
+                if con_aire:
+                    arranca = desde + M.PLACA_PIE_AIRE
+                    y0 = arranca + max(0, (hueco - M.PLACA_PIE_AIRE - alto) // 2)
+                else:
+                    y0 = desde + max(0, (hueco - alto) // 2)
                 for i, l in enumerate(lineas):
                     draw.text(((M.W - _ancho(draw, l, f)) // 2, y0 + i * salto), l,
                               font=f, fill=M.GRIS)
                     informe["bloques"].append(("pie", l, cuerpo, y0 + i * salto))
+                informe["pie_aire"] = M.PLACA_PIE_AIRE if con_aire else 0
             else:
                 informe["pie_omitido"] = f"no entra en {hueco}px"
 
@@ -381,7 +413,10 @@ def componer(guion: dict, foto: Path | None, salida: Path, capas: bool = False) 
     salida.parent.mkdir(parents=True, exist_ok=True)
     final = base.convert("RGBA")
     final.alpha_composite(capa)
-    final.convert("RGB").save(salida, quality=95)
+    # 85 y no 95: la placa es la miniatura y el primer cuadro, no el material de
+    # archivo. Entre 95 y 85 no hay diferencia visible en un telefono y el archivo
+    # pesa la mitad, que con mas flujo de posteo es lo que cuenta.
+    final.convert("RGB").save(salida, quality=85, optimize=True)
     informe["archivo"] = str(salida)
     informe["alto_imagen"] = alto_img
 

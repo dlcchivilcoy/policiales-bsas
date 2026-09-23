@@ -388,6 +388,9 @@ def main():
                     help="el guion lo redacta la IA (Gemini gratis si hay claves; si no, Claude)")
     ap.add_argument("--proveedor", choices=["gemini", "claude"], default="",
                     help="forzar proveedor. Vacío = Gemini si hay claves (gratis)")
+    ap.add_argument("--cadencia", action="store_true",
+                    help=f"agendar las piezas cada {MINUTOS_ENTRE_POSTEOS} min "
+                         f"(para la automatizacion; en una corrida manual no hace falta)")
     ap.add_argument("--sin-ledger", action="store_true",
                     help="ignorar la memoria y permitir repetir notas ya usadas")
     ap.add_argument("--entrada", help="JSON de scrapeo; por defecto, el último de salida/")
@@ -497,7 +500,11 @@ def main():
                 print(f"      ⚠ {a}")
         print()
 
-    agendadas = plan_de_publicacion(piezas)
+    # La cadencia NO se aplica en las corridas manuales, que es como corre esto hoy:
+    # una vista previa se mira toda junta, y ponerle horarios a algo que se revisa a
+    # mano solo confunde. Los 5 minutos son para el dia que exista el paso que publica
+    # solo — ahi la automatizacion pasa --cadencia y cada pieza sale con su hora.
+    agendadas = plan_de_publicacion(piezas) if args.cadencia else 0
     for pz in piezas:                       # que la hora quede tambien en cada pieza
         ruta = pz.pop("_json", None)
         if ruta:

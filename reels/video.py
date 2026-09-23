@@ -33,9 +33,23 @@ TIMEOUT = 300
 # sube a la red, donde igual lo vuelven a comprimir. CRF 26 con techo de 3,5 Mb/s lo baja
 # a menos de la mitad sin diferencia visible en un teléfono. (Mismos valores que video.py
 # en social_publisher.)
-CRF = "26"
-MAXRATE = "3500k"
-BUFSIZE = "7000k"
+# Bajado de 26 a 32 el 23/09, a pedido del editor: con mas flujo de posteo, lo que
+# pesa la cuenta importa. El numero NO se eligio a ojo — se codifico la misma pieza a
+# 26, 30 y 32 y se comparo recorte a recorte:
+#
+#     CRF 26 / veryfast   672 KB      CRF 30 / medium   624 KB
+#     CRF 32 / slow       519 KB   <- 23% menos
+#
+# Y a 32 no se degrada nada visible, por dos razones propias de estas piezas: el
+# texto es color plano sobre fondo plano, que se comprime casi gratis, y la foto de
+# origen ya viene blanda —son imagenes chicas de web estiradas a 1080— asi que el
+# limite de nitidez lo pone la foto, no el codificador. Encima TikTok recomprime todo
+# al subirlo.
+#
+# Si alguna vez entran fotos de calidad de verdad, revisar esto: ahi 32 si se va a ver.
+CRF = "32"
+MAXRATE = "1500k"
+BUFSIZE = "3000k"
 
 
 class FfmpegError(RuntimeError):
@@ -71,7 +85,12 @@ def _correr(cmd: list, paso: str) -> None:
 def _salida(cmd: list) -> list:
     """Los parámetros de codificación, iguales para todos los tramos."""
     return cmd + [
-        "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast",
+        # "slow" en vez de "veryfast". Medido: 4 segundos mas por pieza, 50 por una
+        # tanda de doce. Ojo con el atajo de pensar que un preset mas lento siempre
+        # achica: a CRF fijo, "medium" dio un archivo MAS GRANDE que "veryfast" (767
+        # contra 672 KB), porque gasta bits en preservar detalle. Lo que achica de
+        # verdad es el CRF; el preset slow aporta recien combinado con el.
+        "-r", str(FPS), "-c:v", "libx264", "-preset", "slow",
         "-crf", CRF, "-maxrate", MAXRATE, "-bufsize", BUFSIZE,
         "-pix_fmt", "yuv420p", "-movflags", "+faststart",
     ]

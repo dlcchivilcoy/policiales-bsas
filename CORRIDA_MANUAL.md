@@ -109,6 +109,72 @@ otro.
 
 ---
 
+## Peso de los archivos
+
+Bajado el 23/09 a pedido del editor, porque con más flujo de posteo lo que pesa la
+cuenta importa. **−37% por pieza** (1304 KB → 819 KB). Una tanda de 12 pasa de 15,3 a
+9,6 MB.
+
+El número de CRF **no se eligió a ojo**: se codificó la misma pieza a 26, 30 y 32 y
+se comparó recorte a recorte, texto y foto por separado.
+
+| | tamaño |
+|---|---|
+| CRF 26 / veryfast (antes) | 672 KB |
+| CRF 30 / medium | 624 KB |
+| **CRF 32 / slow (ahora)** | **519 KB** |
+
+A 32 no se degrada nada visible, por dos razones propias de estas piezas: el texto es
+color plano sobre fondo plano, que se comprime casi gratis, y **la foto de origen ya
+viene blanda** —son imágenes chicas de web estiradas a 1080— así que el límite de
+nitidez lo pone la foto, no el codificador. Encima TikTok recomprime todo al subir.
+
+> Ojo con el atajo de pensar que un preset más lento siempre achica: a CRF fijo,
+> `medium` dio un archivo **más grande** que `veryfast` (767 contra 672 KB), porque
+> gasta bits en preservar detalle. Lo que achica es el CRF; `slow` aporta recién
+> combinado con él. Cuesta 4 segundos más por pieza.
+
+La placa bajó de calidad 95 a 85 (430 → 259 KB). Si alguna vez entran fotos de calidad
+de verdad, revisar los dos números: ahí sí se va a ver.
+
+---
+
+## La localidad, siempre visible
+
+La volanta tiene que decir de dónde es la noticia: es lo primero que busca el lector
+de un pueblo. Se pide en el prompt **y** se garantiza en código, porque pedir no es
+garantizar — el modelo escribía «Justicia bonaerense» y «Operativo policial en la
+región», y así el lector no tiene cómo saber si la noticia es de su ciudad o de una
+que queda a 200 km.
+
+El código no toca la volanta en dos casos, los dos a propósito:
+
+- **Si el titular ya nombra la localidad.** Repetirla arriba y abajo queda como un
+  error de armado.
+- **Si la volanta ya dice un lugar** (tiene un « en »). «Accidente en Sunchales» es un
+  piloto de Pehuajó que volcó en Santa Fe: agregarle « en Pehuajó» no solo daba
+  «Accidente en Sunchales en Pehuajó», afirmaba que el hecho pasó en Pehuajó. Que
+  falte la localidad es una molestia; que diga la equivocada es un error publicado.
+
+---
+
+## Aire entre la foto y el pie
+
+El pie es el texto gris bajo una foto apaisada. Estaba pegado al filo de la foto y se
+leían como un solo bloque.
+
+El aire sale de la **foto**, no del texto, y eso costó dos intentos fallidos que
+conviene no repetir:
+
+1. Recortar la zona del pie → el pie **desapareció entero**: el hueco bajo una
+   apaisada es de unos 95 px y dos renglones lo llenan justo.
+2. Empujar el texto hacia abajo → no tenía a dónde, por lo mismo.
+
+Lo que funciona: dibujar la foto 28 px más corta. Sobre una foto de ~600 px es un 4%
+que no se ve; perder el pie sí se ve.
+
+---
+
 ## Cadencia de publicación: 5 minutos entre posteo y posteo
 
 Decidido por el editor. **No es estético**: subir cinco videos seguidos en el mismo
@@ -116,8 +182,13 @@ minuto es el patrón más fácil de reconocer que tiene una cuenta automatizada,
 redes lo tratan como spam antes de mirar el contenido. Espaciarlos hace que la tanda
 parezca una redacción trabajando y no un script vaciando una cola.
 
-Ya está construido, aunque el paso que publica todavía no exista: cada tanda deja
-escrito **a qué hora sale cada pieza**, en `_lote.json` y en el `.json` de cada una.
+**En las corridas manuales está apagado**, que es como corre esto hoy: una vista
+previa se mira toda junta, y ponerle horarios a algo que se revisa a mano solo
+confunde. Se enciende con `--cadencia`, y eso es lo que va a pasar el día que exista
+el paso que publica solo.
+
+Con el flag puesto, cada tanda deja escrito **a qué hora sale cada pieza**, en
+`_lote.json` y en el `.json` de cada una.
 
 ```
 apto=True  sale=13:47  Pergamino   Adolescente herido tras chocar con un auto...
