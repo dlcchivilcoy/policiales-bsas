@@ -13,8 +13,15 @@ se olvide de llamarlo es un bug visible y no una diferencia silenciosa entre la
 notebook y la nube.
 """
 import os
+import re
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
+
+# Un nombre de variable de entorno valido. Hace falta comprobarlo: os.environ tira
+# ValueError ante un nombre ilegal y se lleva puesta la corrida entera. Paso de
+# verdad, con un .env que habia quedado mal escrito — y el sintoma fue que no
+# arrancaba NADA, no que faltara una clave.
+_NOMBRE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 
 def cargar(ruta: str = None) -> int:
@@ -26,7 +33,7 @@ def cargar(ruta: str = None) -> int:
     ruta = ruta or os.path.join(RAIZ, ".env")
     if not os.path.exists(ruta):
         return 0
-    puestas = 0
+    puestas, malas = 0, []
     with open(ruta, encoding="utf-8") as f:
         for linea in f:
             linea = linea.strip()
@@ -36,9 +43,17 @@ def cargar(ruta: str = None) -> int:
             k, v = k.strip(), v.strip().strip('"').strip("'")
             if not v:                      # los huecos del template no cuentan
                 continue
+            if not _NOMBRE.match(k):
+                # Una linea rota se saltea y se avisa, pero la corrida sigue: perder
+                # una variable es un problema, no arrancar es otro mucho peor.
+                malas.append(k[:40] or "(vacio)")
+                continue
             if k not in os.environ:
                 os.environ[k] = v
                 puestas += 1
+    if malas:
+        print(f"(.env: {len(malas)} linea(s) con nombre invalido, salteadas: "
+              f"{', '.join(malas[:3])}{'...' if len(malas) > 3 else ''})")
     return puestas
 
 
