@@ -11,11 +11,22 @@ name: Reels de policiales
 # scraper/run.py (pide la variable CLASIFICADOR_IA_AUTORIZADO). La IA que SÍ se usa es la
 # de los guiones, con el cupo gratis de Gemini.
 
+# ⛔ AUTOMATIZACION APAGADA A PEDIDO DEL EDITOR (22/09/2026)
+#
+# Las 3 pasadas diarias estan COMENTADAS, no borradas. El motivo no es tecnico: la
+# clave de Gemini es PAGA y cada pasada la usa, asi que mientras se esta evaluando
+# como quedan los reels no tiene sentido que el sistema corra solo tres veces por
+# dia gastando plata y minutos.
+#
+# Hoy esto SOLO corre cuando alguien aprieta "Run workflow" a mano.
+#
+# Para volver a encenderlo: descomentar las 4 lineas de abajo. Nada mas. El resto
+# del workflow —ledger, avisos, borrado a las 24h— ya esta probado y funcionando.
 on:
-  schedule:
-    - cron: "0 13 * * *"    # 10:00 Argentina
-    - cron: "0 20 * * *"    # 17:00 Argentina
-    - cron: "0 23 * * *"    # 20:00 Argentina
+  # schedule:
+  #   - cron: "0 13 * * *"    # 10:00 Argentina
+  #   - cron: "0 20 * * *"    # 17:00 Argentina
+  #   - cron: "0 23 * * *"    # 20:00 Argentina
   workflow_dispatch:
     inputs:
       cuantos:
