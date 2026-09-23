@@ -90,6 +90,34 @@ def _tramo_nota(informe: dict, salida: Path, seg: float) -> Path:
     if not texto or not Path(texto).exists():
         raise FfmpegError("falta la capa de texto: hay que componer la placa con capas=True")
 
+    clip = informe.get("clip")
+    if clip and Path(clip).exists():
+        # Video de verdad en lugar de la foto con zoom. El clip se recorta a la caja
+        # de la imagen igual que lo haria una foto: se agranda hasta tapar la caja y
+        # se corta lo que sobra, asi nunca quedan bandas negras a los costados.
+        #
+        # -stream_loop -1 es para los clips CORTOS: si el medio subio 4 segundos y el
+        # tramo dura 8, sin esto el video se congela en el ultimo cuadro y parece que
+        # se colgo. Loopeando, sigue en movimiento hasta el final.
+        #
+        # Sin audio (-an) a proposito: el cierre es una placa muda, y pegar un tramo
+        # con sonido a uno sin sonido deja el reel con audio a la mitad. Es una
+        # decision a revisar el dia que se quiera aprovechar el sonido original.
+        entradas = ["-stream_loop", "-1", "-t", f"{seg:.3f}", "-i", str(clip),
+                    "-loop", "1", "-t", f"{seg:.3f}", "-i", str(fondo),
+                    "-loop", "1", "-t", f"{seg:.3f}", "-i", str(texto)]
+        filtro = (
+            f"[0:v]scale={M.W}:{alto_img}:force_original_aspect_ratio=increase,"
+            f"crop={M.W}:{alto_img},fps={FPS},setsar=1,setpts=PTS-STARTPTS[mov];"
+            f"[1:v]scale={M.W}:{M.H},setsar=1[bg];"
+            f"[bg][mov]overlay=0:{y_img}:shortest=1[conf];"
+            f"[conf][2:v]overlay=0:0[out]"
+        )
+        cmd = _salida([ff, "-y", *entradas, "-filter_complex", filtro,
+                       "-map", "[out]", "-an", "-t", f"{seg:.3f}"]) + [str(salida)]
+        _correr(cmd, "tramo de la nota (con video)")
+        return salida
+
     if foto and Path(foto).exists():
         # zoompan trabaja sobre UNA imagen y saca `d` cuadros de ella, acercándose de a
         # poco. Se parte de la foto al doble de tamaño para que el acercamiento no la
@@ -116,6 +144,30 @@ def _tramo_nota(informe: dict, salida: Path, seg: float) -> Path:
                    "-map", "[out]", "-t", f"{seg:.3f}"]) + [str(salida)]
     _correr(cmd, "tramo de la nota")
     return salida
+
+
+def primer_cuadro(clip: Path, destino: Path) -> Path | None:
+    """Saca un cuadro del clip para usarlo como si fuera la foto de la nota.
+
+    Hace falta porque la placa se compone sobre una IMAGEN: de ahi salen el color
+    dominante del fondo y la altura de la caja. Sin esto habria que duplicar toda esa
+    logica para el caso del video.
+
+    Se toma el segundo 1 y no el 0: el primer cuadro de un video suele ser negro o el
+    fundido de entrada, y de un cuadro negro sale un fondo negro.
+    """
+    try:
+        cmd = [ffmpeg_exe(), "-y", "-ss", "1", "-i", str(clip), "-frames:v", "1",
+               "-q:v", "2", str(destino)]
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode == 0 and destino.exists() and destino.stat().st_size > 0:
+            return destino
+        # Clip de menos de un segundo: se reintenta desde el principio.
+        cmd[cmd.index("-ss") + 1] = "0"
+        subprocess.run(cmd, capture_output=True, text=True)
+        return destino if destino.exists() and destino.stat().st_size > 0 else None
+    except Exception:
+        return None
 
 
 def _tramo_cierre(salida: Path, seg: float) -> Path | None:
@@ -177,6 +229,7 @@ def armar(informe: dict, salida: Path, *, seg_nota: float = SEG_NOTA,
         "peso_kb": round(salida.stat().st_size / 1024) if salida.exists() else 0,
         "tramos": tramos,
         "con_foto": bool(informe.get("capa_foto")),
+        "con_video": bool(informe.get("clip")),
     }
 
 

@@ -549,10 +549,48 @@ _CUERPO_RE = re.compile(
     r"post-body|cuerponota|nota-cuerpo|contenido-nota|texto-nota")
 
 
+# Extensiones que ffmpeg puede tomar directamente de una URL. Se deja afuera .m3u8
+# (HLS) a proposito: es un manifiesto con cientos de trocitos, tarda y se corta.
+_VIDEO_EXT = (".mp4", ".webm", ".mov", ".m4v")
+
+
+def _video_del_html(soup, base):
+    """La URL del video PROPIO de la nota, o None.
+
+    Solo videos alojados por el medio, que son los que se pueden bajar con una
+    peticion normal y los que el medio efectivamente filmo. Un iframe de YouTube o
+    un embed de Facebook NO cuentan: no se bajan asi, y ademas son de otro.
+
+    Se busca en este orden:
+      1. og:video / og:video:url — la forma estandar de declararlo, y la que usan
+         los sitios con plugin de video.
+      2. <video src> y <video><source src> — el reproductor puesto a mano.
+    """
+    for prop in ("og:video:secure_url", "og:video:url", "og:video"):
+        m = soup.find("meta", attrs={"property": prop}) or \
+            soup.find("meta", attrs={"name": prop})
+        if m and m.get("content"):
+            u = urljoin(base, m["content"].strip())
+            if any(e in u.lower() for e in _VIDEO_EXT):
+                return u
+
+    for tag in soup.find_all("video"):
+        cands = [tag.get("src")]
+        cands += [f.get("src") for f in tag.find_all("source")]
+        for c in cands:
+            if not c:
+                continue
+            u = urljoin(base, c.strip())
+            if any(e in u.lower() for e in _VIDEO_EXT):
+                return u
+    return None
+
+
 def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
     """Baja la nota una sola vez y devuelve cuerpo + fecha + imagen.
     `ok` False significa que la URL murio (404/error): esa nota no se guarda."""
-    vacio = {"ok": False, "cuerpo": "", "descripcion": "", "publicado": None, "imagen": None}
+    vacio = {"ok": False, "cuerpo": "", "descripcion": "", "publicado": None,
+             "imagen": None, "video": None}
     try:
         html, _ = obtener_html(url, permitir_navegador, timeout)
         if not html:
@@ -560,6 +598,9 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         soup = BeautifulSoup(html, "html.parser")
         publicado = _fecha_del_html(soup) or _fecha_de_url(url)
         imagen = _imagen_del_html(soup, url)
+        # El video se busca ANTES de vaciar el <head> y los <script>, porque el
+        # og:video vive en el head y mas abajo se desarma todo para sacar el cuerpo.
+        video = _video_del_html(soup, url)
 
         for tag in soup.find_all(["script", "style", "nav", "header", "footer", "aside", "form"]):
             tag.decompose()
@@ -578,7 +619,7 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         if not cuerpo:
             cuerpo = descripcion
         return {"ok": True, "cuerpo": cuerpo, "descripcion": descripcion,
-                "publicado": publicado, "imagen": imagen}
+                "publicado": publicado, "imagen": imagen, "video": video}
     except Exception:
         return vacio
 

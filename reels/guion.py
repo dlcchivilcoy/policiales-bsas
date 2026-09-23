@@ -440,6 +440,44 @@ def _norm_frase(t: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", _sin_tildes((t or "").lower())).strip()
 
 
+def _localidad_nombrada(texto: str, distinta_de: str = "") -> str:
+    """La localidad del padron que nombra el texto, si nombra UNA SOLA.
+
+    Con dos o mas no se puede decidir —«Robaron en Chacabuco y cayeron en Junin»
+    habla de las dos— y ahi se prefiere no tocar nada. Con ninguna, tampoco.
+    """
+    from scraper.medios import LOCALIDADES
+    plano = _sin_tildes((texto or "").lower())
+    nombradas = []
+    for loc in LOCALIDADES:
+        bonito = nombre_localidad(loc)
+        if _sin_tildes(bonito.lower()) in plano and bonito not in nombradas:
+            nombradas.append(bonito)
+    if len(nombradas) == 1 and nombradas[0] != distinta_de:
+        return nombradas[0]
+    return ""
+
+
+def localidad_de_la_nota(nota: dict) -> tuple:
+    """(localidad, aviso) del HECHO, leida del titular original de la nota.
+
+    Por que del titular de la NOTA y no del guion: porque hay que saberlo ANTES de
+    redactar. La localidad entra en la volanta de la placa y en el material que lee
+    el modelo; si se resuelve despues, la placa ya salio diciendo otra cosa.
+
+    Un medio de 9 de Julio publica la prision preventiva de un concejal de Bragado y
+    la pieza salia con la volanta «Narcotrafico en 9 de Julio». No es un detalle de
+    forma: al lector de 9 de Julio se le esta diciendo que el hecho es de su ciudad.
+    """
+    del_medio = nombre_localidad(nota.get("localidad_medio") or nota.get("localidad") or "")
+    titulo = limpiar_titular(nota.get("titulo") or "")
+    otra = _localidad_nombrada(titulo, distinta_de=del_medio)
+    if otra:
+        return otra, (f"El hecho es de {otra} pero el medio es de {del_medio}: "
+                      f"la pieza se arma como de {otra}.")
+    return del_medio, ""
+
+
 def localidad_del_hecho(guion: dict, nota: dict) -> tuple:
     """Devuelve (localidad, aviso). La del hecho, no la del medio que lo publico.
 
@@ -501,7 +539,8 @@ def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
     # en la atribución, porque ahí se está diciendo quién lo publicó: poner la del
     # hecho daba «Fuente: Diario Democracia (Pergamino)», y Democracia es de
     # Chacabuco — atribuirle una ciudad que no es la suya.
-    localidad, _aviso = localidad_del_hecho(guion, nota)
+    # `nota["localidad"]` ya es la del hecho: generar() la resolvió antes de redactar.
+    localidad = nombre_localidad(nota.get("localidad") or nota.get("localidad_medio") or "")
     del_medio = nombre_localidad(nota.get("localidad_medio") or "")
     medio = nota.get("medio") or ""
     if medio:
@@ -527,7 +566,17 @@ def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
 
 
 def generar(nota: dict, usar_ia: bool = True, preferir: str = "", sitio: str = "") -> dict:
-    """Guion completo + descripción lista para publicar."""
+    """Guion completo + descripción lista para publicar.
+
+    Lo PRIMERO es resolver de qué localidad es el hecho, porque de eso dependen la
+    volanta de la placa, lo que lee el modelo y el hashtag del posteo. Resolverlo
+    después alcanzaba solo a la descripción y dejaba la placa mintiendo.
+    """
+    loc, aviso = localidad_de_la_nota(nota)
+    nota = dict(nota, localidad=loc)
+
     g = guion_ia(nota, preferir) if usar_ia else guion_simple(nota)
     g["descripcion_final"] = descripcion_tiktok(g, nota, sitio)
+    g["localidad_hecho"] = loc
+    g["aviso_localidad"] = aviso
     return g

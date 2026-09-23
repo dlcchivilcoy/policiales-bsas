@@ -103,6 +103,26 @@ def ya_hecha(nota: dict, hechos: dict = None) -> bool:
     return any(_se_parecen(h, otra) for otra in _huellas_recordadas(hechos))
 
 
+def filtrar_tanda(notas: list) -> tuple:
+    """Saca las que repiten un hecho YA PRESENTE en la misma lista, sin mirar la
+    memoria. Devuelve (unicas, cuantas se saltearon).
+
+    Existe aparte de filtrar() porque son dos controles distintos que se confundian
+    en uno: --sin-ledger apagaba la memoria entre pasadas y, de paso, este. Y este
+    hace falta siempre. En una tanda entran los dos medios de una localidad y los
+    regionales de al lado, asi que el mismo hecho llega por varias puertas: el
+    femicidio de Pergamino aparecio por el medio de Chacabuco y por el de Pergamino,
+    y salieron los dos reels."""
+    huellas, unicas = [], []
+    for n in notas:
+        h = _huella(n)
+        if any(_se_parecen(h, otra) for otra in huellas):
+            continue
+        huellas.append(h)
+        unicas.append(n)
+    return unicas, len(notas) - len(unicas)
+
+
 def filtrar(notas: list) -> tuple:
     """Saca las que ya tuvieron reel. Devuelve (pendientes, cuantas se saltearon).
 

@@ -37,6 +37,16 @@ CASOS = [
     ("Capacitación para comerciantes sobre prevención de estafas", False),
     ("Aumentó la venta de vehículos usados en la región", False),
     ("Simulacro de evacuación en la escuela primaria", False),
+    # --- titulos de obras y presentaciones: la trampa del 22/09 ---
+    # Una obra llamada "Infancias Robadas" dispara "robadas" en el titular y entraba
+    # como policial. Se resolvio moviendo los verbos de presentacion a los apagadores
+    # FUERTES, que se aplican aunque haya una palabra policial en el titulo.
+    ("Chacabuco “Infancias Robadas” fue presentado en la Casa de la Cultura", False),
+    ("Presentaron la obra Infancias Robadas en la Casa de la Cultura", False),
+    ("Presento su libro sobre el crimen que conmovio al pueblo", False),
+    # Pero la Casa de la Cultura si puede ser escenario de un hecho.
+    ("Robo en la Casa de la Cultura: se llevaron equipos de sonido", True),
+    ("Se preparaba para ir a trabajar y le robaron la bicicleta del patio", True),
 ]
 
 if __name__ == "__main__":

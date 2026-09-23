@@ -69,6 +69,17 @@ def _puntaje(nota: dict) -> float:
     return p
 
 
+# Puntaje mínimo para entrar en la segunda vuelta. El umbral del diccionario es 5 y
+# sirve para "revisá esto"; para OCUPAR un lugar en la tanda hace falta más margen.
+UMBRAL_RELLENO = 8
+
+# Cuánto del titular más corto tiene que estar contenido en el otro para darlos por el
+# mismo hecho, entre notas de la MISMA localidad. 0,40 salió de medir el caso real:
+# el par de Bragado da 0,43 y dos hechos distintos de una misma localidad rara vez
+# pasan de 0,25.
+CONTENCION_MISMA_LOCALIDAD = 0.40
+
+
 def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
     """Las mejores `cuantos` notas para hacer reel, sin repetir localidad si se puede.
 
@@ -84,18 +95,67 @@ def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
     ordenadas = sorted(notas, key=_puntaje, reverse=True)
     elegidas, vistas = [], set()
     for n in ordenadas:                      # primera vuelta: una por localidad
-        loc = (n.get("localidad_medio") or "").lower()
+        # La del HECHO, no la del medio. Esto además resuelve solo un problema que el
+        # parecido de titulares no alcanzaba a resolver: cuando dos medios de pueblos
+        # distintos cubren el MISMO hecho, los titulares pueden no parecerse en nada
+        # —«Dictan prisión preventiva al edil libertario» y «Prisión preventiva para
+        # el concejal de Bragado acusado de vender drogas» comparten tres palabras—
+        # pero los dos son de Bragado, y la regla de una por localidad deja pasar uno
+        # solo. Repartiendo por el medio, los dos entraban como localidades distintas.
+        loc = (n.get("localidad") or n.get("localidad_medio") or "").lower()
         if loc in vistas:
             continue
         vistas.add(loc)
         elegidas.append(n)
         if len(elegidas) >= cuantos:
             return elegidas
-    for n in ordenadas:                      # segunda: completar si faltan
-        if n not in elegidas:
-            elegidas.append(n)
+    # Segunda vuelta: completar con una segunda nota de alguna localidad ya usada.
+    # Acá hay que ser MÁS exigente que en la primera, no menos, porque lo que entra
+    # es lo que quedó abajo en el orden. Sin esto, pedir 14 reels un día que hay 11
+    # notas buenas metía las tres peores: en la prueba del 22/09 entró «Presentaron
+    # la obra Infancias Robadas en la Casa de la Cultura» —que pasó el diccionario
+    # porque la OBRA se llama «Robadas»— y el mismo hecho de Bragado dos veces.
+    from reels import ledger as _LD
+    huellas = [_LD._huella(n) for n in elegidas]
+
+    for n in ordenadas:
         if len(elegidas) >= cuantos:
             break
+        if n in elegidas:
+            continue
+
+        # (a) Solo lo que el diccionario dio por policial con holgura. Lo que entró
+        #     raspando el umbral no merece un lugar cuando ya hay material mejor.
+        if (n.get("score_keywords") or 0) < UMBRAL_RELLENO:
+            continue
+
+        # (b) Y que no sea un hecho que ya está en la tanda. Dos medios distintos
+        #     titulan el mismo hecho muy distinto —«Dictan prisión preventiva al edil
+        #     libertario Díaz» y «Prisión preventiva para el concejal de Bragado
+        #     acusado de vender drogas» comparten tres palabras de trece— así que el
+        #     parecido general no alcanza. Lo que sí discrimina es que esas tres
+        #     palabras son las DISTINTIVAS: acá se mide cuánto del titular más corto
+        #     está contenido en el otro, y solo entre notas de la misma localidad,
+        #     donde dos hechos del mismo día que comparten casi todo el vocabulario
+        #     casi siempre son el mismo hecho contado dos veces.
+        h = _LD._huella(n)
+        loc_n = (n.get("localidad") or n.get("localidad_medio") or "").lower()
+        repetida = False
+        for m, hm in zip(elegidas, huellas):
+            loc_m = (m.get("localidad") or m.get("localidad_medio") or "").lower()
+            if _LD._se_parecen(h, hm):
+                repetida = True
+                break
+            if loc_n and loc_n == loc_m and len(h) >= 4 and len(hm) >= 4:
+                contencion = len(h & hm) / min(len(h), len(hm))
+                if contencion >= CONTENCION_MISMA_LOCALIDAD:
+                    repetida = True
+                    break
+        if repetida:
+            continue
+
+        elegidas.append(n)
+        huellas.append(h)
     return elegidas
 
 
@@ -110,6 +170,42 @@ def _bajar_foto(url: str, destino: Path) -> Path | None:
         destino.write_bytes(r.content)
         return destino
     except Exception:
+        return None
+
+
+# Tope de descarga del video. Un clip de nota local pesa 2-15 MB; arriba de esto
+# suele ser una pelicula entera mal enlazada o un stream, y no vale la pena esperarlo
+# para despues usar 8 segundos.
+MAX_VIDEO_MB = 60
+
+
+def _bajar_video(url: str, destino: Path) -> Path | None:
+    """Baja el video de la nota, si pesa lo razonable.
+
+    Se descarga por trozos y mirando el tamaño a medida que entra, porque el
+    Content-Length miente o no viene: sin el corte, una URL mal puesta puede tener
+    a la corrida bajando cientos de megas.
+    """
+    if not url:
+        return None
+    try:
+        tope = MAX_VIDEO_MB * 1024 * 1024
+        with httpx.stream("GET", url, timeout=60, follow_redirects=True,
+                          headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}) as r:
+            if r.status_code >= 400:
+                return None
+            total = 0
+            with open(destino, "wb") as fh:
+                for trozo in r.iter_bytes(65536):
+                    total += len(trozo)
+                    if total > tope:
+                        fh.close()
+                        destino.unlink(missing_ok=True)
+                        return None
+                    fh.write(trozo)
+        return destino if total > 10240 else None     # menos de 10 KB no es un video
+    except Exception:
+        destino.unlink(missing_ok=True)
         return None
 
 
@@ -143,21 +239,48 @@ def material(nota: dict) -> dict:
 def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
              hacer_video: bool = True, preferir: str = "") -> dict:
     """Una nota → guion + placa + descripción. Devuelve el informe de la pieza."""
+    # La imagen PRIMERO y el guion después, aunque parezca al revés. Si la nota se
+    # queda sin imagen, la pieza no se arma; redactando antes se habría gastado una
+    # llamada a la IA para un guion que nadie va a usar.
+    #
+    # El VIDEO tiene prioridad sobre la foto: un reel con imágenes en movimiento
+    # retiene mucho más que una foto quieta con zoom. Si el medio publicó uno propio,
+    # ese va al reel y la foto queda de respaldo.
+    tmp_dir = Path(tempfile.gettempdir())
+    clip = _bajar_video(nota.get("video") or "", tmp_dir / f"reel_clip_{idx}.mp4")
+
+    tmp = tmp_dir / f"reel_foto_{idx}.jpg"
+    foto = None
+    if clip:
+        # La placa se compone sobre una imagen: de ahí salen el color del fondo y la
+        # altura de la caja. Con video, esa imagen es un cuadro del propio clip, así
+        # el fondo combina con lo que se ve moverse.
+        foto = V.primer_cuadro(clip, tmp)
+    if not foto:
+        foto = _bajar_foto(nota.get("imagen") or "", tmp)
+
+    # El filtro de la tanda mira que la nota DECLARE una imagen; esto comprueba que la
+    # imagen realmente se pueda bajar. Un enlace roto o un 403 dejan la placa igual de
+    # vacía que no tener foto, así que la pieza no se arma.
+    if not foto and not clip:
+        return {"orden": idx, "descartada": True,
+                "por_que_no": "La imagen que declara la nota no se pudo bajar.",
+                "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                "titulo": nota.get("titulo"), "url_original": nota.get("url")}
+
     nota = material(nota)
     g = G.generar(nota, usar_ia=usar_ia, preferir=preferir, sitio=SITIO)
-
-    tmp = Path(tempfile.gettempdir()) / f"reel_foto_{idx}.jpg"
-    foto = _bajar_foto(nota.get("imagen") or "", tmp)
 
     nombre = f"{idx:02d}_{_slug(nota.get('localidad_medio'))}_{_slug(g['titular'], 30)}"
     img = carpeta / f"{nombre}.jpg"
     informe = P.componer(g, foto, img, capas=hacer_video)
+    if clip:
+        informe["clip"] = str(clip)
     avisos = P.auditar(informe)
-    # Que el hecho sea de otra localidad que la del medio no rompe la pieza, pero
-    # hay que verlo: cambia el hashtag y el 'Mas noticias de' del posteo.
-    _loc_hecho, _aviso_loc = G.localidad_del_hecho(g, nota)
-    if _aviso_loc:
-        avisos.append(_aviso_loc)
+    # Que el hecho sea de otra localidad que la del medio no rompe la pieza, pero hay
+    # que verlo: cambia la volanta, el hashtag y el "Más noticias de" del posteo.
+    if g.get("aviso_localidad"):
+        avisos.append(g["aviso_localidad"])
 
     vid = None
     if hacer_video:
@@ -200,6 +323,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "puntaje": round(_puntaje(nota), 1),
         "url_original": nota.get("url"),
         "tenia_foto": bool(foto),
+        "tenia_video": bool(clip),
         "guion": {k: g[k] for k in ("volanta", "titular", "bajada", "zocalo", "pie", "via")},
         "descripcion_tiktok": g["descripcion_final"],
         "placa": str(img),
@@ -250,13 +374,44 @@ def main():
 
     notas = json.loads(entrada.read_text(encoding="utf-8"))["notas"]
     print(f"=== FASE 1 — generación de reels (NO se publica nada) ===")
-    print(f"Entrada: {entrada.name} ({len(notas)} notas policiales)\n")
+    print(f"Entrada: {entrada.name} ({len(notas)} notas policiales)")
+
+    # Sin imagen ni video no hay reel que valga. La placa queda con media pantalla
+    # vacía —se ve como un armado a medio hacer— y el .mp4 pesa 330 KB contra 800 de
+    # una con foto, porque es casi todo fondo liso. En la tanda del 22/09 pasó en 3
+    # de 14 y las tres salieron marcadas listas para publicar.
+    #
+    # Se descartan ACÁ, antes de elegir, y no al final: así no ocupan uno de los
+    # lugares de la tanda ni gastan una llamada a la IA para un guion que no se usa.
+    # De qué localidad es cada hecho, antes de repartir. Sin esto, una nota de
+    # Pergamino publicada por un medio de Chacabuco ocupa el lugar de Chacabuco.
+    notas = [dict(n, localidad=G.localidad_de_la_nota(n)[0]) for n in notas]
+
+    con_material = [n for n in notas if (n.get("imagen") or n.get("video"))]
+    sin_material = len(notas) - len(con_material)
+    if sin_material:
+        print(f"{sin_material} nota(s) descartadas por no tener ni foto ni video.")
+    notas = con_material
+    if not notas:
+        print("Ninguna nota de la tanda trae imagen: no hay nada que armar.")
+        return 0
+    print()
 
     # Memoria entre pasadas: las tres corridas del dia miran ventanas que se superponen,
     # asi que sin esto la nota fuerte de la manana volveria a salir a la tarde y a la noche.
     if args.sin_ledger:
-        print("--sin-ledger: no se consulta la memoria de notas ya usadas.")
-        candidatas = notas
+        # --sin-ledger apaga la MEMORIA entre pasadas, no el dedup de esta tanda. Son
+        # dos cosas distintas y confundirlas se vio en la vista previa del 22/09: la
+        # misma nota del femicidio de Pergamino salio dos veces, una por el medio de
+        # Chacabuco y otra por el de Pergamino, y la prision preventiva del concejal de
+        # Bragado tambien, desde 9 de Julio y desde Carlos Casares. Cuatro de catorce
+        # piezas eran dos hechos repetidos.
+        print("--sin-ledger: no se consulta la memoria de pasadas anteriores "
+              "(el dedup dentro de esta tanda sigue activo).")
+        candidatas, repetidas = LD.filtrar_tanda(notas)
+        if repetidas:
+            print(f"{repetidas} nota(s) salteadas por ser el mismo hecho que otra de "
+                  f"esta misma tanda.")
     else:
         candidatas, repetidas = LD.filtrar(notas)
         print(f"Memoria: {LD.resumen()}" +
@@ -271,12 +426,17 @@ def main():
     carpeta = SALIDA_REELS / sello
     carpeta.mkdir(parents=True, exist_ok=True)
 
-    piezas = []
+    piezas, descartadas = [], []
     for i, nota in enumerate(elegidas, 1):
         print(f"[{i}/{len(elegidas)}] {nota.get('localidad_medio', '?')} — "
               f"{(nota.get('titulo') or '')[:58]}")
         pieza = procesar(nota, carpeta, args.con_ia, i, hacer_video=not args.sin_video,
                          preferir=args.proveedor)
+        if pieza.get("descartada"):
+            # No se le hizo guion ni placa: no hay nada que mostrar más que el motivo.
+            descartadas.append(pieza)
+            print(f"      DESCARTADA — {pieza['por_que_no']}\n")
+            continue
         piezas.append(pieza)
         g = pieza["guion"]
         print(f"      volanta : {g['volanta']}")
@@ -300,12 +460,22 @@ def main():
         "publicado": False,
         "nota": "FASE 1: piezas generadas para revisión. No se subió nada a ninguna red.",
         "piezas": piezas,
+        # Las que no llegaron a armarse quedan anotadas igual: una nota que desaparece
+        # sin dejar rastro es indistinguible de una que nunca existió.
+        "descartadas": descartadas,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if not args.sin_ledger:
         # Se anota DESPUES de que las piezas salieron, no antes: si la corrida se cae a la
         # mitad, las notas que no llegaron a tener reel tienen que poder reintentarse.
-        con_pieza = [n for n, p in zip(elegidas, piezas) if p.get("placa")]
+        #
+        # Se casa por URL y no con zip(elegidas, piezas). Desde que una nota puede
+        # descartarse, las dos listas ya no van en paralelo: el zip emparejaría cada
+        # nota con la pieza de OTRA y el ledger anotaría como hechas notas que no se
+        # hicieron — que además se perderían para siempre, porque el ledger no las
+        # volvería a ofrecer.
+        hechas = {p.get("url_original") for p in piezas if p.get("placa")}
+        con_pieza = [n for n in elegidas if n.get("url") in hechas]
         total = LD.registrar(con_pieza)
         print(f"Memoria actualizada: {len(con_pieza)} nota(s) anotadas, {total} en total")
 
@@ -322,6 +492,11 @@ def main():
         if barrido["mb_total"]:
             print(f"Limpieza: {barrido['mb_total']} MB de corridas con más de "
                   f"{args.conservar_dias} día(s)")
+
+    if descartadas:
+        print(f"{len(descartadas)} nota(s) descartadas al armar (imagen que no bajó):")
+        for d in descartadas:
+            print(f"   - {str(d.get('localidad'))[:14]:<14} {str(d.get('titulo'))[:56]}")
 
     print(f"=== {len(piezas)} placas en {carpeta} ===")
     print("No se publicó nada. Revisá las imágenes y los .json antes del próximo paso.")

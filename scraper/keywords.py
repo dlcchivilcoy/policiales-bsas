@@ -72,6 +72,16 @@ DEBILES = [
 #    usos figurados o actos institucionales donde la palabra fuerte es justamente
 #    la que esta de adorno.
 APAGADORES_FUERTES = [
+    # Verbos de PRESENTACION. Van entre los fuertes —que se aplican aunque el titular
+    # traiga una palabra policial— porque el caso que resuelven es justamente ese: una
+    # obra llamada "Infancias Robadas" dispara "robadas" en el titulo, y como apagador
+    # de contexto quedaba anulado y la nota entraba como policial. Son frases que no
+    # aparecen en la cronica de un hecho: nadie escribe "fue presentado en" sobre un
+    # robo. "casa de la cultura" queda aparte, como contexto, porque un robo EN la Casa
+    # de la Cultura si es policial.
+    "fue presentado en", "presentaron la obra", "presento su libro",
+    "presentacion del libro", "obra de teatro",
+
     "se robo el show", "robo la escena", "le robo el protagonismo", "robo de balones",
     "robo de pelota", "incendio de pasiones", "choque de opiniones",
     "homenaje", "aniversario", "desfile", "colecta", "rifa",
@@ -88,6 +98,13 @@ APAGADORES_FUERTES = [
 APAGADORES_CONTEXTO = [
     "gol", "goles", "torneo", "campeonato", "campeon", "hinchada", "futbol",
     "basquet", "sorteo", "acv",
+    # Presentaciones culturales. Una obra puede llamarse "Infancias Robadas" y ese
+    # titulo dispara "robadas" el solo: la nota es de la Casa de la Cultura, no un
+    # hecho policial. Van como apagadores de CONTEXTO y no fuertes a proposito: si el
+    # titular trae ademas una palabra fuerte de verdad, gana la palabra fuerte. Una
+    # charla sobre abuso en la Casa de la Cultura no es policial; un robo EN la Casa
+    # de la Cultura, si.
+    "casa de la cultura", "muestra fotografica", "documental", "ciclo de cine",
 ]
 
 APAGADORES = APAGADORES_FUERTES + APAGADORES_CONTEXTO

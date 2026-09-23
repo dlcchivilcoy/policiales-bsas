@@ -100,12 +100,13 @@ def _listar(url, rss, limite, nav):
 def recolectar(medio, ventana, usar_navegador):
     """Lista las notas de un medio y se queda con las que huelen a policial.
 
-    Mira DOS fuentes y no una:
+    Mira TRES fuentes y no una:
 
-      - la seccion de policiales, que viene acotada al rubro; y
-      - la home / ultimas noticias, que es donde esta la actualidad.
+      - la seccion de policiales, que viene acotada al rubro;
+      - el feed general de ultimas noticias; y
+      - la PORTADA raspada del HTML, que no es lo mismo que el feed.
 
-    Las dos, siempre, aunque el medio tenga seccion. La razon es que en estos
+    Las tres, siempre, aunque el medio tenga seccion. La razon es que en estos
     diarios la seccion se actualiza tarde y a mano: la nota sale primero en la
     portada y recien despues alguien la categoriza, si se acuerda. Un medio puede
     tener la seccion de policiales parada hace una semana y estar publicando un
@@ -130,10 +131,23 @@ def recolectar(medio, ventana, usar_navegador):
         if err:
             errores.append(f"seccion: {err}")
 
-    notas_home, err = _listar(medio["base"], medio["rss"], LIMITE_POR_MEDIO, nav)
-    fuentes.append(("home", notas_home, False))
+    # El feed general: es la lista de "últimas noticias" que publica el propio medio.
+    notas_feed, err = _listar(medio["base"], medio["rss"], LIMITE_POR_MEDIO, nav)
+    fuentes.append(("feed", notas_feed, False))
     if err:
-        errores.append(f"home: {err}")
+        errores.append(f"feed: {err}")
+
+    # Y la PORTADA en sí, raspando el HTML. Es una fuente aparte del feed y no un
+    # respaldo: cuando el medio tiene RSS, `_listar` se queda con el feed y nunca
+    # llega a mirar la portada. Y no son lo mismo — varios de estos CMS dejan
+    # categorías enteras afuera del feed, o lo publican recortado a 10 items
+    # mientras la portada muestra 40. La nota de hace media hora suele estar
+    # arriba de todo en la portada antes que en ningún otro lado.
+    if medio["rss"]:
+        notas_portada, err = _listar(medio["base"], None, LIMITE_POR_MEDIO, nav)
+        fuentes.append(("portada", notas_portada, False))
+        if err:
+            errores.append(f"portada: {err}")
 
     # Una nota que esta en las dos fuentes se queda con la version de la seccion,
     # que es la que trae la marca de confiable.
@@ -199,6 +213,9 @@ def completar_detalle(nota):
     nota["cuerpo"] = d["cuerpo"] or nota.get("copete", "")
     nota["publicado"] = nota.get("publicado") or d["publicado"]
     nota["imagen"] = nota.get("imagen") or d["imagen"]
+    # El video PROPIO del medio, si lo hay. Se prefiere sobre la foto al armar el reel:
+    # un reel con imagenes en movimiento retiene mucho mas que una foto quieta con zoom.
+    nota["video"] = nota.get("video") or d.get("video")
     return nota
 
 
@@ -208,7 +225,7 @@ def escribir(notas, etiqueta):
 
     campos = ["localidad", "localidad_medio", "medio", "dominio", "tipo", "gravedad",
               "victimas", "detenidos", "titulo", "resumen", "publicado", "url",
-              "imagen", "score_keywords"]
+              "imagen", "video", "score_keywords"]
     with open(base + ".csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=campos, extrasaction="ignore")
         w.writeheader()
