@@ -79,13 +79,16 @@ REGLAS DE REDACCIÓN (obligatorias):
 - NO inventes datos, nombres, cifras ni lugares que no estén en el material.
 - Preservá los verbos de atribución: "según", "informó", "habría", "es investigado".
 - Si una persona está solo por sus iniciales o no está identificada, NO le pongas nombre.
+- MENORES DE 18: nunca el nombre, ni el apodo, ni el de sus familiares, ni la escuela,
+  ni víctimas ni acusados, aunque el medio de origen sí los nombre. La edad y el
+  parentesco sí van: «un adolescente de 15 años», «el hijo de la víctima».
 - Nada de adjetivos valorativos ni morbo: "murió", no "perdió trágicamente la vida".
 - Sin clickbait engañoso, sin MAYÚSCULAS sostenidas.
 - En causas abiertas, presunción de inocencia: "acusado de", "imputado por", nunca "el culpable".
 
 ZÓCALO (la placa de abajo, como en la tele):
 - MÁXIMO 5 PALABRAS. PRIORIDAD: si hay una persona identificada por su nombre (el protagonista
-  nombrado del hecho), poné su NOMBRE Y APELLIDO. SOLO si NO hay ninguna persona nombrada,
+  nombrado del hecho), poné su NOMBRE Y APELLIDO. Salvo que sea menor de 18: ahí va el hecho. SOLO si NO hay ninguna persona nombrada,
   poné de qué se trata el hecho en pocas palabras (ej. "Choque en Ruta 5", "Robo en un comercio").
 - NUNCA inventes un nombre. Ante la duda, poné el hecho.
 
