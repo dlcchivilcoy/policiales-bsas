@@ -80,6 +80,44 @@ UMBRAL_RELLENO = 8
 CONTENCION_MISMA_LOCALIDAD = 0.40
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# CADENCIA DE PUBLICACION
+# ─────────────────────────────────────────────────────────────────────────────
+# Cinco minutos entre posteo y posteo. No es una preferencia estetica: subir cinco
+# videos seguidos en el mismo minuto es el patron mas facil de reconocer que tiene
+# una cuenta automatizada, y las redes lo tratan como spam mucho antes de mirar el
+# contenido. Espaciarlos es lo que hace que una tanda parezca una redaccion
+# trabajando y no un script vaciando una cola.
+#
+# El plan se calcula ACA, al armar la tanda, aunque todavia no exista el paso que
+# publica. Dos razones: queda escrito en el lote —o sea que la pasada deja dicho a
+# que hora va cada pieza, y se puede revisar antes— y el dia que se conecte TikTok
+# el publicador solo tiene que leer `publicar_en`, no volver a decidir nada.
+MINUTOS_ENTRE_POSTEOS = 5
+
+
+def plan_de_publicacion(piezas: list, desde=None, minutos: int = MINUTOS_ENTRE_POSTEOS):
+    """Le pone hora de publicacion a cada pieza, separadas `minutos` entre si.
+
+    Solo entran las APTAS: una pieza con objeciones no ocupa un lugar en la cola.
+    Si se le diera hora igual, el publicador tendria que acordarse de saltearla, y
+    esa es justo la clase de detalle que se olvida.
+
+    Devuelve la cantidad de piezas agendadas. Modifica las piezas en el lugar.
+    """
+    from datetime import timedelta
+    desde = desde or datetime.now()
+    agendadas = 0
+    for p in piezas:
+        if not p.get("apto_para_publicar"):
+            p["publicar_en"] = None
+            continue
+        p["publicar_en"] = (desde + timedelta(minutes=minutos * agendadas)).isoformat(
+            timespec="minutes")
+        agendadas += 1
+    return agendadas
+
+
 def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
     """Las mejores `cuantos` notas para hacer reel, sin repetir localidad si se puede.
 
@@ -332,6 +370,11 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "y_imagen": informe.get("y_img"),
         "avisos": avisos,
     }
+    # La ruta queda guardada porque este archivo se reescribe mas tarde, cuando se
+    # calcula el plan de publicacion: la hora de cada pieza se sabe recien al final,
+    # con la tanda entera armada, y tiene que quedar tambien en el .json de la pieza
+    # y no solo en el lote.
+    pieza["_json"] = str(carpeta / f"{nombre}.json")
     (carpeta / f"{nombre}.json").write_text(
         json.dumps(pieza, ensure_ascii=False, indent=2), encoding="utf-8")
     return pieza
@@ -454,11 +497,23 @@ def main():
                 print(f"      ⚠ {a}")
         print()
 
+    agendadas = plan_de_publicacion(piezas)
+    for pz in piezas:                       # que la hora quede tambien en cada pieza
+        ruta = pz.pop("_json", None)
+        if ruta:
+            Path(ruta).write_text(json.dumps(pz, ensure_ascii=False, indent=2),
+                                  encoding="utf-8")
+    if agendadas:
+        ultima = max(p["publicar_en"] for p in piezas if p.get("publicar_en"))
+        print(f"Plan de publicación: {agendadas} pieza(s), una cada "
+              f"{MINUTOS_ENTRE_POSTEOS} minutos, la última {ultima[11:]}.")
+
     (carpeta / "_lote.json").write_text(json.dumps({
         "generado": datetime.now().isoformat(),
         "entrada": str(entrada),
         "publicado": False,
         "nota": "FASE 1: piezas generadas para revisión. No se subió nada a ninguna red.",
+        "minutos_entre_posteos": MINUTOS_ENTRE_POSTEOS,
         "piezas": piezas,
         # Las que no llegaron a armarse quedan anotadas igual: una nota que desaparece
         # sin dejar rastro es indistinguible de una que nunca existió.

@@ -115,6 +115,12 @@ def construir(carpeta):
         return None
 
     aptos = sum(1 for _, p in piezas if p.get("apto_para_publicar"))
+    # Los horarios salen del plan que arma reels/flujo.py: cinco minutos entre pieza
+    # y pieza, para que la cuenta no parezca un script vaciando una cola.
+    horas = sorted(p["publicar_en"] for _, p in piezas if p.get("publicar_en"))
+    cadencia = (f"Cuando se conecte la publicación, la tanda sale escalonada: "
+                f"de {horas[0][11:]} a {horas[-1][11:]}, una cada 5 minutos."
+                if len(horas) > 1 else "")
     tarjetas = []
     for base, p in piezas:
         g = p.get("guion", {})
@@ -131,7 +137,8 @@ def construir(carpeta):
     <div class="cab">
       <span class="loc">{e(str(p.get('localidad','')))}</span>
       <span class="badge {'si' if apto else 'no'}">
-        {'LISTO PARA TIKTOK' if apto else 'NO PUBLICABLE'}</span>
+        {('SALE ' + p['publicar_en'][11:]) if (apto and p.get('publicar_en'))
+         else ('LISTO PARA TIKTOK' if apto else 'NO PUBLICABLE')}</span>
     </div>
     <div class="medios">
       <a href="{e(jpg)}" target="_blank" title="abrir la placa en tamaño real">
@@ -171,7 +178,8 @@ def construir(carpeta):
 <div class="sub">{len(piezas)} piezas · {aptos} listas para publicar ·
   {len(piezas) - aptos} con objeciones</div>
 <div class="aviso"><strong>No se publicó nada.</strong> Esta página es para mirar cómo
-  quedarían los reels antes de que salgan. Vive en tu disco: no sube nada a ningún lado.</div>
+  quedarían los reels antes de que salgan. Vive en tu disco: no sube nada a ningún lado.
+  {cadencia}</div>
 <div class="grid">{''.join(tarjetas)}</div>
 <script>{JS}</script></body></html>"""
 

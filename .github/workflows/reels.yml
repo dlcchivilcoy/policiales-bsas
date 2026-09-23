@@ -49,6 +49,10 @@ jobs:
   generar:
     runs-on: ubuntu-latest
     timeout-minutes: 20       # si pasa de esto algo se colgó: cortar y no quemar minutos
+    # ⚠️ Cuando se agregue el paso que PUBLICA, revisar este número. La tanda sale
+    # escalonada a 5 minutos por pieza (ver CORRIDA_MANUAL.md): cinco piezas son 20
+    # minutos de espera y este tope las mataría justo antes de la última. O se sube,
+    # o el publicador corre aparte leyendo `publicar_en` de cada pieza.
 
     steps:
       - uses: actions/checkout@v4

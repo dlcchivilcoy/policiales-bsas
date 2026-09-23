@@ -109,6 +109,41 @@ otro.
 
 ---
 
+## Cadencia de publicación: 5 minutos entre posteo y posteo
+
+Decidido por el editor. **No es estético**: subir cinco videos seguidos en el mismo
+minuto es el patrón más fácil de reconocer que tiene una cuenta automatizada, y las
+redes lo tratan como spam antes de mirar el contenido. Espaciarlos hace que la tanda
+parezca una redacción trabajando y no un script vaciando una cola.
+
+Ya está construido, aunque el paso que publica todavía no exista: cada tanda deja
+escrito **a qué hora sale cada pieza**, en `_lote.json` y en el `.json` de cada una.
+
+```
+apto=True  sale=13:47  Pergamino   Adolescente herido tras chocar con un auto...
+apto=False sale=—      9 de Julio  (no se publica: no ocupa lugar en la cola)
+apto=True  sale=13:52  9 de Julio  Prisión preventiva para el concejal...
+apto=True  sale=13:57  Alberti     Cayó un hombre buscado por homicidio...
+```
+
+Las piezas con objeciones **no reciben horario**. Si se les diera uno igual, el
+publicador tendría que acordarse de saltearlas, y eso es justo lo que se olvida.
+
+El intervalo vive en una sola constante, `MINUTOS_ENTRE_POSTEOS` en
+`reels/flujo.py`. La galería muestra el horario en el badge de cada tarjeta.
+
+> **Para el día que se construya el posteo, dos cosas que hay que resolver ahí:**
+>
+> 1. **El job no puede simplemente dormir.** Cinco piezas a 5 minutos son 20
+>    minutos de espera, y el workflow tiene `timeout-minutes: 20` — lo mataría
+>    justo antes de la última. O se sube ese tope, o el que publica lee
+>    `publicar_en` y sale a postear lo que esté vencido, en corridas separadas.
+> 2. **El tope de TikTok manda igual.** Son 5 borradores sin publicar cada 24 h;
+>    con 3 pasadas por día eso es 1 o 2 piezas por pasada, no 5. La cadencia de 5
+>    minutos recién se nota el día que haya Direct Post y varias piezas seguidas.
+
+---
+
 ## Criterio editorial (decidido por el editor)
 
 - **Los nombres propios se publican**, zócalo incluido, incluso de acusados y
