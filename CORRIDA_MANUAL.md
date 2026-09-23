@@ -215,6 +215,51 @@ El intervalo vive en una sola constante, `MINUTOS_ENTRE_POSTEOS` en
 
 ---
 
+## Credenciales
+
+Viven en `.env`, que está en `.gitignore` — **el repo es público, esto no se sube
+nunca**. Para cargarlas o rotarlas:
+
+```bat
+venv\Scripts\python.exe tools\cargar_credenciales.py <archivo> --borrar-origen
+```
+
+Esa herramienta **nunca imprime un valor**: dice qué variables cargó y cuántos
+caracteres tenía cada una. Se puede correr con la salida a la vista.
+
+Los nombres son **los mismos que usa el bot de corresponsales**, a propósito: así el
+mismo `.env` sirve para los dos proyectos y no hay que renovar un token en dos
+lugares. Es el criterio que `reels/ia.py` ya seguía con Gemini, y rindió — el pool
+pasó de 1 clave a 9 al traer las del bot.
+
+| Cuenta | Variables |
+|---|---|
+| Gemini (lo único que se usa hoy) | `GEMINI_API_KEY*` — 9 claves, cada una con su cupo gratis |
+| Facebook, página del diario | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_ACCESS_TOKEN` |
+| Instagram @diarioyradio | `INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN` |
+| YouTube Radio del Centro | `YT_TOKEN_JSON`, `YT_SHORTS_TOKEN_JSON`, `YT_CHANNEL_ID`, `YT_HANDLE` |
+| TikTok @diarioyradio | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REDIRECT_URI` |
+
+Falta `TIKTOK_REFRESH_TOKEN` (bloqueado por la auditoría) y `ANTHROPIC_API_KEY`
+(opcional, es el respaldo pago de los guiones).
+
+**El archivo está recortado a propósito.** Había llegado el `.env` entero del bot
+—Supabase, WhatsApp, mail, Wix, Twitter: 78 variables— y quedaron 23. Nada de eso lo
+toca este scraper, y cuanto menos haya, menos se pierde el día que un archivo termine
+donde no debe.
+
+> Cosas que hay que saber antes de escribir el publicador:
+>
+> - **Instagram y Facebook no reciben el archivo de video.** Se les pasa una URL
+>   pública y ellos la van a buscar, así que el `.mp4` tiene que estar publicado en
+>   algún lado accesible desde internet. YouTube y TikTok sí aceptan el archivo.
+> - **YouTube tiene cuota:** subir cuesta 1600 unidades y el cupo diario gratis es
+>   10.000. Son **6 videos por día** y se acabó.
+> - **El token de página de Meta dura 60 días** y hay que renovarlo, o la publicación
+>   se corta sola y sin aviso.
+
+---
+
 ## Criterio editorial (decidido por el editor)
 
 - **Los nombres propios se publican**, zócalo incluido, incluso de acusados y
