@@ -94,9 +94,9 @@ jobs:
 
       # ─────────────────────────────────────────────────────────────────────────
       # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed),
-      # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro, con tope
-      # diario (variable del repo YT_SHORTS_POR_DIA, 2 si no está: el cupo de YouTube
-      # se comparte con el bot del diario). Decidido por el editor el 26/09/2026.
+      # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro, con un tope
+      # de seguridad (variable del repo YT_SHORTS_POR_DIA, 20 si no está; YouTube da 100
+      # subidas por día por proyecto, compartidas con el bot). Decidido el 26/09/2026.
       #
       # TikTok: DESACTIVADO hasta que aprueben el Direct Post, ni borradores. Sus claves
       # están cargadas como secrets pero A PROPÓSITO no se le pasan a ningún paso.

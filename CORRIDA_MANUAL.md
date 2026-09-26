@@ -233,13 +233,16 @@ venv\Scripts\python.exe tools\test_publicador.py                :: 52 pruebas, s
   Antes de subir se verifica que el token sea de ese canal: una subida por API va al
   canal del token sin preguntar. Título = titular + « | Pueblo», descripción = el
   texto del posteo + `#Shorts`, categoría Noticias.
-- **⚠️ Tope diario de YouTube: 2 Shorts** (variable `YT_SHORTS_POR_DIA`). El cupo de
-  la API es de 10.000 unidades por día POR PROYECTO de Google, cada subida cuesta
-  1.600 (= 6 por día), y el proyecto es EL MISMO del bot del diario, que desde agosto
-  sube sus Shorts a Radio del Centro. Sin tope, policiales le come el cupo al bot. Las
-  piezas que no entran salen igual en Instagram y Facebook; quedarse sin lugar no es
-  falla. Si YouTube contesta «cupo agotado», no se insiste en esa pasada. Para más
-  Shorts sin tocar el cupo del bot: un proyecto de Google aparte para policiales.
+- **Cupo de YouTube: 100 subidas por día por proyecto de Google** (verificado en la
+  documentación oficial el 26/09). Desde el 1/06/2026 las subidas tienen un cupo
+  PROPIO, aparte de las 10.000 unidades del resto de la API. ⚠️ El dato viejo —«cada
+  subida cuesta 1.600 unidades, 6 por día»— quedó desactualizado y todavía aparece
+  en comentarios del bot del diario: no guiarse por él. El proyecto es el mismo del
+  bot, que sube ~10 Shorts por día hábil a Radio del Centro: sobra lugar para los dos.
+- **Tope de seguridad: 20 Shorts por día** (variable `YT_SHORTS_POR_DIA`). No es una
+  ración: cubre las 3 pasadas de 5 piezas y frena un desborde (corridas a mano
+  repetidas). Las piezas que no entran salen igual en Instagram y Facebook; quedarse
+  sin lugar no es falla. Si YouTube contesta «cupo agotado», no se insiste en esa pasada.
 - **TikTok: desactivado**, ver arriba.
 - **5 minutos entre piezas, sin excepción al publicar de verdad.** Aunque el plan ya
   venga espaciado, si una pieza tarda en salir la siguiente espera igual.

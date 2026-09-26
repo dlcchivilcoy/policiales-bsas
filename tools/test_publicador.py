@@ -232,7 +232,7 @@ chequear("Facebook: lleva el texto del posteo", f.get("description", "").startsw
 chequear("ningun token viaja en una URL (Meta, GitHub ni YouTube)",
          not any(t in str(r.url) for r in meta.pedidos for t in TODOS_LOS_SECRETOS))
 yt = meta.yt_inicios[0]
-chequear("YouTube: las dos piezas suben como Short (tope 2 por dia)",
+chequear("YouTube: las dos piezas suben como Short (tope por defecto: 20 por dia)",
          [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "ok"] and len(meta.yt_videos) == 2)
 chequear("YouTube: publico, categoria Noticias, no es para chicos",
          yt["status"]["privacyStatus"] == "public" and yt["snippet"]["categoryId"] == "25"
@@ -332,6 +332,7 @@ chequear("los secretos de YouTube tambien se tapan",
          "yt_refresco" not in PUB._tapar("refresh_token=yt_refresco_secreto_123456"))
 
 # --- 9. YouTube: tope diario ----------------------------------------------------
+chequear("el tope por defecto cubre las 3 pasadas de 5 piezas (15 por dia)", PUB.tope_youtube() >= 15)
 os.environ["YT_SHORTS_POR_DIA"] = "1"
 base, carpeta, reloj, meta = preparar()
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)

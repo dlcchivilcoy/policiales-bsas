@@ -14,7 +14,7 @@ Decidido por el editor el 2026-09-26:
 - Facebook: reel normal, le llega directo a los seguidores. La API de Facebook no
   tiene reels de prueba (verificado en la referencia de `video_reels`).
 - YouTube: Short publico en el canal RADIO DEL CENTRO (@radiodelcentro), con un
-  tope diario (ver YT_SHORTS_POR_DIA: el cupo de la API se comparte con el bot).
+  tope diario de seguridad (ver YT_SHORTS_POR_DIA).
 - TikTok: DESACTIVADO hasta que TikTok apruebe el Direct Post. Ni publicacion ni
   BORRADORES: no hay codigo que le hable, y la red se rechaza aunque se la pida.
 - 5 minutos entre posteo y posteo (`MINUTOS_ENTRE_POSTEOS` de flujo.py). Al publicar
@@ -93,13 +93,16 @@ _HTTP_TRANSITORIO = (429, 500, 502, 503, 504)
 YT_API = "https://www.googleapis.com/youtube/v3"
 YT_UPLOAD = "https://www.googleapis.com/upload/youtube/v3/videos"
 YT_CATEGORIA = "25"                       # Noticias y politica
-# ⚠️ EL CUPO DE YOUTUBE ES COMPARTIDO. Los dos tokens de YouTube salen del MISMO proyecto
-# de Google que usa el bot del diario, y desde agosto el bot tambien sube SUS Shorts a
-# Radio del Centro. El cupo gratis es de 10.000 unidades/dia POR PROYECTO y cada subida
-# cuesta 1.600: son 6 subidas por dia ENTRE TODOS. Sin tope, una pasada de policiales
-# le come el cupo al bot y los Shorts de los corresponsales dejan de salir.
-# Se cambia con la variable YT_SHORTS_POR_DIA (en la nube: variable del repo).
-YT_SHORTS_POR_DIA_DEFAULT = 2
+# CUPO DE YOUTUBE (verificado en la documentacion oficial el 26/09/2026):
+# desde el 1/06/2026 las subidas (videos.insert) tienen su PROPIO cupo: 100 subidas por
+# dia POR PROYECTO de Google, aparte de las 10.000 unidades del resto de la API. (Antes
+# cada subida costaba ~1.600 de esas 10.000 = 6 por dia; ese numero quedo VIEJO y
+# todavia aparece en comentarios del bot del diario.)
+# El proyecto es el MISMO del bot, que tambien sube sus Shorts a Radio del Centro (~10
+# por dia habil). 100 alcanza de sobra para los dos. El tope queda como freno ante un
+# desborde (corridas a mano repetidas, un bucle), no como racion: 20 cubre las 3 pasadas
+# de 5 piezas y le deja 80 al bot. Se cambia con YT_SHORTS_POR_DIA (variable del repo).
+YT_SHORTS_POR_DIA_DEFAULT = 20
 
 # Enganches para las pruebas (tools/test_publicador.py): la red, el reloj y la espera.
 _http = None
