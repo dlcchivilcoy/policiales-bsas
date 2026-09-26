@@ -35,6 +35,9 @@ on:
       ventana:
         description: '"hoy" (lo que corre siempre) o un número de horas, para probar'
         default: "hoy"
+      publicar:
+        description: '"si" = publicar DE VERDAD (Instagram como reel de prueba, Facebook normal). Cualquier otra cosa = solo simular'
+        default: "no"
 
 # Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
 concurrency:
@@ -48,11 +51,11 @@ permissions:
 jobs:
   generar:
     runs-on: ubuntu-latest
-    timeout-minutes: 20       # si pasa de esto algo se colgó: cortar y no quemar minutos
-    # ⚠️ Cuando se agregue el paso que PUBLICA, revisar este número. La tanda sale
-    # escalonada a 5 minutos por pieza (ver CORRIDA_MANUAL.md): cinco piezas son 20
-    # minutos de espera y este tope las mataría justo antes de la última. O se sube,
-    # o el publicador corre aparte leyendo `publicar_en` de cada pieza.
+    # Era 20. Con el paso que publica se subió: la tanda sale escalonada a 5 minutos por
+    # pieza, así que cinco piezas son ~20-25 minutos de publicación ADEMÁS de los ~3 de
+    # armado. El paso de publicar tiene su propio tope (45) por debajo de este, para que
+    # si se cuelga todavía corran los pasos que guardan la memoria y avisan.
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
@@ -84,9 +87,38 @@ jobs:
           GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
           # Respaldo pago, solo si se agotaron todas las gratis. Puede quedar vacío.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        # --cadencia le pone hora a cada pieza, una cada 5 minutos: la lee el publicador.
         run: |
-          python -m reels.flujo --con-ia \
+          python -m reels.flujo --con-ia --cadencia \
             --cuantos "${{ github.event.inputs.cuantos || '5' }}"
+
+      # ─────────────────────────────────────────────────────────────────────────
+      # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed) y
+      # Facebook como reel NORMAL. Decidido por el editor el 26/09/2026.
+      #
+      # APAGADO por defecto. Publica de verdad solo si:
+      #   - alguien corre el workflow a mano con publicar = "si", o
+      #   - la variable del repo PUBLICAR_REDES vale 1 (Settings → Secrets and
+      #     variables → Actions → Variables). Es el interruptor de las pasadas
+      #     automáticas: se prende y se apaga sin tocar código.
+      # Si no, el paso de abajo SIMULA: muestra qué saldría, sin tocar ninguna red.
+      # ─────────────────────────────────────────────────────────────────────────
+      - name: Publicar en Instagram (prueba) y Facebook
+        if: vars.PUBLICAR_REDES == '1' || github.event.inputs.publicar == 'si'
+        timeout-minutes: 45
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          # Para subir el .mp4 al Release: Instagram no recibe el archivo, lo va a buscar
+          # a una URL pública. Lo da GitHub solo (contents: write, más arriba).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m reels.publicador --publicar
+
+      - name: Simular la publicación (no se publica nada)
+        if: vars.PUBLICAR_REDES != '1' && github.event.inputs.publicar != 'si'
+        run: python -m reels.publicador
 
       - name: Guardar los reels
         uses: actions/upload-artifact@v4
@@ -156,6 +188,10 @@ jobs:
             CUERPO="$(cat informe_salud.md)"
           else
             CUERPO="La corrida falló antes de llegar a la revisión: el informe no se generó."
+          fi
+          # Lo que no salió en Instagram o Facebook (lo escribe reels/publicador.py).
+          if [ -f informe_publicacion.md ]; then
+            CUERPO="$(printf '%s\n\n%s' "$CUERPO" "$(cat informe_publicacion.md)")"
           fi
           CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
 

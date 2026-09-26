@@ -23,3 +23,6 @@ data/candidatos_directorio.json
 # Lo escribe salud.py solo cuando hay una falla, para que el workflow lo meta en el
 # issue de aviso. Es de una corrida: no tiene por que quedar en el repo.
 informe_salud.md
+
+# Lo escribe reels/publicador.py cuando algo no salio en una red, para el issue.
+informe_publicacion.md

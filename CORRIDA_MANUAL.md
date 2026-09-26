@@ -3,7 +3,8 @@
 Este archivo es la receta de una pasada hecha a mano, y el registro de todo lo que
 se aprendió armándolas. La automatización está **apagada** (los crons de
 `.github/workflows/reels.yml` están comentados) porque la clave de Gemini es paga:
-hoy el sistema corre solo cuando alguien lo dispara.
+hoy el sistema corre solo cuando alguien lo dispara. El publicador existe desde el
+26/09 pero también está apagado en la nube: ver *Publicar* más abajo.
 
 ---
 
@@ -203,15 +204,50 @@ publicador tendría que acordarse de saltearlas, y eso es justo lo que se olvida
 El intervalo vive en una sola constante, `MINUTOS_ENTRE_POSTEOS` en
 `reels/flujo.py`. La galería muestra el horario en el badge de cada tarjeta.
 
-> **Para el día que se construya el posteo, dos cosas que hay que resolver ahí:**
->
-> 1. **El job no puede simplemente dormir.** Cinco piezas a 5 minutos son 20
->    minutos de espera, y el workflow tiene `timeout-minutes: 20` — lo mataría
->    justo antes de la última. O se sube ese tope, o el que publica lee
->    `publicar_en` y sale a postear lo que esté vencido, en corridas separadas.
-> 2. **El tope de TikTok manda igual.** Son 5 borradores sin publicar cada 24 h;
->    con 3 pasadas por día eso es 1 o 2 piezas por pasada, no 5. La cadencia de 5
->    minutos recién se nota el día que haya Direct Post y varias piezas seguidas.
+> **Resuelto al construir el posteo (26/09):** el workflow pasó de
+> `timeout-minutes: 20` a 60, y el paso que publica tiene su propio tope de 45.
+> **Queda pendiente para TikTok:** son 5 borradores sin publicar cada 24 h; con 3
+> pasadas por día eso es 1 o 2 piezas por pasada, no 5.
+
+---
+
+## Publicar: Instagram como reel de prueba, Facebook normal
+
+Lo hace `reels/publicador.py` (26/09). **Sin `--publicar` solo simula**: muestra qué
+saldría, a qué hora y con qué texto, y no toca ninguna red.
+
+```bat
+venv\Scripts\python.exe -m reels.publicador                     :: simula la última tanda
+venv\Scripts\python.exe -m reels.publicador --publicar          :: publica DE VERDAD
+venv\Scripts\python.exe -m reels.publicador --publicar --redes facebook
+venv\Scripts\python.exe tools\test_publicador.py                :: 31 pruebas, sin red
+```
+
+- **Instagram:** reel de PRUEBA con graduación automática (ver *Credenciales*). El
+  `.mp4` se sube antes al Release `reels-policiales` de GitHub, porque Instagram no
+  recibe el archivo: lo va a buscar a una URL pública. Se borra solo a las 24 h.
+- **Facebook:** reel normal, directo a los seguidores. Se sube el archivo.
+- **5 minutos entre piezas, sin excepción al publicar de verdad.** Aunque el plan ya
+  venga espaciado, si una pieza tarda en salir la siguiente espera igual.
+- **Una red nunca tumba a la otra.** Si Facebook falla, Instagram sale igual, y al
+  revés. Lo que no salió queda en `informe_publicacion.md` y va al issue de aviso.
+- **Memoria de lo publicado:** `estado/publicados.json`, por nota y por red. Correrlo
+  otra vez sobre la misma tanda no repite nada: solo reintenta la red que falló.
+- **«Sin confirmar» no se reintenta nunca.** Es cuando no hay forma de saber si
+  salió (Facebook que no termina de procesar en 5 min). Duplicar un hecho es peor
+  que perder un posteo: se revisa a mano.
+- **El token viaja en el encabezado, nunca en la URL.** El repo y sus logs son
+  públicos; una URL con el token en un mensaje de error lo dejaría a la vista.
+- **Versión de la API `v26.0`, a propósito.** Los reels de prueba son nuevos: una
+  versión vieja podría ignorar el parámetro sin error y sacar el reel NORMAL.
+
+**En la nube está APAGADO por defecto.** El workflow publica solo si alguien lo
+corre a mano con `publicar = si`, o si la variable del repo `PUBLICAR_REDES` vale
+`1`. Es el interruptor de las pasadas automáticas: se prende y se apaga en
+*Settings → Secrets and variables → Actions → Variables*, sin tocar código. Si no,
+simula. Para publicar desde la nube además tienen que estar cargados los secrets
+`FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_ACCESS_TOKEN`, `INSTAGRAM_USER_ID` e
+`INSTAGRAM_ACCESS_TOKEN`.
 
 ---
 

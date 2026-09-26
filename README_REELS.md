@@ -4,6 +4,10 @@ Fase 1 del sistema de reels: **genera y muestra, no publica**. Todo lo estético
 tu bot de corresponsales (`dlcchivilcoy/social_publisher`), replicado acá para que las
 piezas salgan con tu marca y no con un diseño inventado.
 
+> **26/09:** la publicación en Instagram (reel de prueba) y Facebook (reel normal)
+> existe en `reels/publicador.py`, apagada por defecto. Ver la sección *Publicar* de
+> `CORRIDA_MANUAL.md`.
+
 ---
 
 ## ⚠️ Antes que nada: TikTok no publica solo
