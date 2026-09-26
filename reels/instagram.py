@@ -2,10 +2,13 @@
 """Instagram: TODO lo automatico sale como REEL DE PRUEBA. Este modulo NO publica.
 
 Decidido por el editor el 2026-09-26. Un reel de prueba ("trial reel") se muestra
-SOLO a gente que no sigue la cuenta. Los seguidores de @diarioyradio no lo ven hasta
-que alguien lo "gradua" a mano desde la app. Asi un reel armado sin revision
-humana —que es como sale todo lo automatico— no le llega al publico propio del diario
-sin que el editor lo haya visto funcionar primero.
+primero SOLO a gente que no sigue la cuenta. Asi un reel armado sin revision
+humana —que es como sale todo lo automatico— no le llega de entrada al publico propio
+del diario.
+
+Graduacion AUTOMATICA (SS_PERFORMANCE), pedida por el editor el mismo 26/09: si al
+reel le va bien con los no seguidores, Instagram lo pasa solo al feed de
+@diarioyradio y ahi lo ven los seguidores. El que no funciona queda en prueba.
 
 Esto esta en la API oficial, no es un truco: `POST /{ig-user-id}/media` acepta
 `trial_params` con `media_type=REELS`.
@@ -17,8 +20,8 @@ y no le pasa parametros por su cuenta: si la regla dependiera de que el que escr
 el publicador se acuerde de agregar un campo, se olvida.
 
 Lo que la API NO da, y hay que saber:
-- No hay forma de graduar un reel por API ni de leer si esta en prueba. La
-  graduacion MANUAL se hace desde la app de Instagram, reel por reel.
+- No hay forma de graduar un reel por API ni de leer si esta en prueba. Con
+  SS_PERFORMANCE decide Instagram con su propia vara: la API no expone el umbral.
 - Rige solo para Instagram. La pagina de Facebook es otra llamada, con otras reglas.
 """
 import json
@@ -31,7 +34,7 @@ SOLO_REELS_DE_PRUEBA = True
 #           a los seguidores solo.
 # "SS_PERFORMANCE": Instagram lo gradua solo si le va bien con los no seguidores.
 #           Deja de ser "solo de prueba": el que anda, termina en el feed de todos.
-GRADUACION = "MANUAL"
+GRADUACION = "SS_PERFORMANCE"
 
 _GRADUACIONES = ("MANUAL", "SS_PERFORMANCE")
 

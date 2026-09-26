@@ -18,19 +18,19 @@ def chequear(nombre, condicion):
 
 p = IG.contenedor_reel(URL, "Texto del posteo")
 chequear("la regla esta encendida", IG.SOLO_REELS_DE_PRUEBA is True)
-chequear("graduacion MANUAL: nada le llega solo a los seguidores", IG.GRADUACION == "MANUAL")
+chequear("graduacion automatica: el que anda pasa solo al feed", IG.GRADUACION == "SS_PERFORMANCE")
 chequear("es un reel", p["media_type"] == "REELS")
 chequear("lleva trial_params",
-         json.loads(p.get("trial_params", "{}")) == {"graduation_strategy": "MANUAL"})
+         json.loads(p.get("trial_params", "{}")) == {"graduation_strategy": "SS_PERFORMANCE"})
 
 # Un valor mal escrito tiene que frenar, no caer en un reel normal.
-IG.GRADUACION = "manual"
+IG.GRADUACION = "ss_performance"
 try:
     IG.contenedor_reel(URL, "x")
     chequear("graduacion mal escrita frena", False)
 except ValueError:
     chequear("graduacion mal escrita frena", True)
-IG.GRADUACION = "MANUAL"
+IG.GRADUACION = "SS_PERFORMANCE"
 
 try:
     IG.contenedor_reel("C:\\salida_reels\\reel.mp4", "x")
