@@ -306,8 +306,9 @@ donde no debe.
 > - **Instagram y Facebook no reciben el archivo de video.** Se les pasa una URL
 >   pública y ellos la van a buscar, así que el `.mp4` tiene que estar publicado en
 >   algún lado accesible desde internet. YouTube y TikTok sí aceptan el archivo.
-> - **YouTube tiene cuota:** subir cuesta 1600 unidades y el cupo diario gratis es
->   10.000. Son **6 videos por día** y se acabó.
+> - **YouTube tiene cuota:** 100 subidas por día por proyecto de Google, compartidas
+>   con el bot del diario (corregido el 26/09: el dato viejo de «1.600 unidades, 6 por
+>   día» dejó de valer el 1/06/2026). Ver *Publicar*.
 > - **El token de página de Meta dura 60 días** y hay que renovarlo, o la publicación
 >   se corta sola y sin aviso.
 > - **En Instagram, todo lo automático sale como REEL DE PRUEBA con graduación
