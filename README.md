@@ -183,7 +183,8 @@ policiales-bsas/
 │   ├── rankear.py              Elige los 2 por localidad
 │   ├── cobertura_regional.py   Qué cubre cada regional
 │   ├── generar_registro.py     Escribe medios.py
-│   └── test_keywords.py        Banco de pruebas del diccionario
+│   ├── test_keywords.py        Banco de pruebas del diccionario
+│   └── test_instagram.py       Que Instagram salga siempre como reel de prueba
 ├── data/     Padrón y mediciones
 └── salida/   CSV/JSON de cada corrida
 ```

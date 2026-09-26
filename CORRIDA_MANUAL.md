@@ -257,6 +257,13 @@ donde no debe.
 >   10.000. Son **6 videos por día** y se acabó.
 > - **El token de página de Meta dura 60 días** y hay que renovarlo, o la publicación
 >   se corta sola y sin aviso.
+> - **En Instagram, todo lo automático sale como REEL DE PRUEBA** (decidido por el
+>   editor el 26/09). Se muestra solo a quienes no siguen @diarioyradio; a los
+>   seguidores les llega recién cuando el editor lo gradúa a mano desde la app. El
+>   publicador arma el pedido con `reels/instagram.py: contenedor_reel()` y no por su
+>   cuenta, así la regla no depende de que alguien se acuerde. La API no permite
+>   graduar ni consultar el estado de prueba: eso se hace solo desde la app.
+>   `tools\test_instagram.py` verifica que la regla siga encendida.
 
 ---
 
