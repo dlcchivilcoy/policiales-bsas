@@ -206,12 +206,13 @@ El intervalo vive en una sola constante, `MINUTOS_ENTRE_POSTEOS` en
 
 > **Resuelto al construir el posteo (26/09):** el workflow pasó de
 > `timeout-minutes: 20` a 60, y el paso que publica tiene su propio tope de 45.
-> **Queda pendiente para TikTok:** son 5 borradores sin publicar cada 24 h; con 3
-> pasadas por día eso es 1 o 2 piezas por pasada, no 5.
+> **TikTok está DESACTIVADO** (decisión del editor, 26/09) hasta que aprueben el
+> Direct Post: ni publicación ni borradores. Para el día que vuelva: son 5 borradores
+> sin publicar cada 24 h, o sea 1 o 2 piezas por pasada, no 5.
 
 ---
 
-## Publicar: Instagram como reel de prueba, Facebook normal
+## Publicar: Instagram de prueba, Facebook normal, YouTube Short
 
 Lo hace `reels/publicador.py` (26/09). **Sin `--publicar` solo simula**: muestra qué
 saldría, a qué hora y con qué texto, y no toca ninguna red.
@@ -219,14 +220,27 @@ saldría, a qué hora y con qué texto, y no toca ninguna red.
 ```bat
 venv\Scripts\python.exe -m reels.publicador                     :: simula la última tanda
 venv\Scripts\python.exe -m reels.publicador --publicar          :: publica DE VERDAD
-venv\Scripts\python.exe -m reels.publicador --publicar --redes facebook
-venv\Scripts\python.exe tools\test_publicador.py                :: 31 pruebas, sin red
+venv\Scripts\python.exe -m reels.publicador --publicar --redes facebook,youtube
+venv\Scripts\python.exe tools\test_publicador.py                :: 52 pruebas, sin red
 ```
 
 - **Instagram:** reel de PRUEBA con graduación automática (ver *Credenciales*). El
   `.mp4` se sube antes al Release `reels-policiales` de GitHub, porque Instagram no
   recibe el archivo: lo va a buscar a una URL pública. Se borra solo a las 24 h.
 - **Facebook:** reel normal, directo a los seguidores. Se sube el archivo.
+- **YouTube:** Short PÚBLICO en **Radio del Centro** (@radiodelcentro), con el token
+  `YT_TOKEN_JSON` (el `YT_SHORTS_TOKEN_JSON` es del canal del diario y NO se usa).
+  Antes de subir se verifica que el token sea de ese canal: una subida por API va al
+  canal del token sin preguntar. Título = titular + « | Pueblo», descripción = el
+  texto del posteo + `#Shorts`, categoría Noticias.
+- **⚠️ Tope diario de YouTube: 2 Shorts** (variable `YT_SHORTS_POR_DIA`). El cupo de
+  la API es de 10.000 unidades por día POR PROYECTO de Google, cada subida cuesta
+  1.600 (= 6 por día), y el proyecto es EL MISMO del bot del diario, que desde agosto
+  sube sus Shorts a Radio del Centro. Sin tope, policiales le come el cupo al bot. Las
+  piezas que no entran salen igual en Instagram y Facebook; quedarse sin lugar no es
+  falla. Si YouTube contesta «cupo agotado», no se insiste en esa pasada. Para más
+  Shorts sin tocar el cupo del bot: un proyecto de Google aparte para policiales.
+- **TikTok: desactivado**, ver arriba.
 - **5 minutos entre piezas, sin excepción al publicar de verdad.** Aunque el plan ya
   venga espaciado, si una pieza tarda en salir la siguiente espera igual.
 - **Una red nunca tumba a la otra.** Si Facebook falla, Instagram sale igual, y al
@@ -245,9 +259,9 @@ venv\Scripts\python.exe tools\test_publicador.py                :: 31 pruebas, s
 corre a mano con `publicar = si`, o si la variable del repo `PUBLICAR_REDES` vale
 `1`. Es el interruptor de las pasadas automáticas: se prende y se apaga en
 *Settings → Secrets and variables → Actions → Variables*, sin tocar código. Si no,
-simula. Para publicar desde la nube además tienen que estar cargados los secrets
-`FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_ACCESS_TOKEN`, `INSTAGRAM_USER_ID` e
-`INSTAGRAM_ACCESS_TOKEN`.
+simula. Los secrets que usa (`FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_ACCESS_TOKEN`,
+`INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN`, `YT_TOKEN_JSON`, `YT_CHANNEL_ID`)
+quedaron cargados el 26/09, junto con los de TikTok, que no se le pasan a ningún paso.
 
 ---
 

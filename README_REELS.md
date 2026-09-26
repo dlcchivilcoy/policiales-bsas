@@ -4,13 +4,18 @@ Fase 1 del sistema de reels: **genera y muestra, no publica**. Todo lo estético
 tu bot de corresponsales (`dlcchivilcoy/social_publisher`), replicado acá para que las
 piezas salgan con tu marca y no con un diseño inventado.
 
-> **26/09:** la publicación en Instagram (reel de prueba) y Facebook (reel normal)
-> existe en `reels/publicador.py`, apagada por defecto. Ver la sección *Publicar* de
-> `CORRIDA_MANUAL.md`.
+> **26/09:** la publicación en Instagram (reel de prueba), Facebook (reel normal) y
+> YouTube (Short en Radio del Centro) existe en `reels/publicador.py`, apagada por
+> defecto. TikTok, desactivado. Ver la sección *Publicar* de `CORRIDA_MANUAL.md`.
 
 ---
 
 ## ⚠️ Antes que nada: TikTok no publica solo
+
+> ⛔ **DECISIÓN DEL EDITOR (26/09): TikTok DESACTIVADO hasta que aprueben el Direct
+> Post. Ni publicación ni borradores.** El publicador rechaza la red aunque se la pida
+> (`TIKTOK_ACTIVO = False` en `reels/publicador.py`) y el workflow no le pasa sus claves
+> a ningún paso. Lo de abajo queda como contexto para el día que se destrabe.
 
 Lo leí en tu propio `TIKTOK.md`, y cambia el plan que me planteaste:
 

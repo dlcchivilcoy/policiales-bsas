@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""El publicador contra un Meta y un GitHub FALSOS. No usa la red ni publica nada.
+"""El publicador contra un Meta, un YouTube y un GitHub FALSOS. No usa la red ni publica nada.
 
 Cubre lo que no se puede probar publicando de a uno: el 500 mentiroso de Instagram,
 el contenedor en ERROR, una red que falla sin tumbar a la otra, no repetir lo ya
-publicado, los 5 minutos entre posteos y que ningun token termine en una URL.
+publicado, los 5 minutos entre posteos, que ningun token termine en una URL, el tope
+diario y el cupo agotado de YouTube, el token de otro canal, y que TikTok no salga.
 """
 import json
 import os
@@ -33,9 +34,18 @@ def chequear(nombre, condicion):
 TOKENS = {"FACEBOOK_PAGE_ACCESS_TOKEN": "fb_token_secreto_123456",
           "INSTAGRAM_ACCESS_TOKEN": "ig_token_secreto_123456",
           "GITHUB_TOKEN": "gh_token_secreto_123456"}
+YT_SECRETOS = {"client_secret": "yt_cliente_secreto_123456", "refresh_token": "yt_refresco_secreto_123456",
+               "token": "yt_viejo_secreto_123456"}
+YT_ACCESO = "ya29_acceso_secreto_123456"
 os.environ.update(TOKENS)
 os.environ.update({"FACEBOOK_PAGE_ID": "PAGINA", "INSTAGRAM_USER_ID": "IGUSER",
-                   "GITHUB_REPOSITORY": "dlcchivilcoy/policiales-bsas"})
+                   "GITHUB_REPOSITORY": "dlcchivilcoy/policiales-bsas",
+                   "YT_CHANNEL_ID": "UCRADIO",
+                   "YT_TOKEN_JSON": json.dumps({"client_id": "cliente.apps.googleusercontent.com",
+                                                "token_uri": "https://oauth2.googleapis.com/token",
+                                                **YT_SECRETOS})})
+os.environ.pop("YT_SHORTS_POR_DIA", None)
+TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
 
 class Reloj:
@@ -54,7 +64,8 @@ class Reloj:
 
 class Meta:
     """Graph API + rupload + GitHub, con fallas a pedido."""
-    def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200):
+    def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
+                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -63,10 +74,47 @@ class Meta:
         self.ig_estados = list(ig_estados or [])       # status_code sucesivos del contenedor
         self.fb_inicio = fb_inicio
         self.publicado = set()
+        self.yt_canal = yt_canal          # de que canal es el token
+        self.yt_sin_cupo = yt_sin_cupo    # YouTube contesta quotaExceeded
+        self.yt_cortes = yt_cortes        # subidas que LLEGAN pero pierden la respuesta
+        self.yt_inicios = []              # metadatos de cada sesion de subida abierta
+        self.yt_videos = {}               # upload_id -> id del video creado
+
+    def _youtube(self, req, host, ruta, m):
+        if host == "oauth2.googleapis.com":
+            return httpx.Response(200, json={"access_token": YT_ACCESO, "expires_in": 3599})
+        if ruta == "/youtube/v3/channels":
+            return httpx.Response(200, json={"items": [{"id": self.yt_canal}]})
+        if ruta == "/upload/youtube/v3/videos" and m == "POST":
+            if self.yt_sin_cupo:
+                return httpx.Response(403, json={"error": {"code": 403, "message": "quota",
+                                                           "errors": [{"reason": "quotaExceeded"}]}})
+            self.yt_inicios.append(json.loads(req.content))
+            uid = f"U{len(self.yt_inicios)}"
+            return httpx.Response(200, headers={"location":
+                f"https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&upload_id={uid}"})
+        if ruta == "/upload/youtube/v3/videos" and m == "PUT":
+            uid = req.url.params["upload_id"]
+            if req.headers.get("content-range", "").startswith("bytes */"):      # ¿como quedo?
+                if uid in self.yt_videos:
+                    return httpx.Response(200, json={"id": self.yt_videos[uid],
+                                                     "status": {"privacyStatus": "public"}})
+                return httpx.Response(308)
+            self.yt_videos[uid] = f"YT{len(self.yt_videos) + 1}"
+            if self.yt_cortes:
+                self.yt_cortes -= 1
+                raise httpx.ReadTimeout("se corto", request=req)   # llego, pero sin respuesta
+            return httpx.Response(200, json={"id": self.yt_videos[uid],
+                                             "status": {"privacyStatus": "public"}})
+        return None
 
     def __call__(self, req: httpx.Request) -> httpx.Response:
         self.pedidos.append(req)
         host, ruta, m = req.url.host, req.url.path, req.method
+        if host.endswith("googleapis.com"):
+            r = self._youtube(req, host, ruta, m)
+            if r is not None:
+                return r
         cuerpo = parse_qs(req.content.decode("utf-8")) if req.content and host == "graph.facebook.com" else {}
         uno = {k: v[0] for k, v in cuerpo.items()}
 
@@ -181,8 +229,18 @@ f = meta.fb_finish[0]
 chequear("Facebook: reel publicado normal (video_state PUBLISHED)", f.get("video_state") == "PUBLISHED")
 chequear("Facebook: sin nada de reel de prueba", not any("trial" in k for k in f))
 chequear("Facebook: lleva el texto del posteo", f.get("description", "").startswith("Texto del posteo 1"))
-chequear("ningun token viaja en una URL",
-         not any(t in str(r.url) for r in meta.pedidos for t in TOKENS.values()))
+chequear("ningun token viaja en una URL (Meta, GitHub ni YouTube)",
+         not any(t in str(r.url) for r in meta.pedidos for t in TODOS_LOS_SECRETOS))
+yt = meta.yt_inicios[0]
+chequear("YouTube: las dos piezas suben como Short (tope 2 por dia)",
+         [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "ok"] and len(meta.yt_videos) == 2)
+chequear("YouTube: publico, categoria Noticias, no es para chicos",
+         yt["status"]["privacyStatus"] == "public" and yt["snippet"]["categoryId"] == "25"
+         and yt["status"]["selfDeclaredMadeForKids"] is False)
+chequear("YouTube: el titulo lleva el pueblo bien escrito", yt["snippet"]["title"] == "Titular 1 | Junín")
+chequear("YouTube: la descripcion lleva #Shorts", "#Shorts" in yt["snippet"]["description"])
+chequear("YouTube: se verifico el canal ANTES de subir",
+         any(r.url.path == "/youtube/v3/channels" for r in meta.pedidos))
 chequear("la pieza no apta no se publico", not any("/3" in str(r.url) for r in meta.pedidos)
          and len(meta.contenedores) == 2)
 h1, h2 = (datetime.fromisoformat(f["hora"]) for f in inf["piezas"])
@@ -227,13 +285,14 @@ m = Meta(fb_inicio=403)
 base, carpeta, reloj, meta = preparar(m)
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 p0 = inf["piezas"][0]
-chequear("Facebook falla y Instagram sale igual",
-         p0["instagram"]["estado"] == "ok" and p0["facebook"]["estado"] == "fallo")
+chequear("Facebook falla e Instagram y YouTube salen igual",
+         p0["instagram"]["estado"] == "ok" and p0["facebook"]["estado"] == "fallo"
+         and p0["youtube"]["estado"] == "ok")
 aviso = base / "informe_publicacion.md"
 chequear("la falla queda escrita para el issue de aviso",
          aviso.exists() and "facebook" in aviso.read_text(encoding="utf-8"))
 chequear("el aviso no lleva ningun token",
-         not any(t in aviso.read_text(encoding="utf-8") for t in TOKENS.values()))
+         not any(t in aviso.read_text(encoding="utf-8") for t in TODOS_LOS_SECRETOS))
 antes = len(meta.contenedores)
 m.fb_inicio = 200
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
@@ -269,6 +328,74 @@ shutil.rmtree(base)
 
 chequear("un token dentro de un mensaje de error se tapa",
          "fb_token_secreto" not in PUB._tapar("https://x?access_token=fb_token_secreto_123456"))
+chequear("los secretos de YouTube tambien se tapan",
+         "yt_refresco" not in PUB._tapar("refresh_token=yt_refresco_secreto_123456"))
+
+# --- 9. YouTube: tope diario ----------------------------------------------------
+os.environ["YT_SHORTS_POR_DIA"] = "1"
+base, carpeta, reloj, meta = preparar()
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("tope 1 por dia: la primera sube y la segunda queda por cupo",
+         [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "cupo"] and len(meta.yt_videos) == 1)
+chequear("quedarse sin lugar en YouTube NO es una falla (no abre issue)",
+         not (base / "informe_publicacion.md").exists())
+chequear("la pieza sin lugar en YouTube sale igual en Instagram y Facebook",
+         inf["piezas"][1]["instagram"]["estado"] == "ok" and inf["piezas"][1]["facebook"]["estado"] == "ok")
+antes = len(meta.pedidos)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("otra pasada el mismo dia: el tope cuenta lo ya subido y no sube nada",
+         len(meta.pedidos) == antes and inf["piezas"][1].get("youtube", {}).get("estado") == "cupo")
+reloj.t += timedelta(days=1)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("al dia siguiente el tope se renueva y sube la que habia quedado",
+         inf["piezas"][1].get("youtube", {}).get("estado") == "ok" and len(meta.yt_videos) == 2)
+os.environ.pop("YT_SHORTS_POR_DIA")
+shutil.rmtree(base)
+
+# --- 10. YouTube: cupo agotado ----------------------------------------------------
+base, carpeta, reloj, meta = preparar(Meta(yt_sin_cupo=True))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("cupo agotado: la primera falla avisando el cupo",
+         inf["piezas"][0]["youtube"]["estado"] == "fallo" and "cupo" in inf["piezas"][0]["youtube"]["detalle"])
+chequear("...y no se insiste con la segunda en la misma pasada",
+         inf["piezas"][1]["youtube"]["estado"] == "cupo"
+         and sum(1 for r in meta.pedidos if r.url.path == "/upload/youtube/v3/videos") == 1)
+shutil.rmtree(base)
+
+# --- 11. YouTube: token de otro canal ----------------------------------------------
+base, carpeta, reloj, meta = preparar(Meta(yt_canal="UCDIARIO"))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("token de OTRO canal: no se sube nada a YouTube",
+         not meta.yt_inicios and all(f["youtube"]["estado"] == "fallo" for f in inf["piezas"]))
+chequear("...e Instagram y Facebook salen igual",
+         all(f["instagram"]["estado"] == "ok" and f["facebook"]["estado"] == "ok" for f in inf["piezas"]))
+shutil.rmtree(base)
+
+# --- 12. YouTube: el archivo llega pero se pierde la respuesta ------------------------
+base, carpeta, reloj, meta = preparar(Meta(yt_cortes=1))
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("subida cortada que SI llego: se pregunta, se da por subida y no se duplica",
+         inf["piezas"][0]["youtube"]["estado"] == "ok"
+         and sum(1 for r in meta.pedidos if r.method == "PUT" and not r.headers.get("content-range")) == 2)
+shutil.rmtree(base)
+
+largo = PUB.metadatos_youtube({"localidad": "junin", "descripcion_tiktok": "a <b> c",
+                               "guion": {"titular": "x" * 150}})["snippet"]
+chequear("titulo de YouTube: nunca mas de 100 caracteres", len(largo["title"]) <= 100)
+chequear("sin < ni > (YouTube rechaza el video entero)", "<" not in largo["description"]
+         and ">" not in largo["description"])
+
+# --- 13. TikTok apagado ------------------------------------------------------------
+chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)
+base, carpeta, reloj, meta = preparar()
+try:
+    silencio(PUB.publicar_lote, carpeta, ("instagram", "tiktok"), publicar=True)
+    chequear("pedir TikTok frena TODO, ni borradores", False)
+except ValueError:
+    chequear("pedir TikTok frena TODO, ni borradores", len(meta.pedidos) == 0)
+chequear("ningun pedido va a TikTok en ningun caso",
+         not any("tiktok" in r.url.host for r in meta.pedidos))
+shutil.rmtree(base)
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

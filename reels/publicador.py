@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Publica una tanda de reels: Instagram como REEL DE PRUEBA, Facebook como reel NORMAL.
+"""Publica una tanda de reels: Instagram (PRUEBA), Facebook (normal) y YouTube (Short).
 
     venv\\Scripts\\python.exe -m reels.publicador                 # SIMULA la ultima tanda
     venv\\Scripts\\python.exe -m reels.publicador --publicar      # publica de verdad
     venv\\Scripts\\python.exe -m reels.publicador --lote salida_reels\\2026-09-26_1900
-    venv\\Scripts\\python.exe -m reels.publicador --redes instagram
+    venv\\Scripts\\python.exe -m reels.publicador --redes instagram,youtube
 
 Decidido por el editor el 2026-09-26:
 - Instagram: TODO sale como reel de prueba con graduacion automatica (el que anda
@@ -13,6 +13,10 @@ Decidido por el editor el 2026-09-26:
   cuenta: la regla vive en un solo lugar.
 - Facebook: reel normal, le llega directo a los seguidores. La API de Facebook no
   tiene reels de prueba (verificado en la referencia de `video_reels`).
+- YouTube: Short publico en el canal RADIO DEL CENTRO (@radiodelcentro), con un
+  tope diario (ver YT_SHORTS_POR_DIA: el cupo de la API se comparte con el bot).
+- TikTok: DESACTIVADO hasta que TikTok apruebe el Direct Post. Ni publicacion ni
+  BORRADORES: no hay codigo que le hable, y la red se rechaza aunque se la pida.
 - 5 minutos entre posteo y posteo (`MINUTOS_ENTRE_POSTEOS` de flujo.py). Al publicar
   de verdad la espera NO se puede saltear: es para que las redes no lean la cuenta
   como un bot.
@@ -62,7 +66,15 @@ DIAS_LEDGER = 5
 VERSION_GRAPH = "v26.0"
 GRAPH = f"https://graph.facebook.com/{VERSION_GRAPH}"
 
-REDES = ("instagram", "facebook")
+REDES = ("instagram", "facebook", "youtube")
+NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouTube"}
+
+# TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
+# auditoria de Direct Post. Ni publicar ni mandar a BORRADORES. No es un ajuste
+# tecnico: prenderlo es decision del editor, y ademas hoy no hay codigo que suba a
+# TikTok. Si alguien pide la red igual, el publicador se niega (ver _rechazar_tiktok).
+TIKTOK_ACTIVO = False
+
 MAX_CAPTION_IG = 2200
 DURACION_REEL = (3, 90)        # segundos que acepta un reel de Facebook (Instagram admite mas)
 
@@ -76,12 +88,28 @@ ESPERAS_CONTENEDOR = (20, 60)             # contenedor de IG en ERROR: hasta 3 e
 ESPERAS_PUBLICAR = (10, 30, 60)           # media_publish con error transitorio
 _HTTP_TRANSITORIO = (429, 500, 502, 503, 504)
 
+# YouTube. El token es YT_TOKEN_JSON = canal RADIO DEL CENTRO (verificado el 26/09 con
+# channels.list; YT_SHORTS_TOKEN_JSON es el del canal del DIARIO, no se usa aca).
+YT_API = "https://www.googleapis.com/youtube/v3"
+YT_UPLOAD = "https://www.googleapis.com/upload/youtube/v3/videos"
+YT_CATEGORIA = "25"                       # Noticias y politica
+# ⚠️ EL CUPO DE YOUTUBE ES COMPARTIDO. Los dos tokens de YouTube salen del MISMO proyecto
+# de Google que usa el bot del diario, y desde agosto el bot tambien sube SUS Shorts a
+# Radio del Centro. El cupo gratis es de 10.000 unidades/dia POR PROYECTO y cada subida
+# cuesta 1.600: son 6 subidas por dia ENTRE TODOS. Sin tope, una pasada de policiales
+# le come el cupo al bot y los Shorts de los corresponsales dejan de salir.
+# Se cambia con la variable YT_SHORTS_POR_DIA (en la nube: variable del repo).
+YT_SHORTS_POR_DIA_DEFAULT = 2
+
 # Enganches para las pruebas (tools/test_publicador.py): la red, el reloj y la espera.
 _http = None
 _dormir = time.sleep
 _ahora = datetime.now
 _barrer_release = L.limpiar_release
 _token_gh = ""
+_ocultar = []              # tokens obtenidos en la corrida (gh, acceso de YouTube)
+_yt_acceso = ""            # token de acceso de YouTube, ya verificado contra el canal
+_yt_sin_cupo = False       # YouTube dijo "cupo agotado": no se insiste en esta pasada
 
 
 class FalloRed(Exception):
@@ -117,7 +145,12 @@ def _tapar(texto: str) -> str:
     texto = str(texto)
     valores = [os.environ.get(k, "") for k in (
         "FACEBOOK_PAGE_ACCESS_TOKEN", "INSTAGRAM_ACCESS_TOKEN", "GITHUB_TOKEN", "GH_TOKEN")]
-    for v in valores + [_token_gh]:
+    try:
+        yt = json.loads(os.environ.get("YT_TOKEN_JSON") or "{}")
+        valores += [str(yt.get(k) or "") for k in ("token", "refresh_token", "client_secret")]
+    except (ValueError, AttributeError):
+        pass
+    for v in valores + [_token_gh] + _ocultar:
         if v and len(v) > 8:
             texto = texto.replace(v, "***")
     return texto
@@ -171,6 +204,8 @@ def _token_github() -> str:
         _token_gh = out.stdout.strip() if out.returncode == 0 else ""
     except Exception:
         _token_gh = ""
+    if _token_gh:
+        _ocultar.append(_token_gh)
     return _token_gh
 
 
@@ -427,6 +462,170 @@ def publicar_facebook(pieza: dict, mp4: Path) -> dict:
 
 
 # =============================================================================
+# YouTube: Short en Radio del Centro
+# =============================================================================
+
+class SinCupoYouTube(FalloRed):
+    """YouTube dijo que se agoto el cupo del dia: no se insiste hasta mañana."""
+
+
+def _yt_error(r: httpx.Response, paso: str) -> str:
+    try:
+        err = (r.json() or {}).get("error") or {}
+        razones = [e.get("reason") for e in err.get("errors") or [] if e.get("reason")]
+        detalle = err.get("message") or r.text[:300]
+    except (ValueError, AttributeError):
+        razones, detalle = [], r.text[:300]
+    msg = _tapar(f"{paso}: HTTP {r.status_code} — {detalle}")
+    if {"quotaExceeded", "uploadLimitExceeded", "dailyLimitExceeded"} & set(razones):
+        raise SinCupoYouTube(msg + " (cupo del dia agotado)")
+    return msg
+
+
+def _yt_sesion() -> str:
+    """Token de acceso fresco, y la verificacion de que es del canal que corresponde.
+
+    Se verifica el canal ANTES de subir nada porque una subida por API va al canal con
+    el que se autorizo el token, sin preguntar. Si YT_TOKEN_JSON algun dia se cruza con
+    el del diario (ya paso que los dos tokens convivan en el mismo .env), los policiales
+    terminarian en el canal equivocado. Cuesta 1 unidad de cupo por pasada.
+    """
+    global _yt_acceso
+    if _yt_acceso:
+        return _yt_acceso
+    try:
+        info = json.loads(os.environ.get("YT_TOKEN_JSON") or "")
+    except ValueError:
+        raise FalloRed("YouTube: YT_TOKEN_JSON no es un JSON valido")
+    try:
+        r = _pedir("POST", info.get("token_uri") or "https://oauth2.googleapis.com/token", data={
+            "client_id": info.get("client_id"), "client_secret": info.get("client_secret"),
+            "refresh_token": info.get("refresh_token"), "grant_type": "refresh_token"})
+    except _Cortado as e:
+        raise FalloRed(f"YouTube (token): {e}")
+    if r.status_code >= 400:
+        raise FalloRed(_tapar(f"YouTube: no se pudo renovar el token — HTTP {r.status_code} "
+                              f"{r.text[:200]}. Si dice invalid_grant, hay que re-autorizar."))
+    acceso = r.json()["access_token"]
+    _ocultar.append(acceso)
+
+    esperado = os.environ.get("YT_CHANNEL_ID", "")
+    try:
+        c = _pedir("GET", f"{YT_API}/channels", acceso, params={"part": "id", "mine": "true"})
+    except _Cortado as e:
+        raise FalloRed(f"YouTube (canal): {e}")
+    if c.status_code >= 400:
+        raise FalloRed(_yt_error(c, "YouTube (canal)"))
+    canales = [i.get("id") for i in (c.json() or {}).get("items") or []]
+    if not esperado or esperado not in canales:
+        raise FalloRed("YouTube: el token NO es del canal de Radio del Centro "
+                       f"(YT_CHANNEL_ID). No se sube nada para no publicar en otro canal.")
+    _yt_acceso = acceso
+    return acceso
+
+
+def _sin_angulos(texto: str) -> str:
+    # YouTube rechaza el video entero si el titulo o la descripcion tienen < o >.
+    return (texto or "").replace("<", "‹").replace(">", "›")
+
+
+def metadatos_youtube(pieza: dict) -> dict:
+    g = pieza.get("guion") or {}
+    pueblo = _pueblo(pieza.get("localidad") or "")
+    titulo = (g.get("titular") or "").strip()
+    # La localidad en el titulo: en YouTube se busca por el nombre del pueblo, y el
+    # titular muchas veces no lo dice porque la volanta ya lo decia en la placa.
+    if pueblo and pueblo.lower() not in titulo.lower():
+        titulo = f"{titulo} | {pueblo}"
+    titulo = _sin_angulos(titulo)
+    if len(titulo) > 100:                                   # tope duro de YouTube
+        titulo = titulo[:99].rstrip() + "…"
+    desc = _sin_angulos(texto_del_posteo(pieza, "youtube"))
+    if "#shorts" not in desc.lower():
+        desc = f"{desc}\n\n#Shorts"
+    etiquetas, vistas = [], set()
+    for t in re.findall(r"#(\w+)", desc) + [pueblo, "policiales", "Buenos Aires"]:
+        if t and t.lower() not in vistas and t.lower() != "shorts":
+            vistas.add(t.lower())
+            etiquetas.append(t)
+    while etiquetas and sum(len(t) + 1 for t in etiquetas) > 400:   # tope: 500 caracteres
+        etiquetas.pop()
+    return {
+        "snippet": {"title": titulo, "description": desc[:5000], "tags": etiquetas,
+                    "categoryId": YT_CATEGORIA, "defaultLanguage": "es",
+                    "defaultAudioLanguage": "es"},
+        "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
+                   "embeddable": True, "containsSyntheticMedia": False},
+    }
+
+
+def _yt_listo(v: dict) -> dict:
+    vid = v["id"]
+    privacidad = (v.get("status") or {}).get("privacyStatus")
+    info = {"id": vid, "url": f"https://youtube.com/shorts/{vid}", "privacidad": privacidad}
+    if privacidad and privacidad != "public":
+        # Pasa si el proyecto de Google pierde la condicion que hoy deja subir publico.
+        info["aviso"] = f"YouTube lo dejo {privacidad}, no publico"
+    return info
+
+
+def publicar_youtube(pieza: dict, mp4: Path) -> dict:
+    """videos.insert con subida reanudable: se abre la sesion con los datos del video y
+    despues se manda el archivo. El video recien EXISTE cuando termina la subida, asi
+    que un corte en el medio se puede retomar sin riesgo de duplicarlo."""
+    acceso = _yt_sesion()
+    datos = mp4.read_bytes()
+    n = len(datos)
+    try:
+        r = _pedir("POST", YT_UPLOAD, acceso,
+                   params={"uploadType": "resumable", "part": "snippet,status"},
+                   headers={"Content-Type": "application/json; charset=UTF-8",
+                            "X-Upload-Content-Type": "video/mp4",
+                            "X-Upload-Content-Length": str(n)},
+                   content=json.dumps(metadatos_youtube(pieza)).encode("utf-8"))
+    except _Cortado as e:
+        raise FalloRed(f"YouTube (inicio): {e}")
+    if r.status_code >= 400:
+        raise FalloRed(_yt_error(r, "YouTube (inicio)"))
+    sesion = r.headers.get("location") or ""
+    if not sesion:
+        raise FalloRed("YouTube (inicio): no devolvio la direccion de subida")
+
+    desde, incompleto = 0, False
+    for intento in range(4):
+        if intento:
+            _dormir(5 * intento)
+            # Antes de mandar de nuevo, preguntar cuanto llego. Puede haber llegado todo
+            # y haberse perdido solo la respuesta: ahi el video ya existe.
+            try:
+                st = _pedir("PUT", sesion, acceso, headers={"Content-Range": f"bytes */{n}"})
+            except _Cortado:
+                incompleto = False
+                continue
+            if st.status_code in (200, 201):
+                return _yt_listo(st.json())
+            if st.status_code != 308:
+                raise FalloRed(_yt_error(st, "YouTube (estado de la subida)"))
+            incompleto = True
+            rango = st.headers.get("range") or ""          # "bytes=0-12345"
+            desde = int(rango.rsplit("-", 1)[1]) + 1 if "-" in rango else 0
+        cabeza = {"Content-Type": "video/mp4"}
+        if desde:
+            cabeza["Content-Range"] = f"bytes {desde}-{n - 1}/{n}"
+        try:
+            up = _pedir("PUT", sesion, acceso, headers=cabeza, content=datos[desde:])
+        except _Cortado:
+            continue
+        if up.status_code in (200, 201):
+            return _yt_listo(up.json())
+        if up.status_code not in _HTTP_TRANSITORIO + (308,):
+            raise FalloRed(_yt_error(up, "YouTube (subida)"))
+    if incompleto:
+        raise FalloRed("YouTube: la subida quedo incompleta despues de 4 intentos")
+    raise SinConfirmar("YouTube: la subida se corto y no se pudo saber si termino")
+
+
+# =============================================================================
 # La tanda
 # =============================================================================
 
@@ -512,7 +711,32 @@ def faltantes(redes, publicar: bool) -> list:
             falta.append("GITHUB_TOKEN")
     if "facebook" in redes:
         falta += [k for k in ("FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN") if not os.environ.get(k)]
+    if "youtube" in redes:
+        falta += [k for k in ("YT_TOKEN_JSON", "YT_CHANNEL_ID") if not os.environ.get(k)]
     return falta
+
+
+def _rechazar_tiktok(redes):
+    """Defensa en profundidad: aunque alguien pida TikTok, no sale nada."""
+    if "tiktok" in [r.lower() for r in redes] and not TIKTOK_ACTIVO:
+        raise ValueError("TikTok esta DESACTIVADO hasta que TikTok apruebe el Direct Post: "
+                         "no se publica ni se manda a borradores.")
+
+
+def tope_youtube() -> int:
+    try:
+        return max(0, int(os.environ.get("YT_SHORTS_POR_DIA") or YT_SHORTS_POR_DIA_DEFAULT))
+    except ValueError:
+        return YT_SHORTS_POR_DIA_DEFAULT
+
+
+def _youtube_de_hoy(ledger: dict) -> int:
+    """Shorts de policiales ya subidos hoy (cuentan tambien los sin confirmar: pudieron
+    haber gastado cupo)."""
+    hoy = _ahora().date().isoformat()
+    return sum(1 for e in ledger.values()
+               if (e.get("youtube") or {}).get("estado") in ("ok", "sin_confirmar")
+               and (e["youtube"].get("cuando") or "").startswith(hoy))
 
 
 def _hora(texto):
@@ -539,6 +763,8 @@ def _intentar(fn, *args) -> dict:
         return {"estado": "ok", **fn(*args)}
     except SinConfirmar as e:
         return {"estado": "sin_confirmar", "detalle": _tapar(e)}
+    except SinCupoYouTube as e:
+        return {"estado": "fallo", "detalle": _tapar(e), "sin_cupo": True}
     except FalloRed as e:
         return {"estado": "fallo", "detalle": _tapar(e)}
     except Exception as e:                    # un error de programacion tampoco
@@ -552,18 +778,30 @@ def _simular(red: str, pieza: dict, mp4: Path) -> dict:
     if red == "instagram":
         params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto)
         info["prueba"] = json.loads(params.get("trial_params") or "null")
+    elif red == "youtube":
+        info["titulo"] = metadatos_youtube(pieza)["snippet"]["title"]
     return info
 
 
 def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
+    global _yt_acceso, _yt_sin_cupo
+    _rechazar_tiktok(redes)
+    # Y cualquier otra red que no este implementada, tambien antes de tocar nada.
+    raras = [r for r in redes if r not in REDES]
+    if raras:
+        raise ValueError(f"redes desconocidas: {', '.join(raras)} (van: {', '.join(REDES)})")
     lote = json.loads((carpeta / "_lote.json").read_text(encoding="utf-8"))
     listas, salteadas = elegibles(lote, carpeta)
     ledger = cargar_ledger()
     informe = {"lote": carpeta.name, "modo": "publicar" if publicar else "simulacion",
                "redes": list(redes), "piezas": [], "salteadas": salteadas}
+    _yt_acceso, _yt_sin_cupo = "", False
+    yt_tope, yt_hoy, yt_pasada = tope_youtube(), _youtube_de_hoy(ledger), 0
 
     modo = "PUBLICANDO" if publicar else "SIMULACION — no se toca ninguna red"
     print(f"=== {modo} · lote {carpeta.name} · {len(listas)} pieza(s) · {', '.join(redes)} ===")
+    if "youtube" in redes:
+        print(f"  YouTube: tope {yt_tope} Short(s) por dia, ya subidos hoy {yt_hoy}")
     for s in salteadas:
         print(f"  salteada #{s['orden']}: {s['motivo']}")
 
@@ -576,10 +814,23 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         g = pieza.get("guion") or {}
         pueblo = _pueblo(pieza.get("localidad") or "")
         fila = {"orden": pieza.get("orden"), "localidad": pueblo, "titular": g.get("titular")}
+
+        # YouTube sin lugar hoy: se saca de esta pieza ANTES de decidir si hay que esperar
+        # turno, para que una pieza que solo iba a YouTube no ocupe 5 minutos de la cola.
+        # No se anota en la memoria: no es una falla, es el tope.
+        sin_lugar = None
+        if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
+            pendientes.remove("youtube")
+            sin_lugar = {"estado": "cupo", "detalle":
+                         "YouTube agoto su cupo en esta pasada" if _yt_sin_cupo else
+                         f"ya van {yt_hoy + yt_pasada} Short(s) hoy (tope {yt_tope})"}
+
         if not pendientes:
-            fila["resultado"] = "ya estaba publicada"
+            fila["resultado"] = "ya estaba publicada" if not sin_lugar else "solo faltaba YouTube"
+            if sin_lugar:
+                fila["youtube"] = sin_lugar
             informe["piezas"].append(fila)
-            print(f"\n#{pieza.get('orden')} {pueblo} — ya publicada, se saltea")
+            print(f"\n#{pieza.get('orden')} {pueblo} — {fila['resultado']}, se saltea")
             continue
 
         hora = _turno(pieza, ultimo)
@@ -599,8 +850,16 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 res = _simular(red, pieza, mp4)
             elif red == "instagram":
                 res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
-            else:
+            elif red == "facebook":
                 res = _intentar(publicar_facebook, pieza, mp4)
+            elif red == "youtube":
+                res = _intentar(publicar_youtube, pieza, mp4)
+                if res.pop("sin_cupo", False):
+                    _yt_sin_cupo = True
+            else:                                   # nunca un "else" que publique en algo
+                raise ValueError(f"red sin implementar: {red}")
+            if red == "youtube" and res.get("estado") in ("ok", "sin_confirmar", "simulado"):
+                yt_pasada += 1
             fila[red] = res
             _mostrar(red, res)
             if publicar:
@@ -609,6 +868,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 e[red] = res
                 e["ultimo"] = res["cuando"]
                 guardar_ledger(ledger)       # despues de CADA red: un corte no borra lo hecho
+        if sin_lugar:
+            fila["youtube"] = sin_lugar
+            _mostrar("youtube", sin_lugar)
         informe["piezas"].append(fila)
 
     (carpeta / "_publicacion.json").write_text(
@@ -632,17 +894,21 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
 
 
 def _mostrar(red: str, res: dict):
-    nombre = {"instagram": "Instagram", "facebook": "Facebook"}[red]
+    nombre = NOMBRE_RED[red]
     est = res.get("estado")
     if est == "simulado":
-        extra = ""
         if red == "instagram":
             extra = f" · reel de PRUEBA {res.get('prueba')}"
-        else:
+        elif red == "facebook":
             extra = " · reel NORMAL"
+        else:
+            extra = f" · Short publico en Radio del Centro: «{res.get('titulo')}»"
         print(f"  {nombre:<9} saldria{extra} · {res['kb']} KB · texto de {res['caracteres']} caracteres")
     elif est == "ok":
-        print(f"  {nombre:<9} OK (id {res.get('id') or 'sin leer'})")
+        aviso = f" ⚠ {res['aviso']}" if res.get("aviso") else ""
+        print(f"  {nombre:<9} OK (id {res.get('id') or 'sin leer'}){aviso}")
+    elif est == "cupo":
+        print(f"  {nombre:<9} no va: {res.get('detalle')}")
     elif est == "sin_confirmar":
         print(f"  {nombre:<9} SIN CONFIRMAR — {res.get('detalle')}")
     else:
@@ -677,18 +943,23 @@ def _resumen(informe: dict):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Publica una tanda de reels en Instagram (prueba) "
-                                             "y Facebook (normal). Sin --publicar, simula.")
+    ap = argparse.ArgumentParser(description="Publica una tanda de reels en Instagram (prueba), "
+                                             "Facebook (normal) y YouTube (Short). Sin --publicar, simula.")
     ap.add_argument("--publicar", action="store_true",
                     help="publicar DE VERDAD. Sin esto no se toca ninguna red")
     ap.add_argument("--lote", help="carpeta de la tanda; por defecto, la ultima de salida_reels/")
     ap.add_argument("--redes", default=",".join(REDES),
-                    help="instagram,facebook (default: las dos)")
+                    help="instagram,facebook,youtube (default: las tres). TikTok esta desactivado")
     args = ap.parse_args()
 
     entorno.consola_utf8()
     entorno.cargar()
     redes = tuple(r.strip().lower() for r in args.redes.split(",") if r.strip())
+    try:
+        _rechazar_tiktok(redes)
+    except ValueError as e:
+        print(e)
+        return 2
     raras = [r for r in redes if r not in REDES]
     if raras or not redes:
         print(f"Redes desconocidas: {', '.join(raras) or '(ninguna)'}. Van: {', '.join(REDES)}")

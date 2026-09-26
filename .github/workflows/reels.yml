@@ -36,7 +36,7 @@ on:
         description: '"hoy" (lo que corre siempre) o un número de horas, para probar'
         default: "hoy"
       publicar:
-        description: '"si" = publicar DE VERDAD (Instagram como reel de prueba, Facebook normal). Cualquier otra cosa = solo simular'
+        description: '"si" = publicar DE VERDAD (Instagram como reel de prueba, Facebook normal, YouTube Short). Cualquier otra cosa = solo simular'
         default: "no"
 
 # Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
@@ -93,8 +93,13 @@ jobs:
             --cuantos "${{ github.event.inputs.cuantos || '5' }}"
 
       # ─────────────────────────────────────────────────────────────────────────
-      # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed) y
-      # Facebook como reel NORMAL. Decidido por el editor el 26/09/2026.
+      # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed),
+      # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro, con tope
+      # diario (variable del repo YT_SHORTS_POR_DIA, 2 si no está: el cupo de YouTube
+      # se comparte con el bot del diario). Decidido por el editor el 26/09/2026.
+      #
+      # TikTok: DESACTIVADO hasta que aprueben el Direct Post, ni borradores. Sus claves
+      # están cargadas como secrets pero A PROPÓSITO no se le pasan a ningún paso.
       #
       # APAGADO por defecto. Publica de verdad solo si:
       #   - alguien corre el workflow a mano con publicar = "si", o
@@ -103,7 +108,7 @@ jobs:
       #     automáticas: se prende y se apaga sin tocar código.
       # Si no, el paso de abajo SIMULA: muestra qué saldría, sin tocar ninguna red.
       # ─────────────────────────────────────────────────────────────────────────
-      - name: Publicar en Instagram (prueba) y Facebook
+      - name: Publicar en Instagram (prueba), Facebook y YouTube
         if: vars.PUBLICAR_REDES == '1' || github.event.inputs.publicar == 'si'
         timeout-minutes: 45
         env:
@@ -111,6 +116,10 @@ jobs:
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          # Canal RADIO DEL CENTRO. El publicador verifica el canal antes de subir.
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+          YT_SHORTS_POR_DIA: ${{ vars.YT_SHORTS_POR_DIA }}
           # Para subir el .mp4 al Release: Instagram no recibe el archivo, lo va a buscar
           # a una URL pública. Lo da GitHub solo (contents: write, más arriba).
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
