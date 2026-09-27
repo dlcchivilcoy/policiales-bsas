@@ -65,6 +65,8 @@ Recibís una nota policial ya publicada por un medio local. Armá el GUION de un
 para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
 
 {
+  "es_del_temario": true,
+  "motivo": "SOLO si es_del_temario es false: en pocas palabras, de qué trata la nota",
   "volanta": "antetítulo de 2 a 6 palabras que NOMBRE LA LOCALIDAD, sin punto final",
   "titular": "titular claro y fiel al hecho, MÁXIMO 90 caracteres, sin punto final",
   "bajada": "para redes, MÁXIMO 280 caracteres, cerrada SIEMPRE en punto",
@@ -73,6 +75,22 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "descripcion": "2 a 4 frases para la descripción del reel",
   "hashtags": ["#Uno", "#Dos"]
 }
+
+ES_DEL_TEMARIO (primero decidí esto; el reel se publica SOLO si es true):
+- true si el HECHO CENTRAL de la nota es uno de estos: delito o hecho policial (robo,
+  hurto, estafa, amenaza, agresión, detención, allanamiento, operativo, secuestro de
+  drogas o armas, narcotráfico), siniestro vial, incendio, accidente (también aéreo o
+  laboral), homicidio, femicidio, suicidio, violencia de género o familiar, búsqueda
+  de una persona desaparecida, o una causa judicial PENAL (imputación, detención,
+  prisión preventiva, juicio, condena).
+- false si el hecho central es otra cosa, aunque la nota nombre a la policía o a un
+  detenido de pasada: clima y alertas meteorológicas, política y sesiones del Concejo,
+  obras, servicios, cortes de luz o agua, salud, educación, deportes, espectáculos,
+  campañas o charlas de prevención, entrega de patrulleros, aniversarios, homenajes,
+  efemérides, avisos institucionales.
+- El material puede traer restos de OTRAS notas de la página (títulos del costado).
+  Decidí por el titular original y el hecho que cuenta la nota, no por esos restos.
+- Aunque sea false, completá igual los demás campos.
 
 VOLANTA (el antetítulo naranja):
 - Tiene que decir DÓNDE pasó: es lo primero que busca el lector de un pueblo al ver el
@@ -434,7 +452,29 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     salida["hashtags"] = tags[:4] or base["hashtags"]
     salida["tipo"] = base["tipo"]
     salida["via"] = detalle
+    salida["fuera_de_temario"] = fuera_de_temario(datos)
     return salida
+
+
+def fuera_de_temario(datos: dict) -> str:
+    """El motivo si la IA dijo que la nota NO es del temario; "" si es del temario.
+
+    Existe porque el diccionario del scraper puntúa la PÁGINA entera, y en estos medios
+    la página trae los títulos de otras notas al costado. El 27/09 salió publicada una
+    «Alerta meteorológica para Chacabuco» con 15 puntos: sus «aciertos» (robaron,
+    narcotráfico, choque, allanamientos) eran de la columna de al lado. Con el tope de 5
+    por pasada no llegaba a entrar; sin tope, sí.
+
+    Si la IA no contesta el campo, la nota PASA: el campo es un freno, y un olvido del
+    modelo no tiene que costar un reel bueno.
+    """
+    valor = datos.get("es_del_temario", True)
+    if isinstance(valor, str):
+        valor = valor.strip().lower() not in ("false", "no", "0", "falso")
+    if valor is not False and valor != 0:
+        return ""
+    motivo = " ".join(str(datos.get("motivo") or "").split())[:160]
+    return motivo or "la IA dijo que no es un hecho policial"
 
 
 # =============================================================================

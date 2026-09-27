@@ -315,7 +315,9 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # El reel y su cuadro fijo los arma el MOTOR DEL BOT (reels/reel_bot.py): la misma
     # estética que los reels del diario, decidida en el bot. El .jpg queda al lado del .mp4.
     vid = None
-    if hacer_video:
+    # Lo que la IA dijo que no es policial no se va a publicar: no vale la pena armarle
+    # el video (ni subirlo como artefacto). Queda el JSON con el motivo.
+    if hacer_video and not g.get("fuera_de_temario"):
         try:
             vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip)
         except R.ReelError as e:
@@ -354,6 +356,13 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         if len((g.get(campo) or "").strip()) < minimo:
             objeciones.append(f"El campo '{campo}' quedo vacio o demasiado corto: "
                               f"en la placa se ve como un hueco.")
+
+    # La tercera: que SEA del temario. El diccionario del scraper deja pasar notas que no
+    # son policiales (el 27/09, una alerta meteorológica); la IA, que lee la nota entera
+    # para redactar, lo decide en la misma llamada. Ver guion.fuera_de_temario().
+    if g.get("fuera_de_temario"):
+        objeciones.append(f"No es del temario de policiales (según la IA): "
+                          f"{g['fuera_de_temario']}")
 
     apto = not objeciones
     pieza = {
@@ -507,6 +516,8 @@ def main():
             print(f"      video   : {v['duracion']}s · {v['peso_kb']} KB · {'+'.join(v['tramos'])}")
         elif v:
             print(f"      video   : FALLÓ — {v['error'][:60]}")
+        if not pieza["apto_para_publicar"]:
+            print(f"      NO SE PUBLICA — {pieza['por_que_no'][:110]}")
         if pieza["avisos"]:
             for a in pieza["avisos"]:
                 print(f"      ⚠ {a}")

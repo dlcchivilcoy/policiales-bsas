@@ -32,6 +32,15 @@ name: Reels de policiales
 # Para APAGAR la publicacion sin tocar codigo: borrar la variable PUBLICAR_REDES (o
 # ponerla en 0) en Settings → Secrets and variables → Actions → Variables. Las pasadas
 # siguen armando reels pero solo simulan. Para apagar todo: comentar el `schedule:`.
+#
+# QUIÉN DISPARA LAS PASADAS (27/09): cron-job.org, a horario exacto, igual que el bot del
+# diario. El `schedule:` de GitHub es un solo programador para todo GitHub y en horas de
+# carga atrasa o DESCARTA corridas: el 27/09 la de las 09:05 nunca se creó, y el 22/09 la
+# primera salió 4 h tarde. Queda abajo como RESPALDO: si llegan a correr las dos, la
+# segunda no repite nada (memoria de notas y de publicados).
+# cron-job.org llama a la API workflow_dispatch con {"ref":"main","inputs":{"origen":"cron"}}
+# y el token fino «cron-job publicador» (cuenta dlcchivilcoy, Actions RW en social_publisher
+# y policiales-bsas; vence 9/6/2027).
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "5 12 * * *"    # 09:05 Argentina
@@ -51,6 +60,11 @@ on:
       publicar:
         description: '"si" = publicar DE VERDAD (Instagram como reel de prueba, Facebook normal, YouTube Short). Cualquier otra cosa = solo simular'
         default: "no"
+      origen:
+        # cron-job.org manda "cron": es una pasada de horario, no una prueba a mano, y el
+        # chequeo del motor (2 min) no tiene sentido repetirlo seis veces por día.
+        description: '"manual" (corrida a mano) o "cron" (la dispara cron-job.org a horario)'
+        default: "manual"
 
 # Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
 concurrency:
@@ -90,7 +104,7 @@ jobs:
         # que trae imageio-ffmpeg: es otro binario y ya pasó que le faltara un filtro. Esto
         # corre el autochequeo del propio bot. ~2 min; en las pasadas automáticas no se
         # repite, alcanza con la primera a mano después de traer una estética nueva.
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.origen != 'cron'
         run: python tools/test_estetica.py
 
       - name: Traer las noticias
