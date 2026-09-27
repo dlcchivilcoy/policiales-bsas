@@ -7,6 +7,10 @@ piezas salgan con tu marca y no con un diseño inventado.
 > **26/09:** la publicación en Instagram (reel de prueba), Facebook (reel normal) y
 > YouTube (Short en Radio del Centro) existe en `reels/publicador.py`, apagada por
 > defecto. TikTok, desactivado. Ver la sección *Publicar* de `CORRIDA_MANUAL.md`.
+>
+> **26/09: la estética ya no es la de este documento.** El reel lo arma el motor del bot
+> del diario, copiado en `estetica_bot/` (sección *Estética* de `CORRIDA_MANUAL.md`). Lo
+> de geometría y tipografías de más abajo es el armado anterior.
 
 ---
 
@@ -317,12 +321,19 @@ exactamente eso, se puede portar).
 
 ```
 reels/
-├── marca.py    Constantes de identidad, copiadas de video.py con sus comentarios
-├── placa.py    Render 1080×1920 con Pillow (port de placa_layout)
-├── guion.py    Nota → volanta/titular/bajada/zócalo + descripción SEO
-├── video.py    Armado del .mp4 con ffmpeg (zoom lento + fundido + cierre)
-├── limpieza.py Borrado de intermedios y retención por antigüedad
-└── flujo.py    Orquestador de la Fase 1. NO importa platforms.tiktok a propósito.
-marca/          Tus assets: logo_reel, overlay, fondo, placa_final + las 3 tipografías
-salida_reels/   Una carpeta por corrida, con .jpg y .json por pieza
+├── guion.py      Nota → volanta/titular/bajada/zócalo + descripción SEO
+├── reel_bot.py   Arma el reel con el MOTOR DEL BOT (26/09): lo único propio de policiales
+├── flujo.py      Orquestador de la tanda (no publica)
+├── publicador.py Instagram (prueba), Facebook, YouTube. TikTok desactivado.
+├── instagram.py  La regla del reel de prueba
+├── ledger.py     Memoria de notas ya usadas
+└── limpieza.py   Borrado de intermedios y retención por antigüedad
+estetica_bot/     El motor de reels del bot, copiado TAL CUAL (tools/traer_estetica_bot.py)
+salida_reels/     Una carpeta por corrida, con .jpg, .mp4 y .json por pieza
 ```
+
+> Hasta el 26/09 había `placa.py`, `video.py`, `marca.py` y `marca/`: una reimplementación
+> a mano de la estética del bot del 18/09. Se reemplazó por el motor del bot (ver
+> *Estética* en `CORRIDA_MANUAL.md`). Lo que este archivo dice más arriba sobre
+> geometría, tipografías Archivo Narrow / Libre Franklin y `zoompan` describe ese armado
+> anterior.

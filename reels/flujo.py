@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-"""FASE 1 — genera los reels y muestra qué se publicaría. NO PUBLICA NADA.
+"""Genera los reels de una tanda y muestra qué se publicaría. ESTE PASO NO PUBLICA NADA.
 
-    nota scrapeada → guion → placa 1080x1920 → descripción SEO → carpeta de revisión
+    nota scrapeada → guion → reel 1080x1920 con el motor del bot → descripción → carpeta
 
-No importa `platforms.tiktok` ni ninguna credencial de red social: en esta fase la
-publicación está fuera del alcance a propósito. El paso de subida se agrega cuando
-digas, y en su momento va a ser a BORRADORES, no directo (ver README_REELS.md).
+El reel lo arma el MOTOR DEL BOT DEL DIARIO (estetica_bot/, vía reels/reel_bot.py), así
+sale con su misma estética. Publicar es otro paso: reels/publicador.py.
 
 Uso:
     venv\\Scripts\\python.exe -m reels.flujo                    # top 5 del último scrapeo
@@ -27,9 +26,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import guion as G
-from reels import marca as M
-from reels import placa as P
-from reels import video as V
+from reels import reel_bot as R
 from reels import limpieza as L
 from reels import ledger as LD
 from scraper import fetch
@@ -282,20 +279,18 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # llamada a la IA para un guion que nadie va a usar.
     #
     # El VIDEO tiene prioridad sobre la foto: un reel con imágenes en movimiento
-    # retiene mucho más que una foto quieta con zoom. Si el medio publicó uno propio,
+    # retiene mucho más que una foto quieta. Si el medio publicó uno propio,
     # ese va al reel y la foto queda de respaldo.
     tmp_dir = Path(tempfile.gettempdir())
     clip = _bajar_video(nota.get("video") or "", tmp_dir / f"reel_clip_{idx}.mp4")
 
     tmp = tmp_dir / f"reel_foto_{idx}.jpg"
     foto = None
-    if clip:
-        # La placa se compone sobre una imagen: de ahí salen el color del fondo y la
-        # altura de la caja. Con video, esa imagen es un cuadro del propio clip, así
-        # el fondo combina con lo que se ve moverse.
-        foto = V.primer_cuadro(clip, tmp)
-    if not foto:
-        foto = _bajar_foto(nota.get("imagen") or "", tmp)
+    if clip and not R.cuadro_de_video(clip, tmp_dir / f"reel_cuadro_{idx}.jpg"):
+        clip = None          # un video del que no sale ni un cuadro no se puede usar
+    # La foto se baja igual aunque haya video: si el motor no puede con el clip, el
+    # reel se arma con la foto en vez de perder la pieza.
+    foto = _bajar_foto(nota.get("imagen") or "", tmp)
 
     # El filtro de la tanda mira que la nota DECLARE una imagen; esto comprueba que la
     # imagen realmente se pueda bajar. Un enlace roto o un 403 dejan la placa igual de
@@ -311,21 +306,31 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
 
     nombre = f"{idx:02d}_{_slug(nota.get('localidad_medio'))}_{_slug(g['titular'], 30)}"
     img = carpeta / f"{nombre}.jpg"
-    informe = P.componer(g, foto, img, capas=hacer_video)
-    if clip:
-        informe["clip"] = str(clip)
-    avisos = P.auditar(informe)
+    avisos = []
     # Que el hecho sea de otra localidad que la del medio no rompe la pieza, pero hay
     # que verlo: cambia la volanta, el hashtag y el "Más noticias de" del posteo.
     if g.get("aviso_localidad"):
         avisos.append(g["aviso_localidad"])
 
+    # El reel y su cuadro fijo los arma el MOTOR DEL BOT (reels/reel_bot.py): la misma
+    # estética que los reels del diario, decidida en el bot. El .jpg queda al lado del .mp4.
     vid = None
     if hacer_video:
         try:
-            vid = V.armar(informe, carpeta / f"{nombre}.mp4")
-        except V.FfmpegError as e:
+            vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip)
+        except R.ReelError as e:
             vid = {"error": str(e)}
+            if clip and foto:
+                try:
+                    vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=foto)
+                    avisos.append(f"El video del medio no se pudo usar ({e}); va la foto.")
+                except R.ReelError as e2:
+                    vid = {"error": str(e2)}
+    elif foto:
+        try:
+            R.placa_fija(g, foto, img)
+        except Exception as e:
+            avisos.append(f"No se pudo armar la vista fija: {type(e).__name__}: {e}")
 
     # El camino SIN IA copia oraciones del medio tal cual y arma el zocalo truncando el
     # titular. Sirve para VER el flujo, no para publicar: publicar texto copiado del medio
@@ -344,7 +349,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # corrida: la bajada salio en blanco y la pieza no objeto nada. El guion por IA
     # cae a los campos del guion por reglas cuando el modelo deja uno vacio, asi que
     # el agujero llega igual aunque haya escrito la IA.
-    for campo, minimo in (("titular", 15), ("volanta", 3), ("bajada", 25), ("zocalo", 3)):
+    # (El zócalo ya no se chequea: la estética del bot no lo dibuja.)
+    for campo, minimo in (("titular", 15), ("volanta", 3), ("bajada", 25)):
         if len((g.get(campo) or "").strip()) < minimo:
             objeciones.append(f"El campo '{campo}' quedo vacio o demasiado corto: "
                               f"en la placa se ve como un hueco.")
@@ -366,8 +372,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "descripcion_tiktok": g["descripcion_final"],
         "placa": str(img),
         "video": vid,
-        "fondo": informe.get("fondo"),
-        "y_imagen": informe.get("y_img"),
+        "estetica": f"bot {R.origen()}",
         "avisos": avisos,
     }
     # La ruta queda guardada porque este archivo se reescribe mas tarde, cuando se
@@ -409,9 +414,10 @@ def main():
     if args.con_ia and not cargadas:
         print("(no se leyo ninguna clave del .env; se usa lo que haya en el entorno)")
 
-    faltan = M.faltantes()
+    faltan = R.faltantes()
     if faltan:
-        print(f"OJO: faltan assets de marca: {', '.join(faltan)}")
+        print(f"OJO: al motor de reels del bot le falta: {', '.join(faltan)}. "
+              f"Traelo con  venv\\Scripts\\python.exe tools\\traer_estetica_bot.py")
 
     entrada = Path(args.entrada) if args.entrada else _ultimo_scrapeo()
     if not entrada or not entrada.exists():
@@ -489,7 +495,8 @@ def main():
         print(f"      titular : {g['titular']}")
         print(f"      bajada  : {g['bajada'][:74]}")
         print(f"      zócalo  : {g['zocalo']}   (guion vía: {g['via']})")
-        print(f"      foto    : {'sí' if pieza['tenia_foto'] else 'NO — placa sin imagen'}")
+        print(f"      foto    : {'sí' if pieza['tenia_foto'] else 'no'}"
+              f"{' · video del medio' if pieza['tenia_video'] else ''}")
         v = pieza.get("video")
         if v and not v.get("error"):
             print(f"      video   : {v['duracion']}s · {v['peso_kb']} KB · {'+'.join(v['tramos'])}")

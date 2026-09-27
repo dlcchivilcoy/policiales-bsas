@@ -927,7 +927,8 @@ def _resumen(informe: dict):
             est = (f.get(r) or {}).get("estado")
             if est:
                 cuenta[(r, est)] = cuenta.get((r, est), 0) + 1
-    print("\n=== " + " · ".join(f"{r} {e}: {n}" for (r, e), n in sorted(cuenta.items())) + " ===")
+    print("\n=== " + (" · ".join(f"{r} {e}: {n}" for (r, e), n in sorted(cuenta.items()))
+                        or "nada para publicar en esta tanda") + " ===")
 
     malas = [(f, r) for f in informe["piezas"] for r in informe["redes"]
              if (f.get(r) or {}).get("estado") in ("fallo", "sin_confirmar")]

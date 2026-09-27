@@ -91,13 +91,46 @@ en el otro: ese par da 0,43 y dos hechos distintos rara vez pasan de 0,25.
 
 ---
 
+## Estética: la MISMA del bot del diario
+
+Desde el 26/09 (pedido del editor) el reel lo arma **el motor de reels del bot**, copiado
+tal cual en `estetica_bot/`. Por eso sale idéntico a los del diario: se comparó cuadro
+contra cuadro con el bot armando la misma foto y dio **diferencia 0**. Google Sans a la
+izquierda, volanta naranja, titular y bajada blancos, fondo carbón con humo, isologo a la
+derecha, marca arriba y la placa de cierre «Seguinos en redes».
+
+Según la forma de la foto (lo decide el bot):
+- **vertical:** la imagen en los 3/4 de abajo, recortada desde abajo para no cortar
+  cabezas (encuentra las caras con OpenCV); arriba volanta y titular, **sin bajada**.
+- **apaisada o cuadrada:** entera, titular hasta 3 renglones y la **bajada debajo**.
+- **afiche:** a cuadro completo, solo marca e isologo.
+
+**Cuando cambies la estética del bot**, policiales se pone al día con:
+
+```bat
+venv\Scripts\python.exe tools\traer_estetica_bot.py
+venv\Scripts\python.exe tools\test_estetica.py
+```
+
+El primero copia el motor, la marca y las letras, y **frena si el código trae algo que
+parezca una clave, un mail o un teléfono** (este repo es público; el del bot, privado). El
+segundo corre 17 pruebas, incluido el autochequeo del propio bot. `estetica_bot/ORIGEN.txt`
+dice de qué commit del bot es la copia. **No editar `estetica_bot/` a mano**: se pisa.
+
+Lo único propio de policiales está en `reels/reel_bot.py`:
+- **Duración:** 13 s (8 de nota + los 5 de la placa de cierre del bot). El bot usa 30 s en
+  sus foto-notas; un policial breve con una foto quieta no aguanta tanto.
+- **Peso:** CRF 32 y techo 1500k (ver *Peso*), con las perillas `REEL_CRF`/`REEL_MAXRATE`
+  del bot. `REEL_FONDO=0`, igual que el `.env` del bot.
+
+---
+
 ## Video
 
 El reel usa el **video de la nota** si el medio publicó uno propio, y la foto si
-no. El clip se recorta a la caja de la imagen, se loopea si es más corto que el
-tramo, y el texto queda fijo encima. Sale sin audio, porque el cierre es una placa
-muda y pegar un tramo con sonido a uno sin sonido deja el reel con audio a la
-mitad.
+no. Lo arma el motor del bot (`to_vertical_reel`), hasta 15 s y **sin audio**: es audio
+de otro medio (música, locución), no se republica. Si el motor no puede con el clip, el
+reel se arma con la foto en vez de perder la pieza.
 
 Solo cuenta el video **alojado por el medio** (`og:video`, `<video>`, `<source>`).
 Un iframe de YouTube o un embed de Facebook no: no se bajan así, y además son de
@@ -135,8 +168,10 @@ nitidez lo pone la foto, no el codificador. Encima TikTok recomprime todo al sub
 > gasta bits en preservar detalle. Lo que achica es el CRF; `slow` aporta recién
 > combinado con él. Cuesta 4 segundos más por pieza.
 
-La placa bajó de calidad 95 a 85 (430 → 259 KB). Si alguna vez entran fotos de calidad
-de verdad, revisar los dos números: ahí sí se va a ver.
+**Con el motor del bot (26/09)** el CRF 32 y el techo de 1500k siguen (perillas
+`REEL_CRF`/`REEL_MAXRATE`), pero el preset es el del bot (`veryfast`). Como el cuadro es
+una foto quieta sobre el humo, cada pieza pesa **110-135 KB**. El `.jpg` de la galería es
+un cuadro del propio reel al segundo 1.
 
 ---
 
@@ -159,7 +194,10 @@ El código no toca la volanta en dos casos, los dos a propósito:
 
 ---
 
-## Aire entre la foto y el pie
+## Aire entre la foto y el pie (histórico)
+
+> **Ya no aplica desde el 26/09:** con el motor del bot no hay pie; bajo una apaisada va
+> la bajada, y el aire lo maneja el bot. Queda como registro del armado anterior.
 
 El pie es el texto gris bajo una foto apaisada. Estaba pegado al filo de la foto y se
 leían como un solo bloque.

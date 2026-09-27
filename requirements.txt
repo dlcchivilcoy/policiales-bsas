@@ -18,6 +18,12 @@ pillow>=10.0
 # de ffmpeg se usa, y un ffmpeg distinto puede cambiar como sale el video.
 imageio-ffmpeg==0.6.0
 
+# El motor de reels del bot (estetica_bot/, 26/09). numpy dibuja el fondo carbon con humo:
+# sin el, el motor NO falla, cae a un color liso y el reel sale distinto al del bot sin
+# avisar. OpenCV encuentra las caras para no cortarlas al encuadrar. Misma version que el bot.
+numpy>=1.24
+opencv-python-headless>=4.8.0,<5
+
 # Solo hace falta para los 4 medios que bloquean clientes automaticos.
 # Usa el Chrome del sistema (channel="chrome"), no baja Chromium.
 # En la nube no se usa: el workflow corre --sin-navegador.

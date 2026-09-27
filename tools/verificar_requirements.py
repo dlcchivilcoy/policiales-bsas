@@ -19,12 +19,21 @@ import sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Paquetes locales del proyecto: no van en requirements.
-PROPIOS = {"scraper", "reels", "tools", "entorno", "salud"}
+PROPIOS = {"scraper", "reels", "tools", "entorno", "salud",
+           # el motor de reels del bot, copiado en estetica_bot/ (se importa desde ahi)
+           "video", "story_image", "utils"}
+
+# Importaciones del motor del bot que el camino de los reels NUNCA alcanza (verificado
+# el 26/09 recorriendo las llamadas desde compose_foto_reel/_encuadrar/_detect_faces):
+# qrcode es de la historia del canal de WhatsApp y rembg del recorte de fondo, que pesa
+# cientos de MB. Si un cambio del bot las mete en el reel, el test_estetica lo va a ver.
+DEL_BOT_SIN_USO = {"qrcode", "rembg"}
 
 # El nombre con que se importa no siempre es el nombre con que se instala.
 ALIAS = {
     "PIL": "pillow",
     "imageio_ffmpeg": "imageio-ffmpeg",
+    "cv2": "opencv-python-headless",
     "bs4": "beautifulsoup4",
     "dotenv": "python-dotenv",
     "yaml": "pyyaml",
@@ -72,7 +81,7 @@ def main():
 
     faltan = []
     for nombre in sorted(importados):
-        if nombre in stdlib or nombre in PROPIOS or nombre.startswith("_"):
+        if nombre in stdlib or nombre in PROPIOS or nombre in DEL_BOT_SIN_USO or nombre.startswith("_"):
             continue
         paquete = ALIAS.get(nombre, nombre).lower()
         if paquete not in declarados:

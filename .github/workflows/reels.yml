@@ -70,6 +70,14 @@ jobs:
         # ffmpeg NO se instala por apt: viene adentro de imageio-ffmpeg, con la versión
         # fijada. Es a propósito — apt a veces se cuelga y tumba la corrida entera.
 
+      - name: Chequear el motor de reels del bot (solo en corridas a mano)
+        # El motor (estetica_bot/) se prueba en Windows, pero acá corre el ffmpeg de LINUX
+        # que trae imageio-ffmpeg: es otro binario y ya pasó que le faltara un filtro. Esto
+        # corre el autochequeo del propio bot. ~2 min; en las pasadas automáticas no se
+        # repite, alcanza con la primera a mano después de traer una estética nueva.
+        if: github.event_name == 'workflow_dispatch'
+        run: python tools/test_estetica.py
+
       - name: Traer las noticias
         # "hoy" es el día calendario argentino. Cada pasada trae SOLO lo del día: no se
         # arrastra nada de ayer, aunque el medio lo haya publicado hace 20 horas.

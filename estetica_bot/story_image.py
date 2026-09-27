@@ -1,0 +1,1749 @@
+"""Compositor de imágenes para Historias (stories) 9:16 — 1080x1920.
+
+Las Historias por API NO muestran caption ni stickers, así que TODO el texto
+(resumen, dirección web, título) se dibuja DENTRO de la imagen con Pillow.
+
+Funciones públicas:
+  - compose_note_story(photo_path, volanta, titular, resumen, site_url) -> Path
+  - compose_youtube_story(thumb_path, titulo, etiqueta) -> Path
+Ambas devuelven la ruta a un JPG en historias_preview/.
+"""
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+
+from utils.logger import get_logger
+
+logger = get_logger("story_image")
+
+# --- Lienzo ---
+W, H = 1080, 1920
+MARGIN = 70
+
+# --- Paleta CLARA (identidad de la web: blanco + naranja + logo) ---
+BG = (255, 255, 255)        # fondo blanco
+ACCENT = (226, 98, 12)      # naranja del diario (ajustable)
+# OJO: la variable se sigue llamando WHITE por compatibilidad con las funciones
+# existentes, pero ahora vale NARANJA: los títulos (antes blancos sobre negro) pasan
+# a ser naranjas sobre blanco. El cuerpo va en GRAY (gris oscuro, legible en blanco).
+WHITE = (226, 98, 12)       # títulos → naranja
+GRAY = (74, 78, 86)         # texto secundario → gris oscuro
+
+PREVIEW_DIR = Path(__file__).parent / "historias_preview"
+LOGO_PATH = Path(__file__).parent / "logo.png"
+_logo_cache = None
+
+
+def _paste_logo(canvas: "Image.Image", top: int, target_w: int) -> int:
+    """Pega el logo del diario (masthead negro, transparente) centrado arriba.
+    Devuelve la 'y' debajo del logo. Si no está el archivo, no rompe."""
+    global _logo_cache
+    if _logo_cache is None:
+        try:
+            _logo_cache = Image.open(LOGO_PATH).convert("RGBA")
+        except Exception as e:
+            logger.warning(f"No se pudo cargar el logo ({LOGO_PATH}): {e}")
+            _logo_cache = False
+    if not _logo_cache:
+        return top
+    w, h = _logo_cache.size
+    nh = max(1, round(h * target_w / w))
+    lg = _logo_cache.resize((target_w, nh), Image.LANCZOS)
+    canvas.paste(lg, ((canvas.width - target_w) // 2, top), lg)
+    return top + nh
+
+# Fuentes (Windows primero, luego Linux; fallback a la default de Pillow).
+# En el server Linux se usan Liberation Sans (métrica idéntica a Arial) o DejaVu.
+_FONT_PATHS = {
+    "bold": [
+        r"C:\Windows\Fonts\arialbd.ttf", r"C:\Windows\Fonts\Arialbd.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    ],
+    "regular": [
+        r"C:\Windows\Fonts\arial.ttf", r"C:\Windows\Fonts\Arial.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ],
+}
+
+
+def _font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
+    for p in _FONT_PATHS["bold" if bold else "regular"]:
+        try:
+            return ImageFont.truetype(p, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
+
+def _wrap(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, max_w: int) -> list[str]:
+    """Parte el texto en líneas que entren en max_w píxeles."""
+    text = (text or "").strip()
+    if not text:
+        return []
+    lines, line = [], ""
+    for word in text.split():
+        probe = (line + " " + word).strip()
+        if draw.textlength(probe, font=font) <= max_w:
+            line = probe
+        else:
+            if line:
+                lines.append(line)
+            line = word
+    if line:
+        lines.append(line)
+    return lines
+
+
+def _draw_block(draw, lines, font, x, y, fill, line_gap) -> int:
+    """Dibuja varias líneas y devuelve la Y debajo del bloque."""
+    for ln in lines:
+        draw.text((x, y), ln, font=font, fill=fill)
+        bbox = font.getbbox(ln)
+        y += (bbox[3] - bbox[1]) + line_gap
+    return y
+
+
+def _resumen_lineas(draw, text, font, max_w, max_lines) -> list[str]:
+    """Resumen recortado a `max_lines` líneas que entren en `max_w`, SIN puntos
+    suspensivos. Si el texto no entra, corta en el límite de la última línea
+    completa (y, si puede, en el final de una oración para que quede prolijo)."""
+    text = (text or "").strip()
+    if not text:
+        return []
+    lines = _wrap(draw, text, font, max_w)
+    if len(lines) <= max_lines:
+        return lines
+    recorte = lines[:max_lines]
+    # Intentar terminar en el final de una oración dentro del bloque permitido.
+    bloque = " ".join(recorte)
+    corte = max(bloque.rfind(". "), bloque.rfind("! "), bloque.rfind("? "))
+    if corte >= len(bloque) * 0.5:  # solo si no perdemos demasiado texto
+        bloque = bloque[:corte + 1]
+        recorte = _wrap(draw, bloque, font, max_w)[:max_lines]
+    return recorte
+
+
+def _cover(img: Image.Image, box_w: int, box_h: int) -> Image.Image:
+    """Escala la imagen para CUBRIR el box y recorta el sobrante (crop centrado)."""
+    img = img.convert("RGB")
+    src_w, src_h = img.size
+    scale = max(box_w / src_w, box_h / src_h)
+    new = img.resize((max(1, round(src_w * scale)), max(1, round(src_h * scale))), Image.LANCZOS)
+    nw, nh = new.size
+    left = (nw - box_w) // 2
+    top = (nh - box_h) // 2
+    return new.crop((left, top, left + box_w, top + box_h))
+
+
+def _contain(img: Image.Image, box_w: int, box_h: int) -> Image.Image:
+    """Escala la imagen para ENTRAR en el box sin recortar (mantiene proporción)."""
+    img = img.convert("RGB")
+    out = img.copy()
+    out.thumbnail((box_w, box_h), Image.LANCZOS)
+    return out
+
+
+def _fit_blur(img: Image.Image, box_w: int, box_h: int) -> Image.Image:
+    """Muestra la foto COMPLETA (sin recortar) dentro del box y rellena el fondo
+    con una versión ampliada y desenfocada de la misma foto (estilo Instagram).
+    Si la foto ya tiene la proporción del box, queda igual que antes (sin franjas);
+    si tiene otra proporción, se ve entera y prolija sobre el fondo borroso."""
+    img = img.convert("RGB")
+    # Fondo: cubrir el box (recorte) + desenfoque fuerte + oscurecer un poco
+    bg = _cover(img, box_w, box_h).filter(ImageFilter.GaussianBlur(40))
+    bg = ImageEnhance.Brightness(bg).enhance(0.55)
+    # Primer plano: la foto entera escalada para entrar, centrada
+    fg = img.copy()
+    fg.thumbnail((box_w, box_h), Image.LANCZOS)
+    fw, fh = fg.size
+    bg.paste(fg, ((box_w - fw) // 2, (box_h - fh) // 2))
+    return bg
+
+
+def _new_canvas() -> Image.Image:
+    return Image.new("RGB", (W, H), BG)
+
+
+def _save(img: Image.Image, stem: str) -> Path:
+    PREVIEW_DIR.mkdir(exist_ok=True)
+    out = PREVIEW_DIR / f"{stem}.jpg"
+    img.save(out, "JPEG", quality=90)
+    logger.debug(f"Historia compuesta: {out.name}")
+    return out
+
+
+def _safe_stem(text: str, fallback: str) -> str:
+    base = "".join(c if c.isalnum() else "_" for c in (text or "")).strip("_")[:40]
+    return base or fallback
+
+
+def compose_foto_reel(photo_path: Path) -> Path:
+    """La foto encuadrada a 9:16, SIN texto ni gráfica, para armar un reel con la/s foto/s
+    del editor. Las VERTICALES/CUADRADAS van FULL BLEED (llenan el cuadro, centradas en el
+    sujeto con `_encuadrar`, el mismo criterio que las placas). Las HORIZONTALES van enteras
+    sobre fondo desenfocado: recortarlas a 9:16 se comería al sujeto (pedido 2026-08-25).
+    `REEL_FULLBLEED=0` apaga el full bleed en todos los casos."""
+    from video import _fullbleed_aplica  # misma regla que los reels de video
+    img = Image.open(photo_path)
+    canvas = _encuadrar(img, W, H) if _fullbleed_aplica(img.width, img.height) else _fit_blur(img, W, H)
+    return _save(canvas, _safe_stem(Path(photo_path).stem, "foto_reel"))
+
+
+# ---------------------------------------------------------------------------
+# Historia de NOTICIA: foto (cover, full-bleed arriba) + texto abajo
+# ---------------------------------------------------------------------------
+def compose_note_story(photo_path: Path, volanta: str, titular: str,
+                       resumen: str, site_url: str) -> Path:
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+
+    # Encabezado de marca
+    f_brand = _font(34, bold=True)
+    draw.text((MARGIN, 60), "DIARIO LA CAMPAÑA", font=f_brand, fill=ACCENT)
+
+    # Foto en la franja superior: se ve ENTERA (sin recortar), con fondo borroso
+    # para rellenar si la foto tiene otra proporción (evita "fuera de cuadro").
+    photo_top = 130
+    photo_h = 1080
+    try:
+        photo = _fit_blur(Image.open(photo_path), W, photo_h)
+        canvas.paste(photo, (0, photo_top))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la foto {getattr(photo_path,'name',photo_path)}: {e}")
+        photo_h = 0
+
+    # Bloque de texto
+    text_x = MARGIN
+    text_w = W - 2 * MARGIN
+    y = photo_top + photo_h + 50
+
+    f_volanta = _font(34, bold=True)
+    f_titular = _font(58, bold=True)
+    f_resumen = _font(38, bold=False)
+    f_footer = _font(34, bold=True)
+
+    if volanta:
+        vlines = _wrap(draw, volanta.upper(), f_volanta, text_w)[:1]
+        y = _draw_block(draw, vlines, f_volanta, text_x, y, ACCENT, 8)
+        y += 6
+
+    if titular:
+        tlines = _wrap(draw, titular, f_titular, text_w)[:3]
+        y = _draw_block(draw, tlines, f_titular, text_x, y, WHITE, 10)
+        y += 18
+
+    # Reservar lugar para el pie (footer) abajo
+    footer_text = f"Leé la nota completa en {site_url}"
+    footer_lines = _wrap(draw, footer_text, f_footer, text_w)
+    footer_h = sum((f_footer.getbbox(l)[3] - f_footer.getbbox(l)[1]) + 12 for l in footer_lines)
+    footer_y = H - MARGIN - footer_h
+
+    if resumen:
+        # Cuántas líneas de resumen entran antes del footer
+        max_y = footer_y - 40
+        rlines = _wrap(draw, resumen, f_resumen, text_w)
+        fitted = []
+        yy = y
+        for ln in rlines:
+            h = (f_resumen.getbbox(ln)[3] - f_resumen.getbbox(ln)[1]) + 12
+            if yy + h > max_y:
+                if fitted:
+                    fitted[-1] = fitted[-1].rstrip(" .,;:") + "…"
+                break
+            fitted.append(ln)
+            yy += h
+        _draw_block(draw, fitted, f_resumen, text_x, y, GRAY, 12)
+
+    # Línea separadora + footer
+    draw.line((MARGIN, footer_y - 26, W - MARGIN, footer_y - 26), fill=(60, 64, 74), width=2)
+    _draw_block(draw, footer_lines, f_footer, text_x, footer_y, WHITE, 12)
+
+    stem = "nota_" + _safe_stem(titular or volanta, "nota")
+    return _save(canvas, stem)
+
+
+# ---------------------------------------------------------------------------
+# Historia de YOUTUBE: miniatura (16:9) centrada + título + pie
+# ---------------------------------------------------------------------------
+def compose_youtube_story(thumb_path: Path, titulo: str, etiqueta: str,
+                          footer: str | None = None, en_vivo: bool = False) -> Path:
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+
+    # Encabezado
+    f_brand = _font(34, bold=True)
+    draw.text((MARGIN, 60), "RADIO DEL CENTRO", font=f_brand, fill=ACCENT)
+
+    # Cartel "EN VIVO" (rojo) cuando corresponde
+    if en_vivo:
+        f_live = _font(40, bold=True)
+        txt = "EN VIVO"
+        tw = draw.textlength(txt, font=f_live)
+        bx0, by0 = MARGIN, 118
+        pad, dot = 26, 16
+        bx1 = bx0 + dot + 18 + tw + pad * 2
+        by1 = by0 + 70
+        draw.rounded_rectangle((bx0, by0, bx1, by1), radius=18, fill=ACCENT)
+        cy = (by0 + by1) // 2
+        draw.ellipse((bx0 + pad, cy - dot // 2, bx0 + pad + dot, cy + dot // 2), fill=WHITE)
+        draw.text((bx0 + pad + dot + 18, by0 + 14), txt, font=f_live, fill=WHITE)
+
+    # Miniatura: ancho completo, 16:9 → 1080x607, centrada verticalmente arriba
+    thumb_w = W
+    thumb_h = round(W * 9 / 16)
+    thumb_top = 420 if en_vivo else 360
+    try:
+        thumb = _cover(Image.open(thumb_path), thumb_w, thumb_h)
+        canvas.paste(thumb, (0, thumb_top))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la miniatura: {e}")
+
+    # Botón play (círculo rojo + triángulo) en el centro de la miniatura
+    cx, cy, r = W // 2, thumb_top + thumb_h // 2, 70
+    draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=ACCENT)
+    tri = [(cx - 22, cy - 36), (cx - 22, cy + 36), (cx + 40, cy)]
+    draw.polygon(tri, fill=WHITE)
+
+    # Título debajo
+    text_x = MARGIN
+    text_w = W - 2 * MARGIN
+    y = thumb_top + thumb_h + 70
+
+    f_titulo = _font(56, bold=True)
+    tlines = _wrap(draw, titulo, f_titulo, text_w)[:4]
+    y = _draw_block(draw, tlines, f_titulo, text_x, y, WHITE, 12)
+
+    # Pie: triángulo "play" dibujado + texto (sin emojis, para que Arial lo renderice)
+    f_footer = _font(40, bold=True)
+    footer_text = footer or f"{etiqueta} en YouTube"
+    flines = _wrap(draw, footer_text, f_footer, text_w - 70)
+    footer_h = sum((f_footer.getbbox(l)[3] - f_footer.getbbox(l)[1]) + 12 for l in flines)
+    footer_y = H - MARGIN - footer_h
+    draw.line((MARGIN, footer_y - 26, W - MARGIN, footer_y - 26), fill=(60, 64, 74), width=2)
+    # triángulo a la izquierda de la primera línea
+    fh = f_footer.getbbox("Ay")[3] - f_footer.getbbox("Ay")[1]
+    ty = footer_y + 4
+    draw.polygon([(text_x, ty), (text_x, ty + fh), (text_x + fh * 0.85, ty + fh / 2)], fill=ACCENT)
+    _draw_block(draw, flines, f_footer, text_x + 70, footer_y, ACCENT, 12)
+
+    stem = "yt_" + _safe_stem(titulo, "video")
+    return _save(canvas, stem)
+
+
+# ---------------------------------------------------------------------------
+# Historia RESUMEN de YouTube: UNA sola historia con TODAS las notas del día
+#   (varias miniaturas + título) + CTA "Mirálas en nuestro canal de YouTube".
+# ---------------------------------------------------------------------------
+def compose_youtube_resumen_story(videos: list[dict],
+                                  titulo_top: str = "NOTAS DE HOY",
+                                  cta: str = "Mirálas en nuestro canal de YouTube",
+                                  marca: str = "Radio del Centro") -> Path:
+    """videos: lista de {"thumb": Path, "titulo": str}. Devuelve un JPG 9:16."""
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+    m = MARGIN
+    inner = W - 2 * m
+
+    # Encabezado
+    draw.text((m, 56), "RADIO DEL CENTRO", font=_font(34, True), fill=ACCENT)
+    y = 130
+
+    # Título grande
+    f_t = _font(72, True)
+    for ln in _wrap(draw, titulo_top, f_t, inner)[:2]:
+        draw.text((m, y), ln, font=f_t, fill=WHITE)
+        y += _line_h(f_t, "Ay") + 18
+
+    # Subtítulo (cantidad de videos)
+    f_s = _font(34, False)
+    sub = f"{len(videos)} video{'s' if len(videos) != 1 else ''} de hoy"
+    draw.text((m, y), sub, font=f_s, fill=ACCENT)
+    y += _line_h(f_s, "Ay") + 22
+    draw.line((m, y, W - m, y), fill=(60, 64, 74), width=2)
+    y_start = y + 30
+
+    # Pie (CTA en varias líneas + marca) — reservar su altura
+    f_cta = _font(40, True)
+    f_marca = _font(46, True)
+    cta_lines = _wrap(draw, cta, f_cta, inner - 64)
+    cta_h = sum(_line_h(f_cta, l) + 8 for l in cta_lines)
+    footer_h = cta_h + _line_h(f_marca, "Ay") + 14
+    footer_y = H - m - footer_h
+    avail = (footer_y - 30) - y_start
+
+    # Cuántas filas mostrar y con qué tamaño de miniatura entran
+    GAP = 24
+    MAXN = 6
+    items = videos[:MAXN]
+    extra = len(videos) - len(items)
+    n = max(1, len(items))
+
+    thumb_w = 240
+    for tw in (460, 420, 380, 340, 300, 260, 240):
+        th = round(tw * 9 / 16)
+        total = n * th + (n - 1) * GAP + (44 if extra > 0 else 0)
+        if total <= avail:
+            thumb_w = tw
+            break
+    thumb_h = round(thumb_w * 9 / 16)
+
+    f_titulo = _font(34, True)
+    text_x = m + thumb_w + 28
+    text_w = W - m - text_x
+
+    yy = y_start
+    for v in items:
+        # Miniatura (cover, recorte centrado) con marco sutil
+        try:
+            th_img = _cover(Image.open(v["thumb"]), thumb_w, thumb_h)
+            canvas.paste(th_img, (m, yy))
+        except Exception as e:
+            logger.warning(f"miniatura no disponible: {e}")
+            draw.rectangle((m, yy, m + thumb_w, yy + thumb_h), fill=(40, 44, 54))
+        draw.rectangle((m, yy, m + thumb_w, yy + thumb_h), outline=(70, 74, 84), width=2)
+
+        # Botón play (círculo rojo + triángulo)
+        bx, by, r = m + thumb_w // 2, yy + thumb_h // 2, 32
+        draw.ellipse((bx - r, by - r, bx + r, by + r), fill=ACCENT)
+        draw.polygon([(bx - 10, by - 16), (bx - 10, by + 16), (bx + 18, by)], fill=WHITE)
+
+        # Título al costado, centrado vertical respecto a la miniatura
+        tlines = _wrap(draw, v.get("titulo", ""), f_titulo, text_w)[:3]
+        lh = _line_h(f_titulo, "Ay") + 4
+        ty = yy + max(0, (thumb_h - len(tlines) * lh) // 2)
+        for ln in tlines:
+            draw.text((text_x, ty), ln, font=f_titulo, fill=WHITE)
+            ty += lh
+        yy += thumb_h + GAP
+
+    if extra > 0:
+        draw.text((m, yy), f"… y {extra} más en el canal", font=f_s, fill=GRAY)
+
+    # Pie: triángulo play + CTA (blanco) + marca (acento)
+    draw.line((m, footer_y - 20, W - m, footer_y - 20), fill=(60, 64, 74), width=2)
+    fh = _line_h(f_cta, "Ay")
+    draw.polygon([(m, footer_y + 4), (m, footer_y + 4 + fh),
+                  (m + fh * 0.85, footer_y + 4 + fh / 2)], fill=ACCENT)
+    yc = footer_y
+    for i, ln in enumerate(cta_lines):
+        x = m + (int(fh) + 18 if i == 0 else 0)
+        draw.text((x, yc), ln, font=f_cta, fill=WHITE)
+        yc += _line_h(f_cta, ln) + 8
+    draw.text((m, yc + 4), marca, font=f_marca, fill=ACCENT)
+
+    return _save(canvas, "yt_resumen")
+
+
+# ---------------------------------------------------------------------------
+# Historia de TAPA: la tapa del diario entera (contain, sin recortar) + fecha
+# ---------------------------------------------------------------------------
+def compose_tapa_story(cover_path: Path, fecha_str: str) -> Path:
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+
+    # (Sin logo arriba — pedido del usuario.)
+    # Pie (lo dibujamos al final, pero reservamos su altura). Texto CENTRADO.
+    f_tapa = _font(56, bold=True)
+    f_fecha = _font(40, bold=False)
+    footer_block_h = 150
+    footer_y = H - MARGIN - footer_block_h
+
+    # Tapa contenida (sin recortar), centrada en TODO el espacio libre de arriba.
+    box_top = 90
+    box_h = footer_y - 40 - box_top
+    box_w = W - 2 * MARGIN
+    try:
+        cover = _contain(Image.open(cover_path), box_w, box_h)
+        cw, ch = cover.size
+        cx = (W - cw) // 2
+        cy = box_top + (box_h - ch) // 2
+        # marco sutil
+        draw.rectangle((cx - 4, cy - 4, cx + cw + 4, cy + ch + 4), outline=(70, 74, 84), width=3)
+        canvas.paste(cover, (cx, cy))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la tapa: {e}")
+
+    # Pie: "TAPA DE HOY" + fecha — CENTRADOS
+    draw.line((MARGIN, footer_y - 20, W - MARGIN, footer_y - 20), fill=(60, 64, 74), width=2)
+    y = _texto_centrado(draw, ["TAPA DE HOY"], f_tapa, footer_y, WHITE, gap=8)
+    if fecha_str:
+        _texto_centrado(draw, [fecha_str], f_fecha, y, ACCENT)
+
+    return _save(canvas, "tapa")
+
+
+# ---------------------------------------------------------------------------
+# Compositor GENÉRICO de listados (sirve para sepelios y farmacias)
+# ---------------------------------------------------------------------------
+GREEN = (60, 175, 110)
+
+
+def _line_h(font, sample="Ay") -> int:
+    b = font.getbbox(sample)
+    return b[3] - b[1]
+
+
+def _draw_marker(draw, x, y, size, color, kind):
+    """Dibuja un marcador: 'cross' (cruz sobria), 'plus' (cruz farmacia), 'dot'."""
+    if kind == "cross":
+        w = max(3, size // 5)
+        cx = x + size // 2
+        draw.rectangle((cx - w // 2, y, cx + w // 2, y + size), fill=color)          # vertical
+        draw.rectangle((x, y + size // 4, x + size, y + size // 4 + w), fill=color)   # horizontal
+    elif kind == "plus":
+        w = max(4, size // 4)
+        cx, cy = x + size // 2, y + size // 2
+        draw.rectangle((cx - w // 2, y, cx + w // 2, y + size), fill=color)
+        draw.rectangle((x, cy - w // 2, x + size, cy + w // 2), fill=color)
+    else:  # dot
+        draw.ellipse((x, y + size // 4, x + size // 2, y + size // 4 + size // 2), fill=color)
+
+
+def _compose_listado(*, size, titulo, subtitulo, items, footer,
+                     accent=ACCENT, marker="dot", stem="info",
+                     logo=True, center=False) -> Path:
+    """
+    items: lista de dicts {"main": str, "sub": str (opcional)}.
+    Ajusta el tamaño de fuente para que entren todos entre el encabezado y el pie.
+    logo=False  → no dibuja el logo de arriba.
+    center=True → centra TODO el texto horizontalmente Y apila encabezado, lista y pie
+                  como UN SOLO BLOQUE centrado verticalmente.
+
+    Por qué el bloque único (2026-09-14): antes el título quedaba clavado arriba de todo
+    y el pie abajo de todo, con la lista flotando en el medio. En la historia de
+    farmacias (1080x1920 con tres renglones) eso dejaba dos huecos blancos enormes y el
+    título se veía descolgado del resto. Ahora las tres partes viajan juntas.
+    """
+    W2, H2 = size
+    m = 70
+    inner = W2 - 2 * m
+    canvas = Image.new("RGB", (W2, H2), BG)
+    draw = ImageDraw.Draw(canvas)
+
+    def _line(ln, font, yy, fill):
+        lx = m + (inner - draw.textlength(ln, font=font)) / 2 if center else m
+        draw.text((lx, yy), ln, font=font, fill=fill)
+
+    # --- Encabezado y pie: se MIDEN antes de dibujar, para poder apilarlos ---
+    f_t = _font(68, True)
+    tit_lineas = _wrap(draw, titulo, f_t, inner)[:2]
+    alto_tit = sum(_line_h(f_t, ln) + 16 for ln in tit_lineas)
+    f_s = _font(36, False)
+    alto_sub = (_line_h(f_s) + 24) if subtitulo else 0
+
+    f_foot = _font(26, False)
+    foot_lines = _wrap(draw, footer, f_foot, inner) if footer else []
+    foot_h = sum(_line_h(f_foot, l) + 10 for l in foot_lines)
+
+    # Sitio que puede ocupar la lista: el MÁXIMO posible (encabezado pegado arriba y pie
+    # pegado abajo). Se mide siempre así, centrado o no, para que el cuerpo de letra que
+    # se elige no dependa de dónde termine ubicado el bloque.
+    y_arriba = 116 if logo else 90
+    avail = (H2 - m - foot_h - 26) - (y_arriba + alto_tit + alto_sub + 30)
+
+    n = max(1, len(items))
+    GAP = 24  # espacio entre ítems
+
+    def layout(main_sz):
+        """Calcula fuentes, líneas por ítem y altura total para un tamaño dado."""
+        f_main = _font(main_sz, True)
+        f_sub = _font(max(22, main_sz - 18), False)
+        mk = max(22, _line_h(f_main, "Ay"))
+        text_w = inner - mk - 22
+        mlh = _line_h(f_main, "Ay")
+        slh = _line_h(f_sub, "Ay")
+        filas, total = [], 0
+        for it in items:
+            mlines = _wrap(draw, it.get("main", ""), f_main, text_w)[:2]
+            sub = it.get("sub", "")
+            sline = _wrap(draw, sub, f_sub, text_w)[:1] if sub else []
+            sub2 = it.get("sub2", "")           # línea resaltada (ej: horario)
+            sline2 = _wrap(draw, sub2, f_sub, text_w)[:1] if sub2 else []
+            h = (len(mlines) * (mlh + 2) + (slh + 4 if sline2 else 0)
+                 + (slh + 4 if sline else 0) + GAP)
+            filas.append((mlines, sline2, sline, h))
+            total += h
+        return f_main, f_sub, mk, mlh, slh, filas, total
+
+    # Elegir el tamaño más grande que entre (contemplando nombres en 2 líneas)
+    chosen = None
+    for main_sz in (54, 48, 44, 40, 36, 32, 28, 24):
+        res = layout(main_sz)
+        if res[6] <= avail:
+            chosen = res
+            break
+    if not chosen:
+        chosen = layout(24)
+    f_main, f_sub, mk, mlh, slh, filas, total = chosen
+
+    # --- Dónde arranca el encabezado y dónde va el pie ---
+    if center:
+        # Bloque único: encabezado + 30 + lista + 26 + pie, centrado en el alto útil.
+        # `y_arriba` es el piso: el bloque nunca sube más que la posición de siempre.
+        alto_bloque = alto_tit + alto_sub + 30 + total + 26 + foot_h
+        y = max(y_arriba, (H2 - alto_bloque) // 2)
+        y_div = y + alto_tit + alto_sub
+        foot_y = y_div + 30 + total + 26
+    else:
+        y = y_arriba
+        y_div = y + alto_tit + alto_sub
+        foot_y = (H2 - m - foot_h) if foot_lines else (H2 - m)
+
+    # --- Dibujar ---
+    if logo:
+        _paste_logo(canvas, 40, 360)
+
+    for ln in tit_lineas:
+        _line(ln, f_t, y, WHITE)
+        y += _line_h(f_t, ln) + 16
+    if subtitulo:
+        _line(subtitulo, f_s, y, accent)
+
+    draw.line((m, y_div, W2 - m, y_div), fill=(60, 64, 74), width=2)
+
+    yy = y_div + 30
+    for idx, (mlines, sline2, sline, h) in enumerate(filas):
+        if yy + h > foot_y - 10:
+            draw.text((m, yy), f"… y {n - idx} más", font=f_sub, fill=GRAY)
+            break
+        if center:
+            # Texto centrado, sin marcador a la izquierda.
+            ly = yy
+            for ln in mlines:
+                draw.text(((W2 - draw.textlength(ln, font=f_main)) / 2, ly), ln, font=f_main, fill=WHITE)
+                ly += mlh + 2
+            if sline2:
+                draw.text(((W2 - draw.textlength(sline2[0], font=f_sub)) / 2, ly + 2), sline2[0], font=f_sub, fill=accent)
+                ly += slh + 4
+            if sline:
+                draw.text(((W2 - draw.textlength(sline[0], font=f_sub)) / 2, ly + 2), sline[0], font=f_sub, fill=GRAY)
+        else:
+            _draw_marker(draw, m, yy + 4, mk, accent, marker)
+            tx = m + mk + 22
+            ly = yy
+            for ln in mlines:
+                draw.text((tx, ly), ln, font=f_main, fill=WHITE)
+                ly += mlh + 2
+            if sline2:   # horario u otra línea destacada → color de acento
+                draw.text((tx, ly + 2), sline2[0], font=f_sub, fill=accent)
+                ly += slh + 4
+            if sline:
+                draw.text((tx, ly + 2), sline[0], font=f_sub, fill=GRAY)
+        yy += h
+
+    # Pie
+    if foot_lines:
+        draw.line((m, foot_y - 16, W2 - m, foot_y - 16), fill=(60, 64, 74), width=2)
+        if center:
+            yy = foot_y
+            for ln in foot_lines:
+                draw.text(((W2 - draw.textlength(ln, font=f_foot)) / 2, yy), ln, font=f_foot, fill=GRAY)
+                yy += _line_h(f_foot, ln) + 10
+        else:
+            _draw_block(draw, foot_lines, f_foot, m, foot_y, GRAY, 10)
+
+    return _save(canvas, stem)
+
+
+# ---- SEPELIOS ----
+def compose_sepelios_feed(nombres: list[str], fecha_str: str) -> Path:
+    items = [{"main": n} for n in nombres]
+    return _compose_listado(
+        size=(1080, 1350), titulo="SEPELIOS", subtitulo=fecha_str,
+        items=items, footer="Q.E.P.D. · Diario La Campaña acompaña a las familias · Fuentes: Visión y San Nicolás",
+        accent=GRAY, marker="cross", stem="sepelios_feed")
+
+
+def compose_sepelios_story(nombres: list[str], fecha_str: str) -> Path:
+    items = [{"main": n} for n in nombres]
+    return _compose_listado(
+        size=(W, H), titulo="SEPELIOS", subtitulo=fecha_str,
+        items=items, footer="Q.E.P.D. · Diario La Campaña acompaña a las familias · Fuentes: Visión y San Nicolás",
+        accent=GRAY, marker="cross", stem="sepelios_story")
+
+
+# ---- FARMACIAS ----
+def compose_farmacias_feed(items: list[dict], fecha_str: str) -> Path:
+    return _compose_listado(
+        size=(1080, 1350), titulo="FARMACIAS DE TURNO", subtitulo=fecha_str,
+        items=items, footer="Turnos de 8:30 a 8:30 hs (la última, de 8:30 a 22 hs)",
+        accent=GREEN, marker="plus", stem="farmacias_feed")
+
+
+def compose_farmacias_story(items: list[dict], fecha_str: str) -> Path:
+    return _compose_listado(
+        size=(W, H), titulo="FARMACIAS DE TURNO", subtitulo=fecha_str,
+        items=items, footer="Turnos de 8:30 a 8:30 hs (la última, de 8:30 a 22 hs)",
+        accent=GREEN, marker="plus", stem="farmacias_story",
+        logo=False, center=True)
+
+
+# ---------------------------------------------------------------------------
+# Historia PROMO del CANAL de WhatsApp: QR (escaneable) + invitación a seguirlo.
+#   En historias el link no es tocable; el QR sí se escanea desde otro teléfono.
+# ---------------------------------------------------------------------------
+WHATSAPP_GREEN = (37, 211, 102)
+
+
+def _texto_centrado(draw, lines, font, y, fill, gap=10):
+    for ln in lines:
+        w = draw.textlength(ln, font=font)
+        draw.text(((W - w) // 2, y), ln, font=font, fill=fill)
+        y += _line_h(font, "Ay") + gap
+    return y
+
+
+def compose_canal_story(url: str, *,
+                        titulo="Seguinos en nuestro Canal de WhatsApp",
+                        subtitulo="Toda la info del día, al instante 📲",
+                        cta="Escaneá el código para seguirnos",
+                        marca="Diario La Campaña · Radio del Centro") -> Path:
+    import qrcode
+
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+    m = MARGIN
+    inner = W - 2 * m
+
+    # Marca arriba (centrada)
+    _texto_centrado(draw, ["DIARIO LA CAMPAÑA"], _font(36, True), 70, ACCENT)
+    y = 175
+
+    # Título (centrado)
+    f_t = _font(64, True)
+    y = _texto_centrado(draw, _wrap(draw, titulo, f_t, inner)[:3], f_t, y, WHITE, gap=12)
+    y += 8
+
+    # Subtítulo (centrado, verde WhatsApp). Sin emoji para que Arial no falle.
+    sub = subtitulo.replace("📲", "").strip()
+    f_s = _font(38, False)
+    y = _texto_centrado(draw, _wrap(draw, sub, f_s, inner)[:2], f_s, y, WHATSAPP_GREEN, gap=8)
+    y += 34
+
+    # Panel blanco con el QR centrado
+    panel = min(inner, 760)
+    px = (W - panel) // 2
+    py = y
+    draw.rounded_rectangle((px, py, px + panel, py + panel), radius=44, fill=WHITE)
+
+    qr = qrcode.QRCode(border=1, box_size=10,
+                       error_correction=qrcode.constants.ERROR_CORRECT_M)
+    qr.add_data(url)
+    qr.make(fit=True)
+    qr_img = qr.make_image(fill_color=(17, 19, 26), back_color=(255, 255, 255)).convert("RGB")
+    qsize = panel - 96
+    qr_img = qr_img.resize((qsize, qsize), Image.NEAREST)
+    canvas.paste(qr_img, (px + (panel - qsize) // 2, py + (panel - qsize) // 2))
+    y = py + panel + 44
+
+    # CTA (centrada)
+    f_cta = _font(44, True)
+    y = _texto_centrado(draw, _wrap(draw, cta, f_cta, inner)[:2], f_cta, y, WHITE, gap=8)
+
+    # Marca abajo (verde WhatsApp)
+    f_m = _font(34, True)
+    _texto_centrado(draw, [marca], f_m, H - m - _line_h(f_m, "Ay"), WHATSAPP_GREEN)
+
+    return _save(canvas, "canal_wsp")
+
+
+# ---------------------------------------------------------------------------
+# Historia de REPOSTEO de publicidad: el flyer del comercio centrado (sin
+# recortar) sobre el fondo de marca + un pie discreto. Sirve para cualquier
+# proporción de flyer (cuadrado, 4:5, etc.) quedando siempre 9:16 prolijo.
+# ---------------------------------------------------------------------------
+def compose_repost_story(flyer_path: Path, pie: str = "Espacio publicitario",
+                         marca: str = "DIARIO LA CAMPAÑA") -> Path:
+    canvas = _new_canvas()
+    draw = ImageDraw.Draw(canvas)
+
+    _texto_centrado(draw, [marca], _font(34, True), 60, ACCENT)
+
+    # Pie reservado
+    f_pie = _font(32, False)
+    pie_y = H - MARGIN - _line_h(f_pie, "Ay")
+
+    # Flyer contenido (sin recortar) y centrado entre encabezado y pie
+    box_top = 150
+    box_h = (pie_y - 30) - box_top
+    box_w = W - 2 * MARGIN
+    try:
+        flyer = _contain(Image.open(flyer_path), box_w, box_h)
+        fw, fh = flyer.size
+        cx = (W - fw) // 2
+        cy = box_top + (box_h - fh) // 2
+        draw.rectangle((cx - 3, cy - 3, cx + fw + 3, cy + fh + 3), outline=(70, 74, 84), width=2)
+        canvas.paste(flyer, (cx, cy))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir el flyer a repostear: {e}")
+
+    if pie:
+        _texto_centrado(draw, [pie], f_pie, pie_y, GRAY)
+
+    return _save(canvas, "repost")
+
+
+# ---------------------------------------------------------------------------
+# CARRUSEL (feed 4:5): slide de NOTA, slide de TAPA y placa "Noticias de hoy".
+# Las imágenes del carrusel se generan 1080x1350 (Instagram exige que TODAS las
+# imágenes del carrusel tengan la misma proporción).
+# ---------------------------------------------------------------------------
+SLIDE_W, SLIDE_H = 1080, 1350
+
+
+def _draw_titular_fill(draw, text, x, y, w, h, fill, *, max_size=100, min_size=44, center=False):
+    """Dibuja el titular lo MÁS grande posible para llenar la caja (w x h),
+    centrado verticalmente (y horizontalmente si center=True). Si no entra ni al
+    tamaño mínimo, recorta con '…'."""
+    text = (text or "").strip()
+    if not text:
+        return
+
+    def _emit(f, lines, yy):
+        for ln in lines:
+            lx = x + (w - draw.textlength(ln, font=f)) / 2 if center else x
+            draw.text((lx, yy), ln, font=f, fill=fill)
+            yy += _line_h(f, "Ay") + 8
+
+    for size in range(max_size, min_size - 1, -3):
+        f = _font(size, bold=True)
+        lines = _wrap(draw, text, f, w)
+        lh = _line_h(f, "Ay") + 8
+        if len(lines) * lh <= h:
+            _emit(f, lines, y + max(0, (h - len(lines) * lh) // 2))
+            return
+    f = _font(min_size, bold=True)
+    lh = _line_h(f, "Ay") + 8
+    lines = _wrap(draw, text, f, w)[:max(1, h // lh)]
+    if lines:
+        lines[-1] = lines[-1].rstrip(" .,;:") + "…"
+    _emit(f, lines, y)
+
+
+# ---------------------------------------------------------------------------
+# Carrusel de notas — estética editorial (2026-08). Logo NUEVO (isotipo naranja),
+# foto a sangre (tamaño orgánico), título imponente sobre degradé, y barra de
+# progreso + contador para invitar a DESLIZAR (más alcance en IG).
+# ---------------------------------------------------------------------------
+ISO_WHITE_PATH = Path(__file__).parent / "logo_reel.png"           # isotipo blanco
+ISO_ORANGE_PATH = Path(__file__).parent / "logo_reel_naranja.png"  # isotipo naranja
+_iso_cache: dict = {}
+
+SLIDE_DARK = (17, 19, 25)      # fondo/relleno oscuro del slide de foto
+SLIDE_TITLE = (255, 255, 255)  # título blanco
+SLIDE_VOL = (247, 147, 43)     # volanta: naranja más brillante (legible sobre foto)
+SLIDE_CTA = (228, 228, 232)    # pie claro
+
+
+def _iso(orange: bool = True):
+    key = "o" if orange else "w"
+    if key not in _iso_cache:
+        try:
+            _iso_cache[key] = Image.open(ISO_ORANGE_PATH if orange else ISO_WHITE_PATH).convert("RGBA")
+        except Exception as e:
+            logger.warning(f"No se pudo cargar el isotipo: {e}")
+            _iso_cache[key] = False
+    return _iso_cache[key]
+
+
+def _paste_iso(canvas, x, y, target_h, orange=True) -> int:
+    """Pega el isotipo (C concéntrica) con la altura pedida. Devuelve la x a su derecha."""
+    im = _iso(orange)
+    if not im:
+        return x
+    w, h = im.size
+    nw = max(1, round(w * target_h / h))
+    lg = im.resize((nw, target_h), Image.LANCZOS)
+    canvas.paste(lg, (x, y), lg)
+    return x + nw
+
+
+_face_cascades = None
+
+
+def _detect_faces(img):
+    """Caras detectadas como lista de (x, y, w, h) en coordenadas de la imagen original.
+    Usa Haar (frontal + perfil + perfil espejado). Devuelve [] si no hay caras o si cv2
+    no está instalado (en ese caso degrada a cover-crop normal, sin romper)."""
+    try:
+        import cv2
+        import numpy as np
+    except Exception:
+        return []
+    global _face_cascades
+    if _face_cascades is None:
+        base = cv2.data.haarcascades
+        _face_cascades = (
+            cv2.CascadeClassifier(base + "haarcascade_frontalface_default.xml"),
+            cv2.CascadeClassifier(base + "haarcascade_profileface.xml"),
+        )
+    try:
+        gray = cv2.cvtColor(np.array(img.convert("RGB")), cv2.COLOR_RGB2GRAY)
+        gray = cv2.equalizeHist(gray)
+    except Exception:
+        return []
+    h, w = gray.shape[:2]
+    minsize = max(24, int(min(w, h) * 0.05))
+    frontal, profile = _face_cascades
+    boxes = []
+    if frontal is not None and not frontal.empty():
+        for (x, y, fw, fh) in frontal.detectMultiScale(gray, 1.1, 5, minSize=(minsize, minsize)):
+            boxes.append((int(x), int(y), int(fw), int(fh)))
+    if profile is not None and not profile.empty():
+        for (x, y, fw, fh) in profile.detectMultiScale(gray, 1.1, 5, minSize=(minsize, minsize)):
+            boxes.append((int(x), int(y), int(fw), int(fh)))
+        flip = cv2.flip(gray, 1)  # perfiles que miran al otro lado
+        for (x, y, fw, fh) in profile.detectMultiScale(flip, 1.1, 5, minSize=(minsize, minsize)):
+            boxes.append((int(w - x - fw), int(y), int(fw), int(fh)))
+    return boxes
+
+
+def _caras_principales(faces):
+    """De las caras detectadas deja las del PRIMER PLANO: las que miden al menos el 40%
+    del área de la cara más grande. Descarta caras chicas de fondo/público que inflarían
+    el recuadro de los sujetos hacia las gradas/atrás (ej.: en la foto de handball, la
+    cara del público a la izquierda estiraba el recorte; sin ella queda sobre las 3)."""
+    if not faces:
+        return []
+    amax = max(f[2] * f[3] for f in faces)
+    return [f for f in faces if f[2] * f[3] >= 0.40 * amax]
+
+
+def _encuadrar(img, box_w, box_h):
+    """SIEMPRE devuelve un cover a sangre (full-bleed) que LLENA el cuadro, enfocado en las
+    CARAS de los sujetos principales. El recorte se centra en el centro PONDERADO por el
+    tamaño de cada cara (las caras grandes = primer plano pesan más), con aire arriba para
+    no cortar cabezas y dejar ver el cuerpo. Si las caras no entran todas, se recortan las
+    de los extremos priorizando a los sujetos principales (pedido del usuario: las 10 full-
+    bleed). Sin caras (paisaje/objeto o cv2 ausente): cover con leve sesgo hacia arriba."""
+    img = img.convert("RGB")
+    iw, ih = img.size
+    scale = max(box_w / iw, box_h / ih)  # escala del cover a sangre
+    nw, nh = max(1, round(iw * scale)), max(1, round(ih * scale))
+    resized = img.resize((nw, nh), Image.LANCZOS)
+
+    faces = _caras_principales(_detect_faces(img))
+    if not faces:
+        left = (nw - box_w) // 2
+        top = max(0, min(int((nh - box_h) * 0.30), nh - box_h))
+        return resized.crop((left, top, left + box_w, top + box_h))
+
+    # Centro horizontal PONDERADO por el tamaño de cada cara (el/los sujetos principales
+    # pesan más → el recorte los mantiene aunque haya caras chicas hacia un costado).
+    tot = sum(f[2] * f[3] for f in faces)
+    cx = sum((f[0] + f[2] / 2) * f[2] * f[3] for f in faces) / tot
+    y_top = min(f[1] for f in faces)  # tope de las caras (para dejar aire arriba)
+
+    left = max(0, min(int(round(cx * scale - box_w / 2)), nw - box_w))
+    # Caras en el tercio superior: cabezas con aire arriba y cuerpo abajo (aplica a fotos
+    # verticales; en apaisadas el alto ya queda fijo por el cover).
+    top = max(0, min(int(round(y_top * scale - box_h * 0.14)), nh - box_h))
+    return resized.crop((left, top, left + box_w, top + box_h))
+
+
+def _grad_overlay(canvas, top_y, height, color, a_top, a_bottom, gamma=1.5):
+    """Pega un degradé vertical (alpha a_top→a_bottom) de `color` sobre el canvas."""
+    if height <= 0:
+        return
+    g = Image.new("L", (1, height), 0)
+    for i in range(height):
+        t = (i / (height - 1)) ** gamma if height > 1 else 1
+        g.putpixel((0, i), int(a_top + (a_bottom - a_top) * t))
+    alpha = g.resize((canvas.width, height))
+    canvas.paste(Image.new("RGB", (canvas.width, height), color), (0, top_y), alpha)
+
+
+def _draw_title_impose(draw, text, x, bottom_y, max_w, *, max_h, max_size=110, min_size=54):
+    """Título BLANCO imponente, alineado abajo-izquierda dentro de (max_w × max_h),
+    autoescalado con sombra para máxima legibilidad. Devuelve la Y superior usada."""
+    text = (text or "").strip()
+    if not text:
+        return bottom_y
+    f = _font(min_size, bold=True)
+    lines = _wrap(draw, text, f, max_w)
+    for size in range(max_size, min_size - 1, -4):
+        f = _font(size, bold=True)
+        lines = _wrap(draw, text, f, max_w)
+        lh = _line_h(f, "Ay") + 12
+        if len(lines) * lh <= max_h:
+            break
+    lh = _line_h(f, "Ay") + 12
+    max_lines = max(1, max_h // lh)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rstrip(" .,;:") + "…"
+    total_h = len(lines) * lh
+    y = bottom_y - total_h
+    for ln in lines:
+        draw.text((x + 3, y + 4), ln, font=f, fill=(0, 0, 0))   # sombra
+        draw.text((x, y), ln, font=f, fill=SLIDE_TITLE)
+        y += lh
+    return bottom_y - total_h
+
+
+def compose_note_slide(photo_path: Path, volanta: str, titular: str, site_url: str = "",
+                       idx: int | None = None, total: int | None = None) -> Path:
+    """Slide 4:5 del carrusel — estética editorial:
+      • foto a sangre (llena el cuadro, recorte orgánico, sin franjas borrosas),
+      • isotipo naranja + 'DIARIO LA CAMPAÑA' arriba,
+      • barra de progreso + contador 'idx/total' que invitan a deslizar,
+      • título BLANCO grande e imponente sobre un degradé oscuro (siempre legible),
+      • volanta naranja + 'Seguí leyendo en {web}' al pie."""
+    canvas = Image.new("RGB", (SLIDE_W, SLIDE_H), SLIDE_DARK)
+    try:
+        canvas.paste(_encuadrar(Image.open(photo_path), SLIDE_W, SLIDE_H), (0, 0))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la foto del slide {getattr(photo_path, 'name', photo_path)}: {e}")
+
+    _grad_overlay(canvas, 0, 300, SLIDE_DARK, 180, 0)                 # velo arriba (marca)
+    _grad_overlay(canvas, SLIDE_H - 900, 900, (10, 11, 16), 0, 242)   # velo abajo (título)
+    draw = ImageDraw.Draw(canvas)
+
+    if idx and total:
+        draw.rectangle((0, 0, SLIDE_W, 9), fill=(70, 72, 80))
+        draw.rectangle((0, 0, int(SLIDE_W * idx / total), 9), fill=ACCENT)
+
+    hy, iso_h = 42, 70
+    after = _paste_iso(canvas, MARGIN, hy, iso_h, orange=True)
+    f_brand = _font(31, bold=True)
+    draw.text((after + 20, hy + (iso_h - _line_h(f_brand, "Ay")) // 2), "DIARIO LA CAMPAÑA",
+              font=f_brand, fill=SLIDE_TITLE)
+
+    if idx and total:
+        tag = f"{idx} / {total}"
+        f_tag = _font(30, bold=True)
+        tw = draw.textlength(tag, font=f_tag)
+        pad, pill_h = 20, 54
+        pill_w = tw + 2 * pad
+        px = SLIDE_W - MARGIN - pill_w
+        py = hy + (iso_h - pill_h) // 2
+        draw.rounded_rectangle((px, py, px + pill_w, py + pill_h), radius=pill_h // 2, fill=ACCENT)
+        draw.text((px + pad, py + (pill_h - _line_h(f_tag, "Ay")) // 2 - 2), tag, font=f_tag, fill=SLIDE_TITLE)
+
+    max_w = SLIDE_W - 2 * MARGIN
+    yb = SLIDE_H - 50
+
+    f_cta = _font(27, bold=True)
+    cta_lines = _wrap(draw, f"Seguí leyendo en {site_url}", f_cta, max_w) if site_url else []
+    cta_lh = _line_h(f_cta, "Ay") + 6
+    cta_block = len(cta_lines) * cta_lh
+
+    title_bottom = yb - (cta_block + 24 if cta_lines else 0)
+    title_top = _draw_title_impose(draw, titular, MARGIN, title_bottom, max_w, max_h=470)
+
+    vol = (volanta or "").strip().upper()
+    if vol:
+        f_vol = _font(30, bold=True)
+        vy = title_top - 14 - _line_h(f_vol, "Ay")
+        draw.rectangle((MARGIN, vy - 20, MARGIN + 66, vy - 12), fill=ACCENT)
+        ln = _wrap(draw, vol, f_vol, max_w)[:1]
+        if ln:
+            draw.text((MARGIN, vy), ln[0], font=f_vol, fill=SLIDE_VOL)
+
+    if cta_lines:
+        yy = yb - cta_block
+        for ln in cta_lines:
+            draw.text((MARGIN, yy), ln, font=f_cta, fill=SLIDE_CTA)
+            yy += cta_lh
+
+    return _save(canvas, "slide_" + _safe_stem(titular or volanta, "nota"))
+
+
+def compose_tapa_slide(cover_path: Path) -> Path:
+    """Slide 4:5 con la tapa entera (fondo desenfocado para entrar en 1080x1350)."""
+    canvas = Image.new("RGB", (SLIDE_W, SLIDE_H), BG)
+    try:
+        canvas.paste(_fit_blur(Image.open(cover_path), SLIDE_W, SLIDE_H), (0, 0))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la tapa para el slide: {e}")
+    return _save(canvas, "slide_tapa")
+
+
+def _mosaico(photos: list, w: int, h: int) -> "Image.Image":
+    """Collage tipo rompecabezas que CUBRE todo el lienzo w x h SIN huecos:
+    rellena todas las celdas (cicla fotos si faltan) y las celdas se tocan
+    exactamente (sin franjas en blanco), recortando cada foto a su celda."""
+    canvas = Image.new("RGB", (w, h), BG)
+    fotos = [p for p in (photos or []) if p]
+    n = len(fotos)
+    if n == 0:
+        return canvas
+    cols = 1 if n == 1 else (2 if n <= 6 else 3)
+    rows = max(1, (n + cols - 1) // cols)
+    idx = 0
+    for r in range(rows):
+        y0, y1 = r * h // rows, (r + 1) * h // rows
+        for c in range(cols):
+            x0, x1 = c * w // cols, (c + 1) * w // cols
+            p = fotos[idx % n]
+            idx += 1
+            try:
+                canvas.paste(_cover(Image.open(p), x1 - x0, y1 - y0), (x0, y0))
+            except Exception:
+                pass
+    return canvas
+
+
+def compose_noticias_hoy_story(fecha_str: str, site_url: str = "", photos: list = None) -> Path:
+    """Placa 9:16 'NOTICIAS DE HOY' (la ÚNICA historia del carrusel de notas):
+    las fotos de las noticias arman un rompecabezas de fondo, con un velo blanco
+    para que se lea + logo + texto naranja."""
+    base = _mosaico(photos, W, H).convert("RGBA")
+    velo = Image.new("RGBA", (W, H), (255, 255, 255, 210))
+    canvas = Image.alpha_composite(base, velo).convert("RGB")
+    draw = ImageDraw.Draw(canvas)
+
+    # Todo MÁS GRANDE para máxima legibilidad
+    _paste_logo(canvas, 110, 860)
+    _texto_centrado(draw, ["NUEVO POSTEO"], _font(70, bold=True), 390, GRAY)
+    _texto_centrado(draw, ["NOTICIAS", "DE HOY"], _font(180, bold=True), 470, ACCENT, gap=2)
+    if fecha_str:
+        _texto_centrado(draw, [fecha_str], _font(64, bold=True), 940, GRAY)
+    draw.line((MARGIN, 1090, W - MARGIN, 1090), fill=ACCENT, width=8)
+    msg = "Deslizá nuestro posteo con todas las noticias del día en el perfil"
+    _texto_centrado(draw, _wrap(draw, msg, _font(62, bold=True), W - 2 * MARGIN), _font(62, bold=True), 1330, GRAY, gap=16)
+    if site_url:
+        _texto_centrado(draw, [site_url], _font(58, bold=True), 1660, ACCENT)
+    return _save(canvas, "noticias_hoy")
+
+
+# ---------------------------------------------------------------------------
+# REEL "Las 5 más leídas del día" — placas 9:16 (1080x1920) para armar el video.
+# ---------------------------------------------------------------------------
+def compose_reel_intro(fecha_str: str, photos: list = None) -> Path:
+    """Portada del reel: fondo rompecabezas con las fotos + velo + logo + título."""
+    base = _mosaico(photos, W, H).convert("RGBA")
+    velo = Image.new("RGBA", (W, H), (255, 255, 255, 214))
+    canvas = Image.alpha_composite(base, velo).convert("RGB")
+    draw = ImageDraw.Draw(canvas)
+    _paste_logo(canvas, 150, 820)
+    _texto_centrado(draw, ["LAS 5 MÁS", "LEÍDAS", "DE HOY"], _font(148, bold=True), 470, ACCENT, gap=2)
+    if fecha_str:
+        _texto_centrado(draw, [fecha_str], _font(60, bold=True), 1180, GRAY)
+    draw.line((MARGIN, 1330, W - MARGIN, 1330), fill=ACCENT, width=8)
+    _texto_centrado(draw, ["Mirá el ranking del día"], _font(54, bold=True), 1440, GRAY)
+    return _save(canvas, "reel_intro")
+
+
+def compose_reel_slide(photo_path: Path, titular: str, resumen: str, rank: int, views: int = 0) -> Path:
+    """Una placa del reel: badge de ranking + foto entera (bien encuadrada) +
+    TITULAR grande (autoajustado, centrado) + DESCRIPCIÓN de hasta 3 líneas
+    SIN puntos suspensivos + lecturas. Las cajas se reservan de abajo hacia arriba
+    para que todo entre completo."""
+    canvas = Image.new("RGB", (W, H), BG)
+    draw = ImageDraw.Draw(canvas)
+    _paste_logo(canvas, 70, 560)
+    _texto_centrado(draw, [f"N°{rank}  ·  LO MÁS LEÍDO"], _font(52, bold=True), 210, ACCENT)
+
+    x, max_w = MARGIN, W - 2 * MARGIN
+
+    # Lecturas reservadas abajo (solo si hay vistas > 0).
+    views_h = 70 if (views and views > 0) else 0
+    views_top = (H - 80) - views_h
+
+    photo_top, photo_h = 300, 980
+    try:
+        canvas.paste(_fit_blur(Image.open(photo_path), W, photo_h), (0, photo_top))
+    except Exception as e:
+        logger.warning(f"No se pudo abrir la foto del reel: {e}")
+
+    # Descripción: MÁXIMO 3 líneas (pedido del usuario), sin '…'. Se reserva su caja
+    # justo encima de las lecturas; el titular ocupa lo que queda entre la foto y ella.
+    f_res = _font(40)
+    res_lines = _resumen_lineas(draw, resumen, f_res, max_w, max_lines=3)
+    res_lh = _line_h(f_res, "Ay") + 10
+    res_h = len(res_lines) * res_lh
+    res_top = (views_top - (24 if res_h else 0)) - res_h
+
+    titular_box_top = photo_top + photo_h + 30
+    titular_box_h = max(220, (res_top - 24) - titular_box_top)
+    _draw_titular_fill(draw, titular, x, titular_box_top, max_w, titular_box_h, ACCENT,
+                       max_size=92, min_size=38, center=True)
+
+    if res_lines:
+        _texto_centrado(draw, res_lines, f_res, res_top, GRAY, gap=10)
+
+    if views and views > 0:
+        _texto_centrado(draw, [f"{views:,}".replace(",", ".") + " lecturas"], _font(34, bold=True), views_top, ACCENT)
+    return _save(canvas, f"reel_{rank}")
+
+
+def compose_reel_outro(site_url: str = "") -> Path:
+    """Cierre del reel: logo + invitación a la web."""
+    canvas = Image.new("RGB", (W, H), BG)
+    draw = ImageDraw.Draw(canvas)
+    _paste_logo(canvas, 560, 780)
+    _texto_centrado(draw, _wrap(draw, "Seguí informándote en", _font(66, bold=True), W - 2 * MARGIN),
+                    _font(66, bold=True), 900, GRAY, gap=10)
+    if site_url:
+        _texto_centrado(draw, [site_url], _font(58, bold=True), 1060, ACCENT)
+    return _save(canvas, "reel_outro")
+
+
+# ---------------------------------------------------------------------------
+# Miniatura de YouTube 1280x720 — estética de Radio del Centro: foto arriba
+#   (full-bleed) + banda NARANJA con el wordmark "RADIO DEL CENTRO" (sacado del
+#   banner del canal), el TÍTULO grande con tipografía estilo logo (negro con
+#   contorno blanco) y una BAJADA llamativa debajo. Líneas BALANCEADAS.
+# ---------------------------------------------------------------------------
+YT_TW, YT_TH = 1280, 720
+RADIO_ORANGE = (255, 122, 0)    # naranja exacto de la marca (muestreado del banner)
+RADIO_BLACK = (0, 0, 0)
+RADIO_LOGO_SRC = Path(__file__).parent / "logo_radio_banner.jpg"
+_radio_logo_cache = None
+
+
+def _radio_logo():
+    """Extrae el wordmark 'RADIO DEL CENTRO' del banner del canal (zona central) y
+    arma una máscara para pegarlo limpio (solo el texto) sobre la banda naranja.
+    Cacheado."""
+    global _radio_logo_cache
+    if _radio_logo_cache is None:
+        try:
+            from PIL import ImageChops
+            im = Image.open(RADIO_LOGO_SRC).convert("RGB")
+            w, h = im.size
+            cx, cy = w // 2, h // 2
+            crop = im.crop((cx - 740, cy - 300, cx + 740, cy + 300))
+            diff = ImageChops.difference(crop, Image.new("RGB", crop.size, RADIO_ORANGE)).convert("L")
+            mask_full = diff.point(lambda p: 255 if p > 55 else 0)
+            bbox = mask_full.getbbox()
+            if bbox:
+                img = crop.crop(bbox)
+                mask = mask_full.crop(bbox).filter(ImageFilter.GaussianBlur(0.6))
+            else:
+                img, mask = crop, None
+            _radio_logo_cache = (img, mask)
+        except Exception as e:
+            logger.warning(f"No se pudo cargar el logo de la radio ({RADIO_LOGO_SRC}): {e}")
+            _radio_logo_cache = False
+    return _radio_logo_cache
+
+
+def _paste_radio_logo(canvas: "Image.Image", top: int, target_h: int, x: int | None = None) -> int:
+    """Pega el logo de la radio con la altura pedida. Si x es None va centrado; si
+    no, en esa x (para la esquina). Devuelve la y debajo del logo."""
+    data = _radio_logo()
+    if not data:
+        return top
+    img, mask = data
+    w, h = img.size
+    nw = max(1, round(w * target_h / h))
+    lg = img.resize((nw, target_h), Image.LANCZOS)
+    m = mask.resize((nw, target_h), Image.LANCZOS) if mask is not None else None
+    px = (canvas.width - nw) // 2 if x is None else x
+    canvas.paste(lg, (px, top), m)
+    return top + target_h
+
+
+def _name_chunks(text: str) -> list[str]:
+    """Agrupa en 'bloques' atómicos las palabras que NO se deben partir entre
+    renglones: nombres propios (2+ palabras con mayúscula seguidas) y lo que va
+    entre paréntesis. El resto queda palabra por palabra."""
+    words = (text or "").split()
+    n = len(words)
+
+    def cap(w):
+        for ch in w:
+            if ch.isalpha():
+                return ch.isupper()
+        return False
+
+    chunks, i = [], 0
+    while i < n:
+        w = words[i]
+        if w.startswith("("):  # grupo entre paréntesis: lo mantenemos junto
+            grp, j = [], i
+            while j < n:
+                grp.append(words[j])
+                if ")" in words[j]:
+                    j += 1
+                    break
+                j += 1
+            chunks.append(" ".join(grp))
+            i = j
+            continue
+        if cap(w):  # posible nombre propio (corrida de palabras con mayúscula)
+            grp, j = [], i
+            while j < n and cap(words[j]) and not words[j].startswith("("):
+                grp.append(words[j])
+                j += 1
+            chunks.append(" ".join(grp) if len(grp) >= 2 else grp[0])
+            i = j
+            continue
+        chunks.append(w)
+        i += 1
+    return chunks
+
+
+def _balanced_tokens(draw, tokens, font, max_w):
+    """Reparte `tokens` (atómicos) en líneas balanceadas (mínima irregularidad).
+    Devuelve la lista de líneas, o None si algún token solo no entra en max_w."""
+    if not tokens:
+        return []
+    n = len(tokens)
+
+    def lw(i, j):
+        return draw.textlength(" ".join(tokens[i:j]), font=font)
+
+    for t in tokens:  # si un bloque (p.ej. un nombre) no entra, no es viable
+        if draw.textlength(t, font=font) > max_w:
+            return None
+
+    k, i = 0, 0  # cantidad mínima de líneas (greedy)
+    while i < n:
+        j = i + 1
+        while j <= n and lw(i, j) <= max_w:
+            j += 1
+        i = max(i + 1, j - 1)
+        k += 1
+
+    INF = float("inf")
+    memo = {}
+
+    def solve(i, l):
+        key = (i, l)
+        if key in memo:
+            return memo[key]
+        if l == 1:
+            ww = lw(i, n)
+            res = ((max_w - ww) ** 2, [n]) if (i < n and ww <= max_w) else (INF, None)
+            memo[key] = res
+            return res
+        best = (INF, None)
+        for j in range(i + 1, n - (l - 1) + 1):
+            ww = lw(i, j)
+            if ww > max_w:
+                break  # sumar más tokens solo agranda la línea
+            sub = solve(j, l - 1)
+            if sub[1] is None:
+                continue
+            cost = (max_w - ww) ** 2 + sub[0]
+            if cost < best[0]:
+                best = (cost, [j] + sub[1])
+        memo[key] = best
+        return best
+
+    _, cuts = solve(0, k)
+    if cuts is None:
+        return None
+    lines, start = [], 0
+    for c in cuts:
+        lines.append(" ".join(tokens[start:c]))
+        start = c
+    return lines
+
+
+def _draw_title_balanced(draw, text, x, y, w, h, fill, *, max_size=92, min_size=40,
+                         stroke=0, stroke_fill=None, top_align=False):
+    """Dibuja el texto lo más grande posible, con líneas balanceadas, centrado
+    horizontalmente y (por defecto) verticalmente dentro de la caja (w x h).
+    `stroke`/`stroke_fill` dibujan un contorno (estilo logo). Devuelve la y final."""
+    text = (text or "").strip()
+    if not text:
+        return y
+
+    def _render(f, lines, yy):
+        lh = _line_h(f, "Ay") + max(10, stroke * 2)
+        for ln in lines:
+            lx = x + (w - draw.textlength(ln, font=f)) / 2
+            draw.text((lx, yy), ln, font=f, fill=fill,
+                      stroke_width=stroke, stroke_fill=stroke_fill or fill)
+            yy += lh
+        return yy
+
+    avail = w - 2 * stroke
+    chunks = _name_chunks(text)
+    for size in range(max_size, min_size - 1, -3):
+        f = _font(size, bold=True)
+        lines = _balanced_tokens(draw, chunks, f, avail)  # mantiene nombres juntos
+        if not lines:
+            continue  # algún nombre no entra a este tamaño → achicar
+        lh = _line_h(f, "Ay") + max(10, stroke * 2)
+        if len(lines) * lh <= h:
+            yy = y if top_align else y + max(0, (h - len(lines) * lh) // 2)
+            return _render(f, lines, yy)
+    # último recurso: al tamaño mínimo, permitir partir palabra por palabra
+    f = _font(min_size, bold=True)
+    lh = _line_h(f, "Ay") + max(10, stroke * 2)
+    lines = (_balanced_tokens(draw, text.split(), f, avail) or _wrap(draw, text, f, avail))[:max(1, h // lh)]
+    return _render(f, lines, y)
+
+
+_rembg_session = None
+
+
+def _cutout_rgba(src_rgb: "Image.Image"):
+    """Recorta SOLO a las personas del frame con rembg (local, gratis). Usa el modelo
+    'u2net_human_seg' (especializado en humanos): descarta escritorios, cajitas de
+    videollamada, etc. Devuelve RGBA o None."""
+    global _rembg_session
+    try:
+        from rembg import remove, new_session
+        if _rembg_session is None:
+            _rembg_session = new_session("u2net_human_seg")
+        return remove(src_rgb, session=_rembg_session)
+    except Exception as e:
+        logger.warning(f"rembg no disponible / falló el recorte: {e}")
+        return None
+
+
+def _add_outline(cut_rgba: "Image.Image", grow: int = 7,
+                 color=(255, 255, 255, 255)) -> "Image.Image":
+    """Agrega un contorno (sticker) alrededor del recorte, dilatando su alpha."""
+    alpha = cut_rgba.split()[3]
+    k = grow * 2 + 1
+    dil = alpha.filter(ImageFilter.MaxFilter(k if k <= 9 else 9))
+    if grow > 4:  # más grosor: dilatar de nuevo
+        dil = dil.filter(ImageFilter.MaxFilter(9))
+    dil = dil.filter(ImageFilter.GaussianBlur(1)).point(lambda p: 255 if p > 60 else 0)
+    base = Image.new("RGBA", cut_rgba.size, (0, 0, 0, 0))
+    base.paste(Image.new("RGBA", cut_rgba.size, color), (0, 0), dil)
+    base.alpha_composite(cut_rgba)
+    return base
+
+
+def _split_two_figures(cut_rgba: "Image.Image") -> list:
+    """Separa el recorte en DOS figuras (si hay un hueco vertical en el medio, típico
+    de la videollamada con dos personas). Devuelve [fig] o [fig_izq, fig_der], ya
+    recortadas a su contenido. Para armar el 'vs'."""
+    try:
+        import numpy as np
+        a = np.asarray(cut_rgba.split()[3], dtype=float)
+        cols = a.sum(axis=0)
+        if cols.max() <= 0:
+            return [cut_rgba]
+        present = cols > cols.max() * 0.06
+        xs = np.where(present)[0]
+        if len(xs) == 0:
+            return [cut_rgba]
+        x0, x1 = int(xs[0]), int(xs[-1])
+        gaps, i = [], x0
+        while i <= x1:
+            if not present[i]:
+                j = i
+                while j <= x1 and not present[j]:
+                    j += 1
+                gaps.append((i, j - 1))
+                i = j
+            else:
+                i += 1
+        mid = (x0 + x1) / 2
+        best = None
+        for g0, g1 in gaps:
+            if g1 - g0 < 10:
+                continue
+            score = (g1 - g0) - abs((g0 + g1) / 2 - mid) * 0.6
+            if best is None or score > best[0]:
+                best = (score, g0, g1)
+        if best is None:
+            return [cut_rgba]
+        _, g0, g1 = best
+        figs = []
+        for box in ((x0, 0, g0 + 1, cut_rgba.height), (g1, 0, x1 + 1, cut_rgba.height)):
+            f = cut_rgba.crop(box)
+            bb = f.split()[3].getbbox()
+            if bb:
+                figs.append(f.crop(bb))
+        return figs if len(figs) == 2 else [cut_rgba]
+    except Exception as e:
+        logger.warning(f"No se pudieron separar las figuras: {e}")
+        return [cut_rgba]
+
+
+def _orange_fade(canvas_rgba: "Image.Image", frac: float = 0.55, max_alpha: int = 240) -> "Image.Image":
+    """Degradado naranja DIFUMINADO desde el borde inferior (transparente arriba →
+    naranja abajo), no una caja lineal."""
+    h, w = YT_TH, YT_TW
+    y0 = int(h * (1 - frac))
+    grad = Image.new("L", (1, h), 0)
+    gpx = grad.load()
+    for y in range(h):
+        gpx[0, y] = 0 if y <= y0 else int(((y - y0) / (h - y0)) ** 1.6 * max_alpha)
+    grad = grad.resize((w, h))
+    orange = Image.new("RGBA", (w, h), RADIO_ORANGE + (255,))
+    orange.putalpha(grad)
+    canvas_rgba.alpha_composite(orange)
+    return canvas_rgba
+
+
+def _draw_title_left(draw, text, x, bottom, max_w, max_h, *, max_size, min_size,
+                     fill, stroke, stroke_fill, max_lines=3):
+    """Título grande ALINEADO A LA IZQUIERDA, anclado al borde inferior `bottom`,
+    nombres sin cortar. Devuelve la y de la primera línea."""
+    text = (text or "").strip()
+    if not text:
+        return bottom
+    chunks = _name_chunks(text)
+    for size in range(max_size, min_size - 1, -3):
+        f = _font(size, bold=True)
+        lines = _balanced_tokens(draw, chunks, f, max_w)
+        if not lines or len(lines) > max_lines:
+            continue
+        lh = _line_h(f, "Ay") + max(12, stroke * 2)
+        if len(lines) * lh <= max_h:
+            yy = bottom - len(lines) * lh
+            top = yy
+            for ln in lines:
+                draw.text((x, yy), ln, font=f, fill=fill,
+                          stroke_width=stroke, stroke_fill=stroke_fill)
+                yy += lh
+            return top
+    f = _font(min_size, bold=True)
+    lh = _line_h(f, "Ay") + max(12, stroke * 2)
+    lines = (_balanced_tokens(draw, text.split(), f, max_w) or _wrap(draw, text, f, max_w))[:max_lines]
+    yy = bottom - len(lines) * lh
+    top = yy
+    for ln in lines:
+        draw.text((x, yy), ln, font=f, fill=fill, stroke_width=stroke, stroke_fill=stroke_fill)
+        yy += lh
+    return top
+
+
+def _draw_title_centered(draw, text, cx, bottom, max_w, max_h, *, max_size, min_size,
+                         fill, stroke, stroke_fill, max_lines=4):
+    """Título CENTRADO, anclado al borde inferior `bottom`. Corta después del primer
+    ':' (lo de antes va en un renglón y lo de después abajo) y mantiene nombres juntos.
+    Devuelve la y de la primera línea."""
+    text = (text or "").strip()
+    if not text:
+        return bottom
+    if ":" in text:
+        i = text.index(":")
+        segs = [text[:i + 1].strip(), text[i + 1:].strip()]
+    else:
+        segs = [text]
+    segs = [s for s in segs if s]
+
+    def _wrap_all(f):
+        out = []
+        for s in segs:
+            sl = _balanced_tokens(draw, _name_chunks(s), f, max_w)
+            if sl is None:
+                return None
+            out.extend(sl)
+        return out
+
+    for size in range(max_size, min_size - 1, -3):
+        f = _font(size, bold=True)
+        lines = _wrap_all(f)
+        if not lines or len(lines) > max_lines:
+            continue
+        lh = _line_h(f, "Ay") + max(10, stroke * 2)
+        if len(lines) * lh <= max_h:
+            yy = bottom - len(lines) * lh
+            top = yy
+            for ln in lines:
+                draw.text((cx - draw.textlength(ln, font=f) / 2, yy), ln, font=f, fill=fill,
+                          stroke_width=stroke, stroke_fill=stroke_fill)
+                yy += lh
+            return top
+    f = _font(min_size, bold=True)
+    lh = _line_h(f, "Ay") + max(10, stroke * 2)
+    lines = (_wrap_all(f) or _wrap(draw, text, f, max_w))[:max_lines]
+    yy = bottom - len(lines) * lh
+    top = yy
+    for ln in lines:
+        draw.text((cx - draw.textlength(ln, font=f) / 2, yy), ln, font=f, fill=fill,
+                  stroke_width=stroke, stroke_fill=stroke_fill)
+        yy += lh
+    return top
+
+
+def _bg_naranja(src: "Image.Image") -> "Image.Image":
+    """Fondo naranja vibrante: el frame desenfocado + saturado + tinte naranja."""
+    bg = _cover(src, YT_TW, YT_TH).filter(ImageFilter.GaussianBlur(24))
+    bg = ImageEnhance.Color(bg).enhance(1.35)
+    bg = ImageEnhance.Brightness(bg).enhance(0.92).convert("RGBA")
+    bg.alpha_composite(Image.new("RGBA", (YT_TW, YT_TH), RADIO_ORANGE + (135,)))
+    return bg
+
+
+def _guardar_thumb(canvas, titulo, out_path) -> Path:
+    if out_path is not None:
+        out = Path(out_path)
+        out.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        PREVIEW_DIR.mkdir(exist_ok=True)
+        out = PREVIEW_DIR / f"yt_thumb_{_safe_stem(titulo, 'video')}.jpg"
+    canvas.save(out, "JPEG", quality=90)
+    logger.debug(f"Miniatura YouTube compuesta: {out}")
+    return out
+
+
+def _trim_black_borders(img: "Image.Image") -> "Image.Image":
+    """Recorta las barras/bordes negros del frame (pillarbox/letterbox)."""
+    try:
+        import numpy as np
+        a = np.asarray(img.convert("L"))
+        mask = a > 18
+        cols = np.where(mask.any(axis=0))[0]
+        rows = np.where(mask.any(axis=1))[0]
+        if len(cols) and len(rows):
+            return img.crop((int(cols[0]), int(rows[0]), int(cols[-1]) + 1, int(rows[-1]) + 1))
+    except Exception:
+        pass
+    return img
+
+
+def _compose_programa(src, gancho, keyword, out_path) -> Path:
+    """Layout LIMPIO para el programa (Mañana del Centro): la card del programa fundida
+    arriba (sin marco ni barras negras), y el GANCHO con palabra resaltada abajo."""
+    CARD_BOTTOM = 452               # la card no baja de acá; debajo va el texto
+    base = _bg_naranja(src)         # fondo naranja vibrante (la card desenfocada + tinte)
+
+    # ZOOM al centro de la card (donde está el texto del logo) para que se vea GRANDE,
+    # sin los márgenes naranjas que trae alrededor.
+    bc = _trim_black_borders(src)
+    bw, bh0 = bc.size
+    bc = bc.crop((int(bw * 0.06), int(bh0 * 0.16), int(bw * 0.94), int(bh0 * 0.84)))
+    card = _contain(bc, int(YT_TW * 0.99), CARD_BOTTOM - 6).convert("RGBA")
+    cw, ch = card.size
+    # Difuminamos los bordes para que se FUNDA con el naranja (sin rectángulo).
+    inset = max(8, int(min(cw, ch) * 0.10))
+    m = Image.new("L", (cw, ch), 0)
+    ImageDraw.Draw(m).rectangle((inset, inset, cw - inset, ch - inset), fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(inset * 0.8))
+    card.putalpha(m)
+    base.alpha_composite(card, ((YT_TW - cw) // 2, 6 + (CARD_BOTTOM - 6 - ch) // 2))
+
+    _bottom_scrim(base, frac=0.42, max_alpha=205, color=(12, 7, 3))
+    canvas = base.convert("RGB")
+    draw = ImageDraw.Draw(canvas)
+
+    # GANCHO con palabra resaltada, centrado abajo (no se superpone con la card de arriba).
+    _draw_hook(draw, gancho, keyword, YT_TW // 2, YT_TH - 30,
+               YT_TW - 2 * MARGIN, YT_TH - CARD_BOTTOM - 44,
+               max_size=72, min_size=34)
+
+    return _guardar_thumb(canvas, gancho, out_path)  # SIN logo de Radio del Centro
+
+
+def _norm_w(w: str) -> str:
+    s = "".join(c for c in (w or "").lower() if c.isalnum())
+    for a, b in (("á", "a"), ("é", "e"), ("í", "i"), ("ó", "o"), ("ú", "u"), ("ñ", "n")):
+        s = s.replace(a, b)
+    return s
+
+
+def _draw_hook(draw, text, keyword, cx, bottom, max_w, max_h, *, max_size=118, min_size=46,
+               base=(255, 255, 255), hl=(255, 196, 0), stroke=7):
+    """GANCHO centrado, anclado abajo, en MAYÚSCULAS, con UNA palabra resaltada en color
+    (estilo growth/CTR). Devuelve la y superior."""
+    text = (text or "").strip().upper()
+    if not text:
+        return bottom
+    kwset = {_norm_w(x) for x in (keyword or "").split() if _norm_w(x)}
+    words = text.split()
+
+    def wrap(f):
+        lines, cur = [], []
+        for w in words:
+            if not cur or draw.textlength(" ".join(cur + [w]), font=f) <= max_w:
+                cur.append(w)
+            else:
+                lines.append(cur)
+                cur = [w]
+        if cur:
+            lines.append(cur)
+        return lines
+
+    def emit(f, lines):
+        lh = _line_h(f, "Ay") + max(12, stroke * 2)
+        y = bottom - len(lines) * lh
+        top = y
+        sp = draw.textlength(" ", font=f)
+        for ln in lines:
+            widths = [draw.textlength(w, font=f) for w in ln]
+            total = sum(widths) + sp * (len(ln) - 1)
+            x = cx - total / 2
+            for w, wd in zip(ln, widths):
+                col = hl if _norm_w(w) in kwset else base
+                draw.text((x, y), w, font=f, fill=col, stroke_width=stroke, stroke_fill=(6, 6, 6))
+                x += wd + sp
+            y += lh
+        return top
+
+    for size in range(max_size, min_size - 1, -4):
+        f = _font(size, bold=True)
+        lines = wrap(f)
+        lh = _line_h(f, "Ay") + max(12, stroke * 2)
+        if len(lines) * lh <= max_h and all(draw.textlength(" ".join(l), font=f) <= max_w for l in lines):
+            return emit(f, lines)
+    fm = _font(min_size, bold=True)
+    return emit(fm, wrap(fm))
+
+
+def _vignette(canvas_rgba, strength=150):
+    """Oscurece las esquinas (look cinematográfico)."""
+    w, h = canvas_rgba.size
+    m = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(m).ellipse((int(w * 0.06), int(h * 0.02), int(w * 0.94), int(h * 1.06)), fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(170))
+    black = Image.new("RGBA", (w, h), (0, 0, 0, 255))
+    black.putalpha(m.point(lambda p: int((255 - p) / 255 * strength)))
+    canvas_rgba.alpha_composite(black)
+
+
+def _cinematic_bg(src):
+    """Fondo cinematográfico: frame muy desenfocado, oscuro, contrastado, con tinte
+    naranja sutil (acento, no lavado) y viñeta."""
+    bg = _cover(src, YT_TW, YT_TH).filter(ImageFilter.GaussianBlur(22))
+    bg = ImageEnhance.Contrast(bg).enhance(1.18)
+    bg = ImageEnhance.Brightness(bg).enhance(0.5)
+    bg = ImageEnhance.Color(bg).enhance(1.12).convert("RGBA")
+    bg.alpha_composite(Image.new("RGBA", (YT_TW, YT_TH), RADIO_ORANGE + (55,)))
+    _vignette(bg, strength=150)
+    return bg
+
+
+def _soft_shadow(cut_rgba, blur=20, alpha=165):
+    """Sombra suave de la figura (le da profundidad/separación premium)."""
+    sh = Image.new("RGBA", cut_rgba.size, (0, 0, 0, 0))
+    sh.paste(Image.new("RGBA", cut_rgba.size, (0, 0, 0, alpha)), (0, 0), cut_rgba.split()[3])
+    return sh.filter(ImageFilter.GaussianBlur(blur))
+
+
+def _bottom_scrim(canvas_rgba, frac=0.55, max_alpha=215, color=(10, 7, 4)):
+    """Degradado OSCURO desde abajo para que el gancho se lea con fuerza."""
+    h, w = YT_TH, YT_TW
+    y0 = int(h * (1 - frac))
+    grad = Image.new("L", (1, h), 0)
+    gpx = grad.load()
+    for y in range(h):
+        gpx[0, y] = 0 if y <= y0 else int(((y - y0) / (h - y0)) ** 1.5 * max_alpha)
+    layer = Image.new("RGBA", (w, h), color + (255,))
+    layer.putalpha(grad.resize((w, h)))
+    canvas_rgba.alpha_composite(layer)
+
+
+def compose_youtube_thumbnail(fondo_path: Path, gancho: str, keyword: str = "",
+                              out_path: Path | None = None, programa: bool = False) -> Path:
+    """Miniatura 1280x720 SIMPLE de marca (sin recortes ni efectos): el frame del video
+    arriba con marco blanco, y abajo una banda naranja con el wordmark 'RADIO DEL CENTRO'
+    y el GANCHO (texto con gancho + SEO, en negro con contorno blanco, sin cortar nombres)."""
+    try:
+        src = Image.open(fondo_path).convert("RGB")
+    except Exception as e:
+        logger.warning(f"No se pudo abrir el frame de la miniatura: {e}")
+        src = Image.new("RGB", (YT_TW, YT_TH), (20, 20, 20))
+    src = _trim_black_borders(src)  # saca barras negras (p.ej. la card del programa)
+
+    canvas = Image.new("RGB", (YT_TW, YT_TH), RADIO_ORANGE)
+    draw = ImageDraw.Draw(canvas)
+
+    # Foto del video arriba, con marco blanco que la rodea.
+    bordo, foto_h = 14, 432
+    draw.rectangle((0, 0, YT_TW, foto_h + 2 * bordo), fill=(255, 255, 255))
+    canvas.paste(_cover(src, YT_TW - 2 * bordo, foto_h), (bordo, bordo))
+
+    # Banda naranja: wordmark de la radio + gancho.
+    y = _paste_radio_logo(canvas, foto_h + 2 * bordo + 10, 56)
+    box_y = y + 8
+    box_h = YT_TH - box_y - 18
+    _draw_title_centered(draw, gancho, YT_TW // 2, YT_TH - 20, YT_TW - 2 * MARGIN, box_h,
+                         max_size=68, min_size=28, fill=(12, 12, 12), stroke=5,
+                         stroke_fill=(255, 255, 255), max_lines=3)
+    return _guardar_thumb(canvas, gancho, out_path)
