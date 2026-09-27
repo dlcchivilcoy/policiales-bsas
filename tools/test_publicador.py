@@ -72,7 +72,7 @@ class Meta:
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
                  yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None, ig_recientes=None,
                  wix_falla=None, wix_existe="", wix_foto_falla=False, fb_recientes=None,
-                 fb_lista_falla=False):
+                 fb_lista_falla=False, yt_miniatura=200):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -96,12 +96,21 @@ class Meta:
         self.wix_publicados = 0
         self.fb_recientes = list(fb_recientes or [])   # reels que ya tiene la página
         self.fb_lista_falla = fb_lista_falla
+        self.yt_miniatura = yt_miniatura  # status de thumbnails.set
+        self.yt_miniaturas = []           # (videoId, tipo, bytes) de cada miniatura puesta
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
             return httpx.Response(200, json={"access_token": YT_ACCESO, "expires_in": 3599})
         if ruta == "/youtube/v3/channels":
             return httpx.Response(200, json={"items": [{"id": self.yt_canal}]})
+        if ruta == "/upload/youtube/v3/thumbnails/set" and m == "POST":
+            if self.yt_miniatura >= 400:
+                return httpx.Response(self.yt_miniatura, json={"error": {"code": self.yt_miniatura,
+                    "message": "no", "errors": [{"reason": "forbidden"}]}})
+            self.yt_miniaturas.append((req.url.params["videoId"], req.headers.get("content-type"),
+                                       len(req.content)))
+            return httpx.Response(200, json={"items": [{"default": {"url": "x"}}]})
         if ruta == "/upload/youtube/v3/videos" and m == "POST":
             if self.yt_sin_cupo:
                 return httpx.Response(403, json={"error": {"code": 403, "message": "quota",
@@ -770,6 +779,35 @@ chequear("una sin hora conocida no le gana a una que sí es del momento",
 os.environ.pop("IG_PRUEBA_POR_PASADA")
 for b in (base, base2, base3):
     shutil.rmtree(b)
+
+
+# --- 21. Miniatura del Short = PORTADA del reel, no la placa final (27/09) ----------------
+base, carpeta, reloj, meta = preparar()
+(carpeta / "01_reel.jpg").write_bytes(b"JPGportada")
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+yt1 = inf["piezas"][0]["youtube"]
+chequear("YouTube: se le pone la portada del reel (.jpg al lado del .mp4) como miniatura",
+         meta.yt_miniaturas == [("YT1", "image/jpeg", 10)] and yt1.get("miniatura") == "portada del reel")
+chequear("...la pieza sin portada .jpg no llama y lo anota",
+         len(meta.yt_miniaturas) == 1 and "sin portada" in inf["piezas"][1]["youtube"].get("miniatura", ""))
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(yt_miniatura=403))
+(carpeta / "01_reel.jpg").write_bytes(b"JPGportada")
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("si YouTube rechaza la miniatura, el Short queda publicado igual (con el aviso)",
+         inf["piezas"][0]["youtube"]["estado"] == "ok"
+         and "no aceptó la portada" in inf["piezas"][0]["youtube"].get("miniatura", "")
+         and not (base / "informe_publicacion.md").exists())
+shutil.rmtree(base)
+
+os.environ["YT_MINIATURA"] = "0"
+base, carpeta, reloj, meta = preparar()
+(carpeta / "01_reel.jpg").write_bytes(b"JPGportada")
+silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("YT_MINIATURA=0 la apaga", meta.yt_miniaturas == [])
+os.environ.pop("YT_MINIATURA")
+shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)

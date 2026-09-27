@@ -628,7 +628,55 @@ def _yt_listo(v: dict) -> dict:
     return info
 
 
+YT_MINIATURA = "https://www.googleapis.com/upload/youtube/v3/thumbnails/set"
+
+
+def _portada(pieza: dict, mp4: Path):
+    """El cuadro fijo del reel (.jpg al lado del .mp4): volanta, título y foto."""
+    for c in (pieza.get("placa"), mp4.with_suffix(".jpg")):
+        if c and Path(c).is_file():
+            return Path(c)
+    return None
+
+
+def _poner_miniatura(info: dict, pieza: dict, mp4: Path) -> dict:
+    """La PORTADA del reel como miniatura del Short (pedido del editor, 27/09/2026).
+
+    Sin esto YouTube elige un cuadro solo, y como la placa final «Seguinos en redes» dura 5
+    de los 13 segundos, muchas veces elegía esa: todos los Shorts con la misma miniatura.
+    YouTube acepta miniaturas propias en Shorts desde el 24/07/2026 (canales del Programa
+    de Socios); por la API no está documentado, pero thumbnails.set contestó 200 en el canal
+    de Radio del Centro el 27/09. Cuesta ~50 unidades del cupo general (no el de subidas).
+
+    Si falla, el Short YA está publicado: se anota el aviso y nada más. YT_MINIATURA=0 lo
+    apaga."""
+    if (os.environ.get("YT_MINIATURA") or "1").strip() == "0":
+        return info
+    jpg = _portada(pieza, mp4)
+    if not jpg:
+        info["miniatura"] = "sin portada .jpg: queda la que elige YouTube"
+        return info
+    try:
+        r = _pedir("POST", YT_MINIATURA, _yt_sesion(),
+                   params={"videoId": info["id"], "uploadType": "media"},
+                   headers={"Content-Type": "image/jpeg"}, content=jpg.read_bytes())
+    except (_Cortado, OSError) as e:
+        info["miniatura"] = f"no se pudo poner la portada ({e}): queda la que elige YouTube"
+        return info
+    if r.status_code >= 400:
+        info["miniatura"] = (f"YouTube no aceptó la portada ({_yt_error(r, 'miniatura')}): "
+                             f"queda la que elige YouTube")
+    else:
+        info["miniatura"] = "portada del reel"
+    return info
+
+
 def publicar_youtube(pieza: dict, mp4: Path) -> dict:
+    """Sube el Short y le pone la portada del reel como miniatura (ver _poner_miniatura)."""
+    return _poner_miniatura(_subir_youtube(pieza, mp4), pieza, mp4)
+
+
+def _subir_youtube(pieza: dict, mp4: Path) -> dict:
     """videos.insert con subida reanudable: se abre la sesion con los datos del video y
     despues se manda el archivo. El video recien EXISTE cuando termina la subida, asi
     que un corte en el medio se puede retomar sin riesgo de duplicarlo."""
@@ -1248,6 +1296,10 @@ def _mostrar(red: str, res: dict):
         print(f"  {nombre:<9} OK {res.get('url')}" + (" (ya estaba)" if res.get("ya_estaba") else ""))
     elif est == "ok":
         aviso = f" ⚠ {res['aviso']}" if res.get("aviso") else ""
+        if res.get("miniatura") and res["miniatura"] != "portada del reel":
+            aviso += f" · miniatura: {res['miniatura']}"
+        elif res.get("miniatura"):
+            aviso += " · con la portada como miniatura"
         print(f"  {nombre:<9} OK (id {res.get('id') or 'sin leer'}){aviso}")
     elif est in ("cupo", "omitida"):
         print(f"  {nombre:<9} no va: {res.get('detalle')}")
