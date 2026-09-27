@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import parse_qs
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.stdout.reconfigure(encoding="utf-8")      # la consola de Windows es cp1252
 import httpx
 from reels import publicador as PUB
 
@@ -47,6 +48,8 @@ os.environ.update({"FACEBOOK_PAGE_ID": "PAGINA", "INSTAGRAM_USER_ID": "IGUSER",
                                                 **YT_SECRETOS})})
 os.environ.pop("YT_SHORTS_POR_DIA", None)
 os.environ.pop("IG_RESERVA_BOT", None)
+os.environ["NOTAS_WEB"] = "0"          # la nota de la web se prueba aparte (sección 16)
+os.environ.pop("IG_PRUEBA_POR_PASADA", None)
 TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
 
@@ -67,7 +70,8 @@ class Reloj:
 class Meta:
     """Graph API + rupload + GitHub, con fallas a pedido."""
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
-                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None):
+                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None, ig_recientes=None,
+                 wix_falla=None, wix_existe="", wix_foto_falla=False):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -83,6 +87,12 @@ class Meta:
         self.yt_videos = {}               # upload_id -> id del video creado
         self.ig_cupo = ig_cupo            # (usados, total) de Instagram; None = no se puede leer
         self.ig_tope_prueba = ig_tope_prueba  # reels de prueba que acepta antes de rebotar
+        self.ig_recientes = list(ig_recientes or [])   # lo que ya está en el Instagram de la cuenta
+        self.wix_falla = wix_falla        # paso de Wix que contesta 500 ("borrador")
+        self.wix_existe = wix_existe      # slug que Wix dice que ya existe
+        self.wix_foto_falla = wix_foto_falla
+        self.wix_borradores = []          # el cuerpo de cada borrador creado
+        self.wix_publicados = 0
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
@@ -122,6 +132,21 @@ class Meta:
         cuerpo = parse_qs(req.content.decode("utf-8")) if req.content and host == "graph.facebook.com" else {}
         uno = {k: v[0] for k, v in cuerpo.items()}
 
+        if host == "www.wixapis.com":
+            if ruta == "/blog/v3/posts/query":
+                return httpx.Response(200, json={"posts": [{"slug": self.wix_existe}] if self.wix_existe else []})
+            if ruta == "/site-media/v1/files/import":
+                if self.wix_foto_falla:
+                    return httpx.Response(400, json={"message": "no se pudo bajar"})
+                return httpx.Response(200, json={"file": {"id": "FOTO1"}})
+            if ruta == "/blog/v3/draft-posts":
+                if self.wix_falla == "borrador":
+                    return httpx.Response(500, text="error interno")
+                self.wix_borradores.append(json.loads(req.content or b"{}"))
+                return httpx.Response(200, json={"draftPost": {"id": f"D{len(self.wix_borradores)}"}})
+            if ruta.endswith("/publish"):
+                self.wix_publicados += 1
+                return httpx.Response(200, json={"post": {}})
         if host == "api.github.com" and ruta.endswith("/releases/tags/reels-policiales"):
             return httpx.Response(200, json={"id": 7, "assets": []})
         if host == "uploads.github.com":
@@ -140,7 +165,7 @@ class Meta:
                 return httpx.Response(200, json={"data": [{"config": {"quota_total": total,
                     "quota_duration": 86400}, "quota_usage": usados}]})
             if ruta == "/v26.0/IGUSER/media" and m == "GET":
-                return httpx.Response(200, json={"data": []})
+                return httpx.Response(200, json={"data": self.ig_recientes})
             if ruta.startswith("/v26.0/C") and m == "GET":
                 cid = ruta.rsplit("/", 1)[1]
                 if cid in self.publicado:
@@ -182,6 +207,8 @@ def pieza(orden, pueblo, apta=True, hora="2026-09-26T10:00"):
             "publicar_en": hora if apta else None,
             "guion": {"titular": f"Titular {orden}"},
             "descripcion_tiktok": f"Texto del posteo {orden}\n\n#Policiales",
+            "web": {"titulo": f"Junín: el hecho número {orden}", "cuerpo": "Párrafo uno.\n\nPárrafo dos."},
+            "imagen_url": f"https://medio.test/{orden}.jpg", "medio": "Medio Test",
             "video": {"archivo": f"Z:\\otra\\maquina\\{orden:02d}_reel.mp4", "duracion": 10.4}}
 
 
@@ -470,6 +497,145 @@ base, carpeta, reloj, meta = preparar(Meta(ig_tope_prueba=0))
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("tope desde la primera: no se insiste con la segunda en la misma pasada",
          meta.publicar_llamadas == 1 and inf["piezas"][1]["instagram"]["estado"] == "cupo")
+shutil.rmtree(base)
+
+# --- 16. La NOTA de la web y el link en Facebook (27/09) ------------------------------
+os.environ.update({"NOTAS_WEB": "1", "WIX_API_KEY": "wix_clave_secreta_123456",
+                   "WIX_SITE_ID": "SITIO", "WIX_MEMBER_ID": "MIEMBRO"})
+TODOS_LOS_SECRETOS.append("wix_clave_secreta_123456")
+from reels import web as WEBM
+base, carpeta, reloj, meta = preparar()
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+w = inf["piezas"][0].get("web", {})
+chequear("web: cada pieza tiene su nota publicada",
+         [f.get("web", {}).get("estado") for f in inf["piezas"]] == ["ok", "ok"] and meta.wix_publicados == 2)
+chequear("web: el link es el corto de la web, con la Ñ",
+         w.get("url", "").startswith("https://www.diariolacampaña.com.ar/n/junin-el-hecho-numero-1-"))
+b1 = meta.wix_borradores[0]["draftPost"]
+chequear("web: va SOLO a la sección Región (nunca a Inicio, la portada)", b1["categoryIds"] == [WEBM.REGION_ID])
+chequear("web: no se destaca", b1["featured"] is False)
+tipos = [n["type"] for n in b1["richContent"]["nodes"]]
+chequear("web: foto, el Short de YouTube y el texto",
+         tipos[:2] == ["IMAGE", "VIDEO"] and tipos.count("PARAGRAPH") == 3)
+chequear("web: el Short va como watch?v= (lo único que muestra la web)",
+         b1["richContent"]["nodes"][1]["videoData"]["video"]["src"]["url"] == "https://www.youtube.com/watch?v=YT1")
+fuente = b1["richContent"]["nodes"][-1]["nodes"]
+chequear("web: cierra con la fuente y el link a la nota original",
+         "Medio Test" in fuente[0]["textData"]["text"]
+         and fuente[1]["textData"]["decorations"][0]["linkData"]["link"]["url"] == "https://medio.test/1")
+chequear("Facebook: el posteo lleva el link a la nota",
+         meta.fb_finish[0]["description"].count("📲 Nota completa: https://www.diariolacampaña.com.ar/n/") == 1)
+chequear("Instagram y YouTube NO cambian su texto (el link es para Facebook)",
+         "Nota completa" not in meta.contenedores[0].get("caption", "")
+         and "Nota completa" not in meta.yt_inicios[0]["snippet"]["description"])
+orden_pedidos = [r.url.path for r in meta.pedidos]
+i_yt = next(i for i, x in enumerate(orden_pedidos) if x == "/upload/youtube/v3/videos")
+i_web = orden_pedidos.index("/blog/v3/draft-posts")
+i_fb = orden_pedidos.index("/v26.0/PAGINA/video_reels")
+chequear("orden: YouTube, después la nota, después Facebook", i_yt < i_web < i_fb)
+chequear("la clave de Wix nunca en una URL", not any("wix_clave_secreta" in str(r.url) for r in meta.pedidos))
+antes = meta.wix_publicados
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("web: correrlo de nuevo no duplica la nota", meta.wix_publicados == antes)
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(wix_falla="borrador"))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+p0 = inf["piezas"][0]
+chequear("web caída: el reel sale igual en Facebook, con el link general",
+         p0["web"]["estado"] == "fallo" and p0["facebook"]["estado"] == "ok"
+         and "Nota completa" not in meta.fb_finish[0]["description"])
+chequear("web caída: queda escrito para el issue",
+         "web" in (base / "informe_publicacion.md").read_text(encoding="utf-8"))
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(wix_existe="junin-el-hecho-numero-1-abc123"))
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("web: si la nota ya existía (corte a mitad), se usa esa y no se crea otra",
+         not meta.wix_borradores and "junin-el-hecho-numero-1-abc123" in inf["piezas"][0]["web"]["url"])
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(wix_foto_falla=True))
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("web: sin foto importable la nota sale igual, sin portada",
+         inf["piezas"][0]["web"]["estado"] == "ok" and "media" not in meta.wix_borradores[0]["draftPost"])
+shutil.rmtree(base)
+
+guardada = os.environ.pop("WIX_API_KEY")
+base, carpeta, reloj, meta = preparar()
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("sin clave de Wix: no frena, Facebook sale con el link general",
+         inf["piezas"][0]["facebook"]["estado"] == "ok" and "web" not in inf["piezas"][0])
+os.environ["WIX_API_KEY"] = guardada
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar()
+silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=False)
+chequear("simulando con la web prendida: cero pedidos", len(meta.pedidos) == 0)
+shutil.rmtree(base)
+os.environ["NOTAS_WEB"] = "0"
+
+chequear("el link reemplaza la línea «📲 Más noticias» si estaba",
+         PUB.texto_del_posteo({"descripcion_tiktok": "Texto\n\n📲 Más noticias de Junín en www.x\n\n#A"},
+                              "facebook", "https://l") == "Texto\n\n📲 Nota completa: https://l\n\n#A")
+
+
+# --- 17. Instagram de PRUEBA: los más virales de cada pasada (27/09) --------------------
+def preparar_virales(virales, meta=None, titulares=None):
+    base, carpeta, reloj, meta = preparar(meta)
+    piezas = []
+    for i, v in enumerate(virales, 1):
+        pz = pieza(i, "junin")
+        pz["viral"] = v
+        if titulares:
+            pz["guion"] = {"titular": titulares[i - 1][0], "bajada": titulares[i - 1][1]}
+        piezas.append(pz)
+        (carpeta / f"{i:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
+    (carpeta / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas}), encoding="utf-8")
+    return base, carpeta, reloj, meta
+
+
+chequear("por defecto van 2 por pasada", PUB.ig_por_pasada() == 2)
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+ig = [f["instagram"]["estado"] for f in inf["piezas"]]
+chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"] and len(meta.contenedores) == 2)
+chequear("...con el motivo a la vista", "virales" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("...y Facebook y YouTube llevan las tres",
+         all(f["facebook"]["estado"] == "ok" and f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+chequear("...no es una falla: no abre issue", not (base / "informe_publicacion.md").exists())
+shutil.rmtree(base)
+
+os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("IG_PRUEBA_POR_PASADA=1: solo la más viral",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "omitida"])
+os.environ.pop("IG_PRUEBA_POR_PASADA")
+shutil.rmtree(base)
+
+hechos = [("Detuvieron a dos hombres por el robo de una camioneta en el barrio Centro",
+           "La policía recuperó la camioneta sustraída y secuestró herramientas en la vivienda"),
+          ("Choque entre un auto y una moto en la Ruta 7 dejó un herido grave",
+           "El motociclista fue trasladado al hospital con fracturas tras el impacto"),
+          ("Incendio destruyó un galpón de maquinaria agrícola en la zona rural",
+           "Los bomberos trabajaron durante horas para controlar las llamas")]
+ya_en_ig = [{"caption": "La policía detuvo a dos hombres por el robo de una camioneta en el barrio Centro "
+                        "y recuperó la camioneta sustraída tras secuestrar herramientas en la vivienda.\n\n"
+                        "📰 Fuente: Otro\n\n#Junin",
+             "timestamp": "2026-09-26T08:00:00+0000"}]
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7], Meta(ig_recientes=ya_en_ig), hechos)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+ig = inf["piezas"]
+chequear("el hecho que YA está en el Instagram de la cuenta no se repite",
+         ig[0]["instagram"]["estado"] == "omitida" and "ya está en el Instagram" in ig[0]["instagram"]["detalle"])
+chequear("...y en su lugar van las dos siguientes", [f["instagram"]["estado"] for f in ig[1:]] == ["ok", "ok"])
+shutil.rmtree(base)
+
+viejo = [dict(ya_en_ig[0], timestamp="2026-09-20T08:00:00+0000")]
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7], Meta(ig_recientes=viejo), hechos)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("un posteo de hace más de 3 días no cuenta", inf["piezas"][0]["instagram"]["estado"] == "ok")
 shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------

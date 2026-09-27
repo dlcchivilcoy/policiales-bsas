@@ -48,7 +48,9 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import instagram as IG
+from reels import ledger as LD
 from reels import limpieza as L
+from reels import web as WEB
 from reels.flujo import MINUTOS_ENTRE_POSTEOS, SALIDA_REELS
 from scraper.localidades import nombre as _pueblo
 
@@ -67,7 +69,19 @@ VERSION_GRAPH = "v26.0"
 GRAPH = f"https://graph.facebook.com/{VERSION_GRAPH}"
 
 REDES = ("instagram", "facebook", "youtube")
-NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouTube"}
+NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouTube",
+              "web": "Web"}
+# El ORDEN dentro de cada pieza (27/09): YouTube primero, porque la nota de la web lleva
+# el Short adentro (la web solo muestra videos de YouTube); después la NOTA de la web,
+# porque Facebook lleva su link; después Facebook e Instagram.
+ORDEN = ("youtube", "web", "facebook", "instagram")
+
+# INSTAGRAM DE PRUEBA: los N más VIRALES de cada pasada (pedido del editor, 27/09).
+# Instagram acepta ~10 reels de prueba por día por la API; con 6 pasadas, 2 por pasada.
+# Se eligen por el puntaje viral de la IA (guion.potencial_viral) y se saltean los hechos
+# que ya están en el Instagram de la cuenta (publicados a mano, por el bot o por nosotros).
+IG_PRUEBA_POR_PASADA_DEFAULT = 2
+HORAS_INSTAGRAM_RECIENTE = 72
 
 # TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
 # auditoria de Direct Post. Ni publicar ni mandar a BORRADORES. No es un ajuste
@@ -172,7 +186,8 @@ def _tapar(texto: str) -> str:
     """
     texto = str(texto)
     valores = [os.environ.get(k, "") for k in (
-        "FACEBOOK_PAGE_ACCESS_TOKEN", "INSTAGRAM_ACCESS_TOKEN", "GITHUB_TOKEN", "GH_TOKEN")]
+        "FACEBOOK_PAGE_ACCESS_TOKEN", "INSTAGRAM_ACCESS_TOKEN", "GITHUB_TOKEN", "GH_TOKEN",
+        "WIX_API_KEY")]
     try:
         yt = json.loads(os.environ.get("YT_TOKEN_JSON") or "{}")
         valores += [str(yt.get(k) or "") for k in ("token", "refresh_token", "client_secret")]
@@ -273,7 +288,8 @@ def subir_a_release(mp4: Path, nombre: str) -> str:
                     _pedir("DELETE", f"{GITHUB_API}/repos/{repo}/releases/assets/{a['id']}",
                            tok, headers=h)
             up = _pedir("POST", f"{GITHUB_UPLOADS}/repos/{repo}/releases/{rel['id']}/assets",
-                        tok, headers={**h, "Content-Type": "video/mp4"},
+                        tok, headers={**h, "Content-Type": "image/jpeg" if mp4.suffix.lower()
+                                      in (".jpg", ".jpeg") else "video/mp4"},
                         params={"name": nombre}, content=datos)
             if up.status_code < 400:
                 url = up.json()["browser_download_url"]
@@ -421,7 +437,7 @@ def _estado_video_fb(vid: str, tok: str) -> dict:
     return (r.json() or {}).get("status") or {}
 
 
-def publicar_facebook(pieza: dict, mp4: Path) -> dict:
+def publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
     """/{page}/video_reels en tres pasos: inicio → subir el archivo → publicar."""
     pid = os.environ.get("FACEBOOK_PAGE_ID", "")
     tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
@@ -464,7 +480,7 @@ def publicar_facebook(pieza: dict, mp4: Path) -> dict:
     try:
         fin = _pedir("POST", base, tok, data={
             "upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED",
-            "description": texto_del_posteo(pieza, "facebook")})
+            "description": texto_del_posteo(pieza, "facebook", url_web)})
         if fin.status_code < 400:
             confirmado = True
         elif not _transitorio(fin):
@@ -657,8 +673,21 @@ def publicar_youtube(pieza: dict, mp4: Path) -> dict:
 # La tanda
 # =============================================================================
 
-def texto_del_posteo(pieza: dict, red: str) -> str:
+def texto_del_posteo(pieza: dict, red: str, url_web: str = "") -> str:
     texto = (pieza.get("descripcion_tiktok") or "").strip()
+    if red == "facebook" and url_web:
+        # Pedido del editor (27/09): el posteo de Facebook lleva a la NOTA de la web. La
+        # línea genérica «📲 Más noticias de X en www…» pasa a ser el link a esta nota;
+        # si no estaba, el link va antes de los hashtags.
+        linea = f"📲 Nota completa: {url_web}"
+        partes = texto.split("\n\n")
+        i = next((k for k, p in enumerate(partes) if p.startswith("📲")), None)
+        if i is not None:
+            partes[i] = linea
+        else:
+            j = len(partes) - 1 if partes and partes[-1].startswith("#") else len(partes)
+            partes.insert(j, linea)
+        texto = "\n\n".join(partes)
     if red == "instagram" and len(texto) > MAX_CAPTION_IG:
         texto = texto[:MAX_CAPTION_IG - 1].rstrip() + "…"
     return texto
@@ -783,6 +812,82 @@ def _lugar_en_instagram():
     return total - reserva_instagram() - usados, usados, total
 
 
+def ig_por_pasada() -> int:
+    try:
+        return max(0, int(os.environ.get("IG_PRUEBA_POR_PASADA") or IG_PRUEBA_POR_PASADA_DEFAULT))
+    except ValueError:
+        return IG_PRUEBA_POR_PASADA_DEFAULT
+
+
+def _huella_texto(texto: str) -> frozenset:
+    return LD._huella({"titulo": texto})
+
+
+def _huella_pieza(pieza: dict) -> frozenset:
+    g = pieza.get("guion") or {}
+    return _huella_texto(f"{g.get('titular') or ''} {g.get('bajada') or ''}")
+
+
+def _mismo_hecho(pieza_h: frozenset, posteo_h: frozenset) -> bool:
+    """¿El posteo de Instagram cuenta el mismo hecho que la pieza? Se mide cuánto de la
+    pieza (titular + bajada) está contenido en el texto del posteo: un posteo es mucho más
+    largo que un titular, así que el Jaccard del ledger daría siempre bajo."""
+    if len(pieza_h) < 5 or not posteo_h:
+        return False
+    return len(pieza_h & posteo_h) / len(pieza_h) >= 0.6
+
+
+def _recientes_instagram(horas: int = HORAS_INSTAGRAM_RECIENTE) -> list:
+    """Huellas de lo publicado en el Instagram de la cuenta en las últimas `horas`: a mano,
+    por el bot del diario o por este sistema. Si no se puede leer, lista vacía (no frena)."""
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    desde = _ahora() - timedelta(hours=horas)
+    try:
+        r = _pedir("GET", f"{GRAPH}/{uid}/media", tok,
+                   params={"fields": "caption,timestamp", "limit": 50})
+        datos = (r.json() or {}).get("data") or [] if r.status_code < 400 else []
+    except (_Cortado, ValueError):
+        return []
+    huellas = []
+    for m in datos:
+        try:
+            cuando = datetime.strptime((m.get("timestamp") or "")[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            continue
+        if cuando < desde:            # timestamp de Meta en UTC; `desde` es aproximado: sobra
+            continue
+        # Solo el texto: sin la línea de la fuente, el link ni los hashtags.
+        texto = " ".join(l for l in (m.get("caption") or "").splitlines()
+                         if l.strip() and not l.lstrip().startswith(("📰", "📲", "#")))
+        huellas.append(_huella_texto(texto))
+    return huellas
+
+
+def elegir_instagram(listas: list, ledger: dict, publicar: bool) -> tuple:
+    """(claves elegidas, {clave: motivo} de las que no van) para Instagram en esta pasada."""
+    n = ig_por_pasada()
+    candidatas = [p for p, _ in listas
+                  if ((ledger.get(_clave(p)) or {}).get("instagram") or {}).get("estado")
+                  not in ("ok", "sin_confirmar")]
+    # Se lee la cuenta solo si hay algo que decidir (y nunca simulando).
+    recientes = _recientes_instagram() if (publicar and candidatas and n) else []
+    motivos, validas = {}, []
+    for pieza in candidatas:
+        clave = _clave(pieza)
+        h = _huella_pieza(pieza)
+        if any(_mismo_hecho(h, r) for r in recientes):
+            motivos[clave] = "ese hecho ya está en el Instagram de la cuenta"
+            continue
+        validas.append(pieza)
+    validas.sort(key=lambda p: (p.get("viral") or 5, p.get("puntaje") or 0), reverse=True)
+    elegidas = {_clave(p) for p in validas[:n]}
+    for p in validas[n:]:
+        motivos[_clave(p)] = (f"no está entre los {n} más virales de la pasada "
+                              f"(viral {p.get('viral') or 5}/10)")
+    return elegidas, motivos
+
+
 def _youtube_de_hoy(ledger: dict) -> int:
     """Shorts de policiales ya subidos hoy (cuentan tambien los sin confirmar: pudieron
     haber gastado cupo)."""
@@ -824,9 +929,27 @@ def _intentar(fn, *args) -> dict:
         return {"estado": "fallo", "detalle": _tapar(f"{type(e).__name__}: {e}")}
 
 
-def _simular(red: str, pieza: dict, mp4: Path) -> dict:
+def _paso_web(pieza: dict, mp4: Path, carpeta: Path, fila: dict, hecho: dict,
+              publicar: bool) -> dict:
+    """La nota de la web (reels/web.py), con el Short adentro si YouTube ya salió."""
+    if not publicar:
+        return {"estado": "simulado", "titulo": (pieza.get("web") or {}).get("titulo"),
+                "url": WEB.link(WEB.slug_de(pieza))}
+    yt = fila.get("youtube") if (fila.get("youtube") or {}).get("estado") == "ok" else hecho.get("youtube")
+    yt_id = (yt or {}).get("id") if (yt or {}).get("estado") == "ok" else ""
+
+    def respaldo():
+        # Si la foto del medio no se deja importar, va el cuadro del reel (vertical, con marca).
+        jpg = mp4.with_suffix(".jpg") if mp4 else None
+        return subir_a_release(jpg, f"{carpeta.name}_{jpg.name}") if jpg and jpg.exists() else ""
+
+    return _intentar(WEB.publicar, lambda m, u, **kw: _pedir(m, u, "", **kw), pieza, yt_id or "",
+                     respaldo)
+
+
+def _simular(red: str, pieza: dict, mp4: Path, url_web: str = "") -> dict:
     """Todo lo que se puede verificar sin publicar."""
-    texto = texto_del_posteo(pieza, red)
+    texto = texto_del_posteo(pieza, red, url_web)
     info = {"estado": "simulado", "kb": round(mp4.stat().st_size / 1024), "caracteres": len(texto)}
     if red == "instagram":
         params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto)
@@ -858,6 +981,20 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     for s in salteadas:
         print(f"  salteada #{s['orden']}: {s['motivo']}")
 
+    # La nota de la web va con Facebook (es para su link). Sin credenciales de Wix no se
+    # frena la pasada: sale el reel igual, con el link general del diario.
+    web_on = WEB.activa() and "facebook" in redes
+    if web_on and publicar and WEB.faltantes():
+        print(f"  Web: faltan {', '.join(WEB.faltantes())}: esta pasada sale sin notas en la web")
+        web_on = False
+    if web_on:
+        informe["redes"].append("web")
+    ig_elegidas, ig_motivos = set(), {}
+    if "instagram" in redes:
+        ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
+        print(f"  Instagram de prueba: {len(ig_elegidas)} pieza(s) de esta pasada, "
+              f"las más virales (tope {ig_por_pasada()} por pasada)")
+
     ultimo = None
     for pieza, mp4 in listas:
         clave = _clave(pieza)
@@ -872,6 +1009,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         # para que una pieza que solo iba a esa red no ocupe 5 minutos de la cola.
         # No se anota en la memoria: no es una falla, es el cupo.
         sin_lugar = {}
+        if "instagram" in pendientes and clave not in ig_elegidas:
+            pendientes.remove("instagram")
+            sin_lugar["instagram"] = {"estado": "omitida", "detalle":
+                                      ig_motivos.get(clave) or "no elegida para esta pasada"}
         if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
             pendientes.remove("youtube")
             sin_lugar["youtube"] = {"estado": "cupo", "detalle":
@@ -911,9 +1052,17 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             ultimo = hora
         fila["hora"] = ultimo.isoformat(timespec="minutes")
 
-        for red in pendientes:
-            if not publicar:
-                res = _simular(red, pieza, mp4)
+        url_web = ((hecho.get("web") or {}).get("url") or "") if web_on else ""
+        falta_web = (web_on and "facebook" in pendientes
+                     and (hecho.get("web") or {}).get("estado") != "ok")
+        pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)]
+        for red in pasos:
+            if red == "web":
+                res = _paso_web(pieza, mp4, carpeta, fila, hecho, publicar)
+                if res.get("estado") in ("ok", "simulado"):
+                    url_web = res.get("url") or ""
+            elif not publicar:
+                res = _simular(red, pieza, mp4, url_web)
             elif red == "instagram":
                 res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
                 if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
@@ -921,7 +1070,7 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                     res = {"estado": "cupo", "detalle":
                            "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
             elif red == "facebook":
-                res = _intentar(publicar_facebook, pieza, mp4)
+                res = _intentar(publicar_facebook, pieza, mp4, url_web)
             elif red == "youtube":
                 res = _intentar(publicar_youtube, pieza, mp4)
                 if res.pop("sin_cupo", False):
@@ -968,7 +1117,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
 def _mostrar(red: str, res: dict):
     nombre = NOMBRE_RED[red]
     est = res.get("estado")
-    if est == "simulado":
+    if est == "simulado" and red == "web":
+        print(f"  {nombre:<9} saldria la nota en Región: «{res.get('titulo')}» → {res.get('url')}")
+    elif est == "simulado":
         if red == "instagram":
             extra = f" · reel de PRUEBA {res.get('prueba')}"
         elif red == "facebook":
@@ -976,10 +1127,12 @@ def _mostrar(red: str, res: dict):
         else:
             extra = f" · Short publico en Radio del Centro: «{res.get('titulo')}»"
         print(f"  {nombre:<9} saldria{extra} · {res['kb']} KB · texto de {res['caracteres']} caracteres")
+    elif est == "ok" and red == "web":
+        print(f"  {nombre:<9} OK {res.get('url')}" + (" (ya estaba)" if res.get("ya_estaba") else ""))
     elif est == "ok":
         aviso = f" ⚠ {res['aviso']}" if res.get("aviso") else ""
         print(f"  {nombre:<9} OK (id {res.get('id') or 'sin leer'}){aviso}")
-    elif est == "cupo":
+    elif est in ("cupo", "omitida"):
         print(f"  {nombre:<9} no va: {res.get('detalle')}")
     elif est == "sin_confirmar":
         print(f"  {nombre:<9} SIN CONFIRMAR — {res.get('detalle')}")

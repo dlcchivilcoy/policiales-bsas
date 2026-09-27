@@ -379,6 +379,12 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "tenia_video": bool(clip),
         "guion": {k: g[k] for k in ("volanta", "titular", "bajada", "zocalo", "pie", "via")},
         "descripcion_tiktok": g["descripcion_final"],
+        # Para la nota de la web (reels/web.py) y para elegir qué va a Instagram.
+        "viral": g.get("viral", 5),
+        "web": {"titulo": g.get("titulo_web") or g["titular"],
+                "cuerpo": g.get("nota_web") or g["bajada"]},
+        "imagen_url": nota.get("imagen") or "",
+        "localidad_hecho": g.get("localidad_hecho") or nota.get("localidad") or "",
         "placa": str(img),
         "video": vid,
         "estetica": f"bot {R.origen()}",
@@ -509,6 +515,7 @@ def main():
         print(f"      titular : {g['titular']}")
         print(f"      bajada  : {g['bajada'][:74]}")
         print(f"      zócalo  : {g['zocalo']}   (guion vía: {g['via']})")
+        print(f"      viral   : {pieza.get('viral')}/10 · web: {pieza['web']['titulo'][:62]}")
         print(f"      foto    : {'sí' if pieza['tenia_foto'] else 'no'}"
               f"{' · video del medio' if pieza['tenia_video'] else ''}")
         v = pieza.get("video")

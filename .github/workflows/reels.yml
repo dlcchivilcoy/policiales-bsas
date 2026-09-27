@@ -137,6 +137,15 @@ jobs:
       # diario: policiales frena antes para no dejarlo sin lugar. Reservas: variables del
       # repo IG_RESERVA_BOT (25 si no está) y YT_SHORTS_POR_DIA (80 si no está).
       #
+      # Instagram de PRUEBA (27/09): solo los N más virales de cada pasada (variable
+      # IG_PRUEBA_POR_PASADA, 2 si no está), salteando hechos que ya estén en la cuenta.
+      # Instagram acepta ~10 reels de prueba por día por la API (tope no documentado).
+      #
+      # NOTA EN LA WEB (27/09): cada reel tiene su nota en la sección «Región» de la web
+      # (fuera de la portada) y el posteo de Facebook lleva su link. Orden por pieza:
+      # YouTube → nota (con el Short adentro) → Facebook → Instagram. Se apaga con la
+      # variable NOTAS_WEB=0. Credenciales de Wix = las del bot del diario.
+      #
       # TikTok: DESACTIVADO hasta que aprueben el Direct Post, ni borradores. Sus claves
       # están cargadas como secrets pero A PROPÓSITO no se le pasan a ningún paso.
       #
@@ -156,6 +165,12 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
+          # La nota de la web (reels/web.py): Wix del diario.
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}
+          WIX_MEMBER_ID: ${{ secrets.WIX_MEMBER_ID }}
+          NOTAS_WEB: ${{ vars.NOTAS_WEB }}
           # Canal RADIO DEL CENTRO. El publicador verifica el canal antes de subir.
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
           YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
