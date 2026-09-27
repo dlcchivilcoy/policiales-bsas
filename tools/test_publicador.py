@@ -49,6 +49,7 @@ os.environ.update({"FACEBOOK_PAGE_ID": "PAGINA", "INSTAGRAM_USER_ID": "IGUSER",
 os.environ.pop("YT_SHORTS_POR_DIA", None)
 os.environ.pop("IG_RESERVA_BOT", None)
 os.environ["NOTAS_WEB"] = "0"          # la nota de la web se prueba aparte (sección 16)
+os.environ["YT_SIN_PLACA"] = "0"       # el corte de la placa se prueba aparte (sección 22)
 os.environ.pop("IG_PRUEBA_POR_PASADA", None)
 TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
@@ -808,6 +809,53 @@ silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
 chequear("YT_MINIATURA=0 la apaga", meta.yt_miniaturas == [])
 os.environ.pop("YT_MINIATURA")
 shutil.rmtree(base)
+
+
+# --- 22. YouTube va SIN la placa final (27/09) ---------------------------------------------
+from reels import reel_bot as RB
+_original_sin_placa = RB.sin_placa_final
+cortes = []
+
+
+def _corte_falso(mp4, destino):
+    cortes.append(Path(mp4).name)
+    Path(destino).write_bytes(b"CORTO" * 100)            # 500 bytes: distinto del original
+    return Path(destino)
+
+
+os.environ["YT_SIN_PLACA"] = "1"
+try:
+    RB.sin_placa_final = _corte_falso
+    base, carpeta, reloj, meta = preparar()
+    inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+    subidas = [len(r.content) for r in meta.pedidos
+               if r.url.path == "/upload/youtube/v3/videos" and r.method == "PUT" and r.content]
+    chequear("a YouTube sube el reel CORTADO (sin la placa final)",
+             subidas and all(n == 500 for n in subidas) and inf["piezas"][0]["youtube"].get("sin_placa"))
+    fb = [r for r in meta.pedidos if r.url.host == "rupload.facebook.com"]
+    chequear("...Facebook sigue recibiendo el reel entero, con la placa",
+             fb and all(len(r.content) == 4096 for r in fb if r.content))
+    shutil.rmtree(base)
+
+    def _corte_roto(mp4, destino):
+        raise RuntimeError("ffmpeg no está")
+    RB.sin_placa_final = _corte_roto
+    base, carpeta, reloj, meta = preparar()
+    inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+    chequear("si el corte falla, sube el reel entero y no es una falla",
+             inf["piezas"][0]["youtube"]["estado"] == "ok" and not inf["piezas"][0]["youtube"].get("sin_placa"))
+    shutil.rmtree(base)
+
+    RB.sin_placa_final = _corte_falso
+    os.environ["YT_SIN_PLACA"] = "0"
+    cortes.clear()
+    base, carpeta, reloj, meta = preparar()
+    silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+    chequear("YT_SIN_PLACA=0 sube el reel entero", cortes == [])
+    shutil.rmtree(base)
+finally:
+    RB.sin_placa_final = _original_sin_placa
+    os.environ["YT_SIN_PLACA"] = "0"
 
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)

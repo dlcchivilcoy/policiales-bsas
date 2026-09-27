@@ -40,6 +40,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -671,9 +672,30 @@ def _poner_miniatura(info: dict, pieza: dict, mp4: Path) -> dict:
     return info
 
 
+def _sin_placa(mp4: Path, destino: Path):
+    """El reel sin la placa final, para YouTube (reel_bot.sin_placa_final), o None para
+    subir el original. Nunca frena la subida: si algo falla, va el reel entero."""
+    if (os.environ.get("YT_SIN_PLACA") or "1").strip() == "0":
+        return None
+    try:
+        from reels import reel_bot as R
+        return R.sin_placa_final(mp4, destino)
+    except Exception as e:                          # noqa: BLE001 — nunca frena la subida
+        print(f"  (YouTube: no se pudo sacar la placa final: {type(e).__name__}: {e}; va el reel entero)")
+        return None
+
+
 def publicar_youtube(pieza: dict, mp4: Path) -> dict:
-    """Sube el Short y le pone la portada del reel como miniatura (ver _poner_miniatura)."""
-    return _poner_miniatura(_subir_youtube(pieza, mp4), pieza, mp4)
+    """Sube el Short SIN la placa final «Seguinos en redes» (pedido del editor, 27/09: así
+    YouTube no puede elegirla de miniatura; en Facebook e Instagram la placa sigue) y le
+    pone la portada del reel como miniatura (ver _poner_miniatura). YT_SIN_PLACA=0 sube
+    el reel entero."""
+    with tempfile.TemporaryDirectory(prefix="yt_") as t:
+        corto = _sin_placa(mp4, Path(t) / mp4.name)
+        info = _subir_youtube(pieza, corto or mp4)
+    if corto:
+        info["sin_placa"] = True
+    return _poner_miniatura(info, pieza, mp4)
 
 
 def _subir_youtube(pieza: dict, mp4: Path) -> dict:

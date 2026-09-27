@@ -73,6 +73,65 @@ def origen() -> str:
     return "?"
 
 
+def _parecido_a_placa(mp4: Path, segundo: float, placa: Path, tmp: Path) -> float:
+    """Diferencia media (0-255) entre el cuadro del segundo `segundo` y la placa de cierre.
+    Chica = es la placa. 255 si no se pudo leer el cuadro."""
+    import subprocess
+    from PIL import Image, ImageChops, ImageStat
+    m = motor()
+    cuadro = tmp / f"cuadro_{segundo:.2f}.jpg"
+    subprocess.run([m._ffmpeg(), "-y", "-loglevel", "error", "-ss", f"{segundo:.3f}", "-i", str(mp4),
+                    "-frames:v", "1", "-q:v", "3", str(cuadro)], capture_output=True, timeout=60)
+    if not cuadro.exists():
+        return 255.0
+    a = Image.open(cuadro).convert("L").resize((54, 96))
+    b = Image.open(placa).convert("L").resize((54, 96))
+    return ImageStat.Stat(ImageChops.difference(a, b)).mean[0]
+
+
+# Por debajo de esto, el cuadro ES la placa (la placa contra sí misma ya codificada da
+# muy poco; contra una nota, mucho más: ver tools/test_sin_placa.py).
+UMBRAL_PLACA = 20.0
+
+
+def sin_placa_final(mp4, destino) -> Path | None:
+    """Copia del reel SIN la placa de cierre «Seguinos en redes», para YouTube.
+
+    Pedido del editor (27/09/2026): YouTube elegía la placa como miniatura del Short y la
+    grilla del canal quedaba toda igual. Sin la placa, cualquier cuadro que elija es la nota.
+
+    La placa es el último tramo, de REEL_PLACA_SEG segundos (5), pegado aparte y con fundido
+    de entrada: se corta justo antes. Antes de cortar se COMPRUEBA que el reel termine en la
+    placa, porque el motor a veces la saca (escalón «sin la placa de cierre») y cortar a
+    ciegas le comería 5 segundos a la nota. Devuelve la ruta, o None (subir el original)."""
+    import subprocess
+    m = motor()
+    mp4, destino = Path(mp4), Path(destino)
+    placa = m._asset("REEL_PLACA_FINAL", m.PLACA_FINAL)
+    seg_placa = m._num("REEL_PLACA_SEG", m.PLACA_SEG)
+    dur = m.duration_seconds(mp4)
+    if not placa or seg_placa <= 0 or dur - seg_placa < 3:
+        return None
+    corte = dur - seg_placa
+    with tempfile.TemporaryDirectory(prefix="placa_") as t:
+        t = Path(t)
+        if _parecido_a_placa(mp4, dur - 1.0, placa, t) >= UMBRAL_PLACA:
+            return None                         # no termina en la placa: no se toca
+        if _parecido_a_placa(mp4, max(0.0, corte - 0.5), placa, t) < UMBRAL_PLACA:
+            return None                         # la placa arranca antes de lo esperado
+    # Recodificado y no `-c copy`: copiando, ffmpeg se pasaba ~0,1 s y se colaban cuadros
+    # del fundido a negro de la placa. Y 0,2 s antes del corte por la misma razón.
+    corte -= 0.2
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    r = subprocess.run([m._ffmpeg(), "-y", "-loglevel", "error", "-i", str(mp4), "-t", f"{corte:.3f}",
+                        "-c:v", "libx264", "-preset", "veryfast", "-crf", m._cfg("REEL_CRF", "26"),
+                        "-pix_fmt", "yuv420p", "-an", "-movflags", "+faststart", str(destino)],
+                       capture_output=True, timeout=180)
+    if r.returncode != 0 or not destino.exists() or abs(m.duration_seconds(destino) - corte) > 0.3:
+        return None
+    return destino
+
+
 def faltantes() -> list:
     """Lo que falta para armar reels con la estetica del bot."""
     necesarios = ["video.py", "story_image.py", "logo_reel.png", "placa_final.png",
