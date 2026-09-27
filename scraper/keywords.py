@@ -48,6 +48,15 @@ FUERTES = [
     # personas
     "desaparecido", "desaparecida", "busqueda de persona", "secuestro", "rapto",
     "abuso sexual", "violacion", "amenazas", "acoso",
+    # alertas meteorologicas y temporales. Pedido del editor (27/09/2026): «si hay
+    # alertas meteorologicas, establecelo dentro de policiales, puede generar buen
+    # trafico». Entran por el mismo circuito; el pronostico comun lo frena la IA
+    # (reels/guion.py, ES_DEL_TEMARIO). "temporal" suelto NO: da "cierre temporal".
+    "alerta meteorologica", "alertas meteorologicas", "alerta amarilla", "alerta naranja",
+    "alerta roja", "alerta por tormentas", "alerta por viento", "alerta por lluvias",
+    "fuerte temporal", "tras el temporal", "por el temporal", "temporal de lluvia",
+    "temporal de viento", "granizo", "granizada", "tornado", "inundacion", "inundaciones",
+    "evacuados", "tormenta severa", "tormentas fuertes",
 ]
 
 # --- Contexto: suman pero solos no alcanzan -------------------------------------
@@ -60,6 +69,9 @@ DEBILES = [
     "bomberos", "cuartel", "rescate", "llamas", "fiscal", "sumario",
     "investigacion", "testigo", "sospechoso", "banda", "delincuente", "delincuentes",
     "inseguridad", "damnificado", "denuncia", "agresion", "disparo", "disparos",
+    # clima (solos no alcanzan: un pronostico con lluvia no es una alerta)
+    "tormenta", "tormentas", "lluvia", "lluvias", "rafagas", "vientos fuertes",
+    "servicio meteorologico", "smn", "calles anegadas", "arboles caidos", "sin luz",
 ]
 
 # --- Contexto que APAGA la nota: la palabra existe pero el tema no es policial ----

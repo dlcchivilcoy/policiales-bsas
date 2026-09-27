@@ -45,6 +45,8 @@ PESO_TIPO = {
     "robo": 75, "violencia_genero": 70, "desaparicion": 70, "muerte_dudosa": 65,
     "abuso_sexual": 60, "operativo_policial": 55, "estafa": 50, "suicidio": 30,
     "judicial": 40, "otro_policial": 35,
+    # Pedido del editor (27/09): las alertas meteorológicas generan mucho tráfico.
+    "alerta_meteorologica": 85,
 }
 PESO_GRAVEDAD = {"fatal": 40, "grave": 25, "media": 10, "leve": 0}
 

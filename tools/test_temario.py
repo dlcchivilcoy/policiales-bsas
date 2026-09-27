@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """El filtro de temario: lo que la IA dice que no es policial no se publica. Sin red.
 
-Nació el 27/09/2026, cuando salió publicada una «Alerta meteorológica para Chacabuco»:
-el diccionario del scraper le dio 15 puntos con palabras de las notas del costado.
+Nació el 27/09/2026, cuando salieron publicadas «Necrológicas de Chacabuco» y una alerta
+meteorológica: el diccionario puntúa la página entera, con las notas del costado. (Las
+alertas meteorológicas después pasaron a ser DEL temario, a pedido del editor.)
 """
 import os
 import sys
@@ -29,7 +30,7 @@ ft = G.fuera_de_temario
 chequear("es del temario: no hay motivo", ft({"es_del_temario": True}) == "")
 chequear("la IA no contestó el campo: la nota PASA (un olvido no cuesta un reel)", ft({}) == "")
 chequear("no es del temario: devuelve el motivo que dio la IA",
-         "meteorol" in ft({"es_del_temario": False, "motivo": "Alerta meteorológica"}))
+         "fúnebres" in ft({"es_del_temario": False, "motivo": "Avisos fúnebres"}))
 chequear("no es del temario y sin motivo: igual frena, con un motivo genérico",
          ft({"es_del_temario": False}) != "")
 chequear("«false» como texto también frena", ft({"es_del_temario": "false"}) != "")
@@ -37,17 +38,17 @@ chequear("«true» como texto pasa", ft({"es_del_temario": "true"}) == "")
 chequear("0 frena", ft({"es_del_temario": 0}) != "")
 
 # --- 2. guion_ia lo deja en el guion -------------------------------------------------
-respuesta = {"volanta": "Alerta en Chacabuco", "titular": "Amplían la alerta por tormentas en la zona",
-             "bajada": "El Servicio Meteorológico amplió la alerta amarilla para la región.",
-             "zocalo": "Alerta por tormentas", "pie": "Rige desde la tarde.",
-             "descripcion": "Rige la alerta.", "hashtags": ["#Clima"]}
+respuesta = {"volanta": "Necrológicas de Chacabuco", "titular": "Los servicios fúnebres de la jornada en Chacabuco",
+             "bajada": "Se informaron los sepelios del día en la ciudad y sus horarios.",
+             "zocalo": "Servicios fúnebres", "pie": "Sepelio a las 16.",
+             "descripcion": "Los sepelios del día.", "hashtags": ["#Chacabuco"]}
 original = ia.redactar
 try:
     ia.redactar = lambda *a, **k: (dict(respuesta, es_del_temario=False,
-                                         motivo="alerta meteorológica"), "gemini:falso")
-    g = G.guion_ia({"titulo": "Alerta Meteorológica para Chacabuco", "localidad": "chacabuco"})
-    chequear("guion_ia: la nota del clima sale marcada fuera de temario",
-             "meteorol" in g.get("fuera_de_temario", ""))
+                                         motivo="avisos fúnebres"), "gemini:falso")
+    g = G.guion_ia({"titulo": "Necrológicas de Chacabuco", "localidad": "chacabuco"})
+    chequear("guion_ia: una necrológica sale marcada fuera de temario",
+             "fúnebres" in g.get("fuera_de_temario", ""))
     ia.redactar = lambda *a, **k: (dict(respuesta, es_del_temario=True), "gemini:falso")
     g = G.guion_ia({"titulo": "Robaron una moto", "localidad": "junin"})
     chequear("guion_ia: la nota policial sale sin marca", g.get("fuera_de_temario") == "")
@@ -67,8 +68,8 @@ armar, generar = F.R.armar, F.G.generar
 
 def generar_falso(motivo):
     def _g(nota, **k):
-        return {"volanta": "Alerta en Chacabuco", "titular": "Amplían la alerta por tormentas en la zona",
-                "bajada": "El Servicio Meteorológico amplió la alerta amarilla para la región.",
+        return {"volanta": "Necrológicas de Chacabuco", "titular": "Los servicios fúnebres de la jornada en Chacabuco",
+                "bajada": "Se informaron los sepelios del día en la ciudad y sus horarios.",
                 "zocalo": "Alerta", "pie": "Rige.", "via": "gemini:falso", "tipo": "otro_policial",
                 "descripcion_final": "Texto", "fuera_de_temario": motivo}
     return _g
@@ -79,14 +80,14 @@ try:
         setattr(F, k, v)
     F.R.armar = lambda g, salida, **k: armados.append(salida) or {"duracion": 13, "peso_kb": 120, "tramos": ["nota"]}
     carpeta = Path(tempfile.mkdtemp(prefix="temario_"))
-    nota = {"titulo": "Alerta Meteorológica para Chacabuco", "localidad_medio": "Chacabuco",
+    nota = {"titulo": "Necrológicas de Chacabuco", "localidad_medio": "Chacabuco",
             "url": "https://medio.test/alerta", "imagen": "https://medio.test/a.jpg"}
 
-    F.G.generar = generar_falso("alerta meteorológica")
+    F.G.generar = generar_falso("avisos fúnebres")
     p = F.procesar(nota, carpeta, True, 1)
     chequear("flujo: fuera de temario → NO apta para publicar", p["apto_para_publicar"] is False)
     chequear("flujo: el motivo queda escrito en por_que_no", "temario" in p["por_que_no"]
-             and "meteorol" in p["por_que_no"])
+             and "fúnebres" in p["por_que_no"])
     chequear("flujo: no se le arma el video (no se va a publicar)", armados == [])
 
     F.G.generar = generar_falso("")

@@ -47,6 +47,16 @@ CASOS = [
     # Pero la Casa de la Cultura si puede ser escenario de un hecho.
     ("Robo en la Casa de la Cultura: se llevaron equipos de sonido", True),
     ("Se preparaba para ir a trabajar y le robaron la bicicleta del patio", True),
+    # --- alertas meteorologicas y temporales: entran desde el 27/09 (pedido del editor) ---
+    ("Rige una alerta amarilla por tormentas para Chacabuco y la región", True),
+    ("Se amplió la alerta Meteorológica para Chacabuco y la zona", True),
+    ("Fuerte temporal: árboles caídos y calles anegadas en Bragado", True),
+    ("Cayó granizo en Pergamino y hubo daños en viviendas", True),
+    ("Evacuados por la crecida del río Salado en 25 de Mayo", True),
+    # ...pero el pronóstico común y el "temporal" de otra cosa, no
+    ("Pronóstico del fin de semana: sol y temperaturas agradables", False),
+    ("Anunciaron el cierre temporal de la calle 9 de Julio por obras", False),
+    ("Se viene una semana con lluvias y temperaturas en baja", False),
 ]
 
 if __name__ == "__main__":

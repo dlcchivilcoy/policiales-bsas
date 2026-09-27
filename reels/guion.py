@@ -39,6 +39,7 @@ VOLANTA_POR_TIPO = {
     "estafa": "Estafa", "suicidio": "Muerte", "muerte_dudosa": "Muerte dudosa",
     "desaparicion": "Búsqueda de persona", "operativo_policial": "Operativo policial",
     "judicial": "Causa judicial", "otro_policial": "Policiales",
+    "alerta_meteorologica": "Alerta meteorológica",
 }
 
 # Hashtags fijos por tipo. Van DESPUÉS de los de localidad.
@@ -57,6 +58,7 @@ HASHTAGS_POR_TIPO = {
     "operativo_policial": ["#Operativo", "#Policia"],
     "judicial": ["#Justicia", "#Policiales"],
     "otro_policial": ["#Policiales"],
+    "alerta_meteorologica": ["#AlertaMeteorologica", "#Clima"],
 }
 
 SYSTEM_PROMPT = """Sos el editor de policiales de un medio digital del interior de la provincia de Buenos Aires.
@@ -85,9 +87,12 @@ ES_DEL_TEMARIO (primero decidí esto; el reel se publica SOLO si es true):
   drogas o armas, narcotráfico), siniestro vial, incendio, accidente (también aéreo o
   laboral), homicidio, femicidio, suicidio, violencia de género o familiar, búsqueda
   de una persona desaparecida, o una causa judicial PENAL (imputación, detención,
-  prisión preventiva, juicio, condena).
+  prisión preventiva, juicio, condena). TAMBIÉN true: una ALERTA METEOROLÓGICA oficial
+  (amarilla, naranja o roja) o un TEMPORAL con impacto (tormenta fuerte, granizo, viento,
+  inundaciones, evacuados, árboles caídos, calles o rutas cortadas).
 - false si el hecho central es otra cosa, aunque la nota nombre a la policía o a un
-  detenido de pasada: clima y alertas meteorológicas, política y sesiones del Concejo,
+  detenido de pasada: el pronóstico común del tiempo (sin alerta ni temporal), política
+  y sesiones del Concejo,
   obras, servicios, cortes de luz o agua, salud, educación, deportes, espectáculos,
   campañas o charlas de prevención, entrega de patrulleros, aniversarios, homenajes,
   efemérides, avisos institucionales, NECROLÓGICAS y avisos fúnebres (listas de
@@ -136,7 +141,8 @@ lo comparta y lo comente en redes. Sube: muertes, violencia grave, hechos insól
 fuera de lo común, persecuciones, rescates, víctimas vulnerables, mucho impacto en el
 pueblo, un peligro que sigue vigente. Baja: trámites judiciales de rutina, operativos de
 tránsito o controles, hechos menores sin detalles. Sé exigente: 8 o más, solo lo que de
-verdad sobresale.
+verdad sobresale. EXCEPCIÓN: una alerta meteorológica VIGENTE para la zona, o un temporal
+con daños, va con 8 o más: le importa a todo el pueblo y se comparte mucho.
 
 TITULO_WEB y NOTA_WEB (la nota que se publica en la web del diario):
 - TITULO_WEB: el hecho y la LOCALIDAD en las primeras palabras (es lo que se busca en
@@ -349,6 +355,12 @@ _SENAS_TIPO = [
     ("accidente_vial", r"choque|chocar|colisi|vuelco|volcar|volcaron|despist|"
                        r"atropell|embisti|siniestro (?:vial|de transito|de tránsito)|"
                        r"accidente (?:fatal|de tr[aá]nsito)"),
+    # Alertas y temporales (27/09, pedido del editor). Después de los choques: «choque por
+    # el temporal» es un siniestro vial. Antes que incendio: un rayo que incendia un
+    # galpón en plena tormenta sigue siendo, para el lector, la noticia del temporal.
+    ("alerta_meteorologica", r"alerta (?:meteorol|amarilla|naranja|roja|por (?:tormenta|viento|lluvia))|"
+                             r"(?:fuerte|el) temporal|temporal de (?:lluvia|viento)|"
+                             r"granizo|granizada|tornado|inundaci|evacuad"),
     ("incendio", r"incendi|llamas|explosi[oó]n|bomberos sofoc"),
     ("narcotrafico", r"narcotr|narcomenudeo|estupefaci|coca[ií]na|marihuana|droga"),
     ("violencia_genero", r"violencia de g[eé]nero|violencia familiar|perimetral"),
@@ -503,10 +515,11 @@ def fuera_de_temario(datos: dict) -> str:
     """El motivo si la IA dijo que la nota NO es del temario; "" si es del temario.
 
     Existe porque el diccionario del scraper puntúa la PÁGINA entera, y en estos medios
-    la página trae los títulos de otras notas al costado. El 27/09 salió publicada una
-    «Alerta meteorológica para Chacabuco» con 15 puntos: sus «aciertos» (robaron,
-    narcotráfico, choque, allanamientos) eran de la columna de al lado. Con el tope de 5
-    por pasada no llegaba a entrar; sin tope, sí.
+    la página trae los títulos de otras notas al costado. El 27/09 salieron publicadas
+    «Necrológicas de Chacabuco» y una sesión del Concejo con palabras de la columna de al
+    lado. Con el tope de 5 por pasada no llegaban a entrar; sin tope, sí. (Ese mismo día
+    salió una alerta meteorológica y el editor pidió que las alertas SÍ entren: generan
+    tráfico. Ahora son del temario; ver el prompt.)
 
     Si la IA no contesta el campo, la nota PASA: el campo es un freno, y un olvido del
     modelo no tiene que costar un reel bueno.
