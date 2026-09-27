@@ -26,6 +26,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import frescura as FR
 from reels import guion as G
 from reels import reel_bot as R
 from reels import limpieza as L
@@ -404,6 +405,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
                 "cuerpo": g.get("nota_web") or g["bajada"]},
         "imagen_url": nota.get("imagen") or "",
         "localidad_hecho": g.get("localidad_hecho") or nota.get("localidad") or "",
+        # Hora de publicación en el medio (UTC): Facebook e Instagram llevan la del momento.
+        "publicado": FR.publicado_utc(nota),
         "placa": str(img),
         "video": vid,
         "estetica": f"bot {R.origen()}",
@@ -512,6 +515,9 @@ def main():
     if not elegidas:
         print("No quedan notas nuevas para hacer reel (o ninguna coincide con el filtro).")
         return 0
+    # Se arman y se publican en orden de llegada al medio, la más nueva primero (pedido
+    # del editor, 27/09): lo del momento sale al principio de la pasada.
+    elegidas = FR.ordenar(elegidas)
 
     sello = datetime.now().strftime("%Y-%m-%d_%H%M")
     carpeta = SALIDA_REELS / sello

@@ -327,6 +327,9 @@ reels/
 ├── cercania.py   Prioridad por cercanía a Chivilcoy (27/09): Junín, Chacabuco, Bragado,
 │                 Mercedes, Suipacha, Alberti y 25 de Mayo +2 sobre el viral de la IA;
 │                 Ruta 5 +1; nombra a Chivilcoy +2 (tope 3). La lista, en PRIORITARIAS.
+├── frescura.py   La noticia DEL MOMENTO primero (27/09): FB/IG llevan las más nuevas de
+│                 la pasada (-4 puntos por hora de atraso: cercanía y viral solo desempatan
+│                 entre notas de minutos de diferencia); la pasada publica la más nueva primero.
 ├── publicador.py Instagram (prueba), Facebook, YouTube. TikTok desactivado.
 ├── instagram.py  La regla del reel de prueba
 ├── ledger.py     Memoria de notas ya usadas

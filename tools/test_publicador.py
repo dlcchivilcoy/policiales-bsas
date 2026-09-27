@@ -612,7 +612,7 @@ base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
 chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"] and len(meta.contenedores) == 2)
-chequear("...con el motivo a la vista", "virales" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("...con el motivo a la vista", "más nuevas" in inf["piezas"][0]["instagram"]["detalle"])
 chequear("...YouTube lleva las tres; Facebook, las mismas 2 más virales",
          all(f["youtube"]["estado"] == "ok" for f in inf["piezas"])
          and [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
@@ -726,6 +726,50 @@ chequear("un hecho lejano mucho más viral (9) le sigue ganando a uno cercano de
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
 os.environ.pop("IG_PRUEBA_POR_PASADA")
 shutil.rmtree(base)
+
+
+# --- 20. La noticia DEL MOMENTO, sea cual sea el tema (27/09) ---------------------------
+def preparar_horas(filas):
+    """filas: (pueblo, viral, hora de publicación en el medio, UTC)"""
+    base, carpeta, reloj, meta = preparar()
+    piezas = []
+    for i, (pueblo, v, hora) in enumerate(filas, 1):
+        pz = pieza(i, pueblo)
+        pz["viral"] = v
+        pz["publicado"] = f"2026-09-26T{hora}+00:00" if hora else ""
+        piezas.append(pz)
+        (carpeta / f"{i:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
+    (carpeta / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas}), encoding="utf-8")
+    return base, carpeta, reloj, meta
+
+
+# El caso del 27/09: el temporal de horas antes (muy viral y cercano) se llevaba el lugar.
+base, carpeta, reloj, meta = preparar_horas([("bragado", 9, "13:00"), ("pergamino", 5, "15:00"),
+                                             ("lobos", 6, "15:10")])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("van las 2 MÁS NUEVAS aunque la vieja sea más viral y cercana",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"]
+         and [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
+chequear("...y el motivo dice cuánto más vieja era",
+         "2,2 h más vieja" in inf["piezas"][0]["facebook"]["detalle"])
+shutil.rmtree(base)
+
+os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "15:00")])
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("con minutos de diferencia, desempata la cercanía (Junín 10 min antes le gana)",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
+base2, carpeta2, _, _ = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "13:30")])
+inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
+chequear("...pero con más de una hora de diferencia gana la más nueva",
+         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["ok", "omitida"])
+base3, carpeta3, _, _ = preparar_horas([("lobos", 9, ""), ("lobos", 5, "15:10")])
+inf3 = silencio(PUB.publicar_lote, carpeta3, ("instagram",), publicar=True)
+chequear("una sin hora conocida no le gana a una que sí es del momento",
+         [f["instagram"]["estado"] for f in inf3["piezas"]] == ["omitida", "ok"])
+os.environ.pop("IG_PRUEBA_POR_PASADA")
+for b in (base, base2, base3):
+    shutil.rmtree(b)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)

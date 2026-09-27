@@ -48,6 +48,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import frescura as FR
 from reels import instagram as IG
 from reels import ledger as LD
 from reels import limpieza as L
@@ -77,11 +78,11 @@ NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouT
 # porque Facebook lleva su link; después Facebook e Instagram.
 ORDEN = ("youtube", "web", "facebook", "instagram")
 
-# INSTAGRAM DE PRUEBA: los N más VIRALES de cada pasada (pedido del editor, 27/09).
-# Instagram acepta ~10 reels de prueba por día por la API; con 6 pasadas, 2 por pasada.
-# Se eligen por el puntaje viral de la IA (guion.potencial_viral) MÁS la cercanía a
-# Chivilcoy (reels/cercania.py), y se saltean los hechos que ya están en el Instagram de
-# la cuenta (publicados a mano, por el bot o por nosotros). Facebook elige igual.
+# INSTAGRAM DE PRUEBA: N por pasada (pedido del editor, 27/09). Instagram acepta ~10 reels
+# de prueba por día por la API; con 6 pasadas, 2 por pasada. Van las MÁS NUEVAS, sea cual
+# sea el tema (reels/frescura.py); la cercanía a Chivilcoy (reels/cercania.py) y el viral
+# de la IA solo desempatan entre notas de minutos de diferencia. Se saltean los hechos que
+# ya están en el Instagram de la cuenta (a mano, del bot o nuestros). Facebook elige igual.
 IG_PRUEBA_POR_PASADA_DEFAULT = 2
 HORAS_INSTAGRAM_RECIENTE = 72
 
@@ -924,8 +925,9 @@ def _huella_posteo(texto: str) -> frozenset:
 
 def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: list,
                       donde: str) -> tuple:
-    """(claves elegidas, {clave: motivo}) para `red`: las `n` más virales de la pasada que
-    todavía no salieron ahí, salteando los hechos que ya están en la cuenta (`recientes`)."""
+    """(claves elegidas, {clave: motivo}) para `red`: las `n` MÁS NUEVAS de la pasada que
+    todavía no salieron ahí (viral y cercanía desempatan entre notas de minutos de
+    diferencia, ver reels/frescura.py), salteando los hechos que ya están en la cuenta."""
     candidatas = [p for p, _ in listas
                   if ((ledger.get(_clave(p)) or {}).get(red) or {}).get("estado")
                   not in ("ok", "sin_confirmar")]
@@ -937,15 +939,20 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
             motivos[clave] = f"ese hecho ya está en {donde}"
             continue
         validas.append(pieza)
-    # Al viral de la IA se le suma la cercanía a Chivilcoy (reels/cercania.py, pedido del
-    # editor el 27/09): a igual interés, van primero Junín, Chacabuco, Bragado, etc.
-    validas.sort(key=lambda p: ((p.get("viral") or 5) + CER.bono_pieza(p), p.get("viral") or 5,
-                                p.get("puntaje") or 0), reverse=True)
+    # Pedidos del editor del 27/09, en este orden de peso: la noticia DEL MOMENTO
+    # (reels/frescura.py), la cercanía a Chivilcoy (reels/cercania.py) y el viral de la IA.
+    edad = {id(p): h for p, h in zip(validas, FR.edades(validas))}
+
+    def puntos(p):
+        return ((p.get("viral") or 5) + CER.bono_pieza(p)
+                - FR.PUNTOS_POR_HORA * edad[id(p)])
+
+    validas.sort(key=lambda p: (puntos(p), -edad[id(p)], p.get("puntaje") or 0), reverse=True)
     elegidas = {_clave(p) for p in validas[:n]}
     for p in validas[n:]:
         extra = CER.bono_pieza(p)
-        motivos[_clave(p)] = (f"no está entre los {n} más virales de la pasada "
-                              f"(viral {p.get('viral') or 5}/10"
+        motivos[_clave(p)] = (f"no está entre las {n} de la pasada: van las más nuevas "
+                              f"(esta, {FR.hace(edad[id(p)])}; viral {p.get('viral') or 5}/10"
                               + (f" +{extra} por cercanía" if extra else "") + ")")
     return elegidas, motivos
 
@@ -1086,12 +1093,11 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     if "instagram" in redes:
         ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
         print(f"  Instagram de prueba: {len(ig_elegidas)} pieza(s) de esta pasada, "
-              f"las más virales con prioridad a las cercanas (tope {ig_por_pasada()} por pasada)")
+              f"las más nuevas (tope {ig_por_pasada()} por pasada)")
     fb_elegidas, fb_motivos = set(), {}
     if "facebook" in redes:
         fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
-        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales con "
-              f"prioridad a las cercanas "
+        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más nuevas "
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
 
