@@ -149,9 +149,11 @@ jobs:
       # diario: policiales frena antes para no dejarlo sin lugar. Reservas: variables del
       # repo IG_RESERVA_BOT (25 si no está) y YT_SHORTS_POR_DIA (80 si no está).
       #
-      # Instagram de PRUEBA (27/09): solo los N más virales de cada pasada (variable
-      # IG_PRUEBA_POR_PASADA, 2 si no está), salteando hechos que ya estén en la cuenta.
-      # Instagram acepta ~10 reels de prueba por día por la API (tope no documentado).
+      # Instagram de PRUEBA (27/09): los más nuevos de cada pasada, salteando hechos que ya
+      # estén en la cuenta. Cuántos, según el horario: 2 a las 12:05, 18:05 y 21:05 y 1 en
+      # las otras = 9 por día (IG_PRUEBA_POR_HORARIO en reels/publicador.py). El tope de la
+      # API no está documentado (el 27/09 rebotó con 11-13 en 24 h). La variable del repo
+      # IG_PRUEBA_POR_PASADA, si se carga, pisa el horario con un número fijo.
       #
       # NOTA EN LA WEB (27/09): cada reel tiene su nota en la sección «Región» de la web
       # (fuera de la portada) y el posteo de Facebook lleva su link. Orden por pieza:

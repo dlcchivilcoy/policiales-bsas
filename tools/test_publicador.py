@@ -21,6 +21,12 @@ sys.stdout.reconfigure(encoding="utf-8")      # la consola de Windows es cp1252
 import httpx
 from reels import publicador as PUB
 
+# La hora argentina fija en una pasada «de 2» (18:05): los reels de prueba por pasada
+# dependen del horario, y las pruebas no pueden depender de cuándo se corren.
+from datetime import timezone as _tz
+_AR = _tz(timedelta(hours=-3))
+PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
+
 fallas = []
 total = 0
 
@@ -617,7 +623,33 @@ def preparar_virales(virales, meta=None, titulares=None):
     return base, carpeta, reloj, meta
 
 
-chequear("por defecto van 2 por pasada", PUB.ig_por_pasada() == 2)
+chequear("en una pasada de las mejores (18:05) van 2", PUB.ig_por_pasada() == 2)
+
+
+def _a_las(h, m):
+    PUB._hora_ar = lambda: datetime(2026, 9, 26, h, m, tzinfo=_AR)
+    return PUB.ig_por_pasada()
+
+
+# Decidido por el editor el 27/09: 2 en 12:05, 18:05 y 21:05; 1 en 09:05, 15:05 y 23:35.
+chequear("reels de prueba por horario: 9:05→1, 12:05→2, 15:05→1, 18:05→2, 21:05→2, 23:35→1",
+         [_a_las(9, 12), _a_las(12, 12), _a_las(15, 12), _a_las(18, 12), _a_las(21, 12), _a_las(23, 40)]
+         == [1, 2, 1, 2, 2, 1])
+chequear("...son 9 por día (por debajo del tope que mostró Instagram)",
+         sum(c for _, _, c in PUB.IG_PRUEBA_POR_HORARIO) == 9)
+chequear("una pasada que salió tarde por la fila sigue siendo la suya (12:05 que arranca 13:40 → 2)",
+         _a_las(13, 40) == 2)
+chequear("la de 23:35 que cruza la medianoche sigue con 1", _a_las(0, 20) == 1)
+os.environ["IG_PRUEBA_POR_PASADA"] = "3"
+chequear("la variable del repo IG_PRUEBA_POR_PASADA pisa el horario", _a_las(9, 12) == 3)
+os.environ.pop("IG_PRUEBA_POR_PASADA")
+base, carpeta, reloj, meta = preparar_virales([3, 1, 2])
+PUB._hora_ar = lambda: datetime(2026, 9, 26, 15, 10, tzinfo=_AR)
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("en la pasada de las 15:05 sale 1 solo reel de prueba",
+         [f["instagram"]["estado"] for f in inf["piezas"]].count("ok") == 1)
+shutil.rmtree(base)
+PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]

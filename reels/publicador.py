@@ -42,7 +42,7 @@ import subprocess
 import sys
 import tempfile
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import httpx
@@ -79,11 +79,17 @@ NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouT
 # porque Facebook lleva su link; después Facebook e Instagram.
 ORDEN = ("youtube", "web", "facebook", "instagram")
 
-# INSTAGRAM DE PRUEBA: N por pasada (pedido del editor, 27/09). Instagram acepta ~10 reels
-# de prueba por día por la API; con 6 pasadas, 2 por pasada. Van las MÁS NUEVAS, sea cual
-# sea el tema (reels/frescura.py); la cercanía a Chivilcoy (reels/cercania.py) y el viral
-# de la IA solo desempatan entre notas de minutos de diferencia. Se saltean los hechos que
-# ya están en el Instagram de la cuenta (a mano, del bot o nuestros). Facebook elige igual.
+# INSTAGRAM DE PRUEBA: N por pasada (pedido del editor, 27/09). Van las MÁS NUEVAS, sea
+# cual sea el tema (reels/frescura.py); la cercanía a Chivilcoy (reels/cercania.py) y el
+# viral de la IA solo desempatan entre notas de minutos de diferencia. Se saltean los hechos
+# que ya están en el Instagram de la cuenta (a mano, del bot o nuestros). Facebook elige igual.
+#
+# CUÁNTOS, según el horario (decidido por el editor el 27/09): 2 en las pasadas de más
+# movimiento (12:05, 18:05, 21:05) y 1 en las otras (09:05, 15:05, 23:35) = 9 por día.
+# El tope de reels de prueba por la API no está documentado: el 27/09 rebotó con 11 y con
+# 13 en 24 h (10 habían salido juntos a la mañana), así que 6 × 2 = 12 quedaba en el borde.
+# La variable del repo IG_PRUEBA_POR_PASADA, si se carga, pisa esto con un número fijo.
+IG_PRUEBA_POR_HORARIO = ((9, 5, 1), (12, 5, 2), (15, 5, 1), (18, 5, 2), (21, 5, 2), (23, 35, 1))
 IG_PRUEBA_POR_PASADA_DEFAULT = 2
 HORAS_INSTAGRAM_RECIENTE = 72
 # Un reel con el VIDEO del medio retiene mucho más que una foto quieta: suma 4 puntos al
@@ -149,6 +155,9 @@ IG_RESERVA_BOT_DEFAULT = 25
 _http = None
 _dormir = time.sleep
 _ahora = datetime.now
+# La hora ARGENTINA, aparte de _ahora (que en la nube es UTC): decide cuántos reels de
+# prueba lleva la pasada (IG_PRUEBA_POR_HORARIO). Argentina es UTC-3 todo el año.
+_hora_ar = lambda: datetime.now(timezone(timedelta(hours=-3)))  # noqa: E731
 _barrer_release = L.limpiar_release
 _token_gh = ""
 _ocultar = []              # tokens obtenidos en la corrida (gh, acceso de YouTube)
@@ -902,10 +911,22 @@ def _lugar_en_instagram():
 
 
 def ig_por_pasada() -> int:
-    try:
-        return max(0, int(os.environ.get("IG_PRUEBA_POR_PASADA") or IG_PRUEBA_POR_PASADA_DEFAULT))
-    except ValueError:
-        return IG_PRUEBA_POR_PASADA_DEFAULT
+    """Reels de prueba de esta pasada. IG_PRUEBA_POR_PASADA, si está cargada, manda; si no,
+    el horario (IG_PRUEBA_POR_HORARIO): cuenta el último que ya pasó, así una pasada que
+    salió tarde por la fila, o que cruzó la medianoche, sigue siendo la suya."""
+    fijo = (os.environ.get("IG_PRUEBA_POR_PASADA") or "").strip()
+    if fijo:
+        try:
+            return max(0, int(fijo))
+        except ValueError:
+            return IG_PRUEBA_POR_PASADA_DEFAULT
+    ahora = _hora_ar()
+    minutos = ahora.hour * 60 + ahora.minute
+    n = IG_PRUEBA_POR_HORARIO[-1][2]          # antes de las 09:05: la de 23:35 de la noche
+    for hora, minuto, cantidad in IG_PRUEBA_POR_HORARIO:
+        if minutos >= hora * 60 + minuto:
+            n = cantidad
+    return n
 
 
 def _huella_texto(texto: str) -> frozenset:
