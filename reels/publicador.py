@@ -587,7 +587,9 @@ def _sin_angulos(texto: str) -> str:
 
 def metadatos_youtube(pieza: dict) -> dict:
     g = pieza.get("guion") or {}
-    pueblo = _pueblo(pieza.get("localidad") or "")
+    # El pueblo del HECHO, no el del medio que lo publicó: el 27/09 salió «Fuertes
+    # tormentas y caída de granizo afectaron a Bragado | 9 de Julio».
+    pueblo = _pueblo(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
     titulo = (g.get("titular") or "").strip()
     # La localidad en el titulo: en YouTube se busca por el nombre del pueblo, y el
     # titular muchas veces no lo dice porque la volanta ya lo decia en la placa.

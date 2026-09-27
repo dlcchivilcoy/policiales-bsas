@@ -434,6 +434,11 @@ largo = PUB.metadatos_youtube({"localidad": "junin", "descripcion_tiktok": "a <b
 chequear("titulo de YouTube: nunca mas de 100 caracteres", len(largo["title"]) <= 100)
 chequear("sin < ni > (YouTube rechaza el video entero)", "<" not in largo["description"]
          and ">" not in largo["description"])
+cruzado = PUB.metadatos_youtube({"localidad": "9 de julio", "localidad_hecho": "Bragado",
+                                 "descripcion_tiktok": "t", "guion": {"titular": "Granizo en la ciudad"}})
+chequear("titulo de YouTube con el pueblo del HECHO, no el del medio",
+         cruzado["snippet"]["title"] == "Granizo en la ciudad | Bragado"
+         and "9 de Julio" not in cruzado["snippet"]["tags"])
 
 # --- 14. Instagram: sin tope propio, pero con lugar para el bot -------------------
 chequear("Instagram: la reserva para el bot por defecto es de 25 de los 100",
