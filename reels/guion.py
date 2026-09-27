@@ -87,7 +87,8 @@ ES_DEL_TEMARIO (primero decidí esto; el reel se publica SOLO si es true):
   detenido de pasada: clima y alertas meteorológicas, política y sesiones del Concejo,
   obras, servicios, cortes de luz o agua, salud, educación, deportes, espectáculos,
   campañas o charlas de prevención, entrega de patrulleros, aniversarios, homenajes,
-  efemérides, avisos institucionales.
+  efemérides, avisos institucionales, NECROLÓGICAS y avisos fúnebres (listas de
+  fallecidos, sepelios, servicios de cocherías), estadísticas e informes generales.
 - El material puede traer restos de OTRAS notas de la página (títulos del costado).
   Decidí por el titular original y el hecho que cuenta la nota, no por esos restos.
 - Aunque sea false, completá igual los demás campos.

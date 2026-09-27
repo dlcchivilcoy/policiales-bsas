@@ -122,6 +122,22 @@ _token_gh = ""
 _ocultar = []              # tokens obtenidos en la corrida (gh, acceso de YouTube)
 _yt_acceso = ""            # token de acceso de YouTube, ya verificado contra el canal
 _yt_sin_cupo = False       # YouTube dijo "cupo agotado": no se insiste en esta pasada
+_ig_sin_prueba = False     # Instagram no acepta más reels de PRUEBA: no se insiste en esta pasada
+
+# TOPE DE REELS DE PRUEBA (descubierto publicando, 27/09/2026; NO está en la
+# documentación de Meta, que solo habla de los 100 posteos por día): después de ~10 reels
+# de prueba en el día, media_publish contesta 400 «Has alcanzado el número máximo de
+# reels de prueba que se pueden publicar mediante la API de publicación de contenido».
+# El contenedor se crea bien; lo que rebota es la publicación. No es una falla del
+# sistema: es un cupo, igual que el de YouTube. El mensaje llega en el idioma de la
+# cuenta, por eso se buscan las dos versiones.
+_TOPE_PRUEBA = re.compile(r"(reels? de prueba|trial reels?).*(m[aá]xim|maximum|limit|l[ií]mite)|"
+                          r"(m[aá]xim|maximum|limit|l[ií]mite).*(reels? de prueba|trial reels?)",
+                          re.IGNORECASE)
+
+
+def _es_tope_de_prueba(detalle) -> bool:
+    return bool(_TOPE_PRUEBA.search(str(detalle or "")))
 
 
 class FalloRed(Exception):
@@ -821,7 +837,7 @@ def _simular(red: str, pieza: dict, mp4: Path) -> dict:
 
 
 def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
-    global _yt_acceso, _yt_sin_cupo
+    global _yt_acceso, _yt_sin_cupo, _ig_sin_prueba
     _rechazar_tiktok(redes)
     # Y cualquier otra red que no este implementada, tambien antes de tocar nada.
     raras = [r for r in redes if r not in REDES]
@@ -832,7 +848,7 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     ledger = cargar_ledger()
     informe = {"lote": carpeta.name, "modo": "publicar" if publicar else "simulacion",
                "redes": list(redes), "piezas": [], "salteadas": salteadas}
-    _yt_acceso, _yt_sin_cupo = "", False
+    _yt_acceso, _yt_sin_cupo, _ig_sin_prueba = "", False, False
     yt_tope, yt_hoy, yt_pasada = tope_youtube(), _youtube_de_hoy(ledger), 0
 
     modo = "PUBLICANDO" if publicar else "SIMULACION — no se toca ninguna red"
@@ -863,6 +879,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                                     f"ya van {yt_hoy + yt_pasada} Short(s) hoy (tope {yt_tope})"}
         # Instagram: el cupo real de la cuenta, que comparte con el bot. Solo al publicar
         # (simulando no se toca ninguna red).
+        if publicar and "instagram" in pendientes and _ig_sin_prueba:
+            pendientes.remove("instagram")
+            sin_lugar["instagram"] = {"estado": "cupo", "detalle":
+                "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
         if publicar and "instagram" in pendientes:
             lugar = _lugar_en_instagram()
             if lugar and lugar[0] <= 0:
@@ -896,6 +916,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 res = _simular(red, pieza, mp4)
             elif red == "instagram":
                 res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
+                if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
+                    _ig_sin_prueba = True
+                    res = {"estado": "cupo", "detalle":
+                           "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
             elif red == "facebook":
                 res = _intentar(publicar_facebook, pieza, mp4)
             elif red == "youtube":
@@ -908,7 +932,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 yt_pasada += 1
             fila[red] = res
             _mostrar(red, res)
-            if publicar:
+            # Un cupo no se anota en la memoria: no es una falla, y así una corrida
+            # posterior sobre la misma tanda puede volver a intentarlo.
+            if publicar and res.get("estado") != "cupo":
                 res["cuando"] = _ahora().isoformat(timespec="seconds")
                 e = ledger.setdefault(clave, {"titular": g.get("titular"), "localidad": pueblo})
                 e[red] = res

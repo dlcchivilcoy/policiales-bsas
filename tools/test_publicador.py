@@ -67,7 +67,7 @@ class Reloj:
 class Meta:
     """Graph API + rupload + GitHub, con fallas a pedido."""
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
-                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100)):
+                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -82,6 +82,7 @@ class Meta:
         self.yt_inicios = []              # metadatos de cada sesion de subida abierta
         self.yt_videos = {}               # upload_id -> id del video creado
         self.ig_cupo = ig_cupo            # (usados, total) de Instagram; None = no se puede leer
+        self.ig_tope_prueba = ig_tope_prueba  # reels de prueba que acepta antes de rebotar
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
@@ -151,6 +152,10 @@ class Meta:
                                                  "status": "Error: 2207020 - falso" if est == "ERROR" else ""})
             if ruta == "/v26.0/IGUSER/media_publish":
                 self.publicar_llamadas += 1
+                if self.ig_tope_prueba is not None and len(self.publicado) >= self.ig_tope_prueba:
+                    return httpx.Response(400, json={"error": {"code": 9, "message":
+                        "Has alcanzado el número máximo de reels de prueba que se pueden publicar "
+                        "mediante la API de publicación de contenido."}})
                 resp = self.ig_publicar.pop(0) if self.ig_publicar else (200, {"id": "M1"})
                 if resp[0] < 400:
                     self.publicado.add(uno["creation_id"])
@@ -441,6 +446,30 @@ base, carpeta, reloj, meta = preparar(Meta(ig_cupo=None))
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("si el cupo de Instagram no se puede leer, se publica igual",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "ok"])
+shutil.rmtree(base)
+
+# --- 15. Instagram: tope de reels de PRUEBA (no documentado; visto el 27/09) ----------
+base, carpeta, reloj, meta = preparar(Meta(ig_tope_prueba=1))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("tope de prueba: la primera sale y la segunda queda por CUPO, no por falla",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "cupo"])
+chequear("...Facebook y YouTube salen igual",
+         all(f["facebook"]["estado"] == "ok" and f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+chequear("...no abre issue (no es una falla del sistema)",
+         not (base / "informe_publicacion.md").exists())
+led = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+chequear("...y no queda anotada en la memoria para Instagram",
+         "instagram" not in led["https://medio.test/2"])
+chequear("el mensaje en inglés también se reconoce",
+         PUB._es_tope_de_prueba("You have reached the maximum number of trial reels"))
+chequear("un error cualquiera de Instagram NO se toma por tope",
+         not PUB._es_tope_de_prueba("Instagram: publicar: HTTP 400 — Invalid parameter"))
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(ig_tope_prueba=0))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("tope desde la primera: no se insiste con la segunda en la misma pasada",
+         meta.publicar_llamadas == 1 and inf["piezas"][1]["instagram"]["estado"] == "cupo")
 shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
