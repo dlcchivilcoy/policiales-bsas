@@ -857,6 +857,33 @@ finally:
     RB.sin_placa_final = _original_sin_placa
     os.environ["YT_SIN_PLACA"] = "0"
 
+
+# --- 23. El VIDEO del medio por sobre la foto (27/09) --------------------------------------
+def preparar_video(filas):
+    """filas: (pueblo, viral, hora UTC, tenia_video)"""
+    base, carpeta, reloj, meta = preparar_horas([(pu, v, h) for pu, v, h, _ in filas])
+    lote = json.loads((carpeta / "_lote.json").read_text(encoding="utf-8"))
+    for pz, (_, _, _, vid) in zip(lote["piezas"], filas):
+        pz["tenia_video"] = vid
+    (carpeta / "_lote.json").write_text(json.dumps(lote), encoding="utf-8")
+    return base, carpeta, reloj, meta
+
+
+os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "15:00", True)])
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("de la misma hora, la que tiene VIDEO le gana a la de foto aunque sea menos viral",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
+chequear("...y el motivo de la de foto no dice «por video»", "por video" not in inf["piezas"][0]["instagram"]["detalle"])
+base2, carpeta2, _, _ = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "13:00", True)])
+inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
+chequear("...pero un video de 2 horas antes no le gana a la noticia del momento",
+         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["ok", "omitida"]
+         and "+4 por video" in inf2["piezas"][1]["instagram"]["detalle"])
+os.environ.pop("IG_PRUEBA_POR_PASADA")
+for b in (base, base2):
+    shutil.rmtree(b)
+
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)
 base, carpeta, reloj, meta = preparar()

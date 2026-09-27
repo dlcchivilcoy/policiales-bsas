@@ -86,6 +86,10 @@ ORDEN = ("youtube", "web", "facebook", "instagram")
 # ya están en el Instagram de la cuenta (a mano, del bot o nuestros). Facebook elige igual.
 IG_PRUEBA_POR_PASADA_DEFAULT = 2
 HORAS_INSTAGRAM_RECIENTE = 72
+# Un reel con el VIDEO del medio retiene mucho más que una foto quieta: suma 4 puntos al
+# elegir para Facebook e Instagram (pedido del editor, 27/09). 4 = lo que vale una hora de
+# frescura: entre notas de la misma hora, gana la que tiene video.
+BONO_VIDEO = 4
 
 # FACEBOOK (verificado en la doc de la Reels Publishing API el 27/09/2026): «Reels API is
 # limited to 30 API-published posts within a 24-hour moving period», POR PÁGINA. La página
@@ -1010,11 +1014,15 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
             continue
         validas.append(pieza)
     # Pedidos del editor del 27/09, en este orden de peso: la noticia DEL MOMENTO
-    # (reels/frescura.py), la cercanía a Chivilcoy (reels/cercania.py) y el viral de la IA.
+    # (reels/frescura.py), el VIDEO del medio por sobre la foto (BONO_VIDEO), la cercanía a
+    # Chivilcoy (reels/cercania.py) y el viral de la IA.
     edad = {id(p): h for p, h in zip(validas, FR.edades(validas))}
 
+    def video(p):
+        return BONO_VIDEO if p.get("tenia_video") else 0
+
     def puntos(p):
-        return ((p.get("viral") or 5) + CER.bono_pieza(p)
+        return ((p.get("viral") or 5) + CER.bono_pieza(p) + video(p)
                 - FR.PUNTOS_POR_HORA * edad[id(p)])
 
     validas.sort(key=lambda p: (puntos(p), -edad[id(p)], p.get("puntaje") or 0), reverse=True)
@@ -1023,7 +1031,8 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
         extra = CER.bono_pieza(p)
         motivos[_clave(p)] = (f"no está entre las {n} de la pasada: van las más nuevas "
                               f"(esta, {FR.hace(edad[id(p)])}; viral {p.get('viral') or 5}/10"
-                              + (f" +{extra} por cercanía" if extra else "") + ")")
+                              + (f" +{extra} por cercanía" if extra else "")
+                              + (f" +{video(p)} por video" if video(p) else "") + ")")
     return elegidas, motivos
 
 

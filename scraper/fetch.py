@@ -42,6 +42,13 @@ RUTAS_RSS = [
 _WP_SIZE_RE = re.compile(r"-\d{2,4}x\d{2,4}(?=\.(?:jpg|jpeg|png|webp|gif)$)", re.IGNORECASE)
 _RESIZE_PARAMS = {"resize", "fit", "w", "h", "width", "height", "quality", "q", "strip", "ssl", "crop", "s"}
 
+# Blogger / Google: el tamaño va en el último directorio (/s72-c/foto.webp, /w400-h300/) o
+# al final (=s72-c, =w400-h300-rw). El RSS de Blogger da la miniatura de 72x72 y el reel de
+# Chacabuco del 27/09 salió pixelado; con /s1600/ Google devuelve la original (859x519).
+_GOOGLE_IMG_HOSTS = ("googleusercontent.com", "bp.blogspot.com")
+_GOOGLE_SEG_RE = re.compile(r"/(?:s\d+|w\d+(?:-h\d+)?|h\d+)(?:-[a-z0-9]+)*/(?=[^/]+$)", re.IGNORECASE)
+_GOOGLE_FIN_RE = re.compile(r"=(?:s\d+|w\d+(?:-h\d+)?|h\d+)(?:-[a-z0-9]+)*$", re.IGNORECASE)
+
 
 def limpiar(texto):
     return re.sub(r"\s+", " ", texto).strip() if texto else ""
@@ -56,11 +63,14 @@ def _sin_tildes(texto):
 
 def mejorar_imagen(url):
     """Devuelve la version de mayor calidad: saca el sufijo de tamaño de WordPress
-    (foo-300x200.jpg -> foo.jpg) y los parametros de resize del CDN."""
+    (foo-300x200.jpg -> foo.jpg), los parametros de resize del CDN, y en Blogger/Google
+    pide el tamaño original (/s72-c/ -> /s1600/)."""
     if not url:
         return url
     path, _, qs = url.partition("?")
     path = _WP_SIZE_RE.sub("", path)
+    if any(h in (urlparse(path).hostname or "") for h in _GOOGLE_IMG_HOSTS):
+        path = _GOOGLE_FIN_RE.sub("=s1600", _GOOGLE_SEG_RE.sub("/s1600/", path))
     if qs:
         kept = "&".join(p for p in qs.split("&")
                         if p and p.split("=")[0].lower() not in _RESIZE_PARAMS)

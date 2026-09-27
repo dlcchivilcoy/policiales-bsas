@@ -60,6 +60,8 @@ armados = []
 reemplazos = {
     "_bajar_video": lambda url, destino: None,
     "_bajar_foto": lambda url, destino: destino,
+    # La foto «sirve» sin mirar el archivo (el tamaño se prueba en test_fotos.py).
+    "_foto_usable": lambda nota, destino: (destino, nota.get("imagen") or "", ""),
     "material": lambda nota: nota,
 }
 guardados = {k: getattr(F, k) for k in reemplazos}

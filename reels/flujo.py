@@ -65,6 +65,8 @@ def _puntaje(nota: dict) -> float:
     p += min((nota.get("score_keywords") or 0), 24)      # el diccionario ya midió intensidad
     if nota.get("imagen"):
         p += 30      # sin foto el reel queda pobre: la que tiene imagen va primero
+    if nota.get("video"):
+        p += 45      # y el VIDEO del medio más todavía (pedido del editor, 27/09)
     if (nota.get("victimas") or 0) > 0:
         p += 15
     # Cercanía a Chivilcoy (reels/cercania.py): hasta +30, así las cercanas se arman y se
@@ -228,6 +230,51 @@ def _bajar_foto(url: str, destino: Path) -> Path | None:
         return None
 
 
+# Una foto más chica que esto se ve pixelada estirada a 1080 de ancho, y se descarta
+# (pedido del editor, 27/09: el reel de Chacabuco salió con una de 72x72, la miniatura que
+# da el RSS de Blogger). Las de hoy iban de 442x248 a 1672x941.
+FOTO_MIN_LADO_MAYOR = 400
+FOTO_MIN_LADO_MENOR = 200
+
+
+def _tamanio(ruta: Path):
+    try:
+        from PIL import Image
+        with Image.open(ruta) as im:
+            return im.size
+    except Exception:
+        return None
+
+
+def _foto_usable(nota: dict, destino: Path) -> tuple:
+    """(ruta, url, motivo): la foto de la nota si tiene tamaño para un reel.
+
+    Primero la de la nota con la URL mejorada (fetch.mejorar_imagen pide el tamaño
+    original a WordPress, los CDN y Blogger). Si igual es chica, la foto principal de la
+    página (og:image), que suele ser la grande. Si ninguna sirve: (None, "", motivo)."""
+    probadas, motivo = set(), ""
+    candidatas = [nota.get("imagen")]
+    for i in range(2):
+        for url in candidatas:
+            url = fetch.mejorar_imagen(url or "")
+            if not url or url in probadas:
+                continue
+            probadas.add(url)
+            if not _bajar_foto(url, destino):
+                motivo = motivo or "La imagen que declara la nota no se pudo bajar."
+                continue
+            t = _tamanio(destino)
+            if t and max(t) >= FOTO_MIN_LADO_MAYOR and min(t) >= FOTO_MIN_LADO_MENOR:
+                return destino, url, ""
+            motivo = (f"La foto es demasiado chica ({t[0]}x{t[1]}): se vería pixelada."
+                      if t else "La imagen que declara la nota no se pudo abrir.")
+        if i == 0:                               # segunda vuelta: la foto de la página
+            d = fetch.detalle(nota.get("url") or "", permitir_navegador=False)
+            candidatas = [d.get("imagen")] if d.get("ok") else []
+    destino.unlink(missing_ok=True)
+    return None, "", motivo or "La nota no trae imagen."
+
+
 # Tope de descarga del video. Un clip de nota local pesa 2-15 MB; arriba de esto
 # suele ser una pelicula entera mal enlazada o un stream, y no vale la pena esperarlo
 # para despues usar 8 segundos.
@@ -310,14 +357,14 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         clip = None          # un video del que no sale ni un cuadro no se puede usar
     # La foto se baja igual aunque haya video: si el motor no puede con el clip, el
     # reel se arma con la foto en vez de perder la pieza.
-    foto = _bajar_foto(nota.get("imagen") or "", tmp)
+    foto, imagen_usada, sin_foto = _foto_usable(nota, tmp)
 
     # El filtro de la tanda mira que la nota DECLARE una imagen; esto comprueba que la
-    # imagen realmente se pueda bajar. Un enlace roto o un 403 dejan la placa igual de
-    # vacía que no tener foto, así que la pieza no se arma.
+    # imagen realmente se pueda bajar y tenga tamaño. Un enlace roto, un 403 o una
+    # miniatura de 72x72 dejan la placa igual de mal que no tener foto: no se arma.
     if not foto and not clip:
         return {"orden": idx, "descartada": True,
-                "por_que_no": "La imagen que declara la nota no se pudo bajar.",
+                "por_que_no": sin_foto,
                 "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
                 "titulo": nota.get("titulo"), "url_original": nota.get("url")}
 
@@ -403,7 +450,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "viral": g.get("viral", 5),
         "web": {"titulo": g.get("titulo_web") or g["titular"],
                 "cuerpo": g.get("nota_web") or g["bajada"]},
-        "imagen_url": nota.get("imagen") or "",
+        "imagen_url": imagen_usada or nota.get("imagen") or "",
         "localidad_hecho": g.get("localidad_hecho") or nota.get("localidad") or "",
         # Hora de publicación en el medio (UTC): Facebook e Instagram llevan la del momento.
         "publicado": FR.publicado_utc(nota),
