@@ -110,6 +110,13 @@ jobs:
       - name: Traer las noticias
         # "hoy" es el día calendario argentino. Cada pasada trae SOLO lo del día: no se
         # arrastra nada de ayer, aunque el medio lo haya publicado hace 20 horas.
+        # Tarda de 1 a 8 minutos. El 27/09 quedó 3 h 18 min colgado esperando a un medio y
+        # trabó la fila de las pasadas siguientes: con este tope, en el peor caso se pierde
+        # UNA pasada y la siguiente sale a horario. PYTHONUNBUFFERED: que el log muestre
+        # cada medio en el momento (si no, Python lo guarda y un cuelgue no deja rastro).
+        timeout-minutes: 20
+        env:
+          PYTHONUNBUFFERED: "1"
         run: |
           python -m scraper.run --sin-navegador \
             --ventana "${{ github.event.inputs.ventana || 'hoy' }}"

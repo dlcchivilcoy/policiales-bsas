@@ -10,6 +10,7 @@ Descubrir el feed automaticamente es lo que hace viable tener 56 medios: mantene
 56 parsers a mano seria imposible.
 """
 import re
+import socket
 import unicodedata
 import httpx
 import feedparser
@@ -23,6 +24,13 @@ HEADERS = {
     "Accept-Language": "es-AR,es;q=0.9",
 }
 TIMEOUT = 20
+
+# feedparser.parse(url) —el respaldo de listar_por_rss— baja con urllib, que por defecto
+# NO tiene límite de tiempo: un medio que acepta la conexión y nunca contesta dejaba el
+# scraper esperando para siempre. El 27/09 la pasada de las 12 quedó 3 h 18 min colgada
+# en «Traer las noticias» y trabó la fila de las siguientes. httpx pone sus propios
+# límites, así que esto solo alcanza a lo que no los tiene.
+socket.setdefaulttimeout(TIMEOUT)
 
 # Rutas donde suele vivir el feed. El orden importa: las primeras dos cubren
 # practicamente todo WordPress, que es lo que usa la enorme mayoria de estos medios.
@@ -250,7 +258,10 @@ def listar_por_rss(rss_url, limite=40):
     except Exception:
         pass
     if feed is None or not feed.entries:
-        feed = feedparser.parse(rss_url)
+        try:
+            feed = feedparser.parse(rss_url)
+        except OSError:          # el corte de socket.setdefaulttimeout (ver arriba)
+            return []            # sin notas: listar_notas cae a la portada HTML
 
     notas = []
     for e in feed.entries[:limite]:
