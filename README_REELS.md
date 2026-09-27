@@ -324,6 +324,9 @@ reels/
 ├── guion.py      Nota → volanta/titular/bajada/zócalo + descripción SEO
 ├── reel_bot.py   Arma el reel con el MOTOR DEL BOT (26/09): lo único propio de policiales
 ├── flujo.py      Orquestador de la tanda (no publica)
+├── cercania.py   Prioridad por cercanía a Chivilcoy (27/09): Junín, Chacabuco, Bragado,
+│                 Mercedes, Suipacha, Alberti y 25 de Mayo +2 sobre el viral de la IA;
+│                 Ruta 5 +1; nombra a Chivilcoy +2 (tope 3). La lista, en PRIORITARIAS.
 ├── publicador.py Instagram (prueba), Facebook, YouTube. TikTok desactivado.
 ├── instagram.py  La regla del reel de prueba
 ├── ledger.py     Memoria de notas ya usadas

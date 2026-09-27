@@ -47,6 +47,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from reels import cercania as CER
 from reels import instagram as IG
 from reels import ledger as LD
 from reels import limpieza as L
@@ -78,8 +79,9 @@ ORDEN = ("youtube", "web", "facebook", "instagram")
 
 # INSTAGRAM DE PRUEBA: los N más VIRALES de cada pasada (pedido del editor, 27/09).
 # Instagram acepta ~10 reels de prueba por día por la API; con 6 pasadas, 2 por pasada.
-# Se eligen por el puntaje viral de la IA (guion.potencial_viral) y se saltean los hechos
-# que ya están en el Instagram de la cuenta (publicados a mano, por el bot o por nosotros).
+# Se eligen por el puntaje viral de la IA (guion.potencial_viral) MÁS la cercanía a
+# Chivilcoy (reels/cercania.py), y se saltean los hechos que ya están en el Instagram de
+# la cuenta (publicados a mano, por el bot o por nosotros). Facebook elige igual.
 IG_PRUEBA_POR_PASADA_DEFAULT = 2
 HORAS_INSTAGRAM_RECIENTE = 72
 
@@ -933,11 +935,16 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
             motivos[clave] = f"ese hecho ya está en {donde}"
             continue
         validas.append(pieza)
-    validas.sort(key=lambda p: (p.get("viral") or 5, p.get("puntaje") or 0), reverse=True)
+    # Al viral de la IA se le suma la cercanía a Chivilcoy (reels/cercania.py, pedido del
+    # editor el 27/09): a igual interés, van primero Junín, Chacabuco, Bragado, etc.
+    validas.sort(key=lambda p: ((p.get("viral") or 5) + CER.bono_pieza(p), p.get("viral") or 5,
+                                p.get("puntaje") or 0), reverse=True)
     elegidas = {_clave(p) for p in validas[:n]}
     for p in validas[n:]:
+        extra = CER.bono_pieza(p)
         motivos[_clave(p)] = (f"no está entre los {n} más virales de la pasada "
-                              f"(viral {p.get('viral') or 5}/10)")
+                              f"(viral {p.get('viral') or 5}/10"
+                              + (f" +{extra} por cercanía" if extra else "") + ")")
     return elegidas, motivos
 
 
@@ -1077,11 +1084,12 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     if "instagram" in redes:
         ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
         print(f"  Instagram de prueba: {len(ig_elegidas)} pieza(s) de esta pasada, "
-              f"las más virales (tope {ig_por_pasada()} por pasada)")
+              f"las más virales con prioridad a las cercanas (tope {ig_por_pasada()} por pasada)")
     fb_elegidas, fb_motivos = set(), {}
     if "facebook" in redes:
         fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
-        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
+        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales con "
+              f"prioridad a las cercanas "
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
 

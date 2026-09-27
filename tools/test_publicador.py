@@ -689,6 +689,39 @@ chequear("el hecho que YA está en la página de Facebook no se repite ahí",
          and [f["facebook"]["estado"] for f in inf["piezas"][1:]] == ["ok", "ok"])
 shutil.rmtree(base)
 
+
+# --- 19. Cercanía a Chivilcoy: a igual interés, las localidades cercanas primero (27/09) ---
+def preparar_pueblos(pueblos_virales):
+    base, carpeta, reloj, meta = preparar()
+    piezas = []
+    for i, (pueblo, v) in enumerate(pueblos_virales, 1):
+        pz = pieza(i, pueblo)
+        pz["viral"] = v
+        piezas.append(pz)
+        (carpeta / f"{i:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
+    (carpeta / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas}), encoding="utf-8")
+    return base, carpeta, reloj, meta
+
+
+base, carpeta, reloj, meta = preparar_pueblos([("pergamino", 8), ("lobos", 8), ("chacabuco", 7), ("alberti", 5)])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("Chacabuco (viral 7) le gana el lugar a Lobos (viral 8) en Instagram y Facebook",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok", "omitida"]
+         and [f["facebook"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok", "omitida"])
+chequear("...el motivo de la cercana que no entró lo dice",
+         "+2 por cercanía" in inf["piezas"][3]["instagram"]["detalle"]
+         and "cercanía" not in inf["piezas"][1]["instagram"]["detalle"])
+chequear("...y YouTube sigue llevando todas", all(f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+shutil.rmtree(base)
+
+os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_pueblos([("junin", 6), ("pergamino", 9)])
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("un hecho lejano mucho más viral (9) le sigue ganando a uno cercano de 6",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
+os.environ.pop("IG_PRUEBA_POR_PASADA")
+shutil.rmtree(base)
+
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)
 base, carpeta, reloj, meta = preparar()

@@ -25,6 +25,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from reels import cercania as CER
 from reels import guion as G
 from reels import reel_bot as R
 from reels import limpieza as L
@@ -65,12 +66,21 @@ def _puntaje(nota: dict) -> float:
         p += 30      # sin foto el reel queda pobre: la que tiene imagen va primero
     if (nota.get("victimas") or 0) > 0:
         p += 15
+    # Cercanía a Chivilcoy (reels/cercania.py): hasta +30, así las cercanas se arman y se
+    # publican primero en cada pasada.
+    p += 10 * CER.bono_nota(nota)
     return p
 
 
 # Puntaje mínimo para entrar en la segunda vuelta. El umbral del diccionario es 5 y
 # sirve para "revisá esto"; para OCUPAR un lugar en la tanda hace falta más margen.
 UMBRAL_RELLENO = 8
+# Para las localidades prioritarias (y los hechos en la Ruta 5 o con Chivilcoy), la vara
+# de la segunda nota es más baja, a pedido del editor (27/09): en el scrapeo de ese día
+# quedaban afuera «Mercedes: la fiesta de estudiantes dejó un apuñalado» o «Escalofriante
+# caso en Chacabuco», que el diccionario puntuó 6. Lo que no es policial lo frena igual
+# el filtro de temario de la IA (guion.fuera_de_temario).
+UMBRAL_RELLENO_CERCANAS = 6
 
 # Cuánto del titular más corto tiene que estar contenido en el otro para darlos por el
 # mismo hecho, entre notas de la MISMA localidad. 0,40 salió de medir el caso real:
@@ -163,7 +173,15 @@ def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
 
         # (a) Solo lo que el diccionario dio por policial con holgura. Lo que entró
         #     raspando el umbral no merece un lugar cuando ya hay material mejor.
-        if (n.get("score_keywords") or 0) < UMBRAL_RELLENO:
+        umbral = UMBRAL_RELLENO_CERCANAS if CER.bono_nota(n) else UMBRAL_RELLENO
+        if (n.get("score_keywords") or 0) < umbral:
+            continue
+
+        h = _LD._huella(n)
+        # Si entra por la vara baja de las cercanas, el titular tiene que poder compararse
+        # con los demás: «PRISIÓN PREVENTIVA PARA DÍAZ» (3 palabras útiles) repetía un
+        # hecho ya elegido y el control de abajo no lo veía por corto.
+        if (n.get("score_keywords") or 0) < UMBRAL_RELLENO and len(h) < 4:
             continue
 
         # (b) Y que no sea un hecho que ya está en la tanda. Dos medios distintos
@@ -175,7 +193,6 @@ def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
         #     está contenido en el otro, y solo entre notas de la misma localidad,
         #     donde dos hechos del mismo día que comparten casi todo el vocabulario
         #     casi siempre son el mismo hecho contado dos veces.
-        h = _LD._huella(n)
         loc_n = (n.get("localidad") or n.get("localidad_medio") or "").lower()
         repetida = False
         for m, hm in zip(elegidas, huellas):
