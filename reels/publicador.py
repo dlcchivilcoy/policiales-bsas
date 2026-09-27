@@ -83,6 +83,16 @@ ORDEN = ("youtube", "web", "facebook", "instagram")
 IG_PRUEBA_POR_PASADA_DEFAULT = 2
 HORAS_INSTAGRAM_RECIENTE = 72
 
+# FACEBOOK (verificado en la doc de la Reels Publishing API el 27/09/2026): «Reels API is
+# limited to 30 API-published posts within a 24-hour moving period», POR PÁGINA. La página
+# es la MISMA del bot del diario, que publica hasta 15 reels por día (máximo medido en 24 h
+# móviles, 18-26/09: 17). Así que policiales va con 2 por pasada, los más virales (6
+# pasadas = 12 por día; 12 + 17 = 29), y además frena si la página ya tiene
+# FB_TOPE_REELS - FB_MARGEN_BOT reels en las últimas 24 h, para no dejar al bot sin lugar.
+FB_TOPE_REELS = 30
+FB_POR_PASADA_DEFAULT = 2
+FB_MARGEN_BOT = 4
+
 # TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
 # auditoria de Direct Post. Ni publicar ni mandar a BORRADORES. No es un ajuste
 # tecnico: prenderlo es decision del editor, y ademas hoy no hay codigo que suba a
@@ -864,20 +874,63 @@ def _recientes_instagram(horas: int = HORAS_INSTAGRAM_RECIENTE) -> list:
     return huellas
 
 
-def elegir_instagram(listas: list, ledger: dict, publicar: bool) -> tuple:
-    """(claves elegidas, {clave: motivo} de las que no van) para Instagram en esta pasada."""
-    n = ig_por_pasada()
+def fb_por_pasada() -> int:
+    try:
+        return max(0, int(os.environ.get("FB_POR_PASADA") or FB_POR_PASADA_DEFAULT))
+    except ValueError:
+        return FB_POR_PASADA_DEFAULT
+
+
+def _reels_facebook(horas: int):
+    """[(cuando, texto)] de los reels de la PÁGINA en las últimas `horas` (del bot, a mano o
+    nuestros), o None si no se pudo leer."""
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    desde = _ahora() - timedelta(hours=horas)     # created_time viene en UTC, como la nube
+    url, params, out = f"{GRAPH}/{pid}/video_reels", {"fields": "created_time,description", "limit": 100}, []
+    try:
+        for _ in range(3):                       # 300 reels alcanzan de sobra para 72 h
+            r = _pedir("GET", url, tok, params=params)
+            if r.status_code >= 400:
+                return None
+            d = r.json() or {}
+            viejos = False
+            for x in d.get("data") or []:
+                try:
+                    cuando = datetime.strptime((x.get("created_time") or "")[:19], "%Y-%m-%dT%H:%M:%S")
+                except ValueError:
+                    continue
+                if cuando < desde:
+                    viejos = True
+                    continue
+                out.append((cuando, x.get("description") or ""))
+            url, params = (d.get("paging") or {}).get("next"), None
+            if viejos or not url:
+                break
+    except (_Cortado, ValueError):
+        return None
+    return out
+
+
+def _huella_posteo(texto: str) -> frozenset:
+    """Solo el texto del posteo: sin la fuente, el link ni los hashtags."""
+    return _huella_texto(" ".join(l for l in (texto or "").splitlines()
+                                  if l.strip() and not l.lstrip().startswith(("📰", "📲", "#"))))
+
+
+def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: list,
+                      donde: str) -> tuple:
+    """(claves elegidas, {clave: motivo}) para `red`: las `n` más virales de la pasada que
+    todavía no salieron ahí, salteando los hechos que ya están en la cuenta (`recientes`)."""
     candidatas = [p for p, _ in listas
-                  if ((ledger.get(_clave(p)) or {}).get("instagram") or {}).get("estado")
+                  if ((ledger.get(_clave(p)) or {}).get(red) or {}).get("estado")
                   not in ("ok", "sin_confirmar")]
-    # Se lee la cuenta solo si hay algo que decidir (y nunca simulando).
-    recientes = _recientes_instagram() if (publicar and candidatas and n) else []
     motivos, validas = {}, []
     for pieza in candidatas:
         clave = _clave(pieza)
         h = _huella_pieza(pieza)
         if any(_mismo_hecho(h, r) for r in recientes):
-            motivos[clave] = "ese hecho ya está en el Instagram de la cuenta"
+            motivos[clave] = f"ese hecho ya está en {donde}"
             continue
         validas.append(pieza)
     validas.sort(key=lambda p: (p.get("viral") or 5, p.get("puntaje") or 0), reverse=True)
@@ -886,6 +939,37 @@ def elegir_instagram(listas: list, ledger: dict, publicar: bool) -> tuple:
         motivos[_clave(p)] = (f"no está entre los {n} más virales de la pasada "
                               f"(viral {p.get('viral') or 5}/10)")
     return elegidas, motivos
+
+
+def _hay_candidatas(listas: list, ledger: dict, red: str) -> bool:
+    return any(((ledger.get(_clave(p)) or {}).get(red) or {}).get("estado") not in ("ok", "sin_confirmar")
+               for p, _ in listas)
+
+
+def elegir_facebook(listas: list, ledger: dict, publicar: bool) -> tuple:
+    """Facebook: las FB_POR_PASADA más virales (ver FB_TOPE_REELS arriba)."""
+    n = fb_por_pasada()
+    recientes = []
+    if publicar and n and _hay_candidatas(listas, ledger, "facebook"):
+        recientes = [_huella_posteo(t) for _, t in (_reels_facebook(HORAS_INSTAGRAM_RECIENTE) or [])]
+    return _elegir_por_viral(listas, ledger, "facebook", n, recientes, "la página de Facebook")
+
+
+def _lugar_en_facebook():
+    """(reels de la página en 24 h, techo para policiales) o None si no se pudo leer."""
+    reels = _reels_facebook(24)
+    if reels is None:
+        return None
+    return len(reels), FB_TOPE_REELS - FB_MARGEN_BOT
+
+
+def elegir_instagram(listas: list, ledger: dict, publicar: bool) -> tuple:
+    """(claves elegidas, {clave: motivo} de las que no van) para Instagram en esta pasada."""
+    n = ig_por_pasada()
+    # Se lee la cuenta solo si hay algo que decidir (y nunca simulando).
+    recientes = (_recientes_instagram() if (publicar and n and _hay_candidatas(listas, ledger, "instagram"))
+                 else [])
+    return _elegir_por_viral(listas, ledger, "instagram", n, recientes, "el Instagram de la cuenta")
 
 
 def _youtube_de_hoy(ledger: dict) -> int:
@@ -994,6 +1078,12 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
         print(f"  Instagram de prueba: {len(ig_elegidas)} pieza(s) de esta pasada, "
               f"las más virales (tope {ig_por_pasada()} por pasada)")
+    fb_elegidas, fb_motivos = set(), {}
+    if "facebook" in redes:
+        fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
+        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
+              f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
+              f"por día por la API y los comparte con el bot)")
 
     ultimo = None
     for pieza, mp4 in listas:
@@ -1013,6 +1103,17 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             pendientes.remove("instagram")
             sin_lugar["instagram"] = {"estado": "omitida", "detalle":
                                       ig_motivos.get(clave) or "no elegida para esta pasada"}
+        if "facebook" in pendientes and clave not in fb_elegidas:
+            pendientes.remove("facebook")
+            sin_lugar["facebook"] = {"estado": "omitida", "detalle":
+                                     fb_motivos.get(clave) or "no elegida para esta pasada"}
+        if publicar and "facebook" in pendientes:
+            lugar = _lugar_en_facebook()
+            if lugar and lugar[0] >= lugar[1]:
+                pendientes.remove("facebook")
+                sin_lugar["facebook"] = {"estado": "cupo", "detalle":
+                    f"la página ya tiene {lugar[0]} reels en 24 h (Facebook admite "
+                    f"{FB_TOPE_REELS}); los últimos {FB_MARGEN_BOT} quedan para el bot del diario"}
         if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
             pendientes.remove("youtube")
             sin_lugar["youtube"] = {"estado": "cupo", "detalle":

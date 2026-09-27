@@ -71,7 +71,8 @@ class Meta:
     """Graph API + rupload + GitHub, con fallas a pedido."""
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
                  yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None, ig_recientes=None,
-                 wix_falla=None, wix_existe="", wix_foto_falla=False):
+                 wix_falla=None, wix_existe="", wix_foto_falla=False, fb_recientes=None,
+                 fb_lista_falla=False):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -93,6 +94,8 @@ class Meta:
         self.wix_foto_falla = wix_foto_falla
         self.wix_borradores = []          # el cuerpo de cada borrador creado
         self.wix_publicados = 0
+        self.fb_recientes = list(fb_recientes or [])   # reels que ya tiene la página
+        self.fb_lista_falla = fb_lista_falla
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
@@ -185,6 +188,10 @@ class Meta:
                 if resp[0] < 400:
                     self.publicado.add(uno["creation_id"])
                 return httpx.Response(resp[0], json=resp[1])
+            if ruta == "/v26.0/PAGINA/video_reels" and m == "GET":
+                if self.fb_lista_falla:
+                    return httpx.Response(400, json={"error": {"message": "no"}})
+                return httpx.Response(200, json={"data": self.fb_recientes})
             if ruta == "/v26.0/PAGINA/video_reels":
                 if uno.get("upload_phase") == "start":
                     if self.fb_inicio >= 400:
@@ -531,7 +538,7 @@ chequear("Instagram y YouTube NO cambian su texto (el link es para Facebook)",
 orden_pedidos = [r.url.path for r in meta.pedidos]
 i_yt = next(i for i, x in enumerate(orden_pedidos) if x == "/upload/youtube/v3/videos")
 i_web = orden_pedidos.index("/blog/v3/draft-posts")
-i_fb = orden_pedidos.index("/v26.0/PAGINA/video_reels")
+i_fb = next(i for i, r in enumerate(meta.pedidos) if r.url.path == "/v26.0/PAGINA/video_reels" and r.method == "POST")
 chequear("orden: YouTube, después la nota, después Facebook", i_yt < i_web < i_fb)
 chequear("la clave de Wix nunca en una URL", not any("wix_clave_secreta" in str(r.url) for r in meta.pedidos))
 antes = meta.wix_publicados
@@ -601,8 +608,9 @@ inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
 chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"] and len(meta.contenedores) == 2)
 chequear("...con el motivo a la vista", "virales" in inf["piezas"][0]["instagram"]["detalle"])
-chequear("...y Facebook y YouTube llevan las tres",
-         all(f["facebook"]["estado"] == "ok" and f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+chequear("...YouTube lleva las tres; Facebook, las mismas 2 más virales",
+         all(f["youtube"]["estado"] == "ok" for f in inf["piezas"])
+         and [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
 chequear("...no es una falla: no abre issue", not (base / "informe_publicacion.md").exists())
 shutil.rmtree(base)
 
@@ -636,6 +644,49 @@ viejo = [dict(ya_en_ig[0], timestamp="2026-09-20T08:00:00+0000")]
 base, carpeta, reloj, meta = preparar_virales([9, 8, 7], Meta(ig_recientes=viejo), hechos)
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("un posteo de hace más de 3 días no cuenta", inf["piezas"][0]["instagram"]["estado"] == "ok")
+shutil.rmtree(base)
+
+
+# --- 18. Facebook: 30 reels por día POR PÁGINA, compartidos con el bot (27/09) ----------
+chequear("Facebook: 2 por pasada por defecto", PUB.fb_por_pasada() == 2)
+os.environ["FB_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("FB_POR_PASADA=1: a Facebook solo la más viral",
+         [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "omitida"] and len(meta.fb_finish) == 1)
+os.environ.pop("FB_POR_PASADA")
+shutil.rmtree(base)
+
+llena = [{"created_time": "2026-09-26T0%d:%02d:00+0000" % (1 + i // 60, i % 60), "description": f"Reel del bot {i}"}
+         for i in range(26)]
+base, carpeta, reloj, meta = preparar(Meta(fb_recientes=llena))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("página con 26 reels en 24 h: policiales NO publica en Facebook (lugar del bot)",
+         [f["facebook"]["estado"] for f in inf["piezas"]] == ["cupo", "cupo"] and not meta.fb_finish)
+chequear("...Instagram y YouTube salen igual, y no es una falla",
+         all(f["instagram"]["estado"] == "ok" and f["youtube"]["estado"] == "ok" for f in inf["piezas"])
+         and not (base / "informe_publicacion.md").exists())
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(fb_recientes=llena[:25]))
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("con 25 todavía hay lugar para una", inf["piezas"][0]["facebook"]["estado"] == "ok")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(fb_lista_falla=True))
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("si no se puede leer la página, Facebook sale igual",
+         [f["facebook"]["estado"] for f in inf["piezas"]] == ["ok", "ok"])
+shutil.rmtree(base)
+
+ya_en_fb = [{"created_time": "2026-09-26T08:00:00+0000",
+             "description": ya_en_ig[0]["caption"]}]
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7], Meta(fb_recientes=ya_en_fb), hechos)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("el hecho que YA está en la página de Facebook no se repite ahí",
+         inf["piezas"][0]["facebook"]["estado"] == "omitida"
+         and "Facebook" in inf["piezas"][0]["facebook"]["detalle"]
+         and [f["facebook"]["estado"] for f in inf["piezas"][1:]] == ["ok", "ok"])
 shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
