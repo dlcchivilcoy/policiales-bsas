@@ -88,6 +88,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # La punta de la rama AL ARRANCAR, no el commit del momento del disparo. Una
+          # pasada que esperó en la fila (27/09: 1 h 20 min detrás de una colgada) si no
+          # arranca con la memoria VIEJA y no ve lo que publicó la anterior.
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
@@ -241,11 +246,10 @@ jobs:
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add estado/
-          git commit -m "Reels de $(date -u +'%Y-%m-%d %H:%M') UTC [skip ci]"
-          # La pasada anterior puede haber commiteado mientras esta corría.
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          # Combina con lo que haya subido otra pasada en vez de pelearse con git. Antes era
+          # `git pull --rebase` y el 27/09 chocó en salud.json: la memoria de 16 posteos se
+          # perdió y la pasada siguiente iba a repetirlos (ver tools/guardar_estado.py).
+          python tools/guardar_estado.py
 
       - name: Avisar en un issue
         if: failure()
