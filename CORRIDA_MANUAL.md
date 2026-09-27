@@ -244,6 +244,8 @@ El intervalo vive en una sola constante, `MINUTOS_ENTRE_POSTEOS` en
 
 > **Resuelto al construir el posteo (26/09):** el workflow pasó de
 > `timeout-minutes: 20` a 60, y el paso que publica tiene su propio tope de 45.
+> **27/09, sin tope de reels:** 340 y 300. Una nota queda anotada como hecha cuando se
+> ARMA su reel: si el tiempo corta la publicación, lo que faltaba no vuelve a salir.
 > **TikTok está DESACTIVADO** (decisión del editor, 26/09) hasta que aprueben el
 > Direct Post: ni publicación ni borradores. Para el día que vuelva: son 5 borradores
 > sin publicar cada 24 h, o sea 1 o 2 piezas por pasada, no 5.
@@ -259,7 +261,7 @@ saldría, a qué hora y con qué texto, y no toca ninguna red.
 venv\Scripts\python.exe -m reels.publicador                     :: simula la última tanda
 venv\Scripts\python.exe -m reels.publicador --publicar          :: publica DE VERDAD
 venv\Scripts\python.exe -m reels.publicador --publicar --redes facebook,youtube
-venv\Scripts\python.exe tools\test_publicador.py                :: 52 pruebas, sin red
+venv\Scripts\python.exe tools\test_publicador.py                :: 65 pruebas, sin red
 ```
 
 - **Instagram:** reel de PRUEBA con graduación automática (ver *Credenciales*). El
@@ -277,10 +279,14 @@ venv\Scripts\python.exe tools\test_publicador.py                :: 52 pruebas, s
   subida cuesta 1.600 unidades, 6 por día»— quedó desactualizado y todavía aparece
   en comentarios del bot del diario: no guiarse por él. El proyecto es el mismo del
   bot, que sube ~10 Shorts por día hábil a Radio del Centro: sobra lugar para los dos.
-- **Tope de seguridad: 20 Shorts por día** (variable `YT_SHORTS_POR_DIA`). No es una
-  ración: cubre las 3 pasadas de 5 piezas y frena un desborde (corridas a mano
-  repetidas). Las piezas que no entran salen igual en Instagram y Facebook; quedarse
-  sin lugar no es falla. Si YouTube contesta «cupo agotado», no se insiste en esa pasada.
+- **Sin tope propio (decisión del editor, 27/09), pero con lugar para el bot.** Las
+  100 subidas de YouTube y los **100 posteos cada 24 h de Instagram** (por cuenta,
+  leído de `content_publishing_limit` el 27/09) se comparten con el bot del diario.
+  Policiales frena antes: YouTube hasta 80 Shorts por día (`YT_SHORTS_POR_DIA`) e
+  Instagram hasta que queden 25 lugares (`IG_RESERVA_BOT`), leyendo el cupo REAL de la
+  cuenta antes de cada pieza. Si no se puede leer, publica igual. Lo que no entra en
+  una red sale igual en las otras; quedarse sin lugar no es falla ni abre issue. Si
+  YouTube contesta «cupo agotado», no se insiste en esa pasada.
 - **TikTok: desactivado**, ver arriba.
 - **5 minutos entre piezas, sin excepción al publicar de verdad.** Aunque el plan ya
   venga espaciado, si una pieza tarda en salir la siguiente espera igual.
@@ -296,9 +302,13 @@ venv\Scripts\python.exe tools\test_publicador.py                :: 52 pruebas, s
 - **Versión de la API `v26.0`, a propósito.** Los reels de prueba son nuevos: una
   versión vieja podría ignorar el parámetro sin error y sacar el reel NORMAL.
 
-**En la nube está APAGADO por defecto.** El workflow publica solo si alguien lo
-corre a mano con `publicar = si`, o si la variable del repo `PUBLICAR_REDES` vale
-`1`. Es el interruptor de las pasadas automáticas: se prende y se apaga en
+**En la nube está ENCENDIDO desde el 27/09**: 6 pasadas por día (9:05, 12:05, 15:05,
+18:05, 21:05 y 23:35), elegidas cruzando cuándo publican los medios (227 notas de una
+semana) con cuándo está conectado el público de @diarioyradio; el detalle está en
+`.github/workflows/reels.yml`. Cada pasada hace reel de TODAS las notas nuevas que
+sirvan, y la IA es Gemini 3.5 Flash-Lite (~US$1/mes medido; ver `reels/ia.py`).
+El workflow publica si la variable del repo `PUBLICAR_REDES` vale `1`, o si alguien
+lo corre a mano con `publicar = si`. Es el interruptor de las pasadas automáticas: se prende y se apaga en
 *Settings → Secrets and variables → Actions → Variables*, sin tocar código. Si no,
 simula. Los secrets que usa (`FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_ACCESS_TOKEN`,
 `INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN`, `YT_TOKEN_JSON`, `YT_CHANNEL_ID`)

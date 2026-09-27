@@ -20,12 +20,21 @@ import os
 import re
 import time
 
-# Alias que se auto-actualizan y SÍ tienen cupo gratis. Ojo con pinear una versión: el
-# 2026-08-27 `gemini-2.5-flash` quedó retirado de golpe (404 «no longer available to new
-# users») y el bot se quedó sin camino. Los alias evitan eso.
-# NO usar `gemini-3.8-flash` acá: ese es el modelo PAGO del bot (US$0,75/1M de entrada).
-MODELO_GEMINI = "gemini-flash-latest"
-MODELO_GEMINI_RESPALDO = "gemini-flash-lite-latest"
+# EL MODELO BARATO PRIMERO (decidido por el editor el 27/09/2026, "para abaratar costos").
+# Medido ese día con 4 guiones reales y el precio oficial: el alias `gemini-flash-latest`
+# se había corrido SOLO a gemini-3.8-flash, el modelo pago caro (US$0,75/3,75 por 1M,
+# y el DOBLE desde el 1/1/2027), que además piensa ~790 tokens por guion que se cobran
+# como salida: ~US$0,0048 por reel. Flash-Lite: ~US$0,001 por reel, sin razonamiento,
+# y redactó bien las tres que le tocaron. Con ~32 reels por día: ~US$1/mes contra ~4,60.
+#
+# El orden, y por qué:
+# 1. `gemini-3.5-flash-lite` FIJO: un alias puede moverse a un modelo más caro sin
+#    avisar (es lo que pasó con el de Flash). Fijo, el precio no cambia de golpe.
+# 2. `gemini-flash-lite-latest`: si el fijo queda retirado (el 2026-08-27 pasó con
+#    `gemini-2.5-flash`: 404 de un día para el otro), el alias sigue en la gama barata.
+# 3. `gemini-flash-latest` (hoy 3.8 Flash, caro): SOLO si los dos Lite fallan, para no
+#    perder el reel. Un guion suelto cuesta medio centavo de dólar.
+MODELOS_GEMINI = ("gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-flash-latest")
 MODELO_CLAUDE = "claude-haiku-4-5-20251001"
 
 URL_GEMINI = "https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
@@ -112,7 +121,7 @@ def redactar_gemini(system: str, material: str) -> tuple:
         raise SinProveedor("no hay ninguna GEMINI_API_KEY en el entorno")
 
     ultimo = None
-    for modelo in (MODELO_GEMINI, MODELO_GEMINI_RESPALDO):
+    for modelo in MODELOS_GEMINI:
         for i, clave in enumerate(claves, 1):
             try:
                 texto = _pedir_gemini(system, material, clave, modelo)
@@ -127,7 +136,8 @@ def redactar_gemini(system: str, material: str) -> tuple:
                 if "503" in str(e):
                     time.sleep(2)
                 continue
-    raise RuntimeError(f"se agotaron las {len(claves)} claves y los 2 modelos: {ultimo}")
+    raise RuntimeError(f"se agotaron las {len(claves)} claves y los {len(MODELOS_GEMINI)} "
+                       f"modelos: {ultimo}")
 
 
 # =============================================================================

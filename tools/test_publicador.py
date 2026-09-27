@@ -4,7 +4,8 @@
 Cubre lo que no se puede probar publicando de a uno: el 500 mentiroso de Instagram,
 el contenedor en ERROR, una red que falla sin tumbar a la otra, no repetir lo ya
 publicado, los 5 minutos entre posteos, que ningun token termine en una URL, el tope
-diario y el cupo agotado de YouTube, el token de otro canal, y que TikTok no salga.
+diario y el cupo agotado de YouTube, el token de otro canal, el lugar que se le deja al
+bot en Instagram, y que TikTok no salga.
 """
 import json
 import os
@@ -45,6 +46,7 @@ os.environ.update({"FACEBOOK_PAGE_ID": "PAGINA", "INSTAGRAM_USER_ID": "IGUSER",
                                                 "token_uri": "https://oauth2.googleapis.com/token",
                                                 **YT_SECRETOS})})
 os.environ.pop("YT_SHORTS_POR_DIA", None)
+os.environ.pop("IG_RESERVA_BOT", None)
 TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
 
@@ -65,7 +67,7 @@ class Reloj:
 class Meta:
     """Graph API + rupload + GitHub, con fallas a pedido."""
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
-                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0):
+                 yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100)):
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -79,6 +81,7 @@ class Meta:
         self.yt_cortes = yt_cortes        # subidas que LLEGAN pero pierden la respuesta
         self.yt_inicios = []              # metadatos de cada sesion de subida abierta
         self.yt_videos = {}               # upload_id -> id del video creado
+        self.ig_cupo = ig_cupo            # (usados, total) de Instagram; None = no se puede leer
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
@@ -131,6 +134,10 @@ class Meta:
             if ruta == "/v26.0/IGUSER/media" and m == "POST":
                 self.contenedores.append(uno)
                 return httpx.Response(200, json={"id": f"C{len(self.contenedores)}"})
+            if ruta == "/v26.0/IGUSER/content_publishing_limit" and self.ig_cupo:
+                usados, total = self.ig_cupo
+                return httpx.Response(200, json={"data": [{"config": {"quota_total": total,
+                    "quota_duration": 86400}, "quota_usage": usados}]})
             if ruta == "/v26.0/IGUSER/media" and m == "GET":
                 return httpx.Response(200, json={"data": []})
             if ruta.startswith("/v26.0/C") and m == "GET":
@@ -232,7 +239,7 @@ chequear("Facebook: lleva el texto del posteo", f.get("description", "").startsw
 chequear("ningun token viaja en una URL (Meta, GitHub ni YouTube)",
          not any(t in str(r.url) for r in meta.pedidos for t in TODOS_LOS_SECRETOS))
 yt = meta.yt_inicios[0]
-chequear("YouTube: las dos piezas suben como Short (tope por defecto: 20 por dia)",
+chequear("YouTube: las dos piezas suben como Short",
          [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "ok"] and len(meta.yt_videos) == 2)
 chequear("YouTube: publico, categoria Noticias, no es para chicos",
          yt["status"]["privacyStatus"] == "public" and yt["snippet"]["categoryId"] == "25"
@@ -332,7 +339,10 @@ chequear("los secretos de YouTube tambien se tapan",
          "yt_refresco" not in PUB._tapar("refresh_token=yt_refresco_secreto_123456"))
 
 # --- 9. YouTube: tope diario ----------------------------------------------------
-chequear("el tope por defecto cubre las 3 pasadas de 5 piezas (15 por dia)", PUB.tope_youtube() >= 15)
+chequear("sin racion para policiales: el tope por defecto deja subir un dia enorme (50+)",
+         PUB.tope_youtube() >= 50)
+chequear("...pero le deja al bot al menos 15 de las 100 subidas del proyecto",
+         PUB.tope_youtube() <= 85)
 os.environ["YT_SHORTS_POR_DIA"] = "1"
 base, carpeta, reloj, meta = preparar()
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
@@ -385,6 +395,53 @@ largo = PUB.metadatos_youtube({"localidad": "junin", "descripcion_tiktok": "a <b
 chequear("titulo de YouTube: nunca mas de 100 caracteres", len(largo["title"]) <= 100)
 chequear("sin < ni > (YouTube rechaza el video entero)", "<" not in largo["description"]
          and ">" not in largo["description"])
+
+# --- 14. Instagram: sin tope propio, pero con lugar para el bot -------------------
+chequear("Instagram: la reserva para el bot por defecto es de 25 de los 100",
+         PUB.reserva_instagram() == 25)
+base, carpeta, reloj, meta = preparar(Meta(ig_cupo=(74, 100)))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("Instagram con 74 de 100 usados: todavia hay lugar y sale",
+         inf["piezas"][0]["instagram"]["estado"] == "ok")
+chequear("se lee el cupo antes de publicar, con el token en el encabezado",
+         any(r.url.path.endswith("/content_publishing_limit")
+             and r.headers.get("authorization") == "Bearer ig_token_secreto_123456" for r in meta.pedidos))
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(ig_cupo=(75, 100)))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("Instagram con 75 de 100 usados: no se publica ahi (lo que queda es del bot)",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["cupo", "cupo"]
+         and not meta.contenedores)
+chequear("...y el motivo lo dice",
+         "bot" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("...Facebook y YouTube salen igual",
+         all(f["facebook"]["estado"] == "ok" and f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+chequear("...no es una falla: no abre issue",
+         not (base / "informe_publicacion.md").exists())
+led = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+chequear("...y no se anota en la memoria como publicado en Instagram",
+         "instagram" not in led["https://medio.test/1"])
+meta.ig_cupo = (10, 100)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("cuando se libera lugar, otra pasada sobre la misma tanda la sube (solo a Instagram)",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "ok"]
+         and len(meta.fb_finish) == 2 and len(meta.yt_videos) == 2)
+shutil.rmtree(base)
+
+os.environ["IG_RESERVA_BOT"] = "0"
+base, carpeta, reloj, meta = preparar(Meta(ig_cupo=(99, 100)))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("la reserva se cambia con IG_RESERVA_BOT (0 = hasta el ultimo lugar)",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "ok"])
+os.environ.pop("IG_RESERVA_BOT")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar(Meta(ig_cupo=None))
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("si el cupo de Instagram no se puede leer, se publica igual",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "ok"])
+shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)

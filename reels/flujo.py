@@ -387,7 +387,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
 
 def main():
     ap = argparse.ArgumentParser(description="FASE 1 — genera reels de policiales. NO publica.")
-    ap.add_argument("--cuantos", type=int, default=5)
+    ap.add_argument("--cuantos", type=int, default=5,
+                    help="cuántos reels generar; 0 = TODAS las notas que sirvan (sin tope)")
     ap.add_argument("--localidad", help="filtra por localidad (separadas por coma)")
     ap.add_argument("--con-ia", action="store_true",
                     help="el guion lo redacta la IA (Gemini gratis si hay claves; si no, Claude)")
@@ -469,7 +470,11 @@ def main():
         print(f"Memoria: {LD.resumen()}" +
               (f" — {repetidas} nota(s) ya tuvieron reel y se saltean" if repetidas else ""))
 
-    elegidas = elegir(candidatas, args.cuantos, args.localidad or "")
+    # 0 = sin tope, decidido por el editor el 27/09/2026: ni por pueblo ni por día. Lo
+    # único que sigue afuera es lo que elegir() descarta por calidad (lo que entró
+    # raspando el diccionario) y el mismo hecho contado dos veces.
+    cuantos = args.cuantos if args.cuantos > 0 else len(candidatas)
+    elegidas = elegir(candidatas, cuantos, args.localidad or "")
     if not elegidas:
         print("No quedan notas nuevas para hacer reel (o ninguna coincide con el filtro).")
         return 0

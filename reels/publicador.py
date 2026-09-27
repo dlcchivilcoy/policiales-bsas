@@ -99,10 +99,19 @@ YT_CATEGORIA = "25"                       # Noticias y politica
 # cada subida costaba ~1.600 de esas 10.000 = 6 por dia; ese numero quedo VIEJO y
 # todavia aparece en comentarios del bot del diario.)
 # El proyecto es el MISMO del bot, que tambien sube sus Shorts a Radio del Centro (~10
-# por dia habil). 100 alcanza de sobra para los dos. El tope queda como freno ante un
-# desborde (corridas a mano repetidas, un bucle), no como racion: 20 cubre las 3 pasadas
-# de 5 piezas y le deja 80 al bot. Se cambia con YT_SHORTS_POR_DIA (variable del repo).
-YT_SHORTS_POR_DIA_DEFAULT = 20
+# por dia habil). Policiales NO tiene racion propia (decidido por el editor el 27/09/2026:
+# sin tope por pueblo ni por dia). El numero de abajo no es una racion: es para no
+# dejar al BOT sin subidas si policiales tiene un dia enorme. Le deja 20 de las 100.
+# Se cambia con YT_SHORTS_POR_DIA (variable del repo).
+YT_SHORTS_POR_DIA_DEFAULT = 80
+
+# CUPO DE INSTAGRAM (leido de la API el 27/09/2026, `content_publishing_limit`): 100
+# posteos por API cada 24 h moviles, POR CUENTA. La cuenta es la misma del bot del diario
+# (@diarioyradio), que publica ahi sus carruseles, reels e historias, y todo cuenta. Mismo
+# criterio que YouTube: policiales no tiene tope propio, pero deja de publicar en
+# Instagram cuando quedan IG_RESERVA_BOT lugares libres, para que al bot no le rebote nada.
+# Se lee el cupo REAL antes de cada pieza (no una cuenta propia), asi se ve lo del bot.
+IG_RESERVA_BOT_DEFAULT = 25
 
 # Enganches para las pruebas (tools/test_publicador.py): la red, el reloj y la espera.
 _http = None
@@ -733,6 +742,31 @@ def tope_youtube() -> int:
         return YT_SHORTS_POR_DIA_DEFAULT
 
 
+def reserva_instagram() -> int:
+    try:
+        return max(0, int(os.environ.get("IG_RESERVA_BOT") or IG_RESERVA_BOT_DEFAULT))
+    except ValueError:
+        return IG_RESERVA_BOT_DEFAULT
+
+
+def _lugar_en_instagram():
+    """(libres para policiales, usados, total) en Instagram ahora, o None si no se pudo
+    leer. Si no se puede leer se publica igual: el cupo es de 100 y un dia normal usa
+    bastante menos; perder reels por un bache de lectura seria peor."""
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    try:
+        r = _pedir("GET", f"{GRAPH}/{uid}/content_publishing_limit", tok,
+                   params={"fields": "config,quota_usage"})
+        d = ((r.json() or {}).get("data") or [{}])[0] if r.status_code < 400 else {}
+    except (_Cortado, ValueError, AttributeError, IndexError):
+        return None
+    usados, total = d.get("quota_usage"), (d.get("config") or {}).get("quota_total")
+    if not isinstance(usados, int) or not isinstance(total, int):
+        return None
+    return total - reserva_instagram() - usados, usados, total
+
+
 def _youtube_de_hoy(ledger: dict) -> int:
     """Shorts de policiales ya subidos hoy (cuentan tambien los sin confirmar: pudieron
     haber gastado cupo)."""
@@ -818,20 +852,29 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         pueblo = _pueblo(pieza.get("localidad") or "")
         fila = {"orden": pieza.get("orden"), "localidad": pueblo, "titular": g.get("titular")}
 
-        # YouTube sin lugar hoy: se saca de esta pieza ANTES de decidir si hay que esperar
-        # turno, para que una pieza que solo iba a YouTube no ocupe 5 minutos de la cola.
-        # No se anota en la memoria: no es una falla, es el tope.
-        sin_lugar = None
+        # Red sin lugar: se saca de esta pieza ANTES de decidir si hay que esperar turno,
+        # para que una pieza que solo iba a esa red no ocupe 5 minutos de la cola.
+        # No se anota en la memoria: no es una falla, es el cupo.
+        sin_lugar = {}
         if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
             pendientes.remove("youtube")
-            sin_lugar = {"estado": "cupo", "detalle":
-                         "YouTube agoto su cupo en esta pasada" if _yt_sin_cupo else
-                         f"ya van {yt_hoy + yt_pasada} Short(s) hoy (tope {yt_tope})"}
+            sin_lugar["youtube"] = {"estado": "cupo", "detalle":
+                                    "YouTube agoto su cupo en esta pasada" if _yt_sin_cupo else
+                                    f"ya van {yt_hoy + yt_pasada} Short(s) hoy (tope {yt_tope})"}
+        # Instagram: el cupo real de la cuenta, que comparte con el bot. Solo al publicar
+        # (simulando no se toca ninguna red).
+        if publicar and "instagram" in pendientes:
+            lugar = _lugar_en_instagram()
+            if lugar and lugar[0] <= 0:
+                pendientes.remove("instagram")
+                sin_lugar["instagram"] = {"estado": "cupo", "detalle":
+                    f"la cuenta ya uso {lugar[1]} de sus {lugar[2]} posteos de 24 h; los "
+                    f"ultimos {reserva_instagram()} quedan para el bot del diario"}
 
         if not pendientes:
-            fila["resultado"] = "ya estaba publicada" if not sin_lugar else "solo faltaba YouTube"
-            if sin_lugar:
-                fila["youtube"] = sin_lugar
+            fila["resultado"] = ("ya estaba publicada" if not sin_lugar else
+                                 "solo faltaba " + " y ".join(NOMBRE_RED[r] for r in sin_lugar))
+            fila.update(sin_lugar)
             informe["piezas"].append(fila)
             print(f"\n#{pieza.get('orden')} {pueblo} — {fila['resultado']}, se saltea")
             continue
@@ -871,9 +914,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 e[red] = res
                 e["ultimo"] = res["cuando"]
                 guardar_ledger(ledger)       # despues de CADA red: un corte no borra lo hecho
-        if sin_lugar:
-            fila["youtube"] = sin_lugar
-            _mostrar("youtube", sin_lugar)
+        for red, info in sin_lugar.items():
+            fila[red] = info
+            _mostrar(red, info)
         informe["piezas"].append(fila)
 
     (carpeta / "_publicacion.json").write_text(

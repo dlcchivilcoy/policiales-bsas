@@ -11,27 +11,40 @@ name: Reels de policiales
 # scraper/run.py (pide la variable CLASIFICADOR_IA_AUTORIZADO). La IA que SÍ se usa es la
 # de los guiones, con el cupo gratis de Gemini.
 
-# ⛔ AUTOMATIZACION APAGADA A PEDIDO DEL EDITOR (22/09/2026)
+# ✅ AUTOMATIZACION ENCENDIDA A PEDIDO DEL EDITOR (27/09/2026), despues de la primera
+# publicacion real de prueba (1 reel: salio bien en Instagram, Facebook y YouTube).
+# Estuvo apagada del 22/09 al 27/09 mientras se evaluaban los reels.
 #
-# Las 3 pasadas diarias estan COMENTADAS, no borradas. El motivo no es tecnico: la
-# clave de Gemini es PAGA y cada pasada la usa, asi que mientras se esta evaluando
-# como quedan los reels no tiene sentido que el sistema corra solo tres veces por
-# dia gastando plata y minutos.
+# SIN TOPE de reels por pueblo ni por dia (decision del editor, 27/09): cada pasada hace
+# reel de TODAS las notas nuevas que sirvan (--cuantos 0). Queda afuera solo lo que no
+# tiene foto, lo que no es policial y el mismo hecho contado dos veces.
 #
-# Hoy esto SOLO corre cuando alguien aprieta "Run workflow" a mano.
+# HORARIOS (27/09), elegidos cruzando dos mediciones:
+#   - cuando PUBLICAN los medios: 227 notas de una semana → fuerte de 7 a 11, parejo de 13
+#     a 19 (pico a las 17) y un 15% despues de las 20, que con las 3 pasadas viejas (10,
+#     17 y 20) se perdia entero: cada pasada toma solo lo de HOY.
+#   - cuando esta CONECTADO el publico de @diarioyradio (insights de Instagram): alto de
+#     10 a 23, picos 12-13 y 19-22; despues de medianoche cae a la mitad.
+# Pasadas cada 3 horas = tandas chicas y reels frescos repartidos en el dia, en vez de
+# rafagas. La de las 23:35 rescata lo de la noche. A las :05 y no en punto porque GitHub
+# atrasa los cron de la hora en punto (es cuando mas cargado esta).
 #
-# Para volver a encenderlo: descomentar las 4 lineas de abajo. Nada mas. El resto
-# del workflow —ledger, avisos, borrado a las 24h— ya esta probado y funcionando.
+# Para APAGAR la publicacion sin tocar codigo: borrar la variable PUBLICAR_REDES (o
+# ponerla en 0) en Settings → Secrets and variables → Actions → Variables. Las pasadas
+# siguen armando reels pero solo simulan. Para apagar todo: comentar el `schedule:`.
 on:
-  # schedule:
-  #   - cron: "0 13 * * *"    # 10:00 Argentina
-  #   - cron: "0 20 * * *"    # 17:00 Argentina
-  #   - cron: "0 23 * * *"    # 20:00 Argentina
+  schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
+    - cron: "5 12 * * *"    # 09:05 Argentina
+    - cron: "5 15 * * *"    # 12:05 Argentina
+    - cron: "5 18 * * *"    # 15:05 Argentina
+    - cron: "5 21 * * *"    # 18:05 Argentina
+    - cron: "5 0 * * *"     # 21:05 Argentina
+    - cron: "35 2 * * *"    # 23:35 Argentina
   workflow_dispatch:
     inputs:
       cuantos:
-        description: "Cuántos reels generar"
-        default: "5"
+        description: "Cuántos reels generar (0 = todas las notas que sirvan)"
+        default: "0"
       ventana:
         description: '"hoy" (lo que corre siempre) o un número de horas, para probar'
         default: "hoy"
@@ -51,11 +64,13 @@ permissions:
 jobs:
   generar:
     runs-on: ubuntu-latest
-    # Era 20. Con el paso que publica se subió: la tanda sale escalonada a 5 minutos por
-    # pieza, así que cinco piezas son ~20-25 minutos de publicación ADEMÁS de los ~3 de
-    # armado. El paso de publicar tiene su propio tope (45) por debajo de este, para que
-    # si se cuelga todavía corran los pasos que guardan la memoria y avisan.
-    timeout-minutes: 60
+    # Era 20, después 60. Sin tope de reels (27/09) una pasada puede traer 20 o más, y
+    # salen escalonados a 5 minutos: 30 son dos horas y media de publicación. OJO: una
+    # nota queda anotada como hecha cuando se ARMA su reel, así que si el tiempo corta
+    # la publicación, lo que faltaba no vuelve a salir: por eso el tope es holgado. El
+    # paso de publicar tiene el suyo (300) por debajo de este, para que si se cuelga
+    # todavía corran los pasos que guardan la memoria y avisan.
+    timeout-minutes: 340
 
     steps:
       - uses: actions/checkout@v4
@@ -98,13 +113,15 @@ jobs:
         # --cadencia le pone hora a cada pieza, una cada 5 minutos: la lee el publicador.
         run: |
           python -m reels.flujo --con-ia --cadencia \
-            --cuantos "${{ github.event.inputs.cuantos || '5' }}"
+            --cuantos "${{ github.event.inputs.cuantos || '0' }}"
 
       # ─────────────────────────────────────────────────────────────────────────
       # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed),
-      # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro, con un tope
-      # de seguridad (variable del repo YT_SHORTS_POR_DIA, 20 si no está; YouTube da 100
-      # subidas por día por proyecto, compartidas con el bot). Decidido el 26/09/2026.
+      # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro. Decidido el
+      # 26/09/2026. Sin tope propio (27/09), pero Instagram (100 posteos cada 24 h por
+      # cuenta) y YouTube (100 subidas por día por proyecto) se COMPARTEN con el bot del
+      # diario: policiales frena antes para no dejarlo sin lugar. Reservas: variables del
+      # repo IG_RESERVA_BOT (25 si no está) y YT_SHORTS_POR_DIA (80 si no está).
       #
       # TikTok: DESACTIVADO hasta que aprueben el Direct Post, ni borradores. Sus claves
       # están cargadas como secrets pero A PROPÓSITO no se le pasan a ningún paso.
@@ -118,12 +135,13 @@ jobs:
       # ─────────────────────────────────────────────────────────────────────────
       - name: Publicar en Instagram (prueba), Facebook y YouTube
         if: vars.PUBLICAR_REDES == '1' || github.event.inputs.publicar == 'si'
-        timeout-minutes: 45
+        timeout-minutes: 300
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
           # Canal RADIO DEL CENTRO. El publicador verifica el canal antes de subir.
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
           YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}

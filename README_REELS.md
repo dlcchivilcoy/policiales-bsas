@@ -235,7 +235,7 @@ venv\Scripts\python.exe -m reels.flujo --cuantos 5             # armar los reels
 
 | Opción | Qué hace |
 |---|---|
-| `--cuantos 3` | Cuántos reels generar (default 5). |
+| `--cuantos 3` | Cuántos reels generar (default 5). `0` = todas las notas que sirvan: es lo que usa la nube desde el 27/09. |
 | `--localidad Junin,Bragado` | Solo esas localidades. |
 | `--con-ia` | El guion lo redacta Claude. **Necesario para material publicable.** |
 | `--entrada archivo.json` | Usar otro scrapeo en vez del último. |
