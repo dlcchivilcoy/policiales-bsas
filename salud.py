@@ -54,6 +54,11 @@ LOCALIDADES_MINIMAS = 3
 
 MAX_PASADAS_GUARDADAS = 30
 
+# Con pocas notas nuevas, que ninguna se arme suele ser la foto rota de un medio: aviso.
+# Con 4 o más, ya es algo nuestro: falla.
+NUEVAS_SIN_REEL_PARA_FALLA = 4
+RESUMEN_PASADA = os.path.join(RAIZ, "salida_reels", "_ultima_pasada.json")
+
 
 def _cargar(ruta, x_default):
     try:
@@ -104,8 +109,25 @@ def revisar():
                       f"es la red de la corrida o algo nuestro.")
 
     if notas > 0 and not piezas:
-        fallas.append(f"Habia {notas} notas y no se armo ni un reel. Mirar el paso de "
-                      f"los reels: suele ser la clave de Gemini o ffmpeg.")
+        # Qué pasó en el armado (reels/flujo.py lo deja SIEMPRE). «Notas y cero reels» puede
+        # ser un día sin nada nuevo, y eso no es una falla (28/09: salió como falla culpando a
+        # Gemini, y eran 2 notas nuevas con la foto rota en el medio).
+        res = _cargar(RESUMEN_PASADA, None)
+        if res is None:
+            fallas.append(f"Habia {notas} notas y el paso de los reels no llego a terminar "
+                          f"(no dejo su resumen). Mirar su log.")
+        elif not res.get("nuevas"):
+            informe.append(f"- Nada nuevo para armar: {res.get('ya_hechas', 0)} nota(s) ya "
+                           f"tuvieron reel y {res.get('sin_material', 0)} no traen foto ni video")
+        else:
+            motivos = sorted(set(res.get("descartadas") or []))
+            detalle = f" ({'; '.join(motivos)})" if motivos else ""
+            texto = (f"{res['nuevas']} nota(s) nueva(s) y ninguna se pudo armar{detalle}.")
+            if res["nuevas"] >= NUEVAS_SIN_REEL_PARA_FALLA:
+                fallas.append(texto + " Con tantas, no es la foto de un medio: mirar el paso "
+                                      "de los reels (descargas desde la nube, Gemini o ffmpeg).")
+            else:
+                avisos.append(texto)
 
     if 0 < localidades < LOCALIDADES_MINIMAS:
         avisos.append(f"Solo {localidades} localidad(es) con material. Para una tanda "

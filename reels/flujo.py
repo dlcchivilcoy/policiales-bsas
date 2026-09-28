@@ -130,6 +130,23 @@ def plan_de_publicacion(piezas: list, desde=None, minutos: int = MINUTOS_ENTRE_P
     return agendadas
 
 
+# Qué pasó en el armado, SIEMPRE, aunque no se arme nada: lo lee salud.py. Sin esto, «36
+# notas y 0 reels» no distinguía «no había nada nuevo» de «se rompió»: el 28/09 quedaban 2
+# notas nuevas con la foto rota en el medio y la pasada salió como falla, culpando a
+# Gemini o ffmpeg.
+RESUMEN_PASADA = SALIDA_REELS / "_ultima_pasada.json"
+
+
+def _resumen_pasada(sin_material: int = 0, ya_hechas: int = 0, nuevas: int = 0,
+                    piezas: int = 0, descartadas=()):
+    RESUMEN_PASADA.parent.mkdir(parents=True, exist_ok=True)
+    RESUMEN_PASADA.write_text(json.dumps({
+        "cuando": datetime.now().isoformat(timespec="seconds"),
+        "sin_material": sin_material, "ya_hechas": ya_hechas, "nuevas": nuevas,
+        "piezas": piezas, "descartadas": list(descartadas)}, ensure_ascii=False, indent=2),
+        encoding="utf-8")
+
+
 def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
     """Las mejores `cuantos` notas para hacer reel, sin repetir localidad si se puede.
 
@@ -216,17 +233,24 @@ def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
     return elegidas
 
 
+_error_foto = ""       # por qué no bajó la última foto (para el motivo del descarte)
+
+
 def _bajar_foto(url: str, destino: Path) -> Path | None:
+    global _error_foto
+    _error_foto = ""
     if not url:
         return None
     try:
         r = httpx.get(url, timeout=30, follow_redirects=True,
                       headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
         if r.status_code >= 400 or not r.content:
+            _error_foto = f"HTTP {r.status_code}" if r.status_code >= 400 else "vino vacía"
             return None
         destino.write_bytes(r.content)
         return destino
-    except Exception:
+    except Exception as e:
+        _error_foto = type(e).__name__
         return None
 
 
@@ -261,7 +285,8 @@ def _foto_usable(nota: dict, destino: Path) -> tuple:
                 continue
             probadas.add(url)
             if not _bajar_foto(url, destino):
-                motivo = motivo or "La imagen que declara la nota no se pudo bajar."
+                motivo = motivo or ("La imagen que declara la nota no se pudo bajar"
+                                    + (f" ({_error_foto})." if _error_foto else "."))
                 continue
             t = _tamanio(destino)
             if t and max(t) >= FOTO_MIN_LADO_MAYOR and min(t) >= FOTO_MIN_LADO_MENOR:
@@ -531,6 +556,7 @@ def main():
     notas = con_material
     if not notas:
         print("Ninguna nota de la tanda trae imagen: no hay nada que armar.")
+        _resumen_pasada(sin_material=sin_material)
         return 0
     print()
 
@@ -561,6 +587,7 @@ def main():
     elegidas = elegir(candidatas, cuantos, args.localidad or "")
     if not elegidas:
         print("No quedan notas nuevas para hacer reel (o ninguna coincide con el filtro).")
+        _resumen_pasada(sin_material=sin_material, ya_hechas=repetidas)
         return 0
     # Se arman y se publican en orden de llegada al medio, la más nueva primero (pedido
     # del editor, 27/09): lo del momento sale al principio de la pasada.
@@ -628,6 +655,8 @@ def main():
         # sin dejar rastro es indistinguible de una que nunca existió.
         "descartadas": descartadas,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
+    _resumen_pasada(sin_material=sin_material, ya_hechas=repetidas, nuevas=len(elegidas),
+                    piezas=len(piezas), descartadas=[d.get("por_que_no") or "" for d in descartadas])
 
     if not args.sin_ledger:
         # Se anota DESPUES de que las piezas salieron, no antes: si la corrida se cae a la
