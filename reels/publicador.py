@@ -55,6 +55,7 @@ from reels import ledger as LD
 from reels import limpieza as L
 from reels import web as WEB
 from reels.flujo import MINUTOS_ENTRE_POSTEOS, SALIDA_REELS
+from scraper.localidades import NOMBRES as _LOCALIDADES_NOMBRES
 from scraper.localidades import nombre as _pueblo
 
 import entorno
@@ -162,6 +163,8 @@ _barrer_release = L.limpiar_release
 _token_gh = ""
 _ocultar = []              # tokens obtenidos en la corrida (gh, acceso de YouTube)
 _yt_acceso = ""            # token de acceso de YouTube, ya verificado contra el canal
+_yt_acceso_t = 0.0         # cuándo se obtuvo (time.monotonic): vence a la hora
+YT_ACCESO_MINUTOS = 45
 _yt_sin_cupo = False       # YouTube dijo "cupo agotado": no se insiste en esta pasada
 _ig_sin_prueba = False     # Instagram no acepta más reels de PRUEBA: no se insiste en esta pasada
 
@@ -561,8 +564,10 @@ def _yt_sesion() -> str:
     el del diario (ya paso que los dos tokens convivan en el mismo .env), los policiales
     terminarian en el canal equivocado. Cuesta 1 unidad de cupo por pasada.
     """
-    global _yt_acceso
-    if _yt_acceso:
+    global _yt_acceso, _yt_acceso_t
+    # El token de acceso de Google vence a la HORA. La pasada de respaldo del 27/09 duró
+    # 60 min publicando y el Short 13 rebotó con 401: se renueva a los 45 minutos.
+    if _yt_acceso and time.monotonic() - _yt_acceso_t < YT_ACCESO_MINUTOS * 60:
         return _yt_acceso
     try:
         info = json.loads(os.environ.get("YT_TOKEN_JSON") or "")
@@ -591,7 +596,7 @@ def _yt_sesion() -> str:
     if not esperado or esperado not in canales:
         raise FalloRed("YouTube: el token NO es del canal de Radio del Centro "
                        f"(YT_CHANNEL_ID). No se sube nada para no publicar en otro canal.")
-    _yt_acceso = acceso
+    _yt_acceso, _yt_acceso_t = acceso, time.monotonic()
     return acceso
 
 
@@ -1018,6 +1023,107 @@ def _huella_posteo(texto: str) -> frozenset:
                                   if l.strip() and not l.lstrip().startswith(("📰", "📲", "#"))))
 
 
+# YOUTUBE: antes de subir, lo que YA está en el canal (pedido del editor, 28/09). El 27/09
+# salieron repetidos: la misma nota con otra dirección, corridas que perdieron la memoria y
+# el mismo hecho contado por otro medio (el temporal de Bragado salió 3 veces). Facebook e
+# Instagram ya miraban la cuenta; YouTube no.
+HORAS_YOUTUBE_RECIENTE = 72
+# Temporales y alertas: un Short por pueblo cada 24 h. Cada medio cuenta la tormenta a su
+# manera y el parecido de texto no alcanza (no juntó ninguna de las 3 de Bragado).
+HORAS_TEMPORAL = 24
+# Un Short ES de clima si lleva los hashtags que les pone guion.HASHTAGS_POR_TIPO. Mirar
+# palabras sueltas no sirve: «Bomberos apagaron el fuego en un poste de luz durante el
+# temporal» dice «temporal» y es un incendio.
+_CLIMA_RE = re.compile(r"#clima\b|#alertameteorologica\b")
+# Títulos: dos Shorts con títulos casi iguales son el mismo hecho aunque la bajada cambie
+# («Despliegue de seguridad en Lobos deja…» / «…dejó…»). Cuánto del título más corto está
+# en el otro: 0,6 en el mismo pueblo. Con OTRO pueblo hace falta mucho más, porque «Robaron
+# una moto estacionada en el centro» pasa en todos lados: 0,8 sin contar los nombres de los
+# pueblos Y un número en común (la ruta 191, el kilómetro 230), como el auto volcado de la
+# ruta 191 que salió como de Salto y de Chacabuco.
+TITULO_MISMO_PUEBLO = 0.6
+TITULO_OTRO_PUEBLO = 0.8
+_PUEBLOS_PLANOS = frozenset(w for n in _LOCALIDADES_NOMBRES.values() for w in re.findall(r"[a-z]+", LD._norm(n))
+                            if len(w) >= 4)
+
+
+def _numeros(texto: str) -> set:
+    return set(re.findall(r"\b\d{2,}\b", texto or ""))
+
+
+def _plano(texto: str) -> str:
+    return LD._norm(texto or "")
+
+
+def _recientes_youtube(horas: int = HORAS_YOUTUBE_RECIENTE) -> list:
+    """[{cuando, texto}] de los Shorts del canal (Radio del Centro) de las últimas `horas`:
+    nuestros o del bot. Si no se puede leer, lista vacía (no frena la publicación)."""
+    desde = _ahora() - timedelta(hours=horas)       # publishedAt viene en UTC, como la nube
+    try:
+        acceso = _yt_sesion()
+        c = _pedir("GET", f"{YT_API}/channels", acceso, params={"part": "contentDetails", "mine": "true"})
+        items = (c.json() or {}).get("items") or [] if c.status_code < 400 else []
+        subidos = ((items[0].get("contentDetails") or {}).get("relatedPlaylists") or {}).get("uploads") \
+            if items else None
+        if not subidos:
+            return []
+        out, params = [], {"part": "snippet", "playlistId": subidos, "maxResults": 50}
+        for _ in range(4):                          # 200 Shorts alcanzan para 72 h
+            r = _pedir("GET", f"{YT_API}/playlistItems", acceso, params=params)
+            if r.status_code >= 400:
+                break
+            d = r.json() or {}
+            viejos = False
+            for it in d.get("items") or []:
+                s = it.get("snippet") or {}
+                try:
+                    cuando = datetime.strptime((s.get("publishedAt") or "")[:19], "%Y-%m-%dT%H:%M:%S")
+                except ValueError:
+                    continue
+                if cuando < desde:
+                    viejos = True
+                    continue
+                out.append({"cuando": cuando, "texto": f"{s.get('title') or ''}\n{s.get('description') or ''}"})
+            if viejos or not d.get("nextPageToken"):
+                break
+            params = dict(params, pageToken=d["nextPageToken"])
+        return out
+    except (FalloRed, _Cortado, ValueError, KeyError, IndexError, AttributeError):
+        return []
+
+
+def _ya_en_youtube(pieza: dict, recientes: list) -> str:
+    """El motivo si el hecho de la pieza ya tiene Short en el canal; "" si no."""
+    pueblo = _pueblo(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
+    # Palabra entera: si no, «Salto» aparece adentro de «asalto».
+    nombre = re.compile(rf"\b{re.escape(_plano(pueblo))}\b") if pueblo else None
+
+    h = _huella_pieza(pieza)
+    titulo = metadatos_youtube(pieza)["snippet"]["title"]
+    th = _huella_texto(titulo)
+    for r in recientes:
+        if _mismo_hecho(h, _huella_posteo(r["texto"])):
+            return "ese hecho ya está en el canal de YouTube"
+        otro = r["texto"].split("\n", 1)[0]
+        oh = _huella_texto(otro)
+        if nombre and nombre.search(_plano(otro)):              # el mismo pueblo
+            a, b, umbral = th, oh, TITULO_MISMO_PUEBLO
+        elif _numeros(titulo) & _numeros(otro):                 # otro pueblo, mismo número
+            a, b, umbral = th - _PUEBLOS_PLANOS, oh - _PUEBLOS_PLANOS, TITULO_OTRO_PUEBLO
+        else:
+            continue
+        if len(a) >= 4 and len(b) >= 4 and len(a & b) / min(len(a), len(b)) >= umbral:
+            return f"ese hecho ya está en el canal de YouTube («{otro[:60]}»)"
+    if pieza.get("tipo") == "alerta_meteorologica" and nombre:
+        corte = _ahora() - timedelta(hours=HORAS_TEMPORAL)
+        for r in recientes:
+            texto = _plano(r["texto"])
+            if r["cuando"] >= corte and nombre.search(texto) and _CLIMA_RE.search(texto):
+                return (f"ya hay un Short del temporal o la alerta de {pueblo} en las últimas "
+                        f"{HORAS_TEMPORAL} h")
+    return ""
+
+
 def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: list,
                       donde: str) -> tuple:
     """(claves elegidas, {clave: motivo}) para `red`: las `n` MÁS NUEVAS de la pasada que
@@ -1200,6 +1306,16 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más nuevas "
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
+    # Lo que ya está en el canal de YouTube, para no repetir hechos (ver _ya_en_youtube).
+    yt_recientes = []
+    # Solo si alguna pieza todavía tiene que ir a YouTube y hay cupo: una pasada que no va a
+    # subir nada no gasta ni un pedido.
+    falta_yt = any(((ledger.get(_clave(p)) or {}).get("youtube") or {}).get("estado")
+                   not in ("ok", "sin_confirmar") for p, _ in listas)
+    if publicar and "youtube" in redes and falta_yt and yt_hoy < yt_tope:
+        yt_recientes = _recientes_youtube()
+        print(f"  YouTube: {len(yt_recientes)} Short(s) del canal en las últimas "
+              f"{HORAS_YOUTUBE_RECIENTE} h, para no repetir hechos")
 
     ultimo = None
     for pieza, mp4 in listas:
@@ -1230,6 +1346,11 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 sin_lugar["facebook"] = {"estado": "cupo", "detalle":
                     f"la página ya tiene {lugar[0]} reels en 24 h (Facebook admite "
                     f"{FB_TOPE_REELS}); los últimos {FB_MARGEN_BOT} quedan para el bot del diario"}
+        if "youtube" in pendientes and yt_recientes:
+            motivo = _ya_en_youtube(pieza, yt_recientes)
+            if motivo:
+                pendientes.remove("youtube")
+                sin_lugar["youtube"] = {"estado": "omitida", "detalle": motivo}
         if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
             pendientes.remove("youtube")
             sin_lugar["youtube"] = {"estado": "cupo", "detalle":
@@ -1296,6 +1417,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 raise ValueError(f"red sin implementar: {red}")
             if red == "youtube" and res.get("estado") in ("ok", "sin_confirmar", "simulado"):
                 yt_pasada += 1
+                # Y cuenta para las piezas que siguen en esta misma pasada.
+                meta_yt = metadatos_youtube(pieza)["snippet"]
+                yt_recientes.append({"cuando": _ahora(),
+                                     "texto": f"{meta_yt['title']}\n{meta_yt['description']}"})
             fila[red] = res
             _mostrar(red, res)
             # Un cupo no se anota en la memoria: no es una falla, y así una corrida

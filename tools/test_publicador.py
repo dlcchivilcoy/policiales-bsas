@@ -79,7 +79,8 @@ class Meta:
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
                  yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None, ig_recientes=None,
                  wix_falla=None, wix_existe="", wix_foto_falla=False, fb_recientes=None,
-                 fb_lista_falla=False, yt_miniatura=200):
+                 fb_lista_falla=False, yt_miniatura=200, yt_recientes=None):
+        self.yt_recientes = list(yt_recientes or [])   # (publishedAt, título, descripción) del canal
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
         self.publicar_llamadas = 0
@@ -110,7 +111,12 @@ class Meta:
         if host == "oauth2.googleapis.com":
             return httpx.Response(200, json={"access_token": YT_ACCESO, "expires_in": 3599})
         if ruta == "/youtube/v3/channels":
-            return httpx.Response(200, json={"items": [{"id": self.yt_canal}]})
+            return httpx.Response(200, json={"items": [{"id": self.yt_canal, "contentDetails": {
+                "relatedPlaylists": {"uploads": "UUSUBIDOS"}}}]})
+        if ruta == "/youtube/v3/playlistItems":
+            return httpx.Response(200, json={"items": [
+                {"snippet": {"publishedAt": c, "title": t, "description": d}}
+                for c, t, d in self.yt_recientes]})
         if ruta == "/upload/youtube/v3/thumbnails/set" and m == "POST":
             if self.yt_miniatura >= 400:
                 return httpx.Response(self.yt_miniatura, json={"error": {"code": self.yt_miniatura,
@@ -915,6 +921,135 @@ chequear("...pero un video de 2 horas antes no le gana a la noticia del momento"
 os.environ.pop("IG_PRUEBA_POR_PASADA")
 for b in (base, base2):
     shutil.rmtree(b)
+
+
+# --- 24. YouTube: no repetir un hecho que YA está en el canal (28/09) ------------------------
+def preparar_yt(filas, recientes):
+    """filas: (titular, bajada, tipo, pueblo); recientes: Shorts del canal."""
+    base, carpeta, reloj, meta = preparar(Meta(yt_recientes=recientes))
+    piezas = []
+    for i, (tit, baj, tipo, pueblo) in enumerate(filas, 1):
+        pz = pieza(i, pueblo.lower())
+        pz.update({"guion": {"titular": tit, "bajada": baj}, "tipo": tipo, "localidad_hecho": pueblo})
+        piezas.append(pz)
+        (carpeta / f"{i:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
+    (carpeta / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas}), encoding="utf-8")
+    return base, carpeta, reloj, meta
+
+
+ROBO = ("Detuvieron a dos hombres por el robo de una camioneta en el barrio Centro",
+        "La policía recuperó la camioneta sustraída y secuestró herramientas en la vivienda")
+base, carpeta, reloj, meta = preparar_yt(
+    [ROBO + ("robo", "Junín"), ("Choque entre un auto y una moto en la Ruta 7 dejó un herido grave",
+                               "El motociclista fue trasladado al hospital con fracturas", "accidente_vial", "Junín")],
+    [("2026-09-26T08:00:00Z", "Detuvieron a dos hombres por el robo de una camioneta | Junín",
+      "La policía detuvo a dos hombres, recuperó la camioneta sustraída y secuestró herramientas en la vivienda.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+yts = [f["youtube"] for f in inf["piezas"]]
+chequear("YouTube: el hecho que YA está en el canal no se sube de nuevo",
+         yts[0]["estado"] == "omitida" and "ya está en el canal" in yts[0]["detalle"])
+chequear("...el otro hecho sí", yts[1]["estado"] == "ok" and len(meta.yt_videos) == 1)
+shutil.rmtree(base)
+
+BRAGADO_1 = ("Fuertes tormentas y caída de granizo afectaron a Bragado | Bragado",
+             "Un temporal de gran intensidad azotó a la localidad.\n\n#Bragado #AlertaMeteorologica")
+TEMPORAL = ("Temporal en Bragado: intensas tormentas, granizo y calles anegadas",
+            "Un fuerte temporal de lluvia azotó la ciudad cabecera y las zonas rurales del distrito",
+            "alerta_meteorologica", "Bragado")
+base, carpeta, reloj, meta = preparar_yt([TEMPORAL], [("2026-09-26T02:00:00Z",) + BRAGADO_1])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("temporal: si ya hay un Short del temporal de ese pueblo en 24 h, no va otro (el caso de Bragado)",
+         inf["piezas"][0]["youtube"]["estado"] == "omitida"
+         and "temporal o la alerta de Bragado" in inf["piezas"][0]["youtube"]["detalle"])
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt([TEMPORAL], [("2026-09-25T04:00:00Z",) + BRAGADO_1])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("...pero el de hace más de 24 h no frena uno nuevo", inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt(
+    [("Emiten alerta amarilla por tormentas en Junín", "Rige desde la tarde para el distrito y la zona",
+      "alerta_meteorologica", "Junín")], [("2026-09-26T02:00:00Z",) + BRAGADO_1])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("...ni el temporal de OTRO pueblo", inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt(
+    [("Alerta amarilla por tormentas en Salto", "Rige desde la tarde para el distrito y la zona",
+      "alerta_meteorologica", "Salto")],
+    [("2026-09-26T02:00:00Z", "Asalto a mano armada durante la tormenta | Chacabuco", "Robo en un comercio")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("«Salto» no se confunde con «asalto»", inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt([TEMPORAL, TEMPORAL[:2] + ("alerta_meteorologica", "Bragado")],
+                                         [("2026-09-20T02:00:00Z", "Otra cosa vieja | Lobos", "nada")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("dentro de la misma pasada tampoco se repite (la primera cuenta para la segunda)",
+         [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "omitida"])
+shutil.rmtree(base)
+
+chequear("el token de YouTube se renueva antes de la hora (vence a los 60 min)", PUB.YT_ACCESO_MINUTOS < 60)
+
+# Títulos casi iguales con bajadas distintas: el caso real del operativo de Lobos (27/09).
+base, carpeta, reloj, meta = preparar_yt(
+    [("Despliegue de seguridad en Lobos dejó cinco vehículos secuestrados",
+      "Personal policial identificó 143 rodados y labró 28 infracciones en distintos puntos", "operativo_policial", "Lobos")],
+    [("2026-09-26T08:00:00Z", "Despliegue de seguridad en Lobos deja cinco vehículos secuestrados | Lobos",
+      "Un amplio operativo de control vial terminó con varias actas.\n\n#Lobos #Policiales")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("título casi igual (deja/dejó) aunque cambie la bajada: no se repite",
+         inf["piezas"][0]["youtube"]["estado"] == "omitida" and "Despliegue" in inf["piezas"][0]["youtube"]["detalle"])
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt(
+    [("Dos detenidos tras una amenaza en la vía pública de Chacabuco",
+      "La policía detuvo a dos personas luego de un llamado al 911", "operativo_policial", "Chacabuco")],
+    [("2026-09-26T08:00:00Z", "Dos jóvenes fueron detenidos tras un operativo antidrogas | Chacabuco",
+      "Secuestraron cocaína y marihuana en un allanamiento.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("...pero dos hechos distintos del mismo pueblo con títulos parecidos NO se frenan",
+         inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+
+# Otro pueblo: hace falta un título MUY parecido (la ruta 191 salió como de Salto y de Chacabuco).
+base, carpeta, reloj, meta = preparar_yt(
+    [("Encontraron un auto volcado y sin ocupantes en la Ruta 191",
+      "Un Peugeot 208 protagonizó un vuelco en una curva del tramo", "accidente_vial", "Chacabuco")],
+    [("2026-09-26T08:00:00Z", "Hallan un auto volcado a la vera de la ruta 191 sin sus ocupantes | Salto",
+      "Un vehículo fue hallado volcado al costado de la ruta.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("otro pueblo pero el mismo título (ruta 191, Salto/Chacabuco): no se repite",
+         inf["piezas"][0]["youtube"]["estado"] == "omitida")
+shutil.rmtree(base)
+base, carpeta, reloj, meta = preparar_yt(
+    [("Robaron una moto estacionada en el centro de Junín",
+      "El propietario radicó la denuncia en la comisaría", "robo", "Junín")],
+    [("2026-09-26T08:00:00Z", "Robaron una moto estacionada en el centro | Chacabuco",
+      "La víctima denunció el hecho en la comisaría local.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("...y dos robos de moto en pueblos distintos NO son el mismo hecho",
+         inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+base, carpeta, reloj, meta = preparar_yt(
+    [("Choque en la Ruta 65 entre una moto y un camión en el acceso sur",
+      "El motociclista fue trasladado al hospital municipal", "accidente_vial", "9 de Julio")],
+    [("2026-09-26T08:00:00Z", "Choque en la Ruta 65 cerca del acceso norte: dos autos involucrados | Junín",
+      "No hubo heridos de gravedad.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("...ni dos choques distintos en la misma ruta y en pueblos distintos",
+         inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
+
+# El poste de luz «durante el temporal» es un incendio: no frena el Short del temporal.
+base, carpeta, reloj, meta = preparar_yt(
+    [TEMPORAL], [("2026-09-26T02:00:00Z", "Bomberos apagaron el fuego en un poste de luz durante el temporal | Bragado",
+                  "El personal intervino con rapidez.\n\n#Bragado #Bomberos #Temporal #Incendio")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("temporal: solo cuentan Shorts de CLIMA (#Clima/#AlertaMeteorologica), no un incendio que dice «temporal»",
+         inf["piezas"][0]["youtube"]["estado"] == "ok")
+shutil.rmtree(base)
 
 # --- 13. TikTok apagado ------------------------------------------------------------
 chequear("TikTok no esta entre las redes", "tiktok" not in PUB.REDES and PUB.TIKTOK_ACTIVO is False)

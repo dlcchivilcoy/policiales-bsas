@@ -19,6 +19,7 @@ import re
 import time
 import unicodedata
 from pathlib import Path
+from urllib.parse import urlsplit
 
 RAIZ = Path(__file__).resolve().parent.parent
 ARCHIVO = RAIZ / "estado" / "reels_hechos.json"
@@ -43,6 +44,38 @@ def _cargar() -> dict:
 def _clave(nota: dict) -> str:
     """La URL sin la barra final. Es el mismo criterio de dedup que usa el scraper."""
     return (nota.get("url") or "").rstrip("/")
+
+
+def _es_fecha(n: str) -> bool:
+    """2026 (año) o 20260927 (fecha): no son el número de una nota."""
+    return (len(n) == 4 and 1990 <= int(n) <= 2099) or (len(n) == 8 and n[:2] in ("19", "20"))
+
+
+def identidad(url: str) -> str:
+    """Qué nota es, aunque el medio cambie cómo escribe la dirección.
+
+    El 27/09 Diario Junín publicó la MISMA nota como «.../102628_dos-juninenses-de-23-y-24-
+    aos-...» a la tarde y «...-24-anos-...» a la noche: la memoria comparaba la dirección
+    exacta, no la reconoció y el hecho salió dos veces en YouTube. Casi todos estos medios
+    numeran sus notas (/nota/7457/..., /345553-..., /102628_...): medio + número es la
+    identidad. Sin número (las que van por fecha, /2026/09/27/titulo), la dirección
+    normalizada."""
+    u = (url or "").strip()
+    if not u:
+        return ""
+    p = urlsplit(u.lower())
+    host = p.hostname or ""
+    host = host[4:] if host.startswith("www.") else host
+    segmentos = [s for s in p.path.split("/") if s]
+    for s in segmentos:
+        m = re.match(r"^(\d{4,})(?:[-_.]|$)", s)
+        if m and not _es_fecha(m.group(1)):
+            return f"{host}#{m.group(1)}"
+    if segmentos:
+        m = re.search(r"[-_](\d{5,})(?:\.html?)?$", segmentos[-1])
+        if m and not _es_fecha(m.group(1)):
+            return f"{host}#{m.group(1)}"
+    return f"{host}{p.path.rstrip('/')}" + (f"?{p.query}" if p.query else "")
 
 
 # Palabras que aparecen en cualquier titular policial y no distinguen un hecho de
@@ -97,7 +130,7 @@ def _huellas_recordadas(hechos: dict) -> list:
 
 def ya_hecha(nota: dict, hechos: dict = None) -> bool:
     hechos = _cargar() if hechos is None else hechos
-    if _clave(nota) in hechos:
+    if identidad(_clave(nota)) in {identidad(k) for k in hechos}:
         return True
     h = _huella(nota)
     return any(_se_parecen(h, otra) for otra in _huellas_recordadas(hechos))
@@ -113,12 +146,14 @@ def filtrar_tanda(notas: list) -> tuple:
     regionales de al lado, asi que el mismo hecho llega por varias puertas: el
     femicidio de Pergamino aparecio por el medio de Chacabuco y por el de Pergamino,
     y salieron los dos reels."""
-    huellas, unicas = [], []
+    huellas, unicas, vistas = [], [], set()
     for n in notas:
+        i = identidad(_clave(n))
         h = _huella(n)
-        if any(_se_parecen(h, otra) for otra in huellas):
+        if (i and i in vistas) or any(_se_parecen(h, otra) for otra in huellas):
             continue
         huellas.append(h)
+        vistas.add(i)
         unicas.append(n)
     return unicas, len(notas) - len(unicas)
 
@@ -134,19 +169,21 @@ def filtrar(notas: list) -> tuple:
     entran los dos medios de una localidad, y si los dos cubrieron el mismo choque
     hay que quedarse con uno solo."""
     hechos = _cargar()
-    urls = set(hechos)
+    # Por IDENTIDAD y no por la dirección exacta: ver identidad().
+    urls = {identidad(k) for k in hechos}
     huellas = _huellas_recordadas(hechos)
 
     pendientes = []
     for n in notas:
         k = _clave(n)
-        if not k or k in urls:
+        i = identidad(k)
+        if not k or i in urls:
             continue
         h = _huella(n)
         if any(_se_parecen(h, otra) for otra in huellas):
             continue
         huellas.append(h)      # las de esta misma tanda tampoco se repiten entre si
-        urls.add(k)
+        urls.add(i)
         pendientes.append(n)
     return pendientes, len(notas) - len(pendientes)
 
