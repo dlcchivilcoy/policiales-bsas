@@ -199,6 +199,41 @@ PLACA_CAJA_TITULAR_MIN3 = 38
 PLACA_CAJA_SALTO = 1.10
 PLACA_CAJA_VOLANTA_TAM = 40
 PLACA_CAJA_OPACIDAD = 0.86     # la caja grafito deja ver apenas el video de atrás
+
+# ── Reels de lo que llega por WhatsApp (corresponsales) ───────────────────────────────────
+# 2026-10-02: el usuario mandó una «especificación editorial y visual v1.0» y el 2026-10-03 el
+# «prompt detallado para editar reels», que define las CAJAS y el encabezado de estos reels
+# (las medidas de acá salen de ese documento, en px de 1080x1920). Y pidió:
+#   · fotos y videos VERTICALES (o cuadrados): a sangre en 9:16, con la volanta y el titular
+#     en cajas abajo —si tapan una cara, suben—, sin bajada;
+#   · fotos y videos HORIZONTALES: ENTEROS, sin recortar, en un reel MÁS CUADRADO, 4:5
+#     (1080x1350): marca arriba, la imagen a todo el ancho y las cajas debajo, sin el hueco de
+#     abajo que dejaba el 9:16.
+# Los demás reels (videos del diario, foto-notas, radio) siguen con el estilo placa de arriba.
+CORR_NARANJA = (239, 150, 60, 255)      # #EF963C: acentos y separadores finos
+CORR_NARANJA_CAJA = (179, 91, 24, 255)  # #B35B18: la caja (opaca) de la volanta
+CORR_GRAFITO = (32, 34, 38, 255)        # #202226: la caja principal y el fondo
+CORR_BLANCO2 = (240, 240, 240, 255)     # #F0F0F0: el usuario
+CORR_X = 100                            # margen izquierdo de la marca y de las cajas
+CORR_MARCA = ((130, 29), (172, 26))     # (tope de las mayúsculas, cuerpo): nombre y usuario
+CORR_LOGO = (128, 80, 130)              # isologo: ancho, margen derecho (X 872), Y
+CORR_CAJA_ANCHO = 784                   # cajas de X 100 a 884: lejos de los botones de la derecha
+CORR_CAJA_PAD = (26, 20)                # relleno de la caja principal: costados, arriba/abajo
+CORR_CAJA_OPACIDAD = 0.94
+CORR_VOLANTA = (30, 56, "500")          # cuerpo, alto de su caja, peso (en mayúsculas)
+CORR_VOLANTA_MIN = 24
+CORR_TITULAR = (54, 42, "400")          # cuerpo, mínimo en dos renglones, peso
+CORR_SALTO = 1.18                       # interlineado
+CORR_GAP = 12                           # entre la caja de la volanta y la principal
+CORR_Y_ABAJO = 1058                     # tope de la volanta en 9:16 (la principal, en 1126)
+CORR_Y_ARRIBA = 360                     # la posición alternativa, si abajo hay una cara
+CORR_TOPE_IMAGEN = 290                  # en lo apaisado, la imagen arranca debajo del isologo
+CORR_ALTO_APAISADO = 1350               # el reel de lo horizontal: 4:5
+CORR_AR_APAISADO = 1.0                  # más ancho que alto = «apaisado»
+# Tarjetas que cambian a lo largo del video (2026-10-03): entran y salen con un fundido de 0,2 s
+# («de 0,15 a 0,25», dice el prompt) y cada una se lee al menos 3 s (o palabras / 2,5).
+FUNDIDO_TARJETA = 0.2
+TARJETA_MIN_SEG = 3.0
 # Cuántos puntos de titular estamos dispuestos a resignar con tal de no partir un nombre
 # entre dos renglones. Hasta 8 no se nota; más abajo sí, y ahí conviene el titular grande
 # aunque el apellido caiga al renglón siguiente.
@@ -270,7 +305,14 @@ def _logo_a_la_derecha() -> bool:
     return _cfg("REEL_LOGO_LADO", "derecha").lower() not in ("izq", "izquierda", "left")
 
 
-def _logo_caja() -> tuple[int, int, int, int] | None:
+def _logo_geo() -> tuple[int, int, int]:
+    """(ancho, margen lateral, margen de arriba) del isologo de siempre (`REEL_LOGO_*`)."""
+    return (int(float(_cfg("REEL_LOGO_ANCHO", str(LOGO_ANCHO)))),
+            int(float(_cfg("REEL_LOGO_MARGEN_X", str(LOGO_MX)))),
+            int(float(_cfg("REEL_LOGO_MARGEN_Y", str(LOGO_MY)))))
+
+
+def _logo_caja(geo: tuple | None = None) -> tuple[int, int, int, int] | None:
     """(x0, y0, x1, y1): el rectángulo que ocupa el isologo. None si el reel va sin logo.
 
     El alto se MIDE del PNG en vez de fijarlo, porque el filtergraph lo escala con
@@ -279,9 +321,7 @@ def _logo_caja() -> tuple[int, int, int, int] | None:
     ruta = _asset("REEL_LOGO", LOGO_REEL)
     if not ruta:
         return None
-    ancho = int(float(_cfg("REEL_LOGO_ANCHO", str(LOGO_ANCHO))))
-    mx = int(float(_cfg("REEL_LOGO_MARGEN_X", str(LOGO_MX))))
-    my = int(float(_cfg("REEL_LOGO_MARGEN_Y", str(LOGO_MY))))
+    ancho, mx, my = geo or _logo_geo()
     try:
         from PIL import Image
         with Image.open(ruta) as im:
@@ -1545,8 +1585,11 @@ def _texto_encima(volanta: str, titular: str, f: dict, desde: int | None = None)
     (dónde va el sombreado del estilo «sombra»), `rect` (lo que ocupa todo), y el texto:
     `titulo` (renglones) y `volanta`."""
     estilo = _estilo_cajas()
-    pad_x = PLACA_MX - PLACA_CAJA_MX
-    ancho = PLACA_CAJA_DER - pad_x - PLACA_MX
+    caja_mx, texto_x = PLACA_CAJA_MX, PLACA_MX
+    naranja, carbon = NARANJA, GRAFITO
+    campo = False                                # margen de siempre (ver `_x_renglon`)
+    pad_x = texto_x - caja_mx
+    ancho = PLACA_CAJA_DER - pad_x - texto_x
     tope = int(_num("REEL_PLACA_CAJA_TITULAR_TAM", PLACA_CAJA_TITULAR_TAM))
     tit = (0, [])
     for maximo, minimo in ((2, PLACA_CAJA_TITULAR_MIN), (3, PLACA_CAJA_TITULAR_MIN3)):
@@ -1577,32 +1620,32 @@ def _texto_encima(volanta: str, titular: str, f: dict, desde: int | None = None)
         y_v = desde
         y_t = y_v + alto_v
 
-    caja_t = GRAFITO[:3] + (round(255 * _num("REEL_PLACA_CAJA_OPACIDAD",
+    caja_t = carbon[:3] + (round(255 * _num("REEL_PLACA_CAJA_OPACIDAD",
                                                PLACA_CAJA_OPACIDAD)),)
     color_t, color_v = BLANCO, BLANCO
     if estilo == "blanca":
-        caja_t, color_t = (255, 255, 255, 255), GRAFITO
+        caja_t, color_t = (255, 255, 255, 255), carbon
     elif estilo == "sombra":
-        color_v = NARANJA
+        color_v = naranja
     cajas, bloques = [], []
-    x1_max = PLACA_CAJA_MX
+    x1_max = caja_mx
     if vtxt:
         bl = y_v + pad_v + may_v
-        bloques.append((vtxt, v, bl - asc_v, f["f_r"], f["p_v"], color_v, False))
-        x1 = PLACA_MX + _ancho_texto(vtxt, f["f_r"], v, f["p_v"]) + pad_x
+        bloques.append((vtxt, v, bl - asc_v, f["f_r"], f["p_v"], color_v, campo))
+        x1 = texto_x + _ancho_texto(vtxt, f["f_r"], v, f["p_v"]) + pad_x
         x1_max = max(x1_max, x1)
         if estilo != "sombra":
-            cajas.append((PLACA_CAJA_MX, y_v, x1, y_v + alto_v, NARANJA))
+            cajas.append((caja_mx, y_v, x1, y_v + alto_v, naranja))
     if lineas:
         largo = max(_ancho_texto(l, f["f_t"], c, f["p_t"]) for l in lineas)
-        x1 = PLACA_MX + largo + pad_x
+        x1 = texto_x + largo + pad_x
         x1_max = max(x1_max, x1)
         for i, l in enumerate(lineas):
             bl = y_t + pad_t + may_t + i * salto
-            bloques.append((l, c, bl - asc_t, f["f_t"], f["p_t"], color_t, False))
+            bloques.append((l, c, bl - asc_t, f["f_t"], f["p_t"], color_t, campo))
         if estilo != "sombra":
-            cajas.append((PLACA_CAJA_MX, y_t, x1, y_t + alto_t, caja_t))
-    rect = (PLACA_CAJA_MX, y_v if vtxt else y_t, x1_max, y_t + alto_t)
+            cajas.append((caja_mx, y_t, x1, y_t + alto_t, caja_t))
+    rect = (caja_mx, y_v if vtxt else y_t, x1_max, y_t + alto_t)
     return dict(cajas=cajas, bloques=bloques, rect=rect, titulo=lineas, volanta=vtxt,
                 halo=list(bloques) if estilo == "sombra" else [],
                 banda=(rect[1], rect[3]) if (estilo == "sombra" and bloques) else None)
@@ -1638,8 +1681,197 @@ def _cuanto_tapa(rect: tuple, cabezas: list) -> float:
     return peor
 
 
+def _marca_corr(f: dict) -> list:
+    """El encabezado de los reels de WhatsApp: «Diario La Campaña | Radio del Centro» (29,
+    blanco, tope en Y 130) y «@diarioyradio» (26, #F0F0F0, Y 172), en X 100. Va una sola vez
+    sobre todo el cuadro; el isologo lo pega ffmpeg (`CORR_LOGO`)."""
+    nombres = " | ".join(l.strip() for l in
+                         _cfg("REEL_PLACA_MARCA_TEXTO", PLACA_MARCA_TEXTO).split("|")
+                         if l.strip())
+    usuario = _cfg("REEL_MARCA_USUARIO", MARCA_USUARIO)
+    bloques = []
+    for (y, tam), txt, color in zip(CORR_MARCA, (nombres, usuario), (BLANCO, CORR_BLANCO2)):
+        if txt:
+            asc, may = _metricas(f["f_r"], tam, "400")
+            bloques.append((txt, tam, y - asc + may, f["f_r"], "400", color, CORR_X))
+    return bloques
+
+
+def _volanta_corr(volanta: str, f: dict) -> tuple:
+    """(cuerpo, texto) de la volanta: MAYÚSCULAS breves, un renglón que entre en la caja."""
+    texto = " ".join((volanta or "").split()).upper()
+    if not texto:
+        return 0, ""
+    tam, _alto, peso = CORR_VOLANTA
+    ancho = CORR_CAJA_ANCHO - 40
+    for c in range(tam, CORR_VOLANTA_MIN - 1, -1):
+        if _ancho_texto(texto, f["f_r"], c, peso) <= ancho:
+            return c, texto
+    palabras = texto.split()
+    while len(palabras) > 1 and _ancho_texto(" ".join(palabras), f["f_r"], CORR_VOLANTA_MIN,
+                                             peso) > ancho:
+        palabras.pop()
+    return CORR_VOLANTA_MIN, " ".join(palabras).rstrip(",;:·-–— ")
+
+
+def _tarjeta_corr(volanta: str, titular: str, f: dict, y: int) -> dict:
+    """Una TARJETA del prompt del usuario, con la volanta arriba en `y`:
+      · volanta: caja naranja #B35B18 opaca de 56 px de alto, ancho = texto + 40, mayúsculas
+        de 30 px en blanco, centradas;
+      · 12 px más abajo, la caja principal: grafito #202226 al 94 %, 784 px de ancho (X 100 a
+        884), relleno de 26 a los costados y 20 arriba y abajo, el titular en 54 px peso 400,
+        hasta dos renglones, cada renglón centrado sobre el eje X 492 y el bloque centrado en el
+        alto. Si no entra en dos renglones se achica; recién por debajo de 42, va en tres.
+    Esquinas rectas, sin borde. Devuelve `cajas`, `bloques`, `rect`, `titulo` y `volanta`."""
+    pad_x, pad_y = CORR_CAJA_PAD
+    cajas, bloques, y0 = [], [], y
+    v, vtxt = _volanta_corr(volanta, f)
+    if vtxt:
+        _t, valto, vpeso = CORR_VOLANTA
+        vw = min(CORR_CAJA_ANCHO, round(_ancho_texto(vtxt, f["f_r"], v, vpeso)) + 40)
+        cajas.append((CORR_X, y, CORR_X + vw, y + valto, CORR_NARANJA_CAJA))
+        asc, may = _metricas(f["f_r"], v, vpeso)
+        tope = y + (valto - may) / 2
+        bloques.append((vtxt, v, round(tope - asc + may), f["f_r"], vpeso, BLANCO,
+                        ("centro", CORR_X + vw // 2)))
+        y += valto + CORR_GAP
+    tam, minimo, peso = CORR_TITULAR
+    ft = dict(f, p_t=peso)
+    c, lineas = 0, []
+    if titular:
+        for maximo, piso in ((2, minimo), (3, 34)):
+            c, lineas = _titulo_en(titular, ft, CORR_CAJA_ANCHO - 2 * pad_x, maximo, tam, piso,
+                                   mayor=True)
+            if lineas and not lineas[-1].endswith("…"):
+                break
+    if lineas:
+        salto = round(c * CORR_SALTO)
+        alto = 2 * pad_y + len(lineas) * salto
+        cajas.append((CORR_X, y, CORR_X + CORR_CAJA_ANCHO, y + alto,
+                      CORR_GRAFITO[:3] + (round(255 * CORR_CAJA_OPACIDAD),)))
+        asc, may = _metricas(f["f_t"], c, peso)
+        tope = y + (alto - ((len(lineas) - 1) * salto + may)) / 2
+        for i, l in enumerate(lineas):
+            bloques.append((l, c, round(tope + i * salto - asc + may), f["f_t"], peso, BLANCO,
+                            ("centro", CORR_X + CORR_CAJA_ANCHO // 2)))
+        y += alto
+    return dict(cajas=cajas, bloques=bloques, rect=(CORR_X, y0, CORR_X + CORR_CAJA_ANCHO, y),
+                titulo=lineas, volanta=vtxt)
+
+
+def tarjeta_png(volanta: str, texto: str, y: int, lienzo: tuple, salida) -> Path:
+    """Una tarjeta SOLA (`_tarjeta_corr`, volanta arriba en `y`) en un PNG transparente del
+    tamaño del cuadro, para superponerla en su momento y con su fundido. Si no entra abajo (un
+    cuadro 4:5 y una tarjeta más alta que la del título), sube lo justo."""
+    from PIL import Image
+    f = _fuentes_placa()
+    t = _tarjeta_corr(volanta, texto, f, y)
+    sobra = t["rect"][3] - (lienzo[1] - 30)
+    if sobra > 0:
+        t = _tarjeta_corr(volanta, texto, f, y - sobra)
+    capa = Image.new("RGBA", tuple(lienzo), (0, 0, 0, 0))
+    pintar_placa(capa, dict(bloques=t["bloques"], cajas=t["cajas"]))
+    salida = Path(salida)
+    capa.save(salida)
+    return salida
+
+
+def _segundos_lectura(texto: str) -> float:
+    """Lo mínimo que una tarjeta tiene que quedar: 3 s o palabras / 2,5, lo que sea más."""
+    return max(TARJETA_MIN_SEG, len((texto or "").split()) / 2.5)
+
+
+def tarjetas_validas(propuestas: list, dur: float, volanta: str, titulo: str) -> list:
+    """Las tarjetas de un video solo, en limpio: [(desde, hasta, volanta, texto)], la primera
+    siempre la del título desde el segundo 0. Las que propone Gemini entran solo si dejan leer a
+    la anterior, si a ellas les queda tiempo de lectura antes del final y si no repiten texto.
+    Con una sola, el reel queda como siempre."""
+    lista = [(0.0, volanta, titulo)]
+    vistos = {(titulo or "").strip().lower()}
+    for p in sorted(propuestas or [], key=lambda p: float(p.get("desde") or 0)):
+        try:
+            desde = float(p.get("desde"))
+        except (TypeError, ValueError):
+            continue
+        texto = " ".join(str(p.get("texto", "")).split())
+        if not (3 <= len(texto.split()) <= 16) or texto.lower() in vistos:
+            continue
+        if desde < lista[-1][0] + _segundos_lectura(lista[-1][2]):
+            continue
+        if desde + _segundos_lectura(texto) > dur - 0.5:
+            continue
+        vistos.add(texto.lower())
+        lista.append((desde, " ".join(str(p.get("volanta", "")).split()), texto))
+    return [(d, (lista[i + 1][0] if i + 1 < len(lista) else dur), v, t)
+            for i, (d, v, t) in enumerate(lista)]
+
+
+def _plan_corr(volanta: str, titular: str, f: dict, w: int, h: int, grafica: bool, caras,
+               alto: int = 0) -> dict:
+    """Un cuadro de un reel de lo que llega por WhatsApp (ver `CORR_NARANJA`), foto o video.
+
+    · VERTICAL o cuadrado: a sangre en 1080x1920 (se recorta buscando a los sujetos) con el
+      encabezado arriba —sombreado mínimo y halo— y la tarjeta abajo, en Y 1058; si tapa una
+      cara, sube a Y 360.
+    · APAISADO: ENTERO, a todo el ancho, en un cuadro 1080x1350 (`alto` lo fuerza: en un pase
+      de fotos con alguna vertical, todas van en 1920), con la tarjeta debajo de la imagen y el
+      conjunto centrado en el alto. Si no hay lugar debajo (una casi cuadrada), la tarjeta va
+      sobre la parte de abajo de la imagen.
+    · AFICHE vertical: entero, con solo la marca, como siempre.
+    `lienzo` del plan dice el tamaño del cuadro."""
+    forma = forma_de(w, h, grafica)
+    w, h = max(1, w), max(1, h)
+    marca = _marca_corr(f)
+    plan = dict(forma=forma, bloques=list(marca), bajada=[], cover=False, fundido=(0, 0),
+                sombra_arriba=False, grafica=grafica, estilo="corresponsal", logo=CORR_LOGO,
+                halo=[], cajas=[], titulo=[], volanta="", lienzo=(1080, 1920),
+                texto=(CORR_X, CORR_MARCA[0][0], CORR_X + CORR_CAJA_ANCHO, CORR_MARCA[1][0] + 30))
+    if forma == "afiche":
+        esc = min(1080 / w, 1920 / h)
+        aw, ah = max(2, round(w * esc)) // 2 * 2, max(2, round(h * esc)) // 2 * 2
+        y = max(0, min(PLACA_AFICHE_TOPE, 1920 - ah))
+        plan.update(media=((1080 - aw) // 2, y, aw, ah), sombra_arriba=True, halo=list(marca))
+        return plan
+    if w / h > CORR_AR_APAISADO:
+        lienzo = alto or CORR_ALTO_APAISADO
+        am = round(1080 * h / w) // 2 * 2
+        alto_t = _tarjeta_corr(volanta, titular, f, 0)["rect"][3]
+        if lienzo >= 1920:
+            # En 9:16 (un pase con alguna vertical): la tarjeta en su lugar de siempre y la
+            # imagen justo arriba.
+            y_img = max(CORR_TOPE_IMAGEN, CORR_Y_ABAJO - 24 - am)
+            y_t = max(CORR_Y_ABAJO, y_img + am + 24)
+        else:
+            libre = lienzo - 40 - CORR_TOPE_IMAGEN
+            if am + 24 + alto_t <= libre:
+                y_img = CORR_TOPE_IMAGEN + (libre - am - 24 - alto_t) // 2
+                y_t = y_img + am + 24
+            else:
+                y_img = CORR_TOPE_IMAGEN
+                y_t = lienzo - 40 - alto_t
+        t = _tarjeta_corr(volanta, titular, f, y_t)
+        plan.update(media=(0, y_img, 1080, am), lienzo=(1080, lienzo), cajas=t["cajas"],
+                    bloques=marca + t["bloques"], titulo=t["titulo"], volanta=t["volanta"],
+                    texto=t["rect"])
+        return plan
+    media = (0, 0, 1080, 1920)
+    cover = abs(1080 * h / w - 1920) > 2
+    t = _tarjeta_corr(volanta, titular, f, CORR_Y_ABAJO)
+    cabezas = _caras_en_cuadro(caras, w, h, media, cover)
+    if cabezas and _cuanto_tapa(t["rect"], cabezas) > 0.15:
+        arriba = _tarjeta_corr(volanta, titular, f, CORR_Y_ARRIBA)
+        if _cuanto_tapa(arriba["rect"], cabezas) < _cuanto_tapa(t["rect"], cabezas):
+            logger.info("La tarjeta abajo tapaba una cara: va arriba (Y 360).")
+            t = arriba
+    plan.update(media=media, cover=cover, sombra_arriba=True, halo=list(marca),
+                cajas=t["cajas"], bloques=marca + t["bloques"], titulo=t["titulo"],
+                volanta=t["volanta"], texto=t["rect"])
+    return plan
+
+
 def plan_placa(volanta: str, titular: str, resumen: str, w: int, h: int, *,
-               grafica: bool = False, modo_texto: str = "", caras=None) -> dict:
+               grafica: bool = False, modo_texto: str = "", caras=None,
+               estilo: str = "", alto: int = 0) -> dict:
     """TODO lo que va en un cuadro del reel estilo placa, según la FORMA del material
     (pedido del usuario 2026-09-26; ver `PLACA_VERTICAL_AR`):
 
@@ -1661,8 +1893,13 @@ def plan_placa(volanta: str, titular: str, resumen: str, w: int, h: int, *,
     Devuelve un dict con `forma`, `bloques` (todo el texto), `bajada` (sus renglones),
     `media=(x, y, ancho, alto)` (dónde va la imagen), `cover` (si hay que recortarla para
     llenar), `fundido=(arriba, abajo)`, `sombra_arriba` y `grafica`; en «pantalla», además,
-    `cajas`, `halo`, `banda`, `titulo`, `volanta` y `texto` (el rectángulo que ocupa)."""
+    `cajas`, `halo`, `banda`, `titulo`, `volanta` y `texto` (el rectángulo que ocupa).
+
+    `estilo="corresponsal"` (lo que llega por WhatsApp, 2026-10-03): `_plan_corr`, igual para
+    fotos y videos; `alto` fuerza el alto del cuadro en un pase de fotos (ver ahí)."""
     f = _fuentes_placa()
+    if estilo == "corresponsal":
+        return _plan_corr(volanta, titular, f, w, h, grafica, caras, alto)
     forma = forma_de(w, h, grafica)
     modo = modo_texto or forma
     marca, fin_marca = _marca_bloques(f)
@@ -1815,7 +2052,7 @@ def placa_png(plan: dict, salida) -> Path | None:
         return None
     try:
         from PIL import Image, ImageDraw
-        lienzo = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
+        lienzo = Image.new("RGBA", tuple(plan.get("lienzo") or (1080, 1920)), (0, 0, 0, 0))
         pintar_placa(lienzo, plan)
         salida = Path(salida)
         salida.parent.mkdir(parents=True, exist_ok=True)
@@ -1910,13 +2147,26 @@ def sombrear_arriba(lienzo) -> None:
         lienzo.paste(negro.convert("RGB"), (0, 0), alfa)
 
 
+def _x_renglon(campo) -> tuple:
+    """(x, anchor, centrado) del 7º campo de un renglón: `True` = centrado en el cuadro (lo
+    usaba el estilo anterior), `("centro", x)` = centrado sobre el eje x (las cajas de los
+    corresponsales), un NÚMERO = la x de su margen izquierdo, `False` = `PLACA_MX`."""
+    if campo is True:
+        return 540, "ma", True
+    if isinstance(campo, tuple) and campo and campo[0] == "centro":
+        return int(campo[1]), "ma", True
+    if isinstance(campo, (int, float)) and not isinstance(campo, bool) and campo:
+        return int(campo), "la", False
+    return PLACA_MX, "la", False
+
+
 def dibujar_bloques(dib, bloques) -> None:
     """Dibuja los renglones que arma `plan_placa` sobre un ImageDraw."""
-    for texto, cuerpo, y, fuente, peso, color, centrado in bloques:
+    for texto, cuerpo, y, fuente, peso, color, campo in bloques:
         f = _tipo(fuente, cuerpo, peso)
-        # `anchor="la"`: la `y` es el ascendente del renglón. Centrado (lo usaba el estilo
-        # anterior) ancla por el medio y la x pasa a ser el centro.
-        x, anchor = (540, "ma") if centrado else (PLACA_MX, "la")
+        # `anchor="la"`: la `y` es el ascendente del renglón. Centrado ancla por el medio y la
+        # x pasa a ser el centro.
+        x, anchor, centrado = _x_renglon(campo)
         track = _interletra(peso)[1] * cuerpo
         if not track or centrado:
             # Sin sombra: contra el fondo liso solo ensuciaba el contorno de la letra.
@@ -2187,10 +2437,10 @@ def _hay_drawtext() -> bool:
     return True
 
 
-def _norm(idx: int, fps: int) -> str:
-    # Escala/encuadra cada imagen a 1080x1920 exactas y fija sar/fps para xfade.
-    return (f"[{idx}:v]scale=1080:1920:force_original_aspect_ratio=decrease,"
-            f"pad=1080:1920:(ow-iw)/2:(oh-ih)/2:white,setsar=1,fps={fps}[s{idx}]")
+def _norm(idx: int, fps: int, alto: int = 1920) -> str:
+    # Escala/encuadra cada imagen a 1080x`alto` exactas y fija sar/fps para xfade.
+    return (f"[{idx}:v]scale=1080:{alto}:force_original_aspect_ratio=decrease,"
+            f"pad=1080:{alto}:(ow-iw)/2:(oh-ih)/2:white,setsar=1,fps={fps}[s{idx}]")
 
 
 # Frases con las que ffmpeg nombra lo que salió mal. Las suyas van al PRINCIPIO del
@@ -2627,7 +2877,10 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
                 texto_placa: tuple | None = None,
                 color_fondo: str = "",
                 fondo_placa: Path | None = None,
-                capa_texto: Path | None = None) -> None:
+                capa_texto: Path | None = None,
+                logo_geo: tuple | None = None,
+                alto: int = 1920,
+                tarjetas: list | None = None) -> None:
     """Arma el reel vertical en UNA sola pasada de ffmpeg (un único re-encode, para
     no pagar el doble de CPU en la nube): fondo borroso + video + logo + firma, y
     al final la placa de cierre concatenada. Si `recorte` (w,h,x,y) viene dado, primero
@@ -2652,7 +2905,8 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
     # ESTILO PLACA: el texto va arriba y la imagen FULL BLEED abajo, fundida con el fondo
     # por su borde de arriba. Sin placa, la imagen ocupa el cuadro entero como siempre.
     ym = texto_placa[1] if texto_placa else 0
-    mh = texto_placa[3] if texto_placa else 1920        # alto REAL de la imagen
+    # `alto`: el del CUADRO. 1920 salvo los reels apaisados de los corresponsales (1350).
+    mh = texto_placa[3] if texto_placa else alto        # alto REAL de la imagen
     # Ancho REAL. Es 1080 salvo cuando la imagen va ENTERA y es más alta que ancha: ahí entra
     # completa y más angosta, y a los costados queda el color del fondo.
     mw = (texto_placa[5] if (texto_placa and len(texto_placa) > 5) else 1080) or 1080
@@ -2667,7 +2921,7 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
         # no hace falta sumar un input ni un generador `color` infinito. Y de paso nos ahorramos
         # el `boxblur`, que era con diferencia el filtro más caro de la cadena.
         if tiene_filtro("drawbox"):
-            relleno = (f"scale=1080:1920,drawbox=x=0:y=0:w=1080:h=1920:"
+            relleno = (f"scale=1080:{alto},drawbox=x=0:y=0:w=1080:h={alto}:"
                        f"color={_color_fondo(color_fondo)}@1:t=fill")
         else:
             # Misma historia que `drawtext` (2026-09-17): no todas las builds traen todo, y la
@@ -2675,8 +2929,8 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
             # ninguna librería externa, así que esto no debería pasar nunca — pero si pasa, el
             # reel sale con el fondo borroso de antes en vez de no salir.
             logger.warning("Este ffmpeg NO trae «drawbox»: el fondo de la placa va borroso.")
-            relleno = ("scale=1080:1920:force_original_aspect_ratio=increase,"
-                       "crop=1080:1920,boxblur=luma_radius=40:luma_power=1")
+            relleno = (f"scale=1080:{alto}:force_original_aspect_ratio=increase,"
+                       f"crop=1080:{alto},boxblur=luma_radius=40:luma_power=1")
         vf = f"{pre}{v0}split=2[bg][fg];[bg]{relleno},setsar=1[bgb]"
         if fondo_placa:
             # Carbón con humo (2026-09-25). Es una imagen FIJA: `overlay` repite su único
@@ -2702,7 +2956,7 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
     elif encuadre:
         # FULL BLEED clásico: el video LLENA el cuadro 9:16, sin franjas ni fondo borroso.
         nw, nh, cx, cy = encuadre
-        vf = f"{pre}{v0}scale={nw}:{nh},setsar=1,crop=1080:1920:{cx}:{cy}[v]"
+        vf = f"{pre}{v0}scale={nw}:{nh},setsar=1,crop=1080:{alto}:{cx}:{cy}[v]"
     else:
         # Fondo: el propio video escalado a llenar + recortado + desenfocado.
         # Primer plano: el video escalado a entrar dentro del cuadro. Se superponen.
@@ -2730,7 +2984,7 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
         idx = n_in
         inputs += ["-i", str(fondo)]
         n_in += 1
-        vf += (f";[{idx}:v]scale=1080:1920,format=rgba[fd];"
+        vf += (f";[{idx}:v]scale=1080:{alto},format=rgba[fd];"
                f"{out_label}[fd]overlay=0:0[vfd]")
         out_label = "[vfd]"
     if logo_png:
@@ -2738,9 +2992,8 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
         idx = n_in
         inputs += ["-i", str(logo_png)]
         n_in += 1
-        ancho = int(float(_cfg("REEL_LOGO_ANCHO", str(LOGO_ANCHO))))
-        mx = int(float(_cfg("REEL_LOGO_MARGEN_X", str(LOGO_MX))))
-        my = int(float(_cfg("REEL_LOGO_MARGEN_Y", str(LOGO_MY))))
+        # `logo_geo`: el estilo de los corresponsales lo lleva a 80 px de los bordes.
+        ancho, mx, my = logo_geo or _logo_geo()
         op = float(_cfg("REEL_LOGO_OPACIDAD", "0.92"))
         # `W-w` = ancho del cuadro menos el del logo. Se deja que lo calcule ffmpeg en vez
         # de hacer la cuenta acá: el `scale={ancho}:-1` define el alto —y por lo tanto el
@@ -2757,7 +3010,7 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
             idx = n_in
             inputs += ["-i", str(marca_png)]
             n_in += 1
-            vf += (f";[{idx}:v]scale=1080:1920,format=rgba[mk];"
+            vf += (f";[{idx}:v]scale=1080:{alto},format=rgba[mk];"
                    f"{out_label}[mk]overlay=0:0[vmk]")
             out_label = "[vmk]"
     if texto_placa:
@@ -2766,16 +3019,33 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
         idx = n_in
         inputs += ["-i", str(texto_placa[0])]
         n_in += 1
-        vf += (f";[{idx}:v]scale=1080:1920,format=rgba[pl];"
+        vf += (f";[{idx}:v]scale=1080:{alto},format=rgba[pl];"
                f"{out_label}[pl]overlay=0:0[vpl]")
         out_label = "[vpl]"
+    for png, desde, hasta, f_in, f_out in tarjetas or []:
+        # Tarjetas que cambian a lo largo del video (2026-10-03): cada una en su tramo, con un
+        # fundido de entrada/salida en alfa. La imagen se repite cuadro a cuadro (`-loop 1`)
+        # para que el fundido tenga cuadros sobre los que actuar.
+        idx = n_in
+        inputs += ["-loop", "1", "-framerate", str(fps), "-t", f"{hasta + 0.1:.3f}",
+                   "-i", str(png)]
+        n_in += 1
+        fd = FUNDIDO_TARJETA
+        cad = "format=rgba"
+        if f_in:
+            cad += f",fade=t=in:st={desde:.3f}:d={fd}:alpha=1"
+        if f_out:
+            cad += f",fade=t=out:st={max(desde, hasta - fd):.3f}:d={fd}:alpha=1"
+        vf += (f";[{idx}:v]{cad}[tj{idx}];{out_label}[tj{idx}]"
+               f"overlay=0:0:enable='between(t,{desde:.3f},{hasta:.3f})'[vtj{idx}]")
+        out_label = f"[vtj{idx}]"
     if capa_texto:
         # Reel de FOTOS: fondo e imagen ya vienen compuestos en cada cuadro; acá solo se le
         # pega el texto de arriba, una vez, para que quede QUIETO mientras las fotos pasan.
         idx = n_in
         inputs += ["-i", str(capa_texto)]
         n_in += 1
-        vf += (f";[{idx}:v]scale=1080:1920,format=rgba[ct];"
+        vf += (f";[{idx}:v]scale=1080:{alto},format=rgba[ct];"
                f"{out_label}[ct]overlay=0:0[vct]")
         out_label = "[vct]"
     if overlay:
@@ -2783,7 +3053,7 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
         idx = n_in
         inputs += ["-i", str(overlay)]
         n_in += 1
-        vf += (f";[{idx}:v]scale=1080:1920,format=rgba[ov];"
+        vf += (f";[{idx}:v]scale=1080:{alto},format=rgba[ov];"
                f"{out_label}[ov]overlay=0:0[vo]")
         out_label = "[vo]"
     if firma:
@@ -2807,8 +3077,14 @@ def _armar_reel(src: Path, salida: Path, *, audio: bool, max_seconds: float | No
     i_placa = n_in
     inputs += ["-loop", "1", "-t", str(seg_placa), "-i", str(placa)]
     n_in += 1
-    vf += (f";[{i_placa}:v]scale=1080:1920:force_original_aspect_ratio=decrease,"
-           f"pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1,fps={fps},"
+    if alto == 1920:
+        ajuste = ("scale=1080:1920:force_original_aspect_ratio=decrease,"
+                  "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black")
+    else:
+        # Cuadro más bajo (el 4:5 de lo apaisado): la placa —fondo crema parejo— se RECORTA en
+        # alto alrededor del logo, el @diarioyradio y las redes, en vez de achicarse con bandas.
+        ajuste = f"scale=1080:-2,crop=1080:{alto}:0:(ih-{alto})*0.42"
+    vf += (f";[{i_placa}:v]{ajuste},setsar=1,fps={fps},"
            f"fade=t=in:st=0:d=0.4,format=yuv420p[vplaca]")
     if con_audio:
         # La placa va con silencio; el audio del video se normaliza para que concat
@@ -2939,9 +3215,8 @@ def autochequeo() -> bool:
             for texto, cuerpo, y, fuente, peso, color, centrado in plan["bloques"]:
                 # La caja de TINTA de verdad (no la del renglón, que incluye el ascendente
                 # vacío por encima de las mayúsculas): lo que tapan las apps es lo que se ve.
-                x = 540 if centrado else PLACA_MX
-                bx0, by0, bx1, by1 = _tipo(fuente, cuerpo, peso).getbbox(
-                    texto, anchor="ma" if centrado else "la")
+                x, anchor, centrado = _x_renglon(centrado)
+                bx0, by0, bx1, by1 = _tipo(fuente, cuerpo, peso).getbbox(texto, anchor=anchor)
                 # Con interletrado negativo el renglón dibujado es más angosto que el que mide PIL.
                 bx1 += _interletra(peso)[1] * cuerpo * max(0, len(texto) - 1)
                 r = (x + bx0, y + by0, x + bx1, y + by1)
@@ -3014,6 +3289,67 @@ def autochequeo() -> bool:
             for f in fallas:
                 print(f"        → {f}")
 
+    print("\n=== reels de WhatsApp (corresponsales: cajas y 4:5 para lo apaisado) ===")
+    caja_logo_c = _logo_caja(CORR_LOGO)
+    for nombre, vol, tit, res in MAQUETAS:
+        for etiqueta, w, h, graf in (("vertical 9:16", 1080, 1920, False),
+                                     ("vertical 3:4", 960, 1280, False),
+                                     ("cuadrada", 1200, 1200, False),
+                                     ("apaisada 16:9", 1920, 1080, False),
+                                     ("apaisada 4:3", 1600, 1200, False),
+                                     ("casi cuadrada 5:4", 1250, 1000, False),
+                                     ("afiche 4:5", 1080, 1350, True)):
+            fallas = []
+            plan = plan_placa(vol, tit, res, w, h, grafica=graf, estilo="corresponsal")
+            lw, lh = plan["lienzo"]
+            piso = lh - (BANDA_SEGURO if lh >= 1920 else 30)
+            for texto, cuerpo, y, fuente, peso, color, campo in plan["bloques"]:
+                x, anchor, _c = _x_renglon(campo)
+                bx0, by0, bx1, by1 = _tipo(fuente, cuerpo, peso).getbbox(texto, anchor=anchor)
+                r = (x + bx0, y + by0, x + bx1, y + by1)
+                if r[0] < CORR_X - 4 or r[2] > CORR_X + CORR_CAJA_ANCHO + 4:
+                    fallas.append(f"«{texto[:22]}» se sale de X 100–884 ({r[0]:.0f}..{r[2]:.0f})")
+                if r[3] > piso:
+                    fallas.append(f"«{texto[:22]}» entra en la franja de abajo (y={r[3]})")
+                if caja_logo_c and not (r[2] <= caja_logo_c[0] or r[0] >= caja_logo_c[2]
+                                        or r[3] <= caja_logo_c[1] or r[1] >= caja_logo_c[3]):
+                    fallas.append(f"«{texto[:22]}» SE SUPERPONE CON EL ISOLOGO")
+            for x0, y0, x1, y1, _col in plan["cajas"]:
+                if x0 < CORR_X or x1 > CORR_X + CORR_CAJA_ANCHO or y1 > piso:
+                    fallas.append(f"una caja se sale de su zona ({x0},{y0})–({x1},{y1})")
+            titulo = plan["titulo"]
+            mx, my, mw, mh = plan["media"]
+            if plan["forma"] == "afiche":
+                if titulo or plan["cajas"]:
+                    fallas.append("un afiche lleva solo la marca")
+            else:
+                if vol and (not plan["volanta"] or plan["volanta"] != plan["volanta"].upper()):
+                    fallas.append(f"volanta mal: «{plan['volanta']}»")
+                if len(titulo) > (3 if len(tit) > 100 else 2) or any(
+                        l.endswith("…") for l in titulo):
+                    fallas.append(f"titular mal: {titulo}")
+                if plan["bajada"]:
+                    fallas.append("no lleva bajada")
+                if w > h:
+                    if (lw, lh) != (1080, CORR_ALTO_APAISADO):
+                        fallas.append(f"lo apaisado va en 1080x1350, no {lw}x{lh}")
+                    if plan["cover"] or mw != 1080 or abs(mh - 1080 * h / w) > 2:
+                        fallas.append(f"lo apaisado va ENTERO a todo el ancho ({mw}x{mh})")
+                    if my < (caja_logo_c[3] if caja_logo_c else 0):
+                        fallas.append(f"la imagen se mete debajo del isologo (y={my})")
+                    alto_t = plan["texto"][3] - plan["texto"][1]
+                    if (mh + 24 + alto_t <= lh - 40 - CORR_TOPE_IMAGEN
+                            and plan["texto"][1] < my + mh):
+                        fallas.append("la tarjeta tapa la imagen aunque había lugar debajo")
+                elif (lw, lh) != (1080, 1920) or (mw, mh) != (1080, 1920):
+                    fallas.append(f"lo vertical va a sangre en 1080x1920 ({mw}x{mh})")
+            ok = ok and not fallas
+            print(f"  {'OK  ' if not fallas else 'MAL '} {nombre} · {etiqueta}: {lw}x{lh}, "
+                  f"imagen {mw}x{mh} en y={my}, titular {len(titulo)} renglón/es, "
+                  f"tarjeta y={plan['texto'][1]}..{plan['texto'][3]}")
+            for f_ in fallas:
+                print(f"        → {f_}")
+
     print("\n=== reel de prueba (el camino completo, como en una publicación) ===")
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d)
@@ -3038,11 +3374,14 @@ def autochequeo() -> bool:
             print(f"  ROTO: no pude armar el video de prueba: {e}")
             return False
 
-        for etiqueta, fuente in (("video derecho", base), ("video de celular girado", giro),
-                                 ("video vertical 9:16", vert)):
-            salida = tmp / f"reel_{etiqueta.split()[1]}.mp4"
+        for etiqueta, fuente, estilo in (("video derecho", base, ""),
+                                         ("video de celular girado", giro, ""),
+                                         ("video vertical 9:16", vert, ""),
+                                         ("video corresponsal 16:9", base, "corresponsal"),
+                                         ("video corresponsal 9:16", vert, "corresponsal")):
+            salida = tmp / f"reel_{len(estilo)}_{etiqueta.split()[-1].replace(':', '')}.mp4"
             try:
-                to_vertical_reel(fuente, salida,
+                to_vertical_reel(fuente, salida, estilo=estilo,
                                  titular="Memi Mesplet y Seba Bravo presentan «Habladurías»",
                                  resumen="La función será el domingo 27 en Casa vieja San Luis.",
                                  volanta="Ciclo de teatro independiente",
@@ -3051,11 +3390,13 @@ def autochequeo() -> bool:
                 w, h = _dimensiones(salida)
                 dur = duration_seconds(salida) or 0
                 falta = ultimo_reel_degradado()
-                bien = (w, h) == (1080, 1920) and dur > 1 and not falta
+                # Lo apaisado de los corresponsales sale 4:5 (pedido 2026-10-03).
+                esperado = (1080, CORR_ALTO_APAISADO if etiqueta.endswith("16:9") else 1920)
+                bien = (w, h) == esperado and dur > 1 and not falta
                 ok = ok and bien
                 detalle = f"{w}x{h}, {dur:.1f}s"
-                if (w, h) != (1080, 1920):
-                    detalle += "  ← TENDRÍA QUE SER 1080x1920 (¿sale acostado?)"
+                if (w, h) != esperado:
+                    detalle += f"  ← TENDRÍA QUE SER {esperado[0]}x{esperado[1]}"
                 if falta:
                     detalle += f"  ← se cayó a «{falta}»"
                 print(f"  {'OK  ' if bien else 'MAL '} {etiqueta}: {detalle}")
@@ -3094,6 +3435,54 @@ def autochequeo() -> bool:
         except Exception as e:                                   # noqa: BLE001
             ok = False
             print(f"  ROTO tres fotos de formas distintas: {type(e).__name__}: {e}")
+        # Las mismas fotos con el estilo de los corresponsales: con una vertical van todas en
+        # 9:16; solo las apaisadas, en 4:5.
+        # Tarjetas que cambian a lo largo de un video solo, con fundido (2026-10-03).
+        try:
+            largo = tmp / "largo.mp4"
+            subprocess.run([exe, "-y", "-f", "lavfi", "-i",
+                            "testsrc=size=1080x1920:rate=25:duration=12", "-c:v", "libx264",
+                            "-pix_fmt", "yuv420p", str(largo)], capture_output=True, check=True)
+            salida = tmp / "reel_tarjetas.mp4"
+            to_vertical_reel(largo, salida, estilo="corresponsal", volanta="CHIVILCOY · PRUEBA",
+                             titular="Una prueba de tarjetas que cambian",
+                             tarjetas=[{"desde": 5.5, "volanta": "CONTEXTO",
+                                        "texto": "La segunda tarjeta entra con un fundido suave"}])
+            w, h = _dimensiones(salida)
+            falta = ultimo_reel_degradado()
+            bien = (w, h) == (1080, 1920) and not falta
+            ok = ok and bien
+            print(f"  {'OK  ' if bien else 'MAL '} video con tarjetas que cambian: {w}x{h}"
+                  + (f"  ← se cayó a «{falta}»" if falta else ""))
+        except Exception as e:                                   # noqa: BLE001
+            ok = False
+            print(f"  ROTO video con tarjetas que cambian: {type(e).__name__}: {e}")
+        # Montaje de varios videos (2026-10-03): paneles, capas y unión por cortes, sin Gemini.
+        try:
+            import montaje
+            ok = montaje.autoprueba(tmp) and ok
+        except Exception as e:                                   # noqa: BLE001
+            ok = False
+            print(f"  ROTO montaje: {type(e).__name__}: {e}")
+        for etiqueta, lote, esperado in (("fotos de corresponsal mezcladas", fotos, 1920),
+                                         ("fotos de corresponsal apaisadas", fotos[1:],
+                                          CORR_ALTO_APAISADO)):
+            try:
+                salida = tmp / f"reel_corr_{len(lote)}.mp4"
+                foto_a_reel(lote, salida, seg=14, overlay=False, estilo="corresponsal",
+                            titular="Un auto se incendió en la Ruta 30",
+                            resumen="La conductora resultó ilesa.", volanta="Chivilcoy · Accidente")
+                w, h = _dimensiones(salida)
+                dur = duration_seconds(salida) or 0
+                falta = ultimo_reel_degradado()
+                bien = (w, h) == (1080, esperado) and dur > 8 and not falta
+                ok = ok and bien
+                print(f"  {'OK  ' if bien else 'MAL '} {etiqueta}: {w}x{h}, {dur:.1f}s"
+                      + (f"  ← se cayó a «{falta}»" if falta else "")
+                      + ("" if h == esperado else f"  ← TENDRÍA QUE SER 1080x{esperado}"))
+            except Exception as e:                               # noqa: BLE001
+                ok = False
+                print(f"  ROTO {etiqueta}: {type(e).__name__}: {e}")
 
     print("\n" + ("=== TODO EN ORDEN: el próximo reel puede salir tranquilo ===" if ok else
                   "=== HAY ALGO MAL: mirá las líneas de arriba ==="))
@@ -3149,7 +3538,8 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
                      placa_final: bool = True, zocalo: str | None = None,
                      overlay: bool = True, titular: str = "", resumen: str = "",
                      volanta: str = "", cuerpo: str = "",
-                     compuesto=None) -> Path:
+                     compuesto=None, estilo: str = "", alto: int = 0,
+                     tarjetas: list | None = None) -> Path:
     """Convierte un video cualquiera a un reel vertical 1080x1920 (9:16).
 
     El video se escala ENTERO (sin recortar) y se centra sobre un fondo borroso de
@@ -3188,8 +3578,15 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
     `compuesto` avisa que el 'video' es un reel de FOTOS que ya viene armado cuadro por
     cuadro, con fondo, foto y texto (ver `foto_a_reel`): acá solo se le pegan el isologo y la
     placa de cierre. Si es un PNG, además se le pega ese texto encima.
+
+    `estilo="corresponsal"` (lo que llega por WhatsApp): el diseño de `_plan_corr`, con el
+    isologo en X 872 · Y 130. Lo apaisado sale en 1080x1350; `alto` es el de un reel de fotos
+    ya compuesto. `tarjetas` (las que propone Gemini para un video solo, ver
+    `tarjetas_validas`) hace que la tarjeta del título dé paso a otras a lo largo del video.
     """
     src, salida = Path(src), Path(salida)
+    logo_geo = CORR_LOGO if estilo == "corresponsal" else None
+    capas_tiempo = None
     logo_png = _asset("REEL_LOGO", LOGO_REEL) if logo else None
     placa_cierre = _asset("REEL_PLACA_FINAL", PLACA_FINAL) if placa_final else None
     seg_placa = float(_cfg("REEL_PLACA_SEG", str(PLACA_SEG)))
@@ -3198,10 +3595,11 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
         # Las fotos ya vienen compuestas a 1080x1920: NADA de buscar barras negras (el fondo
         # carbón las «tendría» arriba y abajo y las recortaría) ni de volver a encuadrar.
         base = dict(fondo=None, logo_png=logo_png, overlay=None, placa=placa_cierre,
-                    seg_placa=seg_placa, recorte=None, encuadre=(1080, 1920, 0, 0),
+                    seg_placa=seg_placa, recorte=None, encuadre=(1080, alto or 1920, 0, 0),
                     marca_texto=False, texto_placa=None, color_fondo="",
                     fondo_placa=None,
-                    capa_texto=compuesto if isinstance(compuesto, Path) else None)
+                    capa_texto=compuesto if isinstance(compuesto, Path) else None,
+                    logo_geo=logo_geo, alto=alto or 1920)
         escalones = [("completo", base)]
         if placa_cierre:
             escalones.append(("sin la placa de cierre", {**base, "placa": None, "seg_placa": 0.0}))
@@ -3248,13 +3646,14 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
     # muy comprimido tiene manchones planos que lo harían pasar por gráfica sin serlo.
     grafica = _es_grafica(src, salida.parent) if (_bandas_on() and es_foto) else False
     caras = None
+    espec = estilo == "corresponsal"
     if _bandas_on() and (titular or resumen or volanta):
         # A pantalla completa el titular va ENCIMA del video: se buscan las caras antes, para
-        # no taparlas (y el encuadre las reusa).
-        if forma_de(cont_w, cont_h, grafica) == "pantalla":
+        # no taparlas (y el encuadre las reusa). Con la especificación, toda foto va a sangre.
+        if forma_de(cont_w, cont_h, grafica) == "pantalla" or (espec and not grafica):
             caras = _caras_de_video(src, recorte, salida.parent)
         plan = plan_placa(volanta, titular, resumen, cont_w, cont_h, grafica=grafica,
-                          caras=caras)
+                          caras=caras, estilo=estilo)
         png = placa_png(plan, salida.parent / f"placa_{salida.stem}.png")
         if png:
             _x, y_media, ancho_foto, alto_foto = plan["media"]
@@ -3266,8 +3665,15 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
                                    arriba=arriba, abajo=abajo, ancho=ancho_foto)
                        if (arriba or abajo) else None)
             placa = (png, y_media, mascara, alto_foto, plan["cover"], ancho_foto)
-            fondo_pl = fondo_placa_png(salida.parent / f"fondo_placa_{salida.stem}.png",
-                                       color_fondo)
+            if plan.get("estilo") == "corresponsal" and tarjetas and plan.get("texto"):
+                capas_tiempo = _capas_en_el_tiempo(plan, tarjetas, src, salida, volanta,
+                                                   titular)
+            if plan.get("estilo") == "corresponsal":
+                # Grafito liso, sin humo.
+                color_fondo = "0x%02X%02X%02X" % CORR_GRAFITO[:3]
+            else:
+                fondo_pl = fondo_placa_png(salida.parent / f"fondo_placa_{salida.stem}.png",
+                                           color_fondo)
     # Con placa el marco naranja no va: el fondo es el carbón que pinta el filtergraph.
     fondo = None if placa else fondo_enmarcado(
         cont_w, cont_h, salida.parent / f"fondo_{salida.stem}.png")
@@ -3292,11 +3698,18 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
     marca = dict(fondo=fondo, logo_png=logo_png, overlay=overlay_png, placa=placa_cierre,
                  seg_placa=seg_placa, recorte=recorte, encuadre=encuadre,
                  marca_texto=logo, texto_placa=placa, color_fondo=color_fondo,
-                 fondo_placa=fondo_pl, capa_texto=None)
+                 fondo_placa=fondo_pl, capa_texto=None, logo_geo=logo_geo,
+                 alto=(plan.get("lienzo") or (1080, 1920))[1] if (plan and placa) else 1920)
     pelado = dict(fondo=None, logo_png=None, overlay=None, placa=None, seg_placa=0.0,
                   recorte=None, encuadre=None, marca_texto=False, texto_placa=None,
                   color_fondo="", fondo_placa=None, capa_texto=None)
     escalones = [("completo", marca)]
+    if capas_tiempo:
+        # Primero con las tarjetas que cambian; si eso molesta, la del título fija, como siempre.
+        base_png, lista = capas_tiempo
+        escalones = [("completo", {**marca, "texto_placa": (base_png,) + tuple(placa[1:]),
+                                   "tarjetas": lista}),
+                     ("sin las tarjetas que cambian", marca)]
     if placa_cierre:
         escalones.append(("sin la placa de cierre", {**marca, "placa": None, "seg_placa": 0.0}))
     if fondo_pl:
@@ -3313,7 +3726,7 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
                     "fondo_placa": None,
                     "fondo": fondo_enmarcado(cont_w, cont_h,
                                              salida.parent / f"fondo2_{salida.stem}.png"),
-                    "encuadre": None}
+                    "encuadre": None, "alto": 1920}
         escalones.append(("sin el texto de arriba", sin_placa))
     if fondo or logo_png or overlay_png or placa_cierre or recorte or placa:
         escalones.append(("pelado, sin ninguna marca", pelado))
@@ -3334,6 +3747,48 @@ def to_vertical_reel(src, salida, *, audio: bool = True, max_seconds: float | No
         + (f" + placa final {seg_placa:.0f}s" if marca.get("placa") else "")
     )
     return salida
+
+
+def a_9x16(src, salida) -> Path:
+    """Copia de un reel que NO es 9:16 (el 4:5 de lo apaisado de los corresponsales) llevada a
+    1080x1920 con bandas grafito arriba y abajo, para las HISTORIAS, que son 9:16. El audio va
+    tal cual."""
+    color = "0x%02X%02X%02X" % CORR_GRAFITO[:3]
+    cmd = [_ffmpeg(), "-y", "-i", str(src),
+           "-vf", f"scale=1080:-2,pad=1080:1920:0:(oh-ih)/2:color={color},setsar=1",
+           "-c:v", "libx264", "-preset", "veryfast", *_calidad(), "-pix_fmt", "yuv420p",
+           "-c:a", "copy", "-movflags", "+faststart", str(salida)]
+    _run_ffmpeg(cmd, "reel a 9:16 para historias")
+    return Path(salida)
+
+
+def _capas_en_el_tiempo(plan: dict, propuestas: list, src: Path, salida: Path, volanta: str,
+                        titular: str) -> tuple | None:
+    """Para un video solo con tarjetas que cambian: el PNG de la marca SOLA (va todo el video) y
+    una tarjeta por PNG con su tramo y sus fundidos. None si queda una sola tarjeta (el reel sale
+    como siempre, con la del título fija)."""
+    try:
+        dur = float(duration_seconds(src) or 0)
+        lista = tarjetas_validas(propuestas, dur, volanta, titular)
+        if len(lista) < 2:
+            return None
+        base = dict(plan, bloques=[b for b in plan["bloques"] if b[6] == CORR_X] or
+                    plan["bloques"][:2], cajas=[])
+        base_png = placa_png(base, salida.parent / f"placa_base_{salida.stem}.png")
+        lienzo = tuple(plan.get("lienzo") or (1080, 1920))
+        y = plan["texto"][1]
+        capas = []
+        for i, (desde, hasta, vol, txt) in enumerate(lista):
+            png = tarjeta_png(vol, txt, y, lienzo,
+                              salida.parent / f"tarjeta_{i}_{salida.stem}.png")
+            # Sin fundido al arrancar (el primer cuadro es la portada) ni al final del video.
+            capas.append((png, desde, hasta, i > 0, i + 1 < len(lista)))
+        logger.info(f"Tarjetas en el tiempo: {len(lista)} — "
+                    + " · ".join(f"{d:.0f}s «{t[:30]}»" for d, _h, _v, t in lista))
+        return base_png, capas
+    except Exception as e:                                       # noqa: BLE001
+        logger.warning(f"No pude armar las tarjetas en el tiempo ({e}); va la del título fija.")
+        return None
 
 
 def _foto_a_clip(foto, salida, seg: float, fps: int = 30) -> Path:
@@ -3452,7 +3907,8 @@ def _caras_de_foto(img) -> list:
 
 
 def _fotos_compuestas(fotos: list, base: Path, seg_cont: float, *, titular: str,
-                      resumen: str, volanta: str, work_dir: Path, clave: str) -> bool:
+                      resumen: str, volanta: str, work_dir: Path, clave: str,
+                      estilo: str = "") -> int:
     """Arma el 'video fuente' de un reel de FOTOS en el estilo placa: cada foto compuesta
     ENTERA por separado (`_placa_de_foto`, con su texto) y unidas con un fundido encadenado.
 
@@ -3460,10 +3916,23 @@ def _fotos_compuestas(fotos: list, base: Path, seg_cont: float, *, titular: str,
     a otra: si alguna foto es VERTICAL, todas usan el bloque vertical (volanta + titular en dos
     renglones, que entra en la franja chica de arriba). Los afiches van con solo la marca."""
     from PIL import Image
-    color = _color_dominante(fotos[0], work_dir)          # "" salvo REEL_PLACA_FONDO_AUTO=1
-    fondo_png = fondo_placa_png(work_dir / f"fondo_placa_{clave}.png", color)
-    fondo = (Image.open(fondo_png).convert("RGB") if fondo_png else
-             Image.new("RGB", (1080, 1920), _rgb_de(_color_fondo(color))))
+    alto = 1920
+    if estilo == "corresponsal":
+        # Si TODAS son apaisadas, el reel sale 4:5 (1080x1350); si no, 9:16 para todas. Grafito
+        # liso, sin humo.
+        try:
+            from PIL import ImageOps
+            todas = [ImageOps.exif_transpose(Image.open(f)).size for f in fotos]
+            if todas and all(w / max(1, h) > CORR_AR_APAISADO for w, h in todas):
+                alto = CORR_ALTO_APAISADO
+        except Exception:                                        # noqa: BLE001
+            pass
+        fondo = Image.new("RGB", (1080, alto), CORR_GRAFITO[:3])
+    else:
+        color = _color_dominante(fotos[0], work_dir)      # "" salvo REEL_PLACA_FONDO_AUTO=1
+        fondo_png = fondo_placa_png(work_dir / f"fondo_placa_{clave}.png", color)
+        fondo = (Image.open(fondo_png).convert("RGB") if fondo_png else
+                 Image.new("RGB", (1080, 1920), _rgb_de(_color_fondo(color))))
     miradas = []
     for i, f in enumerate(fotos):
         try:
@@ -3481,10 +3950,14 @@ def _fotos_compuestas(fotos: list, base: Path, seg_cont: float, *, titular: str,
     for i, (f, img, grafica) in enumerate(miradas):
         try:
             forma = formas[i]
-            # Las que se recortan o llevan texto encima buscan caras acá, una sola vez.
-            caras = _caras_de_foto(img) if forma in ("pantalla", "vertical") else None
+            # Las que se recortan o llevan texto encima buscan caras acá, una sola vez. Con
+            # la especificación TODAS se recortan (van a sangre), salvo los afiches.
+            recorta = (estilo == "corresponsal" and not grafica) or forma in ("pantalla",
+                                                                               "vertical")
+            caras = _caras_de_foto(img) if recorta else None
             plan = plan_placa(volanta, titular, resumen, img.width, img.height,
-                              grafica=grafica, modo_texto=modo, caras=caras)
+                              grafica=grafica, modo_texto=modo, caras=caras, estilo=estilo,
+                              alto=alto if estilo == "corresponsal" else 0)
             placas.append(_placa_de_foto(img, plan, fondo,
                                          work_dir / f"_placa_foto_{clave}_{i}.jpg",
                                          Path(f).name, caras=caras))
@@ -3495,14 +3968,14 @@ def _fotos_compuestas(fotos: list, base: Path, seg_cont: float, *, titular: str,
     # Solo FUNDIDO entre fotos: una cortina o un deslizamiento moverían el humo y el texto.
     por = (seg_cont if len(placas) == 1 else
            max(3.0, (seg_cont + (len(placas) - 1) * 0.6) / len(placas)))
-    build_slideshow(placas, base, seg=por, fade=0.6, transiciones=["fade"])
-    return True
+    build_slideshow(placas, base, seg=por, fade=0.6, transiciones=["fade"], alto=alto)
+    return alto
 
 
 def foto_a_reel(fotos, salida, *, seg: float | None = None, zocalo: str | None = None,
                 firma: str | None = None, overlay: bool = True,
                 titular: str = "", resumen: str = "", volanta: str = "",
-                cuerpo: str = "") -> Path:
+                cuerpo: str = "", estilo: str = "") -> Path:
     """Convierte una FOTO (o varias) de una nota en un reel vertical 9:16 con el MISMO
     criterio estético que los videos: logo arriba a la derecha, texto de la nota arriba y
     la placa de cierre «Seguinos en redes» al final.
@@ -3516,6 +3989,7 @@ def foto_a_reel(fotos, salida, *, seg: float | None = None, zocalo: str | None =
     `seg` es la DURACIÓN TOTAL apuntada del reel (default `REEL_FOTO_SEG`, 30s): se le
     descuentan los segundos de la placa para que el total quede en ~`seg`. Devuelve el .mp4.
     `cuerpo` ya no se usa (era el «pie» de las apaisadas, que reemplazó la bajada).
+    `estilo="corresponsal"`: lo que llega por WhatsApp (`_plan_corr`).
     """
     fotos = [Path(f) for f in fotos]
     salida = Path(salida)
@@ -3533,14 +4007,15 @@ def foto_a_reel(fotos, salida, *, seg: float | None = None, zocalo: str | None =
         try:
             listo = _fotos_compuestas(fotos, base, seg_cont, titular=titular, resumen=resumen,
                                       volanta=volanta, work_dir=salida.parent,
-                                      clave=salida.stem)
+                                      clave=salida.stem, estilo=estilo)
         except Exception as e:                                   # noqa: BLE001
             logger.error(f"No pude componer las fotos en el estilo placa ({e}); van con el "
                          f"armado de antes.")
         if listo:
             logger.info(f"Foto-reel: {len(fotos)} foto(s) compuestas una por una → "
-                        f"{seg_cont:.0f}s de contenido + placa")
-            return to_vertical_reel(base, salida, audio=False, firma=firma, compuesto=True)
+                        f"{seg_cont:.0f}s de contenido + placa (1080x{listo})")
+            return to_vertical_reel(base, salida, audio=False, firma=firma, compuesto=True,
+                                    estilo=estilo, alto=listo)
     if len(fotos) == 1:
         _foto_a_clip(fotos[0], base, seg_cont)
     else:
@@ -3554,7 +4029,7 @@ def foto_a_reel(fotos, salida, *, seg: float | None = None, zocalo: str | None =
                 f"(branding igual que los videos)")
     return to_vertical_reel(base, salida, audio=False, firma=firma, zocalo=zocalo or "",
                             overlay=overlay, titular=titular, resumen=resumen,
-                            volanta=volanta, es_foto=True)
+                            volanta=volanta, es_foto=True, estilo=estilo)
 
 
 def frame_at(src, seconds, salida) -> Path:
@@ -3906,7 +4381,7 @@ def _duraciones_parejas(n: int, seg: float, fade: float) -> list[float]:
 
 
 def build_slideshow(imagenes, salida, *, seg: float = 3.5, fade: float = 0.6, fps: int = 30,
-                    transiciones: list | None = None) -> Path:
+                    transiciones: list | None = None, alto: int = 1920) -> Path:
     """imagenes: lista de Paths (cada una una placa 9:16). Devuelve el .mp4.
 
     `seg` es la duración MEDIA por placa: el reparto real lo hace `_duraciones_parejas`
@@ -3924,7 +4399,7 @@ def build_slideshow(imagenes, salida, *, seg: float = 3.5, fade: float = 0.6, fp
     for p, d in zip(imgs, dur):
         inputs += ["-loop", "1", "-t", str(d), "-i", p]
 
-    fc = [_norm(i, fps) for i in range(n)]
+    fc = [_norm(i, fps, alto) for i in range(n)]
     if n == 1:
         last = "s0"
     else:

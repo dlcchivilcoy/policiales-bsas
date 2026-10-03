@@ -31,7 +31,9 @@ BOT_DEFAULT = Path(r"C:\Users\Diario\social_publisher")
 
 # Lo que usa el motor de reels. video.py es el motor; story_image.py pone las caras
 # (el encuadre que no corta cabezas); el resto son la marca y las letras.
-CODIGO = ["video.py", "story_image.py"]
+# montaje.py (03/10/2026) une varios videos de un corresponsal: policiales no lo usa, pero el
+# autochequeo del motor lo prueba, y sin él el chequeo da ROTO.
+CODIGO = ["video.py", "story_image.py", "montaje.py"]
 ASSETS = ["logo_reel.png", "placa_final.png", "fondo_reel.png", "overlay_reel.png", "logo.png"]
 FUENTES = "fonts"
 

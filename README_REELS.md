@@ -177,6 +177,21 @@ del caption de TikTok contando los hashtags.
 
 ## El video
 
+> **Al día (03/10/2026).** El motor es el del bot, copiado tal cual en `estetica_bot/`
+> (`tools/traer_estetica_bot.py`), con el estilo de sus reels de WhatsApp
+> (`estilo="corresponsal"`, ver `reels/reel_bot.py`): lo vertical a sangre en 9:16 y lo
+> horizontal ENTERO en 4:5 (1080x1350), con la volanta en caja naranja y el titular en caja
+> grafito. Facebook recibe el 4:5 en una copia 9:16 con bandas grafito (que tome un 4:5 por
+> API no está probado). `REEL_ESTILO_POLICIALES=""` vuelve al estilo placa. Lo de abajo es la
+> historia del primer diseño.
+>
+> **Sin logos de medio.** `reels/marcas.py` (Gemini) mira la foto y dos cuadros del video; si
+> traen el logo o la marca de agua del medio, NO se usan (no se borra ni se tapa la marca): va
+> la foto de la misma noticia publicada por otro medio, si está limpia, y si no, una imagen
+> ilustrativa propia (`reels/ilustrativa.py`: luces de patrullero, ruta, fuego o tormenta
+> dibujadas por código, o fotos propias del diario cargadas en `reels/banco/<grupo>/`).
+> `MARCAS=0` lo apaga.
+
 La pieza tiene **dos tramos** y un fundido de 0,6 s entre ellos:
 
 | Tramo | Dura | Qué se ve |

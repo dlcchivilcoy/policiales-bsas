@@ -467,7 +467,28 @@ def _estado_video_fb(vid: str, tok: str) -> dict:
     return (r.json() or {}).get("status") or {}
 
 
+def _para_facebook(pieza: dict, mp4: Path, carpeta: Path) -> Path:
+    """El reel en 9:16 para Facebook. Desde el 03/10 lo horizontal sale 4:5 (estilo de los
+    reels de WhatsApp del bot) y que los reels de Facebook por API tomen un 4:5 no está
+    probado: va una copia con bandas grafito (reel_bot.a_9x16_si_hace_falta). Nunca frena la
+    subida: si algo falla, va el original. FB_9X16=0 sube siempre el original."""
+    alto = (pieza.get("video") or {}).get("alto") or 0
+    if not alto or alto >= 1900 or (os.environ.get("FB_9X16") or "1").strip() == "0":
+        return mp4
+    try:
+        from reels import reel_bot as R
+        return R.a_9x16_si_hace_falta(mp4, carpeta / mp4.name, alto) or mp4
+    except Exception as e:                          # noqa: BLE001 — nunca frena la subida
+        print(f"  (Facebook: no se pudo pasar a 9:16: {type(e).__name__}: {e}; va el original)")
+        return mp4
+
+
 def publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
+    with tempfile.TemporaryDirectory(prefix="fb_") as t:
+        return _publicar_facebook(pieza, _para_facebook(pieza, mp4, Path(t)), url_web)
+
+
+def _publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
     """/{page}/video_reels en tres pasos: inicio → subir el archivo → publicar."""
     pid = os.environ.get("FACEBOOK_PAGE_ID", "")
     tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")

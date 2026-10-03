@@ -76,11 +76,16 @@ def proveedor_disponible() -> str:
 # =============================================================================
 
 def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
-                  timeout: int = 90) -> str:
+                  timeout: int = 90, imagenes: tuple = ()) -> str:
+    """`imagenes`: JPEG en bytes que van junto al texto (reels/marcas.py mira los logos)."""
+    import base64
     import httpx
+    partes = [{"text": material}] + [
+        {"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(b).decode("ascii")}}
+        for b in imagenes]
     payload = {
         "systemInstruction": {"parts": [{"text": system}]},
-        "contents": [{"role": "user", "parts": [{"text": material}]}],
+        "contents": [{"role": "user", "parts": partes}],
         "generationConfig": {
             "temperature": 0.3,
             # 900 era poco y cortaba. El guion completo son volanta + titular +
@@ -114,7 +119,7 @@ class _Cuota(RuntimeError):
     """Cupo agotado de ESA clave. Se rota, no se espera."""
 
 
-def redactar_gemini(system: str, material: str) -> tuple:
+def redactar_gemini(system: str, material: str, imagenes: tuple = ()) -> tuple:
     """Devuelve (texto, detalle). Rota claves ante 429 y después baja de modelo."""
     claves = _claves_gemini()
     if not claves:
@@ -124,7 +129,7 @@ def redactar_gemini(system: str, material: str) -> tuple:
     for modelo in MODELOS_GEMINI:
         for i, clave in enumerate(claves, 1):
             try:
-                texto = _pedir_gemini(system, material, clave, modelo)
+                texto = _pedir_gemini(system, material, clave, modelo, imagenes=imagenes)
                 return texto, f"gemini:{modelo} (clave {i}/{len(claves)})"
             except _Cuota as e:
                 ultimo = e

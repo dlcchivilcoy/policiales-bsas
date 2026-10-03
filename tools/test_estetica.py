@@ -56,13 +56,18 @@ chequear("peso de policiales: CRF 32 y techo 1500k (salvo que el entorno diga ot
 
 with tempfile.TemporaryDirectory(prefix="test_estetica_") as tmp:
     tmp = Path(tmp)
-    for forma, (w, h) in (("apaisada", (1600, 900)), ("vertical", (900, 1600))):
+    # Estilo de los reels de WhatsApp del bot (03/10): lo horizontal ENTERO en 4:5, lo
+    # vertical a sangre en 9:16.
+    for forma, (w, h), cuadro in (("apaisada", (1600, 900), (1080, 1350)),
+                                  ("vertical", (900, 1600), (1080, 1920))):
         salida_dir = tmp / forma
         salida_dir.mkdir()
         foto = foto_de_prueba(tmp / f"{forma}.jpg", w, h)
         info = R.armar(GUION, salida_dir / "reel.mp4", foto=foto)
         ancho, alto = m._dimensiones(Path(info["archivo"]))
-        chequear(f"{forma}: reel 1080x1920", (ancho, alto) == (1080, 1920))
+        chequear(f"{forma}: reel {cuadro[0]}x{cuadro[1]}", (ancho, alto) == cuadro)
+        chequear(f"{forma}: las medidas quedan en la pieza (Facebook las usa)",
+                 (info.get("ancho"), info.get("alto")) == cuadro)
         chequear(f"{forma}: dura ~{R.SEG_REEL_FOTO:.0f} s (8 de nota + 5 de cierre)",
                  abs(info["duracion"] - R.SEG_REEL_FOTO) < 1.0)
         chequear(f"{forma}: liviano (menos de 1 MB)", info["peso_kb"] < 1024)
@@ -71,8 +76,9 @@ with tempfile.TemporaryDirectory(prefix="test_estetica_") as tmp:
                  sorted(p.name for p in salida_dir.iterdir()) == ["reel.jpg", "reel.mp4"])
     fija = R.placa_fija(GUION, foto_de_prueba(tmp / "fija.jpg", 1600, 900), tmp / "fija_placa.jpg")
     from PIL import Image
-    chequear("vista rapida (--sin-video): cuadro de 1080x1920",
-             Image.open(fija).size == (1080, 1920))
+    chequear("vista rapida (--sin-video) de una apaisada: el mismo cuadro 4:5 del reel",
+             Image.open(fija).size == (1080, 1350))
+    chequear("el estilo es el de los reels de WhatsApp del bot", R.estilo() == "corresponsal")
 
 if "--rapido" not in sys.argv:
     print("\n--- autochequeo del propio bot (ffmpeg, filtros, letras, maquetas, reels) ---")
