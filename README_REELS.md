@@ -157,12 +157,16 @@ salía sin la Ñ o en punycode.
 ```
 {2 a 4 frases, CADA UNA en su propio párrafo, separadas por renglón en blanco}
 
-📰 Fuente: {medio} ({localidad})
-
-📲 Más noticias de {localidad} en {sitio}        ← cuando definas el dominio
+📲 Más noticias de {localidad} en {sitio}
 
 #{Localidad} #{TipoDeHecho} #{Tema} #BuenosAires  ← máx. 6, localidad PRIMERO
 ```
+
+**Sin fuente desde el 03/10/2026**, a pedido del editor: ni la línea «📰 Fuente» en los
+posteos ni «Fuente: … Ver la nota original» en la nota de la web. A cambio, el texto va
+reescrito de cero: el modelo no recibe el nombre del medio, y `guion.copia_del_original`
+mide las palabras seguidas iguales a la nota original. Con 10 o más se le pide a la IA
+que reescriba (una vez, con el tramo a la vista); si sigue en 15 o más, la pieza no sale.
 
 El hashtag de localidad va primero porque es el que trae a la gente del lugar. Se
 normaliza sin tildes ni eñes (`#Canuelas`, no `#Cañuelas`): los hashtags con caracteres

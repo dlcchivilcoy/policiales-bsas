@@ -11,8 +11,8 @@ Decisiones que no se ven en el código:
   La web la deja FUERA de la portada, de «Lo más leído» y del archivo general (diario_web,
   commit 73d9e14): son ~20-30 notas por día de otros pueblos y la portada es de Chivilcoy.
   Por eso la nota va ÚNICAMENTE a Región, nunca a «Inicio», y sin destacar.
-- El texto lo escribe la IA con palabras propias (NOTA_WEB del guion). Acá se agrega lo que
-  no puede faltar y no conviene dejarle al modelo: la FUENTE con el link a la nota original.
+- El texto lo escribe la IA reescrito de cero (NOTA_WEB del guion). Desde el 03/10/2026 la
+  nota NO lleva la fuente ni el link a la nota original, a pedido del editor.
 - La web (Astro) solo muestra videos de YouTube dentro de una nota, no los subidos a Wix:
   por eso el reel entra como el Short de Radio del Centro, y por eso YouTube se publica
   ANTES que la nota (ver reels/publicador.py).
@@ -88,14 +88,6 @@ def _parrafo(i: int, *partes) -> dict:
     return {"type": "PARAGRAPH", "id": f"p{i}", "nodes": list(partes)}
 
 
-def _fuente(pieza: dict) -> str:
-    medio = pieza.get("medio") or "un medio de la zona"
-    loc = pieza.get("localidad") or ""
-    if loc and loc.lower() not in medio.lower():
-        medio = f"{medio} ({loc})"
-    return medio
-
-
 def armar_borrador(pieza: dict, file_id: str = "", youtube_id: str = "",
                    member_id: str = "") -> dict:
     """El pedido para Wix, sin tocar la red (se prueba solo)."""
@@ -114,10 +106,6 @@ def armar_borrador(pieza: dict, file_id: str = "", youtube_id: str = "",
             "video": {"src": {"url": f"https://www.youtube.com/watch?v={youtube_id}"}}}})
     for i, p in enumerate(parrafos):
         nodos.append(_parrafo(i, _texto(p)))
-    fuente = [_texto(f"Fuente: {_fuente(pieza)}. ")]
-    if pieza.get("url_original"):
-        fuente.append(_texto("Ver la nota original", pieza["url_original"]))
-    nodos.append(_parrafo(len(parrafos), *fuente))
 
     resumen = " ".join(((pieza.get("guion") or {}).get("bajada") or (parrafos[:1] or [""])[0]).split())
     descripcion = resumen if len(resumen) <= 155 else resumen[:155].rsplit(" ", 1)[0] + "…"

@@ -456,6 +456,20 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         objeciones.append(f"No es del temario de policiales (según la IA): "
                           f"{g['fuera_de_temario']}")
 
+    # La cuarta: que no se note la copia (pedido del editor, 03/10). guion.guion_ia ya le
+    # pidió a la IA que reescribiera lo calcado; si aun así quedó una frase larga del medio,
+    # no sale. Un tramo más corto o el nombre del medio quedan como aviso.
+    copia = g.get("copia") or {}
+    if copia.get("racha", 0) >= G.UMBRAL_COPIA_BLOQUEO:
+        objeciones.append(f"El {copia['campo']} copia {copia['racha']} palabras seguidas de la "
+                          f"nota original («{copia['tramo'][:90]}»), aun después de pedir que "
+                          f"lo reescriba.")
+    elif copia.get("racha", 0) >= G.UMBRAL_COPIA:
+        avisos.append(f"El {copia['campo']} repite {copia['racha']} palabras seguidas del "
+                      f"original: «{copia['tramo'][:90]}».")
+    if copia.get("nombra_medio"):
+        avisos.append("El texto nombra al medio de origen.")
+
     apto = not objeciones
     pieza = {
         "orden": idx,
@@ -470,6 +484,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
         "guion": {k: g[k] for k in ("volanta", "titular", "bajada", "zocalo", "pie", "via")},
+        "copia": copia,
         "descripcion_tiktok": g["descripcion_final"],
         # Para la nota de la web (reels/web.py) y para elegir qué va a Instagram.
         "viral": g.get("viral", 5),

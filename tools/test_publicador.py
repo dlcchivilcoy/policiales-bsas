@@ -550,13 +550,13 @@ chequear("web: va SOLO a la sección Región (nunca a Inicio, la portada)", b1["
 chequear("web: no se destaca", b1["featured"] is False)
 tipos = [n["type"] for n in b1["richContent"]["nodes"]]
 chequear("web: foto, el Short de YouTube y el texto",
-         tipos[:2] == ["IMAGE", "VIDEO"] and tipos.count("PARAGRAPH") == 3)
+         tipos[:2] == ["IMAGE", "VIDEO"] and tipos.count("PARAGRAPH") == 2)
 chequear("web: el Short va como watch?v= (lo único que muestra la web)",
          b1["richContent"]["nodes"][1]["videoData"]["video"]["src"]["url"] == "https://www.youtube.com/watch?v=YT1")
-fuente = b1["richContent"]["nodes"][-1]["nodes"]
-chequear("web: cierra con la fuente y el link a la nota original",
-         "Medio Test" in fuente[0]["textData"]["text"]
-         and fuente[1]["textData"]["decorations"][0]["linkData"]["link"]["url"] == "https://medio.test/1")
+cuerpo_web = json.dumps(b1["richContent"], ensure_ascii=False)
+chequear("web: SIN la fuente ni el link a la nota original (pedido del editor, 03/10)",
+         "Medio Test" not in cuerpo_web and "Fuente" not in cuerpo_web
+         and "medio.test" not in cuerpo_web)
 chequear("Facebook: el posteo lleva el link a la nota",
          meta.fb_finish[0]["description"].count("📲 Nota completa: https://www.diariolacampaña.com.ar/n/") == 1)
 chequear("Instagram y YouTube NO cambian su texto (el link es para Facebook)",
