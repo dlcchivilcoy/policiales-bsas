@@ -1,9 +1,9 @@
 {
-  "cuando": "2026-10-03T15:09:07.048548+00:00",
-  "cuando_ar": "2026-10-03 12:09",
+  "cuando": "2026-10-03T16:10:32.850726+00:00",
+  "cuando_ar": "2026-10-03 13:10",
   "ventana": "hoy",
-  "candidatas": 201,
-  "finales": 27,
+  "candidatas": 236,
+  "finales": 30,
   "medios": [
     {
       "dominio": "25digital.com.ar",
@@ -93,7 +93,7 @@
       "dominio": "infoarrecifes.com",
       "nombre": "InfoArrecifes",
       "localidad": "Arrecifes",
-      "candidatas": 0,
+      "candidatas": 1,
       "error": null
     },
     {
@@ -198,7 +198,7 @@
       "dominio": "infocanuelas.com",
       "nombre": "InfoCañuelas",
       "localidad": "Canuelas",
-      "candidatas": 19,
+      "candidatas": 18,
       "error": null
     },
     {
@@ -212,6 +212,13 @@
       "dominio": "noticiasruta5.com",
       "nombre": "Noticias Ruta 5",
       "localidad": "Carlos Casares",
+      "candidatas": 1,
+      "error": null
+    },
+    {
+      "dominio": "tejedornoticias.com.ar",
+      "nombre": "Tejedor Noticias",
+      "localidad": "Carlos Tejedor",
       "candidatas": 1,
       "error": null
     },
@@ -254,7 +261,7 @@
       "dominio": "diariodemocracia.com",
       "nombre": "Diario Democracia",
       "localidad": "Chacabuco",
-      "candidatas": 5,
+      "candidatas": 6,
       "error": null
     },
     {
@@ -269,6 +276,41 @@
       "nombre": "Radio Lider Chacabuco",
       "localidad": "Chacabuco",
       "candidatas": 4,
+      "error": null
+    },
+    {
+      "dominio": "elojoenlinea.com.ar",
+      "nombre": "El Ojo Ameghinense",
+      "localidad": "Florentino Ameghino",
+      "candidatas": 0,
+      "error": null
+    },
+    {
+      "dominio": "infoarenales.com",
+      "nombre": "Info Arenales",
+      "localidad": "General Arenales",
+      "candidatas": 3,
+      "error": null
+    },
+    {
+      "dominio": "lacalledepinto.com.ar",
+      "nombre": "La Calle de General Pinto",
+      "localidad": "General Pinto",
+      "candidatas": 0,
+      "error": null
+    },
+    {
+      "dominio": "viamontedigital.com.ar",
+      "nombre": "Viamonte Digital",
+      "localidad": "General Viamonte",
+      "candidatas": 0,
+      "error": null
+    },
+    {
+      "dominio": "distritointerior.com.ar",
+      "nombre": "Distrito Interior",
+      "localidad": "General Villegas",
+      "candidatas": 1,
       "error": null
     },
     {
@@ -296,7 +338,7 @@
       "dominio": "junindigital.com",
       "nombre": "Junín Digital",
       "localidad": "Junin",
-      "candidatas": 1,
+      "candidatas": 29,
       "error": null
     },
     {
@@ -506,7 +548,7 @@
       "dominio": "infosalto.com.ar",
       "nombre": "InfoSalto",
       "localidad": "Salto",
-      "candidatas": 0,
+      "candidatas": 2,
       "error": null
     },
     {
@@ -562,7 +604,7 @@
       "dominio": "infocanuelas.com",
       "nombre": "InfoCañuelas",
       "localidad": "San Miguel del Monte",
-      "candidatas": 11,
+      "candidatas": 10,
       "error": null
     },
     {
