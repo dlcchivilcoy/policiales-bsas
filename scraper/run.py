@@ -311,7 +311,7 @@ AVISO_IA = """
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Scraper de policiales — 28 localidades bonaerenses")
+    ap = argparse.ArgumentParser(description="Scraper de policiales — localidades bonaerenses del padron")
     # "hoy" es el default a proposito: las 3 pasadas tienen que traer la actualidad
     # del dia y nada mas. Un numero de horas sirve para probar sin esperar al dia
     # siguiente, pero no es lo que corre en la nube.

@@ -559,4 +559,134 @@ APORTADOS = [
         'medido_el': '2026-09-23',
         # 11 de 16 notas del listado son policiales (0.55/dia medido). Medido el 2026-09-23.
     },
+
+    # ═════════════════════════════════════════════════════════════════════════
+    #  Tanda del 03/10/2026 — la Cuarta Seccion electoral, aportada por el editor.
+    #
+    #  14 medios de 12 partidos. 3 ya estaban (Casares Online, Rumores de Pehuajo
+    #  y Diario Noticias Pehuajo); los otros 11 se sondearon con el mismo criterio
+    #  del 23/09 (al menos 3 notas y 2 policiales) y entraron estos 6, cada uno de
+    #  un partido que el padron no tenia. Todos se leen por HTTP pelado, sin
+    #  navegador, asi que sirven en la nube.
+    #
+    #  Quedaron afuera, con motivo:
+    #    - alem.news NO es Leandro N. Alem de Buenos Aires: es Alem de MISIONES
+    #      (titula Posadas, Obera, Martires, Wanda). Mismo error que montenoticias
+    #      y losprincipios. No va ni a candidatos.json, para que una regeneracion
+    #      no lo meta solo.
+    #    - hipolitoyrigoyen.gob.ar es la Municipalidad: transparencia, salud y
+    #      actos, 0 policiales, y la ultima novedad era de julio.
+    #    - casareshoy.com.ar: 0 policiales de 33 notas, como el 23/09. Su seccion
+    #      «seguridad» es de impuestos («Seguridad para contribuyentes»).
+    #    - rivadaviaonline.com.ar (Rivadavia, Buenos Aires: titula America): sin
+    #      RSS ni seccion de policiales, 1 policial de 40 notas.
+    #    - masternews.com.ar (Rivadavia, Buenos Aires: Sansinena, Gonzalez Moreno,
+    #      America): sin seccion de policiales, 1 policial en ~25 titulares de la
+    #      portada, y el servidor cortaba la conexion a cada rato.
+    #  Rivadavia queda en candidatos.json para una futura re-medicion.
+    # ═════════════════════════════════════════════════════════════════════════
+
+    {
+        'localidad': 'Carlos Tejedor',
+        'nombre': 'Tejedor Noticias',
+        'dominio': 'tejedornoticias.com.ar',
+        'base': 'https://tejedornoticias.com.ar',
+        'seccion': 'https://tejedornoticias.com.ar/category/policiales/feed/',
+        'seccion_rss': 'https://tejedornoticias.com.ar/category/policiales/feed/',
+        'rss': 'https://tejedornoticias.com.ar/feed/',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 10,
+        'medido_policiales': 6,
+        'medido_el': '2026-10-03',
+        # 6 de 10 notas de la seccion son policiales, pero la seccion se carga poco
+        # (la ultima, del 5/8): el feed general y la portada son los que traen lo del
+        # dia. Localidad verificada: se presenta como «el portal de noticias
+        # Tejedorenses» y titula Timote, que es del partido.
+    },
+    {
+        'localidad': 'Florentino Ameghino',
+        'nombre': 'El Ojo Ameghinense',
+        'dominio': 'elojoenlinea.com.ar',
+        'base': 'https://elojoenlinea.com.ar',
+        'seccion': 'https://elojoenlinea.com.ar/category/policiales/feed/',
+        'seccion_rss': 'https://elojoenlinea.com.ar/category/policiales/feed/',
+        'rss': 'https://elojoenlinea.com.ar/feed/',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 10,
+        'medido_policiales': 7,
+        'medido_el': '2026-10-03',
+        # 7 de 10 policiales (0.10/dia medido). Comparte red con La Calle de General
+        # Pinto: buena parte de las notas regionales salen en los dos con la misma
+        # hora. No se repiten en los reels porque la memoria compara la huella del
+        # titulo, no solo la URL.
+    },
+    {
+        'localidad': 'General Arenales',
+        'nombre': 'Info Arenales',
+        'dominio': 'infoarenales.com',
+        'base': 'https://infoarenales.com',
+        'seccion': 'https://infoarenales.com/tag/policiales/feed/',
+        'seccion_rss': 'https://infoarenales.com/tag/policiales/feed/',
+        'rss': 'https://infoarenales.com/feed/',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 15,
+        'medido_policiales': 9,
+        'medido_el': '2026-10-03',
+        # 9 de 15 policiales; la ultima del 25/09. El feed general es casi todo de
+        # agencia (nacionales e internacionales), asi que lo local viene de la
+        # etiqueta de policiales. Titula General Arenales y Arribenos.
+    },
+    {
+        'localidad': 'General Pinto',
+        'nombre': 'La Calle de General Pinto',
+        'dominio': 'lacalledepinto.com.ar',
+        'base': 'https://lacalledepinto.com.ar',
+        'seccion': 'https://lacalledepinto.com.ar/category/policiales/feed/',
+        'seccion_rss': 'https://lacalledepinto.com.ar/category/policiales/feed/',
+        'rss': 'https://lacalledepinto.com.ar/feed/',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 10,
+        'medido_policiales': 7,
+        'medido_el': '2026-10-03',
+        # 7 de 10 policiales (0.11/dia medido). Misma red que El Ojo Ameghinense.
+    },
+    {
+        'localidad': 'General Viamonte',
+        'nombre': 'Viamonte Digital',
+        'dominio': 'viamontedigital.com.ar',
+        'base': 'https://viamontedigital.com.ar',
+        'seccion': 'https://viamontedigital.com.ar/noticias/policiales/feed/',
+        'seccion_rss': 'https://viamontedigital.com.ar/noticias/policiales/feed/',
+        'rss': 'https://viamontedigital.com.ar/feed/',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 5,
+        'medido_policiales': 5,
+        'medido_el': '2026-10-03',
+        # Poco flujo: 5 policiales en 10 meses. Entra porque es el unico medio de
+        # General Viamonte que se midio y cumple el piso. OJO con la ruta: el
+        # descubridor eligio /tag/policiales/feed/, que existe pero quedo parada en
+        # 2023; la seccion de verdad es /noticias/policiales/.
+    },
+    {
+        'localidad': 'General Villegas',
+        'nombre': 'Distrito Interior',
+        'dominio': 'distritointerior.com.ar',
+        'base': 'https://www.distritointerior.com.ar',
+        'seccion': 'https://www.distritointerior.com.ar/policiales/feed/',
+        'seccion_rss': 'https://www.distritointerior.com.ar/policiales/feed/',
+        'rss': 'https://www.distritointerior.com.ar/feed',
+        'alcance': 'local',
+        'navegador': False,
+        'medido_notas': 10,
+        'medido_policiales': 8,
+        'medido_el': '2026-10-03',
+        # El mas fuerte de la tanda: 8 de 10 policiales, 0.93/dia medido. Se
+        # presenta como «Noticias de Gral. Villegas y Gral. Pinto»; casi todo lo
+        # que titula es de Villegas, por eso va a esa localidad.
+    },
 ]

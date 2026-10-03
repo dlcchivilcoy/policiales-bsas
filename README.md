@@ -1,7 +1,7 @@
-# Policiales BSAS — scraper de policiales de 28 localidades bonaerenses
+# Policiales BSAS — scraper de policiales de 34 localidades bonaerenses
 
 Junta noticias de **policiales, siniestros viales, incendios, robos, homicidios y
-suicidios** de 55 medios digitales de 28 localidades de la provincia de Buenos Aires.
+suicidios** de 94 medios digitales de 34 localidades de la provincia de Buenos Aires.
 
 Reusa el motor de scraping de **NoticIAs Chivilcoy** (RSS + raspado HTML +
 `fetch_article_details` + Claude Haiku), pero generalizado: acá no hay un parser por

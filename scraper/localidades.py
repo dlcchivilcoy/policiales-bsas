@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Nombres de las 28 localidades, bien escritos.
+"""Nombres de las localidades del padrón, bien escritos.
 
 El padrón interno (`data/candidatos.json`, `scraper/medios.py`) usa las claves SIN
 tildes ni eñes, porque son claves y así no se rompen al comparar ni al armar nombres de
@@ -40,6 +40,13 @@ NOMBRES = {
     "las flores": "Las Flores",
     "navarro": "Navarro",
     "roque perez": "Roque Pérez",
+    # Cuarta Sección, desde el 03/10/2026
+    "carlos tejedor": "Carlos Tejedor",
+    "florentino ameghino": "Florentino Ameghino",
+    "general arenales": "General Arenales",
+    "general pinto": "General Pinto",
+    "general viamonte": "General Viamonte",
+    "general villegas": "General Villegas",
 }
 
 
