@@ -101,11 +101,13 @@ BONO_VIDEO = 4
 # FACEBOOK (verificado en la doc de la Reels Publishing API el 27/09/2026): «Reels API is
 # limited to 30 API-published posts within a 24-hour moving period», POR PÁGINA. La página
 # es la MISMA del bot del diario, que publica hasta 15 reels por día (máximo medido en 24 h
-# móviles, 18-26/09: 17). Así que policiales va con 2 por pasada, los más virales (6
-# pasadas = 12 por día; 12 + 17 = 29), y además frena si la página ya tiene
-# FB_TOPE_REELS - FB_MARGEN_BOT reels en las últimas 24 h, para no dejar al bot sin lugar.
+# móviles, 18-26/09: 17). Policiales iba con 2 por pasada (6 pasadas = 12 por día; 12 + 17 =
+# 29); desde el 03/10 van 5, pedido del editor. Con 5 el que frena es el freno de la página:
+# si ya tiene FB_TOPE_REELS - FB_MARGEN_BOT reels en las últimas 24 h, no va (para no dejar
+# al bot sin lugar). El 01/10 la página ya llegaba a 31-32 con 2 por pasada: más por pasada
+# adelanta los reels a las primeras pasadas del día, no suma reels al día.
 FB_TOPE_REELS = 30
-FB_POR_PASADA_DEFAULT = 2
+FB_POR_PASADA_DEFAULT = 5
 FB_MARGEN_BOT = 4
 
 # TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
@@ -1310,7 +1312,8 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
 
     # La nota de la web va con Facebook (es para su link). Sin credenciales de Wix no se
     # frena la pasada: sale el reel igual, con el link general del diario.
-    web_on = WEB.activa() and "facebook" in redes
+    # La web acompaña a YouTube y a Facebook (03/10): sale si la pasada publica en alguna.
+    web_on = WEB.activa() and ("facebook" in redes or "youtube" in redes)
     if web_on and publicar and WEB.faltantes():
         print(f"  Web: faltan {', '.join(WEB.faltantes())}: esta pasada sale sin notas en la web")
         web_on = False
@@ -1412,7 +1415,11 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         fila["hora"] = ultimo.isoformat(timespec="minutes")
 
         url_web = ((hecho.get("web") or {}).get("url") or "") if web_on else ""
-        falta_web = (web_on and "facebook" in pendientes
+        # La NOTA de la web va con cada reel que sale en YOUTUBE (pedido del editor, 03/10:
+        # más notas para Google), no solo con los de Facebook. Facebook la sigue llevando
+        # porque su posteo enlaza a la nota.
+        yt_hecho = (hecho.get("youtube") or {}).get("estado") in ("ok", "sin_confirmar")
+        falta_web = (web_on and ("facebook" in pendientes or "youtube" in pendientes or yt_hecho)
                      and (hecho.get("web") or {}).get("estado") != "ok")
         pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)]
         for red in pasos:

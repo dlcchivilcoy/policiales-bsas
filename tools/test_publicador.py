@@ -56,6 +56,9 @@ os.environ.pop("YT_SHORTS_POR_DIA", None)
 os.environ.pop("IG_RESERVA_BOT", None)
 os.environ["NOTAS_WEB"] = "0"          # la nota de la web se prueba aparte (sección 16)
 os.environ["YT_SIN_PLACA"] = "0"       # el corte de la placa se prueba aparte (sección 22)
+# Las pruebas de CÓMO se elige ponen más piezas que el tope de Facebook: se fija en 2 (el
+# tope de antes) para que siga habiendo que elegir. El valor por defecto (5) se prueba en 18.
+os.environ["FB_POR_PASADA"] = "2"
 os.environ.pop("IG_PRUEBA_POR_PASADA", None)
 TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
@@ -701,13 +704,19 @@ shutil.rmtree(base)
 
 
 # --- 18. Facebook: 30 reels por día POR PÁGINA, compartidos con el bot (27/09) ----------
-chequear("Facebook: 2 por pasada por defecto", PUB.fb_por_pasada() == 2)
+os.environ.pop("FB_POR_PASADA")
+chequear("Facebook: 5 por pasada por defecto (pedido del editor, 03/10)", PUB.fb_por_pasada() == 5)
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7, 5, 6, 8])
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
+chequear("...de 6 piezas, a Facebook van 5",
+         [f["facebook"]["estado"] for f in inf["piezas"]].count("ok") == 5 and len(meta.fb_finish) == 5)
+shutil.rmtree(base)
 os.environ["FB_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("FB_POR_PASADA=1: a Facebook solo la más viral",
          [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "omitida"] and len(meta.fb_finish) == 1)
-os.environ.pop("FB_POR_PASADA")
+os.environ["FB_POR_PASADA"] = "2"
 shutil.rmtree(base)
 
 llena = [{"created_time": "2026-09-26T0%d:%02d:00+0000" % (1 + i // 60, i % 60), "description": f"Reel del bot {i}"}
@@ -1062,6 +1071,36 @@ except ValueError:
 chequear("ningun pedido va a TikTok en ningun caso",
          not any("tiktok" in r.url.host for r in meta.pedidos))
 shutil.rmtree(base)
+
+
+# --- 25. La nota de la web va con cada reel de YOUTUBE (pedido del editor, 03/10) ---------
+os.environ["NOTAS_WEB"] = "1"
+os.environ["FB_POR_PASADA"] = "1"
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube", "facebook"), publicar=True)
+chequear("web: una nota por cada reel de YouTube, aunque a Facebook vaya uno solo",
+         [f["facebook"]["estado"] for f in inf["piezas"]].count("ok") == 1
+         and [(f.get("web") or {}).get("estado") for f in inf["piezas"]] == ["ok", "ok", "ok"]
+         and meta.wix_publicados == 3)
+shutil.rmtree(base)
+os.environ["FB_POR_PASADA"] = "2"
+
+base, carpeta, reloj, meta = preparar()
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("web: también en una pasada que solo publica YouTube",
+         [(f.get("web") or {}).get("estado") for f in inf["piezas"]] == ["ok", "ok"])
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_yt(
+    [ROBO + ("robo", "Junín")],
+    [("2026-09-26T08:00:00Z", "Detuvieron a dos hombres por el robo de una camioneta | Junín",
+      "La policía detuvo a dos hombres, recuperó la camioneta sustraída y secuestró herramientas en la vivienda.")])
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+chequear("web: el hecho que YouTube no repite (ya está en el canal) tampoco se repite en la web",
+         inf["piezas"][0]["youtube"]["estado"] == "omitida" and "web" not in inf["piezas"][0]
+         and meta.wix_publicados == 0)
+shutil.rmtree(base)
+os.environ["NOTAS_WEB"] = "0"
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

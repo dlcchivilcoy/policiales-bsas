@@ -155,7 +155,8 @@ jobs:
       # API no está documentado (el 27/09 rebotó con 11-13 en 24 h). La variable del repo
       # IG_PRUEBA_POR_PASADA, si se carga, pisa el horario con un número fijo.
       #
-      # NOTA EN LA WEB (27/09): cada reel tiene su nota en la sección «Región» de la web
+      # NOTA EN LA WEB (27/09; desde el 03/10, una por cada reel que sale en YouTube): cada
+      # reel tiene su nota en la sección «Región» de la web
       # (fuera de la portada) y el posteo de Facebook lleva su link. Orden por pieza:
       # YouTube → nota (con el Short adentro) → Facebook → Instagram. Se apaga con la
       # variable NOTAS_WEB=0. Credenciales de Wix = las del bot del diario.
@@ -180,7 +181,8 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
           IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
-          # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 2 por pasada.
+          # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 5 por pasada
+          # (03/10); el freno de 26 en 24 h de la página manda (ver publicador.py).
           FB_POR_PASADA: ${{ vars.FB_POR_PASADA }}
           # La nota de la web (reels/web.py): Wix del diario.
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
