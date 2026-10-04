@@ -181,9 +181,12 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
           IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
-          # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 5 por pasada
-          # (03/10); el freno de 26 en 24 h de la página manda (ver publicador.py).
+          # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 2 por pasada,
+          # los de más potencial de viralización (03/10).
           FB_POR_PASADA: ${{ vars.FB_POR_PASADA }}
+          # El resto de los Shorts va a la página como ENLACE (título + link a la nota web).
+          # Variable del repo FB_YOUTUBE=0 lo apaga.
+          FB_YOUTUBE: ${{ vars.FB_YOUTUBE }}
           # La nota de la web (reels/web.py): Wix del diario.
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
           WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}

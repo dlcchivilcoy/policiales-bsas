@@ -82,7 +82,9 @@ class Meta:
     def __init__(self, ig_publicar=None, ig_estados=None, fb_inicio=200,
                  yt_canal="UCRADIO", yt_sin_cupo=False, yt_cortes=0, ig_cupo=(4, 100), ig_tope_prueba=None, ig_recientes=None,
                  wix_falla=None, wix_existe="", wix_foto_falla=False, fb_recientes=None,
-                 fb_lista_falla=False, yt_miniatura=200, yt_recientes=None):
+                 fb_lista_falla=False, yt_miniatura=200, yt_recientes=None, fb_link=200):
+        self.fb_link = fb_link            # status del POST /feed (el enlace del Short)
+        self.fb_links = []                # el cuerpo de cada enlace publicado en la página
         self.yt_recientes = list(yt_recientes or [])   # (publishedAt, título, descripción) del canal
         self.pedidos = []
         self.contenedores = []            # los params de cada POST /media
@@ -213,6 +215,11 @@ class Meta:
                 if resp[0] < 400:
                     self.publicado.add(uno["creation_id"])
                 return httpx.Response(resp[0], json=resp[1])
+            if ruta == "/v26.0/PAGINA/feed":
+                if self.fb_link >= 400:
+                    return httpx.Response(self.fb_link, json={"error": {"message": "no se pudo", "code": 1}})
+                self.fb_links.append(uno)
+                return httpx.Response(200, json={"id": f"PAGINA_{len(self.fb_links)}"})
             if ruta == "/v26.0/PAGINA/video_reels" and m == "GET":
                 if self.fb_lista_falla:
                     return httpx.Response(400, json={"error": {"message": "no"}})
@@ -705,12 +712,51 @@ shutil.rmtree(base)
 
 # --- 18. Facebook: 30 reels por día POR PÁGINA, compartidos con el bot (27/09) ----------
 os.environ.pop("FB_POR_PASADA")
-chequear("Facebook: 5 por pasada por defecto (pedido del editor, 03/10)", PUB.fb_por_pasada() == 5)
+chequear("Facebook: 2 por pasada por defecto (03/10: se probó 5 y se volvió a 2)", PUB.fb_por_pasada() == 2)
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7, 5, 6, 8])
-inf = silencio(PUB.publicar_lote, carpeta, ("facebook",), publicar=True)
-chequear("...de 6 piezas, a Facebook van 5",
-         [f["facebook"]["estado"] for f in inf["piezas"]].count("ok") == 5 and len(meta.fb_finish) == 5)
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=True)
+fb = [f["facebook"]["estado"] for f in inf["piezas"]]
+chequear("...de 6 piezas, como reel van las 2 MÁS VIRALES (9 y 8)",
+         fb == ["omitida", "ok", "omitida", "omitida", "omitida", "ok"] and len(meta.fb_finish) == 2)
+chequear("...y el motivo de las otras lo dice", "más virales" in inf["piezas"][0]["facebook"]["detalle"])
+links = [(f.get("fb_youtube") or {}).get("estado") for f in inf["piezas"]]
+chequear("...las otras 4 van a la página como ENLACE del Short; las 2 del reel no se repiten",
+         links == ["ok", None, "ok", "ok", "ok", None] and len(meta.fb_links) == 4)
+chequear("...el enlace es el Short, y el texto: el título en una oración y el link a la nota",
+         all(x["link"].startswith("https://youtube.com/shorts/") for x in meta.fb_links)
+         and meta.fb_links[0]["message"].split("\n\n")[0].endswith(".")
+         and meta.fb_links[0]["message"].count("\n\n") == 1)
 shutil.rmtree(base)
+
+os.environ.update({"NOTAS_WEB": "1"})
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=True)
+chequear("enlace del Short: con la nota de la web, la segunda oración es su link",
+         "📲 Leé la nota completa: https://www.diariolacampaña.com.ar/n/" in meta.fb_links[0]["message"])
+shutil.rmtree(base)
+os.environ["NOTAS_WEB"] = "0"
+
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7], Meta(fb_link=500))
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=True)
+chequear("enlace del Short que falla: queda anotado y no frena el resto",
+         inf["piezas"][0]["fb_youtube"]["estado"] == "fallo"
+         and all(f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
+shutil.rmtree(base)
+
+os.environ["FB_YOUTUBE"] = "0"
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=True)
+chequear("FB_YOUTUBE=0 lo apaga", not meta.fb_links and all("fb_youtube" not in f for f in inf["piezas"]))
+os.environ.pop("FB_YOUTUBE")
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=False)
+chequear("simulando: el enlace sale simulado y no se toca la página",
+         [(f.get("fb_youtube") or {}).get("estado") for f in inf["piezas"]].count("simulado") == 1
+         and not meta.fb_links)
+shutil.rmtree(base)
+os.environ["FB_POR_PASADA"] = "2"
 os.environ["FB_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
@@ -804,11 +850,12 @@ def preparar_horas(filas):
 base, carpeta, reloj, meta = preparar_horas([("bragado", 9, "13:00"), ("pergamino", 5, "15:00"),
                                              ("lobos", 6, "15:10")])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("van las 2 MÁS NUEVAS aunque la vieja sea más viral y cercana",
-         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"]
-         and [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
+chequear("Instagram: van las 2 MÁS NUEVAS aunque la vieja sea más viral y cercana",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
 chequear("...y el motivo dice cuánto más vieja era",
-         "2,2 h más vieja" in inf["piezas"][0]["facebook"]["detalle"])
+         "2,2 h más vieja" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("Facebook, en cambio (03/10): las 2 MÁS VIRALES, aunque sean de horas antes",
+         [f["facebook"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok"])
 shutil.rmtree(base)
 
 os.environ["IG_PRUEBA_POR_PASADA"] = "1"

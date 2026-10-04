@@ -74,11 +74,12 @@ GRAPH = f"https://graph.facebook.com/{VERSION_GRAPH}"
 
 REDES = ("instagram", "facebook", "youtube")
 NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouTube",
-              "web": "Web"}
+              "web": "Web", "fb_youtube": "FB enlace"}
 # El ORDEN dentro de cada pieza (27/09): YouTube primero, porque la nota de la web lleva
 # el Short adentro (la web solo muestra videos de YouTube); después la NOTA de la web,
-# porque Facebook lleva su link; después Facebook e Instagram.
-ORDEN = ("youtube", "web", "facebook", "instagram")
+# porque Facebook lleva su link; después Facebook (el reel, o el enlace del Short si la
+# pieza no va como reel, 03/10) e Instagram.
+ORDEN = ("youtube", "web", "facebook", "fb_youtube", "instagram")
 
 # INSTAGRAM DE PRUEBA: N por pasada (pedido del editor, 27/09). Van las MÁS NUEVAS, sea
 # cual sea el tema (reels/frescura.py); la cercanía a Chivilcoy (reels/cercania.py) y el
@@ -101,13 +102,14 @@ BONO_VIDEO = 4
 # FACEBOOK (verificado en la doc de la Reels Publishing API el 27/09/2026): «Reels API is
 # limited to 30 API-published posts within a 24-hour moving period», POR PÁGINA. La página
 # es la MISMA del bot del diario, que publica hasta 15 reels por día (máximo medido en 24 h
-# móviles, 18-26/09: 17). Policiales iba con 2 por pasada (6 pasadas = 12 por día; 12 + 17 =
-# 29); desde el 03/10 van 5, pedido del editor. Con 5 el que frena es el freno de la página:
-# si ya tiene FB_TOPE_REELS - FB_MARGEN_BOT reels en las últimas 24 h, no va (para no dejar
-# al bot sin lugar). El 01/10 la página ya llegaba a 31-32 con 2 por pasada: más por pasada
-# adelanta los reels a las primeras pasadas del día, no suma reels al día.
+# móviles, 18-26/09: 17). Así que policiales va con 2 por pasada (6 pasadas = 12 por día;
+# 12 + 17 = 29), los de MÁS POTENCIAL DE VIRALIZACIÓN (03/10), y además frena si la página
+# ya tiene FB_TOPE_REELS - FB_MARGEN_BOT reels en las últimas 24 h, para no dejar al bot sin
+# lugar. (El 03/10 se probó subir a 5 y se volvió a 2: el 01/10 la página ya llegaba a 31-32
+# con 2, así que 5 adelantaba los reels a la mañana sin sumar al día.) El resto de los Shorts
+# va a Facebook como publicación con el enlace (ver FB_YOUTUBE), que no cuenta para ese tope.
 FB_TOPE_REELS = 30
-FB_POR_PASADA_DEFAULT = 5
+FB_POR_PASADA_DEFAULT = 2
 FB_MARGEN_BOT = 4
 
 # TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
@@ -483,6 +485,41 @@ def _para_facebook(pieza: dict, mp4: Path, carpeta: Path) -> Path:
     except Exception as e:                          # noqa: BLE001 — nunca frena la subida
         print(f"  (Facebook: no se pudo pasar a 9:16: {type(e).__name__}: {e}; va el original)")
         return mp4
+
+
+# EL SHORT EN FACEBOOK COMO ENLACE (pedido del editor, 03/10): cada Short que sale en YouTube
+# y NO va a Facebook como reel se publica en la página como LINK, con el título en una
+# oración y el enlace a la nota de la web en otra. Facebook arma la tarjeta con la miniatura
+# del video (verificado en el bot, yt_a_facebook.py). Los que van como reel no se repiten
+# como enlace en la misma página. No es un reel: no cuenta para el tope de 30 reels por día
+# de la Reels API. FB_YOUTUBE=0 lo apaga.
+def fb_youtube_activo() -> bool:
+    return (os.environ.get("FB_YOUTUBE") or "1").strip() != "0"
+
+
+def texto_link_youtube(pieza: dict, url_web: str = "") -> str:
+    titular = " ".join(((pieza.get("guion") or {}).get("titular") or "").split()).rstrip(" .")
+    if url_web:
+        enlace = f"📲 Leé la nota completa: {url_web}"
+    else:                                   # la nota de la web no salió: la línea de siempre
+        pueblo = _pueblo(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
+        enlace = f"📲 Más noticias de {pueblo or 'la región'} en {WEB.SITIO}"
+    return f"{titular}.\n\n{enlace}"
+
+
+def publicar_link_youtube(pieza: dict, url_youtube: str, url_web: str = "") -> dict:
+    """/{page}/feed con `link` = el Short y `message` = título + enlace a la nota."""
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    try:
+        r = _pedir("POST", f"{GRAPH}/{pid}/feed", tok,
+                   data={"link": url_youtube, "message": texto_link_youtube(pieza, url_web)})
+    except _Cortado as e:
+        # Un posteo NO se reintenta a ciegas: pudo haber salido.
+        raise SinConfirmar(f"Facebook (enlace del Short): {e}")
+    if r.status_code >= 400:
+        raise FalloRed(_error(r, "Facebook (enlace del Short)"))
+    return {"id": str((r.json() or {}).get("id") or ""), "link": url_youtube}
 
 
 def publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
@@ -1148,10 +1185,12 @@ def _ya_en_youtube(pieza: dict, recientes: list) -> str:
 
 
 def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: list,
-                      donde: str) -> tuple:
-    """(claves elegidas, {clave: motivo}) para `red`: las `n` MÁS NUEVAS de la pasada que
-    todavía no salieron ahí (viral y cercanía desempatan entre notas de minutos de
-    diferencia, ver reels/frescura.py), salteando los hechos que ya están en la cuenta."""
+                      donde: str, por: str = "frescura") -> tuple:
+    """(claves elegidas, {clave: motivo}) para `red`, salteando los hechos que ya están en la
+    cuenta. `por="frescura"` (Instagram): las `n` MÁS NUEVAS de la pasada (viral y cercanía
+    desempatan entre notas de minutos de diferencia, ver reels/frescura.py). `por="viral"`
+    (Facebook, desde el 03/10): las `n` con MÁS POTENCIAL DE VIRALIZACIÓN según la IA; la
+    cercanía y el video suman, y la hora solo desempata."""
     candidatas = [p for p, _ in listas
                   if ((ledger.get(_clave(p)) or {}).get(red) or {}).get("estado")
                   not in ("ok", "sin_confirmar")]
@@ -1172,17 +1211,19 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
         return BONO_VIDEO if p.get("tenia_video") else 0
 
     def puntos(p):
-        return ((p.get("viral") or 5) + CER.bono_pieza(p) + video(p)
-                - FR.PUNTOS_POR_HORA * edad[id(p)])
+        castigo = FR.PUNTOS_POR_HORA * edad[id(p)] if por == "frescura" else 0
+        return (p.get("viral") or 5) + CER.bono_pieza(p) + video(p) - castigo
 
     validas.sort(key=lambda p: (puntos(p), -edad[id(p)], p.get("puntaje") or 0), reverse=True)
     elegidas = {_clave(p) for p in validas[:n]}
     for p in validas[n:]:
         extra = CER.bono_pieza(p)
-        motivos[_clave(p)] = (f"no está entre las {n} de la pasada: van las más nuevas "
-                              f"(esta, {FR.hace(edad[id(p)])}; viral {p.get('viral') or 5}/10"
-                              + (f" +{extra} por cercanía" if extra else "")
-                              + (f" +{video(p)} por video" if video(p) else "") + ")")
+        detalle = (f"viral {p.get('viral') or 5}/10" + (f" +{extra} por cercanía" if extra else "")
+                   + (f" +{video(p)} por video" if video(p) else ""))
+        motivos[_clave(p)] = (
+            f"no está entre las {n} de la pasada: van las más nuevas "
+            f"(esta, {FR.hace(edad[id(p)])}; {detalle})" if por == "frescura" else
+            f"no está entre las {n} más virales de la pasada (esta: {detalle})")
     return elegidas, motivos
 
 
@@ -1192,12 +1233,14 @@ def _hay_candidatas(listas: list, ledger: dict, red: str) -> bool:
 
 
 def elegir_facebook(listas: list, ledger: dict, publicar: bool) -> tuple:
-    """Facebook: las FB_POR_PASADA más virales (ver FB_TOPE_REELS arriba)."""
+    """Facebook: las FB_POR_PASADA con más potencial de viralización (pedido del editor,
+    03/10), no las más nuevas como Instagram. Ver FB_TOPE_REELS arriba."""
     n = fb_por_pasada()
     recientes = []
     if publicar and n and _hay_candidatas(listas, ledger, "facebook"):
         recientes = [_huella_posteo(t) for _, t in (_reels_facebook(HORAS_INSTAGRAM_RECIENTE) or [])]
-    return _elegir_por_viral(listas, ledger, "facebook", n, recientes, "la página de Facebook")
+    return _elegir_por_viral(listas, ledger, "facebook", n, recientes, "la página de Facebook",
+                             por="viral")
 
 
 def _lugar_en_facebook():
@@ -1319,6 +1362,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         web_on = False
     if web_on:
         informe["redes"].append("web")
+    # El Short como enlace en Facebook, para las piezas que no van como reel (03/10).
+    fb_link_on = fb_youtube_activo() and "facebook" in redes and "youtube" in redes
+    if fb_link_on:
+        informe["redes"].append("fb_youtube")
     ig_elegidas, ig_motivos = set(), {}
     if "instagram" in redes:
         ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
@@ -1421,12 +1468,31 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         yt_hecho = (hecho.get("youtube") or {}).get("estado") in ("ok", "sin_confirmar")
         falta_web = (web_on and ("facebook" in pendientes or "youtube" in pendientes or yt_hecho)
                      and (hecho.get("web") or {}).get("estado") != "ok")
-        pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)]
+        # El enlace del Short en Facebook: solo si la pieza NO va (ni fue) a Facebook como reel.
+        va_como_reel = ("facebook" in pendientes
+                        or (hecho.get("facebook") or {}).get("estado") in ("ok", "sin_confirmar"))
+        falta_link = (fb_link_on and not va_como_reel and ("youtube" in pendientes or yt_hecho)
+                      and (hecho.get("fb_youtube") or {}).get("estado") not in ("ok", "sin_confirmar"))
+        pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)
+                 or (r == "fb_youtube" and falta_link)]
         for red in pasos:
             if red == "web":
                 res = _paso_web(pieza, mp4, carpeta, fila, hecho, publicar)
                 if res.get("estado") in ("ok", "simulado"):
                     url_web = res.get("url") or ""
+            elif red == "fb_youtube":
+                yt = fila.get("youtube") if "youtube" in fila else hecho.get("youtube")
+                url_yt = (yt or {}).get("url") or ""
+                if not publicar and (yt or {}).get("estado") == "simulado":
+                    res = {"estado": "simulado", "texto": texto_link_youtube(pieza, url_web)}
+                elif (yt or {}).get("estado") != "ok" or not url_yt:
+                    # Sin Short no hay enlace. No se anota: si el Short sale en otra corrida,
+                    # el enlace puede salir ahí.
+                    fila[red] = {"estado": "omitida", "detalle": "el Short no salió"}
+                    _mostrar(red, fila[red])
+                    continue
+                else:
+                    res = _intentar(publicar_link_youtube, pieza, url_yt, url_web)
             elif not publicar:
                 res = _simular(red, pieza, mp4, url_web)
             elif red == "instagram":
@@ -1489,6 +1555,8 @@ def _mostrar(red: str, res: dict):
     est = res.get("estado")
     if est == "simulado" and red == "web":
         print(f"  {nombre:<9} saldria la nota en Región: «{res.get('titulo')}» → {res.get('url')}")
+    elif est == "simulado" and red == "fb_youtube":
+        print(f"  {nombre:<9} saldria el enlace del Short: «{(res.get('texto') or '').splitlines()[0]}»")
     elif est == "simulado":
         if red == "instagram":
             extra = f" · reel de PRUEBA {res.get('prueba')}"
