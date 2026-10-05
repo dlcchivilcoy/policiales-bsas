@@ -28,8 +28,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
 from reels import frescura as FR
 from reels import guion as G
-from reels import ilustrativa as IL
-from reels import marcas as MAR
 from reels import reel_bot as R
 from reels import limpieza as L
 from reels import ledger as LD
@@ -365,71 +363,6 @@ def material(nota: dict) -> dict:
     return dict(nota, cuerpo=texto[:1500]) if texto else nota
 
 
-# Sin marcas de medio en el reel (pedido del editor, 03/10/2026). Ver reels/marcas.py.
-SEGUNDOS_CUADROS_MARCA = (0.5, 3.0)   # el logo de un video suele estar fijo: dos cuadros alcanzan
-MAX_ALTERNATIVAS = 3                  # fotos de otros medios a probar antes de la ilustrativa
-
-
-def _clip_sin_marca(clip: Path, tmp_dir: Path, idx: int) -> tuple:
-    """(clip o None, aviso, ¿tenía marca?). Mira dos cuadros del video en una sola consulta."""
-    cuadros = [c for c in (R.cuadro_de_video(clip, tmp_dir / f"reel_marca_{idx}_{k}.jpg", s)
-                           for k, s in enumerate(SEGUNDOS_CUADROS_MARCA)) if c]
-    if not MAR.activo():
-        return clip, "", False
-    r = MAR.revisar(cuadros)
-    if r["marca"]:
-        return None, f"El video del medio trae una marca ({r['que']}): no se usa.", True
-    if r["marca"] is None:
-        return clip, f"No se pudo revisar si el video trae marca: {r['que']}.", False
-    return clip, "", False
-
-
-def _imagen_sin_marca(nota: dict, foto, url: str, tmp_dir: Path, idx: int) -> tuple:
-    """(foto, url, ¿ilustrativa?, avisos): la imagen del reel, sin la marca de ningún medio.
-
-    1. La foto de la nota, si no trae marca (o si no se pudo revisar: el control es un
-       filtro y no deja la pasada sin reels).
-    2. La foto de la MISMA noticia publicada por otro medio (`alternativas`, ver
-       _con_alternativas), solo si se confirmó que no trae marca.
-    3. Una imagen ilustrativa propia (reels/ilustrativa.py).
-    `foto` llega en None cuando la nota no tenía foto y el video se cayó por la marca."""
-    avisos = []
-    if foto:
-        if not MAR.activo():
-            return foto, url, False, []
-        r = MAR.revisar([foto])
-        if r["marca"] is None:
-            return foto, url, False, [f"No se pudo revisar si la foto trae marca: {r['que']}."]
-        if not r["marca"]:
-            return foto, url, False, []
-        avisos.append(f"La foto del medio trae una marca ({r['que']}): no se usa.")
-    for k, alt in enumerate((nota.get("alternativas") or [])[:MAX_ALTERNATIVAS]):
-        otra, otra_url, _ = _foto_usable(alt, tmp_dir / f"reel_foto_{idx}_alt{k}.jpg")
-        if otra and MAR.revisar([otra])["marca"] is False:
-            avisos.append(f"Va la foto de la misma noticia publicada por "
-                          f"{alt.get('medio') or 'otro medio'}, que no trae marca.")
-            return otra, otra_url, False, avisos
-    ilus = IL.generar(nota.get("tipo") or G.inferir_tipo(nota),
-                      tmp_dir / f"reel_ilustrativa_{idx}.jpg", semilla=nota.get("url") or "")
-    avisos.append("Ninguna imagen de la noticia está libre de marca: va una imagen ilustrativa.")
-    return ilus, "", True, avisos
-
-
-def _con_alternativas(candidatas: list, notas: list) -> list:
-    """A cada candidata le anota las OTRAS versiones del mismo hecho (otros medios, con su
-    foto): si la foto de la elegida trae el logo de su medio, de ahí sale una limpia. Mismo
-    criterio de «mismo hecho» que la memoria (ledger._se_parecen sobre el titular)."""
-    versiones = [(n, LD._huella(n), LD.identidad(LD._clave(n))) for n in notas if n.get("imagen")]
-    salida = []
-    for c in candidatas:
-        hc, ic = LD._huella(c), LD.identidad(LD._clave(c))
-        alt = [{"imagen": n["imagen"], "url": n.get("url"), "medio": n.get("medio")}
-               for n, h, i in versiones
-               if i != ic and n["imagen"] != c.get("imagen") and LD._se_parecen(hc, h)]
-        salida.append(dict(c, alternativas=alt) if alt else c)
-    return salida
-
-
 def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
              hacer_video: bool = True, preferir: str = "") -> dict:
     """Una nota → guion + placa + descripción. Devuelve el informe de la pieza."""
@@ -447,21 +380,9 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     foto = None
     if clip and not R.cuadro_de_video(clip, tmp_dir / f"reel_cuadro_{idx}.jpg"):
         clip = None          # un video del que no sale ni un cuadro no se puede usar
-    # Ni el video ni la foto pueden llevar el logo del medio (pedido del editor, 03/10):
-    # la imagen con marca no se usa —no se borra ni se tapa la marca— y se busca otra.
-    avisos_imagen, clip_con_marca = [], False
-    if clip:
-        clip, aviso, clip_con_marca = _clip_sin_marca(clip, tmp_dir, idx)
-        if aviso:
-            avisos_imagen.append(aviso)
     # La foto se baja igual aunque haya video: si el motor no puede con el clip, el
     # reel se arma con la foto en vez de perder la pieza.
     foto, imagen_usada, sin_foto = _foto_usable(nota, tmp)
-    ilustrativa = False
-    if foto or clip_con_marca:
-        foto, imagen_usada, ilustrativa, avs = _imagen_sin_marca(nota, foto, imagen_usada,
-                                                                 tmp_dir, idx)
-        avisos_imagen += avs
 
     # El filtro de la tanda mira que la nota DECLARE una imagen; esto comprueba que la
     # imagen realmente se pueda bajar y tenga tamaño. Un enlace roto, un 403 o una
@@ -477,7 +398,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
 
     nombre = f"{idx:02d}_{_slug(nota.get('localidad_medio'))}_{_slug(g['titular'], 30)}"
     img = carpeta / f"{nombre}.jpg"
-    avisos = list(avisos_imagen)
+    avisos = []
     # Que el hecho sea de otra localidad que la del medio no rompe la pieza, pero hay
     # que verlo: cambia la volanta, el hashtag y el "Más noticias de" del posteo.
     if g.get("aviso_localidad"):
@@ -562,7 +483,6 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "url_original": nota.get("url"),
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
-        "imagen_ilustrativa": ilustrativa,
         "guion": {k: g[k] for k in ("volanta", "titular", "bajada", "zocalo", "pie", "via")},
         "copia": copia,
         "descripcion_tiktok": g["descripcion_final"],
@@ -570,10 +490,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "viral": g.get("viral", 5),
         "web": {"titulo": g.get("titulo_web") or g["titular"],
                 "cuerpo": g.get("nota_web") or g["bajada"]},
-        # Solo la imagen que se REVISÓ: nunca la de la nota a ciegas, que puede traer el logo
-        # del medio. Vacía (imagen ilustrativa, o la foto no bajó), la nota de la web lleva
-        # el cuadro del propio reel (publicador._paso_web).
-        "imagen_url": imagen_usada or "",
+        "imagen_url": imagen_usada or nota.get("imagen") or "",
         "localidad_hecho": g.get("localidad_hecho") or nota.get("localidad") or "",
         # Hora de publicación en el medio (UTC): Facebook e Instagram llevan la del momento.
         "publicado": FR.publicado_utc(nota),
@@ -677,9 +594,6 @@ def main():
         candidatas, repetidas = LD.filtrar(notas)
         print(f"Memoria: {LD.resumen()}" +
               (f" — {repetidas} nota(s) ya tuvieron reel y se saltean" if repetidas else ""))
-
-    # Las otras versiones de cada hecho, para tener una foto sin marca de respaldo.
-    candidatas = _con_alternativas(candidatas, notas)
 
     # 0 = sin tope, decidido por el editor el 27/09/2026: ni por pueblo ni por día. Lo
     # único que sigue afuera es lo que elegir() descarta por calidad (lo que entró

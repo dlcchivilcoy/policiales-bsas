@@ -185,12 +185,9 @@ del caption de TikTok contando los hashtags.
 > API no está probado). `REEL_ESTILO_POLICIALES=""` vuelve al estilo placa. Lo de abajo es la
 > historia del primer diseño.
 >
-> **Sin logos de medio.** `reels/marcas.py` (Gemini) mira la foto y dos cuadros del video; si
-> traen el logo o la marca de agua del medio, NO se usan (no se borra ni se tapa la marca): va
-> la foto de la misma noticia publicada por otro medio, si está limpia, y si no, una imagen
-> ilustrativa propia (`reels/ilustrativa.py`: luces de patrullero, ruta, fuego o tormenta
-> dibujadas por código, o fotos propias del diario cargadas en `reels/banco/<grupo>/`).
-> `MARCAS=0` lo apaga.
+> **La imagen es siempre la ORIGINAL de la nota** (foto o video del medio, tengan o no su
+> logo). Decisión del editor del 05/10: el 03/10 se probó descartar las que traían logo y
+> reemplazarlas por otra foto o una imagen ilustrativa, y se sacó.
 
 La pieza tiene **dos tramos** y un fundido de 0,6 s entre ellos:
 
