@@ -24,8 +24,9 @@ Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales`
    la sección en letras grandes; el motor del bot le pone marca, volanta y titular.
 6. **Publica**, 5 min entre piezas:
    - **YouTube**: Short en Radio del Centro con el link de su nota.
-   - **Web**: nota en **Nacionales** + categoría interna «Nacionales automáticas» (fuera de la
-     portada, de «Lo más leído» y del archivo; sí en la sección y en los sitemaps).
+   - **Web**: nota en **Nacionales** y en la **portada** (pedido del 06/10), también en «Lo más
+     leído», el archivo y los sitemaps. Lleva además la categoría interna «Nacionales
+     automáticas» (b4cdfc99…), por si algún día hay que separarlas (diario_web, `SIN_REGION`).
    - **Facebook**: solo las más virales, **2 por pasada y 8 por día**: posteo con la placa y el
      link a la nota (no reels; el link solo saldría con una foto equivocada).
 7. **22:00, Instagram**: carrusel «Noticias nacionales de hoy» (tapa + hasta 9 diapositivas) con

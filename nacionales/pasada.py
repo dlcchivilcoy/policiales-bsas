@@ -22,7 +22,7 @@ Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un traba
 2. Hasta NAC_POR_PASADA notas nuevas (3), sin pasar de NAC_POR_DIA (12) ni repetir un tema de
    las últimas 24 h. Guion con la IA (guion.py); la que no sirve queda anotada y no se reintenta.
 3. Por pieza, en orden: Short en YouTube (con el link de su nota) → nota en la web (sección
-   Nacionales, fuera de la portada, con el Short adentro) → Facebook, SOLO las más virales: hasta
+   Nacionales y portada, con el Short adentro) → Facebook, SOLO las más virales: hasta
    NAC_FB_POR_PASADA (2) y NAC_FB_POR_DIA (8). Es un posteo con la PLACA y el link a la nota:
    Facebook no lee bien la foto de una nota de Wix recién publicada (memoria del bot, «FB
    previsualización misma foto») y si se postea solo el link sale con una foto equivocada.

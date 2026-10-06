@@ -219,7 +219,7 @@ redes = [l[0] for l in llamadas]
 chequear("pasada: 3 piezas por pasada", len(inf["piezas"]) == 3 and len(mem["piezas"]) == 3)
 chequear("pasada: orden por pieza YouTube → web → Facebook",
          redes[:3] == ["youtube", "release", "web"] and "facebook" in redes)
-chequear("pasada: la nota va a Nacionales + la categoría que la saca de la portada",
+chequear("pasada: la nota va a Nacionales + la categoría interna de las automáticas",
          all(l[1] == (WEB.NACIONALES_ID, WEB.NACIONALES_AUTO_ID) for l in llamadas if l[0] == "web"))
 chequear("pasada: la web lleva el Short adentro", all(l[2] for l in llamadas if l[0] == "web"))
 chequear("pasada: Facebook solo 2 por pasada, las MÁS virales",

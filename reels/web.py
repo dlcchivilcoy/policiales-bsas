@@ -30,8 +30,8 @@ from datetime import datetime, timedelta, timezone
 
 REGION_ID = "55c5c23e-4ac1-43c4-ae24-125fce001311"
 # Las NACIONALES (nacionales/, 06/10/2026) van a la sección Nacionales y además a una categoría
-# interna, «Nacionales automáticas», creada ese día SOLO para que la web las deje fuera de la
-# portada (igual que Región): se ven en /seccion/nacionales y en los sitemaps.
+# interna, «Nacionales automáticas», creada ese día para poder separarlas. Van TAMBIÉN a la
+# portada (pedido del editor del mismo 06/10): la web hoy solo excluye Región.
 NACIONALES_ID = "b646fede-00cb-4f10-aca5-56fdda96094a"
 NACIONALES_AUTO_ID = "b4cdfc99-ec74-4581-8ce1-3de7d5d1f59b"
 SITIO = "www.diariolacampaña.com.ar"          # con la Ñ: es lo que se lee en el posteo
