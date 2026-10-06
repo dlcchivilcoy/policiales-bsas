@@ -763,20 +763,21 @@ def _sin_placa(mp4: Path, destino: Path):
         return None
 
 
-def publicar_youtube(pieza: dict, mp4: Path) -> dict:
+def publicar_youtube(pieza: dict, mp4: Path, meta: dict = None) -> dict:
     """Sube el Short SIN la placa final «Seguinos en redes» (pedido del editor, 27/09: así
     YouTube no puede elegirla de miniatura; en Facebook e Instagram la placa sigue) y le
     pone la portada del reel como miniatura (ver _poner_miniatura). YT_SIN_PLACA=0 sube
-    el reel entero."""
+    el reel entero. `meta` (título, descripción…) lo traen las piezas que no son de policiales
+    (nacionales/); sin él, se arma con metadatos_youtube()."""
     with tempfile.TemporaryDirectory(prefix="yt_") as t:
         corto = _sin_placa(mp4, Path(t) / mp4.name)
-        info = _subir_youtube(pieza, corto or mp4)
+        info = _subir_youtube(pieza, corto or mp4, meta)
     if corto:
         info["sin_placa"] = True
     return _poner_miniatura(info, pieza, mp4)
 
 
-def _subir_youtube(pieza: dict, mp4: Path) -> dict:
+def _subir_youtube(pieza: dict, mp4: Path, meta: dict = None) -> dict:
     """videos.insert con subida reanudable: se abre la sesion con los datos del video y
     despues se manda el archivo. El video recien EXISTE cuando termina la subida, asi
     que un corte en el medio se puede retomar sin riesgo de duplicarlo."""
@@ -789,7 +790,7 @@ def _subir_youtube(pieza: dict, mp4: Path) -> dict:
                    headers={"Content-Type": "application/json; charset=UTF-8",
                             "X-Upload-Content-Type": "video/mp4",
                             "X-Upload-Content-Length": str(n)},
-                   content=json.dumps(metadatos_youtube(pieza)).encode("utf-8"))
+                   content=json.dumps(meta or metadatos_youtube(pieza)).encode("utf-8"))
     except _Cortado as e:
         raise FalloRed(f"YouTube (inicio): {e}")
     if r.status_code >= 400:

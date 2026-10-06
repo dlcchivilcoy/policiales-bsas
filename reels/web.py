@@ -29,6 +29,11 @@ import unicodedata
 from datetime import datetime, timedelta, timezone
 
 REGION_ID = "55c5c23e-4ac1-43c4-ae24-125fce001311"
+# Las NACIONALES (nacionales/, 06/10/2026) van a la sección Nacionales y además a una categoría
+# interna, «Nacionales automáticas», creada ese día SOLO para que la web las deje fuera de la
+# portada (igual que Región): se ven en /seccion/nacionales y en los sitemaps.
+NACIONALES_ID = "b646fede-00cb-4f10-aca5-56fdda96094a"
+NACIONALES_AUTO_ID = "b4cdfc99-ec74-4581-8ce1-3de7d5d1f59b"
 SITIO = "www.diariolacampaña.com.ar"          # con la Ñ: es lo que se lee en el posteo
 MARCA = "Diario La Campaña"
 CREDENCIALES = ("WIX_API_KEY", "WIX_SITE_ID", "WIX_MEMBER_ID")
@@ -89,7 +94,7 @@ def _parrafo(i: int, *partes) -> dict:
 
 
 def armar_borrador(pieza: dict, file_id: str = "", youtube_id: str = "",
-                   member_id: str = "") -> dict:
+                   member_id: str = "", categorias=None) -> dict:
     """El pedido para Wix, sin tocar la red (se prueba solo)."""
     web = pieza.get("web") or {}
     titulo = " ".join((web.get("titulo") or "").split())[:200]
@@ -118,7 +123,8 @@ def armar_borrador(pieza: dict, file_id: str = "", youtube_id: str = "",
     borrador = {
         "title": titulo,
         "memberId": member_id or os.environ.get("WIX_MEMBER_ID", ""),
-        "categoryIds": [REGION_ID],          # SOLO Región: nunca «Inicio» (la portada)
+        # SOLO Región (o Nacionales): nunca «Inicio» (la portada)
+        "categoryIds": list(categorias or [REGION_ID]),
         "featured": False,
         "excerpt": descripcion,
         "richContent": {"nodes": nodos},
@@ -171,7 +177,7 @@ def _importar_foto(pedir, url: str, titulo: str) -> str:
         return ""
 
 
-def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="") -> dict:
+def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="", categorias=None) -> dict:
     """Crea y publica la nota. Devuelve {id, slug, url}. `pedir(metodo, url, **kw)` es el
     cliente HTTP del publicador (el mismo que se reemplaza en las pruebas). `foto_respaldo`
     es una URL o una función que la devuelve: se usa SOLO si la foto del medio no se deja
@@ -189,7 +195,7 @@ def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="") -> dict
         except Exception:
             url = ""
         file_id = _importar_foto(pedir, url, titulo)
-    cuerpo = armar_borrador(pieza, file_id, youtube_id)
+    cuerpo = armar_borrador(pieza, file_id, youtube_id, categorias=categorias)
     r = pedir("POST", DRAFT_POSTS_URL, headers=_headers(), json=cuerpo, timeout=30)
     draft_id = (_json(r, "crear borrador").get("draftPost") or {}).get("id")
     if not draft_id:

@@ -308,3 +308,116 @@ jobs:
           if not hubo:
               print("_No se generó ningún reel en esta pasada._")
           PY
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # NOTICIAS NACIONALES (pedido del editor, 06/10/2026). Ver nacionales/pasada.py.
+  # Infobae → nota en la web (sección Nacionales, fuera de la portada) + Short en YouTube +
+  # posteo en Facebook con la placa y el link (solo las más virales: 2 por pasada, 8 por día) y,
+  # a las 22, el carrusel «Noticias nacionales de hoy» en Instagram. Placa PROPIA: la foto de
+  # Infobae no se usa nunca.
+  #
+  # Es un trabajo APARTE del de policiales: corre en paralelo (no demora los reels) y si uno
+  # falla el otro sigue. Lo disparan las mismas pasadas (cron-job.org). La de las 21:05 espera
+  # hasta las 22 para el carrusel; si esa no corrió, lo saca la de las 23:35.
+  #
+  # Publica con el mismo interruptor que policiales (PUBLICAR_REDES) y tiene el suyo propio:
+  # la variable del repo NACIONALES=0 lo deja solo simulando. Topes (variables, opcionales):
+  # NAC_POR_PASADA (3), NAC_POR_DIA (12), NAC_FB_POR_PASADA (2), NAC_FB_POR_DIA (8).
+  # ═══════════════════════════════════════════════════════════════════════════════
+  nacionales:
+    runs-on: ubuntu-latest
+    # 3 piezas a 5 minutos + la espera hasta las 22 (hasta 100 min) + el carrusel.
+    timeout-minutes: 160
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Noticias nacionales
+        timeout-minutes: 150
+        env:
+          PYTHONUNBUFFERED: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}
+          WIX_MEMBER_ID: ${{ secrets.WIX_MEMBER_ID }}
+          NOTAS_WEB: ${{ vars.NOTAS_WEB }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NAC_POR_PASADA: ${{ vars.NAC_POR_PASADA }}
+          NAC_POR_DIA: ${{ vars.NAC_POR_DIA }}
+          NAC_FB_POR_PASADA: ${{ vars.NAC_FB_POR_PASADA }}
+          NAC_FB_POR_DIA: ${{ vars.NAC_FB_POR_DIA }}
+          PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          NACIONALES_VAR: ${{ vars.NACIONALES }}
+        run: |
+          set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then
+            ARGS="--publicar"
+          fi
+          # La pasada de las 21:05 (o su respaldo, si llega antes de las 22) espera el carrusel.
+          if [ "$(TZ=America/Argentina/Buenos_Aires date +%H)" = "21" ]; then
+            ARGS="$ARGS --esperar-carrusel 22:00"
+          fi
+          python -m nacionales.pasada $ARGS | tee informe_nacionales.md
+
+      - name: Guardar las piezas
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nacionales-${{ github.run_number }}
+          path: |
+            salida_nacionales/**/*.mp4
+            salida_nacionales/**/*.jpg
+            salida_nacionales/**/*.json
+          retention-days: 1
+          compression-level: 0
+
+      - name: Recordar qué nacionales ya salieron
+        # SOLO estado/nacionales.json: el resto de estado/ de esta copia es el viejo del arranque
+        # y lo guarda el trabajo de policiales (tools/guardar_estado.py combina las dos copias).
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/nacionales.json)" ]; then
+            echo "La memoria de nacionales no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo nacionales.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="Las noticias nacionales fallaron"
+          CUERPO="$( [ -f informe_nacionales.md ] && cat informe_nacionales.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi

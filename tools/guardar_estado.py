@@ -64,7 +64,27 @@ def combinar_hechos(nuestro: dict, remoto: dict) -> dict:
     return out
 
 
-COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos}
+def combinar_nacionales(nuestro: dict, remoto: dict) -> dict:
+    """estado/nacionales.json (nacionales/pasada.py, 06/10/2026): unión por clave en piezas,
+    descartadas y carruseles; en una misma clave gana el registro más nuevo ("cuando").
+
+    Hace falta aunque cada trabajo escriba lo suyo: el trabajo de POLICIALES guarda TODO
+    estado/, y su copia de nacionales.json es la del arranque de la pasada. Sin combinar, la
+    pisaría con una vieja y la pasada siguiente repetiría las nacionales."""
+    out = dict(remoto)
+    for seccion in ("piezas", "descartadas", "carruseles"):
+        union = dict(remoto.get(seccion) or {})
+        for clave, v in (nuestro.get(seccion) or {}).items():
+            otro = union.get(clave)
+            if not isinstance(otro, dict) or (v.get("cuando") or "") >= (otro.get("cuando") or ""):
+                union[clave] = v
+        out[seccion] = union
+    out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
+    return out
+
+
+COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
+            "nacionales.json": combinar_nacionales}
 
 
 def _git(*args, chequear=True, raiz=RAIZ) -> subprocess.CompletedProcess:
@@ -91,11 +111,14 @@ def _remoto(nombre: str, raiz=RAIZ):
         return None
 
 
-def guardar(mensaje: str, raiz: Path = RAIZ) -> str:
+def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
+    """`solo`: los archivos de estado/ que escribió este trabajo (el de nacionales guarda solo
+    nacionales.json: el resto de su copia es la vieja del arranque)."""
     estado = raiz / "estado"
     g = lambda *a, **k: _git(*a, raiz=raiz, **k)
     # Lo que escribió ESTA pasada, en memoria, antes de tocar nada en git.
-    nuestros = {p.name: _leer(p) for p in sorted(estado.glob("*.json"))}
+    nuestros = {p.name: _leer(p) for p in sorted(estado.glob("*.json"))
+                if not solo or p.name in solo}
     nuestros = {k: v for k, v in nuestros.items() if v is not None}
     if not nuestros:
         return "estado/ vacío: nada que guardar."
@@ -108,7 +131,7 @@ def guardar(mensaje: str, raiz: Path = RAIZ) -> str:
             final = COMBINAR[nombre](mio, remoto) if (nombre in COMBINAR and remoto) else mio
             (estado / nombre).write_text(json.dumps(final, ensure_ascii=False, indent=2),
                                          encoding="utf-8")
-        g("add", "estado/")
+        g("add", *[f"estado/{n}" for n in nuestros])
         if not g("status", "--porcelain", "estado/").stdout.strip():
             return "La memoria ya estaba al día: nada que commitear."
         g("commit", "--quiet", "-m", mensaje)
@@ -120,9 +143,11 @@ def guardar(mensaje: str, raiz: Path = RAIZ) -> str:
 
 if __name__ == "__main__":
     from datetime import datetime, timezone
-    msg = f"Reels de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
+    solo = sys.argv[sys.argv.index("--solo") + 1:] if "--solo" in sys.argv else None
+    que = "Nacionales" if solo == ["nacionales.json"] else "Reels"
+    msg = f"{que} de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
     try:
-        print(guardar(msg))
+        print(guardar(msg, solo=solo))
     except RuntimeError as e:
         print(f"ERROR: {e}")
         sys.exit(1)
