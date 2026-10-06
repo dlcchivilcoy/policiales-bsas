@@ -218,7 +218,8 @@ def portada_carrusel(titulares: list, cuando: datetime, destino: Path, semilla: 
 
     items = [t for t in titulares if t][:6]
     alto_libre = H - 150 - y
-    por_item = alto_libre // max(1, len(items))
+    # Con pocas notas no se reparten en todo el alto: quedan juntas arriba.
+    por_item = min(150, alto_libre // max(1, len(items)))
     fn = fuente(40, 700)
     for i, t in enumerate(items, 1):
         fi, li, lhi = _encajar(d, t, W - 2 * M - 70, por_item - 18, 38, 28, 500, 1.18, 2)
@@ -227,7 +228,7 @@ def portada_carrusel(titulares: list, cuando: datetime, destino: Path, semilla: 
         for ln in li:
             d.text((M + 70, yy), ln, font=fi, fill=GRIS)
             yy += lhi
-        y += max(por_item, yy - y + 14) if por_item < 60 else por_item
+        y += max(por_item, yy - y + 18)
     fc = fuente(34, 600)
     d.text((W - M, H - 70), "Deslizá para leer  →", font=fc, fill=NARANJA, anchor="rm")
     destino = Path(destino)
