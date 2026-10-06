@@ -65,6 +65,11 @@ on:
         # chequeo del motor (2 min) no tiene sentido repetirlo seis veces por día.
         description: '"manual" (corrida a mano) o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
+      trabajos:
+        # Para probar uno solo a mano. Las pasadas de horario (cron-job.org y el schedule) no lo
+        # mandan y corren los dos.
+        description: '"todos", "policiales" o "nacionales"'
+        default: "todos"
 
 # Dos corridas a la vez se pisarían el ledger y podrían repetir una nota.
 concurrency:
@@ -77,6 +82,7 @@ permissions:
 
 jobs:
   generar:
+    if: github.event.inputs.trabajos != 'nacionales'
     runs-on: ubuntu-latest
     # Era 20, después 60. Sin tope de reels (27/09) una pasada puede traer 20 o más, y
     # salen escalonados a 5 minutos: 30 son dos horas y media de publicación. OJO: una
@@ -325,6 +331,7 @@ jobs:
   # NAC_POR_PASADA (3), NAC_POR_DIA (12), NAC_FB_POR_PASADA (2), NAC_FB_POR_DIA (8).
   # ═══════════════════════════════════════════════════════════════════════════════
   nacionales:
+    if: github.event.inputs.trabajos != 'policiales'
     runs-on: ubuntu-latest
     # 3 piezas a 5 minutos + la espera hasta las 22 (hasta 100 min) + el carrusel.
     timeout-minutes: 160
