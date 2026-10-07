@@ -82,7 +82,8 @@ def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
         "systemInstruction": {"parts": [{"text": system}]},
         "contents": [{"role": "user", "parts": [{"text": material}]}],
         "generationConfig": {
-            "temperature": 0.3,
+            # Sin temperature: Google la depreca (aviso del 7/10/2026). Desde Gemini
+            # 3.6 Flash no cambia nada y en los modelos que vienen da error.
             # 900 era poco y cortaba. El guion completo son volanta + titular +
             # bajada de hasta 280 caracteres + zocalo + pie + una descripcion de
             # cuatro parrafos + hashtags; en castellano eso pasa holgado los 900
