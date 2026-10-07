@@ -20,8 +20,11 @@ Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales`
 3. **Hasta 3 piezas por pasada y 12 por día**, sin repetir un tema de las últimas 24 h.
 4. **Guion** con Gemini (`nacionales/guion.py`): reescrito de cero, sin nombrar a Infobae,
    neutral en política, con el control de copia de policiales.
-5. **Placa propia** (`nacionales/placa.py`): la foto de Infobae no se usa nunca. Fondo grafito con
-   la sección en letras grandes; el motor del bot le pone marca, volanta y titular.
+5. **La foto** (desde el 07/10): la de la nota de Infobae, en todas las redes y la web, SALVO que
+   el epígrafe diga que es de una **agencia** (AP, AFP, Reuters, EFE, Getty, NA…): esas agencias
+   facturan cada foto usada en un sitio. Esas notas, las que no traen foto y las que no dejan leer
+   el epígrafe van con la **placa propia** (`nacionales/placa.py`: grafito con la sección en
+   letras grandes). En los dos casos el motor del bot pone marca, volanta y titular.
 6. **Publica**, 5 min entre piezas:
    - **YouTube**: Short en Radio del Centro con el link de su nota.
    - **Web**: nota en **Nacionales** y en la **portada** (pedido del 06/10), también en «Lo más

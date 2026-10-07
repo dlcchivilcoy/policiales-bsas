@@ -15,7 +15,9 @@ Pedido del editor (06/10/2026), en sus palabras:
 - Facebook: «publicaciones separadas con link a la nota rearmada a mi web» (no reels: «la idea
   sería no saturar con reels»).
 - YouTube: «shorts individuales».
-- Las fotos de Infobae NO se usan nunca: placa propia (nacionales/placa.py).
+- La foto (07/10): la de la nota de Infobae —en el Short, la placa de Facebook, la web y el
+  carrusel—, SALVO que el epígrafe diga que es de una agencia (AP, AFP, Reuters, EFE, Getty…:
+  facturan cada foto usada). Esas, y las notas sin foto, salen con la placa propia (placa.py).
 
 Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un trabajo aparte):
 1. Infobae (nacionales/infobae.py) → filtro y orden por relevancia y cobertura (filtro.py).
@@ -156,6 +158,29 @@ def _semilla(url: str) -> int:
     return int(hashlib.sha1(url.encode("utf-8")).hexdigest()[:8], 16)
 
 
+def foto_de_la_nota(nota: dict, destino: Path) -> dict:
+    """La foto de la nota de Infobae, si se puede usar (decisión del editor, 07/10: la original,
+    SALVO las de agencia). Devuelve {archivo, url, credito} o {motivo} si va la placa propia."""
+    from reels.flujo import FOTO_MIN_LADO_MAYOR, FOTO_MIN_LADO_MENOR, _bajar_foto, _tamanio
+    url = nota.get("imagen") or ""
+    if not url:
+        return {"motivo": "la nota no trae foto"}
+    epigrafe, leido = IB.credito_foto(nota["url"])
+    credito = " ".join(f"{nota.get('credito_feed') or ''} {epigrafe}".split())
+    if not leido:
+        return {"motivo": "no se pudo leer de quién es la foto", "url": url}
+    agencia = IB.es_de_agencia(credito)
+    if agencia:
+        return {"motivo": f"foto de agencia ({agencia})", "url": url, "credito": credito}
+    if not _bajar_foto(url, Path(destino)):
+        return {"motivo": "la foto no se pudo bajar", "url": url, "credito": credito}
+    t = _tamanio(Path(destino))
+    if not t or max(t) < FOTO_MIN_LADO_MAYOR or min(t) < FOTO_MIN_LADO_MENOR:
+        Path(destino).unlink(missing_ok=True)
+        return {"motivo": f"la foto es muy chica ({t})", "url": url, "credito": credito}
+    return {"archivo": str(destino), "url": url, "credito": credito}
+
+
 def armar(nota: dict, carpeta: Path, redactar=None) -> dict:
     """Guion + Short + placa de Facebook + imagen de la web. Lanza si la IA no contesta."""
     g = NG.generar(nota, redactar)
@@ -167,12 +192,15 @@ def armar(nota: dict, carpeta: Path, redactar=None) -> dict:
     base = carpeta / WEB.slugify(g["titular"], 50)
     semilla = _semilla(nota["url"])
     from reels import reel_bot as R
-    fondo = P.guardar_fondo(g["seccion"], base.with_name(base.name + "_fondo.jpg"), semilla=semilla)
+    pieza["foto"] = foto_de_la_nota(nota, base.with_name(base.name + "_foto.jpg"))
+    foto = pieza["foto"].get("archivo")
+    imagen = foto or P.guardar_fondo(g["seccion"], base.with_name(base.name + "_fondo.jpg"), semilla=semilla)
     pieza["video"] = R.armar({"volanta": g["volanta"], "titular": g["titular"], "bajada": g["bajada"]},
-                             base.with_suffix(".mp4"), foto=fondo)
+                             base.with_suffix(".mp4"), foto=imagen)
     pieza["placa"] = pieza["video"].get("placa")
     pieza["slide"] = str(P.slide(g["seccion"], g["volanta"], g["titular"],
-                                 base.with_name(base.name + "_facebook.jpg"), sitio=WEB.SITIO, semilla=semilla))
+                                 base.with_name(base.name + "_facebook.jpg"), sitio=WEB.SITIO, semilla=semilla,
+                                 foto=foto))
     pieza["portada_web"] = str(P.portada_web(g["seccion"], g["volanta"], g["titular"],
                                              base.with_name(base.name + "_web.jpg"), semilla=semilla))
     # Para revisar después qué se publicó y con qué texto (va al artefacto de la corrida).
@@ -268,8 +296,13 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
 
     def _web():
         nombre = f"nacional_{hashlib.sha1(pieza['url_original'].encode()).hexdigest()[:10]}_web.jpg"
-        pieza["imagen_url"] = PUB.subir_a_release(Path(pieza["portada_web"]), nombre)
+        placa_web = lambda: PUB.subir_a_release(Path(pieza["portada_web"]), nombre)   # noqa: E731
+        foto = (pieza.get("foto") or {})
+        # La foto de la nota (Wix la importa de Infobae); la placa propia si no hay foto usable o
+        # si Wix no la deja importar.
+        pieza["imagen_url"] = foto.get("url") if foto.get("archivo") else placa_web()
         return WEB.publicar(lambda m, u, **kw: PUB._pedir(m, u, "", **kw), pieza, yt_id or "",
+                            placa_web if foto.get("archivo") else "",
                             categorias=[WEB.NACIONALES_ID, WEB.NACIONALES_AUTO_ID])
     res["web"] = _resultado(_web) if WEB.activa() else {"estado": "apagada"}
     url_web = res["web"].get("url") if _ok(res["web"]) else ""
@@ -328,10 +361,15 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime) -> dict:
     total = len(elegidas)
     jpgs = [P.portada_carrusel([p["titular"] for _, p in elegidas], ahora, carpeta / "carrusel_00_tapa.jpg",
                                semilla=int(ahora.strftime("%Y%m%d")))]
+    from reels.flujo import _bajar_foto
+    carpeta.mkdir(parents=True, exist_ok=True)
     for i, (u, p) in enumerate(elegidas, 1):
+        foto = None
+        if p.get("foto_url"):                        # la misma que salió en su pieza
+            foto = _bajar_foto(p["foto_url"], carpeta / f"carrusel_{i:02d}_foto.jpg")
         jpgs.append(P.slide(p.get("seccion") or "Nacionales", p.get("volanta") or "", p["titular"],
                             carpeta / f"carrusel_{i:02d}.jpg", sitio=WEB.SITIO, idx=i, total=total,
-                            semilla=_semilla(u)))
+                            semilla=_semilla(u), foto=foto))
     caption = caption_carrusel([p["titular"] for _, p in elegidas], ahora)
     if not publicar:
         return {"estado": "simulado", "diapositivas": len(jpgs), "caption": caption,
@@ -395,7 +433,11 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                     "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
                     "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
                     "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
-                    "copia": (g.get("copia") or {}).get("racha"), **res}
+                    "copia": (g.get("copia") or {}).get("racha"),
+                    # La foto, para el carrusel de las 22 (otra corrida: se vuelve a bajar).
+                    "foto_url": (pieza.get("foto") or {}).get("url") if (pieza.get("foto") or {}).get("archivo") else "",
+                    "foto": (pieza.get("foto") or {}).get("credito") or (pieza.get("foto") or {}).get("motivo"),
+                    **res}
             informe["piezas"].append(fila)
             for red, r in res.items():
                 if r.get("estado") == "fallo":

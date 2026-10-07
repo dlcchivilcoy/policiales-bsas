@@ -91,15 +91,26 @@ chequear("filtro: «San Pedro y Chivilcoy» es la ciudad, «Avenida Gaona y Chiv
          not F.nombra_chivilcoy("Chocó en Avenida Gaona y Chivilcoy, en Floresta."))
 
 # --- 2. Infobae --------------------------------------------------------------------------------
-xml = """<?xml version="1.0"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>
+xml = """<?xml version="1.0"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:media="http://search.yahoo.com/mrss/"><channel>
 <item><title>Título de prueba</title><link>https://www.infobae.com/politica/2026/10/06/nota/</link>
 <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate><description>Resumen</description>
-<content:encoded><![CDATA[<p>Primer párrafo.</p><p>Segundo.</p>]]></content:encoded></item>
+<content:encoded><![CDATA[<p>Primer párrafo.</p><p>Segundo.</p>]]></content:encoded>
+<media:content url="https://www.infobae.com/resizer/v2/FOTO.jpg?auth=x" type="image/jpeg"/>
+<media:credit role="author" scheme="urn:ebu">Agustin Marcarian</media:credit></item>
 <item><title>Otra</title><link>https://otro.sitio/nota</link></item></channel></rss>"""
 ns = IB.notas_del_feed(xml, "politica")
 chequear("Infobae: lee título, texto completo y fecha del feed",
          len(ns) == 1 and ns[0]["cuerpo"] == "Primer párrafo. Segundo." and ns[0]["fecha"] > 0)
-chequear("Infobae: la foto ni se guarda (placa propia)", "imagen" not in ns[0])
+chequear("Infobae: guarda la foto y el crédito del feed (07/10)",
+         ns[0]["imagen"].endswith("FOTO.jpg?auth=x") and ns[0]["credito_feed"] == "Agustin Marcarian")
+chequear("agencias: Reuters, AP, EFE, NA en el epígrafe",
+         all(IB.es_de_agencia(t) for t in ("(Foto: Reuters)", "Javier Milei (AP)", "(Foto AP/Ettore Chiereguini)",
+                                           "REUTERS/Agustin Marcarian", "Foto de archivo EFE", "(NA)")))
+chequear("agencias: oficiales, capturas y palabras parecidas NO",
+         not any(IB.es_de_agencia(t) for t in ("(Fotos: Consejo de la Magistratura)", "(Prensa ANSES)",
+                                               "El NAP del gobierno", "El APOYO de la gente", "Captura de video",
+                                               "Una EFEméride", "")))
 
 # --- 3. Guion -----------------------------------------------------------------------------------
 BUENO = {"apta": True, "seccion": "Economía", "volanta": "ANSES", "titular": "Los jubilados cobran con bono en octubre",
@@ -170,10 +181,32 @@ PA._dormir = lambda s: dormido.append(s) or reloj.__setitem__("ahora", reloj["ah
 llamadas = []
 
 
+fotos_reel = {}
+
+
 def armar_reel(guion, salida, foto=None, clip=None):
     Path(salida).parent.mkdir(parents=True, exist_ok=True)
     Path(salida).write_bytes(b"mp4")
+    fotos_reel[guion["titular"][:20]] = str(foto)
     return {"archivo": str(salida), "duracion": 12.9, "placa": None}
+
+
+# La foto: el epígrafe por URL y una descarga que deja una foto de verdad (la usa el compositor).
+from reels import flujo as FL
+FOTO_OK = tmp / "foto_ok.jpg"
+Image.new("RGB", (1200, 800), (120, 90, 60)).save(FOTO_OK, "JPEG")
+EPIGRAFES = {}
+bajadas = []
+IB.credito_foto = lambda url, cliente=None: (EPIGRAFES.get(url, ""), url not in ("ROTA",))
+
+
+def bajar_falsa(url, destino):
+    bajadas.append(url)
+    shutil.copy(FOTO_OK, destino)
+    return Path(destino)
+
+
+FL._bajar_foto = bajar_falsa
 
 
 R.armar = armar_reel
@@ -183,8 +216,12 @@ PUB.subir_a_release = lambda ruta, nombre: llamadas.append(("release", nombre)) 
 web_falla = {"si": False}
 
 
+imagenes_web = {}
+
+
 def web_falsa(pedir, pieza, yt, foto_respaldo="", categorias=None):
     llamadas.append(("web", tuple(categorias or ()), yt))
+    imagenes_web[pieza["guion"]["titular"][:20]] = (pieza.get("imagen_url"), bool(foto_respaldo))
     if web_falla["si"]:
         raise WEB.FalloWeb("Wix caído")
     slug = WEB.slug_de(pieza)
@@ -204,6 +241,11 @@ notas = [nota(f"ANSES: cuándo cobran los jubilados con el bono {i}", "economia"
     nota("Crece la puja por la sucesión de Kicillof entre los intendentes", "politica", slug="interna")]
 TODAS = list(notas)
 virales = {"anses0": 9, "paro": 8, "lujan": 7, "cuadernos": 5, "interna": 4}
+# ANSES trae una foto oficial; el paro, una de Reuters; las demás, ninguna.
+notas[0]["imagen"] = "https://www.infobae.com/resizer/v2/ANSES.jpg"
+EPIGRAFES[notas[0]["url"]] = "La ANSES confirmó el calendario (Prensa ANSES)"
+notas[1]["imagen"] = "https://www.infobae.com/resizer/v2/PARO.jpg"
+EPIGRAFES[notas[1]["url"]] = "La marcha de la CGT (Foto: Reuters)"
 
 
 def redactar_por_nota(system, material):
@@ -217,8 +259,9 @@ inf = PA.pasada(True, redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 redes = [l[0] for l in llamadas]
 chequear("pasada: 3 piezas por pasada", len(inf["piezas"]) == 3 and len(mem["piezas"]) == 3)
+sin_release = [r for r in redes if r != "release"]
 chequear("pasada: orden por pieza YouTube → web → Facebook",
-         redes[:3] == ["youtube", "release", "web"] and "facebook" in redes)
+         sin_release[:3] == ["youtube", "web", "facebook"])
 chequear("pasada: la nota va a Nacionales + la categoría interna de las automáticas",
          all(l[1] == (WEB.NACIONALES_ID, WEB.NACIONALES_AUTO_ID) for l in llamadas if l[0] == "web"))
 chequear("pasada: la web lleva el Short adentro", all(l[2] for l in llamadas if l[0] == "web"))
@@ -231,6 +274,23 @@ chequear("pasada: el posteo de Facebook es título + link a la nota",
          all("📲 Leé la nota completa: https://www.diariolacampaña.com.ar/n/" in l[1] for l in llamadas if l[0] == "facebook"))
 chequear("pasada: 5 minutos entre pieza y pieza", dormido == [300, 300])
 chequear("pasada: a las 12 no hay carrusel", "carrusel" not in inf and not mem["carruseles"])
+t_anses, t_paro = notas[0]["titulo"][:20], notas[1]["titulo"][:20]
+chequear("foto: la nota con foto oficial arma el Short con SU foto",
+         fotos_reel.get(t_anses, "").endswith("_foto.jpg") and bajadas[:1] == [notas[0]["imagen"]])
+chequear("foto: la de Reuters NO se baja ni se usa: va la placa propia",
+         fotos_reel.get(t_paro, "").endswith("_fondo.jpg") and notas[1]["imagen"] not in bajadas)
+chequear("foto: la nota sin foto va con la placa propia",
+         all(v.endswith("_fondo.jpg") for k, v in fotos_reel.items() if k not in (t_anses, t_paro)))
+chequear("foto: la web importa la foto original y tiene la placa de respaldo",
+         imagenes_web.get(t_anses) == (notas[0]["imagen"], True))
+chequear("foto: sin foto usable, la web lleva la placa (subida al Release)",
+         (imagenes_web.get(t_paro) or ("",))[0].startswith("https://gh/nacional_"))
+chequear("foto: la memoria guarda la foto (para el carrusel) y por qué la otra no",
+         mem["piezas"][notas[0]["url"]]["foto_url"] == notas[0]["imagen"]
+         and mem["piezas"][notas[1]["url"]]["foto_url"] == ""
+         and "Reuters" in mem["piezas"][notas[1]["url"]]["foto"])
+chequear("foto: si la página no deja leer el epígrafe, va la placa (ante la duda, sin foto)",
+         "no se pudo leer" in PA.foto_de_la_nota({"url": "ROTA", "imagen": "https://x/f.jpg"}, tmp / "r.jpg")["motivo"])
 
 llamadas.clear()
 reloj["ahora"] = datetime(2026, 10, 6, 15, 5, tzinfo=AR)
@@ -258,6 +318,7 @@ web_falla["si"] = False
 
 # El carrusel de las 22.
 llamadas.clear()
+bajadas.clear()
 reloj["ahora"] = datetime(2026, 10, 6, 21, 5, tzinfo=AR)
 inf4 = PA.pasada(True, solo_carrusel=False, esperar_carrusel="22:00", redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
@@ -267,6 +328,8 @@ chequear("carrusel: la pasada de las 21:05 espera hasta las 22 y lo publica",
 hijos = [l for l in llamadas if l[0] == "ig_contenedor"]
 chequear("carrusel: tapa + una diapositiva por nota con web (la de Wix caída no va)",
          len(hijos) == 1 + 5 + 1 and hijos[-1][1] == "CAROUSEL")
+chequear("carrusel: la diapositiva de la nota con foto vuelve a bajar SU foto",
+         bajadas == [notas[0]["imagen"]])
 cap = [l[1] for l in llamadas if l[0] == "ig_publicar"][0]
 chequear("carrusel: el texto arranca con «Noticias nacionales de hoy» (lo que se busca)",
          cap.startswith("Noticias nacionales de hoy, martes 6 de octubre de 2026"))

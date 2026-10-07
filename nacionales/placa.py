@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-"""La PLACA PROPIA de las piezas nacionales: nunca la foto de Infobae (decisión del editor,
-06/10/2026: sus fotos son de sus fotógrafos o de agencias y un reclamo de derechos caería sobre
-la página entera).
+"""La PLACA PROPIA de las piezas nacionales. Desde el 07/10/2026 (decisión del editor) cada
+pieza lleva la FOTO de su nota de Infobae, salvo que sea de una agencia (AP, AFP, Reuters, EFE…,
+que facturan cada foto usada): ahí, o si la nota no trae foto, va esta placa
+(nacionales/pasada.py, foto_de_la_nota). Del 06/10 al 07/10 todas salieron con placa.
 
 Qué se dibuja, todo con la paleta del estilo «corresponsal» del bot (grafito + naranja):
 - fondo(): el fondo de cada pieza: grafito con un resplandor naranja y la SECCIÓN en letras
@@ -163,13 +164,14 @@ def _story_image():
 
 
 def slide(seccion: str, volanta: str, titular: str, destino: Path, *, sitio: str = "",
-          idx: int = None, total: int = None, semilla: int = 0) -> Path:
-    """Diapositiva 4:5 (1080x1350) con el compositor de carruseles del bot sobre el fondo propio."""
+          idx: int = None, total: int = None, semilla: int = 0, foto=None) -> Path:
+    """Diapositiva 4:5 (1080x1350) con el compositor de carruseles del bot: sobre la FOTO de la
+    nota si la hay (y no es de agencia), o sobre el fondo propio."""
     si = _story_image()
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="slide_") as t:
-        f = guardar_fondo(seccion, Path(t) / "fondo.jpg", (1080, 1350), semilla)
+        f = Path(foto) if foto else guardar_fondo(seccion, Path(t) / "fondo.jpg", (1080, 1350), semilla)
         hecho = si.compose_note_slide(f, (volanta or "").upper(), titular, sitio, idx, total)
         shutil.move(str(hecho), str(destino))
     return destino
