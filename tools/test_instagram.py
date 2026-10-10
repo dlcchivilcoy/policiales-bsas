@@ -43,6 +43,24 @@ except ValueError:
 IG.GRADUACION = "SS_PERFORMANCE"
 IG.SOLO_REELS_DE_PRUEBA = False
 
+# Archivo Literario y pregunta del día (10/10): reel de PRUEBA aunque la regla general esté apagada.
+p = IG.contenedor_reel(URL, "x", prueba=True, portada="https://ejemplo.com/portada.jpg")
+chequear("prueba=True: trial_params con graduación automática aunque SOLO_REELS_DE_PRUEBA sea False",
+         json.loads(p.get("trial_params", "{}")) == {"graduation_strategy": "SS_PERFORMANCE"}
+         and "share_to_feed" not in p)
+chequear("portada -> cover_url", p.get("cover_url") == "https://ejemplo.com/portada.jpg")
+IG.SOLO_REELS_DE_PRUEBA = True
+p = IG.contenedor_reel(URL, "x", prueba=False)
+chequear("prueba=False: reel normal aunque la regla general esté prendida",
+         "trial_params" not in p and p.get("share_to_feed") == "true")
+IG.SOLO_REELS_DE_PRUEBA = False
+chequear("sin portada no manda cover_url", "cover_url" not in IG.contenedor_reel(URL, "x"))
+try:
+    IG.contenedor_reel(URL, "x", portada="portada.jpg")
+    chequear("una portada local frena", False)
+except ValueError:
+    chequear("una portada local frena", True)
+
 try:
     IG.contenedor_reel("C:\\salida_reels\\reel.mp4", "x")
     chequear("un archivo local frena: Instagram necesita URL publica", False)

@@ -83,8 +83,43 @@ def combinar_nacionales(nuestro: dict, remoto: dict) -> dict:
     return out
 
 
+def combinar_archivo(nuestro: dict, remoto: dict) -> dict:
+    """estado/archivo.json (archivo/pasada.py, 10/10/2026: reels de prueba del Archivo Literario y
+    la pregunta del día). Igual que nacionales, la copia que guarda el trabajo de policiales es la
+    vieja del arranque: sin esto, pisaría lo publicado y se repetiría la pieza del día.
+    - usados: unión; por clave, la fecha más nueva.
+    - publicaciones: unión por «día:tipo»; un ok nunca se pisa con algo que no sea ok.
+    - preguntas: unión por (día, pregunta), en orden, las últimas 200."""
+    out = dict(remoto)
+    usados = dict(remoto.get("usados") or {})
+    for clave, dia in (nuestro.get("usados") or {}).items():
+        usados[clave] = max(dia or "", usados.get(clave) or "")
+    out["usados"] = usados
+    pubs = dict(remoto.get("publicaciones") or {})
+    for clave, mio in (nuestro.get("publicaciones") or {}).items():
+        otro = pubs.get(clave)
+        if not isinstance(otro, dict):
+            pubs[clave] = mio
+            continue
+        ok_mio, ok_otro = mio.get("estado") in EXITO, otro.get("estado") in EXITO
+        if ok_otro and not ok_mio:
+            continue
+        if (ok_mio and not ok_otro) or (mio.get("cuando") or "") >= (otro.get("cuando") or ""):
+            pubs[clave] = mio
+    out["publicaciones"] = pubs
+    vistas, preguntas = set(), []
+    for p in (remoto.get("preguntas") or []) + (nuestro.get("preguntas") or []):
+        clave = (p.get("dia"), p.get("pregunta"))
+        if clave not in vistas:
+            vistas.add(clave)
+            preguntas.append(p)
+    out["preguntas"] = sorted(preguntas, key=lambda p: p.get("dia") or "")[-200:]
+    out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
+    return out
+
+
 COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
-            "nacionales.json": combinar_nacionales}
+            "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo}
 
 
 def _git(*args, chequear=True, raiz=RAIZ) -> subprocess.CompletedProcess:
@@ -144,7 +179,7 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
 if __name__ == "__main__":
     from datetime import datetime, timezone
     solo = sys.argv[sys.argv.index("--solo") + 1:] if "--solo" in sys.argv else None
-    que = "Nacionales" if solo == ["nacionales.json"] else "Reels"
+    que = {("nacionales.json",): "Nacionales", ("archivo.json",): "Archivo"}.get(tuple(solo or ()), "Reels")
     msg = f"{que} de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
     try:
         print(guardar(msg, solo=solo))

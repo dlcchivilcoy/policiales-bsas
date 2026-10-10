@@ -1,0 +1,136 @@
+name: Reels del Archivo Literario y pregunta del día
+
+# Pedido del editor (10/10/2026): 2 reels de PRUEBA por día en Instagram, con su estética, logos e info:
+#   - 13:30 → efeméride de HOY del Archivo Literario Municipal de Chivilcoy («Un día como hoy…»); si hoy
+#             no hay, un personaje chivilcoyano o una curiosidad de la historia local.
+#   - 20:30 → la PREGUNTA DEL DÍA, con una imagen de Cloudflare Workers AI (gratis) o la placa propia.
+# Horarios elegidos con los online_followers de @diarioyradio (picos 12-13 y 19-22), lejos de las
+# pasadas de policiales (12:05 y 21:05). Reel de PRUEBA con graduación automática (SS_PERFORMANCE): lo ven
+# primero los que no siguen la cuenta y, si anda, Instagram lo pasa solo al feed. Sin nombrar la fuente.
+# Detalle: README_ARCHIVO.md.
+#
+# Quién dispara: cron-job.org a horario exacto (como las otras pasadas), con
+# {"ref":"main","inputs":{"tipo":"efemeride"|"pregunta","origen":"cron"}}. El `schedule:` de abajo es el
+# RESPALDO, 20 minutos después: si la de cron-job.org ya salió, la memoria (estado/archivo.json) lo frena
+# y no hace nada.
+#
+# Publica si la variable del repo PUBLICAR_REDES es 1 y ARCHIVO no es 0. Para apagar SOLO esto: ARCHIVO=0
+# (sigue armando y simula).
+on:
+  schedule:                 # UTC; Argentina es UTC-3 todo el año
+    - cron: "50 16 * * *"   # 13:50 Argentina: respaldo de la efeméride
+    - cron: "50 23 * * *"   # 20:50 Argentina: respaldo de la pregunta del día
+  workflow_dispatch:
+    inputs:
+      tipo:
+        description: "efemeride, pregunta o auto (antes de las 17 hora argentina, la efeméride)"
+        default: "auto"
+      publicar:
+        description: '"si" publica aunque PUBLICAR_REDES no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+
+# Grupo propio: no hace fila detrás de las pasadas de policiales (que pueden tardar horas).
+concurrency:
+  group: reels-archivo
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # para commitear estado/archivo.json
+  issues: write               # para avisar si falla
+
+jobs:
+  archivo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Reel del Archivo / pregunta del día
+        timeout-minutes: 25
+        env:
+          PYTHONUNBUFFERED: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          EVENTO: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+          TIPO_INPUT: ${{ github.event.inputs.tipo }}
+          PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          ARCHIVO_VAR: ${{ vars.ARCHIVO }}
+        run: |
+          set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
+          TIPO="${TIPO_INPUT:-auto}"
+          if [ "$EVENTO" = "schedule" ]; then
+            if [ "$CRON" = "50 16 * * *" ]; then TIPO="efemeride"; else TIPO="pregunta"; fi
+          fi
+          ARGS="--tipo $TIPO"
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } \
+             && [ "$PUBLICAR_INPUT" != "no" ] && [ "$ARCHIVO_VAR" != "0" ]; then
+            ARGS="$ARGS --publicar"
+          fi
+          echo "python -m archivo.pasada $ARGS"
+          python -m archivo.pasada $ARGS | tee informe_archivo.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: archivo-${{ github.run_number }}
+          path: |
+            salida_archivo/**/*.mp4
+            salida_archivo/**/*.jpg
+            salida_archivo/**/*.json
+          retention-days: 1
+          compression-level: 0
+
+      - name: Recordar qué salió
+        # SOLO estado/archivo.json: tools/guardar_estado.py lo combina con la copia que guardan los
+        # trabajos de policiales.
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/archivo.json)" ]; then
+            echo "La memoria del Archivo no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo archivo.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="El reel del Archivo Literario falló"
+          CUERPO="$( [ -f informe_archivo.md ] && cat informe_archivo.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi

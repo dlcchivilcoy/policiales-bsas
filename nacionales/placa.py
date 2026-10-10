@@ -106,8 +106,9 @@ def _sumar_ruido(img: Image.Image, capa: Image.Image) -> Image.Image:
     return ImageChops.subtract(ImageChops.add(img, mas), menos)
 
 
-def fondo(seccion: str, tam=(1080, 1920), semilla: int = 0, etiqueta: bool = True) -> Image.Image:
-    """El fondo propio: grafito, un resplandor naranja y la SECCIÓN en letras enormes y tenues."""
+def fondo(seccion: str, tam=(1080, 1920), semilla: int = 0, etiqueta=True) -> Image.Image:
+    """El fondo propio: grafito, un resplandor naranja y la SECCIÓN en letras enormes y tenues.
+    `etiqueta`: True pone «NACIONALES» arriba; un texto pone ese (el Archivo Literario, 10/10); False, nada."""
     w, h = tam
     img = Image.new("RGB", tam, GRAFITO_OSCURO)
     # Degradé vertical: más claro arriba, donde va la palabra.
@@ -144,15 +145,16 @@ def fondo(seccion: str, tam=(1080, 1920), semilla: int = 0, etiqueta: bool = Tru
     if etiqueta:
         dd.rectangle((x + 6, ya, x + 6 + int(w * 0.12), ya + max(4, h // 300)), fill=NARANJA)
         fe = fuente(max(22, w // 34), 600)
-        dd.text((x + 6, ya - int(w * 0.055)), "NACIONALES", font=fe, fill=NARANJA)
+        rotulo = etiqueta if isinstance(etiqueta, str) else "NACIONALES"
+        dd.text((x + 6, ya - int(w * 0.055)), rotulo.upper(), font=fe, fill=NARANJA)
     img = img.filter(ImageFilter.GaussianBlur(0.6))
     return _grano(img, semilla or zlib.crc32(palabra.encode("utf-8")))
 
 
-def guardar_fondo(seccion: str, destino: Path, tam=(1080, 1920), semilla: int = 0) -> Path:
+def guardar_fondo(seccion: str, destino: Path, tam=(1080, 1920), semilla: int = 0, etiqueta=True) -> Path:
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
-    fondo(seccion, tam, semilla).save(destino, "JPEG", quality=92)
+    fondo(seccion, tam, semilla, etiqueta).save(destino, "JPEG", quality=92)
     return destino
 
 

@@ -3,6 +3,10 @@
 Junta noticias de **policiales, siniestros viales, incendios, robos, homicidios y
 suicidios** de 94 medios digitales de 34 localidades de la provincia de Buenos Aires.
 
+En este mismo repo viven también los reels ([README_REELS.md](README_REELS.md)), las noticias
+nacionales ([README_NACIONALES.md](README_NACIONALES.md)) y los reels de prueba del Archivo
+Literario + pregunta del día ([README_ARCHIVO.md](README_ARCHIVO.md)).
+
 Reusa el motor de scraping de **NoticIAs Chivilcoy** (RSS + raspado HTML +
 `fetch_article_details` + Claude Haiku), pero generalizado: acá no hay un parser por
 medio, hay una sola estrategia que se adapta sola. Mantener 55 parsers a mano sería
