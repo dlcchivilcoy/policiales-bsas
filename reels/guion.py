@@ -77,9 +77,25 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "descripcion": "2 a 4 frases para la descripción del reel",
   "hashtags": ["#Uno", "#Dos"],
   "potencial_viral": 7,
+  "datos_clave": ["cada dato concreto del hecho, corto y tal cual está en el material"],
   "titulo_web": "titular para la NOTA de la web, 60 a 95 caracteres, sin punto final",
-  "nota_web": "la nota para la web: 3 a 5 párrafos separados por un renglón en blanco"
+  "nota_web": "la nota para la web: 4 a 6 párrafos separados por un renglón en blanco"
 }
+
+DATOS CLAVE (obligatorio, pedido del editor): la nota tiene que servir para enterarse de TODO
+lo que pasó. Antes de escribir, listá en "datos_clave" cada dato concreto que trae el material
+(hasta 14), tal cual está escrito: nombre y apellido de cada persona mayor de edad (víctima,
+acusado, conductor, funcionario, testigo), las EDADES («74 años»), la localidad y el lugar
+exacto (calle y altura, esquina, barrio, ruta y kilómetro, paraje), el día y la hora, los
+VEHÍCULOS (marca, modelo, color, dominio si está), lo robado o secuestrado, montos y cantidades,
+el estado de salud y el hospital, quiénes intervinieron (comisaría, fiscalía y fiscal, juzgado,
+bomberos, SAME) y la carátula de la causa. NUNCA el nombre ni las INICIALES de un menor de 18.
+- TODOS los datos_clave tienen que aparecer en la NOTA_WEB, escritos exactos.
+- Los más fuertes (la edad, el lugar, un nombre conocido, lo insólito) van en el TITULAR y en
+  la BAJADA: «Murió un hombre de 74 años en un choque en la Ruta 5», no «Un choque terminó en
+  tragedia».
+- Reescribir con tus palabras NUNCA es sacar datos: se cambia la redacción, no la información.
+  Nombres, edades, lugares, vehículos y cifras no cuentan como copia.
 
 ES_DEL_TEMARIO (primero decidí esto; el reel se publica SOLO si es true):
 - true si el HECHO CENTRAL de la nota es uno de estos: delito o hecho policial (robo,
@@ -120,7 +136,7 @@ REGLAS DE REDACCIÓN (obligatorias):
 - NO inventes datos, nombres, cifras ni lugares que no estén en el material.
 - Preservá los verbos de atribución: "según", "informó", "habría", "es investigado".
 - Si una persona está solo por sus iniciales o no está identificada, NO le pongas nombre.
-- MENORES DE 18: nunca el nombre, ni el apodo, ni el de sus familiares, ni la escuela,
+- MENORES DE 18: nunca el nombre, ni las iniciales, ni el apodo, ni el de sus familiares, ni la escuela,
   ni víctimas ni acusados, aunque el medio de origen sí los nombre. La edad y el
   parentesco sí van: «un adolescente de 15 años», «el hijo de la víctima».
 - Nada de adjetivos valorativos ni morbo: "murió", no "perdió trágicamente la vida".
@@ -134,7 +150,8 @@ ZÓCALO (la placa de abajo, como en la tele):
 - NUNCA inventes un nombre. Ante la duda, poné el hecho.
 
 DESCRIPCIÓN:
-- 2 a 4 frases con las palabras clave naturales: qué pasó, dónde y por qué importa.
+- 3 a 5 frases con los datos fuertes: qué pasó, a quién (nombre y edad), dónde exactamente,
+  cuándo, y cómo sigue (estado de salud, causa, búsqueda).
 - Escribí CADA frase como un PÁRRAFO APARTE, separados por un renglón en blanco.
 - NO escribas links, ni la dirección de la web, ni hashtags: el sistema los agrega al final.
   Si los escribís vos también, salen DUPLICADOS.
@@ -156,8 +173,9 @@ TITULO_WEB y NOTA_WEB (la nota que se publica en la web del diario):
 - TITULO_WEB: el hecho y la LOCALIDAD en las primeras palabras (es lo que se busca en
   Google: «Chacabuco: detuvieron a…», «Choque en la Ruta 5 en Bragado…»). Claro, fiel,
   sin clickbait.
-- NOTA_WEB: 3 a 5 párrafos cortos, entre 120 y 250 palabras en total. El primer párrafo
-  responde qué pasó, dónde y cuándo; los siguientes, los detalles que trae el material.
+- NOTA_WEB: 4 a 6 párrafos cortos, entre 150 y 350 palabras en total. El primer párrafo
+  responde qué pasó, a quién, dónde y cuándo; los siguientes, TODOS los detalles que trae el
+  material (ver DATOS CLAVE). Mejor larga y completa que corta y vaga.
 - Las MISMAS reglas de redacción de arriba: reescrita de cero, nada inventado, verbos de
   atribución, menores protegidos, sin morbo.
 - NO nombres al medio de origen, ni escribas links ni hashtags.
@@ -477,13 +495,21 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     # sabe, el modelo no lo puede escribir.
     titular_original = limpiar_titular(nota.get('titulo') or '')
     texto = (nota.get('resumen') or nota.get('cuerpo') or nota.get('copete') or '')[:1200]
+    # El texto COMPLETO de la nota (flujo.material), además del resumen: con el resumen solo,
+    # la IA no tenía las edades, los vehículos ni las calles (10/10).
+    completo = " ".join((nota.get('texto_completo') or '').split())[:4000]
+    if completo and _norm_frase(completo[:200]) == _norm_frase(texto[:200]):
+        texto, completo = completo, ""           # el «resumen» ya era el texto entero
     material = (
         f"Localidad: {nombre_localidad(nota.get('localidad') or nota.get('localidad_medio')) or 's/d'}\n"
         f"Tipo de hecho: {nota.get('tipo') or inferir_tipo(nota)}\n"
         f"Gravedad: {nota.get('gravedad', 's/d')}\n"
         f"Titular original: {titular_original}\n"
         f"Texto: {texto}"
+        + (f"\nTexto completo de la nota (al final puede traer restos de otras notas de la página: "
+           f"usá solo lo de este hecho): {completo}" if completo else "")
     )
+    texto = f"{texto} {completo}"                 # contra esto se mide la copia
     try:
         datos, detalle = ia.redactar(SYSTEM_PROMPT, material, preferir)
     except Exception as e:
@@ -501,17 +527,23 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     # salen del texto del medio) y, si copió, se le pide una vez más con el tramo a la vista.
     original = _palabras(f"{titular_original} {texto}")
     copia = copia_del_original(salida, original, nota.get("medio") or "")
-    if copia["racha"] >= UMBRAL_COPIA or copia["nombra_medio"]:
+    # Y que no falte ningún dato (pedido del editor, 10/10): los datos_clave que la propia IA
+    # listó tienen que estar en lo que se publica. Si falta alguno, segundo pedido con la lista.
+    faltan = datos_faltantes(salida)
+    if copia["racha"] >= UMBRAL_COPIA or copia["nombra_medio"] or faltan:
         try:
-            datos2, detalle2 = ia.redactar(SYSTEM_PROMPT + _pedido_reescritura(copia),
+            datos2, detalle2 = ia.redactar(SYSTEM_PROMPT + _pedido_reescritura(copia, faltan),
                                            material, preferir)
             salida2 = _salida_ia(datos2, detalle2, nota)
             copia2 = copia_del_original(salida2, original, nota.get("medio") or "")
-            if (copia2["nombra_medio"], copia2["racha"]) < (copia["nombra_medio"], copia["racha"]):
-                salida, copia = salida2, copia2
+            faltan2 = datos_faltantes(salida2)
+            if ((copia2["nombra_medio"], copia2["racha"] >= UMBRAL_COPIA, len(faltan2), copia2["racha"])
+                    < (copia["nombra_medio"], copia["racha"] >= UMBRAL_COPIA, len(faltan), copia["racha"])):
+                salida, copia, faltan = salida2, copia2, faltan2
         except Exception:
             pass                  # si el segundo pedido falla, queda el primero
     salida["copia"] = copia
+    salida["faltan_datos"] = faltan
     return salida
 
 
@@ -533,6 +565,8 @@ def _salida_ia(datos: dict, detalle: str, nota: dict) -> dict:
     salida["via"] = detalle
     salida["fuera_de_temario"] = fuera_de_temario(datos)
     salida["viral"] = potencial_viral(datos)
+    salida["datos_clave"] = [" ".join(str(d).split()) for d in (datos.get("datos_clave") or [])
+                             if isinstance(d, (str, int, float)) and str(d).strip()][:14]
     # La nota de la web. Si la IA no la escribió, se arma con lo que sí escribió (bajada +
     # descripción): una nota corta es mejor que un posteo de Facebook sin link.
     salida["titulo_web"] = _acortar(" ".join(str(datos.get("titulo_web") or "").split())
@@ -594,20 +628,65 @@ def _nombra_medio(texto: str, medio: str) -> bool:
     return f" {' '.join(nombre)} " in f" {' '.join(_palabras(texto))} "
 
 
+DATO_MAX_PALABRAS = 8
+
+
+def _sin_datos(palabras: list, datos: list) -> list:
+    """Las palabras del texto con cada DATO CLAVE tapado por «§», que no está en el original.
+
+    Desde el 10/10 los datos van exactos (pedido del editor): «la Fiscalía de Responsabilidad
+    Penal Juvenil Nº 12 del Departamento Judicial Junín» son 13 palabras iguales al original y
+    no es copiar, es el nombre de la fiscalía. Tapados, el control mide solo la REDACCIÓN. Solo
+    datos de hasta 8 palabras: una oración entera listada como «dato» no se salva."""
+    salida = list(palabras)
+    for dato in datos or []:
+        d = _palabras(dato)
+        if not d or len(d) > DATO_MAX_PALABRAS:
+            continue
+        i = 0
+        while i <= len(salida) - len(d):
+            if salida[i:i + len(d)] == d:
+                salida[i:i + len(d)] = ["§"] * len(d)
+                i += len(d)
+            else:
+                i += 1
+    return salida
+
+
 def copia_del_original(guion: dict, original: list, medio: str = "") -> dict:
-    """Cuánto de lo que se publica es calcado de la nota original, campo por campo."""
+    """Cuánto de lo que se publica es calcado de la nota original, campo por campo (sin contar
+    los datos clave, ver _sin_datos)."""
     peor = {"racha": 0, "tramo": "", "campo": "", "nombra_medio": False}
+    datos = guion.get("datos_clave") or []
     for campo in CAMPOS_PUBLICOS:
         texto = guion.get(campo) or ""
         if medio and _nombra_medio(texto, medio):
             peor["nombra_medio"] = True
-        n, tramo = tramo_copiado(texto, original)
+        n, tramo = tramo_copiado(_sin_datos(_palabras(texto), datos), original)
         if n > peor["racha"]:
             peor.update(racha=n, tramo=tramo, campo=campo)
     return peor
 
 
-def _pedido_reescritura(copia: dict) -> str:
+def datos_faltantes(guion: dict) -> list:
+    """Los datos_clave (que listó la propia IA) que no aparecen en lo que se publica.
+
+    Un dato está si aparece al menos el 75% de sus palabras y TODAS sus cifras: «un Ford Ka y
+    un Renault Logan» está aunque la nota diga «el Renault Logan … el Ford Ka»."""
+    publico = set(_palabras(" ".join(guion.get(c) or "" for c in CAMPOS_PUBLICOS)))
+    faltan = []
+    for dato in guion.get("datos_clave") or []:
+        palabras = [w for w in _palabras(dato) if len(w) >= 3 or w.isdigit()]
+        if not palabras:
+            continue
+        cifras = [w for w in palabras if w.isdigit()]
+        hay = sum(1 for w in palabras if w in publico)
+        if any(c not in publico for c in cifras) or hay < 0.75 * len(palabras):
+            faltan.append(dato)
+    return faltan
+
+
+def _pedido_reescritura(copia: dict, faltan=()) -> str:
     """Lo que se le agrega al prompt en el segundo pedido. Va en el SYSTEM y no en el
     material: el material es contenido a procesar y el prompt le dice que ignore órdenes
     que vengan adentro."""
@@ -618,6 +697,11 @@ def _pedido_reescritura(copia: dict) -> str:
                       f"orden; ningún tramo de más de 5 palabras puede coincidir con el material.")
     if copia.get("nombra_medio"):
         partes.append("Nombraste al medio que publicó la nota: sacalo.")
+    if faltan:
+        partes.append("Te faltaron estos datos que vos mismo listaste en datos_clave: "
+                      + ", ".join(f"«{d}»" for d in list(faltan)[:10])
+                      + ". Ponelos TODOS en la nota_web, exactos (los más fuertes también en el "
+                        "titular y la bajada), salvo el nombre o las iniciales de un menor de 18.")
     partes.append("Respetá los mismos topes de largo de cada campo (el titular, 90 caracteres).")
     return " ".join(partes)
 

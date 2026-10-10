@@ -184,7 +184,8 @@ policiales-bsas/
 │   ├── cobertura_regional.py   Qué cubre cada regional
 │   ├── generar_registro.py     Escribe medios.py
 │   ├── test_keywords.py        Banco de pruebas del diccionario
-│   └── test_instagram.py       Que Instagram salga siempre como reel de prueba
+│   ├── test_datos.py           Que el guion no se coma nombres, edades ni lugares (10/10)
+│   └── test_instagram.py       Cómo sale el reel en Instagram (normal al feed desde el 10/10)
 ├── data/     Padrón y mediciones
 └── salida/   CSV/JSON de cada corrida
 ```

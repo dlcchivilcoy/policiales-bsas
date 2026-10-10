@@ -7,7 +7,8 @@
     venv\\Scripts\\python.exe -m reels.publicador --redes instagram,youtube
 
 Decidido por el editor el 2026-09-26:
-- Instagram: TODO sale como reel de prueba con graduacion automatica (el que anda
+- Instagram (desde el 10/10/2026): reel NORMAL al feed, hasta 5 por pasada, los más
+  virales. Antes (26/09 a 10/10): TODO salía como reel de prueba con graduacion automatica (el que anda
   con los no seguidores pasa solo al feed). El pedido lo arma
   `reels/instagram.py: contenedor_reel()` y este modulo no le agrega nada por su
   cuenta: la regla vive en un solo lugar.
@@ -81,18 +82,15 @@ NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouT
 # pieza no va como reel, 03/10) e Instagram.
 ORDEN = ("youtube", "web", "facebook", "fb_youtube", "instagram")
 
-# INSTAGRAM DE PRUEBA: N por pasada (pedido del editor, 27/09). Van las MÁS NUEVAS, sea
-# cual sea el tema (reels/frescura.py); la cercanía a Chivilcoy (reels/cercania.py) y el
-# viral de la IA solo desempatan entre notas de minutos de diferencia. Se saltean los hechos
-# que ya están en el Instagram de la cuenta (a mano, del bot o nuestros). Facebook elige igual.
-#
-# CUÁNTOS, según el horario (decidido por el editor el 27/09): 2 en las pasadas de más
-# movimiento (12:05, 18:05, 21:05) y 1 en las otras (09:05, 15:05, 23:35) = 9 por día.
-# El tope de reels de prueba por la API no está documentado: el 27/09 rebotó con 11 y con
-# 13 en 24 h (10 habían salido juntos a la mañana), así que 6 × 2 = 12 quedaba en el borde.
-# La variable del repo IG_PRUEBA_POR_PASADA, si se carga, pisa esto con un número fijo.
-IG_PRUEBA_POR_HORARIO = ((9, 5, 1), (12, 5, 2), (15, 5, 1), (18, 5, 2), (21, 5, 2), (23, 35, 1))
-IG_PRUEBA_POR_PASADA_DEFAULT = 2
+# INSTAGRAM (pedido del editor, 10/10/2026): reels NORMALES —al feed, ya no «de prueba»—,
+# hasta 5 por pasada, los de MÁS POTENCIAL VIRAL de la pasada (igual que Facebook: viral de la
+# IA + cercanía a Chivilcoy + video). Se saltean los hechos que ya están en el Instagram de la
+# cuenta (a mano, del bot o nuestros). El techo es el de la API: 100 posteos cada 24 h por
+# cuenta, compartido con el bot (IG_RESERVA_BOT lo cuida).
+# Antes: del 27/09 al 10/10, reels de PRUEBA, 1 o 2 por pasada según el horario (9 por día),
+# los más nuevos; los de prueba tenían un tope propio de ~10 por día.
+# La variable del repo IG_POR_PASADA (o la vieja IG_PRUEBA_POR_PASADA) pisa el 5.
+IG_POR_PASADA_DEFAULT = 5
 HORAS_INSTAGRAM_RECIENTE = 72
 # Un reel con el VIDEO del medio retiene mucho más que una foto quieta: suma 4 puntos al
 # elegir para Facebook e Instagram (pedido del editor, 27/09). 4 = lo que vale una hora de
@@ -977,22 +975,15 @@ def _lugar_en_instagram():
 
 
 def ig_por_pasada() -> int:
-    """Reels de prueba de esta pasada. IG_PRUEBA_POR_PASADA, si está cargada, manda; si no,
-    el horario (IG_PRUEBA_POR_HORARIO): cuenta el último que ya pasó, así una pasada que
-    salió tarde por la fila, o que cruzó la medianoche, sigue siendo la suya."""
-    fijo = (os.environ.get("IG_PRUEBA_POR_PASADA") or "").strip()
+    """Reels de Instagram de esta pasada: IG_POR_PASADA (o la vieja IG_PRUEBA_POR_PASADA) si
+    está cargada; si no, 5."""
+    fijo = (os.environ.get("IG_POR_PASADA") or os.environ.get("IG_PRUEBA_POR_PASADA") or "").strip()
     if fijo:
         try:
             return max(0, int(fijo))
         except ValueError:
-            return IG_PRUEBA_POR_PASADA_DEFAULT
-    ahora = _hora_ar()
-    minutos = ahora.hour * 60 + ahora.minute
-    n = IG_PRUEBA_POR_HORARIO[-1][2]          # antes de las 09:05: la de 23:35 de la noche
-    for hora, minuto, cantidad in IG_PRUEBA_POR_HORARIO:
-        if minutos >= hora * 60 + minuto:
-            n = cantidad
-    return n
+            return IG_POR_PASADA_DEFAULT
+    return IG_POR_PASADA_DEFAULT
 
 
 def _huella_texto(texto: str) -> frozenset:
@@ -1188,10 +1179,10 @@ def _ya_en_youtube(pieza: dict, recientes: list) -> str:
 def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: list,
                       donde: str, por: str = "frescura") -> tuple:
     """(claves elegidas, {clave: motivo}) para `red`, salteando los hechos que ya están en la
-    cuenta. `por="frescura"` (Instagram): las `n` MÁS NUEVAS de la pasada (viral y cercanía
-    desempatan entre notas de minutos de diferencia, ver reels/frescura.py). `por="viral"`
-    (Facebook, desde el 03/10): las `n` con MÁS POTENCIAL DE VIRALIZACIÓN según la IA; la
-    cercanía y el video suman, y la hora solo desempata."""
+    cuenta. `por="viral"` (Facebook desde el 03/10, Instagram desde el 10/10): las `n` con MÁS
+    POTENCIAL DE VIRALIZACIÓN según la IA; la cercanía y el video suman, y la hora solo
+    desempata. `por="frescura"` (lo que usaba Instagram hasta el 10/10): las `n` MÁS NUEVAS de
+    la pasada (viral y cercanía desempatan entre notas de minutos, ver reels/frescura.py)."""
     candidatas = [p for p, _ in listas
                   if ((ledger.get(_clave(p)) or {}).get(red) or {}).get("estado")
                   not in ("ok", "sin_confirmar")]
@@ -1258,7 +1249,10 @@ def elegir_instagram(listas: list, ledger: dict, publicar: bool) -> tuple:
     # Se lee la cuenta solo si hay algo que decidir (y nunca simulando).
     recientes = (_recientes_instagram() if (publicar and n and _hay_candidatas(listas, ledger, "instagram"))
                  else [])
-    return _elegir_por_viral(listas, ledger, "instagram", n, recientes, "el Instagram de la cuenta")
+    # Por VIRALIDAD, como Facebook (pedido del editor, 10/10: «los reels con mejor proyección
+    # de viralidad posible»). Hasta entonces, Instagram elegía por frescura.
+    return _elegir_por_viral(listas, ledger, "instagram", n, recientes, "el Instagram de la cuenta",
+                             por="viral")
 
 
 def _youtube_de_hoy(ledger: dict) -> int:
@@ -1370,12 +1364,12 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     ig_elegidas, ig_motivos = set(), {}
     if "instagram" in redes:
         ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
-        print(f"  Instagram de prueba: {len(ig_elegidas)} pieza(s) de esta pasada, "
-              f"las más nuevas (tope {ig_por_pasada()} por pasada)")
+        print(f"  Instagram: {len(ig_elegidas)} pieza(s) de esta pasada, "
+              f"las más virales (tope {ig_por_pasada()} por pasada)")
     fb_elegidas, fb_motivos = set(), {}
     if "facebook" in redes:
         fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
-        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más nuevas "
+        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
     # Lo que ya está en el canal de YouTube, para no repetir hechos (ver _ya_en_youtube).

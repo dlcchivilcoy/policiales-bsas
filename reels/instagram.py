@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Instagram: TODO lo automatico sale como REEL DE PRUEBA. Este modulo NO publica.
+"""Instagram: como sale cada reel automático. Este modulo NO publica.
+
+DESDE EL 10/10/2026 (pedido del editor: «sacarlos de reels de prueba»): reels NORMALES, al
+feed y a la pestaña de reels (`share_to_feed`). Lo de abajo cuenta cómo fue del 26/09 al
+10/10, cuando todo salía como reel de prueba; la regla sigue acá por si se vuelve.
 
 Decidido por el editor el 2026-09-26. Un reel de prueba ("trial reel") se muestra
 primero SOLO a gente que no sigue la cuenta. Asi un reel armado sin revision
@@ -27,8 +31,9 @@ Lo que la API NO da, y hay que saber:
 import json
 
 # True = todo lo que sube el sistema es reel de prueba. Pasarlo a False es decision
-# del editor, no un ajuste tecnico: los reels le llegarian directo a los seguidores.
-SOLO_REELS_DE_PRUEBA = True
+# del editor, no un ajuste tecnico: los reels le llegan directo a los seguidores.
+# False desde el 10/10/2026, a pedido del editor.
+SOLO_REELS_DE_PRUEBA = False
 
 # "MANUAL": queda en prueba hasta que el editor lo gradue desde la app. Nunca le llega
 #           a los seguidores solo.
@@ -54,4 +59,7 @@ def contenedor_reel(video_url: str, caption: str) -> dict:
             raise ValueError(f"GRADUACION invalida: {GRADUACION!r}")
         # La Graph API recibe los objetos anidados como JSON dentro del formulario.
         params["trial_params"] = json.dumps({"graduation_strategy": GRADUACION})
+    else:
+        # Reel normal: al feed de la cuenta Y a la pestaña de reels.
+        params["share_to_feed"] = "true"
     return params

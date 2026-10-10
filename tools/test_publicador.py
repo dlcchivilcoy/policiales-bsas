@@ -60,6 +60,8 @@ os.environ["YT_SIN_PLACA"] = "0"       # el corte de la placa se prueba aparte (
 # tope de antes) para que siga habiendo que elegir. El valor por defecto (5) se prueba en 18.
 os.environ["FB_POR_PASADA"] = "2"
 os.environ.pop("IG_PRUEBA_POR_PASADA", None)
+# Instagram, igual: el tope de antes (2) para que haya que elegir; el de hoy (5) se prueba aparte.
+os.environ["IG_POR_PASADA"] = "2"
 TODOS_LOS_SECRETOS = list(TOKENS.values()) + list(YT_SECRETOS.values()) + [YT_ACCESO]
 
 
@@ -286,8 +288,8 @@ chequear("simular: cero pedidos a la red", len(meta.pedidos) == 0)
 chequear("simular: no escribe la memoria de publicados", not PUB.LEDGER.exists())
 chequear("simular: la pieza no apta queda salteada con motivo",
          [s["orden"] for s in inf["salteadas"]] == [3] and "no apta" in inf["salteadas"][0]["motivo"])
-chequear("simular: Instagram se anuncia como reel de prueba automatico",
-         inf["piezas"][0]["instagram"]["prueba"] == {"graduation_strategy": "SS_PERFORMANCE"})
+chequear("simular: Instagram ya no se anuncia como reel de prueba (10/10)",
+         inf["piezas"][0]["instagram"]["prueba"] is None)
 shutil.rmtree(base)
 
 # --- 2. Publicar: el camino feliz ---------------------------------------------
@@ -297,8 +299,8 @@ estados = [(f["instagram"]["estado"], f["facebook"]["estado"]) for f in inf["pie
 chequear("publicar: las dos piezas aptas salen en las dos redes", estados == [("ok", "ok")] * 2)
 c = meta.contenedores[0]
 chequear("Instagram: es un reel", c.get("media_type") == "REELS")
-chequear("Instagram: sale como reel de PRUEBA con graduacion automatica",
-         json.loads(c.get("trial_params", "{}")) == {"graduation_strategy": "SS_PERFORMANCE"})
+chequear("Instagram: sale como reel NORMAL al feed (sin trial_params, con share_to_feed)",
+         "trial_params" not in c and c.get("share_to_feed") == "true")
 chequear("Instagram: le pasa la URL publica del video en GitHub",
          c.get("video_url", "").startswith("https://github.com/dlcchivilcoy/policiales-bsas/releases/download/"))
 chequear("Instagram: el nombre del video lleva la tanda (no se pisan entre pasadas)",
@@ -639,50 +641,41 @@ def preparar_virales(virales, meta=None, titulares=None):
     return base, carpeta, reloj, meta
 
 
-chequear("en una pasada de las mejores (18:05) van 2", PUB.ig_por_pasada() == 2)
-
-
-def _a_las(h, m):
-    PUB._hora_ar = lambda: datetime(2026, 9, 26, h, m, tzinfo=_AR)
-    return PUB.ig_por_pasada()
-
-
-# Decidido por el editor el 27/09: 2 en 12:05, 18:05 y 21:05; 1 en 09:05, 15:05 y 23:35.
-chequear("reels de prueba por horario: 9:05→1, 12:05→2, 15:05→1, 18:05→2, 21:05→2, 23:35→1",
-         [_a_las(9, 12), _a_las(12, 12), _a_las(15, 12), _a_las(18, 12), _a_las(21, 12), _a_las(23, 40)]
-         == [1, 2, 1, 2, 2, 1])
-chequear("...son 9 por día (por debajo del tope que mostró Instagram)",
-         sum(c for _, _, c in PUB.IG_PRUEBA_POR_HORARIO) == 9)
-chequear("una pasada que salió tarde por la fila sigue siendo la suya (12:05 que arranca 13:40 → 2)",
-         _a_las(13, 40) == 2)
-chequear("la de 23:35 que cruza la medianoche sigue con 1", _a_las(0, 20) == 1)
+os.environ.pop("IG_POR_PASADA")
+chequear("Instagram: 5 reels por pasada por defecto (10/10)", PUB.ig_por_pasada() == 5)
+PUB._hora_ar = lambda: datetime(2026, 9, 26, 9, 10, tzinfo=_AR)
+chequear("...a cualquier hora (ya no depende del horario)", PUB.ig_por_pasada() == 5)
 os.environ["IG_PRUEBA_POR_PASADA"] = "3"
-chequear("la variable del repo IG_PRUEBA_POR_PASADA pisa el horario", _a_las(9, 12) == 3)
-os.environ.pop("IG_PRUEBA_POR_PASADA")
-base, carpeta, reloj, meta = preparar_virales([3, 1, 2])
-PUB._hora_ar = lambda: datetime(2026, 9, 26, 15, 10, tzinfo=_AR)
+chequear("la variable vieja IG_PRUEBA_POR_PASADA sigue pisando el tope", PUB.ig_por_pasada() == 3)
+del os.environ["IG_PRUEBA_POR_PASADA"]
+os.environ["IG_POR_PASADA"] = "4"
+chequear("la variable IG_POR_PASADA pisa el tope", PUB.ig_por_pasada() == 4)
+os.environ.pop("IG_POR_PASADA")
+base, carpeta, reloj, meta = preparar_virales([3, 1, 2, 8, 5, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
-chequear("en la pasada de las 15:05 sale 1 solo reel de prueba",
-         [f["instagram"]["estado"] for f in inf["piezas"]].count("ok") == 1)
+ig = [f["instagram"]["estado"] for f in inf["piezas"]]
+chequear("con 7 piezas salen las 5 MÁS VIRALES (9, 8, 7, 5, 3); la de 1 y la de 2 no",
+         ig == ["ok", "omitida", "omitida", "ok", "ok", "ok", "ok"] and len(meta.contenedores) == 5)
 shutil.rmtree(base)
+os.environ["IG_POR_PASADA"] = "2"
 PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
 chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"] and len(meta.contenedores) == 2)
-chequear("...con el motivo a la vista", "más nuevas" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("...con el motivo a la vista", "más virales" in inf["piezas"][0]["instagram"]["detalle"])
 chequear("...YouTube lleva las tres; Facebook, las mismas 2 más virales",
          all(f["youtube"]["estado"] == "ok" for f in inf["piezas"])
          and [f["facebook"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
 chequear("...no es una falla: no abre issue", not (base / "informe_publicacion.md").exists())
 shutil.rmtree(base)
 
-os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+os.environ["IG_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("IG_PRUEBA_POR_PASADA=1: solo la más viral",
+chequear("IG_POR_PASADA=1: solo la más viral",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "omitida"])
-os.environ.pop("IG_PRUEBA_POR_PASADA")
+os.environ["IG_POR_PASADA"] = "2"
 shutil.rmtree(base)
 
 hechos = [("Detuvieron a dos hombres por el robo de una camioneta en el barrio Centro",
@@ -822,12 +815,12 @@ chequear("...el motivo de la cercana que no entró lo dice",
 chequear("...y YouTube sigue llevando todas", all(f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
 shutil.rmtree(base)
 
-os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+os.environ["IG_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_pueblos([("junin", 6), ("pergamino", 9)])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 chequear("un hecho lejano mucho más viral (9) le sigue ganando a uno cercano de 6",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
-os.environ.pop("IG_PRUEBA_POR_PASADA")
+os.environ["IG_POR_PASADA"] = "2"
 shutil.rmtree(base)
 
 
@@ -850,28 +843,28 @@ def preparar_horas(filas):
 base, carpeta, reloj, meta = preparar_horas([("bragado", 9, "13:00"), ("pergamino", 5, "15:00"),
                                              ("lobos", 6, "15:10")])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("Instagram: van las 2 MÁS NUEVAS aunque la vieja sea más viral y cercana",
-         [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok", "ok"])
-chequear("...y el motivo dice cuánto más vieja era",
-         "2,2 h más vieja" in inf["piezas"][0]["instagram"]["detalle"])
+chequear("Instagram (10/10): las 2 MÁS VIRALES, como Facebook, aunque sean de horas antes",
+         [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok"])
+chequear("...y el motivo dice que no está entre las más virales",
+         "más virales" in inf["piezas"][1]["instagram"]["detalle"])
 chequear("Facebook, en cambio (03/10): las 2 MÁS VIRALES, aunque sean de horas antes",
          [f["facebook"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok"])
 shutil.rmtree(base)
 
-os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+os.environ["IG_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "15:00")])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 chequear("con minutos de diferencia, desempata la cercanía (Junín 10 min antes le gana)",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
 base2, carpeta2, _, _ = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "13:30")])
 inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
-chequear("...pero con más de una hora de diferencia gana la más nueva",
-         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["ok", "omitida"])
+chequear("...y desde el 10/10 la hora ya no manda: gana la cercana aunque sea de 1,5 h antes",
+         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["omitida", "ok"])
 base3, carpeta3, _, _ = preparar_horas([("lobos", 9, ""), ("lobos", 5, "15:10")])
 inf3 = silencio(PUB.publicar_lote, carpeta3, ("instagram",), publicar=True)
-chequear("una sin hora conocida no le gana a una que sí es del momento",
-         [f["instagram"]["estado"] for f in inf3["piezas"]] == ["omitida", "ok"])
-os.environ.pop("IG_PRUEBA_POR_PASADA")
+chequear("la más viral gana aunque no se sepa su hora (9 contra 5)",
+         [f["instagram"]["estado"] for f in inf3["piezas"]] == ["ok", "omitida"])
+os.environ["IG_POR_PASADA"] = "2"
 for b in (base, base2, base3):
     shutil.rmtree(b)
 
@@ -963,7 +956,7 @@ def preparar_video(filas):
     return base, carpeta, reloj, meta
 
 
-os.environ["IG_PRUEBA_POR_PASADA"] = "1"
+os.environ["IG_POR_PASADA"] = "1"
 base, carpeta, reloj, meta = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "15:00", True)])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 chequear("de la misma hora, la que tiene VIDEO le gana a la de foto aunque sea menos viral",
@@ -971,10 +964,10 @@ chequear("de la misma hora, la que tiene VIDEO le gana a la de foto aunque sea m
 chequear("...y el motivo de la de foto no dice «por video»", "por video" not in inf["piezas"][0]["instagram"]["detalle"])
 base2, carpeta2, _, _ = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "13:00", True)])
 inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
-chequear("...pero un video de 2 horas antes no le gana a la noticia del momento",
-         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["ok", "omitida"]
-         and "+4 por video" in inf2["piezas"][1]["instagram"]["detalle"])
-os.environ.pop("IG_PRUEBA_POR_PASADA")
+chequear("...y el video suma aunque sea de 2 horas antes (desde el 10/10 la hora solo desempata)",
+         [f["instagram"]["estado"] for f in inf2["piezas"]] == ["omitida", "ok"]
+         and "más virales" in inf2["piezas"][0]["instagram"]["detalle"])
+os.environ["IG_POR_PASADA"] = "2"
 for b in (base, base2):
     shutil.rmtree(b)
 

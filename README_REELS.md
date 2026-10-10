@@ -4,6 +4,11 @@ Fase 1 del sistema de reels: **genera y muestra, no publica**. Todo lo estético
 tu bot de corresponsales (`dlcchivilcoy/social_publisher`), replicado acá para que las
 piezas salgan con tu marca y no con un diseño inventado.
 
+> **10/10:** Instagram pasa a reel NORMAL al feed, hasta 5 por pasada, los más virales (igual
+> que Facebook). Y el guion lee el texto COMPLETO de la nota y lista sus datos clave (nombres,
+> edades, lugares, vehículos, cifras): si alguno no aparece en lo publicado, se le pide de nuevo
+> (`guion.datos_faltantes`). Los datos exactos no cuentan como copia (`guion._sin_datos`).
+>
 > **26/09:** la publicación en Instagram (reel de prueba), Facebook (reel normal) y
 > YouTube (Short en Radio del Centro) existe en `reels/publicador.py`, apagada por
 > defecto. TikTok, desactivado. Ver la sección *Publicar* de `CORRIDA_MANUAL.md`.
@@ -347,7 +352,7 @@ reels/
 │                 la pasada (-4 puntos por hora de atraso: cercanía y viral solo desempatan
 │                 entre notas de minutos de diferencia); la pasada publica la más nueva primero.
 ├── publicador.py Instagram (prueba), Facebook, YouTube. TikTok desactivado.
-├── instagram.py  La regla del reel de prueba
+├── instagram.py  Cómo sale el reel (normal desde el 10/10; la regla de prueba queda)
 ├── ledger.py     Memoria de notas ya usadas
 └── limpieza.py   Borrado de intermedios y retención por antigüedad
 estetica_bot/     El motor de reels del bot, copiado TAL CUAL (tools/traer_estetica_bot.py)

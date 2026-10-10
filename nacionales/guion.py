@@ -13,7 +13,9 @@ from reels import guion as G
 
 MAX_TITULAR = 90
 MAX_BAJADA = 280
-MATERIAL = 1500             # caracteres del texto original que lee la IA (y contra los que se mide la copia)
+# Caracteres del texto original que lee la IA (y contra los que se mide la copia). Era 1.500: con
+# eso quedaban afuera nombres, cifras y lugares de la mitad de la nota (pedido del editor, 10/10).
+MATERIAL = 3500
 
 # La palabra grande de la placa propia, según de qué trata la nota.
 SECCIONES = ("Política", "Economía", "Sociedad", "Justicia", "Salud", "Provincia", "Clima",
@@ -34,6 +36,7 @@ Devolvés EXACTAMENTE estos campos en un JSON:
   "descripcion": "2 a 4 frases para la descripción del video",
   "hashtags": ["#Uno", "#Dos"],
   "potencial_viral": 7,
+  "datos_clave": ["cada dato concreto, corto y tal cual está en el material"],
   "titulo_web": "titular para la NOTA de la web, 60 a 95 caracteres, sin punto final",
   "nota_web": "la nota para la web: 4 a 6 párrafos separados por un renglón en blanco"
 }
@@ -60,7 +63,12 @@ REGLAS DE REDACCIÓN (obligatorias):
   tomes partido, ni califiques a un dirigente, ni uses los motes de unos contra otros salvo
   como cita textual atribuida.
 - En causas judiciales, presunción de inocencia: «acusado de», «imputado por», nunca «el culpable».
-- MENORES DE 18: nunca el nombre ni datos que los identifiquen.
+- MENORES DE 18: nunca el nombre, ni las iniciales, ni datos que los identifiquen.
+- DATOS CLAVE (obligatorio, pedido del editor): listá en "datos_clave" (hasta 14) cada dato
+  concreto del material, tal cual: nombres y cargos de las personas, edades, lugares, fechas y
+  plazos, montos y porcentajes, organismos, números de ley o decreto, cifras. TODOS tienen que
+  aparecer en la NOTA_WEB, exactos; los más fuertes, en el titular y la bajada. Reescribir con
+  tus palabras nunca es sacar datos: se cambia la redacción, no la información.
 - Si el material trae un DATO DE CHIVILCOY (viene aparte, en «Lo que dice de Chivilcoy»), es
   lo más importante para nuestros lectores: va en el titular o en la bajada, y en el primer
   párrafo de la nota de la web. Con su sentido EXACTO, sin agregarle nada ni dramatizarlo: si
@@ -134,6 +142,8 @@ def _salida(datos: dict, detalle: str, nota: dict) -> dict:
     tags = [t for t in (datos.get("hashtags") or []) if isinstance(t, str) and t.startswith("#")]
     s["hashtags"] = [re.sub(r"[^\w#]", "", G._sin_tildes(t)) for t in tags][:4]
     s["viral"] = G.potencial_viral(datos)
+    s["datos_clave"] = [" ".join(str(d).split()) for d in (datos.get("datos_clave") or [])
+                        if isinstance(d, (str, int, float)) and str(d).strip()][:14]
     apta = datos.get("apta", True)
     if isinstance(apta, str):
         apta = apta.strip().lower() not in ("false", "no", "0", "falso")
@@ -174,18 +184,22 @@ def generar(nota: dict, redactar=None) -> dict:
 
     original = G._palabras(f"{titular} {texto}")
     copia = G.copia_del_original(g, original)
+    faltan = G.datos_faltantes(g)
     copia["nombra_medio"] = _nombra_infobae(g)
-    if copia["racha"] >= G.UMBRAL_COPIA or copia["nombra_medio"]:
+    if copia["racha"] >= G.UMBRAL_COPIA or copia["nombra_medio"] or faltan:
         try:
-            datos2, detalle2 = redactar(SYSTEM_PROMPT + G._pedido_reescritura(copia), material)
+            datos2, detalle2 = redactar(SYSTEM_PROMPT + G._pedido_reescritura(copia, faltan), material)
             g2 = _salida(datos2, detalle2, nota)
             copia2 = G.copia_del_original(g2, original)
+            faltan2 = G.datos_faltantes(g2)
             copia2["nombra_medio"] = _nombra_infobae(g2)
-            if (copia2["nombra_medio"], copia2["racha"]) < (copia["nombra_medio"], copia["racha"]):
-                g, copia = g2, copia2
+            if ((copia2["nombra_medio"], copia2["racha"] >= G.UMBRAL_COPIA, len(faltan2), copia2["racha"])
+                    < (copia["nombra_medio"], copia["racha"] >= G.UMBRAL_COPIA, len(faltan), copia["racha"])):
+                g, copia, faltan = g2, copia2, faltan2
         except Exception:                            # noqa: BLE001 — queda la primera versión
             pass
     g["copia"] = copia
+    g["faltan_datos"] = faltan
     if copia["racha"] >= G.UMBRAL_COPIA_BLOQUEO or copia["nombra_medio"]:
         g["apta"] = False
         g["motivo"] = (f"nombra al medio de origen" if copia["nombra_medio"] else

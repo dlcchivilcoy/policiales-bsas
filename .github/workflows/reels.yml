@@ -58,7 +58,7 @@ on:
         description: '"hoy" (lo que corre siempre) o un número de horas, para probar'
         default: "hoy"
       publicar:
-        description: '"si" = publicar DE VERDAD (Instagram como reel de prueba, Facebook normal, YouTube Short). Cualquier otra cosa = solo simular'
+        description: '"si" = publicar DE VERDAD (Instagram reel al feed, Facebook reel, YouTube Short). Cualquier otra cosa = solo simular'
         default: "no"
       origen:
         # cron-job.org manda "cron": es una pasada de horario, no una prueba a mano, y el
@@ -148,18 +148,18 @@ jobs:
             --cuantos "${{ github.event.inputs.cuantos || '0' }}"
 
       # ─────────────────────────────────────────────────────────────────────────
-      # PUBLICAR: Instagram como REEL DE PRUEBA (el que anda pasa solo al feed),
+      # PUBLICAR: Instagram como reel NORMAL al feed (desde el 10/10; antes, reel de prueba),
       # Facebook como reel NORMAL y YouTube como SHORT en Radio del Centro. Decidido el
       # 26/09/2026. Sin tope propio (27/09), pero Instagram (100 posteos cada 24 h por
       # cuenta) y YouTube (100 subidas por día por proyecto) se COMPARTEN con el bot del
       # diario: policiales frena antes para no dejarlo sin lugar. Reservas: variables del
       # repo IG_RESERVA_BOT (25 si no está) y YT_SHORTS_POR_DIA (80 si no está).
       #
-      # Instagram de PRUEBA (27/09): los más nuevos de cada pasada, salteando hechos que ya
-      # estén en la cuenta. Cuántos, según el horario: 2 a las 12:05, 18:05 y 21:05 y 1 en
-      # las otras = 9 por día (IG_PRUEBA_POR_HORARIO en reels/publicador.py). El tope de la
-      # API no está documentado (el 27/09 rebotó con 11-13 en 24 h). La variable del repo
-      # IG_PRUEBA_POR_PASADA, si se carga, pisa el horario con un número fijo.
+      # INSTAGRAM (10/10, pedido del editor): reels NORMALES al feed, hasta 5 por pasada, los
+      # de MÁS POTENCIAL VIRAL (igual que Facebook), salteando hechos que ya estén en la
+      # cuenta. El techo lo pone la API (100 posteos/24 h, IG_RESERVA_BOT deja lugar al bot).
+      # La variable del repo IG_POR_PASADA, si se carga, pisa el 5. (Del 27/09 al 10/10 eran
+      # reels de prueba, 1-2 por pasada según el horario, los más nuevos.)
       #
       # NOTA EN LA WEB (27/09; desde el 03/10, una por cada reel que sale en YouTube): cada
       # reel tiene su nota en la sección «Región» de la web
@@ -177,7 +177,7 @@ jobs:
       #     automáticas: se prende y se apaga sin tocar código.
       # Si no, el paso de abajo SIMULA: muestra qué saldría, sin tocar ninguna red.
       # ─────────────────────────────────────────────────────────────────────────
-      - name: Publicar en Instagram (prueba), Facebook y YouTube
+      - name: Publicar en Instagram, Facebook y YouTube
         if: vars.PUBLICAR_REDES == '1' || github.event.inputs.publicar == 'si'
         timeout-minutes: 300
         env:
@@ -186,6 +186,7 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          IG_POR_PASADA: ${{ vars.IG_POR_PASADA }}
           IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
           # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 2 por pasada,
           # los de más potencial de viralización (03/10).

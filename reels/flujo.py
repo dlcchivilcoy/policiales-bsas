@@ -341,6 +341,11 @@ def _slug(texto: str, n: int = 40) -> str:
     return limpio.strip("-")[:n] or "nota"
 
 
+# Cuánto del texto completo de la nota lee la IA. Las notas de estos medios van de 500 a 5.000
+# caracteres; 4.000 alcanza para todas menos las crónicas largas, y es poco para el modelo.
+TOPE_TEXTO_COMPLETO = 4000
+
+
 def material(nota: dict) -> dict:
     """Vuelve a bajar la nota para tener CUERPO con el que redactar.
 
@@ -349,17 +354,25 @@ def material(nota: dict) -> dict:
     que no repitan el titular hace falta el cuerpo, así que se baja acá, se usa para
     redactar, y NO se persiste: a la carpeta de revisión solo va el texto propio.
     """
-    if nota.get("resumen"):
-        return nota
     d = fetch.detalle(nota.get("url") or "", permitir_navegador=False)
     if not d.get("ok"):
         return nota
+    # El TEXTO COMPLETO va aparte y solo lo lee la IA del guion (pedido del editor, 10/10:
+    # «no obviar nombres, edades, lugares o info crucial»). Hasta ese día, si el RSS traía
+    # resumen, la IA leía SOLO ese resumen de una o dos oraciones: la edad de la víctima, los
+    # autos, la calle o el hospital nunca le llegaban. El resumen sigue mandando para lo
+    # demás (la localidad del arranque, el guion por reglas), porque el volcado del cuerpo a
+    # veces trae al final la nota de al lado.
+    completo = (d.get("cuerpo") or "")[:TOPE_TEXTO_COMPLETO]
+    if nota.get("resumen"):
+        return dict(nota, texto_completo=completo) if completo else nota
     # og:description primero: es el resumen que escribio el medio, corto y del tema. El
     # volcado del cuerpo se usa solo si no hay, porque en varios sitios trae la nota de
     # al lado y la bajada termina hablando de otra cosa.
     texto = d.get("descripcion") or ""
     if len(texto) < 80 and d.get("cuerpo"):
         texto = d["cuerpo"]
+    nota = dict(nota, texto_completo=completo) if completo else nota
     return dict(nota, cuerpo=texto[:1500]) if texto else nota
 
 
