@@ -308,8 +308,9 @@ def resumen(inf: dict) -> str:
     if inf.get("titular"):
         lineas += [f"- Tipo: {inf.get('subtipo')}", f"- Titular: {inf['titular']}",
                    f"- Imagen: {inf.get('imagen')}" + (f" ({inf['motivo_imagen']})" if inf.get("motivo_imagen") else ""),
-                   f"- Copia máxima: {inf.get('copia')} palabras seguidas",
                    f"- Fuente interna (no se publica): {json.dumps(inf.get('fuente'), ensure_ascii=False)}"]
+        if inf.get("copia") is not None:
+            lineas.append(f"- Copia máxima: {inf['copia']} palabras seguidas")
         if inf.get("faltan_datos"):
             lineas.append(f"- Datos que no quedaron: {', '.join(inf['faltan_datos'])}")
         if inf.get("id"):
