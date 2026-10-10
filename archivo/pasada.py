@@ -198,7 +198,8 @@ def armar(tipo: str, ahora: datetime, mem: dict, carpeta: Path, redactar=None, *
         if not q["apta"]:
             raise PasadaError(f"la IA no dio una pregunta que sirva («{q.get('pregunta')}»)")
         img = IM.imagen_pregunta(q["image_prompt"], q["seccion"], base.with_name(base.name + "_imagen.jpg"),
-                                 semilla=_semilla(q["pregunta"]), pedir=kw.get("pedir_imagen"))
+                                 semilla=_semilla(q["pregunta"]), pedir=kw.get("pedir_imagen"),
+                                 mirar=kw.get("mirar_texto"))
         pieza = {"tipo": "pregunta", "guion": q, "volanta": AG.volanta("pregunta"), "imagen": img,
                  "usados": [], "fuente": {"categoria": cat, "tema": tema}}
         foto = img["archivo"]

@@ -177,7 +177,8 @@ tmp = Path(tempfile.mkdtemp(prefix="test_archivo_"))
 for k in ("CF_ACCOUNT_ID", "CF_API_TOKEN"):
     os.environ.pop(k, None)
 pedidos = []
-r = IM.imagen_pregunta("a park", "Plazas", tmp / "img.jpg", pedir=lambda *a, **k: pedidos.append(1))
+r = IM.imagen_pregunta("a park", "Plazas", tmp / "img.jpg", pedir=lambda *a, **k: pedidos.append(1),
+                       mirar=lambda p: False)
 chequear("sin la clave de Cloudflare: placa propia, sin llamar a nadie",
          r["proveedor"] == "placa" and not pedidos and Path(r["archivo"]).is_file())
 os.environ.update(CF_ACCOUNT_ID="cuenta", CF_API_TOKEN="secreto123")
@@ -203,12 +204,21 @@ def cloudflare_ok(url, headers=None, json=None):
     return Resp(200, {"success": True, "result": {"image": foto_b64}})
 
 
-r = IM.imagen_pregunta("a park at sunset", "Plazas", tmp / "cf.jpg", pedir=cloudflare_ok)
+r = IM.imagen_pregunta("a park at sunset", "Plazas", tmp / "cf.jpg", pedir=cloudflare_ok, mirar=lambda p: False)
 chequear("Cloudflare: guarda la imagen", r["proveedor"] == "cloudflare" and Path(r["archivo"]).is_file())
 chequear("Cloudflare: modelo FLUX schnell, la cuenta en la URL y el token en el encabezado",
          visto["url"].endswith("/accounts/cuenta/ai/run/@cf/black-forest-labs/flux-1-schnell")
-         and visto["auth"] == "Bearer secreto123" and "No text" in visto["cuerpo"]["prompt"])
-r = IM.imagen_pregunta("x", "Plazas", tmp / "cf2.jpg",
+         and visto["auth"] == "Bearer secreto123" and "wordless" in visto["cuerpo"]["prompt"]
+         and "no text" not in visto["cuerpo"]["prompt"].lower())
+miradas = iter([True, False])
+r = IM.imagen_pregunta("a park", "Plazas", tmp / "cf3.jpg", pedir=cloudflare_ok, mirar=lambda p: next(miradas))
+chequear("si Gemini ve letras en la imagen, se pide otra (y la segunda sirve)",
+         r["proveedor"] == "cloudflare" and r["intentos"] == 2)
+r = IM.imagen_pregunta("a park", "Plazas", tmp / "cf4.jpg", pedir=cloudflare_ok, mirar=lambda p: True)
+chequear("si las dos traen letras: placa propia", r["proveedor"] == "placa" and "letras" in r["motivo"])
+r = IM.imagen_pregunta("a park", "Plazas", tmp / "cf5.jpg", pedir=cloudflare_ok, mirar=lambda p: None)
+chequear("si no se pudo mirar (Gemini caído), la imagen sirve igual", r["proveedor"] == "cloudflare")
+r = IM.imagen_pregunta("x", "Plazas", tmp / "cf2.jpg", mirar=lambda p: False,
                        pedir=lambda *a, **k: Resp(401, {"errors": [{"message": "Authentication error"}]}))
 chequear("Cloudflare con la clave mal: placa propia y el motivo, sin mostrar el token",
          r["proveedor"] == "placa" and "401" in r["motivo"] and "secreto123" not in r["motivo"])
