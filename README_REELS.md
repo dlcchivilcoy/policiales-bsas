@@ -180,6 +180,17 @@ del caption de TikTok contando los hashtags.
 
 ---
 
+## Reel de declaración (10/10/2026)
+
+Si la nota del medio trae un **audio** (el reproductor del cuerpo, `og:audio` o un enlace a un
+.mp3/.m4a/.ogg; la radio en vivo del encabezado no cuenta), `reels/declaracion.py` lo baja, Gemini
+lo transcribe con tiempos y dice quién habla, su cargo y las frases, y `reel_bot.armar_declaracion`
+arma el reel del motor del bot (`estetica_bot/declaracion.py`): foto o video de la nota, cargo,
+nombre, frases que cambian y espectro naranja, con el sonido. Si no se sabe quién habla, o es un
+menor, un detenido o un acusado, sale el reel de siempre. Medido el 10/10: ninguna de 150 notas
+recientes traía un audio propio (solo radios en vivo y podcasts de Spotify). Pruebas:
+`tools/test_declaracion.py`.
+
 ## El video
 
 > **Al día (03/10/2026).** El motor es el del bot, copiado tal cual en `estetica_bot/`
