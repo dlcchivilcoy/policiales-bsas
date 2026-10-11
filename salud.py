@@ -96,6 +96,12 @@ def revisar():
     informe.append("")
     informe.append(f"- {notas} notas policiales, de {localidades} localidades")
     informe.append(f"- {len(piezas)} reels armados")
+    # Declaraciones (10/10/2026): cuántas notas traían un audio y cuántas salieron como reel de
+    # declaración, para medir si los medios suben audios seguido.
+    con_audio = [p for p in piezas if p.get("tenia_audio")]
+    if con_audio:
+        informe.append(f"- {len(con_audio)} nota(s) con audio, "
+                       f"{sum(1 for p in con_audio if p.get('declaracion'))} como reel de declaración")
     informe.append(f"- {len(caidos)} de {len(medios)} medios con error")
 
     # ── Lo que rompe la pasada ───────────────────────────────────────────────

@@ -282,3 +282,52 @@ def armar(guion: dict, salida: Path, foto=None, clip=None) -> dict:
         "placa": str(jpg) if jpg.exists() else None,
         "estetica": f"bot {origen()}",
     }
+
+
+def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: str = "") -> dict:
+    """El reel de DECLARACIÓN (estetica_bot/declaracion.py, 10/10/2026): el audio de la nota con su
+    foto o su video (sin el sonido del video), el nombre, el cargo, las frases y el espectro.
+    `decl` sale de reels/declaracion.preparar. Mismo dict que `armar`, con «declaracion»."""
+    m = motor()
+    if str(ESTETICA) not in sys.path:
+        sys.path.insert(0, str(ESTETICA))
+    import declaracion as D                     # ← estetica_bot/declaracion.py (el del bot)
+    salida = Path(salida)
+    if not foto and not clip:
+        raise ReelError("no hay ni foto ni video")
+    with tempfile.TemporaryDirectory(prefix="decl_") as tmp:
+        visual = Path(clip or foto)
+        propia = Path(tmp) / f"visual{visual.suffix or '.jpg'}"
+        shutil.copy2(visual, propia)
+        destino = Path(tmp) / salida.name
+        try:
+            info = D.reel(decl["audio"], propia, destino, nombre=decl.get("nombre", ""),
+                          cargo=decl.get("cargo", ""), frases=decl.get("frases"), tramo=decl.get("tramo"),
+                          es_foto=not clip, respaldo=respaldo, work_dir=Path(tmp))
+        except Exception as e:
+            raise ReelError(f"{type(e).__name__}: {e}") from e
+        if not destino.exists() or destino.stat().st_size < 10240:
+            raise ReelError("el motor no dejó un .mp4 válido")
+        salida.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(destino), str(salida))
+    jpg = salida.with_suffix(".jpg")
+    try:
+        m.frame_at(salida, 1.0, jpg)
+    except Exception:
+        pass
+    ancho, alto = dimensiones(salida, jpg)
+    return {
+        "archivo": str(salida),
+        "duracion": round(float(m.duration_seconds(salida)), 1),
+        "peso_kb": round(salida.stat().st_size / 1024),
+        "ancho": ancho,
+        "alto": alto,
+        "tramos": ["declaracion", "cierre"],
+        "con_foto": not clip,
+        "con_video": bool(clip),
+        "con_audio": True,
+        "declaracion": {"nombre": decl.get("nombre"), "cargo": decl.get("cargo"),
+                        "frases": info.get("frases"), "tramo": info.get("tramo")},
+        "placa": str(jpg) if jpg.exists() else None,
+        "estetica": f"bot {origen()}",
+    }

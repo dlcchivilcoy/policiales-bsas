@@ -216,6 +216,8 @@ def completar_detalle(nota):
     # El video PROPIO del medio, si lo hay. Se prefiere sobre la foto al armar el reel:
     # un reel con imagenes en movimiento retiene mucho mas que una foto quieta con zoom.
     nota["video"] = nota.get("video") or d.get("video")
+    # El AUDIO de la nota (declaraciones), para el reel de declaración (10/10/2026).
+    nota["audio"] = nota.get("audio") or d.get("audio")
     return nota
 
 

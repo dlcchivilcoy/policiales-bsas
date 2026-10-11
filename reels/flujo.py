@@ -26,6 +26,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import declaracion as DE
 from reels import frescura as FR
 from reels import guion as G
 from reels import reel_bot as R
@@ -364,6 +365,10 @@ def material(nota: dict) -> dict:
     # demás (la localidad del arranque, el guion por reglas), porque el volcado del cuerpo a
     # veces trae al final la nota de al lado.
     completo = (d.get("cuerpo") or "")[:TOPE_TEXTO_COMPLETO]
+    if d.get("audio") and not nota.get("audio"):
+        # El audio de la nota (declaraciones, 10/10/2026): el scrapeo no siempre baja la nota
+        # entera (con copete y fecha del RSS no la abre), acá sí.
+        nota = dict(nota, audio=d["audio"])
     if nota.get("resumen"):
         return dict(nota, texto_completo=completo) if completo else nota
     # og:description primero: es el resumen que escribio el medio, corto y del tema. El
@@ -420,9 +425,28 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # El reel y su cuadro fijo los arma el MOTOR DEL BOT (reels/reel_bot.py): la misma
     # estética que los reels del diario, decidida en el bot. El .jpg queda al lado del .mp4.
     vid = None
+    # DECLARACIÓN (10/10/2026, pedido del editor): si la nota trae un AUDIO, el reel es el de la
+    # declaración —el audio con la foto o el video de la nota, quién habla y frases—. Solo con el
+    # guion de la IA y si se sabe quién habla; si no, el reel de siempre.
+    decl = None
+    if (hacer_video and nota.get("audio") and not g.get("fuera_de_temario")
+            and g.get("via", "").startswith(("claude", "gemini"))):
+        try:
+            decl = DE.preparar(nota, g, tmp_dir, f"reel_{idx}")
+            vid = R.armar_declaracion(decl, carpeta / f"{nombre}.mp4", foto=None if clip else foto,
+                                      clip=clip, respaldo=g["titular"])
+            g["descripcion_final"] = DE.caption_con_escucha(g["descripcion_final"], decl["nombre"])
+        except (DE.DeclaracionError, R.ReelError) as e:
+            avisos.append(f"La nota trae un audio pero no salió el reel de declaración: {e}")
+            decl, vid = None, None
+        except Exception as e:                      # noqa: BLE001 — nunca se pierde la pieza por esto
+            avisos.append(f"El reel de declaración falló ({type(e).__name__}: {e}); va el de siempre.")
+            decl, vid = None, None
     # Lo que la IA dijo que no es policial no se va a publicar: no vale la pena armarle
     # el video (ni subirlo como artefacto). Queda el JSON con el motivo.
-    if hacer_video and not g.get("fuera_de_temario"):
+    if vid:
+        pass                                        # ya salió el reel de la declaración
+    elif hacer_video and not g.get("fuera_de_temario"):
         try:
             vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip)
         except R.ReelError as e:
@@ -496,6 +520,9 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "url_original": nota.get("url"),
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
+        "tenia_audio": bool(nota.get("audio")),
+        "declaracion": ({k: decl.get(k) for k in ("nombre", "cargo", "frases", "tramo", "url_audio",
+                                                  "duracion_audio", "transcripcion")} if decl else None),
         "guion": {k: g[k] for k in ("volanta", "titular", "bajada", "zocalo", "pie", "via")},
         "copia": copia,
         "descripcion_tiktok": g["descripcion_final"],

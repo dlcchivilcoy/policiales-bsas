@@ -1200,7 +1200,9 @@ def _elegir_por_viral(listas: list, ledger: dict, red: str, n: int, recientes: l
     edad = {id(p): h for p, h in zip(validas, FR.edades(validas))}
 
     def video(p):
-        return BONO_VIDEO if p.get("tenia_video") else 0
+        # El reel de DECLARACIÓN (audio con quien habla, 10/10/2026) cuenta como video: también
+        # retiene más que una foto quieta.
+        return BONO_VIDEO if (p.get("tenia_video") or p.get("declaracion")) else 0
 
     def puntos(p):
         castigo = FR.PUNTOS_POR_HORA * edad[id(p)] if por == "frescura" else 0

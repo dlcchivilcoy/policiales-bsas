@@ -33,7 +33,10 @@ BOT_DEFAULT = Path(r"C:\Users\Diario\social_publisher")
 # (el encuadre que no corta cabezas); el resto son la marca y las letras.
 # montaje.py (03/10/2026) une varios videos de un corresponsal: policiales no lo usa, pero el
 # autochequeo del motor lo prueba, y sin él el chequeo da ROTO.
-CODIGO = ["video.py", "story_image.py", "montaje.py"]
+# declaracion.py (10/10/2026): el reel de DECLARACIONES (audio + foto con nombre, cargo, frases y
+# espectro); policiales lo usa cuando la nota del medio trae un audio. utils/grafia.py: el motor
+# corrige los participios de todo texto que quema en el reel (no depende de nada más).
+CODIGO = ["video.py", "story_image.py", "montaje.py", "declaracion.py", "utils/grafia.py"]
 ASSETS = ["logo_reel.png", "placa_final.png", "fondo_reel.png", "overlay_reel.png", "logo.png",
           "logo_reel_naranja.png"]       # el isotipo naranja de los carruseles (nacionales, 06/10)
 FUENTES = "fonts"

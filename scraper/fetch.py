@@ -607,11 +607,49 @@ def _video_del_html(soup, base):
     return None
 
 
+# El AUDIO de la nota (10/10/2026): las declaraciones del comisario, del fiscal, del intendente…
+# que algunos medios suben como archivo. Con eso se arma el reel de declaración (reels/declaracion.py).
+_AUDIO_EXT = (".mp3", ".m4a", ".ogg", ".oga", ".opus", ".aac", ".wav")
+
+
+def _es_audio(u):
+    return urlparse(u).path.lower().endswith(_AUDIO_EXT)
+
+
+def _audio_og(soup, base):
+    """og:audio, si lo declara (vive en el <head>: hay que mirarlo antes de desarmar la página)."""
+    for prop in ("og:audio:secure_url", "og:audio:url", "og:audio"):
+        m = soup.find("meta", attrs={"property": prop}) or soup.find("meta", attrs={"name": prop})
+        if m and m.get("content"):
+            u = urljoin(base, m["content"].strip())
+            if _es_audio(u):
+                return u
+    return None
+
+
+def _audio_del_cuerpo(nodo, base):
+    """El audio PROPIO de la nota dentro de su cuerpo: el reproductor (<audio src>, <source>, el
+    de WordPress) o un enlace a un .mp3/.m4a/.ogg. Solo en el cuerpo y solo archivos: el
+    reproductor de la radio en vivo vive en el encabezado de todas las páginas, y un iframe de
+    SoundCloud o iVoox no se baja con una petición normal."""
+    if nodo is None:
+        return None
+    for tag in nodo.find_all("audio"):
+        for c in [tag.get("src")] + [s.get("src") for s in tag.find_all("source")]:
+            if c and _es_audio(urljoin(base, c.strip())):
+                return urljoin(base, c.strip())
+    for a in nodo.find_all("a", href=True):
+        u = urljoin(base, a["href"].strip())
+        if _es_audio(u):
+            return u
+    return None
+
+
 def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
     """Baja la nota una sola vez y devuelve cuerpo + fecha + imagen.
     `ok` False significa que la URL murio (404/error): esa nota no se guarda."""
     vacio = {"ok": False, "cuerpo": "", "descripcion": "", "publicado": None,
-             "imagen": None, "video": None}
+             "imagen": None, "video": None, "audio": None}
     try:
         html, _ = obtener_html(url, permitir_navegador, timeout)
         if not html:
@@ -622,11 +660,13 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         # El video se busca ANTES de vaciar el <head> y los <script>, porque el
         # og:video vive en el head y mas abajo se desarma todo para sacar el cuerpo.
         video = _video_del_html(soup, url)
+        audio = _audio_og(soup, url)
 
         for tag in soup.find_all(["script", "style", "nav", "header", "footer", "aside", "form"]):
             tag.decompose()
 
         nodo = soup.find(class_=_CUERPO_RE) or soup.find("article")
+        audio = audio or _audio_del_cuerpo(nodo, url)
         cuerpo = limpiar(nodo.get_text(" ")) if nodo else ""
 
         # og:description es el resumen que ESCRIBIO EL PROPIO MEDIO: corto, del tema y
@@ -640,7 +680,7 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         if not cuerpo:
             cuerpo = descripcion
         return {"ok": True, "cuerpo": cuerpo, "descripcion": descripcion,
-                "publicado": publicado, "imagen": imagen, "video": video}
+                "publicado": publicado, "imagen": imagen, "video": video, "audio": audio}
     except Exception:
         return vacio
 
