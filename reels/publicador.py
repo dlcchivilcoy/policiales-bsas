@@ -50,6 +50,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import distribuidor as DIST
 from reels import frescura as FR
 from reels import instagram as IG
 from reels import ledger as LD
@@ -1526,6 +1527,19 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             fila[red] = info
             _mostrar(red, info)
         informe["piezas"].append(fila)
+
+    # X y TikTok: no se publican acá. Todas las piezas aptas van al buzón del distribuidor
+    # central (social_publisher), que elige las de más potencial dentro de su cupo diario.
+    if publicar:
+        try:
+            informe["distribuidor"] = DIST.dejar(
+                listas, ledger, carpeta, subir_a_release,
+                os.environ.get("GITHUB_REPOSITORY") or REPO, TAG_RELEASE, _clave,
+                existe=lambda u: _pedir("HEAD", u).status_code == 200)
+        except Exception as e:  # noqa: BLE001 — el buzón nunca frena la pasada
+            print(f"\nDistribuidor X/TikTok: no se pudo dejar el buzón ({_tapar(e)})")
+    elif DIST.activo():
+        print(f"\nDistribuidor X/TikTok: {len(listas)} pieza(s) irían al buzón (simulación)")
 
     (carpeta / "_publicacion.json").write_text(
         json.dumps(informe, ensure_ascii=False, indent=2), encoding="utf-8")

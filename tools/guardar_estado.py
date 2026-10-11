@@ -118,8 +118,16 @@ def combinar_archivo(nuestro: dict, remoto: dict) -> dict:
     return out
 
 
+def combinar_buzon(nuestro: dict, remoto: dict) -> dict:
+    """estado/buzon_distribuidor.json (reels/distribuidor.py, 11/10/2026): unión por id."""
+    sys.path.insert(0, str(RAIZ))
+    from reels.distribuidor import combinar
+    return combinar(nuestro, remoto)
+
+
 COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
-            "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo}
+            "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo,
+            "buzon_distribuidor.json": combinar_buzon}
 
 
 def _git(*args, chequear=True, raiz=RAIZ) -> subprocess.CompletedProcess:

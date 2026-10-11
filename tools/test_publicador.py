@@ -269,6 +269,7 @@ def preparar(meta=None):
     PUB._ahora, PUB._dormir = reloj.ahora, reloj.dormir
     PUB._barrer_release = lambda *a, **k: {"borrados": [], "mb": 0}
     PUB.LEDGER = base / "estado" / "publicados.json"
+    PUB.DIST.BUZON = base / "estado" / "buzon_distribuidor.json"   # nunca el buzón real
     PUB.RAIZ = base
     return base, carpeta, reloj, meta
 

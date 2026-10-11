@@ -375,3 +375,17 @@ salida_reels/     Una carpeta por corrida, con .jpg, .mp4 y .json por pieza
 > *Estética* en `CORRIDA_MANUAL.md`). Lo que este archivo dice más arriba sobre
 > geometría, tipografías Archivo Narrow / Libre Franklin y `zoompan` describe ese armado
 > anterior.
+
+## X y TikTok: buzón del distribuidor central (11/10/2026)
+
+Policiales **no publica** en X ni en TikTok. Al final de cada pasada con `--publicar`,
+`reels/distribuidor.py` deja TODAS las piezas aptas en `estado/buzon_distribuidor.json`
+(últimas 48 h), con el MP4 en el Release `reels-policiales` (reusa el que subió Instagram).
+El distribuidor central (repo `social_publisher`, ver su `DISTRIBUIDOR.md`) elige hasta 12
+por día en cada red por potencial viral, las programa en Buffer y evita repetir hechos.
+
+- Urgente = `viral` ≥ 9 y publicada por el medio hace ≤ 3 h (adelanta en la cola).
+- Texto de X: titular + bajada (ya escrita para redes) + link a la nota; TikTok: la
+  `descripcion_tiktok` de siempre.
+- `tools/guardar_estado.py` combina el buzón por id (nunca pisa lo de otra pasada).
+- Apagar: variable `DISTRIBUIDOR_POLICIALES=0`. Pruebas: `tools/test_distribuidor.py`.
