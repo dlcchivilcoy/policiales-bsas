@@ -9,6 +9,12 @@
       "pregunta": "¿Qué oficio o trabajo va a ser el más buscado acá en Chivilcoy en diez años?",
       "categoria": "Futuro de Chivilcoy",
       "tema": "las oportunidades laborales futuras"
+    },
+    {
+      "dia": "2026-10-11",
+      "pregunta": "¿Qué aroma te hace acordar inmediatamente a tu infancia en Chivilcoy?",
+      "categoria": "Identidad de Chivilcoy",
+      "tema": "la identidad de Chivilcoy"
     }
   ],
   "publicaciones": {
@@ -49,7 +55,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-11:pregunta": {
+      "titular": "¿Qué aroma te hace acordar inmediatamente a tu infancia en Chivilcoy?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-11T20:30:43-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Identidad de Chivilcoy",
+        "tema": "la identidad de Chivilcoy"
+      },
+      "estado": "ok",
+      "id": "17920859622442570",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-11T13:30:28-03:00"
+  "actualizado": "2026-10-11T20:30:28-03:00"
 }
