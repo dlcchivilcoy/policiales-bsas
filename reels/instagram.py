@@ -44,13 +44,15 @@ GRADUACION = "SS_PERFORMANCE"
 _GRADUACIONES = ("MANUAL", "SS_PERFORMANCE")
 
 
-def contenedor_reel(video_url: str, caption: str, prueba=None, portada: str = "") -> dict:
+def contenedor_reel(video_url: str, caption: str, prueba=None, portada: str = "",
+                    ubicacion: str = "") -> dict:
     """Los parametros del `POST /{ig-user-id}/media` para un reel. Sin red, sin token.
 
     `video_url` tiene que ser publica: Instagram va a buscar el archivo, no lo recibe.
     `prueba=True` lo hace reel de PRUEBA aunque SOLO_REELS_DE_PRUEBA este apagado: los del
     Archivo Literario y la pregunta del dia (pedido del editor, 10/10/2026) salen siempre asi;
     None sigue la regla general. `portada`: URL publica de la imagen de la grilla (cover_url).
+    `ubicacion`: el location_id de la localidad del hecho (reels/ubicaciones.py, 12/10/2026).
     """
     if not video_url or not video_url.startswith("https://"):
         raise ValueError("Instagram necesita una URL https publica del video")
@@ -59,6 +61,10 @@ def contenedor_reel(video_url: str, caption: str, prueba=None, portada: str = ""
         if not portada.startswith("https://"):
             raise ValueError("la portada tiene que ser una URL https publica")
         params["cover_url"] = portada
+    if ubicacion:
+        if not str(ubicacion).isdigit():
+            raise ValueError("location_id tiene que ser el numero de la pagina del lugar")
+        params["location_id"] = str(ubicacion)
     if SOLO_REELS_DE_PRUEBA if prueba is None else prueba:
         if GRADUACION not in _GRADUACIONES:
             # Un valor mal escrito no puede terminar en un reel publicado normal:

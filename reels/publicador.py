@@ -55,6 +55,7 @@ from reels import frescura as FR
 from reels import instagram as IG
 from reels import ledger as LD
 from reels import limpieza as L
+from reels import ubicaciones as UB
 from reels import web as WEB
 from reels.flujo import MINUTOS_ENTRE_POSTEOS, SALIDA_REELS
 from scraper.localidades import NOMBRES as _LOCALIDADES_NOMBRES
@@ -450,10 +451,21 @@ def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     url = subir_a_release(mp4, nombre)
     caption = texto_del_posteo(pieza, "instagram")
-    params = IG.contenedor_reel(url, caption)      # ← la regla del reel de prueba
-    cid = _contenedor_listo(uid, tok, params)
+    # La etiqueta de ubicación de la localidad del hecho (12/10/2026, reels/ubicaciones.py).
+    ubic = UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
+    params = IG.contenedor_reel(url, caption, ubicacion=ubic)      # ← la regla del reel de prueba
+    try:
+        cid = _contenedor_listo(uid, tok, params)
+    except FalloRed as e:
+        if not ubic or "location" not in str(e).lower():
+            raise
+        # Una ubicación que Instagram no acepta no puede costar el reel: sale sin ella.
+        params.pop("location_id", None)
+        ubic = ""
+        cid = _contenedor_listo(uid, tok, params)
     media_id = _publicar_contenedor(uid, tok, cid, caption)
-    return {"id": media_id or None, "prueba": json.loads(params.get("trial_params") or "null")}
+    return {"id": media_id or None, "prueba": json.loads(params.get("trial_params") or "null"),
+            "ubicacion": ubic or None}
 
 
 # =============================================================================
