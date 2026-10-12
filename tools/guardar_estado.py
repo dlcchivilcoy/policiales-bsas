@@ -12,6 +12,8 @@ Cómo combina (siempre gana lo más completo, nunca se pierde nada anotado):
   nuevo ("cuando"), y un "ok" nunca se pisa con algo que no sea "ok".
 - reels_hechos.json: unión por nota; gana el registro más nuevo.
 - salud.json y ultima_corrida.json: los de esta pasada (son su diagnóstico).
+- tema_reels.json (12/10/2026): el tema del último reel 4:5 (bloque blanco o grafito); gana el
+  más nuevo. Lo escriben policiales, nacionales y el Archivo.
 
 Uso (en el workflow, después de que la pasada escribió estado/):
     python tools/guardar_estado.py
@@ -125,7 +127,13 @@ def combinar_buzon(nuestro: dict, remoto: dict) -> dict:
     return combinar(nuestro, remoto)
 
 
+def combinar_tema(nuestro: dict, remoto: dict) -> dict:
+    """estado/tema_reels.json: el más nuevo («cuando»), así la alternancia sigue al último reel."""
+    return nuestro if (nuestro.get("cuando") or 0) >= (remoto.get("cuando") or 0) else remoto
+
+
 COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
+            "tema_reels.json": combinar_tema,
             "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo,
             "buzon_distribuidor.json": combinar_buzon}
 
@@ -187,7 +195,7 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
 if __name__ == "__main__":
     from datetime import datetime, timezone
     solo = sys.argv[sys.argv.index("--solo") + 1:] if "--solo" in sys.argv else None
-    que = {("nacionales.json",): "Nacionales", ("archivo.json",): "Archivo"}.get(tuple(solo or ()), "Reels")
+    que = {"nacionales.json": "Nacionales", "archivo.json": "Archivo"}.get((solo or [""])[0], "Reels")
     msg = f"{que} de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
     try:
         print(guardar(msg, solo=solo))

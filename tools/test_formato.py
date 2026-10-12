@@ -79,7 +79,7 @@ armar, generar = F.R.armar, F.G.generar
 try:
     for k, v in reemplazos.items():
         setattr(F, k, v)
-    F.R.armar = lambda g, salida, foto=None, clip=None: usadas.append(foto) or {
+    F.R.armar = lambda g, salida, foto=None, clip=None, **k: usadas.append(foto) or {
         "duracion": 13, "peso_kb": 120, "tramos": ["nota"], "alto": 1350}
     F.G.generar = lambda nota, **k: {"volanta": "Robo en Junín", "titular": "Robaron una moto en pleno centro de Junín",
                                      "bajada": "La moto estaba estacionada frente a un comercio de la avenida.",

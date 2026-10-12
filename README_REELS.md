@@ -201,6 +201,13 @@ recientes traía un audio propio (solo radios en vivo y podcasts de Spotify). Pr
 > API no está probado). `REEL_ESTILO_POLICIALES=""` vuelve al estilo placa. Lo de abajo es la
 > historia del primer diseño.
 >
+> **4:5 estilo bloque (12/10/2026).** Lo horizontal arranca en el borde de ARRIBA; debajo, una
+> línea naranja y un bloque con el isologo y el logo, la volanta naranja y el titular. El bloque
+> va BLANCO (titular grafito) o GRAFITO (titular blanco) y se alternan de un posteo al otro:
+> `reel_bot.proximo_tema` / `anotar_tema` en `estado/tema_reels.json`, que comparten policiales,
+> nacionales y el Archivo (`tools/test_tema_reels.py`). `REEL_BLOQUE_4X5=0` vuelve al 4:5 con
+> cajas; `REEL_TEMA_4X5=blanco|grafito` fija uno.
+>
 > **La imagen es siempre la ORIGINAL de la nota** (foto o video del medio, tengan o no su
 > logo). Decisión del editor del 05/10: el 03/10 se probó descartar las que traían logo y
 > reemplazarlas por otra foto o una imagen ilustrativa, y se sacó.

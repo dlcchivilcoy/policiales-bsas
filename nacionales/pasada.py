@@ -198,8 +198,10 @@ def armar(nota: dict, carpeta: Path, redactar=None) -> dict:
     pieza["foto"] = foto_de_la_nota(nota, base.with_name(base.name + "_foto.jpg"))
     foto = pieza["foto"].get("archivo")
     imagen = foto or P.guardar_fondo(g["seccion"], base.with_name(base.name + "_fondo.jpg"), semilla=semilla)
+    # Bloque blanco o grafito si sale 4:5, alternado con el reel anterior (12/10/2026).
     pieza["video"] = R.armar({"volanta": g["volanta"], "titular": g["titular"], "bajada": g["bajada"]},
-                             base.with_suffix(".mp4"), foto=imagen)
+                             base.with_suffix(".mp4"), foto=imagen, tema=R.proximo_tema())
+    R.anotar_tema(pieza["video"].get("tema", ""))
     pieza["placa"] = pieza["video"].get("placa")
     # La placa del posteo de Facebook: la misma del carrusel (estilo portal en grafito, 12/10),
     # sin número ni flecha porque es un posteo suelto.

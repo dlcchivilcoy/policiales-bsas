@@ -11,21 +11,30 @@ para reels del bot»): el de los reels de WhatsApp del bot, `estilo="corresponsa
 («prompt detallado para editar reels», 03/10):
 - vertical o cuadrada: a sangre en 9:16, la volanta en una caja naranja #B35B18 en
   mayúsculas y el titular en una caja grafito abajo; si tapan una cara, suben. Sin bajada.
-- horizontal: ENTERA, a todo el ancho, en un reel 4:5 (1080x1350), con las cajas debajo.
+- horizontal: ENTERA, a todo el ancho, en un reel 4:5 (1080x1350). Desde el 12/10/2026 (pedido
+  del editor, con dos reels de infobae de ejemplo) la imagen arranca en el borde de ARRIBA y
+  debajo va una línea naranja y un BLOQUE con el isologo y el logo, la volanta naranja y el
+  titular: blanco con titular grafito o grafito con titular blanco, ALTERNADOS de un posteo al
+  otro (`proximo_tema` / `anotar_tema`, en estado/tema_reels.json).
 - afiche: entero, solo la marca.
 Marca arriba a la izquierda, isologo arriba a la derecha y la placa de cierre recortada al
 cuadro. REEL_ESTILO_POLICIALES="" vuelve al estilo placa de antes (texto arriba, fondo carbón).
 
 Facebook recibe el 4:5 en una copia 9:16 con bandas grafito (ver a_9x16_si_hace_falta).
 """
+import json
 import os
 import shutil
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 ESTETICA = RAIZ / "estetica_bot"
+# El tema del último reel 4:5 (bloque blanco o grafito): el próximo va con el otro. Lo comparten
+# policiales, nacionales y el Archivo Literario (el motor es uno).
+TEMAS = RAIZ / "estado" / "tema_reels.json"
 
 # Cuanto dura el reel de una FOTO: 8 s de nota + los 5 s de la placa de cierre del bot.
 # El bot usa 30 s para sus foto-notas; un policial breve con una foto quieta 25 s se
@@ -69,6 +78,26 @@ def motor():
         import video as m                     # ← estetica_bot/video.py (el del bot)
         _motor = m
     return _motor
+
+
+def proximo_tema(archivo: Path = None) -> str:
+    """El tema del bloque para el próximo reel 4:5: el otro del último anotado."""
+    archivo = archivo or TEMAS
+    try:
+        ultimo = json.loads(archivo.read_text(encoding="utf-8")).get("ultimo", "")
+    except (OSError, ValueError, AttributeError):
+        ultimo = ""
+    return motor().tema_siguiente(ultimo)
+
+
+def anotar_tema(tema: str, archivo: Path = None) -> None:
+    """Anota el tema del reel 4:5 que acaba de salir (solo si salió 4:5: `armar` lo devuelve)."""
+    if not tema:
+        return
+    archivo = archivo or TEMAS
+    archivo.parent.mkdir(parents=True, exist_ok=True)
+    archivo.write_text(json.dumps({"ultimo": tema, "cuando": time.time()}, ensure_ascii=False,
+                                  indent=2), encoding="utf-8")
 
 
 def origen() -> str:
@@ -234,8 +263,10 @@ def placa_fija(guion: dict, foto, salida: Path) -> Path:
         return m._placa_de_foto(img, plan, fondo, Path(salida))
 
 
-def armar(guion: dict, salida: Path, foto=None, clip=None) -> dict:
-    """El .mp4 del reel y su cuadro fijo (.jpg al lado, para la galeria).
+def armar(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> dict:
+    """El .mp4 del reel y su cuadro fijo (.jpg al lado, para la galeria). `tema`: el bloque del
+    4:5 (blanco/grafito, ver `proximo_tema`); el dict devuelto dice en «tema» el que se usó, o ""
+    si el reel salió 9:16.
 
     El motor deja archivos de trabajo al lado de su salida (fondos, mascaras, bases): se lo
     hace trabajar en una carpeta temporal y solo se trae el .mp4 terminado.
@@ -244,18 +275,19 @@ def armar(guion: dict, salida: Path, foto=None, clip=None) -> dict:
     salida = Path(salida)
     if not foto and not clip:
         raise ReelError("no hay ni foto ni video")
+    m.tema_usado(reset=True)
     with tempfile.TemporaryDirectory(prefix="reel_") as tmp:
         destino = Path(tmp) / salida.name
         try:
             if clip:
                 m.to_vertical_reel(Path(clip), destino, audio=False, max_seconds=SEG_REEL_VIDEO,
-                                   overlay=False, estilo=estilo(), **_textos(guion))
+                                   overlay=False, estilo=estilo(), tema=tema, **_textos(guion))
             else:
                 # La foto se copia a la carpeta de trabajo: el motor escribe al lado.
                 propia = Path(tmp) / f"foto{Path(foto).suffix or '.jpg'}"
                 shutil.copy2(foto, propia)
                 m.foto_a_reel([propia], destino, seg=SEG_REEL_FOTO, overlay=False,
-                              estilo=estilo(), **_textos(guion))
+                              estilo=estilo(), tema=tema, **_textos(guion))
         except Exception as e:
             raise ReelError(f"{type(e).__name__}: {e}") from e
         if not destino.exists() or destino.stat().st_size < 10240:
@@ -281,10 +313,12 @@ def armar(guion: dict, salida: Path, foto=None, clip=None) -> dict:
         "con_video": bool(clip),
         "placa": str(jpg) if jpg.exists() else None,
         "estetica": f"bot {origen()}",
+        "tema": m.tema_usado(),
     }
 
 
-def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: str = "") -> dict:
+def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: str = "",
+                      tema: str = "") -> dict:
     """El reel de DECLARACIÓN (estetica_bot/declaracion.py, 10/10/2026): el audio de la nota con su
     foto o su video (sin el sonido del video), el nombre, el cargo, las frases y el espectro.
     `decl` sale de reels/declaracion.preparar. Mismo dict que `armar`, con «declaracion»."""
@@ -303,7 +337,7 @@ def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: 
         try:
             info = D.reel(decl["audio"], propia, destino, nombre=decl.get("nombre", ""),
                           cargo=decl.get("cargo", ""), frases=decl.get("frases"), tramo=decl.get("tramo"),
-                          es_foto=not clip, respaldo=respaldo, work_dir=Path(tmp))
+                          es_foto=not clip, respaldo=respaldo, work_dir=Path(tmp), tema=tema)
         except Exception as e:
             raise ReelError(f"{type(e).__name__}: {e}") from e
         if not destino.exists() or destino.stat().st_size < 10240:
@@ -330,4 +364,5 @@ def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: 
                         "frases": info.get("frases"), "tramo": info.get("tramo")},
         "placa": str(jpg) if jpg.exists() else None,
         "estetica": f"bot {origen()}",
+        "tema": info.get("tema", ""),
     }

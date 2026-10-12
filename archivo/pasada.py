@@ -220,8 +220,10 @@ def armar(tipo: str, ahora: datetime, mem: dict, carpeta: Path, redactar=None, *
         pieza["imagen"]["ajustada"] = ajuste["ajustada"]
     g = pieza["guion"]
     pieza["caption"] = AG.caption(g["descripcion"], g["hashtags"])
+    # Bloque blanco o grafito si sale 4:5, alternado con el reel anterior (12/10/2026).
     pieza["video"] = R.armar({"volanta": pieza["volanta"], "titular": g["titular"], "bajada": g["bajada"]},
-                             base.with_suffix(".mp4"), foto=foto)
+                             base.with_suffix(".mp4"), foto=foto, tema=R.proximo_tema())
+    R.anotar_tema(pieza["video"].get("tema", ""))
     guardable = {k: v for k, v in pieza.items()}
     base.with_suffix(".json").write_text(json.dumps(guardable, ensure_ascii=False, indent=2, default=str),
                                          encoding="utf-8")

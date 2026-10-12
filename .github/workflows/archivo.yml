@@ -110,13 +110,14 @@ jobs:
         # trabajos de policiales.
         if: always()
         run: |
-          if [ -z "$(git status --porcelain estado/archivo.json)" ]; then
+          if [ -z "$(git status --porcelain estado/archivo.json estado/tema_reels.json)" ]; then
             echo "La memoria del Archivo no cambió."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python tools/guardar_estado.py --solo archivo.json
+          # tema_reels.json: el bloque blanco/grafito del último reel 4:5 (se alternan).
+          python tools/guardar_estado.py --solo archivo.json tema_reels.json
 
       - name: Avisar en un issue
         if: failure()

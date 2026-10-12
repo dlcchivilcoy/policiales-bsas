@@ -425,6 +425,9 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # El reel y su cuadro fijo los arma el MOTOR DEL BOT (reels/reel_bot.py): la misma
     # estética que los reels del diario, decidida en el bot. El .jpg queda al lado del .mp4.
     vid = None
+    # Si el reel sale 4:5 (material horizontal), el bloque de abajo va blanco o grafito,
+    # ALTERNADO con el del posteo anterior (pedido del editor, 12/10/2026).
+    tema = R.proximo_tema()
     # DECLARACIÓN (10/10/2026, pedido del editor): si la nota trae un AUDIO, el reel es el de la
     # declaración —el audio con la foto o el video de la nota, quién habla y frases—. Solo con el
     # guion de la IA y si se sabe quién habla; si no, el reel de siempre.
@@ -434,7 +437,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         try:
             decl = DE.preparar(nota, g, tmp_dir, f"reel_{idx}")
             vid = R.armar_declaracion(decl, carpeta / f"{nombre}.mp4", foto=None if clip else foto,
-                                      clip=clip, respaldo=g["titular"])
+                                      clip=clip, respaldo=g["titular"], tema=tema)
             g["descripcion_final"] = DE.caption_con_escucha(g["descripcion_final"], decl["nombre"])
         except (DE.DeclaracionError, R.ReelError) as e:
             avisos.append(f"La nota trae un audio pero no salió el reel de declaración: {e}")
@@ -448,15 +451,20 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         pass                                        # ya salió el reel de la declaración
     elif hacer_video and not g.get("fuera_de_temario"):
         try:
-            vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip)
+            vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip,
+                          tema=tema)
         except R.ReelError as e:
             vid = {"error": str(e)}
             if clip and foto:
                 try:
-                    vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=foto)
+                    vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=foto, tema=tema)
                     avisos.append(f"El video del medio no se pudo usar ({e}); va la foto.")
                 except R.ReelError as e2:
                     vid = {"error": str(e2)}
+    if isinstance(vid, dict) and vid.get("tema"):
+        R.anotar_tema(vid["tema"])
+    if vid:
+        pass
     elif foto:
         try:
             R.placa_fija(g, foto, img)

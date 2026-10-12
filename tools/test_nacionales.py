@@ -196,7 +196,7 @@ llamadas = []
 fotos_reel = {}
 
 
-def armar_reel(guion, salida, foto=None, clip=None):
+def armar_reel(guion, salida, foto=None, clip=None, **k):
     Path(salida).parent.mkdir(parents=True, exist_ok=True)
     Path(salida).write_bytes(b"mp4")
     fotos_reel[guion["titular"][:20]] = str(foto)
