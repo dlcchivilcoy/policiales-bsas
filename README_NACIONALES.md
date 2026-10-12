@@ -30,8 +30,8 @@ Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales`
    - **Web**: nota en **Nacionales** y en la **portada** (pedido del 06/10), también en «Lo más
      leído», el archivo y los sitemaps. Lleva además la categoría interna «Nacionales
      automáticas» (b4cdfc99…), por si algún día hay que separarlas (diario_web, `SIN_REGION`).
-   - **Facebook**: solo las más virales, **2 por pasada y 8 por día**: posteo con la placa y el
-     link a la nota (no reels; el link solo saldría con una foto equivocada).
+   - **Facebook**: solo las más virales, **2 por pasada y 8 por día**: posteo con la placa (la misma del
+     carrusel, estilo portal en grafito, desde el 12/10) y el link a la nota (no reels; el link solo saldría con una foto equivocada).
 7. **22:00, Instagram**: carrusel «Noticias nacionales de hoy» (hasta 10 diapositivas, una por
    nota; la primera es la portada) con lo publicado desde el carrusel anterior. Desde el 12/10 va
    con el estilo portal en **grafito** (`placa.slide_carrusel`, motor del bot

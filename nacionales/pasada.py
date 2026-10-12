@@ -201,9 +201,11 @@ def armar(nota: dict, carpeta: Path, redactar=None) -> dict:
     pieza["video"] = R.armar({"volanta": g["volanta"], "titular": g["titular"], "bajada": g["bajada"]},
                              base.with_suffix(".mp4"), foto=imagen)
     pieza["placa"] = pieza["video"].get("placa")
-    pieza["slide"] = str(P.slide(g["seccion"], g["volanta"], g["titular"],
-                                 base.with_name(base.name + "_facebook.jpg"), sitio=WEB.SITIO, semilla=semilla,
-                                 foto=foto))
+    # La placa del posteo de Facebook: la misma del carrusel (estilo portal en grafito, 12/10),
+    # sin número ni flecha porque es un posteo suelto.
+    pieza["slide"] = str(P.slide_carrusel(g["seccion"], g["volanta"], g["titular"], g.get("bajada") or "",
+                                          base.with_name(base.name + "_facebook.jpg"), sitio=WEB.SITIO,
+                                          semilla=semilla, foto=foto))
     pieza["portada_web"] = str(P.portada_web(g["seccion"], g["volanta"], g["titular"],
                                              base.with_name(base.name + "_web.jpg"), semilla=semilla))
     # Para revisar después qué se publicó y con qué texto (va al artefacto de la corrida).

@@ -160,8 +160,8 @@ from reels import reel_bot as R
 P.guardar_fondo("Política", tmp / "f.jpg")
 chequear("placa: el motor la toma como FOTO, no como afiche (si no, no le pone el titular)",
          not R.motor()._es_grafica(tmp / "f.jpg", tmp))
-s = P.slide("Política", "Interna", "Un titular de prueba para la diapositiva", tmp / "s.jpg", sitio="x", idx=2, total=5)
-chequear("placa: la diapositiva es 4:5 (Instagram pide la misma proporción en todo el carrusel)",
+s = P.slide_carrusel("Política", "Interna", "Un titular de prueba para el posteo", "", tmp / "s.jpg", sitio="x")
+chequear("placa: la de Facebook es la del carrusel, 4:5, sin número ni flecha",
          Image.open(s).size == (1080, 1350))
 c1 = P.slide_carrusel("Economía", "Dólar", "Una nota sin foto en el carrusel", "", tmp / "c1.jpg", sitio="x",
                       idx=1, total=3)

@@ -11,11 +11,10 @@ Qué se dibuja, todo con la paleta del estilo «corresponsal» del bot (grafito 
   ⚠️ Lleva GRANO a propósito: el motor reconoce una gráfica por sus rellenos lisos y a una
   gráfica la muestra entera, SIN las cajas del titular (video.py, _es_grafica). Con grano es
   una «foto» más.
-- slide(): la diapositiva 4:5 del posteo de Facebook, con el compositor del bot
-  (story_image.compose_note_slide) sobre la foto o ese fondo.
-- slide_carrusel(): la diapositiva del carrusel de Instagram, estilo portal en GRAFITO (pedido
-  del 12/10/2026, story_image.compose_carrusel_slide). Desde ese día el carrusel arranca con la
-  primera nota: ya no hay tapa con la lista de titulares.
+- slide_carrusel(): la placa 4:5 del carrusel de Instagram y del posteo de Facebook, estilo
+  portal en GRAFITO (pedido del 12/10/2026, story_image.compose_carrusel_slide) sobre la foto o
+  ese fondo. Desde ese día el carrusel arranca con la primera nota (ya no hay tapa con la lista de
+  titulares) y el posteo de Facebook usa la misma placa, sin número ni flecha.
 - portada_web(): la imagen 1200x675 de la nota de la web (tarjeta de la sección, Google).
 """
 import random
@@ -167,20 +166,6 @@ def _story_image():
     return story_image
 
 
-def slide(seccion: str, volanta: str, titular: str, destino: Path, *, sitio: str = "",
-          idx: int = None, total: int = None, semilla: int = 0, foto=None) -> Path:
-    """Diapositiva 4:5 (1080x1350) con el compositor de carruseles del bot: sobre la FOTO de la
-    nota si la hay (y no es de agencia), o sobre el fondo propio."""
-    si = _story_image()
-    destino = Path(destino)
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="slide_") as t:
-        f = Path(foto) if foto else guardar_fondo(seccion, Path(t) / "fondo.jpg", (1080, 1350), semilla)
-        hecho = si.compose_note_slide(f, (volanta or "").upper(), titular, sitio, idx, total)
-        shutil.move(str(hecho), str(destino))
-    return destino
-
-
 def estilos_carrusel(fotos: list) -> list:
     """Estilo de cada diapositiva del carrusel (las horizontales alternan A y B; las demás, C)."""
     return _story_image().estilos_carrusel(fotos)
@@ -189,8 +174,10 @@ def estilos_carrusel(fotos: list) -> list:
 def slide_carrusel(seccion: str, volanta: str, titular: str, bajada: str, destino: Path, *,
                    sitio: str = "", idx: int = None, total: int = None, semilla: int = 0, foto=None,
                    estilo: str = None) -> Path:
-    """Diapositiva 4:5 del carrusel de Instagram, fondo grafito. Sin foto (agencia o la nota no
-    trae): el fondo propio a sangre y el titular en la caja (estilo C)."""
+    """Placa 4:5 del carrusel de Instagram o del posteo de Facebook (sin idx: sin número ni
+    flecha), fondo grafito. Sin `estilo`, lo decide la foto: horizontal → foto arriba (A);
+    cuadrada o vertical → a sangre con la caja (C). Sin foto (agencia o la nota no trae): el
+    fondo propio a sangre y el titular en la caja."""
     si = _story_image()
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
