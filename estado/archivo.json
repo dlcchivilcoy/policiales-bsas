@@ -1,7 +1,9 @@
 {
   "usados": {
     "h:1948-10-11:7bf23d29": "2026-10-11",
-    "p:18168": "2026-10-11"
+    "p:18168": "2026-10-11",
+    "h:1930-10-12:20f966a6": "2026-10-12",
+    "p:18259": "2026-10-12"
   },
   "preguntas": [
     {
@@ -70,7 +72,31 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-12:efemeride": {
+      "titular": "En 1930, Chivilcoy vio nacer al Club Social y Deportivo Colón en la plaza homónima",
+      "subtipo": "efemeride",
+      "cuando": "2026-10-12T13:30:39-03:00",
+      "intentos": 1,
+      "fuente": {
+        "fecha": "12 de octubre de 1930",
+        "hace": 96,
+        "posts": [
+          18259,
+          15967,
+          13591,
+          5893
+        ],
+        "dedicado": 18259,
+        "candidatas": 3,
+        "coincide_anio": true
+      },
+      "estado": "ok",
+      "id": "18107749190252630",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-11T20:30:28-03:00"
+  "actualizado": "2026-10-12T13:30:24-03:00"
 }
