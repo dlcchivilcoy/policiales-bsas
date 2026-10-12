@@ -11,9 +11,11 @@ Qué se dibuja, todo con la paleta del estilo «corresponsal» del bot (grafito 
   ⚠️ Lleva GRANO a propósito: el motor reconoce una gráfica por sus rellenos lisos y a una
   gráfica la muestra entera, SIN las cajas del titular (video.py, _es_grafica). Con grano es
   una «foto» más.
-- slide(): la diapositiva 4:5 del carrusel y del posteo de Facebook, con el compositor de
-  carruseles del bot (story_image.compose_note_slide) sobre ese fondo.
-- portada_carrusel(): la primera diapositiva, «Noticias nacionales de hoy» con los titulares.
+- slide(): la diapositiva 4:5 del posteo de Facebook, con el compositor del bot
+  (story_image.compose_note_slide) sobre la foto o ese fondo.
+- slide_carrusel(): la diapositiva del carrusel de Instagram, estilo portal en GRAFITO (pedido
+  del 12/10/2026, story_image.compose_carrusel_slide). Desde ese día el carrusel arranca con la
+  primera nota: ya no hay tapa con la lista de titulares.
 - portada_web(): la imagen 1200x675 de la nota de la web (tarjeta de la sección, Google).
 """
 import random
@@ -179,6 +181,29 @@ def slide(seccion: str, volanta: str, titular: str, destino: Path, *, sitio: str
     return destino
 
 
+def estilos_carrusel(fotos: list) -> list:
+    """Estilo de cada diapositiva del carrusel (las horizontales alternan A y B; las demás, C)."""
+    return _story_image().estilos_carrusel(fotos)
+
+
+def slide_carrusel(seccion: str, volanta: str, titular: str, bajada: str, destino: Path, *,
+                   sitio: str = "", idx: int = None, total: int = None, semilla: int = 0, foto=None,
+                   estilo: str = None) -> Path:
+    """Diapositiva 4:5 del carrusel de Instagram, fondo grafito. Sin foto (agencia o la nota no
+    trae): el fondo propio a sangre y el titular en la caja (estilo C)."""
+    si = _story_image()
+    destino = Path(destino)
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="slide_") as t:
+        if not foto:
+            foto = guardar_fondo(seccion, Path(t) / "fondo.jpg", (1080, 1350), semilla, etiqueta=False)
+            estilo = "C"
+        hecho = si.compose_carrusel_slide(foto, volanta or "", titular, bajada or "", sitio, idx, total,
+                                          tema="grafito", estilo=estilo)
+        shutil.move(str(hecho), str(destino))
+    return destino
+
+
 def _marca(img: Image.Image, x: int, y: int, alto: int):
     """Isotipo naranja + «DIARIO LA CAMPAÑA», como en los carruseles del bot."""
     d = ImageDraw.Draw(img)
@@ -191,54 +216,6 @@ def _marca(img: Image.Image, x: int, y: int, alto: int):
         pass
     f = fuente(round(alto * 0.44), 700)
     d.text((x, y + alto // 2), "DIARIO LA CAMPAÑA", font=f, fill=BLANCO, anchor="lm")
-
-
-def portada_carrusel(titulares: list, cuando: datetime, destino: Path, semilla: int = 0) -> Path:
-    """La tapa del carrusel: «Noticias nacionales de hoy», la fecha y los titulares numerados."""
-    W, H, M = 1080, 1350, 80
-    img = fondo("Hoy", (W, H), semilla, etiqueta=False)
-    # Velo para que se lea la lista.
-    velo = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(velo).rectangle((0, 380, W, H), fill=150)
-    velo = velo.filter(ImageFilter.GaussianBlur(60))
-    img = Image.composite(Image.new("RGB", (W, H), GRAFITO_OSCURO), img, velo)
-    d = ImageDraw.Draw(img)
-    _marca(img, M, 56, 66)
-
-    y = 190
-    fv = fuente(34, 600)
-    texto_fecha = fecha_larga(cuando).upper()
-    ancho_caja = d.textlength(texto_fecha, font=fv) + 44
-    d.rectangle((M, y, M + ancho_caja, y + 58), fill=NARANJA_CAJA)
-    d.text((M + 22, y + 29), texto_fecha, font=fv, fill=BLANCO, anchor="lm")
-    y += 86
-    ft, lineas, lh = _encajar(d, "Noticias nacionales de hoy", W - 2 * M, 230, 104, 64, 700, 1.04, 2)
-    for ln in lineas:
-        d.text((M, y), ln, font=ft, fill=BLANCO)
-        y += lh
-    y += 30
-    d.rectangle((M, y, M + 120, y + 6), fill=NARANJA)
-    y += 40
-
-    items = [t for t in titulares if t][:6]
-    alto_libre = H - 150 - y
-    # Con pocas notas no se reparten en todo el alto: quedan juntas arriba.
-    por_item = min(150, alto_libre // max(1, len(items)))
-    fn = fuente(40, 700)
-    for i, t in enumerate(items, 1):
-        fi, li, lhi = _encajar(d, t, W - 2 * M - 70, por_item - 18, 38, 28, 500, 1.18, 2)
-        d.text((M, y), f"{i}", font=fn, fill=NARANJA)
-        yy = y + 2
-        for ln in li:
-            d.text((M + 70, yy), ln, font=fi, fill=GRIS)
-            yy += lhi
-        y += max(por_item, yy - y + 18)
-    fc = fuente(34, 600)
-    d.text((W - M, H - 70), "Deslizá para leer  →", font=fc, fill=NARANJA, anchor="rm")
-    destino = Path(destino)
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    img.save(destino, "JPEG", quality=92)
-    return destino
 
 
 def portada_web(seccion: str, volanta: str, titular: str, destino: Path, semilla: int = 0) -> Path:

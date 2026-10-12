@@ -30,7 +30,10 @@ Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un traba
    previsualización misma foto») y si se postea solo el link sale con una foto equivocada.
    5 minutos entre pieza y pieza.
 4. Desde las 22 (la pasada de las 21:05 espera con --esperar-carrusel 22:00), el carrusel de
-   Instagram con lo que salió desde el carrusel anterior: tapa + hasta 9 diapositivas. Es un
+   Instagram con lo que salió desde el carrusel anterior: hasta 10 diapositivas, una por nota y
+   la primera es la portada (desde el 12/10 no hay tapa con la lista de titulares). Estilo
+   portal en grafito (placa.slide_carrusel): las fotos horizontales alternan dos estilos con la
+   foto arriba y las demás van a sangre con el titular en una caja que no tapa caras. Es un
    posteo NORMAL del feed: los «reels de prueba» de Instagram son solo para reels.
 
 La memoria vive en estado/nacionales.json (se commitea como la de policiales).
@@ -65,7 +68,7 @@ POR_PASADA = 3
 POR_DIA = 12
 FB_POR_PASADA = 2
 FB_POR_DIA = 8
-CARRUSEL_MAX = 9            # diapositivas de notas (+ la tapa = 10, el tope de Instagram)
+CARRUSEL_MAX = 10           # diapositivas, una por nota (el tope de Instagram; sin tapa desde el 12/10)
 CARRUSEL_MIN = 2
 HORA_CARRUSEL = (22, 0)
 MINUTOS_ENTRE_PIEZAS = 5
@@ -359,17 +362,20 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime) -> dict:
     if len(elegidas) < CARRUSEL_MIN:
         return {"estado": "omitido", "motivo": f"hay {len(elegidas)} nota(s) para el carrusel"}
     total = len(elegidas)
-    jpgs = [P.portada_carrusel([p["titular"] for _, p in elegidas], ahora, carpeta / "carrusel_00_tapa.jpg",
-                               semilla=int(ahora.strftime("%Y%m%d")))]
     from reels.flujo import _bajar_foto
     carpeta.mkdir(parents=True, exist_ok=True)
+    fotos = []
     for i, (u, p) in enumerate(elegidas, 1):
         foto = None
         if p.get("foto_url"):                        # la misma que salió en su pieza
             foto = _bajar_foto(p["foto_url"], carpeta / f"carrusel_{i:02d}_foto.jpg")
-        jpgs.append(P.slide(p.get("seccion") or "Nacionales", p.get("volanta") or "", p["titular"],
-                            carpeta / f"carrusel_{i:02d}.jpg", sitio=WEB.SITIO, idx=i, total=total,
-                            semilla=_semilla(u), foto=foto))
+        fotos.append(foto)
+    estilos = P.estilos_carrusel(fotos)
+    jpgs = []
+    for i, ((u, p), foto, estilo) in enumerate(zip(elegidas, fotos, estilos), 1):
+        jpgs.append(P.slide_carrusel(p.get("seccion") or "Nacionales", p.get("volanta") or "", p["titular"],
+                                     p.get("bajada") or "", carpeta / f"carrusel_{i:02d}.jpg", sitio=WEB.SITIO,
+                                     idx=i, total=total, semilla=_semilla(u), foto=foto, estilo=estilo))
     caption = caption_carrusel([p["titular"] for _, p in elegidas], ahora)
     if not publicar:
         return {"estado": "simulado", "diapositivas": len(jpgs), "caption": caption,
@@ -430,7 +436,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             nota, g = pieza["nota"], pieza["guion"]
             res = publicar_pieza(pieza, nota["url"] in fb, publicar)
             fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
-                    "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
+                    "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
                     "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
                     "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
                     "copia": (g.get("copia") or {}).get("racha"),

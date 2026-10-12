@@ -32,8 +32,13 @@ Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales`
      automáticas» (b4cdfc99…), por si algún día hay que separarlas (diario_web, `SIN_REGION`).
    - **Facebook**: solo las más virales, **2 por pasada y 8 por día**: posteo con la placa y el
      link a la nota (no reels; el link solo saldría con una foto equivocada).
-7. **22:00, Instagram**: carrusel «Noticias nacionales de hoy» (tapa + hasta 9 diapositivas) con
-   lo publicado desde el carrusel anterior. La pasada de las 21:05 espera hasta las 22; si no corrió,
+7. **22:00, Instagram**: carrusel «Noticias nacionales de hoy» (hasta 10 diapositivas, una por
+   nota; la primera es la portada) con lo publicado desde el carrusel anterior. Desde el 12/10 va
+   con el estilo portal en **grafito** (`placa.slide_carrusel`, motor del bot
+   `story_image.compose_carrusel_slide`): logo arriba a la izquierda e isologo a la derecha; las
+   fotos horizontales alternan uno y uno dos estilos con la foto arriba y el texto abajo, y las
+   cuadradas o verticales, y las notas sin foto, van a sangre con el titular en una caja
+   semitransparente que no tapa caras. Ya no hay tapa con la lista de titulares. La pasada de las 21:05 espera hasta las 22; si no corrió,
    lo saca la de las 23:35. Es un posteo normal del feed (los «reels de prueba» son solo reels).
 
 ## Interruptores (Settings → Secrets and variables → Actions → Variables)

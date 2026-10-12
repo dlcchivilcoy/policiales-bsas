@@ -163,8 +163,20 @@ chequear("placa: el motor la toma como FOTO, no como afiche (si no, no le pone e
 s = P.slide("Política", "Interna", "Un titular de prueba para la diapositiva", tmp / "s.jpg", sitio="x", idx=2, total=5)
 chequear("placa: la diapositiva es 4:5 (Instagram pide la misma proporción en todo el carrusel)",
          Image.open(s).size == (1080, 1350))
-t = P.portada_carrusel(["Uno", "Dos", "Tres"], datetime(2026, 10, 6, 22), tmp / "t.jpg")
-chequear("placa: la tapa del carrusel también es 4:5", Image.open(t).size == (1080, 1350))
+c1 = P.slide_carrusel("Economía", "Dólar", "Una nota sin foto en el carrusel", "", tmp / "c1.jpg", sitio="x",
+                      idx=1, total=3)
+chequear("placa: la diapositiva del carrusel también es 4:5 (sin foto, sobre el fondo propio)",
+         Image.open(c1).size == (1080, 1350))
+apaisada, parada = tmp / "apaisada.jpg", tmp / "parada.jpg"
+Image.new("RGB", (1600, 900), (90, 90, 90)).save(apaisada)
+Image.new("RGB", (900, 1200), (90, 90, 90)).save(parada)
+chequear("placa: las horizontales alternan A y B; las verticales y las sin foto, caja (C)",
+         P.estilos_carrusel([apaisada, parada, apaisada, None, apaisada]) == ["A", "C", "B", "C", "A"])
+c2 = P.slide_carrusel("Política", "Interna", "Titular", "Bajada de la nota", tmp / "c2.jpg", foto=apaisada,
+                      idx=2, total=3, estilo="B")
+chequear("placa: la diapositiva con foto horizontal es 4:5 y el fondo del panel es grafito",
+         Image.open(c2).size == (1080, 1350)
+         and max(abs(a - b) for a, b in zip(Image.open(c2).convert("RGB").getpixel((540, 1000)), P.GRAFITO)) < 6)
 chequear("placa: la imagen de la web es 1200x675",
          Image.open(P.portada_web("Salud", "Dengue", "Titular", tmp / "w.jpg")).size == (1200, 675))
 chequear("placa: la fecha en castellano", P.fecha_larga(datetime(2026, 10, 6)) == "martes 6 de octubre")
@@ -326,8 +338,8 @@ c = inf4.get("carrusel") or {}
 chequear("carrusel: la pasada de las 21:05 espera hasta las 22 y lo publica",
          c.get("estado") == "ok" and reloj["ahora"].hour == 22)
 hijos = [l for l in llamadas if l[0] == "ig_contenedor"]
-chequear("carrusel: tapa + una diapositiva por nota con web (la de Wix caída no va)",
-         len(hijos) == 1 + 5 + 1 and hijos[-1][1] == "CAROUSEL")
+chequear("carrusel: una diapositiva por nota con web, sin tapa (la de Wix caída no va)",
+         len(hijos) == 5 + 1 and hijos[-1][1] == "CAROUSEL")
 chequear("carrusel: la diapositiva de la nota con foto vuelve a bajar SU foto",
          bajadas == [notas[0]["imagen"]])
 cap = [l[1] for l in llamadas if l[0] == "ig_publicar"][0]
