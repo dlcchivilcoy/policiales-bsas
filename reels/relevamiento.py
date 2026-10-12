@@ -31,7 +31,8 @@ from datetime import datetime, timedelta
 from reels import ledger as LD
 
 DIAS = 10                     # hasta cuánto hacia atrás se mira
-DIAS_SEGURO = 3               # la decisión sin IA, solo entre hechos de estos días
+DIAS_SEGURO = 2               # la decisión sin IA, solo entre hechos de estos días (con 3 juntó
+                              # dos choques de moto distintos en Chacabuco, a 2,4 días)
 CONTIENE_SEGURO = 0.7         # parte de las raíces del texto más corto que está en el otro
 CONTIENE_IA = 0.4             # desde acá, se le pregunta a la IA
 CONTIENE_IA_MISMO_PUEBLO = 0.25
