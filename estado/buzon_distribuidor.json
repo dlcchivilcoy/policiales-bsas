@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-12T02:41:56.000Z",
+  "actualizado": "2026-10-12T12:11:04.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diarioel9dejulio.com.ar/noticia/203542",
@@ -84,6 +84,28 @@
       "localidad": "Bragado",
       "volanta": "Bragado",
       "categoria": "robo",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.latrochadigital.com.ar/2026/10/12/ruta-5-se-incendio-un-neumatico-de-un-camion-en-transito/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-12T12:11:04.000Z",
+      "titulo": "Incendio de neumático en un camión sobre la Ruta 5 en 9 de Julio",
+      "descripcion": "El acoplado de un transporte de carga sufrió fuego en una de sus ruedas mientras circulaba por la traza nacional. El chofer resultó ileso y actuaron los bomberos voluntarios.",
+      "texto_tiktok": "['Un transporte de carga protagonizó un principio de incendio en la Ruta 5 a la altura de 9 de Julio.', 'El fuego se originó en un neumático del acoplado mientras el vehículo circulaba en pleno tránsito.', 'El chofer logró detener la marcha a tiempo y no sufrió lesiones de gravedad.', 'Personal de bomberos voluntarios acudió al lugar para controlar la situación y evitar mayores daños.']\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #Ruta5 #Incendio #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-12_1209_01_9-de-julio_incendio-de-neum-tico-en-un-ca.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/9-de-julio-se-incendio-un-neumatico-de-un-camion-en-la-ruta-5-64b039",
+      "youtube_url": "https://youtube.com/shorts/BPZqPBpToEo",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "9 de Julio",
+      "categoria": "incendio",
       "plataformas": [
         "x",
         "tiktok"
