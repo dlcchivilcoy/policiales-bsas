@@ -26,6 +26,16 @@ from reels import publicador as PUB
 from datetime import timezone as _tz
 _AR = _tz(timedelta(hours=-3))
 PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
+# El relevamiento (12/10/2026) mira estado/publicados.json y le pregunta a la IA: en las pruebas,
+# ni lo uno ni lo otro (cada prueba arma su propia memoria).
+PUB.RV.cargar_publicados = lambda: {}
+
+
+def _sin_ia(*a, **k):
+    raise RuntimeError("sin IA en las pruebas")
+
+
+PUB.RV._preguntar_ia = _sin_ia
 
 fallas = []
 total = 0
@@ -1037,7 +1047,8 @@ base, carpeta, reloj, meta = preparar_yt([TEMPORAL, TEMPORAL[:2] + ("alerta_mete
                                          [("2026-09-20T02:00:00Z", "Otra cosa vieja | Lobos", "nada")])
 inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
 chequear("dentro de la misma pasada tampoco se repite (la primera cuenta para la segunda)",
-         [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok", "omitida"])
+         [f["youtube"]["estado"] for f in inf["piezas"]] == ["ok"]
+         and any("repite un hecho" in s_["motivo"] for s_ in inf["salteadas"]))
 shutil.rmtree(base)
 
 chequear("el token de YouTube se renueva antes de la hora (vence a los 60 min)", PUB.YT_ACCESO_MINUTOS < 60)

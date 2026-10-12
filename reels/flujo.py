@@ -32,6 +32,7 @@ from reels import guion as G
 from reels import reel_bot as R
 from reels import limpieza as L
 from reels import ledger as LD
+from reels import relevamiento as RV
 from scraper import fetch
 
 import entorno
@@ -57,6 +58,19 @@ PESO_GRAVEDAD = {"fatal": 40, "grave": 25, "media": 10, "leve": 0}
 def _ultimo_scrapeo() -> Path | None:
     archivos = sorted(glob.glob(str(RAIZ / "salida" / "policiales_*.json")))
     return Path(archivos[-1]) if archivos else None
+
+
+# El relevamiento de lo publicado (reels/relevamiento.py, 12/10/2026): lo de los últimos 10 días
+# se lee una vez por pasada, y lo que se arma en la pasada se suma a medida que sale.
+_PUBLICADO = None
+_EN_LA_PASADA = []
+
+
+def _ya_publicado() -> list:
+    global _PUBLICADO
+    if _PUBLICADO is None:
+        _PUBLICADO = RV.de_publicados(RV.cargar_publicados())
+    return _PUBLICADO
 
 
 def _puntaje(nota: dict) -> float:
@@ -414,6 +428,21 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     nota = material(nota)
     g = G.generar(nota, usar_ia=usar_ia, preferir=preferir, sitio=SITIO)
 
+    # ¿Este HECHO ya se publicó, o ya salió en esta pasada, contado por otro medio? (pedido del
+    # editor, 12/10/2026: el robo del Cementerio Judío de Carlos Casares salió dos veces, una por
+    # La Trocha y otra por Diario Junín). Se mira con el guion ya escrito —el titular nuestro, el
+    # pueblo del hecho— y antes de gastar en el reel.
+    ficha = RV.ficha(g.get("titular"), g.get("bajada"), g.get("localidad_hecho") or nota.get("localidad"),
+                     nota.get("titulo"), nota.get("url"), datetime.now().isoformat(timespec="seconds"),
+                     g.get("descripcion_final"))
+    if not g.get("fuera_de_temario"):
+        rep = RV.repetida(ficha, _ya_publicado() + _EN_LA_PASADA,
+                          usar_ia=g.get("via", "").startswith(("claude", "gemini")))
+        if rep:
+            return {"orden": idx, "descartada": True, "repetida": True, "por_que_no": RV.motivo(rep),
+                    "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                    "titulo": nota.get("titulo"), "url_original": nota.get("url")}
+
     nombre = f"{idx:02d}_{_slug(nota.get('localidad_medio'))}_{_slug(g['titular'], 30)}"
     img = carpeta / f"{nombre}.jpg"
     avisos = []
@@ -526,6 +555,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "gravedad": nota.get("gravedad") or "(sin clasificar)",
         "puntaje": round(_puntaje(nota), 1),
         "url_original": nota.get("url"),
+        "titulo_medio": nota.get("titulo") or "",
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
         "tenia_audio": bool(nota.get("audio")),
@@ -551,6 +581,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     # calcula el plan de publicacion: la hora de cada pieza se sabe recien al final,
     # con la tanda entera armada, y tiene que quedar tambien en el .json de la pieza
     # y no solo en el lote.
+    if apto:
+        _EN_LA_PASADA.append(ficha)
     pieza["_json"] = str(carpeta / f"{nombre}.json")
     (carpeta / f"{nombre}.json").write_text(
         json.dumps(pieza, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -731,6 +763,8 @@ def main():
         # hicieron — que además se perderían para siempre, porque el ledger no las
         # volvería a ofrecer.
         hechas = {p.get("url_original") for p in piezas if p.get("placa")}
+        # Las repetidas también: el hecho ya está publicado, no hay que volver a evaluarlas.
+        hechas |= {d.get("url_original") for d in descartadas if d.get("repetida")}
         con_pieza = [n for n in elegidas if n.get("url") in hechas]
         total = LD.registrar(con_pieza)
         print(f"Memoria actualizada: {len(con_pieza)} nota(s) anotadas, {total} en total")

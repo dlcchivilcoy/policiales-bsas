@@ -13,6 +13,9 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.stdout.reconfigure(encoding="utf-8")      # la consola de Windows es cp1252
 from reels import flujo as F, guion as G, ia
+# Sin el relevamiento real ni la IA (reels/relevamiento.py): cada prueba es su propio mundo.
+F._PUBLICADO = []
+F.RV._preguntar_ia = lambda *a, **k: (_ for _ in ()).throw(RuntimeError("sin IA"))
 
 fallas, total = [], 0
 

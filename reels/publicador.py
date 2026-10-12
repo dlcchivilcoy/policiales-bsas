@@ -55,6 +55,7 @@ from reels import frescura as FR
 from reels import instagram as IG
 from reels import ledger as LD
 from reels import limpieza as L
+from reels import relevamiento as RV
 from reels import ubicaciones as UB
 from reels import web as WEB
 from reels.flujo import MINUTOS_ENTRE_POSTEOS, SALIDA_REELS
@@ -913,6 +914,29 @@ def _clave(pieza: dict) -> str:
     return pieza.get("url_original") or pieza.get("placa") or ""
 
 
+def sin_repetir(listas: list, ledger: dict, usar_ia: bool = True, previas: list = None) -> tuple:
+    """(listas sin los hechos repetidos, salteadas con el motivo). Compara cada pieza contra
+    TODO lo publicado en 10 días (`relevamiento.de_publicados`) y contra las piezas anteriores de
+    este mismo lote. Una pieza que ya salió en alguna red es nuestra: sigue, para completar las
+    redes que le falten."""
+    previas = list(RV.de_publicados(RV.cargar_publicados()) if previas is None else previas)
+    quedan, salteadas = [], []
+    for pieza, mp4 in listas:
+        hecho = ledger.get(_clave(pieza)) or {}
+        if any(isinstance(v, dict) and v.get("estado") in ("ok", "sin_confirmar") for v in hecho.values()):
+            quedan.append((pieza, mp4))
+            continue
+        ficha = RV.ficha_pieza(pieza)
+        rep = RV.repetida(ficha, [p for p in previas if p.get("url") != ficha["url"]], usar_ia=usar_ia)
+        if rep:
+            salteadas.append({"orden": pieza.get("orden"), "titular": (pieza.get("guion") or {}).get("titular"),
+                              "motivo": RV.motivo(rep)})
+            continue
+        quedan.append((pieza, mp4))
+        previas.append(ficha)
+    return quedan, salteadas
+
+
 def cargar_ledger() -> dict:
     if not LEDGER.exists():
         return {}
@@ -1351,6 +1375,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     lote = json.loads((carpeta / "_lote.json").read_text(encoding="utf-8"))
     listas, salteadas = elegibles(lote, carpeta)
     ledger = cargar_ledger()
+    # El RELEVAMIENTO (12/10/2026): un hecho que ya salió —contado por otro medio, con otras
+    # palabras— no se vuelve a subir a NINGUNA red. Se decide antes de repartir los cupos.
+    listas, repetidas = sin_repetir(listas, ledger, usar_ia=publicar)
+    salteadas += repetidas
     informe = {"lote": carpeta.name, "modo": "publicar" if publicar else "simulacion",
                "redes": list(redes), "piezas": [], "salteadas": salteadas}
     _yt_acceso, _yt_sin_cupo, _ig_sin_prueba = "", False, False
@@ -1532,6 +1560,11 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             if publicar and res.get("estado") != "cupo":
                 res["cuando"] = _ahora().isoformat(timespec="seconds")
                 e = ledger.setdefault(clave, {"titular": g.get("titular"), "localidad": pueblo})
+                # Lo que el relevamiento compara la próxima vez (reels/relevamiento.py).
+                for k, v in (("bajada", g.get("bajada")), ("localidad_hecho", pieza.get("localidad_hecho")),
+                             ("titulo_medio", pieza.get("titulo_medio"))):
+                    if v:
+                        e.setdefault(k, v)
                 e[red] = res
                 e["ultimo"] = res["cuando"]
                 guardar_ledger(ledger)       # despues de CADA red: un corte no borra lo hecho
