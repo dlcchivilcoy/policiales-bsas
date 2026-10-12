@@ -32,6 +32,12 @@ chequear("una ID marcada como no válida no se usa", UB.location_id("Junín", ta
 chequear("localidad sin ID o desconocida: sin ubicación", UB.location_id("Lobos", tabla) == ""
          and UB.location_id("Mar del Plata", tabla) == "")
 chequear("la tabla del repo tiene las 34 localidades + Chivilcoy", len(UB.cargar()) == 35)
+chequear("alias: «Los Toldos» y «San Carlos de Bolívar» van a su partido",
+         UB.clave("Los Toldos") == "general viamonte" and UB.clave("San Carlos de Bolívar") == "bolivar")
+real = UB.cargar()
+chequear("las 35 de la tabla real tienen un ID numérico y válido",
+         all(d.get("id", "").isdigit() and d.get("valido") is not False for d in real.values()))
+chequear("los alias apuntan a claves que existen", all(v in real for v in UB.ALIAS.values()))
 
 URL = "https://ejemplo.com/reel.mp4"
 p = IG.contenedor_reel(URL, "x", ubicacion="108000000000001")

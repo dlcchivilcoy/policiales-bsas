@@ -15,6 +15,11 @@ import unicodedata
 from pathlib import Path
 
 ARCHIVO = Path(__file__).resolve().parent / "ubicaciones.json"
+# Cómo puede escribir la IA la localidad del hecho → clave de la tabla (la cabecera del partido).
+ALIAS = {"los toldos": "general viamonte", "san carlos de bolivar": "bolivar", "monte": "san miguel del monte",
+         "ameghino": "florentino ameghino", "arenales": "general arenales", "villegas": "general villegas",
+         "nueve de julio": "9 de julio", "veinticinco de mayo": "25 de mayo", "areco": "san antonio de areco",
+         "giles": "san andres de giles", "trenque": "trenque lauquen", "tejedor": "carlos tejedor"}
 
 
 def clave(texto: str) -> str:
@@ -25,7 +30,8 @@ def clave(texto: str) -> str:
     for prefijo in ("ciudad de ", "partido de "):
         if t.startswith(prefijo):
             t = t[len(prefijo):]
-    return t.split(" buenos aires")[0].strip()
+    t = t.split(" buenos aires")[0].strip()
+    return ALIAS.get(t, t)
 
 
 def cargar() -> dict:

@@ -10,6 +10,12 @@ Instagram revisa la ubicación ANTES de bajar la imagen: si el ID no es de un lu
 is not a valid location page ID»; si lo es, falla recién al bajar la imagen. En ningún caso queda un
 contenedor. Ojo: esto prueba que es UN lugar, no cuál; el nombre se confirma al sacarlo del buscador
 (el 12/10 Wikidata daba como «Luján» la ID de Villa Luján, Tucumán).
+
+De dónde salen (12/10/2026): con la sesión de Instagram abierta en el navegador,
+`/api/v1/fbsearch/places/?query=<ciudad>` (header X-IG-App-ID) da por cada lugar su `pk` de Instagram y
+su `facebook_places_id`. SOLO sirve el facebook_places_id: los pk cortos de Instagram (p. ej. 238764192)
+la API los rechaza. Se toma el del lugar categoría «Ciudad» con más publicaciones (el primero del
+directorio público /explore/locations/c<N>/) y se confirman las coordenadas.
 """
 import json
 import os
