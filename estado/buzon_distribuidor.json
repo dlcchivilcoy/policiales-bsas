@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-12T15:37:21.000Z",
+  "actualizado": "2026-10-12T18:16:38.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diarioel9dejulio.com.ar/noticia/203542",
@@ -216,6 +216,50 @@
       "localidad": "Luján",
       "volanta": "Luján y General Rodríguez",
       "categoria": "accidente_vial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://quepasaenbolivar.com.ar/momentos-de-tension-por-un-joven-que-se-atrinchero-en-una-vivienda-de-bolivar/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-12T18:16:38.000Z",
+      "titulo": "Se atrincheró con un arma en una casa de Bolívar y terminó detenido",
+      "descripcion": "Un joven ingresó de manera violenta a una vivienda y amenazó a una mujer, que logró escapar. Tras horas de tensión y negociaciones, se entregó a la policía y fue derivado al hospital.",
+      "texto_tiktok": "Momentos de máxima tensión se vivieron en Bolívar por un joven que se atrincheró armado dentro de una vivienda.\n\nLa situación se desencadenó al mediodía de este lunes en la calle Bernardo de Irigoyen, entre Brown y Belgrano.\n\nTras una intensa negociación con la policía, el masculino se entregó de forma voluntaria y fue trasladado al hospital.\n\n📲 Más noticias de Bolívar en www.diariolacampaña.com.ar\n\n#Bolivar #Policiales #OperativoPolicial #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-12_1809_01_bolivar_se-atrincher-con-un-arma-en-un.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bolivar-un-joven-armado-se-atrinchero-en-una-vivienda-y-se-69fba5",
+      "youtube_url": "https://youtube.com/shorts/Z6lBZhAaoFw",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Bolívar",
+      "volanta": "Operativo en Bolívar",
+      "categoria": "otro_policial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://laopinionline.ar/articulo/a-un-sujeto-lo-aprehendieron-con-una-bateria-robada-a-la-noche-y-salio-en-libertad-y-volvio-a-quedar-involucrado-en-una-situacion-delictiva",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-12T18:16:38.000Z",
+      "titulo": "Detuvieron a dos hombres por robar baterías y herramientas",
+      "descripcion": "Uno de los sospechosos, de 34 años, había recuperado la libertad tras ser atrapado in fraganti y volvió a caer junto a un cómplice de 43.",
+      "texto_tiktok": "Dos hombres fueron apresados en Pergamino tras cometer distintos robos de baterías de autos y herramientas.\n\nEl operativo estuvo a cargo de la Brigada Motorizada de la Policía Local y la causa la lleva la Unidad Funcional de Instrucción y Juicio N° 3.\n\nUno de los implicados, de 34 años, había salido en libertad horas antes y volvió a delinquir junto a su cómplice de 43.\n\n📲 Más noticias de Pergamino en www.diariolacampaña.com.ar\n\n#Pergamino #Policiales #Robo #Detenidos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-12_1809_02_pergamino_detuvieron-a-dos-hombres-por-r.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/pergamino-apresaron-a-dos-sujetos-por-robar-baterias-y-d58a08",
+      "youtube_url": "https://youtube.com/shorts/PWER-CouUrg",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Pergamino",
+      "volanta": "Pergamino",
+      "categoria": "robo",
       "plataformas": [
         "x",
         "tiktok"
