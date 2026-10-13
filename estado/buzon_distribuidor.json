@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-13T15:17:50.000Z",
+  "actualizado": "2026-10-13T18:42:25.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diarioel9dejulio.com.ar/noticia/203542",
@@ -546,6 +546,50 @@
       "localidad": "Chacabuco",
       "volanta": "Juan Bautista Alberdi en Chacabuco",
       "categoria": "otro_policial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.junindigital.com/policiales/2026-10-13-12-20-0-violenta-pelea-en-junin-cuatro-aprehendidos-y-secuestro-de-armas-blancas-un-hacha-y-canos",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-13T18:42:25.000Z",
+      "titulo": "Cuatro detenidos tras una violenta pelea callejera con un hacha",
+      "descripcion": "Personal policial arrestó a cuatro personas en la calle Magaldi luego de una confrontación que incluyó armas blancas, caños y un hacha. Uno de los demorados tenía un corte en la cabeza.",
+      "texto_tiktok": "Una fuerte disputa callejera movilizó a la policía hasta la calle Magaldi, entre las arterias Rivadavia y Roque Sáenz Peña.\n\nEn el sitio, los efectivos lograron reducir y arrestar a cuatro individuos que se resistieron al operativo.\n\nEl conflicto se habría originado a raíz de destrozos provocados en la entrada de una casa perteneciente a la expareja de uno de los sospechosos.\n\nDurante el procedimiento se incautaron armas blancas, varios caños y un hacha.\n\nUno de los sujetos involucrados sufrió una lesión cortante en la cabeza y la causa quedó bajo la órbita de la UFI N.º 6 junto a la fiscalía de género departamental.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Operativo #Policia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-13_1809_05_junin_cuatro-detenidos-tras-una-viol.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-cuatro-aprehendidos-tras-una-violenta-pelea-con-armas-22ab7d",
+      "youtube_url": "https://youtube.com/shorts/LTIIvCuhNQU",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Operativo en Junín",
+      "categoria": "operativo_policial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/346476-recuperaron-en-junin-una-moto-robada-en-lincoln-do",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-13T18:42:25.000Z",
+      "titulo": "Hallan en Junín moto robada en Lincoln y hay dos aprehendidos",
+      "descripcion": "Una motocicleta sustraída en la vecina ciudad fue recuperada este martes tras un allanamiento en una vivienda de Junín. Dos jóvenes de 21 y 22 años quedaron imputados por encubrimiento.",
+      "texto_tiktok": "Una motocicleta robada en Lincoln fue hallada este martes durante un allanamiento policial en la ciudad de Junín.\n\nEl operativo se llevó a cabo en un domicilio de la calle Soldado Jurio al 300, en el barrio Martín de Güemes.\n\nComo resultado del procedimiento, dos jóvenes de 21 y 22 años quedaron aprehendidos e imputados por el delito de encubrimiento.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Junin #Lincoln #Secuestro #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-13_1809_06_chacabuco_hallan-en-jun-n-moto-robada-en.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-hallaron-una-moto-robada-en-lincoln-durante-un-4c109b",
+      "youtube_url": "https://youtube.com/shorts/tXDE6UQWbkA",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Junín y Lincoln en Chacabuco",
+      "categoria": "robo",
       "plataformas": [
         "x",
         "tiktok"
