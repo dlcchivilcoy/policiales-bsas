@@ -134,7 +134,7 @@ def _salida(datos: dict, detalle: str, nota: dict) -> dict:
     titular, texto = _material(nota)
     s = {}
     for campo in ("volanta", "titular", "bajada", "descripcion"):
-        s[campo] = " ".join(str(datos.get(campo) or "").split())
+        s[campo] = " ".join(G.texto_ia(datos.get(campo)).split())     # una lista no va con corchetes
     s["titular"] = G._acortar(s["titular"] or titular, MAX_TITULAR)
     s["volanta"] = G._acortar(s["volanta"] or _seccion("", nota), 32)
     s["bajada"] = G._cerrar_en_punto(s["bajada"] or texto[:MAX_BAJADA], MAX_BAJADA)
@@ -150,8 +150,8 @@ def _salida(datos: dict, detalle: str, nota: dict) -> dict:
     s["apta"] = apta is not False and apta != 0
     s["motivo"] = "" if s["apta"] else (" ".join(str(datos.get("motivo") or "").split())[:160]
                                         or "la IA dijo que no alcanza para una nota")
-    s["titulo_web"] = G._acortar(" ".join(str(datos.get("titulo_web") or "").split()) or s["titular"], 120)
-    parrafos = [" ".join(p.split()) for p in re.split(r"\n\s*\n|\n", str(datos.get("nota_web") or ""))]
+    s["titulo_web"] = G._acortar(" ".join(G.texto_ia(datos.get("titulo_web")).split()) or s["titular"], 120)
+    parrafos = [" ".join(p.split()) for p in re.split(r"\n\s*\n|\n", G.texto_ia(datos.get("nota_web"), "\n\n"))]
     parrafos = [p for p in parrafos if p]
     if sum(len(p) for p in parrafos) < 300:
         # Sin nota de la web no hay a dónde mandar a la gente desde Facebook: no se publica.

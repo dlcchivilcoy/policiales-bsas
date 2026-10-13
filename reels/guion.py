@@ -74,12 +74,12 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "bajada": "para redes, MÁXIMO 280 caracteres, cerrada SIEMPRE en punto",
   "zocalo": "MÁXIMO 5 PALABRAS, sin punto ni comillas",
   "pie": "una oración con el dato más fuerte del hecho, escrita con tus palabras, cerrada en punto",
-  "descripcion": "2 a 4 frases para la descripción del reel",
+  "descripcion": "2 a 4 frases para la descripción del reel, en UN solo texto corrido (string, NO una lista)",
   "hashtags": ["#Uno", "#Dos"],
   "potencial_viral": 7,
   "datos_clave": ["cada dato concreto del hecho, corto y tal cual está en el material"],
   "titulo_web": "titular para la NOTA de la web, 60 a 95 caracteres, sin punto final",
-  "nota_web": "la nota para la web: 4 a 6 párrafos separados por un renglón en blanco"
+  "nota_web": "la nota para la web: 4 a 6 párrafos separados por un renglón en blanco, en UN solo texto (string, NO una lista)"
 }
 
 DATOS CLAVE (obligatorio, pedido del editor): la nota tiene que servir para enterarse de TODO
@@ -547,12 +547,36 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     return salida
 
 
+_LISTA_PEGADA = re.compile(r"""^\s*\[\s*(['"]).*\1\s*\]\s*$""", re.S)
+
+
+def texto_ia(valor, separador: str = " ") -> str:
+    """Un campo de la IA como TEXTO. A veces contesta una LISTA de oraciones donde se pidió un
+    texto corrido, y `str(lista)` publicaba «['Una frase.', 'Otra frase.']» con corchetes y
+    comillas (pasó en 5 de los últimos 100 posteos de Instagram, 12/10/2026). Una lista se une
+    con `separador`; un texto que ya viene con la lista pegada adentro se desarma igual."""
+    if isinstance(valor, (list, tuple)):
+        return separador.join(texto_ia(v) for v in valor if v is not None and str(v).strip())
+    if valor is None:
+        return ""
+    texto = str(valor)
+    if _LISTA_PEGADA.match(texto):
+        import ast
+        try:
+            lista = ast.literal_eval(texto.strip())
+            if isinstance(lista, (list, tuple)):
+                return texto_ia(list(lista), separador)
+        except (ValueError, SyntaxError):
+            pass
+    return texto
+
+
 def _salida_ia(datos: dict, detalle: str, nota: dict) -> dict:
     """El guion a partir de lo que contestó la IA, con topes duros y rellenos."""
     base = guion_simple(nota)
     salida = {}
     for campo in ("volanta", "titular", "bajada", "zocalo", "pie", "descripcion"):
-        valor = " ".join(str(datos.get(campo) or "").split())
+        valor = " ".join(texto_ia(datos.get(campo)).split())
         salida[campo] = valor or base[campo]
     # Topes duros: la IA los respeta casi siempre, pero "casi" no alcanza cuando de esto
     # depende que el texto entre en la placa.
@@ -569,9 +593,9 @@ def _salida_ia(datos: dict, detalle: str, nota: dict) -> dict:
                              if isinstance(d, (str, int, float)) and str(d).strip()][:14]
     # La nota de la web. Si la IA no la escribió, se arma con lo que sí escribió (bajada +
     # descripción): una nota corta es mejor que un posteo de Facebook sin link.
-    salida["titulo_web"] = _acortar(" ".join(str(datos.get("titulo_web") or "").split())
+    salida["titulo_web"] = _acortar(" ".join(texto_ia(datos.get("titulo_web")).split())
                                     or salida["titular"], 120)
-    parrafos = [" ".join(p.split()) for p in re.split(r"\n\s*\n|\n", str(datos.get("nota_web") or ""))]
+    parrafos = [" ".join(p.split()) for p in re.split(r"\n\s*\n|\n", texto_ia(datos.get("nota_web"), "\n\n"))]
     parrafos = [p for p in parrafos if p]
     if sum(len(p) for p in parrafos) < 200:
         parrafos = [salida["bajada"]] + [f for f in _oraciones(salida["descripcion"])
@@ -845,7 +869,8 @@ def descripcion_tiktok(guion: dict, nota: dict, sitio: str = "") -> str:
     """
     partes = []
 
-    cuerpo = (guion.get("descripcion") or "").strip()
+    # texto_ia: última red por si algo llegó con la lista pegada («['Una.', 'Otra.']»).
+    cuerpo = texto_ia(guion.get("descripcion")).strip()
     if cuerpo:
         # Cada oración, su propio párrafo. Se lee mucho mejor en el celular.
         frases = _oraciones(cuerpo)

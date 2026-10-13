@@ -134,9 +134,10 @@ def caption(descripcion: str, tags: list) -> str:
 
 def _limpiar(datos: dict, tipo: str) -> dict:
     g = dict(datos)
-    g["titular"] = G._acortar(G.limpiar_titular(g.get("titular") or ""), MAX_TITULAR)
-    g["bajada"] = G._cerrar_en_punto(" ".join((g.get("bajada") or "").split()), MAX_BAJADA)
-    g["descripcion"] = (g.get("descripcion") or "").strip()
+    # G.texto_ia: si la IA contesta una lista donde se pidió texto, no salen corchetes (12/10/2026).
+    g["titular"] = G._acortar(G.limpiar_titular(G.texto_ia(g.get("titular"))), MAX_TITULAR)
+    g["bajada"] = G._cerrar_en_punto(" ".join(G.texto_ia(g.get("bajada")).split()), MAX_BAJADA)
+    g["descripcion"] = G.texto_ia(g.get("descripcion")).strip()
     g["hashtags"] = hashtags(tipo, g.get("hashtags"))
     g["viral"] = G.potencial_viral(g)
     g["datos_clave"] = [str(d) for d in (g.get("datos_clave") or []) if str(d).strip()]
