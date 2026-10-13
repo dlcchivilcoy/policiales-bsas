@@ -18,9 +18,9 @@ Decidido por el editor el 2026-09-26:
   tope diario de seguridad (ver YT_SHORTS_POR_DIA).
 - TikTok: DESACTIVADO hasta que TikTok apruebe el Direct Post. Ni publicacion ni
   BORRADORES: no hay codigo que le hable, y la red se rechaza aunque se la pida.
-- 5 minutos entre posteo y posteo (`MINUTOS_ENTRE_POSTEOS` de flujo.py). Al publicar
-  de verdad la espera NO se puede saltear: es para que las redes no lean la cuenta
-  como un bot.
+- 30 minutos entre posteo y posteo (`MINUTOS_ENTRE_POSTEOS` de flujo.py; eran 5 hasta el
+  13/10/2026). Al publicar de verdad la espera NO se puede saltear. Una pasada publica solo
+  las piezas que entran antes de la siguiente (`lugares_en_la_pasada`), las mejores primero.
 - Sin revision humana: sale lo que el flujo marco `apto_para_publicar`.
 
 SIN `--publicar` no se toca ninguna red: muestra que saldria, a que hora y con que
@@ -1311,14 +1311,56 @@ def _hora(texto):
 
 
 def _turno(pieza: dict, ultimo) -> datetime:
-    """A que hora sale esta pieza: la agendada, pero nunca antes de ahora ni a menos de
-    MINUTOS_ENTRE_POSTEOS de la anterior. La segunda condicion hace falta aunque el
-    plan ya venga espaciado: si una pieza tarda en publicarse, la siguiente no puede
-    salir pegada."""
-    hora = max(_hora(pieza.get("publicar_en")) or _ahora(), _ahora())
+    """A que hora sale esta pieza: ya mismo la primera, y cada una a MINUTOS_ENTRE_POSTEOS de la
+    anterior. La hora agendada por el flujo ya no manda (13/10/2026): con 30 minutos y solo las
+    mejores de la pasada, la agenda de la tanda entera dejaba huecos de las que no salen."""
+    hora = _ahora()
     if ultimo:
         hora = max(hora, ultimo + timedelta(minutes=MINUTOS_ENTRE_POSTEOS))
     return hora
+
+
+# Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Una
+# pasada termina de publicar antes de que arranque la siguiente: si no, se pisan (la segunda queda
+# en fila) y salen dos reels juntos.
+PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la pasada siguiente
+MAX_POR_PASADA = 6           # aun con la noche entera por delante (23:35 → 09:05)
+
+
+def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
+    """Cuántas piezas entran en esta pasada a MINUTOS_ENTRE_POSTEOS: la primera ya, y las demás
+    hasta MARGEN_PASADA_MIN antes de la pasada siguiente. Entre 1 y MAX_POR_PASADA."""
+    ahora = ahora_ar or _hora_ar()
+    proxima = min(ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
+                  for d in (0, 1) for h, m in PASADAS_AR
+                  if ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
+                  > ahora + timedelta(minutes=20))
+    libres = (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
+    return max(1, min(MAX_POR_PASADA, int(libres // MINUTOS_ENTRE_POSTEOS) + 1))
+
+
+def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set) -> tuple:
+    """(las `n` piezas de la pasada, salteadas). Primero las elegidas para Instagram o Facebook
+    (las de más potencial), después las de más viral; las que entran salen en el orden de la
+    pasada (la más nueva primero). Una pieza que ya salió en todas sus redes no ocupa lugar."""
+    def falta(p):
+        hecho = ledger.get(_clave(p)) or {}
+        return any((hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar")
+                   for r in ("instagram", "facebook", "youtube"))
+    pendientes = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p)]
+    rango = sorted(pendientes, key=lambda x: (_clave(x[1]) in preferidas, x[1].get("viral") or 5,
+                                              -x[0]), reverse=True)
+    entran = {i for i, _p in rango[:n]}
+    quedan, salteadas = [], []
+    for i, (p, m) in enumerate(listas):
+        if i in entran or not falta(p):
+            quedan.append((p, m))
+        else:
+            salteadas.append({"orden": p.get("orden"), "titular": (p.get("guion") or {}).get("titular"),
+                              "motivo": f"no entra en la pasada: un reel cada {MINUTOS_ENTRE_POSTEOS} minutos, "
+                                        f"{n} lugares hasta la pasada siguiente"})
+    return quedan, salteadas
 
 
 def _intentar(fn, *args) -> dict:
@@ -1415,6 +1457,14 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
+    # Un reel cada 30 minutos en cada red (13/10/2026): entra lo que cabe hasta la pasada siguiente.
+    lugares = lugares_en_la_pasada()
+    listas, no_entran = solo_las_que_entran(listas, ledger, lugares, ig_elegidas | fb_elegidas)
+    salteadas += no_entran
+    informe["salteadas"] = salteadas
+    for s_ in no_entran:
+        print(f"  salteada #{s_['orden']}: {s_['motivo']}")
+    print(f"  Lugares en esta pasada: {lugares} (un reel cada {MINUTOS_ENTRE_POSTEOS} minutos)")
     # Lo que ya está en el canal de YouTube, para no repetir hechos (ver _ya_en_youtube).
     yt_recientes = []
     # Solo si alguna pieza todavía tiene que ir a YouTube y hay cupo: una pasada que no va a
@@ -1492,7 +1542,8 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         if publicar:
             falta = (hora - _ahora()).total_seconds()
             if falta > 0:
-                print(f"  esperando {falta / 60:.1f} min (5 minutos entre posteos)…", flush=True)
+                print(f"  esperando {falta / 60:.1f} min ({MINUTOS_ENTRE_POSTEOS} minutos entre posteos)…",
+                      flush=True)
                 _dormir(falta)
             ultimo = _ahora()
         else:

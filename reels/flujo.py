@@ -120,7 +120,10 @@ CONTENCION_MISMA_LOCALIDAD = 0.40
 # publica. Dos razones: queda escrito en el lote —o sea que la pasada deja dicho a
 # que hora va cada pieza, y se puede revisar antes— y el dia que se conecte TikTok
 # el publicador solo tiene que leer `publicar_en`, no volver a decidir nada.
-MINUTOS_ENTRE_POSTEOS = 5
+# 30 desde el 13/10/2026 (pedido del editor: «postear 1 reel cada 30 minutos, lo mismo para las otras
+# redes»). Antes, 5. Cada pieza sale en todas sus redes juntas, así que en cada red queda un reel cada 30
+# minutos como mucho; cuántas entran en una pasada lo decide el publicador (`lugares_en_la_pasada`).
+MINUTOS_ENTRE_POSTEOS = 30
 
 
 def plan_de_publicacion(piezas: list, desde=None, minutos: int = MINUTOS_ENTRE_POSTEOS):

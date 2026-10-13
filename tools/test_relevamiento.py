@@ -102,12 +102,16 @@ listas = [(pieza(1, "Robaron más de un centenar de placas de bronce en el Cemen
                  "https://otro.test/2"), "b.mp4"),
           (pieza(3, "Volcó un auto en la Ruta 30: el conductor salió ileso", "Chivilcoy",
                  "https://tercero.test/3"), "c.mp4")]
-quedan, salteadas = PUB.sin_repetir(listas, {}, usar_ia=False, previas=list(PUBLICADAS))
+# Lo publicado, AYER: la pieza toma la hora de ahora, y la prueba no puede depender de cuándo se corre.
+from datetime import datetime, timedelta  # noqa: E402
+ayer = (datetime.now() - timedelta(days=1)).isoformat(timespec="seconds")
+recientes = [dict(f, cuando=ayer) for f in PUBLICADAS]
+quedan, salteadas = PUB.sin_repetir(listas, {}, usar_ia=False, previas=recientes)
 chequear("publicador: la repetida de lo publicado y la repetida dentro del lote no salen",
          [p["orden"] for p, _ in quedan] == [2] and len(salteadas) == 2
          and all("repite un hecho" in s["motivo"] for s in salteadas))
 ledger = {"https://diariojunin.test/1": {"instagram": {"estado": "ok"}}}
-quedan, _ = PUB.sin_repetir(listas[:1], ledger, usar_ia=False, previas=list(PUBLICADAS))
+quedan, _ = PUB.sin_repetir(listas[:1], ledger, usar_ia=False, previas=recientes)
 chequear("una pieza que YA salió en alguna red es nuestra: sigue (para completar las otras redes)",
          len(quedan) == 1)
 

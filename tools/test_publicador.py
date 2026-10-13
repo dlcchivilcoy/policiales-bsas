@@ -665,9 +665,19 @@ os.environ.pop("IG_POR_PASADA")
 base, carpeta, reloj, meta = preparar_virales([3, 1, 2, 8, 5, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
-chequear("con 7 piezas salen las 5 MÁS VIRALES (9, 8, 7, 5, 3); la de 1 y la de 2 no",
-         ig == ["ok", "omitida", "omitida", "ok", "ok", "ok", "ok"] and len(meta.contenedores) == 5)
+chequear("con 7 piezas salen las 5 MÁS VIRALES (9, 8, 7, 5, 3); la de 2 no va a Instagram y la de 1 "
+         "no entra en la pasada (a las 9:10 hay 6 lugares de 30 minutos hasta las 12:05)",
+         ig == ["ok", "omitida", "ok", "ok", "ok", "ok"] and len(meta.contenedores) == 5
+         and any("no entra en la pasada" in s_["motivo"] for s_ in inf["salteadas"]))
+horas = [f["hora"] for f in inf["piezas"] if f.get("hora")]
+chequear("un reel cada 30 minutos (13/10/2026)",
+         all((datetime.fromisoformat(b) - datetime.fromisoformat(a)).total_seconds() >= 30 * 60
+             for a, b in zip(horas, horas[1:])))
 shutil.rmtree(base)
+chequear("lugares por pasada: 12:20 → 6 (hasta las 14:55), 21:20 → 5 (hasta las 23:25), 23:50 → 6 (tope)",
+         PUB.lugares_en_la_pasada(datetime(2026, 10, 13, 12, 20, tzinfo=_AR)) == 6
+         and PUB.lugares_en_la_pasada(datetime(2026, 10, 13, 21, 20, tzinfo=_AR)) == 5
+         and PUB.lugares_en_la_pasada(datetime(2026, 10, 13, 23, 50, tzinfo=_AR)) == 6)
 os.environ["IG_POR_PASADA"] = "2"
 PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
