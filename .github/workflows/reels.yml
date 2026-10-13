@@ -369,7 +369,8 @@ jobs:
     needs: respaldo
     if: needs.respaldo.outputs.nacionales == 'true' && ((github.event.inputs.trabajos || 'todos') == 'todos' || github.event.inputs.trabajos == 'nacionales')
     runs-on: ubuntu-latest
-    # 3 piezas a 5 minutos + la espera hasta las 22 (hasta 100 min) + el carrusel.
+    # 3 piezas a 30 minutos (13/10/2026) + la espera hasta las 22 (hasta 100 min; con 30 minutos la
+    # pasada de las 21:05 ya llega pasadas las 22) + el carrusel.
     timeout-minutes: 160
     steps:
       - uses: actions/checkout@v4

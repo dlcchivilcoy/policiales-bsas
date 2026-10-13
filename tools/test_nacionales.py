@@ -284,7 +284,7 @@ url_nota = [p["web"]["url"] for p in inf["piezas"]][0]
 chequear("pasada: el Short sale con el link de SU nota (el slug se sabe antes)", url_nota in desc_yt)
 chequear("pasada: el posteo de Facebook es título + link a la nota",
          all("📲 Leé la nota completa: https://www.diariolacampaña.com.ar/n/" in l[1] for l in llamadas if l[0] == "facebook"))
-chequear("pasada: 5 minutos entre pieza y pieza", dormido == [300, 300])
+chequear("pasada: 30 minutos entre pieza y pieza (13/10/2026)", dormido == [1800, 1800])
 chequear("pasada: a las 12 no hay carrusel", "carrusel" not in inf and not mem["carruseles"])
 t_anses, t_paro = notas[0]["titulo"][:20], notas[1]["titulo"][:20]
 chequear("foto: la nota con foto oficial arma el Short con SU foto",

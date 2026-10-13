@@ -28,7 +28,7 @@ Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un traba
    NAC_FB_POR_PASADA (2) y NAC_FB_POR_DIA (8). Es un posteo con la PLACA y el link a la nota:
    Facebook no lee bien la foto de una nota de Wix recién publicada (memoria del bot, «FB
    previsualización misma foto») y si se postea solo el link sale con una foto equivocada.
-   5 minutos entre pieza y pieza.
+   30 minutos entre pieza y pieza (eran 5; pedido del editor del 13/10/2026, como policiales).
 4. Desde las 22 (la pasada de las 21:05 espera con --esperar-carrusel 22:00), el carrusel de
    Instagram con lo que salió desde el carrusel anterior: hasta 10 diapositivas, una por nota y
    la primera es la portada (desde el 12/10 no hay tapa con la lista de titulares). Estilo
@@ -71,7 +71,7 @@ FB_POR_DIA = 8
 CARRUSEL_MAX = 10           # diapositivas, una por nota (el tope de Instagram; sin tapa desde el 12/10)
 CARRUSEL_MIN = 2
 HORA_CARRUSEL = (22, 0)
-MINUTOS_ENTRE_PIEZAS = 5
+MINUTOS_ENTRE_PIEZAS = 30     # entre un Short y el siguiente (13/10/2026; eran 5), como policiales
 HORAS_TEMA = 24             # un tema ya contado no se repite en este lapso
 MAX_ESPERA_CARRUSEL = 100   # minutos: más que esto no se espera (la pasada vendría muy atrasada)
 
@@ -434,9 +434,14 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             armadas.append(pieza)
 
         fb = para_facebook(armadas, mem, dia)
+        ultimo = None
         for i, pieza in enumerate(armadas):
-            if i and publicar:
-                _dormir(MINUTOS_ENTRE_PIEZAS * 60)
+            if ultimo is not None and publicar:
+                # Desde que ARRANCÓ la anterior: lo que tardó en subir ya cuenta en los 30 minutos.
+                falta = (ultimo + timedelta(minutes=MINUTOS_ENTRE_PIEZAS) - _ahora()).total_seconds()
+                if falta > 0:
+                    _dormir(falta)
+            ultimo = _ahora()
             nota, g = pieza["nota"], pieza["guion"]
             res = publicar_pieza(pieza, nota["url"] in fb, publicar)
             fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
