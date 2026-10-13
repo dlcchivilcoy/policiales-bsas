@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-13T12:21:38.000Z",
+  "actualizado": "2026-10-13T15:17:50.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diarioel9dejulio.com.ar/noticia/203542",
@@ -502,6 +502,50 @@
       "localidad": "Chacabuco",
       "volanta": "Chacabuco",
       "categoria": "robo",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://laopinionline.ar/articulo/salto-agredieron-a-inspectores-de-transito-y-secuestraron-vehiculos-durante-controles-viales",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-13T15:17:50.000Z",
+      "titulo": "Agredieron a inspectores viales y secuestraron vehículos durante el fin de semana",
+      "descripcion": "La Dirección de Tránsito llevó adelante diversas inspecciones que terminaron con ataques al personal municipal, conductores alcoholizados y varias motos retenidas por distintas infracciones.",
+      "texto_tiktok": "La Municipalidad desplegó controles viales en distintos puntos de la ciudad durante el fin de semana largo.\n\nEn uno de los episodios más graves, un motociclista atacó a los inspectores con una piedra y una tonfa extensible.\n\nAdemás, hubo un choque protagonizado por un conductor alcoholizado y varios rodados incautados por falta de documentación.\n\n📲 Más noticias de Salto en www.diariolacampaña.com.ar\n\n#Salto #Operativo #Policia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-13_1509_04_pergamino_agredieron-a-inspectores-viale.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/salto-agredieron-a-inspectores-de-transito-secuestraron-motos-y-268ac2",
+      "youtube_url": "https://youtube.com/shorts/V9dzpm9f2is",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Salto",
+      "volanta": "Salto",
+      "categoria": "operativo_policial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/346451-una-adolescente-de-15-anos-sufrio-una-fractura-de",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-13T15:17:50.000Z",
+      "titulo": "Una adolescente de 15 años sufrió fractura de cráneo tras una golpiza en una plaza",
+      "descripcion": "El brutal ataque ocurrió a las 10:04 AM durante la Fiesta del Cordero. Su padre denunció que la víctima era hostigada desde hacía meses y exigió que la Justicia investigue.",
+      "texto_tiktok": "Una adolescente de 15 años fue brutalmente golpeada en la plaza de Juan Bautista Alberdi durante la celebración de la Fiesta del Cordero.\n\nEl hecho ocurrió el martes 13 de octubre de 2026 a las 10:04 AM, según los datos aportados por la investigación y el testimonio de su padre, Oscar Rodríguez.\n\nLa víctima sufrió fractura de cráneo y pérdida de conocimiento, además de recibir asistencia médica antes de recibir el alta.\n\nLa familia realizó la correspondiente denuncia en la ciudad de Vedia para exigir que la Justicia esclarezca el violento episodio.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-13_1509_05_chacabuco_una-adolescente-de-15-a-os-suf.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/juan-bautista-alberdi-una-adolescente-de-15-anos-sufrio-e03c5c",
+      "youtube_url": "https://youtube.com/shorts/tsBd_C3LYqI",
+      "prioridad": 9,
+      "urgente": true,
+      "localidad": "Chacabuco",
+      "volanta": "Juan Bautista Alberdi en Chacabuco",
+      "categoria": "otro_policial",
       "plataformas": [
         "x",
         "tiktok"
