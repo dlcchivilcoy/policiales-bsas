@@ -210,8 +210,10 @@ def armar(tipo: str, ahora: datetime, mem: dict, carpeta: Path, redactar=None, *
         if not foto:
             from nacionales import placa as P
             palabra = {"efemeride": "Efemérides", "personaje": "Personajes"}.get(pieza["tipo"], "Historia")
+            # Horizontal: sin foto, el reel sale 4:5 como los de policiales (12/10/2026).
             foto = str(P.guardar_fondo(palabra, base.with_name(base.name + "_placa.jpg"),
-                                       semilla=_semilla(pieza["guion"]["titular"]), etiqueta="Chivilcoy"))
+                                       tam=IM.PLACA_HORIZONTAL, semilla=_semilla(pieza["guion"]["titular"]),
+                                       etiqueta="Chivilcoy"))
         pieza["imagen"] = {"archivo": foto, "proveedor": "archivo" if pieza["foto_url"] and "placa" not in foto
                            else "placa"}
     if pieza["imagen"].get("proveedor") != "placa":       # la placa propia ya trae su grano

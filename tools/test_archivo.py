@@ -206,6 +206,12 @@ def cloudflare_ok(url, headers=None, json=None):
 
 r = IM.imagen_pregunta("a park at sunset", "Plazas", tmp / "cf.jpg", pedir=cloudflare_ok, mirar=lambda p: False)
 chequear("Cloudflare: guarda la imagen", r["proveedor"] == "cloudflare" and Path(r["archivo"]).is_file())
+chequear("la imagen de la pregunta va HORIZONTAL 4:3 (el reel sale 4:5, como policiales)",
+         Image.open(r["archivo"]).size == (1024, 768) and "horizontal" in visto["cuerpo"]["prompt"])
+placa = IM.imagen_pregunta("a park", "Plazas", tmp / "pl.jpg", pedir=lambda *a, **k: Resp(401, {}),
+                           mirar=lambda p: False)
+chequear("la placa propia de respaldo también es horizontal",
+         placa["proveedor"] == "placa" and Image.open(placa["archivo"]).size == IM.PLACA_HORIZONTAL)
 chequear("Cloudflare: modelo FLUX schnell, la cuenta en la URL y el token en el encabezado",
          visto["url"].endswith("/accounts/cuenta/ai/run/@cf/black-forest-labs/flux-1-schnell")
          and visto["auth"] == "Bearer secreto123" and "wordless" in visto["cuerpo"]["prompt"]

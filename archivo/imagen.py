@@ -24,8 +24,14 @@ ESPERAS = (5, 20)
 # FLUX no tiene «prompt negativo»: escribirle «no text» igual le mete la idea de letras, y el 10/10 dibujó
 # «utuire careers» en una pregunta sobre el futuro laboral. El estilo pictórico y las superficies lisas
 # alejan el texto; lo que se cuele lo agarra tiene_texto() y se pide otra (o va la placa).
-ESTILO = (" Painterly gouache editorial illustration, vertical composition, warm palette with orange accents, "
+# Horizontal (12/10/2026): el reel de la pregunta sale 4:5 como los de policiales —imagen arriba, bloque
+# con el texto abajo— y FLUX en Cloudflare solo da 1024x1024: se le pide el sujeto en la franja del medio
+# y después se recorta a 4:3 (`a_horizontal`).
+ESTILO = (" Painterly gouache editorial illustration, wide horizontal composition with the main subject in the "
+          "middle band of the frame and open space above and below, warm palette with orange accents, "
           "soft natural light, clean uncluttered scene, plain blank surfaces, wordless.")
+PROPORCION = 4 / 3          # la imagen de la pregunta: 4:3 → en el reel 4:5, 1080x810 + el bloque
+PLACA_HORIZONTAL = (1080, 810)
 INTENTOS_SIN_TEXTO = 2      # imágenes de Cloudflare que se prueban antes de caer a la placa
 
 
@@ -77,6 +83,35 @@ def generar(prompt: str, destino: Path, pedir=None) -> dict:
             continue
         return {"archivo": str(destino), "proveedor": "cloudflare", "modelo": MODELO}
     return {"motivo": f"Cloudflare: {ultimo}"}
+
+
+def a_horizontal(ruta, proporcion: float = PROPORCION) -> Path:
+    """La imagen recortada a `proporcion` (4:3) quitando cielo y piso, con la ventana centrada en lo
+    que importa: las caras si hay, si no el objeto central (`_objetos_de_foto` del motor), si no el
+    medio. Si ya es así de ancha, la misma ruta."""
+    from PIL import Image
+    ruta = Path(ruta)
+    with Image.open(ruta) as im:
+        im = im.convert("RGB")
+    w, h = im.size
+    nh = round(w / proporcion)
+    if nh >= h:
+        return ruta
+    centro = h / 2
+    try:
+        from reels import reel_bot as R
+        m = R.motor()
+        cajas = m._caras_de_foto(im) or m._objetos_de_foto(im)
+        if cajas:
+            arriba = min(y for _x, y, _w, _h in cajas)
+            abajo = max(y + hh for _x, y, _w, hh in cajas)
+            centro = (arriba + abajo) / 2
+    except Exception:                          # noqa: BLE001 — sin motor, el medio
+        pass
+    y0 = int(max(0, min(h - nh, centro - nh / 2)))
+    destino = ruta.with_name(ruta.stem + "_43.jpg")
+    im.crop((0, y0, w, y0 + nh)).save(destino, "JPEG", quality=92)
+    return destino
 
 
 LADO_MOTOR = 1350           # a esto se agranda una foto chica antes de sumarle grano
@@ -156,6 +191,7 @@ def imagen_pregunta(prompt: str, seccion: str, destino: Path, semilla: int = 0, 
         if not r.get("archivo"):
             motivos.append(r.get("motivo") or "sin imagen")
             break
+        r["archivo"] = str(a_horizontal(r["archivo"]))
         if not mirar(r["archivo"]):          # False (sin letras) o None (no se pudo mirar): sirve
             r["intentos"] = intento + 1
             return r
@@ -163,5 +199,5 @@ def imagen_pregunta(prompt: str, seccion: str, destino: Path, semilla: int = 0, 
         r = {}
     from nacionales import placa as P
     archivo = P.guardar_fondo(seccion or "Chivilcoy", destino.with_name(destino.stem + "_placa.jpg"),
-                              semilla=semilla, etiqueta="Chivilcoy")
+                              tam=PLACA_HORIZONTAL, semilla=semilla, etiqueta="Chivilcoy")
     return {"archivo": str(archivo), "proveedor": "placa", "motivo": "; ".join(motivos)}
