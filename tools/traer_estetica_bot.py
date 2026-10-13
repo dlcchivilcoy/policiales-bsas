@@ -37,7 +37,7 @@ BOT_DEFAULT = Path(r"C:\Users\Diario\social_publisher")
 # espectro); policiales lo usa cuando la nota del medio trae un audio. utils/grafia.py: el motor
 # corrige los participios de todo texto que quema en el reel (no depende de nada más).
 CODIGO = ["video.py", "story_image.py", "montaje.py", "declaracion.py", "utils/grafia.py"]
-ASSETS = ["logo_reel.png", "placa_final.png", "fondo_reel.png", "overlay_reel.png", "logo.png",
+ASSETS = ["logo_reel.png", "placa_final.png", "placa_final_4x5.png", "fondo_reel.png", "overlay_reel.png", "logo.png",
           "logo_reel_naranja.png"]       # el isotipo naranja de los carruseles (nacionales, 06/10)
 FUENTES = "fonts"
 

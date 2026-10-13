@@ -123,7 +123,12 @@ def _parecido_a_placa(mp4: Path, segundo: float, placa: Path, tmp: Path) -> floa
     if not cuadro.exists():
         return 255.0
     a = Image.open(cuadro).convert("L")
-    b = _placa_al_cuadro(Image.open(placa).convert("L"), a.size)
+    # Desde el 13/10 el 4:5 tiene su propia placa (placa_final_4x5.png) en vez de la 9:16 recortada.
+    placa_4x5 = Path(placa).with_name(Path(placa).stem + "_4x5.png")
+    if a.height < a.width * 1.7 and placa_4x5.is_file():
+        b = Image.open(placa_4x5).convert("L").resize(a.size)
+    else:
+        b = _placa_al_cuadro(Image.open(placa).convert("L"), a.size)
     tam = (54, max(1, round(54 * a.height / a.width)))
     return ImageStat.Stat(ImageChops.difference(a.resize(tam), b.resize(tam))).mean[0]
 
