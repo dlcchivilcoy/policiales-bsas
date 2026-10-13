@@ -23,6 +23,12 @@
       "pregunta": "¿Cuál es la calle más linda para caminar a la tarde en Chivilcoy?",
       "categoria": "Barrios y convivencia",
       "tema": "la vida en los barrios"
+    },
+    {
+      "dia": "2026-10-13",
+      "pregunta": "¿A qué pizzería de Chivilcoy hay que ir sí o sí?",
+      "categoria": "Gastronomía local",
+      "tema": "las pizzerías"
     }
   ],
   "publicaciones": {
@@ -117,7 +123,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-13:pregunta": {
+      "titular": "¿A qué pizzería de Chivilcoy hay que ir sí o sí?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-13T00:56:10-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Gastronomía local",
+        "tema": "las pizzerías"
+      },
+      "estado": "ok",
+      "id": "18080800544410814",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-12T20:30:20-03:00"
+  "actualizado": "2026-10-13T00:55:57-03:00"
 }
