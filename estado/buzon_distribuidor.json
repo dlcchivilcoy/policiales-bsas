@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-14T02:13:16.000Z",
+  "actualizado": "2026-10-14T02:41:22.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/30984/robaron-una-camioneta-durante-la-fiesta-del-caballo.html",
@@ -722,6 +722,28 @@
       "localidad": "Junín",
       "volanta": "Operativo internacional en Lima",
       "categoria": "operativo_policial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://laopinionline.ar/articulo/familiares-de-maria-de-los-angeles-ruiz-reclamaron-justicia-y-aportaron-pruebas-en-la-fiscalia",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-14T02:41:22.000Z",
+      "titulo": "Familiares de María de los Ángeles Ruiz pidieron justicia frente a la Fiscalía este 13",
+      "descripcion": "Allegados a María de los Ángeles Ruiz se concentraron frente a la sede judicial de Pergamino para exigir avances en la causa por su muerte y entregar pruebas clave sobre hostigamiento.",
+      "texto_tiktok": "Familiares y amigos de María de los Ángeles Ruiz, de 29 años, se congregaron pacíficamente ante la Fiscalía de Pergamino para reclamar avances en la causa.\n\nDurante la medida, llevada a cabo el 13 de octubre de 2026, fueron recibidos por el fiscal Francisco Furnari, a quien le entregaron nuevos elementos probatorios.\n\nEl entorno familiar busca que la justicia analice presuntos episodios de violencia y hostigamiento previos al fallecimiento de la joven.\n\nEl expediente judicial continúa caratulado como averiguación de causales de muerte mientras los allegados exigen esclarecer las responsabilidades.\n\n📲 Más noticias de Pergamino en www.diariolacampaña.com.ar\n\n#Pergamino #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-14_0239_02_pergamino_familiares-de-mar-a-de-los-nge.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/pergamino-familiares-de-maria-de-los-angeles-ruiz-aportaron-41b551",
+      "youtube_url": "https://youtube.com/shorts/6czOikPl34I",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Pergamino",
+      "volanta": "Pergamino",
+      "categoria": "otro_policial",
       "plataformas": [
         "x",
         "tiktok"
