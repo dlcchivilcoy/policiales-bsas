@@ -33,6 +33,12 @@
       "pregunta": "¿A qué pizzería de Chivilcoy hay que ir sí o sí?",
       "categoria": "Gastronomía local",
       "tema": "las pizzerías"
+    },
+    {
+      "dia": "2026-10-14",
+      "pregunta": "¿A qué cine de Chivilcoy ibas todos los fines de semana?",
+      "categoria": "Nostalgia y recuerdos",
+      "tema": "los viejos cines"
     }
   ],
   "publicaciones": {
@@ -186,7 +192,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-14:pregunta": {
+      "titular": "¿A qué cine de Chivilcoy ibas todos los fines de semana?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-14T20:30:48-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Nostalgia y recuerdos",
+        "tema": "los viejos cines"
+      },
+      "estado": "ok",
+      "id": "18117472226043089",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-14T13:30:28-03:00"
+  "actualizado": "2026-10-14T20:30:32-03:00"
 }
