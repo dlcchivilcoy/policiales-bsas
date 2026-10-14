@@ -1505,6 +1505,82 @@
         83,
         78
       ]
+    },
+    "b8c0365cbfff1d4d": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 35,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "riesgo país",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una cotización diaria sin análisis agropecuario específico, por lo que no amerita desarrollo propio.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fe47ce557dcb4655": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 63,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "biocombustibles",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la demanda internacional de maíz y aceite de soja argentino.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ddf869f42a331bc7": {
+      "impacto_economico": 16,
+      "interes_productores": 13,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 76,
+      "subtema": "mercados",
+      "tema": "granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis fundamental de comercialización de granos muy útil para los productores de la región núcleo.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        76,
+        67
+      ]
+    },
+    "1be5aea70de2a7f4": {
+      "impacto_economico": 6,
+      "interes_productores": 8,
+      "innovacion": 12,
+      "cercania_argentina": 4,
+      "cercania_pba": 4,
+      "potencial_reel": 7,
+      "conversacion": 5,
+      "potencial_comercial": 7,
+      "ai_score": 53,
+      "commercial_score": 60,
+      "subtema": "agtech",
+      "tema": "siembra inteligente",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Muestra tecnología avanzada en sensores de siembra, de gran interés para contratistas y asesores innovadores.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -1602,7 +1678,20 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/entre-enero-y": "2026-10-13",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-y": "2026-10-13",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/feedlots-3": "2026-10-13",
-      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/comenzo-la-influencia-del-nino-en": "2026-10-13"
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/comenzo-la-influencia-del-nino-en": "2026-10-13",
+      "https://infocampo.com.ar/clima-en-mendoza-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-san-luis-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-corrientes-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-tucuman-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-buenos-aires-y-pronostico-del-tiempo-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-rosario-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-salta-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-cordoba-hoy-14-octubre-2026": "2026-10-14",
+      "https://infocampo.com.ar/clima-en-la-rioja-nubes-el-pronostico-para-hoy-14-de-octubre": "2026-10-14",
+      "https://infocampo.com.ar/riesgo-pais-hoy-13-de-octubre-2": "2026-10-14",
+      "https://bichosdecampo.com/ahora-el-gobierno-de-trump-dice-que-compensara-a-la-industria-de-los-biocombustibles-luego-de-aplicar-una-medida-que-resulto-perjudicial-para-el-sector": "2026-10-14",
+      "https://lacapital.com.ar/agro/granos-el-maiz-sostiene-las-ventas-y-el-trigo-enfrenta-el-desafio-la-nueva-cosecha-n10286481.html": "2026-10-14",
+      "https://futurefarming.com/smart-farming/smart-drilling-with-sensors-agrisem-chief-measures-in-the-seed-furrow": "2026-10-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -1698,7 +1787,20 @@
       "entre enero y agosto argentina sostuvo superavits gemelos por tercer ano consecutivo": "2026-10-13",
       "mercados y expectativas mejora el frente externo argentino brasil reacciona a las elecciones y ee uu modera su mercado laboral": "2026-10-13",
       "feedlots encierres record y una estacionalidad que pierde fuerza": "2026-10-13",
-      "comenzo la influencia del nino en la region central con 50 mm que le ponen piso al trigo": "2026-10-13"
+      "comenzo la influencia del nino en la region central con 50 mm que le ponen piso al trigo": "2026-10-13",
+      "clima en mendoza hoy 14 octubre 2026": "2026-10-14",
+      "clima en san luis hoy 14 octubre 2026": "2026-10-14",
+      "clima en corrientes hoy 14 octubre 2026": "2026-10-14",
+      "clima en tucuman hoy 14 octubre 2026": "2026-10-14",
+      "clima en buenos aires y pronostico del tiempo hoy 14 octubre 2026": "2026-10-14",
+      "clima en rosario hoy 14 octubre 2026": "2026-10-14",
+      "clima en salta hoy 14 octubre 2026": "2026-10-14",
+      "clima en cordoba hoy 14 octubre 2026": "2026-10-14",
+      "clima en la rioja nubes el pronostico para hoy 14 de octubre": "2026-10-14",
+      "riesgo pais hoy 13 10 2026": "2026-10-14",
+      "ahora el gobierno de trump dice que compensara a la industria de los biocombustibles luego de aplicar una medida que resulto perjudicial para el sector": "2026-10-14",
+      "granos el maiz sostiene las ventas y el trigo enfrenta el desafio de la nueva cosecha": "2026-10-14",
+      "smart drilling with sensors agrisem chief measures in the seed furrow": "2026-10-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -1794,7 +1896,20 @@
       "8e9514aaf4375c1b": "2026-10-13",
       "72a1a849102133aa": "2026-10-13",
       "5b243f74be43da5b": "2026-10-13",
-      "8cd2e5c7b5974db6": "2026-10-13"
+      "8cd2e5c7b5974db6": "2026-10-13",
+      "29571da91ccd0e7a": "2026-10-14",
+      "fb42b090a3b0c80c": "2026-10-14",
+      "480a8a34ee1d5a19": "2026-10-14",
+      "b3da0dd7abfe6d93": "2026-10-14",
+      "c2411e80ddaf6ef7": "2026-10-14",
+      "07d7ade4bddaca63": "2026-10-14",
+      "ab67e01f687cccb8": "2026-10-14",
+      "77f809d960661b0a": "2026-10-14",
+      "f13e1b0c143d2616": "2026-10-14",
+      "b8c0365cbfff1d4d": "2026-10-14",
+      "fe47ce557dcb4655": "2026-10-14",
+      "ddf869f42a331bc7": "2026-10-14",
+      "1be5aea70de2a7f4": "2026-10-14"
     }
   },
   "elegidas": [
@@ -1876,6 +1991,60 @@
         },
         "instagram": {
           "id": "18106690067127887",
+          "prueba": null,
+          "ubicacion": null
+        }
+      }
+    },
+    {
+      "id": "f37ee359d2f4",
+      "cuando": "2026-10-14T07:00-03:00",
+      "titulo_original": "El Niño: una simulación anticipó cuánto pueden aumentar los rindes de los cultivos y dónde hay riesgos",
+      "descripcion": "Una empresa analizó 42 campañas agrícolas en 459 localidades de once provincias y determinó cómo varía la producción de soja y maíz durante los años con este fenómeno climático; también identificó regiones donde los rendimientos caen y otras con mayor presencia de agua durante la cosecha",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-una-simulacion-anticipo-cuanto-pueden-aumentar-los-rindes-de-los-cultivos-y-donde-hay-nid13102026/",
+      "titular": "Una simulación mide cuánto suben los rindes de soja y maíz",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 87,
+        "commercial_score": 90,
+        "subtema": "agtech",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Análisis predictivo de clima y rindes con alto impacto económico para la campaña de granos.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/9)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "turno": "2026-10-14T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "FbeSSAeT_IQ",
+          "url": "https://youtube.com/shorts/FbeSSAeT_IQ",
+          "privacidad": "public",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "e04efdf6-203c-406b-84c5-3dfa3debaee6",
+          "slug": "simulacion-agricola-detalla-como-impacta-el-nino-en-rindes-de-d57cd8",
+          "url": "https://www.diariolacampaña.com.ar/n/simulacion-agricola-detalla-como-impacta-el-nino-en-rindes-de-d57cd8",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1606036111020125"
+        },
+        "instagram": {
+          "id": "18144400300596340",
           "prueba": null,
           "ubicacion": null
         }
@@ -2264,66 +2433,6 @@
           78,
           76
         ]
-      },
-      "cuando": "2026-10-13T21:10-03:00"
-    },
-    {
-      "id": "f37ee359d2f4",
-      "rep": {
-        "id": "f37ee359d2f4",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-una-simulacion-anticipo-cuanto-pueden-aumentar-los-rindes-de-los-cultivos-y-donde-hay-nid13102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-una-simulacion-anticipo-cuanto-pueden-aumentar-los-rindes-de-los-cultivos-y-donde-hay-nid13102026",
-        "titulo": "El Niño: una simulación anticipó cuánto pueden aumentar los rindes de los cultivos y dónde hay riesgos",
-        "titulo_norm": "el nino una simulacion anticipo cuanto pueden aumentar los rindes de los cultivos y donde hay riesgos",
-        "descripcion": "Una empresa analizó 42 campañas agrícolas en 459 localidades de once provincias y determinó cómo varía la producción de soja y maíz durante los años con este fenómeno climático; también identificó regiones donde los rendimientos caen y otras con mayor presencia de agua durante la cosecha",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CNOMJBFXZ5DRZKEHBHYL554SOY.png?auth=5d3bb5e8d8f494934ce673d16edb66bee2c273c92c8e81a5936ebf73a4f904f8&smart=true",
-        "autor": "",
-        "publicado": "2026-10-13T19:23-03:00",
-        "capturado": "2026-10-13T21:10-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "09666f8e8150aace"
-      },
-      "grupo": [
-        {
-          "id": "f37ee359d2f4",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-una-simulacion-anticipo-cuanto-pueden-aumentar-los-rindes-de-los-cultivos-y-donde-hay-nid13102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-una-simulacion-anticipo-cuanto-pueden-aumentar-los-rindes-de-los-cultivos-y-donde-hay-nid13102026",
-          "titulo": "El Niño: una simulación anticipó cuánto pueden aumentar los rindes de los cultivos y dónde hay riesgos",
-          "titulo_norm": "el nino una simulacion anticipo cuanto pueden aumentar los rindes de los cultivos y donde hay riesgos",
-          "descripcion": "Una empresa analizó 42 campañas agrícolas en 459 localidades de once provincias y determinó cómo varía la producción de soja y maíz durante los años con este fenómeno climático; también identificó regiones donde los rendimientos caen y otras con mayor presencia de agua durante la cosecha",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CNOMJBFXZ5DRZKEHBHYL554SOY.png?auth=5d3bb5e8d8f494934ce673d16edb66bee2c273c92c8e81a5936ebf73a4f904f8&smart=true",
-          "autor": "",
-          "publicado": "2026-10-13T19:23-03:00",
-          "capturado": "2026-10-13T21:10-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "09666f8e8150aace"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 87,
-        "commercial_score": 90,
-        "subtema": "agtech",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Análisis predictivo de clima y rindes con alto impacto económico para la campaña de granos.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/9)"
       },
       "cuando": "2026-10-13T21:10-03:00"
     },
@@ -2722,5 +2831,5 @@
       "cuando": "2026-10-13T21:10-03:00"
     }
   ],
-  "actualizado": ""
+  "actualizado": "2026-10-14T07:03:37-03:00"
 }
