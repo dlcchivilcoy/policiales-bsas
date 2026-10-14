@@ -5,7 +5,9 @@
     "h:1930-10-12:20f966a6": "2026-10-12",
     "p:18259": "2026-10-12",
     "h:1951-10-13:9fed1eed": "2026-10-13",
-    "p:15958": "2026-10-13"
+    "p:15958": "2026-10-13",
+    "h:2021-10-14:53582848": "2026-10-14",
+    "p:15345": "2026-10-14"
   },
   "preguntas": [
     {
@@ -163,7 +165,28 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-14:efemeride": {
+      "titular": "Mara Helguera, la gran voz del tango, falleció el 14 de octubre de 2021 a los 81 años",
+      "subtipo": "efemeride",
+      "cuando": "2026-10-14T13:30:41-03:00",
+      "intentos": 1,
+      "fuente": {
+        "fecha": "14 de octubre de 2021",
+        "hace": 5,
+        "posts": [
+          15960
+        ],
+        "dedicado": 15345,
+        "candidatas": 1,
+        "coincide_anio": true
+      },
+      "estado": "ok",
+      "id": "17912027634498858",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-13T13:30:30-03:00"
+  "actualizado": "2026-10-14T13:30:28-03:00"
 }
