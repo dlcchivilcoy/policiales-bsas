@@ -77,7 +77,7 @@ planteálo como pregunta o como tendencia, no como hecho.
 PROMPT_IMAGEN: una foto ilustrativa realista y moderna de la escena (campo, maquinaria, cultivo,
 hacienda, tecnología, mercado) en una o dos oraciones en inglés. FIEL A LA NOTA: si habla de un
 cultivo, nombralo en inglés con sus rasgos visibles para que no se confunda (soja = «soybean plants
-with trifoliate leaves and pods», maíz = «corn plants with tall stalks and ears», trigo = «golden
+with trifoliate leaves and pods», maíz = «corn plants with tall stalks, ears growing from the SIDE of the stalk wrapped in green husks, tassels on top», trigo = «golden
 wheat field with heads of grain», girasol = «sunflower field»); si habla de hacienda, la raza o el
 tipo de animal; si es maquinaria, el tipo de máquina sin marca. A cielo abierto en la llanura
 pampeana salvo que la nota sea de un laboratorio, un galpón o un mercado. Sin personas reconocibles

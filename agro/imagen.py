@@ -23,7 +23,7 @@ BANCO = Path(__file__).resolve().parent / "marca" / "banco"
 SEGURAS = {
     "agro": ["Wide view of a green soybean field with trifoliate leaves in the pampas at golden hour",
              "Golden wheat field with heads of grain under a dramatic sky in the Argentine pampas",
-             "Rows of young corn plants in dark fertile soil, low angle, morning light"],
+             "Rows of young corn plants in dark fertile soil, low angle, morning light, no ears yet"],
     "mercados": ["Close-up of a pile of golden soybeans and corn kernels, soft daylight",
                  "Close-up of golden wheat grains heaped in a wooden bowl, soft window light",
                  "Long white silo bags lying in a harvested field under a blue sky, seen from far"],
