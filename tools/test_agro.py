@@ -1,0 +1,633 @@
+# -*- coding: utf-8 -*-
+"""El circuito agro en simulación (13/10/2026). Sin red: la IA, los feeds y las imágenes son de mentira.
+
+    venv\\Scripts\\python.exe tools\\test_agro.py
+"""
+import os
+import sys
+import tempfile
+from datetime import datetime
+from pathlib import Path
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.stdout.reconfigure(encoding="utf-8")
+from agro import captura as CA  # noqa: E402
+from agro import dedup as DD  # noqa: E402
+from agro import guion as GU  # noqa: E402
+from agro import imagen as IMG  # noqa: E402
+from agro import pasada as PA  # noqa: E402
+from agro import scoring as SC  # noqa: E402
+from agro import seleccion as SE  # noqa: E402
+
+fallas, total = [], 0
+
+
+def chequear(nombre, condicion):
+    global total
+    total += 1
+    print(("OK " if condicion else "MAL") + " " + nombre)
+    if not condicion:
+        fallas.append(nombre)
+
+
+def nota(i, titulo, desc="", fuente="Infocampo", tipo="medio"):
+    url = f"https://www.infocampo.com.ar/nota-{i}/"
+    return {"id": CA.id_de(url), "fuente": fuente, "tipo_fuente": tipo, "url": url,
+            "canonical_url": CA.canonica(url), "titulo": titulo, "titulo_norm": CA.normalizar_titulo(titulo),
+            "descripcion": desc, "hash": CA.huella(titulo, desc), "publicado": "2026-10-13T10:00:00-03:00"}
+
+
+# --- captura ---------------------------------------------------------------------------------
+chequear("canonica saca rastreadores, www y barra final",
+         CA.canonica("https://WWW.Infocampo.com.ar/nota/?utm_source=fb&id=3&fbclid=x#arriba")
+         == "https://infocampo.com.ar/nota?id=3")
+chequear("normalizar_titulo sin tildes ni signos",
+         CA.normalizar_titulo("¡Récord de exportación de maíz!") == "record de exportacion de maiz")
+chequear("misma URL con y sin utm → mismo id",
+         CA.id_de("https://a.com/x?utm_medium=rss") == CA.id_de("https://www.a.com/x/"))
+
+# --- tableros automáticos --------------------------------------------------------------------
+for t, esperado in (("Precio del Trigo en Rosario hoy 13 octubre 2026", True),
+                    ("Dólar BLUE HOY: a cuánto cotiza el 13 octubre 2026", True),
+                    ("Clima en San Luis hoy 13 octubre 2026", True),
+                    ("Riesgo país hoy 9 de octubre", True),
+                    ("Soja en Chicago: cae a US$ 12,82 por bushel", False),
+                    ("Retenciones: la recaudación saltó 49,5% real en septiembre", False)):
+    chequear(f"tablero {esperado}: {t}", PA.es_tablero({"titulo": t}) is esperado)
+
+# --- duplicados ------------------------------------------------------------------------------
+mem = {}
+a = nota(1, "El INTA investiga la mostaza para reducir agroquímicos", "Ensayos con mostaza como cultivo de servicio")
+chequear("nota nueva no está vista", DD.ya_vista(a, mem) == "")
+DD.anotar(a, mem)
+chequear("misma URL → vista", DD.ya_vista(dict(a), mem) != "")
+otra_url = dict(a, canonical_url="https://otro.com/x", hash="zzz")
+chequear("mismo título en otra URL → vista", "título" in DD.ya_vista(otra_url, mem))
+
+viejo = {"indice": {"url": {"u1": "2026-09-30", "u2": "2026-10-12"}, "titulo": {}, "hash": {"h1": "2026-09-30", "h2": "2026-10-12"}},
+         "scores": {"h1": {"ai_score": 80}, "h2": {"ai_score": 70}}}
+DD.olvidar_viejas(viejo, "2026-10-03")
+chequear("el índice y los puntajes olvidan lo de hace más de 10 días",
+         list(viejo["indice"]["url"]) == ["u2"] and list(viejo["scores"]) == ["h2"])
+chequear("anotar guarda la fecha en que se vio la nota",
+         DD.anotar(dict(a, capturado="2026-10-13T10:00-03:00"), m2 := {}) is None and set(m2["indice"]["url"].values()) == {"2026-10-13"})
+b = nota(2, "Mostaza contra los agroquímicos: el INTA investiga una alternativa",
+         "El INTA ensaya la mostaza como cultivo de servicio para reducir agroquímicos", "Agrositio")
+c = nota(3, "Pick-ups chinas: radiografía por marca y modelo", "El mercado de camionetas chinas acelera")
+d = nota(4, "Remolacha forrajera: buena calidad nutricional y menor costo", "Para la hacienda en invierno")
+r = DD.agrupar([a, b, c, d], [], usar_ia=False)
+juntos = [g for g in r["grupos"] if len(g) == 2]
+chequear("las dos de la mostaza se agrupan por palabras",
+         len(juntos) == 1 and {n["id"] for n in juntos[0]} == {a["id"], b["id"]})
+chequear("las otras quedan solas", len(r["grupos"]) == 3)
+
+
+def ia_agrupa(system, material, **kw):
+    return {"grupos": [[1, 2]]}, "falsa"
+
+
+r = DD.agrupar([c, d], [], redactar=ia_agrupa, usar_ia=True)
+chequear("sin parecido por palabras la IA ni se consulta", len(r["grupos"]) == 2 and r["ia"] is None)
+r = DD.agrupar([b], [a], usar_ia=False)
+chequear("la misma noticia ya elegida otro día → repetida", b["id"] in r["repetidas"] and not r["grupos"])
+chequear("representante: oficial antes que medio",
+         DD.representante([a, dict(b, tipo_fuente="oficial")])["id"] == b["id"])
+
+# --- puntaje ---------------------------------------------------------------------------------
+s = SC.limpiar({"impacto_economico": 99, "interes_productores": "12", "innovacion": -4, "cercania_argentina": 10,
+                "cercania_pba": 10, "potencial_reel": 7.6, "conversacion": None, "potencial_comercial": 10,
+                "commercial_score": 140, "subtema": "Ganadería", "sensible": "sí", "ambito": "Internacional"})
+chequear("limpiar aplica los topes y suma", s["impacto_economico"] == 20 and s["innovacion"] == 0
+         and s["potencial_reel"] == 8 and s["ai_score"] == 20 + 12 + 0 + 10 + 10 + 8 + 0 + 10)
+chequear("limpiar: commercial ≤ 100, subtema sin tilde, sensible y ámbito",
+         s["commercial_score"] == 100 and s["subtema"] == "ganaderia" and s["sensible"]
+         and s["ambito"] == "internacional")
+chequear("subtema desconocido → agro", SC.limpiar({"subtema": "deportes"})["subtema"] == "agro")
+
+pedidos = []
+
+
+def ia_puntua(system, material, **kw):
+    pedidos.append(material)
+    return {"notas": [{"n": 1, "impacto_economico": 20, "subtema": "agro"},
+                      {"n": 3, "impacto_economico": 5, "subtema": "mercados"}]}, "falsa"
+
+
+cache = {}
+p = SC.puntuar([a, c, d], cache, redactar=ia_puntua, log=lambda m: None)
+chequear("puntuar: la nota que la IA no devolvió queda sin puntaje", set(p) == {a["id"], d["id"]})
+p2 = SC.puntuar([a, d], cache, redactar=ia_puntua, log=lambda m: None)
+chequear("puntuar: lo ya puntuado sale del caché sin llamar a la IA",
+         len(pedidos) == 1 and all(v.get("cache") for v in p2.values()))
+
+
+
+def puntaje_ia(total):
+    """Un puntaje de la IA que suma `total` (repartido en los criterios, sin pasar los topes)."""
+    d, resto = {}, total
+    for c, tope in SC.CRITERIOS.items():
+        d[c] = min(tope, resto)
+        resto -= d[c]
+    return d
+
+
+llamadas_p = []
+
+
+def ia_doble(por_vuelta):
+    """La IA de mentira: en cada llamada devuelve, para cada nota, el total que diga `por_vuelta`
+    según su título y el número de vuelta (1ª o 2ª vez que la ve)."""
+    vistas = {}
+
+    def redactar(system, material, **kw):
+        llamadas_p.append(material)
+        notas = []
+        for i, bloque in enumerate(material.split("\n\n")):
+            titulo = bloque.split("Título: ")[1].split("\n")[0]
+            vistas[titulo] = vistas.get(titulo, 0) + 1
+            notas.append(dict(puntaje_ia(por_vuelta[titulo][vistas[titulo] - 1]), n=i + 1, subtema="agro",
+                              sensible=vistas[titulo] == 2 and titulo == "Cerca"))
+        return {"notas": notas}, "falsa"
+    return redactar
+
+
+lejos, cerca_ = nota(60, "Lejos", "x"), nota(61, "Cerca", "y")
+llamadas_p.clear()
+cache2 = {}
+p = SC.puntuar([lejos, cerca_], cache2, redactar=ia_doble({"Lejos": [92], "Cerca": [78, 60]}),
+               log=lambda m: None, minimo=75, margen=10)
+chequear("doble puntaje: solo la que quedó cerca del corte (78) se vuelve a puntuar, sola en otra tanda",
+         len(llamadas_p) == 2 and "Cerca" in llamadas_p[1] and "Lejos" not in llamadas_p[1])
+chequear("doble puntaje: 78 y 60 → se promedia criterio por criterio (69, queda afuera)",
+         p[cerca_["id"]]["dobles"] == [78, 60] and p[cerca_["id"]]["ai_score"] == 69)
+chequear("doble puntaje: la de 92 no cambia ni se repite", p[lejos["id"]]["ai_score"] == 92
+         and "dobles" not in p[lejos["id"]])
+chequear("doble puntaje: «sensible» si cualquiera de las dos vueltas lo vio", p[cerca_["id"]]["sensible"])
+llamadas_p.clear()
+SC.puntuar([lejos, cerca_], cache2, redactar=ia_doble({"Lejos": [92], "Cerca": [78, 60]}),
+           log=lambda m: None, minimo=75, margen=10)
+chequear("doble puntaje: lo ya promediado sale del caché sin otra llamada", not llamadas_p)
+cache3 = {cerca_["hash"]: dict(SC.limpiar(puntaje_ia(80)), via="vieja")}
+llamadas_p.clear()
+p = SC.puntuar([cerca_], cache3, redactar=ia_doble({"Cerca": [70]}), log=lambda m: None, minimo=75, margen=10)
+chequear("doble puntaje: un puntaje viejo del caché cerca del corte recibe su segunda vuelta",
+         len(llamadas_p) == 1 and p[cerca_["id"]]["dobles"] == [80, 70] and p[cerca_["id"]]["ai_score"] == 75)
+llamadas_p.clear()
+SC.puntuar([cerca_], {}, redactar=ia_doble({"Cerca": [78]}), log=lambda m: None, minimo=75, margen=0)
+chequear("doble puntaje: margen 0 (AGRO_DOBLE_MARGEN=0) lo apaga", len(llamadas_p) == 1)
+
+# --- selección -------------------------------------------------------------------------------
+
+
+def cand(i, score, sub, tema="", com=0):
+    return {"id": str(i), "score": {"ai_score": score, "commercial_score": com, "subtema": sub, "tema": tema}}
+
+
+os.environ.pop("AGRO_MEZCLA", None)
+chequear("topes de la mezcla del documento con 10 por día",
+         SE.topes(10) == {"agro": 3, "mercados": 2, "agtech": 2, "maquinaria": 1, "ganaderia": 1, "empresas": 1})
+os.environ["AGRO_MEZCLA"] = "agro:50,mercados:50"
+chequear("AGRO_MEZCLA se puede editar", SE.topes(4) == {"agro": 2, "mercados": 2})
+os.environ.pop("AGRO_MEZCLA")
+el, desc = SE.elegir([cand(1, 90, "mercados"), cand(2, 88, "mercados"), cand(3, 80, "mercados"),
+                      cand(4, 74, "agro"), cand(5, 86, "mercados")], [], cupo_dia=10, minimo=75)
+ids = [c["id"] for c in el]
+chequear("tope de mercados (2) + refuerzo para la de 86, no para la de 80",
+         sorted(ids) == ["1", "2", "5"])
+chequear("la de 74 se descarta por score", any(c["id"] == "4" and "74 < 75" in m for c, m in desc))
+el, desc = SE.elegir([cand(1, 90, "agro", "soja"), cand(2, 89, "agtech", "soja"), cand(3, 88, "mercados", "soja")],
+                     [], cupo_dia=10, minimo=75)
+chequear("no más de 2 del mismo tema por día", len(el) == 2 and "soja" in desc[0][1])
+el, _ = SE.elegir([cand(1, 90, "agro"), cand(2, 89, "agtech")], [cand(9, 80, "agro")] * 9, cupo_dia=10, minimo=75)
+chequear("respeta el cupo del día contando lo ya elegido", len(el) == 1)
+orden = SE.ordenar_variado([cand(1, 90, "agro"), cand(2, 89, "agro"), cand(3, 80, "mercados")], [])
+chequear("no salen dos del mismo subtema seguidos", [c["id"] for c in orden] == ["1", "3", "2"])
+
+# --- guion -----------------------------------------------------------------------------------
+chequear("recortar_palabras no deja un conector colgado",
+         GU.recortar_palabras("La soja argentina lidera el mercado de la exportación mundial", 8)
+         == "La soja argentina lidera el mercado")
+chequear("hashtags: CamelCase sin tildes, sin repetir, hasta 5",
+         GU._hashtags(["#Agro", "agro", "#Ganadería", "Campo Argentino", "#Soja", "#Maiz", "#Trigo"])
+         == ["#Agro", "#Ganaderia", "#CampoArgentino", "#Soja", "#Maiz"])
+chequear("se saca la lista suelta de palabras clave al final del texto de IG",
+         GU._sin_lista_de_claves("Texto.\n\n¿Y vos qué pensás?\n\nagro, campo argentino, agricultura, productores, "
+                                 "Argentina") == "Texto.\n\n¿Y vos qué pensás?")
+chequear("un párrafo normal con comas no se toca",
+         GU._sin_lista_de_claves("Hubo lluvias en Chivilcoy, Bragado, Alberti y 9 de Julio, con 40 mm en promedio "
+                                 "según el SMN.") .startswith("Hubo lluvias"))
+chequear("el prompt pide voseo, titular concreto y cifras en números sin cambiar el sentido",
+         "VOSEO" in GU.SYSTEM_PROMPT and "nunca genérico" in GU.SYSTEM_PROMPT and "Un rango queda rango" in GU.SYSTEM_PROMPT)
+
+CUERPO = ("La empresa Koppert lanzó dos packs biológicos para semillas de soja. Aceleran la emergencia al "
+          "menos 3 días y suben el rendimiento promedio un 2% sobre los químicos, según más de 90 ensayos.")
+BUENA = {"apta": True, "volanta": "AgTech", "titular": "Soja: biológicos de Koppert aceleran la emergencia 3 días",
+         "bajada": "Los dos packs suben el rendimiento un 2% frente a los químicos tras 90 ensayos.",
+         "descripcion": "Gancho.\n\nKoppert sumó dos packs para soja que adelantan 3 días la emergencia.\n\n"
+                        "En más de 90 ensayos el rinde subió 2%.\n\n¿Lo probarías en tu lote?",
+         "hashtags": ["#Agro", "#Soja", "#AgTech"], "datos_clave": ["3 días", "2%"],
+         "titulo_web": "Biológicos en soja: adelantan la emergencia y suben el rinde",
+         "nota_web": "Koppert sumó dos packs para soja.\n\nAdelantan 3 días la emergencia y suman 2% de rinde "
+                     "en más de 90 ensayos.",
+         "reel": {"gancho": "Más rinde en soja sin químicos", "que_paso": "Koppert lanzó dos packs",
+                  "datos": ["3 días antes", "2% más de rinde"], "por_que_importa": "Más kilos por hectárea",
+                  "cierre": "Más en la web"},
+         "prompt_imagen": "soybean plants with trifoliate leaves", "datos_contradictorios": False}
+llamadas = []
+
+
+def ia_guion(respuestas):
+    def redactar(system, material, **kw):
+        llamadas.append(system)
+        return respuestas[min(len(llamadas) - 1, len(respuestas) - 1)], "falsa"
+    return redactar
+
+
+rep = nota(5, "Koppert lanza packs biológicos para soja", "Tratamientos biológicos de semillas")
+llamadas.clear()
+g = GU.generar(rep, CUERPO, [], {"sensible": False}, redactar=ia_guion([BUENA]))
+chequear("guion bueno: una sola llamada, apta y sin revisión",
+         len(llamadas) == 1 and g["apta"] and not g["requires_review"])
+llamadas.clear()
+nombra = dict(BUENA, descripcion=BUENA["descripcion"] + "\n\nLo publicó Infocampo.")
+g = GU.generar(rep, CUERPO, [], {"sensible": False}, redactar=ia_guion([nombra, nombra]))
+chequear("nombrar al medio: se pide otra versión y si insiste queda NO apta",
+         len(llamadas) == 2 and "Infocampo" in llamadas[1] and not g["apta"])
+llamadas.clear()
+larga = dict(BUENA, titular="Uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce")
+g = GU.generar(rep, CUERPO, [], {"sensible": False}, redactar=ia_guion([larga, larga]))
+chequear("titular largo: se pide otra versión y al final se recorta a 12",
+         len(llamadas) == 2 and len(g["titular"].split()) <= 12)
+g = GU.generar(rep, CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
+chequear("dato sensible de un medio → requiere revisión", g["requires_review"])
+g = GU.generar(dict(rep, tipo_fuente="oficial"), CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
+chequear("dato sensible de una fuente oficial → no requiere revisión", not g["requires_review"])
+g = GU.generar(rep, CUERPO, [], {"sensible": False},
+               redactar=ia_guion([dict(BUENA, datos_contradictorios=True, detalle_contradiccion="2% vs 3%")]))
+chequear("fuentes que se contradicen → revisión con el detalle",
+         g["requires_review"] and "2% vs 3%" in g["motivo_revision"])
+g["hashtags"] = ["#Agro", "#Soja"]
+fb = GU.texto_red(g, "facebook", "https://ejemplo.com/n/x")
+chequear("Facebook lleva el link y los hashtags al final", fb.endswith("#Agro #Soja") and "https://ejemplo.com/n/x" in fb)
+chequear("Instagram no lleva link", "https://" not in GU.texto_red(g, "instagram", "https://ejemplo.com/n/x"))
+chequear("Shorts lleva #Shorts", GU.texto_red(g, "youtube").endswith("#Shorts"))
+
+# --- imagen ----------------------------------------------------------------------------------
+with tempfile.TemporaryDirectory() as tmp:
+    destino = Path(tmp) / "p_imagen.jpg"
+    bajadas, generadas = [], []
+
+    from PIL import Image as _Im
+    ancho_foto = [1600]
+
+    def bajar(url, ruta):
+        bajadas.append(url)
+        _Im.new("RGB", (ancho_foto[0], ancho_foto[0] * 2 // 3), (80, 120, 60)).save(ruta)
+        return True
+
+    def generar(prompt, ruta, estilo=None):
+        generadas.append(estilo)
+        Path(ruta).write_bytes(b"x")
+        return {"archivo": str(ruta)}
+
+    r = IMG.elegir(dict(rep, tipo_fuente="medio"), "https://foto/medio.jpg", "soy", destino,
+                   generar=generar, bajar=bajar, mirar=lambda f: False)
+    chequear("foto de OTRO MEDIO: no se baja, va IA con la URL guardada",
+             r["origen"] == "ia" and not bajadas and r["url_original"] == "https://foto/medio.jpg")
+    chequear("la IA recibe el estilo agro", generadas and generadas[0] == IMG.ESTILO)
+    r = IMG.elegir(dict(rep, tipo_fuente="oficial"), "https://foto/inta.jpg", "soy", destino,
+                   generar=generar, bajar=bajar, mirar=lambda f: False)
+    chequear("foto de fuente OFICIAL: se usa con el crédito",
+             r["origen"] == "fuente" and bajadas == ["https://foto/inta.jpg"] and r["credito"] == rep["fuente"])
+    ancho_foto[0] = 500
+    r = IMG.elegir(dict(rep, tipo_fuente="oficial"), "https://foto/chica.jpg", "soy", destino,
+                   generar=generar, bajar=bajar, mirar=lambda f: False)
+    chequear("foto oficial chica (500 px) → IA", r["origen"] == "ia" and "chica" in r["motivo"])
+    ancho_foto[0] = 1600
+    r = IMG.elegir(dict(rep, tipo_fuente="oficial"), "https://foto/placa.jpg", "soy", destino,
+                   generar=generar, bajar=bajar, mirar=lambda f: "_fuente" in str(f))
+    chequear("foto oficial con letras (placa) → IA", r["origen"] == "ia" and "letras" in r["motivo"])
+    bajadas.clear()
+    r = IMG.elegir(dict(rep, tipo_fuente="oficial", fuente="Bolsa de Comercio de Rosario"), "https://bcr/x.png",
+                   "soy", destino, generar=generar, bajar=bajar, mirar=lambda f: False)
+    chequear("la Bolsa (foto: False) va directo a la IA sin bajar su placa", r["origen"] == "ia" and not bajadas)
+    # Nunca el logo suelto: escena de la nota (2) → escena segura del tema (1) → banco.
+    prompts = []
+
+    def generar_p(prompt, ruta, estilo=None):
+        prompts.append(prompt)
+        Path(ruta).write_bytes(b"x")
+        return {"archivo": str(ruta)}
+
+    banco_real = IMG.BANCO
+    IMG.BANCO = Path(tmp) / "banco"
+    try:
+        r = IMG.elegir(rep, "", "soy", destino, generar=generar_p, bajar=bajar,
+                       mirar=lambda f: not str(f).endswith("_ia2.jpg"), subtema="ganaderia")
+        chequear("letras dos veces → 3er intento con una escena segura del subtema, y sirve",
+                 r["origen"] == "ia" and prompts[:2] == ["soy", "soy"] and prompts[2] in IMG.SEGURAS["ganaderia"]
+                 and "escena segura" in r["motivo"])
+        r = IMG.elegir(rep, "", "soy", destino, generar=generar_p, bajar=bajar, mirar=lambda f: True, subtema="ganaderia")
+        chequear("todo con letras y banco vacío → recién ahí «ninguna»", r["origen"] == "ninguna")
+        (IMG.BANCO / "ganaderia").mkdir(parents=True)
+        (IMG.BANCO / "agro").mkdir(parents=True)
+        for nombre in ("ganaderia/g1.jpg", "ganaderia/g2.jpg", "agro/a1.jpg"):
+            (IMG.BANCO / nombre).write_bytes(b"x")
+        r = IMG.elegir(rep, "", "soy", destino, generar=generar_p, bajar=bajar, mirar=lambda f: True, subtema="ganaderia")
+        chequear("todo con letras → imagen del banco DEL SUBTEMA (nunca el logo suelto)",
+                 r["origen"] == "ia" and "/ganaderia/" in Path(r["archivo"]).as_posix() and "banco" in r["motivo"])
+        r = IMG.elegir(rep, "", "soy", destino, generar=lambda *a, **k: {"motivo": "Cloudflare caído"},
+                       bajar=bajar, mirar=lambda f: False, subtema="maquinaria")
+        chequear("la IA caída y el subtema sin banco → cualquier imagen del banco",
+                 r["origen"] == "ia" and r["archivo"] and "Cloudflare caído" in r["motivo"])
+    finally:
+        IMG.BANCO = banco_real
+    chequear("el banco real tiene imágenes de todos los subtemas",
+             all(list((IMG.BANCO / sub).glob("*.jpg")) for sub in IMG.SEGURAS))
+
+    # --- portada y reel (PIL + ffmpeg, sin red) -------------------------------------------------
+    from PIL import Image
+    from agro import portada as POR
+    from agro import reel as REEL
+    foto = Path(tmp) / "foto.jpg"
+    Image.new("RGB", (1024, 1024), (90, 140, 60)).save(foto)
+    g = dict(GU._salida(BUENA, "falsa"))
+    for img, ia in ((foto, True), (None, False)):
+        sal = Path(tmp) / f"portada_{bool(img)}.jpg"
+        POR.armar(g, img, sal, ia=ia)
+        with Image.open(sal) as im:
+            chequear(f"portada 1080x1920 {'con foto' if img else 'sin foto'}", im.size == (1080, 1920))
+    tramos = REEL.TRAMOS
+    REEL.TRAMOS = tuple((n, 0.25) for n, _ in tramos)          # un reel de 1,25 s para la prueba
+    try:
+        rr = REEL.armar(g, foto, Path(tmp) / "reel.mp4", ia=True)
+        chequear("reel mp4 armado", Path(rr["archivo"]).stat().st_size > 1000 and abs(rr["duracion"] - 1.25) < 0.01)
+    finally:
+        REEL.TRAMOS = tramos
+
+# --- fuentes oficiales y sitios sin RSS -----------------------------------------------------------
+from agro import fuentes as FU  # noqa: E402
+chequear("Secretaría de Agricultura (oficial) y LA NACION Campo (medio) están",
+         FU.por_nombre("Secretaría de Agricultura").get("tipo") == "oficial"
+         and FU.por_nombre("LA NACION Campo").get("tipo") == "medio")
+chequear("las internacionales (AgFunderNews, Future Farming, CropLife) están en inglés",
+         all(FU.por_nombre(n).get("idioma") == "en" and FU.por_nombre(n).get("tipo") == "medio"
+             for n in ("AgFunderNews", "Future Farming", "CropLife")))
+chequear("el idioma de la fuente pasa a la nota",
+         CA.normalizar({"url": "https://x.com/a", "titulo": "Robots"}, {"nombre": "X", "idioma": "en", "pais": "INT"},
+                       "f", datetime(2026, 10, 13, tzinfo=CA.TZ_AR))["idioma"] == "en")
+chequear("el guion pide escribir en castellano lo que viene en inglés", "en inglés" in GU.SYSTEM_PROMPT)
+chequear("INTA y la Bolsa están, como oficiales",
+         FU.por_nombre("INTA").get("tipo") == "oficial" and FU.por_nombre("Bolsa de Comercio de Rosario").get("tipo") == "oficial")
+
+
+class _Resp:
+    def __init__(self, texto, status=200):
+        self.text, self.status_code = texto, status
+
+    def raise_for_status(self):
+        pass
+
+
+PORTADA_BCR = ('<a href="/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/feedlots-3">'
+               '<a href="/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/feedlots-3">'
+               '<a href="/es/mercados/mercado-de-granos/comentario-del-mercado/comentario-del-mercado-local/comentario-1809">'
+               '<a href="/es/sobre-bcr">')
+NOTA_BCR = ('<meta property="og:title" content="FEEDLOTS: encierres r&eacute;cord" />'
+            '<meta property="og:description" content="Ingresos estacionales" />'
+            '<meta property="og:image" content="https://www.bcr.com.ar/x.png" />'
+            '<meta property="article:published_time" content="08/10/2026" />'
+            '<div class="field--name-body">' + "<p>" + "Un párrafo largo de la nota. " * 40 + "</p>" * 3 + "</div>"
+            '<div class="menu"><p>Inicio</p></div>')
+pedidas = []
+
+
+def get_falso(url):
+    pedidas.append(url)
+    return _Resp(PORTADA_BCR if url.endswith("informativo-semanal") else NOTA_BCR)
+
+
+CA._robots["https://www.bcr.com.ar"] = __import__("urllib.robotparser").robotparser.RobotFileParser()
+CA._robots["https://www.bcr.com.ar"].parse([])
+bcr = FU.por_nombre("Bolsa de Comercio de Rosario")
+lista = CA.listar_portada("https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+                          bcr["patron"], get=get_falso)
+chequear("Bolsa: solo los links del informativo, sin repetir (no el comentario diario ni el menú)",
+         len(lista) == 1 and lista[0]["url"].endswith("/feedlots-3"))
+chequear("Bolsa: título (sin entidades), resumen, foto y fecha de los metadatos",
+         lista[0]["titulo"] == "FEEDLOTS: encierres récord" and lista[0]["copete"] == "Ingresos estacionales"
+         and lista[0]["imagen"].endswith("x.png") and lista[0]["publicado"].startswith("2026-10-08"))
+SITEMAP = ('<urlset><url><loc>https://www.lacapital.com.ar/agro/feedlots-record-n10286319.html</loc><news:news>'
+           '<news:publication_date>2026-10-13T09:15:00Z</news:publication_date>'
+           '<news:title>Los feedlots tienen un stock r&eacute;cord</news:title></news:news></url>'
+           '<url><loc>https://www.lacapital.com.ar/politica/milei-viaja-n10286482.html</loc><news:news>'
+           '<news:publication_date>2026-10-13T10:00:00Z</news:publication_date><news:title>Milei viaja</news:title>'
+           '</news:news></url></urlset>')
+
+
+def get_sitemap(url):
+    return _Resp(SITEMAP if url.endswith(".xml") else NOTA_BCR)
+
+
+CA._robots["https://www.lacapital.com.ar"] = CA._robots["https://www.bcr.com.ar"]
+agc = FU.por_nombre("Agroclave (La Capital)")
+lista = CA.listar_sitemap("https://www.lacapital.com.ar/sitemap-news.xml", agc["patron"], get=get_sitemap)
+chequear("Agroclave: del sitemap de La Capital solo entra lo de /agro/, con título y fecha del sitemap",
+         len(lista) == 1 and lista[0]["titulo"] == "Los feedlots tienen un stock récord"
+         and lista[0]["publicado"] == "2026-10-13T09:15:00Z" and lista[0]["copete"] == "Ingresos estacionales")
+chequear("cuerpo por párrafos: el bloque con más texto, no el menú",
+         CA.cuerpo_por_parrafos(NOTA_BCR).startswith("Un párrafo largo") and "Inicio" not in CA.cuerpo_por_parrafos(NOTA_BCR))
+c = CA.completar({"url": "https://www.bcr.com.ar/es/nota", "imagen_url": ""},
+                 detalle=lambda u: {"ok": True, "cuerpo": "solo el resumen", "imagen": ""}, get=get_falso)
+chequear("completar: si el extractor da solo el resumen, se usa el texto por párrafos", len(c["cuerpo"]) > 1000)
+
+
+def listar_viejas(feed):
+    return [{"titulo": "Informe semanal", "url": "https://www.bcr.com.ar/es/n1", "copete": "",
+             "publicado": "2026-10-08T12:00:00"}]
+
+
+for horas, entra in ((0, False), (168, True)):
+    f = {"nombre": "X", "rss": ["https://www.bcr.com.ar/rss"], "tipo": "oficial", "horas": horas}
+    ns, _ = CA.capturar([f], ahora=datetime(2026, 10, 13, 17, 0, tzinfo=CA.TZ_AR), horas_max=48,
+                        listar=listar_viejas, log=lambda m: None)
+    chequear(f"ventana propia de {horas} h: una nota de hace 5 días {'entra' if entra else 'no entra'}",
+             bool(ns) is entra)
+
+# --- pasada de punta a punta: una pieza frenada se repone con la siguiente ----------------------
+with tempfile.TemporaryDirectory() as tmp:
+    import json as _json
+    PA.SALIDA, PA.MEMORIA = Path(tmp), Path(tmp) / "memoria.json"
+    temas = {"Soja": ("agro", 90), "Trigo": ("mercados", 85), "Hacienda": ("ganaderia", 80), "Tractores": ("maquinaria", 60)}
+    crudas = [nota(10 + i, f"{t} {extra}", f"Detalle {t.lower()} {extra}")
+              for i, (t, extra) in enumerate((("Soja", "récord en Chivilcoy"), ("Trigo", "precios en alza"),
+                                               ("Hacienda", "remate en Bragado"), ("Tractores", "ventas de septiembre")))]
+    originales = {k: getattr(m, a) for k, (m, a) in {
+        "cap": (CA, "capturar"), "comp": (CA, "completar"), "pun": (SC, "puntuar"), "gen": (GU, "generar"),
+        "img": (IMG, "elegir"), "por": (PA.POR, "armar"), "reel": (PA, "GU_reel"), "ent": (PA.entorno, "cargar")}.items()}
+    try:
+        PA.entorno.cargar = lambda: None
+        CA.capturar = lambda fuentes, ahora, horas_max, log: ([dict(n) for n in crudas], [])
+        CA.completar = lambda rep: {"ok": True, "cuerpo": "cuerpo", "imagen": ""}
+
+        def puntuar_falso(reps, cache, log):
+            out = {}
+            for r in reps:
+                sub, sc = temas[r["titulo"].split()[0]]
+                out[r["id"]] = dict(SC.limpiar({"subtema": sub}), ai_score=sc, tema=r["titulo"].split()[0].lower())
+            return out
+        SC.puntuar = puntuar_falso
+
+        def generar_falso(rep, cuerpo, otras, s):
+            g = GU._salida(dict(BUENA, titular=rep["titulo"]), "falsa")
+            g.update(copia={"racha": 0}, faltan_datos=[], formato=[], requires_review=False, motivo_revision="")
+            if rep["titulo"].startswith("Soja"):
+                g.update(apta=False, motivo="calca 17 palabras seguidas del original")
+            return g
+        GU.generar = generar_falso
+        IMG.elegir = lambda *a, **k: {"archivo": None, "origen": "ninguna", "motivo": "prueba"}
+        PA.POR.armar = lambda *a, **k: Path(tmp) / "p.jpg"
+        PA.GU_reel = lambda *a, **k: {"archivo": None, "duracion": 0, "peso_kb": 0}
+        ruta = PA.pasada(max_piezas=2, con_reel=False, log=lambda m: None)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        titulos = [p["guion"]["titular"] for p in inf["piezas"]]
+        chequear("la pieza frenada por copia queda en el informe como NO APTA",
+                 titulos[0].startswith("Soja") and not inf["piezas"][0]["guion"]["apta"])
+        chequear("su lugar lo toma la siguiente mejor (la de 80, no la de 60)",
+                 titulos == ["Soja récord en Chivilcoy", "Trigo precios en alza", "Hacienda remate en Bragado"]
+                 and inf["conteos"]["Reemplazos"] == 1 and inf["conteos"]["Piezas armadas"] == 2)
+        chequear("la que entró de reemplazo ya no figura como descartada",
+                 not any(d["titulo"].startswith("Hacienda") for d in inf["descartadas"]))
+        mem = _json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
+        chequear("la frenada queda en memoria como no apta (no ocupa cupo del día)",
+                 any(e["titular"].startswith("Soja") and e["apta"] is False for e in mem["elegidas"]))
+
+        # Arranque real: 1 por pasada. La buena que no entró espera a la pasada siguiente.
+        PA.MEMORIA.unlink()
+        ruta = PA.pasada(con_reel=False, log=lambda m: None)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        aptas = [p["guion"]["titular"] for p in inf["piezas"] if p["guion"]["apta"]]
+        chequear("1 por pasada: Soja frenada → entra Trigo y nada más", aptas == ["Trigo precios en alza"])
+        chequear("la de 80 (Hacienda) queda pendiente, no se pierde",
+                 inf["conteos"]["Quedan pendientes"] == 1 and any(
+                     "pendiente para la próxima pasada" in d["motivo"] for d in inf["descartadas"]))
+        ruta = PA.pasada(con_reel=False, log=lambda m: None)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        chequear("la pasada siguiente (sin notas nuevas) arma la pendiente",
+                 [p["guion"]["titular"] for p in inf["piezas"]] == ["Hacienda remate en Bragado"]
+                 and inf["conteos"]["Pendientes de pasadas anteriores"] == 1 and inf["conteos"]["Quedan pendientes"] == 0)
+        ruta = PA.pasada(con_reel=False, log=lambda m: None)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        chequear("y la tercera no repite nada", not inf["piezas"])
+
+        # Modo REAL con un publicador de mentira: la retenida para revisión no sale y se repone.
+        PA.MEMORIA_REAL = Path(tmp) / "estado_agro.json"
+        PA.GU_reel = lambda g, imagen, salida, ia, credito="": (Path(salida).write_bytes(b"mp4") and None) or {
+            "archivo": str(salida), "duracion": 19, "peso_kb": 1}
+        gen_sim = GU.generar
+
+        def generar_revision(rep, cuerpo, otras, s):
+            g = gen_sim(rep, cuerpo, otras, s)
+            if rep["titulo"].startswith("Trigo"):
+                g.update(requires_review=True, motivo_revision="dato sensible sin fuente oficial")
+            return g
+        GU.generar = generar_revision
+        publicadas, estado_al_publicar = [], []
+
+        def publicador_falso(pieza, log=print):
+            publicadas.append(pieza["guion"]["titular"])
+            estado_al_publicar.append(_json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8")))
+            return {"youtube": {"id": "yt1"}, "web": {"url": "https://x/n/a"}, "facebook": {"id": "fb1"},
+                    "instagram": {"error": "FalloRed: prueba"}}
+        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        chequear("real: Soja (no apta) y Trigo (retenida) no salen; se publica Hacienda",
+                 publicadas == ["Hacienda remate en Bragado"])
+        chequear("real: se anota «publicando» en la memoria ANTES de publicar (un corte no la repite)",
+                 any(e.get("publicado", {}).get("estado") == "publicando" for e in estado_al_publicar[0]["elegidas"]))
+        mem_r = _json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
+        hac = next(e for e in mem_r["elegidas"] if e["titular"].startswith("Hacienda"))
+        chequear("real: queda anotado qué red salió y cuál falló",
+                 hac["publicado"]["facebook"] == {"id": "fb1"} and "error" in hac["publicado"]["instagram"]
+                 and inf["conteos"]["Publicadas"] == 1)
+        chequear("real: la memoria real es aparte de la simulación", PA.MEMORIA_REAL != PA.MEMORIA)
+    finally:
+        GU.generar = originales["gen"]
+        CA.capturar, CA.completar, SC.puntuar, GU.generar = originales["cap"], originales["comp"], originales["pun"], originales["gen"]
+        IMG.elegir, PA.POR.armar, PA.GU_reel, PA.entorno.cargar = originales["img"], originales["por"], originales["reel"], originales["ent"]
+
+# --- publicar: salvaguarda de credenciales --------------------------------------------------------
+from agro import publicar as PUBA  # noqa: E402
+_guardadas = {k: os.environ.get(k) for k in list(PUBA._CLAVES) + ["AGRO_FACEBOOK_PAGE_ID", "AGRO_INSTAGRAM_USER_ID",
+                                                                  "AGRO_FACEBOOK_PAGE_ACCESS_TOKEN", "AGRO_INSTAGRAM_ACCESS_TOKEN"]}
+try:
+    os.environ.update({"INSTAGRAM_USER_ID": "17841405971293744", "INSTAGRAM_ACCESS_TOKEN": "tok-diario",
+                       "FACEBOOK_PAGE_ID": "1456376377985890", "FACEBOOK_PAGE_ACCESS_TOKEN": "tok-diario",
+                       "AGRO_FACEBOOK_PAGE_ID": "101271341650483", "AGRO_INSTAGRAM_USER_ID": "17841427698320458",
+                       "AGRO_FACEBOOK_PAGE_ACCESS_TOKEN": "tok-agro", "AGRO_INSTAGRAM_ACCESS_TOKEN": ""})
+    with PUBA.credenciales_agro():
+        dentro = (os.environ["INSTAGRAM_USER_ID"], os.environ["FACEBOOK_PAGE_ID"], os.environ["INSTAGRAM_ACCESS_TOKEN"])
+    chequear("mientras publica, los publicadores ven la cuenta AGRO (IG con el token de página)",
+             dentro == ("17841427698320458", "101271341650483", "tok-agro"))
+    chequear("al terminar, vuelven las del diario", os.environ["INSTAGRAM_USER_ID"] == "17841405971293744"
+             and os.environ["FACEBOOK_PAGE_ACCESS_TOKEN"] == "tok-diario")
+    os.environ["AGRO_INSTAGRAM_USER_ID"] = "17841405971293744"
+    try:
+        PUBA.credenciales()
+        chequear("salvaguarda: un ID agro igual al del diario NO publica", False)
+    except PUBA.SalvaguardaAgro:
+        chequear("salvaguarda: un ID agro igual al del diario NO publica", True)
+    os.environ.update({"AGRO_INSTAGRAM_USER_ID": "17841427698320458", "AGRO_FACEBOOK_PAGE_ACCESS_TOKEN": "tok-diario"})
+    try:
+        PUBA.credenciales()
+        chequear("salvaguarda: el token del diario puesto como agro NO publica", False)
+    except PUBA.SalvaguardaAgro:
+        chequear("salvaguarda: el token del diario puesto como agro NO publica", True)
+finally:
+    for k, v in _guardadas.items():
+        if v is None:
+            os.environ.pop(k, None)
+        else:
+            os.environ[k] = v
+pp = PUBA.pieza_publicador({"guion": dict(GU._salida(BUENA, "x"), titulo_web="Biológicos en soja"), "portada": "p.jpg",
+                            "rep": {"url": "https://infocampo.com.ar/n1"}})
+chequear("la web nunca usa la foto del otro medio y va a la sección Campo",
+         pp["imagen_url"] == "" and pp["web"]["titulo"] == "Biológicos en soja" and PUBA.CAMPO_ID.startswith("0b4eafce"))
+
+# --- la memoria agro en la nube: el trabajo de policiales no la pisa -----------------------------------
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+import guardar_estado as GE  # noqa: E402
+viejo_ = {"indice": {"url": {"u1": "2026-10-13"}}, "scores": {"h1": {}},
+          "elegidas": [{"id": "a", "cuando": "2026-10-14T07:00", "publicado": {"estado": "publicando"}}],
+          "pendientes": [{"id": "p-viejo"}], "actualizado": "2026-10-14T07:01"}
+nuevo_ = {"indice": {"url": {"u1": "2026-10-13", "u2": "2026-10-14"}}, "scores": {"h1": {}, "h2": {}},
+          "elegidas": [{"id": "a", "cuando": "2026-10-14T07:00", "publicado": {"facebook": {"id": "1"}}},
+                       {"id": "b", "cuando": "2026-10-14T12:30", "publicado": {"web": {"url": "x"}}}],
+          "pendientes": [{"id": "p-nuevo"}], "actualizado": "2026-10-14T12:35"}
+for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_), "agro con la nueva": (nuevo_, viejo_)}.items():
+    c_ = GE.COMBINAR["agro.json"](mio, remoto)
+    chequear(f"combinar agro.json ({nombre}): no se pierde ni se des-publica nada",
+             [e["id"] for e in c_["elegidas"]] == ["a", "b"] and c_["elegidas"][0]["publicado"] == {"facebook": {"id": "1"}}
+             and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
+             and c_["pendientes"] == [{"id": "p-nuevo"}])
+
+# --- plan horario ----------------------------------------------------------------------------
+os.environ.pop("AGRO_PASADAS", None)
+chequear("arranque: 3 por día, 1 por pasada, a las 07:00, 12:30 y 20:30",
+         SE.max_dia() == 3 and SE.por_pasada() == 1 and SE.pasadas() == [(7, 0), (12, 30), (20, 30)])
+
+
+def _t(h, m, dia=13):
+    return datetime(2026, 10, dia, h, m, tzinfo=CA.TZ_AR)
+
+
+chequear("una corrida a las 12:41 es la pasada de las 12:30", PA.turno(_t(12, 41)) == _t(12, 30))
+chequear("a las 06:00 corresponde la de las 07:00", PA.turno(_t(6, 0)) == _t(7, 0))
+chequear("a las 22:00 ya pasaron todas: mañana a las 07:00", PA.turno(_t(22, 0)) == _t(7, 0, 14))
+chequear("una segunda pieza en la misma pasada sale 30 min después", PA.plan_horario(_t(12, 31), 1) == _t(13, 0))
+os.environ["AGRO_PASADAS"] = "8:00, 21:15, basura"
+chequear("AGRO_PASADAS se puede cambiar (y lo que no se entiende se saltea)", SE.pasadas() == [(8, 0), (21, 15)])
+os.environ.pop("AGRO_PASADAS")
+
+print(f"\n{total - len(fallas)}/{total} bien")
+sys.exit(1 if fallas else 0)

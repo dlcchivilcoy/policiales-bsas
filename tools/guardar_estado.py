@@ -132,7 +132,38 @@ def combinar_tema(nuestro: dict, remoto: dict) -> dict:
     return nuestro if (nuestro.get("cuando") or 0) >= (remoto.get("cuando") or 0) else remoto
 
 
+def combinar_agro(nuestro: dict, remoto: dict) -> dict:
+    """estado/agro.json (agro/pasada.py --publicar, 14/10/2026). El trabajo de policiales guarda TODO
+    estado/ con la copia vieja del arranque: sin esto pisaría lo que publicó agro y se repetiría.
+    - indice y scores: unión (son «ya visto», nunca se des-ven).
+    - elegidas: unión por id; una con resultado de publicación le gana a una sin él o «publicando».
+    - pendientes: los de la copia más nueva («actualizado»)."""
+    out = dict(remoto)
+    idx = {k: dict(v) for k, v in (remoto.get("indice") or {}).items()}
+    for k, v in (nuestro.get("indice") or {}).items():
+        idx.setdefault(k, {}).update(v)
+    out["indice"] = idx
+    out["scores"] = {**(remoto.get("scores") or {}), **(nuestro.get("scores") or {})}
+
+    def peso(e):
+        pub = e.get("publicado")
+        if not isinstance(pub, dict):
+            return 0
+        return 1 if pub.get("estado") == "publicando" else 2
+    por_id = {e["id"]: e for e in remoto.get("elegidas") or []}
+    for e in nuestro.get("elegidas") or []:
+        otro = por_id.get(e["id"])
+        if otro is None or peso(e) >= peso(otro):
+            por_id[e["id"]] = e
+    out["elegidas"] = sorted(por_id.values(), key=lambda e: e.get("cuando") or "")
+    mas_nuevo = nuestro if (nuestro.get("actualizado") or "") >= (remoto.get("actualizado") or "") else remoto
+    out["pendientes"] = mas_nuevo.get("pendientes") or []
+    out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
+    return out
+
+
 COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
+            "agro.json": combinar_agro,
             "tema_reels.json": combinar_tema,
             "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo,
             "buzon_distribuidor.json": combinar_buzon}
@@ -195,7 +226,7 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
 if __name__ == "__main__":
     from datetime import datetime, timezone
     solo = sys.argv[sys.argv.index("--solo") + 1:] if "--solo" in sys.argv else None
-    que = {"nacionales.json": "Nacionales", "archivo.json": "Archivo"}.get((solo or [""])[0], "Reels")
+    que = {"nacionales.json": "Nacionales", "archivo.json": "Archivo", "agro.json": "Agro"}.get((solo or [""])[0], "Reels")
     msg = f"{que} de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
     try:
         print(guardar(msg, solo=solo))

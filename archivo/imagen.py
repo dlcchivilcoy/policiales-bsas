@@ -39,15 +39,16 @@ def credenciales() -> tuple:
     return (os.environ.get("CF_ACCOUNT_ID") or "").strip(), (os.environ.get("CF_API_TOKEN") or "").strip()
 
 
-def generar(prompt: str, destino: Path, pedir=None) -> dict:
-    """{archivo, proveedor: «cloudflare»} o {motivo} si no se pudo. Nunca lanza ni muestra el token."""
+def generar(prompt: str, destino: Path, pedir=None, estilo: str = None) -> dict:
+    """{archivo, proveedor: «cloudflare»} o {motivo} si no se pudo. Nunca lanza ni muestra el token.
+    `estilo`: lo que se agrega al prompt (por defecto ESTILO, el del Archivo; agro usa el suyo)."""
     cuenta, token = credenciales()
     if not cuenta or not token:
         return {"motivo": "faltan CF_ACCOUNT_ID / CF_API_TOKEN"}
     if not (prompt or "").strip():
         return {"motivo": "la IA no dio la descripción de la imagen"}
     pedir = pedir or (lambda url, **kw: httpx.post(url, timeout=120, **kw))
-    cuerpo = {"prompt": (prompt.strip() + ESTILO)[:2048], "steps": PASOS}
+    cuerpo = {"prompt": (prompt.strip() + (ESTILO if estilo is None else estilo))[:2048], "steps": PASOS}
     ultimo = ""
     for intento in range(len(ESPERAS) + 1):
         if intento:

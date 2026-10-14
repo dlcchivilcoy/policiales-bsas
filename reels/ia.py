@@ -76,7 +76,7 @@ def proveedor_disponible() -> str:
 # =============================================================================
 
 def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
-                  timeout: int = 90) -> str:
+                  timeout: int = 90, max_tokens: int = 2000) -> str:
     import httpx
     payload = {
         "systemInstruction": {"parts": [{"text": system}]},
@@ -93,7 +93,7 @@ def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
             #
             # Subirlo no cuesta nada: es un TECHO, no un cargo. Se paga lo que el
             # modelo escribe, y escribe lo mismo que antes.
-            "maxOutputTokens": 2000,
+            "maxOutputTokens": max_tokens,
             # Se pide JSON de verdad, no «un JSON dentro de un bloque de código». Ahorra
             # el limpiado de ```json y los cortes a mitad de llave.
             "responseMimeType": "application/json",
@@ -115,7 +115,7 @@ class _Cuota(RuntimeError):
     """Cupo agotado de ESA clave. Se rota, no se espera."""
 
 
-def redactar_gemini(system: str, material: str) -> tuple:
+def redactar_gemini(system: str, material: str, max_tokens: int = 2000) -> tuple:
     """Devuelve (texto, detalle). Rota claves ante 429 y después baja de modelo."""
     claves = _claves_gemini()
     if not claves:
@@ -125,7 +125,7 @@ def redactar_gemini(system: str, material: str) -> tuple:
     for modelo in MODELOS_GEMINI:
         for i, clave in enumerate(claves, 1):
             try:
-                texto = _pedir_gemini(system, material, clave, modelo)
+                texto = _pedir_gemini(system, material, clave, modelo, max_tokens=max_tokens)
                 return texto, f"gemini:{modelo} (clave {i}/{len(claves)})"
             except _Cuota as e:
                 ultimo = e
@@ -145,14 +145,14 @@ def redactar_gemini(system: str, material: str) -> tuple:
 # Claude (respaldo)
 # =============================================================================
 
-def redactar_claude(system: str, material: str) -> tuple:
+def redactar_claude(system: str, material: str, max_tokens: int = 900) -> tuple:
     import anthropic
     clave = os.environ.get("ANTHROPIC_API_KEY", "")
     if not clave:
         raise SinProveedor("no hay ANTHROPIC_API_KEY en el entorno")
     cliente = anthropic.Anthropic(api_key=clave)
     msg = cliente.messages.create(
-        model=MODELO_CLAUDE, max_tokens=900, system=system,
+        model=MODELO_CLAUDE, max_tokens=max_tokens, system=system,
         messages=[{"role": "user", "content": material}],
     )
     return msg.content[0].text, f"claude:{MODELO_CLAUDE}"
@@ -162,11 +162,12 @@ def redactar_claude(system: str, material: str) -> tuple:
 # Entrada única
 # =============================================================================
 
-def redactar(system: str, material: str, preferir: str = "") -> tuple:
+def redactar(system: str, material: str, preferir: str = "", max_tokens: int = 0) -> tuple:
     """Redacta con lo que haya. Devuelve (dict_parseado, detalle_del_proveedor).
 
     `preferir` fuerza 'gemini' o 'claude'. Vacío = Gemini si hay claves (gratis), y si no,
-    Claude.
+    Claude. `max_tokens`: techo de la respuesta (0 = el de siempre: 2000 Gemini, 900 Claude);
+    lo sube agro, que pide la nota, el texto de Instagram y el guion del reel juntos.
     """
     orden = [preferir] if preferir else (["gemini", "claude"] if _claves_gemini()
                                          else ["claude"])
@@ -179,8 +180,9 @@ def redactar(system: str, material: str, preferir: str = "") -> tuple:
         # estuviera perfecta.
         for intento in (1, 2):
             try:
-                texto, detalle = (redactar_gemini(system, material) if cual == "gemini"
-                                  else redactar_claude(system, material))
+                kw = {"max_tokens": max_tokens} if max_tokens else {}
+                texto, detalle = (redactar_gemini(system, material, **kw) if cual == "gemini"
+                                  else redactar_claude(system, material, **kw))
                 return _parsear(texto), detalle
             except SinProveedor as e:
                 errores.append(f"{cual}: {e}")

@@ -30,3 +30,12 @@ informe_salud.md
 
 # Lo escribe reels/publicador.py cuando algo no salio en una red, para el issue.
 informe_publicacion.md
+
+# Archivo suelto con el token agro mientras se carga (tools/cargar_credenciales.py lo borra).
+agro.txt
+
+# Copias del .env antes de cambiar credenciales.
+.env.bak-*
+
+# Simulación de agro (informes, portadas, reels y su memoria): local, no va al repo.
+salida_agro/

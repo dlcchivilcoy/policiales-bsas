@@ -1,0 +1,137 @@
+name: Agro (@diarioyradioagro)
+
+# Activado por el editor el 14/10/2026. Arranque decidido el 13/10: 3 REELS POR DÍA en 3 pasadas, 1 por
+# pasada, a las 07:00, 12:30 y 20:30 (AGRO_PASADAS, AGRO_MAX_DIA y AGRO_POR_PASADA en agro/seleccion.py;
+# se pueden cambiar como variables del repo sin tocar código).
+#
+# Cada pasada: lee las fuentes (agro/fuentes.py), descarta duplicados, puntúa con IA, elige la mejor
+# nota que no salió y arma título, textos, imagen (foto oficial o IA, nunca el logo suelto), portada y
+# reel. Publica el Short en Radio del Centro, la nota en la sección Campo de la web y el reel en Facebook
+# e Instagram de @diarioyradioagro con las credenciales AGRO_* (salvaguarda: nunca las del diario).
+# Detalle: agro/pasada.py y agro/publicar.py.
+#
+# Quién dispara: cron-job.org a horario exacto con {"ref":"main","inputs":{"origen":"cron"}}. El
+# `schedule:` de abajo es el RESPALDO, 20 minutos después: si la pasada de ese horario ya publicó, la
+# memoria (estado/agro.json) lo frena y no hace nada.
+#
+# Publica si la variable del repo AGRO_PUBLICAR es 1. Para apagar SOLO esto: AGRO_PUBLICAR=0 (sigue
+# armando y simula; las piezas quedan como artefacto de la corrida).
+on:
+  schedule:                 # UTC; Argentina es UTC-3 todo el año
+    - cron: "20 10 * * *"   # 07:20 Argentina: respaldo de la pasada de las 07:00
+    - cron: "50 15 * * *"   # 12:50 Argentina: respaldo de la de las 12:30
+    - cron: "50 23 * * *"   # 20:50 Argentina: respaldo de la de las 20:30
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" publica aunque AGRO_PUBLICAR no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+
+# Grupo propio: no hace fila detrás de policiales y dos disparos juntos no publican dos veces.
+concurrency:
+  group: agro
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # para commitear estado/agro.json (y subir el video al Release temporal)
+  issues: write               # para avisar si falla
+
+jobs:
+  agro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Pasada agro
+        timeout-minutes: 30
+        env:
+          PYTHONUNBUFFERED: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          # Las del diario SOLO para que la salvaguarda pueda comparar: agro nunca publica con ellas.
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}
+          WIX_MEMBER_ID: ${{ secrets.WIX_MEMBER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AGRO_MAX_DIA: ${{ vars.AGRO_MAX_DIA }}
+          AGRO_POR_PASADA: ${{ vars.AGRO_POR_PASADA }}
+          AGRO_PASADAS: ${{ vars.AGRO_PASADAS }}
+          AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
+          PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+        run: |
+          set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
+            ARGS="--publicar"
+          fi
+          echo "python -m agro.pasada $ARGS"
+          python -m agro.pasada $ARGS | tee informe_agro.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agro-${{ github.run_number }}
+          path: |
+            salida_agro/**/*.mp4
+            salida_agro/**/*.jpg
+            salida_agro/**/*.json
+            salida_agro/**/*.html
+          retention-days: 3
+          compression-level: 0
+
+      - name: Recordar qué salió
+        # SOLO estado/agro.json: tools/guardar_estado.py lo combina con la copia que guardan los
+        # trabajos de policiales (combinar_agro), así nadie pisa lo publicado.
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/agro.json)" ]; then
+            echo "La memoria de agro no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo agro.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="La pasada de agro falló"
+          CUERPO="$( [ -f informe_agro.md ] && tail -60 informe_agro.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
