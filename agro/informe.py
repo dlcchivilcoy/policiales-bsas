@@ -90,6 +90,7 @@ def _pieza(p: dict, carpeta: Path) -> str:
     controles = (f"<details><summary>Controles</summary><table>"
                  f"<tr><td>Copia más larga del original</td><td>{e((g.get('copia') or {}).get('racha'))} palabras"
                  f" {('— «' + e((g.get('copia') or {}).get('tramo')) + '»') if (g.get('copia') or {}).get('tramo') else ''}</td></tr>"
+                 f"<tr><td>Párrafos corregidos por copia</td><td>{e(g.get('reparaciones_copia') or 0)}</td></tr>"
                  f"<tr><td>Datos que faltan en el texto</td><td>{e(', '.join(g.get('faltan_datos') or []) or 'ninguno')}</td></tr>"
                  f"<tr><td>Formato</td><td>{e('; '.join(g.get('formato') or []) or 'ok')}</td></tr>"
                  f"<tr><td>Imagen</td><td>{e(img.get('origen'))} — {e(img.get('motivo'))}"

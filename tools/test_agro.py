@@ -6,7 +6,7 @@
 import os
 import sys
 import tempfile
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -258,6 +258,38 @@ larga = dict(BUENA, titular="Uno dos tres cuatro cinco seis siete ocho nueve die
 g = GU.generar(rep, CUERPO, [], {"sensible": False}, redactar=ia_guion([larga, larga]))
 chequear("titular largo: se pide otra versión y al final se recorta a 12",
          len(llamadas) == 2 and len(g["titular"].split()) <= 12)
+# Copia que sobrevive al segundo pedido: se corrige SOLO el párrafo calcado.
+from reels import guion as RG  # noqa: E402
+ORIG = ("La empresa Koppert lanzó dos packs biológicos para semillas de soja que aceleran la emergencia "
+        "al menos tres días y mejoran el rendimiento promedio frente a los tratamientos químicos tradicionales")
+orig_pal = RG._palabras(ORIG)
+g_c = dict(GU._salida(BUENA, "x"), datos_clave=["Koppert"],
+           nota_web="Un párrafo propio sin problemas.\n\nLa empresa Koppert lanzó dos packs biológicos para semillas "
+                    "de soja que aceleran la emergencia al menos tres días y mejoran el rendimiento promedio.")
+c_c = RG.copia_del_original(g_c, orig_pal)
+pedidos_p = []
+
+
+def ia_parafrasis(respuestas):
+    def redactar(system, material, **kw):
+        pedidos_p.append(material)
+        return {"parrafo": respuestas[min(len(pedidos_p) - 1, len(respuestas) - 1)]}, "falsa"
+    return redactar
+
+
+g2, c2, f2, n = GU.reparar_copia(g_c, c_c, orig_pal, [], ia_parafrasis(
+    ["Koppert sumó al mercado dos opciones biológicas para tratar la semilla de soja: según la firma, "
+     "la planta emerge tres días antes y rinde más que con los productos químicos de siempre."]))
+chequear("copia: arranca calcada (más de 10 palabras)", c_c["racha"] >= RG.UMBRAL_COPIA and c_c["campo"] == "nota_web")
+chequear("copia: se pide reescribir SOLO el párrafo calcado, con el fragmento a evitar",
+         len(pedidos_p) == 1 and "Un párrafo propio" not in pedidos_p[0] and "FRAGMENTO A EVITAR" in pedidos_p[0])
+chequear("copia: queda corregida y el párrafo propio intacto",
+         c2["racha"] < RG.UMBRAL_COPIA and n == 1 and g2["nota_web"].startswith("Un párrafo propio sin problemas."))
+pedidos_p.clear()
+g3, c3, f3, n3 = GU.reparar_copia(dict(g_c, datos_clave=["Koppert", "tres días"]), c_c, orig_pal, [],
+                                  ia_parafrasis(["Una empresa sumó dos opciones biológicas para la semilla de soja."]))
+chequear("copia: un arreglo que pierde un dato se descarta (y se reintenta hasta 3 veces)",
+         g3["nota_web"] == g_c["nota_web"] and n3 == GU.REPARACIONES)
 g = GU.generar(rep, CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
 chequear("dato sensible de un medio → requiere revisión", g["requires_review"])
 g = GU.generar(dict(rep, tipo_fuente="oficial"), CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
@@ -539,6 +571,8 @@ with tempfile.TemporaryDirectory() as tmp:
             estado_al_publicar.append(_json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8")))
             return {"youtube": {"id": "yt1"}, "web": {"url": "https://x/n/a"}, "facebook": {"id": "fb1"},
                     "instagram": {"error": "FalloRed: prueba"}}
+        turno_real = PA.turno
+        PA.turno = lambda ahora: ahora.replace(second=0, microsecond=0)      # «estamos en horario»
         ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: Soja (no apta) y Trigo (retenida) no salen; se publica Hacienda",
@@ -551,6 +585,24 @@ with tempfile.TemporaryDirectory() as tmp:
                  hac["publicado"]["facebook"] == {"id": "fb1"} and "error" in hac["publicado"]["instagram"]
                  and inf["conteos"]["Publicadas"] == 1)
         chequear("real: la memoria real es aparte de la simulación", PA.MEMORIA_REAL != PA.MEMORIA)
+        # El respaldo de 20 min después (mismo turno) no publica otra vez.
+        fijo = datetime.now(CA.TZ_AR).replace(second=0, microsecond=0)
+        PA.turno = lambda ahora: fijo
+        mem_t = _json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
+        for e in mem_t["elegidas"]:
+            if e.get("publicado"):
+                e["turno"] = fijo.isoformat()
+        PA.MEMORIA_REAL.write_text(_json.dumps(mem_t), encoding="utf-8")
+        publicadas.clear()
+        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        chequear("real: si ese horario ya publicó, el respaldo no publica otra",
+                 not publicadas and "ya publicó" in inf["conteos"]["No se publicó"])
+        PA.turno = lambda ahora: ahora.replace(second=0, microsecond=0) + timedelta(hours=3)
+        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
+        chequear("real: fuera de horario no publica", not publicadas and "fuera de horario" in inf["conteos"]["No se publicó"])
+        PA.turno = turno_real
     finally:
         GU.generar = originales["gen"]
         CA.capturar, CA.completar, SC.puntuar, GU.generar = originales["cap"], originales["comp"], originales["pun"], originales["gen"]

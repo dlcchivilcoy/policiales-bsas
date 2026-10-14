@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Publica UNA pieza agro: Short en YouTube (Radio del Centro) → nota en la web (sección Campo) →
+"""Publica UNA pieza agro: Short en YouTube (Radio del Centro) → nota en la web (sección Agro, ex Campo) →
 reel en Facebook e Instagram de @diarioyradioagro.
 
 Activado por el editor el 14/10/2026 («activá el sistema y hacé una como primer posteo»), con el
@@ -23,7 +23,7 @@ from contextlib import contextmanager
 from pathlib import Path
 
 DIARIO_IDS = {"1456376377985890", "17841405971293744"}   # página e IG de @diarioyradio
-CAMPO_ID = "0b4eafce-3bb8-44df-96dd-43e53fa24a9c"         # sección «Campo» de la web (Wix)
+CAMPO_ID = "0b4eafce-3bb8-44df-96dd-43e53fa24a9c"         # sección «Agro» de la web (ex «Campo», 14/10/2026)
 REDES = ("youtube", "web", "facebook", "instagram")
 _CLAVES = ("INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")
 

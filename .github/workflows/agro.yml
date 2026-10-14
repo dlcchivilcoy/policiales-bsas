@@ -6,7 +6,7 @@ name: Agro (@diarioyradioagro)
 #
 # Cada pasada: lee las fuentes (agro/fuentes.py), descarta duplicados, puntúa con IA, elige la mejor
 # nota que no salió y arma título, textos, imagen (foto oficial o IA, nunca el logo suelto), portada y
-# reel. Publica el Short en Radio del Centro, la nota en la sección Campo de la web y el reel en Facebook
+# reel. Publica el Short en Radio del Centro, la nota en la sección Agro de la web y el reel en Facebook
 # e Instagram de @diarioyradioagro con las credenciales AGRO_* (salvaguarda: nunca las del diario).
 # Detalle: agro/pasada.py y agro/publicar.py.
 #
