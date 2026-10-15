@@ -40,6 +40,12 @@
       "pregunta": "¿A qué cine de Chivilcoy ibas todos los fines de semana?",
       "categoria": "Nostalgia y recuerdos",
       "tema": "los viejos cines"
+    },
+    {
+      "dia": "2026-10-15",
+      "pregunta": "¿Qué histórico negocio del centro de Chivilcoy extrañás que ya no esté?",
+      "categoria": "Comercios y consumo",
+      "tema": "los comercios del centro"
     }
   ],
   "publicaciones": {
@@ -229,7 +235,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-15:pregunta": {
+      "titular": "¿Qué histórico negocio del centro de Chivilcoy extrañás que ya no esté?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-15T20:30:39-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Comercios y consumo",
+        "tema": "los comercios del centro"
+      },
+      "estado": "ok",
+      "id": "18159687208497708",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-15T13:30:31-03:00"
+  "actualizado": "2026-10-15T20:30:25-03:00"
 }
