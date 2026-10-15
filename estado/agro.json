@@ -2591,6 +2591,126 @@
         82,
         85
       ]
+    },
+    "b8ae5f8d13451ff9": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 80,
+      "commercial_score": 86,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interés directo para productores de la zona núcleo en plena campaña maicera con alto atractivo comercial.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        79,
+        83
+      ]
+    },
+    "6289ab0210fcb89b": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 71,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto geopolítico y comercial en exportaciones, clave para el debate del sector aunque sensible por datos estadísticos.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        69
+      ]
+    },
+    "ba7bc9808cef7af6": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 51,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "ley de tierras",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema regulatorio de alta conversación política pero menor utilidad técnica directa para el productor.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "49343917ac2516db": {
+      "impacto_economico": 4,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 44,
+      "commercial_score": 54,
+      "subtema": "agro",
+      "tema": "mujer rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota institucional y social de buena llegada en redes pero baja relevancia económica y productiva dura.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b2f69c9d556d7ab3": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Relevamiento clave de cultivos en la región pampeana con alertas sanitarias muy útiles para asesores y productores.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        71,
+        74
+      ]
+    },
+    "c477ff4a684b2b5e": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 12,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 37,
+      "commercial_score": 46,
+      "subtema": "agtech",
+      "tema": "fertilizadora robot",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Tecnología internacional muy incipiente con baja cercanía y adopción actual en la región pampeana.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -2764,7 +2884,25 @@
       "https://lacapital.com.ar/agro/la-gira-federal-maquinaria-agricola-que-recorrio-15-localidades-seis-provincias-n10286686.html": "2026-10-14",
       "https://agfundernews.com/molagri-raises-5-8m-to-build-updatable-biopesticides": "2026-10-14",
       "https://agfundernews.com/perplant-lands-valtra-deal-to-put-its-ai-crop-sensor-on-tractors-straight-from-the-factory": "2026-10-14",
-      "https://intainforma.inta.gob.ar/maiz-mas-agua-y-una-oportunidad-para-ajustar-el-manejo": "2026-10-14"
+      "https://intainforma.inta.gob.ar/maiz-mas-agua-y-una-oportunidad-para-ajustar-el-manejo": "2026-10-14",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-en-la-rioja-despejado-el-pronostico-para-hoy-15-de-octubre": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-15-octubre-2026": "2026-10-15",
+      "https://infocampo.com.ar/manejo-integral-en-maiz-la-caja-de-herramientas-para-protegerlo-contra-malezas-y-enfermedades": "2026-10-15",
+      "https://bichosdecampo.com/una-buena-noticia-que-en-realidad-es-mala-brasil-lidera-los-embarques-de-harina-de-soja-y-le-saca-ventaja-a-la-argentina": "2026-10-15",
+      "https://bichosdecampo.com/argentina-insolita-ahora-el-gobierno-libertario-quiere-restituir-la-ley-de-tierras-del-kirchnerismo": "2026-10-15",
+      "https://lanacion.com.ar/economia/campo/dia-de-la-mujer-rural-cinco-profesionales-y-un-mensaje-contundente-no-tengan-miedo-nid15102026": "2026-10-15",
+      "https://lacapital.com.ar/agro/el-trigo-santafesino-avanza-buenas-condiciones-aunque-crece-la-presion-enfermedades-n10286507.html": "2026-10-15",
+      "https://futurefarming.com/smart-farming/light-disc-fertiliser-as-basis-for-fertiliser-robot": "2026-10-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -2936,7 +3074,25 @@
       "la gira federal de maquinaria agricola que recorrio 15 localidades en seis provincias": "2026-10-14",
       "molagri raises 5 8m to build updatable biopesticides": "2026-10-14",
       "perplant lands valtra deal to put its ai crop sensor on tractors straight from the factory": "2026-10-14",
-      "maiz mas agua y una oportunidad para ajustar el manejo": "2026-10-14"
+      "maiz mas agua y una oportunidad para ajustar el manejo": "2026-10-14",
+      "dolar blue hoy a cuanto cotiza el 15 octubre 2026": "2026-10-15",
+      "clima hoy en mendoza el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en tucuman el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en corrientes el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en cordoba el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en salta el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en san luis el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en rosario el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima en la rioja despejado el pronostico para hoy 15 de octubre": "2026-10-15",
+      "clima hoy en mar del plata el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en bahia blanca el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "clima hoy en misiones el pronostico del tiempo para este 15 octubre 2026": "2026-10-15",
+      "manejo integral en maiz la caja de herramientas para protegerlo contra malezas y enfermedades": "2026-10-15",
+      "una buena noticia que en realidad es mala brasil lidera los embarques de harina de soja y le saca ventaja a la argentina": "2026-10-15",
+      "argentina insolita ahora el gobierno libertario quiere restituir la ley de tierras del kirchnerismo": "2026-10-15",
+      "dia de la mujer rural cinco profesionales y un mensaje contundente no tengan miedo": "2026-10-15",
+      "el trigo santafesino avanza en buenas condiciones aunque crece la presion de enfermedades": "2026-10-15",
+      "light disc fertiliser as basis for fertiliser robot": "2026-10-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -3108,7 +3264,25 @@
       "9872ca6275f33952": "2026-10-14",
       "37a1e4c7b4f6c660": "2026-10-14",
       "d1d9d42eb61bc58b": "2026-10-14",
-      "f820526c24e16a7c": "2026-10-14"
+      "f820526c24e16a7c": "2026-10-14",
+      "9ec3f65041984ba4": "2026-10-15",
+      "2680121dc02458d2": "2026-10-15",
+      "030c16508320b651": "2026-10-15",
+      "15c75e43a58fba61": "2026-10-15",
+      "248dc0b09ce16f6a": "2026-10-15",
+      "f13e0c38972fefc8": "2026-10-15",
+      "add51fe643bfe1eb": "2026-10-15",
+      "6aaf9910202ffdd8": "2026-10-15",
+      "9d491c015ba47321": "2026-10-15",
+      "045e75d7233af1cf": "2026-10-15",
+      "7f995bb9bf095bf3": "2026-10-15",
+      "ea41597ddf23b167": "2026-10-15",
+      "b8ae5f8d13451ff9": "2026-10-15",
+      "6289ab0210fcb89b": "2026-10-15",
+      "ba7bc9808cef7af6": "2026-10-15",
+      "49343917ac2516db": "2026-10-15",
+      "b2f69c9d556d7ab3": "2026-10-15",
+      "c477ff4a684b2b5e": "2026-10-15"
     }
   },
   "elegidas": [
@@ -3360,9 +3534,127 @@
           "ubicacion": null
         }
       }
+    },
+    {
+      "id": "eb65b112a78a",
+      "cuando": "2026-10-15T07:00-03:00",
+      "titulo_original": "Una startup fue elegida entre 44 por su tecnología para asegurar al agro frente al clima",
+      "descripcion": "Suyana Climate Insurance ganó una nueva edición de AgTech Revolution con una propuesta de seguros paramétricos que se activan automáticamente ante sequías, inundaciones y otros eventos extremos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/una-startup-fue-elegida-entre-44-por-su-tecnologia-para-asegurar-al-agro-frente-al-clima-nid12102026/",
+      "titular": "Una startup ganó AgTech Revolution con seguros paramétricos contra el clima",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 88,
+        "subtema": "agtech",
+        "tema": "seguros paramétricos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran relevancia por combinar AgTech, gestión de riesgo climático y un formato de seguro muy demandado en la región núcleo.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/9)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "turno": "2026-10-15T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "bpQxw2s72-c",
+          "url": "https://youtube.com/shorts/bpQxw2s72-c",
+          "privacidad": "public",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "dda2c07c-c88b-47e7-b8f5-6d103245c317",
+          "slug": "una-startup-gano-agtech-revolution-con-seguros-parametricos-ca3b9f",
+          "url": "https://www.diariolacampaña.com.ar/n/una-startup-gano-agtech-revolution-con-seguros-parametricos-ca3b9f",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1589408122456591"
+        },
+        "instagram": {
+          "id": "18079843163710699",
+          "prueba": null,
+          "ubicacion": null
+        }
+      }
     }
   ],
   "pendientes": [
+    {
+      "id": "6ae3c87631e4",
+      "rep": {
+        "id": "6ae3c87631e4",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/manejo-integral-en-maiz-la-caja-de-herramientas-para-protegerlo-contra-malezas-y-enfermedades/",
+        "canonical_url": "https://infocampo.com.ar/manejo-integral-en-maiz-la-caja-de-herramientas-para-protegerlo-contra-malezas-y-enfermedades",
+        "titulo": "Manejo integral en maíz: la “caja de herramientas” para protegerlo contra malezas y enfermedades",
+        "titulo_norm": "manejo integral en maiz la caja de herramientas para protegerlo contra malezas y enfermedades",
+        "descripcion": "En el Congreso Internacional de Maíz, Agroterrum presentó su oferta de soluciones para la campaña. Ante un escenario con mayores precipitaciones, remarcaron la importancia del uso de herbicidas residuales, el monitoreo fúngico y la flexibilidad de control.",
+        "imagen_url": "https://www.youtube.com/embed/DBhJT4THVRs",
+        "autor": "infocampo",
+        "publicado": "2026-10-14T20:35-03:00",
+        "capturado": "2026-10-15T07:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b8ae5f8d13451ff9"
+      },
+      "grupo": [
+        {
+          "id": "6ae3c87631e4",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/manejo-integral-en-maiz-la-caja-de-herramientas-para-protegerlo-contra-malezas-y-enfermedades/",
+          "canonical_url": "https://infocampo.com.ar/manejo-integral-en-maiz-la-caja-de-herramientas-para-protegerlo-contra-malezas-y-enfermedades",
+          "titulo": "Manejo integral en maíz: la “caja de herramientas” para protegerlo contra malezas y enfermedades",
+          "titulo_norm": "manejo integral en maiz la caja de herramientas para protegerlo contra malezas y enfermedades",
+          "descripcion": "En el Congreso Internacional de Maíz, Agroterrum presentó su oferta de soluciones para la campaña. Ante un escenario con mayores precipitaciones, remarcaron la importancia del uso de herbicidas residuales, el monitoreo fúngico y la flexibilidad de control.",
+          "imagen_url": "https://www.youtube.com/embed/DBhJT4THVRs",
+          "autor": "infocampo",
+          "publicado": "2026-10-14T20:35-03:00",
+          "capturado": "2026-10-15T07:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b8ae5f8d13451ff9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 9,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 80,
+        "commercial_score": 86,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interés directo para productores de la zona núcleo en plena campaña maicera con alto atractivo comercial.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          79,
+          83
+        ]
+      },
+      "cuando": "2026-10-15T07:00-03:00"
+    },
     {
       "id": "765d2972b4a7",
       "rep": {
@@ -4640,66 +4932,6 @@
       "cuando": "2026-10-13T21:10-03:00"
     },
     {
-      "id": "eb65b112a78a",
-      "rep": {
-        "id": "eb65b112a78a",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/una-startup-fue-elegida-entre-44-por-su-tecnologia-para-asegurar-al-agro-frente-al-clima-nid12102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/una-startup-fue-elegida-entre-44-por-su-tecnologia-para-asegurar-al-agro-frente-al-clima-nid12102026",
-        "titulo": "Una startup fue elegida entre 44 por su tecnología para asegurar al agro frente al clima",
-        "titulo_norm": "una startup fue elegida entre 44 por su tecnologia para asegurar al agro frente al clima",
-        "descripcion": "Suyana Climate Insurance ganó una nueva edición de AgTech Revolution con una propuesta de seguros paramétricos que se activan automáticamente ante sequías, inundaciones y otros eventos extremos",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/U57IF23ANFAK7PRPL7UJ4XIWTU.png?auth=4c4d8a7655716e680d28c1e2bceef4e24564a5b85fbd4ad1e0dd12b8d6de64d8&smart=true",
-        "autor": "",
-        "publicado": "2026-10-12T10:00-03:00",
-        "capturado": "2026-10-13T21:10-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e2e9f559d954a589"
-      },
-      "grupo": [
-        {
-          "id": "eb65b112a78a",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/una-startup-fue-elegida-entre-44-por-su-tecnologia-para-asegurar-al-agro-frente-al-clima-nid12102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/una-startup-fue-elegida-entre-44-por-su-tecnologia-para-asegurar-al-agro-frente-al-clima-nid12102026",
-          "titulo": "Una startup fue elegida entre 44 por su tecnología para asegurar al agro frente al clima",
-          "titulo_norm": "una startup fue elegida entre 44 por su tecnologia para asegurar al agro frente al clima",
-          "descripcion": "Suyana Climate Insurance ganó una nueva edición de AgTech Revolution con una propuesta de seguros paramétricos que se activan automáticamente ante sequías, inundaciones y otros eventos extremos",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/U57IF23ANFAK7PRPL7UJ4XIWTU.png?auth=4c4d8a7655716e680d28c1e2bceef4e24564a5b85fbd4ad1e0dd12b8d6de64d8&smart=true",
-          "autor": "",
-          "publicado": "2026-10-12T10:00-03:00",
-          "capturado": "2026-10-13T21:10-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e2e9f559d954a589"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 13,
-        "innovacion": 14,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 86,
-        "commercial_score": 88,
-        "subtema": "agtech",
-        "tema": "seguros paramétricos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Gran relevancia por combinar AgTech, gestión de riesgo climático y un formato de seguro muy demandado en la región núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/9)"
-      },
-      "cuando": "2026-10-13T21:10-03:00"
-    },
-    {
       "id": "e44883a3f25a",
       "rep": {
         "id": "e44883a3f25a",
@@ -4906,5 +5138,5 @@
       "cuando": "2026-10-13T21:10-03:00"
     }
   ],
-  "actualizado": "2026-10-14T20:34:18-03:00"
+  "actualizado": "2026-10-15T07:04:38-03:00"
 }
