@@ -48,6 +48,12 @@
       "pregunta": "¿Qué histórico negocio del centro de Chivilcoy extrañás que ya no esté?",
       "categoria": "Comercios y consumo",
       "tema": "los comercios del centro"
+    },
+    {
+      "dia": "2026-10-16",
+      "pregunta": "¿En qué lugar tuviste tu primer trabajo acá en Chivilcoy?",
+      "categoria": "Trabajo y oficios",
+      "tema": "el primer empleo"
     }
   ],
   "publicaciones": {
@@ -273,7 +279,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-16:pregunta": {
+      "titular": "¿En qué lugar tuviste tu primer trabajo acá en Chivilcoy?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-16T20:30:42-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Trabajo y oficios",
+        "tema": "el primer empleo"
+      },
+      "estado": "ok",
+      "id": "17952312900335227",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-16T13:30:25-03:00"
+  "actualizado": "2026-10-16T20:30:27-03:00"
 }
