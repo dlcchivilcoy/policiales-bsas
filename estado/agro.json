@@ -3923,6 +3923,86 @@
       "sensible": true,
       "explicacion": "Informe clave de la BCR sobre estrategia de siembra de soja ante El Niño y estado del trigo con alerta de fusariosis en zona núcleo.",
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3166fe5f96268281": {
+      "impacto_economico": 10,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 1,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "algodonera avellaneda",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una quiebra industrial importante en el norte santafesino, pero con baja incidencia directa en la producción de la zona núcleo.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f9d2e2e640482874": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve volúmenes gigantescos y afecta directamente la estrategia comercial de los productores de la región pampeana.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        75,
+        75
+      ]
+    },
+    "0d3fc52e94793d44": {
+      "impacto_economico": 4,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 2,
+      "conversacion": 7,
+      "potencial_comercial": 0,
+      "ai_score": 33,
+      "commercial_score": 15,
+      "subtema": "ganaderia",
+      "tema": "inundaciones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Trágica noticia rural pero de impacto local en Santa Fe, con escasa utilidad práctica para el productor de Chivilcoy.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f8cedc96cf1db951": {
+      "impacto_economico": 13,
+      "interes_productores": 11,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 9,
+      "ai_score": 66,
+      "commercial_score": 74,
+      "subtema": "agro",
+      "tema": "financiamiento ganadero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa al ganadero por las herramientas de crédito y atrae anunciantes bancarios de peso.",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        64
+      ]
     }
   },
   "indice": {
@@ -4185,7 +4265,25 @@
       "https://croplife.com/smart-tech/four-building-blocks-for-unlocking-precision-ags-full-value": "2026-10-15",
       "https://croplife.com/smart-tech/ag-tech-talk-podcast-ptx-on-precision-ag-retrofits-targeted-spraying-and-autonomy": "2026-10-15",
       "https://intainforma.inta.gob.ar/anticipar-la-salida-de-la-hacienda-reduce-riesgos-y-amplia-el-margen-operativo": "2026-10-15",
-      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area": "2026-10-15"
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area": "2026-10-15",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-16-de-octubre": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-16-octubre-2026": "2026-10-16",
+      "https://bichosdecampo.com/el-peor-final-disponen-la-quiebra-de-algodonera-avellaneda-como-empresa-en-marcha-para-intentar-mitigar-el-desastre-social": "2026-10-16",
+      "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas": "2026-10-16",
+      "https://lanacion.com.ar/economia/campo/tragedia-un-trabajador-rural-murio-ahogado-mientras-rescataba-vacas-de-una-zona-de-campos-inundados-nid15102026": "2026-10-16",
+      "https://lacapital.com.ar/agro/creditos-precision-claves-financiar-el-negocio-ganadero-n10286523.html": "2026-10-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -4446,7 +4544,25 @@
       "four building blocks for unlocking precision ag s full value": "2026-10-15",
       "ag tech talk podcast ptx on precision ag retrofits targeted spraying and autonomy": "2026-10-15",
       "anticipar la salida de la hacienda reduce riesgos y amplia el margen operativo": "2026-10-15",
-      "soja tactica con un 2 mas de area comienza una siembra estrategica para ganarle al nino": "2026-10-15"
+      "soja tactica con un 2 mas de area comienza una siembra estrategica para ganarle al nino": "2026-10-15",
+      "dolar blue hoy a cuanto cotiza el 16 octubre 2026": "2026-10-16",
+      "clima hoy en mendoza el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en tucuman el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en corrientes el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en cordoba el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en salta el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en san luis el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en rosario el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en neuquen el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima en la rioja lluvia ligera el pronostico para hoy 16 de octubre": "2026-10-16",
+      "clima hoy en bahia blanca el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en mar del plata el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en misiones el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "clima hoy en buenos aires el pronostico del tiempo para este 16 octubre 2026": "2026-10-16",
+      "el peor final disponen la quiebra de algodonera avellaneda como empresa en marcha para intentar mitigar el desastre social": "2026-10-16",
+      "precavidos se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen malas cartas": "2026-10-16",
+      "tragedia un trabajador rural murio ahogado mientras rescataba vacas de una zona de campos inundados": "2026-10-16",
+      "creditos de precision claves para financiar el negocio ganadero": "2026-10-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -4707,7 +4823,25 @@
       "cd2bd18248f87505": "2026-10-15",
       "8eb4ebff2163274b": "2026-10-15",
       "b031bf0403f4d219": "2026-10-15",
-      "2d4631c68bc86ec2": "2026-10-15"
+      "2d4631c68bc86ec2": "2026-10-15",
+      "5ef9798b3bb1a1fd": "2026-10-16",
+      "8d86952962b4d72d": "2026-10-16",
+      "7f6833f6dcd7fc52": "2026-10-16",
+      "07509454bdaf73ee": "2026-10-16",
+      "1b31466c82233df4": "2026-10-16",
+      "9863c8914d466448": "2026-10-16",
+      "a246f2ef95f6a3fc": "2026-10-16",
+      "5cfe02affdc0cf6d": "2026-10-16",
+      "c1446649950ee159": "2026-10-16",
+      "360f29c5b3fc8b5d": "2026-10-16",
+      "b319b90a2f3124d3": "2026-10-16",
+      "a9a612f999bfe9d4": "2026-10-16",
+      "8711576244550bb0": "2026-10-16",
+      "31c3ca33b4f84228": "2026-10-16",
+      "3166fe5f96268281": "2026-10-16",
+      "f9d2e2e640482874": "2026-10-16",
+      "0d3fc52e94793d44": "2026-10-16",
+      "f8cedc96cf1db951": "2026-10-16"
     }
   },
   "elegidas": [
@@ -5129,9 +5263,127 @@
           "ubicacion": null
         }
       }
+    },
+    {
+      "id": "53167412d1dd",
+      "cuando": "2026-10-16T07:00-03:00",
+      "titulo_original": "Soja “táctica”: con un 2% más de área, comienza una siembra estratégica para ganarle al “Niño”",
+      "descripcion": "Obtener kilos extras y evitar resiembras son los objetivos más importantes que se buscan con los ajustes en el manejo de la soja 2025/26. El trigo sigue mejorando su condición, pero hay una palabra que mete miedo en el sector: fusariosis.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area",
+      "titular": "Inicia la siembra de soja táctica con 2% más de área",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 90,
+        "subtema": "agro",
+        "tema": "soja y trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe clave de la BCR sobre estrategia de siembra de soja ante El Niño y estado del trigo con alerta de fusariosis en zona núcleo.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "turno": "2026-10-16T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "T1kbX4tfTBA",
+          "url": "https://youtube.com/shorts/T1kbX4tfTBA",
+          "privacidad": "public",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "9669ccd2-5db3-4ca4-ab19-f026cc09a1ef",
+          "slug": "campana-de-soja-2025-26-arranca-la-siembra-tactica-con-4-5-2b0a7d",
+          "url": "https://www.diariolacampaña.com.ar/n/campana-de-soja-2025-26-arranca-la-siembra-tactica-con-4-5-2b0a7d",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1750834279361530"
+        },
+        "instagram": {
+          "id": "18637395937037732",
+          "prueba": null,
+          "ubicacion": null
+        }
+      }
     }
   ],
   "pendientes": [
+    {
+      "id": "a6901efdd716",
+      "rep": {
+        "id": "a6901efdd716",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas/",
+        "canonical_url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas",
+        "titulo": "Precavidos: Se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen “malas cartas”",
+        "titulo_norm": "precavidos se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen malas cartas",
+        "descripcion": "Este jueves se negociaron futuros y opciones de Soja Rosario por 386.500 toneladas en A3 Mercados con movimientos que denotan una urgencia por generar coberturas de precios. Si bien los precios de los principales contratos registraron leves caídas intradiarias, los mismos siguen reflejando, en términos generales, valores sostenidos gracias a la capacidad de pago de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-15T22:25-03:00",
+        "capturado": "2026-10-16T07:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f9d2e2e640482874"
+      },
+      "grupo": [
+        {
+          "id": "a6901efdd716",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas/",
+          "canonical_url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas",
+          "titulo": "Precavidos: Se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen “malas cartas”",
+          "titulo_norm": "precavidos se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen malas cartas",
+          "descripcion": "Este jueves se negociaron futuros y opciones de Soja Rosario por 386.500 toneladas en A3 Mercados con movimientos que denotan una urgencia por generar coberturas de precios. Si bien los precios de los principales contratos registraron leves caídas intradiarias, los mismos siguen reflejando, en términos generales, valores sostenidos gracias a la capacidad de pago de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-15T22:25-03:00",
+          "capturado": "2026-10-16T07:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f9d2e2e640482874"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve volúmenes gigantescos y afecta directamente la estrategia comercial de los productores de la región pampeana.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          75,
+          75
+        ]
+      },
+      "cuando": "2026-10-16T07:00-03:00"
+    },
     {
       "id": "8a8a9cbcf6e1",
       "rep": {
@@ -5513,66 +5765,6 @@
           79,
           77
         ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "53167412d1dd",
-      "rep": {
-        "id": "53167412d1dd",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/gea",
-        "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area",
-        "canonical_url": "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area",
-        "titulo": "Soja “táctica”: con un 2% más de área, comienza una siembra estratégica para ganarle al “Niño”",
-        "titulo_norm": "soja tactica con un 2 mas de area comienza una siembra estrategica para ganarle al nino",
-        "descripcion": "Obtener kilos extras y evitar resiembras son los objetivos más importantes que se buscan con los ajustes en el manejo de la soja 2025/26. El trigo sigue mejorando su condición, pero hay una palabra que mete miedo en el sector: fusariosis.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/sup_soja.png?itok=v0Ki-764",
-        "autor": "",
-        "publicado": "2026-10-15T09:00-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2d4631c68bc86ec2"
-      },
-      "grupo": [
-        {
-          "id": "53167412d1dd",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/gea",
-          "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area",
-          "canonical_url": "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-tactica-con-un-2-mas-de-area",
-          "titulo": "Soja “táctica”: con un 2% más de área, comienza una siembra estratégica para ganarle al “Niño”",
-          "titulo_norm": "soja tactica con un 2 mas de area comienza una siembra estrategica para ganarle al nino",
-          "descripcion": "Obtener kilos extras y evitar resiembras son los objetivos más importantes que se buscan con los ajustes en el manejo de la soja 2025/26. El trigo sigue mejorando su condición, pero hay una palabra que mete miedo en el sector: fusariosis.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/sup_soja.png?itok=v0Ki-764",
-          "autor": "",
-          "publicado": "2026-10-15T09:00-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2d4631c68bc86ec2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 7,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 86,
-        "commercial_score": 90,
-        "subtema": "agro",
-        "tema": "soja y trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Informe clave de la BCR sobre estrategia de siembra de soja ante El Niño y estado del trigo con alerta de fusariosis en zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-15T20:30-03:00"
     },
@@ -6471,259 +6663,7 @@
         ]
       },
       "cuando": "2026-10-14T20:30-03:00"
-    },
-    {
-      "id": "41d5fdcfcb72",
-      "rep": {
-        "id": "41d5fdcfcb72",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/riego-solar-y-subterraneo-el-modelo-del-inta-para-elevar-rindes-y-superficie-en-campos-sin-energia-electrica/",
-        "canonical_url": "https://infocampo.com.ar/riego-solar-y-subterraneo-el-modelo-del-inta-para-elevar-rindes-y-superficie-en-campos-sin-energia-electrica",
-        "titulo": "Riego solar y subterráneo: el modelo del INTA para elevar rindes y superficie en campos sin energía eléctrica",
-        "titulo_norm": "riego solar y subterraneo el modelo del inta para elevar rindes y superficie en campos sin energia electrica",
-        "descripcion": "Estudios del INTA Manfredi muestran que, con la incorporación de paneles solares, se logra aumentar las láminas de riego aplicadas, lo que puede redundar en mayores rindes y la siembra de más hectáreas con la misma cantidad de agua.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/energia-solar-4-2-1536x1037-1.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-14T10:57-03:00",
-        "capturado": "2026-10-14T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9041c18803a41e80"
-      },
-      "grupo": [
-        {
-          "id": "41d5fdcfcb72",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/riego-solar-y-subterraneo-el-modelo-del-inta-para-elevar-rindes-y-superficie-en-campos-sin-energia-electrica/",
-          "canonical_url": "https://infocampo.com.ar/riego-solar-y-subterraneo-el-modelo-del-inta-para-elevar-rindes-y-superficie-en-campos-sin-energia-electrica",
-          "titulo": "Riego solar y subterráneo: el modelo del INTA para elevar rindes y superficie en campos sin energía eléctrica",
-          "titulo_norm": "riego solar y subterraneo el modelo del inta para elevar rindes y superficie en campos sin energia electrica",
-          "descripcion": "Estudios del INTA Manfredi muestran que, con la incorporación de paneles solares, se logra aumentar las láminas de riego aplicadas, lo que puede redundar en mayores rindes y la siembra de más hectáreas con la misma cantidad de agua.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/energia-solar-4-2-1536x1037-1.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-14T10:57-03:00",
-          "capturado": "2026-10-14T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9041c18803a41e80"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 13,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 86,
-        "commercial_score": 85,
-        "subtema": "agtech",
-        "tema": "riego solar",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente combinación de tecnología solar y riego de alto impacto para zonas productivas.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-14T12:30-03:00"
-    },
-    {
-      "id": "bdf476bd1b82",
-      "rep": {
-        "id": "bdf476bd1b82",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-gusano-cogollero-ya-esta-haciendo-de-las-suyas-en-los-maices-tempranos-alertan-por-ataques-y-recomiendan-intervenir-antes-de-que-sea-tarde/",
-        "canonical_url": "https://bichosdecampo.com/el-gusano-cogollero-ya-esta-haciendo-de-las-suyas-en-los-maices-tempranos-alertan-por-ataques-y-recomiendan-intervenir-antes-de-que-sea-tarde",
-        "titulo": "El gusano cogollero ya está haciendo de las suyas en los maíces tempranos: Alertan por ataques y recomiendan intervenir antes de que sea tarde",
-        "titulo_norm": "el gusano cogollero ya esta haciendo de las suyas en los maices tempranos alertan por ataques y recomiendan intervenir antes de que sea tarde",
-        "descripcion": "El gusano cogollero, una de las principales plagas que afectan al cultivo de maíz, comenzó a generar preocupación en los lotes de siembra temprana. El programa Manejo de Resistencia de Insectos (MRI) advirtió que recibió alertas por la presencia de Spodoptera frugiperda, que ya está provocando daños en las primeras etapas de crecimiento de las […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/03/gusano-cogollero-bichos-de-campo.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-14T11:40-03:00",
-        "capturado": "2026-10-14T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1a28ec3eebb52335"
-      },
-      "grupo": [
-        {
-          "id": "bdf476bd1b82",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-gusano-cogollero-ya-esta-haciendo-de-las-suyas-en-los-maices-tempranos-alertan-por-ataques-y-recomiendan-intervenir-antes-de-que-sea-tarde/",
-          "canonical_url": "https://bichosdecampo.com/el-gusano-cogollero-ya-esta-haciendo-de-las-suyas-en-los-maices-tempranos-alertan-por-ataques-y-recomiendan-intervenir-antes-de-que-sea-tarde",
-          "titulo": "El gusano cogollero ya está haciendo de las suyas en los maíces tempranos: Alertan por ataques y recomiendan intervenir antes de que sea tarde",
-          "titulo_norm": "el gusano cogollero ya esta haciendo de las suyas en los maices tempranos alertan por ataques y recomiendan intervenir antes de que sea tarde",
-          "descripcion": "El gusano cogollero, una de las principales plagas que afectan al cultivo de maíz, comenzó a generar preocupación en los lotes de siembra temprana. El programa Manejo de Resistencia de Insectos (MRI) advirtió que recibió alertas por la presencia de Spodoptera frugiperda, que ya está provocando daños en las primeras etapas de crecimiento de las […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/03/gusano-cogollero-bichos-de-campo.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-14T11:40-03:00",
-          "capturado": "2026-10-14T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1a28ec3eebb52335"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 15,
-        "innovacion": 6,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 80,
-        "commercial_score": 86,
-        "subtema": "agro",
-        "tema": "maiz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Alerta fitosanitaria clave y urgente para los maíces tempranos en la región núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          82,
-          79
-        ]
-      },
-      "cuando": "2026-10-14T12:30-03:00"
-    },
-    {
-      "id": "97316c06eb8a",
-      "rep": {
-        "id": "97316c06eb8a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/hay-muchos-jovenes-que-entran-para-ganar-plata-y-es-muy-peligroso-la-incomoda-advertencia-de-un-experto-irlandes-sobre-el-boom-de-la-pulverizacion-con-drones/",
-        "canonical_url": "https://bichosdecampo.com/hay-muchos-jovenes-que-entran-para-ganar-plata-y-es-muy-peligroso-la-incomoda-advertencia-de-un-experto-irlandes-sobre-el-boom-de-la-pulverizacion-con-drones",
-        "titulo": "“Hay muchos jóvenes que entran para ganar plata, y es muy peligroso”: La incómoda advertencia de un experto irlandés sobre el boom de la pulverización con drones",
-        "titulo_norm": "hay muchos jovenes que entran para ganar plata y es muy peligroso la incomoda advertencia de un experto irlandes sobre el boom de la pulverizacion con drones",
-        "descripcion": "Alan McCracken se especializa en aplicaciones agrícolas desde mucho antes de que alguien imaginara que un dron podía sobrevolar un lote cargado con fitosanitarios. El experto irlandés trabaja vinculado al agro argentino desde 1973 y, medio siglo después, lo sigue haciendo cada vez que lo convocan para discutir algunos de los cambios más importantes en […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/04/Agrosinergia-drones-2-e1777306872611.jpeg",
-        "autor": "Lucas Torsiglieri",
-        "publicado": "2026-10-14T10:05-03:00",
-        "capturado": "2026-10-14T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "70216ce867918d18"
-      },
-      "grupo": [
-        {
-          "id": "97316c06eb8a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/hay-muchos-jovenes-que-entran-para-ganar-plata-y-es-muy-peligroso-la-incomoda-advertencia-de-un-experto-irlandes-sobre-el-boom-de-la-pulverizacion-con-drones/",
-          "canonical_url": "https://bichosdecampo.com/hay-muchos-jovenes-que-entran-para-ganar-plata-y-es-muy-peligroso-la-incomoda-advertencia-de-un-experto-irlandes-sobre-el-boom-de-la-pulverizacion-con-drones",
-          "titulo": "“Hay muchos jóvenes que entran para ganar plata, y es muy peligroso”: La incómoda advertencia de un experto irlandés sobre el boom de la pulverización con drones",
-          "titulo_norm": "hay muchos jovenes que entran para ganar plata y es muy peligroso la incomoda advertencia de un experto irlandes sobre el boom de la pulverizacion con drones",
-          "descripcion": "Alan McCracken se especializa en aplicaciones agrícolas desde mucho antes de que alguien imaginara que un dron podía sobrevolar un lote cargado con fitosanitarios. El experto irlandés trabaja vinculado al agro argentino desde 1973 y, medio siglo después, lo sigue haciendo cada vez que lo convocan para discutir algunos de los cambios más importantes en […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/04/Agrosinergia-drones-2-e1777306872611.jpeg",
-          "autor": "Lucas Torsiglieri",
-          "publicado": "2026-10-14T10:05-03:00",
-          "capturado": "2026-10-14T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "70216ce867918d18"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 14,
-        "innovacion": 13,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 82,
-        "commercial_score": 86,
-        "subtema": "agtech",
-        "tema": "drones",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Fuerte advertencia tecnológica sobre pulverización con drones, ideal para contratistas y asesores.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          84,
-          82
-        ]
-      },
-      "cuando": "2026-10-14T12:30-03:00"
-    },
-    {
-      "id": "98429de7eb18",
-      "rep": {
-        "id": "98429de7eb18",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/caminos-rurales-productores-de-rojas-fueron-a-la-justicia-para-saber-que-paso-con-los-1-500-millones-de-pesos-de-la-tasa-vial-y-piden-que-se-privatice-la-gestion-de-la-red/",
-        "canonical_url": "https://bichosdecampo.com/caminos-rurales-productores-de-rojas-fueron-a-la-justicia-para-saber-que-paso-con-los-1-500-millones-de-pesos-de-la-tasa-vial-y-piden-que-se-privatice-la-gestion-de-la-red",
-        "titulo": "Caminos rurales: productores de Rojas fueron a la Justicia para saber qué pasó con los 1.500 millones de pesos de la tasa vial y piden que se privatice la gestión de la red",
-        "titulo_norm": "caminos rurales productores de rojas fueron a la justicia para saber que paso con los 1 500 millones de pesos de la tasa vial y piden que se privatice la gestion de la red",
-        "descripcion": "La discusión por el estado de los caminos rurales bonaerenses no pasa solamente por las máquinas disponibles o por la capacidad de los municipios para hacer los trabajos. Para Alberto del Solar, productor de Rojas y vicepresidente de la Sociedad Rural local, el problema central está en el destino de los fondos que pagan los […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/del-solar.png",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-14T08:06-03:00",
-        "capturado": "2026-10-14T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "86314aa99aa66233"
-      },
-      "grupo": [
-        {
-          "id": "98429de7eb18",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/caminos-rurales-productores-de-rojas-fueron-a-la-justicia-para-saber-que-paso-con-los-1-500-millones-de-pesos-de-la-tasa-vial-y-piden-que-se-privatice-la-gestion-de-la-red/",
-          "canonical_url": "https://bichosdecampo.com/caminos-rurales-productores-de-rojas-fueron-a-la-justicia-para-saber-que-paso-con-los-1-500-millones-de-pesos-de-la-tasa-vial-y-piden-que-se-privatice-la-gestion-de-la-red",
-          "titulo": "Caminos rurales: productores de Rojas fueron a la Justicia para saber qué pasó con los 1.500 millones de pesos de la tasa vial y piden que se privatice la gestión de la red",
-          "titulo_norm": "caminos rurales productores de rojas fueron a la justicia para saber que paso con los 1 500 millones de pesos de la tasa vial y piden que se privatice la gestion de la red",
-          "descripcion": "La discusión por el estado de los caminos rurales bonaerenses no pasa solamente por las máquinas disponibles o por la capacidad de los municipios para hacer los trabajos. Para Alberto del Solar, productor de Rojas y vicepresidente de la Sociedad Rural local, el problema central está en el destino de los fondos que pagan los […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/del-solar.png",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-14T08:06-03:00",
-          "capturado": "2026-10-14T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "86314aa99aa66233"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 75,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "caminos rurales",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Toca un problema histórico y crítico para sacar la cosecha en la provincia de Buenos Aires.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          77,
-          70
-        ]
-      },
-      "cuando": "2026-10-14T12:30-03:00"
     }
   ],
-  "actualizado": "2026-10-15T20:34:20-03:00"
+  "actualizado": "2026-10-16T07:04:26-03:00"
 }
