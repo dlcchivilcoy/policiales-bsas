@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-16T02:41:51.000Z",
+  "actualizado": "2026-10-16T12:42:00.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/346495-chacabuco-detuvieron-a-un-hombre-que-estaba-profug",
@@ -898,6 +898,50 @@
       "localidad": "Chacabuco",
       "volanta": "Chacabuco",
       "categoria": "accidente_vial",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diarioelsalado.com.ar/2026/10/trasladaron-a-una-unidad-carcelaria-al-detenido-en-alberti-por-el-homicidio-de-una-bebe-durante-una-persecucion/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-16T12:42:00.000Z",
+      "titulo": "Alberti: trasladaron a la cárcel a un detenido por el crimen de una bebé",
+      "descripcion": "Diego José Aquino, de 35 años, fue derivado a la Unidad Carcelaria N.º 2 de Sierra Chica en el marco de la causa por el raid delictivo de marzo de 2025 que terminó con la muerte de una niña de 11 meses en Pablo Nogués.",
+      "texto_tiktok": "El detenido Diego José Aquino, de 35 años, fue trasladado a la Unidad Carcelaria N.º 2 de Sierra Chica por disposición judicial.\n\nEl sujeto había sido capturado por efectivos del CPR Alberti durante un control de rutina en el camino real a Bragado, donde se constató que tenía pedido de captura.\n\nLa medida judicial se inscribe en la causa por el violento raid delictivo de marzo de 2025 que culminó con el trágico fallecimiento de una niña en Pablo Nogués y dejó cuatro detenidos.\n\n📲 Más noticias de Alberti en www.diariolacampaña.com.ar\n\n#Alberti #Policiales #Homicidio #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-16_1209_02_alberti_alberti-trasladaron-a-la-c-rce.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/alberti-trasladaron-a-una-unidad-carcelaria-al-detenido-por-el-f6073d",
+      "youtube_url": "https://youtube.com/shorts/NNUg4jN_Vso",
+      "prioridad": 9,
+      "urgente": true,
+      "localidad": "Alberti",
+      "volanta": "Alberti",
+      "categoria": "homicidio",
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/10/16/26369-dos-menores-fueron-aprehendidos-tras-amenazar-a-una-mujer-con-un-arma-de-juguete-en-el-hospital-san-luis",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-16T12:42:00.000Z",
+      "titulo": "Dos menores aprehendidos por amenazar a una mujer con un arma de juguete",
+      "descripcion": "Fueron demorados tras intimidar a una vecina frente al Hospital Municipal San Luis con un pistolón falso. Intervino la fiscalía de Mercedes.",
+      "texto_tiktok": "Dos adolescentes fueron demorados por la policía tras intimidar a una mujer frente al Hospital Municipal San Luis.\n\nEl episodio ocurrió en la esquina de las calles Hermanos Islas y Moreno durante la tarde del jueves 15 de octubre de 2026.\n\nLos efectivos comprobaron que el elemento intimidatorio era un juguete y la fiscalía ordenó la entrega de los jóvenes a sus padres.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Policiales #Seguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-16_1209_03_bragado_dos-menores-aprehendidos-por-a.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-dos-menores-aprehendidos-por-amenazar-a-una-mujer-con-2582f0",
+      "youtube_url": "https://youtube.com/shorts/0gvPEEc9F8Y",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Bragado",
+      "categoria": "operativo_policial",
       "plataformas": [
         "x",
         "tiktok"
