@@ -723,6 +723,10 @@ _pend = [_cand("g", "ganaderia", 77), _cand("m", "mercados", 76)]
 chequear("13:00 del 17/10: con solo ganadería y mercados pendientes y su tope lleno, el horario no queda vacío",
          SE.elegir(_pend, _hoy6)[0] == [] and SE.elegir(_pend, _hoy6, relajar=True)[0][0]["id"] == "g")
 chequear("topes de la mezcla hacia arriba (6 por día: 2 de mercados)", SE.topes(6)["mercados"] == 2)
+_hoy_tema = [{"score": dict(SC.limpiar({"subtema": "ganaderia"}), tema="trazabilidad bovina")}]
+chequear("relajado, nunca entra otra del mismo tema que algo de hoy",
+         SE.elegir([dict(_cand("t", "ganaderia", 80), score=dict(_cand("t", "ganaderia", 80)["score"], tema="trazabilidad bovina"))],
+                   _hoy_tema, relajar=True)[0] == [])
 
 # --- datos: granos, dólar, Chicago, clima y alertas (sin red) -------------------------------------
 from agro import mercado as M  # noqa: E402

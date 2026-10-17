@@ -280,6 +280,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         pool = [x for x in candidatos if x["id"] not in probadas and all(x["id"] != y["id"] for y in cola)]
         nuevo, _ = SE.elegir(pool, ocupados, formato=formato)
         if not nuevo:
+            nuevo, _ = SE.elegir(pool, ocupados, formato=formato, relajar=True)
+        if not nuevo:
             return
         reemplazos += 1
         cola.append(nuevo[0])

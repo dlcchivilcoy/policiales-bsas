@@ -137,7 +137,8 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     for c in reserva:
         s = c["score"]
-        if lugar > 0 and s["ai_score"] >= minimo + (0 if relajar else REFUERZO)                 and temas.get(s.get("tema"), 0) < MAX_MISMO_TEMA:
+        # Relajado, nunca el mismo tema que algo de hoy (la misma noticia contada por otro medio).
+        if lugar > 0 and s["ai_score"] >= minimo + (0 if relajar else REFUERZO)                 and temas.get(s.get("tema"), 0) < (1 if relajar else MAX_MISMO_TEMA):
             elegidos.append(c)
             lugar -= 1
             if s.get("tema"):
