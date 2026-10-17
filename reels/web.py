@@ -101,9 +101,11 @@ def armar_borrador(pieza: dict, file_id: str = "", youtube_id: str = "",
     parrafos = [p.strip() for p in re.split(r"\n\s*\n", web.get("cuerpo") or "") if p.strip()]
     nodos = []
     if file_id:
+        # Texto alternativo (17/10/2026, PDF «Prompt integral» §28): el titular describe lo que
+        # muestra la foto o la placa; lo leen los lectores de pantalla y Google Imágenes.
         nodos.append({"type": "IMAGE", "id": "img0", "nodes": [], "imageData": {
             "containerData": {"width": {"size": "CONTENT"}, "alignment": "CENTER"},
-            "image": {"src": {"id": file_id}}}})
+            "image": {"src": {"id": file_id}}, "altText": titulo[:125]}})
     if youtube_id:
         # La web reconoce el video por «v=<id>» en la URL (diario_web/src/lib/wix.js).
         nodos.append({"type": "VIDEO", "id": f"yt-{youtube_id}", "nodes": [], "videoData": {

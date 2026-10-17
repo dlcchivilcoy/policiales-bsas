@@ -32,6 +32,14 @@ piezas salgan con tu marca y no con un diseño inventado.
 >   la página. `INTERCALADO=0` lo apaga; `MIN_NON_POLICE_POSTS_BETWEEN_POLICE` (1). X y TikTok: el
 >   mismo criterio en el distribuidor de social_publisher.
 >
+> **17/10, etapa 5 (notas web y Shorts):** el Short lleva el link a SU nota (`/n/slug`, se sabe antes
+> de crearla; si la nota no sale, `yt_cambiar_snippet` le saca el link). Un Short recién subido
+> queda «uploaded» y en la pasada siguiente `verificar_shorts` pregunta a YouTube (videos.list,
+> 1 unidad cada 50): processed → `verificado`; rejected/failed/borrado → estado «rechazado» (no
+> cuenta como publicado y no se resube solo). Lo mismo para los Shorts de nacionales. La foto de la
+> nota web lleva texto alternativo (el titular). Verificado contra el canal el 17/10: 28 de 28
+> procesados y públicos.
+>
 > **10/10:** Instagram pasa a reel NORMAL al feed, hasta 5 por pasada, los más virales (igual
 > que Facebook). Y el guion lee el texto COMPLETO de la nota y lista sus datos clave (nombres,
 > edades, lugares, vehículos, cifras): si alguno no aparece en lo publicado, se le pide de nuevo

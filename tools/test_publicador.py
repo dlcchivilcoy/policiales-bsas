@@ -129,6 +129,8 @@ class Meta:
         self.fb_posteos = []              # lo último de la página (intercalado, 17/10/2026)
         self.yt_miniatura = yt_miniatura  # status de thumbnails.set
         self.yt_miniaturas = []           # (videoId, tipo, bytes) de cada miniatura puesta
+        self.yt_estado = {}               # id → uploadStatus que contesta videos.list («borrado» = no existe)
+        self.yt_cambios = []              # cada videos.update (cambio de descripción)
 
     def _youtube(self, req, host, ruta, m):
         if host == "oauth2.googleapis.com":
@@ -140,6 +142,15 @@ class Meta:
             return httpx.Response(200, json={"items": [
                 {"snippet": {"publishedAt": c, "title": t, "description": d}}
                 for c, t, d in self.yt_recientes]})
+        if ruta == "/youtube/v3/videos" and m == "GET":       # verificar_shorts (17/10/2026)
+            ids = req.url.params.get("id", "").split(",")
+            return httpx.Response(200, json={"items": [
+                {"id": i, "status": {"uploadStatus": self.yt_estado.get(i, "processed"), "privacyStatus": "public",
+                                     **({"rejectionReason": "duplicate"} if self.yt_estado.get(i) == "rejected" else {})}}
+                for i in ids if i in self.yt_videos.values() and self.yt_estado.get(i) != "borrado"]})
+        if ruta == "/youtube/v3/videos" and m == "PUT":
+            self.yt_cambios.append(json.loads(req.content))
+            return httpx.Response(200, json={"id": "x"})
         if ruta == "/upload/youtube/v3/thumbnails/set" and m == "POST":
             if self.yt_miniatura >= 400:
                 return httpx.Response(self.yt_miniatura, json={"error": {"code": self.yt_miniatura,
@@ -356,7 +367,11 @@ chequear("el lote queda marcado como publicado",
 # --- 3. Correrlo de nuevo no repite nada --------------------------------------
 antes = len(meta.pedidos)
 inf2 = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("segunda pasada sobre la misma tanda: cero pedidos a Meta", len(meta.pedidos) == antes)
+chequear("segunda pasada sobre la misma tanda: cero pedidos a Meta (a YouTube, solo la consulta de "
+         "si terminó de procesar los Shorts)",
+         [r.url.path for r in meta.pedidos[antes:] if r.url.host.endswith("googleapis.com")
+          and r.url.path not in ("/token", "/youtube/v3/channels")] == ["/youtube/v3/videos"]
+         and not [r for r in meta.pedidos[antes:] if not r.url.host.endswith("googleapis.com")])
 chequear("segunda pasada: las dos figuran como ya publicadas",
          all(f.get("resultado") == "ya estaba publicada" for f in inf2["piezas"]))
 shutil.rmtree(base)
@@ -447,8 +462,11 @@ chequear("la pieza sin lugar en YouTube sale igual en Instagram y Facebook",
          inf["piezas"][1]["instagram"]["estado"] == "ok" and inf["piezas"][1]["facebook"]["estado"] == "ok")
 antes = len(meta.pedidos)
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("otra pasada el mismo dia: el tope cuenta lo ya subido y no sube nada",
-         len(meta.pedidos) == antes and inf["piezas"][1].get("youtube", {}).get("estado") == "cupo")
+chequear("otra pasada el mismo dia: el tope cuenta lo ya subido y no sube nada (solo consulta si el "
+         "Short anterior terminó de procesarse)",
+         {r.url.path for r in meta.pedidos[antes:]} <= {"/token", "/youtube/v3/channels", "/youtube/v3/videos"}
+         and not any(r.method != "GET" and r.url.path != "/token" for r in meta.pedidos[antes:])
+         and inf["piezas"][1].get("youtube", {}).get("estado") == "cupo")
 reloj.t += timedelta(days=1)
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("al dia siguiente el tope se renueva y sube la que habia quedado",
@@ -583,6 +601,9 @@ chequear("web: no se destaca", b1["featured"] is False)
 tipos = [n["type"] for n in b1["richContent"]["nodes"]]
 chequear("web: foto, el Short de YouTube y el texto",
          tipos[:2] == ["IMAGE", "VIDEO"] and tipos.count("PARAGRAPH") == 2)
+chequear("web: la foto lleva texto alternativo (el titular, 17/10/2026)",
+         b1["richContent"]["nodes"][0]["type"] == "IMAGE"
+         and b1["richContent"]["nodes"][0]["imageData"]["altText"] == b1["title"][:125])
 chequear("web: el Short va como watch?v= (lo único que muestra la web)",
          b1["richContent"]["nodes"][1]["videoData"]["video"]["src"]["url"] == "https://www.youtube.com/watch?v=YT1")
 cuerpo_web = json.dumps(b1["richContent"], ensure_ascii=False)
@@ -591,9 +612,12 @@ chequear("web: SIN la fuente ni el link a la nota original (pedido del editor, 0
          and "medio.test" not in cuerpo_web)
 chequear("Facebook: el posteo lleva el link a la nota",
          meta.fb_finish[0]["description"].count("📲 Nota completa: https://www.diariolacampaña.com.ar/n/") == 1)
-chequear("Instagram y YouTube NO cambian su texto (el link es para Facebook)",
-         "Nota completa" not in meta.contenedores[0].get("caption", "")
-         and "Nota completa" not in meta.yt_inicios[0]["snippet"]["description"])
+chequear("Instagram NO cambia su texto (no hay links en Instagram)",
+         "Nota completa" not in meta.contenedores[0].get("caption", ""))
+chequear("el Short lleva el link a SU nota (17/10/2026, PDF §29)",
+         meta.yt_inicios[0]["snippet"]["description"].count("📲 Nota completa: https://www.diariolacampaña.com.ar/n/") == 1
+         and meta.yt_inicios[0]["snippet"]["description"].split("📲 Nota completa: ")[1].split()[0]
+         in meta.fb_finish[0]["description"])
 orden_pedidos = [r.url.path for r in meta.pedidos]
 i_yt = next(i for i, x in enumerate(orden_pedidos) if x == "/upload/youtube/v3/videos")
 i_web = orden_pedidos.index("/blog/v3/draft-posts")
@@ -1320,6 +1344,37 @@ chequear("...y el enlace del Short del 3.º tampoco (también es un policial en 
 shutil.rmtree(base)
 
 os.environ["INTERCALADO"] = "0"
+
+# --- 32. Shorts: estado real y link a la nota (17/10/2026, PDF «Prompt integral» §29) -------------
+base, carpeta, reloj, meta = preparar()
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+ledger = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+yt1 = ledger["https://medio.test/1"]["youtube"]
+chequear("recién subido: queda «uploaded», sin verificar todavía",
+         yt1.get("subida") == "uploaded" and not yt1.get("verificado"))
+meta.yt_estado = {"YT1": "processed", "YT2": "rejected"}
+reloj.t += timedelta(minutes=30)
+silencio(PUB.publicar_lote, carpeta, ("youtube",), publicar=True)
+ledger = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+chequear("en la pasada siguiente: el procesado queda verificado",
+         ledger["https://medio.test/1"]["youtube"].get("verificado") == "procesado")
+chequear("...y el rechazado deja de contar como publicado, con el motivo, y no se resube solo",
+         ledger["https://medio.test/2"]["youtube"]["estado"] == "rechazado"
+         and "rejected (duplicate)" in ledger["https://medio.test/2"]["youtube"]["detalle"]
+         and len(meta.yt_videos) == 2)
+regs = {"a": {"youtube": {"estado": "ok", "id": "YT1"}}, "b": {"youtube": {"estado": "ok", "id": "NOESTA"}}}
+PUB.verificar_shorts(regs)
+chequear("un Short que ya no existe en el canal también se marca", regs["b"]["youtube"]["verificado"] == "no_existe")
+shutil.rmtree(base)
+
+os.environ["NOTAS_WEB"] = "1"
+base, carpeta, reloj, meta = preparar(Meta(wix_falla="borrador"))
+inf = silencio(PUB.publicar_lote, carpeta, ("youtube", "facebook"), publicar=True)
+chequear("si la nota de la web no sale, al Short se le saca el link (no queda roto)",
+         meta.yt_cambios and "Nota completa" not in meta.yt_cambios[0]["snippet"]["description"]
+         and inf["piezas"][0]["youtube"].get("descripcion") == "sin link: la nota no salió")
+shutil.rmtree(base)
+os.environ["NOTAS_WEB"] = "0"
 chequear("INTERCALADO=0 lo apaga", PUB.intercalado_libre("instagram", {}) == (True, ""))
 PUB.INT.cuando_local = _cuando_real
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"

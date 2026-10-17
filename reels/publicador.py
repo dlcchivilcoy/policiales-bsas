@@ -675,12 +675,24 @@ def _yt_sesion() -> str:
     return acceso
 
 
+def yt_cambiar_snippet(video_id: str, meta: dict) -> dict:
+    """Cambia título/descripción de un Short ya subido (videos.update, 50 unidades)."""
+    acceso = _yt_sesion()
+    r = _pedir("PUT", f"{YT_API}/videos", acceso, params={"part": "snippet"},
+               json={"id": video_id, "snippet": meta["snippet"]})
+    if r.status_code >= 400:
+        raise FalloRed(_yt_error(r, "YouTube (cambiar la descripción)"))
+    return {}
+
+
 def _sin_angulos(texto: str) -> str:
     # YouTube rechaza el video entero si el titulo o la descripcion tienen < o >.
     return (texto or "").replace("<", "‹").replace(">", "›")
 
 
-def metadatos_youtube(pieza: dict) -> dict:
+def metadatos_youtube(pieza: dict, url_web: str = "") -> dict:
+    """`url_web`: la nota de la web de este hecho (17/10/2026, PDF «Prompt integral» §29: el Short
+    lleva a su nota). Sin ella, la línea genérica «Más noticias de X en www…»."""
     g = pieza.get("guion") or {}
     # El pueblo del HECHO, no el del medio que lo publicó: el 27/09 salió «Fuertes
     # tormentas y caída de granizo afectaron a Bragado | 9 de Julio».
@@ -693,7 +705,7 @@ def metadatos_youtube(pieza: dict) -> dict:
     titulo = _sin_angulos(titulo)
     if len(titulo) > 100:                                   # tope duro de YouTube
         titulo = titulo[:99].rstrip() + "…"
-    desc = _sin_angulos(texto_del_posteo(pieza, "youtube"))
+    desc = _sin_angulos(texto_del_posteo(pieza, "youtube", url_web))
     if "#shorts" not in desc.lower():
         desc = f"{desc}\n\n#Shorts"
     etiquetas, vistas = [], set()
@@ -715,7 +727,10 @@ def metadatos_youtube(pieza: dict) -> dict:
 def _yt_listo(v: dict) -> dict:
     vid = v["id"]
     privacidad = (v.get("status") or {}).get("privacyStatus")
-    info = {"id": vid, "url": f"https://youtube.com/shorts/{vid}", "privacidad": privacidad}
+    info = {"id": vid, "url": f"https://youtube.com/shorts/{vid}", "privacidad": privacidad,
+            # Recién SUBIDO: YouTube todavía lo procesa. Se confirma en la pasada siguiente
+            # (verificar_shorts); hasta entonces no se da por visto en el canal.
+            "subida": (v.get("status") or {}).get("uploadStatus") or "uploaded"}
     if privacidad and privacidad != "public":
         # Pasa si el proyecto de Google pierde la condicion que hoy deja subir publico.
         info["aviso"] = f"YouTube lo dejo {privacidad}, no publico"
@@ -723,6 +738,81 @@ def _yt_listo(v: dict) -> dict:
 
 
 YT_MINIATURA = "https://www.googleapis.com/upload/youtube/v3/thumbnails/set"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ¿El Short quedó de verdad en el canal? (17/10/2026, PDF «Prompt integral» §29: «un archivo
+# subido, privado o en procesamiento todavía no debe declararse publicado»)
+# ─────────────────────────────────────────────────────────────────────────────
+HORAS_VERIFICAR_SHORTS = 48
+
+
+def estado_shorts(ids: list):
+    """{id: {subida, privacidad, motivo}} por videos.list (1 unidad cada 50 videos), o None si
+    YouTube no contestó. Un id que no vuelve es un video que ya no existe."""
+    if not ids:
+        return {}
+    acceso = _yt_sesion()
+    out = {}
+    for i in range(0, len(ids), 50):
+        tanda = ids[i:i + 50]
+        try:
+            r = _pedir("GET", f"{YT_API}/videos", acceso, params={"part": "status", "id": ",".join(tanda)})
+        except _Cortado:
+            return None
+        if r.status_code >= 400:
+            return None
+        for v in (r.json() or {}).get("items") or []:
+            st = v.get("status") or {}
+            out[v.get("id")] = {"subida": st.get("uploadStatus"), "privacidad": st.get("privacyStatus"),
+                                "motivo": st.get("rejectionReason") or st.get("failureReason") or ""}
+        for vid in tanda:
+            out.setdefault(vid, {"subida": "no_existe"})
+    return out
+
+
+def verificar_shorts(registros: dict, horas: int = HORAS_VERIFICAR_SHORTS) -> list:
+    """Confirma los Shorts que todavía no se verificaron (`registros`: {clave: {"youtube": {...}}},
+    la memoria de policiales o la de nacionales). processed → «verificado»; rejected, failed,
+    deleted o inexistente → deja de contar como publicado (estado «rechazado», con el motivo; no se
+    resube solo).
+    Si YouTube sigue procesando, se mira en la pasada siguiente. Devuelve los avisos."""
+    pendientes = {}
+    for e in registros.values():
+        yt = e.get("youtube") if isinstance(e, dict) else None
+        if not (isinstance(yt, dict) and yt.get("estado") == "ok" and yt.get("id") and not yt.get("verificado")):
+            continue
+        cuando = _hora(yt.get("cuando"))
+        # La memoria de nacionales guarda la hora con zona; la de policiales, sin zona.
+        ahora = datetime.now(cuando.tzinfo) if cuando and cuando.tzinfo else _ahora()
+        if cuando and ahora - cuando > timedelta(hours=horas):
+            continue
+        pendientes[str(yt["id"])] = yt
+    if not pendientes:
+        return []
+    try:
+        estados = estado_shorts(list(pendientes))
+    except FalloRed:
+        return []
+    if estados is None:
+        return []
+    avisos = []
+    for vid, yt in pendientes.items():
+        st = estados.get(vid) or {}
+        subida = st.get("subida")
+        yt["privacidad"] = st.get("privacidad") or yt.get("privacidad")
+        if subida == "processed":
+            yt["verificado"] = "procesado"
+            if st.get("privacidad") != "public":
+                yt["aviso"] = f"YouTube lo dejó {st.get('privacidad')}, no público"
+                avisos.append(f"Short {vid}: {yt['aviso']}")
+        elif subida in ("rejected", "failed", "deleted", "no_existe"):
+            # «rechazado»: no cuenta como publicado, pero tampoco se vuelve a subir a ciegas (un
+            # duplicado o una infracción volverían a rebotar). Queda a la vista para revisarlo.
+            yt.update(estado="rechazado", verificado=subida,
+                      detalle=f"YouTube: {subida}" + (f" ({st['motivo']})" if st.get("motivo") else ""))
+            avisos.append(f"Short {vid}: {yt['detalle']}")
+    return avisos
 
 
 def _portada(pieza: dict, mp4: Path):
@@ -854,8 +944,9 @@ def _subir_youtube(pieza: dict, mp4: Path, meta: dict = None) -> dict:
 
 def texto_del_posteo(pieza: dict, red: str, url_web: str = "") -> str:
     texto = (pieza.get("descripcion_tiktok") or "").strip()
-    if red == "facebook" and url_web:
-        # Pedido del editor (27/09): el posteo de Facebook lleva a la NOTA de la web. La
+    if red in ("facebook", "youtube") and url_web:
+        # Pedido del editor (27/09): el posteo de Facebook lleva a la NOTA de la web (y el Short
+        # también, desde el 17/10/2026). La
         # línea genérica «📲 Más noticias de X en www…» pasa a ser el link a esta nota;
         # si no estaba, el link va antes de los hashtags.
         linea = f"📲 Nota completa: {url_web}"
@@ -1347,7 +1438,7 @@ def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
 
 def _falta(p: dict, ledger: dict) -> bool:
     hecho = ledger.get(_clave(p)) or {}
-    return any((hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar")
+    return any((hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar", "rechazado")
                for r in ("instagram", "facebook", "youtube"))
 
 
@@ -1572,6 +1663,13 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     lote = json.loads((carpeta / "_lote.json").read_text(encoding="utf-8"))
     listas, salteadas = elegibles(lote, carpeta)
     ledger = cargar_ledger()
+    # Los Shorts de las pasadas anteriores: ¿YouTube los terminó de procesar? (17/10/2026)
+    if publicar and "youtube" in redes:
+        antes = json.dumps(ledger, sort_keys=True, default=str)
+        for aviso in verificar_shorts(ledger):
+            print(f"  ⚠ {aviso}")
+        if json.dumps(ledger, sort_keys=True, default=str) != antes:
+            guardar_ledger(ledger)
     # El RELEVAMIENTO (12/10/2026): un hecho que ya salió —contado por otro medio, con otras
     # palabras— no se vuelve a subir a NINGUNA red. Se decide antes de repartir los cupos.
     # Radio de 100 km desde Chivilcoy (17/10/2026): antes que nada, porque lo lejano no compite.
@@ -1656,7 +1754,7 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         clave = _clave(pieza)
         hecho = ledger.get(clave) or {}
         pendientes = [r for r in redes
-                      if (hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar")]
+                      if (hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar", "rechazado")]
         g = pieza.get("guion") or {}
         pueblo = _pueblo(pieza.get("localidad") or "")
         fila = {"orden": pieza.get("orden"), "localidad": pueblo, "titular": g.get("titular")}
@@ -1744,6 +1842,13 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 res = _paso_web(pieza, mp4, carpeta, fila, hecho, publicar)
                 if res.get("estado") in ("ok", "simulado"):
                     url_web = res.get("url") or ""
+                elif publicar and (fila.get("youtube") or {}).get("link_nota"):
+                    # La nota no salió: el Short no puede quedar con un link roto.
+                    cambio = _intentar(yt_cambiar_snippet, fila["youtube"]["id"], metadatos_youtube(pieza))
+                    fila["youtube"]["link_nota"] = ""
+                    fila["youtube"]["descripcion"] = ("sin link: la nota no salió" if cambio.get("estado") == "ok"
+                                                      else f"quedó con el link a una nota que no salió: "
+                                                           f"{cambio.get('detalle')}")
             elif red == "fb_youtube":
                 yt = fila.get("youtube") if "youtube" in fila else hecho.get("youtube")
                 url_yt = (yt or {}).get("url") or ""
@@ -1788,9 +1893,15 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                     continue
                 res = _publicar_red(red, pieza, mp4, carpeta, url_web)
             elif red == "youtube":
-                res = _intentar(publicar_youtube, pieza, mp4)
+                # El Short sale con el link de SU nota (17/10/2026): la que ya está o la que se crea
+                # en esta misma vuelta (el slug se sabe antes). Si la nota no sale, se le saca.
+                url_yt_nota = ((hecho.get("web") or {}).get("url")
+                               or (WEB.link(WEB.slug_de(pieza)) if falta_web else ""))
+                res = _intentar(publicar_youtube, pieza, mp4, metadatos_youtube(pieza, url_yt_nota))
                 if res.pop("sin_cupo", False):
                     _yt_sin_cupo = True
+                if url_yt_nota and res.get("estado") == "ok":
+                    res["link_nota"] = url_yt_nota
             else:                                   # nunca un "else" que publique en algo
                 raise ValueError(f"red sin implementar: {red}")
             if red == "youtube" and res.get("estado") in ("ok", "sin_confirmar", "simulado"):

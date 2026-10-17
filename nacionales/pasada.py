@@ -427,11 +427,16 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
     informe = {"cuando": ahora.isoformat(timespec="seconds"), "publicar": publicar, "piezas": [],
                "descartadas": [], "fallas": []}
 
+    if publicar:
+        # Los Shorts de pasadas anteriores: ¿YouTube los terminó de procesar? (17/10/2026)
+        for aviso in PUB.verificar_shorts(mem["piezas"]):
+            informe.setdefault("avisos", []).append(aviso)
+
     if not solo_carrusel:
         if notas is None:
             notas, fallas = IB.bajar()
             # Una sección caída es un aviso, no una falla: las otras alcanzan.
-            informe["avisos"] = [f"Infobae {f}" for f in fallas]
+            informe.setdefault("avisos", []).extend(f"Infobae {f}" for f in fallas)
             if not notas:
                 raise RuntimeError("Infobae no devolvió ninguna nota: " + "; ".join(fallas))
         cands = F.candidatas(notas, ahora.timestamp())
