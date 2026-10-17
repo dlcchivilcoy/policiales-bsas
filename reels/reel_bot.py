@@ -18,7 +18,7 @@ para reels del bot»): el de los reels de WhatsApp del bot, `estilo="corresponsa
   otro (`proximo_tema` / `anotar_tema`, en estado/tema_reels.json).
 - desde el 17/10/2026 las FOTOS verticales o 9:16 van igual que las horizontales: el bloque abajo
   con el texto, el logo y el isologo, y la foto ENTERA, achicada y centrada arriba (sobre sí misma
-  desenfocada), en 9:16. Los videos verticales siguen a sangre con las cajas. Marca e isologo de
+  desenfocada), en 9:16. Desde la misma noche, también los VIDEOS verticales. Marca e isologo de
   los cuadros a sangre, más abajo (Y 250) y más grandes: los tapaban los marcos de las apps.
 - afiche: entero, solo la marca.
 Marca arriba a la izquierda, isologo arriba a la derecha y la placa de cierre recortada al
