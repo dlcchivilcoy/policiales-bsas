@@ -17,6 +17,7 @@ meteorológica, problema sanitario, cambio normativo relevante) va primero, y lo
 del documento suman un poco según su prioridad (clima primero, reglas y agenda al final). Para el
 carrusel pesa además si la noticia se puede EXPLICAR (potencial_carrusel).
 """
+import math
 import os
 
 MEZCLA_DEFECTO = {"agro": 30, "mercados": 20, "agtech": 20, "maquinaria": 10, "ganaderia": 10, "empresas": 10}
@@ -91,10 +92,15 @@ def mezcla() -> dict:
 def topes(cupo_dia: int, m: dict = None) -> dict:
     m = m or mezcla()
     total = sum(m.values()) or 1
-    return {k: max(1, round(cupo_dia * v / total)) for k, v in m.items()}
+    # Hacia arriba (17/10/2026): con 6 por día, «20 % mercados» daba 1 y una tarde de pendientes de
+    # mercados y ganadería dejó el carrusel de las 13:00 sin nada.
+    return {k: max(1, math.ceil(cupo_dia * v / total)) for k, v in m.items()}
 
 
-def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = None, formato: str = "reel") -> tuple:
+def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = None, formato: str = "reel",
+           relajar: bool = False) -> tuple:
+    """`relajar`: el horario se quedaría vacío → la reserva (tope del subtema lleno) entra con el mínimo,
+    sin el refuerzo. La agenda pide 3 reels y 3 carruseles: mejor repetir subtema que no publicar."""
     """(elegidos, descartados_con_motivo). `candidatos`: [{"id", "score": {...}}, …] (un
     representante por grupo). `de_hoy`: lo ya elegido hoy (cuenta para cupo, mezcla y temas)."""
     cupo_dia = max_dia() if cupo_dia is None else cupo_dia
@@ -131,7 +137,7 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     for c in reserva:
         s = c["score"]
-        if lugar > 0 and s["ai_score"] >= minimo + REFUERZO and temas.get(s.get("tema"), 0) < MAX_MISMO_TEMA:
+        if lugar > 0 and s["ai_score"] >= minimo + (0 if relajar else REFUERZO)                 and temas.get(s.get("tema"), 0) < MAX_MISMO_TEMA:
             elegidos.append(c)
             lugar -= 1
             if s.get("tema"):

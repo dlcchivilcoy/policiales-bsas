@@ -250,6 +250,11 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     de_hoy = [p for p in mem.get("elegidas", []) if p.get("cuando", "").startswith(hoy)
               and p.get("apta", True) and not p.get("revision") and not p.get("fuera_de_cupo")]
     elegidos, desc = SE.elegir(candidatos, de_hoy, formato=formato)
+    if not elegidos and any("tope de" in m for _, m in desc):
+        # Antes que dejar el horario vacío, se repite subtema con una que pase el mínimo.
+        elegidos, desc = SE.elegir(candidatos, de_hoy, formato=formato, relajar=True)
+        if elegidos:
+            log(f"   sin variedad de temas: entra igual la mejor ({elegidos[0]['score']['subtema']})")
     for c, motivo in desc:
         descartar(c["rep"], motivo, c["score"])
     por_cli = bool(max_piezas)

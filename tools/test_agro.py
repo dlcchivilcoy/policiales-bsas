@@ -718,6 +718,12 @@ chequear("para el carrusel pesa lo que se puede explicar; para el reel, el punta
          SE.elegir([_x, _y], [], formato="carrusel")[0][0]["id"] == "x"
          and SE.elegir([_x, _y], [], formato="reel")[0][0]["id"] == "y")
 
+_hoy6 = [{"score": dict(SC.limpiar({"subtema": s_}), tema=s_)} for s_ in ("ganaderia", "mercados", "ganaderia", "mercados")]
+_pend = [_cand("g", "ganaderia", 77), _cand("m", "mercados", 76)]
+chequear("13:00 del 17/10: con solo ganadería y mercados pendientes y su tope lleno, el horario no queda vacío",
+         SE.elegir(_pend, _hoy6)[0] == [] and [c["id"] for c in SE.elegir(_pend, _hoy6, relajar=True)[0]] == ["g"])
+chequear("topes de la mezcla hacia arriba (6 por día: 2 de mercados)", SE.topes(6)["mercados"] == 2)
+
 # --- datos: granos, dólar, Chicago, clima y alertas (sin red) -------------------------------------
 from agro import mercado as M  # noqa: E402
 from datetime import date  # noqa: E402
