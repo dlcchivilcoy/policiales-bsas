@@ -19,7 +19,9 @@ MATERIAL = 3500
 
 # La palabra grande de la placa propia, según de qué trata la nota.
 SECCIONES = ("Política", "Economía", "Sociedad", "Justicia", "Salud", "Provincia", "Clima",
-             "Campo", "Trabajo", "Educación", "Policiales", "Chivilcoy")
+             "Campo", "Trabajo", "Educación", "Policiales", "Chivilcoy",
+             # Las categorías nuevas (17/10/2026, nacionales/categorias.py): la fija la categoría.
+             "Deportes", "Espectáculos", "Cine y series", "Tecnología")
 
 SYSTEM_PROMPT = """Sos el editor de NACIONALES de un diario del interior de la provincia de Buenos Aires
 (Chivilcoy). Recibís una nota nacional ya publicada por otro medio. Armá el texto de una pieza
@@ -179,8 +181,14 @@ def generar(nota: dict, redactar=None) -> dict:
     if local:
         material += f"\nLo que dice de Chivilcoy: {local}"
         texto = f"{texto} {local}"
-    datos, detalle = redactar(SYSTEM_PROMPT, material)
+    # Las categorías nuevas (17/10/2026) suman sus reglas editoriales y fijan la sección.
+    from nacionales import categorias as CAT
+    categoria = nota.get("categoria") or ""
+    sistema = SYSTEM_PROMPT + (CAT.GUIAS.get(categoria) or "")
+    datos, detalle = redactar(sistema, material)
     g = _salida(datos, detalle, nota)
+    if categoria:
+        g["seccion"] = CAT.CATEGORIAS[categoria]["nombre"]
 
     original = G._palabras(f"{titular} {texto}")
     copia = G.copia_del_original(g, original)
@@ -188,8 +196,10 @@ def generar(nota: dict, redactar=None) -> dict:
     copia["nombra_medio"] = _nombra_infobae(g)
     if copia["racha"] >= G.UMBRAL_COPIA or copia["nombra_medio"] or faltan:
         try:
-            datos2, detalle2 = redactar(SYSTEM_PROMPT + G._pedido_reescritura(copia, faltan), material)
+            datos2, detalle2 = redactar(sistema + G._pedido_reescritura(copia, faltan), material)
             g2 = _salida(datos2, detalle2, nota)
+            if categoria:
+                g2["seccion"] = g["seccion"]
             copia2 = G.copia_del_original(g2, original)
             faltan2 = G.datos_faltantes(g2)
             copia2["nombra_medio"] = _nombra_infobae(g2)
@@ -216,6 +226,8 @@ def texto_posteo(g: dict, url_web: str = "", sitio: str = "") -> str:
         partes.append(f"📲 Leé la nota completa: {url_web}")
     elif sitio:
         partes.append(f"📲 Más noticias nacionales en {sitio}")
-    tags = list(dict.fromkeys((g.get("hashtags") or []) + ["#Nacionales", "#Argentina"]))[:6]
+    propio = ("#" + re.sub(r"[^\w]", "", G._sin_tildes(g["seccion"]).title())
+              if g.get("seccion") in ("Deportes", "Espectáculos", "Cine y series", "Tecnología") else "#Nacionales")
+    tags = list(dict.fromkeys((g.get("hashtags") or []) + [propio, "#Argentina"]))[:6]
     partes.append(" ".join(tags))
     return "\n\n".join(p for p in partes if p)[:4900]

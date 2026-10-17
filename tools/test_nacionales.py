@@ -368,6 +368,84 @@ m = GE.combinar_nacionales(vieja, nueva)
 chequear("memoria: la copia VIEJA de policiales no pisa lo nuevo de nacionales",
          set(m["piezas"]) == {"a", "b"} and m["carruseles"])
 
+# --- 7. Categorías nuevas: deportes, espectáculos, cine y series, IA aplicada (17/10/2026) --------
+from nacionales import categorias as CAT
+T = AHORA
+
+
+def nota_cat(titulo, seccion, slug, resumen="", horas=1):
+    return dict(nota(titulo, seccion, slug=slug), resumen=resumen, fecha=T - horas * 3600)
+
+
+pc = lambda n: CAT.puntuar(n, T)[0]   # noqa: E731
+chequear("deportes: con un equipo o un jugador argentino, sí",
+         pc(nota_cat("Boca le ganó a Racing y es puntero del Clausura", "deportes", "d1")) > 0)
+chequear("deportes: sin protagonista argentino, no",
+         pc(nota_cat("El Real Madrid goleó al Getafe en la Liga de España", "deportes", "d2")) == 0)
+chequear("deportes: un «en vivo» no (el resultado todavía no es final)",
+         pc(nota_cat("River vs Boca EN VIVO: minuto a minuto del superclásico", "deportes", "d3")) == 0)
+chequear("espectáculos: una galería de fotos no",
+         pc(nota_cat("Fotos: el look de los famosos en la alfombra roja", "teleshow", "e1")) == 0)
+chequear("cine y series: un estreno suma más que otra nota de cine",
+         pc(nota_cat("Netflix estrena en noviembre la serie de Mafalda", "que-puedo-ver", "c1"))
+         > pc(nota_cat("Cómo se filmó la serie de Mafalda en Netflix", "que-puedo-ver", "c2")) > 0)
+chequear("cine y series: un videojuego no",
+         pc(nota_cat("El nuevo videojuego de Batman llega a PlayStation", "que-puedo-ver", "c3")) == 0)
+chequear("IA: con un uso práctico para comercios en el título, sí",
+         pc(nota_cat("Cómo usar la IA para responder clientes por WhatsApp en un comercio", "tecno", "t1")) > 0)
+chequear("IA: una pelea entre empresas de IA, no",
+         pc(nota_cat("OpenAI acusa a Apple de obtener información secreta con su IA", "tecno", "t2")) == 0)
+chequear("cine y series mira 72 h (los estrenos se anuncian con días); deportes, 24",
+         pc(nota_cat("Disney+ estrena la temporada final de la serie", "que-puedo-ver", "c4", horas=50)) > 0
+         and pc(nota_cat("Boca le ganó a Racing en el Clausura", "deportes", "d4", horas=30)) == 0)
+os.environ["NAC_CUPO_DEPORTES"] = "1"
+chequear("rotación: sin cupo hoy, la categoría no va; la que hace más que no sale, primero",
+         CAT.orden_de_rotacion([{"categoria": "deportes"}], {"espectaculos": "2026-10-07T10:00",
+                                                             "cine_series": "2026-10-05T10:00"})
+         == ["tecnologia_ia", "cine_series", "espectaculos"])
+os.environ.pop("NAC_CUPO_DEPORTES")
+chequear("web: Deportes va a su sección; las que todavía no tienen, a Nacionales",
+         CAT.seccion_web("deportes") == "094f631e-1b56-485f-8777-6e167802455e"
+         and CAT.seccion_web("espectaculos") == WEB.NACIONALES_ID)
+
+# La pasada: 1 pieza de otra categoría DENTRO del cupo de 3, en el medio de la tanda.
+PA.MEMORIA = estado_tmp / "nacionales_cat.json"
+reloj["ahora"] = datetime.fromtimestamp(T, AR)
+llamadas.clear()
+sistemas = []
+
+
+def redactar_cat(system, material):
+    sistemas.append(system)
+    titulo = material.split("Titular original: ")[1].split("\n")[0]
+    return dict(BUENO, titular=titulo[:80], potencial_viral=5, titulo_web=f"{titulo[:60]} nota web"), "falso"
+
+
+generales = [nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo el país", "economia", "g1"),
+             nota_cat("La CGT anunció un paro general para fin de mes", "politica", "g2"),
+             nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "g3")]
+variadas = [nota_cat("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "v1"),
+            nota_cat("MasterChef Junior volvió a la pantalla con Vero Lozano", "teleshow", "v2")]
+inf = PA.pasada(True, redactar=redactar_cat, notas=generales, notas_variedad=variadas)
+cats = [p.get("categoria") for p in inf["piezas"]]
+chequear("pasada: siguen siendo 3 piezas (la categoría nueva reemplaza, no suma)", len(inf["piezas"]) == 3, )
+chequear("pasada: la de otra categoría va SEGUNDA, entre dos nacionales", cats == ["", "deportes", ""])
+chequear("pasada: la nota de deportes va a la sección Deportes de la web",
+         ("094f631e-1b56-485f-8777-6e167802455e", WEB.NACIONALES_AUTO_ID) in [l[1] for l in llamadas if l[0] == "web"])
+chequear("guion: a la IA le llegan las reglas de la categoría (resultado final, confirmado…)",
+         sum(1 for s in sistemas if "CATEGORÍA DEPORTES" in s) >= 1)
+mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
+chequear("guion: la sección la fija la categoría, no la IA",
+         any(p.get("seccion") == "Deportes" and p.get("categoria") == "deportes" for p in mem["piezas"].values()))
+reloj["ahora"] += timedelta(hours=3)
+inf2 = PA.pasada(True, redactar=redactar_cat, notas=[], notas_variedad=variadas)
+chequear("rotación: la pasada siguiente lleva otra categoría (espectáculos)",
+         [p.get("categoria") for p in inf2["piezas"]] == ["espectaculos"])
+mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
+chequear("carrusel «Noticias nacionales de hoy»: sin deportes ni espectáculos",
+         not any(p.get("categoria") for _u, p in PA.para_el_carrusel(mem)))
+print("   categorías de las pasadas:", cats, [p.get("categoria") for p in inf2["piezas"]])
+
 shutil.rmtree(tmp, ignore_errors=True)
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

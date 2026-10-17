@@ -3,6 +3,20 @@
 Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales` de
 `.github/workflows/reels.yml` (corre en las mismas pasadas que policiales, en paralelo).
 
+> **17/10/2026 — categorías nuevas (PDF «Prompt integral», etapa 4)** en `nacionales/categorias.py`:
+> deportes (Infobae `deportes`, solo con protagonista argentino, sin «en vivo»), espectáculos
+> (`teleshow`, sin galerías ni chicanas), cine y series (`que-puedo-ver`, 72 h) e IA aplicada a
+> comercios (`tecno`, con el uso práctico en el TÍTULO; casi nunca hay). **Dentro del mismo cupo**
+> (3 por pasada, 12 por día): como mucho `NAC_VARIEDAD_POR_PASADA` (1) por pasada, va SEGUNDA en la
+> tanda, rotando la categoría que hace más que no sale; tope por día `NAC_CUPO_<CATEGORIA>`
+> (deportes 2, espectáculos 2, cine y series 1, tecnologia_ia 1). La IA recibe reglas por categoría
+> (resultado final o en juego, muerte confirmada y atribuida, plataforma/país/fecha del estreno,
+> qué tarea resuelve la IA y lo que dice la empresa atribuido). Web: Deportes a su sección; las demás
+> a Nacionales hasta que existan sus secciones (`WIX_CAT_ESPECTACULOS`, `WIX_CAT_CINE_SERIES`,
+> `WIX_CAT_TECNOLOGIA_IA`). NO van al carrusel «Noticias nacionales de hoy». Las efemérides las
+> cubre el Archivo Literario (README_ARCHIVO). Registro de fuentes con estado real:
+> `data/registro_fuentes.json`.
+
 ## Qué hace cada pasada (09:05, 12:05, 15:05, 18:05, 21:05, 23:35)
 
 1. **Lee Infobae** por sus feeds RSS de sección (política, economía, sociedad, policiales,

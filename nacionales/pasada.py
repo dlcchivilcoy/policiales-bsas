@@ -50,6 +50,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import entorno
+from nacionales import categorias as CAT
 from nacionales import filtro as F
 from nacionales import guion as NG
 from nacionales import infobae as IB
@@ -288,6 +289,7 @@ def _resultado(fn, *args) -> dict:
 def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
     """YouTube → web → Facebook. Devuelve {red: resultado}."""
     mp4 = Path(pieza["video"]["archivo"])
+    cat = pieza["nota"].get("categoria") or ""        # deportes, espectáculos… (17/10/2026)
     url_prev = url_web_prevista(pieza)
     meta = meta_youtube(pieza, url_prev)
     res = {}
@@ -310,7 +312,8 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
         pieza["imagen_url"] = foto.get("url") if foto.get("archivo") else placa_web()
         return WEB.publicar(lambda m, u, **kw: PUB._pedir(m, u, "", **kw), pieza, yt_id or "",
                             placa_web if foto.get("archivo") else "",
-                            categorias=[WEB.NACIONALES_ID, WEB.NACIONALES_AUTO_ID])
+                            categorias=[CAT.seccion_web(cat) if cat else WEB.NACIONALES_ID,
+                                        WEB.NACIONALES_AUTO_ID])
     res["web"] = _resultado(_web) if WEB.activa() else {"estado": "apagada"}
     url_web = res["web"].get("url") if _ok(res["web"]) else ""
     if yt_id and not url_web:
@@ -331,7 +334,9 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
 def para_el_carrusel(mem: dict) -> list:
     """Lo publicado desde el último carrusel (con su nota en la web), de lo más viral a lo menos."""
     ya = {u for c in mem["carruseles"].values() if _ok(c) for u in c.get("piezas") or []}
-    listas = [(u, p) for u, p in mem["piezas"].items() if u not in ya and _ok(p.get("web"))]
+    # Las categorías nuevas (deportes, espectáculos…) no van al carrusel «Noticias nacionales de hoy».
+    listas = [(u, p) for u, p in mem["piezas"].items() if u not in ya and _ok(p.get("web"))
+              and not p.get("categoria")]
     listas.sort(key=lambda x: (-(x[1].get("viral") or 0), -(x[1].get("puntos") or 0), x[1].get("cuando") or ""))
     return listas[:CARRUSEL_MAX]
 
@@ -394,8 +399,27 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime) -> dict:
 # La pasada
 # =============================================================================
 
+def elegir_variedad(notas_var: list, mem: dict, dia: str, ahora: datetime, cupo: int) -> list:
+    """Candidatas de las categorías nuevas (nacionales/categorias.py), en orden de rotación: la
+    categoría que hace más que no sale primero, y dentro de cada una las mejores notas nuevas (hasta 3,
+    porque la que la IA descarta deja lugar a la siguiente)."""
+    if cupo <= 0 or not notas_var:
+        return []
+    por_cat = CAT.candidatas(notas_var, ahora.timestamp())
+    ultimas = {}
+    for p in mem["piezas"].values():
+        c = p.get("categoria")
+        if c and (p.get("cuando") or "") > ultimas.get(c, ""):
+            ultimas[c] = p.get("cuando") or ""
+    salida = []
+    for cat in CAT.orden_de_rotacion(de_hoy(mem, dia), ultimas):
+        salida += elegir(por_cat.get(cat) or [], mem, 3, ahora)
+    return salida
+
+
 def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, esperar_carrusel: str = "",
-           con_carrusel: bool = True, redactar=None, notas=None) -> dict:
+           con_carrusel: bool = True, redactar=None, notas=None, notas_variedad=None) -> dict:
+    notas_inyectadas = notas
     mem = cargar()
     ahora = _ahora()
     dia = ahora.date().isoformat()
@@ -414,6 +438,37 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
         informe["candidatas"] = len(cands)
         hechas = len(de_hoy(mem, dia))
         cupo = min(cuantos or _entero("NAC_POR_PASADA", POR_PASADA), _entero("NAC_POR_DIA", POR_DIA) - hechas)
+        # Las categorías nuevas (17/10/2026): deportes, espectáculos, cine y series, IA aplicada. Dentro
+        # del MISMO cupo (reemplazan parte de lo repetitivo, no suman carga): como mucho
+        # NAC_VARIEDAD_POR_PASADA por pasada y cada categoría con su tope por día.
+        if notas_variedad is None:
+            notas_variedad = []
+            if notas_inyectadas is None:             # en las pruebas, solo lo que se le pasa
+                notas_variedad, fallas_var = IB.bajar(CAT.FEEDS)
+                informe.setdefault("avisos", []).extend(f"Infobae {f}" for f in fallas_var)
+        n_var = min(CAT.por_pasada(), max(0, cupo))
+        variedad = []
+        for c in elegir_variedad(notas_variedad, mem, dia, ahora, n_var):
+            if len(variedad) >= n_var:
+                break
+            if any(v["nota"].get("categoria") == c["categoria"] for v in variedad):
+                continue
+            try:
+                pieza = armar(c, carpeta, redactar)
+            except Exception as e:                   # noqa: BLE001 — la IA o el motor: se sigue con otra
+                informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
+                continue
+            if not pieza["guion"]["apta"]:
+                informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
+                                               "categoria": c["categoria"]})
+                if publicar:
+                    mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
+                                                    "cuando": ahora.isoformat(timespec="seconds")}
+                continue
+            variedad.append(pieza)
+        informe["variedad"] = [{"categoria": v["nota"]["categoria"], "titulo": v["guion"]["titular"]}
+                               for v in variedad]
+        cupo -= len(variedad)
         armadas = []
         # Se piden de a una, de la más relevante a la menos, hasta llenar el cupo: la que la IA
         # descarta deja lugar a la siguiente.
@@ -432,6 +487,9 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                     mem["descartadas"][c["url"]] = {"motivo": g["motivo"], "cuando": ahora.isoformat(timespec="seconds")}
                 continue
             armadas.append(pieza)
+        # La de otra categoría va SEGUNDA: entre dos nacionales, no al principio ni al final de la tanda.
+        for v in variedad:
+            armadas.insert(min(1, len(armadas)), v)
 
         fb = para_facebook(armadas, mem, dia)
         ultimo = None
@@ -445,6 +503,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             nota, g = pieza["nota"], pieza["guion"]
             res = publicar_pieza(pieza, nota["url"] in fb, publicar)
             fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
+                    "categoria": nota.get("categoria") or "",
                     "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
                     "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
                     "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
