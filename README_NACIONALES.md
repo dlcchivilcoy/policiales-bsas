@@ -11,9 +11,9 @@ Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales`
 > tanda, rotando la categoría que hace más que no sale; tope por día `NAC_CUPO_<CATEGORIA>`
 > (deportes 2, espectáculos 2, cine y series 1, tecnologia_ia 1). La IA recibe reglas por categoría
 > (resultado final o en juego, muerte confirmada y atribuida, plataforma/país/fecha del estreno,
-> qué tarea resuelve la IA y lo que dice la empresa atribuido). Web: Deportes a su sección; las demás
-> a Nacionales hasta que existan sus secciones (`WIX_CAT_ESPECTACULOS`, `WIX_CAT_CINE_SERIES`,
-> `WIX_CAT_TECNOLOGIA_IA`). NO van al carrusel «Noticias nacionales de hoy». Las efemérides las
+> qué tarea resuelve la IA y lo que dice la empresa atribuido). Web: cada una en su sección
+> (Deportes, y Espectáculos, Cine y series y Tecnología, creadas el 17/10 en Wix y en diario_web;
+> `WIX_CAT_<CATEGORIA>` la pisa). NO van al carrusel «Noticias nacionales de hoy». Las efemérides las
 > cubre el Archivo Literario (README_ARCHIVO). Registro de fuentes con estado real:
 > `data/registro_fuentes.json`.
 

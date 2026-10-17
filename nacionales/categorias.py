@@ -12,8 +12,8 @@ Cómo entran, sin sumar carga (el PDF pide que lo nuevo REEMPLACE parte de lo re
 - Comparten el cupo de nacionales (3 por pasada, 12 por día). Como mucho NAC_VARIEDAD_POR_PASADA (1)
   pieza de estas categorías por pasada, y cada categoría tiene su tope por día (CUPO_DIA, variable
   NAC_CUPO_<CATEGORIA>). Se rota: va la categoría que hace más que no sale.
-- Salen como cualquier nacional: Short, nota en la web (Deportes va a su sección; las demás a
-  Nacionales hasta que existan sus secciones, variables WIX_CAT_<CATEGORIA>), Facebook si está entre
+- Salen como cualquier nacional: Short, nota en la web (cada una en su sección: Deportes,
+  Espectáculos, Cine y series, Tecnología; WIX_CAT_<CATEGORIA> la pisa), Facebook si está entre
   las más virales y, por la nota de la web, X. NO van al carrusel «Noticias nacionales de hoy».
 
 Filtros sin IA, por categoría; las reglas editoriales de cada una (resultado final o en juego, muerte
@@ -58,11 +58,14 @@ NEGOCIO = F.rx(["pymes", "pyme", "comercios", "comerciante", "comerciantes", "em
 CATEGORIAS = {
     "deportes": {"nombre": "Deportes", "feeds": ("deportes",), "rutas": ("/deportes/",), "cupo": 2,
                  "web": "094f631e-1b56-485f-8777-6e167802455e"},          # sección Deportes (existe)
+    # Las tres secciones de abajo se crearon en Wix y en diario_web el 17/10/2026 (diario_web 4689c1a).
     "espectaculos": {"nombre": "Espectáculos", "feeds": ("teleshow",), "rutas": ("/teleshow/",), "cupo": 2,
-                     "web": ""},
+                     "web": "973d6c3f-8893-4d88-92fe-78c91ab6d1ce"},
     "cine_series": {"nombre": "Cine y series", "feeds": ("que-puedo-ver",),
-                    "rutas": ("/que-puedo-ver/", "/malditos-nerds/"), "cupo": 1, "web": ""},
-    "tecnologia_ia": {"nombre": "Tecnología", "feeds": ("tecno",), "rutas": ("/tecno/",), "cupo": 1, "web": ""},
+                    "rutas": ("/que-puedo-ver/", "/malditos-nerds/"), "cupo": 1,
+                    "web": "03a75413-7258-4eca-b163-2f931193635c"},
+    "tecnologia_ia": {"nombre": "Tecnología", "feeds": ("tecno",), "rutas": ("/tecno/",), "cupo": 1,
+                      "web": "5b9d1e36-6d94-48ab-b5f6-6f9cb1b8fcaf"},
 }
 FEEDS = tuple(f for c in CATEGORIAS.values() for f in c["feeds"])
 NACIONALES_ID = "b646fede-00cb-4f10-aca5-56fdda96094a"

@@ -404,9 +404,14 @@ chequear("rotación: sin cupo hoy, la categoría no va; la que hace más que no 
                                                              "cine_series": "2026-10-05T10:00"})
          == ["tecnologia_ia", "cine_series", "espectaculos"])
 os.environ.pop("NAC_CUPO_DEPORTES")
-chequear("web: Deportes va a su sección; las que todavía no tienen, a Nacionales",
+chequear("web: cada categoría va a su sección (Deportes, Espectáculos, Cine y series, Tecnología)",
          CAT.seccion_web("deportes") == "094f631e-1b56-485f-8777-6e167802455e"
-         and CAT.seccion_web("espectaculos") == WEB.NACIONALES_ID)
+         and CAT.seccion_web("espectaculos") == "973d6c3f-8893-4d88-92fe-78c91ab6d1ce"
+         and CAT.seccion_web("cine_series") == "03a75413-7258-4eca-b163-2f931193635c"
+         and CAT.seccion_web("tecnologia_ia") == "5b9d1e36-6d94-48ab-b5f6-6f9cb1b8fcaf")
+os.environ["WIX_CAT_ESPECTACULOS"] = "otra"
+chequear("web: WIX_CAT_<CATEGORIA> la pisa", CAT.seccion_web("espectaculos") == "otra")
+os.environ.pop("WIX_CAT_ESPECTACULOS")
 
 # La pasada: 1 pieza de otra categoría DENTRO del cupo de 3, en el medio de la tanda.
 PA.MEMORIA = estado_tmp / "nacionales_cat.json"
