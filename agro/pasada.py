@@ -143,7 +143,7 @@ def correr(publicar: bool = False, tipo: str = "", bloque: str = "", momento: da
     if tipo == "historias":
         return pasada_historias(publicar=publicar, horario=horario, bloque=bloque or AG.bloque(horario), log=log,
                                 publicador=publicador, carpeta=carpeta, ahora=ahora)
-    if tipo == "carrusel" and AG.es_primer_carrusel_del_sabado(horario) and not max_piezas:
+    if tipo == "numeros" or (tipo == "carrusel" and AG.es_primer_carrusel_del_sabado(horario) and not max_piezas):
         return pasada_numeros(publicar=publicar, horario=horario, log=log, publicador=publicador,
                               carpeta=carpeta, ahora=ahora)
     return pasada(max_piezas, con_reel, horas, log=log, publicar=publicar, publicador=publicador,
@@ -587,7 +587,8 @@ def main():
     entorno.consola_utf8()
     ap = argparse.ArgumentParser(description="Agro: la corrida del horario; con --publicar, la publica")
     ap.add_argument("--publicar", action="store_true", help="publica de verdad (memoria estado/agro.json)")
-    ap.add_argument("--tipo", choices=AG.TIPOS, default="", help="qué armar (simulación o --fuera-de-cupo)")
+    ap.add_argument("--tipo", choices=AG.TIPOS + ("numeros",), default="",
+                    help="qué armar (simulación o --fuera-de-cupo); «numeros» = el carrusel «Los números de la semana»")
     ap.add_argument("--bloque", choices=AG.BLOQUES, default="", help="qué tanda de historias (simulación)")
     ap.add_argument("--fuera-de-cupo", action="store_true",
                     help="una corrida a mano que no ocupa lugar en la agenda del día")

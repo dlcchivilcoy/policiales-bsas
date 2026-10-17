@@ -40,7 +40,7 @@ on:
         description: "quién la dispara (cron = cron-job.org)"
         default: "manual"
       tipo:
-        description: '"reel", "carrusel" o "historias": para simular, o para publicar fuera de horario (vacío = lo que toca a esta hora)'
+        description: '"reel", "carrusel", "historias" o "numeros" (Los números de la semana): para simular, o para publicar fuera de horario (vacío = lo que toca a esta hora)'
         default: ""
       fuera_de_cupo:
         description: '"si" + publicar "si" + tipo: publica YA, fuera de la agenda (recuperar un horario que no salió)'
