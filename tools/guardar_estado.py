@@ -127,6 +127,13 @@ def combinar_buzon(nuestro: dict, remoto: dict) -> dict:
     return combinar(nuestro, remoto)
 
 
+def combinar_cupo(nuestro: dict, remoto: dict) -> dict:
+    """estado/cupo_pasadas.json (reels/cupo.py, 17/10/2026): unión de reservas por pasada."""
+    sys.path.insert(0, str(RAIZ))
+    from reels.cupo import combinar
+    return combinar(nuestro, remoto)
+
+
 def combinar_tema(nuestro: dict, remoto: dict) -> dict:
     """estado/tema_reels.json: el más nuevo («cuando»), así la alternancia sigue al último reel."""
     return nuestro if (nuestro.get("cuando") or 0) >= (remoto.get("cuando") or 0) else remoto
@@ -181,7 +188,7 @@ COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combina
             "agro.json": combinar_agro,
             "tema_reels.json": combinar_tema,
             "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo,
-            "buzon_distribuidor.json": combinar_buzon}
+            "buzon_distribuidor.json": combinar_buzon, "cupo_pasadas.json": combinar_cupo}
 
 
 def _git(*args, chequear=True, raiz=RAIZ) -> subprocess.CompletedProcess:

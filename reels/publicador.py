@@ -50,7 +50,9 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import cupo as CUPO
 from reels import distribuidor as DIST
+from reels import geografia as GEO
 from reels import frescura as FR
 from reels import instagram as IG
 from reels import ledger as LD
@@ -1325,41 +1327,69 @@ def _turno(pieza: dict, ultimo) -> datetime:
 # en fila) y salen dos reels juntos.
 PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
 MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la pasada siguiente
-MAX_POR_PASADA = 6           # aun con la noche entera por delante (23:35 → 09:05)
+# Hechos policiales por pasada, sumando todas las redes: 3 desde el 17/10/2026 (antes 6). Es el
+# cupo GLOBAL de reels/cupo.py (variable MAX_POLICE_REELS_PER_PASS); acá se acota además por lo
+# que entra a 30 minutos antes de la pasada siguiente.
 
 
 def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
     """Cuántas piezas entran en esta pasada a MINUTOS_ENTRE_POSTEOS: la primera ya, y las demás
-    hasta MARGEN_PASADA_MIN antes de la pasada siguiente. Entre 1 y MAX_POR_PASADA."""
+    hasta MARGEN_PASADA_MIN antes de la pasada siguiente. Entre 1 y el cupo de la pasada."""
     ahora = ahora_ar or _hora_ar()
     proxima = min(ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
                   for d in (0, 1) for h, m in PASADAS_AR
                   if ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
                   > ahora + timedelta(minutes=20))
     libres = (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
-    return max(1, min(MAX_POR_PASADA, int(libres // MINUTOS_ENTRE_POSTEOS) + 1))
+    return max(1, min(CUPO.maximo() or 1, int(libres // MINUTOS_ENTRE_POSTEOS) + 1))
 
 
-def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set) -> tuple:
+def _falta(p: dict, ledger: dict) -> bool:
+    hecho = ledger.get(_clave(p)) or {}
+    return any((hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar")
+               for r in ("instagram", "facebook", "youtube"))
+
+
+def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set,
+                        reservadas: frozenset = frozenset()) -> tuple:
     """(las `n` piezas de la pasada, salteadas). Primero las elegidas para Instagram o Facebook
-    (las de más potencial), después las de más viral; las que entran salen en el orden de la
-    pasada (la más nueva primero). Una pieza que ya salió en todas sus redes no ocupa lugar."""
+    (las de más potencial), después las de más viral y, a igual viral, la más cercana a Chivilcoy;
+    las que entran salen en el orden de la pasada (la más nueva primero). Una pieza que ya salió en
+    todas sus redes no ocupa lugar, y una que esta misma pasada ya había reservado (corrida
+    repetida) entra sin ocupar uno nuevo."""
     def falta(p):
-        hecho = ledger.get(_clave(p)) or {}
-        return any((hecho.get(r) or {}).get("estado") not in ("ok", "sin_confirmar")
-                   for r in ("instagram", "facebook", "youtube"))
-    pendientes = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p)]
+        return _falta(p, ledger)
+    ya = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) in reservadas]
+    pendientes = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) not in reservadas]
     rango = sorted(pendientes, key=lambda x: (_clave(x[1]) in preferidas, x[1].get("viral") or 5,
+                                              (x[1].get("geo") or {}).get("proximidad") or 0,
                                               -x[0]), reverse=True)
-    entran = {i for i, _p in rango[:n]}
+    entran = {i for i, _p in ya} | {i for i, _p in rango[:max(0, n)]}
     quedan, salteadas = [], []
     for i, (p, m) in enumerate(listas):
         if i in entran or not falta(p):
             quedan.append((p, m))
         else:
             salteadas.append({"orden": p.get("orden"), "titular": (p.get("guion") or {}).get("titular"),
-                              "motivo": f"no entra en la pasada: un reel cada {MINUTOS_ENTRE_POSTEOS} minutos, "
-                                        f"{n} lugares hasta la pasada siguiente"})
+                              "motivo": f"no entra en la pasada: como mucho {CUPO.maximo()} hechos "
+                                        f"policiales por pasada, un reel cada {MINUTOS_ENTRE_POSTEOS} "
+                                        f"minutos ({max(0, n)} lugares libres)"})
+    return quedan, salteadas
+
+
+def fuera_del_radio(listas: list) -> tuple:
+    """(listas dentro del radio de 100 km, salteadas). Segundo control antes de publicar
+    (reels/geografia.py): el primero lo hizo el flujo al armar, pero un lote viejo o un cambio de
+    radio no tienen que colarse. Nunca hay excepción por gravedad o viralidad."""
+    quedan, salteadas = [], []
+    for pieza, mp4 in listas:
+        geo = GEO.evaluar_pieza(pieza)
+        pieza["geo"] = geo
+        if geo["elegible"]:
+            quedan.append((pieza, mp4))
+        else:
+            salteadas.append({"orden": pieza.get("orden"), "titular": (pieza.get("guion") or {}).get("titular"),
+                              "motivo": geo["motivo"], "geografia": geo["estado"]})
     return quedan, salteadas
 
 
@@ -1419,6 +1449,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     ledger = cargar_ledger()
     # El RELEVAMIENTO (12/10/2026): un hecho que ya salió —contado por otro medio, con otras
     # palabras— no se vuelve a subir a NINGUNA red. Se decide antes de repartir los cupos.
+    # Radio de 100 km desde Chivilcoy (17/10/2026): antes que nada, porque lo lejano no compite.
+    listas, lejos = fuera_del_radio(listas)
+    salteadas += lejos
     listas, repetidas = sin_repetir(listas, ledger, usar_ia=publicar)
     salteadas += repetidas
     informe = {"lote": carpeta.name, "modo": "publicar" if publicar else "simulacion",
@@ -1458,13 +1491,29 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
               f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
               f"por día por la API y los comparte con el bot)")
     # Un reel cada 30 minutos en cada red (13/10/2026): entra lo que cabe hasta la pasada siguiente.
-    lugares = lugares_en_la_pasada()
-    listas, no_entran = solo_las_que_entran(listas, ledger, lugares, ig_elegidas | fb_elegidas)
+    # Y como mucho 3 hechos por pasada entre TODAS las redes (reels/cupo.py, 17/10/2026). La pasada es
+    # el horario: una corrida repetida (respaldo, a mano) comparte los lugares que ya se reservaron.
+    pid = CUPO.pasada_id(PASADAS_AR, _hora_ar())
+    reservadas = set(CUPO.reservadas(pid))
+    lugares = min(lugares_en_la_pasada(), CUPO.libres(pid))
+    listas, no_entran = solo_las_que_entran(listas, ledger, lugares, ig_elegidas | fb_elegidas,
+                                            frozenset(reservadas))
+    nuevas = [p for p, _ in listas if _falta(p, ledger) and _clave(p) not in reservadas]
+    if publicar:
+        reservadas = set(CUPO.reservar(pid, nuevas, _clave))
+    informe["pasada"] = {"id": pid, "maximo": CUPO.maximo(), "reservadas": len(reservadas | {
+        _clave(p) for p in nuevas})}
     salteadas += no_entran
     informe["salteadas"] = salteadas
     for s_ in no_entran:
         print(f"  salteada #{s_['orden']}: {s_['motivo']}")
-    print(f"  Lugares en esta pasada: {lugares} (un reel cada {MINUTOS_ENTRE_POSTEOS} minutos)")
+    print(f"  Pasada {pid}: {informe['pasada']['reservadas']} de {CUPO.maximo()} hechos policiales "
+          f"(un reel cada {MINUTOS_ENTRE_POSTEOS} minutos)")
+    for p, _ in listas:
+        geo = p.get("geo") or {}
+        print(f"    · {geo.get('nombre') or p.get('localidad_hecho')}: {geo.get('distancia_km')} km "
+              f"({geo.get('precision') or 's/d'}), viral {p.get('viral') or 5} — "
+              f"{(p.get('guion') or {}).get('titular')}")
     # Lo que ya está en el canal de YouTube, para no repetir hechos (ver _ya_en_youtube).
     yt_recientes = []
     # Solo si alguna pieza todavía tiene que ir a YouTube y hay cupo: una pasada que no va a
@@ -1612,9 +1661,13 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                 res["cuando"] = _ahora().isoformat(timespec="seconds")
                 e = ledger.setdefault(clave, {"titular": g.get("titular"), "localidad": pueblo})
                 # Lo que el relevamiento compara la próxima vez (reels/relevamiento.py).
+                geo = pieza.get("geo") or {}
                 for k, v in (("bajada", g.get("bajada")), ("localidad_hecho", pieza.get("localidad_hecho")),
-                             ("titulo_medio", pieza.get("titulo_medio"))):
-                    if v:
+                             ("titulo_medio", pieza.get("titulo_medio")),
+                             # Para auditar el radio y el cupo (17/10/2026).
+                             ("distancia_km", geo.get("distancia_km")), ("precision_lugar", geo.get("precision")),
+                             ("lugar_hecho", geo.get("nombre")), ("pasada", pid)):
+                    if v or v == 0:              # 0 km = Chivilcoy, que también se anota
                         e.setdefault(k, v)
                 e[red] = res
                 e["ultimo"] = res["cuando"]

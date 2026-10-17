@@ -4,6 +4,26 @@ Fase 1 del sistema de reels: **genera y muestra, no publica**. Todo lo estético
 tu bot de corresponsales (`dlcchivilcoy/social_publisher`), replicado acá para que las
 piezas salgan con tu marca y no con un diseño inventado.
 
+> **17/10 (PDF «Prompt integral»): 3 hechos por pasada y radio de 100 km.**
+> - **Radio estricto de 100 km** en línea recta desde el centro de Chivilcoy (`reels/geografia.py`).
+>   Cuenta dónde OCURRIÓ el hecho: lo lee la IA del guion (`lugar_del_hecho`, controlado contra el
+>   texto de la nota), no la sede del medio. Coordenadas del catálogo `data/localidades_geo.json`
+>   (Georef/INDEC, 2.358 asentamientos; se rehace con `tools/catalogo_localidades.py`). Antes del
+>   guion se descarta gratis solo lo seguro (medio lejano que no nombra ningún pueblo del radio).
+>   Ambiguo, desconocido o solo el partido cerca del límite → pendiente (no sale). Otra provincia →
+>   fuera (CABA, la más cercana, está a 139,7 km). Sin excepción por gravedad ni viralidad. Queda
+>   afuera: Rojas (101,6), Cañuelas, Pergamino, Monte, Arenales, Lincoln, Casares, Las Flores,
+>   Pinto, Bolívar, Pehuajó, Ameghino, Tejedor, Villegas y Trenque Lauquen. Entra 9 de Julio (99,4).
+> - **Cupo global de 3 hechos por pasada** (`reels/cupo.py`, `MAX_POLICE_REELS_PER_PASS`), sumando
+>   YouTube, web, Facebook, Instagram y el buzón de X/TikTok. La pasada es el HORARIO: un reintento
+>   (respaldo o a mano) comparte los lugares ya reservados (`estado/cupo_pasadas.json`). 0, 1 o 2
+>   también están bien: no se completa con relleno. Se arman como mucho 8 notas por pasada
+>   (`POLICIALES_ARMAR_POR_PASADA`) en vez de todas.
+> - **Prioridad por distancia** (`reels/cercania.py`): Chivilcoy +3, hasta 50 km +2, hasta 100 +1
+>   (antes, una lista fija de 7 pueblos). La memoria guarda distancia, precisión y pasada.
+> - Variables: `POLICE_RADIUS_KM` (100), `POLICE_BANDA_CERCANA_KM` (50), `MAX_POLICE_REELS_PER_PASS` (3;
+>   0 pausa los reels). Pruebas: `tools/test_geografia.py`.
+>
 > **10/10:** Instagram pasa a reel NORMAL al feed, hasta 5 por pasada, los más virales (igual
 > que Facebook). Y el guion lee el texto COMPLETO de la nota y lista sus datos clave (nombres,
 > edades, lugares, vehículos, cifras): si alguno no aparece en lo publicado, se le pide de nuevo
@@ -363,9 +383,10 @@ reels/
 ├── guion.py      Nota → volanta/titular/bajada/zócalo + descripción SEO
 ├── reel_bot.py   Arma el reel con el MOTOR DEL BOT (26/09): lo único propio de policiales
 ├── flujo.py      Orquestador de la tanda (no publica)
-├── cercania.py   Prioridad por cercanía a Chivilcoy (27/09): Junín, Chacabuco, Bragado,
-│                 Mercedes, Suipacha, Alberti y 25 de Mayo +2 sobre el viral de la IA;
-│                 Ruta 5 +1; nombra a Chivilcoy +2 (tope 3). La lista, en PRIORITARIAS.
+├── geografia.py  Radio de 100 km (17/10): lugar del hecho, distancia Haversine, pendientes
+├── cupo.py       Cupo global de 3 hechos por pasada (17/10), reservas en estado/cupo_pasadas.json
+├── cercania.py   Prioridad por distancia (17/10): Chivilcoy +3, ≤ 50 km +2, ≤ 100 km +1 sobre
+│                 el viral de la IA; Ruta 5 +1; nombra a Chivilcoy +2 (tope 3).
 ├── frescura.py   La noticia DEL MOMENTO primero (27/09): FB/IG llevan las más nuevas de
 │                 la pasada (-4 puntos por hora de atraso: cercanía y viral solo desempatan
 │                 entre notas de minutos de diferencia); la pasada publica la más nueva primero.

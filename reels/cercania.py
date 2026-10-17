@@ -1,30 +1,30 @@
 # -*- coding: utf-8 -*-
-"""Cercanía a Chivilcoy: qué hechos van primero (pedido del editor, 27/09/2026).
+"""Cercanía a Chivilcoy: qué hechos van primero dentro del radio de 100 km.
 
-El diario es de Chivilcoy y su público también. Un robo en Chacabuco o un vuelco en la
-Ruta 5 a la altura de Suipacha le interesa mucho más que un hecho igual de grave en
-Trenque Lauquen, a 300 km. Las localidades prioritarias las eligió el editor: las más
-cercanas y con más movimiento en las redes.
+El diario es de Chivilcoy y su público también. Desde el 17/10/2026 (PDF «Prompt integral») la
+prioridad sale de la DISTANCIA medida (reels/geografia.py, catálogo Georef), no de una lista de
+pueblos elegidos a mano (la del 27/09 era Junín, Chacabuco, Bragado, Mercedes, Suipacha, Alberti
+y 25 de Mayo). Bandas configurables, no cuotas:
 
-NO es un filtro: las demás localidades siguen saliendo (a YouTube, todas). Es un empujón
-en las dos decisiones que sí recortan:
-- al elegir los pocos reels por pasada que van a Facebook e Instagram (publicador), y
-- al armar la tanda (flujo): van primero y entra una segunda nota del mismo pueblo con
-  menos exigencia que para el resto.
+- Chivilcoy: +3 · hasta 50 km (Alberti, Suipacha, Bragado): +2 · hasta el radio: +1.
+- Lo que está fuera del radio ya no llega acá (lo saca geografia), pero por las dudas suma 0.
+- Siguen sumando que el texto nombre a Chivilcoy o a un chivilcoyano (+2) y la Ruta 5 (+1).
+
+NO es un filtro: es un empujón en las dos decisiones que recortan — qué notas se arman (flujo) y
+qué reels salen en cada red (publicador). Nunca habilita un lugar fuera del radio ni un cuarto
+reel en la pasada.
 """
 import re
 import unicodedata
 
-# Claves sin tildes, como en scraper/localidades.py.
-PRIORITARIAS = ("junin", "chacabuco", "bragado", "mercedes", "suipacha", "alberti", "25 de mayo")
+from reels import geografia as GEO
 
-# Puntos que se le SUMAN al viral de la IA (escala 1 a 10) al elegir para Facebook e
-# Instagram. Con 2, una nota de Chacabuco de viral 7 le gana a una de Pergamino de 8,
-# pero un homicidio lejano de 9 le sigue ganando a una detención cercana de 6.
-BONO_LOCALIDAD = 2
+BONO_BANDA = {"chivilcoy": 3, "cercana": 2, "zona": 1}
 BONO_CHIVILCOY = 2     # el texto nombra a Chivilcoy o a un chivilcoyano
 BONO_RUTA_5 = 1        # la ruta que usan todos los días en Chivilcoy
 BONO_MAXIMO = 3
+# Desde cuánto bono una nota es «cercana» para la vara más baja de la segunda nota (flujo).
+BONO_CERCANA = 2
 
 # Sobre el texto ya sin tildes: «Nº» queda «no» y «N°» queda «n°».
 _RUTA_5 = re.compile(r"\brutas? (?:nacional )?(?:(?:nro|no|n|numero)[°.]* ?)?5\b|\brn ?5\b")
@@ -36,14 +36,15 @@ def _plano(texto: str) -> str:
     return " ".join("".join(c for c in t if not unicodedata.combining(c)).split())
 
 
-def es_prioritaria(localidad: str) -> bool:
-    return _plano(localidad) in PRIORITARIAS
+def bono_banda(localidad: str = "", evaluacion: dict = None) -> int:
+    ev = evaluacion if evaluacion is not None else (GEO.de_localidad(localidad) if localidad else {})
+    return BONO_BANDA.get(ev.get("banda") or "", 0) if ev.get("elegible") else 0
 
 
-def bono(localidad: str, texto: str = "") -> int:
+def bono(localidad: str, texto: str = "", evaluacion: dict = None) -> int:
     """Puntos de cercanía (0 a BONO_MAXIMO) de un hecho de `localidad` contado en `texto`."""
     plano = _plano(texto)
-    b = BONO_LOCALIDAD if es_prioritaria(localidad) else 0
+    b = bono_banda(localidad or "", evaluacion)
     if _CHIVILCOY.search(plano):
         b += BONO_CHIVILCOY
     if _RUTA_5.search(plano):
@@ -59,8 +60,9 @@ def bono_nota(nota: dict) -> int:
 
 
 def bono_pieza(pieza: dict) -> int:
-    """Para una pieza ya armada (publicador): la localidad del hecho y lo que se publica."""
+    """Para una pieza ya armada (publicador): el lugar del hecho evaluado y lo que se publica."""
     g = pieza.get("guion") or {}
     texto = " ".join([g.get("volanta") or "", g.get("titular") or "", g.get("bajada") or "",
                       (pieza.get("web") or {}).get("cuerpo") or ""])
-    return bono(pieza.get("localidad_hecho") or pieza.get("localidad") or "", texto)
+    ev = pieza.get("geo") if isinstance(pieza.get("geo"), dict) else None
+    return bono(pieza.get("localidad_hecho") or pieza.get("localidad") or "", texto, ev)

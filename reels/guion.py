@@ -77,6 +77,7 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "descripcion": "2 a 4 frases para la descripción del reel, en UN solo texto corrido (string, NO una lista)",
   "hashtags": ["#Uno", "#Dos"],
   "potencial_viral": 7,
+  "lugar_del_hecho": {"localidad": "Chacabuco", "partido": "Chacabuco", "provincia": "Buenos Aires", "certeza": "explicita"},
   "datos_clave": ["cada dato concreto del hecho, corto y tal cual está en el material"],
   "titulo_web": "titular para la NOTA de la web, 60 a 95 caracteres, sin punto final",
   "nota_web": "la nota para la web: 4 a 6 párrafos separados por un renglón en blanco, en UN solo texto (string, NO una lista)"
@@ -116,6 +117,18 @@ ES_DEL_TEMARIO (primero decidí esto; el reel se publica SOLO si es true):
 - El material puede traer restos de OTRAS notas de la página (títulos del costado).
   Decidí por el titular original y el hecho que cuenta la nota, no por esos restos.
 - Aunque sea false, completá igual los demás campos.
+
+LUGAR_DEL_HECHO (obligatorio): dónde OCURRIÓ el hecho central. No el domicilio de la víctima o
+del acusado, ni la sede del juzgado o la fiscalía, ni dónde detuvieron a alguien por un hecho de
+otro lugar, ni una ciudad nombrada como antecedente: si detuvieron en Moreno a los autores de un
+robo en Chacabuco, el lugar es Chacabuco.
+- localidad: la ciudad, pueblo o paraje, escrito como en el material. Si fue en una ruta o en el
+  campo, la localidad más cercana que nombre la nota.
+- partido y provincia: los que dice el material o los obvios de esa localidad (Chivilcoy →
+  partido Chivilcoy, Buenos Aires). Si no los sabés, dejalos vacíos.
+- certeza: "explicita" si la nota dice dónde fue; "inferida" si no lo nombra pero es un medio
+  local que habla de «la ciudad», «nuestro distrito» o de un barrio (ahí el lugar es la Localidad
+  que viene en el material); "desconocida" si no se puede saber. NUNCA inventes un lugar.
 
 VOLANTA (el antetítulo naranja):
 - Tiene que decir DÓNDE pasó: es lo primero que busca el lector de un pueblo al ver el
@@ -589,6 +602,12 @@ def _salida_ia(datos: dict, detalle: str, nota: dict) -> dict:
     salida["via"] = detalle
     salida["fuera_de_temario"] = fuera_de_temario(datos)
     salida["viral"] = potencial_viral(datos)
+    # Dónde ocurrió el hecho (17/10/2026): lo usa el radio de 100 km (reels/geografia.py). Si la IA
+    # no lo devolvió, queda un lugar vacío y el hecho queda pendiente, no adentro por defecto.
+    lugar = datos.get("lugar_del_hecho")
+    salida["lugar_del_hecho"] = ({k: " ".join(texto_ia(lugar.get(k)).split())
+                                  for k in ("localidad", "partido", "provincia", "certeza")}
+                                 if isinstance(lugar, dict) else {"certeza": "desconocida"})
     salida["datos_clave"] = [" ".join(str(d).split()) for d in (datos.get("datos_clave") or [])
                              if isinstance(d, (str, int, float)) and str(d).strip()][:14]
     # La nota de la web. Si la IA no la escribió, se arma con lo que sí escribió (bajada +

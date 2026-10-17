@@ -155,7 +155,7 @@ armar, generar = F.R.armar, F.G.generar
 
 def generar_con(copia):
     def _g(nota, **k):
-        return {"volanta": "Robo en Pergamino", "titular": "Allanamientos por el robo al juez federal",
+        return {"volanta": "Robo en Salto", "titular": "Allanamientos por el robo al juez federal",
                 "bajada": "Los investigadores revisaron casas de tres pueblos de la zona.",
                 "zocalo": "Robo", "pie": "Siguen.", "via": "gemini:falso", "tipo": "robo",
                 "descripcion_final": "Texto", "fuera_de_temario": "", "copia": copia}
@@ -167,7 +167,7 @@ try:
         setattr(F, k, v)
     F.R.armar = lambda g, salida, **k: {"duracion": 13, "peso_kb": 120, "tramos": ["nota"]}
     carpeta = Path(tempfile.mkdtemp(prefix="copia_"))
-    nota = {"titulo": "Allanamientos", "localidad_medio": "Pergamino",
+    nota = {"titulo": "Allanamientos", "localidad_medio": "Salto",   # Pergamino (123 km) ya no pasa el radio
             "url": "https://medio.test/juez", "imagen": "https://medio.test/a.jpg"}
 
     F.G.generar = generar_con({"racha": 16, "tramo": "la pesquisa por el violento robo",

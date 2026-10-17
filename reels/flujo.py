@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
 from reels import declaracion as DE
 from reels import frescura as FR
+from reels import geografia as GEO
 from reels import guion as G
 from reels import reel_bot as R
 from reels import limpieza as L
@@ -93,7 +94,7 @@ def _puntaje(nota: dict) -> float:
 # Puntaje mínimo para entrar en la segunda vuelta. El umbral del diccionario es 5 y
 # sirve para "revisá esto"; para OCUPAR un lugar en la tanda hace falta más margen.
 UMBRAL_RELLENO = 8
-# Para las localidades prioritarias (y los hechos en la Ruta 5 o con Chivilcoy), la vara
+# Para las localidades a 50 km o menos (y los hechos en la Ruta 5 o con Chivilcoy), la vara
 # de la segunda nota es más baja, a pedido del editor (27/09): en el scrapeo de ese día
 # quedaban afuera «Mercedes: la fiesta de estudiantes dejó un apuñalado» o «Escalofriante
 # caso en Chacabuco», que el diccionario puntuó 6. Lo que no es policial lo frena igual
@@ -124,6 +125,17 @@ CONTENCION_MISMA_LOCALIDAD = 0.40
 # redes»). Antes, 5. Cada pieza sale en todas sus redes juntas, así que en cada red queda un reel cada 30
 # minutos como mucho; cuántas entran en una pasada lo decide el publicador (`lugares_en_la_pasada`).
 MINUTOS_ENTRE_POSTEOS = 30
+
+# Cuántas notas se ARMAN por pasada cuando no se pide un número (--cuantos 0): el tope de reels
+# de la pasada (3) más margen para las que se caen al armar. Variable POLICIALES_ARMAR_POR_PASADA.
+ARMAR_POR_PASADA_DEFAULT = 8
+
+
+def armar_por_pasada() -> int:
+    try:
+        return max(1, int(os.environ.get("POLICIALES_ARMAR_POR_PASADA") or ARMAR_POR_PASADA_DEFAULT))
+    except ValueError:
+        return ARMAR_POR_PASADA_DEFAULT
 
 
 def plan_de_publicacion(piezas: list, desde=None, minutos: int = MINUTOS_ENTRE_POSTEOS):
@@ -211,7 +223,7 @@ def elegir(notas: list, cuantos: int, localidad: str = "") -> list:
 
         # (a) Solo lo que el diccionario dio por policial con holgura. Lo que entró
         #     raspando el umbral no merece un lugar cuando ya hay material mejor.
-        umbral = UMBRAL_RELLENO_CERCANAS if CER.bono_nota(n) else UMBRAL_RELLENO
+        umbral = UMBRAL_RELLENO_CERCANAS if CER.bono_nota(n) >= CER.BONO_CERCANA else UMBRAL_RELLENO
         if (n.get("score_keywords") or 0) < umbral:
             continue
 
@@ -398,6 +410,20 @@ def material(nota: dict) -> dict:
     return dict(nota, cuerpo=texto[:1500]) if texto else nota
 
 
+def lugar_del_hecho(g: dict, nota: dict) -> tuple:
+    """(lugar, evaluación) del hecho. Con el guion de la IA, el lugar que ella leyó en la nota
+    (`lugar_del_hecho`), controlado contra el texto; sin IA (guion por reglas, que igual no se
+    publica), la localidad del padrón que resolvió el guion."""
+    if isinstance(g.get("lugar_del_hecho"), dict):
+        texto = " ".join(str(nota.get(k) or "") for k in ("titulo", "resumen", "copete", "cuerpo",
+                                                          "texto_completo"))
+        lugar = GEO.lugar_de_la_ia(g["lugar_del_hecho"], texto, nota.get("localidad") or "")
+    else:
+        lugar = dict(GEO.ubicar(g.get("localidad_hecho") or nota.get("localidad")
+                                or nota.get("localidad_medio") or ""), segun="padron")
+    return lugar, GEO.evaluar(lugar)
+
+
 def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
              hacer_video: bool = True, preferir: str = "") -> dict:
     """Una nota → guion + placa + descripción. Devuelve el informe de la pieza."""
@@ -430,6 +456,15 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
 
     nota = material(nota)
     g = G.generar(nota, usar_ia=usar_ia, preferir=preferir, sitio=SITIO)
+
+    # Radio de 100 km desde Chivilcoy (17/10/2026, reels/geografia.py). Cuenta dónde OCURRIÓ el
+    # hecho, que lo lee la IA de la nota entera; antes de gastar en el video.
+    lugar, geo = lugar_del_hecho(g, nota)
+    if not g.get("fuera_de_temario") and not geo["elegible"]:
+        return {"orden": idx, "descartada": True, "geografia": geo["estado"], "por_que_no": geo["motivo"],
+                "lugar_hecho": lugar, "geo": geo,
+                "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                "titulo": nota.get("titulo"), "url_original": nota.get("url")}
 
     # ¿Este HECHO ya se publicó, o ya salió en esta pasada, contado por otro medio? (pedido del
     # editor, 12/10/2026: el robo del Cementerio Judío de Carlos Casares salió dos veces, una por
@@ -573,6 +608,10 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
                 "cuerpo": g.get("nota_web") or g["bajada"]},
         "imagen_url": imagen_usada or nota.get("imagen") or "",
         "localidad_hecho": g.get("localidad_hecho") or nota.get("localidad") or "",
+        # Dónde ocurrió y a cuántos km de Chivilcoy (reels/geografia.py): lo vuelve a mirar el
+        # publicador y queda en la memoria para auditar la selección.
+        "lugar_hecho": lugar,
+        "geo": geo,
         # Hora de publicación en el medio (UTC): Facebook e Instagram llevan la del momento.
         "publicado": FR.publicado_utc(nota),
         "placa": str(img),
@@ -647,6 +686,23 @@ def main():
     # Pergamino publicada por un medio de Chacabuco ocupa el lugar de Chacabuco.
     notas = [dict(n, localidad=G.localidad_de_la_nota(n)[0]) for n in notas]
 
+    # Radio de 100 km (17/10/2026): lo que con SEGURIDAD es lejano se va acá, gratis, antes de
+    # bajar fotos o pedirle el guion a la IA. Lo dudoso sigue: el guion lee el lugar exacto.
+    lejanas = []
+    for n in notas:
+        ev = GEO.prefiltro(n, n["localidad"])
+        if ev:
+            lejanas.append((n, ev))
+    if lejanas:
+        afuera = {id(n) for n, _ in lejanas}
+        notas = [n for n in notas if id(n) not in afuera]
+        por_pueblo = {}
+        for _n, ev in lejanas:
+            por_pueblo[f"{ev.get('nombre')} ({ev.get('distancia_km')} km)"] = \
+                por_pueblo.get(f"{ev.get('nombre')} ({ev.get('distancia_km')} km)", 0) + 1
+        print(f"{len(lejanas)} nota(s) fuera del radio de {GEO.radio_km():g} km de Chivilcoy: "
+              + ", ".join(f"{k} ×{v}" for k, v in sorted(por_pueblo.items())))
+
     con_material = [n for n in notas if (n.get("imagen") or n.get("video"))]
     sin_material = len(notas) - len(con_material)
     if sin_material:
@@ -681,7 +737,11 @@ def main():
     # 0 = sin tope, decidido por el editor el 27/09/2026: ni por pueblo ni por día. Lo
     # único que sigue afuera es lo que elegir() descarta por calidad (lo que entró
     # raspando el diccionario) y el mismo hecho contado dos veces.
-    cuantos = args.cuantos if args.cuantos > 0 else len(candidatas)
+    # Desde el 17/10/2026 salen como mucho 3 reels por pasada (reels/cupo.py): armar
+    # 15 para tirar 12 es gastar IA y video de más. Se arman las mejores ARMAR_POR_PASADA (con
+    # margen por las que se caen al armar: repetidas, fuera del temario o del radio); las demás
+    # no se anotan en la memoria y pueden entrar en la pasada siguiente si siguen siendo de hoy.
+    cuantos = args.cuantos if args.cuantos > 0 else min(len(candidatas), armar_por_pasada())
     elegidas = elegir(candidatas, cuantos, args.localidad or "")
     if not elegidas:
         print("No quedan notas nuevas para hacer reel (o ninguna coincide con el filtro).")
@@ -766,8 +826,9 @@ def main():
         # hicieron — que además se perderían para siempre, porque el ledger no las
         # volvería a ofrecer.
         hechas = {p.get("url_original") for p in piezas if p.get("placa")}
-        # Las repetidas también: el hecho ya está publicado, no hay que volver a evaluarlas.
-        hechas |= {d.get("url_original") for d in descartadas if d.get("repetida")}
+        # Las repetidas también: el hecho ya está publicado, no hay que volver a evaluarlas. Y las
+        # que la IA ubicó fuera del radio o sin lugar claro: ya se pagó el guion para saberlo.
+        hechas |= {d.get("url_original") for d in descartadas if d.get("repetida") or d.get("geografia")}
         con_pieza = [n for n in elegidas if n.get("url") in hechas]
         total = LD.registrar(con_pieza)
         print(f"Memoria actualizada: {len(con_pieza)} nota(s) anotadas, {total} en total")
@@ -787,9 +848,10 @@ def main():
                   f"{args.conservar_dias} día(s)")
 
     if descartadas:
-        print(f"{len(descartadas)} nota(s) descartadas al armar (imagen que no bajó):")
+        print(f"{len(descartadas)} nota(s) descartadas al armar:")
         for d in descartadas:
-            print(f"   - {str(d.get('localidad'))[:14]:<14} {str(d.get('titulo'))[:56]}")
+            print(f"   - {str(d.get('localidad'))[:14]:<14} {str(d.get('titulo'))[:56]} — "
+                  f"{str(d.get('por_que_no'))[:90]}")
 
     print(f"=== {len(piezas)} placas en {carpeta} ===")
     print("No se publicó nada. Revisá las imágenes y los .json antes del próximo paso.")

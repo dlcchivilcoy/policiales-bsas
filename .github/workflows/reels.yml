@@ -15,9 +15,10 @@ name: Reels de policiales
 # publicacion real de prueba (1 reel: salio bien en Instagram, Facebook y YouTube).
 # Estuvo apagada del 22/09 al 27/09 mientras se evaluaban los reels.
 #
-# SIN TOPE de reels por pueblo ni por dia (decision del editor, 27/09): cada pasada hace
-# reel de TODAS las notas nuevas que sirvan (--cuantos 0). Queda afuera solo lo que no
-# tiene foto, lo que no es policial y el mismo hecho contado dos veces.
+# DESDE EL 17/10/2026 (PDF «Prompt integral»): como mucho 3 hechos por pasada entre TODAS las
+# redes (reels/cupo.py) y solo hechos a 100 km o menos del centro de Chivilcoy
+# (reels/geografia.py). Con --cuantos 0 se arman las mejores 8 notas (no todas). Antes (27/09):
+# sin tope, reel de todas las notas nuevas que sirvieran.
 #
 # HORARIOS (27/09), elegidos cruzando dos mediciones:
 #   - cuando PUBLICAN los medios: 227 notas de una semana → fuerte de 7 a 11, parejo de 13

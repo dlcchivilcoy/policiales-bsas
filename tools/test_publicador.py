@@ -36,6 +36,9 @@ def _sin_ia(*a, **k):
 
 
 PUB.RV._preguntar_ia = _sin_ia
+# El cupo global de 3 hechos por pasada (17/10/2026) tiene su propia sección al final (la 30); las
+# pruebas anteriores son de otras reglas y se escribieron con 6 lugares por pasada.
+os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"
 
 fallas = []
 total = 0
@@ -268,7 +271,7 @@ def preparar(meta=None):
     base = Path(tempfile.mkdtemp(prefix="pub_"))
     carpeta = base / "2026-09-26_1000"
     carpeta.mkdir()
-    piezas = [pieza(1, "junin"), pieza(2, "pergamino"), pieza(3, "lobos", apta=False)]
+    piezas = [pieza(1, "junin"), pieza(2, "bragado"), pieza(3, "lobos", apta=False)]
     for p in piezas:
         (carpeta / f"{p['orden']:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
     (carpeta / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas}),
@@ -280,6 +283,7 @@ def preparar(meta=None):
     PUB._barrer_release = lambda *a, **k: {"borrados": [], "mb": 0}
     PUB.LEDGER = base / "estado" / "publicados.json"
     PUB.DIST.BUZON = base / "estado" / "buzon_distribuidor.json"   # nunca el buzón real
+    PUB.CUPO.ARCHIVO = base / "estado" / "cupo_pasadas.json"      # ni el cupo real de la pasada
     PUB.RAIZ = base
     return base, carpeta, reloj, meta
 
@@ -825,19 +829,19 @@ def preparar_pueblos(pueblos_virales):
     return base, carpeta, reloj, meta
 
 
-base, carpeta, reloj, meta = preparar_pueblos([("pergamino", 8), ("lobos", 8), ("chacabuco", 7), ("alberti", 5)])
+base, carpeta, reloj, meta = preparar_pueblos([("junin", 9), ("lobos", 8), ("chivilcoy", 7), ("alberti", 5)])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
-chequear("Chacabuco (viral 7) le gana el lugar a Lobos (viral 8) en Instagram y Facebook",
+chequear("Chivilcoy (viral 7, +3) le gana el lugar a Lobos (viral 8, +1) en Instagram y Facebook",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok", "omitida"]
          and [f["facebook"]["estado"] for f in inf["piezas"]] == ["ok", "omitida", "ok", "omitida"])
 chequear("...el motivo de la cercana que no entró lo dice",
          "+2 por cercanía" in inf["piezas"][3]["instagram"]["detalle"]
-         and "cercanía" not in inf["piezas"][1]["instagram"]["detalle"])
+         and "+1 por cercanía" in inf["piezas"][1]["instagram"]["detalle"])
 chequear("...y YouTube sigue llevando todas", all(f["youtube"]["estado"] == "ok" for f in inf["piezas"]))
 shutil.rmtree(base)
 
 os.environ["IG_POR_PASADA"] = "1"
-base, carpeta, reloj, meta = preparar_pueblos([("junin", 6), ("pergamino", 9)])
+base, carpeta, reloj, meta = preparar_pueblos([("bragado", 6), ("junin", 9)])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 chequear("un hecho lejano mucho más viral (9) le sigue ganando a uno cercano de 6",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
@@ -861,7 +865,7 @@ def preparar_horas(filas):
 
 
 # El caso del 27/09: el temporal de horas antes (muy viral y cercano) se llevaba el lugar.
-base, carpeta, reloj, meta = preparar_horas([("bragado", 9, "13:00"), ("pergamino", 5, "15:00"),
+base, carpeta, reloj, meta = preparar_horas([("bragado", 9, "13:00"), ("junin", 5, "15:00"),
                                              ("lobos", 6, "15:10")])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 chequear("Instagram (10/10): las 2 MÁS VIRALES, como Facebook, aunque sean de horas antes",
@@ -873,11 +877,11 @@ chequear("Facebook, en cambio (03/10): las 2 MÁS VIRALES, aunque sean de horas 
 shutil.rmtree(base)
 
 os.environ["IG_POR_PASADA"] = "1"
-base, carpeta, reloj, meta = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "15:00")])
+base, carpeta, reloj, meta = preparar_horas([("lobos", 6, "15:10"), ("bragado", 6, "15:00")])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
-chequear("con minutos de diferencia, desempata la cercanía (Junín 10 min antes le gana)",
+chequear("con minutos de diferencia, desempata la cercanía (Bragado, 49 km, 10 min antes le gana)",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
-base2, carpeta2, _, _ = preparar_horas([("pergamino", 6, "15:10"), ("junin", 6, "13:30")])
+base2, carpeta2, _, _ = preparar_horas([("lobos", 6, "15:10"), ("bragado", 6, "13:30")])
 inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
 chequear("...y desde el 10/10 la hora ya no manda: gana la cercana aunque sea de 1,5 h antes",
          [f["instagram"]["estado"] for f in inf2["piezas"]] == ["omitida", "ok"])
@@ -978,12 +982,12 @@ def preparar_video(filas):
 
 
 os.environ["IG_POR_PASADA"] = "1"
-base, carpeta, reloj, meta = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "15:00", True)])
+base, carpeta, reloj, meta = preparar_video([("junin", 7, "15:10", False), ("lobos", 5, "15:00", True)])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 chequear("de la misma hora, la que tiene VIDEO le gana a la de foto aunque sea menos viral",
          [f["instagram"]["estado"] for f in inf["piezas"]] == ["omitida", "ok"])
 chequear("...y el motivo de la de foto no dice «por video»", "por video" not in inf["piezas"][0]["instagram"]["detalle"])
-base2, carpeta2, _, _ = preparar_video([("pergamino", 7, "15:10", False), ("lobos", 5, "13:00", True)])
+base2, carpeta2, _, _ = preparar_video([("junin", 7, "15:10", False), ("lobos", 5, "13:00", True)])
 inf2 = silencio(PUB.publicar_lote, carpeta2, ("instagram",), publicar=True)
 chequear("...y el video suma aunque sea de 2 horas antes (desde el 10/10 la hora solo desempata)",
          [f["instagram"]["estado"] for f in inf2["piezas"]] == ["omitida", "ok"]
@@ -1163,6 +1167,60 @@ chequear("web: el hecho que YouTube no repite (ya está en el canal) tampoco se 
          and meta.wix_publicados == 0)
 shutil.rmtree(base)
 os.environ["NOTAS_WEB"] = "0"
+
+
+# --- 30. Cupo GLOBAL de 3 hechos por pasada y radio de 100 km (17/10/2026) -----------------
+os.environ["MAX_POLICE_REELS_PER_PASS"] = "3"
+os.environ.pop("IG_POR_PASADA", None)
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR)   # 6 lugares de 30 min hasta 12:05
+chequear("lugares por pasada: nunca más de 3 aunque entren 6 de 30 minutos",
+         PUB.lugares_en_la_pasada(datetime(2026, 10, 17, 9, 10, tzinfo=_AR)) == 3)
+base, carpeta, reloj, meta = preparar_virales([3, 1, 2, 8, 5, 9, 7, 4, 6, 6])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+salieron = [f for f in inf["piezas"] if any((f.get(r) or {}).get("estado") == "ok" for r in PUB.REDES)]
+chequear("10 piezas elegibles → como mucho 3 hechos en TODAS las redes (YouTube incluido)",
+         len(salieron) == 3 and sum(1 for f in inf["piezas"] if (f.get("youtube") or {}).get("estado") == "ok") == 3)
+chequear("...las 3 más virales (9, 8, 7)", sorted(int(f["titular"].split()[-1]) for f in salieron) == [4, 6, 7])
+chequear("...las demás, salteadas con el motivo del cupo",
+         sum(1 for s_ in inf["salteadas"] if "como mucho 3 hechos" in s_["motivo"]) == 7)
+chequear("...y la pasada queda anotada con sus 3 reservas",
+         inf["pasada"]["id"] == "2026-10-17T09:05" and len(PUB.CUPO.reservadas("2026-10-17T09:05")) == 3)
+# La misma pasada otra vez (el respaldo o una corrida a mano): no hay 3 lugares nuevos.
+lote2 = carpeta.parent / "2026-10-17_0930"
+lote2.mkdir()
+piezas2 = [dict(pieza(20 + i, "chivilcoy"), viral=10) for i in range(3)]
+for p_ in piezas2:
+    (lote2 / f"{p_['orden']:02d}_reel.mp4").write_bytes(b"\x00" * 4096)
+(lote2 / "_lote.json").write_text(json.dumps({"publicado": False, "piezas": piezas2}), encoding="utf-8")
+inf2 = silencio(PUB.publicar_lote, lote2, PUB.REDES, publicar=True)
+chequear("un reintento de la MISMA pasada no habilita otros 3 (ni con viral 10 de Chivilcoy)",
+         not any((f.get(r) or {}).get("estado") == "ok" for f in inf2["piezas"] for r in PUB.REDES)
+         and len(PUB.CUPO.reservadas("2026-10-17T09:05")) == 3)
+# La pasada siguiente sí tiene sus 3.
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 12, 10, tzinfo=_AR)
+inf3 = silencio(PUB.publicar_lote, lote2, PUB.REDES, publicar=True)
+chequear("la pasada siguiente (12:05) tiene sus propios 3 lugares",
+         inf3["pasada"]["id"] == "2026-10-17T12:05"
+         and sum(1 for f in inf3["piezas"] if (f.get("youtube") or {}).get("estado") == "ok") == 3)
+shutil.rmtree(base)
+
+# Radio: lo lejano no sale en ninguna red, ni va al buzón de X/TikTok, aunque sea lo más viral.
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 15, 10, tzinfo=_AR)
+base, carpeta, reloj, meta = preparar_pueblos([("pergamino", 10), ("rojas", 10), ("9 de julio", 5),
+                                               ("bolivar", 9)])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("Pergamino (123 km), Rojas (101,6 km) y Bolívar quedan afuera con el motivo; 9 de Julio (99,4) sale",
+         [f["orden"] for f in inf["piezas"]] == [3]
+         and sum(1 for s_ in inf["salteadas"] if "fuera del radio" in s_["motivo"]) == 3)
+buzon = json.loads(PUB.DIST.BUZON.read_text(encoding="utf-8")) if PUB.DIST.BUZON.exists() else {}
+chequear("...y al buzón de X/TikTok no llega ninguna lejana",
+         all("medio.test/3" in json.dumps(e) for e in (buzon.get("eventos") or [])))
+ledger = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+chequear("...la memoria guarda distancia, precisión y pasada de lo publicado",
+         ledger["https://medio.test/3"].get("distancia_km") == 99.4
+         and ledger["https://medio.test/3"].get("pasada") == "2026-10-17T15:05")
+shutil.rmtree(base)
+os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
