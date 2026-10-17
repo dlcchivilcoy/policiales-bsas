@@ -13,8 +13,11 @@ ante una noticia urgente»).
 Cada placa dice la FECHA del dato, la FUENTE, el mercado o lugar, la MONEDA y la UNIDAD. Si el dato no
 es de hoy, lo dice: «Último dato disponible: 15/10» (nunca un dato viejo presentado como nuevo).
 
-Zonas seguras de Instagram: arriba ~250 px (barras y nombre) y abajo ~250 px (la caja de respuesta)
-quedan libres de lo importante.
+ZONA SEGURA (pedido del editor, 17/10/2026: «centrar todo para que no se tape con los marcos de las
+redes, el texto del margen inferior y los logos; compactar»): todo —la marca, la sección, el título, los
+datos y la fuente de abajo— se arma como UN bloque compacto y se centra entre SEGURA[0] y SEGURA[1]:
+arriba quedan libres las barras de progreso, la foto y el nombre de la cuenta; abajo, la caja de
+respuesta, el corazón y el avión de Instagram y Facebook. Si un bloque no entra, se achica entero.
 """
 import json
 from datetime import date, datetime, timedelta
@@ -30,8 +33,9 @@ TEMA = D.TEMAS["grafito"]
 FONDO = (24, 26, 30)
 TARJETA = (38, 41, 47)
 SUBE, BAJA, IGUAL = (110, 190, 80), (232, 96, 86), (170, 175, 182)
-Y0 = 250                      # tope de lo importante (debajo de la barra de Instagram)
-Y_PIE = 1600                  # el pie (fuente y fecha)
+SEGURA = (290, 1580)          # la franja libre de los marcos de Instagram y Facebook (de 1920)
+Y_PIE = 1150                  # hasta dónde llenar con datos dentro del bloque (después va el pie)
+ALTO_BLOQUE = 2400            # el lienzo de trabajo del bloque (se recorta a lo dibujado)
 MAPA = D.MARCA / "mapa_pampa.png"
 MAPA_GEOJSON = "https://infra.datos.gob.ar/georef/provincias.geojson"
 MAPA_CAJA = (-65.3, -56.7, -39.4, -30.5)        # lon mín, lon máx, lat mín, lat máx
@@ -70,41 +74,50 @@ def pesos(v, dec: int = 0) -> str:
 # Piezas comunes
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 def lienzo() -> tuple:
+    """El lienzo TRANSPARENTE del bloque: se dibuja desde y=0 y `guardar` lo centra en la zona segura."""
+    im = Image.new("RGBA", (W, ALTO_BLOQUE), (0, 0, 0, 0))
+    return im, ImageDraw.Draw(im)
+
+
+def fondo() -> Image.Image:
+    """El fondo 9:16: grafito, una franja naranja fina arriba y el isologo grande, apenas visible."""
     im = Image.new("RGBA", (W, H), FONDO + (255,))
-    d = ImageDraw.Draw(im)
-    # Una franja verde-naranja fina arriba y el isologo grande, apenas visible, de fondo.
-    d.rectangle((0, 0, W, 8), fill=D.NARANJA)
+    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.NARANJA)
     marca = D.isologo(900)
     marca.putalpha(marca.getchannel("A").point(lambda a: round(a * 0.05)))
     im.alpha_composite(marca, (W - marca.width + 260, H - marca.height - 120))
-    return im, d
+    return im
 
 
 def encabezado(im, d, seccion: str, titulo: str, sub: str = "") -> int:
     """La marca, la sección en una caja naranja, el título y la bajada. Devuelve el y libre."""
-    im.alpha_composite(D.lockup("grafito", 64), (D.X, Y0 - 120))
-    f = D.fuente("bold", 30)
+    lg = D.lockup("grafito", 60)
+    im.alpha_composite(lg, (D.X, 0))
+    f = D.fuente("bold", 28)
     w = d.textlength(seccion, font=f)
-    y = Y0 + 10
-    d.rectangle((D.X, y, D.X + w + 36, y + 52), fill=D.NARANJA_CAJA)
-    d.text((D.X + 18, y + 9), seccion, font=f, fill=D.BLANCO)
-    y += 52 + 26
-    ft, rt = D.ajustar(d, titulo, "bold", 76, 50, W - 2 * D.X, 2)
-    y = D.escribir(d, D.X, y, rt, ft, D.BLANCO) + 14
+    y = lg.height + 22
+    d.rectangle((D.X, y, D.X + w + 32, y + 48), fill=D.NARANJA_CAJA)
+    d.text((D.X + 16, y + 8), seccion, font=f, fill=D.BLANCO)
+    y += 48 + 18
+    ft, rt = D.ajustar(d, titulo, "bold", 70, 48, W - 2 * D.X, 2)
+    y = D.escribir(d, D.X, y, rt, ft, D.BLANCO) + 10
     if sub:
-        fs, rs = D.ajustar(d, sub, "regular", 36, 28, W - 2 * D.X, 2)
-        y = D.escribir(d, D.X, y, rs, fs, (200, 204, 210), 1.25)
-    return y + 36
+        fs, rs = D.ajustar(d, sub, "regular", 32, 26, W - 2 * D.X, 2)
+        y = D.escribir(d, D.X, y, rs, fs, (200, 204, 210), 1.22)
+    return y + 26
 
 
 def pie(d, fuente: str, detalle: str = ""):
-    d.line((D.X, Y_PIE, W - D.X, Y_PIE), fill=(70, 74, 82), width=2)
-    y = Y_PIE + 22
+    """La fuente, el detalle y el usuario, PEGADOS debajo de lo último que se dibujó (no al fondo de la
+    pantalla, donde lo tapan la caja de respuesta y los botones)."""
+    y = (d._image.getbbox() or (0, 0, 0, 0))[3] + 28
+    d.line((D.X, y, W - D.X, y), fill=(70, 74, 82), width=2)
+    y += 18
     for texto in (f"Fuente: {fuente}", detalle):
         if texto:
-            fx, r = D.ajustar(d, texto, "regular", 27, 22, W - 2 * D.X, 2)
-            y = D.escribir(d, D.X, y, r, fx, (165, 170, 178), 1.25) + 6
-    d.text((D.X, y + 10), D.USUARIO, font=D.fuente("bold", 30), fill=D.VERDE)
+            fx, r = D.ajustar(d, texto, "regular", 26, 22, W - 2 * D.X, 2)
+            y = D.escribir(d, D.X, y, r, fx, (165, 170, 178), 1.22) + 4
+    d.text((D.X, y + 8), D.USUARIO, font=D.fuente("bold", 28), fill=D.VERDE)
 
 
 def flecha(d, x: int, y: int, var, tam: int = 30, texto: str = "") -> int:
@@ -133,10 +146,24 @@ def tarjeta(d, y: int, alto: int):
     d.rounded_rectangle((D.X - 24, y, W - D.X + 24, y + alto), radius=22, fill=TARJETA)
 
 
+def componer(bloque: Image.Image) -> Image.Image:
+    """El bloque dibujado, recortado a lo que tiene y CENTRADO (vertical) en la zona segura del fondo
+    9:16. Si es más alto que la zona, se achica entero."""
+    caja = bloque.getbbox() or (0, 0, W, 1)
+    bloque = bloque.crop((0, 0, W, caja[3]))
+    alto_zona = SEGURA[1] - SEGURA[0]
+    if bloque.height > alto_zona:
+        k = alto_zona / bloque.height
+        bloque = bloque.resize((round(W * k), alto_zona), Image.LANCZOS)
+    im = fondo()
+    im.alpha_composite(bloque, ((W - bloque.width) // 2, SEGURA[0] + (alto_zona - bloque.height) // 2))
+    return im
+
+
 def guardar(im, destino: Path) -> Path:
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
-    im.convert("RGB").save(destino, "JPEG", quality=92)
+    componer(im).convert("RGB").save(destino, "JPEG", quality=92)
     return destino
 
 
@@ -169,17 +196,17 @@ def placa_clima(datos: dict, destino: Path, hoy: date, seccion: str = "EL CAMPO 
     im, d = lienzo()
     titulo = "El clima hoy en la zona" if dia == hoy else "El clima de mañana en la zona"
     y = encabezado(im, d, seccion, titulo, fecha_larga(dia).capitalize() + " · máxima / mínima, lluvia y viento")
-    alto = 150
+    alto = 132
     for nombre, v in filas:
-        tarjeta(d, y, alto - 18)
-        d.text((D.X + 6, y + 22), nombre, font=D.fuente("bold", 40), fill=D.BLANCO)
-        d.text((D.X + 6, y + 76), f"Viento hasta {v['viento']} km/h", font=D.fuente("regular", 28), fill=(170, 175, 182))
+        tarjeta(d, y, alto - 14)
+        d.text((D.X + 6, y + 16), nombre, font=D.fuente("bold", 38), fill=D.BLANCO)
+        d.text((D.X + 6, y + 66), f"Viento hasta {v['viento']} km/h", font=D.fuente("regular", 26), fill=(170, 175, 182))
         t = f"{round(v['max'])}° / {round(v['min'])}°"
-        f = D.fuente("negra", 56)
-        d.text((560, y + 34), t, font=f, fill=D.NARANJA)
+        f = D.fuente("negra", 52)
+        d.text((540, y + 28), t, font=f, fill=D.NARANJA)
         mm = f"{pesos(v['mm'], 1) if v['mm'] else '0'} mm"
-        fm = D.fuente("bold", 40)
-        d.text((W - D.X - d.textlength(mm, font=fm), y + 44), mm, font=fm, fill=(120, 180, 255) if v["mm"] else IGUAL)
+        fm = D.fuente("bold", 38)
+        d.text((W - D.X - d.textlength(mm, font=fm), y + 36), mm, font=fm, fill=(120, 180, 255) if v["mm"] else IGUAL)
         y += alto
     # Lo que viene: lluvia acumulada de los próximos días en la zona (promedio de las estaciones).
     dias = sorted({f for e in M.ZONA for f in (pron.get(e) or {}) if f >= dia.isoformat()})[:5]
@@ -188,8 +215,8 @@ def placa_clima(datos: dict, destino: Path, hoy: date, seccion: str = "EL CAMPO 
         prom = sum(total) / len(total) if total else 0
         texto = (f"Próximos {len(dias)} días: {pesos(prom, 0)} mm de lluvia en promedio en la zona"
                  if prom >= 1 else f"Próximos {len(dias)} días: sin lluvias importantes en la zona")
-        fx, r = D.ajustar(d, texto, "medium", 36, 28, W - 2 * D.X, 2)
-        D.escribir(d, D.X, y + 20, r, fx, D.BLANCO, 1.25)
+        fx, r = D.ajustar(d, texto, "medium", 32, 26, W - 2 * D.X, 2)
+        D.escribir(d, D.X, y + 8, r, fx, D.BLANCO, 1.22)
     pie(d, "SMN, pronóstico por modelo para cada estación (9 de Julio, Junín, Bolívar, Las Flores, Pehuajó)",
         "El SMN no tiene estación en Chivilcoy: van las cinco más cercanas. °C, mm y km/h.")
     return guardar(im, destino)
@@ -204,31 +231,31 @@ def placa_granos(datos: dict, mem: dict, destino: Path, hoy: date, seccion: str)
         else "Precios de pizarra en Rosario"
     y = encabezado(im, d, seccion, titulo, rotulo_fecha(p["fecha"], hoy) + " · pesos y dólares por tonelada")
     previo = M.anterior(mem, "pizarra", p["fecha"])
-    alto = 168
+    alto = 148
     for grano in ("soja", "maiz", "trigo", "girasol", "sorgo"):
         v = (p.get("productos") or {}).get(grano)
         if not v or y > Y_PIE - alto:
             continue
-        tarjeta(d, y, alto - 18)
-        d.text((D.X + 6, y + 24), M.NOMBRE[grano], font=D.fuente("bold", 44), fill=D.BLANCO)
+        tarjeta(d, y, alto - 14)
+        d.text((D.X + 6, y + 18), M.NOMBRE[grano], font=D.fuente("bold", 40), fill=D.BLANCO)
         if v.get("estimado"):
-            d.text((D.X + 6, y + 84), "estimativo (E)", font=D.fuente("regular", 26), fill=(170, 175, 182))
+            d.text((D.X + 6, y + 72), "estimativo (E)", font=D.fuente("regular", 24), fill=(170, 175, 182))
         precio = f"${pesos(v['ars'])}"
-        f = D.fuente("negra", 58)
+        f = D.fuente("negra", 54)
         x = W - D.X - d.textlength(precio, font=f)
-        d.text((x, y + 16), precio, font=f, fill=D.NARANJA)
+        d.text((x, y + 12), precio, font=f, fill=D.NARANJA)
         usd = f"US$ {pesos(v.get('usd'), 2)}" if v.get("usd") else ""
-        fu = D.fuente("medium", 30)
+        fu = D.fuente("medium", 28)
         var = None
         if previo:
             var = M.variacion(v["ars"], ((previo[1].get("productos") or {}).get(grano) or {}).get("ars"))
         xu = W - D.X - d.textlength(usd, font=fu)
-        d.text((xu, y + 94), usd, font=fu, fill=(200, 204, 210))
+        d.text((xu, y + 80), usd, font=fu, fill=(200, 204, 210))
         if var is not None:
-            flecha(d, 360, y + 94, var, 30)
+            flecha(d, 360, y + 78, var, 28)
         elif v.get("direccion"):
             # Sin la rueda anterior en la memoria, solo el sentido que marca la Cámara (sin el número).
-            flecha(d, 360, y + 94, {"sube": 1, "baja": -1}.get(v["direccion"], 0), 30,
+            flecha(d, 360, y + 78, {"sube": 1, "baja": -1}.get(v["direccion"], 0), 28,
                    {"sube": "sube", "baja": "baja"}.get(v["direccion"], "sin cambios"))
         y += alto
     detalle = (f"Pizarra: entrega inmediata, pago contado, zona Rosario. Variación contra la rueda del "
@@ -249,32 +276,32 @@ def placa_dolar(datos: dict, mem: dict, destino: Path, hoy: date, seccion: str) 
     y = encabezado(im, d, seccion, titulo, rotulo_fecha(fecha, hoy) + " · pesos por dólar")
     if may:
         prev = M.anterior(mem, "a3500", may["fecha"])
-        tarjeta(d, y, 230)
-        d.text((D.X + 6, y + 24), "Mayorista de referencia", font=D.fuente("bold", 40), fill=D.BLANCO)
-        d.text((D.X + 6, y + 76), f"BCRA, Com. A 3500 · {M.fecha_corta(may['fecha'])}", font=D.fuente("regular", 28),
+        tarjeta(d, y, 196)
+        d.text((D.X + 6, y + 18), "Mayorista de referencia", font=D.fuente("bold", 38), fill=D.BLANCO)
+        d.text((D.X + 6, y + 64), f"BCRA, Com. A 3500 · {M.fecha_corta(may['fecha'])}", font=D.fuente("regular", 26),
                fill=(170, 175, 182))
-        d.text((D.X + 6, y + 120), f"${pesos(may['valor'], 2)}", font=D.fuente("negra", 70), fill=D.NARANJA)
+        d.text((D.X + 6, y + 100), f"${pesos(may['valor'], 2)}", font=D.fuente("negra", 64), fill=D.NARANJA)
         if prev:
-            flecha(d, W - D.X - 190, y + 146, M.variacion(may["valor"], prev[1].get("valor")), 34)
-        y += 250
+            flecha(d, W - D.X - 190, y + 124, M.variacion(may["valor"], prev[1].get("valor")), 32)
+        y += 212
     for clave, nombre in (("billete", "Banco Nación · billete"), ("divisa", "Banco Nación · divisa")):
         v = (bna or {}).get(clave)
         if not v:
             continue
-        tarjeta(d, y, 200)
-        d.text((D.X + 6, y + 24), nombre, font=D.fuente("bold", 40), fill=D.BLANCO)
-        d.text((D.X + 6, y + 76), f"{M.fecha_corta(v['fecha'])}" + (f" · {bna.get('hora')} h" if bna.get("hora") else ""),
-               font=D.fuente("regular", 28), fill=(170, 175, 182))
+        tarjeta(d, y, 168)
+        d.text((D.X + 6, y + 18), nombre, font=D.fuente("bold", 38), fill=D.BLANCO)
+        d.text((D.X + 6, y + 64), f"{M.fecha_corta(v['fecha'])}" + (f" · {bna.get('hora')} h" if bna.get("hora") else ""),
+               font=D.fuente("regular", 26), fill=(170, 175, 182))
         for i, (rot, val) in enumerate((("Compra", v["compra"]), ("Venta", v["venta"]))):
             x = D.X + 6 + i * 430
-            d.text((x, y + 118), rot, font=D.fuente("regular", 28), fill=(170, 175, 182))
-            d.text((x + 110, y + 106), f"${pesos(val, 2)}", font=D.fuente("negra", 46), fill=D.BLANCO)
-        y += 220
+            d.text((x, y + 112), rot, font=D.fuente("regular", 26), fill=(170, 175, 182))
+            d.text((x + 116, y + 100), f"${pesos(val, 2)}", font=D.fuente("negra", 44), fill=D.BLANCO)
+        y += 184
     if y < Y_PIE - 150:
         texto = ("El mayorista es la referencia de las exportaciones de granos y de los insumos importados: "
                  "fertilizantes, fitosanitarios y repuestos.")
-        fx, r = D.ajustar(d, texto, "regular", 32, 26, W - 2 * D.X, 3)
-        D.escribir(d, D.X, y + 10, r, fx, (200, 204, 210), 1.3)
+        fx, r = D.ajustar(d, texto, "regular", 29, 24, W - 2 * D.X, 3)
+        D.escribir(d, D.X, y + 4, r, fx, (200, 204, 210), 1.25)
     pie(d, "BCRA (API de estadísticas) y Banco Nación", "Variación contra la rueda anterior.")
     return guardar(im, destino)
 
@@ -294,22 +321,21 @@ def placa_chicago(datos: dict, destino: Path, hoy: date, seccion: str) -> Path |
         v = c.get(grano)
         if not v:
             continue
-        tarjeta(d, y, 200)
-        d.text((D.X + 6, y + 26), M.NOMBRE[grano], font=D.fuente("bold", 46), fill=D.BLANCO)
-        d.text((D.X + 6, y + 88), f"Contrato {v['contrato']} · {pesos(v['cent_bu'], 2)} ¢/bushel",
-               font=D.fuente("regular", 28), fill=(170, 175, 182))
+        tarjeta(d, y, 168)
+        d.text((D.X + 6, y + 20), M.NOMBRE[grano], font=D.fuente("bold", 42), fill=D.BLANCO)
+        d.text((D.X + 6, y + 78), f"Contrato {v['contrato']} · {pesos(v['cent_bu'], 2)} ¢/bushel",
+               font=D.fuente("regular", 26), fill=(170, 175, 182))
         precio = f"US$ {pesos(v['usd_t'], 1)}"
-        f = D.fuente("negra", 58)
-        d.text((W - D.X - d.textlength(precio, font=f), y + 22), precio, font=f, fill=D.NARANJA)
+        f = D.fuente("negra", 54)
+        d.text((W - D.X - d.textlength(precio, font=f), y + 16), precio, font=f, fill=D.NARANJA)
         if v.get("cambio_pct") is not None:
-            ancho = 160
-            flecha(d, W - D.X - ancho, y + 120, v["cambio_pct"], 32)
-        y += 220
+            flecha(d, W - D.X - 160, y + 100, v["cambio_pct"], 30)
+        y += 184
     if y < Y_PIE - 150:
         texto = ("Chicago marca el precio internacional de la soja, el maíz y el trigo: lo que pasa ahí se "
                  "traslada a los precios que se pagan en Rosario.")
-        fx, r = D.ajustar(d, texto, "regular", 32, 26, W - 2 * D.X, 3)
-        D.escribir(d, D.X, y + 10, r, fx, (200, 204, 210), 1.3)
+        fx, r = D.ajustar(d, texto, "regular", 29, 24, W - 2 * D.X, 3)
+        D.escribir(d, D.X, y + 4, r, fx, (200, 204, 210), 1.25)
     pie(d, "CBOT / CME Group (vía Yahoo Finance)",
         "Futuros del contrato más cercano. Centavos de dólar por bushel convertidos a dólares por tonelada.")
     return guardar(im, destino)
@@ -368,7 +394,7 @@ def placa_mapa(datos: dict, destino: Path, hoy: date, seccion: str) -> Path | No
                    f"Lluvia prevista del {DIAS[desde.weekday()][:3]} {desde.day} al {DIAS[hasta.weekday()][:3]} "
                    f"{hasta.day}/{hasta.month}, en milímetros")
     base = Image.open(MAPA).convert("RGBA")
-    escala = min(1.0, (Y_PIE - 40 - y) / base.height)
+    escala = min(1.0, (Y_PIE + 60 - y) / base.height)
     if escala < 1:
         base = base.resize((round(base.width * escala), round(base.height * escala)), Image.LANCZOS)
     x0 = (W - base.width) // 2
@@ -404,8 +430,8 @@ def placa_alerta(alerta: dict, destino: Path, hoy: date) -> Path:
     color = {"roja": (214, 48, 49), "naranja": (235, 130, 30), "amarilla": (240, 200, 40)}.get(alerta["nivel"], (240, 200, 40))
     y = encabezado(im, d, "ALERTA DEL SMN", f"Alerta {alerta['nivel']} por {alerta['evento'].lower()}",
                    "Para la zona: " + ", ".join(alerta.get("lugares") or []))
-    d.rounded_rectangle((D.X - 24, y, W - D.X + 24, y + 16), radius=8, fill=color)
-    y += 50
+    d.rounded_rectangle((D.X - 24, y, W - D.X + 24, y + 14), radius=7, fill=color)
+    y += 38
 
     def hora(t):
         try:
@@ -414,11 +440,11 @@ def placa_alerta(alerta: dict, destino: Path, hoy: date) -> Path:
         except ValueError:
             return t
     for rot, val in (("Desde", hora(alerta.get("desde", ""))), ("Hasta", hora(alerta.get("hasta", "")))):
-        d.text((D.X, y), rot, font=D.fuente("regular", 32), fill=(170, 175, 182))
-        d.text((D.X + 150, y - 4), val, font=D.fuente("bold", 38), fill=D.BLANCO)
-        y += 64
-    fx, r = D.ajustar(d, alerta.get("descripcion", ""), "regular", 36, 28, W - 2 * D.X, 9)
-    D.escribir(d, D.X, y + 20, r, fx, (225, 228, 233), 1.3)
+        d.text((D.X, y), rot, font=D.fuente("regular", 30), fill=(170, 175, 182))
+        d.text((D.X + 140, y - 4), val, font=D.fuente("bold", 36), fill=D.BLANCO)
+        y += 56
+    fx, r = D.ajustar(d, alerta.get("descripcion", ""), "regular", 34, 26, W - 2 * D.X, 9)
+    D.escribir(d, D.X, y + 12, r, fx, (225, 228, 233), 1.28)
     pie(d, "Servicio Meteorológico Nacional (alertas vigentes)", "Seguí las actualizaciones en smn.gob.ar.")
     return guardar(im, destino)
 
@@ -430,20 +456,20 @@ def placa_titulares(items: list, destino: Path, hoy: date, seccion: str, titulo:
     im, d = lienzo()
     y = encabezado(im, d, seccion, titulo, fecha_larga(hoy).capitalize())
     for i, it in enumerate(items[:4]):
-        if y > Y_PIE - 200:
+        if y > Y_PIE - 180:
             break
-        tarjeta(d, y, 230)
+        tarjeta(d, y, 196)
         x = D.X + 6
         if it.get("imagen") and Path(it["imagen"]).exists():
-            foto = D.cubrir(Image.open(it["imagen"]).convert("RGB"), 240, 194)
+            foto = D.cubrir(Image.open(it["imagen"]).convert("RGB"), 200, 164)
             mascara = Image.new("L", foto.size, 0)
             ImageDraw.Draw(mascara).rounded_rectangle((0, 0, *foto.size), radius=16, fill=255)
-            im.paste(foto, (x - 6, y + 18), mascara)
-            x += 262
-        d.text((x, y + 22), (it.get("volanta") or "Agro").upper(), font=D.fuente("bold", 26), fill=D.NARANJA)
-        ft, rt = D.ajustar(d, it["titular"], "bold", 40, 30, W - D.X - x, 4, alto_max=150)
-        D.escribir(d, x, y + 62, rt, ft, D.BLANCO, 1.12)
-        y += 250
+            im.paste(foto, (x - 6, y + 16), mascara)
+            x += 218
+        d.text((x, y + 18), (it.get("volanta") or "Agro").upper(), font=D.fuente("bold", 24), fill=D.NARANJA)
+        ft, rt = D.ajustar(d, it["titular"], "bold", 38, 28, W - D.X - x, 3, alto_max=130)
+        D.escribir(d, x, y + 54, rt, ft, D.BLANCO, 1.12)
+        y += 212
     pie(d, "@diarioyradioagro", "Las notas completas, en diariolacampaña.com.ar, sección Agro.")
     return guardar(im, destino)
 
@@ -464,8 +490,8 @@ def placa_novedad(item: dict, destino: Path, hoy: date, seccion: str) -> Path | 
     ImageDraw.Draw(mascara).rounded_rectangle((0, 0, *port.size), radius=26, fill=255)
     im.paste(port, ((W - port.width) // 2, y), mascara)
     t = "Deslizá e informate en el carrusel" if carrusel else "Miralo completo en el perfil"
-    f = D.fuente("bold", 38)
-    d.text(((W - d.textlength(t, font=f)) / 2, y + port.height + 28), t, font=f, fill=D.VERDE)
+    f = D.fuente("bold", 36)
+    d.text(((W - d.textlength(t, font=f)) / 2, y + port.height + 22), t, font=f, fill=D.VERDE)
     pie(d, "@diarioyradioagro", "")
     return guardar(im, destino)
 
@@ -521,14 +547,14 @@ def placa_semana(mem: dict, clave: str, destino: Path, hoy: date, seccion: str) 
     y = encabezado(im, d, "LOS NÚMEROS DE LA SEMANA", titulo,
                    f"Último dato: {M.fecha_corta(fecha)} · variación contra una semana antes")
     for nombre, valor, var, unidad in filas:
-        tarjeta(d, y, 190)
-        d.text((D.X + 6, y + 26), nombre, font=D.fuente("bold", 42), fill=D.BLANCO)
-        d.text((D.X + 6, y + 86), unidad, font=D.fuente("regular", 28), fill=(170, 175, 182))
-        f = D.fuente("negra", 54)
-        d.text((W - D.X - d.textlength(valor, font=f), y + 22), valor, font=f, fill=D.NARANJA)
+        tarjeta(d, y, 160)
+        d.text((D.X + 6, y + 20), nombre, font=D.fuente("bold", 40), fill=D.BLANCO)
+        d.text((D.X + 6, y + 74), unidad, font=D.fuente("regular", 26), fill=(170, 175, 182))
+        f = D.fuente("negra", 52)
+        d.text((W - D.X - d.textlength(valor, font=f), y + 16), valor, font=f, fill=D.NARANJA)
         if var is not None:
-            flecha(d, W - D.X - 170, y + 112, var, 32)
-        y += 210
+            flecha(d, W - D.X - 170, y + 94, var, 30)
+        y += 176
     pie(d, fuente, f"Dato del {M.fecha_corta(fecha)}.")
     return guardar(im, destino)
 

@@ -165,15 +165,17 @@ def dolar(get=None, hoy: date = None) -> dict:
             salida["bna"] = parsear_bna(r.text)
     except httpx.HTTPError:
         pass
-    try:
-        r = get(URL_A3500, params={"desde": (hoy - timedelta(days=14)).isoformat(), "hasta": hoy.isoformat()})
-        if r.status_code == 200:
-            serie = sorted(((d["fecha"], float(d["valor"])) for d in r.json()["results"][0]["detalle"]))
-            if serie:
-                salida["mayorista"] = {"fecha": serie[-1][0], "valor": serie[-1][1], "serie": serie,
-                                       "fuente": "BCRA (Com. A 3500)"}
-    except (httpx.HTTPError, ValueError, KeyError, IndexError, TypeError):
-        pass
+    for _ in range(2):                                   # la API del BCRA a veces tarda o corta: un reintento
+        try:
+            r = get(URL_A3500, params={"desde": (hoy - timedelta(days=14)).isoformat(), "hasta": hoy.isoformat()})
+            if r.status_code == 200:
+                serie = sorted(((d["fecha"], float(d["valor"])) for d in r.json()["results"][0]["detalle"]))
+                if serie:
+                    salida["mayorista"] = {"fecha": serie[-1][0], "valor": serie[-1][1], "serie": serie,
+                                           "fuente": "BCRA (Com. A 3500)"}
+                    break
+        except (httpx.HTTPError, ValueError, KeyError, IndexError, TypeError):
+            continue
     return salida
 
 

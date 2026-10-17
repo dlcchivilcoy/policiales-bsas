@@ -802,6 +802,15 @@ with tempfile.TemporaryDirectory() as tmp:
              and [h["tipo"] for h in _tandas["mediodia"]] == ["mapa", "chicago", "novedad"])
     chequear("todas las historias son 1080x1920",
              all(Image.open(h["archivo"]).size == (1080, 1920) for v in _tandas.values() for h in v))
+    from PIL import ImageChops
+    _fondo = HI.fondo().convert("L")
+
+    def _fuera_de_zona(ruta):
+        """¿Hay algo dibujado (distinto del fondo) arriba o abajo de la zona segura?"""
+        dif = ImageChops.difference(Image.open(ruta).convert("L"), _fondo).point(lambda v: 255 if v > 40 else 0)
+        return bool(dif.crop((0, 0, 1080, HI.SEGURA[0])).getbbox() or dif.crop((0, HI.SEGURA[1], 1080, 1920)).getbbox())
+    chequear("historias: nada (marca, texto, fuente) cae debajo de los marcos de Instagram y Facebook",
+             not any(_fuera_de_zona(h["archivo"]) for v in _tandas.values() for h in v))
     _sab = HI.armar_tanda("manana", _datos, _mem, Path(tmp) / "sab", datetime(2026, 10, 17, 7, 0, tzinfo=CA.TZ_AR), _rec, _nov)
     chequear("sábado a la mañana: clima, mapa, lo que tenés que saber y la novedad (sin mercados)",
              [h["tipo"] for h in _sab] == ["clima", "mapa", "titulares", "novedad"])
