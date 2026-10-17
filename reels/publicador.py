@@ -55,6 +55,7 @@ from reels import distribuidor as DIST
 from reels import geografia as GEO
 from reels import frescura as FR
 from reels import instagram as IG
+from reels import intercalado as INT
 from reels import ledger as LD
 from reels import limpieza as L
 from reels import relevamiento as RV
@@ -1393,6 +1394,130 @@ def fuera_del_radio(listas: list) -> tuple:
     return quedan, salteadas
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# INTERCALADO EN CADA CUENTA (17/10/2026, reels/intercalado.py)
+# ─────────────────────────────────────────────────────────────────────────────
+ESPERA_INTERCALADO_MIN = 10      # cada cuánto se vuelve a mirar la cuenta al final de la pasada
+ULTIMOS_POSTEOS = 5
+
+
+def _ultimos_posteos(red: str):
+    """Lo último publicado en la cuenta (cualquier origen): [{id, cuando, texto, adjuntos}] o None."""
+    try:
+        if red == "instagram":
+            r = _pedir("GET", f"{GRAPH}/{os.environ.get('INSTAGRAM_USER_ID', '')}/media",
+                       os.environ.get("INSTAGRAM_ACCESS_TOKEN", ""),
+                       params={"fields": "id,timestamp,caption", "limit": ULTIMOS_POSTEOS})
+            if r.status_code >= 400:
+                return None
+            return [{"id": m.get("id"), "cuando": INT.cuando_local(m.get("timestamp")),
+                     "texto": m.get("caption") or ""} for m in (r.json() or {}).get("data") or []]
+        r = _pedir("GET", f"{GRAPH}/{os.environ.get('FACEBOOK_PAGE_ID', '')}/published_posts",
+                   os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", ""),
+                   params={"fields": "id,created_time,message,attachments{target{id}}",
+                           "limit": ULTIMOS_POSTEOS})
+        if r.status_code >= 400:
+            return None
+        return [{"id": p.get("id"), "cuando": INT.cuando_local(p.get("created_time")),
+                 "texto": p.get("message") or "",
+                 "adjuntos": [((a.get("target") or {}).get("id"))
+                              for a in ((p.get("attachments") or {}).get("data") or [])]}
+                for p in (r.json() or {}).get("data") or []]
+    except (_Cortado, ValueError, AttributeError):
+        return None
+
+
+def intercalado_libre(red: str, ledger: dict) -> tuple:
+    """(se puede subir un policial a esa cuenta ya, motivo)."""
+    if not INT.activo():
+        return True, ""
+    return INT.libre(red, _ultimos_posteos(red), ledger)
+
+
+def _peso_espera(turno: dict) -> float:
+    return INT.peso(turno["pieza"], CER.bono_pieza(turno["pieza"]))
+
+
+def _publicar_red(red: str, pieza: dict, mp4: Path, carpeta: Path, url_web: str) -> dict:
+    global _ig_sin_prueba
+    if red == "instagram":
+        res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
+        if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
+            _ig_sin_prueba = True
+            res = {"estado": "cupo", "detalle": "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
+        return res
+    return _intentar(publicar_facebook, pieza, mp4, url_web)
+
+
+def _anotar(ledger: dict, pieza: dict, red: str, res: dict, pid: str):
+    """La publicación en la memoria, después de CADA red: un corte no borra lo hecho."""
+    g = pieza.get("guion") or {}
+    res["cuando"] = _ahora().isoformat(timespec="seconds")
+    e = ledger.setdefault(_clave(pieza), {"titular": g.get("titular"),
+                                          "localidad": _pueblo(pieza.get("localidad") or "")})
+    # Lo que el relevamiento compara la próxima vez (reels/relevamiento.py).
+    geo = pieza.get("geo") or {}
+    for k, v in (("bajada", g.get("bajada")), ("localidad_hecho", pieza.get("localidad_hecho")),
+                 ("titulo_medio", pieza.get("titulo_medio")),
+                 # Para auditar el radio y el cupo (17/10/2026).
+                 ("distancia_km", geo.get("distancia_km")), ("precision_lugar", geo.get("precision")),
+                 ("lugar_hecho", geo.get("nombre")), ("pasada", pid)):
+        if v or v == 0:              # 0 km = Chivilcoy, que también se anota
+            e.setdefault(k, v)
+    e[red] = res
+    e["ultimo"] = res["cuando"]
+    guardar_ledger(ledger)
+
+
+def _publicar_esperado(red: str, turno: dict, carpeta: Path, ledger: dict, pid: str):
+    """Sube a `red` un reel que esperaba otra temática, y lo deja en su fila del informe."""
+    pieza = turno["pieza"]
+    print(f"\n#{pieza.get('orden')} {_ahora():%H:%M} · {NOMBRE_RED[red]}, después de otra temática — "
+          f"{(pieza.get('guion') or {}).get('titular')}")
+    res = _publicar_red(red, pieza, turno["mp4"], carpeta, turno["url_web"])
+    res["intercalado"] = "esperó otra temática"
+    turno["fila"][red] = res
+    _mostrar(red, res)
+    if res.get("estado") != "cupo":
+        _anotar(ledger, pieza, red, res, pid)
+
+
+def _minutos_hasta_el_cierre() -> float:
+    """Minutos hasta MARGEN_PASADA_MIN antes de la pasada siguiente."""
+    ahora = _hora_ar()
+    proxima = min(ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
+                  for d in (0, 1) for h, m in PASADAS_AR
+                  if ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
+                  > ahora + timedelta(minutes=20))
+    return (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
+
+
+def _esperar_intercalado(en_espera: dict, carpeta: Path, ledger: dict, pid: str):
+    limite = _ahora() + timedelta(minutes=_minutos_hasta_el_cierre())
+    cuantos = sum(len(v) for v in en_espera.values())
+    print(f"\n{cuantos} reel(s) esperan otra temática en su cuenta; se mira cada "
+          f"{ESPERA_INTERCALADO_MIN} min hasta las {limite:%H:%M}")
+    while any(en_espera.values()) and _ahora() + timedelta(minutes=ESPERA_INTERCALADO_MIN) <= limite:
+        _dormir(ESPERA_INTERCALADO_MIN * 60)
+        for red in INT.REDES:
+            if not en_espera[red]:
+                continue
+            _ids, ultima = INT.propios(ledger, red)
+            if ultima and _ahora() - ultima < timedelta(minutes=MINUTOS_ENTRE_POSTEOS):
+                continue                 # un reel cada 30 minutos en cada red, también acá
+            if not intercalado_libre(red, ledger)[0]:
+                continue
+            mejor = max(en_espera[red], key=_peso_espera)
+            en_espera[red].remove(mejor)
+            _publicar_esperado(red, mejor, carpeta, ledger, pid)
+    for red, lista in en_espera.items():
+        for turno in lista:
+            turno["fila"][red] = {"estado": "omitida", "detalle":
+                                  f"intercalado: no salió otra temática en {NOMBRE_RED[red]} "
+                                  f"antes de la pasada siguiente"}
+            print(f"  #{turno['pieza'].get('orden')} {NOMBRE_RED[red]}: {turno['fila'][red]['detalle']}")
+
+
 def _intentar(fn, *args) -> dict:
     """Una red nunca tumba a la otra: cualquier error queda anotado y se sigue."""
     try:
@@ -1526,6 +1651,7 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
               f"{HORAS_YOUTUBE_RECIENTE} h, para no repetir hechos")
 
     ultimo = None
+    en_espera = {red: [] for red in INT.REDES}       # reels que esperan otra temática
     for pieza, mp4 in listas:
         clave = _clave(pieza)
         hecho = ledger.get(clave) or {}
@@ -1629,18 +1755,38 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                     fila[red] = {"estado": "omitida", "detalle": "el Short no salió"}
                     _mostrar(red, fila[red])
                     continue
+                elif publicar and not (libre_fb := intercalado_libre("facebook", ledger))[0]:
+                    # El enlace también es un posteo policial de la página: no va pegado a otro.
+                    fila[red] = {"estado": "omitida", "detalle": libre_fb[1]}
+                    _mostrar(red, fila[red])
+                    continue
                 else:
                     res = _intentar(publicar_link_youtube, pieza, url_yt, url_web)
             elif not publicar:
                 res = _simular(red, pieza, mp4, url_web)
-            elif red == "instagram":
-                res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
-                if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
-                    _ig_sin_prueba = True
-                    res = {"estado": "cupo", "detalle":
-                           "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
-            elif red == "facebook":
-                res = _intentar(publicar_facebook, pieza, mp4, url_web)
+            elif red in INT.REDES:
+                # Intercalado (17/10/2026): si lo último de la cuenta ya es policial, este reel
+                # espera otra temática. Y si otro reel de la pasada esperaba con más interés, el
+                # hueco es para ese y el que espera es este.
+                ok, motivo = intercalado_libre(red, ledger)
+                turno = {"pieza": pieza, "mp4": mp4, "fila": fila, "url_web": url_web}
+                if not ok:
+                    en_espera[red].append(turno)
+                    fila[red] = {"estado": "espera", "detalle": motivo}
+                    _mostrar(red, fila[red])
+                    continue
+                if motivo:
+                    print(f"  ({motivo})")
+                mejor = max(en_espera[red], key=_peso_espera, default=None)
+                if mejor and _peso_espera(mejor) > _peso_espera(turno):
+                    en_espera[red].remove(mejor)
+                    en_espera[red].append(turno)
+                    fila[red] = {"estado": "espera", "detalle":
+                                 "intercalado: el hueco lo tomó un reel de más interés que ya esperaba"}
+                    _mostrar(red, fila[red])
+                    _publicar_esperado(red, mejor, carpeta, ledger, pid)
+                    continue
+                res = _publicar_red(red, pieza, mp4, carpeta, url_web)
             elif red == "youtube":
                 res = _intentar(publicar_youtube, pieza, mp4)
                 if res.pop("sin_cupo", False):
@@ -1658,24 +1804,17 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             # Un cupo no se anota en la memoria: no es una falla, y así una corrida
             # posterior sobre la misma tanda puede volver a intentarlo.
             if publicar and res.get("estado") != "cupo":
-                res["cuando"] = _ahora().isoformat(timespec="seconds")
-                e = ledger.setdefault(clave, {"titular": g.get("titular"), "localidad": pueblo})
-                # Lo que el relevamiento compara la próxima vez (reels/relevamiento.py).
-                geo = pieza.get("geo") or {}
-                for k, v in (("bajada", g.get("bajada")), ("localidad_hecho", pieza.get("localidad_hecho")),
-                             ("titulo_medio", pieza.get("titulo_medio")),
-                             # Para auditar el radio y el cupo (17/10/2026).
-                             ("distancia_km", geo.get("distancia_km")), ("precision_lugar", geo.get("precision")),
-                             ("lugar_hecho", geo.get("nombre")), ("pasada", pid)):
-                    if v or v == 0:              # 0 km = Chivilcoy, que también se anota
-                        e.setdefault(k, v)
-                e[red] = res
-                e["ultimo"] = res["cuando"]
-                guardar_ledger(ledger)       # despues de CADA red: un corte no borra lo hecho
+                _anotar(ledger, pieza, red, res, pid)
         for red, info in sin_lugar.items():
             fila[red] = info
             _mostrar(red, info)
         informe["piezas"].append(fila)
+
+    # Los reels que esperan otra temática en Instagram o Facebook: se mira la cuenta cada
+    # ESPERA_INTERCALADO_MIN hasta 10 minutos antes de la pasada siguiente. Lo que no encuentra
+    # hueco queda omitido en esa red (ya salió en YouTube y la web); nunca se rellena.
+    if publicar and any(en_espera.values()):
+        _esperar_intercalado(en_espera, carpeta, ledger, pid)
 
     # X y TikTok: no se publican acá. Todas las piezas aptas van al buzón del distribuidor
     # central (social_publisher), que elige las de más potencial dentro de su cupo diario.

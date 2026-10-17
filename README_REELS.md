@@ -23,6 +23,14 @@ piezas salgan con tu marca y no con un diseño inventado.
 >   (antes, una lista fija de 7 pueblos). La memoria guarda distancia, precisión y pasada.
 > - Variables: `POLICE_RADIUS_KM` (100), `POLICE_BANDA_CERCANA_KM` (50), `MAX_POLICE_REELS_PER_PASS` (3;
 >   0 pausa los reels). Pruebas: `tools/test_geografia.py`.
+> - **Intercalado en cada cuenta** (etapa 3, `reels/intercalado.py`): antes de subir un reel a
+>   Instagram o Facebook se lee lo último de la cuenta (cualquier origen). Si es policial —nuestro por
+>   ID, o del bot según el diccionario `scraper/keywords.py`— el reel espera dentro de la pasada: en
+>   cada turno, y al final cada 10 min hasta 10 min antes de la pasada siguiente. Si otro reel espera
+>   con más interés (viral + cercanía), el hueco es para ese. Lo que no encuentra hueco se omite en
+>   esa red (YouTube y la web siguen igual). El enlace del Short en Facebook también es un policial de
+>   la página. `INTERCALADO=0` lo apaga; `MIN_NON_POLICE_POSTS_BETWEEN_POLICE` (1). X y TikTok: el
+>   mismo criterio en el distribuidor de social_publisher.
 >
 > **10/10:** Instagram pasa a reel NORMAL al feed, hasta 5 por pasada, los más virales (igual
 > que Facebook). Y el guion lee el texto COMPLETO de la nota y lista sus datos clave (nombres,
@@ -385,6 +393,7 @@ reels/
 ├── flujo.py      Orquestador de la tanda (no publica)
 ├── geografia.py  Radio de 100 km (17/10): lugar del hecho, distancia Haversine, pendientes
 ├── cupo.py       Cupo global de 3 hechos por pasada (17/10), reservas en estado/cupo_pasadas.json
+├── intercalado.py Nunca dos policiales seguidos en Instagram o Facebook (17/10)
 ├── cercania.py   Prioridad por distancia (17/10): Chivilcoy +3, ≤ 50 km +2, ≤ 100 km +1 sobre
 │                 el viral de la IA; Ruta 5 +1; nombra a Chivilcoy +2 (tope 3).
 ├── frescura.py   La noticia DEL MOMENTO primero (27/09): FB/IG llevan las más nuevas de

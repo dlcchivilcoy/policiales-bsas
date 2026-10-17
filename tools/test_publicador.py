@@ -39,6 +39,8 @@ PUB.RV._preguntar_ia = _sin_ia
 # El cupo global de 3 hechos por pasada (17/10/2026) tiene su propia sección al final (la 30); las
 # pruebas anteriores son de otras reglas y se escribieron con 6 lugares por pasada.
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"
+# Lo mismo el intercalado dentro de cada cuenta (17/10/2026): sección 31.
+os.environ["INTERCALADO"] = "0"
 
 fallas = []
 total = 0
@@ -124,6 +126,7 @@ class Meta:
         self.wix_publicados = 0
         self.fb_recientes = list(fb_recientes or [])   # reels que ya tiene la página
         self.fb_lista_falla = fb_lista_falla
+        self.fb_posteos = []              # lo último de la página (intercalado, 17/10/2026)
         self.yt_miniatura = yt_miniatura  # status de thumbnails.set
         self.yt_miniaturas = []           # (videoId, tipo, bytes) de cada miniatura puesta
 
@@ -211,6 +214,8 @@ class Meta:
                     "quota_duration": 86400}, "quota_usage": usados}]})
             if ruta == "/v26.0/IGUSER/media" and m == "GET":
                 return httpx.Response(200, json={"data": self.ig_recientes})
+            if ruta == "/v26.0/PAGINA/published_posts" and m == "GET":
+                return httpx.Response(200, json={"data": self.fb_posteos})
             if ruta.startswith("/v26.0/C") and m == "GET":
                 cid = ruta.rsplit("/", 1)[1]
                 if cid in self.publicado:
@@ -1220,6 +1225,103 @@ chequear("...la memoria guarda distancia, precisión y pasada de lo publicado",
          ledger["https://medio.test/3"].get("distancia_km") == 99.4
          and ledger["https://medio.test/3"].get("pasada") == "2026-10-17T15:05")
 shutil.rmtree(base)
+
+
+# --- 31. Intercalado: nunca dos policiales seguidos en la misma cuenta (17/10/2026) ---------
+os.environ["INTERCALADO"] = "1"
+os.environ["IG_POR_PASADA"] = "5"
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR)      # cierre de la pasada: 11:55
+_cuando_real = PUB.INT.cuando_local
+PUB.INT.cuando_local = lambda ts: datetime.fromisoformat(ts[:19]) if ts else None   # el reloj falso no tiene zona
+
+
+def bot_publica(meta, reloj, texto, cuando_dormir=None):
+    """El bot del diario publica `texto` en Instagram cuando el publicador espera su turno."""
+    dormir = reloj.dormir
+    llamadas = []
+
+    def _dormir(s):
+        dormir(s)
+        if s >= 600:                                  # las esperas de turno, no los sondeos
+            llamadas.append(s)
+            if cuando_dormir is None or len(llamadas) in cuando_dormir:
+                meta.ig_recientes.insert(0, {"id": f"BOT{len(llamadas)}", "caption": texto,
+                                             "timestamp": reloj.t.isoformat() + "+0000"})
+    PUB._dormir = _dormir
+
+
+def hora_ar_del_reloj(reloj):
+    """La hora argentina avanza con el reloj falso: la pasada arranca a las 9:10."""
+    PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR) + (reloj.t - datetime(2026, 9, 26, 10, 0))
+
+
+def estados(inf, red="instagram"):
+    return [(f.get(red) or {}).get("estado") for f in inf["piezas"]]
+
+
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7])
+hora_ar_del_reloj(reloj)
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram", "youtube"), publicar=True)
+chequear("sin otra temática en la cuenta: el 1.º reel sale y los otros 2 NO van pegados en Instagram",
+         estados(inf) == ["ok", "omitida", "omitida"]
+         and all("intercalado" in (f["instagram"].get("detalle") or "") for f in inf["piezas"][1:]))
+chequear("...pero salen igual en YouTube (el intercalado es por cuenta)", estados(inf, "youtube") == ["ok"] * 3)
+chequear("...y esperó hasta el cierre de la pasada, no más (11:55, 10 min antes de la de 12:05)",
+         datetime(2026, 9, 26, 10, 0) + timedelta(hours=2, minutes=30) <= reloj.t
+         <= datetime(2026, 9, 26, 10, 0) + timedelta(hours=2, minutes=45))
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7])
+hora_ar_del_reloj(reloj)
+bot_publica(meta, reloj, "El intendente inauguró la nueva plaza del barrio Villa Sarmiento")
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("con un posteo del bot de otra temática entre medio, salen los 3", estados(inf) == ["ok", "ok", "ok"])
+shutil.rmtree(base)
+
+base, carpeta, reloj, meta = preparar_virales([9, 8, 7])
+hora_ar_del_reloj(reloj)
+bot_publica(meta, reloj, "Detuvieron a dos jóvenes tras un robo en un comercio de Chivilcoy")
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("si lo que publicó el bot TAMBIÉN es policial, no cuenta como intercalado",
+         estados(inf) == ["ok", "omitida", "omitida"])
+posteo_bot = [{"id": "B", "cuando": datetime(2026, 9, 26, 12, 0), "texto": "Choque en la Ruta 5: un herido"}]
+chequear("...y el motivo dice que es un policial de otro origen",
+         "de otro origen" in PUB.INT.libre("instagram", posteo_bot, {})[1])
+chequear("un posteo ajeno de otra temática deja el hueco libre",
+         PUB.INT.libre("instagram", [dict(posteo_bot[0], texto="Abre la muestra de pintura en el museo")], {})[0])
+chequear("nuestro reel que todavía no aparece en el listado cuenta como el último",
+         not PUB.INT.libre("instagram", [dict(posteo_bot[0], texto="Abre la muestra de pintura")],
+                           {"u": {"instagram": {"estado": "ok", "id": "X", "cuando": "2026-09-26T12:01:00"}}})[0])
+shutil.rmtree(base)
+
+# El que espera con más interés toma el primer hueco: 5 sale, 9 espera, el bot publica, 9 sale
+# en el turno de 6, y 6 se queda sin hueco.
+base, carpeta, reloj, meta = preparar_virales([5, 9, 6])
+hora_ar_del_reloj(reloj)
+bot_publica(meta, reloj, "Se viene la Fiesta del Inmigrante en el Parque", cuando_dormir={2})
+inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
+chequear("el reel de más interés que esperaba (9) toma el hueco antes que el del turno (6)",
+         estados(inf) == ["ok", "ok", "omitida"]
+         and inf["piezas"][1]["instagram"].get("intercalado") == "esperó otra temática")
+ledger = json.loads(PUB.LEDGER.read_text(encoding="utf-8"))
+chequear("...y la memoria lo anota como publicado en Instagram",
+         (ledger["https://medio.test/2"].get("instagram") or {}).get("estado") == "ok")
+shutil.rmtree(base)
+
+# Facebook: el reel y también el enlace del Short son posteos policiales de la página.
+os.environ["FB_POR_PASADA"] = "2"
+base, carpeta, reloj, meta = preparar_virales([9, 8, 3])
+hora_ar_del_reloj(reloj)
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("Facebook: el 2.º reel no va pegado al 1.º", estados(inf, "facebook")[:2] == ["ok", "omitida"])
+chequear("...y el enlace del Short del 3.º tampoco (también es un policial en la página)",
+         (inf["piezas"][2].get("fb_youtube") or {}).get("estado") in ("omitida", None)
+         and not meta.fb_links)
+shutil.rmtree(base)
+
+os.environ["INTERCALADO"] = "0"
+chequear("INTERCALADO=0 lo apaga", PUB.intercalado_libre("instagram", {}) == (True, ""))
+PUB.INT.cuando_local = _cuando_real
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
