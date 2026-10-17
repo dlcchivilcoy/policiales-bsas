@@ -5153,6 +5153,165 @@
         77,
         68
       ]
+    },
+    "cb191f722624b033": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "kioshi stone",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Historia de vida y desarrollo tecnológico de recuperación de suelos de interés regional.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "965aa457b4fb1f9e": {
+      "impacto_economico": 12,
+      "interes_productores": 9,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 55,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "lobesia botrana",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buen manejo de plagas regionales, aunque enfocado en la vitivinicultura cuyana.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "df438cfc8a3fbca4": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 2,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "fao",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de tono político e institucional con baja utilidad directa para el productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f7b3b0006dfd70d4": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 74,
+      "subtema": "ganaderia",
+      "tema": "ganaderia y exportacion",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Altamente relevante por las exigencias europeas que impactan en toda la cadena exportadora.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        76,
+        67
+      ]
+    },
+    "cb0dc29db1d3f6f8": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 73,
+      "subtema": "ganaderia",
+      "tema": "feedlot",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos clave de la ganadería intensiva y el negocio del encierre que interesan al productor.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        74
+      ]
+    },
+    "a0e0d0a9b0dbf29c": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 8,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 58,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "bufalos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nicho ganadero en expansión con buen atractivo visual para redes, aunque regionalmente acotado.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f58328f545d2f87f": {
+      "impacto_economico": 16,
+      "interes_productores": 13,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis económico fundamental sobre el cultivo clave de la zona núcleo y su comercialización.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        74
+      ]
     }
   },
   "indice": {
@@ -5520,7 +5679,22 @@
       "https://lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026": "2026-10-17",
       "https://lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026": "2026-10-17",
       "https://lanacion.com.ar/economia/campo/carne-mate-gauchos-y-cuchillos-las-sorpresas-que-se-llevo-el-viajero-ingles-samuel-haigh-en-el-siglo-nid17102026": "2026-10-17",
-      "https://lacapital.com.ar/agro/producir-y-demostrar-el-desafio-ambiental-del-agro-argentino-n10286700.html": "2026-10-17"
+      "https://lacapital.com.ar/agro/producir-y-demostrar-el-desafio-ambiental-del-agro-argentino-n10286700.html": "2026-10-17",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-17-octubre-2026": "2026-10-17",
+      "https://infocampo.com.ar/de-galicia-al-futuro-del-campo-argentino-el-hombre-que-convirtio-un-recuerdo-de-infancia-en-una-transformacion-agricola": "2026-10-17",
+      "https://bichosdecampo.com/milei-se-borro-de-la-lucha-contra-la-lobesia-botrana-pero-mendoza-fue-consecuente-y-logro-reducir-70-la-presencia-de-esa-peligrosa-plaga-de-los-vinedos-ahora-pide-que-el-sur-provincial-sea-considera": "2026-10-17",
+      "https://bichosdecampo.com/entre-luces-azules-y-productores-verdes-la-fao-celebro-el-dia-mundial-de-la-alimentacion-con-una-llamativa-ausencia-de-funcionarios-violetas": "2026-10-17",
+      "https://bichosdecampo.com/el-reglamento-antideforestacion-europeo-pone-a-prueba-a-la-ganaderia-argentina-el-desafio-es-enorme-y-se-esta-armando-un-cuello-de-botella-advirtio-el-investigador-gerardo-leotta": "2026-10-17",
+      "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento": "2026-10-17",
+      "https://bichosdecampo.com/el-momento-del-bufalo-es-ahora-con-un-masivo-congreso-los-productores-de-corrientes-buscan-ampliar-la-ganaderia-bubalina-y-abrir-nuevos-mercados-para-una-carne-que-no-tiene-nada-qu": "2026-10-17",
+      "https://lanacion.com.ar/economia/campo/por-que-la-soja-es-la-cenicienta-del-sistema-y-la-argentina-no-aprovecha-una-tendencia-favorable-nid17102026": "2026-10-17"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -5886,7 +6060,22 @@
       "declaraciones juradas al compas de la baja de retenciones": "2026-10-17",
       "los primeros impactos de el nino y un debate que comienza a asomar": "2026-10-17",
       "carne mate gauchos y cuchillos las sorpresas que se llevo el viajero ingles samuel haigh en el siglo xix": "2026-10-17",
-      "producir y demostrar el desafio ambiental del agro argentino": "2026-10-17"
+      "producir y demostrar el desafio ambiental del agro argentino": "2026-10-17",
+      "dolar blue a cuanto cotizan hoy en mendoza 17 octubre 2026": "2026-10-17",
+      "euro blue hoy precio y cotizacion de este 17 octubre 2026": "2026-10-17",
+      "precio del maiz en rosario hoy 17 octubre 2026": "2026-10-17",
+      "precio del trigo en rosario hoy 17 octubre 2026": "2026-10-17",
+      "precio del girasol en rosario hoy 17 octubre 2026": "2026-10-17",
+      "precio de la soja en rosario hoy 17 octubre 2026": "2026-10-17",
+      "precio del sorgo en rosario hoy 17 octubre 2026": "2026-10-17",
+      "dolar blue a cuanto cotizan hoy en cordoba 17 octubre 2026": "2026-10-17",
+      "de galicia al futuro del campo argentino el hombre que convirtio un recuerdo de infancia en una transformacion agricola": "2026-10-17",
+      "milei se borro de la lucha contra la lobesia botrana pero mendoza fue consecuente y logro reducir 70 la presencia de esa peligrosa plaga de los vinedos ahora pide que el sur provincial sea considerado libre": "2026-10-17",
+      "entre luces azules y productores verdes la fao celebro el dia mundial de la alimentacion con una llamativa ausencia de funcionarios violetas": "2026-10-17",
+      "el reglamento antideforestacion europeo pone a prueba a la ganaderia argentina el desafio es enorme y se esta armando un cuello de botella advirtio el investigador gerardo leotta": "2026-10-17",
+      "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento": "2026-10-17",
+      "el momento del bufalo es ahora con un masivo congreso los productores de corrientes buscan ampliar la ganaderia bubalina y abrir nuevos mercados para una carne que no tiene nada que envidiarle a la bovina": "2026-10-17",
+      "por que la soja es la cenicienta del sistema y la argentina no aprovecha una tendencia favorable": "2026-10-17"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -6252,7 +6441,22 @@
       "4fe57623aa8cda7e": "2026-10-17",
       "3404b9669a0ad287": "2026-10-17",
       "3ebec2f452c0b118": "2026-10-17",
-      "e1f23995a2d6e588": "2026-10-17"
+      "e1f23995a2d6e588": "2026-10-17",
+      "a41725fb6fff6f69": "2026-10-17",
+      "53a3f77e25b0d90c": "2026-10-17",
+      "3a2258638cf6a7db": "2026-10-17",
+      "c4365df228badb2f": "2026-10-17",
+      "77394f0e13c71dde": "2026-10-17",
+      "277ee0cc975dbdf8": "2026-10-17",
+      "9842e01cbc1e87a2": "2026-10-17",
+      "24efb432ea0dffea": "2026-10-17",
+      "cb191f722624b033": "2026-10-17",
+      "965aa457b4fb1f9e": "2026-10-17",
+      "df438cfc8a3fbca4": "2026-10-17",
+      "f7b3b0006dfd70d4": "2026-10-17",
+      "cb0dc29db1d3f6f8": "2026-10-17",
+      "a0e0d0a9b0dbf29c": "2026-10-17",
+      "f58328f545d2f87f": "2026-10-17"
     }
   },
   "elegidas": [
@@ -6890,9 +7094,174 @@
           "ubicacion": null
         }
       }
+    },
+    {
+      "id": "6dcb6e1b3951",
+      "cuando": "2026-10-17T12:00-03:00",
+      "titulo_original": "Los primeros impactos de El Niño y un debate que comienza a asomar",
+      "descripcion": "La evolución del fenómeno climático y el marco legal para ponerle fin a los Derechos de Exportación ganaron lugar en la agenda agropecuaria",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026/",
+      "titular": "El Niño golpea el Litoral y reflota el debate por las retenciones",
+      "volanta": "Clima y Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 80,
+        "commercial_score": 84,
+        "subtema": "agro",
+        "tema": "el niño retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Combina clima (impacto de El Niño en la zona núcleo) y agenda política impositiva vital para el productor.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          79,
+          81
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-17T12:00:00-03:00"
+    },
+    {
+      "id": "65ee2a518136",
+      "cuando": "2026-10-17T12:00-03:00",
+      "titulo_original": "El agro argentino ya comercializó un récord de 105 Mt en lo que va de la campaña 2025/26",
+      "descripcion": "Argentina lleva más de 105 Mt comercializadas esta campaña. El porcentaje con precio avanza con firmeza. Aumentan los compromisos de embarque para trigo, con países asiáticos a la cabeza. El maíz se derrumbó en Chicago tras el informe del USDA.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-agro-1",
+      "titular": "Granos: la campaña 2025/26 alcanza un récord de 105 Mt comercializadas",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 19,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 84,
+        "subtema": "mercados",
+        "tema": "granos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cifras récord de comercialización y caída de Chicago que afectan el bolsillo de todo productor.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          76,
+          77
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-17T12:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "JraM0mlXmiU",
+          "url": "https://youtube.com/shorts/JraM0mlXmiU",
+          "privacidad": "public",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "357de5ae-2788-4cb5-9198-9e07743ac18f",
+          "slug": "el-agro-argentino-comercializo-un-record-de-105-mt-y-el-maiz-c4c475",
+          "url": "https://www.diariolacampaña.com.ar/n/el-agro-argentino-comercializo-un-record-de-105-mt-y-el-maiz-c4c475",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1598800525073318",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18136659247632955",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_65ee2a518136_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "498daa80de30",
+      "rep": {
+        "id": "498daa80de30",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento/",
+        "canonical_url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento",
+        "titulo": "A pesar de que el negocio no cierra, sigue en niveles altos el encierre de hacienda en los feedlot y crece la participación de los exportadores en ese segmento",
+        "titulo_norm": "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento",
+        "descripcion": "La Cámara Argentina de Feedlot (CAF) difundió su informe mensual sobre la situación del engorde a corral. Lejos de vaciarse, como sucedía años atrás, estas empresas tienen niveles altos de ocupación. Las estadísticas del Senasa indican que los poco más de mil feedlot inscriptos tienen más de 2,07 millones de cabezas de ganado en engorde, […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/margen-feedlots.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-17T08:07-03:00",
+        "capturado": "2026-10-17T12:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cb0dc29db1d3f6f8"
+      },
+      "grupo": [
+        {
+          "id": "498daa80de30",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento/",
+          "canonical_url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento",
+          "titulo": "A pesar de que el negocio no cierra, sigue en niveles altos el encierre de hacienda en los feedlot y crece la participación de los exportadores en ese segmento",
+          "titulo_norm": "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento",
+          "descripcion": "La Cámara Argentina de Feedlot (CAF) difundió su informe mensual sobre la situación del engorde a corral. Lejos de vaciarse, como sucedía años atrás, estas empresas tienen niveles altos de ocupación. Las estadísticas del Senasa indican que los poco más de mil feedlot inscriptos tienen más de 2,07 millones de cabezas de ganado en engorde, […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/margen-feedlots.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-17T08:07-03:00",
+          "capturado": "2026-10-17T12:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cb0dc29db1d3f6f8"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 73,
+        "subtema": "ganaderia",
+        "tema": "feedlot",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos clave de la ganadería intensiva y el negocio del encierre que interesan al productor.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          72,
+          74
+        ]
+      },
+      "cuando": "2026-10-17T12:00-03:00"
+    },
     {
       "id": "8e641d793eb1",
       "rep": {
@@ -6953,70 +7322,6 @@
         "dobles": [
           73,
           78
-        ]
-      },
-      "cuando": "2026-10-17T07:00-03:00"
-    },
-    {
-      "id": "6dcb6e1b3951",
-      "rep": {
-        "id": "6dcb6e1b3951",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026",
-        "titulo": "Los primeros impactos de El Niño y un debate que comienza a asomar",
-        "titulo_norm": "los primeros impactos de el nino y un debate que comienza a asomar",
-        "descripcion": "La evolución del fenómeno climático y el marco legal para ponerle fin a los Derechos de Exportación ganaron lugar en la agenda agropecuaria",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RGCUPCHHKNBOXCMX6JPUWEBR2Y.png?auth=c2715abb9e1954d11dc8939b543a8c8ae96cae0a815dc6b053740e4b6915a699&smart=true",
-        "autor": "Cristian Mira",
-        "publicado": "2026-10-17T05:50-03:00",
-        "capturado": "2026-10-17T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3404b9669a0ad287"
-      },
-      "grupo": [
-        {
-          "id": "6dcb6e1b3951",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/los-primeros-impactos-de-el-nino-y-un-debate-que-comienza-a-asomar-nid17102026",
-          "titulo": "Los primeros impactos de El Niño y un debate que comienza a asomar",
-          "titulo_norm": "los primeros impactos de el nino y un debate que comienza a asomar",
-          "descripcion": "La evolución del fenómeno climático y el marco legal para ponerle fin a los Derechos de Exportación ganaron lugar en la agenda agropecuaria",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RGCUPCHHKNBOXCMX6JPUWEBR2Y.png?auth=c2715abb9e1954d11dc8939b543a8c8ae96cae0a815dc6b053740e4b6915a699&smart=true",
-          "autor": "Cristian Mira",
-          "publicado": "2026-10-17T05:50-03:00",
-          "capturado": "2026-10-17T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3404b9669a0ad287"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 80,
-        "commercial_score": 84,
-        "subtema": "agro",
-        "tema": "el niño retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Combina clima (impacto de El Niño en la zona núcleo) y agenda política impositiva vital para el productor.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          79,
-          81
         ]
       },
       "cuando": "2026-10-17T07:00-03:00"
@@ -7214,70 +7519,6 @@
       "cuando": "2026-10-16T12:30-03:00"
     },
     {
-      "id": "65ee2a518136",
-      "rep": {
-        "id": "65ee2a518136",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-agro-1",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-agro-1",
-        "titulo": "El agro argentino ya comercializó un récord de 105 Mt en lo que va de la campaña 2025/26",
-        "titulo_norm": "el agro argentino ya comercializo un record de 105 mt en lo que va de la campana 2025 26",
-        "descripcion": "Argentina lleva más de 105 Mt comercializadas esta campaña. El porcentaje con precio avanza con firmeza. Aumentan los compromisos de embarque para trigo, con países asiáticos a la cabeza. El maíz se derrumbó en Chicago tras el informe del USDA.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
-        "autor": "",
-        "publicado": "2026-10-15T09:00-03:00",
-        "capturado": "2026-10-16T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d05aee4f581c4eb3"
-      },
-      "grupo": [
-        {
-          "id": "65ee2a518136",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-agro-1",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-agro-1",
-          "titulo": "El agro argentino ya comercializó un récord de 105 Mt en lo que va de la campaña 2025/26",
-          "titulo_norm": "el agro argentino ya comercializo un record de 105 mt en lo que va de la campana 2025 26",
-          "descripcion": "Argentina lleva más de 105 Mt comercializadas esta campaña. El porcentaje con precio avanza con firmeza. Aumentan los compromisos de embarque para trigo, con países asiáticos a la cabeza. El maíz se derrumbó en Chicago tras el informe del USDA.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
-          "autor": "",
-          "publicado": "2026-10-15T09:00-03:00",
-          "capturado": "2026-10-16T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d05aee4f581c4eb3"
-        }
-      ],
-      "score": {
-        "impacto_economico": 19,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 77,
-        "commercial_score": 84,
-        "subtema": "mercados",
-        "tema": "granos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Cifras récord de comercialización y caída de Chicago que afectan el bolsillo de todo productor.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          76,
-          77
-        ]
-      },
-      "cuando": "2026-10-16T12:30-03:00"
-    },
-    {
       "id": "a6901efdd716",
       "rep": {
         "id": "a6901efdd716",
@@ -7340,391 +7581,8 @@
         ]
       },
       "cuando": "2026-10-16T07:00-03:00"
-    },
-    {
-      "id": "8a8a9cbcf6e1",
-      "rep": {
-        "id": "8a8a9cbcf6e1",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/la-soja-2026-27-da-sus-primeros-pasos-corrientes-y-el-norte-de-santa-fe-marcan-el-inicio-de-la-siembra/",
-        "canonical_url": "https://infocampo.com.ar/la-soja-2026-27-da-sus-primeros-pasos-corrientes-y-el-norte-de-santa-fe-marcan-el-inicio-de-la-siembra",
-        "titulo": "La soja 2026/27 da sus primeros pasos: Corrientes y el norte de Santa Fe marcan el inicio de la siembra",
-        "titulo_norm": "la soja 2026 27 da sus primeros pasos corrientes y el norte de santa fe marcan el inicio de la siembra",
-        "descripcion": "El Gobierno nacional dio por iniciada la nueva campaña de soja, con un pronóstico de 16,7 millones de hectáreas, 500.000 más que en el ciclo 2025/26. \"Se prevén buenos resultados dada la buena disponibilidad de humedad y el fenómeno El Niño\", señaló.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-10-15T19:51-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "43acefccfe161514"
-      },
-      "grupo": [
-        {
-          "id": "8a8a9cbcf6e1",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/la-soja-2026-27-da-sus-primeros-pasos-corrientes-y-el-norte-de-santa-fe-marcan-el-inicio-de-la-siembra/",
-          "canonical_url": "https://infocampo.com.ar/la-soja-2026-27-da-sus-primeros-pasos-corrientes-y-el-norte-de-santa-fe-marcan-el-inicio-de-la-siembra",
-          "titulo": "La soja 2026/27 da sus primeros pasos: Corrientes y el norte de Santa Fe marcan el inicio de la siembra",
-          "titulo_norm": "la soja 2026 27 da sus primeros pasos corrientes y el norte de santa fe marcan el inicio de la siembra",
-          "descripcion": "El Gobierno nacional dio por iniciada la nueva campaña de soja, con un pronóstico de 16,7 millones de hectáreas, 500.000 más que en el ciclo 2025/26. \"Se prevén buenos resultados dada la buena disponibilidad de humedad y el fenómeno El Niño\", señaló.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-10-15T19:51-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "43acefccfe161514"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 78,
-        "commercial_score": 82,
-        "subtema": "agro",
-        "tema": "soja campaña",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El inicio de la campaña de soja mueve millones de hectáreas y es de vital interés para la zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          78,
-          77
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "1817972f875b",
-      "rep": {
-        "id": "1817972f875b",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-nino-se-lleva-bien-con-los-drones-como-aprovecharlos-en-un-contexto-de-mayores-lluvias/",
-        "canonical_url": "https://infocampo.com.ar/el-nino-se-lleva-bien-con-los-drones-como-aprovecharlos-en-un-contexto-de-mayores-lluvias",
-        "titulo": "El Niño se lleva bien con los drones: cómo aprovecharlos en un contexto de mayores lluvias",
-        "titulo_norm": "el nino se lleva bien con los drones como aprovecharlos en un contexto de mayores lluvias",
-        "descripcion": "Una campaña que supone mayor nivel de precipitaciones puede acelerar la adopción de drones para realizar aplicaciones, cuando las máquinas terrestres no pueden ingresar. Cuáles son las claves ineludibles para incorporar esta tecnología.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Ing.-Agr.-Matias-Fernandez-Koller-jefe-de-Investigacion-y-Desarrollo-de-Bidcom-Agro-scaled.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-10-15T13:35-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a15286cd6957cdd1"
-      },
-      "grupo": [
-        {
-          "id": "1817972f875b",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-nino-se-lleva-bien-con-los-drones-como-aprovecharlos-en-un-contexto-de-mayores-lluvias/",
-          "canonical_url": "https://infocampo.com.ar/el-nino-se-lleva-bien-con-los-drones-como-aprovecharlos-en-un-contexto-de-mayores-lluvias",
-          "titulo": "El Niño se lleva bien con los drones: cómo aprovecharlos en un contexto de mayores lluvias",
-          "titulo_norm": "el nino se lleva bien con los drones como aprovecharlos en un contexto de mayores lluvias",
-          "descripcion": "Una campaña que supone mayor nivel de precipitaciones puede acelerar la adopción de drones para realizar aplicaciones, cuando las máquinas terrestres no pueden ingresar. Cuáles son las claves ineludibles para incorporar esta tecnología.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Ing.-Agr.-Matias-Fernandez-Koller-jefe-de-Investigacion-y-Desarrollo-de-Bidcom-Agro-scaled.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-10-15T13:35-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a15286cd6957cdd1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 13,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 9,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 80,
-        "commercial_score": 80,
-        "subtema": "agtech",
-        "tema": "drones agrícolas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "La adopción de drones por exceso hídrico combina tecnología de punta con una solución práctica inmediata.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          80,
-          79
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "3c6d2b62e0a9",
-      "rep": {
-        "id": "3c6d2b62e0a9",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/menos-plastico-para-el-campo-presentaron-un-bidon-de-fitosanitarios-que-promete-reducir-un-30-el-uso-de-ese-material/",
-        "canonical_url": "https://bichosdecampo.com/menos-plastico-para-el-campo-presentaron-un-bidon-de-fitosanitarios-que-promete-reducir-un-30-el-uso-de-ese-material",
-        "titulo": "Menos plástico para el campo: Presentaron un bidón de fitosanitarios que promete reducir un 30% el uso de ese material",
-        "titulo_norm": "menos plastico para el campo presentaron un bidon de fitosanitarios que promete reducir un 30 el uso de ese material",
-        "descripcion": "Un envase de 20 litros que pesa apenas 780 gramos busca reducir la cantidad de plástico que se utiliza para almacenar y transportar productos destinados al agro. La iniciativa fue presentada por Syngenta y, según informó la compañía, permitiría utilizar un 30% menos de ese material frente a los envases estándar del mercado. El diseño […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Nuevo-envase-de-20-litros-con-un-peso-de-780-gr.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-15T16:55-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f7b90cd5a8d5250d"
-      },
-      "grupo": [
-        {
-          "id": "3c6d2b62e0a9",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/menos-plastico-para-el-campo-presentaron-un-bidon-de-fitosanitarios-que-promete-reducir-un-30-el-uso-de-ese-material/",
-          "canonical_url": "https://bichosdecampo.com/menos-plastico-para-el-campo-presentaron-un-bidon-de-fitosanitarios-que-promete-reducir-un-30-el-uso-de-ese-material",
-          "titulo": "Menos plástico para el campo: Presentaron un bidón de fitosanitarios que promete reducir un 30% el uso de ese material",
-          "titulo_norm": "menos plastico para el campo presentaron un bidon de fitosanitarios que promete reducir un 30 el uso de ese material",
-          "descripcion": "Un envase de 20 litros que pesa apenas 780 gramos busca reducir la cantidad de plástico que se utiliza para almacenar y transportar productos destinados al agro. La iniciativa fue presentada por Syngenta y, según informó la compañía, permitiría utilizar un 30% menos de ese material frente a los envases estándar del mercado. El diseño […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Nuevo-envase-de-20-litros-con-un-peso-de-780-gr.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-15T16:55-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f7b90cd5a8d5250d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 77,
-        "commercial_score": 78,
-        "subtema": "empresas",
-        "tema": "fitosanitarios",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Innovación en sustentabilidad y envases que interesa a productores y abre juego a marcas grandes.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          79,
-          74
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "0b31ea4b7828",
-      "rep": {
-        "id": "0b31ea4b7828",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/que-tienen-que-ver-los-agujeros-negros-los-satelites-y-un-lote-de-soja-una-empresa-argentina-decidio-juntar-todo-eso-para-convertir-los-datos-del-agro-en-decisiones/",
-        "canonical_url": "https://bichosdecampo.com/que-tienen-que-ver-los-agujeros-negros-los-satelites-y-un-lote-de-soja-una-empresa-argentina-decidio-juntar-todo-eso-para-convertir-los-datos-del-agro-en-decisiones",
-        "titulo": "¿Qué tienen que ver los agujeros negros, los satélites y un lote de soja? Una empresa argentina decidió juntar todo eso para convertir los datos del agro en decisiones",
-        "titulo_norm": "que tienen que ver los agujeros negros los satelites y un lote de soja una empresa argentina decidio juntar todo eso para convertir los datos del agro en decisiones",
-        "descripcion": "¿Qué pueden tener en común una investigación sobre agujeros negros, el análisis de imágenes satelitales, la ciencia de datos y un ensayo de híbridos de maíz? A primera vista, bastante poco. Pero todas esas disciplinas terminan cruzándose dentro de Dymaxion Labs, una compañía argentina que se propuso utilizar inteligencia artificial y grandes volúmenes de información […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Dymaxion-LABS-1.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-15T15:38-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "768235fe01e3072d"
-      },
-      "grupo": [
-        {
-          "id": "0b31ea4b7828",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/que-tienen-que-ver-los-agujeros-negros-los-satelites-y-un-lote-de-soja-una-empresa-argentina-decidio-juntar-todo-eso-para-convertir-los-datos-del-agro-en-decisiones/",
-          "canonical_url": "https://bichosdecampo.com/que-tienen-que-ver-los-agujeros-negros-los-satelites-y-un-lote-de-soja-una-empresa-argentina-decidio-juntar-todo-eso-para-convertir-los-datos-del-agro-en-decisiones",
-          "titulo": "¿Qué tienen que ver los agujeros negros, los satélites y un lote de soja? Una empresa argentina decidió juntar todo eso para convertir los datos del agro en decisiones",
-          "titulo_norm": "que tienen que ver los agujeros negros los satelites y un lote de soja una empresa argentina decidio juntar todo eso para convertir los datos del agro en decisiones",
-          "descripcion": "¿Qué pueden tener en común una investigación sobre agujeros negros, el análisis de imágenes satelitales, la ciencia de datos y un ensayo de híbridos de maíz? A primera vista, bastante poco. Pero todas esas disciplinas terminan cruzándose dentro de Dymaxion Labs, una compañía argentina que se propuso utilizar inteligencia artificial y grandes volúmenes de información […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Dymaxion-LABS-1.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-15T15:38-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "768235fe01e3072d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 11,
-        "innovacion": 15,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 81,
-        "commercial_score": 78,
-        "subtema": "agtech",
-        "tema": "satelites",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "AgTech nacional de punta que cruza IA y satélites para el manejo agrícola en la zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          83,
-          76
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "62ed0e2b4fcf",
-      "rep": {
-        "id": "62ed0e2b4fcf",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/trigo-en-llamas-los-molinos-brasilenos-van-camino-a-importar-un-volumen-record-de-cereal-argentino/",
-        "canonical_url": "https://bichosdecampo.com/trigo-en-llamas-los-molinos-brasilenos-van-camino-a-importar-un-volumen-record-de-cereal-argentino",
-        "titulo": "Trigo en llamas: Los molinos brasileños van camino a importar un volumen récord de cereal argentino",
-        "titulo_norm": "trigo en llamas los molinos brasilenos van camino a importar un volumen record de cereal argentino",
-        "descripcion": "“Están dadas las condiciones para que en la presente campaña nuestro principal socio comercial nos tire la puerta abajo pidiendo por trigo argentino”. Así lo indicó el analista agrícola Agustín Geier de la consultora brasileña Safras & Mercado durante una charla en formato virtual ofrecida en un evento organizado por Argentrigo. Geier explicó que los […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/diapo1-6.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-15T14:40-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "00ac8c0b3e651504"
-      },
-      "grupo": [
-        {
-          "id": "62ed0e2b4fcf",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/trigo-en-llamas-los-molinos-brasilenos-van-camino-a-importar-un-volumen-record-de-cereal-argentino/",
-          "canonical_url": "https://bichosdecampo.com/trigo-en-llamas-los-molinos-brasilenos-van-camino-a-importar-un-volumen-record-de-cereal-argentino",
-          "titulo": "Trigo en llamas: Los molinos brasileños van camino a importar un volumen récord de cereal argentino",
-          "titulo_norm": "trigo en llamas los molinos brasilenos van camino a importar un volumen record de cereal argentino",
-          "descripcion": "“Están dadas las condiciones para que en la presente campaña nuestro principal socio comercial nos tire la puerta abajo pidiendo por trigo argentino”. Así lo indicó el analista agrícola Agustín Geier de la consultora brasileña Safras & Mercado durante una charla en formato virtual ofrecida en un evento organizado por Argentrigo. Geier explicó que los […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/diapo1-6.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-15T14:40-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "00ac8c0b3e651504"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 10,
-        "potencial_comercial": 8,
-        "ai_score": 80,
-        "commercial_score": 82,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Excelente perspectiva de exportación triguera a Brasil, de gran impacto directo para la zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          83,
-          76
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
-    },
-    {
-      "id": "b6e98581adbf",
-      "rep": {
-        "id": "b6e98581adbf",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/techint-y-la-italiana-saipem-quedaron-a-cargo-de-los-servicios-tecnicos-para-evaluar-una-megaplanta-nid15102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/techint-y-la-italiana-saipem-quedaron-a-cargo-de-los-servicios-tecnicos-para-evaluar-una-megaplanta-nid15102026",
-        "titulo": "Techint y la italiana Saipem quedaron a cargo de los servicios técnicos para evaluar una megaplanta de fertilizantes de Profertil",
-        "titulo_norm": "techint y la italiana saipem quedaron a cargo de los servicios tecnicos para evaluar una megaplanta de fertilizantes de profertil",
-        "descripcion": "Las compañías participarán en la evaluación de una nueva unidad productiva que permitiría ampliar la capacidad de fabricación de urea en el país",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/67S6DJWJLRBYVLSEOD7UFIHLIY.jpeg?auth=4ecffe906055ee090d094d06272f285f82a1aec1dcd27814983d6bd239fe96b0&smart=true",
-        "autor": "",
-        "publicado": "2026-10-15T18:45-03:00",
-        "capturado": "2026-10-15T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "aebe5fa52f2841cf"
-      },
-      "grupo": [
-        {
-          "id": "b6e98581adbf",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/techint-y-la-italiana-saipem-quedaron-a-cargo-de-los-servicios-tecnicos-para-evaluar-una-megaplanta-nid15102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/techint-y-la-italiana-saipem-quedaron-a-cargo-de-los-servicios-tecnicos-para-evaluar-una-megaplanta-nid15102026",
-          "titulo": "Techint y la italiana Saipem quedaron a cargo de los servicios técnicos para evaluar una megaplanta de fertilizantes de Profertil",
-          "titulo_norm": "techint y la italiana saipem quedaron a cargo de los servicios tecnicos para evaluar una megaplanta de fertilizantes de profertil",
-          "descripcion": "Las compañías participarán en la evaluación de una nueva unidad productiva que permitiría ampliar la capacidad de fabricación de urea en el país",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/67S6DJWJLRBYVLSEOD7UFIHLIY.jpeg?auth=4ecffe906055ee090d094d06272f285f82a1aec1dcd27814983d6bd239fe96b0&smart=true",
-          "autor": "",
-          "publicado": "2026-10-15T18:45-03:00",
-          "capturado": "2026-10-15T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "aebe5fa52f2841cf"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 78,
-        "commercial_score": 86,
-        "subtema": "empresas",
-        "tema": "profertil",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Inversión clave en fertilizantes que impacta directamente en los costos y disponibilidad de insumos para la zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          79,
-          77
-        ]
-      },
-      "cuando": "2026-10-15T20:30-03:00"
     }
   ],
-  "actualizado": "2026-10-17T07:04:08-03:00"
+  "actualizado": "2026-10-17T12:04:46-03:00",
+  "tema_ultimo": "blanco"
 }
