@@ -20,7 +20,10 @@ import math
 from reels import relevamiento as RV
 
 SEGURO = 0.6          # parte de las palabras (pesadas) del más corto que está en el otro
-CONSULTAR = 0.3       # desde acá, la IA decide (se le pasa la lista entera igual)
+# Desde acá, la IA decide (se le pasa la lista entera igual). Era 0,3: el 17/10/2026 «Los entes sanitaros
+# suman un nuevo negocio…» (0,18) y «Otro récord agrícola…» (0,18) no llegaron a la IA y casi salen como
+# carruseles repitiendo los reels de las 07:00 y las 12:00. Con 0,15 la IA los agrupó bien.
+CONSULTAR = 0.15
 MAX_IA = 70           # notas que entran en una consulta de agrupamiento
 
 SYSTEM_IA = """Sos el editor de un medio de noticias del agro argentino. Te paso una lista numerada de

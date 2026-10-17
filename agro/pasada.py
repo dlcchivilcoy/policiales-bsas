@@ -213,6 +213,14 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     lim_pend = (ahora - timedelta(hours=PENDIENTE_HORAS)).isoformat()
     ya_elegidas = {p["id"] for p in mem.get("elegidas", [])}
     pendientes = [p for p in mem.get("pendientes", []) if p.get("cuando", "") >= lim_pend and p["id"] not in ya_elegidas]
+    if pendientes and previas:
+        # Una pendiente pudo quedar afuera de su grupo cuando se capturó: se la vuelve a comparar con lo
+        # elegido estos días (17/10/2026: casi sale dos veces la noticia de los chips del Senasa).
+        rp = DD.agrupar([p["rep"] for p in pendientes], previas)
+        for p in [p for p in pendientes if p["rep"]["id"] in rp["repetidas"]]:
+            descartar(p["rep"], f"pendiente que repite una ya elegida: «{rp['repetidas'][p['rep']['id']]['titulo'][:80]}»",
+                      p["score"])
+            pendientes.remove(p)
     previas += [{"id": p["id"], "titulo": p["rep"]["titulo"], "descripcion": p["rep"].get("descripcion", ""),
                  "fuente": p["rep"].get("fuente", ""), "url": p["rep"].get("url", "")} for p in pendientes]
     ag = DD.agrupar(nuevas, previas) if nuevas else {"grupos": [], "repetidas": {}, "como": {}, "ia": None}
