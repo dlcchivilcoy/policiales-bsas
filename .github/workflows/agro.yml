@@ -1,26 +1,36 @@
 name: Agro (@diarioyradioagro)
 
-# Activado por el editor el 14/10/2026. Arranque decidido el 13/10: 3 REELS POR DÍA en 3 pasadas, 1 por
-# pasada, a las 07:00, 12:30 y 20:30 (AGRO_PASADAS, AGRO_MAX_DIA y AGRO_POR_PASADA en agro/seleccion.py;
-# se pueden cambiar como variables del repo sin tocar código).
+# Activado por el editor el 14/10/2026 con 3 reels por día. Desde el 17/10/2026 (pedido del editor, documento
+# «ideas agro»): 3 REELS + 3 CARRUSELES + 10 HISTORIAS por día en 3 corridas, una cosa por horario y una
+# hora entre una y otra (agro/agenda.py; se cambia con la variable del repo AGRO_AGENDA sin tocar código):
 #
-# Cada pasada: lee las fuentes (agro/fuentes.py), descarta duplicados, puntúa con IA, elige la mejor
-# nota que no salió y arma título, textos, imagen (foto oficial o IA, nunca el logo suelto), portada y
-# reel. Publica el Short en Radio del Centro, la nota en la sección Agro de la web y el reel en Facebook
-# e Instagram de @diarioyradioagro con las credenciales AGRO_* (salvaguarda: nunca las del diario).
-# Detalle: agro/pasada.py y agro/publicar.py.
+#   07:00 historias «El campo hoy»   08:00 reel   09:00 carrusel
+#   12:00 reel   13:00 carrusel   14:00 historias (mapa de lluvias, Chicago, la novedad)
+#   19:00 historias «Así cerró el mercado»   20:00 reel   21:00 carrusel
+#
+# Reel y carrusel: lee las fuentes, descarta duplicados, puntúa con IA, elige la mejor nota que no salió
+# y arma textos, imagen (foto oficial con crédito, foto de medio RECREADA con IA, o IA; nunca el logo
+# suelto) y el reel 4:5 o el carrusel «deslizá e informate». Historias: datos de granos (Cámara Arbitral
+# de Rosario), dólar (BCRA y Banco Nación), Chicago y clima (SMN), sin IA. Publica con las credenciales
+# AGRO_* (salvaguarda: nunca las del diario). Detalle: agro/pasada.py y agro/publicar.py.
 #
 # Quién dispara: cron-job.org a horario exacto con {"ref":"main","inputs":{"origen":"cron"}}. El
-# `schedule:` de abajo es el RESPALDO, 20 minutos después: si la pasada de ese horario ya publicó, la
-# memoria (estado/agro.json) lo frena y no hace nada.
+# `schedule:` de abajo es el RESPALDO, 20 minutos después: si ese horario ya publicó, la memoria
+# (estado/agro.json) lo frena y no hace nada.
 #
 # Publica si la variable del repo AGRO_PUBLICAR es 1. Para apagar SOLO esto: AGRO_PUBLICAR=0 (sigue
 # armando y simula; las piezas quedan como artefacto de la corrida).
 on:
-  schedule:                 # UTC; Argentina es UTC-3 todo el año
-    - cron: "20 10 * * *"   # 07:20 Argentina: respaldo de la pasada de las 07:00
-    - cron: "50 15 * * *"   # 12:50 Argentina: respaldo de la de las 12:30
-    - cron: "50 23 * * *"   # 20:50 Argentina: respaldo de la de las 20:30
+  schedule:                 # UTC; Argentina es UTC-3 todo el año. Respaldo 20 min después de cada horario.
+    - cron: "20 10 * * *"   # 07:20 historias
+    - cron: "20 11 * * *"   # 08:20 reel
+    - cron: "20 12 * * *"   # 09:20 carrusel
+    - cron: "20 15 * * *"   # 12:20 reel
+    - cron: "20 16 * * *"   # 13:20 carrusel
+    - cron: "20 17 * * *"   # 14:20 historias
+    - cron: "20 22 * * *"   # 19:20 historias
+    - cron: "20 23 * * *"   # 20:20 reel
+    - cron: "20 0 * * *"    # 21:20 carrusel
   workflow_dispatch:
     inputs:
       publicar:
@@ -80,7 +90,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AGRO_MAX_DIA: ${{ vars.AGRO_MAX_DIA }}
           AGRO_POR_PASADA: ${{ vars.AGRO_POR_PASADA }}
-          AGRO_PASADAS: ${{ vars.AGRO_PASADAS }}
+          AGRO_AGENDA: ${{ vars.AGRO_AGENDA }}
           AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
@@ -103,7 +113,7 @@ jobs:
             salida_agro/**/*.jpg
             salida_agro/**/*.json
             salida_agro/**/*.html
-          retention-days: 3
+          retention-days: 2
           compression-level: 0
 
       - name: Recordar qué salió

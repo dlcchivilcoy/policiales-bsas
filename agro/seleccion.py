@@ -10,6 +10,12 @@ La mezcla (AGRO_MEZCLA, editable) fija un TOPE por subtema dentro del cupo del d
 30 % agro, 20 % mercados, 20 % AgTech, 10 % maquinaria, 10 % ganadería, 10 % empresas.
 Si un subtema no tiene candidatas, su lugar lo puede ocupar otra solo si es muy buena
 (score ≥ mínimo + REFUERZO): mejor publicar menos que rellenar.
+
+17/10/2026 (documento «ideas agro»): 3 REELS + 3 CARRUSELES por día → AGRO_MAX_DIA = 6 noticias (las
+historias son de datos y no cuentan). El orden ya no es solo el puntaje: una noticia URGENTE (alerta
+meteorológica, problema sanitario, cambio normativo relevante) va primero, y los 10 temas fundamentales
+del documento suman un poco según su prioridad (clima primero, reglas y agenda al final). Para el
+carrusel pesa además si la noticia se puede EXPLICAR (potencial_carrusel).
 """
 import os
 
@@ -30,7 +36,7 @@ def score_min() -> int:
 
 
 def max_dia() -> int:
-    return _entero("AGRO_MAX_DIA", 3)
+    return _entero("AGRO_MAX_DIA", 6)
 
 
 def por_pasada() -> int:
@@ -51,6 +57,20 @@ def pasadas() -> list:
         except ValueError:
             continue
     return sorted(set(salida)) or [(7, 0), (12, 30), (20, 30)]
+
+
+# Lo que suma cada tema fundamental al ORDEN (no al puntaje): clima 6 … reglas 1.
+EMPUJE_TEMA = {"clima": 6, "precios": 5, "dolar": 5, "internacional": 4, "campana": 4, "costos": 3,
+               "tecnologia": 2, "sanidad": 2, "ganaderia": 1, "reglas": 1}
+URGENTE_TOLERANCIA = 10     # una urgente entra aunque le falten hasta 10 puntos para el mínimo
+
+
+def prioridad(s: dict, formato: str = "reel") -> tuple:
+    """La clave de orden de una candidata: (urgente, puntaje + empuje del tema [+ carrusel], comercial)."""
+    valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0)
+    if formato == "carrusel":
+        valor += 2 * (s.get("potencial_carrusel", 5) - 5)
+    return (bool(s.get("urgente")), valor, s.get("commercial_score", 0))
 
 
 def mezcla() -> dict:
@@ -74,7 +94,7 @@ def topes(cupo_dia: int, m: dict = None) -> dict:
     return {k: max(1, round(cupo_dia * v / total)) for k, v in m.items()}
 
 
-def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = None) -> tuple:
+def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = None, formato: str = "reel") -> tuple:
     """(elegidos, descartados_con_motivo). `candidatos`: [{"id", "score": {...}}, …] (un
     representante por grupo). `de_hoy`: lo ya elegido hoy (cuenta para cupo, mezcla y temas)."""
     cupo_dia = max_dia() if cupo_dia is None else cupo_dia
@@ -88,12 +108,11 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         if s.get("tema"):
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     lugar = cupo_dia - len(de_hoy)
-    orden = sorted(candidatos, key=lambda c: (c["score"]["ai_score"], c["score"]["commercial_score"]),
-                   reverse=True)
+    orden = sorted(candidatos, key=lambda c: prioridad(c["score"], formato), reverse=True)
     elegidos, descartados, reserva = [], [], []
     for c in orden:
         s = c["score"]
-        if s["ai_score"] < minimo:
+        if s["ai_score"] < minimo and not (s.get("urgente") and s["ai_score"] >= minimo - URGENTE_TOLERANCIA):
             descartados.append((c, f"score {s['ai_score']} < {minimo}"))
             continue
         if s.get("tema") and temas.get(s["tema"], 0) >= MAX_MISMO_TEMA:
@@ -128,7 +147,10 @@ def ordenar_variado(elegidos: list, de_hoy: list) -> list:
     ultimo = (de_hoy[-1].get("score") or {}).get("subtema") if de_hoy else None
     pendientes, salida = list(elegidos), []
     while pendientes:
-        k = next((i for i, c in enumerate(pendientes) if c["score"]["subtema"] != ultimo), 0)
+        # Una urgente no espera a que cambie el subtema: sale primero.
+        k = next((i for i, c in enumerate(pendientes) if c["score"].get("urgente")), None)
+        if k is None:
+            k = next((i for i, c in enumerate(pendientes) if c["score"]["subtema"] != ultimo), 0)
         c = pendientes.pop(k)
         salida.append(c)
         ultimo = c["score"]["subtema"]

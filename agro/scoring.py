@@ -20,6 +20,11 @@ CRITERIOS = {
     "potencial_comercial": 10,
 }
 SUBTEMAS = ("agro", "mercados", "agtech", "maquinaria", "ganaderia", "empresas")
+# Los 10 temas fundamentales del documento «ideas agro» (17/10/2026), en su orden de prioridad. No suman
+# puntaje: ordenan la selección (seleccion.py) y un tema URGENTE (alerta meteorológica, problema
+# sanitario o cambio normativo relevante) pasa al primer lugar.
+TEMAS_DOC = ("clima", "precios", "dolar", "internacional", "campana", "costos", "tecnologia", "sanidad",
+             "ganaderia", "reglas")
 TANDA = 10
 MARGEN_DOBLE = 10      # AGRO_DOBLE_MARGEN: 0 apaga el doble puntaje
 
@@ -45,6 +50,17 @@ Por cada nota devolvés:
 - ambito: «argentina» o «internacional».
 - sensible: true si la nota gira sobre precios, cotizaciones, retenciones, impuestos, regulaciones,
   datos oficiales o estadísticas (esos datos necesitan fuente oficial antes de publicarse).
+- tema_doc: el tema fundamental, uno de: clima (lluvias, heladas, alertas, pronósticos), precios (soja,
+  maíz, trigo y otros granos), dolar (tipo de cambio y su efecto en el campo), internacional (Chicago,
+  commodities, mercados del mundo), campana (siembra, cosecha, estado de cultivos, estimaciones),
+  costos (fertilizantes, semillas, combustible, fletes, labores), tecnologia (drones, sensores,
+  agricultura de precisión, IA, conectividad, maquinaria nueva), sanidad (plagas, enfermedades,
+  manejo), ganaderia (hacienda, precios por categoría, producción animal), reglas (normas, impuestos,
+  retenciones, vencimientos, exposiciones, capacitaciones).
+- urgente: true SOLO si es una alerta meteorológica importante, un problema sanitario serio (brote,
+  plaga, enfermedad) o un cambio normativo relevante que el productor tiene que saber YA.
+- potencial_carrusel (0-10): si se puede EXPLICAR en un carrusel de 5 a 7 diapositivas (pasos, causas,
+  números, comparaciones, qué cambia, cómo funciona). Bajo si es un anuncio sin contenido.
 - explicacion: UNA frase corta con el porqué del puntaje.
 
 Sé exigente: un total de 75 o más es una noticia que de verdad vale una pieza propia. Una nota
@@ -77,6 +93,11 @@ def limpiar(d: dict) -> dict:
     sens = d.get("sensible", False)
     s["sensible"] = sens is True or str(sens).strip().lower() in ("true", "si", "sí", "1")
     s["explicacion"] = " ".join(str(d.get("explicacion") or "").split())[:240]
+    tema_doc = str(d.get("tema_doc") or "").strip().lower().replace("ó", "o").replace("ñ", "n")
+    s["tema_doc"] = tema_doc if tema_doc in TEMAS_DOC else ""
+    urg = d.get("urgente", False)
+    s["urgente"] = urg is True or str(urg).strip().lower() in ("true", "si", "sí", "1")
+    s["potencial_carrusel"] = _entero(d.get("potencial_carrusel"), 10)
     return s
 
 
@@ -114,6 +135,8 @@ def promediar(a: dict, b: dict) -> dict:
     s["ai_score"] = sum(s[c] for c in CRITERIOS)
     s["commercial_score"] = round((a["commercial_score"] + b["commercial_score"]) / 2)
     s["sensible"] = a["sensible"] or b["sensible"]
+    s["urgente"] = bool(a.get("urgente") and b.get("urgente"))
+    s["potencial_carrusel"] = round((a.get("potencial_carrusel", 0) + b.get("potencial_carrusel", 0)) / 2)
     s["dobles"] = [a["ai_score"], b["ai_score"]]
     return s
 

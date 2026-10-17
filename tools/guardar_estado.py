@@ -158,6 +158,21 @@ def combinar_agro(nuestro: dict, remoto: dict) -> dict:
     out["elegidas"] = sorted(por_id.values(), key=lambda e: e.get("cuando") or "")
     mas_nuevo = nuestro if (nuestro.get("actualizado") or "") >= (remoto.get("actualizado") or "") else remoto
     out["pendientes"] = mas_nuevo.get("pendientes") or []
+    # 17/10/2026: las tandas de historias por horario (gana la que tiene resultado), los datos del
+    # mercado por fecha (unión) y el tema del último posteo 4:5 (el de la copia más nueva).
+    hist = dict(remoto.get("historias") or {})
+    for k, v in (nuestro.get("historias") or {}).items():
+        if k not in hist or peso(v) >= peso(hist[k]):
+            hist[k] = v
+    if hist:
+        out["historias"] = hist
+    merc = {k: dict(v) for k, v in (remoto.get("mercado") or {}).items()}
+    for k, v in (nuestro.get("mercado") or {}).items():
+        merc.setdefault(k, {}).update(v)
+    if merc:
+        out["mercado"] = merc
+    if mas_nuevo.get("tema_ultimo"):
+        out["tema_ultimo"] = mas_nuevo["tema_ultimo"]
     out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
     return out
 

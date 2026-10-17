@@ -16,7 +16,14 @@ El orden importa: YouTube primero (la web solo muestra videos de YouTube dentro 
 la nota web (el texto de Facebook lleva su link), después Facebook e Instagram.
 
 Una red que falla no frena a las demás; lo que salió queda anotado en la memoria para no repetirlo.
+
+17/10/2026 (más contenido, pedido del editor): además del reel (ahora 4:5; Facebook recibe una copia
+9:16 con bandas, como policiales), CARRUSELES (nota web → Instagram carrusel → Facebook: las diapositivas
+como fotos de una publicación con el link a la nota; no van a YouTube) e HISTORIAS (Instagram y Facebook,
+foto 9:16). La portada de cada posteo queda subida al Release para que la tanda de historias siguiente
+(otra corrida) la muestre como «novedad».
 """
+import json
 import os
 import re
 from contextlib import contextmanager
@@ -72,6 +79,7 @@ def pieza_publicador(pieza: dict) -> dict:
     from agro import guion as GU
     g = pieza["guion"]
     return {"descripcion_tiktok": GU.texto_red(g, "instagram"),
+            "video": {"alto": (pieza.get("reel") or {}).get("alto") or 1350},     # 4:5 → FB en 9:16
             "guion": {"titular": g["titular"], "bajada": g["bajada"]},
             "placa": pieza.get("portada"),
             "web": {"titulo": g.get("titulo_web") or g["titular"], "cuerpo": g.get("nota_web", "")},
@@ -97,6 +105,28 @@ def metadatos_youtube(pieza: dict, url_web: str = "") -> dict:
 
 
 def publicar(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
+    """Publica la pieza según su formato (reel o carrusel). Devuelve {red: {"id"…} | {"error": …}} y
+    «portada_url» (la portada subida al Release, para las historias)."""
+    if pieza.get("formato") == "carrusel":
+        salida = publicar_carrusel(pieza, ya, log=log)
+    else:
+        salida = publicar_reel(pieza, ya, redes, log=log)
+    salida["portada_url"] = _subir_portada(pieza)
+    return salida
+
+
+def _subir_portada(pieza: dict) -> str:
+    from reels import publicador as PB
+    portada = pieza.get("portada")
+    if not portada or not Path(portada).is_file():
+        return ""
+    try:
+        return PB.subir_a_release(Path(portada), f"agro_{pieza['id']}_portada.jpg")
+    except Exception:                                      # noqa: BLE001 — solo la usa la historia
+        return ""
+
+
+def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
     """Publica en las `redes` que todavía no salieron (`ya`: {red: resultado} de un intento anterior).
     Devuelve {red: {"id"…} | {"error": …}}. Nunca lanza por una red: la siguiente sigue."""
     from reels import publicador as PB
@@ -149,3 +179,150 @@ def publicar(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
                 salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Instagram FALLÓ: {salida['instagram']['error']}")
     return salida
+
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# Carrusel
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+def _carrusel_instagram(urls: list, caption: str) -> dict:
+    """Las diapositivas como contenedores hijos y el CAROUSEL padre (lo mismo que nacionales)."""
+    from reels import publicador as PB
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    hijos = []
+    for url in urls:
+        hijos.append(PB._contenedor_listo(uid, tok, {"image_url": url, "is_carousel_item": "true"}))
+    padre = PB._contenedor_listo(uid, tok, {"media_type": "CAROUSEL", "children": ",".join(hijos),
+                                            "caption": caption[:PB.MAX_CAPTION_IG]})
+    return {"id": PB._publicar_contenedor(uid, tok, padre, caption) or None, "diapositivas": len(urls)}
+
+
+def _fotos_facebook(urls: list, mensaje: str) -> dict:
+    """Una publicación del muro con las diapositivas como fotos (lo más parecido a un carrusel en una
+    página): cada foto se sube sin publicar y después va todo junto con el texto."""
+    from reels import publicador as PB
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    ids = []
+    for i, url in enumerate(urls):
+        r = PB._pedir("POST", f"{PB.GRAPH}/{pid}/photos", tok, data={"url": url, "published": "false"})
+        if r.status_code >= 400:
+            raise PB.FalloRed(PB._error(r, f"Facebook (foto {i + 1})"))
+        ids.append(str((r.json() or {}).get("id")))
+    datos = {"message": mensaje}
+    for i, fid in enumerate(ids):
+        datos[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})
+    try:
+        r = PB._pedir("POST", f"{PB.GRAPH}/{pid}/feed", tok, data=datos)
+    except PB._Cortado as e:
+        raise PB.SinConfirmar(f"Facebook (publicación con fotos): {e}")
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (publicación con fotos)"))
+    return {"id": str((r.json() or {}).get("id") or ""), "fotos": len(ids)}
+
+
+def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
+    """Web (si es una noticia) → Instagram (carrusel) → Facebook (fotos + link)."""
+    from agro import guion as GU
+    from reels import publicador as PB
+    from reels import web as W
+    salida = dict(ya or {})
+    jpgs = [j for j in (pieza.get("carrusel") or {}).get("archivos") or [] if Path(j).is_file()]
+    if len(jpgs) < 2:
+        return {"error": "el carrusel no tiene diapositivas"}
+    g = pieza["guion"]
+
+    def hecho(red):
+        return red in salida and not (salida[red] or {}).get("error")
+
+    if not pieza.get("datos") and not hecho("web") and W.activa() and not W.faltantes():
+        imagen = (pieza.get("imagen") or {}).get("archivo") or jpgs[0]
+        try:
+            pp = pieza_publicador(pieza)
+
+            def respaldo():
+                return PB.subir_a_release(Path(imagen), f"agro_{pieza['id']}.jpg")
+            salida["web"] = W.publicar(lambda m, u, **kw: PB._pedir(m, u, "", **kw), pp, youtube_id="",
+                                       foto_respaldo=respaldo, categorias=[CAMPO_ID])
+            log(f"   Web: {salida['web'].get('url')}")
+        except Exception as e:                             # noqa: BLE001
+            salida["web"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+            log(f"   Web FALLÓ: {salida['web']['error']}")
+    url_web = (salida.get("web") or {}).get("url", "") if hecho("web") else ""
+    caption = (pieza.get("carrusel") or {}).get("caption") or GU.texto_red(g, "instagram")
+    mensaje = caption if pieza.get("datos") else GU.texto_red(g, "facebook", url_web)
+    marca = re.sub(r"[^\w-]", "", str(pieza["id"]))[:40]
+    try:
+        urls = [PB.subir_a_release(Path(j), f"agro_{marca}_c{i:02d}.jpg") for i, j in enumerate(jpgs)]
+    except Exception as e:                                 # noqa: BLE001
+        error = {"error": f"no se pudieron subir las diapositivas: {type(e).__name__}: {str(e)[:160]}"}
+        return dict(salida, **{red: error for red in ("instagram", "facebook") if not hecho(red)})
+    with credenciales_agro():
+        if not hecho("instagram"):
+            try:
+                salida["instagram"] = _carrusel_instagram(urls, caption)
+                log(f"   Instagram (carrusel): {salida['instagram'].get('id')}")
+            except Exception as e:                         # noqa: BLE001
+                salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+                log(f"   Instagram FALLÓ: {salida['instagram']['error']}")
+        if not hecho("facebook"):
+            try:
+                salida["facebook"] = _fotos_facebook(urls, mensaje)
+                log(f"   Facebook (fotos): {salida['facebook'].get('id')}")
+            except Exception as e:                         # noqa: BLE001
+                salida["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+                log(f"   Facebook FALLÓ: {salida['facebook']['error']}")
+    return salida
+
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# Historias
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+def _historia_instagram(url: str) -> dict:
+    from reels import publicador as PB
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    cid = PB._contenedor_listo(uid, tok, {"image_url": url, "media_type": "STORIES"})
+    return {"id": PB._publicar_contenedor(uid, tok, cid, "") or None}
+
+
+def _historia_facebook(url: str) -> dict:
+    from reels import publicador as PB
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    r = PB._pedir("POST", f"{PB.GRAPH}/{pid}/photos", tok, data={"url": url, "published": "false"})
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (foto de la historia)"))
+    foto = str((r.json() or {}).get("id"))
+    try:
+        r = PB._pedir("POST", f"{PB.GRAPH}/{pid}/photo_stories", tok, data={"photo_id": foto})
+    except PB._Cortado as e:
+        raise PB.SinConfirmar(f"Facebook (historia): {e}")
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (historia)"))
+    d = r.json() or {}
+    return {"id": str(d.get("post_id") or d.get("id") or foto)}
+
+
+def publicar_historias(tanda: list, log=print) -> dict:
+    """Cada historia en Instagram y en Facebook, en orden. Una que falla no frena a las demás.
+    {"items": [{"instagram": {...}, "facebook": {...}}…]}."""
+    from reels import publicador as PB
+    items = []
+    with credenciales_agro():
+        for i, h in enumerate(tanda):
+            r = {}
+            try:
+                url = PB.subir_a_release(Path(h["archivo"]), f"agro_hist_{Path(h['archivo']).parent.name}_{i:02d}.jpg")
+            except Exception as e:                         # noqa: BLE001
+                items.append({"instagram": {"error": f"subida: {e}"[:200]}, "facebook": {"error": "sin subida"}})
+                continue
+            for red, fn in (("instagram", _historia_instagram), ("facebook", _historia_facebook)):
+                try:
+                    r[red] = fn(url)
+                except Exception as e:                     # noqa: BLE001
+                    r[red] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+            log(f"   historia {i + 1} ({h['tipo']}): IG {r['instagram'].get('id') or r['instagram'].get('error')}"
+                f" · FB {r['facebook'].get('id') or r['facebook'].get('error')}")
+            items.append(r)
+    return {"items": items}

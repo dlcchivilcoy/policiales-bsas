@@ -20,6 +20,9 @@ main{max-width:1180px;margin:0 auto;padding:24px 16px 80px}h1{font-size:26px;mar
 .sub{color:var(--sub)}.kpis{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.kpi{background:var(--card);border:1px solid var(--borde);border-radius:10px;padding:10px 14px;min-width:120px}
 .kpi b{display:block;font-size:22px}.card{background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:18px;margin:16px 0}
 .pieza{display:grid;grid-template-columns:300px 1fr;gap:20px}@media(max-width:820px){.pieza{grid-template-columns:1fr}}
+.diapos{display:grid;grid-template-columns:1fr 1fr;gap:6px}.diapos img{margin:0}
+.historias{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.historias img{width:100%;border-radius:10px;border:1px solid var(--borde)}
 .pieza img,.pieza video{width:100%;border-radius:10px;border:1px solid var(--borde);display:block;margin-bottom:10px}
 .tag{display:inline-block;border-radius:99px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:6px;background:var(--borde)}
 .tag.nar{background:var(--nar);color:#fff}.tag.ver{background:var(--ver);color:#fff}.tag.alerta{background:var(--alerta);color:#fff}
@@ -69,6 +72,9 @@ def _pieza(p: dict, carpeta: Path) -> str:
         medios += f"<img src='{e(_rel(p['portada'], carpeta))}' alt='portada'>"
     if (p.get("reel") or {}).get("archivo"):
         medios += f"<video controls preload=metadata src='{e(_rel(p['reel']['archivo'], carpeta))}'></video>"
+    if (p.get("carrusel") or {}).get("archivos"):
+        medios = "<div class=diapos>" + "".join(f"<img src='{e(_rel(a, carpeta))}' alt='diapositiva'>"
+                                                for a in p["carrusel"]["archivos"]) + "</div>"
     img = p.get("imagen") or {}
     alerta = ""
     if g.get("requires_review"):
@@ -121,10 +127,21 @@ def escribir(inf: dict, carpeta: Path) -> Path:
         f"<td class=num>{e(d.get('score', ''))}{('<br><span class=sub>' + e(d['dobles'][0]) + ' y ' + e(d['dobles'][1]) + '</span>') if d.get('dobles') else ''}</td><td>{e(d.get('subtema', ''))}</td><td>{e(d['motivo'])}"
         f"{('<br><span class=sub>' + e(d['explicacion']) + '</span>') if d.get('explicacion') else ''}</td></tr>"
         for d in inf["descartadas"])
-    cuerpo = (f"<main><h1>Agro · pasada {'real' if inf.get('publicar') else 'simulada'}</h1><div class=sub>{e(inf['cuando'])} · @diarioyradioagro · "
+    formato = {"reel": "reel", "carrusel": "carrusel", "historias": "historias"}.get(inf.get("formato"), "pasada")
+    hist = ""
+    if inf.get("historias"):
+        hist = "<h2>Historias</h2><div class=historias>" + "".join(
+            f"<figure style='margin:0'><img src='{e(_rel(h['archivo'], carpeta))}' alt='{e(h['tipo'])}'>"
+            f"<figcaption class=sub>{e(h['tipo'])}</figcaption></figure>" for h in inf["historias"]) + "</div>"
+    if inf.get("carrusel_datos"):
+        cd = inf["carrusel_datos"]
+        hist += "<h2>Carrusel «Los números de la semana»</h2><div class=historias>" + "".join(
+            f"<img src='{e(_rel(a, carpeta))}' alt='diapositiva'>" for a in cd["carrusel"]["archivos"]) +             f"</div><details><summary>Texto</summary><pre>{e(cd['carrusel']['caption'])}</pre></details>"
+    cuerpo = (f"<main><h1>Agro · {formato} {'real' if inf.get('publicar') else 'simulado'}</h1><div class=sub>{e(inf['cuando'])} · @diarioyradioagro · "
               f"<b>{'PUBLICADA' if inf.get('publicar') else 'no se publicó nada'}</b> · score mínimo {inf['config']['score_min']} · tope {inf['config']['max_dia']} por día</div>"
               f"<div class=kpis>{kpis}</div>"
-              f"<h2>Piezas</h2>{piezas}"
+              f"{hist}"
+              f"<h2>Piezas</h2>{piezas if not hist or inf.get('piezas') else '<p class=sub>—</p>'}"
               f"<h2>Fuentes</h2><div class=tabla-scroll><table><tr><th>Fuente</th><th class=num>Leídas</th>"
               f"<th class=num>Últimas {inf['config']['horas']} h</th><th>Estado</th></tr>{fuentes}</table></div>"
               f"<h2>Duplicados agrupados</h2>{grupos}"
@@ -132,6 +149,6 @@ def escribir(inf: dict, carpeta: Path) -> Path:
               f"<th class=num>Score</th><th>Subtema</th><th>Motivo</th></tr>{desc}</table></div></main>")
     ruta = carpeta / "informe.html"
     ruta.write_text(f"<!doctype html><html lang=es><head><meta charset=utf-8>"
-                    f"<meta name=viewport content='width=device-width,initial-scale=1'><title>Agro simulación</title>"
+                    f"<meta name=viewport content='width=device-width,initial-scale=1'><title>Agro informe</title>"
                     f"<style>{CSS}</style></head><body>{cuerpo}</body></html>", encoding="utf-8")
     return ruta

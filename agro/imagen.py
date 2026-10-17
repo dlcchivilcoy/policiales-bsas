@@ -7,6 +7,11 @@
     lleva `"foto": False` y va directo a la IA.
   - Fuente que es OTRO MEDIO: su foto NO se republica (derechos). Va una imagen ilustrativa generada
     con IA (Cloudflare FLUX, gratis: la misma cuenta del Archivo) con la leyenda que lo avisa.
+  - Fuente que es OTRO MEDIO, desde el 17/10/2026 (pedido del editor: «tratar de utilizar la imagen de la
+    fuente; podés modificarla con IA para evitar el copyright»): su foto se RECREA con IA (Cloudflare
+    FLUX.2 klein, que edita a partir de una imagen): la misma escena y el mismo sujeto, con otro encuadre,
+    otro ángulo y otra luz, sin letras ni logos. Queda una imagen nueva, fiel a la noticia, con la leyenda
+    «Imagen generada con IA». La foto original nunca se publica.
   - NUNCA sale la portada con el logo suelto (pedido del editor, 13/10/2026). Si la IA dibuja letras
     o no contesta: (1) la escena de la nota, dos intentos; (2) una ESCENA SEGURA del subtema, sin
     máquinas, carteles ni edificios (lo que trae letras); (3) una imagen del BANCO: fotos IA ya
@@ -14,7 +19,73 @@
 
 La URL de la foto original se guarda siempre (trazabilidad), aunque no se use.
 """
+import base64
+import io
+import os
+import time
 from pathlib import Path
+
+import httpx
+
+MODELO_RECREAR = "@cf/black-forest-labs/flux-2-klein-4b"   # ~130 neuronas por imagen 1024x768
+URL_CF = "https://api.cloudflare.com/client/v4/accounts/{cuenta}/ai/run/"
+MIN_ANCHO_RECREAR = 400     # más chica no sirve ni de referencia
+RECREAR = ("Recreate this news photograph as a NEW original photo of the same scene: the same place, the same kind "
+           "of subject and the same elements, seen from a slightly different camera angle and framing, with different "
+           "light. Do NOT add people, animals, vehicles or objects that are not in the original. If there are people, "
+           "give them different faces and clothes. Realistic and natural, like a press photo taken by another "
+           "photographer. Remove every text, letter, number, logo, watermark, label, sign and screen with writing.")
+RECREAR_2 = ("Photograph the same subject and setting from a different side, natural daylight, realistic editorial "
+             "photo, without adding anything new. Absolutely no text, letters, numbers, logos, tags with writing or signs.")
+
+
+def recrear(foto, destino: Path, contexto: str = "", pedir=None, variante: int = 0) -> dict:
+    """Una imagen NUEVA de la misma escena a partir de la foto de la fuente (Cloudflare FLUX.2 klein):
+    {archivo} o {motivo}. Nunca lanza ni muestra el token."""
+    cuenta = (os.environ.get("CF_ACCOUNT_ID") or "").strip()
+    token = (os.environ.get("CF_API_TOKEN") or "").strip()
+    if not cuenta or not token:
+        return {"motivo": "faltan CF_ACCOUNT_ID / CF_API_TOKEN"}
+    from PIL import Image
+    try:
+        with Image.open(foto) as im:
+            im = im.convert("RGB")
+    except Exception:                                      # noqa: BLE001
+        return {"motivo": "la foto de la fuente no se pudo abrir"}
+    if im.width < MIN_ANCHO_RECREAR:
+        return {"motivo": f"la foto de la fuente es muy chica ({im.width} px)"}
+    from agro import diseno as D
+    im = D.cubrir(im, 1024, 768) if im.width / im.height < 1.6 else D.cubrir(im, 1024, 768, zoom=1.0)
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=90)
+    prompt = (RECREAR if variante == 0 else RECREAR_2) + (f" Scene: {contexto[:400]}" if contexto else "")
+    pedir = pedir or (lambda url, **kw: httpx.post(url, timeout=120, **kw))
+    ultimo = ""
+    for intento, espera in enumerate((0, 8, 25)):
+        if espera:
+            time.sleep(espera)
+        try:
+            r = pedir(URL_CF.format(cuenta=cuenta) + MODELO_RECREAR, headers={"Authorization": f"Bearer {token}"},
+                      files={"prompt": (None, prompt), "input_image_0": ("fuente.jpg", buf.getvalue(), "image/jpeg"),
+                             "width": (None, "1024"), "height": (None, "768")})
+        except httpx.HTTPError as e:
+            ultimo = type(e).__name__
+            continue
+        if r.status_code != 200:
+            ultimo = f"HTTP {r.status_code}"
+            if r.status_code in (429, 500, 502, 503, 504):
+                continue
+            break
+        try:
+            crudo = base64.b64decode((r.json().get("result") or {}).get("image") or "")
+            with Image.open(io.BytesIO(crudo)) as nueva:
+                Path(destino).parent.mkdir(parents=True, exist_ok=True)
+                nueva.convert("RGB").save(destino, "JPEG", quality=92)
+            return {"archivo": str(destino), "modelo": MODELO_RECREAR}
+        except Exception:                                  # noqa: BLE001
+            ultimo = "Cloudflare contestó sin imagen"
+    return {"motivo": f"Cloudflare (recrear): {ultimo}"}
+
 
 MIN_ANCHO = 900         # una foto más chica se ve borrosa a 1080 de ancho
 BANCO = Path(__file__).resolve().parent / "marca" / "banco"
@@ -43,7 +114,7 @@ SEGURAS = {
 
 ESTILO = (" Realistic modern editorial photograph for an agribusiness and agtech news outlet, natural "
           "daylight, cinematic composition, shallow depth of field, rich but natural colors, wide "
-          "vertical-friendly framing with the subject in the upper-middle of the frame, no people "
+          "horizontal composition with the subject in the middle band of the frame, no people "
           "facing the camera, no logos, no brand names, plain surfaces, wordless.")
 
 
@@ -72,9 +143,9 @@ def del_banco(subtema: str, semilla: str) -> str:
 
 
 def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=None, bajar=None,
-           mirar=None, subtema: str = "") -> dict:
-    """{archivo, origen: «fuente»|«ia»|«ninguna», url_original, motivo}. «ninguna» solo si falla
-    todo Y el banco está vacío."""
+           mirar=None, subtema: str = "", recrear_con=None) -> dict:
+    """{archivo, origen: «fuente»|«recreada»|«ia»|«ninguna», url_original, motivo}. «ninguna» solo si
+    falla todo Y el banco está vacío."""
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     url = cuerpo_imagen or rep.get("imagen_url") or ""
@@ -99,6 +170,27 @@ def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=No
         else:
             return dict(salida, archivo=str(foto), origen="fuente", credito=rep.get("fuente", ""),
                         motivo=f"foto de una fuente {rep['tipo_fuente']}")
+    elif url and rep.get("tipo_fuente") == "medio":
+        # La foto del otro medio, RECREADA con IA (nunca la original). Dos intentos sin letras.
+        if bajar is None:
+            from reels.flujo import _bajar_foto as bajar
+        foto = destino.with_name(destino.stem + "_fuente.jpg")
+        recrear_con = recrear_con or recrear
+        if not bajar(url, foto):
+            salida["motivo"] = "la foto de la fuente no se pudo bajar"
+        else:
+            motivos_r = []
+            for variante in (0, 1):
+                r = recrear_con(foto, destino.with_name(f"{destino.stem}_recreada{variante}.jpg"), "",
+                                variante=variante)
+                if not r.get("archivo"):
+                    motivos_r.append(r.get("motivo") or "no salió")
+                    break
+                if not mirar(r["archivo"]):
+                    return dict(salida, archivo=r["archivo"], origen="recreada",
+                                motivo="foto de la fuente recreada con IA (escena nueva, sin la original)")
+                motivos_r.append("la recreación tiene letras")
+            salida["motivo"] = "recreación de la foto: " + "; ".join(motivos_r)
     if generar is None:
         from archivo import imagen as IM
         generar = IM.generar

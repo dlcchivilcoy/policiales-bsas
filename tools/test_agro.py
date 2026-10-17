@@ -323,10 +323,12 @@ with tempfile.TemporaryDirectory() as tmp:
         return {"archivo": str(ruta)}
 
     r = IMG.elegir(dict(rep, tipo_fuente="medio"), "https://foto/medio.jpg", "soy", destino,
-                   generar=generar, bajar=bajar, mirar=lambda f: False)
-    chequear("foto de OTRO MEDIO: no se baja, va IA con la URL guardada",
-             r["origen"] == "ia" and not bajadas and r["url_original"] == "https://foto/medio.jpg")
+                   generar=generar, bajar=bajar, mirar=lambda f: False,
+                   recrear_con=lambda *a, **k: {"motivo": "Cloudflare caído"})
+    chequear("foto de OTRO MEDIO que no se pudo recrear: va IA (la original nunca) con la URL guardada",
+             r["origen"] == "ia" and r["url_original"] == "https://foto/medio.jpg" and "Cloudflare caído" in r["motivo"])
     chequear("la IA recibe el estilo agro", generadas and generadas[0] == IMG.ESTILO)
+    bajadas.clear()
     r = IMG.elegir(dict(rep, tipo_fuente="oficial"), "https://foto/inta.jpg", "soy", destino,
                    generar=generar, bajar=bajar, mirar=lambda f: False)
     chequear("foto de fuente OFICIAL: se usa con el crédito",
@@ -388,12 +390,16 @@ with tempfile.TemporaryDirectory() as tmp:
         sal = Path(tmp) / f"portada_{bool(img)}.jpg"
         POR.armar(g, img, sal, ia=ia)
         with Image.open(sal) as im:
-            chequear(f"portada 1080x1920 {'con foto' if img else 'sin foto'}", im.size == (1080, 1920))
+            chequear(f"portada 4:5 (1080x1350) {'con foto' if img else 'sin foto'}", im.size == (1080, 1350))
     tramos = REEL.TRAMOS
     REEL.TRAMOS = tuple((n, 0.25) for n, _ in tramos)          # un reel de 1,25 s para la prueba
     try:
-        rr = REEL.armar(g, foto, Path(tmp) / "reel.mp4", ia=True)
-        chequear("reel mp4 armado", Path(rr["archivo"]).stat().st_size > 1000 and abs(rr["duracion"] - 1.25) < 0.01)
+        for tema in ("blanco", "grafito"):
+            rr = REEL.armar(g, foto, Path(tmp) / f"reel_{tema}.mp4", origen="recreada", tema=tema)
+            with Image.open(rr["vista"]) as im:
+                chequear(f"reel 4:5 ({tema}) armado, con su portada 1080x1350",
+                         Path(rr["archivo"]).stat().st_size > 1000 and abs(rr["duracion"] - 1.25) < 0.01
+                         and im.size == (1080, 1350) and rr["tema"] == tema)
     finally:
         REEL.TRAMOS = tramos
 
@@ -542,20 +548,20 @@ with tempfile.TemporaryDirectory() as tmp:
         chequear("1 por pasada: Soja frenada → entra Trigo y nada más", aptas == ["Trigo precios en alza"])
         chequear("la de 80 (Hacienda) queda pendiente, no se pierde",
                  inf["conteos"]["Quedan pendientes"] == 1 and any(
-                     "pendiente para la próxima pasada" in d["motivo"] for d in inf["descartadas"]))
+                     "pendiente para la próxima corrida" in d["motivo"] for d in inf["descartadas"]))
         ruta = PA.pasada(con_reel=False, log=lambda m: None)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("la pasada siguiente (sin notas nuevas) arma la pendiente",
                  [p["guion"]["titular"] for p in inf["piezas"]] == ["Hacienda remate en Bragado"]
-                 and inf["conteos"]["Pendientes de pasadas anteriores"] == 1 and inf["conteos"]["Quedan pendientes"] == 0)
+                 and inf["conteos"]["Pendientes de corridas anteriores"] == 1 and inf["conteos"]["Quedan pendientes"] == 0)
         ruta = PA.pasada(con_reel=False, log=lambda m: None)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("y la tercera no repite nada", not inf["piezas"])
 
         # Modo REAL con un publicador de mentira: la retenida para revisión no sale y se repone.
         PA.MEMORIA_REAL = Path(tmp) / "estado_agro.json"
-        PA.GU_reel = lambda g, imagen, salida, ia, credito="": (Path(salida).write_bytes(b"mp4") and None) or {
-            "archivo": str(salida), "duracion": 19, "peso_kb": 1}
+        PA.GU_reel = lambda g, imagen, salida, origen="ia", credito="", clip=None, tema="blanco": (
+            Path(salida).write_bytes(b"mp4") and None) or {"archivo": str(salida), "duracion": 22, "peso_kb": 1}
         gen_sim = GU.generar
 
         def generar_revision(rep, cuerpo, otras, s):
@@ -572,8 +578,8 @@ with tempfile.TemporaryDirectory() as tmp:
             return {"youtube": {"id": "yt1"}, "web": {"url": "https://x/n/a"}, "facebook": {"id": "fb1"},
                     "instagram": {"error": "FalloRed: prueba"}}
         turno_real = PA.turno
-        PA.turno = lambda ahora: ahora.replace(second=0, microsecond=0)      # «estamos en horario»
-        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        PA.turno = lambda ahora: (ahora.replace(second=0, microsecond=0), "reel", True)   # «estamos en horario»
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: Soja (no apta) y Trigo (retenida) no salen; se publica Hacienda",
                  publicadas == ["Hacienda remate en Bragado"])
@@ -587,19 +593,19 @@ with tempfile.TemporaryDirectory() as tmp:
         chequear("real: la memoria real es aparte de la simulación", PA.MEMORIA_REAL != PA.MEMORIA)
         # El respaldo de 20 min después (mismo turno) no publica otra vez.
         fijo = datetime.now(CA.TZ_AR).replace(second=0, microsecond=0)
-        PA.turno = lambda ahora: fijo
+        PA.turno = lambda ahora: (fijo, "reel", True)
         mem_t = _json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
         for e in mem_t["elegidas"]:
             if e.get("publicado"):
                 e["turno"] = fijo.isoformat()
         PA.MEMORIA_REAL.write_text(_json.dumps(mem_t), encoding="utf-8")
         publicadas.clear()
-        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: si ese horario ya publicó, el respaldo no publica otra",
                  not publicadas and "ya publicó" in inf["conteos"]["No se publicó"])
-        PA.turno = lambda ahora: ahora.replace(second=0, microsecond=0) + timedelta(hours=3)
-        ruta = PA.pasada(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        PA.turno = lambda ahora: (ahora.replace(second=0, microsecond=0) + timedelta(hours=3), "reel", False)
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: fuera de horario no publica", not publicadas and "fuera de horario" in inf["conteos"]["No se publicó"])
         PA.turno = turno_real
@@ -663,23 +669,262 @@ for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_),
              and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
              and c_["pendientes"] == [{"id": "p-nuevo"}])
 
-# --- plan horario ----------------------------------------------------------------------------
-os.environ.pop("AGRO_PASADAS", None)
-chequear("arranque: 3 por día, 1 por pasada, a las 07:00, 12:30 y 20:30",
-         SE.max_dia() == 3 and SE.por_pasada() == 1 and SE.pasadas() == [(7, 0), (12, 30), (20, 30)])
+# --- agenda (17/10/2026): 3 reels + 3 carruseles + 10 historias, una cosa por horario --------------
+from agro import agenda as AG  # noqa: E402
+
+os.environ.pop("AGRO_AGENDA", None)
+_ag = AG.agenda()
+chequear("agenda: 9 horarios, 3 reels, 3 carruseles y 3 tandas de historias",
+         len(_ag) == 9 and AG.cuantos("reel") == 3 and AG.cuantos("carrusel") == 3 and AG.cuantos("historias") == 3)
+_min = [h * 60 + m for h, m, _ in _ag]
+chequear("agenda: al menos una hora entre un posteo y el siguiente", all(b - a >= 60 for a, b in zip(_min, _min[1:])))
 
 
-def _t(h, m, dia=13):
+def _t(h, m, dia=16):
     return datetime(2026, 10, dia, h, m, tzinfo=CA.TZ_AR)
 
 
-chequear("una corrida a las 12:41 es la pasada de las 12:30", PA.turno(_t(12, 41)) == _t(12, 30))
-chequear("a las 06:00 corresponde la de las 07:00", PA.turno(_t(6, 0)) == _t(7, 0))
-chequear("a las 22:00 ya pasaron todas: mañana a las 07:00", PA.turno(_t(22, 0)) == _t(7, 0, 14))
-chequear("una segunda pieza en la misma pasada sale 30 min después", PA.plan_horario(_t(12, 31), 1) == _t(13, 0))
-os.environ["AGRO_PASADAS"] = "8:00, 21:15, basura"
-chequear("AGRO_PASADAS se puede cambiar (y lo que no se entiende se saltea)", SE.pasadas() == [(8, 0), (21, 15)])
-os.environ.pop("AGRO_PASADAS")
+chequear("una corrida a las 08:25 es el reel de las 08:00", AG.turno(_t(8, 25)) == (_t(8, 0), "reel", True))
+chequear("a las 08:45 ya no (40 min de tolerancia): lo próximo es el carrusel de las 09:00",
+         AG.turno(_t(8, 45)) == (_t(9, 0), "carrusel", False))
+chequear("a las 22:00 ya pasó todo: mañana a las 07:00, historias", AG.turno(_t(22, 0)) == (_t(7, 0, 17), "historias", False))
+chequear("las tres tandas de historias: mañana, mediodía y cierre",
+         [AG.bloque(_t(7, 0)), AG.bloque(_t(14, 0)), AG.bloque(_t(19, 0))] == ["manana", "mediodia", "cierre"])
+chequear("sábado: el primer carrusel es «Los números de la semana»",
+         AG.es_primer_carrusel_del_sabado(_t(9, 0, 17)) and not AG.es_primer_carrusel_del_sabado(_t(13, 0, 17))
+         and not AG.es_primer_carrusel_del_sabado(_t(9, 0, 16)))
+os.environ["AGRO_AGENDA"] = "06:30 historias, 10:00 reel, basura, 25:00 reel"
+chequear("AGRO_AGENDA se puede cambiar (y lo que no se entiende se saltea)",
+         AG.agenda() == [(6, 30, "historias"), (10, 0, "reel")])
+os.environ.pop("AGRO_AGENDA")
+chequear("cupo del día: 6 noticias (3 reels + 3 carruseles), una por corrida", SE.max_dia() == 6 and SE.por_pasada() == 1)
+
+# --- prioridades del documento «ideas agro» -------------------------------------------------------
+_s = SC.limpiar({"tema_doc": "Clima", "urgente": "sí", "potencial_carrusel": 14})
+chequear("puntaje: tema fundamental, urgente y potencial de carrusel",
+         _s["tema_doc"] == "clima" and _s["urgente"] is True and _s["potencial_carrusel"] == 10)
+
+
+def _cand(i, sub, sc, **kw):
+    return {"id": i, "score": dict(SC.limpiar(dict({"subtema": sub}, **kw)), ai_score=sc, tema=i)}
+
+
+_el, _ = SE.elegir([_cand("a", "agro", 82, tema_doc="reglas"), _cand("b", "agro", 78, tema_doc="clima"),
+                    _cand("c", "mercados", 68, urgente=True, tema_doc="sanidad")], [], cupo_dia=6)
+chequear("una URGENTE va primero (aunque tenga 68) y clima (78) le gana a reglas (82)",
+         [c["id"] for c in _el] == ["c", "b", "a"])
+_x, _y = _cand("x", "agtech", 80, potencial_carrusel=10), _cand("y", "agtech", 84, potencial_carrusel=2)
+chequear("para el carrusel pesa lo que se puede explicar; para el reel, el puntaje",
+         SE.elegir([_x, _y], [], formato="carrusel")[0][0]["id"] == "x"
+         and SE.elegir([_x, _y], [], formato="reel")[0][0]["id"] == "y")
+
+# --- datos: granos, dólar, Chicago, clima y alertas (sin red) -------------------------------------
+from agro import mercado as M  # noqa: E402
+from datetime import date  # noqa: E402
+
+_cac = ('<h3>Precios Pizarra del día 15/10/2026</h3> <div class="board board-trigo "> <div class="price"> $350.450,00 '
+        '</div> <strong>US$</strong> 233,01 </div> <span class="direction fa fa-arrow-up"></span> '
+        '<div class="board board-girasol estimative"> <div class="price"> <span> S/C </span> '
+        '<span class="price-sc-estimated"> (E) $797.120,00</span> </div> <strong>US$</strong> <span> (E) </span> 530,00 '
+        '</div> <span class="direction nofont">=</span> TC BNA Divisas Comprador 15/10/2026: $ 1.504,00')
+_p = M.parsear_pizarra(_cac)
+chequear("pizarra de Rosario: fecha, pesos, dólares, sentido y estimativo",
+         _p["fecha"] == "2026-10-15" and _p["productos"]["trigo"] == {"ars": 350450.0, "usd": 233.01, "estimado": False,
+                                                                       "direccion": "sube"}
+         and _p["productos"]["girasol"]["estimado"] and _p["productos"]["girasol"]["ars"] == 797120.0
+         and _p["productos"]["girasol"]["direccion"] == "igual" and _p["tc"] == 1504.0)
+_b = M.parsear_bna("Cotización Billetes Cotización Divisas 16/10/2026 Compra Venta Dolar U.S.A 1485,00 1535,00 Euro 1 2 "
+                   "Hora Actualización: 17:00 16/10/2026 Compra Venta Dolar U.S.A 1509.0000 1518.0000")
+chequear("Banco Nación: billete y divisa con fecha y hora",
+         _b["billete"] == {"fecha": "2026-10-16", "compra": 1485.0, "venta": 1535.0}
+         and _b["divisa"]["venta"] == 1518.0 and _b["hora"] == "17:00")
+chequear("números con coma, con punto y sin cotización",
+         (M.numero("$1.504,00"), M.numero("1509.0000"), M.numero("S/C")) == (1504.0, 1509.0, None))
+chequear("Chicago: el contrato más cercano que no venció",
+         M.contrato("soja", date(2026, 10, 17)) == ("ZSX26.CBT", "nov-26")
+         and M.contrato("soja", date(2026, 11, 14)) == ("ZSF27.CBT", "ene-27")
+         and M.contrato("maiz", date(2026, 10, 17)) == ("ZCZ26.CBT", "dic-26"))
+_pron = M.parsear_pronostico(" JUNIN_AERO\n ====\n      FECHA *   TEMPERATURA\n ====\n"
+                             "  17/OCT/2026 00Hs.         6.1       149 |  12         0.0 \n"
+                             "  17/OCT/2026 03Hs.         4.2       157 |  11         1.5 \n"
+                             "  18/OCT/2026 00Hs.         4.9       103 |  9         0.0 \n")
+chequear("pronóstico del SMN por estación y por día",
+         M.por_dia(_pron["JUNIN_AERO"])["2026-10-17"] == {"max": 6.1, "min": 4.2, "mm": 1.5, "viento": 12})
+_cap = ('<alert><info><event>Tormentas</event><severity>Severe</severity><onset>2026-10-16T15:00:00-03:00</onset>'
+        '<expires>{hasta}</expires><description>Tormentas fuertes.</description><area><polygon>-34.5,-60.5 -34.5,-59.5 '
+        '-35.3,-59.5 -35.3,-60.5 -34.5,-60.5</polygon></area></info></alert>')
+
+
+class _R:
+    def __init__(self, texto):
+        self.text, self.status_code = texto, 200
+
+
+def _get_cap(hasta):
+    def get(url, **kw):
+        if url == M.URL_SMN_CAP:
+            return _R('<a href="https://ssl.smn.gob.ar/feeds/CAP/xml_generados/a.xml">x</a>'
+                      '<a href="https://ssl.smn.gob.ar/feeds/CAP/xml_generados/a.xml">y</a>')
+        return _R(_cap.format(hasta=hasta))
+    return get
+
+
+_al = M.alertas(_get_cap("2026-10-16T23:00:00-03:00"), momento=_t(18, 0))
+chequear("alerta del SMN que toca la zona: nivel, lugares y sin repetir",
+         len(_al) == 1 and _al[0]["nivel"] == "naranja" and "Chivilcoy" in _al[0]["lugares"])
+chequear("una alerta vencida no sale", M.alertas(_get_cap("2026-10-16T12:00:00-03:00"), momento=_t(18, 0)) == [])
+_mem = {}
+M.anotar(_mem, "pizarra", "2026-10-14", {"productos": {"soja": {"ars": 550000}}}, hoy=date(2026, 10, 16))
+M.anotar(_mem, "pizarra", "2026-10-15", {"productos": {"soja": {"ars": 560000}}}, hoy=date(2026, 10, 16))
+M.anotar(_mem, "pizarra", "2026-08-01", {"productos": {}}, hoy=date(2026, 10, 16))
+chequear("la memoria del mercado: rueda anterior, semana y se olvida lo viejo",
+         M.anterior(_mem, "pizarra", "2026-10-15")[0] == "2026-10-14" and M.anterior(_mem, "pizarra", "2026-10-15", dias=7) is None
+         and "2026-08-01" not in _mem["mercado"]["pizarra"] and M.variacion(560000, 550000) == 1.82)
+
+# --- historias ------------------------------------------------------------------------------------
+from PIL import Image  # noqa: E402
+from agro import historias as HI  # noqa: E402
+
+_dia = {f"2026-10-{d}": {"max": 20.0, "min": 8.0, "mm": 3.0, "viento": 20} for d in (16, 17, 18, 19, 20)}
+_datos = {"pizarra": _p, "mayorista": {"fecha": "2026-10-16", "valor": 1514.56}, "bna": _b,
+          "chicago": {g: {"contrato": "nov-26", "cent_bu": 1261.25, "usd_t": 463.4, "cambio_pct": -0.5,
+                          "fecha": "2026-10-16"} for g in ("soja", "maiz", "trigo")},
+          "pronostico": {e: dict(_dia) for e in M.ESTACIONES}, "alertas": []}
+with tempfile.TemporaryDirectory() as tmp:
+    _foto = Path(tmp) / "portada.jpg"
+    Image.new("RGB", (1080, 1350), (90, 140, 60)).save(_foto)
+    _rec = [{"titular": "La siembra de soja arranca con 2% más de área", "volanta": "Agricultura", "imagen": str(_foto)}]
+    _nov = {"titular": "x", "formato": "reel", "portada": str(_foto)}
+    _tandas = {b: HI.armar_tanda(b, _datos, _mem, Path(tmp) / b, _t(7, 0), _rec, _nov) for b in AG.BLOQUES}
+    chequear("un día hábil: 4 + 3 + 3 = 10 historias",
+             [len(v) for v in _tandas.values()] == [4, 3, 3]
+             and [h["tipo"] for h in _tandas["manana"]] == ["clima", "granos", "dolar", "titulares"]
+             and [h["tipo"] for h in _tandas["mediodia"]] == ["mapa", "chicago", "novedad"])
+    chequear("todas las historias son 1080x1920",
+             all(Image.open(h["archivo"]).size == (1080, 1920) for v in _tandas.values() for h in v))
+    _sab = HI.armar_tanda("manana", _datos, _mem, Path(tmp) / "sab", datetime(2026, 10, 17, 7, 0, tzinfo=CA.TZ_AR), _rec, _nov)
+    chequear("sábado a la mañana: clima, mapa, lo que tenés que saber y la novedad (sin mercados)",
+             [h["tipo"] for h in _sab] == ["clima", "mapa", "titulares", "novedad"])
+    _datos["alertas"] = [{"evento": "Tormentas", "nivel": "naranja", "desde": "2026-10-16T15:00:00-03:00",
+                          "hasta": "2026-10-16T23:00:00-03:00", "descripcion": "Tormentas fuertes.", "lugares": ["Chivilcoy"]}]
+    _con = HI.armar_tanda("cierre", _datos, _mem, Path(tmp) / "al", _t(19, 0), _rec, _nov)
+    chequear("una alerta del SMN va PRIMERA en la tanda", _con[0]["tipo"] == "alerta" and len(_con) == 4)
+    _sin = HI.armar_tanda("cierre", _datos, _mem, Path(tmp) / "al2", _t(19, 0), _rec, _nov, alertas_ya={_con[0]["clave"]})
+    chequear("y no se repite en la tanda siguiente", [h["tipo"] for h in _sin] == ["granos", "dolar", "chicago"])
+    _datos["alertas"] = []
+    chequear("rótulo de fecha: dato de hoy o «último dato disponible»",
+             HI.rotulo_fecha("2026-10-16", date(2026, 10, 16)).startswith("Dato de hoy")
+             and HI.rotulo_fecha("2026-10-15", date(2026, 10, 16)) == "Último dato disponible: jueves 15/10")
+
+    # --- carrusel ---------------------------------------------------------------------------------
+    from agro import carrusel as CAR
+    chequear("cifras del carrusel: las del material pasan, las inventadas no",
+             CAR.cifras_ajenas("Subió 45% y 1.200 toneladas", "subió un 45 % con 1200 toneladas") == []
+             and CAR.cifras_ajenas("Llega al 30%", "subió un 45 %") == ["30"])
+    _g = dict(GU._salida(BUENA, "falsa"))
+    _rep = {"titulo": "Biológicos en soja", "descripcion": "Ensayo del INTA con 12% más de rinde", "url": "u"}
+
+    def _redactar_carrusel(system, material, max_tokens=0):
+        return {"gancho": "¿Sirven los biológicos en soja?",
+                "diapositivas": [{"titulo": "Qué pasó", "texto": "Un ensayo midió el efecto de los biológicos."},
+                                 {"titulo": "El número", "texto": "Más rinde en los lotes tratados.", "dato": "12%",
+                                  "dato_rotulo": "más de rinde"},
+                                 {"titulo": "Inventado", "texto": "Y bajó 37% el costo."},
+                                 {"titulo": "Qué cambia", "texto": "Conviene probarlo en una franja del lote."}],
+                "pregunta": "¿Los probaste?"}, "falsa"
+    _c = CAR.contenido(_g, _rep, "", redactar=_redactar_carrusel)
+    chequear("carrusel: la diapositiva con una cifra inventada se saca, las demás quedan",
+             [d["titulo"] for d in _c["diapositivas"]] == ["Qué pasó", "El número", "Qué cambia"] and len(_c["quitadas"]) == 1)
+
+    def _ia_caida(*a, **k):
+        raise RuntimeError("sin cupo")
+    _c2 = CAR.contenido(_g, _rep, "", redactar=_ia_caida)
+    chequear("carrusel: con la IA caída se arma igual con el guion del reel",
+             _c2["via"] == "guion del reel" and len(_c2["diapositivas"]) >= 2)
+    _arch = CAR.armar(_g, _c, str(_foto), Path(tmp), "prueba", "grafito", "Imagen generada con IA")
+    chequear("carrusel: tapa + 3 diapositivas + cierre, todas 4:5",
+             len(_arch) == 5 and all(Image.open(a).size == (1080, 1350) for a in _arch))
+    chequear("el texto del carrusel invita a deslizar", "Deslizá e informate" in CAR.caption(_g))
+    _msem = {"mercado": {"pizarra": {"2026-10-09": {"productos": {"soja": {"ars": 540000}}},
+                                     "2026-10-16": {"productos": {"soja": {"ars": 560000}}}},
+                         "a3500": {"2026-10-09": {"valor": 1500.0}, "2026-10-16": {"valor": 1514.0}},
+                         "chicago_soja": {"2026-10-09": {"usd_t": 470.0}, "2026-10-16": {"usd_t": 463.4}}}}
+    _sem = CAR.numeros_semana(_msem, _datos, Path(tmp), date(2026, 10, 17), str(_foto))
+    chequear("sábado: «Los números de la semana» con granos, Chicago, dólar y lluvias",
+             _sem and len(_sem["archivos"]) == 6 and "+3,7%" in " ".join(
+                 p for d in _sem["contenido"]["diapositivas"] for p in d.get("puntos", [])))
+
+    # --- imagen: la foto de un medio se RECREA con IA ----------------------------------------------
+    def _bajar(url, destino):
+        Image.new("RGB", (1200, 800), (100, 120, 80)).save(destino)
+        return destino
+    _llamadas = []
+
+    def _recrear(foto, destino, contexto="", variante=0):
+        _llamadas.append(variante)
+        Image.new("RGB", (1024, 768), (80, 120, 60)).save(destino)
+        return {"archivo": str(destino)}
+    _medio = {"id": "m1", "fuente": "Infocampo", "tipo_fuente": "medio"}
+    _r = IMG.elegir(_medio, "https://x/foto.jpg", "soy", Path(tmp) / "im.jpg", bajar=_bajar, mirar=lambda f: False,
+                    recrear_con=_recrear, generar=lambda *a, **k: {"motivo": "no se usa"})
+    chequear("foto de un medio → recreada con IA (nunca la original)",
+             _r["origen"] == "recreada" and "recreada" in _r["archivo"] and _llamadas == [0])
+    _r = IMG.elegir(_medio, "https://x/foto.jpg", "soy", Path(tmp) / "im2.jpg", bajar=_bajar,
+                    mirar=lambda f: "recreada" in f, recrear_con=_recrear,
+                    generar=lambda texto, destino, estilo="": (Image.new("RGB", (64, 64)).save(destino) or {"archivo": str(destino)}))
+    chequear("si la recreación trae letras dos veces → la escena con IA de siempre",
+             _r["origen"] == "ia" and "recreación" in _r["motivo"])
+
+    # --- historias en modo real: se anotan y el respaldo no las repite -------------------------------
+    import json as _json2
+    _orig = (PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.turno, PA.SALIDA)
+    try:
+        PA.MEMORIA_REAL, PA.SALIDA = Path(tmp) / "agro_real.json", Path(tmp) / "salida"
+        PA.entorno.cargar = lambda: None
+        M.leer_todo = lambda mem, get=None, momento=None, log=print: _datos
+        _pub = []
+
+        def _publicador_hist(tanda, log=print):
+            _pub.append([h["tipo"] for h in tanda])
+            return {"items": [{"instagram": {"id": "i"}, "facebook": {"id": "f"}} for _ in tanda]}
+        PA.turno = lambda ahora: (_t(19, 0), "historias", True)
+        PA.correr(publicar=True, publicador=_publicador_hist, momento=_t(19, 5), log=lambda m: None)
+        _mr = _json2.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
+        _h = _mr["historias"][_t(19, 0).isoformat()]
+        chequear("historias reales: «Así cerró el mercado» publicada y anotada (sin rutas locales)",
+                 _pub == [["granos", "dolar", "chicago"]] and _h["publicado"]["estado"] == "listo"
+                 and all("archivo" not in i and i["publicado"]["instagram"] == {"id": "i"} for i in _h["items"]))
+        PA.correr(publicar=True, publicador=_publicador_hist, momento=_t(19, 25), log=lambda m: None)
+        chequear("el respaldo de las 19:20 no las vuelve a publicar", len(_pub) == 1)
+    finally:
+        PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.turno, PA.SALIDA = _orig
+
+# --- publicar: reel en 9:16 para Facebook, portada para las historias ------------------------------
+_pp = PUBA.pieza_publicador({"guion": dict(GU._salida(BUENA, "x")), "portada": "p.jpg", "rep": {"url": "u"},
+                             "reel": {"alto": 1350}})
+chequear("el reel 4:5 le avisa a Facebook su alto (va con bandas a 9:16)", _pp["video"]["alto"] == 1350)
+_orig_pub = (PUBA.publicar_carrusel, PUBA.publicar_reel, PUBA._subir_portada)
+try:
+    PUBA.publicar_carrusel = lambda pieza, ya=None, log=print: {"instagram": {"id": "car"}}
+    PUBA.publicar_reel = lambda pieza, ya=None, redes=None, log=print: {"instagram": {"id": "reel"}}
+    PUBA._subir_portada = lambda pieza: "https://release/portada.jpg"
+    chequear("publicar elige por formato y devuelve la portada subida",
+             PUBA.publicar({"formato": "carrusel"})["instagram"]["id"] == "car"
+             and PUBA.publicar({"formato": "reel"}) == {"instagram": {"id": "reel"}, "portada_url": "https://release/portada.jpg"})
+finally:
+    PUBA.publicar_carrusel, PUBA.publicar_reel, PUBA._subir_portada = _orig_pub
+
+# --- la memoria agro en la nube: historias y mercado tampoco se pierden ----------------------------
+_a = {"historias": {"h1": {"publicado": {"estado": "publicando"}}}, "mercado": {"pizarra": {"2026-10-15": {}}},
+      "tema_ultimo": "blanco", "actualizado": "2026-10-16T08:00"}
+_b2 = {"historias": {"h1": {"publicado": {"estado": "listo"}}, "h2": {"publicado": {"estado": "listo"}}},
+       "mercado": {"pizarra": {"2026-10-16": {}}, "a3500": {"2026-10-16": {}}}, "tema_ultimo": "grafito",
+       "actualizado": "2026-10-16T09:00"}
+for _mio, _rem in ((_a, _b2), (_b2, _a)):
+    _c3 = GE.COMBINAR["agro.json"](_mio, _rem)
+    chequear("combinar agro.json: historias publicadas, datos del mercado y el tema del último posteo",
+             _c3["historias"]["h1"]["publicado"]["estado"] == "listo" and set(_c3["historias"]) == {"h1", "h2"}
+             and set(_c3["mercado"]["pizarra"]) == {"2026-10-15", "2026-10-16"} and _c3["tema_ultimo"] == "grafito")
 
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)

@@ -239,4 +239,5 @@ def completar(nota: dict, detalle=None, get=None) -> dict:
                 cuerpo = otro
         except Exception:                                  # noqa: BLE001 — queda el que había
             pass
-    return {"ok": True, "cuerpo": cuerpo, "imagen": d.get("imagen") or nota.get("imagen_url") or ""}
+    return {"ok": True, "cuerpo": cuerpo, "imagen": d.get("imagen") or nota.get("imagen_url") or "",
+            "video": d.get("video") or ""}

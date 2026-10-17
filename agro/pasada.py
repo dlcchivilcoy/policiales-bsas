@@ -1,22 +1,25 @@
 # -*- coding: utf-8 -*-
-"""AGRO / AgTech (@diarioyradioagro) — una pasada: arma la pieza y, con --publicar, la publica.
+"""AGRO / AgTech (@diarioyradioagro) — una corrida de la agenda: un reel, un carrusel o una tanda de
+historias. Con --publicar, lo publica.
 
-    venv\\Scripts\\python.exe -m agro.pasada --publicar       # PUBLICA (memoria real: estado/agro.json)
-    venv\\Scripts\\python.exe -m agro.pasada                  # una pasada completa (simulada)
-    venv\\Scripts\\python.exe -m agro.pasada --piezas 2       # arma como mucho 2 piezas (para probar)
-    venv\\Scripts\\python.exe -m agro.pasada --sin-reel       # solo portadas (más rápido)
-    venv\\Scripts\\python.exe -m agro.pasada --olvidar        # borra la memoria de la simulación
+    venv\\Scripts\\python.exe -m agro.pasada --publicar               # PUBLICA lo del horario (estado/agro.json)
+    venv\\Scripts\\python.exe -m agro.pasada --tipo reel              # simula un reel
+    venv\\Scripts\\python.exe -m agro.pasada --tipo carrusel          # simula un carrusel
+    venv\\Scripts\\python.exe -m agro.pasada --tipo historias --bloque cierre   # simula una tanda de historias
+    venv\\Scripts\\python.exe -m agro.pasada --olvidar                # borra la memoria de la simulación
 
-Circuito (documento «Proyecto Agro», 13/10/2026):
-  CAPTURA (RSS) → DUPLICADOS (URL/título/huella + parecido + IA) → SCORE IA (solo título y bajada)
-  → SELECCIÓN (≥ AGRO_SCORE_MIN, AGRO_MAX_DIA por día, mezcla por subtema) → TEXTO COMPLETO solo de
-  las elegidas → REDACCIÓN (título, bajada, Instagram, web, guion del reel) → IMAGEN (foto de fuente
-  oficial/prensa, si no IA) → PORTADA 9:16 → REEL → PLAN DE PUBLICACIÓN SIMULADO → informe HTML.
+La agenda (agro/agenda.py, pedido del editor del 17/10/2026): 3 reels + 3 carruseles + 10 historias por
+día en 3 corridas, una cosa por horario y una hora entre una y otra.
 
-Sin --publicar NO publica. Con --publicar (activado el 14/10/2026) cada pieza apta y sin revisión
-pendiente sale por agro/publicar.py: Short en Radio del Centro, nota en la sección Campo de la web y
-reel en Facebook e Instagram de @diarioyradioagro con las credenciales AGRO_* (nunca las del diario).
-Una pieza que queda retenida para revisión NO se publica: su lugar lo toma la siguiente.
+REEL y CARRUSEL (documento «Proyecto Agro», 13/10/2026, y «ideas agro», 17/10/2026):
+  CAPTURA (RSS) → DUPLICADOS (URL/título/huella + parecido + IA) → SCORE IA (título y bajada) →
+  SELECCIÓN (≥ AGRO_SCORE_MIN, AGRO_MAX_DIA por día, urgentes primero, temas fundamentales, mezcla) →
+  TEXTO COMPLETO solo de la elegida → REDACCIÓN (título, bajada, Instagram, web, guion) → IMAGEN (foto
+  oficial con crédito, foto de medio RECREADA con IA, o IA) → REEL 4:5 o CARRUSEL «deslizá e informate».
+  Los sábados, el primer carrusel es «Los números de la semana» (solo datos).
+HISTORIAS: datos de granos, dólar, Chicago y clima (agro/mercado.py), sin IA (agro/historias.py).
+
+Sin --publicar NO publica. Una pieza retenida para revisión NO se publica: su lugar lo toma la siguiente.
 Memorias separadas: la real en estado/agro.json (la commitea la nube), la de la simulación en
 salida_agro/memoria_sim.json (fuera de git).
 """
@@ -30,8 +33,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import entorno  # noqa: E402
+from agro import agenda as AG  # noqa: E402
 from agro import captura as CA  # noqa: E402
 from agro import dedup as DD  # noqa: E402
+from agro import diseno as DIS  # noqa: E402
 from agro import fuentes as FU  # noqa: E402
 from agro import guion as GU  # noqa: E402
 from agro import imagen as IMG  # noqa: E402
@@ -49,10 +54,8 @@ TZ_AR = timezone(timedelta(hours=-3))
 DIAS_MEMORIA = 7
 DIAS_INDICE = 10                  # lo visto se recuerda 10 días (más que la ventana más larga, la de la Bolsa: 7)
 DIAS_REPETIDA = 3                 # contra lo elegido estos días se busca la misma noticia
-MINUTOS_ENTRE = 30                # si una pasada arma más de una pieza, entre una y otra
-PENDIENTE_HORAS = 36              # una buena que no entró espera a las pasadas siguientes este tiempo
-TOLERANCIA_MIN = 60               # una pasada que arranca hasta 1 h después de su horario es «esa»
-MAX_REEMPLAZOS = 3                # piezas frenadas (copia, IA) que se reponen con la siguiente, por pasada
+PENDIENTE_HORAS = 36              # una buena que no entró espera a las corridas siguientes este tiempo
+MAX_REEMPLAZOS = 3                # piezas frenadas (copia, IA) que se reponen con la siguiente, por corrida
 
 # Tableros automáticos («Precio del maíz en Rosario hoy 13 octubre 2026», «Dólar blue hoy…», «Clima
 # en San Luis hoy…», «Riesgo país hoy 9 de octubre»): no son noticias, se descartan antes de gastar IA.
@@ -72,45 +75,103 @@ def guardar(mem: dict, ahora: datetime, ruta: Path = None):
     mem["actualizado"] = datetime.now(TZ_AR).isoformat(timespec="seconds")   # tools/guardar_estado.combinar_agro
     limite = (ahora - timedelta(days=DIAS_MEMORIA)).isoformat()
     mem["elegidas"] = [p for p in mem.get("elegidas", []) if p.get("cuando", "") >= limite]
+    mem["historias"] = {k: v for k, v in (mem.get("historias") or {}).items() if k >= limite}
     DD.olvidar_viejas(mem, (ahora - timedelta(days=DIAS_INDICE)).strftime("%Y-%m-%d"))
     ruta.parent.mkdir(parents=True, exist_ok=True)
-    ruta.write_text(json.dumps(mem, ensure_ascii=False, indent=1), encoding="utf-8")
+    ruta.write_text(json.dumps(mem, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
 
 
 def es_tablero(n: dict) -> bool:
     return bool(TABLERO.search(n["titulo"]))
 
 
-def turno(ahora: datetime) -> datetime:
-    """El horario de pasada (AGRO_PASADAS) al que corresponde esta corrida: el que acaba de
-    empezar (hasta TOLERANCIA_MIN después) o, si no, el próximo (mañana si ya pasaron todos)."""
-    hoy = [ahora.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in SE.pasadas()]
-    for t in hoy:
-        if t - timedelta(minutes=5) <= ahora <= t + timedelta(minutes=TOLERANCIA_MIN):
-            return t
-    futuros = [t for t in hoy if t > ahora]
-    return futuros[0] if futuros else hoy[0] + timedelta(days=1)
+def turno(ahora: datetime):
+    """(horario, tipo, en_horario) de la agenda (agro/agenda.py)."""
+    return AG.turno(ahora)
 
 
-def plan_horario(ahora: datetime, k: int) -> datetime:
-    """Cuándo saldría la pieza k de esta pasada: en su turno (y 30 min entre una y otra)."""
-    return turno(ahora) + timedelta(minutes=MINUTOS_ENTRE * k)
+def tema_siguiente(mem: dict) -> str:
+    """El bloque del próximo posteo 4:5 (blanco o grafito): el otro del último que salió."""
+    return DIS.tema_siguiente(mem.get("tema_ultimo", ""))
+
+
+def ya_publicado(mem: dict, horario: datetime, tipo: str):
+    """Lo que ya salió (o está saliendo) en ese horario, o None."""
+    iso = horario.isoformat()
+    if tipo == "historias":
+        h = (mem.get("historias") or {}).get(iso)
+        return h if h and h.get("publicado") else None
+    return next((p for p in mem.get("elegidas", []) if p.get("turno") == iso and p.get("publicado")), None)
+
+
+def _informe_vacio(carpeta: Path, ahora: datetime, motivo: str, publicar: bool, horas: int = 48) -> Path:
+    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "conteos": {"No se publicó": motivo}, "fuentes": [],
+           "piezas": [], "descartadas": [], "grupos_duplicados": [], "publicar": publicar,
+           "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": horas}}
+    (carpeta / "informe.json").write_text(json.dumps(inf, ensure_ascii=False, indent=1), encoding="utf-8")
+    return INF.escribir(inf, carpeta)
+
+
+def correr(publicar: bool = False, tipo: str = "", bloque: str = "", momento: datetime = None, log=print,
+           publicador=None, fuera_de_cupo: bool = False, max_piezas: int = 0, con_reel: bool = True,
+           horas: int = 48) -> Path:
+    """La corrida del horario: decide qué toca (o lo que pida `tipo`, en simulación o fuera de cupo)."""
+    entorno.cargar()
+    ahora = momento or datetime.now(TZ_AR)
+    carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+    carpeta.mkdir(parents=True, exist_ok=True)
+    horario, tipo_ag, en_horario = turno(ahora)
+    if publicar and not fuera_de_cupo:
+        # Una cosa por horario: el respaldo de 20 min después o un doble disparo no publican dos veces;
+        # fuera de los horarios de la agenda no se publica (salvo a mano, con --fuera-de-cupo).
+        if not en_horario:
+            log(f"No se publica: fuera de horario (lo próximo: {tipo_ag} a las {horario:%d/%m %H:%M})")
+            return _informe_vacio(carpeta, ahora, f"fuera de horario: lo próximo es {tipo_ag} de las "
+                                                  f"{horario:%d/%m %H:%M}", publicar, horas)
+        tipo = tipo_ag
+        mem = cargar(MEMORIA_REAL)
+        ya = ya_publicado(mem, horario, tipo)
+        if ya:
+            que = ya.get("titular") or f"{len(ya.get('items') or [])} historias"
+            log(f"No se publica: el horario de las {horario:%H:%M} ya publicó ({que})")
+            return _informe_vacio(carpeta, ahora, f"el horario de las {horario:%H:%M} ya publicó: «{que}»",
+                                  publicar, horas)
+    else:
+        tipo = tipo or tipo_ag
+        if not en_horario:
+            horario = ahora.replace(second=0, microsecond=0)
+    if tipo == "historias":
+        return pasada_historias(publicar=publicar, horario=horario, bloque=bloque or AG.bloque(horario), log=log,
+                                publicador=publicador, carpeta=carpeta, ahora=ahora)
+    if tipo == "carrusel" and AG.es_primer_carrusel_del_sabado(horario) and not max_piezas:
+        return pasada_numeros(publicar=publicar, horario=horario, log=log, publicador=publicador,
+                              carpeta=carpeta, ahora=ahora)
+    return pasada(max_piezas, con_reel, horas, log=log, publicar=publicar, publicador=publicador,
+                  fuera_de_cupo=fuera_de_cupo, formato=tipo or "reel", horario=horario, ahora=ahora, carpeta=carpeta)
+
+
+def _con_reloj(log):
+    t_ini = time.time()
+
+    def _log(msg):                                     # con los segundos desde que arrancó
+        log(f"[{time.time() - t_ini:5.0f} s] {msg}")
+    return _log
 
 
 def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=print, publicar: bool = False,
-           publicador=None, fuera_de_cupo: bool = False) -> Path:
+           publicador=None, fuera_de_cupo: bool = False, formato: str = "reel", horario: datetime = None,
+           ahora: datetime = None, carpeta: Path = None) -> Path:
+    """Un reel o un carrusel de una noticia (por defecto 1, AGRO_POR_PASADA)."""
     entorno.cargar()
-    t_ini = time.time()
-    _log = log
-
-    def log(msg):                                      # con los segundos desde que arrancó
-        _log(f"[{time.time() - t_ini:5.0f} s] {msg}")
-    ahora = datetime.now(TZ_AR)
-    carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+    log = _con_reloj(log)
+    ahora = ahora or datetime.now(TZ_AR)
+    horario = horario or ahora.replace(second=0, microsecond=0)
+    carpeta = carpeta or SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
     carpeta.mkdir(parents=True, exist_ok=True)
     ruta_mem = MEMORIA_REAL if publicar else MEMORIA
     mem = cargar(ruta_mem)
     mem.setdefault("scores", {})
+    carrusel = formato == "carrusel"
     if publicar:
         con_reel = True                                # sin reel no hay qué publicar
         if publicador is None:
@@ -123,22 +184,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                             "score": (s or {}).get("ai_score", ""), "subtema": (s or {}).get("subtema", ""),
                             "explicacion": (s or {}).get("explicacion", ""), "dobles": (s or {}).get("dobles")})
 
-    log(f"[agro] pasada {'REAL' if publicar else 'SIMULADA'} {ahora:%d/%m %H:%M} → {carpeta}")
-    if publicar and not fuera_de_cupo:
-        # Una publicación por horario: la corrida de respaldo (20 min después) o un doble disparo no
-        # publican dos veces; fuera de los horarios de AGRO_PASADAS no se publica (salvo a mano,
-        # con --fuera-de-cupo).
-        t = turno(ahora)
-        ya = [p for p in mem.get("elegidas", []) if p.get("turno") == t.isoformat() and p.get("publicado")]
-        motivo = (f"fuera de horario: la próxima pasada es la de {t:%d/%m %H:%M}" if t > ahora + timedelta(minutes=5)
-                  else f"la pasada de las {t:%H:%M} ya publicó: «{ya[0]['titular']}»" if ya else "")
-        if motivo:
-            log(f"No se publica: {motivo}")
-            inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "conteos": {"No se publicó": motivo}, "fuentes": [],
-                   "piezas": [], "descartadas": [], "grupos_duplicados": [], "publicar": publicar,
-                   "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": horas}}
-            (carpeta / "informe.json").write_text(json.dumps(inf, ensure_ascii=False, indent=1), encoding="utf-8")
-            return INF.escribir(inf, carpeta)
+    log(f"[agro] {formato.upper()} {'REAL' if publicar else 'SIMULADO'} {ahora:%d/%m %H:%M} → {carpeta}")
     log("1) Captura")
     notas, inf_fuentes = CA.capturar(FU.activas(), ahora, horas_max=horas, log=log)
     conteos["Capturadas"] = len(notas)
@@ -162,14 +208,14 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     previas = [{"id": p["id"], "titulo": p["titulo_original"], "descripcion": p.get("descripcion", ""),
                 "fuente": p.get("fuente", ""), "url": p.get("url", "")}
                for p in mem.get("elegidas", []) if p.get("cuando", "") >= limite]
-    # Las pendientes (buenas que no entraron en una pasada anterior) también cuentan: si una nueva
+    # Las pendientes (buenas que no entraron en una corrida anterior) también cuentan: si una nueva
     # cuenta lo mismo, ya está representada y espera su turno.
     lim_pend = (ahora - timedelta(hours=PENDIENTE_HORAS)).isoformat()
     ya_elegidas = {p["id"] for p in mem.get("elegidas", [])}
     pendientes = [p for p in mem.get("pendientes", []) if p.get("cuando", "") >= lim_pend and p["id"] not in ya_elegidas]
     previas += [{"id": p["id"], "titulo": p["rep"]["titulo"], "descripcion": p["rep"].get("descripcion", ""),
                  "fuente": p["rep"].get("fuente", ""), "url": p["rep"].get("url", "")} for p in pendientes]
-    ag = DD.agrupar(nuevas, previas)
+    ag = DD.agrupar(nuevas, previas) if nuevas else {"grupos": [], "repetidas": {}, "como": {}, "ia": None}
     if ag["ia"] is not True and ag["ia"] is not None:
         log(f"   la IA no agrupó ({ag['ia']}): quedan solo los grupos por palabras")
     for n in nuevas:
@@ -181,12 +227,12 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
 
     log(f"4) Puntaje de {len(grupos)} noticias (IA, título y bajada)")
     reps = [DD.representante(g) for g in grupos]
-    puntajes = SC.puntuar(reps, mem["scores"], log=log)
+    puntajes = SC.puntuar(reps, mem["scores"], log=log) if reps else {}
     candidatos = []
     for g, r in zip(grupos, reps):
         s = puntajes.get(r["id"])
         if not s:
-            descartar(r, "la IA no le puso puntaje (se reintenta la próxima pasada)")
+            descartar(r, "la IA no le puso puntaje (se reintenta la próxima corrida)")
             for n in g:                                # que vuelva a entrar la próxima vez
                 mem.setdefault("indice", {"url": {}, "titulo": {}, "hash": {}})["url"].pop(n["canonical_url"], None)
                 mem["indice"]["titulo"].pop(n["titulo_norm"], None)
@@ -195,23 +241,23 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         candidatos.append({"id": r["id"], "rep": r, "grupo": g, "score": s, "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
     candidatos += [dict(p, pendiente=True) for p in pendientes]
-    conteos["Pendientes de pasadas anteriores"] = len(pendientes)
+    conteos["Pendientes de corridas anteriores"] = len(pendientes)
     conteos[f"Con ≥ {SE.score_min()}"] = sum(1 for c in candidatos if c["score"]["ai_score"] >= SE.score_min())
 
-    log("5) Selección editorial")
+    log(f"5) Selección editorial ({formato})")
     hoy = ahora.strftime("%Y-%m-%d")
     # Las frenadas (NO APTA) y las retenidas para revisión no ocupan lugar en el cupo del día.
     de_hoy = [p for p in mem.get("elegidas", []) if p.get("cuando", "").startswith(hoy)
               and p.get("apta", True) and not p.get("revision") and not p.get("fuera_de_cupo")]
-    elegidos, desc = SE.elegir(candidatos, de_hoy)
+    elegidos, desc = SE.elegir(candidatos, de_hoy, formato=formato)
     for c, motivo in desc:
         descartar(c["rep"], motivo, c["score"])
     por_cli = bool(max_piezas)
     max_piezas = max_piezas or SE.por_pasada()
     if len(elegidos) > max_piezas:
         for c in elegidos[max_piezas:]:
-            descartar(c["rep"], f"límite de prueba de esta pasada (--piezas {max_piezas})" if por_cli else
-                      f"queda pendiente para la próxima pasada ({max_piezas} por pasada)", c["score"])
+            descartar(c["rep"], f"límite de prueba de esta corrida (--piezas {max_piezas})" if por_cli else
+                      f"queda pendiente para la próxima corrida ({max_piezas} por corrida)", c["score"])
         elegidos = elegidos[:max_piezas]
     conteos["Elegidas"] = len(elegidos)
 
@@ -219,7 +265,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
 
     def reponer(motivo_caida):
         """Si una pieza se frenó, su lugar lo toma la mejor de las que quedaron afuera, con las
-        mismas reglas (score, mezcla, temas). Hasta MAX_REEMPLAZOS por pasada."""
+        mismas reglas (score, mezcla, temas). Hasta MAX_REEMPLAZOS por corrida."""
         nonlocal reemplazos
         if reemplazos >= MAX_REEMPLAZOS:
             return
@@ -227,7 +273,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                              if p["guion"]["apta"] and not p["guion"]["requires_review"]] + \
             [{"score": x["score"]} for x in cola]
         pool = [x for x in candidatos if x["id"] not in probadas and all(x["id"] != y["id"] for y in cola)]
-        nuevo, _ = SE.elegir(pool, ocupados)
+        nuevo, _ = SE.elegir(pool, ocupados, formato=formato)
         if not nuevo:
             return
         reemplazos += 1
@@ -255,52 +301,88 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         elif publicar and g["requires_review"]:
             reponer("retenida para revisión")
         base = carpeta / f"{k + 1:02d}_{WEB.slugify(g['titular'] or rep['titulo'], 40)}"
-        pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g}
+        pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g, "formato": formato}
+        tema = tema_siguiente(mem)
         if g["apta"]:
             pieza["imagen"] = IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
                                          base.with_name(base.name + "_imagen.jpg"), subtema=s.get("subtema", ""))
-            ia = pieza["imagen"]["origen"] == "ia"
+            origen = pieza["imagen"]["origen"]
             credito = pieza["imagen"].get("credito", "")
-            pieza["portada"] = str(POR.armar(g, pieza["imagen"].get("archivo"), base.with_name(base.name + "_portada.jpg"),
-                                             ia=ia, credito=credito))
-            if con_reel:
+            leyenda = DIS.texto_leyenda(origen, credito)
+            if carrusel:
+                from agro import carrusel as CAR
                 try:
-                    t0 = time.time()
-                    pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"), ia, credito)
-                    log(f"   reel {pieza['reel']['duracion']:.0f} s, {pieza['reel']['peso_kb']} KB ({time.time() - t0:.0f} s)")
-                except Exception as e:                 # noqa: BLE001 — la portada queda igual
-                    pieza["reel"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
-                    log(f"   el reel falló: {pieza['reel']['error']}")
+                    cont = CAR.contenido(g, rep, completo.get("cuerpo", ""), log=log)
+                    pieza["carrusel"] = {"contenido": cont, "archivos": CAR.armar(
+                        g, cont, pieza["imagen"].get("archivo"), carpeta, base.name, tema, leyenda),
+                        "caption": CAR.caption(g), "tema": tema}
+                    pieza["portada"] = pieza["carrusel"]["archivos"][0]
+                    log(f"   carrusel: {len(pieza['carrusel']['archivos'])} diapositivas ({cont.get('via')})")
+                except Exception as e:                 # noqa: BLE001
+                    pieza["carrusel"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+                    log(f"   el carrusel falló: {pieza['carrusel']['error']}")
                     if publicar:
-                        reponer("el reel falló")
+                        reponer("el carrusel falló")
+            else:
+                pieza["portada"] = str(POR.armar(g, pieza["imagen"].get("archivo"),
+                                                 base.with_name(base.name + "_portada.jpg"),
+                                                 credito=credito, origen=origen, tema=tema))
+                if con_reel:
+                    clip = _clip_de_la_fuente(rep, completo, base)
+                    try:
+                        t0 = time.time()
+                        pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"), origen,
+                                                credito, clip=clip, tema=tema)
+                        log(f"   reel {pieza['reel']['duracion']:.0f} s, {pieza['reel']['peso_kb']} KB "
+                            f"({'con el video de la fuente, ' if clip else ''}{time.time() - t0:.0f} s)")
+                    except Exception as e:             # noqa: BLE001 — la portada queda igual
+                        pieza["reel"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+                        log(f"   el reel falló: {pieza['reel']['error']}")
+                        if publicar:
+                            reponer("el reel falló")
         slug = WEB.slugify(g.get("titulo_web") or g["titular"], 70)
         url_web = f"https://{WEB.SITIO}/n/{slug}"
-        pieza["textos"] = {"Instagram (reel)": GU.texto_red(g, "instagram"),
-                           "Facebook (reel)": GU.texto_red(g, "facebook", url_web),
-                           "YouTube Shorts": f"{g['titular']}\n\n{GU.texto_red(g, 'youtube', url_web)}",
-                           f"Web: {g.get('titulo_web')}": g.get("nota_web", "")}
+        if carrusel:
+            from agro import carrusel as CAR
+            pieza["textos"] = {"Instagram (carrusel)": CAR.caption(g),
+                               "Facebook (fotos + link)": GU.texto_red(g, "facebook", url_web),
+                               f"Web: {g.get('titulo_web')}": g.get("nota_web", "")}
+        else:
+            pieza["textos"] = {"Instagram (reel)": GU.texto_red(g, "instagram"),
+                               "Facebook (reel)": GU.texto_red(g, "facebook", url_web),
+                               "YouTube Shorts": f"{g['titular']}\n\n{GU.texto_red(g, 'youtube', url_web)}",
+                               f"Web: {g.get('titulo_web')}": g.get("nota_web", "")}
+        listo = bool((pieza.get("carrusel") or {}).get("archivos")) if carrusel else bool((pieza.get("reel") or {}).get("archivo"))
         if g["requires_review"] or not g["apta"]:
             estado = "RETENIDA para revisión" if g["requires_review"] else "NO APTA"
             pieza["plan"] = {"Estado": estado, "Motivo": g.get("motivo_revision") or g.get("motivo")}
+        elif carrusel:
+            pieza["plan"] = {"Hora": f"{horario:%d/%m %H:%M}", "Web (sección Agro)": url_web,
+                             "Instagram @diarioyradioagro": f"carrusel de {len((pieza.get('carrusel') or {}).get('archivos') or [])} diapositivas + texto + hashtags",
+                             "Facebook @diarioyradioagro": "las diapositivas como fotos + texto + link a la nota",
+                             "Publicación automática": "SÍ" if publicar else "APAGADA (simulación)"}
         else:
-            hora = plan_horario(ahora, len([p for p in piezas if "Hora" in (p.get("plan") or {})]))
-            pieza["plan"] = {"Hora": f"{hora:%d/%m %H:%M}", "YouTube Shorts": "reel + título + link a la nota",
+            pieza["plan"] = {"Hora": f"{horario:%d/%m %H:%M}", "YouTube Shorts": "reel 4:5 + título + link a la nota",
                              "Web (sección Agro)": url_web, "Facebook @diarioyradioagro": "reel + texto + link",
-                             "Instagram @diarioyradioagro": "reel + texto + 5 hashtags",
+                             "Instagram @diarioyradioagro": "reel 4:5 + texto + 5 hashtags",
                              "Publicación automática": "SÍ" if publicar else "APAGADA (simulación)"}
         piezas.append(pieza)
         anotada = {
             "id": rep["id"], "cuando": ahora.isoformat(timespec="minutes"), "titulo_original": rep["titulo"],
             "descripcion": rep.get("descripcion", "")[:300], "fuente": rep["fuente"], "url": rep["url"],
-            "titular": g["titular"], "score": s, "apta": g["apta"], "revision": g["requires_review"],
-            "fuera_de_cupo": fuera_de_cupo, "turno": turno(ahora).isoformat() if publicar else ""}
+            "titular": g["titular"], "volanta": g.get("volanta", ""), "score": s, "apta": g["apta"],
+            "revision": g["requires_review"], "fuera_de_cupo": fuera_de_cupo, "formato": formato,
+            "turno": horario.isoformat() if publicar else ""}
         mem.setdefault("elegidas", []).append(anotada)
-        if publicar and "Hora" in pieza["plan"] and (pieza.get("reel") or {}).get("archivo"):
+        if "Hora" in pieza["plan"] and listo:
+            mem["tema_ultimo"] = tema
+        if publicar and "Hora" in pieza["plan"] and listo:
             # Se anota ANTES de publicar: si la corrida se corta en el medio, la próxima no la repite.
             anotada["publicado"] = {"estado": "publicando"}
             guardar(mem, ahora, ruta_mem)
             log("   publicando…")
             res = publicador(pieza, log=log)
+            anotada["portada_url"] = res.pop("portada_url", "") if isinstance(res, dict) else ""
             anotada["publicado"] = pieza["publicado"] = res
             ok = [r for r, v in res.items() if isinstance(v, dict) and not v.get("error")]
             pieza["plan"]["Publicado en"] = ", ".join(ok) or "ninguna red"
@@ -312,7 +394,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     conteos["Reemplazos"] = reemplazos
     conteos["Retenidas para revisión"] = sum(1 for p in piezas if p["guion"]["requires_review"])
 
-    # Las buenas que no se probaron esperan a las pasadas siguientes (hasta PENDIENTE_HORAS).
+    # Las buenas que no se probaron esperan a las corridas siguientes (hasta PENDIENTE_HORAS).
     mem["pendientes"] = [{k: c[k] for k in ("id", "rep", "grupo", "score", "cuando")}
                          for c in candidatos
                          if c["score"]["ai_score"] >= SE.score_min() and c["id"] not in probadas][:40]
@@ -320,7 +402,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     if publicar:
         conteos["Publicadas"] = sum(1 for p in piezas if p.get("publicado"))
     guardar(mem, ahora, ruta_mem)
-    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "conteos": conteos, "fuentes": inf_fuentes, "piezas": piezas,
+    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "formato": formato, "conteos": conteos, "fuentes": inf_fuentes,
+           "piezas": piezas,
            "descartadas": sorted(descartadas, key=lambda d: -(d["score"] or 0) if isinstance(d["score"], int) else 0),
            "grupos_duplicados": [{"notas": g, "como": ag["como"]} for g in grupos if len(g) > 1],
            "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": horas},
@@ -331,17 +414,168 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     return ruta
 
 
-def GU_reel(g, imagen, salida, ia, credito=""):
+def _clip_de_la_fuente(rep: dict, completo: dict, base: Path):
+    """El video de la nota, SOLO si la fuente es oficial o de prensa (INTA, Secretaría, BCR): el de un
+    medio no se usa (no se puede recrear con IA y Meta detecta los videos de otros). None si no hay."""
+    url = completo.get("video") or ""
+    if not url or rep.get("tipo_fuente") not in ("oficial", "prensa"):
+        return None
+    try:
+        from reels.flujo import _bajar_video
+        clip = _bajar_video(url, base.with_name(base.name + "_clip.mp4"))
+    except Exception:                                  # noqa: BLE001
+        return None
+    try:
+        from reels import reel_bot as R
+        return clip if clip and R.motor().duration_seconds(clip) >= 4 else None
+    except Exception:                                  # noqa: BLE001
+        return None
+
+
+def GU_reel(g, imagen, salida, origen="ia", credito="", clip=None, tema="blanco"):
     from agro import reel as RE
-    return RE.armar(g, imagen, salida, ia=ia, credito=credito)
+    return RE.armar(g, imagen, salida, origen=origen, credito=credito, clip=clip, tema=tema)
+
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# Historias y el carrusel de los números de la semana
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+def _publicadas(mem: dict, desde: datetime) -> list:
+    """Lo nuestro publicado desde `desde`, de lo más nuevo a lo más viejo."""
+    lim = desde.isoformat(timespec="minutes")
+    sal = [p for p in mem.get("elegidas", []) if p.get("cuando", "") >= lim and p.get("apta", True)
+           and not p.get("revision") and p.get("publicado") and p["publicado"].get("estado") != "publicando"
+           and any(isinstance(v, dict) and not v.get("error") for v in p["publicado"].values())]
+    return sorted(sal, key=lambda p: p.get("turno") or p.get("cuando", ""), reverse=True)
+
+
+def _bajar(url: str, destino: Path) -> str:
+    if not url:
+        return ""
+    try:
+        from reels.flujo import _bajar_foto
+        return str(destino) if _bajar_foto(url, destino) else ""
+    except Exception:                                  # noqa: BLE001
+        return ""
+
+
+def pasada_historias(publicar: bool, horario: datetime, bloque: str, log=print, publicador=None,
+                     carpeta: Path = None, ahora: datetime = None) -> Path:
+    from agro import historias as HI
+    from agro import mercado as M
+    log = _con_reloj(log)
+    ahora = ahora or datetime.now(TZ_AR)
+    carpeta = carpeta or SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+    ruta_mem = MEMORIA_REAL if publicar else MEMORIA
+    mem = cargar(ruta_mem)
+    log(f"[agro] HISTORIAS «{bloque}» {'REALES' if publicar else 'SIMULADAS'} {ahora:%d/%m %H:%M} → {carpeta}")
+    datos = M.leer_todo(mem, momento=ahora, log=log)
+    hechas = _publicadas(mem, ahora - timedelta(hours=24))
+    recientes = []
+    for i, p in enumerate(hechas[:4]):
+        recientes.append({"titular": p["titular"], "volanta": p.get("volanta", ""),
+                          "imagen": _bajar(p.get("portada_url", ""), carpeta / f"reciente_{i}.jpg")})
+    hoy = [p for p in hechas if (p.get("turno") or p.get("cuando", ""))[:10] == ahora.date().isoformat()]
+    novedad = None
+    if hoy:
+        n = hoy[0]
+        novedad = {"titular": n["titular"], "formato": n.get("formato", "reel"),
+                   "portada": _bajar(n.get("portada_url", ""), carpeta / "novedad.jpg")}
+    if bloque == "cierre" and ahora.weekday() >= 5:
+        recientes = [r for r, p in zip(recientes, hechas) if p in hoy] or recientes
+    alertas_ya = {i.get("clave") for h in (mem.get("historias") or {}).values()
+                  if h.get("dia") == ahora.date().isoformat() for i in h.get("items") or []}
+    tanda = HI.armar_tanda(bloque, datos, mem, carpeta, ahora, recientes, novedad, alertas_ya)
+    log(f"   {len(tanda)} historias: {', '.join(t['tipo'] for t in tanda)}")
+    registro = {"dia": ahora.date().isoformat(), "bloque": bloque, "items": [dict(t) for t in tanda]}
+    mem.setdefault("historias", {})
+    if publicar and tanda:
+        if publicador is None:
+            from agro import publicar as PUB
+            publicador = PUB.publicar_historias
+        registro["publicado"] = {"estado": "publicando"}
+        mem["historias"][horario.isoformat()] = registro
+        guardar(mem, ahora, ruta_mem)
+        res = publicador(tanda, log=log)
+        registro["publicado"] = {"estado": "listo", "resultado": res}
+        for item, r in zip(registro["items"], res.get("items") or []):
+            item["publicado"] = r
+    else:
+        mem["historias"][horario.isoformat()] = dict(registro, simulado=True) if not publicar else registro
+    for it in registro["items"]:
+        it.pop("archivo", None) if publicar else None
+    guardar(mem, ahora, ruta_mem)
+    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "formato": "historias", "bloque": bloque,
+           "conteos": {"Historias": len(tanda),
+                       "Publicadas": sum(1 for t in registro["items"] if t.get("publicado") and not
+                                         any((v or {}).get("error") for v in t["publicado"].values()))
+                       if publicar else 0},
+           "historias": tanda, "fuentes": [], "piezas": [], "descartadas": [], "grupos_duplicados": [],
+           "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": 0}, "publicar": publicar,
+           "resultado": registro.get("publicado")}
+    (carpeta / "informe.json").write_text(json.dumps(inf, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    return INF.escribir(inf, carpeta)
+
+
+def pasada_numeros(publicar: bool, horario: datetime, log=print, publicador=None, carpeta: Path = None,
+                   ahora: datetime = None) -> Path:
+    """Sábado: el carrusel «Los números de la semana» (solo datos, sin IA)."""
+    from agro import carrusel as CAR
+    from agro import mercado as M
+    log = _con_reloj(log)
+    ahora = ahora or datetime.now(TZ_AR)
+    carpeta = carpeta or SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+    ruta_mem = MEMORIA_REAL if publicar else MEMORIA
+    mem = cargar(ruta_mem)
+    log(f"[agro] CARRUSEL «Los números de la semana» {'REAL' if publicar else 'SIMULADO'} {ahora:%d/%m %H:%M}")
+    datos = M.leer_todo(mem, momento=ahora, log=log)
+    tema = tema_siguiente(mem)
+    imagen = IMG.del_banco("mercados", ahora.date().isoformat())
+    r = CAR.numeros_semana(mem, datos, carpeta, ahora.date(), imagen or None, tema)
+    if not r:
+        log("   no hay datos suficientes: va un carrusel de noticia")
+        guardar(mem, ahora, ruta_mem)
+        return pasada(log=log, publicar=publicar, publicador=publicador, formato="carrusel", horario=horario,
+                      ahora=ahora, carpeta=carpeta)
+    g = {"titular": r["titular"], "volanta": "Los números de la semana", "bajada": "", "descripcion": r["caption"],
+         "hashtags": [], "titulo_web": "", "nota_web": "", "apta": True, "requires_review": False}
+    pieza = {"id": f"semana-{ahora:%Y%m%d}", "rep": {"url": "", "fuente": "datos", "titulo": r["titular"]},
+             "grupo": [], "score": {"ai_score": "", "subtema": "mercados", "tema": "números de la semana"},
+             "guion": g, "formato": "carrusel", "datos": True, "portada": r["archivos"][0],
+             "carrusel": {"archivos": r["archivos"], "caption": r["caption"], "contenido": r["contenido"], "tema": tema},
+             "plan": {"Hora": f"{horario:%d/%m %H:%M}", "Instagram": "carrusel de datos",
+                      "Facebook": "las diapositivas como fotos"}}
+    anotada = {"id": pieza["id"], "cuando": ahora.isoformat(timespec="minutes"), "titulo_original": r["titular"],
+               "fuente": "datos", "url": "", "titular": r["titular"], "volanta": "Los números de la semana",
+               "score": pieza["score"], "apta": True, "revision": False, "fuera_de_cupo": True, "formato": "carrusel",
+               "turno": horario.isoformat() if publicar else ""}
+    mem.setdefault("elegidas", []).append(anotada)
+    mem["tema_ultimo"] = tema
+    if publicar:
+        if publicador is None:
+            from agro import publicar as PUB
+            publicador = PUB.publicar
+        anotada["publicado"] = {"estado": "publicando"}
+        guardar(mem, ahora, ruta_mem)
+        res = publicador(pieza, log=log)
+        anotada["portada_url"] = res.pop("portada_url", "") if isinstance(res, dict) else ""
+        anotada["publicado"] = pieza["publicado"] = res
+    guardar(mem, ahora, ruta_mem)
+    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "formato": "carrusel", "conteos": {"Diapositivas": len(r["archivos"])},
+           "fuentes": [], "piezas": [], "carrusel_datos": pieza, "descartadas": [], "grupos_duplicados": [],
+           "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": 0}, "publicar": publicar}
+    (carpeta / "informe.json").write_text(json.dumps(inf, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    return INF.escribir(inf, carpeta)
 
 
 def main():
     entorno.consola_utf8()
-    ap = argparse.ArgumentParser(description="Agro: arma la pieza; con --publicar, la publica")
+    ap = argparse.ArgumentParser(description="Agro: la corrida del horario; con --publicar, la publica")
     ap.add_argument("--publicar", action="store_true", help="publica de verdad (memoria estado/agro.json)")
+    ap.add_argument("--tipo", choices=AG.TIPOS, default="", help="qué armar (simulación o --fuera-de-cupo)")
+    ap.add_argument("--bloque", choices=AG.BLOQUES, default="", help="qué tanda de historias (simulación)")
     ap.add_argument("--fuera-de-cupo", action="store_true",
-                    help="una corrida a mano que no ocupa lugar de las 3 del día (la primera, del 14/10)")
+                    help="una corrida a mano que no ocupa lugar en la agenda del día")
     ap.add_argument("--piezas", type=int, default=0, help="arma como mucho N piezas (0 = las que elija)")
     ap.add_argument("--sin-reel", action="store_true", help="solo portadas")
     ap.add_argument("--horas", type=int, default=48, help="antigüedad máxima de las notas")
@@ -351,10 +585,15 @@ def main():
         MEMORIA.unlink(missing_ok=True)
         print("Memoria de la simulación borrada.")
         return 0
-    ruta = pasada(a.piezas, not a.sin_reel, a.horas, publicar=a.publicar, fuera_de_cupo=a.fuera_de_cupo)
+    if a.fuera_de_cupo and not a.tipo:
+        ap.error("--fuera-de-cupo necesita --tipo")
+    ruta = correr(publicar=a.publicar, tipo=a.tipo, bloque=a.bloque, fuera_de_cupo=a.fuera_de_cupo,
+                  max_piezas=a.piezas, con_reel=not a.sin_reel, horas=a.horas)
     inf = json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
     fallas = [f"{p['guion']['titular']}: {r}" for p in inf["piezas"] for r, v in (p.get("publicado") or {}).items()
               if isinstance(v, dict) and v.get("error")]
+    for h in (inf.get("resultado") or {}).get("resultado", {}).get("items", []) if inf.get("resultado") else []:
+        fallas += [f"historia: {r}: {v['error']}" for r, v in (h or {}).items() if isinstance(v, dict) and v.get("error")]
     if fallas:
         print("FALLARON:\n- " + "\n- ".join(fallas))
         return 1
