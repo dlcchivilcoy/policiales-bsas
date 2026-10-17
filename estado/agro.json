@@ -5312,6 +5312,127 @@
         70,
         74
       ]
+    },
+    "060efab4aeb365ce": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 66,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "exportación carne china",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta fuerte en la cadena ganadera y exportadora por la falta de hacienda y competitividad.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        62
+      ]
+    },
+    "f826d071289ec861": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 5,
+      "cercania_argentina": 4,
+      "cercania_pba": 2,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 40,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "plant based legumbres",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una tendencia internacional interesante pero de impacto indirecto para el productor núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f66db5b3cd4ae5e9": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 13,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 7,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 66,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "bioinsumos trichonoa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran desarrollo científico nacional de bioinsumos con alto valor para la sustentabilidad.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        60
+      ]
+    },
+    "11e8afaa6dc91325": {
+      "impacto_economico": 15,
+      "interes_productores": 9,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 60,
+      "commercial_score": 68,
+      "subtema": "ganaderia",
+      "tema": "avicultura exportación",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve cifras millonarias del sector avícola y su comercio exterior tras los brotes.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        54
+      ]
+    },
+    "4f029c90bcb25504": {
+      "impacto_economico": 13,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 3,
+      "ai_score": 66,
+      "commercial_score": 66,
+      "subtema": "ganaderia",
+      "tema": "crecida islas delta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Operativo dramático de traslado de hacienda por crecida con alto impacto visual y humano.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        59
+      ]
     }
   },
   "indice": {
@@ -5695,7 +5816,12 @@
       "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento": "2026-10-17",
       "https://bichosdecampo.com/el-momento-del-bufalo-es-ahora-con-un-masivo-congreso-los-productores-de-corrientes-buscan-ampliar-la-ganaderia-bubalina-y-abrir-nuevos-mercados-para-una-carne-que-no-tiene-nada-qu": "2026-10-17",
       "https://lanacion.com.ar/economia/campo/por-que-la-soja-es-la-cenicienta-del-sistema-y-la-argentina-no-aprovecha-una-tendencia-favorable-nid17102026": "2026-10-17",
-      "https://lanacion.com.ar/economia/campo/record-historico-el-campo-argentino-ya-vendio-mas-de-105-millones-de-toneladas-de-granos-nid17102026": "2026-10-17"
+      "https://lanacion.com.ar/economia/campo/record-historico-el-campo-argentino-ya-vendio-mas-de-105-millones-de-toneladas-de-granos-nid17102026": "2026-10-17",
+      "https://bichosdecampo.com/no-se-cumpliria-este-ano-el-cupo-de-carne-otorgado-por-china-y-mario-ravettino-tiene-una-explicacion-hay-demanda-pero-a-los-frigorificos-les-falta-hacienda-y-competitividad": "2026-10-17",
+      "https://bichosdecampo.com/se-pincho-el-negocio-de-las-hamburguesas-vegetales-en-europa-el-plant-based-cambia-de-rumbo-y-ahora-mira-hacia-las-legumbres": "2026-10-17",
+      "https://bichosdecampo.com/el-inta-desarrollo-un-bioinsumo-basado-en-un-hongo-benefico-para-combatir-enfermedades-y-estimular-el-crecimiento-de-los-cultivos": "2026-10-17",
+      "https://bichosdecampo.com/la-avicultura-quiere-volver-a-exportar-400-000-toneladas-espera-la-reapertura-de-china-y-negociar-en-paris-el-reparto-del-cupo-ue-mercosur": "2026-10-17",
+      "https://lanacion.com.ar/economia/campo/ganarle-al-agua-asi-es-el-dramatico-operativo-de-los-ganaderos-de-las-islas-entrerrianas-donde-nada-nid17102026": "2026-10-17"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6077,7 +6203,12 @@
       "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento": "2026-10-17",
       "el momento del bufalo es ahora con un masivo congreso los productores de corrientes buscan ampliar la ganaderia bubalina y abrir nuevos mercados para una carne que no tiene nada que envidiarle a la bovina": "2026-10-17",
       "por que la soja es la cenicienta del sistema y la argentina no aprovecha una tendencia favorable": "2026-10-17",
-      "record historico el campo argentino ya vendio mas de 105 millones de toneladas de granos": "2026-10-17"
+      "record historico el campo argentino ya vendio mas de 105 millones de toneladas de granos": "2026-10-17",
+      "no se cumpliria este ano el cupo de carne otorgado por china y mario ravettino tiene una explicacion hay demanda pero a los frigorificos les falta hacienda y competitividad": "2026-10-17",
+      "se pincho el negocio de las hamburguesas vegetales en europa el plant based cambia de rumbo y ahora mira hacia las legumbres": "2026-10-17",
+      "el inta desarrollo un bioinsumo basado en un hongo benefico para combatir enfermedades y estimular el crecimiento de los cultivos": "2026-10-17",
+      "la avicultura quiere volver a exportar 400 000 toneladas espera la reapertura de china y negociar en paris el reparto del cupo ue mercosur": "2026-10-17",
+      "ganarle al agua asi es el dramatico operativo de los ganaderos de las islas entrerrianas donde nada puede fallar para salvar a las vacas": "2026-10-17"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -6459,7 +6590,12 @@
       "cb0dc29db1d3f6f8": "2026-10-17",
       "a0e0d0a9b0dbf29c": "2026-10-17",
       "f58328f545d2f87f": "2026-10-17",
-      "c4e5527dd8af1306": "2026-10-17"
+      "c4e5527dd8af1306": "2026-10-17",
+      "060efab4aeb365ce": "2026-10-17",
+      "f826d071289ec861": "2026-10-17",
+      "f66db5b3cd4ae5e9": "2026-10-17",
+      "11e8afaa6dc91325": "2026-10-17",
+      "4f029c90bcb25504": "2026-10-17"
     }
   },
   "elegidas": [
@@ -7195,6 +7331,117 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_65ee2a518136_portada.jpg"
+    },
+    {
+      "id": "8e641d793eb1",
+      "cuando": "2026-10-17T16:17-03:00",
+      "titulo_original": "Declaraciones juradas al compás de la baja de retenciones",
+      "descripcion": "Hay un gran volumen de mercadería registrada para exportar en los principales granos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026/",
+      "titular": "Trigo y maíz lideran exportaciones mientras la soja espera la baja",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 76,
+        "commercial_score": 82,
+        "subtema": "mercados",
+        "tema": "retenciones djve",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Trata sobre declaraciones juradas y bajas de retenciones, información sumamente sensible de mercado.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          73,
+          78
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:17:00-03:00"
+    },
+    {
+      "id": "e8317059ab2c",
+      "cuando": "2026-10-17T16:17-03:00",
+      "titulo_original": "Otro récord agrícola: ya se comercializaron más de 100 millones de toneladas de la campaña 2025/26",
+      "descripcion": "Al 7 de octubre, la comercialización de soja, maíz, trigo, sorgo y girasol supera en un 25% el promedio de los últimos cinco años y marca el máximo nivel registrado para esta época del año, en línea con la cosecha récord.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/otro-record-agricola-ya-se-comercializaron-mas-de-100-millones-de-toneladas-de-la-campana-2025-26/",
+      "titular": "Granos: ventas superan 105 millones de toneladas en la campaña",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 13,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 84,
+        "subtema": "mercados",
+        "tema": "comercialización agrícola",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Récord histórico de granos comercializados que impacta directamente en toda la zona núcleo.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          74,
+          73
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:17:00-03:00"
+    },
+    {
+      "id": "a6901efdd716",
+      "cuando": "2026-10-17T16:17-03:00",
+      "titulo_original": "Precavidos: Se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen “malas cartas”",
+      "descripcion": "Este jueves se negociaron futuros y opciones de Soja Rosario por 386.500 toneladas en A3 Mercados con movimientos que denotan una urgencia por generar coberturas de precios. Si bien los precios de los principales contratos registraron leves caídas intradiarias, los mismos siguen reflejando, en térmi",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas/",
+      "titular": "Soja: operadores aceleran coberturas en A3 Mercados ante un escenario complejo",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve volúmenes gigantescos y afecta directamente la estrategia comercial de los productores de la región pampeana.",
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          75,
+          75
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:17:00-03:00"
     }
   ],
   "pendientes": [
@@ -7264,134 +7511,6 @@
         ]
       },
       "cuando": "2026-10-17T12:00-03:00"
-    },
-    {
-      "id": "8e641d793eb1",
-      "rep": {
-        "id": "8e641d793eb1",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026",
-        "titulo": "Declaraciones juradas al compás de la baja de retenciones",
-        "titulo_norm": "declaraciones juradas al compas de la baja de retenciones",
-        "descripcion": "Hay un gran volumen de mercadería registrada para exportar en los principales granos",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/LBTZV5JMZ5ESBFAMJ3RTOKTZJQ.JPG?auth=0bfdacbb9cb7fae8204e257ec4eb1f1747791abedde57eaf67c397aa94f77057&smart=true",
-        "autor": "Pablo Adreani",
-        "publicado": "2026-10-17T06:52-03:00",
-        "capturado": "2026-10-17T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4fe57623aa8cda7e"
-      },
-      "grupo": [
-        {
-          "id": "8e641d793eb1",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/declaraciones-juradas-al-compas-de-la-baja-de-retenciones-nid17102026",
-          "titulo": "Declaraciones juradas al compás de la baja de retenciones",
-          "titulo_norm": "declaraciones juradas al compas de la baja de retenciones",
-          "descripcion": "Hay un gran volumen de mercadería registrada para exportar en los principales granos",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/LBTZV5JMZ5ESBFAMJ3RTOKTZJQ.JPG?auth=0bfdacbb9cb7fae8204e257ec4eb1f1747791abedde57eaf67c397aa94f77057&smart=true",
-          "autor": "Pablo Adreani",
-          "publicado": "2026-10-17T06:52-03:00",
-          "capturado": "2026-10-17T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4fe57623aa8cda7e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 76,
-        "commercial_score": 82,
-        "subtema": "mercados",
-        "tema": "retenciones djve",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Trata sobre declaraciones juradas y bajas de retenciones, información sumamente sensible de mercado.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          73,
-          78
-        ]
-      },
-      "cuando": "2026-10-17T07:00-03:00"
-    },
-    {
-      "id": "e8317059ab2c",
-      "rep": {
-        "id": "e8317059ab2c",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/otro-record-agricola-ya-se-comercializaron-mas-de-100-millones-de-toneladas-de-la-campana-2025-26/",
-        "canonical_url": "https://infocampo.com.ar/otro-record-agricola-ya-se-comercializaron-mas-de-100-millones-de-toneladas-de-la-campana-2025-26",
-        "titulo": "Otro récord agrícola: ya se comercializaron más de 100 millones de toneladas de la campaña 2025/26",
-        "titulo_norm": "otro record agricola ya se comercializaron mas de 100 millones de toneladas de la campana 2025 26",
-        "descripcion": "Al 7 de octubre, la comercialización de soja, maíz, trigo, sorgo y girasol supera en un 25% el promedio de los últimos cinco años y marca el máximo nivel registrado para esta época del año, en línea con la cosecha récord.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/reporte_1_73.png",
-        "autor": "infocampo",
-        "publicado": "2026-10-16T17:30-03:00",
-        "capturado": "2026-10-16T20:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3f92ea147aea680f"
-      },
-      "grupo": [
-        {
-          "id": "e8317059ab2c",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/otro-record-agricola-ya-se-comercializaron-mas-de-100-millones-de-toneladas-de-la-campana-2025-26/",
-          "canonical_url": "https://infocampo.com.ar/otro-record-agricola-ya-se-comercializaron-mas-de-100-millones-de-toneladas-de-la-campana-2025-26",
-          "titulo": "Otro récord agrícola: ya se comercializaron más de 100 millones de toneladas de la campaña 2025/26",
-          "titulo_norm": "otro record agricola ya se comercializaron mas de 100 millones de toneladas de la campana 2025 26",
-          "descripcion": "Al 7 de octubre, la comercialización de soja, maíz, trigo, sorgo y girasol supera en un 25% el promedio de los últimos cinco años y marca el máximo nivel registrado para esta época del año, en línea con la cosecha récord.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/reporte_1_73.png",
-          "autor": "infocampo",
-          "publicado": "2026-10-16T17:30-03:00",
-          "capturado": "2026-10-16T20:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3f92ea147aea680f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 13,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 75,
-        "commercial_score": 84,
-        "subtema": "mercados",
-        "tema": "comercialización agrícola",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Récord histórico de granos comercializados que impacta directamente en toda la zona núcleo.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          74,
-          73
-        ]
-      },
-      "cuando": "2026-10-16T20:30-03:00"
     },
     {
       "id": "d3968cd2be0b",
@@ -7520,73 +7639,9 @@
         ]
       },
       "cuando": "2026-10-16T12:30-03:00"
-    },
-    {
-      "id": "a6901efdd716",
-      "rep": {
-        "id": "a6901efdd716",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas/",
-        "canonical_url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas",
-        "titulo": "Precavidos: Se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen “malas cartas”",
-        "titulo_norm": "precavidos se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen malas cartas",
-        "descripcion": "Este jueves se negociaron futuros y opciones de Soja Rosario por 386.500 toneladas en A3 Mercados con movimientos que denotan una urgencia por generar coberturas de precios. Si bien los precios de los principales contratos registraron leves caídas intradiarias, los mismos siguen reflejando, en términos generales, valores sostenidos gracias a la capacidad de pago de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-15T22:25-03:00",
-        "capturado": "2026-10-16T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f9d2e2e640482874"
-      },
-      "grupo": [
-        {
-          "id": "a6901efdd716",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas/",
-          "canonical_url": "https://bichosdecampo.com/precavidos-se-aceleran-las-coberturas-en-soja-ante-la-posibilidad-de-que-a-la-oleaginosa-le-toquen-malas-cartas",
-          "titulo": "Precavidos: Se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen “malas cartas”",
-          "titulo_norm": "precavidos se aceleran las coberturas en soja ante la posibilidad de que a la oleaginosa le toquen malas cartas",
-          "descripcion": "Este jueves se negociaron futuros y opciones de Soja Rosario por 386.500 toneladas en A3 Mercados con movimientos que denotan una urgencia por generar coberturas de precios. Si bien los precios de los principales contratos registraron leves caídas intradiarias, los mismos siguen reflejando, en términos generales, valores sostenidos gracias a la capacidad de pago de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-15T22:25-03:00",
-          "capturado": "2026-10-16T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f9d2e2e640482874"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 75,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Mueve volúmenes gigantescos y afecta directamente la estrategia comercial de los productores de la región pampeana.",
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          75,
-          75
-        ]
-      },
-      "cuando": "2026-10-16T07:00-03:00"
     }
   ],
-  "actualizado": "2026-10-17T14:01:32-03:00",
+  "actualizado": "2026-10-17T16:20:24-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
