@@ -185,6 +185,7 @@ chequear("placa: la fecha en castellano", P.fecha_larga(datetime(2026, 10, 6)) =
 AR = timezone(timedelta(hours=-3))
 estado_tmp = tmp / "estado"
 PA.MEMORIA = estado_tmp / "nacionales.json"
+PA.DIST.BUZON = estado_tmp / "buzon_distribuidor.json"      # nunca el buzón real
 PA.SALIDA = tmp / "salida"
 reloj = {"ahora": datetime(2026, 10, 6, 12, 5, tzinfo=AR)}
 PA._ahora = lambda: reloj["ahora"]
@@ -444,6 +445,12 @@ chequear("guion: la sección la fija la categoría, no la IA",
          any(p.get("seccion") == "Deportes" and p.get("categoria") == "deportes" for p in mem["piezas"].values()))
 reloj["ahora"] += timedelta(hours=3)
 inf2 = PA.pasada(True, redactar=redactar_cat, notas=[], notas_variedad=variadas)
+buzon = json.loads(PA.DIST.BUZON.read_text(encoding="utf-8"))["eventos"]
+chequear("TikTok por Buffer: cada pieza publicada va al buzón como «nacionales», solo TikTok",
+         len([e for e in buzon if e["origen"] == "nacionales"]) >= 3
+         and all(e["plataformas"] == ["tiktok"] and e["video_url"].startswith("https://gh/") for e in buzon
+                 if e["origen"] == "nacionales")
+         and any(e.get("categoria") == "Deportes" for e in buzon))
 chequear("rotación: la pasada siguiente lleva otra categoría (espectáculos)",
          [p.get("categoria") for p in inf2["piezas"]] == ["espectaculos"])
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))

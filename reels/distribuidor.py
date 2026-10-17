@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """Buzón para el distribuidor central de X y TikTok (vive en el repo social_publisher).
 
+Desde el 17/10/2026 también las piezas de NACIONALES y de sus categorías (deportes,
+espectáculos…), solo para TikTok (`evento_nacional`): a X ya llegan como notas de la web.
+
 Policiales NO publica en X ni en TikTok: al final de cada pasada deja acá TODAS las piezas
 aptas, con su video en el Release público, y el distribuidor elige las de más potencial
 (hasta 12 por día en cada red), las programa en Buffer y evita repetir el mismo hecho.
@@ -14,6 +17,7 @@ Nunca corta la pasada: si algo falla, IG/FB/YouTube/web ya salieron igual.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from datetime import datetime, timedelta, timezone
@@ -91,8 +95,59 @@ def evento(pieza: dict, video_url: str, url_web: str, url_youtube: str, clave: s
         "localidad": pieza.get("localidad_hecho") or pieza.get("localidad") or "",
         "volanta": volanta,
         "categoria": pieza.get("tipo") or "",
+        # Radio de 100 km (17/10/2026): el distribuidor descarta por su cuenta lo que no lo cumpla.
+        "distancia_km": (pieza.get("geo") or {}).get("distancia_km"),
+        "radio_ok": bool((pieza.get("geo") or {}).get("elegible", True)),
         "plataformas": ["x", "tiktok"],
     }
+
+
+def evento_nacional(pieza: dict, video_url: str, url_web: str, url_youtube: str) -> dict:
+    """Una pieza de NACIONALES o de las categorías nuevas (deportes, espectáculos…) para TikTok
+    (17/10/2026, PDF «Prompt integral» etapa 6). Solo TikTok: a X ya llega como nota de la web."""
+    g = pieza.get("guion") or {}
+    nota = pieza.get("nota") or {}
+    return {
+        "id": f"nacionales:{hashlib.sha1((pieza.get('url_original') or '').encode()).hexdigest()[:16]}",
+        "origen": "nacionales",
+        "tipo": "video",
+        "generado": _iso(_ahora()),
+        "titulo": (g.get("titular") or "").strip(),
+        "descripcion": (g.get("bajada") or "").strip(),
+        "video_url": video_url,
+        "duracion_seg": (pieza.get("video") or {}).get("duracion"),
+        "nota_url": url_web or "",
+        "youtube_url": url_youtube or "",
+        "prioridad": max(1, min(10, int(g.get("viral") or 5))),
+        "urgente": False,
+        "volanta": (g.get("volanta") or "").strip(),
+        "categoria": g.get("seccion") or "",          # «Deportes», «Cine y series», «Política»…
+        "categoria_nacional": nota.get("categoria") or "",
+        "hashtags": [h.lstrip("#") for h in g.get("hashtags") or []][:2],
+        "plataformas": ["tiktok"],
+    }
+
+
+def dejar_nacional(pieza: dict, mp4: Path, url_web: str, url_youtube: str, subir, nombre: str) -> str:
+    """Deja una pieza de nacionales en el buzón (sube el video al Release). Devuelve el id, o ""
+    si no se pudo (nunca frena la pasada)."""
+    if not activo():
+        return ""
+    ev_id = evento_nacional(pieza, "", "", "")["id"]
+    d = leer()
+    if any(e.get("id") == ev_id for e in d.get("eventos") or []):
+        return ev_id
+    try:
+        url = subir(mp4, nombre)
+    except Exception as e:  # noqa: BLE001
+        print(f"  distribuidor: no pude subir el video de «{(pieza.get('guion') or {}).get('titular')}» ({e})")
+        return ""
+    d.setdefault("eventos", []).append(evento_nacional(pieza, url, url_web, url_youtube))
+    d["actualizado"] = _iso(_ahora())
+    d = combinar(d, {})
+    BUZON.parent.mkdir(parents=True, exist_ok=True)
+    BUZON.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+    return ev_id
 
 
 def dejar(listas: list, ledger: dict, carpeta: Path, subir, repo: str, tag: str,

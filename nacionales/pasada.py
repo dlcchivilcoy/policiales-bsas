@@ -55,6 +55,7 @@ from nacionales import filtro as F
 from nacionales import guion as NG
 from nacionales import infobae as IB
 from nacionales import placa as P
+from reels import distribuidor as DIST
 from reels import publicador as PUB
 from reels import web as WEB
 
@@ -507,6 +508,17 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             ultimo = _ahora()
             nota, g = pieza["nota"], pieza["guion"]
             res = publicar_pieza(pieza, nota["url"] in fb, publicar)
+            # TikTok por Buffer (17/10/2026, etapa 6): el video va al buzón del distribuidor, que lo
+            # intercala con el resto. Solo si salió la nota (a X llega como nota de la web).
+            if publicar and _ok(res.get("web")):
+                yt = res.get("youtube") or {}
+                mp4 = Path(pieza["video"]["archivo"])
+                nombre = f"nacional_{hashlib.sha1(nota['url'].encode()).hexdigest()[:10]}_{mp4.name}"
+                ev_id = DIST.dejar_nacional(pieza, mp4, res["web"].get("url") or "",
+                                            yt.get("url") or "" if _ok(yt) else "",
+                                            PUB.subir_a_release, nombre)
+                res["tiktok_buzon"] = ({"estado": "ok", "id": ev_id} if ev_id else
+                                       {"estado": "omitida", "detalle": "no se pudo dejar en el buzón"})
             fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
                     "categoria": nota.get("categoria") or "",
                     "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],

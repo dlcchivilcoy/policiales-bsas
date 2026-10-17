@@ -442,14 +442,16 @@ jobs:
         # y lo guarda el trabajo de policiales (tools/guardar_estado.py combina las dos copias).
         if: always()
         run: |
-          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json)" ]; then
+          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json)" ]; then
             echo "La memoria de nacionales no cambió."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # tema_reels.json: el bloque blanco/grafito del último reel 4:5 (se alternan).
-          python tools/guardar_estado.py --solo nacionales.json tema_reels.json
+          # buzon_distribuidor.json: los videos para TikTok por Buffer (17/10/2026); se une por id
+          # con lo que dejó policiales.
+          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json
 
       - name: Avisar en un issue
         if: failure()
