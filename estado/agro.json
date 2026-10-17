@@ -5433,6 +5433,52 @@
         72,
         59
       ]
+    },
+    "b6f44311def5e8d0": {
+      "impacto_economico": 10,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 3,
+      "ai_score": 36,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "nevadas mendoza",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena noticia para Mendoza, pero de escasa relevancia práctica para el productor de la zona núcleo y provincia de Buenos Aires.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "067289a94668e5c3": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 78,
+      "subtema": "mercados",
+      "tema": "urea",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en los costos de fertilización de la campaña gruesa para toda la región núcleo, movilizando decisiones de compra.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        78,
+        72
+      ]
     }
   },
   "indice": {
@@ -5821,7 +5867,9 @@
       "https://bichosdecampo.com/se-pincho-el-negocio-de-las-hamburguesas-vegetales-en-europa-el-plant-based-cambia-de-rumbo-y-ahora-mira-hacia-las-legumbres": "2026-10-17",
       "https://bichosdecampo.com/el-inta-desarrollo-un-bioinsumo-basado-en-un-hongo-benefico-para-combatir-enfermedades-y-estimular-el-crecimiento-de-los-cultivos": "2026-10-17",
       "https://bichosdecampo.com/la-avicultura-quiere-volver-a-exportar-400-000-toneladas-espera-la-reapertura-de-china-y-negociar-en-paris-el-reparto-del-cupo-ue-mercosur": "2026-10-17",
-      "https://lanacion.com.ar/economia/campo/ganarle-al-agua-asi-es-el-dramatico-operativo-de-los-ganaderos-de-las-islas-entrerrianas-donde-nada-nid17102026": "2026-10-17"
+      "https://lanacion.com.ar/economia/campo/ganarle-al-agua-asi-es-el-dramatico-operativo-de-los-ganaderos-de-las-islas-entrerrianas-donde-nada-nid17102026": "2026-10-17",
+      "https://infocampo.com.ar/tras-anos-de-sequia-los-rios-de-mendoza-cambian-de-escenario-las-nevadas-traen-optimismo-para-el-agro": "2026-10-17",
+      "https://bichosdecampo.com/se-retobaron-los-chinos-y-los-precios-de-la-urea-revirtieron-la-tendencia-bajista": "2026-10-17"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6208,7 +6256,9 @@
       "se pincho el negocio de las hamburguesas vegetales en europa el plant based cambia de rumbo y ahora mira hacia las legumbres": "2026-10-17",
       "el inta desarrollo un bioinsumo basado en un hongo benefico para combatir enfermedades y estimular el crecimiento de los cultivos": "2026-10-17",
       "la avicultura quiere volver a exportar 400 000 toneladas espera la reapertura de china y negociar en paris el reparto del cupo ue mercosur": "2026-10-17",
-      "ganarle al agua asi es el dramatico operativo de los ganaderos de las islas entrerrianas donde nada puede fallar para salvar a las vacas": "2026-10-17"
+      "ganarle al agua asi es el dramatico operativo de los ganaderos de las islas entrerrianas donde nada puede fallar para salvar a las vacas": "2026-10-17",
+      "tras anos de sequia los rios de mendoza cambian de escenario las nevadas traen optimismo para el agro": "2026-10-17",
+      "se retobaron los chinos y los precios de la urea revirtieron la tendencia bajista": "2026-10-17"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -6595,7 +6645,9 @@
       "f826d071289ec861": "2026-10-17",
       "f66db5b3cd4ae5e9": "2026-10-17",
       "11e8afaa6dc91325": "2026-10-17",
-      "4f029c90bcb25504": "2026-10-17"
+      "4f029c90bcb25504": "2026-10-17",
+      "b6f44311def5e8d0": "2026-10-17",
+      "067289a94668e5c3": "2026-10-17"
     }
   },
   "elegidas": [
@@ -7442,49 +7494,56 @@
       "fuera_de_cupo": true,
       "formato": "carrusel",
       "turno": "2026-10-17T16:17:00-03:00"
-    }
-  ],
-  "pendientes": [
+    },
+    {
+      "id": "4880a7437e5f",
+      "cuando": "2026-10-17T16:22-03:00",
+      "titulo_original": "Se “retobaron” los chinos y los precios de la urea revirtieron la tendencia bajista",
+      "descripcion": "El mercado internacional de fertilizantes nitrogenados experimentó esta semana un rebote de precios de la mano de la resistencia de productores chinos a convalidar los precios ofertados en la última licitación de la corporación india IPL (352,1 a 356,2 u$s/tonelada CFR). “Esa negativa disipó la expe",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/se-retobaron-los-chinos-y-los-precios-de-la-urea-revirtieron-la-tendencia-bajista/",
+      "titular": "La urea sube en Argentina tras el freno a la oferta china",
+      "volanta": "Insumos",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 78,
+        "subtema": "mercados",
+        "tema": "urea",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en los costos de fertilización de la campaña gruesa para toda la región núcleo, movilizando decisiones de compra.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          78,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:22:00-03:00"
+    },
     {
       "id": "498daa80de30",
-      "rep": {
-        "id": "498daa80de30",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento/",
-        "canonical_url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento",
-        "titulo": "A pesar de que el negocio no cierra, sigue en niveles altos el encierre de hacienda en los feedlot y crece la participación de los exportadores en ese segmento",
-        "titulo_norm": "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento",
-        "descripcion": "La Cámara Argentina de Feedlot (CAF) difundió su informe mensual sobre la situación del engorde a corral. Lejos de vaciarse, como sucedía años atrás, estas empresas tienen niveles altos de ocupación. Las estadísticas del Senasa indican que los poco más de mil feedlot inscriptos tienen más de 2,07 millones de cabezas de ganado en engorde, […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/margen-feedlots.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-17T08:07-03:00",
-        "capturado": "2026-10-17T12:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cb0dc29db1d3f6f8"
-      },
-      "grupo": [
-        {
-          "id": "498daa80de30",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento/",
-          "canonical_url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento",
-          "titulo": "A pesar de que el negocio no cierra, sigue en niveles altos el encierre de hacienda en los feedlot y crece la participación de los exportadores en ese segmento",
-          "titulo_norm": "a pesar de que el negocio no cierra sigue en niveles altos el encierre de hacienda en los feedlot y crece la participacion de los exportadores en ese segmento",
-          "descripcion": "La Cámara Argentina de Feedlot (CAF) difundió su informe mensual sobre la situación del engorde a corral. Lejos de vaciarse, como sucedía años atrás, estas empresas tienen niveles altos de ocupación. Las estadísticas del Senasa indican que los poco más de mil feedlot inscriptos tienen más de 2,07 millones de cabezas de ganado en engorde, […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/margen-feedlots.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-17T08:07-03:00",
-          "capturado": "2026-10-17T12:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cb0dc29db1d3f6f8"
-        }
-      ],
+      "cuando": "2026-10-17T16:22-03:00",
+      "titulo_original": "A pesar de que el negocio no cierra, sigue en niveles altos el encierre de hacienda en los feedlot y crece la participación de los exportadores en ese segmento",
+      "descripcion": "La Cámara Argentina de Feedlot (CAF) difundió su informe mensual sobre la situación del engorde a corral. Lejos de vaciarse, como sucedía años atrás, estas empresas tienen niveles altos de ocupación. Las estadísticas del Senasa indican que los poco más de mil feedlot inscriptos tienen más de 2,07 mi",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/a-pesar-de-que-el-negocio-no-cierra-sigue-en-niveles-altos-el-encierre-de-hacienda-en-los-feedlot-y-crece-la-participacion-de-los-exportadores-en-ese-segmento/",
+      "titular": "Feedlots: la ocupación sigue alta pese a millonarias pérdidas por animal",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 16,
         "interes_productores": 14,
@@ -7510,48 +7569,21 @@
           74
         ]
       },
-      "cuando": "2026-10-17T12:00-03:00"
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:22:00-03:00"
     },
     {
       "id": "d3968cd2be0b",
-      "rep": {
-        "id": "d3968cd2be0b",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-entes-sanitaros-suman-un-nuevo-negocio-ahora-podran-vender-y-colocar-caravanas-electronicas-en-medio-de-los-reclamos-por-su-costo/",
-        "canonical_url": "https://bichosdecampo.com/los-entes-sanitaros-suman-un-nuevo-negocio-ahora-podran-vender-y-colocar-caravanas-electronicas-en-medio-de-los-reclamos-por-su-costo",
-        "titulo": "Los entes sanitaros suman un nuevo negocio: Ahora podrán vender y colocar caravanas electrónicas, en medio de los reclamos por su costo",
-        "titulo_norm": "los entes sanitaros suman un nuevo negocio ahora podran vender y colocar caravanas electronicas en medio de los reclamos por su costo",
-        "descripcion": "A más de nueve meses de la puesta en marcha del sistema sistema de caravanas electrónicas obligatorias, el costo de esa tecnología sigue siendo uno de los principales puntos de discordia entre los productores y el gobierno, que se negó a introducir cambios en su normativa y se mantiene firme en la decisión. Ahora, el Senasa […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/trazabilidad-individual-caravana-electronica.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-16T08:51-03:00",
-        "capturado": "2026-10-16T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "00722c2756839a01"
-      },
-      "grupo": [
-        {
-          "id": "d3968cd2be0b",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-entes-sanitaros-suman-un-nuevo-negocio-ahora-podran-vender-y-colocar-caravanas-electronicas-en-medio-de-los-reclamos-por-su-costo/",
-          "canonical_url": "https://bichosdecampo.com/los-entes-sanitaros-suman-un-nuevo-negocio-ahora-podran-vender-y-colocar-caravanas-electronicas-en-medio-de-los-reclamos-por-su-costo",
-          "titulo": "Los entes sanitaros suman un nuevo negocio: Ahora podrán vender y colocar caravanas electrónicas, en medio de los reclamos por su costo",
-          "titulo_norm": "los entes sanitaros suman un nuevo negocio ahora podran vender y colocar caravanas electronicas en medio de los reclamos por su costo",
-          "descripcion": "A más de nueve meses de la puesta en marcha del sistema sistema de caravanas electrónicas obligatorias, el costo de esa tecnología sigue siendo uno de los principales puntos de discordia entre los productores y el gobierno, que se negó a introducir cambios en su normativa y se mantiene firme en la decisión. Ahora, el Senasa […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/trazabilidad-individual-caravana-electronica.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-16T08:51-03:00",
-          "capturado": "2026-10-16T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "00722c2756839a01"
-        }
-      ],
+      "cuando": "2026-10-17T16:22-03:00",
+      "titulo_original": "Los entes sanitaros suman un nuevo negocio: Ahora podrán vender y colocar caravanas electrónicas, en medio de los reclamos por su costo",
+      "descripcion": "A más de nueve meses de la puesta en marcha del sistema sistema de caravanas electrónicas obligatorias, el costo de esa tecnología sigue siendo uno de los principales puntos de discordia entre los productores y el gobierno, que se negó a introducir cambios en su normativa y se mantiene firme en la d",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-entes-sanitaros-suman-un-nuevo-negocio-ahora-podran-vender-y-colocar-caravanas-electronicas-en-medio-de-los-reclamos-por-su-costo/",
+      "titular": "Entes sanitarios podrán vender y colocar caravanas electrónicas según el Senasa",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 13,
         "interes_productores": 14,
@@ -7574,48 +7606,21 @@
           73
         ]
       },
-      "cuando": "2026-10-16T12:30-03:00"
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:22:00-03:00"
     },
     {
       "id": "e30aa44987cb",
-      "rep": {
-        "id": "e30aa44987cb",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/carne-a-europa-los-frigorificos-empiezan-a-exigir-trazabilidad-y-hay-un-debate-por-los-precios-nid16102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/carne-a-europa-los-frigorificos-empiezan-a-exigir-trazabilidad-y-hay-un-debate-por-los-precios-nid16102026",
-        "titulo": "Carne a Europa: los frigoríficos empiezan a exigir trazabilidad y hay un debate por los precios",
-        "titulo_norm": "carne a europa los frigorificos empiezan a exigir trazabilidad y hay un debate por los precios",
-        "descripcion": "En la previa de la SIAL de París, la industria pide para noviembre hacienda que cumpla con las exigencias europeas sobre deforestación; Visec ya reúne a unos 20.000 productores; hoy no hay un valor diferencial garantizado para el productor, dicen en el sector",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RPVRSMEQKJHZ7NM65GNXXYUBTU.jpg?auth=54f5b33a4b4ca701a7ae9826dd3fe09ec965ea84df9412170029dd12d6e6f95e&smart=true",
-        "autor": "Belkis Martínez",
-        "publicado": "2026-10-16T08:51-03:00",
-        "capturado": "2026-10-16T12:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "50278b703d41cd43"
-      },
-      "grupo": [
-        {
-          "id": "e30aa44987cb",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/carne-a-europa-los-frigorificos-empiezan-a-exigir-trazabilidad-y-hay-un-debate-por-los-precios-nid16102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/carne-a-europa-los-frigorificos-empiezan-a-exigir-trazabilidad-y-hay-un-debate-por-los-precios-nid16102026",
-          "titulo": "Carne a Europa: los frigoríficos empiezan a exigir trazabilidad y hay un debate por los precios",
-          "titulo_norm": "carne a europa los frigorificos empiezan a exigir trazabilidad y hay un debate por los precios",
-          "descripcion": "En la previa de la SIAL de París, la industria pide para noviembre hacienda que cumpla con las exigencias europeas sobre deforestación; Visec ya reúne a unos 20.000 productores; hoy no hay un valor diferencial garantizado para el productor, dicen en el sector",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RPVRSMEQKJHZ7NM65GNXXYUBTU.jpg?auth=54f5b33a4b4ca701a7ae9826dd3fe09ec965ea84df9412170029dd12d6e6f95e&smart=true",
-          "autor": "Belkis Martínez",
-          "publicado": "2026-10-16T08:51-03:00",
-          "capturado": "2026-10-16T12:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "50278b703d41cd43"
-        }
-      ],
+      "cuando": "2026-10-17T16:22-03:00",
+      "titulo_original": "Carne a Europa: los frigoríficos empiezan a exigir trazabilidad y hay un debate por los precios",
+      "descripcion": "En la previa de la SIAL de París, la industria pide para noviembre hacienda que cumpla con las exigencias europeas sobre deforestación; Visec ya reúne a unos 20.000 productores; hoy no hay un valor diferencial garantizado para el productor, dicen en el sector",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/carne-a-europa-los-frigorificos-empiezan-a-exigir-trazabilidad-y-hay-un-debate-por-los-precios-nid16102026/",
+      "titular": "Carne vacuna: frigoríficos exigen trazabilidad para Europa sin precio diferencial",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 16,
         "interes_productores": 14,
@@ -7638,10 +7643,15 @@
           72
         ]
       },
-      "cuando": "2026-10-16T12:30-03:00"
+      "apta": false,
+      "revision": true,
+      "fuera_de_cupo": true,
+      "formato": "carrusel",
+      "turno": "2026-10-17T16:22:00-03:00"
     }
   ],
-  "actualizado": "2026-10-17T16:20:24-03:00",
+  "pendientes": [],
+  "actualizado": "2026-10-17T16:24:50-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
