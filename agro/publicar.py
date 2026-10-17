@@ -107,11 +107,14 @@ def metadatos_youtube(pieza: dict, url_web: str = "") -> dict:
 def publicar(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
     """Publica la pieza según su formato (reel o carrusel). Devuelve {red: {"id"…} | {"error": …}} y
     «portada_url» (la portada subida al Release, para las historias)."""
+    # La portada (imagen + texto SEO, agro/portada.py) se sube PRIMERO: es la miniatura del reel en
+    # Instagram (cover_url) y en Facebook, y la «novedad» de las historias.
+    portada_url = _subir_portada(pieza)
     if pieza.get("formato") == "carrusel":
         salida = publicar_carrusel(pieza, ya, log=log)
     else:
-        salida = publicar_reel(pieza, ya, redes, log=log)
-    salida["portada_url"] = _subir_portada(pieza)
+        salida = publicar_reel(pieza, ya, redes, log=log, portada_url=portada_url)
+    salida["portada_url"] = portada_url
     return salida
 
 
@@ -126,7 +129,45 @@ def _subir_portada(pieza: dict) -> str:
         return ""
 
 
-def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
+def _reel_instagram(pp: dict, mp4: Path, nombre: str, portada_url: str = "") -> dict:
+    """El reel en Instagram con la PORTADA propia de miniatura en la grilla (`cover_url`, 17/10/2026).
+    Es publicador.publicar_instagram más la portada; si Instagram no la toma, sale sin ella."""
+    from reels import instagram as IG
+    from reels import publicador as PB
+    if not portada_url:
+        return PB.publicar_instagram(pp, mp4, nombre)
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    url = PB.subir_a_release(mp4, nombre)
+    caption = PB.texto_del_posteo(pp, "instagram")
+    params = IG.contenedor_reel(url, caption, portada=portada_url)
+    try:
+        cid = PB._contenedor_listo(uid, tok, params)
+        portada = "propia"
+    except PB.FalloRed:
+        params.pop("cover_url", None)                      # una portada rechazada no cuesta el reel
+        cid = PB._contenedor_listo(uid, tok, params)
+        portada = "la que elige Instagram (rechazó la propia)"
+    return {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": portada}
+
+
+def _miniatura_facebook(video_id: str, jpg) -> str:
+    """La portada como miniatura del reel de Facebook (POST /{video}/thumbnails, is_preferred). Por la
+    API no está documentado para reels: si no la toma, queda la que elige Facebook (que con el primer
+    cuadro del reel ya es la misma portada)."""
+    from reels import publicador as PB
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    if not video_id or not jpg or not Path(jpg).is_file():
+        return "sin portada"
+    try:
+        r = PB._pedir("POST", f"{PB.GRAPH}/{video_id}/thumbnails", tok, data={"is_preferred": "true"},
+                      files={"source": ("portada.jpg", Path(jpg).read_bytes(), "image/jpeg")})
+    except Exception as e:                                 # noqa: BLE001
+        return f"no se pudo ({type(e).__name__})"
+    return "propia" if r.status_code < 400 else f"la del primer cuadro (HTTP {r.status_code})"
+
+
+def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_url: str = "") -> dict:
     """Publica en las `redes` que todavía no salieron (`ya`: {red: resultado} de un intento anterior).
     Devuelve {red: {"id"…} | {"error": …}}. Nunca lanza por una red: la siguiente sigue."""
     from reels import publicador as PB
@@ -167,14 +208,15 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
         if "facebook" in redes and not hecho("facebook"):
             try:
                 salida["facebook"] = PB.publicar_facebook(pp, mp4, url_web)
-                log(f"   Facebook: video {salida['facebook'].get('id')}")
+                salida["facebook"]["miniatura"] = _miniatura_facebook(salida["facebook"].get("id"), pieza.get("portada"))
+                log(f"   Facebook: video {salida['facebook'].get('id')} (miniatura: {salida['facebook']['miniatura']})")
             except Exception as e:                         # noqa: BLE001
                 salida["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Facebook FALLÓ: {salida['facebook']['error']}")
         if "instagram" in redes and not hecho("instagram"):
             try:
-                salida["instagram"] = PB.publicar_instagram(pp, mp4, f"agro_{pieza['id']}.mp4")
-                log(f"   Instagram: {salida['instagram'].get('id')}")
+                salida["instagram"] = _reel_instagram(pp, mp4, f"agro_{pieza['id']}.mp4", portada_url)
+                log(f"   Instagram: {salida['instagram'].get('id')} (portada: {salida['instagram'].get('portada', '—')})")
             except Exception as e:                         # noqa: BLE001
                 salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Instagram FALLÓ: {salida['instagram']['error']}")

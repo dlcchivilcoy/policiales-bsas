@@ -51,6 +51,11 @@ GAP_LOGO = 32
 VOLANTA = (36, 26)        # cuerpo, mínimo
 GAP_VOLANTA = 20
 TITULAR = (78, 44)        # tope, piso
+# La MINIATURA (pedido del editor, 17/10/2026: «que se vea imagen con texto con SEO en la miniatura de
+# las portadas en el feed»): el texto corto de la portada («Soja: arranca la siembra con 2% más de
+# área», empieza con la palabra clave) va más grande que un titular, para leerse en la grilla del perfil
+# (que además recorta el 4:5 a 3:4 por los costados: el margen de 80 px lo deja adentro).
+PORTADA = (100, 60)       # tope, piso de la letra de la miniatura
 SALTO = 1.1
 RECORTE_MAX = 0.25        # lo más que se le saca a la imagen (desde abajo) para que entre el texto
 
@@ -187,7 +192,8 @@ def leyenda(capa: Image.Image, texto: str, y_base: int):
     d.text((x1 - w - 14, y1 - 30), texto, font=f, fill=(240, 240, 240, 255))
 
 
-def plan_bloque(volanta: str, titular: str, tema: str, alto_imagen: int, alto: int = H45) -> dict:
+def plan_bloque(volanta: str, titular: str, tema: str, alto_imagen: int, alto: int = H45,
+                tope: tuple = TITULAR) -> dict:
     """Dónde va cada cosa en el cuadro 4:5: {alto_imagen, y_logo, y_texto, zona, volanta, f_tit, tit}.
 
     La imagen va entera; si el titular no entra con letra ≥ 52 se le resigna imagen desde abajo
@@ -202,19 +208,21 @@ def plan_bloque(volanta: str, titular: str, tema: str, alto_imagen: int, alto: i
     fijo = LINEA + PAD[0] + ISOLOGO + GAP_LOGO + PAD[1] + (fv.size + GAP_VOLANTA if vtxt else 0)
 
     def medir_tit(hueco, piso):
-        return ajustar(medir, titular, "bold", TITULAR[0], piso, ANCHO, 4, alto_max=hueco)
+        return ajustar(medir, titular, "bold", tope[0], piso, ANCHO, 4 if tope == TITULAR else 3, alto_max=hueco)
 
     hm = alto_imagen
-    ft, tit = medir_tit(alto - hm - fijo, 52)
+    ft, tit = medir_tit(alto - hm - fijo, max(52, tope[1]))
     if alto_texto(ft, len(tit)) > alto - hm - fijo or (tit and tit[-1].endswith("…")):
         hm_min = round(alto_imagen * (1 - RECORTE_MAX))
-        ft, tit = medir_tit(alto - hm_min - fijo, TITULAR[1])
+        ft, tit = medir_tit(alto - hm_min - fijo, tope[1] if tope != TITULAR else TITULAR[1])
         hm = max(hm_min, min(alto_imagen, alto - fijo - alto_texto(ft, len(tit))))
     hm = hm // 2 * 2
     extra = max(0, alto - hm - fijo - alto_texto(ft, len(tit)))
     y_logo = hm + LINEA + PAD[0] + round(extra * 0.38)
     y_texto = y_logo + ISOLOGO + GAP_LOGO + round(min(extra * 0.12, 40))
-    return {"alto_imagen": hm, "y_logo": y_logo, "y_texto": y_texto, "zona": (y_texto, alto - PAD[1]),
+    # En la miniatura, la palabra clave de antes de los dos puntos («Soja:») va en naranja.
+    clave = titular.split(":", 1)[0] + ":" if (tope != TITULAR and ":" in titular[:40]) else ""
+    return {"clave": clave, "alto_imagen": hm, "y_logo": y_logo, "y_texto": y_texto, "zona": (y_texto, alto - PAD[1]),
             "volanta": vtxt, "f_vol": fv, "f_tit": ft, "tit": tit, "tema": tema, "alto": alto}
 
 
@@ -239,13 +247,31 @@ def texto_titular(capa: Image.Image, plan: dict, alfa: float = 1.0):
         d.text((X, y), plan["volanta"], font=plan["f_vol"], fill=t["volanta"] + (a,))
         y += plan["f_vol"].size + GAP_VOLANTA
     escribir(d, X, y, plan["tit"], plan["f_tit"], t["titular"] + (a,))
+    clave = plan.get("clave") or ""
+    if clave:
+        # Se repinta encima, en naranja, la parte de la clave en cada renglón donde cae.
+        resto, f = clave, plan["f_tit"]
+        for i, renglon in enumerate(plan["tit"]):
+            if not resto:
+                break
+            tramo = renglon[:len(resto)] if resto.startswith(renglon[:len(resto)]) else ""
+            if not tramo:
+                break
+            d.text((X, y + round(i * f.size * SALTO)), tramo, font=f, fill=t["volanta"] + (a,))
+            resto = resto[len(tramo):].lstrip()
+
+
+def texto_portada(g: dict) -> str:
+    """El texto SEO de la miniatura (agro/guion.py, «portada»), o el titular si no vino."""
+    return (g.get("portada_seo") or g.get("titular") or "").strip()
 
 
 def cuadro_bloque(imagen, volanta: str, titular: str, tema: str = "blanco", leyenda_img: str = "",
-                  proporcion: float = 4 / 3) -> Image.Image:
-    """El cuadro 4:5 fijo (portada del reel, primera diapositiva del carrusel)."""
+                  proporcion: float = 4 / 3, tope: tuple = TITULAR) -> Image.Image:
+    """El cuadro 4:5 fijo (portada del reel, primera diapositiva del carrusel). `tope=PORTADA`: la
+    letra grande de la miniatura."""
     alto_img = round(W / proporcion)
-    plan = plan_bloque(volanta, titular, tema, alto_img)
+    plan = plan_bloque(volanta, titular, tema, alto_img, tope=tope)
     lienzo = base_bloque(plan)
     if imagen is not None:
         im = imagen if isinstance(imagen, Image.Image) else Image.open(imagen).convert("RGB")

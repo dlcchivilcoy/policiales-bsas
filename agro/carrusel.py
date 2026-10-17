@@ -143,8 +143,8 @@ def _pildora_deslizar(im: Image.Image, y_base: int):
 
 
 def tapa(imagen, volanta: str, gancho: str, tema: str, leyenda: str, destino: Path) -> Path:
-    im = D.cuadro_bloque(imagen, volanta, gancho, tema, "")
-    plan = D.plan_bloque(volanta, gancho, tema, round(D.W * 3 / 4))
+    im = D.cuadro_bloque(imagen, volanta, gancho, tema, "", tope=D.PORTADA)
+    plan = D.plan_bloque(volanta, gancho, tema, round(D.W * 3 / 4), tope=D.PORTADA)
     _pildora_deslizar(im, plan["alto_imagen"])
     D.leyenda(im, leyenda, plan["alto_imagen"])
     return _guardar(im, destino)
@@ -235,8 +235,9 @@ def armar(g: dict, c: dict, imagen, carpeta: Path, base: str, tema: str = "blanc
     """Los .jpg del carrusel, en orden: tapa, diapositivas, cierre."""
     carpeta = Path(carpeta)
     n = len(c["diapositivas"]) + 2
-    archivos = [tapa(imagen, g.get("volanta"), c.get("gancho") or g.get("titular", ""), tema, leyenda,
-                     carpeta / f"{base}_c01.jpg")]
+    # La tapa es la MINIATURA del carrusel en la grilla: el texto SEO (palabra clave primero).
+    archivos = [tapa(imagen, g.get("volanta"), D.texto_portada(g) if g.get("portada_seo") else
+                     (c.get("gancho") or g.get("titular", "")), tema, leyenda, carpeta / f"{base}_c01.jpg")]
     for i, x in enumerate(c["diapositivas"], 2):
         archivos.append(diapositiva(x, i, n, tema, carpeta / f"{base}_c{i:02d}.jpg"))
     archivos.append(cierre(c.get("pregunta", ""), n, tema, carpeta / f"{base}_c{n:02d}.jpg"))

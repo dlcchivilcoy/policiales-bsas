@@ -6,7 +6,8 @@ Arriba la imagen a todo el ancho (con un acercamiento lento) o el video de la fu
 abajo la línea naranja y el bloque blanco o grafito —se alternan de un posteo al otro— con la marca.
 En el bloque el texto cambia por tramos, con un fundido corto:
 
-    0-5 s     VOLANTA + TITULAR (lo que se ve en la grilla)
+    0-5 s     LA PORTADA: volanta + el texto SEO de la miniatura en letra grande, ya visible en el
+              primer cuadro (sin fundido: es el que toman Facebook y YouTube si no hay portada)
     5-9,5 s   QUÉ PASÓ
     9,5-14,5  LOS DATOS (aparecen de a uno)
     14,5-19   POR QUÉ IMPORTA
@@ -131,7 +132,8 @@ def armar(guion: dict, imagen, salida: Path, origen: str = "ia", credito: str = 
     salida.parent.mkdir(parents=True, exist_ok=True)
     total = sum(s for _, s in TRAMOS)
     cuadros = round(total * FPS)
-    plan = D.plan_bloque(guion.get("volanta"), guion.get("titular", ""), tema, round(D.W / PROPORCION))
+    plan = D.plan_bloque(guion.get("volanta"), D.texto_portada(guion), tema, round(D.W / PROPORCION),
+                         tope=D.PORTADA)
     hm = plan["alto_imagen"]
     base = D.base_bloque(plan)
     leyenda = D.texto_leyenda("video" if clip else origen, credito)
@@ -174,14 +176,14 @@ def armar(guion: dict, imagen, salida: Path, origen: str = "ia", credito: str = 
                     ti = t - desde
                     if ti < 0:
                         continue
-                    a = min(1.0, ti / FUNDIDO)
+                    a = 1.0 if (tramo == "titular" and desde == 0) else min(1.0, ti / FUNDIDO)
                     if a < 1:
                         capa = capa.copy()
                         capa.putalpha(capa.getchannel("A").point(lambda v, a=a: round(v * a)))
                     lienzo.alpha_composite(capa)
                 cuadro = lienzo.convert("RGB")
                 ultimo_rgb = cuadro
-            if vista is None and tramo == "titular" and t >= min(1.0, TRAMOS[0][1] / 2):
+            if vista is None and tramo == "titular":
                 vista = cuadro.copy()
             proc.stdin.write(cuadro.tobytes())
         proc.stdin.close()

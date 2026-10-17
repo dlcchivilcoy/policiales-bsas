@@ -27,6 +27,10 @@ sanidad, norma) pasa primera en la selección.
 - **Reel** (`agro/reel.py`, `agro/diseno.py`): 4:5 estilo policiales (imagen arriba, línea naranja,
   bloque blanco o grafito alternado con la marca agro), 22 s: titular → qué pasó → datos → por qué
   importa → cierre.
+- **Miniatura** (`agro/portada.py`): imagen + texto SEO corto que arranca con la palabra clave
+  («Soja: arranca la siembra con 2% más de área», la clave en naranja), en letra grande. Es la portada
+  del reel en Instagram (`cover_url`), la miniatura del Short y de Facebook, el primer cuadro del video y
+  la tapa del carrusel. El texto lo escribe la IA en el campo `portada` del guion.
 - **Imagen** (`agro/imagen.py`): foto de fuente oficial con crédito; foto de otro medio RECREADA con IA
   (Cloudflare FLUX.2 klein: misma escena, otro encuadre y otra luz, sin letras; la original nunca se
   publica); si no, escena con IA, escena segura o el banco. Video: solo el de fuentes oficiales.

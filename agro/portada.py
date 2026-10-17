@@ -16,10 +16,11 @@ USUARIO = D.USUARIO
 
 def armar(datos: dict, imagen, salida: Path, ia: bool = False, credito: str = "", origen: str = "",
           tema: str = "blanco") -> Path:
-    """datos: volanta, titular. imagen: ruta (o None: solo el bloque, nunca debería pasar)."""
+    """datos: volanta, portada_seo (o titular). imagen: ruta (o None: solo el bloque, nunca debería pasar).
+    Es la MINIATURA: el texto corto con la palabra clave, en letra grande (17/10/2026)."""
     origen = origen or ("ia" if ia else "fuente")
-    cuadro = D.cuadro_bloque(imagen, datos.get("volanta"), datos.get("titular", ""), tema,
-                             D.texto_leyenda(origen, credito))
+    cuadro = D.cuadro_bloque(imagen, datos.get("volanta"), D.texto_portada(datos), tema,
+                             D.texto_leyenda(origen, credito), tope=D.PORTADA)
     salida = Path(salida)
     salida.parent.mkdir(parents=True, exist_ok=True)
     cuadro.convert("RGB").save(salida, "JPEG", quality=92)

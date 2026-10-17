@@ -33,6 +33,7 @@ Facebook, YouTube Shorts y la web. Devolvés EXACTAMENTE este JSON:
   "motivo": "SOLO si apta es false: por qué",
   "volanta": "la categoría en 1 a 3 palabras (AgTech, Mercados, Ganadería, Maquinaria, Clima, Empresas, Agricultura…)",
   "titular": "MÁXIMO 12 palabras, periodístico, fiel, sin punto final; nombra lo concreto (el cultivo, el producto, el animal, el lugar)",
+  "portada": "el TEXTO DE LA MINIATURA, ver abajo",
   "bajada": "MÁXIMO 25 palabras, cerrada en punto",
   "descripcion": "el texto de Instagram, ver abajo",
   "hashtags": ["#Agro", "#CampoArgentino"],
@@ -50,6 +51,13 @@ Facebook, YouTube Shorts y la web. Devolvés EXACTAMENTE este JSON:
   "datos_contradictorios": false,
   "detalle_contradiccion": "SOLO si hay contradicción: cuál"
 }
+
+PORTADA (la miniatura que se ve en la grilla del perfil, en el feed y en la búsqueda de Instagram,
+YouTube y Google): de 4 a 8 palabras que se lean de un vistazo. ARRANCÁ con la palabra clave que la
+gente busca (el cultivo, el producto, el tema o el lugar: «Soja», «Trigo», «Maíz», «Dólar»,
+«Retenciones», «Hacienda», «Drones», «Lluvias», «Chivilcoy»), seguida de dos puntos o del dato más
+fuerte con su cifra si la hay («Soja: arranca la siembra con 2% más de área», «Trigo: lluvias de hasta
+102 mm frenan el daño»). Fiel a la nota, sin punto final, sin clickbait, sin emojis.
 
 DESCRIPCIÓN (Instagram): entre 900 y 1.800 caracteres cuando el material alcanza (si no alcanza, más
 corta pero sin relleno). Párrafos cortos separados por un renglón en blanco, en este orden: un gancho
@@ -240,6 +248,7 @@ def _salida(datos: dict, via: str) -> dict:
     s["datos_clave"] = [" ".join(str(d).split()) for d in (datos.get("datos_clave") or [])
                         if isinstance(d, (str, int, float)) and str(d).strip()][:12]
     s["reel"] = _texto_reel(datos.get("reel"))
+    s["portada_seo"] = recortar_palabras(" ".join(G.texto_ia(datos.get("portada")).split()), 9).rstrip(" .")
     s["prompt_imagen"] = " ".join(G.texto_ia(datos.get("prompt_imagen")).split())[:600]
     apta = datos.get("apta", True)
     s["apta"] = not (apta is False or str(apta).strip().lower() in ("false", "no", "0"))
@@ -324,6 +333,7 @@ def generar(rep: dict, cuerpo: str, otras: list, score: dict, redactar=None) -> 
     # Lo que queda fuera de medida se recorta acá (nunca sale un titular de 20 palabras).
     g["titular"] = recortar_palabras(g["titular"] or rep["titulo"], MAX_PALABRAS_TITULAR)
     g["bajada"] = G._cerrar_en_punto(recortar_palabras(g["bajada"], MAX_PALABRAS_BAJADA), 300)
+    g["portada_seo"] = g.get("portada_seo") or recortar_palabras(g["titular"], 9)
     g["copia"], g["faltan_datos"], g["formato"] = copia, faltan, formato
     g["reparaciones_copia"] = g_reparaciones
     if copia["racha"] >= G.UMBRAL_COPIA_BLOQUEO or medio:

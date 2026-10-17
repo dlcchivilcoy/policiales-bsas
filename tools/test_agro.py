@@ -906,11 +906,13 @@ chequear("el reel 4:5 le avisa a Facebook su alto (va con bandas a 9:16)", _pp["
 _orig_pub = (PUBA.publicar_carrusel, PUBA.publicar_reel, PUBA._subir_portada)
 try:
     PUBA.publicar_carrusel = lambda pieza, ya=None, log=print: {"instagram": {"id": "car"}}
-    PUBA.publicar_reel = lambda pieza, ya=None, redes=None, log=print: {"instagram": {"id": "reel"}}
+    PUBA.publicar_reel = lambda pieza, ya=None, redes=None, log=print, portada_url="": {
+        "instagram": {"id": "reel", "cover": portada_url}}
     PUBA._subir_portada = lambda pieza: "https://release/portada.jpg"
     chequear("publicar elige por formato y devuelve la portada subida",
              PUBA.publicar({"formato": "carrusel"})["instagram"]["id"] == "car"
-             and PUBA.publicar({"formato": "reel"}) == {"instagram": {"id": "reel"}, "portada_url": "https://release/portada.jpg"})
+             and PUBA.publicar({"formato": "reel"}) == {"instagram": {"id": "reel", "cover": "https://release/portada.jpg"},
+                                                        "portada_url": "https://release/portada.jpg"})
 finally:
     PUBA.publicar_carrusel, PUBA.publicar_reel, PUBA._subir_portada = _orig_pub
 
@@ -925,6 +927,30 @@ for _mio, _rem in ((_a, _b2), (_b2, _a)):
     chequear("combinar agro.json: historias publicadas, datos del mercado y el tema del último posteo",
              _c3["historias"]["h1"]["publicado"]["estado"] == "listo" and set(_c3["historias"]) == {"h1", "h2"}
              and set(_c3["mercado"]["pizarra"]) == {"2026-10-15", "2026-10-16"} and _c3["tema_ultimo"] == "grafito")
+
+# --- la miniatura con texto SEO (17/10/2026) ------------------------------------------------------
+from agro import diseno as DIS  # noqa: E402
+from reels import publicador as _PB  # noqa: E402
+
+_gs = GU._salida(dict(BUENA, portada="Soja: arranca la siembra con 2% más de área en la zona núcleo hoy"), "x")
+chequear("guion: el texto de la miniatura (hasta 9 palabras, palabra clave primero)",
+         _gs["portada_seo"].startswith("Soja:") and len(_gs["portada_seo"].split()) <= 9)
+chequear("sin texto de miniatura, va el titular", DIS.texto_portada({"titular": "Trigo en alza"}) == "Trigo en alza")
+_pl = DIS.plan_bloque("Agricultura", "Soja: arranca la siembra", "blanco", 810, tope=DIS.PORTADA)
+chequear("miniatura: letra más grande que el titular y la clave en naranja",
+         _pl["f_tit"].size >= DIS.TITULAR[0] and _pl["clave"] == "Soja:"
+         and DIS.plan_bloque("x", "Soja: algo", "blanco", 810)["clave"] == "")
+_guard = (_PB.subir_a_release, _PB._contenedor_listo, _PB._publicar_contenedor)
+try:
+    _params = []
+    _PB.subir_a_release = lambda f, n: "https://release/" + n
+    _PB._contenedor_listo = lambda uid, tok, params: _params.append(dict(params)) or "c1"
+    _PB._publicar_contenedor = lambda uid, tok, cid, cap: "m1"
+    _r = PUBA._reel_instagram({"descripcion_tiktok": "texto"}, Path("x.mp4"), "agro_x.mp4", "https://release/portada.jpg")
+    chequear("Instagram: el reel sale con la portada propia como miniatura (cover_url)",
+             _params[0].get("cover_url") == "https://release/portada.jpg" and _r == {"id": "m1", "portada": "propia"})
+finally:
+    _PB.subir_a_release, _PB._contenedor_listo, _PB._publicar_contenedor = _guard
 
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)
