@@ -39,6 +39,9 @@ on:
       origen:
         description: "quién la dispara (cron = cron-job.org)"
         default: "manual"
+      tipo:
+        description: 'solo para simular: "reel", "carrusel" o "historias" (vacío = lo que toca a esta hora)'
+        default: ""
 
 # Grupo propio: no hace fila detrás de policiales y dos disparos juntos no publican dos veces.
 concurrency:
@@ -94,11 +97,14 @@ jobs:
           AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          TIPO_INPUT: ${{ github.event.inputs.tipo }}
         run: |
           set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
           ARGS=""
           if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
             ARGS="--publicar"
+          elif [ -n "$TIPO_INPUT" ]; then
+            ARGS="--tipo $TIPO_INPUT"
           fi
           echo "python -m agro.pasada $ARGS"
           python -m agro.pasada $ARGS | tee informe_agro.md
