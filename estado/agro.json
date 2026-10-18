@@ -5772,6 +5772,52 @@
         69,
         73
       ]
+    },
+    "471852e5b6c39b8b": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 1,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 27,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "horticultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de vida inspiradora pero de muy bajo impacto productivo y comercial para la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "af0db0138929f7b0": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 79,
+      "commercial_score": 80,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca un tema crucial y de máxima actualidad para la ganadería exportadora como las exigencias de trazabilidad de la UE.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        80,
+        77
+      ]
     }
   },
   "indice": {
@@ -6188,7 +6234,9 @@
       "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
       "https://bichosdecampo.com/para-seguir-de-cerca-tres-modelos-climaticos-preven-lluvias-menores-a-las-normales-en-las-regiones-productoras-de-soja-de-mato-grosso-para-las-proximas-dos-semanas": "2026-10-18",
       "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026": "2026-10-18",
-      "https://lacapital.com.ar/agro/afa-escala-convocan-presentar-ideas-innovadoras-el-agro-n10287254.html": "2026-10-18"
+      "https://lacapital.com.ar/agro/afa-escala-convocan-presentar-ideas-innovadoras-el-agro-n10287254.html": "2026-10-18",
+      "https://bichosdecampo.com/despues-de-toda-una-carrera-como-forestal-wilmar-diaz-perera-se-reinvento-como-huertero-cerca-de-virasoro-pero-no-le-resulta-facil-crecer": "2026-10-18",
+      "https://bichosdecampo.com/el-frigorifico-rioplatense-llevo-a-paris-500-kilos-de-carne-de-novillo-que-ya-cumplian-con-las-exigencias-antideforestacion-de-la-ue-los-importadores-europeos-ya-las-exigen-explico-stanley-hogg": "2026-10-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6603,7 +6651,9 @@
       "clima hoy en buenos aires el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
       "para seguir de cerca tres modelos climaticos preven lluvias menores a las normales en las regiones productoras de soja de mato grosso para las proximas dos semanas": "2026-10-18",
       "el costo de producir granos en la argentina se acerca al de sus competidores": "2026-10-18",
-      "afa escala convocan a presentar ideas innovadoras para el agro": "2026-10-18"
+      "afa escala convocan a presentar ideas innovadoras para el agro": "2026-10-18",
+      "despues de toda una carrera como forestal wilmar diaz perera se reinvento como huertero cerca de virasoro pero no le resulta facil crecer": "2026-10-18",
+      "el frigorifico rioplatense llevo a paris 500 kilos de carne de novillo que ya cumplian con las exigencias antideforestacion de la ue los importadores europeos ya las exigen explico stanley hogg": "2026-10-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -7018,7 +7068,9 @@
       "2b7a64371c22b26c": "2026-10-18",
       "11909af4472565f7": "2026-10-18",
       "3dd07fea4f1d999e": "2026-10-18",
-      "65fc02db62c40cb0": "2026-10-18"
+      "65fc02db62c40cb0": "2026-10-18",
+      "471852e5b6c39b8b": "2026-10-18",
+      "af0db0138929f7b0": "2026-10-18"
     }
   },
   "elegidas": [
@@ -8224,6 +8276,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_306aa26b4dc5_portada.jpg"
+    },
+    {
+      "id": "2813c65a2411",
+      "cuando": "2026-10-18T09:00-03:00",
+      "titulo_original": "El frigorífico Rioplatense llevó a París 500 kilos de carne de novillo que ya cumplían con las exigencias antideforestación de la UE: “Los importadores europeos ya las exigen”, explicó Stanley Hogg",
+      "descripcion": "El frigorífico Rioplatense aportó 500 kilos de carne vacuna para servir a los importadores europeos durante la estratégica exposición SIAL de París. Pero detrás de ese embarque hubo algo más que una muestra de la calidad del producto argentino: la necesidad de demostrar que la carne cumple con los r",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-frigorifico-rioplatense-llevo-a-paris-500-kilos-de-carne-de-novillo-que-ya-cumplian-con-las-exigencias-antideforestacion-de-la-ue-los-importadores-europeos-ya-las-exigen-explico-stanley-hogg/",
+      "titular": "Frigorífico Rioplatense envió carne a París bajo exigencia europea",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 79,
+        "commercial_score": 80,
+        "subtema": "ganaderia",
+        "tema": "exportación carne",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca un tema crucial y de máxima actualidad para la ganadería exportadora como las exigencias de trazabilidad de la UE.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          80,
+          77
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-18T09:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b355a924-69fb-44bb-b43c-862727b7b5f2",
+          "slug": "frigorifico-rioplatense-envio-carne-a-paris-bajo-la-exigencia-e39007",
+          "url": "https://www.diariolacampaña.com.ar/n/frigorifico-rioplatense-envio-carne-a-paris-bajo-la-exigencia-e39007",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17978650106919118",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1727261672738163",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2813c65a2411_portada.jpg"
     }
   ],
   "pendientes": [
@@ -8295,8 +8405,8 @@
       "cuando": "2026-10-18T08:00-03:00"
     }
   ],
-  "actualizado": "2026-10-18T08:03:54-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-18T09:03:43-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
