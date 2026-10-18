@@ -1428,5 +1428,27 @@ shutil.rmtree(base)
 os.environ["FILA_15"] = "0"
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "6"
 
+# --- 33. Instagram SIN links, para todo lo que sale de este repo (18/10/2026) -------------------------------
+cap_racing = ("La tribuna de Racing atraviesa una disputa.\n\n📲 Leé la nota completa: "
+              "https://www.diariolacampaña.com.ar/n/racing-quien-es-el-nuevo-jefe-78b5fd\n\n#Racing #Deportes")
+limpio = PUB.caption_sin_links(cap_racing)
+chequear("IG sin links: el renglón de la nota pasa a ser el sitio, antes de los hashtags",
+         "/n/" not in limpio and "http" not in limpio
+         and limpio.endswith("📲 Más noticias en www.diariolacampaña.com.ar\n\n#Racing #Deportes"))
+pol = "Detuvieron a un joven.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco"
+chequear("IG sin links: el sitio pelado se respeta (el texto de policiales queda igual)", PUB.caption_sin_links(pol) == pol)
+chequear("IG sin links: un renglón con otro link (YouTube) se saca entero",
+         PUB.caption_sin_links("Texto.\n📺 El canal 👉 https://youtube.com/@x\n\n#Tag")
+         == "Texto.\n\n📲 Más noticias en www.diariolacampaña.com.ar\n\n#Tag")
+mandados = []
+_pedir_real, _estado_real = PUB._pedir, PUB._estado_contenedor
+PUB._pedir = lambda m, u, tok, **k: mandados.append(k.get("data") or {}) or type(
+    "R", (), {"status_code": 200, "json": lambda s: {"id": "c1"}})()
+PUB._estado_contenedor = lambda cid, tok: ("FINISHED", "")
+PUB._contenedor_listo("u", "t", {"media_type": "REELS", "video_url": "https://gh/v.mp4", "caption": cap_racing})
+PUB._pedir, PUB._estado_contenedor = _pedir_real, _estado_real
+chequear("IG sin links: la última barrera (el contenedor) limpia el texto venga de donde venga",
+         mandados and "/n/" not in mandados[0]["caption"] and "www.diariolacampaña.com.ar" in mandados[0]["caption"])
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

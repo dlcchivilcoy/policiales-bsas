@@ -367,6 +367,8 @@ def _contenedor_listo(uid: str, tok: str, params: dict) -> str:
     """Crea el contenedor y espera a que Instagram procese el video. Si termina en
     ERROR, crea uno NUEVO: el que fallo no se puede reusar."""
     ultimo = ""
+    if params.get("caption"):
+        params = dict(params, caption=caption_sin_links(params["caption"]))    # Instagram: nunca un link
     for i in range(len(ESPERAS_CONTENEDOR) + 1):
         if i:
             _dormir(ESPERAS_CONTENEDOR[i - 1])
@@ -400,8 +402,55 @@ def _contenedor_listo(uid: str, tok: str, params: dict) -> str:
     raise FalloRed(f"Instagram: {ultimo}")
 
 
+# INSTAGRAM SIN LINKS (regla del editor, 18/10/2026: «sacá el link a la nota en los reels o carruseles de
+# IG… para todas las categorías»): en Instagram los links no se pueden tocar; va el sitio y nada más. Es la
+# ÚLTIMA barrera: todo lo que sale a Instagram desde este repo (policiales, nacionales, agro, archivo) pasa
+# por _contenedor_listo, que limpia el texto acá, venga de donde venga.
+_LINK = re.compile(r"(?:https?://|www\.)\S+", re.I)
+_LINK_INVITA = re.compile(r"(nota completa|seguí leyendo|segui leyendo|leé|lee la nota|leela|más info|mas info|"
+                          r"más noticias|mas noticias|en nuestra web|link)", re.I)
+
+
+def _es_link_prohibido(url: str) -> bool:
+    """El sitio pelado (www.diariolacampaña.com.ar) se permite; cualquier otra dirección, no."""
+    limpio = url.rstrip(".,;:)»\"'").lower()
+    limpio = re.sub(r"^https?://", "", limpio).rstrip("/")
+    return limpio not in {WEB.SITIO.lower(), WEB.SITIO.lower().removeprefix("www."),
+                          "www.diariolacampana.com.ar", "diariolacampana.com.ar"}
+
+
+def caption_sin_links(texto: str) -> str:
+    """El texto de Instagram sin links: el renglón que invita a la nota pasa a ser «📲 Más noticias en
+    <sitio>»; otro renglón corto con un link (el canal de YouTube…) se saca; en un párrafo largo se saca
+    solo la dirección."""
+    if not texto or not any(_es_link_prohibido(u) for u in _LINK.findall(texto)):
+        return texto
+    sitio = f"📲 Más noticias en {WEB.SITIO}"
+    salida, puso_sitio = [], False
+    for renglon in texto.split("\n"):
+        links = [u for u in _LINK.findall(renglon) if _es_link_prohibido(u)]
+        if not links:
+            salida.append(renglon)
+            continue
+        if len(renglon) > 160:                        # un párrafo con una dirección adentro
+            for u in links:
+                renglon = renglon.replace(u, "")
+            salida.append(" ".join(renglon.split()))
+            continue
+        if _LINK_INVITA.search(renglon) and not puso_sitio:
+            salida.append(sitio)
+            puso_sitio = True
+    texto = "\n".join(salida)
+    if WEB.SITIO.lower() not in texto.lower():
+        partes = texto.rstrip().split("\n\n")
+        j = len(partes) - 1 if partes and partes[-1].lstrip().startswith("#") else len(partes)
+        partes.insert(j, sitio)
+        texto = "\n\n".join(partes)
+    return re.sub(r"\n{3,}", "\n\n", texto).strip()
+
+
 def _clave_caption(texto: str) -> str:
-    return " ".join((texto or "").split())[:80].lower()
+    return " ".join((caption_sin_links(texto) or "").split())[:80].lower()
 
 
 def _buscar_media(uid: str, tok: str, caption: str) -> str:
