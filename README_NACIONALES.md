@@ -3,6 +3,17 @@
 Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales` de
 `.github/workflows/reels.yml` (corre en las mismas pasadas que policiales, en paralelo).
 
+> **18/10/2026 — VARIEDAD rehecha a pedido del editor** (`nacionales/categorias.py`): deportes, espectáculos,
+> cine y series, **mundo** (internacionales), **virales** e IA para comercios, de Infobae, **La Nación**, **El
+> Cronista** y los blogs de **Zapier, HubSpot y n8n**. **Cupo propio** (~10 por día, hasta 2 por corrida,
+> aparte de las 12 nacionales; topes: deportes 2, espectáculos 2, mundo 2, virales 2, cine y series 1, IA 1),
+> intercaladas en la tanda (segunda y cuarta). **Foto y video ORIGINALES de la nota** (el MP4 del reproductor
+> propio del portal; nada generado con IA). **Instagram**: con video → **reel**; sin video → **carrusel
+> explicativo** (portada + 4-6 láminas con la foto original, `placa.lamina_texto`); un **viral sin su video no
+> sale**. Además: Short, nota en su sección (Mundo y Virales creadas el 18/10, diario_web 9314c3e), Facebook si
+> está entre las 2 más virales y TikTok/X por Buffer. `NAC_INSTAGRAM=0` apaga el Instagram de la variedad. El
+> carrusel de las 22 sale a su hora aunque la tanda de las 21:05 siga.
+>
 > **17/10/2026 — categorías nuevas (PDF «Prompt integral», etapa 4)** en `nacionales/categorias.py`:
 > deportes (Infobae `deportes`, solo con protagonista argentino, sin «en vivo»), espectáculos
 > (`teleshow`, sin galerías ni chicanas), cine y series (`que-puedo-ver`, 72 h) e IA aplicada a

@@ -405,7 +405,7 @@ os.environ["NAC_CUPO_DEPORTES"] = "1"
 chequear("rotación: sin cupo hoy, la categoría no va; la que hace más que no sale, primero",
          CAT.orden_de_rotacion([{"categoria": "deportes"}], {"espectaculos": "2026-10-07T10:00",
                                                              "cine_series": "2026-10-05T10:00"})
-         == ["tecnologia_ia", "cine_series", "espectaculos"])
+         == ["tecnologia_ia", "internacionales", "virales", "cine_series", "espectaculos"])
 os.environ.pop("NAC_CUPO_DEPORTES")
 chequear("web: cada categoría va a su sección (Deportes, Espectáculos, Cine y series, Tecnología)",
          CAT.seccion_web("deportes") == "094f631e-1b56-485f-8777-6e167802455e"
@@ -434,10 +434,12 @@ generales = [nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo
              nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "g3")]
 variadas = [nota_cat("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "v1"),
             nota_cat("MasterChef Junior volvió a la pantalla con Vero Lozano", "teleshow", "v2")]
-inf = PA.pasada(True, redactar=redactar_cat, notas=generales, notas_variedad=variadas)
+sin_pagina = lambda url: {"video": "", "imagen": ""}      # noqa: E731 — nunca la red en las pruebas
+inf = PA.pasada(True, redactar=redactar_cat, notas=generales, notas_variedad=variadas, leer_pagina=sin_pagina)
 cats = [p.get("categoria") for p in inf["piezas"]]
-chequear("pasada: siguen siendo 3 piezas (la categoría nueva reemplaza, no suma)", len(inf["piezas"]) == 3, )
-chequear("pasada: la de otra categoría va SEGUNDA, entre dos nacionales", cats == ["", "deportes", ""])
+chequear("pasada: 3 nacionales + 2 de variedad (cupo propio desde el 18/10, no le quita a las nacionales)",
+         len(inf["piezas"]) == 5)
+chequear("pasada: la variedad va intercalada (segunda y cuarta)", cats == ["", "deportes", "", "espectaculos", ""])
 chequear("pasada: la nota de deportes va a la sección Deportes de la web",
          ("094f631e-1b56-485f-8777-6e167802455e", WEB.NACIONALES_AUTO_ID) in [l[1] for l in llamadas if l[0] == "web"])
 chequear("guion: a la IA le llegan las reglas de la categoría (resultado final, confirmado…)",
@@ -445,16 +447,46 @@ chequear("guion: a la IA le llegan las reglas de la categoría (resultado final,
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 chequear("guion: la sección la fija la categoría, no la IA",
          any(p.get("seccion") == "Deportes" and p.get("categoria") == "deportes" for p in mem["piezas"].values()))
-reloj["ahora"] += timedelta(hours=3)
-inf2 = PA.pasada(True, redactar=redactar_cat, notas=[], notas_variedad=variadas)
 buzon = json.loads(PA.DIST.BUZON.read_text(encoding="utf-8"))["eventos"]
 chequear("TikTok por Buffer: cada pieza publicada va al buzón como «nacionales», solo TikTok",
          len([e for e in buzon if e["origen"] == "nacionales"]) >= 3
          and all(e["plataformas"] == ["tiktok"] and e["video_url"].startswith("https://gh/") for e in buzon
                  if e["origen"] == "nacionales")
          and any(e.get("categoria") == "Deportes" for e in buzon))
-chequear("rotación: la pasada siguiente lleva otra categoría (espectáculos)",
-         [p.get("categoria") for p in inf2["piezas"]] == ["espectaculos"])
+# 18/10/2026: con VIDEO original → reel en Instagram; sin video → carrusel explicativo; viral sin video → no.
+reloj["ahora"] += timedelta(hours=3)
+FL._bajar_video = lambda url, destino: (Path(destino).write_bytes(b"video-original") or Path(destino))
+LAMINAS = [{"titulo": f"Lámina {i}", "texto": "Texto explicativo de la lámina con los datos del hecho y su contexto."}
+           for i in range(1, 5)]
+
+
+def redactar_lam(system, material):
+    datos, via = redactar_cat(system, material)
+    return dict(datos, laminas=LAMINAS), via
+
+
+variadas2 = [dict(nota_cat("Elecciones en Estados Unidos: qué votan este martes", "america", "v3"), categoria="internacionales"),
+             dict(nota_cat("El video del perro que aprendió a abrir la heladera", "virales", "v4"), categoria="virales"),
+             dict(nota_cat("Cómo usar la IA para responder clientes por WhatsApp", "tecno", "v5"), categoria="tecnologia_ia")]
+paginas = {variadas2[0]["url"]: {"video": "https://cdn.jwplayer.com/videos/abc.mp4", "imagen": ""},
+           variadas2[1]["url"]: {"video": "", "imagen": ""}, variadas2[2]["url"]: {"video": "", "imagen": ""}}
+antes_ia = len(sistemas)
+llamadas.clear()
+os.environ["NAC_VARIEDAD_POR_PASADA"] = "3"
+inf2 = PA.pasada(True, redactar=redactar_lam, notas=[], notas_variedad=variadas2, leer_pagina=lambda u: paginas[u])
+os.environ.pop("NAC_VARIEDAD_POR_PASADA")
+por_cat = {p.get("categoria"): p for p in inf2["piezas"]}
+chequear("viral SIN su video original: no sale, y no se gasta la IA",
+         "virales" not in por_cat and any("viral sin el video original" in d["motivo"] for d in inf2["descartadas"]))
+chequear("internacional CON video original: reel en Instagram con ese video",
+         por_cat.get("internacionales", {}).get("formato") == "reel"
+         and (por_cat["internacionales"].get("instagram") or {}).get("estado") == "ok"
+         and por_cat["internacionales"].get("video_original") == "https://cdn.jwplayer.com/videos/abc.mp4")
+chequear("IA sin video: carrusel explicativo (portada + 4 láminas) en Instagram",
+         por_cat.get("tecnologia_ia", {}).get("formato") == "carrusel"
+         and sum(1 for l in llamadas if l == ("ig_contenedor", "hijo")) >= 5
+         and ("ig_contenedor", "CAROUSEL") in llamadas)
+chequear("la IA se usó solo para las dos que salen", len(sistemas) - antes_ia == 2)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 chequear("carrusel «Noticias nacionales de hoy»: sin deportes ni espectáculos",
          not any(p.get("categoria") for _u, p in PA.para_el_carrusel(mem)))

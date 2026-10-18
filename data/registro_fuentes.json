@@ -1,51 +1,237 @@
 {
-  "nota": "Registro de fuentes del PDF «Prompt integral» (17/10/2026). «habilitada» = probada ese día con su adaptador y en uso; «candidata» = nombrada en el PDF, sin adaptador ni prueba; «pendiente_licencia» = requiere contratación: no se ejecuta. Los 94 medios locales de policiales están en scraper/medios.py; el Archivo Literario, en archivo/fuente.py.",
-  "validado": "2026-10-17",
-  "fuentes": [
-    {"nombre": "Infobae", "dominio": "infobae.com", "metodo": "RSS de sección (Arc outboundfeeds)", "acceso": "público; robots.txt permite todo menos /buscador", "estado": "habilitada",
-     "secciones": {
-       "politica": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "economia": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "sociedad": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "sociedad/policiales": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "judiciales": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "salud": {"categoria": "nacionales", "prueba": "en uso desde 06/10/2026"},
-       "deportes": {"categoria": "deportes", "prueba": "200, 100 notas en 2,8 días"},
-       "teleshow": {"categoria": "espectaculos", "prueba": "200, 100 notas en 2,9 días"},
-       "que-puedo-ver": {"categoria": "cine_series", "prueba": "200, 100 notas en 39 días (incluye /malditos-nerds/)"},
-       "tecno": {"categoria": "tecnologia_ia", "prueba": "200, 100 notas en 2,7 días; casi nada de IA para comercios (0 de 100 con el filtro estricto el 17/10)"}
-     },
-     "frecuencia": "cada pasada (6 por día)", "credenciales": "no",
-     "condiciones": "se reescribe de cero, sin nombrar al medio; fotos de agencia (AP, Reuters, EFE…) no se usan"},
-    {"nombre": "Archivo Literario Municipal de Chivilcoy", "dominio": "archivoliterariochivilcoy.com", "metodo": "API pública de WordPress", "estado": "habilitada", "categoria": "efemerides",
-     "prueba": "en uso desde 10/10/2026 (reel diario 13:30)"},
-    {"nombre": "Ámbito", "dominio": "ambito.com", "rss": "https://www.ambito.com/contenidos/rss.html", "categoria": "economia", "estado": "candidata"},
-    {"nombre": "El Cronista", "dominio": "cronista.com", "categoria": "empresas", "estado": "candidata"},
-    {"nombre": "La Nación", "dominio": "lanacion.com.ar", "categoria": "nacionales", "estado": "candidata"},
-    {"nombre": "Clarín", "dominio": "clarin.com", "rss": "https://www.clarin.com/rss.html", "categoria": "nacionales", "estado": "candidata"},
-    {"nombre": "TyC Sports", "dominio": "tycsports.com", "categoria": "deportes", "estado": "candidata"},
-    {"nombre": "ESPN Argentina", "dominio": "espn.com.ar", "categoria": "deportes", "estado": "candidata"},
-    {"nombre": "Olé", "dominio": "ole.com.ar", "categoria": "deportes", "estado": "candidata"},
-    {"nombre": "AFA", "dominio": "afa.com.ar", "categoria": "deportes (primaria)", "estado": "candidata"},
-    {"nombre": "Liga Profesional", "dominio": "ligaprofesional.ar", "categoria": "deportes (primaria)", "estado": "candidata"},
-    {"nombre": "Netflix Tudum", "dominio": "netflix.com/tudum", "categoria": "cine_series", "estado": "candidata"},
-    {"nombre": "Zapier Blog", "dominio": "zapier.com/blog", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "Make Blog", "dominio": "make.com/blog", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "Google Workspace Blog", "dominio": "workspace.google.com/blog", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "Microsoft Copilot Blog", "dominio": "microsoft.com/en-us/copilot/blog", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "HubSpot Blog", "dominio": "blog.hubspot.com", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "n8n Blog", "dominio": "blog.n8n.io", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "Shopify Blog", "dominio": "shopify.com/blog", "categoria": "tecnologia_ia", "estado": "candidata"},
-    {"nombre": "INDEC", "dominio": "indec.gob.ar", "categoria": "primaria", "estado": "candidata"},
-    {"nombre": "Boletín Oficial", "dominio": "boletinoficial.gob.ar", "categoria": "primaria", "estado": "candidata"},
-    {"nombre": "EFE", "dominio": "efe.com", "categoria": "internacionales", "estado": "pendiente_licencia"},
-    {"nombre": "Reuters Connect", "dominio": "reutersagency.com", "categoria": "internacionales", "estado": "pendiente_licencia"},
-    {"nombre": "AP Media API", "dominio": "api.ap.org", "categoria": "internacionales", "estado": "pendiente_licencia"},
-    {"nombre": "BBC Syndication", "dominio": "information-syndication.api.bbc.com", "categoria": "internacionales", "estado": "pendiente_licencia"}
-  ],
-  "carencias": [
-    "IA para comercios: Infobae Tecno casi no publica guías prácticas; las fuentes específicas (Zapier, HubSpot, n8n, Shopify…) son candidatas sin adaptador.",
-    "Internacionales y virales: sin categoría todavía (las agencias requieren licencia; los videos virales, autorización de uso).",
-    "Secciones web: Espectáculos, Cine y series y Tecnología creadas el 17/10/2026 (Wix + diario_web 4689c1a)."
-  ]
+ "nota": "Registro de fuentes del PDF «Prompt integral» (17/10/2026). «habilitada» = probada ese día con su adaptador y en uso; «candidata» = nombrada en el PDF, sin adaptador ni prueba; «pendiente_licencia» = requiere contratación: no se ejecuta. Los 94 medios locales de policiales están en scraper/medios.py; el Archivo Literario, en archivo/fuente.py.",
+ "validado": "2026-10-18",
+ "fuentes": [
+  {
+   "nombre": "Infobae",
+   "dominio": "infobae.com",
+   "metodo": "RSS de sección (Arc outboundfeeds)",
+   "acceso": "público; robots.txt permite todo menos /buscador",
+   "estado": "habilitada",
+   "secciones": {
+    "politica": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "economia": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "sociedad": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "sociedad/policiales": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "judiciales": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "salud": {
+     "categoria": "nacionales",
+     "prueba": "en uso desde 06/10/2026"
+    },
+    "deportes": {
+     "categoria": "deportes",
+     "prueba": "200, 100 notas en 2,8 días"
+    },
+    "teleshow": {
+     "categoria": "espectaculos",
+     "prueba": "200, 100 notas en 2,9 días"
+    },
+    "que-puedo-ver": {
+     "categoria": "cine_series",
+     "prueba": "200, 100 notas en 39 días (incluye /malditos-nerds/)"
+    },
+    "tecno": {
+     "categoria": "tecnologia_ia",
+     "prueba": "200, 100 notas en 2,7 días; casi nada de IA para comercios (0 de 100 con el filtro estricto el 17/10)"
+    },
+    "america": {
+     "categoria": "internacionales",
+     "prueba": "18/10/2026: 100 notas en 0,9 días"
+    },
+    "virales": {
+     "categoria": "virales",
+     "prueba": "18/10/2026: ~1 por día; video propio (JW Player) en 1 de cada 4"
+    }
+   },
+   "frecuencia": "cada pasada (6 por día)",
+   "credenciales": "no",
+   "condiciones": "se reescribe de cero, sin nombrar al medio; fotos de agencia (AP, Reuters, EFE…) no se usan"
+  },
+  {
+   "nombre": "Archivo Literario Municipal de Chivilcoy",
+   "dominio": "archivoliterariochivilcoy.com",
+   "metodo": "API pública de WordPress",
+   "estado": "habilitada",
+   "categoria": "efemerides",
+   "prueba": "en uso desde 10/10/2026 (reel diario 13:30)"
+  },
+  {
+   "nombre": "Ámbito",
+   "dominio": "ambito.com",
+   "rss": "https://www.ambito.com/contenidos/rss.html",
+   "categoria": "economia",
+   "estado": "candidata",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+  },
+  {
+   "nombre": "El Cronista",
+   "dominio": "cronista.com",
+   "categoria": "empresas",
+   "estado": "habilitada",
+   "prueba": "18/10/2026: news.xml (texto completo), solo IA aplicada"
+  },
+  {
+   "nombre": "La Nación",
+   "dominio": "lanacion.com.ar",
+   "categoria": "nacionales",
+   "estado": "habilitada",
+   "prueba": "18/10/2026: deportes, espectáculos y el-mundo (Arc, texto completo)"
+  },
+  {
+   "nombre": "Clarín",
+   "dominio": "clarin.com",
+   "rss": "https://www.clarin.com/rss.html",
+   "categoria": "nacionales",
+   "estado": "candidata",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+  },
+  {
+   "nombre": "TyC Sports",
+   "dominio": "tycsports.com",
+   "categoria": "deportes",
+   "estado": "pendiente",
+   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)"
+  },
+  {
+   "nombre": "ESPN Argentina",
+   "dominio": "espn.com.ar",
+   "categoria": "deportes",
+   "estado": "pendiente",
+   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)"
+  },
+  {
+   "nombre": "Olé",
+   "dominio": "ole.com.ar",
+   "categoria": "deportes",
+   "estado": "candidata",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+  },
+  {
+   "nombre": "AFA",
+   "dominio": "afa.com.ar",
+   "categoria": "deportes (primaria)",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Liga Profesional",
+   "dominio": "ligaprofesional.ar",
+   "categoria": "deportes (primaria)",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Netflix Tudum",
+   "dominio": "netflix.com/tudum",
+   "categoria": "cine_series",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Zapier Blog",
+   "dominio": "zapier.com/blog",
+   "categoria": "tecnologia_ia",
+   "estado": "habilitada",
+   "prueba": "18/10/2026: feeds/latest (en inglés)"
+  },
+  {
+   "nombre": "Make Blog",
+   "dominio": "make.com/blog",
+   "categoria": "tecnologia_ia",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Google Workspace Blog",
+   "dominio": "workspace.google.com/blog",
+   "categoria": "tecnologia_ia",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Microsoft Copilot Blog",
+   "dominio": "microsoft.com/en-us/copilot/blog",
+   "categoria": "tecnologia_ia",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "HubSpot Blog",
+   "dominio": "blog.hubspot.com",
+   "categoria": "tecnologia_ia",
+   "estado": "habilitada",
+   "prueba": "18/10/2026: marketing/rss.xml (en inglés)"
+  },
+  {
+   "nombre": "n8n Blog",
+   "dominio": "blog.n8n.io",
+   "categoria": "tecnologia_ia",
+   "estado": "habilitada",
+   "prueba": "18/10/2026: blog.n8n.io/rss (en inglés)"
+  },
+  {
+   "nombre": "Shopify Blog",
+   "dominio": "shopify.com/blog",
+   "categoria": "tecnologia_ia",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "INDEC",
+   "dominio": "indec.gob.ar",
+   "categoria": "primaria",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "Boletín Oficial",
+   "dominio": "boletinoficial.gob.ar",
+   "categoria": "primaria",
+   "estado": "candidata"
+  },
+  {
+   "nombre": "EFE",
+   "dominio": "efe.com",
+   "categoria": "internacionales",
+   "estado": "pendiente_licencia"
+  },
+  {
+   "nombre": "Reuters Connect",
+   "dominio": "reutersagency.com",
+   "categoria": "internacionales",
+   "estado": "pendiente_licencia"
+  },
+  {
+   "nombre": "AP Media API",
+   "dominio": "api.ap.org",
+   "categoria": "internacionales",
+   "estado": "pendiente_licencia"
+  },
+  {
+   "nombre": "BBC Syndication",
+   "dominio": "information-syndication.api.bbc.com",
+   "categoria": "internacionales",
+   "estado": "pendiente_licencia"
+  },
+  {
+   "nombre": "BBC Mundo",
+   "dominio": "bbc.com/mundo",
+   "rss": "https://feeds.bbci.co.uk/mundo/rss.xml",
+   "categoria": "internacionales",
+   "estado": "candidata",
+   "prueba": "18/10/2026: RSS de titulares"
+  }
+ ],
+ "carencias": [
+  "IA para comercios: Infobae Tecno casi no publica guías prácticas; las fuentes específicas (Zapier, HubSpot, n8n, Shopify…) son candidatas sin adaptador.",
+  "Virales: Infobae Virales publica ~1 por día y solo 1 de cada 4 trae su video propio: van a salir pocos."
+ ],
+ "videos_y_fotos": "Desde el 18/10/2026 (pedido del editor) se usan la FOTO y el VIDEO originales de la nota: el MP4 del reproductor propio del portal (JW Player en Infobae y La Nación) y la og:image o la del RSS. Los posteos de TikTok, Instagram o X embebidos no se bajan. Las fotos de agencia (AP, Reuters, EFE…) siguen sin usarse: facturan cada foto (decisión del 07/10). Nada generado con IA."
 }

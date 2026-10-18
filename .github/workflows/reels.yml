@@ -384,9 +384,9 @@ jobs:
     needs: respaldo
     if: needs.respaldo.outputs.nacionales == 'true' && ((github.event.inputs.trabajos || 'todos') == 'todos' || github.event.inputs.trabajos == 'nacionales')
     runs-on: ubuntu-latest
-    # 3 piezas a 30 minutos (13/10/2026) + la espera hasta las 22 (hasta 100 min; con 30 minutos la
-    # pasada de las 21:05 ya llega pasadas las 22) + el carrusel.
-    timeout-minutes: 160
+    # Hasta 5 piezas a 30 minutos (3 nacionales + 2 de variedad, 18/10/2026) + la espera hasta las 22 +
+    # el carrusel (sale a su hora en el medio de la tanda si hace falta).
+    timeout-minutes: 210
     steps:
       - uses: actions/checkout@v4
         with:
@@ -401,7 +401,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Noticias nacionales
-        timeout-minutes: 150
+        timeout-minutes: 200
         env:
           PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

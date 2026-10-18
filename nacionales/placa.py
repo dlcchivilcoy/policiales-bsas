@@ -191,6 +191,56 @@ def slide_carrusel(seccion: str, volanta: str, titular: str, bajada: str, destin
     return destino
 
 
+def _foto_arriba(foto, ancho: int, alto: int) -> Image.Image:
+    """La foto ORIGINAL recortada al centro para la franja de arriba (sin deformarla)."""
+    im = Image.open(foto).convert("RGB")
+    escala = max(ancho / im.width, alto / im.height)
+    im = im.resize((round(im.width * escala), round(im.height * escala)), Image.LANCZOS)
+    x, y = (im.width - ancho) // 2, max(0, round((im.height - alto) * 0.35))   # un poco arriba: caras
+    return im.crop((x, y, x + ancho, y + alto))
+
+
+def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: int, total: int,
+                 foto=None, sitio: str = "", semilla: int = 0) -> Path:
+    """Una lámina del CARRUSEL EXPLICATIVO (18/10/2026, variedad sin video): 1080x1350, estilo bloque
+    como los reels 4:5 — la foto ORIGINAL de la nota arriba, la línea naranja y el bloque grafito con el
+    título de la lámina, el texto y el número (2/6). Sin foto: el fondo propio arriba. La última lleva
+    el sitio para seguir leyendo; las demás, «Deslizá».
+    """
+    W, H, M = 1080, 1350, 72
+    ALTO_FOTO = 560
+    img = Image.new("RGB", (W, H), GRAFITO)
+    arriba = _foto_arriba(foto, W, ALTO_FOTO) if foto else fondo(seccion, (W, ALTO_FOTO), semilla, etiqueta=False)
+    img.paste(arriba, (0, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, ALTO_FOTO, W, ALTO_FOTO + 8), fill=NARANJA)
+    # Rótulo: SECCIÓN · 2/6
+    y = ALTO_FOTO + 56
+    fr = fuente(30, 700)
+    d.text((M, y), f"{(seccion or '').upper()}  ·  {idx}/{total}", font=fr, fill=NARANJA)
+    y += 62
+    ft, lineas, lh = _encajar(d, titulo, W - 2 * M, 150, 60, 44, 700, 1.1, 2)
+    for ln in lineas:
+        d.text((M, y), ln, font=ft, fill=BLANCO)
+        y += lh
+    y += 26
+    pie = 120
+    fx, lineas, lh = _encajar(d, texto, W - 2 * M, H - pie - y, 44, 34, 500, 1.3)
+    for ln in lineas:
+        d.text((M, y), ln, font=fx, fill=GRIS)
+        y += lh
+    # Pie: la marca a la izquierda; «Deslizá →» o el sitio a la derecha.
+    _marca(img, M, H - 92, 44)
+    fp = fuente(28, 600)
+    fin = f"Seguí leyendo en {sitio}" if idx == total and sitio else ("Deslizá  →" if idx < total else "")
+    if fin:
+        d.text((W - M, H - 70), fin, font=fp, fill=NARANJA, anchor="rm")
+    destino = Path(destino)
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    img.save(destino, "JPEG", quality=92)
+    return destino
+
+
 def _marca(img: Image.Image, x: int, y: int, alto: int):
     """Isotipo naranja + «DIARIO LA CAMPAÑA», como en los carruseles del bot."""
     d = ImageDraw.Draw(img)
