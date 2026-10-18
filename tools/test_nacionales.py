@@ -40,7 +40,9 @@ AHORA = time.time()
 def nota(titulo, seccion="politica", cuerpo="", horas=1, slug=None):
     return {"url": f"https://www.infobae.com/{seccion}/2026/10/06/{slug or abs(hash(titulo)) % 10**8}/",
             "seccion_feed": seccion, "titulo": titulo, "resumen": "", "cuerpo": cuerpo or titulo,
-            "fecha": AHORA - horas * 3600}
+            "fecha": AHORA - horas * 3600,
+            # Desde el 18/10/2026 una nota sin foto usable ni video no sale: todas traen una por defecto.
+            "imagen": f"https://www.infobae.com/resizer/v2/{slug or abs(hash(titulo)) % 10**8}.jpg"}
 
 
 # --- 1. Filtro ------------------------------------------------------------------------------
@@ -267,11 +269,14 @@ notas = [nota(f"ANSES: cuándo cobran los jubilados con el bono {i}", "economia"
     nota("Crece la puja por la sucesión de Kicillof entre los intendentes", "politica", slug="interna")]
 TODAS = list(notas)
 virales = {"anses0": 9, "paro": 8, "lujan": 7, "cuadernos": 5, "interna": 4}
-# ANSES trae una foto oficial; el paro, una de Reuters; las demás, ninguna.
+# ANSES trae una foto oficial; el paro, una de Reuters (18/10/2026: sin foto usable la nota NO sale); las
+# demás, fotos propias del portal.
 notas[0]["imagen"] = "https://www.infobae.com/resizer/v2/ANSES.jpg"
 EPIGRAFES[notas[0]["url"]] = "La ANSES confirmó el calendario (Prensa ANSES)"
 notas[1]["imagen"] = "https://www.infobae.com/resizer/v2/PARO.jpg"
 EPIGRAFES[notas[1]["url"]] = "La marcha de la CGT (Foto: Reuters)"
+for _n in notas[2:]:
+    EPIGRAFES[_n["url"]] = "(Foto: Infobae)"
 
 
 def redactar_por_nota(system, material):
@@ -309,18 +314,19 @@ chequear("Instagram: las generales también salen, una por una, sin el link de l
 t_anses, t_paro = notas[0]["titulo"][:20], notas[1]["titulo"][:20]
 chequear("foto: la nota con foto oficial arma el Short con SU foto",
          fotos_reel.get(t_anses, "").endswith("_foto.jpg") and bajadas[:1] == [notas[0]["imagen"]])
-chequear("foto: la de Reuters NO se baja ni se usa: va la placa propia",
-         fotos_reel.get(t_paro, "").endswith("_fondo.jpg") and notas[1]["imagen"] not in bajadas)
-chequear("foto: la nota sin foto va con la placa propia",
-         all(v.endswith("_fondo.jpg") for k, v in fotos_reel.items() if k not in (t_anses, t_paro)))
+chequear("foto: la de Reuters NO se baja ni se usa, y la nota NO sale (18/10/2026: sin foto no se publica)",
+         t_paro not in fotos_reel and notas[1]["imagen"] not in bajadas and notas[1]["url"] not in mem["piezas"])
+chequear("foto: todas las que salieron llevan una foto de verdad (nunca la placa propia)",
+         fotos_reel and all(v.endswith("_foto.jpg") for v in fotos_reel.values()))
 chequear("foto: la web importa la foto original y tiene la placa de respaldo",
          imagenes_web.get(t_anses) == (notas[0]["imagen"], True))
-chequear("foto: sin foto usable, la web lleva la placa (subida al Release)",
-         (imagenes_web.get(t_paro) or ("",))[0].startswith("https://gh/nacional_"))
-chequear("foto: la memoria guarda la foto (para el carrusel) y por qué la otra no",
-         mem["piezas"][notas[0]["url"]]["foto_url"] == notas[0]["imagen"]
-         and mem["piezas"][notas[1]["url"]]["foto_url"] == ""
-         and "Reuters" in mem["piezas"][notas[1]["url"]]["foto"])
+chequear("foto: la memoria guarda la foto (para el carrusel)",
+         mem["piezas"][notas[0]["url"]]["foto_url"] == notas[0]["imagen"])
+_sin = PA.armar(dict(nota("Una nota sin ninguna foto", "politica", slug="sinfoto"), imagen=""), tmp / "sinfoto",
+                redactar=lambda *a: (_ for _ in ()).throw(AssertionError("no tenía que gastar la IA")),
+                leer_pagina=lambda u: {})
+chequear("foto: una nota sin foto usable ni video NO sale y no gasta la IA",
+         _sin["guion"]["apta"] is False and "sin imagen" in _sin["guion"]["motivo"])
 chequear("foto: si la página no deja leer el epígrafe, va la placa (ante la duda, sin foto)",
          "no se pudo leer" in PA.foto_de_la_nota({"url": "ROTA", "imagen": "https://x/f.jpg"}, tmp / "r.jpg")["motivo"])
 
@@ -328,8 +334,8 @@ llamadas.clear()
 reloj["ahora"] = datetime(2026, 10, 6, 15, 5, tzinfo=AR)
 inf2 = PA.pasada(True, redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
-chequear("pasada siguiente: no repite lo publicado y sigue con lo que quedaba",
-         len(inf2["piezas"]) == 2 and len(mem["piezas"]) == 5)
+chequear("pasada siguiente: no repite lo publicado y sigue con lo que quedaba (el paro, sin foto, no sale)",
+         len(inf2["piezas"]) == 1 and len(mem["piezas"]) == 4)
 chequear("pasada siguiente: a Facebook solo las de potencial viral 7 o más (estas son 5 y 4)",
          [l[0] for l in llamadas].count("facebook") == 0)
 
@@ -364,9 +370,9 @@ c = inf4.get("carrusel") or {}
 chequear("carrusel a mano: se sigue pudiendo sacar", c.get("estado") == "ok")
 hijos = [l for l in llamadas if l[0] == "ig_contenedor"]
 chequear("carrusel: una diapositiva por nota con web, sin tapa (la de Wix caída no va)",
-         len(hijos) == 5 + 1 and hijos[-1][1] == "CAROUSEL")
-chequear("carrusel: la diapositiva de la nota con foto vuelve a bajar SU foto",
-         bajadas == [notas[0]["imagen"]])
+         len(hijos) == 4 + 1 and hijos[-1][1] == "CAROUSEL")
+chequear("carrusel: cada diapositiva vuelve a bajar SU foto",
+         bajadas == [n["imagen"] for n in notas if n is not notas[1]])
 cap = [l[1] for l in llamadas if l[0] == "ig_publicar"][0]
 chequear("carrusel: el texto arranca con «Noticias nacionales de hoy» (lo que se busca)",
          cap.startswith("Noticias nacionales de hoy, martes 6 de octubre de 2026"))
@@ -485,7 +491,7 @@ chequear("TikTok por Buffer: cada pieza publicada va al buzón como «nacionales
          and any(e.get("categoria") == "Deportes" for e in buzon))
 # 18/10/2026: con VIDEO original → reel en Instagram; sin video → carrusel explicativo; viral sin video → no.
 reloj["ahora"] += timedelta(hours=3)
-FL._bajar_video = lambda url, destino: (Path(destino).write_bytes(b"video-original") or Path(destino))
+FL._bajar_video = lambda url, destino: (Path(destino).write_bytes(b"video-original"), Path(destino))[1]
 LAMINAS = [{"titulo": f"Lámina {i}", "texto": "Texto explicativo de la lámina con los datos del hecho y su contexto."}
            for i in range(1, 5)]
 

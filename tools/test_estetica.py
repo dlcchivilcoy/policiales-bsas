@@ -72,8 +72,11 @@ with tempfile.TemporaryDirectory(prefix="test_estetica_") as tmp:
                  abs(info["duracion"] - R.SEG_REEL_FOTO) < 1.0)
         chequear(f"{forma}: liviano (menos de 1 MB)", info["peso_kb"] < 1024)
         chequear(f"{forma}: deja el cuadro fijo .jpg al lado", bool(info["placa"]) and Path(info["placa"]).exists())
-        chequear(f"{forma}: en la carpeta quedan SOLO el .mp4 y el .jpg (nada de trabajo)",
-                 sorted(p.name for p in salida_dir.iterdir()) == ["reel.jpg", "reel.mp4"])
+        chequear(f"{forma}: en la carpeta quedan SOLO el .mp4, el .jpg y la portada (nada de trabajo)",
+                 sorted(p.name for p in salida_dir.iterdir()) == ["reel.jpg", "reel.mp4", "reel_portada.jpg"])
+        from PIL import Image as _Im
+        chequear(f"{forma}: la portada (miniatura de Instagram) es 1080x1920 con la foto de la nota",
+                 info.get("portada") and _Im.open(info["portada"]).size == (1080, 1920))
     fija = R.placa_fija(GUION, foto_de_prueba(tmp / "fija.jpg", 1600, 900), tmp / "fija_placa.jpg")
     from PIL import Image
     chequear("vista rapida (--sin-video) de una apaisada: el mismo cuadro 4:5 del reel",

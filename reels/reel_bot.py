@@ -45,9 +45,10 @@ TEMAS = RAIZ / "estado" / "tema_reels.json"
 # abandona antes de terminar. Antes de adoptar el motor del bot los de policiales duraban
 # 10,4 s (8 + 3 de una placa de cierre mas corta).
 SEG_REEL_FOTO = 13.0
-# Si el medio publico un video propio: hasta cuanto se usa, SIN audio (es audio de otro
-# medio: musica, locucion; no se republica).
-SEG_REEL_VIDEO = 15.0
+# Si el medio publico un video propio: va ENTERO y CON SU SONIDO (pedido del editor, 18/10/2026: «no
+# saques el sonido ni cortes los videos de los reels si duran más de 30 segundos»). Antes: 15 s mudos.
+# El único tope es el de Instagram para un reel por la API (15 min); REEL_VIDEO_MAX_SEG lo cambia.
+SEG_REEL_VIDEO = float(os.environ.get("REEL_VIDEO_MAX_SEG") or 900)
 
 # Las perillas del motor que policiales fija. Solo se ponen si no vienen del entorno.
 PERILLAS = {
@@ -272,10 +273,11 @@ def placa_fija(guion: dict, foto, salida: Path) -> Path:
         return m._placa_de_foto(img, plan, fondo, Path(salida))
 
 
-def armar(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> dict:
+def armar(guion: dict, salida: Path, foto=None, clip=None, tema: str = "", foto_tapa=None) -> dict:
     """El .mp4 del reel y su cuadro fijo (.jpg al lado, para la galeria). `tema`: el bloque del
     4:5 (blanco/grafito, ver `proximo_tema`); el dict devuelto dice en «tema» el que se usó, o ""
-    si el reel salió 9:16.
+    si el reel salió 9:16. `foto_tapa`: la foto de la nota para la PORTADA cuando el reel es del video
+    (si no, la portada sale de un cuadro del video).
 
     El motor deja archivos de trabajo al lado de su salida (fondos, mascaras, bases): se lo
     hace trabajar en una carpeta temporal y solo se trae el .mp4 terminado.
@@ -289,7 +291,7 @@ def armar(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> di
         destino = Path(tmp) / salida.name
         try:
             if clip:
-                m.to_vertical_reel(Path(clip), destino, audio=False, max_seconds=SEG_REEL_VIDEO,
+                m.to_vertical_reel(Path(clip), destino, audio=True, max_seconds=SEG_REEL_VIDEO,
                                    overlay=False, estilo=estilo(), tema=tema, **_textos(guion))
             else:
                 # La foto se copia a la carpeta de trabajo: el motor escribe al lado.
@@ -323,7 +325,32 @@ def armar(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> di
         "placa": str(jpg) if jpg.exists() else None,
         "estetica": f"bot {origen()}",
         "tema": m.tema_usado(),
+        "portada": portada(guion, salida, foto=foto or foto_tapa, clip=clip, tema=m.tema_usado() or tema),
     }
+
+
+def portada(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> str | None:
+    """La MINIATURA del reel (reels/portada.py, 18/10/2026): la foto de la nota o, si el reel es del
+    video del medio, un cuadro de ese video; con la volanta y el texto SEO. Queda al lado del .mp4
+    («<nombre>_portada.jpg»). Nunca frena el reel: si algo falla, Instagram elige la suya."""
+    from reels import portada as POR
+    salida = Path(salida)
+    destino = salida.with_name(salida.stem + "_portada.jpg")
+    try:
+        imagen = foto                              # la foto de la nota, si la hay, es la mejor tapa
+        if clip and not imagen:
+            try:
+                seg = min(3.0, max(0.5, float(motor().duration_seconds(Path(clip))) * 0.3))
+            except Exception:                      # noqa: BLE001
+                seg = 1.0
+            imagen = cuadro_de_video(Path(clip), salida.with_name(salida.stem + "_cuadro.jpg"), seg)
+        if not imagen:
+            return None
+        return str(POR.armar(imagen, guion.get("volanta") or "", POR.texto(guion), destino,
+                             "blanco" if tema == "blanco" else "grafito"))
+    except Exception as e:                         # noqa: BLE001
+        print(f"  (portada del reel: no se pudo armar: {type(e).__name__}: {e})")
+        return None
 
 
 def armar_declaracion(decl: dict, salida: Path, foto=None, clip=None, respaldo: str = "",

@@ -500,6 +500,29 @@ def _publicar_contenedor(uid: str, tok: str, cid: str, caption: str) -> str:
     raise SinConfirmar(f"Instagram: {ultimo} — y no se pudo leer si salio igual")
 
 
+def portada_del_reel(pieza: dict, mp4: Path) -> str:
+    """La miniatura que armó reel_bot.portada (al lado del .mp4, «<nombre>_portada.jpg»), si está."""
+    archivo = ((pieza.get("video") or {}).get("portada") or "")
+    for p in ([Path(archivo)] if archivo else []) + [Path(mp4).with_name(Path(mp4).stem + "_portada.jpg")]:
+        if p.is_file():
+            return str(p)
+    return ""
+
+
+def contenedor_con_portada(uid: str, tok: str, params: dict, portada: str, nombre: str) -> tuple:
+    """(contenedor, "propia"/"de Instagram"): el reel con su PORTADA de miniatura (`cover_url`, pedido del
+    editor del 18/10/2026: «una buena miniatura para el feed, con la imagen y texto con buen SEO»). Una
+    portada que no se puede subir o que Instagram rechaza no cuesta el reel: sale con la que elige él."""
+    if portada and Path(portada).is_file():
+        try:
+            params = dict(params, cover_url=subir_a_release(Path(portada), nombre))
+            return _contenedor_listo(uid, tok, params), "propia"
+        except (FalloRed, OSError, RuntimeError) as e:
+            print(f"  (Instagram: la portada no se pudo usar: {e}; va la que elige Instagram)")
+            params = {k: v for k, v in params.items() if k != "cover_url"}
+    return _contenedor_listo(uid, tok, params), "de Instagram"
+
+
 def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
@@ -508,18 +531,20 @@ def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
     # La etiqueta de ubicación de la localidad del hecho (12/10/2026, reels/ubicaciones.py).
     ubic = UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
     params = IG.contenedor_reel(url, caption, ubicacion=ubic)      # ← la regla del reel de prueba
+    portada = portada_del_reel(pieza, mp4)
+    nombre_portada = f"{Path(nombre).stem}_portada.jpg"
     try:
-        cid = _contenedor_listo(uid, tok, params)
+        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
     except FalloRed as e:
         if not ubic or "location" not in str(e).lower():
             raise
         # Una ubicación que Instagram no acepta no puede costar el reel: sale sin ella.
         params.pop("location_id", None)
         ubic = ""
-        cid = _contenedor_listo(uid, tok, params)
+        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
     media_id = _publicar_contenedor(uid, tok, cid, caption)
     return {"id": media_id or None, "prueba": json.loads(params.get("trial_params") or "null"),
-            "ubicacion": ubic or None}
+            "ubicacion": ubic or None, "portada": con_portada}
 
 
 # =============================================================================
@@ -587,9 +612,32 @@ def publicar_link_youtube(pieza: dict, url_youtube: str, url_web: str = "") -> d
     return {"id": str((r.json() or {}).get("id") or ""), "link": url_youtube}
 
 
+# Los reels de Facebook por la API duran de 3 a 90 s. Desde el 18/10/2026 el video del medio va entero
+# (reels/reel_bot.py, SEG_REEL_VIDEO): uno más largo sale como VIDEO de la página, con el mismo texto.
+FB_REEL_MAX_SEG = 90
+
+
 def publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
+    if float((pieza.get("video") or {}).get("duracion") or 0) > FB_REEL_MAX_SEG:
+        return publicar_video_facebook(pieza, mp4, url_web)
     with tempfile.TemporaryDirectory(prefix="fb_") as t:
         return _publicar_facebook(pieza, _para_facebook(pieza, mp4, Path(t)), url_web)
+
+
+def publicar_video_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
+    """/{page}/videos con `file_url` (Facebook lo va a buscar al Release). Un posteo no se reintenta a
+    ciegas: si la respuesta se pierde, queda «sin confirmar»."""
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    url = subir_a_release(mp4, f"fb_{Path(mp4).name}")
+    try:
+        r = _pedir("POST", f"{GRAPH}/{pid}/videos", tok, data={
+            "file_url": url, "description": texto_del_posteo(pieza, "facebook", url_web)}, timeout=300)
+    except _Cortado as e:
+        raise SinConfirmar(f"Facebook (video largo): {e}")
+    if r.status_code >= 400:
+        raise FalloRed(_error(r, "Facebook (video largo)"))
+    return {"id": str((r.json() or {}).get("id") or ""), "formato": "video"}
 
 
 def _publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:

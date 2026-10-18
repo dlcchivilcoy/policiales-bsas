@@ -71,6 +71,7 @@ para TikTok. Devolvés EXACTAMENTE estos campos en un JSON:
   "motivo": "SOLO si es_del_temario es false: en pocas palabras, de qué trata la nota",
   "volanta": "antetítulo de 2 a 6 palabras que NOMBRE LA LOCALIDAD, sin punto final",
   "titular": "titular claro y fiel al hecho, MÁXIMO 90 caracteres, sin punto final",
+  "portada": "el texto de la MINIATURA del reel: 3 a 8 palabras, MÁXIMO 55 caracteres, con la palabra clave que la gente busca (quién, qué o dónde) al principio, sin punto final",
   "bajada": "para redes, MÁXIMO 280 caracteres, cerrada SIEMPRE en punto",
   "zocalo": "MÁXIMO 5 PALABRAS, sin punto ni comillas",
   "pie": "una oración con el dato más fuerte del hecho, escrita con tus palabras, cerrada en punto",
@@ -594,6 +595,8 @@ def _salida_ia(datos: dict, detalle: str, nota: dict) -> dict:
     # Topes duros: la IA los respeta casi siempre, pero "casi" no alcanza cuando de esto
     # depende que el texto entre en la placa.
     salida["titular"] = _acortar(salida["titular"], MAX_TITULAR)
+    # La miniatura del reel (reels/portada.py, 18/10/2026): pocas palabras con la palabra clave.
+    salida["portada"] = _acortar(" ".join(texto_ia(datos.get("portada")).split()) or salida["titular"], 60)
     salida["bajada"] = _cerrar_en_punto(salida["bajada"], MAX_BAJADA)
     salida["zocalo"] = " ".join(salida["zocalo"].split()[:ZOCALO_PALABRAS]).rstrip(" ,.;:")
     tags = [t for t in (datos.get("hashtags") or []) if isinstance(t, str) and t.startswith("#")]

@@ -202,39 +202,62 @@ def _foto_arriba(foto, ancho: int, alto: int) -> Image.Image:
 
 def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: int, total: int,
                  foto=None, sitio: str = "", semilla: int = 0) -> Path:
-    """Una lámina del CARRUSEL EXPLICATIVO (18/10/2026, variedad sin video): 1080x1350, estilo bloque
-    como los reels 4:5 — la foto ORIGINAL de la nota arriba, la línea naranja y el bloque grafito con el
-    título de la lámina, el texto y el número (2/6). Sin foto: el fondo propio arriba. La última lleva
-    el sitio para seguir leyendo; las demás, «Deslizá».
+    """Una lámina del CARRUSEL EXPLICATIVO: 1080x1350, SOLO TEXTO (pedido del editor, 18/10/2026: «para
+    los carruseles siempre usá imágenes para la primera foto y para las siguientes enfocate en hacer
+    solo texto bien diseñado»). La foto va únicamente en la tapa (slide_carrusel); `foto` queda en la
+    firma por compatibilidad y no se usa.
+
+    Grafito con un resplandor naranja tenue, la marca y el número arriba, el número de la lámina
+    enorme y apenas visible de fondo, y el bloque centrado: sección con su filo naranja, el título en
+    blanco y el texto en gris claro. Abajo, «Deslizá →» o, en la última, el sitio para seguir leyendo.
     """
-    W, H, M = 1080, 1350, 72
-    ALTO_FOTO = 560
-    img = Image.new("RGB", (W, H), GRAFITO)
-    arriba = _foto_arriba(foto, W, ALTO_FOTO) if foto else fondo(seccion, (W, ALTO_FOTO), semilla, etiqueta=False)
-    img.paste(arriba, (0, 0))
+    W, H, M = 1080, 1350, 84
+    tam = (W, H)
+    grad = Image.linear_gradient("L").resize(tam)
+    img = Image.composite(Image.new("RGB", tam, GRAFITO_OSCURO), Image.new("RGB", tam, (42, 44, 50)), grad)
+    luz = Image.new("L", tam, 0)
+    ImageDraw.Draw(luz).ellipse((int(W * 0.45), int(-H * 0.30), int(W * 1.45), int(H * 0.35)), fill=60)
+    img = Image.composite(Image.new("RGB", tam, NARANJA_CAJA), img, luz.filter(ImageFilter.GaussianBlur(220)))
+    # El número de la lámina, enorme y casi transparente, abajo a la derecha.
+    capa = Image.new("L", tam, 0)
+    ImageDraw.Draw(capa).text((W - 40, H - 150), f"{idx:02d}", font=fuente(520, 800), fill=22, anchor="rs")
+    img = Image.composite(Image.new("RGB", tam, BLANCO), img, capa)
+    img = _grano(img, semilla or zlib.crc32(f"{titulo}{idx}".encode("utf-8")), 6)
     d = ImageDraw.Draw(img)
-    d.rectangle((0, ALTO_FOTO, W, ALTO_FOTO + 8), fill=NARANJA)
-    # Rótulo: SECCIÓN · 2/6
-    y = ALTO_FOTO + 56
-    fr = fuente(30, 700)
-    d.text((M, y), f"{(seccion or '').upper()}  ·  {idx}/{total}", font=fr, fill=NARANJA)
-    y += 62
-    ft, lineas, lh = _encajar(d, titulo, W - 2 * M, 150, 60, 44, 700, 1.1, 2)
-    for ln in lineas:
+
+    # Arriba: la marca a la izquierda, «02 / 06» a la derecha, y un filete.
+    _marca(img, M, 70, 50)
+    d.text((W - M, 95), f"{idx:02d} / {total:02d}", font=fuente(32, 700), fill=NARANJA, anchor="rm")
+    d.line((M, 160, W - M, 160), fill=(64, 66, 74), width=2)
+
+    # El bloque, medido antes de dibujar para centrarlo entre el filete y el pie.
+    arriba, abajo = 210, H - 170
+    ancho = W - 2 * M
+    rot = (seccion or "").upper()
+    ft, lt, lht = _encajar(d, titulo, ancho, 330, 78, 50, 800, 1.08, 4)
+    alto_rot = 30 + 24 + 8 + 40 if rot else 0
+    resto = abajo - arriba - alto_rot - len(lt) * lht - 40
+    fx, lx, lhx = _encajar(d, texto, ancho, max(resto, 120), 50, 34, 500, 1.36)
+    alto = alto_rot + len(lt) * lht + 40 + len(lx) * lhx
+    y = arriba + max(0, (abajo - arriba - alto) // 2)
+    if rot:
+        d.text((M, y), rot, font=fuente(30, 700), fill=NARANJA)
+        y += 30 + 24
+        d.rectangle((M, y, M + 96, y + 8), fill=NARANJA)
+        y += 8 + 40
+    for ln in lt:
         d.text((M, y), ln, font=ft, fill=BLANCO)
-        y += lh
-    y += 26
-    pie = 120
-    fx, lineas, lh = _encajar(d, texto, W - 2 * M, H - pie - y, 44, 34, 500, 1.3)
-    for ln in lineas:
+        y += lht
+    y += 40
+    for ln in lx:
         d.text((M, y), ln, font=fx, fill=GRIS)
-        y += lh
-    # Pie: la marca a la izquierda; «Deslizá →» o el sitio a la derecha.
-    _marca(img, M, H - 92, 44)
-    fp = fuente(28, 600)
+        y += lhx
+
+    # Pie: «Deslizá →» o el sitio.
+    d.line((M, H - 120, W - M, H - 120), fill=(64, 66, 74), width=2)
     fin = f"Seguí leyendo en {sitio}" if idx == total and sitio else ("Deslizá  →" if idx < total else "")
     if fin:
-        d.text((W - M, H - 70), fin, font=fp, fill=NARANJA, anchor="rm")
+        d.text((M, H - 70), fin, font=fuente(32, 700), fill=NARANJA, anchor="lm")
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     img.save(destino, "JPEG", quality=92)

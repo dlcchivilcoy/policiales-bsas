@@ -37,6 +37,7 @@ Devolvés EXACTAMENTE estos campos en un JSON:
   "seccion": "una de: Política, Economía, Sociedad, Justicia, Salud, Provincia, Clima, Campo, Trabajo, Educación, Policiales",
   "volanta": "antetítulo de 1 a 4 palabras que diga el TEMA, sin punto final",
   "titular": "titular claro y fiel, MÁXIMO 90 caracteres, sin punto final",
+  "portada": "el texto de la MINIATURA del reel: 3 a 8 palabras, MÁXIMO 55 caracteres, con la palabra clave que la gente busca (quién, qué o dónde) al principio, sin punto final",
   "bajada": "MÁXIMO 280 caracteres, cerrada SIEMPRE en punto",
   "descripcion": "2 a 4 frases para la descripción del video",
   "lista": [{"nombre": "cada elemento si la nota es una lista", "detalle": "su dato clave en 1 frase"}],
@@ -155,6 +156,8 @@ def _salida(datos: dict, detalle: str, nota: dict) -> dict:
     for campo in ("volanta", "titular", "bajada", "descripcion"):
         s[campo] = " ".join(G.texto_ia(datos.get(campo)).split())     # una lista no va con corchetes
     s["titular"] = G._acortar(s["titular"] or titular, MAX_TITULAR)
+    # La miniatura del reel (reels/portada.py, 18/10/2026): pocas palabras con la palabra clave.
+    s["portada"] = G._acortar(" ".join(G.texto_ia(datos.get("portada")).split()) or s["titular"], 60)
     s["volanta"] = G._acortar(s["volanta"] or _seccion("", nota), 32)
     s["bajada"] = G._cerrar_en_punto(s["bajada"] or texto[:MAX_BAJADA], MAX_BAJADA)
     s["seccion"] = _seccion(datos.get("seccion"), nota)

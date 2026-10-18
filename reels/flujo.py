@@ -333,7 +333,7 @@ def _foto_usable(nota: dict, destino: Path) -> tuple:
 # Tope de descarga del video. Un clip de nota local pesa 2-15 MB; arriba de esto
 # suele ser una pelicula entera mal enlazada o un stream, y no vale la pena esperarlo
 # para despues usar 8 segundos.
-MAX_VIDEO_MB = 60
+MAX_VIDEO_MB = 150          # el video del medio va entero desde el 18/10/2026 (antes 60 y 15 s mudos)
 
 
 def _bajar_video(url: str, destino: Path) -> Path | None:
@@ -505,6 +505,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
             decl = DE.preparar(nota, g, tmp_dir, f"reel_{idx}")
             vid = R.armar_declaracion(decl, carpeta / f"{nombre}.mp4", foto=None if clip else foto,
                                       clip=clip, respaldo=g["titular"], tema=tema)
+            vid["portada"] = R.portada(g, Path(vid["archivo"]), foto=foto, clip=clip,
+                                       tema=vid.get("tema") or tema)
             g["descripcion_final"] = DE.caption_con_escucha(g["descripcion_final"], decl["nombre"])
         except (DE.DeclaracionError, R.ReelError) as e:
             avisos.append(f"La nota trae un audio pero no salió el reel de declaración: {e}")
@@ -519,7 +521,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     elif hacer_video and not g.get("fuera_de_temario"):
         try:
             vid = R.armar(g, carpeta / f"{nombre}.mp4", foto=None if clip else foto, clip=clip,
-                          tema=tema)
+                          tema=tema, foto_tapa=foto)
         except R.ReelError as e:
             vid = {"error": str(e)}
             if clip and foto:

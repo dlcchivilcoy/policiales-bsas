@@ -219,39 +219,57 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     if nota.get("categoria") == "virales" and not medios.get("video"):
         return {"nota": nota, "url_original": nota["url"],
                 "guion": {"apta": False, "motivo": "viral sin el video original en la nota"}}
+    # SIN IMAGEN REAL NO SALE (pedido del editor, 18/10/2026: «no quiero fotos hechas con IA ni carruseles
+    # sin fotos; si no podés usar fotos por copyright, directamente no saques la nota»). La foto se mira
+    # ANTES de la IA: una nota sin foto usable ni video propio no gasta el guion. Ya no hay placa propia.
+    semilla = _semilla(nota["url"])
+    carpeta.mkdir(parents=True, exist_ok=True)
+    info_foto = foto_de_la_nota(nota, carpeta / f"{semilla:08x}_foto.jpg")
+    if not info_foto.get("archivo") and not medios.get("video"):
+        return {"nota": nota, "url_original": nota["url"], "foto": info_foto,
+                "guion": {"apta": False, "motivo": f"sin imagen que se pueda usar ({info_foto.get('motivo')})"}}
     g = NG.generar(nota, redactar)
     pieza = {"nota": nota, "guion": g, "url_original": nota["url"],
              "web": {"titulo": g["titulo_web"], "cuerpo": g["nota_web"]}}
     if not g["apta"]:
         return pieza
-    carpeta.mkdir(parents=True, exist_ok=True)
     base = carpeta / WEB.slugify(g["titular"], 50)
-    semilla = _semilla(nota["url"])
     from reels import reel_bot as R
-    pieza["foto"] = foto_de_la_nota(nota, base.with_name(base.name + "_foto.jpg"))
-    foto = pieza["foto"].get("archivo")
-    imagen = foto or P.guardar_fondo(g["seccion"], base.with_name(base.name + "_fondo.jpg"), semilla=semilla)
+    pieza["foto"] = info_foto
+    foto = info_foto.get("archivo")
     clip = None
     # Una nota de LISTA (las cinco películas…) sale como carrusel, una lámina por elemento, aunque traiga
     # video: el video del portal no dice cuáles son (18/10/2026, el posteo de Netflix).
     lista = g.get("lista") or []
     es_lista = len(lista) >= 3 and nota.get("categoria") != "virales"
-    if medios.get("video") and not es_lista:
+    if medios.get("video") and (not es_lista or not foto):
         from reels.flujo import _bajar_video
         clip = _bajar_video(medios["video"], base.with_name(base.name + "_original.mp4"))
         if clip:
             pieza["video_original"] = medios["video"]
+    if clip and not foto:
+        # Sin foto usable: la imagen fija (tapa del carrusel, placa de Facebook, portada) es un cuadro del
+        # mismo video de la nota.
+        foto = R.cuadro_de_video(Path(clip), base.with_name(base.name + "_cuadro.jpg"), 2.0)
+        foto = str(foto) if foto else None
+    if es_lista:
+        clip = None                                   # la lista va en carrusel; el video solo dio la tapa
     if nota.get("categoria") == "virales" and not clip:
         g.update(apta=False, motivo="viral: el video original no se pudo bajar")
         return pieza
-    guion_reel = {"volanta": g["volanta"], "titular": g["titular"], "bajada": g["bajada"]}
+    if not clip and not foto:
+        g.update(apta=False, motivo=f"sin imagen que se pueda usar ({info_foto.get('motivo') or 'el video no anduvo'})")
+        return pieza
+    imagen = foto
+    guion_reel = {"volanta": g["volanta"], "titular": g["titular"], "bajada": g["bajada"],
+                  "portada": g.get("portada") or ""}
     # Bloque blanco o grafito si sale 4:5, alternado con el reel anterior (12/10/2026).
     tema = R.proximo_tema()
     try:
         pieza["video"] = R.armar(guion_reel, base.with_suffix(".mp4"), foto=None if clip else imagen,
-                                 clip=clip, tema=tema)
+                                 clip=clip, tema=tema, foto_tapa=imagen)
     except R.ReelError:
-        if not clip or nota.get("categoria") == "virales":
+        if not clip or not imagen or nota.get("categoria") == "virales":
             raise
         clip = None                                   # el video no anduvo: la pieza sigue con la foto
         pieza["video"] = R.armar(guion_reel, base.with_suffix(".mp4"), foto=imagen, tema=tema)
@@ -433,7 +451,8 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
         caption = caption_instagram(pieza["guion"])
         marca = hashlib.sha1(pieza["url_original"].encode()).hexdigest()[:10]
         if pieza.get("formato") == "reel":
-            res["instagram"] = dict(_resultado(publicar_reel_instagram, mp4, caption, marca), formato="reel")
+            res["instagram"] = dict(_resultado(publicar_reel_instagram, mp4, caption, marca,
+                                               (pieza.get("video") or {}).get("portada") or ""), formato="reel")
         elif pieza.get("formato") == "carrusel":
             res["instagram"] = dict(_resultado(publicar_carrusel, pieza["slides"], caption, f"var_{marca}"),
                                     formato="carrusel")
@@ -448,13 +467,16 @@ def instagram_activo() -> bool:
     return (os.environ.get("NAC_INSTAGRAM") or "1").strip() != "0"
 
 
-def publicar_reel_instagram(mp4: Path, caption: str, marca: str) -> dict:
+def publicar_reel_instagram(mp4: Path, caption: str, marca: str, portada: str = "") -> dict:
+    """El reel con su PORTADA de miniatura (reels/portada.py, 18/10/2026); si Instagram no la toma,
+    sale con la que elige él."""
     from reels import instagram as IG
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     url = PUB.subir_a_release(mp4, f"variedad_{marca}_{mp4.name}")
-    cid = PUB._contenedor_listo(uid, tok, IG.contenedor_reel(url, caption, prueba=False))
-    return {"id": PUB._publicar_contenedor(uid, tok, cid, caption) or None}
+    cid, con_portada = PUB.contenedor_con_portada(uid, tok, IG.contenedor_reel(url, caption, prueba=False),
+                                                  portada, f"variedad_{marca}_portada.jpg")
+    return {"id": PUB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": con_portada}
 
 
 def publicar_imagen_instagram(jpg: Path, caption: str, marca: str) -> dict:

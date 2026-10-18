@@ -1450,5 +1450,47 @@ PUB._pedir, PUB._estado_contenedor = _pedir_real, _estado_real
 chequear("IG sin links: la última barrera (el contenedor) limpia el texto venga de donde venga",
          mandados and "/n/" not in mandados[0]["caption"] and "www.diariolacampaña.com.ar" in mandados[0]["caption"])
 
+# --- 34. Portada del reel y videos largos (18/10/2026) -------------------------------------------------
+import tempfile as _tf
+_d34 = Path(_tf.mkdtemp())
+_mp4 = _d34 / "reel_1.mp4"
+_mp4.write_bytes(b"mp4")
+(_d34 / "reel_1_portada.jpg").write_bytes(b"jpg")
+chequear("portada: se encuentra al lado del .mp4 aunque la ruta del lote sea de otra máquina",
+         PUB.portada_del_reel({"video": {"portada": "C:\\otra\\maquina\\reel_1_portada.jpg"}}, _mp4)
+         == str(_d34 / "reel_1_portada.jpg"))
+_pedidos = []
+_listo_real, _subir_real = PUB._contenedor_listo, PUB.subir_a_release
+PUB.subir_a_release = lambda ruta, nombre: f"https://gh/{nombre}"
+PUB._contenedor_listo = lambda uid, tok, params: _pedidos.append(dict(params)) or "c1"
+cid, como = PUB.contenedor_con_portada("u", "t", {"media_type": "REELS"}, str(_d34 / "reel_1_portada.jpg"), "x.jpg")
+chequear("portada: el contenedor del reel lleva cover_url con la portada subida",
+         como == "propia" and _pedidos[-1].get("cover_url") == "https://gh/x.jpg")
+
+
+def _rechaza_portada(uid, tok, params):
+    _pedidos.append(dict(params))
+    if params.get("cover_url"):
+        raise PUB.FalloRed("Instagram: cover_url inválida")
+    return "c2"
+
+
+PUB._contenedor_listo = _rechaza_portada
+_pedidos.clear()
+cid, como = PUB.contenedor_con_portada("u", "t", {"media_type": "REELS"}, str(_d34 / "reel_1_portada.jpg"), "x.jpg")
+chequear("portada: si Instagram la rechaza, el reel sale igual con la suya",
+         cid == "c2" and como == "de Instagram" and "cover_url" not in _pedidos[-1])
+PUB._contenedor_listo, PUB.subir_a_release = _listo_real, _subir_real
+_fb = []
+_pedir_real, _subir_real = PUB._pedir, PUB.subir_a_release
+PUB.subir_a_release = lambda ruta, nombre: f"https://gh/{nombre}"
+PUB._pedir = lambda m, u, tok="", **k: _fb.append((u, k.get("data") or {})) or type(
+    "R", (), {"status_code": 200, "json": lambda s: {"id": "v9"}})()
+_res = PUB.publicar_facebook({"video": {"duracion": 140.0}, "guion": {"titular": "Un video largo"}}, _mp4)
+PUB._pedir, PUB.subir_a_release = _pedir_real, _subir_real
+chequear("Facebook: un reel de más de 90 s sale como video de la página (los reels por API llegan a 90)",
+         _res == {"id": "v9", "formato": "video"} and _fb and _fb[0][0].endswith("/videos")
+         and _fb[0][1].get("file_url", "").startswith("https://gh/fb_"))
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
