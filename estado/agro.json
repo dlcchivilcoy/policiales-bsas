@@ -5680,6 +5680,98 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a9b8b26ceeeb45d1": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 5,
+      "cercania_argentina": 6,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 53,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "modelo ganadero",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Interesante para ganaderos locales, pero enfocado en un modelo extranjero lejano a la realidad de la pampa húmeda.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "11909af4472565f7": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 7,
+      "cercania_pba": 4,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 65,
+      "subtema": "mercados",
+      "tema": "soja brasil",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Mueve el mercado global de granos y afecta indirectamente el precio de la soja local por la sequía en Mato Grosso.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3dd07fea4f1d999e": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 80,
+      "commercial_score": 84,
+      "subtema": "agro",
+      "tema": "costos de producción",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema central para todo productor de la zona núcleo que define la rentabilidad y el uso de insumos de la campaña.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        81,
+        82
+      ]
+    },
+    "65fc02db62c40cb0": {
+      "impacto_economico": 10,
+      "interes_productores": 11,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 72,
+      "commercial_score": 68,
+      "subtema": "agtech",
+      "tema": "innovación afa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relevante para socios y emprendedores AgTech locales, aunque acotado a la convocatoria de una cooperativa específica.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        73
+      ]
     }
   },
   "indice": {
@@ -6079,7 +6171,24 @@
       "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno": "2026-10-17",
       "https://bichosdecampo.com/el-feminismo-menos-pensado-una-dirigente-de-la-sociedad-rural-argentina-planteo-que-las-mujeres-quedan-al-margen-de-las-decisiones-sobre-las-politicas-agropecuarias": "2026-10-17",
       "https://bichosdecampo.com/no-dejes-de-analizar-se-viene-otra-campana-de-trigo-con-premios-importantes-para-partidas-con-calidad-panadera": "2026-10-17",
-      "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html": "2026-10-17"
+      "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html": "2026-10-17",
+      "https://infocampo.com.ar/congreso-federal-ganadero-el-modelo-familiar-de-estados-unidos-que-escalo-a-un-negocio-global": "2026-10-18",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-en-la-rioja-lluvia-ligera-el-pronostico-para-hoy-18-de-octubre": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-18-octubre-2026": "2026-10-18",
+      "https://bichosdecampo.com/para-seguir-de-cerca-tres-modelos-climaticos-preven-lluvias-menores-a-las-normales-en-las-regiones-productoras-de-soja-de-mato-grosso-para-las-proximas-dos-semanas": "2026-10-18",
+      "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026": "2026-10-18",
+      "https://lacapital.com.ar/agro/afa-escala-convocan-presentar-ideas-innovadoras-el-agro-n10287254.html": "2026-10-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6477,7 +6586,24 @@
       "emilia monteleone describe el largo proceso para lograr un nuevo bioestimulante o de como una bacteria de la cana de azucar termino nutriendo al maiz y fijando nitrogeno": "2026-10-17",
       "el feminismo menos pensado una dirigente de la sociedad rural argentina planteo que las mujeres quedan al margen de las decisiones sobre las politicas agropecuarias": "2026-10-17",
       "no dejes de analizar se viene otra campana de trigo con premios importantes para partidas con calidad panadera": "2026-10-17",
-      "cronicas de campana la soja se blinda por el nino": "2026-10-17"
+      "cronicas de campana la soja se blinda por el nino": "2026-10-17",
+      "congreso federal ganadero el modelo familiar de estados unidos que escalo a un negocio global": "2026-10-18",
+      "dolar blue hoy a cuanto cotiza el 18 octubre 2026": "2026-10-18",
+      "clima hoy en mendoza el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en tucuman el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en corrientes el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en cordoba el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en salta el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en san luis el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en rosario el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima en la rioja lluvia ligera el pronostico para hoy 18 de octubre": "2026-10-18",
+      "clima hoy en misiones el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en bahia blanca el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en mar del plata el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "clima hoy en buenos aires el pronostico del tiempo para este 18 octubre 2026": "2026-10-18",
+      "para seguir de cerca tres modelos climaticos preven lluvias menores a las normales en las regiones productoras de soja de mato grosso para las proximas dos semanas": "2026-10-18",
+      "el costo de producir granos en la argentina se acerca al de sus competidores": "2026-10-18",
+      "afa escala convocan a presentar ideas innovadoras para el agro": "2026-10-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -6875,7 +7001,24 @@
       "7373186905ad787f": "2026-10-17",
       "018f7ac95563731d": "2026-10-17",
       "a1bd882e09694a50": "2026-10-17",
-      "f0566dd540ad003a": "2026-10-17"
+      "f0566dd540ad003a": "2026-10-17",
+      "a9b8b26ceeeb45d1": "2026-10-18",
+      "b80055e038447b50": "2026-10-18",
+      "20a050ce0da4971e": "2026-10-18",
+      "f397664e25a7df0c": "2026-10-18",
+      "9bc9813875f53e8b": "2026-10-18",
+      "8accc52b1cef7d64": "2026-10-18",
+      "9a2822ca41ac553e": "2026-10-18",
+      "a3ed273dbdfd7d1f": "2026-10-18",
+      "a75116bd2fb92f53": "2026-10-18",
+      "73ca45d19c91e3be": "2026-10-18",
+      "5592a2a375741548": "2026-10-18",
+      "a80c978736eca343": "2026-10-18",
+      "166c656c79626b4d": "2026-10-18",
+      "2b7a64371c22b26c": "2026-10-18",
+      "11909af4472565f7": "2026-10-18",
+      "3dd07fea4f1d999e": "2026-10-18",
+      "65fc02db62c40cb0": "2026-10-18"
     }
   },
   "elegidas": [
@@ -8020,49 +8163,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e567601ccad9_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "306aa26b4dc5",
-      "rep": {
-        "id": "306aa26b4dc5",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
-        "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
-        "titulo": "Crónicas de campaña: la soja se blinda por el Niño",
-        "titulo_norm": "cronicas de campana la soja se blinda por el nino",
-        "descripcion": "La Guía Estratégica para el Agro prevé un aumento de 2% en la superficie a implantar en la región núcleo. Los planes son sembrar antes, intensificar los planteos y acortar los ciclos.",
-        "imagen_url": "https://media.lacapital.com.ar/p/4fb71c2e455b4f70b7153076c7ba788b/adjuntos/305/imagenes/103/205/0103205614/1200x675/smart/sojag.jpg",
-        "autor": "",
-        "publicado": "2026-10-17T20:15-03:00",
-        "capturado": "2026-10-17T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f0566dd540ad003a"
-      },
-      "grupo": [
-        {
-          "id": "306aa26b4dc5",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
-          "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
-          "titulo": "Crónicas de campaña: la soja se blinda por el Niño",
-          "titulo_norm": "cronicas de campana la soja se blinda por el nino",
-          "descripcion": "La Guía Estratégica para el Agro prevé un aumento de 2% en la superficie a implantar en la región núcleo. Los planes son sembrar antes, intensificar los planteos y acortar los ciclos.",
-          "imagen_url": "https://media.lacapital.com.ar/p/4fb71c2e455b4f70b7153076c7ba788b/adjuntos/305/imagenes/103/205/0103205614/1200x675/smart/sojag.jpg",
-          "autor": "",
-          "publicado": "2026-10-17T20:15-03:00",
-          "capturado": "2026-10-17T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f0566dd540ad003a"
-        }
-      ],
+      "cuando": "2026-10-18T08:00-03:00",
+      "titulo_original": "Crónicas de campaña: la soja se blinda por el Niño",
+      "descripcion": "La Guía Estratégica para el Agro prevé un aumento de 2% en la superficie a implantar en la región núcleo. Los planes son sembrar antes, intensificar los planteos y acortar los ciclos.",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
+      "titular": "Soja en la región núcleo: sube un 2% la superficie y adelantan",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -8084,11 +8194,109 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-17T21:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-18T08:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "-f4h7Nl3WV0",
+          "url": "https://youtube.com/shorts/-f4h7Nl3WV0",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "2501c79e-6248-40fd-9e51-af526da9d612",
+          "slug": "soja-en-la-region-nucleo-4-5-millones-de-hectareas-y-siembra-235868",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-en-la-region-nucleo-4-5-millones-de-hectareas-y-siembra-235868",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1999287907450420",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18121078880474264",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_306aa26b4dc5_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-18T07:01:30-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [
+    {
+      "id": "f57308ece4b3",
+      "rep": {
+        "id": "f57308ece4b3",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026",
+        "titulo": "El costo de producir granos en la Argentina se acerca al de sus competidores",
+        "titulo_norm": "el costo de producir granos en la argentina se acerca al de sus competidores",
+        "descripcion": "En un año 13 bienes y servicios en dólares cayeron 5,6 puntos porcentuales",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/2ZRCQNZVGNA77KDFZ3YRAC7SSE.jpg?auth=12562c1e87c02b1c9bc118e13d4a4709f3f659cebfc76ec936b869e3b7544302&smart=true",
+        "autor": "Gabriela Origlia",
+        "publicado": "2026-10-18T06:30-03:00",
+        "capturado": "2026-10-18T08:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3dd07fea4f1d999e"
+      },
+      "grupo": [
+        {
+          "id": "f57308ece4b3",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026",
+          "titulo": "El costo de producir granos en la Argentina se acerca al de sus competidores",
+          "titulo_norm": "el costo de producir granos en la argentina se acerca al de sus competidores",
+          "descripcion": "En un año 13 bienes y servicios en dólares cayeron 5,6 puntos porcentuales",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/2ZRCQNZVGNA77KDFZ3YRAC7SSE.jpg?auth=12562c1e87c02b1c9bc118e13d4a4709f3f659cebfc76ec936b869e3b7544302&smart=true",
+          "autor": "Gabriela Origlia",
+          "publicado": "2026-10-18T06:30-03:00",
+          "capturado": "2026-10-18T08:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3dd07fea4f1d999e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 80,
+        "commercial_score": 84,
+        "subtema": "agro",
+        "tema": "costos de producción",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Tema central para todo productor de la zona núcleo que define la rentabilidad y el uso de insumos de la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          81,
+          82
+        ]
+      },
+      "cuando": "2026-10-18T08:00-03:00"
+    }
+  ],
+  "actualizado": "2026-10-18T08:03:54-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
