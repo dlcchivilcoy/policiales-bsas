@@ -63,6 +63,12 @@
       "pregunta": "¿Qué producto aumentó más en las góndolas de Chivilcoy este mes?",
       "categoria": "Economía cotidiana",
       "tema": "el costo del supermercado"
+    },
+    {
+      "dia": "2026-10-18",
+      "pregunta": "¿A qué boliche o lugar salías los fines de semana cuando eras joven?",
+      "categoria": "Jóvenes y estudiantes",
+      "tema": "las salidas de los jóvenes"
     }
   ],
   "publicaciones": {
@@ -365,7 +371,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-18:pregunta": {
+      "titular": "¿A qué boliche o lugar salías los fines de semana cuando eras joven?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-18T20:30:40-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Jóvenes y estudiantes",
+        "tema": "las salidas de los jóvenes"
+      },
+      "estado": "ok",
+      "id": "18210828976367326",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-18T13:30:25-03:00"
+  "actualizado": "2026-10-18T20:30:25-03:00"
 }
