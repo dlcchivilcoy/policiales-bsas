@@ -5952,6 +5952,52 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d6f26f531c536bc4": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "porcinos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante iniciativa regional de agregado de valor en porcinos, pero de impacto limitado para la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "65e9224b67d84063": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 78,
+      "commercial_score": 80,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto económico y comercial para los productores de trigo de la región núcleo por el cumplimiento de exportaciones.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        81,
+        75
+      ]
     }
   },
   "indice": {
@@ -6384,7 +6430,9 @@
       "https://bichosdecampo.com/desde-el-frigorifico-recreo-destacan-oportunidades-en-el-mercado-mundial-de-la-carne-pero-tambien-desafios-para-atender-mejor-la-demanda": "2026-10-18",
       "https://bichosdecampo.com/como-te-ven-te-tratan-tres-periodistas-europeos-probaron-la-carne-argentina-y-contaron-que-imagen-tienen-del-pais-y-de-su-ganaderia": "2026-10-18",
       "https://bichosdecampo.com/en-el-dia-mundial-de-la-proteccion-de-la-naturaleza-sebastian-fermani-tiene-algo-para-decir-sobre-el-cuidado-de-los-pastizales-su-degradacion-tambien-compromete-a-la-produccion": "2026-10-18",
-      "https://lanacion.com.ar/economia/campo/gran-manjar-las-sorpresas-que-se-llevo-un-viajero-ingles-en-la-argentina-nid18102026": "2026-10-18"
+      "https://lanacion.com.ar/economia/campo/gran-manjar-las-sorpresas-que-se-llevo-un-viajero-ingles-en-la-argentina-nid18102026": "2026-10-18",
+      "https://infocampo.com.ar/la-genetica-del-salame-en-oncativo-fortalecen-una-unica-raza-porcina-para-mejorar-sus-chacinados": "2026-10-18",
+      "https://bichosdecampo.com/hito-comercial-se-completo-el-programa-previsto-de-embarques-de-trigo-argentino-2025-26-con-mas-de-un-mes-de-anticipacion": "2026-10-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6815,7 +6863,9 @@
       "desde el frigorifico recreo destacan oportunidades en el mercado mundial de la carne pero tambien desafios para atender mejor la demanda": "2026-10-18",
       "como te ven te tratan tres periodistas europeos probaron la carne argentina y contaron que imagen tienen del pais y de su ganaderia": "2026-10-18",
       "en el dia mundial de la proteccion de la naturaleza sebastian fermani tiene algo para decir sobre el cuidado de los pastizales su degradacion tambien compromete a la produccion": "2026-10-18",
-      "gran manjar las sorpresas que se llevo un viajero ingles en la argentina": "2026-10-18"
+      "gran manjar las sorpresas que se llevo un viajero ingles en la argentina": "2026-10-18",
+      "la genetica del salame en oncativo fortalecen una unica raza porcina para mejorar sus chacinados": "2026-10-18",
+      "hito comercial se completo el programa previsto de embarques de trigo argentino 2025 26 con mas de un mes de anticipacion": "2026-10-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -7246,7 +7296,9 @@
       "b566302d281e7ff3": "2026-10-18",
       "370c70cecd992686": "2026-10-18",
       "62c4b04aa1f256d3": "2026-10-18",
-      "fe73ba067998c1f5": "2026-10-18"
+      "fe73ba067998c1f5": "2026-10-18",
+      "d6f26f531c536bc4": "2026-10-18",
+      "65e9224b67d84063": "2026-10-18"
     }
   },
   "elegidas": [
@@ -8571,49 +8623,56 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5213960c8581_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
+    {
+      "id": "e9433c8d5b1f",
+      "cuando": "2026-10-18T13:00-03:00",
+      "titulo_original": "Hito comercial: Se completó el programa previsto de embarques de trigo argentino 2025/26 con más de un mes de anticipación",
+      "descripcion": "Finalmente, tal como había adelantado Bichos de Campo, la Argentina ya completó el volumen proyectado de embarques de trigo 2025/26 gracias a una demanda extraordinaria del cereal. Hasta el momento se registraron Declaraciones Juradas de Ventas al Exterior (DJVE) de trigo de la presente campaña por ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/hito-comercial-se-completo-el-programa-previsto-de-embarques-de-trigo-argentino-2025-26-con-mas-de-un-mes-de-anticipacion/",
+      "titular": "Trigo: completan las exportaciones 2025/26 antes de tiempo",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 80,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto económico y comercial para los productores de trigo de la región núcleo por el cumplimiento de exportaciones.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          81,
+          75
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-18T13:00:00-03:00"
+    },
     {
       "id": "f57308ece4b3",
-      "rep": {
-        "id": "f57308ece4b3",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026",
-        "titulo": "El costo de producir granos en la Argentina se acerca al de sus competidores",
-        "titulo_norm": "el costo de producir granos en la argentina se acerca al de sus competidores",
-        "descripcion": "En un año 13 bienes y servicios en dólares cayeron 5,6 puntos porcentuales",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/2ZRCQNZVGNA77KDFZ3YRAC7SSE.jpg?auth=12562c1e87c02b1c9bc118e13d4a4709f3f659cebfc76ec936b869e3b7544302&smart=true",
-        "autor": "Gabriela Origlia",
-        "publicado": "2026-10-18T06:30-03:00",
-        "capturado": "2026-10-18T08:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3dd07fea4f1d999e"
-      },
-      "grupo": [
-        {
-          "id": "f57308ece4b3",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026",
-          "titulo": "El costo de producir granos en la Argentina se acerca al de sus competidores",
-          "titulo_norm": "el costo de producir granos en la argentina se acerca al de sus competidores",
-          "descripcion": "En un año 13 bienes y servicios en dólares cayeron 5,6 puntos porcentuales",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/2ZRCQNZVGNA77KDFZ3YRAC7SSE.jpg?auth=12562c1e87c02b1c9bc118e13d4a4709f3f659cebfc76ec936b869e3b7544302&smart=true",
-          "autor": "Gabriela Origlia",
-          "publicado": "2026-10-18T06:30-03:00",
-          "capturado": "2026-10-18T08:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3dd07fea4f1d999e"
-        }
-      ],
+      "cuando": "2026-10-18T13:00-03:00",
+      "titulo_original": "El costo de producir granos en la Argentina se acerca al de sus competidores",
+      "descripcion": "En un año 13 bienes y servicios en dólares cayeron 5,6 puntos porcentuales",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026/",
+      "titular": "Insumos agrícolas argentinos reducen su brecha de precios frente a competidores",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -8639,10 +8698,15 @@
           82
         ]
       },
-      "cuando": "2026-10-18T08:00-03:00"
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-18T13:00:00-03:00"
     }
   ],
-  "actualizado": "2026-10-18T12:03:36-03:00",
+  "pendientes": [],
+  "actualizado": "2026-10-18T13:03:01-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
