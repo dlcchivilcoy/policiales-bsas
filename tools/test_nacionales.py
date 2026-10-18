@@ -186,6 +186,8 @@ AR = timezone(timedelta(hours=-3))
 estado_tmp = tmp / "estado"
 PA.MEMORIA = estado_tmp / "nacionales.json"
 PA.DIST.BUZON = estado_tmp / "buzon_distribuidor.json"      # nunca el buzón real
+from reels import auditoria as AU
+AU.ARCHIVO = estado_tmp / "auditoria.json"                    # ni la auditoría real
 PA.SALIDA = tmp / "salida"
 reloj = {"ahora": datetime(2026, 10, 6, 12, 5, tzinfo=AR)}
 PA._ahora = lambda: reloj["ahora"]

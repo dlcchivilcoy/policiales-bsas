@@ -631,6 +631,34 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     return pieza
 
 
+def _auditar(scrapeadas: int, lejanas: list, sin_material: int, ya_hechas: int, piezas: list,
+             descartadas: list):
+    """El armado de la pasada en estado/auditoria.json (panel editorial, 17/10/2026)."""
+    from reels import auditoria as AU
+    fuera = [{"titulo": (n.get("titulo") or "")[:110], "localidad": ev.get("nombre"),
+              "km": ev.get("distancia_km"), "motivo": ev.get("motivo"), "etapa": "antes del guion"}
+             for n, ev in lejanas]
+    fuera += [{"titulo": (d.get("titulo") or "")[:110], "localidad": (d.get("geo") or {}).get("nombre"),
+               "km": (d.get("geo") or {}).get("distancia_km"), "motivo": d.get("por_que_no"),
+               "etapa": "con el guion"}
+              for d in descartadas if d.get("geografia") == "fuera_de_radio"]
+    AU.anotar("armado", {
+        "notas_scrapeadas": scrapeadas, "sin_foto_ni_video": sin_material, "ya_tuvieron_reel": ya_hechas,
+        "fuera_de_radio": fuera,
+        "pendientes_ubicacion": [{"titulo": (d.get("titulo") or "")[:110], "motivo": d.get("por_que_no")}
+                                 for d in descartadas if d.get("geografia") == "pendiente"],
+        "repetidas": [{"titulo": (d.get("titulo") or "")[:110], "motivo": d.get("por_que_no")}
+                      for d in descartadas if d.get("repetida")],
+        "otras_descartadas": [{"titulo": (d.get("titulo") or "")[:110], "motivo": d.get("por_que_no")}
+                              for d in descartadas if not d.get("repetida") and not d.get("geografia")],
+        "armadas": [{"titular": (p.get("guion") or {}).get("titular"), "localidad": (p.get("geo") or {}).get("nombre")
+                     or p.get("localidad_hecho"), "km": (p.get("geo") or {}).get("distancia_km"),
+                     "banda": (p.get("geo") or {}).get("banda"), "viral": p.get("viral"),
+                     "apta": p.get("apto_para_publicar"), "por_que_no": p.get("por_que_no") or ""}
+                    for p in piezas],
+    })
+
+
 def main():
     ap = argparse.ArgumentParser(description="FASE 1 — genera reels de policiales. NO publica.")
     ap.add_argument("--cuantos", type=int, default=5,
@@ -672,6 +700,7 @@ def main():
         return 1
 
     notas = json.loads(entrada.read_text(encoding="utf-8"))["notas"]
+    notas_scrapeadas = list(notas)
     print(f"=== FASE 1 — generación de reels (NO se publica nada) ===")
     print(f"Entrada: {entrada.name} ({len(notas)} notas policiales)")
 
@@ -746,6 +775,8 @@ def main():
     if not elegidas:
         print("No quedan notas nuevas para hacer reel (o ninguna coincide con el filtro).")
         _resumen_pasada(sin_material=sin_material, ya_hechas=repetidas)
+        if not args.sin_ledger:
+            _auditar(len(notas_scrapeadas), lejanas, sin_material, repetidas, [], [])
         return 0
     # Se arman y se publican en orden de llegada al medio, la más nueva primero (pedido
     # del editor, 27/09): lo del momento sale al principio de la pasada.
@@ -815,6 +846,8 @@ def main():
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     _resumen_pasada(sin_material=sin_material, ya_hechas=repetidas, nuevas=len(elegidas),
                     piezas=len(piezas), descartadas=[d.get("por_que_no") or "" for d in descartadas])
+    if not args.sin_ledger:
+        _auditar(len(notas_scrapeadas), lejanas, sin_material, repetidas, piezas, descartadas)
 
     if not args.sin_ledger:
         # Se anota DESPUES de que las piezas salieron, no antes: si la corrida se cae a la

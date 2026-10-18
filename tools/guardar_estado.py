@@ -134,6 +134,13 @@ def combinar_cupo(nuestro: dict, remoto: dict) -> dict:
     return combinar(nuestro, remoto)
 
 
+def combinar_auditoria(nuestro: dict, remoto: dict) -> dict:
+    """estado/auditoria.json (reels/auditoria.py, 17/10/2026): por pasada y parte, la más nueva."""
+    sys.path.insert(0, str(RAIZ))
+    from reels.auditoria import combinar
+    return combinar(nuestro, remoto)
+
+
 def combinar_tema(nuestro: dict, remoto: dict) -> dict:
     """estado/tema_reels.json: el más nuevo («cuando»), así la alternancia sigue al último reel."""
     return nuestro if (nuestro.get("cuando") or 0) >= (remoto.get("cuando") or 0) else remoto
@@ -188,7 +195,8 @@ COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combina
             "agro.json": combinar_agro,
             "tema_reels.json": combinar_tema,
             "nacionales.json": combinar_nacionales, "archivo.json": combinar_archivo,
-            "buzon_distribuidor.json": combinar_buzon, "cupo_pasadas.json": combinar_cupo}
+            "buzon_distribuidor.json": combinar_buzon, "cupo_pasadas.json": combinar_cupo,
+            "auditoria.json": combinar_auditoria}
 
 
 def _git(*args, chequear=True, raiz=RAIZ) -> subprocess.CompletedProcess:
@@ -224,6 +232,10 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
     nuestros = {p.name: _leer(p) for p in sorted(estado.glob("*.json"))
                 if not solo or p.name in solo}
     nuestros = {k: v for k, v in nuestros.items() if v is not None}
+    # Las páginas .md de estado/ (el panel editorial, 17/10/2026): se guarda la nuestra, sin combinar
+    # (se rehace entera en cada pasada).
+    paginas = {p.name: p.read_text(encoding="utf-8") for p in sorted(estado.glob("*.md"))
+               if not solo or p.name in solo}
     if not nuestros:
         return "estado/ vacío: nada que guardar."
 
@@ -235,7 +247,9 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
             final = COMBINAR[nombre](mio, remoto) if (nombre in COMBINAR and remoto) else mio
             (estado / nombre).write_text(json.dumps(final, ensure_ascii=False, indent=2),
                                          encoding="utf-8")
-        g("add", *[f"estado/{n}" for n in nuestros])
+        for nombre, texto in paginas.items():
+            (estado / nombre).write_text(texto, encoding="utf-8")
+        g("add", *[f"estado/{n}" for n in list(nuestros) + list(paginas)])
         if not g("status", "--porcelain", "estado/").stdout.strip():
             return "La memoria ya estaba al día: nada que commitear."
         g("commit", "--quiet", "-m", mensaje)

@@ -5,7 +5,7 @@ Como mucho MAX_POLICE_REELS_PER_PASS (3) hechos distintos por pasada, sumando TO
 misma pieza en YouTube, web, Facebook, Instagram y el buzón de X/TikTok es un solo hecho. 0, 1 o 2
 también están bien: nunca se completa la cuota.
 
-La pasada es el HORARIO (publicador.PASADAS_AR), no la corrida: si la de las 12:05 se corta y la
+La pasada es el HORARIO (PASADAS_AR, abajo), no la corrida: si la de las 12:05 se corta y la
 corre el respaldo, o alguien la vuelve a lanzar a mano, sigue siendo la pasada de las 12:05 y
 comparte los 3 lugares. Por eso las reservas quedan en estado/cupo_pasadas.json (se guarda con el
 resto de estado/ y se combina por unión en tools/guardar_estado.py). Las corridas de policiales no
@@ -21,6 +21,9 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 ARCHIVO = RAIZ / "estado" / "cupo_pasadas.json"
 MAX_DEFAULT = 3
+# Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Si
+# cambian los horarios de cron-job.org, se cambian acá.
+PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
 DIAS = 3                       # lo que se guarda: alcanza para auditar y no crece sin fin
 TZ_AR = timezone(timedelta(hours=-3))
 # Una corrida que arranca hasta 10 minutos ANTES de su horario es de ese horario.

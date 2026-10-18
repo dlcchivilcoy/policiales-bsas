@@ -553,6 +553,18 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 informe["fallas"].append(f"carrusel: {informe['carrusel'].get('error')}")
     if publicar:
         guardar(mem)
+        if informe["piezas"] or informe["descartadas"]:
+            from reels import auditoria as AU
+            AU.anotar("nacionales", {
+                "candidatas": informe.get("candidatas"),
+                "piezas": [{"titular": p.get("titular"), "categoria": p.get("categoria") or "general",
+                            "seccion": p.get("seccion"), "viral": p.get("viral"),
+                            "destinos": {r: (p.get(r) or {}).get("estado")
+                                         for r in ("youtube", "web", "facebook", "tiktok_buzon") if p.get(r)}}
+                           for p in informe["piezas"]],
+                "descartadas": [{"titulo": d.get("titulo"), "motivo": d.get("motivo"),
+                                 "categoria": d.get("categoria") or "general"} for d in informe["descartadas"]],
+            })
     return informe
 
 

@@ -278,6 +278,20 @@ jobs:
         if: always()
         run: python -m salud
 
+      # Panel editorial (17/10/2026, PDF «Prompt integral» etapa 7): mide las piezas que cumplieron
+      # 24 h (solo lectura de las APIs) y rehace estado/panel_editorial.md. Nunca frena la pasada.
+      - name: Panel editorial y métricas
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+        run: python tools/panel.py > /dev/null
+
       - name: Recordar qué notas ya salieron
         # El ledger es lo ÚNICO que tiene que sobrevivir entre pasadas. Como cada corrida
         # arranca en una máquina vacía, se commitea de vuelta al repo: es lo más simple que
@@ -442,7 +456,7 @@ jobs:
         # y lo guarda el trabajo de policiales (tools/guardar_estado.py combina las dos copias).
         if: always()
         run: |
-          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json)" ]; then
+          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json estado/auditoria.json)" ]; then
             echo "La memoria de nacionales no cambió."
             exit 0
           fi
@@ -451,7 +465,7 @@ jobs:
           # tema_reels.json: el bloque blanco/grafito del último reel 4:5 (se alternan).
           # buzon_distribuidor.json: los videos para TikTok por Buffer (17/10/2026); se une por id
           # con lo que dejó policiales.
-          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json
+          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json auditoria.json
 
       - name: Avisar en un issue
         if: failure()

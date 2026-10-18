@@ -32,6 +32,18 @@ piezas salgan con tu marca y no con un diseño inventado.
 >   la página. `INTERCALADO=0` lo apaga; `MIN_NON_POLICE_POSTS_BETWEEN_POLICE` (1). X y TikTok: el
 >   mismo criterio en el distribuidor de social_publisher.
 >
+> **17/10, etapa 7 (panel y métricas):** `estado/panel_editorial.md` se rehace al final de cada pasada
+> (`tools/panel.py`): por pasada, el cupo usado (de 3), cada hecho con lugar y km y su estado en
+> YouTube/web/Facebook/Instagram (⏳ = esperando otra temática), lo salteado y por qué, lo que quedó
+> fuera del radio, las nacionales por categoría, el volumen de 7 días por destino, las métricas y los
+> controles. Lo alimenta `estado/auditoria.json` (`reels/auditoria.py`: armado, publicación y
+> nacionales). Métricas (`reels/metricas.py`, `estado/metricas.json`): una foto por pieza a las
+> 24-72 h, solo lo que la API deja: IG likes y comentarios, FB reproducciones/likes del reel, YouTube
+> vistas/likes. **Faltan permisos** en el token de Meta (`instagram_manage_insights`, `read_insights`,
+> `pages_read_user_content`): sin ellos no hay alcance, reproducciones de IG, guardados ni retención.
+> Resumen por categoría, franja, día y distancia, con «muestra chica» por debajo de 5. Nada se ajusta
+> solo: el ajuste semanal lo decide el editor mirando el panel.
+>
 > **17/10, etapa 5 (notas web y Shorts):** el Short lleva el link a SU nota (`/n/slug`, se sabe antes
 > de crearla; si la nota no sale, `yt_cambiar_snippet` le saca el link). Un Short recién subido
 > queda «uploaded» y en la pasada siguiente `verificar_shorts` pregunta a YouTube (videos.list,

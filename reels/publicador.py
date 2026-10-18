@@ -1417,7 +1417,7 @@ def _turno(pieza: dict, ultimo) -> datetime:
 # Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Una
 # pasada termina de publicar antes de que arranque la siguiente: si no, se pisan (la segunda queda
 # en fila) y salen dos reels juntos.
-PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+PASADAS_AR = CUPO.PASADAS_AR      # vive en reels/cupo.py desde el 17/10/2026 (la usa también la auditoría)
 MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la pasada siguiente
 # Hechos policiales por pasada, sumando todas las redes: 3 desde el 17/10/2026 (antes 6). Es el
 # cupo GLOBAL de reels/cupo.py (variable MAX_POLICE_REELS_PER_PASS); acá se acota además por lo
@@ -1607,6 +1607,29 @@ def _esperar_intercalado(en_espera: dict, carpeta: Path, ledger: dict, pid: str)
                                   f"intercalado: no salió otra temática en {NOMBRE_RED[red]} "
                                   f"antes de la pasada siguiente"}
             print(f"  #{turno['pieza'].get('orden')} {NOMBRE_RED[red]}: {turno['fila'][red]['detalle']}")
+
+
+def _auditar_publicacion(informe: dict, listas: list, pid: str):
+    """La publicación de la pasada en estado/auditoria.json (panel editorial, 17/10/2026)."""
+    from reels import auditoria as AU
+    geo = {p.get("orden"): (p.get("geo") or {}) for p, _ in listas}
+    redes = ("youtube", "web", "facebook", "fb_youtube", "instagram")
+    try:
+        AU.anotar("publicacion", {
+            "maximo": CUPO.maximo(), "reservadas": (informe.get("pasada") or {}).get("reservadas"),
+            "piezas": [{"orden": f.get("orden"), "titular": f.get("titular"), "localidad": f.get("localidad"),
+                        "km": geo.get(f.get("orden"), {}).get("distancia_km"), "hora": f.get("hora"),
+                        "destinos": {r: {"estado": (f.get(r) or {}).get("estado"),
+                                         "detalle": str((f.get(r) or {}).get("detalle") or "")[:140],
+                                         "url": (f.get(r) or {}).get("url") or ""}
+                                     for r in redes if f.get(r)}}
+                       for f in informe.get("piezas") or []],
+            "salteadas": [{"titular": x.get("titular"), "motivo": x.get("motivo")}
+                          for x in informe.get("salteadas") or []],
+            "buzon_x_tiktok": (informe.get("distribuidor") or {}).get("buzon"),
+        }, pid=pid)
+    except OSError as e:                      # la auditoría nunca frena la pasada
+        print(f"(auditoría: no se pudo anotar: {e})")
 
 
 def _intentar(fn, *args) -> dict:
@@ -1942,6 +1965,8 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
 
     (carpeta / "_publicacion.json").write_text(
         json.dumps(informe, ensure_ascii=False, indent=2), encoding="utf-8")
+    if publicar:
+        _auditar_publicacion(informe, listas, pid)
     if publicar:
         salio = any((f.get(r) or {}).get("estado") == "ok" for f in informe["piezas"] for r in redes)
         if salio:

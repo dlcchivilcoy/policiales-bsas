@@ -300,6 +300,8 @@ def preparar(meta=None):
     PUB.LEDGER = base / "estado" / "publicados.json"
     PUB.DIST.BUZON = base / "estado" / "buzon_distribuidor.json"   # nunca el buzón real
     PUB.CUPO.ARCHIVO = base / "estado" / "cupo_pasadas.json"      # ni el cupo real de la pasada
+    from reels import auditoria as _AU
+    _AU.ARCHIVO = base / "estado" / "auditoria.json"              # ni la auditoría real
     PUB.RAIZ = base
     return base, carpeta, reloj, meta
 
