@@ -5634,6 +5634,52 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a1bd882e09694a50": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 70,
+      "commercial_score": 74,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran interés comercial para los productores trigueros de la zona núcleo por los premios de calidad.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        72
+      ]
+    },
+    "f0566dd540ad003a": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 86,
+      "commercial_score": 88,
+      "subtema": "agro",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Apunta directo al corazón productivo de la zona núcleo con datos clave para la campaña de soja.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -6031,7 +6077,9 @@
       "https://bichosdecampo.com/ni-segundos-francia-los-galos-pierden-posiciones-en-el-mundial-de-los-alimentos-y-hasta-los-organizadores-de-sial-paris-estan-preocupados": "2026-10-17",
       "https://bichosdecampo.com/quien-es-m-dias-branco-el-gigante-brasileno-que-compra-un-millon-de-toneladas-de-trigo-a-veces-de-argentina-para-elaborar-pastas-y-galletitas": "2026-10-17",
       "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno": "2026-10-17",
-      "https://bichosdecampo.com/el-feminismo-menos-pensado-una-dirigente-de-la-sociedad-rural-argentina-planteo-que-las-mujeres-quedan-al-margen-de-las-decisiones-sobre-las-politicas-agropecuarias": "2026-10-17"
+      "https://bichosdecampo.com/el-feminismo-menos-pensado-una-dirigente-de-la-sociedad-rural-argentina-planteo-que-las-mujeres-quedan-al-margen-de-las-decisiones-sobre-las-politicas-agropecuarias": "2026-10-17",
+      "https://bichosdecampo.com/no-dejes-de-analizar-se-viene-otra-campana-de-trigo-con-premios-importantes-para-partidas-con-calidad-panadera": "2026-10-17",
+      "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html": "2026-10-17"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6427,7 +6475,9 @@
       "ni segundos francia los galos pierden posiciones en el mundial de los alimentos y hasta los organizadores de sial paris estan preocupados": "2026-10-17",
       "quien es m dias branco el gigante brasileno que compra un millon de toneladas de trigo a veces de argentina para elaborar pastas y galletitas": "2026-10-17",
       "emilia monteleone describe el largo proceso para lograr un nuevo bioestimulante o de como una bacteria de la cana de azucar termino nutriendo al maiz y fijando nitrogeno": "2026-10-17",
-      "el feminismo menos pensado una dirigente de la sociedad rural argentina planteo que las mujeres quedan al margen de las decisiones sobre las politicas agropecuarias": "2026-10-17"
+      "el feminismo menos pensado una dirigente de la sociedad rural argentina planteo que las mujeres quedan al margen de las decisiones sobre las politicas agropecuarias": "2026-10-17",
+      "no dejes de analizar se viene otra campana de trigo con premios importantes para partidas con calidad panadera": "2026-10-17",
+      "cronicas de campana la soja se blinda por el nino": "2026-10-17"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -6823,7 +6873,9 @@
       "c25a771fba070420": "2026-10-17",
       "be199c1e20c44530": "2026-10-17",
       "7373186905ad787f": "2026-10-17",
-      "018f7ac95563731d": "2026-10-17"
+      "018f7ac95563731d": "2026-10-17",
+      "a1bd882e09694a50": "2026-10-17",
+      "f0566dd540ad003a": "2026-10-17"
     }
   },
   "elegidas": [
@@ -7914,49 +7966,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8ced40a20fee_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "e567601ccad9",
-      "rep": {
-        "id": "e567601ccad9",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno/",
-        "canonical_url": "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno",
-        "titulo": "Emilia Monteleone describe el largo proceso para lograr un nuevo bioestimulante: O de cómo una bacteria de la caña de azúcar terminó nutriendo al maíz y fijando nitrógeno",
-        "titulo_norm": "emilia monteleone describe el largo proceso para lograr un nuevo bioestimulante o de como una bacteria de la cana de azucar termino nutriendo al maiz y fijando nitrogeno",
-        "descripcion": "Cuando Emilia Monteleone decidió estudiar microbiología, hace casi 30 años, los microorganismos estaban bastante lejos del protagonismo que hoy tienen en la agricultura, los alimentos o la industria. Pero en su caso había una motivación bastante concreta: su familia tenía campo y a ella le intrigaba qué podía surgir de juntar esos dos mundos. “Me […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/equipo-koopert-e1792260416851.webp",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-17T16:35-03:00",
-        "capturado": "2026-10-17T20:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7373186905ad787f"
-      },
-      "grupo": [
-        {
-          "id": "e567601ccad9",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno/",
-          "canonical_url": "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno",
-          "titulo": "Emilia Monteleone describe el largo proceso para lograr un nuevo bioestimulante: O de cómo una bacteria de la caña de azúcar terminó nutriendo al maíz y fijando nitrógeno",
-          "titulo_norm": "emilia monteleone describe el largo proceso para lograr un nuevo bioestimulante o de como una bacteria de la cana de azucar termino nutriendo al maiz y fijando nitrogeno",
-          "descripcion": "Cuando Emilia Monteleone decidió estudiar microbiología, hace casi 30 años, los microorganismos estaban bastante lejos del protagonismo que hoy tienen en la agricultura, los alimentos o la industria. Pero en su caso había una motivación bastante concreta: su familia tenía campo y a ella le intrigaba qué podía surgir de juntar esos dos mundos. “Me […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/equipo-koopert-e1792260416851.webp",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-17T16:35-03:00",
-          "capturado": "2026-10-17T20:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7373186905ad787f"
-        }
-      ],
+      "cuando": "2026-10-17T21:00-03:00",
+      "titulo_original": "Emilia Monteleone describe el largo proceso para lograr un nuevo bioestimulante: O de cómo una bacteria de la caña de azúcar terminó nutriendo al maíz y fijando nitrógeno",
+      "descripcion": "Cuando Emilia Monteleone decidió estudiar microbiología, hace casi 30 años, los microorganismos estaban bastante lejos del protagonismo que hoy tienen en la agricultura, los alimentos o la industria. Pero en su caso había una motivación bastante concreta: su familia tenía campo y a ella le intrigaba",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/emilia-monteleone-describe-el-largo-proceso-para-lograr-un-nuevo-bioestimulante-o-de-como-una-bacteria-de-la-cana-de-azucar-termino-nutriendo-al-maiz-y-fijando-nitrogeno/",
+      "titular": "Maíz: desarrollan bioestimulante foliar a partir de bacterias de caña de azúcar",
+      "volanta": "AgTech",
       "score": {
         "impacto_economico": 14,
         "interes_productores": 15,
@@ -7978,11 +7997,98 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-17T20:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-17T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7e9c35e8-7db6-4f24-871e-773dbc78f560",
+          "slug": "maiz-crean-un-bioestimulante-foliar-a-partir-de-bacterias-de-la-7a5be3",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-crean-un-bioestimulante-foliar-a-partir-de-bacterias-de-la-7a5be3",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18415429123084202",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1726765606121103",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e567601ccad9_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-17T20:03:35-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [
+    {
+      "id": "306aa26b4dc5",
+      "rep": {
+        "id": "306aa26b4dc5",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
+        "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
+        "titulo": "Crónicas de campaña: la soja se blinda por el Niño",
+        "titulo_norm": "cronicas de campana la soja se blinda por el nino",
+        "descripcion": "La Guía Estratégica para el Agro prevé un aumento de 2% en la superficie a implantar en la región núcleo. Los planes son sembrar antes, intensificar los planteos y acortar los ciclos.",
+        "imagen_url": "https://media.lacapital.com.ar/p/4fb71c2e455b4f70b7153076c7ba788b/adjuntos/305/imagenes/103/205/0103205614/1200x675/smart/sojag.jpg",
+        "autor": "",
+        "publicado": "2026-10-17T20:15-03:00",
+        "capturado": "2026-10-17T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f0566dd540ad003a"
+      },
+      "grupo": [
+        {
+          "id": "306aa26b4dc5",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
+          "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-la-soja-se-blinda-el-nino-n10287267.html",
+          "titulo": "Crónicas de campaña: la soja se blinda por el Niño",
+          "titulo_norm": "cronicas de campana la soja se blinda por el nino",
+          "descripcion": "La Guía Estratégica para el Agro prevé un aumento de 2% en la superficie a implantar en la región núcleo. Los planes son sembrar antes, intensificar los planteos y acortar los ciclos.",
+          "imagen_url": "https://media.lacapital.com.ar/p/4fb71c2e455b4f70b7153076c7ba788b/adjuntos/305/imagenes/103/205/0103205614/1200x675/smart/sojag.jpg",
+          "autor": "",
+          "publicado": "2026-10-17T20:15-03:00",
+          "capturado": "2026-10-17T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f0566dd540ad003a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 86,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Apunta directo al corazón productivo de la zona núcleo con datos clave para la campaña de soja.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-17T21:00-03:00"
+    }
+  ],
+  "actualizado": "2026-10-17T21:03:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
