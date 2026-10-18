@@ -5818,6 +5818,140 @@
         80,
         77
       ]
+    },
+    "bcbeedf09850a609": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 86,
+      "commercial_score": 86,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la planificación de toda la región pampeana frente al fenómeno climático.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f655d1734aedd554": {
+      "impacto_economico": 13,
+      "interes_productores": 9,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 63,
+      "subtema": "empresas",
+      "tema": "avícola bonin",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran historia de esfuerzo y agregado de valor que genera inspiración y debate en el sector.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        60
+      ]
+    },
+    "b566302d281e7ff3": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 70,
+      "commercial_score": 69,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca de cerca la realidad ganadera de la zona núcleo y los desafíos de competitividad y precios.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        67
+      ]
+    },
+    "370c70cecd992686": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 49,
+      "commercial_score": 59,
+      "subtema": "ganaderia",
+      "tema": "ipcva",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de color institucional sobre promoción de carne en Europa, de interés moderado para el productor.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "62c4b04aa1f256d3": {
+      "impacto_economico": 7,
+      "interes_productores": 8,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 5,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 50,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "pastizales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reflexión técnica sobre pastizales y producción, pero queda algo lejos de la urgencia diaria del productor.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fe73ba067998c1f5": {
+      "impacto_economico": 0,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 5,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 2,
+      "ai_score": 16,
+      "commercial_score": 18,
+      "subtema": "agro",
+      "tema": "historia",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relato histórico cultural sin utilidad práctica ni económica para la actividad agropecuaria actual.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -6236,7 +6370,21 @@
       "https://lanacion.com.ar/economia/campo/el-costo-de-producir-granos-en-la-argentina-se-acerca-al-de-sus-competidores-nid18102026": "2026-10-18",
       "https://lacapital.com.ar/agro/afa-escala-convocan-presentar-ideas-innovadoras-el-agro-n10287254.html": "2026-10-18",
       "https://bichosdecampo.com/despues-de-toda-una-carrera-como-forestal-wilmar-diaz-perera-se-reinvento-como-huertero-cerca-de-virasoro-pero-no-le-resulta-facil-crecer": "2026-10-18",
-      "https://bichosdecampo.com/el-frigorifico-rioplatense-llevo-a-paris-500-kilos-de-carne-de-novillo-que-ya-cumplian-con-las-exigencias-antideforestacion-de-la-ue-los-importadores-europeos-ya-las-exigen-explico-stanley-hogg": "2026-10-18"
+      "https://bichosdecampo.com/el-frigorifico-rioplatense-llevo-a-paris-500-kilos-de-carne-de-novillo-que-ya-cumplian-con-las-exigencias-antideforestacion-de-la-ue-los-importadores-europeos-ya-las-exigen-explico-stanley-hogg": "2026-10-18",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-18-octubre-2026": "2026-10-18",
+      "https://infocampo.com.ar/el-nino-el-gobierno-lanzo-una-nueva-plataforma-para-seguirlo-dia-a-dia-y-con-recomendaciones-productivas": "2026-10-18",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-18-octubre-2026": "2026-10-18",
+      "https://bichosdecampo.com/los-hermanos-bonin-arrancaron-de-cero-vendiendo-unos-pocos-pollos-que-faenaban-a-mano-hoy-tienen-una-avicola-con-800-empleados-que-exporta-y-apunta-al-agregado-de-valor": "2026-10-18",
+      "https://bichosdecampo.com/desde-el-frigorifico-recreo-destacan-oportunidades-en-el-mercado-mundial-de-la-carne-pero-tambien-desafios-para-atender-mejor-la-demanda": "2026-10-18",
+      "https://bichosdecampo.com/como-te-ven-te-tratan-tres-periodistas-europeos-probaron-la-carne-argentina-y-contaron-que-imagen-tienen-del-pais-y-de-su-ganaderia": "2026-10-18",
+      "https://bichosdecampo.com/en-el-dia-mundial-de-la-proteccion-de-la-naturaleza-sebastian-fermani-tiene-algo-para-decir-sobre-el-cuidado-de-los-pastizales-su-degradacion-tambien-compromete-a-la-produccion": "2026-10-18",
+      "https://lanacion.com.ar/economia/campo/gran-manjar-las-sorpresas-que-se-llevo-un-viajero-ingles-en-la-argentina-nid18102026": "2026-10-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6653,7 +6801,21 @@
       "el costo de producir granos en la argentina se acerca al de sus competidores": "2026-10-18",
       "afa escala convocan a presentar ideas innovadoras para el agro": "2026-10-18",
       "despues de toda una carrera como forestal wilmar diaz perera se reinvento como huertero cerca de virasoro pero no le resulta facil crecer": "2026-10-18",
-      "el frigorifico rioplatense llevo a paris 500 kilos de carne de novillo que ya cumplian con las exigencias antideforestacion de la ue los importadores europeos ya las exigen explico stanley hogg": "2026-10-18"
+      "el frigorifico rioplatense llevo a paris 500 kilos de carne de novillo que ya cumplian con las exigencias antideforestacion de la ue los importadores europeos ya las exigen explico stanley hogg": "2026-10-18",
+      "dolar blue a cuanto cotizan hoy en mendoza 18 octubre 2026": "2026-10-18",
+      "euro blue hoy precio y cotizacion de este 18 octubre 2026": "2026-10-18",
+      "precio del maiz en rosario hoy 18 octubre 2026": "2026-10-18",
+      "precio del trigo en rosario hoy 18 octubre 2026": "2026-10-18",
+      "precio del girasol en rosario hoy 18 octubre 2026": "2026-10-18",
+      "precio de la soja en rosario hoy 18 octubre 2026": "2026-10-18",
+      "precio del sorgo en rosario hoy 18 octubre 2026": "2026-10-18",
+      "el nino el gobierno lanzo una nueva plataforma para seguirlo dia a dia y con recomendaciones productivas": "2026-10-18",
+      "dolar blue a cuanto cotizan hoy en cordoba 18 octubre 2026": "2026-10-18",
+      "los hermanos bonin arrancaron de cero vendiendo unos pocos pollos que faenaban a mano hoy tienen una avicola con 800 empleados que exporta y apunta al agregado de valor": "2026-10-18",
+      "desde el frigorifico recreo destacan oportunidades en el mercado mundial de la carne pero tambien desafios para atender mejor la demanda": "2026-10-18",
+      "como te ven te tratan tres periodistas europeos probaron la carne argentina y contaron que imagen tienen del pais y de su ganaderia": "2026-10-18",
+      "en el dia mundial de la proteccion de la naturaleza sebastian fermani tiene algo para decir sobre el cuidado de los pastizales su degradacion tambien compromete a la produccion": "2026-10-18",
+      "gran manjar las sorpresas que se llevo un viajero ingles en la argentina": "2026-10-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -7070,7 +7232,21 @@
       "3dd07fea4f1d999e": "2026-10-18",
       "65fc02db62c40cb0": "2026-10-18",
       "471852e5b6c39b8b": "2026-10-18",
-      "af0db0138929f7b0": "2026-10-18"
+      "af0db0138929f7b0": "2026-10-18",
+      "3eff88cf09e3714f": "2026-10-18",
+      "a4868c0ca119705c": "2026-10-18",
+      "fe65d16f9fb1b959": "2026-10-18",
+      "a6465dde1d4a60c5": "2026-10-18",
+      "f4bc059a0117bfd3": "2026-10-18",
+      "3df62b14c69a2df6": "2026-10-18",
+      "654fee0cb9af7aaa": "2026-10-18",
+      "bcbeedf09850a609": "2026-10-18",
+      "1981238ba0fc301e": "2026-10-18",
+      "f655d1734aedd554": "2026-10-18",
+      "b566302d281e7ff3": "2026-10-18",
+      "370c70cecd992686": "2026-10-18",
+      "62c4b04aa1f256d3": "2026-10-18",
+      "fe73ba067998c1f5": "2026-10-18"
     }
   },
   "elegidas": [
@@ -8334,6 +8510,67 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2813c65a2411_portada.jpg"
+    },
+    {
+      "id": "5213960c8581",
+      "cuando": "2026-10-18T12:00-03:00",
+      "titulo_original": "El Niño: el Gobierno lanzó una nueva plataforma para seguirlo día a día y con recomendaciones productivas",
+      "descripcion": "A través de un nuevo apartado en su página web, la Secretaría de Agricultura de la Nación brinda información actualizada sobre el avance de El Niño y también aportes técnicos para prevenir y enfrentar este fenómeno climático.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-nino-el-gobierno-lanzo-una-nueva-plataforma-para-seguirlo-dia-a-dia-y-con-recomendaciones-productivas/",
+      "titular": "El Niño: lanzan plataforma oficial con monitoreo y guías técnicas",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 86,
+        "commercial_score": 86,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la planificación de toda la región pampeana frente al fenómeno climático.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-18T12:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "7H5QZEoDHbo",
+          "url": "https://youtube.com/shorts/7H5QZEoDHbo",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "392e7a62-f2d6-40e2-9e2d-13ed48cab31b",
+          "slug": "el-nino-lanzan-plataforma-oficial-con-monitoreo-y-guias-49f74d",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-lanzan-plataforma-oficial-con-monitoreo-y-guias-49f74d",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2254912308697010",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18250625155309394",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5213960c8581_portada.jpg"
     }
   ],
   "pendientes": [
@@ -8405,8 +8642,8 @@
       "cuando": "2026-10-18T08:00-03:00"
     }
   ],
-  "actualizado": "2026-10-18T09:03:43-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-18T12:03:36-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
