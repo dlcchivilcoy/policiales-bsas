@@ -5998,6 +5998,73 @@
         81,
         75
       ]
+    },
+    "e52f656ccffec738": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 66,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "oleaginosas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad y estrategia de comercialización de los productores de la región núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        67
+      ]
+    },
+    "17dcb26c0c51668c": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 70,
+      "subtema": "ganaderia",
+      "tema": "visec carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Clave para los ganaderos exportadores que deben adaptarse a las exigencias de trazabilidad de la Unión Europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6c92f1613398d20b": {
+      "impacto_economico": 2,
+      "interes_productores": 1,
+      "innovacion": 5,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 1,
+      "potencial_comercial": 1,
+      "ai_score": 13,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "tomate mozambique",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una nota de color sobre cooperación internacional que no afecta ni interesa al productor de la región pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -6432,7 +6499,10 @@
       "https://bichosdecampo.com/en-el-dia-mundial-de-la-proteccion-de-la-naturaleza-sebastian-fermani-tiene-algo-para-decir-sobre-el-cuidado-de-los-pastizales-su-degradacion-tambien-compromete-a-la-produccion": "2026-10-18",
       "https://lanacion.com.ar/economia/campo/gran-manjar-las-sorpresas-que-se-llevo-un-viajero-ingles-en-la-argentina-nid18102026": "2026-10-18",
       "https://infocampo.com.ar/la-genetica-del-salame-en-oncativo-fortalecen-una-unica-raza-porcina-para-mejorar-sus-chacinados": "2026-10-18",
-      "https://bichosdecampo.com/hito-comercial-se-completo-el-programa-previsto-de-embarques-de-trigo-argentino-2025-26-con-mas-de-un-mes-de-anticipacion": "2026-10-18"
+      "https://bichosdecampo.com/hito-comercial-se-completo-el-programa-previsto-de-embarques-de-trigo-argentino-2025-26-con-mas-de-un-mes-de-anticipacion": "2026-10-18",
+      "https://agrositio.com.ar/canal-agrositio/30-online/248881-agustin-baque-la-guerra-y-el-petroleo-elevan-la-demanda-global-de-oleaginosas-y-los-cereales.html": "2026-10-18",
+      "https://bichosdecampo.com/daniel-urcia-advirtio-que-los-ganaderos-deben-facilitar-los-datos-para-cumplir-con-el-reglamento-antideforestacion-de-la-ue-para-no-quedar-fuera-de-ese-mercado-no-tiene-costo-para-el-productor-no": "2026-10-18",
+      "https://bichosdecampo.com/aun-en-la-adversidad-la-gente-es-muy-alegre-se-la-pasan-cantando-y-bailando-un-equipo-del-inta-colabora-para-mejorar-la-produccion-de-tomate-en-mozambique": "2026-10-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -6865,7 +6935,10 @@
       "en el dia mundial de la proteccion de la naturaleza sebastian fermani tiene algo para decir sobre el cuidado de los pastizales su degradacion tambien compromete a la produccion": "2026-10-18",
       "gran manjar las sorpresas que se llevo un viajero ingles en la argentina": "2026-10-18",
       "la genetica del salame en oncativo fortalecen una unica raza porcina para mejorar sus chacinados": "2026-10-18",
-      "hito comercial se completo el programa previsto de embarques de trigo argentino 2025 26 con mas de un mes de anticipacion": "2026-10-18"
+      "hito comercial se completo el programa previsto de embarques de trigo argentino 2025 26 con mas de un mes de anticipacion": "2026-10-18",
+      "guerra y petroleo por que crece la demanda mundial de oleaginosas y que pasa con los cereales con a baque": "2026-10-18",
+      "daniel urcia advirtio que los ganaderos deben facilitar los datos para cumplir con el reglamento antideforestacion de la ue para no quedar fuera de ese mercado no tiene costo para el productor no es una certificacion": "2026-10-18",
+      "aun en la adversidad la gente es muy alegre se la pasan cantando y bailando un equipo del inta colabora para mejorar la produccion de tomate en mozambique": "2026-10-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -7298,7 +7371,10 @@
       "62c4b04aa1f256d3": "2026-10-18",
       "fe73ba067998c1f5": "2026-10-18",
       "d6f26f531c536bc4": "2026-10-18",
-      "65e9224b67d84063": "2026-10-18"
+      "65e9224b67d84063": "2026-10-18",
+      "e52f656ccffec738": "2026-10-18",
+      "17dcb26c0c51668c": "2026-10-18",
+      "6c92f1613398d20b": "2026-10-18"
     }
   },
   "elegidas": [
@@ -8706,7 +8782,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-18T19:02:08-03:00",
+  "actualizado": "2026-10-18T20:01:34-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
