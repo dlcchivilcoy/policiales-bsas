@@ -7421,7 +7421,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T12:07:25-03:00"
+        "cuando": "2026-10-18T12:07:25-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "2991bf21-e852-48ba-87ce-5d073c3a7487",
@@ -7497,7 +7498,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T12:37:25-03:00"
+        "cuando": "2026-10-18T12:37:25-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "6a8eefef-fd3c-42f1-b4bd-47d0ccf635f7",
@@ -7570,7 +7572,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T13:07:25-03:00"
+        "cuando": "2026-10-18T13:07:25-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "1abafabb-ff53-4fcd-911c-6a4465fed747",
@@ -7640,7 +7643,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T13:37:25-03:00"
+        "cuando": "2026-10-18T13:37:25-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "bdea4ddc-3076-41e7-9bcd-0eb6014e727a",
@@ -7715,7 +7719,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T14:07:25-03:00"
+        "cuando": "2026-10-18T14:07:25-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "c4fb57c6-7a3a-4813-9b35-62db9de59700",
@@ -7734,6 +7739,358 @@
       "tiktok_buzon": {
         "estado": "ok",
         "id": "nacionales:b541d9169f033092"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/18/el-dilema-de-milei-sobrevivir-con-blindaje-politico-hasta-que-la-economia-reaccione/": {
+      "titulo_original": "El dilema de Milei: sobrevivir con blindaje político hasta que la economía reaccione",
+      "titular": "El dilema de Milei: apoyo de gobernadores y la espera de la recuperación económica",
+      "volanta": "Blindaje político",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 51,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 4.º de 34 en «portada»",
+        "Google News: 4.º de 58 en «nacionales»",
+        "cobertura: 5 medios (Infobae)"
+      ],
+      "fuentes": [],
+      "bajada": "El oficialismo logró frenar la caída del DNU 70 en el Congreso gracias al respaldo de 14 gobernadores, entre ellos Hugo Passalacqua y Gustavo Melella. El Gobierno busca sostener el escudo político mientras aguarda la reactivación económica.",
+      "seccion": "Política",
+      "tema": [
+        "*milei",
+        "blindaje",
+        "dilema",
+        "economia",
+        "milei",
+        "politico",
+        "reaccione",
+        "sobrevivir"
+      ],
+      "viral": 7,
+      "puntos": 51,
+      "nivel": "política",
+      "cobertura": 2,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T15:07:32-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 5,
+      "foto_url": "",
+      "foto": "Javier Milei logró un triunfo legislativo que, de todas formas, dejó varias señales de alerta para la Rosada. Foto: REUTERS",
+      "youtube": {
+        "id": "jL46LySK2ak",
+        "url": "https://youtube.com/shorts/jL46LySK2ak",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T15:07:16-03:00"
+      },
+      "web": {
+        "id": "dd87b7aa-3504-4ee1-855b-97c17f044d34",
+        "slug": "el-dilema-de-milei-blindaje-politico-de-gobernadores-y-la-4d4c5b",
+        "url": "https://www.diariolacampaña.com.ar/n/el-dilema-de-milei-blindaje-politico-de-gobernadores-y-la-4d4c5b",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T15:07:25-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2062476401360652",
+        "estado": "ok",
+        "cuando": "2026-10-18T15:07:28-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:4d4c5be14febf1aa"
+      }
+    },
+    "https://www.lanacion.com.ar/espectaculos/que-ver-en-netflix-las-mejores-peliculas-y-series-para-disfrutar-este-fin-de-semana-nublado-y-fresco-nid16102026/": {
+      "titulo_original": "Qué ver en Netflix: las mejores películas y series para disfrutar este fin de semana nublado y fresco",
+      "titular": "Las cinco películas para maratonear este fin de semana en Netflix",
+      "volanta": "Estrenos en Netflix",
+      "categoria": "cine_series",
+      "formato": "reel",
+      "medio_origen": "La Nación",
+      "video_original": "https://cdn.jwplayer.com/videos/BV0ryTJV-kTExGaWf.mp4",
+      "impacto": 55,
+      "impacto_razones": [
+        "fuente: La Nación (2.º de 5 en el orden del PDF)",
+        "Google News: 23.º de 34 en «portada»",
+        "Google News: 1.º de 57 en «espectaculos»",
+        "cobertura: 8 medios (La Nación, Ámbito)",
+        "6.º más leída de Ámbito"
+      ],
+      "fuentes": [
+        "La Nación",
+        "Ámbito"
+      ],
+      "bajada": "La plataforma de streaming renovó su catálogo con opciones de suspenso, comedia romántica y animación. Conocé las producciones imperdibles que marcan tendencia con duraciones de 1 h 48 min, 1 h 43 min, 1 h 41 min y 1 h 17 min.",
+      "seccion": "Cine y series",
+      "tema": [
+        "*netflix",
+        "disfrutar",
+        "fresco",
+        "mejore",
+        "netflix",
+        "nublado",
+        "pelicula",
+        "serie"
+      ],
+      "viral": 6,
+      "puntos": 55,
+      "nivel": "cine_series",
+      "cobertura": 2,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T15:39:00-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 6,
+      "foto_url": "https://resizer.glanacion.com/resizer/v2/IMZEITXFTREIXFUKOG2TJSO5KU.jpg?auth=08607c4db786456e1950431967ecfeb72815579915ab99979e009430fe984f30&smart=true&width=2000&height=1333",
+      "foto": "Con todos menos contigo, la película protagonizada por Sydney Sweeney y Glen Powell está en el ranking de Netflix",
+      "youtube": {
+        "id": "XJCgrqgAfQQ",
+        "url": "https://youtube.com/shorts/XJCgrqgAfQQ",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T15:37:16-03:00"
+      },
+      "web": {
+        "id": "c6663899-669a-41de-b04f-299805304e87",
+        "slug": "netflix-las-cinco-peliculas-recomendadas-para-ver-este-fin-de-82015d",
+        "url": "https://www.diariolacampaña.com.ar/n/netflix-las-cinco-peliculas-recomendadas-para-ver-este-fin-de-82015d",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T15:37:23-03:00"
+      },
+      "instagram": {
+        "id": "18069239522509930",
+        "estado": "ok",
+        "cuando": "2026-10-18T15:37:26-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:82015de779d2e56d"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/18/circulo-rojo-preocupacion-por-la-crisis-que-atraviesa-el-sector-de-la-salud-y-relaciones-cruzadas-en-la-eleccion-del-consejo-de-la-magistratura/": {
+      "titulo_original": "Círculo rojo: preocupación por la crisis que atraviesa el sector de la salud y relaciones cruzadas en la elección del Consejo de la Magistratura",
+      "titular": "Advierten riesgo para 5000 clínicas y sanatorios por el fin de la emergencia",
+      "volanta": "Crisis sanitaria",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 25,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)"
+      ],
+      "fuentes": [],
+      "bajada": "El sector privado de la salud reclama extender la normativa vigente desde 2001 para evitar embargos. En paralelo, el PAMI atraviesa tensiones internas y protestas que afectaron a seis millones de afiliados.",
+      "seccion": "Política",
+      "tema": [
+        "*consejo",
+        "*magistratura",
+        "atraviesa",
+        "circulo",
+        "consejo",
+        "crisi",
+        "cruzada",
+        "eleccion",
+        "magistratura",
+        "preocupacion",
+        "relacione",
+        "rojo",
+        "salud",
+        "sector"
+      ],
+      "viral": 7,
+      "puntos": 46,
+      "nivel": "política",
+      "cobertura": 3,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T16:07:27-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 6,
+      "foto_url": "https://www.infobae.com/resizer/v2/2XCDBLJKN5HX3A5ULROUOKPCGI.jpg?auth=226beeffc8d6c3dea2089e56cc1fc8314ea3dec6bd2eb8a47466a1292bf787d9&smart=true&width=1920&height=1081",
+      "foto": "Manuel Quintar",
+      "youtube": {
+        "id": "lizgrBu68yA",
+        "url": "https://youtube.com/shorts/lizgrBu68yA",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T16:07:16-03:00"
+      },
+      "web": {
+        "id": "82b6cce8-6765-4661-8b19-1e22966dd60a",
+        "slug": "salud-en-alerta-analizan-extender-la-emergencia-para-evitar-la-b1c71e",
+        "url": "https://www.diariolacampaña.com.ar/n/salud-en-alerta-analizan-extender-la-emergencia-para-evitar-la-b1c71e",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T16:07:21-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2062521754689450",
+        "estado": "ok",
+        "cuando": "2026-10-18T16:07:23-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b1c71e9d1312dd69"
+      }
+    },
+    "https://www.tycsports.com/racing-club/quien-es-gamuza-barzola-el-nuevo-lider-de-la-barra-de-racing-en-la-previa-del-clasico-con-independiente-id767078.html": {
+      "titulo_original": "Quién será el nuevo líder de la barra de Racing en la previa del clásico con Independiente",
+      "titular": "Racing define al nuevo líder de su barra brava en la antesala del clásico",
+      "volanta": "Interna en Racing",
+      "categoria": "deportes",
+      "formato": "carrusel",
+      "medio_origen": "TyC Sports",
+      "video_original": "",
+      "impacto": 72,
+      "impacto_razones": [
+        "fuente: TyC Sports (1.º de 9 en el orden del PDF)",
+        "Google News: 28.º de 34 en «portada»",
+        "Google News: 2.º de 53 en «deportes»",
+        "cobertura: 9 medios (TyC Sports, ESPN, Infobae)",
+        "búsqueda en tendencia en Google: «racing - independiente» (100.000+)"
+      ],
+      "fuentes": [
+        "TyC Sports",
+        "ESPN",
+        "Infobae"
+      ],
+      "bajada": "Darío Barzola, alias Gamuza, asumió el mando en el paravalancha de la Academia tras una dura disputa interna. El anterior jefe, Leandro Paredes, sigue prófugo.",
+      "seccion": "Deportes",
+      "tema": [
+        "*independiente",
+        "*racing",
+        "barra",
+        "clasico",
+        "independiente",
+        "lider",
+        "previa",
+        "racing"
+      ],
+      "viral": 6,
+      "puntos": 72,
+      "nivel": "deportes",
+      "cobertura": 4,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T16:38:06-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 8,
+      "foto_url": "https://media.tycsports.com/files/2026/10/18/997136/gamuza-barzola_862x485.webp?v=1",
+      "foto": "Gamuza Barzola es el teñido de rubio, debajo de la letra \"O\" de Pistolero.",
+      "youtube": {
+        "id": "BqvBt9P8caM",
+        "url": "https://youtube.com/shorts/BqvBt9P8caM",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T16:37:16-03:00"
+      },
+      "web": {
+        "id": "04425d89-83c4-4e64-b618-b51e5d8d09e0",
+        "slug": "racing-quien-es-el-nuevo-jefe-de-la-barra-brava-antes-del-78b5fd",
+        "url": "https://www.diariolacampaña.com.ar/n/racing-quien-es-el-nuevo-jefe-de-la-barra-brava-antes-del-78b5fd",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T16:37:24-03:00"
+      },
+      "instagram": {
+        "id": "18110064617230571",
+        "diapositivas": 6,
+        "estado": "ok",
+        "cuando": "2026-10-18T16:37:26-03:00",
+        "formato": "carrusel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:78b5fd65bc73d6c5"
+      }
+    },
+    "https://www.infobae.com/judiciales/2026/10/18/el-ex-titular-de-arsat-que-debia-llevar-internet-a-todo-el-pais-termino-procesado-tenia-usd-26-millones-en-sus-casas/": {
+      "titulo_original": "El ex titular de ARSAT, que debía llevar Internet a todo el país, terminó procesado: tenía USD 2,6 millones en sus casas",
+      "titular": "Procesaron al exjefe de ARSAT y le hallaron 2,6 millones de dólares en efectivo",
+      "volanta": "Corrupción en ARSAT",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 51,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 35.º de 58 en «nacionales»",
+        "cobertura: 5 medios (Infobae)",
+        "YouTube en tendencia: «EL JUEGO MAS RARO DE TODO INTERNET 2 😳😈» (200.915 vistas. 1.460 me gusta. 124 comentarios)"
+      ],
+      "fuentes": [],
+      "bajada": "La Justicia procesó al exfuncionario Facundo Leal en una causa por presuntos sobornos y direccionamiento de contrataciones. Hallaron dinero en efectivo en propiedades de Buenos Aires y Mendoza.",
+      "seccion": "Justicia",
+      "tema": [
+        "*arsat",
+        "*internet",
+        "2",
+        "6",
+        "arsat",
+        "casas",
+        "debia",
+        "internet",
+        "llevar",
+        "millone",
+        "pais",
+        "procesado",
+        "tenia",
+        "termino",
+        "titular"
+      ],
+      "viral": 7,
+      "puntos": 44,
+      "nivel": "justicia",
+      "cobertura": 1,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T17:07:27-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 7,
+      "foto_url": "https://www.infobae.com/resizer/v2/LRWF2G2N3BG2HBHBN36YXKXQUM.jpg?auth=6786f6fea0dd92cb0990af36d466dce05d4cf5e937129511cf01eff5148e6a70&smart=true&width=3091&height=2063",
+      "foto": "Facundo Leal en sus tiempos al frente de ARSAT",
+      "youtube": {
+        "id": "5Z1d0K-w85w",
+        "url": "https://youtube.com/shorts/5Z1d0K-w85w",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T17:07:16-03:00"
+      },
+      "web": {
+        "id": "a6866535-5ea0-4fe1-bea6-41c2d0e69130",
+        "slug": "procesaron-al-ex-titular-de-arsat-facundo-leal-y-hallaron-mas-76f678",
+        "url": "https://www.diariolacampaña.com.ar/n/procesaron-al-ex-titular-de-arsat-facundo-leal-y-hallaron-mas-76f678",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T17:07:23-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:76f6781e9594def9"
       }
     }
   },
@@ -7963,5 +8320,5 @@
       ]
     }
   },
-  "actualizado": "2026-10-18T14:07:38-03:00"
+  "actualizado": "2026-10-18T17:07:27-03:00"
 }
