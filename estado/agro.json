@@ -8087,7 +8087,7 @@
       "cuando": "2026-10-17T21:00-03:00"
     }
   ],
-  "actualizado": "2026-10-17T21:03:22-03:00",
+  "actualizado": "2026-10-18T07:01:30-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -8230,6 +8230,79 @@
               },
               "facebook": {
                 "id": "1461762375830895"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-10-18T07:00:00-03:00": {
+      "dia": "2026-10-18",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "18372554620213588"
+            },
+            "facebook": {
+              "id": "1659382052509129"
+            }
+          }
+        },
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "18023176586712802"
+            },
+            "facebook": {
+              "id": "1865429467925412"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "id": "18050274329810773"
+            },
+            "facebook": {
+              "id": "2336913800477733"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18372554620213588"
+              },
+              "facebook": {
+                "id": "1659382052509129"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18023176586712802"
+              },
+              "facebook": {
+                "id": "1865429467925412"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18050274329810773"
+              },
+              "facebook": {
+                "id": "2336913800477733"
               }
             }
           ]
