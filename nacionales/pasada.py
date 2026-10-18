@@ -28,8 +28,15 @@ Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un traba
    NAC_FB_POR_PASADA (2) y NAC_FB_POR_DIA (8). Es un posteo con la PLACA y el link a la nota:
    Facebook no lee bien la foto de una nota de Wix recién publicada (memoria del bot, «FB
    previsualización misma foto») y si se postea solo el link sale con una foto equivocada.
-   30 minutos entre pieza y pieza (eran 5; pedido del editor del 13/10/2026, como policiales).
-4. Desde las 22 (la pasada de las 21:05 espera con --esperar-carrusel 22:00), el carrusel de
+   → Instagram (desde el 18/10/2026, también las generales): REEL con el video original de la nota o
+   CARRUSEL explicativo con su foto. El texto lleva el sitio, NUNCA el link de la nota (pedido del
+   editor, 18/10: «sacá el link a la nota y poné el link de mi página web»).
+   LA FILA (18/10/2026, noche; reels/turnos.py): un posteo cada 15 minutos entre policiales,
+   nacionales y variedad, hasta 12 por pasada, nunca dos de la misma categoría seguidos. Esta pasada
+   toma los turnos que policiales no reservó, de a uno, en el momento. Antes: 30 minutos entre piezas.
+4. APAGADO desde el 18/10/2026 (pedido del editor: las generales van una por una a Instagram): el
+   workflow corre con --sin-carrusel. Lo que sigue queda por si se vuelve a prender. Desde las 22 (la
+   pasada de las 21:05 esperaba con --esperar-carrusel 22:00), el carrusel de
    Instagram con lo que salió desde el carrusel anterior: hasta 10 diapositivas, una por nota y
    la primera es la portada (desde el 12/10 no hay tapa con la lista de titulares). Estilo
    portal en grafito (placa.slide_carrusel): las fotos horizontales alternan dos estilos con la
@@ -60,6 +67,7 @@ from nacionales import portales as PO
 from nacionales import senales as SE
 from reels import distribuidor as DIST
 from reels import publicador as PUB
+from reels import turnos as TURNOS
 from reels import web as WEB
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -69,14 +77,15 @@ TZ_AR = timezone(timedelta(hours=-3))
 DIAS_MEMORIA = 7
 SECCION_WEB = f"https://{WEB.SITIO}/seccion/nacionales"
 
-POR_PASADA = 3
-POR_DIA = 12
+POR_PASADA = 3              # nacionales generales por pasada (la fila de 15 min, 18/10/2026)
+POR_DIA = 18                # y por día (eran 12)
 FB_POR_PASADA = 2
 FB_POR_DIA = 8
+FB_VIRAL_MINIMO = 7         # a Facebook, solo las de potencial viral 7 o más (con los topes de arriba)
+PENALIDAD_CATEGORIA = 12    # puntos que pierde una categoría por cada pieza que ya salió en la pasada
 CARRUSEL_MAX = 10           # diapositivas, una por nota (el tope de Instagram; sin tapa desde el 12/10)
 CARRUSEL_MIN = 2
 HORA_CARRUSEL = (22, 0)
-MINUTOS_ENTRE_PIEZAS = 30     # entre un Short y el siguiente (13/10/2026; eran 5), como policiales
 HORAS_TEMA = 24             # un tema ya contado no se repite en este lapso
 MAX_ESPERA_CARRUSEL = 100   # minutos: más que esto no se espera (la pasada vendría muy atrasada)
 
@@ -133,11 +142,12 @@ def de_hoy(mem: dict, dia: str) -> list:
 # Elegir
 # =============================================================================
 
-def elegir(candidatas: list, mem: dict, cupo: int, ahora: datetime) -> list:
-    """Las candidatas que van en esta pasada: nuevas, sin descartar y de un tema no contado."""
+def elegir(candidatas: list, mem: dict, cupo: int, ahora: datetime, extra: list = ()) -> list:
+    """Las candidatas que van en esta pasada: nuevas, sin descartar y de un tema no contado (en las
+    últimas 24 h de la memoria, o en `extra`: lo de esta misma pasada)."""
     desde = (ahora - timedelta(hours=HORAS_TEMA)).isoformat(timespec="seconds")
     hechas = [{"titulo": p.get("titular"), "tema": p.get("tema") or []}
-              for p in mem["piezas"].values() if (p.get("cuando") or "") >= desde]
+              for p in mem["piezas"].values() if (p.get("cuando") or "") >= desde] + list(extra)
     salida = []
     for c in candidatas:
         if len(salida) >= cupo:
@@ -148,14 +158,6 @@ def elegir(candidatas: list, mem: dict, cupo: int, ahora: datetime) -> list:
             continue
         salida.append(c)
     return salida
-
-
-def para_facebook(piezas: list, mem: dict, dia: str) -> set:
-    """Las URLs de las piezas que van a Facebook: las más virales de la pasada, con tope."""
-    hechas_hoy = sum(1 for p in de_hoy(mem, dia) if _ok(p.get("facebook")))
-    cupo = min(_entero("NAC_FB_POR_PASADA", FB_POR_PASADA), _entero("NAC_FB_POR_DIA", FB_POR_DIA) - hechas_hoy)
-    orden = sorted(piezas, key=lambda p: (-(p["guion"].get("viral") or 0), -(p["nota"].get("puntos") or 0)))
-    return {p["nota"]["url"] for p in orden[:max(0, cupo)]}
 
 
 # =============================================================================
@@ -192,31 +194,31 @@ def foto_de_la_nota(nota: dict, destino: Path) -> dict:
 def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     """Guion + Short + placa de Facebook + imagen de la web. Lanza si la IA no contesta.
 
-    Variedad (deportes, espectáculos, mundo, virales, cine y series, IA; 18/10/2026): se lee la página de
-    la nota para el VIDEO y la FOTO originales. Con video → REEL con ese video; sin video → CARRUSEL
-    explicativo con la foto original; un VIRAL sin su video no sale (ni se gasta la IA)."""
-    variedad = bool(nota.get("categoria"))
-    medios = {}
-    if variedad:
-        leer = leer_pagina or CAT.leer_pagina
-        medios = dict(leer(nota["url"]))
-        if not nota.get("imagen") and medios.get("imagen"):
-            nota = dict(nota, imagen=medios["imagen"])
-        # Los portales cuyo RSS trae solo el titular (Ámbito, Clarín, Olé, ESPN…): el texto de la página.
-        if len(medios.get("texto") or "") > len(nota.get("cuerpo") or "") and len(nota.get("cuerpo") or "") < 1500:
-            nota = dict(nota, cuerpo=medios["texto"])
-        # Sin video en esta nota: el mismo tema en otro portal puede traer el suyo (18/10/2026).
-        for otra in ([] if medios.get("video") else (nota.get("otras_urls") or [])[:3]):
-            try:
-                v = (leer(otra) or {}).get("video")
-            except Exception:                        # noqa: BLE001 — una página que no anda no frena
-                v = ""
-            if v:
-                medios["video"], medios["video_de"] = v, otra
-                break
-        if nota.get("categoria") == "virales" and not medios.get("video"):
-            return {"nota": nota, "url_original": nota["url"],
-                    "guion": {"apta": False, "motivo": "viral sin el video original en la nota"}}
+    Se lee la página de la nota para el VIDEO y la FOTO originales (la variedad desde el 18/10/2026, las
+    generales desde esa misma noche, que también van a Instagram). Con video → REEL con ese video; sin
+    video → CARRUSEL explicativo con la foto original; un VIRAL sin su video no sale (ni se gasta la IA)."""
+    leer = leer_pagina or CAT.leer_pagina
+    try:
+        medios = dict(leer(nota["url"]) or {})
+    except Exception:                                # noqa: BLE001 — sin la página, la pieza sale igual
+        medios = {}
+    if not nota.get("imagen") and medios.get("imagen"):
+        nota = dict(nota, imagen=medios["imagen"])
+    # Los portales cuyo RSS trae solo el titular (Ámbito, Clarín, Olé, ESPN…): el texto de la página.
+    if len(medios.get("texto") or "") > len(nota.get("cuerpo") or "") and len(nota.get("cuerpo") or "") < 1500:
+        nota = dict(nota, cuerpo=medios["texto"])
+    # Sin video en esta nota: el mismo tema en otro portal puede traer el suyo (18/10/2026).
+    for otra in ([] if medios.get("video") else (nota.get("otras_urls") or [])[:3]):
+        try:
+            v = (leer(otra) or {}).get("video")
+        except Exception:                        # noqa: BLE001 — una página que no anda no frena
+            v = ""
+        if v:
+            medios["video"], medios["video_de"] = v, otra
+            break
+    if nota.get("categoria") == "virales" and not medios.get("video"):
+        return {"nota": nota, "url_original": nota["url"],
+                "guion": {"apta": False, "motivo": "viral sin el video original en la nota"}}
     g = NG.generar(nota, redactar)
     pieza = {"nota": nota, "guion": g, "url_original": nota["url"],
              "web": {"titulo": g["titulo_web"], "cuerpo": g["nota_web"]}}
@@ -251,22 +253,22 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
         pieza["video"] = R.armar(guion_reel, base.with_suffix(".mp4"), foto=imagen, tema=tema)
     R.anotar_tema(pieza["video"].get("tema", ""))
     pieza["placa"] = pieza["video"].get("placa")
-    if variedad:
-        pieza["formato"] = "reel" if clip else "carrusel"
-        if not clip:
-            laminas = g.get("laminas") or []
-            total = 1 + len(laminas)
-            if total >= 3:
-                pieza["slides"] = [str(P.slide_carrusel(
-                    g["seccion"], g["volanta"], g["titular"], g.get("bajada") or "",
-                    base.with_name(base.name + "_c01.jpg"), sitio=WEB.SITIO, idx=1, total=total,
-                    semilla=semilla, foto=foto))]
-                for i, l in enumerate(laminas, 2):
-                    pieza["slides"].append(str(P.lamina_texto(
-                        g["seccion"], l["titulo"], l["texto"], base.with_name(base.name + f"_c{i:02d}.jpg"),
-                        idx=i, total=total, foto=foto, sitio=WEB.SITIO, semilla=semilla)))
-            else:
-                pieza["formato"] = "imagen"           # la IA no escribió láminas: una sola placa
+    # Instagram: todas desde el 18/10/2026
+    pieza["formato"] = "reel" if clip else "carrusel"
+    if not clip:
+        laminas = g.get("laminas") or []
+        total = 1 + len(laminas)
+        if total >= 3:
+            pieza["slides"] = [str(P.slide_carrusel(
+                g["seccion"], g["volanta"], g["titular"], g.get("bajada") or "",
+                base.with_name(base.name + "_c01.jpg"), sitio=WEB.SITIO, idx=1, total=total,
+                semilla=semilla, foto=foto))]
+            for i, l in enumerate(laminas, 2):
+                pieza["slides"].append(str(P.lamina_texto(
+                    g["seccion"], l["titulo"], l["texto"], base.with_name(base.name + f"_c{i:02d}.jpg"),
+                    idx=i, total=total, foto=foto, sitio=WEB.SITIO, semilla=semilla)))
+        else:
+            pieza["formato"] = "imagen"           # la IA no escribió láminas: una sola placa
     # La placa del posteo de Facebook: la misma del carrusel (estilo portal en grafito, 12/10),
     # sin número ni flecha porque es un posteo suelto.
     pieza["slide"] = str(P.slide_carrusel(g["seccion"], g["volanta"], g["titular"], g.get("bajada") or "",
@@ -345,12 +347,36 @@ def _resultado(fn, *args) -> dict:
         return dict(fn(*args) or {}, estado="ok", cuando=cuando)
     except PUB.SinConfirmar as e:
         return {"estado": "sin_confirmar", "error": PUB._tapar(e), "cuando": cuando}
+    except PUB.SinCupoYouTube as e:                  # no es una falla: el cupo del día de Google
+        return {"estado": "cupo", "error": PUB._tapar(e), "cuando": cuando}
     except Exception as e:                           # noqa: BLE001 — se anota y se sigue
         return {"estado": "fallo", "error": PUB._tapar(f"{type(e).__name__}: {e}")[:400], "cuando": cuando}
 
 
-def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
-    """YouTube → web → Facebook. Devuelve {red: resultado}."""
+def caption_instagram(g: dict) -> str:
+    """El texto de Instagram (reel o carrusel): SIN el link de la nota, con el de la web y nada más
+    (pedido del editor, 18/10/2026: «sacá el link a la nota en Instagram y poné el link de mi página
+    web»; en Instagram los links del texto no se pueden tocar)."""
+    return NG.texto_posteo(g, "", WEB.SITIO)[:PUB.MAX_CAPTION_IG]
+
+
+def _lugar_ig():
+    """(libres, usados, total) del cupo de 100 posteos de 24 h de la cuenta (lo comparte con policiales y
+    el bot del diario), o None si no se pudo leer."""
+    return PUB._lugar_en_instagram()
+
+
+def _shorts_hoy(mem: dict, dia: str) -> int:
+    """Shorts de hoy entre nacionales y policiales (el tope YT_SHORTS_POR_DIA es de los dos)."""
+    try:
+        policiales = PUB._youtube_de_hoy(PUB.cargar_ledger())
+    except Exception:                                # noqa: BLE001
+        policiales = 0
+    return policiales + sum(1 for p in de_hoy(mem, dia) if _ok(p.get("youtube")))
+
+
+def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: bool = True) -> dict:
+    """YouTube → web → Facebook → Instagram. Devuelve {red: resultado}."""
     mp4 = Path(pieza["video"]["archivo"])
     cat = pieza["nota"].get("categoria") or ""        # deportes, espectáculos… (17/10/2026)
     url_prev = url_web_prevista(pieza)
@@ -361,12 +387,13 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
         res["web"] = {"estado": "simulado", "url": url_prev}
         if a_facebook:
             res["facebook"] = {"estado": "simulado", "texto": texto_facebook(pieza, url_prev)}
-        if cat and instagram_activo():
+        if instagram_activo():
             res["instagram"] = {"estado": "simulado", "formato": pieza.get("formato"),
-                                "laminas": len(pieza.get("slides") or [])}
+                                "laminas": len(pieza.get("slides") or []), "texto": caption_instagram(pieza["guion"])}
         return res
 
-    res["youtube"] = _resultado(PUB.publicar_youtube, pieza, mp4, meta)
+    res["youtube"] = (_resultado(PUB.publicar_youtube, pieza, mp4, meta) if con_youtube else
+                      {"estado": "cupo", "detalle": f"ya van {PUB.tope_youtube()} Shorts hoy entre nacionales y policiales"})
     yt_id = res["youtube"].get("id") if _ok(res["youtube"]) else ""
 
     def _web():
@@ -390,10 +417,14 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool) -> dict:
         # Sin nota en la web no hay a dónde mandar a la gente: el posteo lleva la sección.
         res["facebook"] = _resultado(publicar_foto_facebook, Path(pieza["slide"]),
                                      texto_facebook(pieza, url_web or SECCION_WEB))
-    # Instagram (18/10/2026): las de variedad salen en el feed — REEL con el video original, o CARRUSEL
-    # explicativo con la foto original. Las nacionales generales siguen yendo al carrusel de las 22.
-    if cat and instagram_activo():
-        caption = NG.texto_posteo(pieza["guion"], url_web or url_prev, WEB.SITIO)[:2200]
+    # Instagram (18/10/2026): TODAS salen en el feed — REEL con el video original, o CARRUSEL explicativo
+    # con la foto original. El texto, sin el link de la nota (caption_instagram).
+    lugar = _lugar_ig() if instagram_activo() else None
+    if instagram_activo() and lugar and lugar[0] <= 0:
+        res["instagram"] = {"estado": "cupo", "detalle": f"la cuenta ya usó {lugar[1]} de sus {lugar[2]} posteos "
+                                                         f"de 24 h; los últimos quedan para el bot del diario"}
+    elif instagram_activo():
+        caption = caption_instagram(pieza["guion"])
         marca = hashlib.sha1(pieza["url_original"].encode()).hexdigest()[:10]
         if pieza.get("formato") == "reel":
             res["instagram"] = dict(_resultado(publicar_reel_instagram, mp4, caption, marca), formato="reel")
@@ -505,33 +536,46 @@ def _hora_del_carrusel(esperar: str = "") -> datetime:
     return _ahora().replace(hour=hh, minute=mm, second=0, microsecond=0)
 
 
-def elegir_variedad(notas_var: list, mem: dict, dia: str, ahora: datetime, cupo: int, senales: dict = None,
-                    ranking: dict = None) -> list:
-    """Candidatas de las categorías nuevas (nacionales/categorias.py) por IMPACTO (18/10/2026): primero
-    la categoría con el tema más fuerte (menos lo que ya salió hoy de ella), y dentro de cada una las
-    mejores notas nuevas (hasta 3, porque la que la IA descarta deja lugar a la siguiente). `ranking`,
-    si viene, se llena con las 3 mejores de cada categoría (para el informe)."""
-    if cupo <= 0 or not notas_var:
-        return []
+def colas_de_variedad(notas_var: list, ahora: datetime, senales: dict = None, ranking: dict = None) -> dict:
+    """{categoría: candidatas de más a menos IMPACTO} (nacionales/categorias.py). `ranking`, si viene, se
+    llena con las 3 mejores de cada categoría (para el informe)."""
+    if not notas_var:
+        return {}
     por_cat = CAT.candidatas(notas_var, ahora.timestamp(), senales)
     if ranking is not None:
         for c, lista in por_cat.items():
             ranking[c] = [{"impacto": x["impacto"], "titulo": x["titulo"], "fuentes": x.get("fuentes") or [],
                            "razones": x.get("impacto_razones") or [], "url": x["url"]} for x in lista[:3]]
-    ultimas = {}
-    for p in mem["piezas"].values():
-        c = p.get("categoria")
-        if c and (p.get("cuando") or "") > ultimas.get(c, ""):
-            ultimas[c] = p.get("cuando") or ""
-    salida = []
-    for cat in CAT.orden_por_impacto(por_cat, de_hoy(mem, dia), ultimas):
-        salida += elegir(por_cat.get(cat) or [], mem, 3, ahora)
-    return salida
+    return {c: list(l) for c, l in por_cat.items() if l}
+
+
+def topes_de_la_pasada(mem: dict, dia: str) -> dict:
+    """{categoría: cuántas piezas puede sumar en esta pasada} («» = nacionales generales): el tope por
+    pasada, sin pasarse del tope del día."""
+    hoy = {}
+    for p in de_hoy(mem, dia):
+        hoy[p.get("categoria") or ""] = hoy.get(p.get("categoria") or "", 0) + 1
+    topes = {"": max(0, min(_entero("NAC_POR_PASADA", POR_PASADA), _entero("NAC_POR_DIA", POR_DIA) - hoy.get("", 0)))}
+    for c in CAT.CATEGORIAS:
+        topes[c] = max(0, min(CAT.tope_pasada(c), CAT.cupo_dia(c) - hoy.get(c, 0)))
+    return topes
+
+
+def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permitir_igual: bool = False):
+    """La categoría del próximo turno: la de la mejor candidata que queda (impacto en la variedad,
+    puntos en las generales) menos PENALIDAD_CATEGORIA por pieza que ya salió en la pasada. Nunca la
+    del turno anterior, salvo `permitir_igual` (no queda otra). None si no queda nada."""
+    def peso(c):
+        x = colas[c][0]
+        return ((x.get("impacto") if c else x.get("puntos")) or 0) - PENALIDAD_CATEGORIA * hechas.get(c, 0)
+    opciones = [c for c, l in colas.items() if l and hechas.get(c, 0) < topes.get(c, 0)
+                and (permitir_igual or c != ultima)]
+    return max(opciones, key=lambda c: (peso(c), c == ""), default=None)
 
 
 def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, esperar_carrusel: str = "",
-           con_carrusel: bool = True, redactar=None, notas=None, notas_variedad=None,
-           leer_pagina=None, senales=None) -> dict:
+           con_carrusel: bool = False, redactar=None, notas=None, notas_variedad=None,
+           leer_pagina=None, senales=None, fila=None) -> dict:
     notas_inyectadas = notas
     mem = cargar()
     ahora = _ahora()
@@ -566,78 +610,102 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             otras, fallas_otras, _ = PO.bajar(PO.FUENTES_NACIONALES)
             informe["avisos"].extend(f"nacionales {f}" for f in fallas_otras)
             cands = IM.realzar_generales(cands, otras, senales, ahora.timestamp())
-        # Las 12 por día son de las nacionales generales: la variedad tiene su cupo propio (18/10/2026).
-        hechas = len([p for p in de_hoy(mem, dia) if not p.get("categoria")])
-        cupo = min(cuantos or _entero("NAC_POR_PASADA", POR_PASADA), _entero("NAC_POR_DIA", POR_DIA) - hechas)
-        # Variedad (deportes, espectáculos, mundo, virales, cine y series, IA): CUPO PROPIO desde el
-        # 18/10/2026 (pedido del editor: ~10 por día), aparte de las nacionales generales. Como mucho
-        # NAC_VARIEDAD_POR_PASADA (2) por pasada, de categorías distintas, y cada una con su tope por día.
+        if leer_pagina is None and notas_inyectadas is not None:
+            leer_pagina = lambda url: {}             # noqa: E731 — en las pruebas, nunca la red
+        # Variedad (deportes, espectáculos, mundo, virales, cine y series, IA): todos los portales del PDF.
         if notas_variedad is None:
             notas_variedad = []
             if notas_inyectadas is None:             # en las pruebas, solo lo que se le pasa
                 notas_variedad, fallas_var, conteo = CAT.bajar()
                 informe.setdefault("avisos", []).extend(f"portal {f}" for f in fallas_var)
                 informe["fuentes_variedad"] = conteo
-        n_var = CAT.por_pasada()
-        variedad = []
         informe["ranking_variedad"] = {}
-        for c in elegir_variedad(notas_variedad, mem, dia, ahora, n_var, senales, informe["ranking_variedad"]):
-            if len(variedad) >= n_var:
-                break
-            if any(v["nota"].get("categoria") == c["categoria"] for v in variedad):
-                continue
-            try:
-                pieza = armar(c, carpeta, redactar, leer_pagina)
-            except Exception as e:                   # noqa: BLE001 — la IA o el motor: se sigue con otra
-                informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
-                continue
-            if not pieza["guion"]["apta"]:
-                informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
-                                               "categoria": c["categoria"]})
-                if publicar:
-                    mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
-                                                    "cuando": ahora.isoformat(timespec="seconds")}
-                continue
-            variedad.append(pieza)
-        informe["variedad"] = [{"categoria": v["nota"]["categoria"], "titulo": v["guion"]["titular"],
-                                "formato": v.get("formato")} for v in variedad]
-        armadas = []
-        # Se piden de a una, de la más relevante a la menos, hasta llenar el cupo: la que la IA
-        # descarta deja lugar a la siguiente.
-        for c in elegir(cands, mem, max(0, cupo) * 3, ahora):
-            if len(armadas) >= cupo:
-                break
-            try:
-                pieza = armar(c, carpeta, redactar)
-            except Exception as e:                   # noqa: BLE001 — la IA o el motor: se sigue con otra
-                informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
-                continue
-            g = pieza["guion"]
-            if not g["apta"]:
-                informe["descartadas"].append({"titulo": c["titulo"], "motivo": g["motivo"]})
-                if publicar:
-                    mem["descartadas"][c["url"]] = {"motivo": g["motivo"], "cuando": ahora.isoformat(timespec="seconds")}
-                continue
-            armadas.append(pieza)
-        # La variedad va intercalada con las nacionales: segunda, cuarta… (nunca dos seguidas si hay con qué).
-        for i, v in enumerate(variedad):
-            armadas.insert(min(1 + 2 * i, len(armadas)), v)
+        colas = {"": list(cands)}
+        colas.update(colas_de_variedad(notas_variedad, ahora, senales, informe["ranking_variedad"]))
+        topes = topes_de_la_pasada(mem, dia)
+        informe["topes"] = topes
 
-        fb = para_facebook(armadas, mem, dia)
-        ultimo = None
-        for i, pieza in enumerate(armadas):
-            if ultimo is not None and publicar:
-                # Desde que ARRANCÓ la anterior: lo que tardó en subir ya cuenta en los 30 minutos.
-                falta = (ultimo + timedelta(minutes=MINUTOS_ENTRE_PIEZAS) - _ahora()).total_seconds()
+        # LA FILA (18/10/2026, noche; reels/turnos.py): un posteo cada 15 minutos entre policiales y
+        # nacionales, nunca dos de la misma categoría seguidos. Policiales reserva los suyos; esta pasada
+        # toma de a uno los que quedan libres. Fuera de GitHub (simulaciones, pruebas) la fila es local.
+        pid = TURNOS.pasada_actual(ahora)
+        if fila is None:
+            remota = publicar and TURNOS.activa() and os.environ.get("GITHUB_ACTIONS") == "true"
+            fila = TURNOS.Fila(pid, token=None if remota else "")
+        turnos = TURNOS.grilla(pid)
+        informe["fila"] = {"pasada": pid, "turnos": [t.strftime("%H:%M") for t in turnos], "ajenos": []}
+        if publicar:
+            fila.barrer(ahora)
+        hechas = {}                                  # piezas de esta pasada por categoría
+        contadas = []                                # los temas de esta pasada (también simulando)
+        usadas = set()
+
+        def sirve(c: dict) -> bool:
+            if c["url"] in usadas:
+                return False
+            return bool(elegir([c], mem, 1, ahora, contadas))
+
+        def preparar(ultima):
+            """La próxima pieza: la categoría con el tema más fuerte que no sea la del turno anterior."""
+            for _intento in range(40):
+                cat = (proxima_categoria(colas, topes, hechas, ultima)
+                       or proxima_categoria(colas, topes, hechas, ultima, permitir_igual=True))
+                if cat is None:
+                    return None
+                c = colas[cat].pop(0)
+                if not sirve(c):
+                    continue
+                usadas.add(c["url"])
+                try:
+                    pieza = armar(c, carpeta, redactar, leer_pagina)
+                except Exception as e:               # noqa: BLE001 — la IA o el motor: se sigue con otra
+                    informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
+                    continue
+                if not pieza["guion"]["apta"]:
+                    informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
+                                                   "categoria": c.get("categoria") or ""})
+                    if publicar:
+                        mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
+                                                        "cuando": ahora.isoformat(timespec="seconds")}
+                    continue
+                hechas[cat] = hechas.get(cat, 0) + 1
+                return pieza
+            return None
+
+        fb_dia = sum(1 for p in de_hoy(mem, dia) if _ok(p.get("facebook")))
+        fb_pasada = 0
+        shorts = _shorts_hoy(mem, dia) if publicar else 0
+        maximo = cuantos or len(turnos)
+        pieza = preparar(None)
+        for k, turno in enumerate(turnos):
+            if pieza is None or len(informe["piezas"]) >= maximo:
+                break
+            if publicar:
+                if turno < _ahora() - TURNOS.TOLERANCIA_ATRASO:
+                    continue                         # ese turno ya pasó (la pasada arrancó tarde)
+                falta = (turno - _ahora()).total_seconds()
                 if falta > 0:
                     _dormir(falta)
-            # Con la variedad la tanda de las 21:05 dura hasta las 23 (18/10/2026): el carrusel de las
-            # 22 sale a su hora, en el medio, con lo publicado hasta ahí (el resto va al de mañana).
+            ocupados = fila.ocupados()
+            if k in ocupados:                        # un policial (o una corrida repetida)
+                informe["fila"]["ajenos"].append(f"{turno:%H:%M} {ocupados[k].get('categoria')}")
+                continue
+            cat = pieza["nota"].get("categoria") or ""
+            if (ocupados.get(k - 1) or {}).get("categoria") == (cat or "general"):
+                continue                             # nunca dos de la misma categoría seguidos
+            if not fila.tomar(k, "nacionales", cat or "general", pieza["guion"]["titular"]):
+                continue
+            # Con el carrusel prendido (ya no lo está), sale a su hora con lo publicado hasta ahí.
             if con_carrusel and "carrusel" not in informe and _ahora() >= _hora_del_carrusel(esperar_carrusel):
                 informe["carrusel"] = carrusel(mem, publicar, carpeta, _ahora())
-            ultimo = _ahora()
+            a_fb = ((pieza["guion"].get("viral") or 0) >= FB_VIRAL_MINIMO
+                    and fb_pasada < _entero("NAC_FB_POR_PASADA", FB_POR_PASADA)
+                    and fb_dia + fb_pasada < _entero("NAC_FB_POR_DIA", FB_POR_DIA))
+            fb_pasada += a_fb
+            con_youtube = shorts < PUB.tope_youtube()
             nota, g = pieza["nota"], pieza["guion"]
-            res = publicar_pieza(pieza, nota["url"] in fb, publicar)
+            res = publicar_pieza(pieza, a_fb, publicar, con_youtube)
+            shorts += _ok(res.get("youtube"))
             # TikTok por Buffer (17/10/2026, etapa 6): el video va al buzón del distribuidor, que lo
             # intercala con el resto. Solo si salió la nota (a X llega como nota de la web).
             if publicar and _ok(res.get("web")):
@@ -649,7 +717,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                                             PUB.subir_a_release, nombre)
                 res["tiktok_buzon"] = ({"estado": "ok", "id": ev_id} if ev_id else
                                        {"estado": "omitida", "detalle": "no se pudo dejar en el buzón"})
-            fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
+            registro = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
                     "categoria": nota.get("categoria") or "", "formato": pieza.get("formato") or "",
                     "medio_origen": PO.fuente_de(nota) if nota.get("categoria") else (nota.get("medio") or ""),
                     "video_original": pieza.get("video_original") or "",
@@ -658,20 +726,23 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                     "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
                     "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
                     "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
+                    "turno": f"{turno:%H:%M}",
                     "copia": (g.get("copia") or {}).get("racha"),
                     # La foto, para el carrusel de las 22 (otra corrida: se vuelve a bajar).
                     "foto_url": (pieza.get("foto") or {}).get("url") if (pieza.get("foto") or {}).get("archivo") else "",
                     "foto": (pieza.get("foto") or {}).get("credito") or (pieza.get("foto") or {}).get("motivo"),
                     **res}
-            informe["piezas"].append(fila)
+            informe["piezas"].append(registro)
             for red, r in res.items():
                 if r.get("estado") == "fallo":
                     informe["fallas"].append(f"{red}: «{g['titular'][:50]}»: {r.get('error')}")
+            contadas.append({"titulo": g["titular"], "tema": nota.get("tema") or []})
             if publicar:
-                mem["piezas"][nota["url"]] = fila
+                mem["piezas"][nota["url"]] = registro
                 guardar(mem)                         # tras cada pieza: un corte no borra lo hecho
+            pieza = preparar(cat)
 
-    if con_carrusel and "carrusel" not in informe:
+    if (con_carrusel or solo_carrusel) and "carrusel" not in informe:
         objetivo = _ahora().replace(hour=HORA_CARRUSEL[0], minute=HORA_CARRUSEL[1], second=0, microsecond=0)
         if esperar_carrusel:
             hh, mm = (int(x) for x in esperar_carrusel.split(":"))
@@ -708,10 +779,16 @@ def resumen(inf: dict) -> str:
         l.append(f"Candidatas de Infobae: {inf['candidatas']} · piezas: {len(inf['piezas'])} · "
                  f"descartadas por la IA: {len(inf['descartadas'])}")
         l.append("")
+    if inf.get("fila"):
+        f = inf["fila"]
+        l.append(f"Fila de la pasada {f['pasada']}: un posteo cada {TURNOS.MINUTOS} min, turnos "
+                 f"{', '.join(f['turnos'])}" + (f"; de policiales: {', '.join(f['ajenos'])}" if f.get("ajenos") else ""))
+        l.append("")
     for p in inf["piezas"]:
         redes = " · ".join(f"{k} {v.get('estado')}" for k, v in p.items()
                            if isinstance(v, dict) and "estado" in v)
-        l.append(f"- **{p['titular']}** ({p['seccion']}, viral {p['viral']}, {p['nivel']}) — {redes}")
+        l.append(f"- {p.get('turno') or ''} **{p['titular']}** ({p.get('categoria') or 'general'} · {p['seccion']}, "
+                 f"viral {p['viral']}, {p.get('formato') or ''}) — {redes}")
     for d in inf["descartadas"]:
         l.append(f"- ~~{d['titulo'][:90]}~~ — {d['motivo']}")
     if inf.get("ranking_variedad"):
@@ -740,10 +817,11 @@ def main():
     ap.add_argument("--publicar", action="store_true", help="publicar de verdad (sin esto, simula)")
     ap.add_argument("--cuantos", type=int, default=0, help="piezas en esta pasada (0 = NAC_POR_PASADA)")
     ap.add_argument("--solo-carrusel", action="store_true", help="solo el carrusel (aunque no sean las 22)")
-    ap.add_argument("--sin-carrusel", action="store_true")
+    ap.add_argument("--sin-carrusel", action="store_true", help="(el carrusel ya viene apagado: 18/10/2026)")
+    ap.add_argument("--con-carrusel", action="store_true", help="volver a sacar el carrusel de las 22")
     ap.add_argument("--esperar-carrusel", default="", help="HH:MM: esperar hasta esa hora para el carrusel")
     a = ap.parse_args()
-    inf = pasada(a.publicar, a.cuantos, a.solo_carrusel, a.esperar_carrusel, not a.sin_carrusel)
+    inf = pasada(a.publicar, a.cuantos, a.solo_carrusel, a.esperar_carrusel, a.con_carrusel and not a.sin_carrusel)
     texto = resumen(inf)
     print(texto)
     if os.environ.get("GITHUB_STEP_SUMMARY"):

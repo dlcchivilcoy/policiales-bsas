@@ -59,6 +59,7 @@ from reels import intercalado as INT
 from reels import ledger as LD
 from reels import limpieza as L
 from reels import relevamiento as RV
+from reels import turnos as TURNOS
 from reels import ubicaciones as UB
 from reels import web as WEB
 from reels.flujo import MINUTOS_ENTRE_POSTEOS, SALIDA_REELS
@@ -1742,6 +1743,13 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     pid = CUPO.pasada_id(PASADAS_AR, _hora_ar())
     reservadas = set(CUPO.reservadas(pid))
     lugares = min(lugares_en_la_pasada(), CUPO.libres(pid))
+    # LA FILA de 15 minutos con nacionales (18/10/2026, reels/turnos.py): los policiales toman turnos
+    # repartidos en la pasada, nunca dos seguidos. Cuántos entran lo dice la fila, no los 30 minutos.
+    fila_turnos = None
+    if TURNOS.activa():
+        remota = publicar and os.environ.get("GITHUB_ACTIONS") == "true"
+        fila_turnos = TURNOS.Fila(pid, token=None if remota else "")
+        lugares = min(CUPO.libres(pid), len(TURNOS.plan_policiales(fila_turnos, CUPO.maximo(), _hora_ar())))
     listas, no_entran = solo_las_que_entran(listas, ledger, lugares, ig_elegidas | fb_elegidas,
                                             frozenset(reservadas))
     nuevas = [p for p, _ in listas if _falta(p, ledger) and _clave(p) not in reservadas]
@@ -1773,6 +1781,15 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
 
     ultimo = None
     en_espera = {red: [] for red in INT.REDES}       # reels que esperan otra temática
+    turnos_pol = None                                # [(turno, hora)] de la fila, en orden
+    if fila_turnos is not None:
+        n = sum(1 for p, _ in listas if _falta(p, ledger))
+        titulares = [(p.get("guion") or {}).get("titular") or "" for p, _ in listas if _falta(p, ledger)]
+        turnos_pol = (TURNOS.reservar_policiales(fila_turnos, n, _hora_ar(), titulares) if publicar
+                      else TURNOS.plan_policiales(fila_turnos, n, _hora_ar()))
+        informe["fila"] = {"pasada": pid, "turnos": [f"{t:%H:%M}" for _k, t in turnos_pol]}
+        print(f"  Fila de 15 minutos con nacionales: turnos de policiales "
+              f"{', '.join(informe['fila']['turnos']) or 'ninguno libre'}")
     for pieza, mp4 in listas:
         clave = _clave(pieza)
         hecho = ledger.get(clave) or {}
@@ -1833,7 +1850,17 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             print(f"\n#{pieza.get('orden')} {pueblo} — {fila['resultado']}, se saltea")
             continue
 
-        hora = _turno(pieza, ultimo)
+        if turnos_pol is not None:
+            if not turnos_pol:
+                fila["resultado"] = "no entró en la fila de la pasada (sin turno libre)"
+                fila.update(sin_lugar)
+                informe["piezas"].append(fila)
+                print(f"\n#{pieza.get('orden')} {pueblo} — {fila['resultado']}")
+                continue
+            _k, t_turno = turnos_pol.pop(0)
+            hora = _ahora() + timedelta(seconds=max(0.0, (t_turno - _hora_ar()).total_seconds()))
+        else:
+            hora = _turno(pieza, ultimo)
         print(f"\n#{pieza.get('orden')} {hora:%H:%M} · {pueblo} — {g.get('titular')}")
         if publicar:
             falta = (hora - _ahora()).total_seconds()
@@ -1944,6 +1971,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             _mostrar(red, info)
         informe["piezas"].append(fila)
 
+    # Los turnos que se reservaron y no se usaron vuelven a la fila (los toma nacionales).
+    if publicar and fila_turnos is not None and turnos_pol:
+        for k, _t in turnos_pol:
+            fila_turnos.soltar(k)
     # Los reels que esperan otra temática en Instagram o Facebook: se mira la cuenta cada
     # ESPERA_INTERCALADO_MIN hasta 10 minutos antes de la pasada siguiente. Lo que no encuentra
     # hueco queda omitido en esa red (ya salió en YouTube y la web); nunca se rellena.

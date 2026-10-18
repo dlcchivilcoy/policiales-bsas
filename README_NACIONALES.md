@@ -3,6 +3,26 @@
 Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales` de
 `.github/workflows/reels.yml` (corre en las mismas pasadas que policiales, en paralelo).
 
+> **18/10/2026 (noche) — LA FILA DE 15 MINUTOS** (pedido del editor: «subí el total de las notas elegidas en
+> cada corrida cada 15 minutos… máximo 12 por pasada… un posteo de categoría diferente»; «sacá el link a la
+> nota en Instagram y poné el link de mi página web»; «cada una a Instagram y desactivá el carrusel de las
+> 22»; la de las 23:35 completa sus 12). `reels/turnos.py`: cada pasada tiene una GRILLA, el primer turno a
+> los 15 minutos del horario y uno cada 15 hasta 12 (09:20 → 12:05, 12:20 → 15:05, …, 21:20 → 23:35 son 10,
+> 23:50 → 02:35). Policiales y nacionales comparten la fila: policiales reserva sus hechos (hasta 3)
+> repartidos y nunca seguidos; nacionales toma, de a uno y en el momento, los turnos libres. Los dos
+> trabajos siguen en paralelo y se reparten los turnos con referencias de git (`refs/turnos/<pasada>/<turno>`,
+> crearla es atómico; se barren a los 2 días). En cada turno de nacionales va la categoría con el tema más
+> fuerte (impacto en la variedad, puntos en las generales; −12 por pieza ya salida en la pasada), NUNCA la
+> misma que el turno anterior: si solo queda una categoría, espera un turno. Topes por pasada: generales 3,
+> deportes 2, espectáculos 2, mundo 2, virales 1, cine y series 1, IA 1 (`NAC_POR_PASADA`,
+> `NAC_PASADA_<CATEGORIA>`); por día, de seguridad: generales 18, deportes/espectáculos/mundo 10, virales y cine
+> 4, IA 3 (`NAC_POR_DIA`, `NAC_CUPO_<CATEGORIA>`). Las GENERALES también van a Instagram (reel con el video de
+> la nota o carrusel explicativo con láminas). El texto de Instagram lleva «📲 Más noticias en
+> www.diariolacampaña.com.ar» y nunca el link de la nota. Facebook: potencial viral 7 o más, 2 por pasada y
+> 8 por día. YouTube: tope `YT_SHORTS_POR_DIA` sumando policiales; Instagram: deja la reserva del bot. El
+> carrusel «Noticias nacionales de hoy» de las 22 quedó APAGADO (`--sin-carrusel`; a mano sigue
+> `--solo-carrusel`). `FILA_15=0` apaga la fila (policiales vuelve a sus 30 minutos).
+>
 > **18/10/2026 (tarde) — TODOS los portales del PDF y PUNTAJE DE IMPACTO** (pedido del editor: «scrapeá
 > todos los portales… y hacé un sistema de scoring para poner las notas que tengan más impacto viral… en el
 > orden del ranking de sitios por categoría»). `nacionales/portales.py` lee 17 portales (~1.800 notas en

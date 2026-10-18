@@ -20,7 +20,7 @@ sys.stdout.reconfigure(encoding="utf-8")     # la consola de Windows es cp1252
 from PIL import Image
 
 from nacionales import filtro as F, guion as NG, infobae as IB, pasada as PA, placa as P
-from reels import publicador as PUB, web as WEB
+from reels import publicador as PUB, turnos as TURNOS, web as WEB
 from tools import guardar_estado as GE
 
 fallas, total = [], 0
@@ -116,7 +116,10 @@ chequear("agencias: oficiales, capturas y palabras parecidas NO",
 BUENO = {"apta": True, "seccion": "Economía", "volanta": "ANSES", "titular": "Los jubilados cobran con bono en octubre",
          "bajada": "El organismo confirmó el calendario.", "descripcion": "Uno. Dos.", "hashtags": ["#Jubilados", "#ANSES"],
          "potencial_viral": 8, "titulo_web": "ANSES: cuándo cobran los jubilados en octubre",
-         "nota_web": ("Párrafo uno con datos del calendario de pagos de la ANSES para este mes. " * 3 + "\n\n") * 3}
+         "nota_web": ("Párrafo uno con datos del calendario de pagos de la ANSES para este mes. " * 3 + "\n\n") * 3,
+         # Las láminas del carrusel de Instagram (las generales también van, desde el 18/10/2026).
+         "laminas": [{"titulo": f"Lámina {i}", "texto": "Texto explicativo de la lámina con los datos del hecho."}
+                     for i in range(1, 5)]}
 pedidos = []
 
 
@@ -150,6 +153,12 @@ chequear("guion: el dato de Chivilcoy (lejos del arranque) le llega a la IA",
 txt = NG.texto_posteo(dict(BUENO, hashtags=["#Jubilados"]), "https://x/n/a")
 chequear("guion: el texto de YouTube cierra con el link de la nota y los hashtags",
          "📲 Leé la nota completa: https://x/n/a" in txt and txt.rstrip().endswith("#Argentina"))
+cap_ig = PA.caption_instagram(dict(BUENO, hashtags=["#Jubilados"]))
+chequear("Instagram: el texto lleva la web y NUNCA el link de la nota (pedido del 18/10/2026)",
+         "📲 Más noticias en www.diariolacampaña.com.ar" in cap_ig and "/n/" not in cap_ig and "http" not in cap_ig)
+g_lam = NG.generar(n_anses, redactar_falso([dict(BUENO, laminas=[]), {"laminas": BUENO["laminas"]}]))
+chequear("guion: una general sin láminas las pide aparte (va a Instagram como carrusel desde el 18/10/2026)",
+         len(g_lam["laminas"]) == 4)
 
 # --- 4. Placa propia ------------------------------------------------------------------------------
 tmp = Path(tempfile.mkdtemp(prefix="nac_"))
@@ -248,6 +257,8 @@ PA.publicar_foto_facebook = lambda jpg, msg: llamadas.append(("facebook", msg)) 
 PA._yt_cambiar_descripcion = lambda vid, meta: llamadas.append(("yt_desc", meta["snippet"]["description"]))
 PUB._contenedor_listo = lambda uid, tok, params: llamadas.append(("ig_contenedor", params.get("media_type") or "hijo")) or "c"
 PUB._publicar_contenedor = lambda uid, tok, cid, cap: llamadas.append(("ig_publicar", cap)) or "media"
+PA._lugar_ig = lambda: None                                     # el cupo de Instagram: sin red
+PA._shorts_hoy = lambda mem, dia: 0
 
 notas = [nota(f"ANSES: cuándo cobran los jubilados con el bono {i}", "economia", slug=f"anses{i}") for i in range(1)] + [
     nota("Paro general: la CGT confirmó la fecha y qué servicios se ven afectados", "politica", slug="paro"),
@@ -273,22 +284,28 @@ def redactar_por_nota(system, material):
 inf = PA.pasada(True, redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 redes = [l[0] for l in llamadas]
-chequear("pasada: 3 piezas por pasada", len(inf["piezas"]) == 3 and len(mem["piezas"]) == 3)
+chequear("pasada: 3 nacionales generales por pasada", len(inf["piezas"]) == 3 and len(mem["piezas"]) == 3)
 sin_release = [r for r in redes if r != "release"]
 chequear("pasada: orden por pieza YouTube → web → Facebook",
          sin_release[:3] == ["youtube", "web", "facebook"])
 chequear("pasada: la nota va a Nacionales + la categoría interna de las automáticas",
          all(l[1] == (WEB.NACIONALES_ID, WEB.NACIONALES_AUTO_ID) for l in llamadas if l[0] == "web"))
 chequear("pasada: la web lleva el Short adentro", all(l[2] for l in llamadas if l[0] == "web"))
-chequear("pasada: Facebook solo 2 por pasada, las MÁS virales",
-         redes.count("facebook") == 2 and {p["viral"] for p in inf["piezas"] if p.get("facebook")} == {9, 8})
+chequear("pasada: Facebook solo 2 por pasada, de potencial viral 7 o más (18/10/2026: se decide en su turno)",
+         redes.count("facebook") == 2 and all(p["viral"] >= 7 for p in inf["piezas"] if p.get("facebook")))
 desc_yt = [l[1] for l in llamadas if l[0] == "youtube"][0]
 url_nota = [p["web"]["url"] for p in inf["piezas"]][0]
 chequear("pasada: el Short sale con el link de SU nota (el slug se sabe antes)", url_nota in desc_yt)
 chequear("pasada: el posteo de Facebook es título + link a la nota",
          all("📲 Leé la nota completa: https://www.diariolacampaña.com.ar/n/" in l[1] for l in llamadas if l[0] == "facebook"))
-chequear("pasada: 30 minutos entre pieza y pieza (13/10/2026)", dormido == [1800, 1800])
-chequear("pasada: a las 12 no hay carrusel", "carrusel" not in inf and not mem["carruseles"])
+chequear("fila: un turno cada 15 minutos desde las 12:20; dos generales nunca seguidas (la otra espera un turno)",
+         dormido == [900] * 5 and [p["turno"] for p in inf["piezas"]] == ["12:20", "12:50", "13:20"]
+         and inf["fila"]["turnos"][0] == "12:20" and len(inf["fila"]["turnos"]) == 12)
+chequear("pasada: no hay carrusel de las 22 (apagado el 18/10/2026)", "carrusel" not in inf and not mem["carruseles"])
+caps_ig = [l[1] for l in llamadas if l[0] == "ig_publicar"]
+chequear("Instagram: las generales también salen, una por una, sin el link de la nota",
+         len(caps_ig) == 3 and all("/n/" not in c and "www.diariolacampaña.com.ar" in c for c in caps_ig)
+         and all((p.get("instagram") or {}).get("estado") == "ok" for p in inf["piezas"]))
 t_anses, t_paro = notas[0]["titulo"][:20], notas[1]["titulo"][:20]
 chequear("foto: la nota con foto oficial arma el Short con SU foto",
          fotos_reel.get(t_anses, "").endswith("_foto.jpg") and bajadas[:1] == [notas[0]["imagen"]])
@@ -313,8 +330,8 @@ inf2 = PA.pasada(True, redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 chequear("pasada siguiente: no repite lo publicado y sigue con lo que quedaba",
          len(inf2["piezas"]) == 2 and len(mem["piezas"]) == 5)
-chequear("pasada siguiente: Facebook sigue eligiendo por viralidad (tope por día: 8)",
-         [l[0] for l in llamadas].count("facebook") == 2)
+chequear("pasada siguiente: a Facebook solo las de potencial viral 7 o más (estas son 5 y 4)",
+         [l[0] for l in llamadas].count("facebook") == 0)
 
 # Si la web falla, el Short no puede quedar con un link roto.
 llamadas.clear()
@@ -331,15 +348,20 @@ chequear("web caída: Facebook manda a la sección, no a una nota que no existe"
 chequear("web caída: la falla queda en el informe (y la corrida avisa)", any("web" in f for f in inf3["fallas"]))
 web_falla["si"] = False
 
-# El carrusel de las 22.
+# El carrusel de las 22: APAGADO desde el 18/10/2026 (las generales van una por una a Instagram).
 llamadas.clear()
 bajadas.clear()
 reloj["ahora"] = datetime(2026, 10, 6, 21, 5, tzinfo=AR)
 inf4 = PA.pasada(True, solo_carrusel=False, esperar_carrusel="22:00", redactar=redactar_por_nota, notas=notas)
+chequear("carrusel: la pasada de las 21:05 ya no espera ni lo publica", "carrusel" not in inf4
+         and reloj["ahora"].hour == 21)
+# A mano (--solo-carrusel) todavía sale, por si se vuelve a prender.
+reloj["ahora"] = datetime(2026, 10, 6, 22, 0, tzinfo=AR)
+llamadas.clear()
+inf4 = PA.pasada(True, solo_carrusel=True, redactar=redactar_por_nota, notas=notas)
 mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 c = inf4.get("carrusel") or {}
-chequear("carrusel: la pasada de las 21:05 espera hasta las 22 y lo publica",
-         c.get("estado") == "ok" and reloj["ahora"].hour == 22)
+chequear("carrusel a mano: se sigue pudiendo sacar", c.get("estado") == "ok")
 hijos = [l for l in llamadas if l[0] == "ig_contenedor"]
 chequear("carrusel: una diapositiva por nota con web, sin tapa (la de Wix caída no va)",
          len(hijos) == 5 + 1 and hijos[-1][1] == "CAROUSEL")
@@ -350,8 +372,8 @@ chequear("carrusel: el texto arranca con «Noticias nacionales de hoy» (lo que 
          cap.startswith("Noticias nacionales de hoy, martes 6 de octubre de 2026"))
 llamadas.clear()
 reloj["ahora"] = datetime(2026, 10, 6, 23, 35, tzinfo=AR)
-inf5 = PA.pasada(True, redactar=redactar_por_nota, notas=notas)
-chequear("carrusel: la pasada de las 23:35 no lo repite", (inf5.get("carrusel") or {}).get("estado") == "ya_estaba"
+inf5 = PA.pasada(True, solo_carrusel=True, redactar=redactar_por_nota, notas=notas)
+chequear("carrusel: no se repite en el día", (inf5.get("carrusel") or {}).get("estado") == "ya_estaba"
          and not any(l[0] == "ig_publicar" for l in llamadas))
 
 # Simulación: no toca la memoria.
@@ -416,9 +438,11 @@ os.environ["WIX_CAT_ESPECTACULOS"] = "otra"
 chequear("web: WIX_CAT_<CATEGORIA> la pisa", CAT.seccion_web("espectaculos") == "otra")
 os.environ.pop("WIX_CAT_ESPECTACULOS")
 
-# La pasada: 1 pieza de otra categoría DENTRO del cupo de 3, en el medio de la tanda.
+# La pasada con variedad: la fila de 15 minutos, una categoría distinta en cada turno.
 PA.MEMORIA = estado_tmp / "nacionales_cat.json"
 reloj["ahora"] = datetime.fromtimestamp(T, AR)
+# Desde acá la hora es la de verdad (las notas son de hace 1 h): la grilla, 12 turnos a partir de ahora.
+TURNOS.grilla = lambda pid: [reloj["ahora"] + timedelta(minutes=15 * (k + 1)) for k in range(12)]
 llamadas.clear()
 sistemas = []
 
@@ -437,9 +461,15 @@ variadas = [nota_cat("Boca le ganó a Racing y quedó puntero del Torneo Clausur
 sin_pagina = lambda url: {"video": "", "imagen": ""}      # noqa: E731 — nunca la red en las pruebas
 inf = PA.pasada(True, redactar=redactar_cat, notas=generales, notas_variedad=variadas, leer_pagina=sin_pagina)
 cats = [p.get("categoria") for p in inf["piezas"]]
-chequear("pasada: 3 nacionales + 2 de variedad (cupo propio desde el 18/10, no le quita a las nacionales)",
+chequear("pasada: 3 nacionales + 2 de variedad (cupo propio, no le quita a las nacionales)",
          len(inf["piezas"]) == 5)
-chequear("pasada: la variedad va intercalada (segunda y cuarta)", cats == ["", "deportes", "", "espectaculos", ""])
+seguidas = [(a, b) for a, b in zip(inf["piezas"], inf["piezas"][1:])
+            if (datetime.strptime(b["turno"], "%H:%M") - datetime.strptime(a["turno"], "%H:%M")).seconds == 900]
+chequear("fila: nunca dos de la misma categoría en turnos seguidos",
+         all((a.get("categoria") or "") != (b.get("categoria") or "") for a, b in seguidas)
+         and sorted(cats, key=str) == sorted(["", "", "", "deportes", "espectaculos"], key=str))
+chequear("fila: con variedad para alternar, las 5 salen en 5 turnos seguidos (cada 15 minutos)",
+         cats[0::2] == ["", "", ""] or len(seguidas) == 4)
 chequear("pasada: la nota de deportes va a la sección Deportes de la web",
          ("094f631e-1b56-485f-8777-6e167802455e", WEB.NACIONALES_AUTO_ID) in [l[1] for l in llamadas if l[0] == "web"])
 chequear("guion: a la IA le llegan las reglas de la categoría (resultado final, confirmado…)",
@@ -491,6 +521,25 @@ mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 chequear("carrusel «Noticias nacionales de hoy»: sin deportes ni espectáculos",
          not any(p.get("categoria") for _u, p in PA.para_el_carrusel(mem)))
 print("   categorías de las pasadas:", cats, [p.get("categoria") for p in inf2["piezas"]])
+
+# La fila compartida con policiales: los turnos que reservó policiales no los usa nacionales.
+reloj["ahora"] += timedelta(hours=3)
+PA.MEMORIA = estado_tmp / "nacionales_fila.json"
+fila = TURNOS.Fila("2026-10-06T12:05", token="")
+fila.tomar(1, "policiales", "policial", "Choque en la Ruta 5")
+fila.tomar(4, "policiales", "policial", "Robo en Chivilcoy")
+gen_f = [nota_cat("Aumentan las tarifas de luz y gas desde diciembre en todo el país", "economia", "f1"),
+         nota_cat("La CGT anunció un nuevo paro general para diciembre", "politica", "f2")]
+var_f = [nota_cat("River le ganó a Boca en el Monumental y es líder", "deportes", "fv1"),
+         nota_cat("Murió un histórico conductor de la televisión argentina", "teleshow", "fv2")]
+turnos_f = TURNOS.grilla("x")
+inf_f = PA.pasada(True, redactar=redactar_lam, notas=gen_f, notas_variedad=var_f, leer_pagina=sin_pagina, fila=fila)
+usados = [p["turno"] for p in inf_f["piezas"]]
+chequear("fila: nacionales no usa los turnos de policiales y los demás salen cada 15 minutos",
+         usados == [f"{turnos_f[k]:%H:%M}" for k in (0, 2, 3, 5)] and len(inf_f["fila"]["ajenos"]) == 2)
+chequear("fila: cada turno de nacionales queda anotado en la fila con su categoría",
+         {k: d["quien"] for k, d in fila.ocupados().items()} == {0: "nacionales", 1: "policiales", 2: "nacionales",
+                                                                 3: "nacionales", 4: "policiales", 5: "nacionales"})
 
 # --- 8. Todos los portales del PDF + puntaje de impacto (18/10/2026) -----------------------------
 from nacionales import impacto as IM, portales as PO, senales as SE

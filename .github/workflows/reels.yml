@@ -15,6 +15,11 @@ name: Reels de policiales
 # publicacion real de prueba (1 reel: salio bien en Instagram, Facebook y YouTube).
 # Estuvo apagada del 22/09 al 27/09 mientras se evaluaban los reels.
 #
+# LA FILA DE 15 MINUTOS (18/10/2026, noche; reels/turnos.py): policiales y nacionales comparten UNA
+# fila por pasada: un posteo cada 15 minutos (el primero a los 15 minutos del horario), hasta 12, nunca
+# dos de la misma categoría seguidos. Los dos trabajos siguen corriendo en paralelo y se reparten los
+# turnos con referencias de git (refs/turnos/...). La variable FILA_15=0 vuelve al reparto anterior.
+#
 # DESDE EL 17/10/2026 (PDF «Prompt integral»): como mucho 3 hechos por pasada entre TODAS las
 # redes (reels/cupo.py) y solo hechos a 100 km o menos del centro de Chivilcoy
 # (reels/geografia.py). Con --cuantos 0 se arman las mejores 8 notas (no todas). Antes (27/09):
@@ -229,6 +234,8 @@ jobs:
           # El resto de los Shorts va a la página como ENLACE (título + link a la nota web).
           # Variable del repo FB_YOUTUBE=0 lo apaga.
           FB_YOUTUBE: ${{ vars.FB_YOUTUBE }}
+          # La fila de 15 minutos con nacionales (18/10/2026). FILA_15=0 la apaga.
+          FILA_15: ${{ vars.FILA_15 }}
           # La nota de la web (reels/web.py): Wix del diario.
           WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
           WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}
@@ -367,26 +374,29 @@ jobs:
 
   # ═══════════════════════════════════════════════════════════════════════════════
   # NOTICIAS NACIONALES (pedido del editor, 06/10/2026). Ver nacionales/pasada.py.
-  # Infobae → nota en la web (sección Nacionales y portada) + Short en YouTube +
-  # posteo en Facebook con la placa y el link (solo las más virales: 2 por pasada, 8 por día) y,
-  # a las 22, el carrusel «Noticias nacionales de hoy» en Instagram. Foto: la de la nota, salvo
-  # las de agencia (AP, AFP, Reuters…), que van con la placa propia (07/10).
+  # Infobae y los portales del PDF → nota en la web + Short en YouTube + Instagram (reel con el video
+  # original o carrusel explicativo; TODAS desde el 18/10/2026, con el sitio y no el link de la nota en
+  # el texto) + Facebook con la placa y el link (solo las más virales: 2 por pasada, 8 por día). Foto:
+  # la de la nota, salvo las de agencia (AP, AFP, Reuters…), que van con la placa propia (07/10).
+  # El carrusel «Noticias nacionales de hoy» de las 22 quedó APAGADO el 18/10/2026 (--sin-carrusel).
   #
-  # Es un trabajo APARTE del de policiales: corre en paralelo (no demora los reels) y si uno
-  # falla el otro sigue. Lo disparan las mismas pasadas (cron-job.org). La de las 21:05 espera
-  # hasta las 22 para el carrusel; si esa no corrió, lo saca la de las 23:35.
+  # Es un trabajo APARTE del de policiales: corre en paralelo y si uno falla el otro sigue. Lo
+  # disparan las mismas pasadas (cron-job.org). Comparten la FILA de 15 minutos (reels/turnos.py):
+  # nacionales toma, de a uno, los turnos que policiales no reservó, hasta 12 por pasada.
   #
   # Publica con el mismo interruptor que policiales (PUBLICAR_REDES) y tiene el suyo propio:
   # la variable del repo NACIONALES=0 lo deja solo simulando. Topes (variables, opcionales):
-  # NAC_POR_PASADA (3), NAC_POR_DIA (12), NAC_FB_POR_PASADA (2), NAC_FB_POR_DIA (8).
+  # NAC_POR_PASADA (3 generales), NAC_POR_DIA (18), NAC_PASADA_<CATEGORIA> y NAC_CUPO_<CATEGORIA>
+  # (variedad, por pasada y por día), NAC_FB_POR_PASADA (2), NAC_FB_POR_DIA (8), NAC_INSTAGRAM=0.
   # ═══════════════════════════════════════════════════════════════════════════════
   nacionales:
     needs: respaldo
     if: needs.respaldo.outputs.nacionales == 'true' && ((github.event.inputs.trabajos || 'todos') == 'todos' || github.event.inputs.trabajos == 'nacionales')
     runs-on: ubuntu-latest
-    # Hasta 5 piezas a 30 minutos (3 nacionales + 2 de variedad, 18/10/2026) + la espera hasta las 22 +
-    # el carrusel (sale a su hora en el medio de la tanda si hace falta).
-    timeout-minutes: 210
+    # La fila de 15 minutos (18/10/2026): el último turno sale 3 horas después del horario de la
+    # pasada (12 turnos desde los 15 minutos). La corrida termina con ese turno: la pasada siguiente
+    # espera en la fila del grupo de concurrencia y arranca a tiempo para su primer turno.
+    timeout-minutes: 235
     steps:
       - uses: actions/checkout@v4
         with:
@@ -401,7 +411,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Noticias nacionales
-        timeout-minutes: 200
+        timeout-minutes: 215
         env:
           PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -424,6 +434,11 @@ jobs:
           NAC_POR_DIA: ${{ vars.NAC_POR_DIA }}
           NAC_FB_POR_PASADA: ${{ vars.NAC_FB_POR_PASADA }}
           NAC_FB_POR_DIA: ${{ vars.NAC_FB_POR_DIA }}
+          NAC_INSTAGRAM: ${{ vars.NAC_INSTAGRAM }}
+          FILA_15: ${{ vars.FILA_15 }}
+          # Los cupos que se comparten con policiales y el bot del diario.
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          YT_SHORTS_POR_DIA: ${{ vars.YT_SHORTS_POR_DIA }}
           PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
           NACIONALES_VAR: ${{ vars.NACIONALES }}
@@ -433,11 +448,8 @@ jobs:
           if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then
             ARGS="--publicar"
           fi
-          # La pasada de las 21:05 (o su respaldo, si llega antes de las 22) espera el carrusel.
-          if [ "$(TZ=America/Argentina/Buenos_Aires date +%H)" = "21" ]; then
-            ARGS="$ARGS --esperar-carrusel 22:00"
-          fi
-          python -m nacionales.pasada $ARGS | tee informe_nacionales.md
+          # El carrusel de las 22 quedó apagado el 18/10/2026: las generales van una por una a Instagram.
+          python -m nacionales.pasada $ARGS --sin-carrusel | tee informe_nacionales.md
 
       - name: Guardar las piezas
         uses: actions/upload-artifact@v4

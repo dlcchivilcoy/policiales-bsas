@@ -163,7 +163,9 @@ CONTROLES = """## Controles (sin tocar código)
 Variables del repo policiales-bsas (Settings → Secrets and variables → Actions → Variables):
 - `PUBLICAR_REDES` — sin él, todo simula. `MAX_POLICE_REELS_PER_PASS` — hechos por pasada (3; 0 pausa
   policiales). `POLICE_RADIUS_KM` — radio (100). `INTERCALADO=0` — apaga el intercalado de IG/FB.
-- `NACIONALES=0` — nacionales solo simula. `NAC_VARIEDAD_POR_PASADA`, `NAC_CUPO_<CATEGORIA>` — categorías nuevas.
+- `NACIONALES=0` — nacionales solo simula. `NAC_PASADA_<CATEGORIA>` / `NAC_CUPO_<CATEGORIA>` — variedad por
+  pasada / por día. `NAC_INSTAGRAM=0` — nacionales sin Instagram.
+- `FILA_15=0` — apaga la fila de 15 minutos compartida (policiales vuelve a 30 min). `FILA_POR_PASADA` (12).
 - `IG_POR_PASADA`, `FB_POR_PASADA`, `YT_SHORTS_POR_DIA` — topes por red.
 X y TikTok: `DISTRIBUIDOR_ACTIVO`, `CUPO_<ORIGEN>_<RED>`, `INTERCALADO` en el ENV_FILE de social_publisher.
 """

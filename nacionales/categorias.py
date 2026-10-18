@@ -14,10 +14,11 @@ categoría; probados el 18/10/2026, ver data/registro_fuentes.json). Puntaje: na
 (jerarquía de la fuente según el PDF + cobertura en varios portales + «más leídas» + búsquedas en
 Google + Google News + YouTube + actualidad), con las señales de nacionales/senales.py.
 
-Cupo PROPIO, aparte de las 12 nacionales del día: como mucho NAC_VARIEDAD_POR_PASADA (2) por pasada y
-un tope por día de cada categoría (NAC_CUPO_<CATEGORIA>): deportes 2, espectáculos 2, internacionales 2,
-virales 2, cine y series 1, tecnología 1 → ~10. Va primero la categoría cuyo mejor tema tiene más
-impacto (menos lo que ya salió hoy de esa categoría).
+Cupo (desde el 18/10/2026 a la noche, la FILA de 15 minutos de reels/turnos.py): cada categoría tiene un
+tope POR PASADA (NAC_PASADA_<CATEGORIA>): deportes 2, espectáculos 2, mundo 2, virales 1, cine y series
+1, tecnología 1; y uno POR DÍA de seguridad (NAC_CUPO_<CATEGORIA>): 10, 10, 10, 4, 4 y 3. En cada turno
+va la categoría con el tema más fuerte (menos 12 puntos por pieza que ya salió en la pasada), nunca la
+misma que el turno anterior.
 
 Formato (nacionales/pasada.py): con VIDEO original en la nota → REEL; sin video → CARRUSEL explicativo
 con la foto original; un VIRAL sin video no sale.
@@ -86,15 +87,16 @@ NEGOCIO = F.rx(["pymes", "pyme", "comercios", "comerciante", "comerciantes", "em
                 "meeting", "meetings", "prospecting", "leads", "lead", "tickets", "store", "stores",
                 "shop", "merchants", "commerce"])
 
+# «cupo»: tope por DÍA (de seguridad); «pasada»: tope por PASADA (la fila de 15 minutos, 18/10/2026).
 CATEGORIAS = {
-    "deportes": {"nombre": "Deportes", "cupo": 2, "web": "094f631e-1b56-485f-8777-6e167802455e"},
+    "deportes": {"nombre": "Deportes", "cupo": 10, "pasada": 2, "web": "094f631e-1b56-485f-8777-6e167802455e"},
     # Las tres siguientes se crearon en Wix y en diario_web el 17/10/2026 (diario_web 4689c1a).
-    "espectaculos": {"nombre": "Espectáculos", "cupo": 2, "web": "973d6c3f-8893-4d88-92fe-78c91ab6d1ce"},
-    "cine_series": {"nombre": "Cine y series", "cupo": 1, "web": "03a75413-7258-4eca-b163-2f931193635c"},
-    "tecnologia_ia": {"nombre": "Tecnología", "cupo": 1, "web": "5b9d1e36-6d94-48ab-b5f6-6f9cb1b8fcaf"},
+    "espectaculos": {"nombre": "Espectáculos", "cupo": 10, "pasada": 2, "web": "973d6c3f-8893-4d88-92fe-78c91ab6d1ce"},
+    "cine_series": {"nombre": "Cine y series", "cupo": 4, "pasada": 1, "web": "03a75413-7258-4eca-b163-2f931193635c"},
+    "tecnologia_ia": {"nombre": "Tecnología", "cupo": 3, "pasada": 1, "web": "5b9d1e36-6d94-48ab-b5f6-6f9cb1b8fcaf"},
     # Las dos siguientes, el 18/10/2026 (secciones Mundo y Virales).
-    "internacionales": {"nombre": "Mundo", "cupo": 2, "web": "0e9c99fe-f2e1-4ca5-b5c6-c175cb191aee"},
-    "virales": {"nombre": "Virales", "cupo": 2, "web": "95f4a5db-061c-407d-8b06-7fc9378741e8"},
+    "internacionales": {"nombre": "Mundo", "cupo": 10, "pasada": 2, "web": "0e9c99fe-f2e1-4ca5-b5c6-c175cb191aee"},
+    "virales": {"nombre": "Virales", "cupo": 4, "pasada": 1, "web": "95f4a5db-061c-407d-8b06-7fc9378741e8"},
 }
 NACIONALES_ID = "b646fede-00cb-4f10-aca5-56fdda96094a"
 # Rutas de Infobae por categoría (para notas viejas sin «categoria», y para las pruebas).
@@ -114,8 +116,8 @@ def cupo_dia(cat: str) -> int:
     return _entero(f"NAC_CUPO_{cat.upper()}", CATEGORIAS[cat]["cupo"])
 
 
-def por_pasada() -> int:
-    return _entero("NAC_VARIEDAD_POR_PASADA", 2)
+def tope_pasada(cat: str) -> int:
+    return _entero(f"NAC_PASADA_{cat.upper()}", CATEGORIAS[cat]["pasada"])
 
 
 def seccion_web(cat: str) -> str:
@@ -355,3 +357,5 @@ CATEGORÍA TECNOLOGÍA / IA PARA COMERCIOS Y EMPRENDEDORES (esta nota): la secci
 - Si es solo un anuncio de producto sin uso práctico para un comercio o un emprendedor, APTA false.""",
 }
 GUIAS = {k: v + _CARRUSEL for k, v in GUIAS.items()}
+# Las nacionales generales también salen en Instagram (18/10/2026): sin video, con su carrusel explicativo.
+GUIAS[""] = _CARRUSEL

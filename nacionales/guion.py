@@ -242,8 +242,9 @@ def generar(nota: dict, redactar=None) -> dict:
     g["copia"] = copia
     g["faltan_datos"] = faltan
     # Sin láminas no hay carrusel: un pedido corto que las arma desde NUESTRA nota (18/10/2026; pasó con
-    # una guía del blog de HubSpot: la IA devolvió todo menos las láminas).
-    if categoria and g.get("apta") and len(g.get("laminas") or []) < 2:
+    # una guía del blog de HubSpot: la IA devolvió todo menos las láminas). Las generales también van a
+    # Instagram desde el 18/10/2026 (noche), así que también las llevan.
+    if g.get("apta") and len(g.get("laminas") or []) < 2:
         try:
             datos3, _det = redactar(PROMPT_LAMINAS, f"Titular: {g['titular']}\n\nNota:\n{g['nota_web']}")
             g["laminas"] = _laminas(datos3) or g.get("laminas") or []
@@ -264,7 +265,7 @@ def texto_posteo(g: dict, url_web: str = "", sitio: str = "") -> str:
     if url_web:
         partes.append(f"📲 Leé la nota completa: {url_web}")
     elif sitio:
-        partes.append(f"📲 Más noticias nacionales en {sitio}")
+        partes.append(f"📲 Más noticias en {sitio}")
     propio = ("#" + re.sub(r"[^\w]", "", G._sin_tildes(g["seccion"]).title())
               if g.get("seccion") in ("Deportes", "Espectáculos", "Cine y series", "Tecnología", "Mundo", "Virales") else "#Nacionales")
     tags = list(dict.fromkeys((g.get("hashtags") or []) + [propio, "#Argentina"]))[:6]
