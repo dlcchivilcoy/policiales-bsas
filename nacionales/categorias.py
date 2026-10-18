@@ -5,52 +5,43 @@ comercios y emprendedores.
 
 Pedido del 18/10 (en sus palabras): «virales como reels sí o sí video; deportes, espectáculos, IA o
 internacionales: si son fotos, como carrusel explicativo para generar retención, y si hay video, como
-reels», «la foto y los videos originales en todas, sin generarlas con IA», cupo propio de ~10 por día y
-fuentes nuevas: La Nación, El Cronista, internacionales y los blogs de IA.
+reels», «la foto y los videos originales en todas, sin generarlas con IA» y cupo propio de ~10 por día.
+Y el mismo día: «scrapeá TODOS los portales del PDF y hacé un sistema de scoring para poner las notas
+que tengan más impacto viral… respetando el ranking de sitios por categoría».
 
-Fuentes (RSS probados el 18/10/2026, ver data/registro_fuentes.json): Infobae y La Nación (Arc, con el
-texto completo), El Cronista (texto completo) y los blogs de Zapier, HubSpot y n8n (en inglés: la IA
-del guion lo cuenta en castellano y atribuye todo a la empresa). TyC y ESPN no tienen RSS que funcione;
-Clarín, Ámbito, Olé y BBC Mundo solo dan titulares (quedan para después).
+Fuentes: TODOS los portales del PDF que dejan leer (nacionales/portales.py, con su orden por
+categoría; probados el 18/10/2026, ver data/registro_fuentes.json). Puntaje: nacionales/impacto.py
+(jerarquía de la fuente según el PDF + cobertura en varios portales + «más leídas» + búsquedas en
+Google + Google News + YouTube + actualidad), con las señales de nacionales/senales.py.
 
 Cupo PROPIO, aparte de las 12 nacionales del día: como mucho NAC_VARIEDAD_POR_PASADA (2) por pasada y
 un tope por día de cada categoría (NAC_CUPO_<CATEGORIA>): deportes 2, espectáculos 2, internacionales 2,
-virales 2, cine y series 1, tecnología 1 → ~10. Rota: va la categoría que hace más que no sale.
+virales 2, cine y series 1, tecnología 1 → ~10. Va primero la categoría cuyo mejor tema tiene más
+impacto (menos lo que ya salió hoy de esa categoría).
 
 Formato (nacionales/pasada.py): con VIDEO original en la nota → REEL; sin video → CARRUSEL explicativo
 con la foto original; un VIRAL sin video no sale.
 """
-import calendar
 import os
 import re
 
-import httpx
-
 from nacionales import filtro as F
-from nacionales.infobae import HEADERS, _texto, ruta
+from nacionales.infobae import ruta
 
-ARC = "https://www.{sitio}/arc/outboundfeeds/rss/category/{seccion}/?outputType=xml"
-# (categoría, medio, feed). «medio» vacío = el blog de una empresa: el guion atribuye todo a ella.
-FUENTES = (
-    ("deportes", "Infobae", ARC.format(sitio="infobae.com", seccion="deportes")),
-    ("deportes", "La Nación", ARC.format(sitio="lanacion.com.ar", seccion="deportes")),
-    ("espectaculos", "Infobae", ARC.format(sitio="infobae.com", seccion="teleshow")),
-    ("espectaculos", "La Nación", ARC.format(sitio="lanacion.com.ar", seccion="espectaculos")),
-    ("cine_series", "Infobae", ARC.format(sitio="infobae.com", seccion="que-puedo-ver")),
-    ("internacionales", "Infobae", ARC.format(sitio="infobae.com", seccion="america")),
-    ("internacionales", "La Nación", ARC.format(sitio="lanacion.com.ar", seccion="el-mundo")),
-    ("virales", "Infobae", ARC.format(sitio="infobae.com", seccion="virales")),
-    ("tecnologia_ia", "Infobae", ARC.format(sitio="infobae.com", seccion="tecno")),
-    ("tecnologia_ia", "El Cronista", "https://www.cronista.com/files/rss/news.xml"),
-    ("tecnologia_ia", "", "https://zapier.com/blog/feeds/latest/"),
-    ("tecnologia_ia", "", "https://blog.hubspot.com/marketing/rss.xml"),
-    ("tecnologia_ia", "", "https://blog.n8n.io/rss/"),
-)
+from nacionales import impacto as IM
+from nacionales import portales as PO
 
 # Cuánto atrás se mira: deportes, espectáculos e internacionales son del día; los estrenos se anuncian
 # con días de anticipación; los virales y las guías de IA no vencen en horas.
 HORAS_VENTANA = {"deportes": 24, "espectaculos": 24, "internacionales": 24, "cine_series": 72,
                  "virales": 72, "tecnologia_ia": 96}
+# Las guías de los blogs de IA (Zapier, HubSpot, n8n…) no vencen en días: publican una o dos por semana.
+HORAS_BLOG = 14 * 24
+
+
+def ventana(n: dict, cat: str = "") -> float:
+    """Horas hacia atrás que se miran para esta nota."""
+    return HORAS_BLOG if n.get("es_blog") else HORAS_VENTANA.get(cat or de_que_categoria(n), 24)
 
 ARGENTINA = F.rx(["argentina", "argentino", "argentinos", "argentinas", "seleccion", "scaloni", "messi",
                   "afa", "liga profesional", "copa argentina", "torneo clausura", "torneo apertura",
@@ -90,7 +81,10 @@ NEGOCIO = F.rx(["pymes", "pyme", "comercios", "comerciante", "comerciantes", "em
                 # en inglés
                 "small business", "business", "customers", "customer", "sales", "ecommerce", "crm",
                 "email", "emails", "spreadsheet", "spreadsheets", "productivity", "support", "team", "teams",
-                "marketers", "how to", "guide", "examples", "tips"])
+                "marketers", "how to", "guide", "examples", "tips", "tools", "apps", "software",
+                "assistant", "assistants", "chatbot", "chatbots", "beginner", "workplace", "work",
+                "meeting", "meetings", "prospecting", "leads", "lead", "tickets", "store", "stores",
+                "shop", "merchants", "commerce"])
 
 CATEGORIAS = {
     "deportes": {"nombre": "Deportes", "cupo": 2, "web": "094f631e-1b56-485f-8777-6e167802455e"},
@@ -143,49 +137,52 @@ def de_que_categoria(n: dict) -> str:
 # Leer las fuentes
 # =============================================================================
 
-def _imagen(e) -> str:
-    for m in (e.get("media_content") or []) + (e.get("media_thumbnail") or []):
-        if (m.get("url") or "").startswith("http") and "video" not in (m.get("type") or ""):
-            return m["url"].strip()
-    for l in e.get("links") or []:
-        if (l.get("type") or "").startswith("image/") and (l.get("href") or "").startswith("http"):
-            return l["href"]
-    return ""
+# Lo que en una sección general (sociedad, internacional, lo último) es un VIRAL: el título lo dice, o
+# es un VIDEO de algo insólito, emotivo o gracioso. NUNCA un policial (PDF, apartado 11: un hecho
+# policial lejano no se reclasifica como viral para saltar el radio de 100 km).
+VIRAL = F.rx(["viral", "virales", "viralizo", "viralizado", "viralizada", "se viralizo", "se hizo viral",
+              "furor en redes", "furor en las redes", "revoluciono las redes", "estallaron las redes",
+              "explotaron las redes", "en tiktok", "tiktoker", "tiktokers", "influencer", "es tendencia"])
+VIDEO = F.rx(["video", "videos", "filmo", "filmaron", "grabo", "grabaron", "registro el momento", "quedo filmado",
+              "el momento en que", "captaron", "las imagenes"])
+LLAMATIVO = F.rx(["insolito", "insolita", "increible", "sorprendente", "sorprendio", "conmovedor", "conmovio",
+                  "emotivo", "emociono", "tierno", "gracioso", "divertido", "curioso", "furor", "redes",
+                  "inesperado", "inesperada", "asombro", "hazana", "record", "guinness", "perrito", "gatito",
+                  "mascota", "animal"])
+POLICIAL = F.rx(["robo", "robaron", "asalto", "asaltaron", "delincuente", "delincuentes", "ladron", "ladrones",
+                 "motochorro", "motochorros", "policia", "policial", "detenido", "detuvieron", "crimen",
+                 "asesinato", "mato", "murio", "muerte", "muerto", "choque", "accidente", "tiroteo", "disparo",
+                 "balazo", "violencia", "golpiza", "pelea", "agresion", "ataque", "abuso", "fiscal",
+                 "camara de seguridad", "camaras de seguridad"])
 
 
-def notas_del_feed(xml: str, cat: str, medio: str) -> list:
-    """Las notas de UN feed, sin red (se prueba solo)."""
-    import feedparser
-    salida = []
-    for e in feedparser.parse(xml).entries:
-        url = (e.get("link") or "").split("?")[0]
-        if not url.startswith("https://"):
-            continue
-        cuerpo = _texto((e.get("content") or [{}])[0].get("value", "")) or _texto(e.get("summary") or "")
-        fecha = e.get("published_parsed") or e.get("updated_parsed")
-        salida.append({"url": url, "seccion_feed": cat, "categoria": cat, "medio": medio, "es_blog": not medio,
-                       "titulo": " ".join((e.get("title") or "").split()), "resumen": _texto(e.get("summary") or "")[:600],
-                       "cuerpo": cuerpo, "fecha": calendar.timegm(fecha) if fecha else 0, "imagen": _imagen(e),
-                       "credito_feed": " ".join(str(e.get("credit") or "").split())})
-    return salida
+def es_viral(titulo: str) -> bool:
+    t = F.norm(titulo)
+    return not POLICIAL.search(t) and bool(VIRAL.search(t) or (VIDEO.search(t) and LLAMATIVO.search(t)))
 
 
-def bajar(fuentes=FUENTES, cliente=None) -> tuple:
-    """(notas, fallas). Una fuente que no contesta no frena las otras."""
-    cliente = cliente or httpx.Client(headers=HEADERS, timeout=30, follow_redirects=True)
-    notas, vistas, fallas = [], set(), []
-    for cat, medio, url in fuentes:
-        try:
-            r = cliente.get(url)
-            r.raise_for_status()
-        except Exception as e:                       # noqa: BLE001
-            fallas.append(f"{medio or url}: {type(e).__name__}: {str(e)[:100]}")
-            continue
-        for n in notas_del_feed(r.text, cat, medio):
-            if n["url"] not in vistas:
-                vistas.add(n["url"])
-                notas.append(n)
-    return notas, fallas
+def clasificar(n: dict) -> dict:
+    """La categoría de una nota según su fuente: «espectaculos+cine» se parte en cine y series o
+    espectáculos; de las secciones «general» solo quedan los virales (lo demás queda sin categoría:
+    no sale, pero cuenta para la cobertura del tema)."""
+    cat, titulo = n.get("categoria"), F.norm(n.get("titulo"))
+    if cat == "espectaculos+cine":
+        cat = "cine_series" if CINE_SERIES.search(titulo) and not VIDEOJUEGOS.search(titulo) else "espectaculos"
+    elif cat in ("general", "nacionales"):
+        cat = "virales" if es_viral(n.get("titulo") or "") else ""
+    return dict(n, categoria=cat, seccion_feed=cat or n.get("seccion_feed"))
+
+
+def bajar(fuentes=None, cliente=None) -> tuple:
+    """(notas, fallas, conteo por fuente) de todos los portales de variedad, ya clasificadas."""
+    notas, fallas, conteo = PO.bajar(PO.FUENTES if fuentes is None else fuentes, cliente)
+    # Una nota que vino por dos lados (el RSS general de El Cronista está en IA y en virales): queda una,
+    # la que tiene categoría.
+    salida = {}
+    for n in map(clasificar, notas):
+        if n["url"] not in salida or (n["categoria"] and not salida[n["url"]]["categoria"]):
+            salida[n["url"]] = n
+    return list(salida.values()), fallas, conteo
 
 
 # =============================================================================
@@ -197,7 +194,7 @@ def puntuar(n: dict, ahora: float) -> tuple:
     cat = de_que_categoria(n)
     if not cat:
         return 0, "otra sección"
-    if ahora - (n.get("fecha") or 0) > HORAS_VENTANA.get(cat, 24) * 3600:
+    if ahora - (n.get("fecha") or 0) > ventana(n, cat) * 3600:
         return 0, "vieja"
     titulo, cabeza = F.norm(n.get("titulo")), F.norm(f"{n.get('titulo')} . {n.get('resumen')}")
     if EN_VIVO.search(titulo):
@@ -219,6 +216,8 @@ def puntuar(n: dict, ahora: float) -> tuple:
             return 0, "noticia local de otro país, sin relevancia acá"
         return 35 + (10 if F.ARGENTINA.search(titulo) else 0), "internacional"
     if cat == "virales":
+        if POLICIAL.search(titulo):
+            return 0, "policial: no se pasa a viral (radio de 100 km)"
         return 35, "viral (sale solo si la nota trae su video)"
     if cat == "tecnologia_ia":
         if not IA.search(titulo if n.get("es_blog") else cabeza):
@@ -229,26 +228,61 @@ def puntuar(n: dict, ahora: float) -> tuple:
     return 0, ""
 
 
-def candidatas(notas: list, ahora: float) -> dict:
-    """{categoría: [candidatas, de mejor a peor]}: una por tema, con la cobertura sumada (el mismo tema
-    en Infobae y en La Nación es UNA candidata, y más fuerte)."""
+def candidatas(notas: list, ahora: float, senales: dict = None) -> dict:
+    """{categoría: [candidatas, de más a menos IMPACTO]}: una por tema (el mismo tema en Infobae, Olé y
+    TyC es UNA candidata, y más fuerte), contada desde la mejor fuente según el orden del PDF."""
+    senales = senales or {}
     recientes = []
     for n in notas:
+        cat = de_que_categoria(n)
+        if ahora - (n.get("fecha") or 0) > ventana(n, cat) * 3600:
+            continue
         p, motivo = puntuar(n, ahora)
-        if p > 0:
-            recientes.append(dict(n, puntos_base=p, nivel=de_que_categoria(n), motivos=[motivo]))
+        recientes.append(dict(n, puntos_base=p, nivel=cat, motivos=[motivo]))
     salida = {cat: [] for cat in CATEGORIAS}
-    for grupo in F.agrupar(recientes):
-        mejor = max(grupo, key=lambda x: (x["puntos_base"], bool(x.get("imagen")), x.get("fecha") or 0))
-        cobertura = len(grupo)
-        puntos = mejor["puntos_base"] + F.BONO_COBERTURA * min(cobertura - 1, F.TOPE_COBERTURA)
-        salida[mejor["nivel"]].append(dict(mejor, categoria=mejor["nivel"], puntos=puntos, cobertura=cobertura,
-                                           tema=sorted(F.palabras_tema(mejor)),
-                                           otras=[x["titulo"] for x in grupo if x is not mejor][:4],
-                                           otras_urls=[x["url"] for x in grupo if x is not mejor][:4]))
+    piso = IM.minimo()
+    # Las guías de los blogs (en inglés) no se agrupan: compartían «best», «guide»… y se inflaba la
+    # cobertura. Cada una es su propio tema.
+    grupos = F.agrupar([x for x in recientes if not x.get("es_blog")])
+    grupos += [[x] for x in recientes if x.get("es_blog")]
+    for todas in grupos:
+        grupo = [x for x in todas if x["puntos_base"] > 0]
+        if not grupo:
+            continue
+        # La nota que se cuenta: la de la mejor fuente del orden del PDF; a igual fuente, con foto y
+        # con más texto.
+        mejor = max(grupo, key=lambda x: (IM.puntos_fuente(PO.fuente_de(x), x["nivel"]), bool(x.get("imagen")),
+                                          len(x.get("cuerpo") or ""), x.get("fecha") or 0))
+        cat = mejor["nivel"]
+        ev = IM.evaluar(todas, cat, senales, ahora, ventana(mejor, cat), mejor["puntos_base"],
+                        principal=PO.fuente_de(mejor))
+        if ev["impacto"] < piso:
+            continue
+        otras = sorted((x for x in todas if x is not mejor),
+                       key=lambda x: -IM.puntos_fuente(PO.fuente_de(x), cat))
+        salida[cat].append(dict(mejor, categoria=cat, puntos=ev["impacto"], impacto=ev["impacto"],
+                                impacto_senal=ev["senal"], impacto_desglose=ev["desglose"],
+                                impacto_razones=ev["razones"], cobertura=len(todas),
+                                fuentes=list(dict.fromkeys(PO.fuente_de(x) for x in todas)),
+                                tema=sorted(F.palabras_tema(mejor)),
+                                otras=[x["titulo"] for x in otras][:4], otras_urls=[x["url"] for x in otras][:4]))
     for cat in salida:
-        salida[cat].sort(key=lambda x: (-x["puntos"], -(x.get("fecha") or 0)))
+        salida[cat].sort(key=lambda x: (-x["impacto"], -(x.get("fecha") or 0)))
     return salida
+
+
+def orden_por_impacto(por_cat: dict, piezas_hoy: list, ultimas: dict) -> list:
+    """Las categorías con cupo hoy, primero la que tiene el tema con más impacto (lo que dice la gente:
+    lectores, búsquedas, cobertura, Google News, YouTube), menos 12 puntos por pieza que ya salió hoy de
+    esa categoría. A igual impacto, la que hace más que no sale."""
+    rotacion = orden_de_rotacion(piezas_hoy, ultimas)
+    hechas = {}
+    for p in piezas_hoy:
+        if p.get("categoria"):
+            hechas[p["categoria"]] = hechas.get(p["categoria"], 0) + 1
+    mejor = {c: max((x.get("impacto_senal") or 0 for x in por_cat.get(c) or []), default=-1) for c in rotacion}
+    return sorted((c for c in rotacion if por_cat.get(c)),
+                  key=lambda c: (-(mejor[c] - 12 * hechas.get(c, 0)), rotacion.index(c)))
 
 
 def orden_de_rotacion(piezas_hoy: list, ultimas: dict) -> list:
@@ -266,30 +300,10 @@ def orden_de_rotacion(piezas_hoy: list, ultimas: dict) -> list:
 # El video y la foto ORIGINALES de la nota (18/10/2026: «sin generarlas con IA»)
 # =============================================================================
 # El video que el propio portal sirve en su reproductor (JW Player en Infobae y La Nación): el MP4
-# directo. Los posteos de TikTok, Instagram o X embebidos NO: viven en esas plataformas.
-_LD_VIDEO = re.compile(r'"contentUrl"\s*:\s*"(https://[^"]+?\.mp4[^"]*)"')
-_JW_MP4 = re.compile(r'https://cdn\.jwplayer\.com/videos/[\w-]+\.mp4')
-_OG_IMG = re.compile(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"|'
-                     r'<meta[^>]+content="([^"]+)"[^>]+property="og:image"')
-
-
-def medios_de_la_pagina(html: str) -> dict:
-    """{video, imagen} de la página de la nota, sin red (se prueba solo)."""
-    video = (_LD_VIDEO.findall(html) or _JW_MP4.findall(html) or [""])[0].replace("\\u002F", "/")
-    og = _OG_IMG.search(html)
-    imagen = (og.group(1) or og.group(2)).replace("&amp;", "&") if og else ""
-    return {"video": video, "imagen": imagen}
-
-
-def leer_pagina(url: str, cliente=None) -> dict:
-    """{video, imagen} de la nota (un pedido). Vacío si la página no contesta."""
-    cliente = cliente or httpx.Client(headers=HEADERS, timeout=30, follow_redirects=True)
-    try:
-        r = cliente.get(url)
-        r.raise_for_status()
-    except Exception:                                 # noqa: BLE001
-        return {"video": "", "imagen": ""}
-    return medios_de_la_pagina(r.text)
+# directo. Los posteos de TikTok, Instagram o X embebidos NO: viven en esas plataformas. Además, el
+# TEXTO completo (para los portales cuyo RSS trae solo el titular: Ámbito, Clarín, Olé, ESPN, TyC…).
+medios_de_la_pagina = PO.ficha
+leer_pagina = PO.leer
 
 
 # Lo que la IA tiene que respetar en cada categoría (se suma al prompt de nacionales).

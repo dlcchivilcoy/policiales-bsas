@@ -1,5 +1,5 @@
 {
- "nota": "Registro de fuentes del PDF «Prompt integral» (17/10/2026). «habilitada» = probada ese día con su adaptador y en uso; «candidata» = nombrada en el PDF, sin adaptador ni prueba; «pendiente_licencia» = requiere contratación: no se ejecuta. Los 94 medios locales de policiales están en scraper/medios.py; el Archivo Literario, en archivo/fuente.py.",
+ "nota": "Registro de fuentes del PDF «Prompt integral» (17/10/2026, rehecho el 18/10/2026: TODOS los portales del PDF que dejan leer, con su ORDEN por categoría, nacionales/portales.py). «habilitada» = probada y en uso; «candidata» = nombrada en el PDF pero no deja leer o no tiene vía (no cuenta para el ranking); «pendiente_licencia» = requiere contratación: no se ejecuta. «ranking_pdf» = el puesto de la fuente en cada categoría según el PDF. Los 94 medios locales de policiales están en scraper/medios.py; el Archivo Literario, en archivo/fuente.py.",
  "validado": "2026-10-18",
  "fuentes": [
   {
@@ -60,7 +60,16 @@
    },
    "frecuencia": "cada pasada (6 por día)",
    "credenciales": "no",
-   "condiciones": "se reescribe de cero, sin nombrar al medio; fotos de agencia (AP, Reuters, EFE…) no se usan"
+   "condiciones": "se reescribe de cero, sin nombrar al medio; fotos de agencia (AP, Reuters, EFE…) no se usan",
+   "ranking_pdf": {
+    "nacionales": 1,
+    "internacionales": 2,
+    "deportes": 6,
+    "espectaculos": 1,
+    "cine_series": 1,
+    "virales": 1,
+    "tecnologia_ia": 8
+   }
   },
   {
    "nombre": "Archivo Literario Municipal de Chivilcoy",
@@ -75,114 +84,218 @@
    "dominio": "ambito.com",
    "rss": "https://www.ambito.com/contenidos/rss.html",
    "categoria": "economia",
-   "estado": "candidata",
-   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota",
+   "metodo": "RSS de sección (/rss/pages/<sección>.xml): titular y bajada; el texto completo se lee de la página (JSON-LD articleBody)",
+   "prueba_18_10": "200 en home, economía, política, deportes, espectáculos, mundo, tecnología e información general; «más leídas» de la portada",
+   "ranking_pdf": {
+    "nacionales": 2,
+    "internacionales": 5,
+    "deportes": 9,
+    "espectaculos": 5,
+    "cine_series": 5,
+    "tecnologia_ia": 11
+   }
   },
   {
    "nombre": "El Cronista",
    "dominio": "cronista.com",
    "categoria": "empresas",
    "estado": "habilitada",
-   "prueba": "18/10/2026: news.xml (texto completo), solo IA aplicada"
+   "prueba": "18/10/2026: news.xml (texto completo), solo IA aplicada",
+   "metodo": "RSS (files/rss/news.xml y economia-politica.xml), texto completo; «Las más leídas» de la portada",
+   "prueba_18_10": "200; las secciones tecnología/espectáculos/deportes dan 404 (se filtra del RSS general)",
+   "ranking_pdf": {
+    "nacionales": 3,
+    "tecnologia_ia": 7,
+    "espectaculos": 4,
+    "virales": 4
+   }
   },
   {
    "nombre": "La Nación",
    "dominio": "lanacion.com.ar",
    "categoria": "nacionales",
    "estado": "habilitada",
-   "prueba": "18/10/2026: deportes, espectáculos y el-mundo (Arc, texto completo)"
+   "prueba": "18/10/2026: deportes, espectáculos y el-mundo (Arc, texto completo)",
+   "metodo": "RSS Arc por sección, texto completo; «Más leídas» de la portada",
+   "prueba_18_10": "200 en deportes, espectáculos, el-mundo, política, economía, sociedad y tecnología",
+   "ranking_pdf": {
+    "nacionales": 4,
+    "internacionales": 3,
+    "deportes": 7,
+    "espectaculos": 2,
+    "cine_series": 2,
+    "virales": 2,
+    "tecnologia_ia": 9
+   }
   },
   {
    "nombre": "Clarín",
    "dominio": "clarin.com",
    "rss": "https://www.clarin.com/rss.html",
    "categoria": "nacionales",
-   "estado": "candidata",
-   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota",
+   "metodo": "RSS por sección (/rss/<sección>/, 10 notas): titular y bajada; texto de la página; «Lo más visto» de la portada",
+   "prueba_18_10": "200 en lo-ultimo, política, economía, sociedad, deportes, espectáculos, mundo, internacional y tecnología (cine y tv: viejos)",
+   "ranking_pdf": {
+    "nacionales": 5,
+    "internacionales": 4,
+    "deportes": 8,
+    "espectaculos": 3,
+    "cine_series": 3,
+    "virales": 3,
+    "tecnologia_ia": 10
+   }
   },
   {
    "nombre": "TyC Sports",
    "dominio": "tycsports.com",
    "categoria": "deportes",
-   "estado": "pendiente",
-   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)",
+   "metodo": "listado de la portada (links -idNNN.html) y de cada nota su página (título, foto, fecha, texto, video)",
+   "prueba_18_10": "sin RSS; sitemap_news.xml quedó en 2020; la portada sí: ~10 notas por pasada",
+   "ranking_pdf": {
+    "deportes": 1
+   }
   },
   {
    "nombre": "ESPN Argentina",
    "dominio": "espn.com.ar",
    "categoria": "deportes",
-   "estado": "pendiente",
-   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: sin RSS que funcione (404 / vacío)",
+   "metodo": "API pública en JSON de su web (site.api.espn.com arg.1 y now.core.api.espn.com) y el texto por content.core.api.espn.com",
+   "prueba_18_10": "la página contesta 202 vacío; la API sí: ~70 notas",
+   "ranking_pdf": {
+    "deportes": 2
+   }
   },
   {
    "nombre": "Olé",
    "dominio": "ole.com.ar",
    "categoria": "deportes",
-   "estado": "candidata",
-   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: el RSS trae solo titulares (sin texto): pendiente de leer cada nota",
+   "metodo": "RSS (/rss/ultimas-noticias/ y /rss/seleccion/): titular y bajada; texto y video de la página",
+   "prueba_18_10": "200, 10 notas cada uno",
+   "ranking_pdf": {
+    "deportes": 3
+   }
   },
   {
    "nombre": "AFA",
    "dominio": "afa.com.ar",
    "categoria": "deportes (primaria)",
-   "estado": "candidata"
+   "estado": "habilitada",
+   "metodo": "listado /es/posts y la página de cada nota (fecha dd/mm/aaaa)",
+   "prueba_18_10": "sin RSS; el texto de la nota casi no viene en el HTML: sirve sobre todo para la cobertura (fuente oficial)",
+   "ranking_pdf": {
+    "deportes": 4
+   }
   },
   {
    "nombre": "Liga Profesional",
    "dominio": "ligaprofesional.ar",
    "categoria": "deportes (primaria)",
-   "estado": "candidata"
+   "estado": "habilitada",
+   "metodo": "RSS WordPress (/feed/), texto completo",
+   "prueba_18_10": "200, 10 notas",
+   "ranking_pdf": {
+    "deportes": 5
+   }
   },
   {
    "nombre": "Netflix Tudum",
    "dominio": "netflix.com/tudum",
    "categoria": "cine_series",
-   "estado": "candidata"
+   "estado": "candidata",
+   "prueba_18_10": "sin RSS ni listado (/tudum/articles da 404): inactiva",
+   "ranking_pdf": {
+    "espectaculos": 2,
+    "cine_series": 2
+   }
   },
   {
    "nombre": "Zapier Blog",
    "dominio": "zapier.com/blog",
    "categoria": "tecnologia_ia",
    "estado": "habilitada",
-   "prueba": "18/10/2026: feeds/latest (en inglés)"
+   "prueba": "18/10/2026: feeds/latest (en inglés)",
+   "metodo": "RSS (/blog/feeds/latest/) y la página para el texto",
+   "prueba_18_10": "200, 25 notas",
+   "ranking_pdf": {
+    "tecnologia_ia": 1
+   }
   },
   {
    "nombre": "Make Blog",
    "dominio": "make.com/blog",
    "categoria": "tecnologia_ia",
-   "estado": "candidata"
+   "estado": "candidata",
+   "prueba_18_10": "403 (Cloudflare) en el blog y en el RSS: inactiva",
+   "ranking_pdf": {
+    "tecnologia_ia": 2
+   }
   },
   {
    "nombre": "Google Workspace Blog",
    "dominio": "workspace.google.com/blog",
    "categoria": "tecnologia_ia",
-   "estado": "candidata"
+   "estado": "habilitada",
+   "metodo": "listado /blog/ai-and-machine-learning y la página de cada nota",
+   "prueba_18_10": "sin RSS (el /rss/ es HTML); 8 notas",
+   "ranking_pdf": {
+    "tecnologia_ia": 2
+   }
   },
   {
    "nombre": "Microsoft Copilot Blog",
    "dominio": "microsoft.com/en-us/copilot/blog",
    "categoria": "tecnologia_ia",
-   "estado": "candidata"
+   "estado": "habilitada",
+   "metodo": "RSS WordPress (/en-us/copilot/blog/feed/; el de microsoft-copilot devuelve HTML)",
+   "prueba_18_10": "200, publica poco (1 nota cada semanas)",
+   "ranking_pdf": {
+    "tecnologia_ia": 3
+   }
   },
   {
    "nombre": "HubSpot Blog",
    "dominio": "blog.hubspot.com",
    "categoria": "tecnologia_ia",
    "estado": "habilitada",
-   "prueba": "18/10/2026: marketing/rss.xml (en inglés)"
+   "prueba": "18/10/2026: marketing/rss.xml (en inglés)",
+   "metodo": "RSS de marketing, sales y service, texto completo",
+   "prueba_18_10": "200, 50 notas cada uno (el de /ai/ da 404)",
+   "ranking_pdf": {
+    "tecnologia_ia": 4
+   }
   },
   {
    "nombre": "n8n Blog",
    "dominio": "blog.n8n.io",
    "categoria": "tecnologia_ia",
    "estado": "habilitada",
-   "prueba": "18/10/2026: blog.n8n.io/rss (en inglés)"
+   "prueba": "18/10/2026: blog.n8n.io/rss (en inglés)",
+   "metodo": "RSS (/rss/), texto completo",
+   "prueba_18_10": "200, 15 notas",
+   "ranking_pdf": {
+    "tecnologia_ia": 5
+   }
   },
   {
    "nombre": "Shopify Blog",
    "dominio": "shopify.com/blog",
    "categoria": "tecnologia_ia",
-   "estado": "candidata"
+   "estado": "habilitada",
+   "metodo": "listado /blog y la página de cada nota (fecha del meta)",
+   "prueba_18_10": "sin RSS ni atom (devuelven HTML); 8 notas",
+   "ranking_pdf": {
+    "tecnologia_ia": 6
+   }
   },
   {
    "nombre": "INDEC",
@@ -200,19 +313,31 @@
    "nombre": "EFE",
    "dominio": "efe.com",
    "categoria": "internacionales",
-   "estado": "pendiente_licencia"
+   "estado": "pendiente_licencia",
+   "prueba_18_10": "403 en la web, el RSS y los sitemaps (Cloudflare): inactiva",
+   "ranking_pdf": {
+    "internacionales": "1 (inactiva)"
+   }
   },
   {
    "nombre": "Reuters Connect",
    "dominio": "reutersagency.com",
    "categoria": "internacionales",
-   "estado": "pendiente_licencia"
+   "estado": "pendiente_licencia",
+   "prueba_18_10": "el sitemap de noticias contesta pero solo en inglés y las notas bloqueadas (DataDome): inactiva",
+   "ranking_pdf": {
+    "internacionales": "2 (inactiva)"
+   }
   },
   {
    "nombre": "AP Media API",
    "dominio": "api.ap.org",
    "categoria": "internacionales",
-   "estado": "pendiente_licencia"
+   "estado": "pendiente_licencia",
+   "prueba_18_10": "apnews.com contesta 403 (web y sitemap): inactiva",
+   "ranking_pdf": {
+    "internacionales": "3 (inactiva)"
+   }
   },
   {
    "nombre": "BBC Syndication",
@@ -225,13 +350,36 @@
    "dominio": "bbc.com/mundo",
    "rss": "https://feeds.bbci.co.uk/mundo/rss.xml",
    "categoria": "internacionales",
-   "estado": "candidata",
-   "prueba": "18/10/2026: RSS de titulares"
+   "estado": "habilitada",
+   "prueba": "18/10/2026: RSS de titulares",
+   "metodo": "RSS (feeds.bbci.co.uk/mundo/rss.xml) y el texto de la página; sus fotos suelen ser de agencia (Getty): van con la placa",
+   "prueba_18_10": "200, 34 notas",
+   "ranking_pdf": {
+    "internacionales": 1
+   }
   }
  ],
  "carencias": [
-  "IA para comercios: Infobae Tecno casi no publica guías prácticas; las fuentes específicas (Zapier, HubSpot, n8n, Shopify…) son candidatas sin adaptador.",
-  "Virales: Infobae Virales publica ~1 por día y solo 1 de cada 4 trae su video propio: van a salir pocos."
+  "Internacionales: las tres primeras del orden del PDF (EFE, Reuters y AP) no dejan leer sin contrato: arranca BBC Mundo, y sus fotos suelen ser de agencia (van con la placa).",
+  "Virales: Infobae Virales publica ~1 por día; desde el 18/10 también se detectan en las secciones generales de Infobae, La Nación, Clarín, Ámbito y El Cronista (título con «viral» o «video» + algo insólito o emotivo, nunca un policial). Sale solo si la nota trae su video propio.",
+  "AFA: el texto de sus notas casi no viene en el HTML; aporta sobre todo cobertura (fuente oficial).",
+  "IA para comercios: las guías de los blogs están en inglés (el guion las cuenta en castellano y las atribuye a la empresa); Make no deja leer.",
+  "Sin vía para medir compartidos ni me gusta de notas ajenas en Facebook, Instagram, TikTok o X: el puntaje usa más leídas, Google Trends, Google News y YouTube."
  ],
- "videos_y_fotos": "Desde el 18/10/2026 (pedido del editor) se usan la FOTO y el VIDEO originales de la nota: el MP4 del reproductor propio del portal (JW Player en Infobae y La Nación) y la og:image o la del RSS. Los posteos de TikTok, Instagram o X embebidos no se bajan. Las fotos de agencia (AP, Reuters, EFE…) siguen sin usarse: facturan cada foto (decisión del 07/10). Nada generado con IA."
+ "videos_y_fotos": "Desde el 18/10/2026 (pedido del editor) se usan la FOTO y el VIDEO originales de la nota: el MP4 del reproductor propio del portal (JW Player en Infobae y La Nación) y la og:image o la del RSS. Los posteos de TikTok, Instagram o X embebidos no se bajan. Las fotos de agencia (AP, Reuters, EFE…) siguen sin usarse: facturan cada foto (decisión del 07/10). Nada generado con IA.",
+ "senales_de_impacto": {
+  "probado": "18/10/2026",
+  "usadas": [
+   "«Más leídas» de El Cronista, La Nación, Ámbito y Clarín (puesto en la lista)",
+   "Google Trends Argentina (trends.google.com/trending/rss?geo=AR): búsquedas en tendencia y su volumen",
+   "Google News Argentina: portada y secciones Nación, Mundo, Deportes, Espectáculos y Tecnología (puesto y medios del tema)",
+   "YouTube Argentina en tendencia (videos.list chart=mostPopular): vistas, me gusta y comentarios (1 unidad de cupo)"
+  ],
+  "descartadas": [
+   "Facebook: la API ya no informa compartidos/reacciones de notas ajenas (da 0 en todas; solo cuenta portadas)",
+   "Instagram, TikTok y X: sin vía autorizada para medir posteos de terceros",
+   "TyC, Infobae, Olé: sin lista de más leídas legible en la portada"
+  ],
+  "puntaje": "nacionales/impacto.py: fuente (orden del PDF) 0-20, cobertura 0-20, lectores 0-20, búsquedas 0-15, Google News 0-10, YouTube 0-10, actualidad 0-5, editorial 0-10"
+ }
 }

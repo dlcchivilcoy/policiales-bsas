@@ -3,6 +3,25 @@
 Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales` de
 `.github/workflows/reels.yml` (corre en las mismas pasadas que policiales, en paralelo).
 
+> **18/10/2026 (tarde) — TODOS los portales del PDF y PUNTAJE DE IMPACTO** (pedido del editor: «scrapeá
+> todos los portales… y hacé un sistema de scoring para poner las notas que tengan más impacto viral… en el
+> orden del ranking de sitios por categoría»). `nacionales/portales.py` lee 17 portales (~1.800 notas en
+> ~20 s, en paralelo) con el ORDEN del PDF por categoría: deportes TyC → ESPN → Olé → AFA → Liga
+> Profesional → Infobae/La Nación/Clarín/Ámbito; mundo BBC Mundo → Infobae → La Nación → Clarín → Ámbito
+> (EFE, Reuters y AP no dejan leer); IA Zapier → Google Workspace → Microsoft → HubSpot → n8n → Shopify →
+> diarios (Make no deja leer); espectáculos, cine y virales Infobae → La Nación → Clarín → El Cronista →
+> Ámbito. Sin RSS se lee el listado y la página (TyC, AFA, Workspace, Shopify); ESPN por su API en JSON.
+> `nacionales/senales.py` junta señales REALES: «más leídas» de Cronista, La Nación, Ámbito y Clarín,
+> búsquedas en tendencia de Google, Google News (puesto y medios del tema) y YouTube en tendencia (vistas,
+> me gusta, comentarios). `nacionales/impacto.py` da 0-100 por TEMA: fuente según el PDF 20, cobertura 20,
+> lectores 20, búsquedas 15, Google News 10, YouTube 10, actualidad 5, editorial 10, con sus razones
+> (quedan en la pieza y en el resumen de la corrida). Va primero la categoría con el tema más fuerte (−12
+> por pieza ya salida hoy); `NAC_IMPACTO_MINIMO` (15) deja afuera lo que nadie cubre ni lee. Las nacionales
+> generales siguen saliendo de Infobae, pero Ámbito, Cronista, La Nación y Clarín y las señales les suman
+> hasta 35 puntos. Si la nota elegida no trae video, se busca en los otros portales del mismo tema; si su
+> RSS trae solo el titular, el texto sale de la página. Facebook ya no informa compartidos de notas
+> ajenas (da 0): no se usa. Registro con el estado y el puesto de cada portal: `data/registro_fuentes.json`.
+>
 > **18/10/2026 — VARIEDAD rehecha a pedido del editor** (`nacionales/categorias.py`): deportes, espectáculos,
 > cine y series, **mundo** (internacionales), **virales** e IA para comercios, de Infobae, **La Nación**, **El
 > Cronista** y los blogs de **Zapier, HubSpot y n8n**. **Cupo propio** (~10 por día, hasta 2 por corrida,

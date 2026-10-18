@@ -53,8 +53,11 @@ import entorno
 from nacionales import categorias as CAT
 from nacionales import filtro as F
 from nacionales import guion as NG
+from nacionales import impacto as IM
 from nacionales import infobae as IB
 from nacionales import placa as P
+from nacionales import portales as PO
+from nacionales import senales as SE
 from reels import distribuidor as DIST
 from reels import publicador as PUB
 from reels import web as WEB
@@ -195,9 +198,22 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     variedad = bool(nota.get("categoria"))
     medios = {}
     if variedad:
-        medios = (leer_pagina or CAT.leer_pagina)(nota["url"])
+        leer = leer_pagina or CAT.leer_pagina
+        medios = dict(leer(nota["url"]))
         if not nota.get("imagen") and medios.get("imagen"):
             nota = dict(nota, imagen=medios["imagen"])
+        # Los portales cuyo RSS trae solo el titular (Ámbito, Clarín, Olé, ESPN…): el texto de la página.
+        if len(medios.get("texto") or "") > len(nota.get("cuerpo") or "") and len(nota.get("cuerpo") or "") < 1500:
+            nota = dict(nota, cuerpo=medios["texto"])
+        # Sin video en esta nota: el mismo tema en otro portal puede traer el suyo (18/10/2026).
+        for otra in ([] if medios.get("video") else (nota.get("otras_urls") or [])[:3]):
+            try:
+                v = (leer(otra) or {}).get("video")
+            except Exception:                        # noqa: BLE001 — una página que no anda no frena
+                v = ""
+            if v:
+                medios["video"], medios["video_de"] = v, otra
+                break
         if nota.get("categoria") == "virales" and not medios.get("video"):
             return {"nota": nota, "url_original": nota["url"],
                     "guion": {"apta": False, "motivo": "viral sin el video original en la nota"}}
@@ -489,27 +505,33 @@ def _hora_del_carrusel(esperar: str = "") -> datetime:
     return _ahora().replace(hour=hh, minute=mm, second=0, microsecond=0)
 
 
-def elegir_variedad(notas_var: list, mem: dict, dia: str, ahora: datetime, cupo: int) -> list:
-    """Candidatas de las categorías nuevas (nacionales/categorias.py), en orden de rotación: la
-    categoría que hace más que no sale primero, y dentro de cada una las mejores notas nuevas (hasta 3,
-    porque la que la IA descarta deja lugar a la siguiente)."""
+def elegir_variedad(notas_var: list, mem: dict, dia: str, ahora: datetime, cupo: int, senales: dict = None,
+                    ranking: dict = None) -> list:
+    """Candidatas de las categorías nuevas (nacionales/categorias.py) por IMPACTO (18/10/2026): primero
+    la categoría con el tema más fuerte (menos lo que ya salió hoy de ella), y dentro de cada una las
+    mejores notas nuevas (hasta 3, porque la que la IA descarta deja lugar a la siguiente). `ranking`,
+    si viene, se llena con las 3 mejores de cada categoría (para el informe)."""
     if cupo <= 0 or not notas_var:
         return []
-    por_cat = CAT.candidatas(notas_var, ahora.timestamp())
+    por_cat = CAT.candidatas(notas_var, ahora.timestamp(), senales)
+    if ranking is not None:
+        for c, lista in por_cat.items():
+            ranking[c] = [{"impacto": x["impacto"], "titulo": x["titulo"], "fuentes": x.get("fuentes") or [],
+                           "razones": x.get("impacto_razones") or [], "url": x["url"]} for x in lista[:3]]
     ultimas = {}
     for p in mem["piezas"].values():
         c = p.get("categoria")
         if c and (p.get("cuando") or "") > ultimas.get(c, ""):
             ultimas[c] = p.get("cuando") or ""
     salida = []
-    for cat in CAT.orden_de_rotacion(de_hoy(mem, dia), ultimas):
+    for cat in CAT.orden_por_impacto(por_cat, de_hoy(mem, dia), ultimas):
         salida += elegir(por_cat.get(cat) or [], mem, 3, ahora)
     return salida
 
 
 def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, esperar_carrusel: str = "",
            con_carrusel: bool = True, redactar=None, notas=None, notas_variedad=None,
-           leer_pagina=None) -> dict:
+           leer_pagina=None, senales=None) -> dict:
     notas_inyectadas = notas
     mem = cargar()
     ahora = _ahora()
@@ -532,6 +554,18 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 raise RuntimeError("Infobae no devolvió ninguna nota: " + "; ".join(fallas))
         cands = F.candidatas(notas, ahora.timestamp())
         informe["candidatas"] = len(cands)
+        # Señales de impacto (18/10/2026): más leídas, búsquedas de Google, Google News y YouTube. Una
+        # sola vez por pasada; en las pruebas, solo lo que se le pasa.
+        if senales is None:
+            senales = SE.juntar() if notas_inyectadas is None else SE.vacias()
+            informe.setdefault("avisos", []).extend(f"señal {f}" for f in senales.get("fallas") or [])
+        informe["senales"] = {k: len(senales.get(k) or []) for k in ("mas_leidas", "tendencias", "google_news",
+                                                                      "youtube")}
+        if notas_inyectadas is None:
+            # Nacionales generales: Ámbito, El Cronista, La Nación y Clarín dan la cobertura del tema.
+            otras, fallas_otras, _ = PO.bajar(PO.FUENTES_NACIONALES)
+            informe["avisos"].extend(f"nacionales {f}" for f in fallas_otras)
+            cands = IM.realzar_generales(cands, otras, senales, ahora.timestamp())
         # Las 12 por día son de las nacionales generales: la variedad tiene su cupo propio (18/10/2026).
         hechas = len([p for p in de_hoy(mem, dia) if not p.get("categoria")])
         cupo = min(cuantos or _entero("NAC_POR_PASADA", POR_PASADA), _entero("NAC_POR_DIA", POR_DIA) - hechas)
@@ -541,11 +575,13 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
         if notas_variedad is None:
             notas_variedad = []
             if notas_inyectadas is None:             # en las pruebas, solo lo que se le pasa
-                notas_variedad, fallas_var = CAT.bajar()
-                informe.setdefault("avisos", []).extend(f"Infobae {f}" for f in fallas_var)
+                notas_variedad, fallas_var, conteo = CAT.bajar()
+                informe.setdefault("avisos", []).extend(f"portal {f}" for f in fallas_var)
+                informe["fuentes_variedad"] = conteo
         n_var = CAT.por_pasada()
         variedad = []
-        for c in elegir_variedad(notas_variedad, mem, dia, ahora, n_var):
+        informe["ranking_variedad"] = {}
+        for c in elegir_variedad(notas_variedad, mem, dia, ahora, n_var, senales, informe["ranking_variedad"]):
             if len(variedad) >= n_var:
                 break
             if any(v["nota"].get("categoria") == c["categoria"] for v in variedad):
@@ -615,7 +651,10 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                                        {"estado": "omitida", "detalle": "no se pudo dejar en el buzón"})
             fila = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
                     "categoria": nota.get("categoria") or "", "formato": pieza.get("formato") or "",
-                    "medio_origen": nota.get("medio") or "", "video_original": pieza.get("video_original") or "",
+                    "medio_origen": PO.fuente_de(nota) if nota.get("categoria") else (nota.get("medio") or ""),
+                    "video_original": pieza.get("video_original") or "",
+                    "impacto": nota.get("impacto"), "impacto_razones": nota.get("impacto_razones") or [],
+                    "fuentes": nota.get("fuentes") or [],
                     "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
                     "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
                     "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
@@ -675,6 +714,13 @@ def resumen(inf: dict) -> str:
         l.append(f"- **{p['titular']}** ({p['seccion']}, viral {p['viral']}, {p['nivel']}) — {redes}")
     for d in inf["descartadas"]:
         l.append(f"- ~~{d['titulo'][:90]}~~ — {d['motivo']}")
+    if inf.get("ranking_variedad"):
+        l.append("\n**Ranking de impacto (variedad):**")
+        for cat, lista in inf["ranking_variedad"].items():
+            for x in lista:
+                l.append(f"- {cat} · **{x['impacto']}** · {x['titulo'][:80]} — {'; '.join(x['razones'][:4])}")
+    if inf.get("senales"):
+        l.append(f"\nSeñales: {inf['senales']}; notas por portal: {inf.get('fuentes_variedad') or {}}")
     if inf.get("carrusel"):
         c = inf["carrusel"]
         l.append(f"\nCarrusel de Instagram: {c.get('estado')} {c.get('motivo') or ''}"

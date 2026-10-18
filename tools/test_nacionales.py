@@ -492,6 +492,175 @@ chequear("carrusel «Noticias nacionales de hoy»: sin deportes ni espectáculos
          not any(p.get("categoria") for _u, p in PA.para_el_carrusel(mem)))
 print("   categorías de las pasadas:", cats, [p.get("categoria") for p in inf2["piezas"]])
 
+# --- 8. Todos los portales del PDF + puntaje de impacto (18/10/2026) -----------------------------
+from nacionales import impacto as IM, portales as PO, senales as SE
+
+chequear("ranking: el orden del PDF entre las ACTIVAS (EFE, Reuters y AP no leen: no ocupan lugar)",
+         PO.ranking("internacionales") == ["BBC Mundo", "Infobae", "La Nación", "Clarín", "Ámbito"]
+         and PO.ranking("deportes")[:5] == ["TyC Sports", "ESPN", "Olé", "AFA", "Liga Profesional"]
+         and PO.ranking("tecnologia_ia")[:2] == ["Zapier", "Google Workspace"])
+chequear("ranking: la primera del PDF vale más que la segunda, y así; una de afuera, casi nada",
+         IM.puntos_fuente("TyC Sports", "deportes") == 20 > IM.puntos_fuente("ESPN", "deportes")
+         > IM.puntos_fuente("Olé", "deportes") > IM.puntos_fuente("Ámbito", "deportes") == 6
+         and IM.puntos_fuente("Página 12", "deportes") == 4)
+chequear("fuente: sale del dominio si la nota no la trae",
+         PO.fuente_de({"url": "https://www.ole.com.ar/boca/x.html"}) == "Olé"
+         and PO.fuente_de({"url": "https://blog.hubspot.com/sales/x"}) == "HubSpot")
+espn = json.dumps({"articles": [
+    {"headline": "Vélez le ganó a Gimnasia", "description": "Partidazo en Liniers", "published": "2026-10-18T02:00:00Z",
+     "images": [{"url": "https://a.espncdn.com/foto.jpg"}],
+     "links": {"web": {"href": "https://www.espn.com.ar/futbol/argentina/nota/_/id/1/velez?x=1"}}},
+    {"headline": "Clip", "links": {"web": {"href": "https://www.espn.com.ar/video/clip/_/id/2/clip"}}}]})
+ne = PO.notas_espn(espn, "deportes", "ESPN")
+chequear("ESPN: la API en JSON da titular, bajada, foto y link (los clips sueltos no)",
+         len(ne) == 1 and ne[0]["titulo"] == "Vélez le ganó a Gimnasia" and ne[0]["imagen"].endswith("foto.jpg")
+         and ne[0]["url"].endswith("/velez") and ne[0]["fecha"] > 0)
+pagina = ('<html><head><meta property="og:title" content="Boca ganó el clásico | TyC Sports">'
+          '<meta property="og:image" content="https://x/foto.jpg"><meta property="og:description" content="Bajada">'
+          '<script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-10-18T10:00:00-03:00",'
+          '"articleBody":"' + "Texto completo de la nota. " * 30 + '"}</script></head><body>'
+          '<script>var v="https://cdn.jwplayer.com/videos/AbC123.mp4"</script></body></html>')
+f = PO.ficha(pagina)
+chequear("página: título sin el «| TyC Sports», foto, fecha, texto completo y el video del reproductor",
+         f["titulo"] == "Boca ganó el clásico" and f["imagen"] == "https://x/foto.jpg" and f["fecha"] > 0
+         and len(f["texto"]) > 500 and f["video"] == "https://cdn.jwplayer.com/videos/AbC123.mp4")
+f2 = PO.ficha('<meta property="og:title" content="Primera C: se juega la permanencia"><p>Publicado el 14/10/2026</p>'
+              '<article><p>' + "El partido se juega en Rosario y define quién se queda en la categoría. " * 3
+              + '</p></article>')
+chequear("página sin articleBody (Olé, BBC, AFA): los párrafos de la nota y la fecha dd/mm/aaaa",
+         len(f2["texto"]) > 150 and datetime.fromtimestamp(f2["fecha"], AR).date().isoformat() == "2026-10-14")
+chequear("listado (TyC, AFA, Shopify): los links de notas, en orden y sin repetir",
+         PO.links_de_lista('<a href="/futbol/a-id1.html"></a><a href="/futbol/a-id1.html"></a>'
+                           '<a href="https://www.tycsports.com/boca/b-id2.html"></a><a href="/x.html"></a>',
+                           r'href="((?:https://www\.tycsports\.com)?/[a-z0-9-]+/[a-z0-9-]+-id\d+\.html)"',
+                           "https://www.tycsports.com/", 10)
+         == ["https://www.tycsports.com/futbol/a-id1.html", "https://www.tycsports.com/boca/b-id2.html"])
+ml = SE.mas_leidas_de('<h2>Las más leídas</h2><div class="most-read__list">'
+                      '<a href="https://www.ambito.com/deportes/dibu-martinez-fue-operado-tras-el-golpazo-n6334968">1</a>'
+                      '<a href="https://www.ambito.com/economia/dolar-hoy-cuanto-cotiza-n6334993">2</a></div>',
+                      "Ámbito", "https://www.ambito.com/", r"most-read__list", r'href="(https://www\.ambito\.com/[^"]+-n\d+)"', 10)
+chequear("más leídas: el puesto y las palabras del link",
+         [(x["puesto"], x["texto"]) for x in ml] == [(1, "dibu martinez fue operado tras el golpazo"),
+                                                     (2, "dolar hoy cuanto cotiza")])
+tr = SE.tendencias_de('<rss xmlns:ht="https://trends.google.com/trending/rss"><channel><item><title>racing independiente</title>'
+                      '<ht:approx_traffic>50.000+</ht:approx_traffic><ht:news_item><ht:news_item_title>Racing e Independiente'
+                      ' juegan el clásico de Avellaneda</ht:news_item_title></ht:news_item></item></channel></rss>')
+chequear("Google Trends: la búsqueda, su volumen y los titulares asociados",
+         tr == [{"consulta": "racing independiente", "trafico": 50000,
+                 "titulos": ["Racing e Independiente juegan el clásico de Avellaneda"]}])
+gn = SE.google_news_de('<rss><channel><item><title>Operaron a Dibu Martínez - Olé</title><source>Olé</source>'
+                       '<description>&lt;ol&gt;&lt;li&gt;&lt;a href="x"&gt;Operaron a Dibu Martínez&lt;/a&gt;&amp;nbsp;'
+                       '&lt;font color="#6f6f6f"&gt;Olé&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="y"&gt;Dibu, operado'
+                       '&lt;/a&gt;&lt;font color="#6f6f6f"&gt;TN&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;</description></item>'
+                       '</channel></rss>', "deportes")
+chequear("Google News: el puesto, los titulares y los medios del tema",
+         gn and gn[0]["puesto"] == 1 and set(gn[0]["medios"]) == {"Olé", "TN"} and "Operaron a Dibu Martínez" in gn[0]["titulos"])
+
+T8 = AHORA
+
+
+def nv(titulo, fuente, cat="deportes", horas=1, url=None, **k):
+    dom = {"TyC Sports": "tycsports.com", "Infobae": "infobae.com", "Olé": "ole.com.ar", "Clarín": "clarin.com",
+           "La Nación": "lanacion.com.ar", "ESPN": "espn.com.ar", "Zapier": "zapier.com"}.get(fuente, "x.com")
+    n = PO.nota_nueva(url or f"https://www.{dom}/{cat}/{abs(hash(titulo + fuente)) % 10**8}-id1.html", cat, fuente,
+                      titulo, cuerpo=titulo, fecha=T8 - horas * 3600, imagen="https://x/f.jpg")
+    return dict(n, **k)
+
+
+dibu = [nv("Operaron a Dibu Martínez tras el golpazo en el Chelsea", "Infobae"),
+        nv("Dibu Martínez fue operado tras el golpazo con el Chelsea", "TyC Sports"),
+        nv("Dibu Martínez operado: el golpazo en el Chelsea", "Olé")]
+solo = [nv("Lanús le ganó a Platense como visitante en el Torneo Clausura", "TyC Sports")]
+senales = dict(SE.vacias(), mas_leidas=[{"medio": "Clarín", "puesto": 2, "url": "u",
+                                         "texto": "operaron dibu martinez golpazo chelsea"}],
+               tendencias=[{"consulta": "dibu martinez", "trafico": 20000, "titulos": []},
+                           {"consulta": "serie a", "trafico": 200, "titulos": []}],
+               youtube=[{"titulo": "Dibu Martínez: el golpazo en el Chelsea", "vistas": 900000, "me_gusta": 30000,
+                         "comentarios": 2000}])
+pc8 = CAT.candidatas(dibu + solo, T8, senales)["deportes"]
+chequear("impacto: el mismo tema en 3 portales es UNA candidata, contada desde la mejor fuente del PDF (TyC)",
+         len(pc8) == 2 and PO.fuente_de(pc8[0]) == "TyC Sports" and pc8[0]["cobertura"] == 3
+         and set(pc8[0]["fuentes"]) == {"Infobae", "TyC Sports", "Olé"})
+d8 = pc8[0]["impacto_desglose"]
+chequear("impacto: cobertura + más leída + búsqueda en Google + YouTube suben al tema leído y buscado",
+         pc8[0]["impacto"] > pc8[1]["impacto"] and d8["cobertura"] == 12 and d8["lectores"] == 9
+         and d8["busquedas"] > 0 and d8["youtube"] > 0)
+chequear("impacto: cada componente deja su razón",
+         any("más leída de Clarín" in r for r in pc8[0]["impacto_razones"])
+         and any("dibu martinez" in r for r in pc8[0]["impacto_razones"]))
+chequear("impacto: los otros portales del tema quedan para buscar el video (por orden del PDF)",
+         pc8[0]["otras_urls"][0] == dibu[2]["url"])
+series = CAT.candidatas([nv("Netflix estrena la serie argentina de Mafalda", "Infobae", "cine_series")], T8, senales)
+chequear("búsquedas: «serie a» (una sola palabra) no se pega a una nota de series",
+         series["cine_series"][0]["impacto_desglose"]["busquedas"] == 0)
+chequear("clasificar: espectáculos se parte en cine y series",
+         CAT.clasificar(nv("Netflix estrena la serie de Mafalda", "Clarín", "espectaculos+cine"))["categoria"] == "cine_series"
+         and CAT.clasificar(nv("Murió un actor de la tele", "Clarín", "espectaculos+cine"))["categoria"] == "espectaculos")
+chequear("clasificar: de una sección general solo quedan los virales",
+         CAT.clasificar(nv("El video viral del perro que abre la heladera", "Clarín", "general"))["categoria"] == "virales"
+         and CAT.clasificar(nv("El insólito video del gato que toca el piano", "Clarín", "general"))["categoria"] == "virales"
+         and CAT.clasificar(nv("Aumentan las tarifas de luz", "Clarín", "general"))["categoria"] == "")
+chequear("clasificar: un policial NUNCA pasa a viral (PDF: no saltar el radio de 100 km)",
+         CAT.clasificar(nv("El video viral del robo a un kiosco", "Clarín", "general"))["categoria"] == ""
+         and CAT.puntuar(nv("Video viral: la cámara de seguridad captó el asalto", "Infobae", "virales"), T8)[0] == 0)
+blogs = [nv("The best AI tools for small business customer support", "Zapier", "tecnologia_ia"),
+         nv("How to use AI agents for customer support in a small business", "HubSpot", "tecnologia_ia")]
+pb = CAT.candidatas(blogs, T8)["tecnologia_ia"]
+chequear("blogs: cada guía es su propio tema (no se juntan por «best» o «guide»)", len(pb) == 2)
+chequear("blogs: miran 14 días (una guía no vence en horas)",
+         CAT.puntuar(nv("How to use AI to answer customers on WhatsApp", "Zapier", "tecnologia_ia", horas=24 * 10), T8)[0] > 0)
+por = {"deportes": [{"impacto_senal": 40}], "espectaculos": [{"impacto_senal": 30}], "virales": []}
+chequear("orden: primero la categoría con el tema de más impacto; sin candidatas, no va",
+         CAT.orden_por_impacto(por, [], {}) == ["deportes", "espectaculos"])
+chequear("orden: 12 puntos menos por pieza que ya salió hoy (para que haya variedad)",
+         CAT.orden_por_impacto(por, [{"categoria": "deportes"}], {}) == ["espectaculos", "deportes"])
+
+# Nacionales generales: Infobae arma; los otros 4 portales del PDF y las señales suben al tema grande.
+gen = [dict(nota("Aumentan las tarifas de luz y gas desde noviembre", "economia"), puntos=50),
+       dict(nota("El Senado aprobó la ley de financiamiento universitario", "politica"), puntos=55)]
+otras_gen = [nv("Tarifas: aumentan la luz y el gas desde noviembre", "Clarín", "nacionales"),
+             nv("Luz y gas: aumentan las tarifas desde noviembre", "La Nación", "nacionales")]
+sen_gen = dict(SE.vacias(), mas_leidas=[{"medio": "Ámbito", "puesto": 1, "url": "u",
+                                         "texto": "aumentan las tarifas de luz y gas desde noviembre"}])
+rg = IM.realzar_generales(gen, otras_gen, sen_gen, T8)
+chequear("nacionales generales: el tema que cubren 3 portales y es el más leído pasa adelante",
+         rg[0]["titulo"].startswith("Aumentan las tarifas") and rg[0]["impacto_extra"] > 0
+         and rg[1].get("impacto_extra", 0) == 0)
+
+# La pasada: el tema de TyC sin video toma el VIDEO de otro portal y el TEXTO completo de su página.
+reloj["ahora"] += timedelta(hours=3)
+mat8 = []
+
+
+def redactar_8(system, material):
+    mat8.append(material)
+    return redactar_lam(system, material)
+
+
+tyc = nv("Messi hizo dos goles y el Inter Miami ganó el clásico de Florida", "TyC Sports", cuerpo="")
+ib = nv("Messi y dos goles: Inter Miami ganó el clásico de Florida", "Infobae")
+paginas8 = {tyc["url"]: {"video": "", "imagen": "", "texto": "TEXTO COMPLETO DE TYC. " * 40},
+            ib["url"]: {"video": "https://cdn.jwplayer.com/videos/messi.mp4", "imagen": "", "texto": ""}}
+os.environ["NAC_VARIEDAD_POR_PASADA"] = "1"
+inf8 = PA.pasada(True, redactar=redactar_8, notas=[], notas_variedad=[tyc, ib], leer_pagina=lambda u: paginas8[u],
+                 senales=SE.vacias())
+os.environ.pop("NAC_VARIEDAD_POR_PASADA")
+p8 = inf8["piezas"][0] if inf8["piezas"] else {}
+chequear("pasada: la nota de TyC (1.ª del PDF) sale como reel con el video que trae Infobae del mismo tema",
+         p8.get("medio_origen") == "TyC Sports" and p8.get("formato") == "reel"
+         and p8.get("video_original") == "https://cdn.jwplayer.com/videos/messi.mp4")
+chequear("pasada: el guion recibe el TEXTO completo de la página (el RSS traía solo el titular)",
+         any("TEXTO COMPLETO DE TYC" in m for m in mat8))
+chequear("pasada: la pieza guarda su impacto, sus razones y los portales del tema",
+         p8.get("impacto") and p8.get("fuentes") == ["TyC Sports", "Infobae"])
+chequear("pasada: el ranking de cada categoría queda en el informe", inf8.get("ranking_variedad", {}).get("deportes"))
+chequear("guion: no nombrar el portal de origen, como palabra entera («Olé» no salta en «colegio»; la AFA "
+         "es fuente oficial y se puede nombrar)",
+         not NG._nombra_infobae({"nota_web": "El colegio y el boleto"}, "Olé")
+         and NG._nombra_infobae({"nota_web": "Según Olé, se va"}, "Olé")
+         and not NG._nombra_infobae({"nota_web": "Fondos de la Nación"}, "La Nación")
+         and not NG._nombra_infobae({"nota_web": "La AFA confirmó la fecha"}, "AFA"))
+
 shutil.rmtree(tmp, ignore_errors=True)
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
