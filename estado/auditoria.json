@@ -189,6 +189,209 @@
         ],
         "descartadas": [],
         "cuando": "2026-10-18T10:06:37-03:00"
+      },
+      "armado": {
+        "notas_scrapeadas": 13,
+        "sin_foto_ni_video": 2,
+        "ya_tuvieron_reel": 1,
+        "fuera_de_radio": [
+          {
+            "titulo": "Asaltaron a una mujer de 80 años en Bolívar y le robaron $3,5 millones",
+            "localidad": "San Carlos de Bolívar",
+            "km": 178.3,
+            "motivo": "fuera del radio: San Carlos de Bolívar está a 178.3 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "HOMICIDIO DE HUGO JUÁREZ: LA DDI CONFIRMÓ QUE EL DETENIDO TIENE 27 AÑOS Y QUE EXISTIRÍA UN CONFLICTO POR POSIB",
+            "localidad": "Pehuajó",
+            "km": 198.5,
+            "motivo": "fuera del radio: Pehuajó está a 198.5 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Casación confirmó la absolución de un padre y dos abuelos acusados de abuso sexual a una nena 18/10/2026",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [],
+        "otras_descartadas": [],
+        "armadas": [
+          {
+            "titular": "Un joven de 21 años fue internado tras una pelea cerca del paso a nivel de la calle San",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 5,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Falleció Martín Rubén Montoya a los 42 años en Chacabuco",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 1,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): Es un aviso fúnebre o necrológica, que pertenece a la categoría de servicios y necrológicas, excluida del temario policial."
+          },
+          {
+            "titular": "Detuvieron al papá de la abogada acusada de racismo en Brasil",
+            "localidad": "9 de Julio",
+            "km": 99.4,
+            "banda": "zona",
+            "viral": 7,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Un motociclista fue hospitalizado tras chocar contra una camioneta estacionada",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Demoraron a un joven de 18 años tras disturbios en el barrio de los Bomberos",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          }
+        ],
+        "cuando": "2026-10-18T09:09:28-03:00"
+      },
+      "publicacion": {
+        "maximo": 3,
+        "reservadas": 3,
+        "piezas": [
+          {
+            "orden": 3,
+            "titular": "Detuvieron al papá de la abogada acusada de racismo en Brasil",
+            "localidad": "9 de Julio",
+            "km": 99.4,
+            "hora": "2026-10-18T12:09",
+            "destinos": {
+              "youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://youtube.com/shorts/e39mGw6kYRY"
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/9-de-julio-detuvieron-al-papa-de-la-abogada-acusada-de-racismo-b2beac"
+              },
+              "facebook": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 4,
+            "titular": "Un motociclista fue hospitalizado tras chocar contra una camioneta estacionada",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "hora": "2026-10-18T12:39",
+            "destinos": {
+              "youtube": {
+                "estado": "omitida",
+                "detalle": "ese hecho ya está en el canal de YouTube («Le chocaron la camioneta estacionada y escaparon | Chacabuco»)",
+                "url": ""
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/chacabuco-un-joven-fue-hospitalizado-tras-chocar-en-moto-contra-eddeaf"
+              },
+              "facebook": {
+                "estado": "omitida",
+                "detalle": "intercalado: no salió otra temática en Facebook antes de la pasada siguiente",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "omitida",
+                "detalle": "intercalado: no salió otra temática en Instagram antes de la pasada siguiente",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 5,
+            "titular": "Demoraron a un joven de 18 años tras disturbios en el barrio de los Bomberos",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "hora": "2026-10-18T13:09",
+            "destinos": {
+              "youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://youtube.com/shorts/oO9NzT1Nr80"
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/chacabuco-demoraron-a-un-joven-de-18-anos-tras-disturbios-en-el-4163cb"
+              },
+              "facebook": {
+                "estado": "omitida",
+                "detalle": "no está entre las 2 más virales de la pasada (esta: viral 6/10 +1 por cercanía)",
+                "url": ""
+              },
+              "fb_youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "omitida",
+                "detalle": "intercalado: no salió otra temática en Instagram antes de la pasada siguiente",
+                "url": ""
+              }
+            }
+          }
+        ],
+        "salteadas": [
+          {
+            "titular": "Falleció Martín Rubén Montoya a los 42 años en Chacabuco",
+            "motivo": "no apta: No es del temario de policiales (según la IA): Es un aviso fúnebre o necrológica, que pertenece a la categoría de servicios y necrológicas, excluida del temario policial."
+          },
+          {
+            "titular": "Un joven de 21 años fue internado tras una pelea cerca del paso a nivel de la calle San",
+            "motivo": "no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)"
+          }
+        ],
+        "buzon_x_tiktok": 1,
+        "cuando": "2026-10-18T11:50:01-03:00"
       }
     }
   }
