@@ -710,6 +710,32 @@ chequear("guion: no nombrar el portal de origen, como palabra entera («Olé» n
          and not NG._nombra_infobae({"nota_web": "Fondos de la Nación"}, "La Nación")
          and not NG._nombra_infobae({"nota_web": "La AFA confirmó la fecha"}, "AFA"))
 
+# --- 9. Notas de LISTA: nunca la promesa sin la información (18/10/2026, el posteo de Netflix) -----------
+chequear("lista: lo que promete el titular (con número, en letras o sin número)",
+         NG.promesa_de_lista("Las cinco películas para maratonear este fin de semana en Netflix") == 5
+         and NG.promesa_de_lista("Los 10 estrenos de la semana") == 10
+         and NG.promesa_de_lista("Qué ver en Netflix: las mejores películas y series") == 3
+         and NG.promesa_de_lista("Boca ganó 3 a 1") == 0 and NG.promesa_de_lista("Murieron dos personas") == 0)
+PELIS = [{"nombre": f"Película {i}", "detalle": f"Drama de 2026, {90 + i} minutos."} for i in range(1, 6)]
+n_lista = nota("Las cinco películas para maratonear este fin de semana en Netflix", "que-puedo-ver",
+               "El catálogo suma cinco películas. " * 20, slug="pelis")
+n_lista["categoria"] = "cine_series"
+pedidos.clear()
+g = NG.generar(n_lista, redactar_falso([dict(BUENO, lista=PELIS[:2]), dict(BUENO, lista=PELIS)]))
+chequear("lista: si la pieza nombra menos de las que promete, pide otra versión con TODAS",
+         g["apta"] and len(g["lista"]) == 5 and len(pedidos) == 2 and "FALTA LA LISTA" in pedidos[1][0])
+g_mal = NG.generar(n_lista, redactar_falso([dict(BUENO, lista=[]), dict(BUENO, lista=PELIS[:1])]))
+chequear("lista: si igual no las nombra, NO sale (mejor nada que la promesa vacía)",
+         not g_mal["apta"] and "lista incompleta" in g_mal["motivo"])
+cap_lista = PA.caption_instagram(g)
+chequear("lista: el texto de Instagram las nombra todas, numeradas, con su dato (y sin link de la nota)",
+         all(f"{v} Película {i}: Drama" in cap_lista for i, v in zip(range(1, 6), ("1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣")))
+         and "/n/" not in cap_lista)
+pz = PA.armar(n_lista, tmp / "lista", redactar_falso([dict(BUENO, lista=PELIS)]),
+              leer_pagina=lambda u: {"video": "https://cdn.jwplayer.com/videos/trailer.mp4", "texto": ""})
+chequear("lista: sale como CARRUSEL, una lámina por elemento, aunque la nota traiga video",
+         pz.get("formato") == "carrusel" and len(pz.get("slides") or []) == 6 and not pz.get("video_original"))
+
 shutil.rmtree(tmp, ignore_errors=True)
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

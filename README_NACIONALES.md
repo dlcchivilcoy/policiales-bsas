@@ -3,6 +3,8 @@
 Pedido del editor del 06/10/2026. Código en `nacionales/`, trabajo `nacionales` de
 `.github/workflows/reels.yml` (corre en las mismas pasadas que policiales, en paralelo).
 
+> **18/10/2026 (noche) — NOTAS DE LISTA** (pedido del editor tras el posteo de Netflix: «no aclaró cuáles eran las 5 películas… no podés obviar información fundamental de las notas»). El guion trae el campo `lista` (cada elemento con su dato clave); si el titular original promete N («las cinco películas», «los 10 estrenos», o «qué ver / las mejores…» = al menos 3) y la pieza nombra menos, pide otra versión y, si sigue incompleta, NO sale. La lista va completa y numerada en el texto de Instagram, YouTube y la web, y la pieza sale como carrusel con una lámina por elemento aunque la nota traiga video. El material que lee la IA pasó de 3.500 a 6.000 caracteres.
+>
 > **18/10/2026 (noche) — LA FILA DE 15 MINUTOS** (pedido del editor: «subí el total de las notas elegidas en
 > cada corrida cada 15 minutos… máximo 12 por pasada… un posteo de categoría diferente»; «sacá el link a la
 > nota en Instagram y poné el link de mi página web»; «cada una a Instagram y desactivá el carrusel de las

@@ -232,7 +232,11 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     foto = pieza["foto"].get("archivo")
     imagen = foto or P.guardar_fondo(g["seccion"], base.with_name(base.name + "_fondo.jpg"), semilla=semilla)
     clip = None
-    if medios.get("video"):
+    # Una nota de LISTA (las cinco películas…) sale como carrusel, una lámina por elemento, aunque traiga
+    # video: el video del portal no dice cuáles son (18/10/2026, el posteo de Netflix).
+    lista = g.get("lista") or []
+    es_lista = len(lista) >= 3 and nota.get("categoria") != "virales"
+    if medios.get("video") and not es_lista:
         from reels.flujo import _bajar_video
         clip = _bajar_video(medios["video"], base.with_name(base.name + "_original.mp4"))
         if clip:
@@ -257,6 +261,8 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     pieza["formato"] = "reel" if clip else "carrusel"
     if not clip:
         laminas = g.get("laminas") or []
+        if es_lista:
+            laminas = [{"titulo": x["nombre"], "texto": x.get("detalle") or x["nombre"]} for x in lista][:9]
         total = 1 + len(laminas)
         if total >= 3:
             pieza["slides"] = [str(P.slide_carrusel(
