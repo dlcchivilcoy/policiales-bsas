@@ -673,6 +673,108 @@
         "descartadas": [],
         "cuando": "2026-10-18T17:07:27-03:00"
       }
+    },
+    "2026-10-18T18:05": {
+      "armado": {
+        "notas_scrapeadas": 20,
+        "sin_foto_ni_video": 5,
+        "ya_tuvieron_reel": 8,
+        "fuera_de_radio": [
+          {
+            "titulo": "Asaltaron a una mujer de 80 años en Bolívar y le robaron $3,5 millones",
+            "localidad": "San Carlos de Bolívar",
+            "km": 178.3,
+            "motivo": "fuera del radio: San Carlos de Bolívar está a 178.3 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Casación confirmó la absolución de un padre y dos abuelos acusados de abuso sexual a una nena 18/10/2026",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "POLICIALES 17:06 | FEMICIDIO “Vengo a entregarme, maté a mi mujer”: femicidio en La Plata conmueve a la región",
+            "localidad": "La Plata",
+            "km": 188.3,
+            "motivo": "fuera del radio: La Plata está a 188.3 km de Chivilcoy (máximo 100)",
+            "etapa": "con el guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [],
+        "otras_descartadas": [
+          {
+            "titulo": "Comienza otra semana de tiempo complejo en Chacabuco",
+            "motivo": "La foto es demasiado chica (259x319): se vería pixelada."
+          }
+        ],
+        "armadas": [
+          {
+            "titular": "Dos mujeres heridas tras un choque entre una moto y un auto en la Ruta 7",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          }
+        ],
+        "cuando": "2026-10-18T18:07:47-03:00"
+      },
+      "publicacion": {
+        "maximo": 3,
+        "reservadas": 1,
+        "piezas": [
+          {
+            "orden": 2,
+            "titular": "Dos mujeres heridas tras un choque entre una moto y un auto en la Ruta 7",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "hora": "2026-10-18T21:20",
+            "destinos": {
+              "youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://youtube.com/shorts/3o0yRJd_n8k"
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/chacabuco-dos-mujeres-hospitalizadas-tras-un-choque-entre-una-bef1cf"
+              },
+              "facebook": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              }
+            }
+          }
+        ],
+        "salteadas": [],
+        "buzon_x_tiktok": 1,
+        "cuando": "2026-10-18T18:21:18-03:00"
+      }
     }
   }
 }
