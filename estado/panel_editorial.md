@@ -1,9 +1,15 @@
 # Panel editorial — Diario y Radio
-Actualizado: 18/10/2026 11:50 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 18/10/2026 12:10 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
 ## Hoy (2026-10-18)
+
+### 12:05 — 0 de 3 hechos policiales
+Notas policiales leídas: 16 · fuera del radio: 5 · ubicación pendiente: 0 · repetidas: 1 · armadas: 0
+
+**Fuera del radio de 100 km:**
+- Cañuelas (115.9 km) ×2 · San Carlos de Bolívar (178.3 km) ×1 · Pehuajó (198.5 km) ×1 · Pergamino (122.9 km) ×1
 
 ### 09:05 — 3 de 3 hechos policiales
 Notas policiales leídas: 13 · fuera del radio: 5 · ubicación pendiente: 0 · repetidas: 0 · armadas: 5
@@ -21,23 +27,28 @@ Notas policiales leídas: 13 · fuera del radio: 5 · ubicación pendiente: 0 ·
 **Fuera del radio de 100 km:**
 - Cañuelas (115.9 km) ×2 · San Carlos de Bolívar (178.3 km) ×1 · Pehuajó (198.5 km) ×1 · Pergamino (122.9 km) ×1
 
+**Nacionales y categorías:**
+- [general] Docentes bonaerenses aceptaron un aumento salarial del 6% bimestral — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
+- [espectaculos] Juana Viale habló sobre la salud de Mirtha Legrand y bromeó con los 100 años — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [general] Mensajes de unidad en el peronismo y reaparición de Cristina Kirchner en su balc — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
+
 ## Últimos 7 días: volumen por destino
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
 |---|---:|---:|---:|---:|---:|
-| Policiales | 79 | 81 | 43 | 38 | 78 |
-| Nacionales | 81 | 81 | 54 | 0 | 0 |
+| Policiales | 76 | 78 | 41 | 37 | 75 |
+| Nacionales | 83 | 83 | 55 | 0 | 0 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 65 piezas · mediana vistas 18 · mediana likes 0
+### YouTube — 66 piezas · mediana vistas 17.5 · mediana likes 0
 
-- **Por categoría:** general: 27, vistas 9, likes 0 · policiales: 38, vistas 43.5, likes 0
-- **Por franja:** madrugada (0-6): 3, vistas 295, likes 2 ⚠️muestra chica · mañana (6-12): 15, vistas 10, likes 0 · noche (18-24): 23, vistas 28, likes 0 · tarde (12-18): 24, vistas 13, likes 0
-- **Por día:** jueves: 36, vistas 18, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 6, vistas 18, likes 0 · viernes: 22, vistas 16.5, likes 0
+- **Por categoría:** general: 28, vistas 8, likes 0 · policiales: 38, vistas 43.5, likes 0
+- **Por franja:** madrugada (0-6): 3, vistas 295, likes 2 ⚠️muestra chica · mañana (6-12): 15, vistas 10, likes 0 · noche (18-24): 23, vistas 28, likes 0 · tarde (12-18): 25, vistas 11, likes 0
+- **Por día:** jueves: 36, vistas 18, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 7, vistas 16, likes 0 · viernes: 22, vistas 16.5, likes 0
 
 ### Facebook — 15 piezas · mediana vistas 465 · mediana likes 1
 
@@ -56,7 +67,7 @@ _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categor�
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-anterior al control: 174 · procesado: 47 · subido, se verifica en la pasada siguiente: 2
+anterior al control: 171 · procesado: 49 · subido, se verifica en la pasada siguiente: 3
 
 ## Controles (sin tocar código)
 
