@@ -7229,7 +7229,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T09:06:21-03:00"
+        "cuando": "2026-10-18T09:06:21-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "aa19ec63-7fdb-421e-a71e-c7aa2c48974e",
@@ -7291,7 +7292,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T09:36:21-03:00"
+        "cuando": "2026-10-18T09:36:21-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "1a3f2450-d820-426b-a2f8-b91f8e338629",
@@ -7348,7 +7350,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-18T10:06:21-03:00"
+        "cuando": "2026-10-18T10:06:21-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "e95b1bc1-7e4f-45a7-be0c-a458de8ddc11",
@@ -7367,6 +7370,370 @@
       "tiktok_buzon": {
         "estado": "ok",
         "id": "nacionales:58461ddc8e0149c5"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/17/una-delegacion-argentina-viajo-al-reino-unido-en-medio-de-la-tension-por-la-soberania-y-el-petroleo-de-malvinas/": {
+      "titulo_original": "Una delegación argentina viajó al Reino Unido en medio de la tensión por la soberanía y el petróleo de Malvinas",
+      "titular": "Delegación argentina en Londres en medio de la tensión por Malvinas",
+      "volanta": "Malvinas y minería",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 38,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 4 medios (Infobae, El Cronista, La Nación, Clarín)"
+      ],
+      "fuentes": [],
+      "bajada": "El secretario de Minería, Luis Lucero, encabeza una comitiva en el Reino Unido para foros de inversión. El viaje se da tras la demanda argentina en Hamburgo contra la extracción petrolera británica.",
+      "seccion": "Política",
+      "tema": [
+        "*malvina",
+        "*reino",
+        "*unido",
+        "argentina",
+        "delegacion",
+        "malvina",
+        "medio",
+        "petroleo",
+        "reino",
+        "soberania",
+        "tension",
+        "unido",
+        "viajo"
+      ],
+      "viral": 6,
+      "puntos": 54,
+      "nivel": "política",
+      "cobertura": 3,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T12:07:37-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/NSD7K4FQABBHFEDECFM5RW4XBQ.jpeg?auth=b779f5f0d4ea227b034e614556122c057ac74afe55db71d2d74dda988fcbff3e&smart=true&width=1920&height=1322",
+      "foto": "El secretario de Minería, Luis Lucero",
+      "youtube": {
+        "id": "nYYR5alASJ4",
+        "url": "https://youtube.com/shorts/nYYR5alASJ4",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T12:07:25-03:00"
+      },
+      "web": {
+        "id": "2991bf21-e852-48ba-87ce-5d073c3a7487",
+        "slug": "mision-minera-en-londres-en-plena-tension-diplomatica-por-las-b61085",
+        "url": "https://www.diariolacampaña.com.ar/n/mision-minera-en-londres-en-plena-tension-diplomatica-por-las-b61085",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T12:07:33-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b6108526eb42ff8a"
+      }
+    },
+    "https://www.bbc.com/mundo/articles/c6ev320r2rnwo": {
+      "titulo_original": "El papa León XIV hace su primera aparición pública tras ser operado por un cáncer de pulmón y \"no hay motivos clínicos\" que impidan su viaje a Sudamérica",
+      "titular": "El papa León XIV reapareció tras ser operado de un cáncer de pulmón",
+      "volanta": "Vaticano",
+      "categoria": "internacionales",
+      "formato": "reel",
+      "medio_origen": "BBC Mundo",
+      "video_original": "https://cdn.jwplayer.com/videos/tXfNpuME-vM6j8t5y.mp4",
+      "impacto": 50,
+      "impacto_razones": [
+        "fuente: BBC Mundo (1.º de 5 en el orden del PDF)",
+        "cobertura: 5 medios (BBC Mundo, Infobae, La Nación, Clarín, Ámbito)",
+        "3.º más leída de Ámbito"
+      ],
+      "fuentes": [
+        "BBC Mundo",
+        "Infobae",
+        "La Nación",
+        "Clarín",
+        "Ámbito"
+      ],
+      "bajada": "El Sumo Pontífice brindó el Ángelus desde el Palacio Apostólico luego de recibir el alta médica. Su equipo médico confirmó que no existen impedimentos clínicos para concretar su gira por Sudamérica en noviembre.",
+      "seccion": "Mundo",
+      "tema": [
+        "*leon",
+        "*sudamerica",
+        "*xiv",
+        "aparicion",
+        "cancer",
+        "clinico",
+        "hace",
+        "impidan",
+        "leon",
+        "motivo",
+        "operado",
+        "papa",
+        "primera",
+        "publica",
+        "pulmon",
+        "sudamerica",
+        "viaje"
+      ],
+      "viral": 6,
+      "puntos": 50,
+      "nivel": "internacionales",
+      "cobertura": 11,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T12:38:17-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 8,
+      "foto_url": "",
+      "foto": "Pie de foto, El Papa agradeció las oraciones de los fieles por su recuperación.",
+      "youtube": {
+        "id": "21HFj1mTKmE",
+        "url": "https://youtube.com/shorts/21HFj1mTKmE",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T12:37:25-03:00"
+      },
+      "web": {
+        "id": "6a8eefef-fd3c-42f1-b4bd-47d0ccf635f7",
+        "slug": "el-papa-leon-xiv-reaparecio-en-publico-tras-una-cirugia-de-fbd132",
+        "url": "https://www.diariolacampaña.com.ar/n/el-papa-leon-xiv-reaparecio-en-publico-tras-una-cirugia-de-fbd132",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T12:37:32-03:00"
+      },
+      "instagram": {
+        "id": "18103625930373308",
+        "estado": "ok",
+        "cuando": "2026-10-18T12:37:35-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:fbd1321e4156d9c7"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/18/el-viaje-de-leon-xiv-a-la-argentina-el-aval-medico-una-nueva-avanzada-del-vaticano-y-otra-senal-clave-renovaron-el-optimismo-por-la-visita/": {
+      "titulo_original": "El viaje de León XIV a la Argentina: el aval médico, una nueva avanzada del Vaticano y otra señal clave renovaron el optimismo por la visita",
+      "titular": "crece el optimismo por la posible visita del papa León XIV a la Argentina",
+      "volanta": "Visita papal",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 48,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 4 medios (Infobae, Ámbito, La Nación, Clarín)",
+        "3.º más leída de Ámbito"
+      ],
+      "fuentes": [],
+      "bajada": "El aval médico y los preparativos renovaron las expectativas sobre la llegada del pontífice al país, prevista para noviembre.",
+      "seccion": "Política",
+      "tema": [
+        "*leon",
+        "*vaticano",
+        "*xiv",
+        "argentina",
+        "aval",
+        "avanzada",
+        "leon",
+        "medico",
+        "optimismo",
+        "renovaron",
+        "senal",
+        "vaticano",
+        "viaje",
+        "visita"
+      ],
+      "viral": 6,
+      "puntos": 50,
+      "nivel": "política",
+      "cobertura": 2,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T13:07:35-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 6,
+      "foto_url": "",
+      "foto": "Uncredited En esta imagen, distribuida por Vatican Media el 16 de octubre de 2026, el papa León XIV celebra misa en el policlínico Agostino Gemelli de Roma, donde se recupera tras la extracción de un tumor en su pulmón derecho. (Vatican Media vía AP)",
+      "youtube": {
+        "id": "AX4EKiBZ2FI",
+        "url": "https://youtube.com/shorts/AX4EKiBZ2FI",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T13:07:25-03:00"
+      },
+      "web": {
+        "id": "1abafabb-ff53-4fcd-911c-6a4465fed747",
+        "slug": "crece-el-optimismo-en-el-gobierno-y-la-iglesia-por-el-viaje-del-b01013",
+        "url": "https://www.diariolacampaña.com.ar/n/crece-el-optimismo-en-el-gobierno-y-la-iglesia-por-el-viaje-del-b01013",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T13:07:31-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b010138b1fbfe036"
+      }
+    },
+    "https://www.tycsports.com/river-plate/la-formacion-de-river-vs-belgrano-por-el-torneo-clausura-id766789.html": {
+      "titulo_original": "La formación de River vs. Belgrano, por el Torneo Clausura",
+      "titular": "River visita a Belgrano con dudas en el equipo y la obligación de ganar",
+      "volanta": "Torneo Clausura",
+      "categoria": "deportes",
+      "formato": "carrusel",
+      "medio_origen": "TyC Sports",
+      "video_original": "",
+      "impacto": 53,
+      "impacto_razones": [
+        "fuente: TyC Sports (1.º de 9 en el orden del PDF)",
+        "cobertura: 7 medios (TyC Sports, ESPN, Olé, Infobae, La Nación, Clarín)",
+        "8.º más leída de Ámbito"
+      ],
+      "fuentes": [
+        "TyC Sports",
+        "ESPN",
+        "Olé",
+        "Infobae",
+        "La Nación",
+        "Clarín",
+        "Ámbito"
+      ],
+      "bajada": "El conjunto dirigido de manera interina por Leonardo Ponzio se medirá este domingo ante el Pirata en el estadio Mario Alberto Kempes, con la urgencia de sumar de a tres.",
+      "seccion": "Deportes",
+      "tema": [
+        "*belgrano",
+        "*clausura",
+        "*river",
+        "*torneo",
+        "belgrano",
+        "clausura",
+        "formacion",
+        "river",
+        "torneo"
+      ],
+      "viral": 7,
+      "puntos": 53,
+      "nivel": "deportes",
+      "cobertura": 19,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T13:38:37-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 4,
+      "foto_url": "https://media.tycsports.com/files/2026/10/17/996992/la-formacion-de-leonardo-ponzio-en-river-para-el-proximo-partido-_1440x810.webp",
+      "foto": "La formación de Leonardo Ponzio en River para el próximo partido.",
+      "youtube": {
+        "id": "iXTNO5lYvj0",
+        "url": "https://youtube.com/shorts/iXTNO5lYvj0",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T13:37:25-03:00"
+      },
+      "web": {
+        "id": "bdea4ddc-3076-41e7-9bcd-0eb6014e727a",
+        "slug": "river-visita-a-belgrano-en-cordoba-por-el-torneo-clausura-2be0a5",
+        "url": "https://www.diariolacampaña.com.ar/n/river-visita-a-belgrano-en-cordoba-por-el-torneo-clausura-2be0a5",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T13:37:30-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2062408384700787",
+        "estado": "ok",
+        "cuando": "2026-10-18T13:37:32-03:00"
+      },
+      "instagram": {
+        "id": "18628839946043734",
+        "diapositivas": 5,
+        "estado": "ok",
+        "cuando": "2026-10-18T13:37:37-03:00",
+        "formato": "carrusel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:2be0a52708a62532"
+      }
+    },
+    "https://www.infobae.com/economia/2026/10/18/arba-lanzara-una-moratoria-impositiva-que-deudas-se-podran-regularizar-con-que-descuento-y-en-cuantas-cuotas/": {
+      "titulo_original": "ARBA lanzará una moratoria impositiva: qué deudas se podrán regularizar, con qué descuento y en cuántas cuotas",
+      "titular": "Nueva moratoria bonaerense: descuentos y plazos para regularizar impuestos",
+      "volanta": "ARBA",
+      "categoria": "",
+      "formato": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 32,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 2 medios (Infobae, Ámbito)"
+      ],
+      "fuentes": [],
+      "bajada": "El organismo fiscal de la provincia habilitará un plan de pagos desde el 26 de octubre. Habrá bonificaciones de hasta el 40 por ciento según la fecha y la modalidad elegida.",
+      "seccion": "Economía",
+      "tema": [
+        "*arba",
+        "arba",
+        "cuanta",
+        "cuota",
+        "descuento",
+        "deuda",
+        "impositiva",
+        "lanzara",
+        "moratoria",
+        "podran",
+        "regularizar"
+      ],
+      "viral": 8,
+      "puntos": 49,
+      "nivel": "provincia",
+      "cobertura": 1,
+      "dia": "2026-10-18",
+      "cuando": "2026-10-18T14:07:38-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "copia": 7,
+      "foto_url": "https://www.infobae.com/resizer/v2/Q4XSTJOZGBC5PIOUZH26HDBLJ4.jpg?auth=7d99f3b452779e70bb11bf9823b6a9bcdbe784acad9b0e674a9bfa5b37b68fec&smart=true&width=1600&height=1066",
+      "foto": "Se podrá acceder a los planes de pago a partir del 26 de octubre.",
+      "youtube": {
+        "id": "wcCXtaLJEjQ",
+        "url": "https://youtube.com/shorts/wcCXtaLJEjQ",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-18T14:07:25-03:00"
+      },
+      "web": {
+        "id": "c4fb57c6-7a3a-4813-9b35-62db9de59700",
+        "slug": "moratoria-de-arba-cuando-comienza-que-deudas-incluye-y-cuales-b541d9",
+        "url": "https://www.diariolacampaña.com.ar/n/moratoria-de-arba-cuando-comienza-que-deudas-incluye-y-cuales-b541d9",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-18T14:07:31-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2062432014698424",
+        "estado": "ok",
+        "cuando": "2026-10-18T14:07:33-03:00"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b541d9169f033092"
       }
     }
   },
@@ -7596,5 +7963,5 @@
       ]
     }
   },
-  "actualizado": "2026-10-18T10:06:37-03:00"
+  "actualizado": "2026-10-18T14:07:38-03:00"
 }
