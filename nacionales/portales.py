@@ -30,6 +30,7 @@ INFOBAE = lambda s: ARC.format(sitio="infobae.com", seccion=s)        # noqa: E7
 LANACION = lambda s: ARC.format(sitio="lanacion.com.ar", seccion=s)   # noqa: E731
 AMBITO = "https://www.ambito.com/rss/pages/{}.xml"
 CLARIN = "https://www.clarin.com/rss/{}/"
+TN = "https://tn.com.ar/arc/outboundfeeds/rss/category/{}/?outputType=xml"
 OLE = "https://www.ole.com.ar/rss/{}/"
 ESPN_ARG = "https://site.api.espn.com/apis/site/v2/sports/soccer/arg.1/news?lang=es&region=ar&limit=50"
 ESPN_TODO = "https://now.core.api.espn.com/v1/sports/news?lang=es&region=ar&limit=50"
@@ -40,7 +41,8 @@ RANKING = {
     # 3. Fuentes nacionales y economía
     "nacionales": ["Infobae", "Ámbito", "El Cronista", "La Nación", "Clarín"],
     # 4. Internacionales y agencias (EFE, Reuters y AP: inactivas, ver el registro)
-    "internacionales": ["EFE", "Reuters", "AP", "BBC Mundo", "Infobae", "La Nación", "Clarín", "Ámbito"],
+    # TN, a pedido del editor (18/10/2026): su sección Internacional trae los videos virales del mundo.
+    "internacionales": ["EFE", "Reuters", "AP", "BBC Mundo", "Infobae", "La Nación", "TN", "Clarín", "Ámbito"],
     # 5. Deportivas, más AFA y la Liga Profesional como fuentes primarias
     "deportes": ["TyC Sports", "ESPN", "Olé", "AFA", "Liga Profesional", "Infobae", "La Nación", "Clarín",
                  "Ámbito"],
@@ -65,7 +67,7 @@ DOMINIOS = {"infobae.com": "Infobae", "ambito.com": "Ámbito", "cronista.com": "
             "ligaprofesional.ar": "Liga Profesional", "bbc.com": "BBC Mundo", "zapier.com": "Zapier",
             "workspace.google.com": "Google Workspace", "microsoft.com": "Microsoft",
             "blog.hubspot.com": "HubSpot", "hubspot.com": "HubSpot", "n8n.io": "n8n", "blog.n8n.io": "n8n",
-            "shopify.com": "Shopify"}
+            "shopify.com": "Shopify", "tn.com.ar": "TN"}
 
 # (categoría, fuente, vía, url, extra). Categoría «espectaculos+cine»: lo que es de cine o series va a
 # cine_series y lo demás a espectáculos. «general»: secciones generales de donde solo se sacan los
@@ -96,6 +98,7 @@ FUENTES = (
     ("internacionales", "BBC Mundo", "rss", "https://feeds.bbci.co.uk/mundo/rss.xml", {}),
     ("internacionales", "Infobae", "rss", INFOBAE("america"), {}),
     ("internacionales", "La Nación", "rss", LANACION("el-mundo"), {}),
+    ("internacionales", "TN", "rss", TN.format("internacional"), {}),
     ("internacionales", "Clarín", "rss", CLARIN.format("mundo"), {}),
     ("internacionales", "Ámbito", "rss", AMBITO.format("mundo"), {}),
     # --- Virales ---
@@ -236,6 +239,14 @@ _META = r'<meta[^>]+(?:property|name|itemprop)="{}"[^>]+content="([^"]*)"|<meta[
 _LD = re.compile(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', re.S)
 _LD_VIDEO = re.compile(r'"contentUrl"\s*:\s*"(https:(?:\\?/){2}[^"]+?\.mp4[^"]*)"')
 _JW_MP4 = re.compile(r'https://cdn\.jwplayer\.com/videos/[\w-]+\.mp4')
+# Los videos de JW Player (La Nación, Infobae, Clarín): el id de 8 letras de cada uno, en el orden de la
+# página. La página trae también los de otras notas y «loops» de cabecera: se elige con la API pública
+# de JW (título, duración y versiones), en video_jw().
+_JW_ID = re.compile(r'cdn\.jwplayer\.com/(?:videos|manifests|v2/media)/([A-Za-z0-9]{8})(?=[-./"&?])')
+JW_MEDIA = "https://cdn.jwplayer.com/v2/media/{}"
+JW_ALTO = 720                 # la versión que se baja: 720p (o la más cercana por debajo)
+# TN (18/10/2026): su reproductor propio (vodgc, «genoa»), el MP4 viene en el contenido de la nota.
+_GENOA = re.compile(r'"highQuality"\s*:\s*"(https://vod\.vodgc\.net/[^"]+?\.mp4)"')
 _SUFIJOS = re.compile(r"\s*[|\-–—]\s*(TyC Sports|AFA|Infobae|LA NACION|La Nación|Clarín|Olé|ESPN|"
                       r"Google Workspace Blog|Shopify.*|Ámbito|El Cronista|BBC News Mundo|Zapier|"
                       r"AI at Work Blog|HubSpot.*|n8n Blog|Sitio Oficial de la Asociación del Fútbol Argentino)\s*$",
@@ -289,10 +300,65 @@ def ficha(html: str) -> dict:
         unido = " ".join(p for p in parrafos if len(p) >= 60)
         if len(unido) > len(texto):
             texto = unido
-    video = (_LD_VIDEO.findall(html) or _JW_MP4.findall(html) or [""])[0].replace("\\u002F", "/").replace("\\/", "/")
+    video = (_LD_VIDEO.findall(html) or _video_tn(html) or _JW_MP4.findall(html) or [""])[0]
+    video = video.replace("\\u002F", "/").replace("\\/", "/")
+    jw = []
+    for i in _JW_ID.findall(html):
+        if i not in jw:
+            jw.append(i)
     return {"titulo": " ".join(titulo.lstrip("◉•● ").split()), "resumen": H.unescape(_meta(html, "og:description")),
             "imagen": _meta(html, "og:image"), "video": video, "fecha": fecha,
-            "texto": " ".join(H.unescape(texto).split())[:12000]}
+            "texto": " ".join(H.unescape(texto).split())[:12000], "jw": jw[:6]}
+
+
+def _video_tn(html: str) -> list:
+    """El video PROPIO de una nota de TN (el de su portada o el primero del cuerpo), no los de otras
+    notas que la página también trae."""
+    m = re.search(r"Fusion\.globalContent\s*=\s*(\{.*?\});\s*Fusion\.", html, re.S)
+    if not m:
+        return []
+    try:
+        gc = json.loads(m.group(1))
+    except ValueError:
+        return []
+    bloques = [((gc.get("promo_items") or {}).get("basic") or {})]
+    bloques += [e for e in gc.get("content_elements") or [] if e.get("type") == "custom_embed"]
+    for b in bloques:
+        cfg = ((b.get("embed") or {}).get("config") or {})
+        if b.get("subtype") == "genoa" and cfg.get("content_type") == "video" and cfg.get("highQuality"):
+            return [cfg["highQuality"]]
+    return []
+
+
+def video_jw(ids: list, titulo: str, cliente=None) -> str:
+    """El MP4 de la nota entre los videos de JW de la página: el que se parece al título de la nota, de
+    más de 8 segundos (los «loops» de cabecera no) y en su versión de 720p. "" si ninguno sirve."""
+    if not ids:
+        return ""
+    cliente = cliente or _cliente()
+    from nacionales import impacto as IM
+    buscado = IM.palabras(titulo)
+    opciones = []
+    for orden, i in enumerate(ids[:6]):
+        try:
+            r = cliente.get(JW_MEDIA.format(i))
+            r.raise_for_status()
+            d = r.json()
+            item = (d.get("playlist") or [{}])[0]
+        except Exception:                             # noqa: BLE001
+            continue
+        nombre = f"{d.get('title') or ''} {item.get('title') or ''}"
+        if (item.get("duration") or 0) < 8 or re.search(r"\bloop\b", nombre, re.I):
+            continue
+        mp4 = [x for x in item.get("sources") or [] if x.get("type") == "video/mp4" and x.get("file")]
+        if not mp4:
+            continue
+        corto = lambda x: min(x.get("width") or x.get("height") or 0, x.get("height") or 0)   # noqa: E731 — verticales
+        abajo = [x for x in mp4 if corto(x) <= JW_ALTO]
+        elegido = max(abajo, key=corto) if abajo else min(mp4, key=corto)
+        comunes = len(buscado & IM.palabras(nombre))
+        opciones.append((comunes, -orden, elegido["file"]))
+    return max(opciones)[2] if opciones else ""
 
 
 def _cliente():
@@ -329,7 +395,12 @@ def leer(url: str, cliente=None) -> dict:
         r.raise_for_status()
     except Exception:                                 # noqa: BLE001
         return {"titulo": "", "resumen": "", "imagen": "", "video": "", "fecha": 0, "texto": ""}
-    return ficha(r.text)
+    f = ficha(r.text)
+    if f.get("jw") and not _video_tn(r.text):
+        # El de JW que corresponde a la nota, en 720p (18/10/2026): antes, el primer MP4 de la página
+        # (a veces un «loop» de 6 segundos o la versión de 180p).
+        f["video"] = video_jw(f["jw"], f.get("titulo") or "", cliente) or ""
+    return f
 
 
 def _una_fuente(fuente, cliente) -> tuple:

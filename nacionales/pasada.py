@@ -567,6 +567,33 @@ def topes_de_la_pasada(mem: dict, dia: str) -> dict:
     return topes
 
 
+# Mundo: lo que se viraliza son los VIDEOS (pedido del editor, 18/10/2026). Entre los temas fuertes, va
+# primero el que trae su video original, si no está más de VIDEO_MARGEN puntos abajo del primero.
+CON_VIDEO_PRIMERO = {"internacionales"}
+VIDEO_MARGEN = 10
+
+
+def adelantar_con_video(cola: list, sirve, leer, mirar: int = 4) -> bool:
+    """Pone primero en `cola` al primer tema (de los `mirar` primeros que sirven) cuya nota, o la de otro
+    portal del mismo tema, trae video, si su impacto está a VIDEO_MARGEN o menos del primero. True si
+    cambió el orden."""
+    utiles = [c for c in cola if sirve(c)][:mirar]
+    if not utiles:
+        return False
+    tope = (utiles[0].get("impacto") or 0) - VIDEO_MARGEN
+    for c in utiles:
+        if (c.get("impacto") or 0) < tope:
+            break
+        urls = [c["url"]] + list(c.get("otras_urls") or [])[:2]
+        if any((leer(u) or {}).get("video") for u in urls):
+            if c is not cola[0]:
+                cola.remove(c)
+                cola.insert(0, c)
+                return True
+            return False
+    return False
+
+
 def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permitir_igual: bool = False):
     """La categoría del próximo turno: la de la mejor candidata que queda (impacto en la variedad,
     puntos en las generales) menos PENALIDAD_CATEGORIA por pieza que ya salió en la pasada. Nunca la
@@ -610,7 +637,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             senales = SE.juntar() if notas_inyectadas is None else SE.vacias()
             informe.setdefault("avisos", []).extend(f"señal {f}" for f in senales.get("fallas") or [])
         informe["senales"] = {k: len(senales.get(k) or []) for k in ("mas_leidas", "tendencias", "google_news",
-                                                                      "youtube")}
+                                                                      "youtube", "videos_medios")}
         if notas_inyectadas is None:
             # Nacionales generales: Ámbito, El Cronista, La Nación y Clarín dan la cobertura del tema.
             otras, fallas_otras, _ = PO.bajar(PO.FUENTES_NACIONALES)
@@ -651,6 +678,13 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 return False
             return bool(elegir([c], mem, 1, ahora, contadas))
 
+        paginas = {}                                 # url → ficha: cada página se lee una sola vez
+
+        def leer_una(url):
+            if url not in paginas:
+                paginas[url] = dict((leer_pagina or CAT.leer_pagina)(url) or {})
+            return paginas[url]
+
         def preparar(ultima):
             """La próxima pieza: la categoría con el tema más fuerte que no sea la del turno anterior."""
             for _intento in range(40):
@@ -658,12 +692,14 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                        or proxima_categoria(colas, topes, hechas, ultima, permitir_igual=True))
                 if cat is None:
                     return None
+                if cat in CON_VIDEO_PRIMERO:
+                    adelantar_con_video(colas[cat], sirve, leer_una)
                 c = colas[cat].pop(0)
                 if not sirve(c):
                     continue
                 usadas.add(c["url"])
                 try:
-                    pieza = armar(c, carpeta, redactar, leer_pagina)
+                    pieza = armar(c, carpeta, redactar, leer_una)
                 except Exception as e:               # noqa: BLE001 — la IA o el motor: se sigue con otra
                     informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
                     continue

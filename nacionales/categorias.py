@@ -191,6 +191,9 @@ def bajar(fuentes=None, cliente=None) -> tuple:
 # Elegir
 # =============================================================================
 
+MUNDO_CURADO = {"La Nación", "TN", "Clarín", "Infobae"}
+
+
 def puntuar(n: dict, ahora: float) -> tuple:
     """(puntos, motivo) de una nota de variedad. 0 = no va."""
     cat = de_que_categoria(n)
@@ -214,7 +217,9 @@ def puntuar(n: dict, ahora: float) -> tuple:
             return 0, "no es cine ni series"
         return 35 + (10 if re.search(r"\bestren", titulo) else 0), "cine y series"
     if cat == "internacionales":
-        if n.get("medio") != "La Nación" and not GRAN_TEMA.search(cabeza):
+        # La Nación, TN, Clarín e Infobae eligen su sección Mundo para el público argentino (y ahí están
+        # los videos que se viralizan, 18/10/2026): no hace falta que sea un «gran tema».
+        if n.get("medio") not in MUNDO_CURADO and not GRAN_TEMA.search(cabeza):
             return 0, "noticia local de otro país, sin relevancia acá"
         return 35 + (10 if F.ARGENTINA.search(titulo) else 0), "internacional"
     if cat == "virales":

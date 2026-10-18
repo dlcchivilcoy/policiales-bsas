@@ -41,6 +41,15 @@ GOOGLE_NEWS = (("portada", GN.format("")),
                ("espectaculos", GN.format("/headlines/section/topic/ENTERTAINMENT")),
                ("tecnologia_ia", GN.format("/headlines/section/topic/TECHNOLOGY")))
 YT_API = "https://www.googleapis.com/youtube/v3/videos"
+YT_LISTA = "https://www.googleapis.com/youtube/v3/playlistItems"
+# VIDEOS QUE EXPLOTAN (pedido del editor, 18/10/2026: «identificar cuáles son los videos de noticias
+# internacionales virales»). Los reels de Instagram de los medios no se pueden leer (la API de Meta lo
+# niega sin una revisión de la app y raspar Instagram va contra sus reglas), pero La Nación, Infobae, TN y
+# Clarín suben los MISMOS videos a YouTube con sus vistas públicas. La lista de subidas de cada canal
+# (su id empieza con UU) y las vistas por hora: 2 unidades de cupo por canal y por pasada.
+MEDIOS_YOUTUBE = (("La Nación", "UUba3hpU7EFBSk817y9qZkiA"), ("Infobae", "UUvsU0EGXN7Su7MfNqcTGNHg"),
+                  ("TN", "UUj6PcyLvpnIRT_2W_mwa9Aw"), ("Clarín", "UUjMGMWnToRcQRqmyVB4R2xQ"))
+HORAS_VIDEO = 72              # los videos de más de 3 días ya no cuentan
 
 
 def slug_a_texto(url: str) -> str:
@@ -123,16 +132,70 @@ def youtube_tendencias(sesion=None) -> list:
     return salida
 
 
+def _segundos(iso: str) -> int:
+    m = re.fullmatch(r"P(?:\d+D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
+    return (int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)) if m else 0
+
+
+def videos_de(items: list, medio: str, ahora: float) -> list:
+    """[{medio, titulo, vistas, horas, por_hora, segundos, id}] de la respuesta de videos.list."""
+    from datetime import datetime
+    salida = []
+    for v in items or []:
+        sn, st = v.get("snippet") or {}, v.get("statistics") or {}
+        try:
+            pub = datetime.fromisoformat((sn.get("publishedAt") or "").replace("Z", "+00:00")).timestamp()
+        except ValueError:
+            continue
+        horas = max(1.0, (ahora - pub) / 3600)
+        if horas > HORAS_VIDEO:
+            continue
+        vistas = int(st.get("viewCount") or 0)
+        salida.append({"medio": medio, "titulo": sn.get("title") or "", "vistas": vistas, "horas": round(horas, 1),
+                       "por_hora": round(vistas / horas), "id": v.get("id"),
+                       "segundos": _segundos((v.get("contentDetails") or {}).get("duration"))})
+    return salida
+
+
+def videos_medios(sesion=None, ahora: float = None) -> list:
+    """Los videos de las últimas 72 h de los canales de La Nación, Infobae, TN y Clarín, con sus vistas por
+    hora. Vacío si no hay token de YouTube (en la PC suele no estar)."""
+    import time
+    if not (os.environ.get("YT_TOKEN_JSON") or "").strip():
+        return []
+    if sesion is None:
+        from reels import publicador as PUB
+        sesion = PUB._yt_sesion
+    h = {"Authorization": f"Bearer {sesion()}"}
+    ahora = ahora or time.time()
+    salida = []
+    for medio, lista in MEDIOS_YOUTUBE:
+        r = httpx.get(YT_LISTA, params={"part": "contentDetails", "playlistId": lista, "maxResults": 50},
+                      headers=h, timeout=30)
+        r.raise_for_status()
+        ids = [i["contentDetails"]["videoId"] for i in r.json().get("items") or []]
+        if not ids:
+            continue
+        r = httpx.get(YT_API, params={"part": "snippet,statistics,contentDetails", "id": ",".join(ids)},
+                      headers=h, timeout=30)
+        r.raise_for_status()
+        salida += videos_de(r.json().get("items"), medio, ahora)
+    return sorted(salida, key=lambda v: -v["por_hora"])
+
+
 def juntar(cliente=None, con_youtube: bool = True) -> dict:
     """Todas las señales de una vez (en paralelo). Lo que falla queda en «fallas» y no frena nada."""
     cliente = cliente or httpx.Client(headers=HEADERS, timeout=25, follow_redirects=True)
-    senales = {"mas_leidas": [], "tendencias": [], "google_news": [], "youtube": [], "fallas": []}
+    senales = {"mas_leidas": [], "tendencias": [], "google_news": [], "youtube": [], "videos_medios": [],
+               "fallas": []}
 
     def pedir(tarea):
         tipo, args = tarea
         try:
             if tipo == "youtube":
                 return tipo, youtube_tendencias(), ""
+            if tipo == "videos_medios":
+                return tipo, videos_medios(), ""
             r = cliente.get(args[1])
             r.raise_for_status()
             if tipo == "mas_leidas":
@@ -146,7 +209,7 @@ def juntar(cliente=None, con_youtube: bool = True) -> dict:
     tareas = [("mas_leidas", m) for m in MAS_LEIDAS] + [("tendencias", ("Google Trends", TENDENCIAS))]
     tareas += [("google_news", g) for g in GOOGLE_NEWS]
     if con_youtube:
-        tareas.append(("youtube", ()))
+        tareas += [("youtube", ()), ("videos_medios", ())]
     with ThreadPoolExecutor(max_workers=8) as ex:
         for tipo, lista, falla in ex.map(pedir, tareas):
             senales[tipo] += lista
@@ -160,4 +223,4 @@ def juntar(cliente=None, con_youtube: bool = True) -> dict:
 
 def vacias() -> dict:
     """Sin señales (las pruebas, o cuando la red no anda)."""
-    return {"mas_leidas": [], "tendencias": [], "google_news": [], "youtube": [], "fallas": []}
+    return {"mas_leidas": [], "tendencias": [], "google_news": [], "youtube": [], "videos_medios": [], "fallas": []}

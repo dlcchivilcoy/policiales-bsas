@@ -14,6 +14,9 @@ Se calcula por TEMA (las notas de todos los portales sobre lo mismo, nacionales/
   Agenda de Google News                       0-10   en qué puesto lo pone Google News
   Interacción en YouTube                      0-10   video en tendencia sobre el tema: vistas, me gusta
                                                      y comentarios
+  Video que explota en un medio               0-25   el mismo tema en un video de La Nación, Infobae, TN
+                                                     o Clarín que está sumando vistas rápido (vistas por
+                                                     hora en YouTube; 18/10/2026: los reels virales)
   Actualidad                                  0-5    recién publicado = 5; baja hasta el fin de la ventana
   Interés editorial                           0-10   lo de siempre: protagonista argentino, Chivilcoy,
                                                      estreno con fecha…
@@ -30,6 +33,7 @@ from nacionales import filtro as F
 from nacionales import portales as PO
 
 PUNTAJE_COBERTURA = {1: 0, 2: 8, 3: 12, 4: 15, 5: 17, 6: 19}
+VIVO = __import__("re").compile(r"(en vivo|en directo|live|streaming|minuto a minuto)")
 
 
 def minimo() -> int:
@@ -137,13 +141,27 @@ def evaluar(grupo: list, cat: str, senales: dict, ahora: float, ventana_h: float
                 razones.append(f"YouTube en tendencia: «{v['titulo'][:50]}» ({v['vistas']:,} vistas, "
                                f"{v['me_gusta']:,} me gusta, {v['comentarios']:,} comentarios)".replace(",", "."))
 
+    # Video que explota en un medio (18/10/2026): las vistas por hora del video del mismo tema.
+    d["video"] = 0
+    for v in senales.get("videos_medios") or []:
+        # Los vivos no son videos virales; y «muertos» o «heridos» solos no hacen el mismo tema.
+        if v.get("por_hora", 0) < 50 or not v.get("segundos") or VIVO.search(F.norm(v["titulo"])):
+            continue
+        clave = palabras(v["titulo"]) - VIDEO_GENERICAS
+        if any(se_parecen(t - VIDEO_GENERICAS, clave, 2, 0.4) for t in titulos):
+            p = round(min(25, max(0, 8 * math.log10(v["por_hora"]) - 12 + (3 if v["vistas"] >= 100_000 else 0))), 1)
+            if p > d["video"]:
+                d["video"] = p
+                razones.append(f"video que explota en {v['medio']}: «{v['titulo'][:50]}» "
+                               f"({v['vistas']:,} vistas, {v['por_hora']:,} por hora)".replace(",", "."))
+
     # Actualidad
     fecha = max((n.get("fecha") or 0) for n in grupo) if grupo else 0
     edad = (ahora - fecha) / 3600 if fecha else ventana_h
     d["actualidad"] = 5.0 if edad <= 3 else round(max(0.0, 5 * (1 - (edad - 3) / max(1, ventana_h - 3))), 1)
 
     d["editorial"] = max(0, min(10, base - 35)) if base else 0
-    senal = sum(d[k] for k in ("cobertura", "lectores", "busquedas", "agenda", "youtube", "actualidad"))
+    senal = sum(d[k] for k in ("cobertura", "lectores", "busquedas", "agenda", "youtube", "video", "actualidad"))
     return {"impacto": int(round(min(100, senal + d["fuente"] + d["editorial"]))), "senal": round(senal, 1),
             "desglose": d, "razones": razones[:8]}
 
@@ -165,3 +183,9 @@ def realzar_generales(cands: list, otras: list, senales: dict, ahora: float, top
             salida[x["_cand"]] = dict(c, puntos=(c.get("puntos") or 0) + extra, impacto=ev["impacto"],
                                       impacto_razones=ev["razones"], impacto_extra=extra)
     return sorted(salida, key=lambda c: (-(c.get("puntos") or 0), -(c.get("fecha") or 0)))
+
+
+# Palabras que aparecen en cualquier título de video de noticias y no dicen de qué trata.
+VIDEO_GENERICAS = palabras("muerto muertos muerta herido heridos herida video videos impactante momento "
+                           "hoy nuevo nueva ultimo ultima ultimas personas gente horas dias años vecinos "
+                           "policia ataque tragedia drama emocion caos crisis")

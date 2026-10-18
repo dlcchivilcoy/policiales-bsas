@@ -545,7 +545,7 @@ chequear("fila: cada turno de nacionales queda anotado en la fila con su categor
 from nacionales import impacto as IM, portales as PO, senales as SE
 
 chequear("ranking: el orden del PDF entre las ACTIVAS (EFE, Reuters y AP no leen: no ocupan lugar)",
-         PO.ranking("internacionales") == ["BBC Mundo", "Infobae", "La Nación", "Clarín", "Ámbito"]
+         PO.ranking("internacionales") == ["BBC Mundo", "Infobae", "La Nación", "TN", "Clarín", "Ámbito"]
          and PO.ranking("deportes")[:5] == ["TyC Sports", "ESPN", "Olé", "AFA", "Liga Profesional"]
          and PO.ranking("tecnologia_ia")[:2] == ["Zapier", "Google Workspace"])
 chequear("ranking: la primera del PDF vale más que la segunda, y así; una de afuera, casi nada",
@@ -735,6 +735,77 @@ pz = PA.armar(n_lista, tmp / "lista", redactar_falso([dict(BUENO, lista=PELIS)])
               leer_pagina=lambda u: {"video": "https://cdn.jwplayer.com/videos/trailer.mp4", "texto": ""})
 chequear("lista: sale como CARRUSEL, una lámina por elemento, aunque la nota traiga video",
          pz.get("formato") == "carrusel" and len(pz.get("slides") or []) == 6 and not pz.get("video_original"))
+
+# --- 10. Videos que explotan en La Nación, Infobae, TN y Clarín (18/10/2026) --------------------------
+from datetime import datetime as _dt
+_hace = lambda h: _dt.fromtimestamp(T8 - h * 3600, timezone.utc).isoformat().replace("+00:00", "Z")  # noqa: E731
+yt_items = [
+    {"id": "a", "snippet": {"title": "Crisis en Francia: protestas, saqueos y detenidos", "publishedAt": _hace(22)},
+     "statistics": {"viewCount": "159000"}, "contentDetails": {"duration": "PT1M5S"}},
+    {"id": "b", "snippet": {"title": "AVALANCHA EN CHILE: 4 MUERTOS Y 4 HERIDOS", "publishedAt": _hace(20)},
+     "statistics": {"viewCount": "60000"}, "contentDetails": {"duration": "PT45S"}},
+    {"id": "c", "snippet": {"title": "EN VIVO: Bolsonaro habla antes del debate", "publishedAt": _hace(2)},
+     "statistics": {"viewCount": "3000"}, "contentDetails": {"duration": "P0D"}},
+    {"id": "d", "snippet": {"title": "Un video viejo", "publishedAt": _hace(100)},
+     "statistics": {"viewCount": "900000"}, "contentDetails": {"duration": "PT30S"}}]
+vids = SE.videos_de(yt_items, "La Nación", T8)
+chequear("videos: vistas por hora, segundos y solo los de las últimas 72 h",
+         [v["id"] for v in vids] == ["a", "b", "c"] and vids[0]["por_hora"] == 7227 and vids[0]["segundos"] == 65
+         and vids[2]["segundos"] == 0)
+sen_v = dict(SE.vacias(), videos_medios=vids)
+francia = [nv("Protestas en Francia: fuertes choques con la Policía y más de 150 detenidos", "La Nación",
+              "internacionales")]
+canada = [nv("Explosión en una base militar de Canadá: hay siete muertos y decenas de heridos", "Infobae",
+             "internacionales")]
+bolso = [nv("Lula y Flávio Bolsonaro, cara a cara en el debate", "Infobae", "internacionales")]
+ev_f = IM.evaluar(francia, "internacionales", sen_v, T8)
+chequear("videos: el tema de un video que explota suma fuerte (y deja la razón)",
+         ev_f["desglose"]["video"] >= 18 and any("video que explota en La Nación" in r for r in ev_f["razones"]))
+chequear("videos: «muertos» y «heridos» solos no hacen el mismo tema (Canadá no es la avalancha de Chile)",
+         IM.evaluar(canada, "internacionales", sen_v, T8)["desglose"]["video"] == 0)
+chequear("videos: un vivo no cuenta como video viral",
+         IM.evaluar(bolso, "internacionales", sen_v, T8)["desglose"]["video"] == 0)
+chequear("Mundo: TN es fuente (después de La Nación) y su sección no exige «gran tema»",
+         PO.fuente_de({"url": "https://tn.com.ar/internacional/2026/10/18/x/"}) == "TN"
+         and PO.ranking("internacionales").index("TN") == PO.ranking("internacionales").index("La Nación") + 1
+         and CAT.puntuar(dict(nv("Un sacerdote murió aplastado por una cruz en Ecuador", "TN", "internacionales"),
+                              medio="TN"), T8)[0] > 0)
+tn_html = ('<script>Fusion.globalContent={"promo_items":{"basic":{"subtype":"genoa","embed":{"config":'
+           '{"content_type":"video","highQuality":"https://vod.vodgc.net/gid1/vod/Artear/TN/1-14-abc_360P.mp4"}}}},'
+           '"content_elements":[]};Fusion.globalContentConfig={};</script>'
+           '<script>{"highQuality":"https://vod.vodgc.net/gid1/vod/Artear/TN/1-14-OTRA_360P.mp4"}</script>')
+chequear("TN: el video PROPIO de la nota (el de su portada), no los de otras notas de la página",
+         PO.ficha(tn_html)["video"].endswith("1-14-abc_360P.mp4"))
+
+
+class _JW:
+    """La API pública de JW: un «Loop» de 6 s de cabecera y el video de la nota, vertical."""
+    datos = {"LOOP1234": {"title": "Loop. Un sacerdote murió aplastado por una cruz", "playlist": [
+        {"duration": 6, "sources": [{"type": "video/mp4", "file": "https://cdn/loop.mp4", "width": 720, "height": 1280}]}]},
+             "NOTA5678": {"title": "Un sacerdote murió aplastado por una cruz", "playlist": [
+        {"duration": 31, "sources": [
+            {"type": "video/mp4", "file": "https://cdn/180.mp4", "width": 180, "height": 320},
+            {"type": "video/mp4", "file": "https://cdn/720.mp4", "width": 720, "height": 1280},
+            {"type": "video/mp4", "file": "https://cdn/1080.mp4", "width": 1080, "height": 1920},
+            {"type": "application/vnd.apple.mpegurl", "file": "https://cdn/x.m3u8"}]}]}}
+
+    def get(self, url):
+        i = url.rsplit("/", 1)[1]
+        return type("R", (), {"raise_for_status": lambda s: None, "json": lambda s: self.datos[i]})()
+
+
+chequear("JW: el video de la nota (no el «loop» de cabecera), en 720 del lado corto (vertical 720x1280)",
+         PO.video_jw(["LOOP1234", "NOTA5678"], "Un sacerdote murió en misa aplastado por una cruz", _JW())
+         == "https://cdn/720.mp4")
+
+cola_m = [{"url": "italia", "impacto": 79}, {"url": "papa", "impacto": 76, "otras_urls": ["papa-tn"]},
+          {"url": "cura", "impacto": 74}]
+pag_m = {"italia": {}, "papa": {}, "papa-tn": {"video": "https://cdn/papa.mp4"}, "cura": {"video": "https://cdn/c.mp4"}}
+chequear("Mundo: va primero el tema con VIDEO (aunque esté en otro portal) si está cerca del primero",
+         PA.adelantar_con_video(cola_m, lambda c: True, pag_m.get) and [c["url"] for c in cola_m][0] == "papa")
+cola_m2 = [{"url": "italia", "impacto": 79}, {"url": "cura", "impacto": 60}]
+chequear("Mundo: ...pero no si está a más de 10 puntos",
+         not PA.adelantar_con_video(cola_m2, lambda c: True, pag_m.get) and cola_m2[0]["url"] == "italia")
 
 shutil.rmtree(tmp, ignore_errors=True)
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
