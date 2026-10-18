@@ -8706,7 +8706,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-18T14:01:40-03:00",
+  "actualizado": "2026-10-18T19:02:08-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -8995,6 +8995,79 @@
               },
               "facebook": {
                 "id": "950317081066947"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-10-18T19:00:00-03:00": {
+      "dia": "2026-10-18",
+      "bloque": "cierre",
+      "items": [
+        {
+          "tipo": "semana_chicago",
+          "clave": "semana_chicago",
+          "publicado": {
+            "instagram": {
+              "id": "17952119544298621"
+            },
+            "facebook": {
+              "id": "2637525823374769"
+            }
+          }
+        },
+        {
+          "tipo": "clima_manana",
+          "clave": "clima_manana",
+          "publicado": {
+            "instagram": {
+              "id": "18355352212222392"
+            },
+            "facebook": {
+              "id": "2560474391132511"
+            }
+          }
+        },
+        {
+          "tipo": "resumen",
+          "clave": "resumen",
+          "publicado": {
+            "instagram": {
+              "id": "18147375679569922"
+            },
+            "facebook": {
+              "id": "1118488207392176"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17952119544298621"
+              },
+              "facebook": {
+                "id": "2637525823374769"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18355352212222392"
+              },
+              "facebook": {
+                "id": "2560474391132511"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18147375679569922"
+              },
+              "facebook": {
+                "id": "1118488207392176"
               }
             }
           ]
