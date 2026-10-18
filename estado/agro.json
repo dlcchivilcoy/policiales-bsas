@@ -8706,7 +8706,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-18T13:03:01-03:00",
+  "actualizado": "2026-10-18T14:01:40-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -8922,6 +8922,79 @@
               },
               "facebook": {
                 "id": "2336913800477733"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-10-18T14:00:00-03:00": {
+      "dia": "2026-10-18",
+      "bloque": "mediodia",
+      "items": [
+        {
+          "tipo": "semana_granos",
+          "clave": "semana_granos",
+          "publicado": {
+            "instagram": {
+              "id": "18096184922234986"
+            },
+            "facebook": {
+              "id": "2141946116419655"
+            }
+          }
+        },
+        {
+          "tipo": "semana_dolar",
+          "clave": "semana_dolar",
+          "publicado": {
+            "instagram": {
+              "id": "18143587876587429"
+            },
+            "facebook": {
+              "id": "1108504965482493"
+            }
+          }
+        },
+        {
+          "tipo": "novedad",
+          "clave": "novedad",
+          "publicado": {
+            "instagram": {
+              "id": "17885689269504286"
+            },
+            "facebook": {
+              "id": "950317081066947"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18096184922234986"
+              },
+              "facebook": {
+                "id": "2141946116419655"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18143587876587429"
+              },
+              "facebook": {
+                "id": "1108504965482493"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17885689269504286"
+              },
+              "facebook": {
+                "id": "950317081066947"
               }
             }
           ]
