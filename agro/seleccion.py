@@ -16,6 +16,8 @@ historias son de datos y no cuentan). El orden ya no es solo el puntaje: una not
 meteorológica, problema sanitario, cambio normativo relevante) va primero, y los 10 temas fundamentales
 del documento suman un poco según su prioridad (clima primero, reglas y agenda al final). Para el
 carrusel pesa además si la noticia se puede EXPLICAR (potencial_carrusel).
+
+19/10/2026: 6 corridas con 1 reel + 1 carrusel cada una → AGRO_MAX_DIA = 12.
 """
 import math
 import os
@@ -37,7 +39,7 @@ def score_min() -> int:
 
 
 def max_dia() -> int:
-    return _entero("AGRO_MAX_DIA", 6)
+    return _entero("AGRO_MAX_DIA", 12)
 
 
 def por_pasada() -> int:

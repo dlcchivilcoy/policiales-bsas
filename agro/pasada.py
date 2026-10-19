@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-"""AGRO / AgTech (@diarioyradioagro) — una corrida de la agenda: un reel, un carrusel o una tanda de
-historias. Con --publicar, lo publica.
+"""AGRO / AgTech (@diarioyradioagro) — una corrida de la agenda: con --publicar, publica todo lo de la
+corrida (reel, una hora después el carrusel, y las historias si tocan), esperando cada horario.
 
-    venv\\Scripts\\python.exe -m agro.pasada --publicar               # PUBLICA lo del horario (estado/agro.json)
+    venv\\Scripts\\python.exe -m agro.pasada --publicar               # PUBLICA la corrida (estado/agro.json)
     venv\\Scripts\\python.exe -m agro.pasada --tipo reel              # simula un reel
     venv\\Scripts\\python.exe -m agro.pasada --tipo carrusel          # simula un carrusel
     venv\\Scripts\\python.exe -m agro.pasada --tipo historias --bloque cierre   # simula una tanda de historias
     venv\\Scripts\\python.exe -m agro.pasada --olvidar                # borra la memoria de la simulación
 
-La agenda (agro/agenda.py, pedido del editor del 17/10/2026): 3 reels + 3 carruseles + 10 historias por
-día en 3 corridas, una cosa por horario y una hora entre una y otra.
+La agenda (agro/agenda.py, pedido del editor del 19/10/2026): 6 corridas por día (7, 10, 13, 16, 18 y 21 h),
+cada una con 1 reel y 1 carrusel intercalados y 1 h entre posteo y posteo, + 3 tandas de historias.
 
 REEL y CARRUSEL (documento «Proyecto Agro», 13/10/2026, y «ideas agro», 17/10/2026):
   CAPTURA (RSS) → DUPLICADOS (URL/título/huella + parecido + IA) → SCORE IA (título y bajada) →
@@ -90,6 +90,44 @@ def turno(ahora: datetime):
     return AG.turno(ahora)
 
 
+def corrida(ahora: datetime):
+    """(inicio, en_horario, [(horario, tipo), …]) de la corrida de `ahora` (agro/agenda.py)."""
+    return AG.corrida(ahora)
+
+
+def _ahora() -> datetime:
+    return datetime.now(TZ_AR)
+
+
+_dormir = time.sleep
+
+
+def _esperar(hasta: datetime, log=print):
+    """Duerme hasta `hasta` (la corrida espera el horario de su segundo posteo)."""
+    falta = (hasta - _ahora()).total_seconds()
+    if falta > 0:
+        log(f"Esperando hasta las {hasta:%H:%M} ({falta / 60:.0f} min)…")
+        _dormir(falta)
+
+
+def _guardar_en_la_nube(log=print):
+    """En la nube, entre un posteo y el siguiente, la memoria se sube al repo: si la máquina se cae
+    mientras espera, el respaldo de 20 min después ya sabe lo que salió y no lo repite."""
+    import os
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    for k, v in (("GIT_AUTHOR_NAME", "github-actions[bot]"), ("GIT_COMMITTER_NAME", "github-actions[bot]"),
+                 ("GIT_AUTHOR_EMAIL", "41898282+github-actions[bot]@users.noreply.github.com"),
+                 ("GIT_COMMITTER_EMAIL", "41898282+github-actions[bot]@users.noreply.github.com")):
+        os.environ.setdefault(k, v)
+    try:
+        from tools import guardar_estado as GE
+        msg = f"Agro de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
+        log(f"   memoria: {GE.guardar(msg, solo=['agro.json'])}")
+    except Exception as e:                             # noqa: BLE001 — el paso final de la corrida la guarda igual
+        log(f"   memoria: no se pudo subir ahora ({type(e).__name__}: {str(e)[:120]})")
+
+
 def tema_siguiente(mem: dict) -> str:
     """El bloque del próximo posteo 4:5 (blanco o grafito): el otro del último que salió."""
     return DIS.tema_siguiente(mem.get("tema_ultimo", ""))
@@ -115,31 +153,80 @@ def _informe_vacio(carpeta: Path, ahora: datetime, motivo: str, publicar: bool, 
 def correr(publicar: bool = False, tipo: str = "", bloque: str = "", momento: datetime = None, log=print,
            publicador=None, fuera_de_cupo: bool = False, max_piezas: int = 0, con_reel: bool = True,
            horas: int = 48) -> Path:
-    """La corrida del horario: decide qué toca (o lo que pida `tipo`, en simulación o fuera de cupo)."""
+    """La corrida del horario: con --publicar, todo lo de la corrida (correr_corrida); si no, una pieza
+    de lo que toca a esta hora o de lo que pida `tipo` (simulación, o fuera de cupo)."""
     entorno.cargar()
-    ahora = momento or datetime.now(TZ_AR)
+    ahora = momento or _ahora()
+    if publicar and not fuera_de_cupo:
+        return correr_corrida(log=log, publicador=publicador, ahora=ahora, max_piezas=max_piezas,
+                              con_reel=con_reel, horas=horas)
     carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
     carpeta.mkdir(parents=True, exist_ok=True)
     horario, tipo_ag, en_horario = turno(ahora)
-    if publicar and not fuera_de_cupo:
-        # Una cosa por horario: el respaldo de 20 min después o un doble disparo no publican dos veces;
-        # fuera de los horarios de la agenda no se publica (salvo a mano, con --fuera-de-cupo).
-        if not en_horario:
-            log(f"No se publica: fuera de horario (lo próximo: {tipo_ag} a las {horario:%d/%m %H:%M})")
-            return _informe_vacio(carpeta, ahora, f"fuera de horario: lo próximo es {tipo_ag} de las "
-                                                  f"{horario:%d/%m %H:%M}", publicar, horas)
-        tipo = tipo_ag
-        mem = cargar(MEMORIA_REAL)
-        ya = ya_publicado(mem, horario, tipo)
+    tipo = tipo or tipo_ag
+    if not en_horario:
+        horario = ahora.replace(second=0, microsecond=0)
+    return _un_turno(publicar, tipo, horario, ahora, carpeta, bloque=bloque, log=log, publicador=publicador,
+                     fuera_de_cupo=fuera_de_cupo, max_piezas=max_piezas, con_reel=con_reel, horas=horas)
+
+
+def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_piezas: int = 0,
+                   con_reel: bool = True, horas: int = 48) -> list:
+    """Publica la corrida de `ahora`, horario por horario y esperando cada uno (19/10/2026: reel, una
+    hora después el carrusel; las historias en su horario). Lo que ya salió no se repite: el respaldo
+    de 20 min después o un doble disparo no publican dos veces. Fuera de horario no publica nada (a
+    mano: --fuera-de-cupo). Devuelve las rutas de los informes."""
+    ahora = ahora or _ahora()
+    inicio, en_horario, turnos = corrida(ahora)
+    if not en_horario:
+        carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+        carpeta.mkdir(parents=True, exist_ok=True)
+        log(f"No se publica: fuera de horario (la próxima corrida: {inicio:%d/%m %H:%M})")
+        return [_informe_vacio(carpeta, ahora, f"fuera de horario: la próxima corrida es la de las "
+                                               f"{inicio:%d/%m %H:%M}", True, horas)]
+    log(f"[agro] CORRIDA de las {inicio:%H:%M}: " + ", ".join(f"{t:%H:%M} {tipo}" for t, tipo in turnos))
+    rutas, errores, ultimo_feed, quedan = [], [], None, len(turnos)
+    for horario, tipo in turnos:
+        quedan -= 1
+        ya = ya_publicado(cargar(MEMORIA_REAL), horario, tipo)
         if ya:
             que = ya.get("titular") or f"{len(ya.get('items') or [])} historias"
-            log(f"No se publica: el horario de las {horario:%H:%M} ya publicó ({que})")
-            return _informe_vacio(carpeta, ahora, f"el horario de las {horario:%H:%M} ya publicó: «{que}»",
-                                  publicar, horas)
-    else:
-        tipo = tipo or tipo_ag
-        if not en_horario:
-            horario = ahora.replace(second=0, microsecond=0)
+            log(f"{horario:%H:%M} {tipo}: ya publicó ({que})")
+            if tipo != "historias":
+                ultimo_feed = horario
+            continue
+        objetivo = horario
+        if tipo != "historias" and ultimo_feed:
+            # Una hora entre posteo y posteo del feed, aunque el primero haya salido tarde.
+            objetivo = max(objetivo, ultimo_feed + timedelta(minutes=AG.MARGEN_MIN))
+        _esperar(objetivo, log)
+        momento = _ahora()
+        if tipo != "historias":
+            ultimo_feed = momento
+        carpeta = SALIDA / f"{momento:%Y-%m-%d_%H%M}_{tipo}"
+        carpeta.mkdir(parents=True, exist_ok=True)
+        try:
+            rutas.append(_un_turno(True, tipo, horario, momento, carpeta, log=log, publicador=publicador,
+                                   max_piezas=max_piezas, con_reel=con_reel, horas=horas))
+        except Exception as e:                         # noqa: BLE001 — una falla no se lleva el resto de la corrida
+            log(f"{horario:%H:%M} {tipo}: FALLÓ ({type(e).__name__}: {str(e)[:200]})")
+            errores.append(f"{horario:%H:%M} {tipo}: {type(e).__name__}: {str(e)[:200]}")
+            continue
+        if quedan:
+            _guardar_en_la_nube(log)
+    if errores:                                        # al final: que la corrida avise (issue)
+        raise RuntimeError("; ".join(errores))
+    if not rutas:
+        carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
+        carpeta.mkdir(parents=True, exist_ok=True)
+        rutas.append(_informe_vacio(carpeta, ahora, f"la corrida de las {inicio:%H:%M} ya publicó todo", True, horas))
+    return rutas
+
+
+def _un_turno(publicar: bool, tipo: str, horario: datetime, ahora: datetime, carpeta: Path, bloque: str = "",
+              log=print, publicador=None, fuera_de_cupo: bool = False, max_piezas: int = 0,
+              con_reel: bool = True, horas: int = 48) -> Path:
+    """Una cosa de la agenda: una tanda de historias, el carrusel de los números o una pieza."""
     if tipo == "historias":
         return pasada_historias(publicar=publicar, horario=horario, bloque=bloque or AG.bloque(horario), log=log,
                                 publicador=publicador, carpeta=carpeta, ahora=ahora)
@@ -618,11 +705,14 @@ def main():
         ap.error("--fuera-de-cupo necesita --tipo")
     ruta = correr(publicar=a.publicar, tipo=a.tipo, bloque=a.bloque, fuera_de_cupo=a.fuera_de_cupo,
                   max_piezas=a.piezas, con_reel=not a.sin_reel, horas=a.horas)
-    inf = json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
-    fallas = [f"{p['guion']['titular']}: {r}" for p in inf["piezas"] for r, v in (p.get("publicado") or {}).items()
-              if isinstance(v, dict) and v.get("error")]
-    for h in (inf.get("resultado") or {}).get("resultado", {}).get("items", []) if inf.get("resultado") else []:
-        fallas += [f"historia: {r}: {v['error']}" for r, v in (h or {}).items() if isinstance(v, dict) and v.get("error")]
+    fallas = []
+    for r in (ruta if isinstance(ruta, list) else [ruta]):
+        inf = json.loads((r.parent / "informe.json").read_text(encoding="utf-8"))
+        fallas += [f"{p['guion']['titular']}: {red}" for p in inf["piezas"]
+                   for red, v in (p.get("publicado") or {}).items() if isinstance(v, dict) and v.get("error")]
+        for h in (inf.get("resultado") or {}).get("resultado", {}).get("items", []) if inf.get("resultado") else []:
+            fallas += [f"historia: {red}: {v['error']}" for red, v in (h or {}).items()
+                       if isinstance(v, dict) and v.get("error")]
     if fallas:
         print("FALLARON:\n- " + "\n- ".join(fallas))
         return 1

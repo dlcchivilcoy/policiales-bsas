@@ -187,6 +187,11 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_
             info = PB._subir_youtube(pp, mp4, metadatos_youtube(pieza))
             salida["youtube"] = PB._poner_miniatura(info, pp, mp4)
             log(f"   YouTube: {salida['youtube'].get('url') or salida['youtube'].get('id')}")
+        except PB.SinCupoYouTube as e:
+            # 19/10/2026: 6 Shorts por día comparten el cupo de la API con policiales y nacionales. Sin
+            # cupo, el reel sale igual en las demás redes y no se cuenta como falla.
+            salida["youtube"] = {"omitido": f"sin cupo de YouTube por hoy ({str(e)[:120]})"}
+            log(f"   YouTube: {salida['youtube']['omitido']}")
         except Exception as e:                             # noqa: BLE001
             salida["youtube"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
             log(f"   YouTube FALLÓ: {salida['youtube']['error']}")

@@ -1,12 +1,19 @@
 name: Agro (@diarioyradioagro)
 
-# Activado por el editor el 14/10/2026 con 3 reels por día. Desde el 17/10/2026 (pedido del editor, documento
-# «ideas agro»): 3 REELS + 3 CARRUSELES + 10 HISTORIAS por día en 3 corridas, una cosa por horario y una
-# hora entre una y otra (agro/agenda.py; se cambia con la variable del repo AGRO_AGENDA sin tocar código):
+# Activado por el editor el 14/10/2026 con 3 reels por día. Desde el 19/10/2026 (pedido del editor): 6 CORRIDAS
+# por día (7, 10, 13, 16, 18 y 21 h); cada una lee todas las fuentes, arma y publica 1 REEL y, una hora
+# después, 1 CARRUSEL (reel y carrusel intercalados todo el día). Las historias, en sus horarios de siempre
+# dentro de la corrida que los contiene (agro/agenda.py; variables del repo AGRO_AGENDA y AGRO_CORRIDAS):
 #
-#   07:00 historias «El campo hoy»   08:00 reel   09:00 carrusel
-#   12:00 reel   13:00 carrusel   14:00 historias (mapa de lluvias, Chicago, la novedad)
-#   19:00 historias «Así cerró el mercado»   20:00 reel   21:00 carrusel
+#   07:00 historias «El campo hoy» + reel   08:00 carrusel
+#   10:00 reel   11:00 carrusel
+#   13:00 reel   14:00 carrusel + historias (mapa de lluvias, Chicago, la novedad)
+#   16:00 reel   17:00 carrusel
+#   18:00 reel   19:00 carrusel + historias «Así cerró el mercado»
+#   21:00 reel   22:00 carrusel
+#
+# La corrida ESPERA dentro de la máquina el horario de su segundo posteo (por eso dura ~70 min). Entre
+# posteo y posteo sube la memoria al repo, así un corte no repite lo publicado.
 #
 # Reel y carrusel: lee las fuentes, descarta duplicados, puntúa con IA, elige la mejor nota que no salió
 # y arma textos, imagen (foto oficial con crédito, foto de medio RECREADA con IA, o IA; nunca el logo
@@ -21,16 +28,13 @@ name: Agro (@diarioyradioagro)
 # Publica si la variable del repo AGRO_PUBLICAR es 1. Para apagar SOLO esto: AGRO_PUBLICAR=0 (sigue
 # armando y simula; las piezas quedan como artefacto de la corrida).
 on:
-  schedule:                 # UTC; Argentina es UTC-3 todo el año. Respaldo 20 min después de cada horario.
-    - cron: "20 10 * * *"   # 07:20 historias
-    - cron: "20 11 * * *"   # 08:20 reel
-    - cron: "20 12 * * *"   # 09:20 carrusel
-    - cron: "20 15 * * *"   # 12:20 reel
-    - cron: "20 16 * * *"   # 13:20 carrusel
-    - cron: "20 17 * * *"   # 14:20 historias
-    - cron: "20 22 * * *"   # 19:20 historias
-    - cron: "20 23 * * *"   # 20:20 reel
-    - cron: "20 0 * * *"    # 21:20 carrusel
+  schedule:                 # UTC; Argentina es UTC-3 todo el año. Respaldo 20 min después de cada corrida.
+    - cron: "20 10 * * *"   # 07:20
+    - cron: "20 13 * * *"   # 10:20
+    - cron: "20 16 * * *"   # 13:20
+    - cron: "20 19 * * *"   # 16:20
+    - cron: "20 21 * * *"   # 18:20
+    - cron: "20 0 * * *"    # 21:20
   workflow_dispatch:
     inputs:
       publicar:
@@ -58,7 +62,7 @@ permissions:
 jobs:
   agro:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 150      # la corrida espera su segundo posteo (~70 min; hasta ~110 si arrancó tarde)
     steps:
       - uses: actions/checkout@v4
         with:
@@ -73,7 +77,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Pasada agro
-        timeout-minutes: 30
+        timeout-minutes: 130
         env:
           PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -97,6 +101,7 @@ jobs:
           AGRO_MAX_DIA: ${{ vars.AGRO_MAX_DIA }}
           AGRO_POR_PASADA: ${{ vars.AGRO_POR_PASADA }}
           AGRO_AGENDA: ${{ vars.AGRO_AGENDA }}
+          AGRO_CORRIDAS: ${{ vars.AGRO_CORRIDAS }}
           AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}

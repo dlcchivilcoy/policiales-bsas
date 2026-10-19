@@ -580,9 +580,11 @@ with tempfile.TemporaryDirectory() as tmp:
             estado_al_publicar.append(_json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8")))
             return {"youtube": {"id": "yt1"}, "web": {"url": "https://x/n/a"}, "facebook": {"id": "fb1"},
                     "instagram": {"error": "FalloRed: prueba"}}
-        turno_real = PA.turno
-        PA.turno = lambda ahora: (ahora.replace(second=0, microsecond=0), "reel", True)   # «estamos en horario»
-        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        corrida_real = PA.corrida
+        # «estamos en horario»: una corrida con un solo reel, ahora
+        PA.corrida = lambda ahora: (ahora.replace(second=0, microsecond=0), True,
+                                    [(ahora.replace(second=0, microsecond=0), "reel")])
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)[-1]
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: Soja (no apta) y Trigo (retenida) no salen; se publica Hacienda",
                  publicadas == ["Hacienda remate en Bragado"])
@@ -596,22 +598,22 @@ with tempfile.TemporaryDirectory() as tmp:
         chequear("real: la memoria real es aparte de la simulación", PA.MEMORIA_REAL != PA.MEMORIA)
         # El respaldo de 20 min después (mismo turno) no publica otra vez.
         fijo = datetime.now(CA.TZ_AR).replace(second=0, microsecond=0)
-        PA.turno = lambda ahora: (fijo, "reel", True)
+        PA.corrida = lambda ahora: (fijo, True, [(fijo, "reel")])
         mem_t = _json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
         for e in mem_t["elegidas"]:
             if e.get("publicado"):
                 e["turno"] = fijo.isoformat()
         PA.MEMORIA_REAL.write_text(_json.dumps(mem_t), encoding="utf-8")
         publicadas.clear()
-        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)[-1]
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: si ese horario ya publicó, el respaldo no publica otra",
                  not publicadas and "ya publicó" in inf["conteos"]["No se publicó"])
-        PA.turno = lambda ahora: (ahora.replace(second=0, microsecond=0) + timedelta(hours=3), "reel", False)
-        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)
+        PA.corrida = lambda ahora: (ahora.replace(second=0, microsecond=0) + timedelta(hours=3), False, [])
+        ruta = PA.correr(log=lambda m: None, publicar=True, publicador=publicador_falso)[-1]
         inf = _json.loads((ruta.parent / "informe.json").read_text(encoding="utf-8"))
         chequear("real: fuera de horario no publica", not publicadas and "fuera de horario" in inf["conteos"]["No se publicó"])
-        PA.turno = turno_real
+        PA.corrida = corrida_real
     finally:
         GU.generar = originales["gen"]
         CA.capturar, CA.completar, SC.puntuar, GU.generar = originales["cap"], originales["comp"], originales["pun"], originales["gen"]
@@ -672,35 +674,113 @@ for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_),
              and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
              and c_["pendientes"] == [{"id": "p-nuevo"}])
 
-# --- agenda (17/10/2026): 3 reels + 3 carruseles + 10 historias, una cosa por horario --------------
+# --- agenda (19/10/2026): 6 corridas, 1 reel + 1 carrusel cada una, 1 h entre posteos ----------------
 from agro import agenda as AG  # noqa: E402
 
 os.environ.pop("AGRO_AGENDA", None)
+os.environ.pop("AGRO_CORRIDAS", None)
 _ag = AG.agenda()
-chequear("agenda: 9 horarios, 3 reels, 3 carruseles y 3 tandas de historias",
-         len(_ag) == 9 and AG.cuantos("reel") == 3 and AG.cuantos("carrusel") == 3 and AG.cuantos("historias") == 3)
-_min = [h * 60 + m for h, m, _ in _ag]
-chequear("agenda: al menos una hora entre un posteo y el siguiente", all(b - a >= 60 for a, b in zip(_min, _min[1:])))
+chequear("agenda: 6 reels, 6 carruseles y 3 tandas de historias",
+         AG.cuantos("reel") == 6 and AG.cuantos("carrusel") == 6 and AG.cuantos("historias") == 3)
+_feed = [(h * 60 + m, t) for h, m, t in _ag if t != "historias"]
+chequear("agenda: reel y carrusel intercalados todo el día, con al menos una hora entre posteos",
+         all(b - a >= 60 for (a, _), (b, _) in zip(_feed, _feed[1:]))
+         and all(t == ("reel" if i % 2 == 0 else "carrusel") for i, (_, t) in enumerate(_feed)))
+chequear("corridas: 7, 10, 13, 16, 18 y 21", AG.corridas() == [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)])
 
 
 def _t(h, m, dia=16):
     return datetime(2026, 10, dia, h, m, tzinfo=CA.TZ_AR)
 
 
-chequear("una corrida a las 08:25 es el reel de las 08:00", AG.turno(_t(8, 25)) == (_t(8, 0), "reel", True))
-chequear("a las 08:45 ya no (40 min de tolerancia): lo próximo es el carrusel de las 09:00",
-         AG.turno(_t(8, 45)) == (_t(9, 0), "carrusel", False))
-chequear("a las 22:00 ya pasó todo: mañana a las 07:00, historias", AG.turno(_t(22, 0)) == (_t(7, 0, 17), "historias", False))
+def _hm(turnos):
+    return [(f"{t:%H:%M}", tipo) for t, tipo in turnos]
+
+
+_c = AG.corrida(_t(7, 3))
+chequear("la corrida de las 07: historias y reel a las 07:00, carrusel a las 08:00",
+         _c[:2] == (_t(7, 0), True) and _hm(_c[2]) == [("07:00", "historias"), ("07:00", "reel"), ("08:00", "carrusel")])
+chequear("la de las 13: reel, y a las 14:00 historias del mediodía y carrusel",
+         _hm(AG.corrida(_t(13, 0))[2]) == [("13:00", "reel"), ("14:00", "historias"), ("14:00", "carrusel")])
+chequear("la de las 16: reel 16:00 y carrusel 17:00 (no se mete en la de las 18)",
+         _hm(AG.corrida(_t(16, 10))[2]) == [("16:00", "reel"), ("17:00", "carrusel")])
+chequear("la de las 21: reel 21:00 y carrusel 22:00", _hm(AG.corrida(_t(21, 39))[2]) == [("21:00", "reel"), ("22:00", "carrusel")])
+chequear("a las 10:45 ya no (40 min de tolerancia): la próxima es la de las 13",
+         AG.corrida(_t(10, 45))[:2] == (_t(13, 0), False))
+chequear("a las 23:00: la próxima es mañana a las 07", AG.corrida(_t(23, 0))[:2] == (_t(7, 0, 17), False))
 chequear("las tres tandas de historias: mañana, mediodía y cierre",
          [AG.bloque(_t(7, 0)), AG.bloque(_t(14, 0)), AG.bloque(_t(19, 0))] == ["manana", "mediodia", "cierre"])
-chequear("sábado: el primer carrusel es «Los números de la semana»",
-         AG.es_primer_carrusel_del_sabado(_t(9, 0, 17)) and not AG.es_primer_carrusel_del_sabado(_t(13, 0, 17))
-         and not AG.es_primer_carrusel_del_sabado(_t(9, 0, 16)))
+chequear("sábado: el primer carrusel (08:00) es «Los números de la semana»",
+         AG.es_primer_carrusel_del_sabado(_t(8, 0, 17)) and not AG.es_primer_carrusel_del_sabado(_t(11, 0, 17))
+         and not AG.es_primer_carrusel_del_sabado(_t(8, 0, 16)))
 os.environ["AGRO_AGENDA"] = "06:30 historias, 10:00 reel, basura, 25:00 reel"
 chequear("AGRO_AGENDA se puede cambiar (y lo que no se entiende se saltea)",
          AG.agenda() == [(6, 30, "historias"), (10, 0, "reel")])
 os.environ.pop("AGRO_AGENDA")
-chequear("cupo del día: 6 noticias (3 reels + 3 carruseles), una por corrida", SE.max_dia() == 6 and SE.por_pasada() == 1)
+os.environ["AGRO_CORRIDAS"] = "08:00, 20:00, x"
+chequear("AGRO_CORRIDAS se puede cambiar", AG.corridas() == [(8, 0), (20, 0)])
+os.environ.pop("AGRO_CORRIDAS")
+chequear("cupo del día: 12 noticias (6 reels + 6 carruseles), una por horario", SE.max_dia() == 12 and SE.por_pasada() == 1)
+
+# --- la corrida: publica lo suyo y espera el horario siguiente -------------------------------------
+_reloj = {"t": _t(7, 2)}
+_hechos, _durmio = [], []
+
+
+def _turno_falso(publicar, tipo, horario, ahora, carpeta, **kw):
+    _hechos.append((tipo, f"{horario:%H:%M}", f"{ahora:%H:%M}"))
+    _reloj["t"] += timedelta(minutes=6)                # lo que tarda armar y publicar
+    m = PA.cargar(PA.MEMORIA_REAL)
+    if tipo == "historias":
+        m.setdefault("historias", {})[horario.isoformat()] = {"dia": f"{ahora:%Y-%m-%d}", "publicado": {"estado": "listo"}, "items": [1]}
+    else:
+        m.setdefault("elegidas", []).append({"turno": horario.isoformat(), "cuando": ahora.isoformat(), "publicado": {"x": 1}, "titular": tipo})
+    PA.guardar(m, ahora, PA.MEMORIA_REAL)
+    carpeta.mkdir(parents=True, exist_ok=True)
+    return PA._informe_vacio(carpeta, ahora, "prueba", True)
+
+
+def _dormir_falso(seg):
+    _durmio.append(round(seg / 60))
+    _reloj["t"] += timedelta(seconds=seg)
+
+
+with tempfile.TemporaryDirectory() as _tmpc:
+    _o = (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar)
+    try:
+        PA.MEMORIA_REAL, PA.SALIDA = Path(_tmpc) / "agro.json", Path(_tmpc) / "salida"
+        PA._un_turno, PA._ahora, PA._dormir = _turno_falso, lambda: _reloj["t"], _dormir_falso
+        PA.entorno.cargar = lambda: None
+        PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
+        chequear("corrida de las 07: historias y reel ya, carrusel una hora después del reel",
+                 _hechos == [("historias", "07:00", "07:02"), ("reel", "07:00", "07:08"), ("carrusel", "08:00", "08:08")]
+                 and _durmio == [54])
+        _hechos.clear()
+        _reloj["t"] = _t(7, 22)
+        PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
+        chequear("el respaldo de las 07:20 no repite nada", _hechos == [])
+        _hechos.clear(), _durmio.clear()
+        _reloj["t"] = _t(10, 38)                       # arrancó tarde
+        PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
+        chequear("si el reel salió tarde (10:38), el carrusel espera su hora entera (11:38)",
+                 _hechos == [("reel", "10:00", "10:38"), ("carrusel", "11:00", "11:38")] and _durmio == [54])
+        _hechos.clear()
+        _reloj["t"] = _t(13, 1)
+
+        def _falla_reel(publicar, tipo, horario, ahora, carpeta, **kw):
+            if tipo == "reel":
+                raise RuntimeError("se cayó la red")
+            return _turno_falso(publicar, tipo, horario, ahora, carpeta, **kw)
+        PA._un_turno = _falla_reel
+        try:
+            PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
+            _aviso = False
+        except RuntimeError as e:
+            _aviso = "se cayó la red" in str(e)
+        chequear("si el reel falla, igual salen historias y carrusel, y la corrida avisa al final",
+                 _aviso and [h[0] for h in _hechos] == ["historias", "carrusel"])
+    finally:
+        PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar = _o
 
 # --- prioridades del documento «ideas agro» -------------------------------------------------------
 _s = SC.limpiar({"tema_doc": "Clima", "urgente": "sí", "potencial_carrusel": 14})
@@ -724,12 +804,12 @@ chequear("para el carrusel pesa lo que se puede explicar; para el reel, el punta
 _hoy6 = [{"score": dict(SC.limpiar({"subtema": s_}), tema=f"t{i_}")} for i_, s_ in enumerate(("ganaderia", "mercados", "ganaderia", "mercados"))]
 _pend = [_cand("g", "ganaderia", 77), _cand("m", "mercados", 76)]
 chequear("13:00 del 17/10: con solo ganadería y mercados pendientes y su tope lleno, el horario no queda vacío",
-         SE.elegir(_pend, _hoy6)[0] == [] and SE.elegir(_pend, _hoy6, relajar=True)[0][0]["id"] == "g")
+         SE.elegir(_pend, _hoy6, cupo_dia=6)[0] == [] and SE.elegir(_pend, _hoy6, cupo_dia=6, relajar=True)[0][0]["id"] == "g")
 chequear("topes de la mezcla hacia arriba (6 por día: 2 de mercados)", SE.topes(6)["mercados"] == 2)
 _hoy_tema = [{"score": dict(SC.limpiar({"subtema": "ganaderia"}), tema="trazabilidad bovina")}]
 chequear("relajado, nunca entra otra del mismo tema que algo de hoy",
          SE.elegir([dict(_cand("t", "ganaderia", 80), score=dict(_cand("t", "ganaderia", 80)["score"], tema="trazabilidad bovina"))],
-                   _hoy_tema, relajar=True)[0] == [])
+                   _hoy_tema, cupo_dia=6, relajar=True)[0] == [])
 
 # --- datos: granos, dólar, Chicago, clima y alertas (sin red) -------------------------------------
 from agro import mercado as M  # noqa: E402
@@ -899,7 +979,7 @@ with tempfile.TemporaryDirectory() as tmp:
 
     # --- historias en modo real: se anotan y el respaldo no las repite -------------------------------
     import json as _json2
-    _orig = (PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.turno, PA.SALIDA)
+    _orig = (PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.corrida, PA.SALIDA, PA._ahora)
     try:
         PA.MEMORIA_REAL, PA.SALIDA = Path(tmp) / "agro_real.json", Path(tmp) / "salida"
         PA.entorno.cargar = lambda: None
@@ -909,17 +989,19 @@ with tempfile.TemporaryDirectory() as tmp:
         def _publicador_hist(tanda, log=print):
             _pub.append([h["tipo"] for h in tanda])
             return {"items": [{"instagram": {"id": "i"}, "facebook": {"id": "f"}} for _ in tanda]}
-        PA.turno = lambda ahora: (_t(19, 0), "historias", True)
+        PA.corrida = lambda ahora: (_t(18, 0), True, [(_t(19, 0), "historias")])
+        PA._ahora = lambda: _t(19, 5)
         PA.correr(publicar=True, publicador=_publicador_hist, momento=_t(19, 5), log=lambda m: None)
         _mr = _json2.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
         _h = _mr["historias"][_t(19, 0).isoformat()]
         chequear("historias reales: «Así cerró el mercado» publicada y anotada (sin rutas locales)",
                  _pub == [["granos", "dolar", "chicago"]] and _h["publicado"]["estado"] == "listo"
                  and all("archivo" not in i and i["publicado"]["instagram"] == {"id": "i"} for i in _h["items"]))
+        PA._ahora = lambda: _t(19, 25)
         PA.correr(publicar=True, publicador=_publicador_hist, momento=_t(19, 25), log=lambda m: None)
         chequear("el respaldo de las 19:20 no las vuelve a publicar", len(_pub) == 1)
     finally:
-        PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.turno, PA.SALIDA = _orig
+        PA.MEMORIA_REAL, M.leer_todo, PA.entorno.cargar, PA.corrida, PA.SALIDA, PA._ahora = _orig
 
 # --- publicar: reel en 9:16 para Facebook, portada para las historias ------------------------------
 _pp = PUBA.pieza_publicador({"guion": dict(GU._salida(BUENA, "x")), "portada": "p.jpg", "rep": {"url": "u"},
