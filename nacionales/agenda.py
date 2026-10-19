@@ -5,15 +5,14 @@ Las nacionales tienen sus corridas propias (no van en las pasadas de policiales)
 categoría, intercalados en categoría y en formato (1 reel y 1 carrusel cuando la categoría admite los dos):
 
     categoría                      días            corridas
-    virales (solo con su video)    todos           11 · 18 · 21
-    internacionales (solo video)   todos           11 · 18 · 21
-    generales (política, economía) todos           12 · 16
-    IA                             sábado/domingo  11
-    espectáculos, cine y series    sábado/domingo  18
+    virales (solo con su video)    todos           18 · 21
+    internacionales (solo video)   todos           18 · 21
+    generales (política, economía) todos           18 · 21
+    IA, espectáculos, cine y series sábado/domingo 18
     deportes                       sábado/domingo  21
 
-(La primera versión, de la mañana del 19/10, era 10 · 18 · 21 con todo junto; esa misma tarde el editor
-sacó la de las 10 y repartió las categorías así.)
+(Historia del 19/10: a la mañana, 10 · 18 · 21 con todo junto; a la tarde, 11 · 12 · 16 · 18 · 21; a la
+noche, tras un día con el cupo de Instagram lleno, el editor dejó solo 18 y 21.)
 
 Ritmo: un posteo cada 30 minutos; los sábados y domingos, cada 15. El primero a los 15 minutos del horario.
 Las corridas van de a una (grupo de concurrencia): si la anterior todavía publica, la que sigue arranca
@@ -27,7 +26,7 @@ import os
 from datetime import datetime, timedelta, timezone
 
 TZ_AR = timezone(timedelta(hours=-3))
-CORRIDAS = ((11, 0), (12, 0), (16, 0), (18, 0), (21, 0))
+CORRIDAS = ((18, 0), (21, 0))
 POR_CATEGORIA = 2
 DEMORA_PRIMERO = 15
 MINUTOS_SEMANA = 30
@@ -37,10 +36,10 @@ GENERALES = ""                         # la «categoría» de las nacionales gen
 
 # categoría → (solo el finde, corridas en las que entra)
 AGENDA = {
-    "virales": (False, (11, 18, 21)),
-    "internacionales": (False, (11, 18, 21)),
-    GENERALES: (False, (12, 16)),
-    "tecnologia_ia": (True, (11,)),
+    "virales": (False, (18, 21)),
+    "internacionales": (False, (18, 21)),
+    GENERALES: (False, (18, 21)),
+    "tecnologia_ia": (True, (18,)),
     "espectaculos": (True, (18,)),
     "cine_series": (True, (18,)),
     "deportes": (True, (21,)),
@@ -62,7 +61,7 @@ def es_finde(cuando: datetime) -> bool:
 
 def corrida(ahora: datetime) -> datetime:
     """El horario de la corrida a la que pertenece `ahora`: la última de CORRIDAS que ya empezó (con 10
-    minutos de margen por si cron-job.org dispara antes). Antes de las 11, la de las 21 del día anterior."""
+    minutos de margen por si cron-job.org dispara antes). Antes de las 18, la de las 21 del día anterior."""
     candidatos = [ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
                   for d in (-1, 0) for h, m in CORRIDAS]
     return max(c for c in candidatos if c <= ahora + timedelta(minutes=10))

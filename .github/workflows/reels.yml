@@ -51,8 +51,7 @@ name: Reels de policiales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     # (la de las 09:05 Argentina —«5 12 * * *»— la sacó el editor el 19/10/2026)
-    - cron: "5 15 * * *"    # 12:05 Argentina
-    - cron: "5 18 * * *"    # 15:05 Argentina
+    # (12:05 y 15:05 Argentina —«5 15» y «5 18»— las sacó el editor el 19/10/2026)
     - cron: "5 21 * * *"    # 18:05 Argentina
     # (la de las 21:05 Argentina —«5 0 * * *»— la sacó el editor el 19/10/2026)
     - cron: "35 2 * * *"    # 23:35 Argentina

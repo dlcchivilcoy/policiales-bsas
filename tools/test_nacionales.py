@@ -21,6 +21,12 @@ from PIL import Image
 
 from nacionales import filtro as F, guion as NG, infobae as IB, pasada as PA, placa as P
 from reels import publicador as PUB, turnos as TURNOS, web as WEB
+
+# Las pruebas de la fila y del cupo usan la grilla completa de pasadas de antes (09:05 a 23:35): prueban
+# la mecánica, no los horarios. Los horarios reales viven en reels/cupo.py (19/10/2026: 18:05 y 23:35).
+from reels import cupo as _CUPO  # noqa: E402
+_CUPO.PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+PUB.PASADAS_AR = _CUPO.PASADAS_AR
 from tools import guardar_estado as GE
 
 fallas, total = [], 0
@@ -818,34 +824,31 @@ shutil.rmtree(tmp, ignore_errors=True)
 from nacionales import agenda as AGE
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
-chequear("agenda: lunes a las 11, 18 y 21, virales e internacionales (2 de cada una)",
-         AGE.topes(_lun(11)) == AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"virales": 2, "internacionales": 2})
-chequear("agenda: las generales a las 12 y a las 16 (solas), todos los días",
-         AGE.topes(_lun(12)) == AGE.topes(_lun(16)) == AGE.topes(_sab(12)) == {"": 2})
-chequear("agenda: sábado, IA a las 11; espectáculos y cine a las 18; deportes a las 21",
-         set(AGE.topes(_sab(11))) == {"virales", "internacionales", "tecnologia_ia"}
-         and set(AGE.topes(_sab(18))) == {"virales", "internacionales", "espectaculos", "cine_series"}
-         and set(AGE.topes(_sab(21))) == {"virales", "internacionales", "deportes"})
-chequear("agenda: ya no hay corrida a las 10",
-         all(h != 10 for h, _m in AGE.CORRIDAS) and AGE.corrida(_lun(10, 30)) == _lun(21) - timedelta(days=1))
+chequear("agenda: lunes a las 18 y 21, virales, internacionales y generales (2 de cada una)",
+         AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"virales": 2, "internacionales": 2, "": 2})
+chequear("agenda: solo hay corridas a las 18 y a las 21 (ni 10, 11, 12 ni 16)",
+         [h for h, _m in AGE.CORRIDAS] == [18, 21] and all(not AGE.topes(_lun(h)) for h in (10, 11, 12, 16)))
+chequear("agenda: sábado a las 18, + IA, espectáculos y cine; a las 21, + deportes",
+         set(AGE.topes(_sab(18))) == {"virales", "internacionales", "", "tecnologia_ia", "espectaculos", "cine_series"}
+         and set(AGE.topes(_sab(21))) == {"virales", "internacionales", "", "deportes"})
 chequear("agenda: a qué corrida pertenece cada hora (cron-job.org puede llegar unos minutos antes)",
-         AGE.corrida(_lun(11, 7)) == _lun(11) and AGE.corrida(_lun(10, 55)) == _lun(11)
-         and AGE.corrida(_lun(12, 46)) == _lun(12) and AGE.corrida(_lun(8)) == _lun(21) - timedelta(days=1))
+         AGE.corrida(_lun(18, 7)) == _lun(18) and AGE.corrida(_lun(17, 55)) == _lun(18)
+         and AGE.corrida(_lun(22, 30)) == _lun(21) and AGE.corrida(_lun(12)) == _lun(21) - timedelta(days=1))
 chequear("agenda: cada 30 min entre semana, cada 15 el finde; el primero a los 15 minutos",
          AGE.minutos(_lun(18)) == 30 and AGE.minutos(_sab(18)) == 15
-         and AGE.turnos(_lun(11), 4) == [_lun(11, 15), _lun(11, 45), _lun(12, 15), _lun(12, 45)])
+         and AGE.turnos(_lun(18), 4) == [_lun(18, 15), _lun(18, 45), _lun(19, 15), _lun(19, 45)])
 chequear("agenda: si la corrida arrancó tarde (esperó a la anterior), sus turnos corren desde que arranca",
-         AGE.turnos(_lun(12), 2, ahora=_lun(12, 46)) == [_lun(12, 51), _lun(13, 21)])
+         AGE.turnos(_lun(21), 2, ahora=_lun(21, 40)) == [_lun(21, 45), _lun(22, 15)])
 chequear("agenda: tope del día = 2 por cada corrida en la que entra",
-         AGE.tope_del_dia("virales", _lun(11)) == 6 and AGE.tope_del_dia("", _lun(11)) == 4
-         and AGE.tope_del_dia("deportes", _lun(11)) == 0 and AGE.tope_del_dia("deportes", _sab(11)) == 2)
+         AGE.tope_del_dia("virales", _lun(18)) == 4 and AGE.tope_del_dia("", _lun(18)) == 4
+         and AGE.tope_del_dia("deportes", _lun(18)) == 0 and AGE.tope_del_dia("deportes", _sab(18)) == 2)
 
 
 def _nv(titulo, seccion, slug, cat, cuando):
     return dict(nota_cat(titulo, seccion, slug), categoria=cat, fecha=cuando.timestamp() - 3600)
 
 
-# Lunes 18:00: virales e internacionales; ni generales (van a las 12 y 16) ni deportes (finde, 21).
+# Lunes 18:00: virales, internacionales y generales; deportes no (finde, 21).
 FOTO_OK.parent.mkdir(parents=True, exist_ok=True)
 Image.new("RGB", (1200, 800), (120, 90, 60)).save(FOTO_OK, "JPEG")
 PA.MEMORIA = estado_tmp / "nacionales_agenda.json"
@@ -864,22 +867,22 @@ _pag[_var[2]["url"]] = {"video": "", "imagen": ""}
 inf_a = PA.pasada(True, redactar=redactar_lam, notas=_gen, notas_variedad=_var, agenda=True,
                   leer_pagina=lambda u: _pag.get(u, {"video": "", "imagen": ""}))
 _cats = [p.get("categoria") for p in inf_a["piezas"]]
-chequear("agenda lunes 18: sale el viral; ni generales ni deportes",
-         _cats == ["virales"] and inf_a["piezas"][0]["turno"] == "18:15")
+chequear("agenda lunes 18: sale el viral y 2 generales; deportes no (es lunes)",
+         sorted(_cats, key=str) == ["", "", "virales"] and [p["turno"] for p in inf_a["piezas"]] == ["18:15", "18:45", "19:15"])
 chequear("agenda: internacional sin video NO sale (solo reel con su video) y no gasta la IA",
          any("internacionales sin el video original" in d["motivo"] for d in inf_a["descartadas"]))
 chequear("agenda: virales e internacionales salen como reel",
          all(p.get("formato") == "reel" for p in inf_a["piezas"] if p.get("categoria") in ("virales", "internacionales")))
-# Lunes 12:00: las generales, solas, cada 30 minutos sin perder turnos.
-PA.MEMORIA = estado_tmp / "nacionales_agenda_12.json"
-reloj["ahora"] = _lun(12, 2)
-_gen12 = [dict(n, fecha=_lun(11).timestamp()) for n in _gen]
-inf_g = PA.pasada(True, redactar=redactar_lam, notas=_gen12, notas_variedad=_var, agenda=True,
-                  leer_pagina=lambda u: _pag.get(u, {"video": "", "imagen": ""}))
+# Lunes 21:00 con solo generales: cada 30 minutos, sin perder turnos por ser la misma categoría.
+PA.MEMORIA = estado_tmp / "nacionales_agenda_21.json"
+reloj["ahora"] = _lun(21, 2)
+_gen21 = [dict(n, fecha=_lun(20).timestamp()) for n in _gen]
+inf_g = PA.pasada(True, redactar=redactar_lam, notas=_gen21, notas_variedad=[], agenda=True,
+                  leer_pagina=lambda u: {"video": "", "imagen": ""})
 _t = [p["turno"] for p in inf_g["piezas"]]
 _cats = [p.get("categoria") for p in inf_g["piezas"]]
-chequear("agenda lunes 12: 2 generales, a las 12:15 y 12:45 (nada de variedad)",
-         _cats == ["", ""] and _t == ["12:15", "12:45"])
+chequear("agenda lunes 21: 2 generales seguidas, a las 21:15 y 21:45 (una corrida de una sola categoría)",
+         _cats == ["", ""] and _t == ["21:15", "21:45"])
 
 # Sábado 18:00: cine y series, 1 reel y 1 carrusel.
 PA.MEMORIA = estado_tmp / "nacionales_agenda_sab.json"

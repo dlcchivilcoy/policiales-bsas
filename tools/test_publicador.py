@@ -21,6 +21,12 @@ sys.stdout.reconfigure(encoding="utf-8")      # la consola de Windows es cp1252
 import httpx
 from reels import publicador as PUB
 
+# Las pruebas de la fila y del cupo usan la grilla completa de pasadas de antes (09:05 a 23:35): prueban
+# la mecánica, no los horarios. Los horarios reales viven en reels/cupo.py (19/10/2026: 18:05 y 23:35).
+from reels import cupo as _CUPO  # noqa: E402
+_CUPO.PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+PUB.PASADAS_AR = _CUPO.PASADAS_AR
+
 # La hora argentina fija en una pasada «de 2» (18:05): los reels de prueba por pasada
 # dependen del horario, y las pruebas no pueden depender de cuándo se corren.
 from datetime import timezone as _tz

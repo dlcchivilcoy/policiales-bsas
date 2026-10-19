@@ -3,11 +3,8 @@ name: Noticias nacionales
 # LAS CORRIDAS PROPIAS DE NACIONALES (pedidos del editor, 19/10/2026; nacionales/agenda.py). 2 posteos de
 # cada categoría por corrida, intercalados en categoría y formato (1 reel y 1 carrusel cuando se puede):
 #
-#   11:00  virales · internacionales            (+ IA los sábados y domingos)
-#   12:00  generales
-#   16:00  generales
-#   18:00  virales · internacionales            (+ espectáculos y cine/series el finde)
-#   21:00  virales · internacionales            (+ deportes el finde)
+#   18:00  virales · internacionales · generales   (+ IA, espectáculos y cine/series el finde)
+#   21:00  virales · internacionales · generales   (+ deportes el finde)
 #
 # Virales e internacionales salen SOLO como reel con el video de la nota. Un posteo cada 30 minutos (cada
 # 15 los sábados y domingos), el primero a los 15 minutos del horario. Los policiales siguen en reels.yml.
@@ -17,9 +14,6 @@ name: Noticias nacionales
 # (referencia de git atómica, refs/turnos/<AAAAMMDD-HHMM>/00) y la otra termina sin hacer nada («ya_corrio»).
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
-    - cron: "20 14 * * *"   # 11:20 Argentina (respaldo de la de las 11)
-    - cron: "20 15 * * *"   # 12:20 Argentina (respaldo de la de las 12)
-    - cron: "20 19 * * *"   # 16:20 Argentina (respaldo de la de las 16)
     - cron: "20 21 * * *"   # 18:20 Argentina (respaldo de la de las 18)
     - cron: "20 0 * * *"    # 21:20 Argentina (respaldo de la de las 21)
   workflow_dispatch:
