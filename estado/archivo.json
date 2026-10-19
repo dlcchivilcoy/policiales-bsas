@@ -69,6 +69,12 @@
       "pregunta": "¿A qué boliche o lugar salías los fines de semana cuando eras joven?",
       "categoria": "Jóvenes y estudiantes",
       "tema": "las salidas de los jóvenes"
+    },
+    {
+      "dia": "2026-10-19",
+      "pregunta": "¿Qué consejo de tus abuelos todavía aplicás todos los días en Chivilcoy?",
+      "categoria": "Mayores y generaciones",
+      "tema": "los consejos de los abuelos"
     }
   ],
   "publicaciones": {
@@ -386,7 +392,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-19:pregunta": {
+      "titular": "¿Qué consejo de tus abuelos todavía aplicás todos los días en Chivilcoy?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-19T20:30:30-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Mayores y generaciones",
+        "tema": "los consejos de los abuelos"
+      },
+      "estado": "ok",
+      "id": "18073854698739659",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-18T20:30:25-03:00"
+  "actualizado": "2026-10-19T20:30:23-03:00"
 }
