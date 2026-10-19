@@ -291,6 +291,9 @@ def _token_github() -> str:
     return _token_gh
 
 
+ESPERAS_URL_PUBLICA = (3, 8, 15, 30)    # segundos entre miradas a la URL recién subida
+
+
 def subir_a_release(mp4: Path, nombre: str) -> str:
     """Sube el .mp4 como asset del Release `reels-policiales` y devuelve su URL publica.
 
@@ -334,7 +337,15 @@ def subir_a_release(mp4: Path, nombre: str) -> str:
                 url = up.json()["browser_download_url"]
                 # Instagram la baja SIN credenciales. Si nosotros tampoco podemos, el
                 # contenedor va a terminar en ERROR y conviene saberlo aca, no despues.
+                # Recién subido, GitHub a veces tarda unos segundos en servirlo (19/10/2026: el
+                # carrusel de agro de las 17 se perdió por un 404 momentáneo): se vuelve a mirar
+                # antes de darlo por perdido.
                 prueba = _pedir("HEAD", url)
+                for espera in ESPERAS_URL_PUBLICA:
+                    if prueba.status_code < 400:
+                        break
+                    _dormir(espera)
+                    prueba = _pedir("HEAD", url)
                 if prueba.status_code >= 400:
                     raise FalloRed(f"el video subio pero su URL no es publica "
                                    f"(HTTP {prueba.status_code}): ¿el repo dejo de ser publico?")

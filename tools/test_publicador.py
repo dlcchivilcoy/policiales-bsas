@@ -1507,5 +1507,47 @@ _r = PUB._intentar(PUB.publicar_youtube, {"video": {"duracion": 400.0}}, Path("n
 chequear("Shorts: el largo queda «omitida» (no es una falla ni manda mail)",
          _r["estado"] == "omitida" and "Short" in _r["detalle"])
 
+# --- 36. La URL recién subida al Release puede tardar en responder (19/10/2026) ----------------------------
+class _R:
+    def __init__(self, code, data=None):
+        self.status_code, self._d, self.text = code, data or {}, ""
+
+    def json(self):
+        return self._d
+
+
+def _armar_pedidos(heads):
+    vistos = {"head": 0}
+
+    def pedir(metodo, url, tok="", **kw):
+        if metodo == "GET":
+            return _R(200, {"id": 1, "assets": []})
+        if metodo == "POST":
+            return _R(201, {"browser_download_url": "https://github.com/x/releases/download/r/a.jpg"})
+        if metodo == "HEAD":
+            vistos["head"] += 1
+            return _R(heads.pop(0) if heads else 200)
+        return _R(204)
+    return pedir, vistos
+
+
+_d36 = Path(tempfile.mkdtemp())
+(_d36 / "a.jpg").write_bytes(b"jpg")
+_orig = (PUB._pedir, PUB._token_github, PUB._dormir)
+PUB._token_github = lambda: "tok"
+_esperas = []
+PUB._dormir = lambda seg: _esperas.append(seg)
+PUB._pedir, _v = _armar_pedidos([404, 404])
+_url = PUB.subir_a_release(_d36 / "a.jpg", "a.jpg")
+chequear("Release: un 404 momentáneo tras subir no tira la pieza (se vuelve a mirar)",
+         _url.endswith("a.jpg") and _v["head"] == 3 and _esperas == [3, 8])
+PUB._pedir, _v = _armar_pedidos([404] * 10)
+try:
+    PUB.subir_a_release(_d36 / "a.jpg", "a.jpg")
+    chequear("Release: si sigue sin responder, falla con el motivo", False)
+except PUB.FalloRed as e:
+    chequear("Release: si sigue sin responder, falla con el motivo", "no es publica" in str(e))
+PUB._pedir, PUB._token_github, PUB._dormir = _orig
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
