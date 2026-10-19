@@ -1,9 +1,31 @@
 # Panel editorial — Diario y Radio
-Actualizado: 18/10/2026 18:21 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 18/10/2026 21:11 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
 ## Hoy (2026-10-18)
+
+### 21:05 — 0 de 3 hechos policiales
+Notas policiales leídas: 33 · fuera del radio: 7 · ubicación pendiente: 0 · repetidas: 1 · armadas: 1
+
+**No salieron en esta pasada:**
+- Buscan intensamente a una docente desaparecida hace diez días en Corrientes — no apta: No es del temario de policiales (según la IA): La desaparición de la docente ocurrió en la provincia de Corrientes, fuera de la provincia de Buenos Aires. El nota_web copia 75 palabras seguidas de la nota original («para la busqueda de personas en las tareas intervienen de manera conjunta integrantes de l»), aun después de pedir que lo reescriba.
+
+**Fuera del radio de 100 km:**
+- Cañuelas (115.9 km) ×2 · Pergamino (122.9 km) ×2 · San Carlos de Bolívar (178.3 km) ×1 · Rojas (101.6 km) ×1 · Lincoln (137.8 km) ×1
+
+**Nacionales y categorías:**
+- [internacionales] Murió un sacerdote en plena misa tras caerle una cruz de madera en la cabeza — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [espectaculos] El compositor argentino Tomás Videla fue nominado a los Latin GRAMMY — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [deportes] Racing e Independiente empataron 1-1 en el Cilindro por el Torneo Clausura — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
+- [cine_series] Elon Musk creó el Turbo Boost del auto fantástico con un Tesla — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
+- [general] El Niño condiciona al campo: lanzan la estrategia de "soja táctica" en la región — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [internacionales] Francia: Macron condenó la violencia y responsabilizó a sectores de extrema izqu — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [deportes] Operaron con éxito a Emiliano 'Dibu' Martínez tras una fractura de maxilar — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [general] La Justicia federal registra 298 cargos vacantes y avanza con 81 concursos — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [espectaculos] Cindy Crawford y Kaia Gerber despidieron con emotivos mensajes a Presley — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [general] La Libertad Avanza acelera su armado juvenil en medio de tensiones internas — YouTube ✅ Web ✅ TikTok (buzón) ✅
+- [tecnologia_ia] Nvidia analiza no vender chips a desarrolladores de IA insegura según su CEO — YouTube ✅ Web ✅ TikTok (buzón) ✅
 
 ### 18:05 — 1 de 3 hechos policiales
 Notas policiales leídas: 20 · fuera del radio: 5 · ubicación pendiente: 0 · repetidas: 0 · armadas: 1
@@ -70,38 +92,41 @@ Notas policiales leídas: 13 · fuera del radio: 5 · ubicación pendiente: 0 ·
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
 |---|---:|---:|---:|---:|---:|
-| Policiales | 74 | 76 | 39 | 37 | 73 |
-| Nacionales | 85 | 85 | 54 | 0 | 4 |
+| Policiales | 71 | 72 | 37 | 35 | 69 |
+| Nacionales | 96 | 96 | 56 | 0 | 15 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 76 piezas · mediana vistas 16 · mediana likes 0
+### YouTube — 79 piezas · mediana vistas 17 · mediana likes 0
 
-- **Por categoría:** general: 34, vistas 7, likes 0 · policiales: 42, vistas 37.5, likes 0
-- **Por franja:** madrugada (0-6): 3, vistas 295, likes 2 ⚠️muestra chica · mañana (6-12): 15, vistas 10, likes 0 · noche (18-24): 24, vistas 27.5, likes 0 · tarde (12-18): 34, vistas 8.5, likes 0
-- **Por día:** jueves: 36, vistas 18, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 17, vistas 8, likes 0 · viernes: 22, vistas 16.5, likes 0
+- **Por categoría:** deportes: 1, vistas 18, likes 0 ⚠️muestra chica · general: 35, vistas 7, likes 0 · policiales: 43, vistas 39, likes 0
+- **Por franja:** madrugada (0-6): 3, vistas 295, likes 2 ⚠️muestra chica · mañana (6-12): 15, vistas 10, likes 0 · noche (18-24): 27, vistas 27, likes 0 · tarde (12-18): 34, vistas 8.5, likes 0
+- **Por día:** jueves: 36, vistas 18, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 20, vistas 14.5, likes 0 · viernes: 22, vistas 16.5, likes 0
+- **Por distancia:** 50 a 100 km: 1, vistas 243, likes 0 ⚠️muestra chica
 
-### Facebook — 19 piezas · mediana vistas 465 · mediana likes 1
+### Facebook — 20 piezas · mediana vistas 467.5 · mediana likes 1
 
-- **Por categoría:** policiales: 19, vistas 465, likes 1
-- **Por franja:** madrugada (0-6): 2, vistas 593.5, likes 1 ⚠️muestra chica · mañana (6-12): 4, vistas 448.5, likes 1.5 ⚠️muestra chica · noche (18-24): 4, vistas 443, likes 1 ⚠️muestra chica · tarde (12-18): 9, vistas 409, likes 1
-- **Por día:** jueves: 9, vistas 425, likes 1 · miércoles: 1, vistas 286, likes 1 ⚠️muestra chica · sábado: 5, vistas 470, likes 1 · viernes: 4, vistas 525.5, likes 2.5 ⚠️muestra chica
+- **Por categoría:** policiales: 20, vistas 467.5, likes 1
+- **Por franja:** madrugada (0-6): 2, vistas 593.5, likes 1 ⚠️muestra chica · mañana (6-12): 4, vistas 448.5, likes 1.5 ⚠️muestra chica · noche (18-24): 5, vistas 512, likes 1 · tarde (12-18): 9, vistas 409, likes 1
+- **Por día:** jueves: 9, vistas 425, likes 1 · miércoles: 1, vistas 286, likes 1 ⚠️muestra chica · sábado: 6, vistas 596, likes 1.5 · viernes: 4, vistas 525.5, likes 2.5 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 1, vistas 752, likes 3 ⚠️muestra chica
 
-### Instagram — 39 piezas · mediana vistas s/d · mediana likes 4
+### Instagram — 40 piezas · mediana vistas s/d · mediana likes 4.5
 
-- **Por categoría:** policiales: 39, likes 4
-- **Por franja:** madrugada (0-6): 3, likes 13 ⚠️muestra chica · mañana (6-12): 7, likes 5 · noche (18-24): 15, likes 4 · tarde (12-18): 14, likes 3
-- **Por día:** jueves: 22, likes 2 · miércoles: 1, likes 4 ⚠️muestra chica · sábado: 6, likes 5 · viernes: 10, likes 8.5
+- **Por categoría:** policiales: 40, likes 4.5
+- **Por franja:** madrugada (0-6): 3, likes 13 ⚠️muestra chica · mañana (6-12): 7, likes 5 · noche (18-24): 16, likes 4 · tarde (12-18): 14, likes 3
+- **Por día:** jueves: 22, likes 2 · miércoles: 1, likes 4 ⚠️muestra chica · sábado: 7, likes 5 · viernes: 10, likes 8.5
+- **Por distancia:** 50 a 100 km: 1, likes 41 ⚠️muestra chica
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-anterior al control: 167 · procesado: 58 · subido, se verifica en la pasada siguiente: 6
+anterior al control: 164 · procesado: 64 · subido, se verifica en la pasada siguiente: 11
 
 ## Controles (sin tocar código)
 

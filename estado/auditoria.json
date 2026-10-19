@@ -906,6 +906,100 @@
         ],
         "descartadas": [],
         "cuando": "2026-10-18T21:06:37-03:00"
+      },
+      "armado": {
+        "notas_scrapeadas": 33,
+        "sin_foto_ni_video": 7,
+        "ya_tuvieron_reel": 12,
+        "fuera_de_radio": [
+          {
+            "titulo": "Asaltaron a una mujer de 80 años en Bolívar y le robaron $3,5 millones",
+            "localidad": "San Carlos de Bolívar",
+            "km": 178.3,
+            "motivo": "fuera del radio: San Carlos de Bolívar está a 178.3 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Avances por el crimen del motociclista en Pergamino: hallan una pistola y dos sospechosos se entregaron a la J",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Secuestraron diez vehículos y aprehendieron a dos personas por tenencia de estupefacientes en Rojas",
+            "localidad": "Rojas",
+            "km": 101.6,
+            "motivo": "fuera del radio: Rojas está a 101.6 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Allanamientos simultáneos: detenidos y una importante cantidad de droga secuestrada en una causa de narcotráfi",
+            "localidad": "Lincoln",
+            "km": 137.8,
+            "motivo": "fuera del radio: Lincoln está a 137.8 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Casación confirmó la absolución de un padre y dos abuelos acusados de abuso sexual a una nena 18/10/2026",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [
+          {
+            "titulo": "Policiales Un auto chocó de atrás a una moto en la Ruta 7: no hubo heridos El impacto por alcance ocurrió a la",
+            "motivo": "repite un hecho ya publicado: «Dos mujeres heridas tras un choque entre una moto y un auto en la Ruta» (2026-10-18; la IA: La nota nueva describe exactamente el mismo choque entre un auto y una moto en el kilómetro 208 de la Ruta 7 en Chacabuco ocurrido el domingo 18 de octubre, ya publicado en la nota [0].)"
+          }
+        ],
+        "otras_descartadas": [
+          {
+            "titulo": "Comienza otra semana de tiempo complejo en Chacabuco",
+            "motivo": "La foto es demasiado chica (259x319): se vería pixelada."
+          }
+        ],
+        "armadas": [
+          {
+            "titular": "Buscan intensamente a una docente desaparecida hace diez días en Corrientes",
+            "localidad": "Esquina",
+            "km": null,
+            "banda": "fuera",
+            "viral": 6,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): La desaparición de la docente ocurrió en la provincia de Corrientes, fuera de la provincia de Buenos Aires. El nota_web copia 75 palabras seguidas de la nota original («para la busqueda de personas en las tareas intervienen de manera conjunta integrantes de l»), aun después de pedir que lo reescriba."
+          }
+        ],
+        "cuando": "2026-10-18T21:11:42-03:00"
+      },
+      "publicacion": {
+        "maximo": 3,
+        "reservadas": 0,
+        "piezas": [],
+        "salteadas": [
+          {
+            "titular": "Buscan intensamente a una docente desaparecida hace diez días en Corrientes",
+            "motivo": "no apta: No es del temario de policiales (según la IA): La desaparición de la docente ocurrió en la provincia de Corrientes, fuera de la provincia de Buenos Aires. El nota_web copia 75 palabras seguidas de la nota original («para la busqueda de personas en las tareas intervienen de manera conjunta integrantes de l»), aun después de pedir que lo reescriba."
+          }
+        ],
+        "buzon_x_tiktok": 0,
+        "cuando": "2026-10-18T21:11:43-03:00"
       }
     }
   }
