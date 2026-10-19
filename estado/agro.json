@@ -7445,6 +7445,48 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "507cd22a046d66a1": {
+      "impacto_economico": 8,
+      "interes_productores": 8,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 51,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia humana sobre arraigo y diversificación hacia la alfalfa en Chaco, aunque de baja cercanía a la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6264ef2d62681498": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 7,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 26,
+      "commercial_score": 35,
+      "subtema": "agtech",
+      "tema": "trazabilidad",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Enfoque académico sobre trazabilidad en la cadena de algodón que resulta demasiado lejano y poco aplicable para el productor pampeano.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -7966,7 +8008,10 @@
       "https://lanacion.com.ar/economia/campo/medida-el-gobierno-reglamento-la-libre-eleccion-de-veterinarios-para-vacunar-contra-la-aftosa-y-la-nid19102026": "2026-10-19",
       "https://lanacion.com.ar/economia/campo/fuerte-impacto-estiman-que-sin-retenciones-el-agro-podria-crear-850000-empleos-nid19102026": "2026-10-19",
       "https://argentina.gob.ar/noticias/agricultura-reconocio-la-indicacion-geografica-para-la-peperina-serrana-de-cordoba-y-san": "2026-10-19",
-      "https://argentina.gob.ar/noticias/la-afe-y-la-secretaria-de-agricultura-refuerzan-el-monitoreo-conjunto-frente-al-fenomeno-0": "2026-10-19"
+      "https://argentina.gob.ar/noticias/la-afe-y-la-secretaria-de-agricultura-refuerzan-el-monitoreo-conjunto-frente-al-fenomeno-0": "2026-10-19",
+      "https://bichosdecampo.com/tiene-37-anos-es-cuarta-generacion-de-productores-en-chaco-y-ve-como-el-campo-se-va-vaciando-german-sanko-encontro-refugio-en-la-alfalfa": "2026-10-19",
+      "https://lanacion.com.ar/economia/campo/juan-capozzolo-productor-de-reconquista-evacua-vacas-de-las-islas-si-empieza-a-llover-va-a-ser-muy-nid19102026": "2026-10-19",
+      "https://agfundernews.com/it-will-take-more-than-data-to-improve-traceability-in-the-cotton-supply-chain": "2026-10-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -8486,7 +8531,10 @@
       "medida el gobierno reglamento la libre eleccion de veterinarios para vacunar contra la aftosa y la brucelosis bovina": "2026-10-19",
       "fuerte impacto estiman que sin retenciones el agro podria crear 850 000 empleos": "2026-10-19",
       "agricultura reconocio la indicacion geografica para la peperina serrana de cordoba y san luis": "2026-10-19",
-      "la afe y la secretaria de agricultura refuerzan el monitoreo conjunto frente al fenomeno el nino": "2026-10-19"
+      "la afe y la secretaria de agricultura refuerzan el monitoreo conjunto frente al fenomeno el nino": "2026-10-19",
+      "tiene 37 anos es cuarta generacion de productores en chaco y ve como el campo se va vaciando german sanko encontro refugio en la alfalfa": "2026-10-19",
+      "juan capozzolo productor de reconquista evacua vacas de las islas si empieza a llover va a ser muy dramatico": "2026-10-19",
+      "it will take more than data to improve traceability in the cotton supply chain": "2026-10-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -9006,7 +9054,10 @@
       "9daf242e18fab66f": "2026-10-19",
       "1b0cf22cbfa3e62d": "2026-10-19",
       "a0657639ec822832": "2026-10-19",
-      "e227fc9a0f5ab324": "2026-10-19"
+      "e227fc9a0f5ab324": "2026-10-19",
+      "507cd22a046d66a1": "2026-10-19",
+      "6824198098bae00f": "2026-10-19",
+      "6264ef2d62681498": "2026-10-19"
     }
   },
   "elegidas": [
@@ -10981,49 +11032,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e0b9a42cbe30_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "cc8f71128636",
-      "rep": {
-        "id": "cc8f71128636",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
-        "titulo": "Ganadería argentina: 12 kilos más por animal y el desafío de llevar la eficiencia reproductiva al 75%; con J. Lizzi - agrónomo",
-        "titulo_norm": "ganaderia argentina 12 kilos mas por animal y el desafio de llevar la eficiencia reproductiva al 75 con j lizzi agronomo",
-        "descripcion": "Libertad de mercados internos y externos. Un mundo hiper demandante de proteínas, y la marca argentina en el valor de sus carnes y cortes. Una charla con el Ing. Agr. José Lisi, referente en ganadería, sostiene que la producción de carne en Argentina atraviesa su mejor etapa histórica, con un aumento promedio de 12 kilos en el peso de faena y un índice ternero-vaca del 67%. Destaca la importancia de mejorar los índices reproductivos hasta un 75% y potenciar la productividad por animal en regiones como el NEA, donde la sinergia con la agricultura ofrece grandes oportunidades para el sector.",
-        "imagen_url": "https://agrotv.agrositio.com/placas/Rf2-FZcWaEs.jpg",
-        "autor": "info@agrositio.com (Ricardo Bindi)",
-        "publicado": "2026-10-19T17:10-03:00",
-        "capturado": "2026-10-19T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ede8d5f1fb12b3b3"
-      },
-      "grupo": [
-        {
-          "id": "cc8f71128636",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
-          "titulo": "Ganadería argentina: 12 kilos más por animal y el desafío de llevar la eficiencia reproductiva al 75%; con J. Lizzi - agrónomo",
-          "titulo_norm": "ganaderia argentina 12 kilos mas por animal y el desafio de llevar la eficiencia reproductiva al 75 con j lizzi agronomo",
-          "descripcion": "Libertad de mercados internos y externos. Un mundo hiper demandante de proteínas, y la marca argentina en el valor de sus carnes y cortes. Una charla con el Ing. Agr. José Lisi, referente en ganadería, sostiene que la producción de carne en Argentina atraviesa su mejor etapa histórica, con un aumento promedio de 12 kilos en el peso de faena y un índice ternero-vaca del 67%. Destaca la importancia de mejorar los índices reproductivos hasta un 75% y potenciar la productividad por animal en regiones como el NEA, donde la sinergia con la agricultura ofrece grandes oportunidades para el sector.",
-          "imagen_url": "https://agrotv.agrositio.com/placas/Rf2-FZcWaEs.jpg",
-          "autor": "info@agrositio.com (Ricardo Bindi)",
-          "publicado": "2026-10-19T17:10-03:00",
-          "capturado": "2026-10-19T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ede8d5f1fb12b3b3"
-        }
-      ],
+      "cuando": "2026-10-19T19:01-03:00",
+      "titulo_original": "Ganadería argentina: 12 kilos más por animal y el desafío de llevar la eficiencia reproductiva al 75%; con J. Lizzi - agrónomo",
+      "descripcion": "Libertad de mercados internos y externos. Un mundo hiper demandante de proteínas, y la marca argentina en el valor de sus carnes y cortes. Una charla con el Ing. Agr. José Lisi, referente en ganadería, sostiene que la producción de carne en Argentina atraviesa su mejor etapa histórica, con un aument",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
+      "titular": "Ganadería vacuna suma 12 kilos por animal y busca el 75%",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 13,
@@ -11049,11 +11067,34 @@
           79
         ]
       },
-      "cuando": "2026-10-19T18:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-19T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e3b4a6fc-c0fb-4dc5-ba9f-40877b1f3e15",
+          "slug": "ganaderia-vacuna-suma-12-kilos-por-animal-y-apunta-al-75-de-d31001",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-vacuna-suma-12-kilos-por-animal-y-apunta-al-75-de-d31001",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18181162102441757",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1728847432579587",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cc8f71128636_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-19T19:01:18-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [],
+  "actualizado": "2026-10-19T19:04:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
