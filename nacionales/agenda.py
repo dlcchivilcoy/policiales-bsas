@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
-"""LA AGENDA DE NACIONALES: qué sale en cada corrida (pedido del editor, 19/10/2026).
+"""LA AGENDA DE NACIONALES: qué sale en cada corrida (pedidos del editor del 19/10/2026).
 
-Las nacionales dejan de ir en las pasadas de policiales (09:05 a 23:35) y tienen sus TRES corridas propias,
-a las 10, a las 18 y a las 21 (hora argentina), con 2 posteos de cada categoría, intercalados:
+Las nacionales tienen sus corridas propias (no van en las pasadas de policiales), con 2 posteos de cada
+categoría, intercalados en categoría y en formato (1 reel y 1 carrusel cuando la categoría admite los dos):
 
     categoría                      días            corridas
-    virales (solo con su video)    todos           10 · 18 · 21
-    internacionales (solo video)   todos           10 · 18 · 21
-    generales (política, economía) todos           18 · 21
-    deportes, espectáculos, IA     sábado/domingo  10 · 18 · 21
-    cine y series                  sábado/domingo  18 · 21
+    virales (solo con su video)    todos           11 · 18 · 21
+    internacionales (solo video)   todos           11 · 18 · 21
+    generales (política, economía) todos           12 · 16
+    IA                             sábado/domingo  11
+    espectáculos, cine y series    sábado/domingo  18
+    deportes                       sábado/domingo  21
 
-Ritmo: un posteo cada 30 minutos; los sábados y domingos, cada 15 (las corridas juntan más categorías). Si
-igual no entran antes de la corrida siguiente, el espaciado se achica lo justo (nunca menos de
-MINUTOS_MINIMO). El primer posteo sale a los 15 minutos del horario (tiempo para leer los portales).
+(La primera versión, de la mañana del 19/10, era 10 · 18 · 21 con todo junto; esa misma tarde el editor
+sacó la de las 10 y repartió las categorías así.)
 
-Los policiales siguen con sus pasadas de siempre (reels/turnos.py).
+Ritmo: un posteo cada 30 minutos; los sábados y domingos, cada 15. El primero a los 15 minutos del horario.
+Las corridas van de a una (grupo de concurrencia): si la anterior todavía publica, la que sigue arranca
+cuando termina y corre sus turnos desde ese momento (nunca dos posteos de nacionales a la misma hora).
+
+Los policiales siguen con sus pasadas (reels/turnos.py).
 """
 from __future__ import annotations
 
@@ -23,24 +27,23 @@ import os
 from datetime import datetime, timedelta, timezone
 
 TZ_AR = timezone(timedelta(hours=-3))
-CORRIDAS = ((10, 0), (18, 0), (21, 0))
+CORRIDAS = ((11, 0), (12, 0), (16, 0), (18, 0), (21, 0))
 POR_CATEGORIA = 2
 DEMORA_PRIMERO = 15
 MINUTOS_SEMANA = 30
 MINUTOS_FINDE = 15
-MINUTOS_MINIMO = 10
 FIN_DE_SEMANA = (5, 6)                 # sábado, domingo
 GENERALES = ""                         # la «categoría» de las nacionales generales
 
 # categoría → (solo el finde, corridas en las que entra)
 AGENDA = {
-    "virales": (False, (10, 18, 21)),
-    "internacionales": (False, (10, 18, 21)),
-    GENERALES: (False, (18, 21)),
-    "deportes": (True, (10, 18, 21)),
-    "espectaculos": (True, (10, 18, 21)),
-    "tecnologia_ia": (True, (10, 18, 21)),
-    "cine_series": (True, (18, 21)),
+    "virales": (False, (11, 18, 21)),
+    "internacionales": (False, (11, 18, 21)),
+    GENERALES: (False, (12, 16)),
+    "tecnologia_ia": (True, (11,)),
+    "espectaculos": (True, (18,)),
+    "cine_series": (True, (18,)),
+    "deportes": (True, (21,)),
 }
 # Solo como REEL con el video de la nota: sin video, no salen (ni como carrusel).
 SOLO_REEL = {"virales", "internacionales"}
@@ -59,7 +62,7 @@ def es_finde(cuando: datetime) -> bool:
 
 def corrida(ahora: datetime) -> datetime:
     """El horario de la corrida a la que pertenece `ahora`: la última de CORRIDAS que ya empezó (con 10
-    minutos de margen por si cron-job.org dispara antes). Antes de las 10, la de las 21 del día anterior."""
+    minutos de margen por si cron-job.org dispara antes). Antes de las 11, la de las 21 del día anterior."""
     candidatos = [ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
                   for d in (-1, 0) for h, m in CORRIDAS]
     return max(c for c in candidatos if c <= ahora + timedelta(minutes=10))
@@ -91,25 +94,23 @@ def tope_del_dia(cat: str, cuando: datetime) -> int:
     return _entero(f"NAC_AGENDA_{(cat or 'GENERALES').upper()}", POR_CATEGORIA) * len(horas)
 
 
-def minutos(inicio: datetime, cuantos: int) -> int:
-    """Cada cuánto sale un posteo: 30 (15 el finde), achicado si no entran antes de la corrida siguiente."""
-    base = _entero("NAC_MINUTOS_FINDE", MINUTOS_FINDE) if es_finde(inicio) else _entero("NAC_MINUTOS", MINUTOS_SEMANA)
-    if cuantos <= 1:
-        return base
-    ventana = (siguiente(inicio) - inicio).total_seconds() / 60 - DEMORA_PRIMERO
-    if inicio.hour == CORRIDAS[-1][0]:
-        return base                     # la última del día no tiene a nadie atrás
-    return max(MINUTOS_MINIMO, min(base, int(ventana // (cuantos - 1))))   # el último, antes de la siguiente
+def minutos(inicio: datetime) -> int:
+    """Cada cuánto sale un posteo: 30 minutos; los sábados y domingos, 15."""
+    if es_finde(inicio):
+        return _entero("NAC_MINUTOS_FINDE", MINUTOS_FINDE) or MINUTOS_FINDE
+    return _entero("NAC_MINUTOS", MINUTOS_SEMANA) or MINUTOS_SEMANA
 
 
-def turnos(inicio: datetime, cuantos: int, holgura: int = 0) -> list:
+def turnos(inicio: datetime, cuantos: int, holgura: int = 0, ahora: datetime = None) -> list:
     """Los horarios de los posteos de la corrida: `cuantos` con su espaciado y `holgura` turnos más, por si
-    alguno queda vacío (dos de la misma categoría nunca van seguidas: la segunda espera un turno). Ninguno
-    después del arranque de la corrida siguiente."""
-    paso = minutos(inicio, cuantos)
+    alguno queda vacío (dos de la misma categoría nunca van seguidas: la segunda espera un turno). El primero
+    a los 15 minutos del horario o, si la corrida arrancó tarde (esperó a la anterior), 5 minutos después de
+    arrancar."""
+    paso = minutos(inicio)
     t0 = inicio + timedelta(minutes=DEMORA_PRIMERO)
-    limite = siguiente(inicio) if inicio.hour != CORRIDAS[-1][0] else inicio + timedelta(hours=12)
-    return [t for t in (t0 + timedelta(minutes=paso * k) for k in range(max(0, cuantos + holgura))) if t < limite]
+    if ahora is not None and ahora + timedelta(minutes=5) > t0:
+        t0 = (ahora + timedelta(minutes=5)).replace(second=0, microsecond=0)
+    return [t0 + timedelta(minutes=paso * k) for k in range(max(0, cuantos + holgura))]
 
 
 def corrida_id(inicio: datetime) -> str:

@@ -1206,9 +1206,9 @@ os.environ["NOTAS_WEB"] = "0"
 # --- 30. Cupo GLOBAL de 3 hechos por pasada y radio de 100 km (17/10/2026) -----------------
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "3"
 os.environ.pop("IG_POR_PASADA", None)
-PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR)   # 6 lugares de 30 min hasta 12:05
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 12, 10, tzinfo=_AR)   # 6 lugares de 30 min hasta 15:05
 chequear("lugares por pasada: nunca más de 3 aunque entren 6 de 30 minutos",
-         PUB.lugares_en_la_pasada(datetime(2026, 10, 17, 9, 10, tzinfo=_AR)) == 3)
+         PUB.lugares_en_la_pasada(datetime(2026, 10, 17, 12, 10, tzinfo=_AR)) == 3)
 base, carpeta, reloj, meta = preparar_virales([3, 1, 2, 8, 5, 9, 7, 4, 6, 6])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 salieron = [f for f in inf["piezas"] if any((f.get(r) or {}).get("estado") == "ok" for r in PUB.REDES)]
@@ -1218,7 +1218,7 @@ chequear("...las 3 más virales (9, 8, 7)", sorted(int(f["titular"].split()[-1])
 chequear("...las demás, salteadas con el motivo del cupo",
          sum(1 for s_ in inf["salteadas"] if "como mucho 3 hechos" in s_["motivo"]) == 7)
 chequear("...y la pasada queda anotada con sus 3 reservas",
-         inf["pasada"]["id"] == "2026-10-17T09:05" and len(PUB.CUPO.reservadas("2026-10-17T09:05")) == 3)
+         inf["pasada"]["id"] == "2026-10-17T12:05" and len(PUB.CUPO.reservadas("2026-10-17T12:05")) == 3)
 # La misma pasada otra vez (el respaldo o una corrida a mano): no hay 3 lugares nuevos.
 lote2 = carpeta.parent / "2026-10-17_0930"
 lote2.mkdir()
@@ -1229,12 +1229,12 @@ for p_ in piezas2:
 inf2 = silencio(PUB.publicar_lote, lote2, PUB.REDES, publicar=True)
 chequear("un reintento de la MISMA pasada no habilita otros 3 (ni con viral 10 de Chivilcoy)",
          not any((f.get(r) or {}).get("estado") == "ok" for f in inf2["piezas"] for r in PUB.REDES)
-         and len(PUB.CUPO.reservadas("2026-10-17T09:05")) == 3)
+         and len(PUB.CUPO.reservadas("2026-10-17T12:05")) == 3)
 # La pasada siguiente sí tiene sus 3.
-PUB._hora_ar = lambda: datetime(2026, 10, 17, 12, 10, tzinfo=_AR)
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 15, 10, tzinfo=_AR)
 inf3 = silencio(PUB.publicar_lote, lote2, PUB.REDES, publicar=True)
-chequear("la pasada siguiente (12:05) tiene sus propios 3 lugares",
-         inf3["pasada"]["id"] == "2026-10-17T12:05"
+chequear("la pasada siguiente (15:05) tiene sus propios 3 lugares",
+         inf3["pasada"]["id"] == "2026-10-17T15:05"
          and sum(1 for f in inf3["piezas"] if (f.get("youtube") or {}).get("estado") == "ok") == 3)
 shutil.rmtree(base)
 
@@ -1259,7 +1259,7 @@ shutil.rmtree(base)
 # --- 31. Intercalado: nunca dos policiales seguidos en la misma cuenta (17/10/2026) ---------
 os.environ["INTERCALADO"] = "1"
 os.environ["IG_POR_PASADA"] = "5"
-PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR)      # cierre de la pasada: 11:55
+PUB._hora_ar = lambda: datetime(2026, 10, 17, 12, 10, tzinfo=_AR)      # cierre de la pasada: 14:55
 _cuando_real = PUB.INT.cuando_local
 PUB.INT.cuando_local = lambda ts: datetime.fromisoformat(ts[:19]) if ts else None   # el reloj falso no tiene zona
 
@@ -1281,7 +1281,7 @@ def bot_publica(meta, reloj, texto, cuando_dormir=None):
 
 def hora_ar_del_reloj(reloj):
     """La hora argentina avanza con el reloj falso: la pasada arranca a las 9:10."""
-    PUB._hora_ar = lambda: datetime(2026, 10, 17, 9, 10, tzinfo=_AR) + (reloj.t - datetime(2026, 9, 26, 10, 0))
+    PUB._hora_ar = lambda: datetime(2026, 10, 17, 12, 10, tzinfo=_AR) + (reloj.t - datetime(2026, 9, 26, 10, 0))
 
 
 def estados(inf, red="instagram"):
@@ -1390,12 +1390,12 @@ os.environ["FILA_15"] = "1"
 os.environ["INTERCALADO"] = "0"
 os.environ["MAX_POLICE_REELS_PER_PASS"] = "3"
 base, carpeta, reloj, meta = preparar_virales([9, 8, 7])
-hora_ar_del_reloj(reloj)                              # la pasada de las 09:05, arranca 09:10
+hora_ar_del_reloj(reloj)                              # la pasada de las 12:05, arranca 12:10 (la de las 09:05 ya no existe)
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram", "youtube"), publicar=True)
 horas = [f.get("hora") for f in inf["piezas"]]
-# El reloj falso arranca 10:00 cuando en la Argentina son las 09:10: 09:20 AR = 10:10 del reloj.
-chequear("fila: los 3 policiales toman turnos repartidos (09:20, 10:20 y 11:20), nunca dos seguidos",
-         inf["fila"]["turnos"] == ["09:20", "10:20", "11:20"]
+# El reloj falso arranca 10:00 cuando en la Argentina son las 12:10: 12:20 AR = 10:10 del reloj.
+chequear("fila: los 3 policiales toman turnos repartidos (12:20, 13:20 y 14:20), nunca dos seguidos",
+         inf["fila"]["turnos"] == ["12:20", "13:20", "14:20"]
          and horas == ["2026-09-26T10:10", "2026-09-26T11:10", "2026-09-26T12:10"])
 chequear("fila: y salen en todas sus redes", estados(inf) == ["ok"] * 3)
 shutil.rmtree(base)
@@ -1403,7 +1403,7 @@ shutil.rmtree(base)
 # Si nacionales ya tomó turnos, policiales usa los libres que siguen, sin pegarse entre sí.
 from reels import turnos as TURNOS
 _Fila = TURNOS.Fila
-compartida = _Fila("2026-10-17T09:05", token="")
+compartida = _Fila("2026-10-17T12:05", token="")
 for k in (0, 1, 2):
     compartida.tomar(k, "nacionales", "general")
 TURNOS.Fila = lambda pid, token=None, **k: compartida
@@ -1412,17 +1412,17 @@ hora_ar_del_reloj(reloj)
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram", "youtube"), publicar=True)
 oc = compartida.ocupados()
 pol = sorted(k for k, d in oc.items() if d["quien"] == "policiales")
-chequear("fila: con los primeros turnos tomados por nacionales, policiales sigue desde el libre (10:05)",
-         inf["fila"]["turnos"][0] == "10:05" and pol[0] == 3 and all(b - a >= 2 for a, b in zip(pol, pol[1:])))
+chequear("fila: con los primeros turnos tomados por nacionales, policiales sigue desde el libre (13:05)",
+         inf["fila"]["turnos"][0] == "13:05" and pol[0] == 3 and all(b - a >= 2 for a, b in zip(pol, pol[1:])))
 shutil.rmtree(base)
 # Simulando no se reserva nada (la fila es de verdad solo publicando).
-compartida2 = _Fila("2026-10-17T09:05", token="")
+compartida2 = _Fila("2026-10-17T12:05", token="")
 TURNOS.Fila = lambda pid, token=None, **k: compartida2
 base, carpeta, reloj, meta = preparar_virales([9, 8])
 hora_ar_del_reloj(reloj)
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram", "youtube"), publicar=False)
 chequear("fila: la simulación muestra los turnos pero no reserva ninguno",
-         inf["fila"]["turnos"] == ["09:20", "10:50"] and compartida2.ocupados() == {})
+         inf["fila"]["turnos"] == ["12:20", "13:50"] and compartida2.ocupados() == {})
 TURNOS.Fila = _Fila
 shutil.rmtree(base)
 os.environ["FILA_15"] = "0"

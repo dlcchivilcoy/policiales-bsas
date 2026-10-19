@@ -129,17 +129,19 @@ venv\Scripts\python.exe tools\test_nacionales.py
 
 Memoria: `estado/nacionales.json` (piezas, descartadas por la IA y carruseles, 7 días).
 
-## Agenda propia: 10, 18 y 21 (19/10/2026)
+## Agenda propia: 11, 12, 16, 18 y 21 (19/10/2026)
 
 Las nacionales ya no van en las pasadas de policiales: tienen su workflow (`.github/workflows/nacionales.yml`,
 `python -m nacionales.pasada --agenda`) y su agenda (`nacionales/agenda.py`). 2 posteos por categoría y corrida,
-intercalados en categoría y formato, cada 30 min (15 el finde; se achica si no entra antes de la corrida siguiente):
+intercalados en categoría y formato (1 reel y 1 carrusel cuando la categoría admite los dos), cada 30 min
+(15 el finde). Las corridas van de a una: si la anterior sigue publicando, la siguiente arranca al terminar.
 
 | categoría | días | corridas |
 |---|---|---|
-| virales, internacionales (solo reel con su video) | todos | 10 · 18 · 21 |
-| generales | todos | 18 · 21 |
-| deportes, espectáculos, IA | sábado y domingo | 10 · 18 · 21 |
-| cine y series (1 reel y 1 carrusel) | sábado y domingo | 18 · 21 |
+| virales, internacionales (solo reel con su video) | todos | 11 · 18 · 21 |
+| generales | todos | 12 · 16 |
+| IA | sábado y domingo | 11 |
+| espectáculos, cine y series | sábado y domingo | 18 |
+| deportes | sábado y domingo | 21 |
 
 YouTube: un reel de más de 3 minutos (sin la placa) no se sube (`YT_SHORT_MAX_SEG`); sale en Instagram y Facebook.

@@ -670,7 +670,7 @@ def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permi
 def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, esperar_carrusel: str = "",
            con_carrusel: bool = False, redactar=None, notas=None, notas_variedad=None,
            leer_pagina=None, senales=None, fila=None, agenda: bool = False) -> dict:
-    """`agenda=True` (19/10/2026): la corrida propia de nacionales de las 10, 18 o 21 (nacionales/agenda.py),
+    """`agenda=True` (19/10/2026): la corrida propia de nacionales (11, 12, 16, 18 o 21; nacionales/agenda.py),
     con sus categorías del día, 2 de cada una, un posteo cada 30 min (15 el finde), intercaladas en
     categoría y formato. Sin `agenda`, la pasada de antes (en la fila de 15 minutos de policiales)."""
     notas_inyectadas = notas
@@ -752,7 +752,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # Cuántos pueden salir de verdad (no más que las candidatas de cada categoría): de eso depende
             # cuánto se achica el espaciado para terminar antes de la corrida siguiente.
             posibles = sum(min(n, len(colas.get(c) or [])) for c, n in topes.items())
-            turnos = AG.turnos(inicio, posibles, holgura=posibles)
+            turnos = AG.turnos(inicio, posibles, holgura=posibles, ahora=ahora)
             cuantos = cuantos or posibles
         else:
             pid = TURNOS.pasada_actual(ahora)
@@ -835,8 +835,10 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 informe["fila"]["ajenos"].append(f"{turno:%H:%M} {ocupados[k].get('categoria')}")
                 continue
             cat = pieza["nota"].get("categoria") or ""
-            if (ocupados.get(k - 1) or {}).get("categoria") == (cat or "general"):
-                continue                             # nunca dos de la misma categoría seguidos
+            # Nunca dos de la misma categoría seguidos (en la fila con policiales). En la agenda propia ya
+            # lo cuida proxima_categoria, y una corrida de una sola categoría (generales) no pierde turnos.
+            if not agenda and (ocupados.get(k - 1) or {}).get("categoria") == (cat or "general"):
+                continue
             if not fila.tomar(k, "nacionales", cat or "general", pieza["guion"]["titular"]):
                 continue
             # Con el carrusel prendido (ya no lo está), sale a su hora con lo publicado hasta ahí.

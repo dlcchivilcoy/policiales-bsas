@@ -1,24 +1,25 @@
 name: Noticias nacionales
 
-# LAS CORRIDAS PROPIAS DE NACIONALES (pedido del editor, 19/10/2026; nacionales/agenda.py). Antes iban en
-# las pasadas de policiales (reels.yml); desde hoy tienen tres horarios, con 2 posteos de cada categoría,
-# intercalados en categoría y formato (reel / carrusel):
+# LAS CORRIDAS PROPIAS DE NACIONALES (pedidos del editor, 19/10/2026; nacionales/agenda.py). 2 posteos de
+# cada categoría por corrida, intercalados en categoría y formato (1 reel y 1 carrusel cuando se puede):
 #
-#   10:00  virales · internacionales            (+ deportes, espectáculos e IA los sábados y domingos)
-#   18:00  virales · internacionales · generales (+ deportes, espectáculos, IA y cine/series el finde)
-#   21:00  igual que la de las 18
+#   11:00  virales · internacionales            (+ IA los sábados y domingos)
+#   12:00  generales
+#   16:00  generales
+#   18:00  virales · internacionales            (+ espectáculos y cine/series el finde)
+#   21:00  virales · internacionales            (+ deportes el finde)
 #
 # Virales e internacionales salen SOLO como reel con el video de la nota. Un posteo cada 30 minutos (cada
-# 15 los sábados y domingos), el primero a los 15 minutos del horario. Los policiales siguen con sus
-# pasadas de siempre en reels.yml.
+# 15 los sábados y domingos), el primero a los 15 minutos del horario. Los policiales siguen en reels.yml.
 #
-# QUIÉN DISPARA: cron-job.org a horario exacto, con {"ref":"main","inputs":{"origen":"cron"}} (el mismo
-# token fino «cron-job publicador»). El `schedule:` de abajo es el RESPALDO, 20 minutos después: la
-# primera corrida que llega toma la corrida (una referencia de git atómica, refs/turnos/<AAAAMMDD-HHMM>/00)
-# y la otra termina sin hacer nada («ya_corrio»).
+# QUIÉN DISPARA: cron-job.org a horario exacto (tarea 8677866), con {"ref":"main","inputs":{"origen":"cron"}}.
+# El `schedule:` de abajo es el RESPALDO, 20 minutos después: la primera corrida que llega toma la corrida
+# (referencia de git atómica, refs/turnos/<AAAAMMDD-HHMM>/00) y la otra termina sin hacer nada («ya_corrio»).
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
-    - cron: "20 13 * * *"   # 10:20 Argentina (respaldo de la de las 10)
+    - cron: "20 14 * * *"   # 11:20 Argentina (respaldo de la de las 11)
+    - cron: "20 15 * * *"   # 12:20 Argentina (respaldo de la de las 12)
+    - cron: "20 19 * * *"   # 16:20 Argentina (respaldo de la de las 16)
     - cron: "20 21 * * *"   # 18:20 Argentina (respaldo de la de las 18)
     - cron: "20 0 * * *"    # 21:20 Argentina (respaldo de la de las 21)
   workflow_dispatch:
@@ -30,7 +31,7 @@ on:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
 
-# Una corrida detrás de la otra: la de las 18 termina antes de las 21 (el espaciado se achica si hace falta).
+# Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
 concurrency:
   group: nacionales
   cancel-in-progress: false
@@ -42,7 +43,7 @@ permissions:
 jobs:
   nacionales:
     runs-on: ubuntu-latest
-    # La de las 21 del finde: hasta 14 posteos cada 15 minutos (≈ 3 h 45).
+    # La más larga: la de las 18 del finde, 8 posteos cada 15 minutos (≈ 2 h 15); holgura de sobra.
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
