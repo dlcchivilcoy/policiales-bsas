@@ -1,8 +1,5 @@
 {
   "pasadas": {
-    "2026-10-18T12:05": {
-      "reservas": []
-    },
     "2026-10-18T18:05": {
       "reservas": [
         {
@@ -15,6 +12,31 @@
           "cuando": "2026-10-18T18:07:53-03:00"
         }
       ]
+    },
+    "2026-10-18T23:35": {
+      "reservas": [
+        {
+          "clave": "https://bragadoesnoticia.com.ar/nuevos-operativos-de-control-y-prevencion-en-distintos-puntos-de-la-ciudad/",
+          "titular": "Secuestran metales y motos en controles vehiculares en Bragado",
+          "localidad": "Bragado",
+          "distancia_km": 49.3,
+          "precision": "localidad",
+          "viral": 6,
+          "cuando": "2026-10-18T23:41:25-03:00"
+        },
+        {
+          "clave": "https://boscoproducciones.com.ar/violento-vuelco-en-la-autovia-8-un-hombre-resulto-gravemente-herido/",
+          "titular": "Vuelco grave en la Autovía 8: el conductor quedó inconsciente",
+          "localidad": "San Antonio de Areco",
+          "distancia_km": 88.2,
+          "precision": "localidad",
+          "viral": 7,
+          "cuando": "2026-10-18T23:41:25-03:00"
+        }
+      ]
+    },
+    "2026-10-18T12:05": {
+      "reservas": []
     },
     "2026-10-18T09:05": {
       "reservas": [
@@ -47,31 +69,6 @@
         }
       ]
     },
-    "2026-10-18T23:35": {
-      "reservas": [
-        {
-          "clave": "https://bragadoesnoticia.com.ar/nuevos-operativos-de-control-y-prevencion-en-distintos-puntos-de-la-ciudad/",
-          "titular": "Secuestran metales y motos en controles vehiculares en Bragado",
-          "localidad": "Bragado",
-          "distancia_km": 49.3,
-          "precision": "localidad",
-          "viral": 6,
-          "cuando": "2026-10-18T23:41:25-03:00"
-        },
-        {
-          "clave": "https://boscoproducciones.com.ar/violento-vuelco-en-la-autovia-8-un-hombre-resulto-gravemente-herido/",
-          "titular": "Vuelco grave en la Autovía 8: el conductor quedó inconsciente",
-          "localidad": "San Antonio de Areco",
-          "distancia_km": 88.2,
-          "precision": "localidad",
-          "viral": 7,
-          "cuando": "2026-10-18T23:41:25-03:00"
-        }
-      ]
-    },
-    "2026-10-17T23:35": {
-      "reservas": []
-    },
     "2026-10-18T15:05": {
       "reservas": [
         {
@@ -84,6 +81,9 @@
           "cuando": "2026-10-18T15:09:31-03:00"
         }
       ]
+    },
+    "2026-10-17T23:35": {
+      "reservas": []
     },
     "2026-10-17T21:05": {
       "reservas": [
@@ -100,7 +100,10 @@
     },
     "2026-10-18T21:05": {
       "reservas": []
+    },
+    "2026-10-19T09:05": {
+      "reservas": []
     }
   },
-  "actualizado": "2026-10-18T23:41:25-03:00"
+  "actualizado": "2026-10-19T09:10:54-03:00"
 }

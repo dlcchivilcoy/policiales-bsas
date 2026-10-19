@@ -1325,6 +1325,77 @@
         ],
         "cuando": "2026-10-18T23:41:19-03:00"
       }
+    },
+    "2026-10-19T09:05": {
+      "armado": {
+        "notas_scrapeadas": 11,
+        "sin_foto_ni_video": 3,
+        "ya_tuvieron_reel": 2,
+        "fuera_de_radio": [
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Tres jóvenes murieron al costado de la ruta provincial 65",
+            "localidad": "Estación Díaz",
+            "km": 150.3,
+            "motivo": "fuera del radio de 100 km: otra provincia (Santa Fe): la más cercana a Chivilcoy, CABA, está a 139,7 km",
+            "etapa": "con el guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [],
+        "otras_descartadas": [],
+        "armadas": [
+          {
+            "titular": "Accidente temprano en Chacabuco",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 1,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): La nota no contiene información sobre el accidente mencionado en el titular original."
+          },
+          {
+            "titular": "Secuestraron marihuana y hallaron una moto abandonada en la Ruta 46",
+            "localidad": "Bragado",
+            "km": 49.3,
+            "banda": "cercana",
+            "viral": 5,
+            "apta": false,
+            "por_que_no": "El nota_web copia 28 palabras seguidas de la nota original («durante la inspeccion del habitaculo delantero los agentes encontraron un frasco de vidrio»), aun después de pedir que lo reescriba."
+          }
+        ],
+        "cuando": "2026-10-19T09:10:53-03:00"
+      },
+      "publicacion": {
+        "maximo": 3,
+        "reservadas": 0,
+        "piezas": [],
+        "salteadas": [
+          {
+            "titular": "Accidente temprano en Chacabuco",
+            "motivo": "no apta: No es del temario de policiales (según la IA): La nota no contiene información sobre el accidente mencionado en el titular original."
+          },
+          {
+            "titular": "Secuestraron marihuana y hallaron una moto abandonada en la Ruta 46",
+            "motivo": "no apta: El nota_web copia 28 palabras seguidas de la nota original («durante la inspeccion del habitaculo delantero los agentes encontraron un frasco de vidrio»), aun después de pedir que lo reescriba."
+          }
+        ],
+        "buzon_x_tiktok": 0,
+        "cuando": "2026-10-19T09:10:54-03:00"
+      }
     }
   }
 }
