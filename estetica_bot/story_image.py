@@ -1296,6 +1296,12 @@ def _franklin(size: int, peso: int = 400) -> ImageFont.FreeTypeFont:
     return _vfont("LibreFranklin-Variable.ttf", size, peso)
 
 
+def _sans(size: int, peso: int = 400) -> ImageFont.FreeTypeFont:
+    """Google Sans, la letra de los REELS. Desde el 19/10/2026 también la de los carruseles (pedido del
+    editor: «usá la misma tipografía que los reels, porque aparece todo el titular en mayúsculas»)."""
+    return _vfont("GoogleSans-Variable.ttf", size, peso)
+
+
 def _abrir_foto(photo_path) -> "Image.Image":
     """La foto derecha (respeta la rotación EXIF de los celulares)."""
     return ImageOps.exif_transpose(Image.open(photo_path)).convert("RGB")
@@ -1502,12 +1508,12 @@ def _pie_carrusel(canvas, draw, tema: dict, x0: int, x1: int, y_centro: int, idx
         canvas.paste(fl, (derecha - lado, y_centro - lado // 2), fl)
         derecha -= lado + 14
     if idx:
-        fn = _angosta(50)
+        fn = _sans(48, 700)
         num = f"{idx:02d}"
         draw.text((derecha, y_centro), num, font=fn, fill=tema["acento"], anchor="rm")
         derecha -= round(draw.textlength(num, font=fn)) + 28
     if site_url:
-        fs = _franklin(26, 600)
+        fs = _sans(26, 600)
         texto = f"Seguí leyendo en {site_url}"
         if draw.textlength(texto, font=fs) > derecha - x0:
             texto = site_url
@@ -1552,7 +1558,9 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
     ancho = SLIDE_W - 2 * m
     draw = ImageDraw.Draw(canvas)
     lead, resto = _partes_titular(volanta, titular)
-    mayus = [(w, t["acento"]) for w in lead.upper().split()] + [(w, t["texto"]) for w in resto.upper().split()]
+    # Como en los reels: Google Sans y el titular tal como se escribe (antes, todo en mayúsculas).
+    mayus = [(w, t["acento"]) for w in lead.split()] + [(w, t["texto"]) for w in resto.split()]
+    _titulo = lambda s_: _sans(s_, 700)                                                  # noqa: E731
 
     if estilo in ("A", "B"):
         if estilo == "A":
@@ -1569,7 +1577,7 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
         if estilo == "A":
             draw.rectangle((0, foto_h, SLIDE_W, foto_h + 10), fill=t["acento"])
             y0 = foto_h + 10 + 52
-            f, lineas, lh = _medir_texto(draw, mayus, ancho, pie_y - 60 - y0, _angosta,
+            f, lineas, lh = _medir_texto(draw, mayus, ancho, pie_y - 60 - y0, _titulo,
                                          max_size=92, min_size=50, salto=1.06)
             _dibujar_renglones(draw, m, y0, lineas, f, lh)
         else:
@@ -1577,14 +1585,14 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
             y = foto_h + 50
             vol = (volanta or "").strip().upper()
             if vol:
-                fv = _franklin(30, 700)
+                fv = _sans(30, 700)
                 draw.text((m, y), vol, font=fv, fill=t["acento"], anchor="lt")
                 y += 30 + 26
             alto_libre = pie_y - 56 - y
             baj = (bajada or "").strip()
             alto_tit = round(alto_libre * 0.55) if baj else alto_libre
             ft, lt, lht = _medir_texto(draw, [(w, t["texto"]) for w in (titular or "").split()], ancho,
-                                       alto_tit, lambda s: _franklin(s, 800), max_size=72 if baj else 100,
+                                       alto_tit, lambda s: _sans(s, 700), max_size=72 if baj else 100,
                                        min_size=42, salto=1.14, max_lineas=5)
             base = _dibujar_renglones(draw, m, y, lt, ft, lht)
             if baj:
@@ -1592,7 +1600,7 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
                 fb_alto = pie_y - 56 - y_baj
                 if fb_alto >= 40:
                     fb, lb, lhb = _medir_texto(draw, [(w, t["texto"]) for w in baj.split()], ancho, fb_alto,
-                                               lambda s: _franklin(s, 400), max_size=40, min_size=34,
+                                               lambda s: _sans(s, 400), max_size=40, min_size=34,
                                                salto=1.35)
                     _dibujar_renglones(draw, m, y_baj, lb, fb, lhb)
         _pie_carrusel(canvas, draw, t, m, SLIDE_W - m, pie_y, idx, total, site_url)
@@ -1612,7 +1620,7 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
     eleccion = None
     cuerpos = list(range(84, 45, -4))
     for size in cuerpos:
-        f, lineas, lh = _medir_texto(draw, mayus, bx1 - bx0 - 2 * pad, 6 * round(size * 1.06), _angosta,
+        f, lineas, lh = _medir_texto(draw, mayus, bx1 - bx0 - 2 * pad, 6 * round(size * 1.06), _titulo,
                                      max_size=size, min_size=size, salto=1.06, max_lineas=6)
         if lineas and lineas[-1][-1][0].endswith("…") and size != cuerpos[-1]:
             continue                                  # no entra en 6 renglones: más chico
