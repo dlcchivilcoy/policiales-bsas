@@ -1223,6 +1223,107 @@
           }
         ],
         "cuando": "2026-10-19T02:36:34-03:00"
+      },
+      "armado": {
+        "notas_scrapeadas": 39,
+        "sin_foto_ni_video": 7,
+        "ya_tuvieron_reel": 16,
+        "fuera_de_radio": [
+          {
+            "titulo": "Asaltaron a una mujer de 80 años en Bolívar y le robaron $3,5 millones",
+            "localidad": "San Carlos de Bolívar",
+            "km": 178.3,
+            "motivo": "fuera del radio: San Carlos de Bolívar está a 178.3 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Secuestraron diez vehículos y aprehendieron a dos personas por tenencia de estupefacientes en Rojas",
+            "localidad": "Rojas",
+            "km": 101.6,
+            "motivo": "fuera del radio: Rojas está a 101.6 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Avances por el crimen del motociclista en Pergamino: hallan una pistola y dos sospechosos se entreg",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Allanamientos simultáneos: detenidos y una importante cantidad de droga secuestrada en una causa de narcotráfi",
+            "localidad": "Lincoln",
+            "km": 137.8,
+            "motivo": "fuera del radio: Lincoln está a 137.8 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Casación confirmó la absolución de un padre y dos abuelos acusados de abuso sexual a una nena 18/10/2026",
+            "localidad": "Pergamino",
+            "km": 122.9,
+            "motivo": "fuera del radio: Pergamino está a 122.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Falleció un jugador de 38 años tras descompensarse en pleno partido de la categoría Senior Ocurrió ",
+            "localidad": "Vedia",
+            "km": 146.1,
+            "motivo": "fuera del radio: Vedia está a 146.1 km de Chivilcoy (máximo 100)",
+            "etapa": "con el guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [],
+        "otras_descartadas": [
+          {
+            "titulo": "Comienza otra semana de tiempo complejo en Chacabuco",
+            "motivo": "La foto es demasiado chica (259x319): se vería pixelada."
+          }
+        ],
+        "armadas": [
+          {
+            "titular": "Secuestran metales y motos en controles vehiculares en Bragado",
+            "localidad": "Bragado",
+            "km": 49.3,
+            "banda": "cercana",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Vuelco grave en la Autovía 8: el conductor quedó inconsciente",
+            "localidad": "San Antonio de Areco",
+            "km": 88.2,
+            "banda": "zona",
+            "viral": 7,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Explosión e incendio en una base militar en Canadá deja múltiples víctimas",
+            "localidad": "Wainwright",
+            "km": null,
+            "banda": "fuera",
+            "viral": 5,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): El hecho ocurrió en Canadá, fuera del ámbito de cobertura de la provincia de Buenos Aires."
+          }
+        ],
+        "cuando": "2026-10-18T23:41:19-03:00"
       }
     }
   }
