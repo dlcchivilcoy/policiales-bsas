@@ -1428,6 +1428,261 @@
         ],
         "descartadas": [],
         "cuando": "2026-10-19T12:45:14-03:00"
+      },
+      "armado": {
+        "notas_scrapeadas": 35,
+        "sin_foto_ni_video": 6,
+        "ya_tuvieron_reel": 7,
+        "fuera_de_radio": [
+          {
+            "titulo": "Policiales Avanza el plan de bacheo con hormigón en más de 20 puntos de la ciudad",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Identificaron al motociclista que realizó maniobras peligrosas en el centro de Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales El viral más peligroso: Se filmó haciendo “Willy” por la vereda",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Tránsito 19/10 | Tránsito Chocó una camioneta en la autopista Ezeiza-Cañuelas",
+            "localidad": "Cañuelas",
+            "km": 115.9,
+            "motivo": "fuera del radio: Cañuelas está a 115.9 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Pehuajó: Nueve aprehendidos en distintos procedimientos, durante operativos del último fin de semana",
+            "localidad": "Pehuajó",
+            "km": 198.5,
+            "motivo": "fuera del radio: Pehuajó está a 198.5 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Secuestraron diez vehículos y aprehendieron a dos personas por tenencia de estupefacientes en Rojas",
+            "localidad": "Rojas",
+            "km": 101.6,
+            "motivo": "fuera del radio: Rojas está a 101.6 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Dos camionetas chocaron en la RN 226 cerca de Carlos Tejedor",
+            "localidad": "Carlos Tejedor",
+            "km": 225.1,
+            "motivo": "fuera del radio: Carlos Tejedor está a 225.1 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Una ambulancia del SAME asistió a un adulto mayor que sufrió una descompensación en el Banco Provincia",
+            "localidad": "Las Flores",
+            "km": 149.6,
+            "motivo": "fuera del radio: Las Flores está a 149.6 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          }
+        ],
+        "pendientes_ubicacion": [],
+        "repetidas": [],
+        "otras_descartadas": [
+          {
+            "titulo": "Fondo Hídrico: Kicillof denunciará penalmente a Milei y Caputo",
+            "motivo": "La imagen que declara la nota no se pudo bajar (HTTP 403)."
+          }
+        ],
+        "armadas": [
+          {
+            "titular": "Treinta y seis actas, diez motos retenidas y un demorado en Lobos",
+            "localidad": "Lobos",
+            "km": 89.8,
+            "banda": "zona",
+            "viral": 5,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Chocaron un auto y una moto en la Ruta 7 y dos mujeres fueron hospitalizadas",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Aprehendieron a un hombre armado tras resistirse en el camino real a Mechita",
+            "localidad": "Alberti",
+            "km": 28.1,
+            "banda": "cercana",
+            "viral": 7,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Kicillof encabezó el acto por el Día de la Lealtad y criticó al Gobierno",
+            "localidad": "González Catán",
+            "km": 126.3,
+            "banda": "fuera",
+            "viral": 3,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): Acto político por el Día de la Lealtad Peronista y declaraciones partidarias"
+          },
+          {
+            "titular": "Conductor chocó contra un árbol tras descompensarse en Alberti",
+            "localidad": "Alberti",
+            "km": 28.1,
+            "banda": "cercana",
+            "viral": 5,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Tres vehículos chocaron en cadena en una calle de Bragado",
+            "localidad": "Bragado",
+            "km": 49.3,
+            "banda": "cercana",
+            "viral": 5,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Un auto cayó al zanjón en la esquina de Cichero y La Plata",
+            "localidad": "Junín",
+            "km": 91.2,
+            "banda": "zona",
+            "viral": 5,
+            "apta": true,
+            "por_que_no": ""
+          }
+        ],
+        "cuando": "2026-10-19T12:11:39-03:00"
+      },
+      "publicacion": {
+        "maximo": 3,
+        "reservadas": 3,
+        "piezas": [
+          {
+            "orden": 2,
+            "titular": "Chocaron un auto y una moto en la Ruta 7 y dos mujeres fueron hospitalizadas",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "hora": "2026-10-19T15:20",
+            "destinos": {
+              "youtube": {
+                "estado": "omitida",
+                "detalle": "ese hecho ya está en el canal de YouTube («Dos mujeres heridas tras un choque entre una moto y un auto »)",
+                "url": ""
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/chacabuco-dos-mujeres-heridas-tras-un-choque-entre-un-auto-y-f2ec27"
+              },
+              "facebook": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "cupo",
+                "detalle": "la cuenta ya uso 81 de sus 100 posteos de 24 h; los ultimos 25 quedan para el bot del diario",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 3,
+            "titular": "Aprehendieron a un hombre armado tras resistirse en el camino real a Mechita",
+            "localidad": "Alberti",
+            "km": 28.1,
+            "hora": "2026-10-19T16:20",
+            "destinos": {
+              "youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://youtube.com/shorts/kup7CSpgNz4"
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/alberti-detuvieron-a-un-hombre-armado-tras-un-operativo-en-el-11addc"
+              },
+              "facebook": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "cupo",
+                "detalle": "la cuenta ya uso 82 de sus 100 posteos de 24 h; los ultimos 25 quedan para el bot del diario",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 5,
+            "titular": "Conductor chocó contra un árbol tras descompensarse en Alberti",
+            "localidad": "Alberti",
+            "km": 28.1,
+            "hora": "2026-10-19T17:20",
+            "destinos": {
+              "youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://youtube.com/shorts/v598uF3pmNc"
+              },
+              "web": {
+                "estado": "ok",
+                "detalle": "",
+                "url": "https://www.diariolacampaña.com.ar/n/alberti-sufrio-una-descompensacion-choco-contra-un-arbol-y-2f63af"
+              },
+              "facebook": {
+                "estado": "omitida",
+                "detalle": "no está entre las 2 más virales de la pasada (esta: viral 5/10 +2 por cercanía)",
+                "url": ""
+              },
+              "fb_youtube": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "cupo",
+                "detalle": "la cuenta ya uso 84 de sus 100 posteos de 24 h; los ultimos 25 quedan para el bot del diario",
+                "url": ""
+              }
+            }
+          }
+        ],
+        "salteadas": [
+          {
+            "titular": "Kicillof encabezó el acto por el Día de la Lealtad y criticó al Gobierno",
+            "motivo": "no apta: No es del temario de policiales (según la IA): Acto político por el Día de la Lealtad Peronista y declaraciones partidarias"
+          },
+          {
+            "titular": "Treinta y seis actas, diez motos retenidas y un demorado en Lobos",
+            "motivo": "no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)"
+          },
+          {
+            "titular": "Tres vehículos chocaron en cadena en una calle de Bragado",
+            "motivo": "no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)"
+          },
+          {
+            "titular": "Un auto cayó al zanjón en la esquina de Cichero y La Plata",
+            "motivo": "no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)"
+          }
+        ],
+        "buzon_x_tiktok": 0,
+        "cuando": "2026-10-19T14:20:18-03:00"
       }
     }
   }
