@@ -7232,6 +7232,219 @@
         65,
         47
       ]
+    },
+    "6ba9b92d938ec41b": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 63,
+      "commercial_score": 63,
+      "subtema": "agro",
+      "tema": "girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena guía técnica de Aapresid para el manejo de girasol en años húmedos, útil para productores.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ede8d5f1fb12b3b3": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 78,
+      "subtema": "ganaderia",
+      "tema": "eficiencia reproductiva",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente análisis sobre ganadería, peso de faena y el desafío de subir la eficiencia reproductiva.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        79
+      ]
+    },
+    "59196325b56a62e8": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 74,
+      "commercial_score": 76,
+      "subtema": "empresas",
+      "tema": "frigorífico gorina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "La reconstrucción de una planta clave de exportación en La Plata es de alto interés zonal y sectorial.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        77,
+        72
+      ]
+    },
+    "1dc88cfddf814aba": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 74,
+      "commercial_score": 77,
+      "subtema": "ganaderia",
+      "tema": "angus",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Triplicar exportaciones de carne certificada Angus marca un hito comercial muy fuerte.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        75,
+        74
+      ]
+    },
+    "cfba3895cefbe973": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 74,
+      "subtema": "ganaderia",
+      "tema": "norma antideforestación ue",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Las exigencias europeas y posibles castigos de precio interesan y preocupan a los criadores.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        71
+      ]
+    },
+    "16571784dbd8a985": {
+      "impacto_economico": 12,
+      "interes_productores": 14,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 76,
+      "subtema": "agro",
+      "tema": "enfermedades girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sanitaria del INTA por enfermedades en girasol debido al fenómeno El Niño en la región.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        72,
+        77
+      ]
+    },
+    "9daf242e18fab66f": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 10,
+      "potencial_comercial": 8,
+      "ai_score": 81,
+      "commercial_score": 80,
+      "subtema": "ganaderia",
+      "tema": "vacunación aftosa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "La reglamentación de la libre elección de veterinarios para aftosa impacta directamente en cada productor ganadero.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        80,
+        81
+      ]
+    },
+    "a0657639ec822832": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 33,
+      "commercial_score": 33,
+      "subtema": "agro",
+      "tema": "peperina serrana",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Reconocimiento de Indicación Geográfica muy acotado y de bajo interés para el productor general de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e227fc9a0f5ab324": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 63,
+      "commercial_score": 63,
+      "subtema": "agro",
+      "tema": "monitoreo el niño",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Acciones oficiales conjuntas frente a El Niño, relevante por el impacto climático en la campaña.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -7743,7 +7956,17 @@
       "https://bichosdecampo.com/en-el-aire-tambien-casafe-publico-un-libro-que-promueve-las-buenas-practicas-para-la-aplicacion-de-agroquimicos-con-drones": "2026-10-19",
       "https://lanacion.com.ar/economia/campo/informe-las-mujeres-solo-manejan-dos-de-cada-diez-empresas-agropecuarias-nid19102026": "2026-10-19",
       "https://lanacion.com.ar/economia/campo/brutal-ataque-a-una-yegua-en-un-campo-bonaerense-le-cortaron-la-cara-y-le-fracturaron-el-hocico-nid19102026": "2026-10-19",
-      "https://futurefarming.com/smart-farming/bloomx-raises-13-million-to-expand-robotic-pollination-in-fruit-crops": "2026-10-19"
+      "https://futurefarming.com/smart-farming/bloomx-raises-13-million-to-expand-robotic-pollination-in-fruit-crops": "2026-10-19",
+      "https://infocampo.com.ar/girasol-es-hora-de-repensar-estrategias-para-cada-ambiente": "2026-10-19",
+      "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html": "2026-10-19",
+      "https://bichosdecampo.com/tras-un-voraz-incendio-el-frigorifico-gorina-logro-reconstruir-su-planta-y-vuelve-a-operar-a-pleno-carlos-riusech-destaca-las-oportunidades-mundiales-para-la-carne-argentina-y-las-complicaciones-de": "2026-10-19",
+      "https://bichosdecampo.com/sintoma-de-una-epoca-los-criadores-de-angus-este-ano-triplicaran-sus-exportaciones-de-carne-certificada-de-alta-calidad": "2026-10-19",
+      "https://bichosdecampo.com/mas-advertencias-sobre-la-norma-antideforestacion-raul-cagliero-de-cafrisa-avisa-que-la-hacienda-que-no-cumpla-con-las-exigencias-europeas-recibiria-castigos-en-el-precio": "2026-10-19",
+      "https://bichosdecampo.com/el-nino-podria-traerle-algo-mas-que-lluvias-al-girasol-cordobes-el-inta-advierte-por-tres-enfermedades-que-pueden-ganar-terreno": "2026-10-19",
+      "https://lanacion.com.ar/economia/campo/medida-el-gobierno-reglamento-la-libre-eleccion-de-veterinarios-para-vacunar-contra-la-aftosa-y-la-nid19102026": "2026-10-19",
+      "https://lanacion.com.ar/economia/campo/fuerte-impacto-estiman-que-sin-retenciones-el-agro-podria-crear-850000-empleos-nid19102026": "2026-10-19",
+      "https://argentina.gob.ar/noticias/agricultura-reconocio-la-indicacion-geografica-para-la-peperina-serrana-de-cordoba-y-san": "2026-10-19",
+      "https://argentina.gob.ar/noticias/la-afe-y-la-secretaria-de-agricultura-refuerzan-el-monitoreo-conjunto-frente-al-fenomeno-0": "2026-10-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -8253,7 +8476,17 @@
       "en el aire tambien casafe publico un libro que promueve las buenas practicas para la aplicacion de agroquimicos con drones": "2026-10-19",
       "informe las mujeres solo manejan dos de cada diez empresas agropecuarias": "2026-10-19",
       "brutal ataque a una yegua en un campo bonaerense le cortaron la cara y le fracturaron el hocico": "2026-10-19",
-      "bloomx raises 13 million to expand robotic pollination in fruit crops": "2026-10-19"
+      "bloomx raises 13 million to expand robotic pollination in fruit crops": "2026-10-19",
+      "girasol es hora de repensar estrategias para cada ambiente": "2026-10-19",
+      "ganaderia argentina 12 kilos mas por animal y el desafio de llevar la eficiencia reproductiva al 75 con j lizzi agronomo": "2026-10-19",
+      "tras un voraz incendio el frigorifico gorina logro reconstruir su planta y vuelve a operar a pleno carlos riusech destaca las oportunidades mundiales para la carne argentina y las complicaciones del negocio": "2026-10-19",
+      "sintoma de una epoca los criadores de angus este ano triplicaran sus exportaciones de carne certificada de alta calidad": "2026-10-19",
+      "mas advertencias sobre la norma antideforestacion raul cagliero de cafrisa avisa que la hacienda que no cumpla con las exigencias europeas recibiria castigos en el precio": "2026-10-19",
+      "el nino podria traerle algo mas que lluvias al girasol cordobes el inta advierte por tres enfermedades que pueden ganar terreno": "2026-10-19",
+      "medida el gobierno reglamento la libre eleccion de veterinarios para vacunar contra la aftosa y la brucelosis bovina": "2026-10-19",
+      "fuerte impacto estiman que sin retenciones el agro podria crear 850 000 empleos": "2026-10-19",
+      "agricultura reconocio la indicacion geografica para la peperina serrana de cordoba y san luis": "2026-10-19",
+      "la afe y la secretaria de agricultura refuerzan el monitoreo conjunto frente al fenomeno el nino": "2026-10-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -8763,7 +8996,17 @@
       "a903472a5caf1ca0": "2026-10-19",
       "72bf1e447ed975c4": "2026-10-19",
       "69fb02cd42d2212d": "2026-10-19",
-      "f4a78eb1bf36e3b6": "2026-10-19"
+      "f4a78eb1bf36e3b6": "2026-10-19",
+      "6ba9b92d938ec41b": "2026-10-19",
+      "ede8d5f1fb12b3b3": "2026-10-19",
+      "59196325b56a62e8": "2026-10-19",
+      "1dc88cfddf814aba": "2026-10-19",
+      "cfba3895cefbe973": "2026-10-19",
+      "16571784dbd8a985": "2026-10-19",
+      "9daf242e18fab66f": "2026-10-19",
+      "1b0cf22cbfa3e62d": "2026-10-19",
+      "a0657639ec822832": "2026-10-19",
+      "e227fc9a0f5ab324": "2026-10-19"
     }
   },
   "elegidas": [
@@ -10553,49 +10796,56 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_86e6379ffc15_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
+    {
+      "id": "a225e1b24914",
+      "cuando": "2026-10-19T18:00-03:00",
+      "titulo_original": "Medida: el Gobierno reglamentó la libre elección de veterinarios para vacunar contra la aftosa y la brucelosis bovina",
+      "descripcion": "El Senasa estableció el procedimiento para que los productores puedan elegir quién vacunará a sus animales en la campaña 2027; la designación se realizará por autogestión, sin nuevos aranceles, y deberá cumplir con requisitos de trazabilidad y conservación de las dosis",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/medida-el-gobierno-reglamento-la-libre-eleccion-de-veterinarios-para-vacunar-contra-la-aftosa-y-la-nid19102026/",
+      "titular": "Senasa reglamenta la libre elección de veterinarios para vacunar hacienda",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 10,
+        "potencial_comercial": 8,
+        "ai_score": 81,
+        "commercial_score": 80,
+        "subtema": "ganaderia",
+        "tema": "vacunación aftosa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "La reglamentación de la libre elección de veterinarios para aftosa impacta directamente en cada productor ganadero.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          80,
+          81
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-19T18:00:00-03:00"
+    },
     {
       "id": "d80192271b0a",
-      "rep": {
-        "id": "d80192271b0a",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248908-maiz-la-cosecha-en-eeuu-impacta-en-los-precios-locales-con-lorena-d-angelo-clinica-de-granos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/248908-maiz-la-cosecha-en-eeuu-impacta-en-los-precios-locales-con-lorena-d-angelo-clinica-de-granos.html",
-        "titulo": "¿Conviene vender Maíz ahora? La cosecha de EE.UU. presiona los precios en Chicago y Argentina; con Lorena D´ Angelo - Clínica de Granos",
-        "titulo_norm": "conviene vender maiz ahora la cosecha de ee uu presiona los precios en chicago y argentina con lorena d angelo clinica de granos",
-        "descripcion": "La cosecha en EE.UU. impacta en los precios locales. El aumento de la oferta estadounidense de maíz a partir de la recolección presiona los precios en Chicago y también en Argentina. Con mayor disponibilidad en el mercado, los precios de exportación comienzan a mostrar valores más competitivos mientras que todavía tenemos en nuestro país mucho maíz por comercializar…",
-        "imagen_url": "https://agrotv.agrositio.com/placas/sfgE9bCUbU4.jpg",
-        "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-        "publicado": "2026-10-19T16:34-03:00",
-        "capturado": "2026-10-19T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "785a91575cb0f123"
-      },
-      "grupo": [
-        {
-          "id": "d80192271b0a",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248908-maiz-la-cosecha-en-eeuu-impacta-en-los-precios-locales-con-lorena-d-angelo-clinica-de-granos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/248908-maiz-la-cosecha-en-eeuu-impacta-en-los-precios-locales-con-lorena-d-angelo-clinica-de-granos.html",
-          "titulo": "¿Conviene vender Maíz ahora? La cosecha de EE.UU. presiona los precios en Chicago y Argentina; con Lorena D´ Angelo - Clínica de Granos",
-          "titulo_norm": "conviene vender maiz ahora la cosecha de ee uu presiona los precios en chicago y argentina con lorena d angelo clinica de granos",
-          "descripcion": "La cosecha en EE.UU. impacta en los precios locales. El aumento de la oferta estadounidense de maíz a partir de la recolección presiona los precios en Chicago y también en Argentina. Con mayor disponibilidad en el mercado, los precios de exportación comienzan a mostrar valores más competitivos mientras que todavía tenemos en nuestro país mucho maíz por comercializar…",
-          "imagen_url": "https://agrotv.agrositio.com/placas/sfgE9bCUbU4.jpg",
-          "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-          "publicado": "2026-10-19T16:34-03:00",
-          "capturado": "2026-10-19T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "785a91575cb0f123"
-        }
-      ],
+      "cuando": "2026-10-19T18:00-03:00",
+      "titulo_original": "¿Conviene vender Maíz ahora? La cosecha de EE.UU. presiona los precios en Chicago y Argentina; con Lorena D´ Angelo - Clínica de Granos",
+      "descripcion": "La cosecha en EE.UU. impacta en los precios locales. El aumento de la oferta estadounidense de maíz a partir de la recolección presiona los precios en Chicago y también en Argentina. Con mayor disponibilidad en el mercado, los precios de exportación comienzan a mostrar valores más competitivos mient",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248908-maiz-la-cosecha-en-eeuu-impacta-en-los-precios-locales-con-lorena-d-angelo-clinica-de-granos.html",
+      "titular": "Maíz: el avance de la cosecha estadounidense presiona los precios",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -10621,48 +10871,21 @@
           76
         ]
       },
-      "cuando": "2026-10-19T17:00-03:00"
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-19T18:00:00-03:00"
     },
     {
       "id": "ec8eb2dc5f5b",
-      "rep": {
-        "id": "ec8eb2dc5f5b",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248909-el-trigo-en-argentina-sube-en-chicago-baja-hasta-cuando-con-lorena-d-angelo-clinica-de-granos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/248909-el-trigo-en-argentina-sube-en-chicago-baja-hasta-cuando-con-lorena-d-angelo-clinica-de-granos.html",
-        "titulo": "El Trigo en Argentina sube, en Chicago baja ¿hasta cuándo?; con Lorena D´ Angelo - Clínica de Granos",
-        "titulo_norm": "el trigo en argentina sube en chicago baja hasta cuando con lorena d angelo clinica de granos",
-        "descripcion": "Los precios locales encuentran el sostén en la demanda de exportación y la preocupación por el desarrollo de los cultivos después de las heladas y las lluvias en algunas regiones que demoran la cosecha. Es una oportunidad antes que ingrese más granos de la cosecha....",
-        "imagen_url": "https://agrotv.agrositio.com/placas/P0WQgc2RtxQ.jpg",
-        "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-        "publicado": "2026-10-19T16:36-03:00",
-        "capturado": "2026-10-19T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c4710a0388f454d6"
-      },
-      "grupo": [
-        {
-          "id": "ec8eb2dc5f5b",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248909-el-trigo-en-argentina-sube-en-chicago-baja-hasta-cuando-con-lorena-d-angelo-clinica-de-granos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/248909-el-trigo-en-argentina-sube-en-chicago-baja-hasta-cuando-con-lorena-d-angelo-clinica-de-granos.html",
-          "titulo": "El Trigo en Argentina sube, en Chicago baja ¿hasta cuándo?; con Lorena D´ Angelo - Clínica de Granos",
-          "titulo_norm": "el trigo en argentina sube en chicago baja hasta cuando con lorena d angelo clinica de granos",
-          "descripcion": "Los precios locales encuentran el sostén en la demanda de exportación y la preocupación por el desarrollo de los cultivos después de las heladas y las lluvias en algunas regiones que demoran la cosecha. Es una oportunidad antes que ingrese más granos de la cosecha....",
-          "imagen_url": "https://agrotv.agrositio.com/placas/P0WQgc2RtxQ.jpg",
-          "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-          "publicado": "2026-10-19T16:36-03:00",
-          "capturado": "2026-10-19T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c4710a0388f454d6"
-        }
-      ],
+      "cuando": "2026-10-19T18:00-03:00",
+      "titulo_original": "El Trigo en Argentina sube, en Chicago baja ¿hasta cuándo?; con Lorena D´ Angelo - Clínica de Granos",
+      "descripcion": "Los precios locales encuentran el sostén en la demanda de exportación y la preocupación por el desarrollo de los cultivos después de las heladas y las lluvias en algunas regiones que demoran la cosecha. Es una oportunidad antes que ingrese más granos de la cosecha....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/248909-el-trigo-en-argentina-sube-en-chicago-baja-hasta-cuando-con-lorena-d-angelo-clinica-de-granos.html",
+      "titular": "Trigo en Argentina sube mientras Chicago baja el 19/10/26",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 17,
         "interes_productores": 15,
@@ -10688,11 +10911,149 @@
           75
         ]
       },
-      "cuando": "2026-10-19T17:00-03:00"
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-19T18:00:00-03:00"
+    },
+    {
+      "id": "e0b9a42cbe30",
+      "cuando": "2026-10-19T18:00-03:00",
+      "titulo_original": "El Niño podría traerle algo más que lluvias al girasol cordobés: El INTA advierte por tres enfermedades que pueden ganar terreno",
+      "descripcion": "El girasol viene ganando terreno en Córdoba, pero su expansión podría enfrentar un nuevo desafío sanitario. Especialistas del INTA Marcos Juárez advirtieron que, frente a mayores niveles de precipitaciones y humedad, varias enfermedades podrían encontrar condiciones favorables para desarrollarse en ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-nino-podria-traerle-algo-mas-que-lluvias-al-girasol-cordobes-el-inta-advierte-por-tres-enfermedades-que-pueden-ganar-terreno/",
+      "titular": "Girasol en Córdoba: el INTA advierte por Sclerotinia, Phomopsis y Septoria",
+      "volanta": "Sanidad",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 14,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 76,
+        "subtema": "agro",
+        "tema": "enfermedades girasol",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sanitaria del INTA por enfermedades en girasol debido al fenómeno El Niño en la región.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          72,
+          77
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-19T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "u2kqWwr7RWw",
+          "url": "https://youtube.com/shorts/u2kqWwr7RWw",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "4d10ba8e-0944-4799-a3d0-1d4e5db4c807",
+          "slug": "el-inta-advierte-por-el-impacto-de-enfermedades-en-el-girasol-79f35b",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-advierte-por-el-impacto-de-enfermedades-en-el-girasol-79f35b",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2644563612663087",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17941438728368190",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e0b9a42cbe30_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-19T17:04:39-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [
+    {
+      "id": "cc8f71128636",
+      "rep": {
+        "id": "cc8f71128636",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
+        "titulo": "Ganadería argentina: 12 kilos más por animal y el desafío de llevar la eficiencia reproductiva al 75%; con J. Lizzi - agrónomo",
+        "titulo_norm": "ganaderia argentina 12 kilos mas por animal y el desafio de llevar la eficiencia reproductiva al 75 con j lizzi agronomo",
+        "descripcion": "Libertad de mercados internos y externos. Un mundo hiper demandante de proteínas, y la marca argentina en el valor de sus carnes y cortes. Una charla con el Ing. Agr. José Lisi, referente en ganadería, sostiene que la producción de carne en Argentina atraviesa su mejor etapa histórica, con un aumento promedio de 12 kilos en el peso de faena y un índice ternero-vaca del 67%. Destaca la importancia de mejorar los índices reproductivos hasta un 75% y potenciar la productividad por animal en regiones como el NEA, donde la sinergia con la agricultura ofrece grandes oportunidades para el sector.",
+        "imagen_url": "https://agrotv.agrositio.com/placas/Rf2-FZcWaEs.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-10-19T17:10-03:00",
+        "capturado": "2026-10-19T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ede8d5f1fb12b3b3"
+      },
+      "grupo": [
+        {
+          "id": "cc8f71128636",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248914-jose-lizzi-analiza-el-mejor-momento-de-la-ganaderia-argentina-y-sus-oportunidades-futuras.html",
+          "titulo": "Ganadería argentina: 12 kilos más por animal y el desafío de llevar la eficiencia reproductiva al 75%; con J. Lizzi - agrónomo",
+          "titulo_norm": "ganaderia argentina 12 kilos mas por animal y el desafio de llevar la eficiencia reproductiva al 75 con j lizzi agronomo",
+          "descripcion": "Libertad de mercados internos y externos. Un mundo hiper demandante de proteínas, y la marca argentina en el valor de sus carnes y cortes. Una charla con el Ing. Agr. José Lisi, referente en ganadería, sostiene que la producción de carne en Argentina atraviesa su mejor etapa histórica, con un aumento promedio de 12 kilos en el peso de faena y un índice ternero-vaca del 67%. Destaca la importancia de mejorar los índices reproductivos hasta un 75% y potenciar la productividad por animal en regiones como el NEA, donde la sinergia con la agricultura ofrece grandes oportunidades para el sector.",
+          "imagen_url": "https://agrotv.agrositio.com/placas/Rf2-FZcWaEs.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-10-19T17:10-03:00",
+          "capturado": "2026-10-19T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ede8d5f1fb12b3b3"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 78,
+        "subtema": "ganaderia",
+        "tema": "eficiencia reproductiva",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente análisis sobre ganadería, peso de faena y el desafío de subir la eficiencia reproductiva.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          72,
+          79
+        ]
+      },
+      "cuando": "2026-10-19T18:00-03:00"
+    }
+  ],
+  "actualizado": "2026-10-19T18:05:23-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
