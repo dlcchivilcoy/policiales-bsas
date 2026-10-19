@@ -9358,9 +9358,10 @@
         "subida": "uploaded",
         "sin_placa": true,
         "miniatura": "portada del reel",
-        "estado": "ok",
+        "estado": "rechazado",
         "cuando": "2026-10-18T22:35:01-03:00",
-        "verificado": "procesado"
+        "verificado": "no_existe",
+        "detalle": "YouTube: no_existe"
       },
       "web": {
         "id": "594e84e0-bc01-4c60-a132-6a7f872182e0",
@@ -9898,9 +9899,10 @@
         "subida": "uploaded",
         "sin_placa": true,
         "miniatura": "portada del reel",
-        "estado": "ok",
+        "estado": "rechazado",
         "cuando": "2026-10-19T00:50:01-03:00",
-        "verificado": "procesado"
+        "verificado": "no_existe",
+        "detalle": "YouTube: no_existe"
       },
       "web": {
         "id": "248ece43-82ef-4e37-a82d-ea5d6b751b0e",
@@ -10045,9 +10047,10 @@
         "subida": "uploaded",
         "sin_placa": true,
         "miniatura": "portada del reel",
-        "estado": "ok",
+        "estado": "rechazado",
         "cuando": "2026-10-19T01:35:01-03:00",
-        "verificado": "procesado"
+        "verificado": "no_existe",
+        "detalle": "YouTube: no_existe"
       },
       "web": {
         "id": "28d31caa-4225-4df6-852e-fce87e6a75a7",
@@ -10431,7 +10434,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-19T10:47:12-03:00"
+        "cuando": "2026-10-19T10:47:12-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "5253b590-963f-4a40-8acf-18a1f53713b5",
@@ -10505,7 +10509,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-19T11:15:00-03:00"
+        "cuando": "2026-10-19T11:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "e03b5e39-743f-48de-bbd5-c3b9bec31a34",
@@ -10581,7 +10586,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-19T11:45:00-03:00"
+        "cuando": "2026-10-19T11:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "4d61cc5b-9d70-46db-b815-a8250038f4de",
@@ -11350,6 +11356,161 @@
         "estado": "ok",
         "id": "nacionales:f370b43343c04756"
       }
+    },
+    "https://www.infobae.com/economia/2026/10/19/cuantos-empleos-estatales-se-eliminaron-en-lo-que-va-del-gobierno-de-milei/": {
+      "titulo_original": "Cuántos empleos estatales se eliminaron en lo que va del Gobierno de Milei",
+      "titular": "El Estado nacional acumula más de 77 mil puestos menos desde diciembre de 2023",
+      "volanta": "Empleo público",
+      "categoria": "",
+      "formato": "carrusel",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 77,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 6.º de 34 en «portada»",
+        "Google News: 1.º de 51 en «nacionales»",
+        "cobertura: 10 medios (Infobae, Ámbito, La Nación, Clarín)",
+        "1.º más leída de Clarín",
+        "video que explota en La Nación: «Diego Santilli en La Cornisa: \"Con PASO o sin PASO» (14.786 vistas. 1.055 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El Gobierno nacional contabilizó una baja de 77.515 puestos de trabajo en el sector público durante los primeros 32 meses de gestión, según informó la administración central.",
+      "seccion": "Economía",
+      "tema": [
+        "*milei",
+        "eliminaron",
+        "empleo",
+        "estatale",
+        "gobierno",
+        "milei"
+      ],
+      "viral": 7,
+      "puntos": 77,
+      "nivel": "bolsillo",
+      "cobertura": 3,
+      "dia": "2026-10-19",
+      "cuando": "2026-10-19T12:15:15-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "12:15",
+      "copia": 9,
+      "foto_url": "https://www.infobae.com/resizer/v2/OO3HJRF53BEPPGDKCAFTYBWCYA.jpg?auth=5af1490effa169bd473709ec22979db2c783ba267ab42e537471c5b83759467d&smart=true&width=1920&height=1080",
+      "foto": "El presidente, Javier Milei, y el ministro de Desregulación y Transformación del Estado, Federico Sturzenegger",
+      "youtube": {
+        "id": "nynVXl_bveE",
+        "url": "https://youtube.com/shorts/nynVXl_bveE",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-19T12:15:00-03:00"
+      },
+      "web": {
+        "id": "9857afc6-ddb9-4b26-b5c7-cfa0a6d2c4b5",
+        "slug": "el-estado-nacional-registra-mas-de-77-mil-puestos-menos-y-lanza-cb2e9c",
+        "url": "https://www.diariolacampaña.com.ar/n/el-estado-nacional-registra-mas-de-77-mil-puestos-menos-y-lanza-cb2e9c",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-19T12:15:06-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2063341151274177",
+        "estado": "ok",
+        "cuando": "2026-10-19T12:15:08-03:00"
+      },
+      "instagram": {
+        "estado": "cupo",
+        "detalle": "la cuenta ya usó 81 de sus 100 posteos de 24 h; los últimos quedan para el bot del diario"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:cb2e9c67cd146106"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/19/karina-milei-gana-protagonismo-cerro-la-primera-etapa-de-traslados-de-reclusos-de-devoto-y-espera-una-definicion-del-papa-leon-xiv/": {
+      "titulo_original": "Karina Milei gana protagonismo: cerró la primera etapa de traslados de reclusos de Devoto y espera una definición del papa León XIV",
+      "titular": "Karina Milei encabezó el traslado de reclusos de Devoto y suma protagonismo político",
+      "volanta": "Cárcel de Devoto",
+      "categoria": "",
+      "formato": "carrusel",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 64,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 6.º de 34 en «portada»",
+        "Google News: 1.º de 51 en «nacionales»",
+        "cobertura: 6 medios (Infobae, La Nación)",
+        "video que explota en Infobae: «Fin de la Fase 1 del traslado de Devoto» (1.002 vistas. 558 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "La secretaria general de la Presidencia lideró una conferencia por la mudanza de presos a Marcos Paz y coordinó la agenda ante una posible visita papal.",
+      "seccion": "Política",
+      "tema": [
+        "*devoto",
+        "*leon",
+        "*milei",
+        "*xiv",
+        "cerro",
+        "definicion",
+        "devoto",
+        "espera",
+        "etapa",
+        "gana",
+        "karina",
+        "leon",
+        "milei",
+        "papa",
+        "primera",
+        "protagonismo",
+        "recluso",
+        "traslado"
+      ],
+      "viral": 7,
+      "puntos": 50,
+      "nivel": "política",
+      "cobertura": 1,
+      "dia": "2026-10-19",
+      "cuando": "2026-10-19T12:45:14-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "12:45",
+      "copia": 6,
+      "foto_url": "https://www.infobae.com/resizer/v2/UVOVL4TCSVD43IBCMZD2H2RZFY.jpg?auth=df0dd861e8998c012139dd868b6335076660a1e75873ea999602ec7305a3eab7&smart=true&width=1280&height=853",
+      "foto": "Karina Milei protagonizó una conferencia de prensa desde la Cárcel de Devoto.",
+      "youtube": {
+        "id": "DGtvR3FVSic",
+        "url": "https://youtube.com/shorts/DGtvR3FVSic",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-19T12:45:00-03:00"
+      },
+      "web": {
+        "id": "071fe0d7-07fd-406f-9b34-979c80fb37a2",
+        "slug": "karina-milei-lidero-el-traslado-de-presos-de-devoto-a-marcos-dc1804",
+        "url": "https://www.diariolacampaña.com.ar/n/karina-milei-lidero-el-traslado-de-presos-de-devoto-a-marcos-dc1804",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-19T12:45:05-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2063372877937671",
+        "estado": "ok",
+        "cuando": "2026-10-19T12:45:07-03:00"
+      },
+      "instagram": {
+        "estado": "cupo",
+        "detalle": "la cuenta ya usó 82 de sus 100 posteos de 24 h; los últimos quedan para el bot del diario"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:dc18047933ea00df"
+      }
     }
   },
   "descartadas": {
@@ -11618,5 +11779,5 @@
       ]
     }
   },
-  "actualizado": "2026-10-19T12:05:45-03:00"
+  "actualizado": "2026-10-19T12:45:14-03:00"
 }
