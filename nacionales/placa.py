@@ -209,7 +209,7 @@ def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: i
 
     Grafito con un resplandor naranja tenue, la marca y el número arriba, el número de la lámina
     enorme y apenas visible de fondo, y el bloque centrado: sección con su filo naranja, el título en
-    blanco y el texto en gris claro. Abajo, «Deslizá →» o, en la última, el sitio para seguir leyendo.
+    blanco y el texto en gris claro. Abajo, «Deslizá y seguí leyendo →» o, en la última, el sitio.
     """
     W, H, M = 1080, 1350, 84
     tam = (W, H)
@@ -255,7 +255,7 @@ def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: i
 
     # Pie: «Deslizá →» o el sitio.
     d.line((M, H - 120, W - M, H - 120), fill=(64, 66, 74), width=2)
-    fin = f"Seguí leyendo en {sitio}" if idx == total and sitio else ("Deslizá  →" if idx < total else "")
+    fin = f"Seguí leyendo en {sitio}" if idx == total and sitio else ("Deslizá y seguí leyendo  →" if idx < total else "")
     if fin:
         d.text((M, H - 70), fin, font=fuente(32, 700), fill=NARANJA, anchor="lm")
     destino = Path(destino)

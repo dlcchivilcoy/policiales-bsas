@@ -166,7 +166,7 @@ def _pie_deslizar(d, tema: str, ultimo: bool = False):
     d.text((D.X, y + 30), D.USUARIO, font=D.fuente("bold", 30), fill=t["verde"])
     if not ultimo:
         f = D.fuente("bold", 30)
-        txt = "Deslizá"
+        txt = "Deslizá y seguí leyendo"           # 19/10/2026: avisa que el carrusel sigue
         x = D.W - D.X - 40 - d.textlength(txt, font=f)
         d.text((x, y + 30), txt, font=f, fill=t["volanta"])
         ax = D.W - D.X - 26
