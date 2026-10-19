@@ -19,11 +19,13 @@
 
 La URL de la foto original se guarda siempre (trazabilidad), aunque no se use.
 
-⛔ DESDE EL 18/10/2026 NADA DE IA (pedido del editor: «sacá las imágenes hechas con IA también de agro: si
-no hay foto real, que no salga»). `elegir` solo acepta la FOTO DE UNA FUENTE OFICIAL O DE PRENSA; sin ella
-devuelve «ninguna» y la pieza no sale (agro/pasada.py la repone con otra). La foto de otro medio no se
-recrea, no se genera ninguna escena y el banco no se usa. Lo de abajo queda para volver atrás con
-AGRO_IMAGEN_IA=1.
+FOTO ORIGINAL PRIMERO (18/10/2026, pedido del editor: «lo de agro activalo, pero tratá de usar la imagen
+original si podés, siempre»). La foto del OTRO MEDIO se usa TAL CUAL si sirve (bajó, tamaño, sin letras y
+no es de una agencia que factura cada foto: AP, AFP, Reuters, EFE…), con su crédito. Solo si no sirve se
+recrea con IA y después se sigue como arriba (escena, escena segura, banco).
+
+AGRO_IMAGEN_IA=0 apaga la IA: solo la foto original; sin ella la pieza no sale (agro/pasada.py la repone
+y deja afuera antes del puntaje lo que solo cuentan otros medios sin foto).
 """
 import base64
 import io
@@ -125,8 +127,29 @@ ESTILO = (" Realistic modern editorial photograph for an agribusiness and agtech
 
 
 def ia_activa() -> bool:
-    """AGRO_IMAGEN_IA=1 vuelve a las imágenes hechas con IA (apagadas por el editor el 18/10/2026)."""
-    return (os.environ.get("AGRO_IMAGEN_IA") or "0").strip() == "1"
+    """La IA como respaldo de la foto original (prendida; AGRO_IMAGEN_IA=0 la apaga)."""
+    return (os.environ.get("AGRO_IMAGEN_IA") or "1").strip() != "0"
+
+
+def foto_original(rep: dict, url: str, destino: Path, bajar, mirar) -> dict:
+    """La foto ORIGINAL de la nota de otro medio, tal cual: {archivo, origen «fuente», credito} o {motivo}."""
+    from nacionales import infobae as IB
+    import re
+    agencia = IB.es_de_agencia(rep.get("credito_foto") or "")
+    m = re.search(r"(?<![a-z])(afp|reuters|efe|getty(?:images)?|bloomberg|xinhua|apimages|ap-?photo|shutterstock|"
+                  r"istock|europapress|anadolu)(?![a-z])", (url or "").lower())
+    agencia = agencia or (m.group(1) if m else "")
+    if agencia:
+        return {"motivo": f"la foto original es de agencia ({agencia})"}
+    foto = destino.with_name(destino.stem + "_original.jpg")
+    if not bajar(url, foto):
+        return {"motivo": "la foto original no se pudo bajar"}
+    if _ancho(foto) < MIN_ANCHO:
+        return {"motivo": f"la foto original es chica ({_ancho(foto)} px)"}
+    if mirar(str(foto)):
+        return {"motivo": "la foto original tiene letras (placa o gráfico)"}
+    return {"archivo": str(foto), "origen": "fuente", "credito": rep.get("fuente", ""),
+            "motivo": "foto original de la nota"}
 
 
 def _ancho(ruta) -> int:
@@ -155,9 +178,9 @@ def del_banco(subtema: str, semilla: str) -> str:
 
 def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=None, bajar=None,
            mirar=None, subtema: str = "", recrear_con=None) -> dict:
-    """{archivo, origen: «fuente»|«ninguna», url_original, motivo}. Desde el 18/10/2026 solo la foto real
-    de una fuente oficial o de prensa; si no, «ninguna» (la pieza no sale). Con AGRO_IMAGEN_IA=1 vuelve
-    lo de antes: «recreada» o «ia» (y «ninguna» solo si falla todo Y el banco está vacío)."""
+    """{archivo, origen: «fuente»|«recreada»|«ia»|«ninguna», url_original, motivo}. Primero la foto
+    ORIGINAL (de la fuente oficial o del medio, tal cual); si no sirve, IA (recreada, escena, banco).
+    Con AGRO_IMAGEN_IA=0, solo la original; si no hay, «ninguna» y la pieza no sale."""
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     url = cuerpo_imagen or rep.get("imagen_url") or ""
@@ -185,7 +208,12 @@ def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=No
     elif not url:
         salida["motivo"] = "la nota no trae foto"
     else:
-        salida["motivo"] = "la foto es de otro medio (derechos): no se usa"
+        if bajar is None:
+            from reels.flujo import _bajar_foto as bajar
+        orig = foto_original(rep, url, destino, bajar, mirar)
+        if orig.get("archivo"):
+            return dict(salida, **orig)
+        salida["motivo"] = orig["motivo"]
     if not ia_activa():
         return dict(salida, archivo=None, origen="ninguna",
                     motivo=f"sin foto real que se pueda usar ({salida.get('motivo') or 'sin foto'})")

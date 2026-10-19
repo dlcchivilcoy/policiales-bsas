@@ -56,10 +56,10 @@ class SinFotoReal(PasadaError):
 
 
 def imagen_ia_activa() -> bool:
-    """SIN IMÁGENES HECHAS CON IA (pedido del editor, 18/10/2026: «sacá las imágenes hechas con IA también
-    del Archivo: si no hay foto real, que no salga»). Apaga la pregunta del día (su imagen era de FLUX) y la
-    placa propia de la efeméride sin foto. ARCHIVO_IMAGEN_IA=1 vuelve a lo de antes."""
-    return (os.environ.get("ARCHIVO_IMAGEN_IA") or "0").strip() == "1"
+    """La pregunta del día con su imagen de IA (FLUX) y la placa propia de la efeméride sin foto. El
+    18/10/2026 el editor las apagó y esa misma noche pidió: «la pregunta del día activala y hacela con IA».
+    Prendido por defecto; ARCHIVO_IMAGEN_IA=0 las apaga (sin foto real no sale nada)."""
+    return (os.environ.get("ARCHIVO_IMAGEN_IA") or "1").strip() != "0"
 
 
 def _ahora() -> datetime:
@@ -293,7 +293,7 @@ def pasada(tipo: str, publicar: bool, ahora: datetime = None, publicador=None, *
 
     if tipo == "pregunta" and not imagen_ia_activa():
         inf["estado"] = "apagada"
-        inf["detalle"] = "la pregunta del día usaba una imagen hecha con IA: apagada desde el 18/10/2026"
+        inf["detalle"] = "la pregunta del día usa una imagen hecha con IA: apagada con ARCHIVO_IMAGEN_IA=0"
         return inf
     try:
         pieza = armar(tipo, ahora, mem, SALIDA / ahora.strftime("%Y-%m-%d"), **kw)
