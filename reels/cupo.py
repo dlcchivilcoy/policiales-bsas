@@ -23,8 +23,8 @@ ARCHIVO = RAIZ / "estado" / "cupo_pasadas.json"
 MAX_DEFAULT = 3
 # Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Si
 # cambian los horarios de cron-job.org, se cambian acá.
-# 19/10/2026: el editor sacó la de las 09:05 (antes: (9, 5) primera).
-PASADAS_AR = ((12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+# 19/10/2026: el editor sacó la de las 09:05 y la de las 21:05.
+PASADAS_AR = ((12, 5), (15, 5), (18, 5), (23, 35))
 DIAS = 3                       # lo que se guarda: alcanza para auditar y no crece sin fin
 TZ_AR = timezone(timedelta(hours=-3))
 # Una corrida que arranca hasta 10 minutos ANTES de su horario es de ese horario.
