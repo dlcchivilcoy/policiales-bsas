@@ -734,11 +734,10 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
         colas.update(colas_de_variedad(notas_variedad, ahora, senales, informe["ranking_variedad"]))
         topes = topes_de_la_pasada(mem, dia)
         if agenda:
-            hoy = {}
-            for p in de_hoy(mem, dia):
-                hoy[p.get("categoria") or ""] = hoy.get(p.get("categoria") or "", 0) + 1
-            topes = {c: max(0, min(n, AG.tope_del_dia(c, inicio) - hoy.get(c, 0)))
-                     for c, n in AG.topes(inicio).items()}
+            # Cada corrida tiene sus 2 por categoría, y punto: que no corra dos veces lo cuida la guardia
+            # de la corrida. (Hasta el 19/10 se restaba lo publicado en el día, y lo de la madrugada —de la
+            # última pasada de la noche anterior— dejó en cero las generales de las 16.)
+            topes = dict(AG.topes(inicio))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
         informe["topes"] = topes
 
