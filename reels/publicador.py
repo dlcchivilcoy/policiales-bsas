@@ -2122,6 +2122,15 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             fila[red] = info
             _mostrar(red, info)
         informe["piezas"].append(fila)
+        # X sincronizado (19/10/2026): la pieza que salió va al buzón del distribuidor EN EL MOMENTO (y se
+        # sube al repo), no al final de la pasada.
+        if publicar and any((fila.get(r) or {}).get("estado") == "ok" for r in redes):
+            try:
+                DIST.dejar([(pieza, mp4)], ledger, carpeta, subir_a_release,
+                           os.environ.get("GITHUB_REPOSITORY") or REPO, TAG_RELEASE, _clave,
+                           existe=lambda u: _pedir("HEAD", u).status_code == 200)
+            except Exception as e:  # noqa: BLE001 — el buzón nunca frena la pasada
+                print(f"  Distribuidor X/TikTok: no se pudo dejar en el buzón ({_tapar(e)})")
 
     # Los turnos que se reservaron y no se usaron vuelven a la fila (los toma nacionales).
     if publicar and fila_turnos is not None and turnos_pol:

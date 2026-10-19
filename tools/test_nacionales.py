@@ -490,9 +490,9 @@ mem = json.loads(PA.MEMORIA.read_text(encoding="utf-8"))
 chequear("guion: la sección la fija la categoría, no la IA",
          any(p.get("seccion") == "Deportes" and p.get("categoria") == "deportes" for p in mem["piezas"].values()))
 buzon = json.loads(PA.DIST.BUZON.read_text(encoding="utf-8"))["eventos"]
-chequear("TikTok por Buffer: cada pieza publicada va al buzón como «nacionales», solo TikTok",
+chequear("Buffer: cada pieza publicada va al buzón como «nacionales», para X y TikTok (19/10/2026)",
          len([e for e in buzon if e["origen"] == "nacionales"]) >= 3
-         and all(e["plataformas"] == ["tiktok"] and e["video_url"].startswith("https://gh/") for e in buzon
+         and all(e["plataformas"] == ["x", "tiktok"] and e["video_url"].startswith("https://gh/") for e in buzon
                  if e["origen"] == "nacionales")
          and any(e.get("categoria") == "Deportes" for e in buzon))
 # 18/10/2026: con VIDEO original → reel en Instagram; sin video → carrusel explicativo; viral sin video → no.

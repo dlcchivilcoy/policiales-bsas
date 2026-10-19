@@ -1549,5 +1549,37 @@ except PUB.FalloRed as e:
     chequear("Release: si sigue sin responder, falla con el motivo", "no es publica" in str(e))
 PUB._pedir, PUB._token_github, PUB._dormir = _orig
 
+# --- 37. El buzón del distribuidor se sube al repo en el momento (X sincronizado, 19/10/2026) -------------
+import base64 as _b64
+from reels import distribuidor as _DIST
+
+
+class _Cli:
+    def __init__(self, remoto, conflictos=0):
+        self.remoto, self.conflictos, self.puts = remoto, conflictos, []
+
+    def get(self, url, params=None):
+        return _R(200, {"sha": "s1", "content": _b64.b64encode(json.dumps(self.remoto).encode()).decode()})
+
+    def put(self, url, json=None):
+        self.puts.append(json)
+        if self.conflictos:
+            self.conflictos -= 1
+            return _R(409)
+        return _R(200)
+
+
+_buzon_real = _DIST.BUZON
+_DIST.BUZON = Path(tempfile.mkdtemp()) / "buzon.json"
+_ahora_iso = _DIST._iso(_DIST._ahora())
+_DIST.BUZON.write_text(json.dumps({"eventos": [{"id": "policiales:nuevo", "generado": _ahora_iso}]}), encoding="utf-8")
+_cli = _Cli({"eventos": [{"id": "nacionales:viejo", "generado": _ahora_iso}]}, conflictos=1)
+_ok = _DIST.subir_al_repo(cliente=_cli)
+_subido = json.loads(_b64.b64decode(_cli.puts[-1]["content"]).decode())
+chequear("buzón: se sube al repo unido con lo que ya estaba allá (y reintenta si otro lo cambió)",
+         _ok and len(_cli.puts) == 2 and {e["id"] for e in _subido["eventos"]} == {"policiales:nuevo", "nacionales:viejo"}
+         and "[skip ci]" in _cli.puts[-1]["message"])
+_DIST.BUZON = _buzon_real
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

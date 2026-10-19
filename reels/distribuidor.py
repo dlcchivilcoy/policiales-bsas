@@ -104,7 +104,8 @@ def evento(pieza: dict, video_url: str, url_web: str, url_youtube: str, clave: s
 
 def evento_nacional(pieza: dict, video_url: str, url_web: str, url_youtube: str) -> dict:
     """Una pieza de NACIONALES o de las categorías nuevas (deportes, espectáculos…) para TikTok
-    (17/10/2026, PDF «Prompt integral» etapa 6). Solo TikTok: a X ya llega como nota de la web."""
+    (17/10/2026, PDF «Prompt integral» etapa 6). Desde el 19/10/2026 también a X, con su video: el
+    distribuidor no repite la nota de la web de la misma noticia (x_sincro)."""
     g = pieza.get("guion") or {}
     nota = pieza.get("nota") or {}
     return {
@@ -124,8 +125,57 @@ def evento_nacional(pieza: dict, video_url: str, url_web: str, url_youtube: str)
         "categoria": g.get("seccion") or "",          # «Deportes», «Cine y series», «Política»…
         "categoria_nacional": nota.get("categoria") or "",
         "hashtags": [h.lstrip("#") for h in g.get("hashtags") or []][:2],
-        "plataformas": ["tiktok"],
+        "plataformas": ["x", "tiktok"],
     }
+
+
+# SINCRONIZADO CON X (19/10/2026): el distribuidor lee este archivo desde el repo cada 20 minutos. Antes se
+# subía recién al final de la corrida (hasta 3 h después) y X salía desfasado; ahora, cada vez que se anota
+# una pieza, el archivo se sube en el momento por la API de GitHub (combinando con lo que ya está allá).
+API_GITHUB = "https://api.github.com"
+RUTA_REPO = "estado/buzon_distribuidor.json"
+
+
+def subir_al_repo(cliente=None) -> bool:
+    """Sube el buzón al repo (contents API), unido con la versión remota. True si quedó arriba. Solo en
+    GitHub Actions (con GITHUB_TOKEN y GITHUB_REPOSITORY); nunca lanza."""
+    import base64
+    tok, repo = os.environ.get("GITHUB_TOKEN", ""), os.environ.get("GITHUB_REPOSITORY", "")
+    if cliente is None and (not (tok and repo) or os.environ.get("GITHUB_ACTIONS") != "true"):
+        return False
+    try:
+        if cliente is None:
+            import httpx
+            cliente = httpx.Client(timeout=30, headers={"Authorization": f"Bearer {tok}",
+                                                        "Accept": "application/vnd.github+json"})
+        url = f"{API_GITHUB}/repos/{repo}/contents/{RUTA_REPO}"
+        for _intento in range(4):
+            r = cliente.get(url, params={"ref": "main"})
+            sha, remoto = None, {}
+            if r.status_code == 200:
+                d = r.json()
+                sha = d.get("sha")
+                try:
+                    remoto = json.loads(base64.b64decode(d.get("content") or "").decode("utf-8"))
+                except ValueError:
+                    remoto = {}
+            unido = combinar(leer(), remoto)
+            cuerpo = {"message": "Buzón del distribuidor (X y TikTok) [skip ci]", "branch": "main",
+                      "content": base64.b64encode(json.dumps(unido, ensure_ascii=False, indent=2)
+                                                  .encode("utf-8")).decode("ascii")}
+            if sha:
+                cuerpo["sha"] = sha
+            p = cliente.put(url, json=cuerpo)
+            if p.status_code in (200, 201):
+                BUZON.parent.mkdir(parents=True, exist_ok=True)
+                BUZON.write_text(json.dumps(unido, ensure_ascii=False, indent=2), encoding="utf-8")
+                return True
+            if p.status_code not in (409, 422):        # 409/422: otro trabajo lo cambió en el medio
+                break
+        return False
+    except Exception as e:  # noqa: BLE001 — el buzón nunca frena la pasada
+        print(f"  distribuidor: no pude subir el buzón al repo ({type(e).__name__}); va al final de la corrida")
+        return False
 
 
 def dejar_nacional(pieza: dict, mp4: Path, url_web: str, url_youtube: str, subir, nombre: str) -> str:
@@ -147,6 +197,7 @@ def dejar_nacional(pieza: dict, mp4: Path, url_web: str, url_youtube: str, subir
     d = combinar(d, {})
     BUZON.parent.mkdir(parents=True, exist_ok=True)
     BUZON.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+    subir_al_repo()                                   # X sale a la par de las otras redes
     return ev_id
 
 
@@ -183,5 +234,6 @@ def dejar(listas: list, ledger: dict, carpeta: Path, subir, repo: str, tag: str,
         d = combinar(d, {})
         BUZON.parent.mkdir(parents=True, exist_ok=True)
         BUZON.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+        subir_al_repo()                               # X sale a la par de las otras redes
     print(f"\nDistribuidor X/TikTok: {nuevos} pieza(s) al buzón" + (f", {fallas} sin video" if fallas else ""))
     return {"buzon": nuevos, "fallas": fallas}
