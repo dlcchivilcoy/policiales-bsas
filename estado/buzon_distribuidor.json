@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-19T23:15:15.000Z",
+  "actualizado": "2026-10-19T23:21:15.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/346695-allanamiento-en-junin-un-aprehendido-y-prendas-sec",
@@ -1606,6 +1606,30 @@
         "Australia"
       ],
       "plataformas": [
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/10/choque-en-la-tarde-de-chacabuco.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-19T23:21:15.000Z",
+      "titulo": "Un motociclista terminó internado tras chocar contra un auto en Chacabuco",
+      "descripcion": "Un conductor de moto debió ser trasladado de urgencia al hospital local con dolencias en una pierna tras protagonizar un violento impacto contra un automóvil en la intersección de las calles Alberdi y Falucho.",
+      "texto_tiktok": "Un motociclista fue trasladado al hospital municipal con una lesión en la pierna tras protagonizar un fuerte choque contra un automóvil en la tarde de este lunes en la ciudad de Chacabuco.\n\nEl siniestro vial ocurrió en la esquina de las calles Alberdi y Falucho, según confirmaron testigos en el lugar.\n\nEl conductor del rodado menor, identificado como de apellido Schettino y señalado como docente de la Universidad Tecnológica Nacional, debió ser asistido por personal médico y evacuado en ambulancia.\n\nEn el hecho participaron una moto y un auto, y las actuaciones quedaron en curso para establecer la mecánica exacta de la colisión.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #SiniestroVial #AccidenteDeTransito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-19_2109_01_chacabuco_un-motociclista-termin-interna.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-un-motociclista-hospitalizado-tras-chocar-con-un-auto-362eb3",
+      "youtube_url": "https://youtube.com/shorts/_xTOtXUBmYc",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Choque en Chacabuco",
+      "categoria": "accidente_vial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
         "tiktok"
       ]
     }
