@@ -57,6 +57,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import entorno
+from nacionales import agenda as AG
 from nacionales import categorias as CAT
 from nacionales import filtro as F
 from nacionales import guion as NG
@@ -216,9 +217,12 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
         if v:
             medios["video"], medios["video_de"] = v, otra
             break
-    if nota.get("categoria") == "virales" and not medios.get("video"):
+    # Virales e internacionales salen SOLO como reel con el video de la nota (19/10/2026): sin video, ni
+    # se gasta la IA.
+    solo_reel = nota.get("categoria") in AG.SOLO_REEL
+    if solo_reel and not medios.get("video"):
         return {"nota": nota, "url_original": nota["url"],
-                "guion": {"apta": False, "motivo": "viral sin el video original en la nota"}}
+                "guion": {"apta": False, "motivo": f"{nota.get('categoria')} sin el video original en la nota"}}
     # SIN IMAGEN REAL NO SALE (pedido del editor, 18/10/2026: «no quiero fotos hechas con IA ni carruseles
     # sin fotos; si no podés usar fotos por copyright, directamente no saques la nota»). La foto se mira
     # ANTES de la IA: una nota sin foto usable ni video propio no gasta el guion. Ya no hay placa propia.
@@ -241,7 +245,7 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     # Una nota de LISTA (las cinco películas…) sale como carrusel, una lámina por elemento, aunque traiga
     # video: el video del portal no dice cuáles son (18/10/2026, el posteo de Netflix).
     lista = g.get("lista") or []
-    es_lista = len(lista) >= 3 and nota.get("categoria") != "virales"
+    es_lista = len(lista) >= 3 and not solo_reel
     if medios.get("video") and (not es_lista or not foto):
         from reels.flujo import _bajar_video
         clip = _bajar_video(medios["video"], base.with_name(base.name + "_original.mp4"))
@@ -254,8 +258,8 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
         foto = str(foto) if foto else None
     if es_lista:
         clip = None                                   # la lista va en carrusel; el video solo dio la tapa
-    if nota.get("categoria") == "virales" and not clip:
-        g.update(apta=False, motivo="viral: el video original no se pudo bajar")
+    if solo_reel and not clip:
+        g.update(apta=False, motivo=f"{nota.get('categoria')}: el video original no se pudo bajar")
         return pieza
     if not clip and not foto:
         g.update(apta=False, motivo=f"sin imagen que se pueda usar ({info_foto.get('motivo') or 'el video no anduvo'})")
@@ -269,7 +273,7 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
         pieza["video"] = R.armar(guion_reel, base.with_suffix(".mp4"), foto=None if clip else imagen,
                                  clip=clip, tema=tema, foto_tapa=imagen)
     except R.ReelError:
-        if not clip or not imagen or nota.get("categoria") == "virales":
+        if not clip or not imagen or solo_reel:
             raise
         clip = None                                   # el video no anduvo: la pieza sigue con la foto
         pieza["video"] = R.armar(guion_reel, base.with_suffix(".mp4"), foto=imagen, tema=tema)
@@ -373,6 +377,8 @@ def _resultado(fn, *args) -> dict:
         return {"estado": "sin_confirmar", "error": PUB._tapar(e), "cuando": cuando}
     except PUB.SinCupoYouTube as e:                  # no es una falla: el cupo del día de Google
         return {"estado": "cupo", "error": PUB._tapar(e), "cuando": cuando}
+    except PUB.LargoParaShort as e:                  # más largo que un Short: no va a YouTube (19/10)
+        return {"estado": "omitida", "detalle": str(e), "cuando": cuando}
     except Exception as e:                           # noqa: BLE001 — se anota y se sigue
         return {"estado": "fallo", "error": PUB._tapar(f"{type(e).__name__}: {e}")[:400], "cuando": cuando}
 
@@ -416,7 +422,9 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
                                 "laminas": len(pieza.get("slides") or []), "texto": caption_instagram(pieza["guion"])}
         return res
 
-    res["youtube"] = (_resultado(PUB.publicar_youtube, pieza, mp4, meta) if con_youtube else
+    largo = PUB.largo_para_short(pieza)
+    res["youtube"] = ({"estado": "omitida", "detalle": largo} if largo else
+                      _resultado(PUB.publicar_youtube, pieza, mp4, meta) if con_youtube else
                       {"estado": "cupo", "detalle": f"ya van {PUB.tope_youtube()} Shorts hoy entre nacionales y policiales"})
     yt_id = res["youtube"].get("id") if _ok(res["youtube"]) else ""
 
@@ -616,6 +624,37 @@ def adelantar_con_video(cola: list, sirve, leer, mirar: int = 4) -> bool:
     return False
 
 
+def formato_probable(c: dict, cat: str, leer) -> str:
+    """«reel» si la nota (o la de otro portal del mismo tema) trae video; si no, «carrusel»."""
+    if cat in AG.SOLO_REEL:
+        return "reel"
+    urls = [c["url"]] + list(c.get("otras_urls") or [])[:2]
+    return "reel" if any((leer(u) or {}).get("video") for u in urls) else "carrusel"
+
+
+def adelantar_formato(cola: list, quiero: str, cat: str, sirve, leer, mirar: int = 3) -> bool:
+    """Pone primero, de las `mirar` mejores que sirven, la primera que saldría en el formato `quiero`
+    (intercalar reel y carrusel, pedido del 19/10/2026). True si cambió el orden."""
+    for c in [x for x in cola if sirve(x)][:mirar]:
+        if formato_probable(c, cat, leer) == quiero:
+            if c is not cola[0]:
+                cola.remove(c)
+                cola.insert(0, c)
+                return True
+            return False
+    return False
+
+
+def formato_buscado(cat: str, formatos: dict, ultimo: str) -> str:
+    """Qué formato conviene para la próxima de `cat`: el otro del que ya salió en esa categoría (1 reel y 1
+    carrusel); si todavía no salió ninguna, el otro del último posteo. "" si da igual."""
+    if cat in AG.SOLO_REEL:
+        return ""
+    ya = formatos.get(cat) or []
+    base = ya[-1] if ya else ultimo
+    return {"reel": "carrusel", "carrusel": "reel", "imagen": "reel"}.get(base or "", "")
+
+
 def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permitir_igual: bool = False):
     """La categoría del próximo turno: la de la mejor candidata que queda (impacto en la variedad,
     puntos en las generales) menos PENALIDAD_CATEGORIA por pieza que ya salió en la pasada. Nunca la
@@ -630,14 +669,30 @@ def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permi
 
 def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, esperar_carrusel: str = "",
            con_carrusel: bool = False, redactar=None, notas=None, notas_variedad=None,
-           leer_pagina=None, senales=None, fila=None) -> dict:
+           leer_pagina=None, senales=None, fila=None, agenda: bool = False) -> dict:
+    """`agenda=True` (19/10/2026): la corrida propia de nacionales de las 10, 18 o 21 (nacionales/agenda.py),
+    con sus categorías del día, 2 de cada una, un posteo cada 30 min (15 el finde), intercaladas en
+    categoría y formato. Sin `agenda`, la pasada de antes (en la fila de 15 minutos de policiales)."""
     notas_inyectadas = notas
     mem = cargar()
     ahora = _ahora()
+    inicio = AG.corrida(ahora) if agenda else None
     dia = ahora.date().isoformat()
     carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
     informe = {"cuando": ahora.isoformat(timespec="seconds"), "publicar": publicar, "piezas": [],
                "descartadas": [], "fallas": []}
+
+    if agenda:
+        informe["corrida"] = {"inicio": inicio.isoformat(timespec="minutes"), "topes": AG.topes(inicio)}
+        if not informe["corrida"]["topes"]:
+            informe["estado"] = "nada"
+            return informe
+        # Una sola corrida por horario: la de cron-job.org o la de respaldo de GitHub, la primera que llega.
+        if publicar and os.environ.get("GITHUB_ACTIONS") == "true":
+            guardia = TURNOS.Fila(AG.corrida_id(inicio))
+            if not guardia.tomar(0, "nacionales", "corrida"):
+                informe["estado"] = "ya_corrio"
+                return informe
 
     if publicar:
         # Los Shorts de pasadas anteriores: ¿YouTube los terminó de procesar? (17/10/2026)
@@ -678,20 +733,39 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
         colas = {"": list(cands)}
         colas.update(colas_de_variedad(notas_variedad, ahora, senales, informe["ranking_variedad"]))
         topes = topes_de_la_pasada(mem, dia)
+        if agenda:
+            hoy = {}
+            for p in de_hoy(mem, dia):
+                hoy[p.get("categoria") or ""] = hoy.get(p.get("categoria") or "", 0) + 1
+            topes = {c: max(0, min(n, AG.tope_del_dia(c, inicio) - hoy.get(c, 0)))
+                     for c, n in AG.topes(inicio).items()}
+            colas = {c: l for c, l in colas.items() if topes.get(c)}
         informe["topes"] = topes
 
         # LA FILA (18/10/2026, noche; reels/turnos.py): un posteo cada 15 minutos entre policiales y
         # nacionales, nunca dos de la misma categoría seguidos. Policiales reserva los suyos; esta pasada
         # toma de a uno los que quedan libres. Fuera de GitHub (simulaciones, pruebas) la fila es local.
-        pid = TURNOS.pasada_actual(ahora)
-        if fila is None:
-            remota = publicar and TURNOS.activa() and os.environ.get("GITHUB_ACTIONS") == "true"
-            fila = TURNOS.Fila(pid, token=None if remota else "")
-        turnos = TURNOS.grilla(pid)
+        if agenda:
+            # La corrida propia: sus turnos (cada 30 min, 15 el finde) en una fila local, sin policiales.
+            pid = AG.corrida_id(inicio)
+            fila = fila or TURNOS.Fila(pid, token="")
+            # Cuántos pueden salir de verdad (no más que las candidatas de cada categoría): de eso depende
+            # cuánto se achica el espaciado para terminar antes de la corrida siguiente.
+            posibles = sum(min(n, len(colas.get(c) or [])) for c, n in topes.items())
+            turnos = AG.turnos(inicio, posibles, holgura=posibles)
+            cuantos = cuantos or posibles
+        else:
+            pid = TURNOS.pasada_actual(ahora)
+            if fila is None:
+                remota = publicar and TURNOS.activa() and os.environ.get("GITHUB_ACTIONS") == "true"
+                fila = TURNOS.Fila(pid, token=None if remota else "")
+            turnos = TURNOS.grilla(pid)
         informe["fila"] = {"pasada": pid, "turnos": [t.strftime("%H:%M") for t in turnos], "ajenos": []}
         if publicar:
             fila.barrer(ahora)
         hechas = {}                                  # piezas de esta pasada por categoría
+        formatos = {}                                # categoría → formatos que ya salieron
+        ultimo_formato = [""]
         contadas = []                                # los temas de esta pasada (también simulando)
         usadas = set()
 
@@ -716,6 +790,10 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                     return None
                 if cat in CON_VIDEO_PRIMERO:
                     adelantar_con_video(colas[cat], sirve, leer_una)
+                if agenda:
+                    quiero = formato_buscado(cat, formatos, ultimo_formato[0])
+                    if quiero:
+                        adelantar_formato(colas[cat], quiero, cat, sirve, leer_una)
                 c = colas[cat].pop(0)
                 if not sirve(c):
                     continue
@@ -733,6 +811,8 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                                                         "cuando": ahora.isoformat(timespec="seconds")}
                     continue
                 hechas[cat] = hechas.get(cat, 0) + 1
+                formatos.setdefault(cat, []).append(pieza.get("formato") or "")
+                ultimo_formato[0] = pieza.get("formato") or ""
                 return pieza
             return None
 
@@ -839,6 +919,14 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
 
 def resumen(inf: dict) -> str:
     l = [f"### Nacionales ({'PUBLICADO' if inf['publicar'] else 'simulación'}) — {inf['cuando']}", ""]
+    if inf.get("corrida"):
+        l.append(f"Corrida de las {inf['corrida']['inicio'][11:16]} · categorías: "
+                 + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["corrida"]["topes"].items()))
+        l.append("")
+    if inf.get("estado"):
+        l.append({"ya_corrio": "Esta corrida ya la hizo otra (cron-job.org o el respaldo): no se hace nada.",
+                  "nada": "En este horario no sale ninguna categoría."}.get(inf["estado"], inf["estado"]))
+        l.append("")
     if "candidatas" in inf:
         l.append(f"Candidatas de Infobae: {inf['candidatas']} · piezas: {len(inf['piezas'])} · "
                  f"descartadas por la IA: {len(inf['descartadas'])}")
@@ -884,8 +972,11 @@ def main():
     ap.add_argument("--sin-carrusel", action="store_true", help="(el carrusel ya viene apagado: 18/10/2026)")
     ap.add_argument("--con-carrusel", action="store_true", help="volver a sacar el carrusel de las 22")
     ap.add_argument("--esperar-carrusel", default="", help="HH:MM: esperar hasta esa hora para el carrusel")
+    ap.add_argument("--agenda", action="store_true",
+                    help="la corrida propia de las 10, 18 o 21 (nacionales/agenda.py, 19/10/2026)")
     a = ap.parse_args()
-    inf = pasada(a.publicar, a.cuantos, a.solo_carrusel, a.esperar_carrusel, a.con_carrusel and not a.sin_carrusel)
+    inf = pasada(a.publicar, a.cuantos, a.solo_carrusel, a.esperar_carrusel, a.con_carrusel and not a.sin_carrusel,
+                 agenda=a.agenda)
     texto = resumen(inf)
     print(texto)
     if os.environ.get("GITHUB_STEP_SUMMARY"):

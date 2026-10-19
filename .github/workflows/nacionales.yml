@@ -1,0 +1,138 @@
+name: Noticias nacionales
+
+# LAS CORRIDAS PROPIAS DE NACIONALES (pedido del editor, 19/10/2026; nacionales/agenda.py). Antes iban en
+# las pasadas de policiales (reels.yml); desde hoy tienen tres horarios, con 2 posteos de cada categoría,
+# intercalados en categoría y formato (reel / carrusel):
+#
+#   10:00  virales · internacionales            (+ deportes, espectáculos e IA los sábados y domingos)
+#   18:00  virales · internacionales · generales (+ deportes, espectáculos, IA y cine/series el finde)
+#   21:00  igual que la de las 18
+#
+# Virales e internacionales salen SOLO como reel con el video de la nota. Un posteo cada 30 minutos (cada
+# 15 los sábados y domingos), el primero a los 15 minutos del horario. Los policiales siguen con sus
+# pasadas de siempre en reels.yml.
+#
+# QUIÉN DISPARA: cron-job.org a horario exacto, con {"ref":"main","inputs":{"origen":"cron"}} (el mismo
+# token fino «cron-job publicador»). El `schedule:` de abajo es el RESPALDO, 20 minutos después: la
+# primera corrida que llega toma la corrida (una referencia de git atómica, refs/turnos/<AAAAMMDD-HHMM>/00)
+# y la otra termina sin hacer nada («ya_corrio»).
+on:
+  schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
+    - cron: "20 13 * * *"   # 10:20 Argentina (respaldo de la de las 10)
+    - cron: "20 21 * * *"   # 18:20 Argentina (respaldo de la de las 18)
+    - cron: "20 0 * * *"    # 21:20 Argentina (respaldo de la de las 21)
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" = publicar DE VERDAD. Cualquier otra cosa = solo simular (si la variable PUBLICAR_REDES no está en 1)'
+        default: "no"
+      origen:
+        description: '"manual" o "cron" (la dispara cron-job.org a horario)'
+        default: "manual"
+
+# Una corrida detrás de la otra: la de las 18 termina antes de las 21 (el espaciado se achica si hace falta).
+concurrency:
+  group: nacionales
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # memoria (estado/) y la referencia de la corrida
+  issues: write               # el issue de aviso si algo falla
+
+jobs:
+  nacionales:
+    runs-on: ubuntu-latest
+    # La de las 21 del finde: hasta 14 posteos cada 15 minutos (≈ 3 h 45).
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Noticias nacionales
+        timeout-minutes: 310
+        env:
+          PYTHONUNBUFFERED: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          WIX_API_KEY: ${{ secrets.WIX_API_KEY }}
+          WIX_SITE_ID: ${{ secrets.WIX_SITE_ID }}
+          WIX_MEMBER_ID: ${{ secrets.WIX_MEMBER_ID }}
+          NOTAS_WEB: ${{ vars.NOTAS_WEB }}
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NAC_FB_POR_PASADA: ${{ vars.NAC_FB_POR_PASADA }}
+          NAC_FB_POR_DIA: ${{ vars.NAC_FB_POR_DIA }}
+          NAC_INSTAGRAM: ${{ vars.NAC_INSTAGRAM }}
+          NAC_MINUTOS: ${{ vars.NAC_MINUTOS }}
+          NAC_MINUTOS_FINDE: ${{ vars.NAC_MINUTOS_FINDE }}
+          # Los cupos que se comparten con policiales y el bot del diario.
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          YT_SHORTS_POR_DIA: ${{ vars.YT_SHORTS_POR_DIA }}
+          PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          NACIONALES_VAR: ${{ vars.NACIONALES }}
+        run: |
+          set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
+          ARGS="--agenda"
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then
+            ARGS="$ARGS --publicar"
+          fi
+          python -m nacionales.pasada $ARGS | tee informe_nacionales.md
+
+      - name: Guardar las piezas
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nacionales-${{ github.run_number }}
+          path: |
+            salida_nacionales/**/*.mp4
+            salida_nacionales/**/*.jpg
+            salida_nacionales/**/*.json
+          retention-days: 1
+          compression-level: 0
+
+      - name: Recordar qué nacionales ya salieron
+        # Solo los archivos de nacionales: tools/guardar_estado.py los combina con lo que guardó policiales.
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json estado/auditoria.json)" ]; then
+            echo "La memoria de nacionales no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json auditoria.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="Las noticias nacionales fallaron"
+          CUERPO="$( [ -f informe_nacionales.md ] && cat informe_nacionales.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi

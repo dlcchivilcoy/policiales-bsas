@@ -513,7 +513,7 @@ inf2 = PA.pasada(True, redactar=redactar_lam, notas=[], notas_variedad=variadas2
 os.environ.pop("NAC_VARIEDAD_POR_PASADA")
 por_cat = {p.get("categoria"): p for p in inf2["piezas"]}
 chequear("viral SIN su video original: no sale, y no se gasta la IA",
-         "virales" not in por_cat and any("viral sin el video original" in d["motivo"] for d in inf2["descartadas"]))
+         "virales" not in por_cat and any("virales sin el video original" in d["motivo"] for d in inf2["descartadas"]))
 chequear("internacional CON video original: reel en Instagram con ese video",
          por_cat.get("internacionales", {}).get("formato") == "reel"
          and (por_cat["internacionales"].get("instagram") or {}).get("estado") == "ok"
@@ -814,5 +814,82 @@ chequear("Mundo: ...pero no si está a más de 10 puntos",
          not PA.adelantar_con_video(cola_m2, lambda c: True, pag_m.get) and cola_m2[0]["url"] == "italia")
 
 shutil.rmtree(tmp, ignore_errors=True)
+# --- 11. La AGENDA propia de nacionales: 10, 18 y 21 (19/10/2026) ------------------------------------------
+from nacionales import agenda as AGE
+_lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
+_sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
+chequear("agenda: lunes a las 10, solo virales e internacionales (2 de cada una)",
+         AGE.topes(_lun(10)) == {"virales": 2, "internacionales": 2})
+chequear("agenda: lunes a las 18 y 21 se suman las generales; nada de deportes, espectáculos, IA ni cine",
+         AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"virales": 2, "internacionales": 2, "": 2})
+chequear("agenda: sábado a las 10, + deportes, espectáculos e IA (sin generales ni cine)",
+         set(AGE.topes(_sab(10))) == {"virales", "internacionales", "deportes", "espectaculos", "tecnologia_ia"})
+chequear("agenda: sábado a las 18, las 7 categorías (cine y series solo 18 y 21 del finde)",
+         set(AGE.topes(_sab(18))) == {"virales", "internacionales", "", "deportes", "espectaculos",
+                                      "tecnologia_ia", "cine_series"} and "cine_series" not in AGE.topes(_sab(10)))
+chequear("agenda: a qué corrida pertenece cada hora (cron-job.org puede llegar unos minutos antes)",
+         AGE.corrida(_lun(10, 7)) == _lun(10) and AGE.corrida(_lun(9, 55)) == _lun(10)
+         and AGE.corrida(_lun(12, 30)) == _lun(10) and AGE.corrida(_lun(8)) == _lun(21) - timedelta(days=1))
+chequear("agenda: cada 30 min entre semana, cada 15 el finde; el primero a los 15 minutos",
+         AGE.minutos(_lun(18), 6) == 30 and AGE.minutos(_sab(10), 10) == 15
+         and AGE.turnos(_lun(10), 4) == [_lun(10, 15), _lun(10, 45), _lun(11, 15), _lun(11, 45)])
+chequear("agenda: el sábado a las 18 (14 posteos) se achica lo justo para terminar antes de las 21",
+         AGE.minutos(_sab(18), 14) == 12 and AGE.turnos(_sab(18), 14)[-1] < _sab(21)
+         and AGE.minutos(_sab(21), 14) == 15)
+chequear("agenda: tope del día = 2 por cada corrida en la que entra",
+         AGE.tope_del_dia("virales", _lun(10)) == 6 and AGE.tope_del_dia("", _lun(10)) == 4
+         and AGE.tope_del_dia("deportes", _lun(10)) == 0 and AGE.tope_del_dia("cine_series", _sab(10)) == 4)
+
+
+def _nv(titulo, seccion, slug, cat, cuando):
+    return dict(nota_cat(titulo, seccion, slug), categoria=cat, fecha=cuando.timestamp() - 3600)
+
+
+# Lunes 18:00: generales, virales e internacionales; el deportes del lunes NO sale.
+FOTO_OK.parent.mkdir(parents=True, exist_ok=True)
+Image.new("RGB", (1200, 800), (120, 90, 60)).save(FOTO_OK, "JPEG")
+PA.MEMORIA = estado_tmp / "nacionales_agenda.json"
+reloj["ahora"] = _lun(18, 2)
+_gen = [dict(nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo el país", "economia", "ag1"),
+             fecha=_lun(17).timestamp()),
+        dict(nota_cat("La CGT anunció un paro general para fin de mes", "politica", "ag2"), fecha=_lun(17).timestamp()),
+        dict(nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "ag3"),
+             fecha=_lun(17).timestamp())]
+_var = [_nv("El video del perro que aprendió a abrir la heladera", "virales", "av1", "virales", _lun(18)),
+        _nv("Elecciones en Estados Unidos: qué votan este martes", "america", "av2", "internacionales", _lun(18)),
+        _nv("Francia: miles de personas protestan contra la reforma jubilatoria", "america", "av3", "internacionales", _lun(18)),
+        _nv("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "av4", "deportes", _lun(18))]
+_pag = {n["url"]: {"video": "https://cdn.jwplayer.com/videos/v.mp4", "imagen": ""} for n in _var}
+_pag[_var[1]["url"]] = {"video": "", "imagen": ""}                 # el de Estados Unidos, sin video
+_pag[_var[3]["url"]] = {"video": "", "imagen": ""}
+inf_a = PA.pasada(True, redactar=redactar_lam, notas=_gen, notas_variedad=_var, agenda=True,
+                  leer_pagina=lambda u: _pag.get(u, {"video": "", "imagen": ""}))
+_cats = [p.get("categoria") for p in inf_a["piezas"]]
+chequear("agenda lunes 18: salen generales (2) y virales; deportes no (es lunes)",
+         _cats.count("") == 2 and "virales" in _cats and "deportes" not in _cats)
+chequear("agenda: internacional sin video NO sale (solo reel con su video) y no gasta la IA",
+         "internacionales" not in _cats
+         and any("internacionales sin el video original" in d["motivo"] for d in inf_a["descartadas"]))
+chequear("agenda: virales e internacionales salen como reel",
+         all(p.get("formato") == "reel" for p in inf_a["piezas"] if p.get("categoria") in ("virales", "internacionales")))
+_t = [p["turno"] for p in inf_a["piezas"]]
+chequear("agenda: un posteo cada 30 minutos desde las 18:15, nunca dos de la misma categoría seguidos",
+         _t == ["18:15", "18:45", "19:15"]
+         and all(a != b for a, b in zip(_cats, _cats[1:])))
+
+# Sábado 18:00: cine y series, 1 reel y 1 carrusel.
+PA.MEMORIA = estado_tmp / "nacionales_agenda_sab.json"
+reloj["ahora"] = _sab(18, 1)
+_cine = [_nv("Netflix estrena en noviembre la serie de Mafalda", "que-puedo-ver", "ac1", "cine_series", _sab(18)),
+         _nv("Cómo se filmó El Eternauta, la serie argentina más vista de Netflix", "que-puedo-ver", "ac2",
+             "cine_series", _sab(18))]
+_pag2 = {_cine[0]["url"]: {"video": "", "imagen": ""}, _cine[1]["url"]: {"video": "https://cdn.jwplayer.com/videos/t.mp4", "imagen": ""}}
+inf_s = PA.pasada(True, redactar=redactar_lam, notas=[], notas_variedad=_cine, agenda=True,
+                  leer_pagina=lambda u: _pag2.get(u, {"video": "", "imagen": ""}))
+_fmt = sorted(p.get("formato") for p in inf_s["piezas"] if p.get("categoria") == "cine_series")
+chequear("agenda sábado: cine y series, 1 reel y 1 carrusel (cada 15 min; la segunda espera un turno: nunca dos seguidas)",
+         _fmt == ["carrusel", "reel"] and [p["turno"] for p in inf_s["piezas"]] == ["18:15", "18:45"])
+print("   agenda lunes:", list(zip(_t, _cats)), "· sábado:", [(p["turno"], p.get("formato")) for p in inf_s["piezas"]])
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

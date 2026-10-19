@@ -966,14 +966,53 @@ def _sin_placa(mp4: Path, destino: Path):
         return None
 
 
+# SOLO SHORTS (pedido del editor, 19/10/2026: «no subas a YT videos de más tiempo de lo que permite la
+# plataforma para los Shorts, porque se me suben como videos largos»). Un Short dura hasta 3 minutos; desde
+# el 18/10 el video del medio va entero, así que uno más largo no va a YouTube (sí a Instagram y Facebook).
+YT_SHORT_MAX_SEG = 180
+
+
+class LargoParaShort(Exception):
+    """El video dura más que un Short: no se sube a YouTube. No es una falla."""
+
+
+def _duracion(mp4) -> float:
+    try:
+        from reels import reel_bot as R
+        return float(R.motor().duration_seconds(Path(mp4)))
+    except Exception:                               # noqa: BLE001 — sin medida, manda lo anotado
+        return 0.0
+
+
+def yt_tope_short() -> float:
+    try:
+        return float(os.environ.get("YT_SHORT_MAX_SEG") or YT_SHORT_MAX_SEG)
+    except ValueError:
+        return YT_SHORT_MAX_SEG
+
+
+def largo_para_short(pieza: dict) -> str:
+    """El motivo si el reel (sin la placa de cierre, que a YouTube no va) dura más que un Short; "" si no."""
+    dur = float((pieza.get("video") or {}).get("duracion") or 0)
+    sin_placa = dur - (5 if (os.environ.get("YT_SIN_PLACA") or "1").strip() != "0" else 0)  # la placa: 5 s
+    if sin_placa > yt_tope_short():
+        return f"dura {sin_placa:.0f} s y un Short llega a {yt_tope_short():.0f} s: no va a YouTube"
+    return ""
+
+
 def publicar_youtube(pieza: dict, mp4: Path, meta: dict = None) -> dict:
     """Sube el Short SIN la placa final «Seguinos en redes» (pedido del editor, 27/09: así
     YouTube no puede elegirla de miniatura; en Facebook e Instagram la placa sigue) y le
     pone la portada del reel como miniatura (ver _poner_miniatura). YT_SIN_PLACA=0 sube
     el reel entero. `meta` (título, descripción…) lo traen las piezas que no son de policiales
-    (nacionales/); sin él, se arma con metadatos_youtube()."""
+    (nacionales/); sin él, se arma con metadatos_youtube(). Más largo que un Short: LargoParaShort."""
+    motivo = largo_para_short(pieza)
+    if motivo:
+        raise LargoParaShort(motivo)
     with tempfile.TemporaryDirectory(prefix="yt_") as t:
         corto = _sin_placa(mp4, Path(t) / mp4.name)
+        if _duracion(corto or mp4) > yt_tope_short():         # la medida real del archivo que sube
+            raise LargoParaShort(f"el archivo dura {_duracion(corto or mp4):.0f} s: más que un Short")
         info = _subir_youtube(pieza, corto or mp4, meta)
     if corto:
         info["sin_placa"] = True
@@ -1738,6 +1777,8 @@ def _intentar(fn, *args) -> dict:
         return {"estado": "sin_confirmar", "detalle": _tapar(e)}
     except SinCupoYouTube as e:
         return {"estado": "fallo", "detalle": _tapar(e), "sin_cupo": True}
+    except LargoParaShort as e:               # no es una falla: no es un Short
+        return {"estado": "omitida", "detalle": str(e)}
     except FalloRed as e:
         return {"estado": "fallo", "detalle": _tapar(e)}
     except Exception as e:                    # un error de programacion tampoco
@@ -1920,6 +1961,9 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
             if motivo:
                 pendientes.remove("youtube")
                 sin_lugar["youtube"] = {"estado": "omitida", "detalle": motivo}
+        if "youtube" in pendientes and largo_para_short(pieza):
+            pendientes.remove("youtube")
+            sin_lugar["youtube"] = {"estado": "omitida", "detalle": largo_para_short(pieza)}
         if "youtube" in pendientes and (_yt_sin_cupo or yt_hoy + yt_pasada >= yt_tope):
             pendientes.remove("youtube")
             sin_lugar["youtube"] = {"estado": "cupo", "detalle":

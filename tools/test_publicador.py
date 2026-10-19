@@ -1492,5 +1492,14 @@ chequear("Facebook: un reel de más de 90 s sale como video de la página (los r
          _res == {"id": "v9", "formato": "video"} and _fb and _fb[0][0].endswith("/videos")
          and _fb[0][1].get("file_url", "").startswith("https://gh/fb_"))
 
+# --- 35. Solo Shorts en YouTube: nada de más de 3 minutos (19/10/2026) -----------------------------------
+os.environ["YT_SIN_PLACA"] = "1"            # como en producción: a YouTube va sin la placa de 5 s
+chequear("Shorts: 3 min o menos (sin la placa de 5 s) va; más largo no",
+         not PUB.largo_para_short({"video": {"duracion": 185.0}})
+         and "no va a YouTube" in PUB.largo_para_short({"video": {"duracion": 200.0}}))
+_r = PUB._intentar(PUB.publicar_youtube, {"video": {"duracion": 400.0}}, Path("no-existe.mp4"))
+chequear("Shorts: el largo queda «omitida» (no es una falla ni manda mail)",
+         _r["estado"] == "omitida" and "Short" in _r["detalle"])
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
