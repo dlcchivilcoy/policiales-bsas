@@ -4,6 +4,9 @@
     venv\\Scripts\\python.exe tools\\test_agro.py
 """
 import os
+# Las pruebas de siempre corren con las imágenes IA prendidas; la regla del 18/10/2026 (sin IA, sin foto
+# real no sale) se prueba al final con AGRO_IMAGEN_IA=0.
+os.environ["AGRO_IMAGEN_IA"] = "1"
 import sys
 import tempfile
 from datetime import datetime, timedelta
@@ -970,6 +973,41 @@ try:
              _params[0].get("cover_url") == "https://release/portada.jpg" and _r == {"id": "m1", "portada": "propia"})
 finally:
     _PB.subir_a_release, _PB._contenedor_listo, _PB._publicar_contenedor = _guard
+
+# --- Sin imágenes hechas con IA (18/10/2026): solo la foto real de una fuente oficial o de prensa ---------
+os.environ["AGRO_IMAGEN_IA"] = "0"
+with tempfile.TemporaryDirectory() as _t0:
+    from PIL import Image as _Im0
+    _gen0, _baj0 = [], []
+
+    def _bajar0(url, ruta):
+        _baj0.append(url)
+        _Im0.new("RGB", (1200, 800), (80, 120, 60)).save(ruta)
+        return True
+
+    def _generar0(*a, **k):
+        _gen0.append(a)
+        return {"archivo": None, "motivo": "no se tenía que llamar"}
+
+    _rep0 = {"id": "x", "fuente": "INTA", "titulo": "t"}
+    _r = IMG.elegir(dict(_rep0, tipo_fuente="medio", fuente="Infocampo"), "https://foto/medio.jpg", "soy",
+                    Path(_t0) / "a.jpg", generar=_generar0, bajar=_bajar0, mirar=lambda f: False,
+                    recrear_con=lambda *a, **k: _gen0.append(a) or {"archivo": None})
+    chequear("sin IA: la foto de otro medio no se recrea ni se genera nada → «ninguna» (la pieza no sale)",
+             _r["origen"] == "ninguna" and not _r["archivo"] and not _gen0 and "otro medio" in _r["motivo"])
+    _r = IMG.elegir(dict(_rep0, tipo_fuente="oficial"), "https://foto/inta.jpg", "soy", Path(_t0) / "b.jpg",
+                    generar=_generar0, bajar=_bajar0, mirar=lambda f: False)
+    chequear("sin IA: la foto real de una fuente oficial sí sale, con su crédito",
+             _r["origen"] == "fuente" and _r["archivo"] and _r["credito"] == "INTA")
+    _r = IMG.elegir(dict(_rep0, tipo_fuente="oficial"), "https://foto/placa.jpg", "soy", Path(_t0) / "c.jpg",
+                    generar=_generar0, bajar=_bajar0, mirar=lambda f: True)
+    chequear("sin IA: una placa con letras de la fuente tampoco sirve → «ninguna» (nunca el banco IA)",
+             _r["origen"] == "ninguna" and not _gen0)
+    _g_medio = [{"tipo_fuente": "medio"}, {"tipo_fuente": "medio"}]
+    _g_inta = [{"tipo_fuente": "medio"}, {"tipo_fuente": "oficial"}]
+    chequear("sin IA: una noticia que solo cuentan otros medios queda afuera antes del puntaje",
+             PA.con_foto_posible([_g_medio, _g_inta]) == ([_g_inta], [_g_medio]))
+os.environ["AGRO_IMAGEN_IA"] = "1"
 
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)

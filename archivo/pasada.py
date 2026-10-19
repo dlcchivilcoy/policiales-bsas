@@ -51,6 +51,17 @@ class PasadaError(Exception):
     pass
 
 
+class SinFotoReal(PasadaError):
+    """No hay foto real para la pieza: no sale (no es una falla de la corrida)."""
+
+
+def imagen_ia_activa() -> bool:
+    """SIN IMÁGENES HECHAS CON IA (pedido del editor, 18/10/2026: «sacá las imágenes hechas con IA también
+    del Archivo: si no hay foto real, que no salga»). Apaga la pregunta del día (su imagen era de FLUX) y la
+    placa propia de la efeméride sin foto. ARCHIVO_IMAGEN_IA=1 vuelve a lo de antes."""
+    return (os.environ.get("ARCHIVO_IMAGEN_IA") or "0").strip() == "1"
+
+
 def _ahora() -> datetime:
     return datetime.now(TZ_AR)
 
@@ -175,12 +186,18 @@ def guion_archivo(ahora: datetime, mem: dict, redactar=None, ind=None, cli=None,
                     continue
             if not post:
                 continue
+            foto = F.url_foto(post.get("foto"), cli) if post.get("foto") else {}
+            if not foto.get("url") and not imagen_ia_activa():
+                motivos.append(f"{tipo}: sin foto del Archivo")       # ni se gasta la IA
+                continue
             g = AG.redactar_con_control(AG.SYSTEM_PROMPT, AG.material_post(post, ahora),
                                         [post["titulo"] + " " + post["texto"][:AG.MATERIAL_POST]], tipo, redactar)
-            foto = F.url_foto(post.get("foto"), cli) if post.get("foto") else {}
             salida = {"tipo": tipo, "guion": g, "volanta": AG.volanta(tipo), "foto_url": foto.get("url") or "",
                       "usados": [E.clave_post(post["id"])],
                       "fuente": {"post": post["id"], "titulo": post["titulo"]}}
+        if g["apta"] and not g["bloqueado"] and not salida["foto_url"] and not imagen_ia_activa():
+            motivos.append(f"{tipo}: sin foto del Archivo")       # sin foto real no sale: la siguiente
+            continue
         if g["apta"] and not g["bloqueado"]:
             return salida
         motivos.append(f"{tipo}: " + ("calcaba el material" if g["bloqueado"] else g.get("motivo") or "no apta"))
@@ -207,6 +224,8 @@ def armar(tipo: str, ahora: datetime, mem: dict, carpeta: Path, redactar=None, *
         pieza = guion_archivo(ahora, mem, redactar, kw.get("ind"), kw.get("cli"), kw.get("buscar"), kw.get("media"),
                               kw.get("leer"))
         foto = _foto_usable(pieza["foto_url"], base.with_name(base.name + "_foto.jpg"), kw.get("bajar"))
+        if not foto and not imagen_ia_activa():
+            raise SinFotoReal("la foto del Archivo no se pudo bajar o es chica: sin foto real no sale")
         if not foto:
             from nacionales import placa as P
             palabra = {"efemeride": "Efemérides", "personaje": "Personajes"}.get(pieza["tipo"], "Historia")
@@ -272,7 +291,16 @@ def pasada(tipo: str, publicar: bool, ahora: datetime = None, publicador=None, *
             inf["detalle"] = f"Instagram sin lugar: {lugar[1]}/{lugar[2]} posteos en 24 h"
             return inf
 
-    pieza = armar(tipo, ahora, mem, SALIDA / ahora.strftime("%Y-%m-%d"), **kw)
+    if tipo == "pregunta" and not imagen_ia_activa():
+        inf["estado"] = "apagada"
+        inf["detalle"] = "la pregunta del día usaba una imagen hecha con IA: apagada desde el 18/10/2026"
+        return inf
+    try:
+        pieza = armar(tipo, ahora, mem, SALIDA / ahora.strftime("%Y-%m-%d"), **kw)
+    except SinFotoReal as e:
+        inf["estado"] = "sin_foto"
+        inf["detalle"] = str(e)
+        return inf
     g = pieza["guion"]
     inf.update(titular=g["titular"], caption=pieza["caption"], imagen=pieza["imagen"].get("proveedor"),
                motivo_imagen=pieza["imagen"].get("motivo"), video=pieza["video"]["archivo"],

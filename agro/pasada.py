@@ -233,6 +233,14 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     conteos["Noticias distintas"] = len(grupos)
     conteos["Agrupadas como duplicado"] = sum(len(g) - 1 for g in grupos) + len(ag["repetidas"])
 
+    # SIN FOTO REAL NO SALE (pedido del editor, 18/10/2026): la foto de otro medio no se usa y no hay más
+    # imágenes hechas con IA (agro/imagen.py). Una noticia que solo cuentan otros medios no tiene de dónde
+    # sacar una foto: afuera antes del puntaje, para no gastar la IA.
+    if not IMG.ia_activa():
+        grupos, sin_fuente = con_foto_posible(grupos)
+        for g in sin_fuente:
+            descartar(DD.representante(g), "solo la cuentan otros medios: no hay foto real que se pueda usar")
+        conteos["Sin foto real (solo otros medios)"] = len(sin_fuente)
     log(f"4) Puntaje de {len(grupos)} noticias (IA, título y bajada)")
     reps = [DD.representante(g) for g in grupos]
     puntajes = SC.puntuar(reps, mem["scores"], log=log) if reps else {}
@@ -248,7 +256,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
             continue
         candidatos.append({"id": r["id"], "rep": r, "grupo": g, "score": s, "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
-    candidatos += [dict(p, pendiente=True) for p in pendientes]
+    candidatos += [dict(p, pendiente=True) for p in pendientes
+                   if IMG.ia_activa() or (p.get("rep") or {}).get("tipo_fuente") in ("oficial", "prensa")]
     conteos["Pendientes de corridas anteriores"] = len(pendientes)
     conteos[f"Con ≥ {SE.score_min()}"] = sum(1 for c in candidatos if c["score"]["ai_score"] >= SE.score_min())
 
@@ -305,6 +314,17 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         otras = [n for n in c["grupo"] if n["id"] != rep["id"]]
         log(f"6) [{k + 1}/{k + 1 + len(cola)}] {s['ai_score']} · {s['subtema']} · {rep['titulo'][:70]}")
         completo = CA.completar(rep)
+        base_previa = carpeta / f"{k + 1:02d}_previa"
+        imagen_previa = None
+        if not IMG.ia_activa():
+            # La foto se mira ANTES del guion: sin foto real usable la pieza no sale (18/10/2026).
+            carpeta.mkdir(parents=True, exist_ok=True)
+            imagen_previa = IMG.elegir(rep, completo.get("imagen", ""), "", base_previa.with_name(
+                base_previa.name + "_imagen.jpg"), subtema=s.get("subtema", ""))
+            if not imagen_previa.get("archivo"):
+                descartar(rep, imagen_previa.get("motivo") or "sin foto real", s)
+                reponer("sin foto real")
+                continue
         try:
             g = GU.generar(rep, completo.get("cuerpo", ""), otras, s)
         except Exception as e:                         # noqa: BLE001
@@ -319,8 +339,9 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g, "formato": formato}
         tema = tema_siguiente(mem)
         if g["apta"]:
-            pieza["imagen"] = IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
-                                         base.with_name(base.name + "_imagen.jpg"), subtema=s.get("subtema", ""))
+            pieza["imagen"] = imagen_previa or IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
+                                                          base.with_name(base.name + "_imagen.jpg"),
+                                                          subtema=s.get("subtema", ""))
             origen = pieza["imagen"]["origen"]
             credito = pieza["imagen"].get("credito", "")
             leyenda = DIS.texto_leyenda(origen, credito)
@@ -447,6 +468,13 @@ def _clip_de_la_fuente(rep: dict, completo: dict, base: Path):
         return None
 
 
+def con_foto_posible(grupos: list) -> tuple:
+    """(los grupos que cuenta alguna fuente oficial o de prensa —de ahí sale la foto real—, los que solo
+    cuentan otros medios). 18/10/2026: sin foto real la pieza no sale."""
+    con = [g for g in grupos if any(n.get("tipo_fuente") in ("oficial", "prensa") for n in g)]
+    return con, [g for g in grupos if g not in con]
+
+
 def GU_reel(g, imagen, salida, origen="ia", credito="", clip=None, tema="blanco"):
     from agro import reel as RE
     return RE.armar(g, imagen, salida, origen=origen, credito=credito, clip=clip, tema=tema)
@@ -545,10 +573,12 @@ def pasada_numeros(publicar: bool, horario: datetime, log=print, publicador=None
     log(f"[agro] CARRUSEL «Los números de la semana» {'REAL' if publicar else 'SIMULADO'} {ahora:%d/%m %H:%M}")
     datos = M.leer_todo(mem, momento=ahora, log=log)
     tema = tema_siguiente(mem)
-    imagen = IMG.del_banco("mercados", ahora.date().isoformat())
-    r = CAR.numeros_semana(mem, datos, carpeta, ahora.date(), imagen or None, tema)
+    # La tapa era una imagen IA del banco: desde el 18/10/2026 no hay imágenes IA ni carruseles sin foto,
+    # así que sin AGRO_IMAGEN_IA=1 este carrusel no sale y va uno de noticia (con su foto real).
+    imagen = IMG.del_banco("mercados", ahora.date().isoformat()) if IMG.ia_activa() else ""
+    r = CAR.numeros_semana(mem, datos, carpeta, ahora.date(), imagen, tema) if imagen else None
     if not r:
-        log("   no hay datos suficientes: va un carrusel de noticia")
+        log("   sin foto real para la tapa o sin datos suficientes: va un carrusel de noticia")
         guardar(mem, ahora, ruta_mem)
         return pasada(log=log, publicar=publicar, publicador=publicador, formato="carrusel", horario=horario,
                       ahora=ahora, carpeta=carpeta)

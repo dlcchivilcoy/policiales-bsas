@@ -4,6 +4,9 @@ import base64
 import io
 import json
 import os
+# Las pruebas de siempre corren con las imágenes IA prendidas; la regla del 18/10/2026 (sin IA, sin foto
+# real no sale) se prueba al final con ARCHIVO_IMAGEN_IA=0.
+os.environ["ARCHIVO_IMAGEN_IA"] = "1"
 import sys
 import tempfile
 from datetime import datetime, timedelta, timezone
@@ -253,6 +256,7 @@ def armar_falso(tipo, ahora, mem, carpeta, redactar=None, **kw):
             "fuente": {}}
 
 
+_armar_real = AP.armar
 AP.armar = armar_falso
 inf = AP.pasada("efemeride", False, HOY)
 chequear("simulada: no publica ni escribe memoria", inf["estado"] == "simulado" and not AP.MEMORIA.exists())
@@ -301,6 +305,26 @@ chequear("la copia vieja que guarda policiales no pisa lo publicado por el Archi
          c["publicaciones"]["2026-10-11:efemeride"]["estado"] == "ok" and "p:2" in c["usados"]
          and len(c["preguntas"]) == 1)
 chequear("archivo.json tiene combinador en guardar_estado", GE.COMBINAR.get("archivo.json") is GE.combinar_archivo)
+
+# --- Sin imágenes hechas con IA (18/10/2026) -----------------------------------------------------------------
+os.environ["ARCHIVO_IMAGEN_IA"] = "0"
+_inf = AP.pasada("pregunta", False)
+chequear("sin IA: la pregunta del día (su imagen era de FLUX) queda apagada, sin error",
+         _inf["estado"] == "apagada")
+_mem0 = {"usados": {}, "publicaciones": {}, "preguntas": []}
+_dummy = Path(tempfile.mkdtemp())
+_orig_guion = AP.guion_archivo
+AP.guion_archivo = lambda *a, **k: {"tipo": "efemeride", "guion": {"titular": "t", "bajada": "b", "descripcion": "d",
+                                                                     "hashtags": []},
+                                     "volanta": "Un día como hoy", "foto_url": "https://x/f.jpg", "usados": []}
+try:
+    _armar_real("efemeride", datetime(2026, 10, 18, 13, 30, tzinfo=AP.TZ_AR), _mem0, _dummy,
+                bajar=lambda url, destino: False)
+    chequear("sin IA: la efeméride cuya foto no baja NO sale (antes iba la placa propia)", False)
+except AP.SinFotoReal:
+    chequear("sin IA: la efeméride cuya foto no baja NO sale (antes iba la placa propia)", True)
+AP.guion_archivo = _orig_guion
+os.environ["ARCHIVO_IMAGEN_IA"] = "1"
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

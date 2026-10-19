@@ -18,6 +18,12 @@
     revisadas, varias por subtema, en agro/marca/banco/ (se arman con `python -m agro.imagen --banco`).
 
 La URL de la foto original se guarda siempre (trazabilidad), aunque no se use.
+
+⛔ DESDE EL 18/10/2026 NADA DE IA (pedido del editor: «sacá las imágenes hechas con IA también de agro: si
+no hay foto real, que no salga»). `elegir` solo acepta la FOTO DE UNA FUENTE OFICIAL O DE PRENSA; sin ella
+devuelve «ninguna» y la pieza no sale (agro/pasada.py la repone con otra). La foto de otro medio no se
+recrea, no se genera ninguna escena y el banco no se usa. Lo de abajo queda para volver atrás con
+AGRO_IMAGEN_IA=1.
 """
 import base64
 import io
@@ -118,6 +124,11 @@ ESTILO = (" Realistic modern editorial photograph for an agribusiness and agtech
           "facing the camera, no logos, no brand names, plain surfaces, wordless.")
 
 
+def ia_activa() -> bool:
+    """AGRO_IMAGEN_IA=1 vuelve a las imágenes hechas con IA (apagadas por el editor el 18/10/2026)."""
+    return (os.environ.get("AGRO_IMAGEN_IA") or "0").strip() == "1"
+
+
 def _ancho(ruta) -> int:
     try:
         from PIL import Image
@@ -144,8 +155,9 @@ def del_banco(subtema: str, semilla: str) -> str:
 
 def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=None, bajar=None,
            mirar=None, subtema: str = "", recrear_con=None) -> dict:
-    """{archivo, origen: «fuente»|«recreada»|«ia»|«ninguna», url_original, motivo}. «ninguna» solo si
-    falla todo Y el banco está vacío."""
+    """{archivo, origen: «fuente»|«ninguna», url_original, motivo}. Desde el 18/10/2026 solo la foto real
+    de una fuente oficial o de prensa; si no, «ninguna» (la pieza no sale). Con AGRO_IMAGEN_IA=1 vuelve
+    lo de antes: «recreada» o «ia» (y «ninguna» solo si falla todo Y el banco está vacío)."""
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     url = cuerpo_imagen or rep.get("imagen_url") or ""
@@ -170,7 +182,14 @@ def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=No
         else:
             return dict(salida, archivo=str(foto), origen="fuente", credito=rep.get("fuente", ""),
                         motivo=f"foto de una fuente {rep['tipo_fuente']}")
-    elif url and rep.get("tipo_fuente") == "medio":
+    elif not url:
+        salida["motivo"] = "la nota no trae foto"
+    else:
+        salida["motivo"] = "la foto es de otro medio (derechos): no se usa"
+    if not ia_activa():
+        return dict(salida, archivo=None, origen="ninguna",
+                    motivo=f"sin foto real que se pueda usar ({salida.get('motivo') or 'sin foto'})")
+    if url and rep.get("tipo_fuente") == "medio":
         # La foto del otro medio, RECREADA con IA (nunca la original). Dos intentos sin letras.
         if bajar is None:
             from reels.flujo import _bajar_foto as bajar
