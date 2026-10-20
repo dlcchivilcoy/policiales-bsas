@@ -8738,6 +8738,27 @@
         69,
         70
       ]
+    },
+    "01e4a3c8579f64e2": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 8,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 34,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "innovación alimentaria",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una curiosidad de feria internacional con baja relevancia directa para el productor de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9346,7 +9367,9 @@
       "https://bichosdecampo.com/contra-esto-competimos-trump-anuncio-que-destinara-8000-millones-de-dolares-para-subsidiar-los-costos-de-la-cosecha-gruesa": "2026-10-20",
       "https://bichosdecampo.com/desde-los-toldos-tierra-de-queseros-freddy-fassler-mantiene-viva-la-tradicion-familiar-del-gouda-elaborado-en-la-cocina-de-su-casa": "2026-10-20",
       "https://lanacion.com.ar/economia/campo/a-francisco-franco-le-faenaron-34-animales-en-un-mes-perdio-40-millones-y-decidio-abandonar-el-campo-nid20102026": "2026-10-20",
-      "https://lanacion.com.ar/economia/campo/vacunos-oferta-abundante-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid20102026": "2026-10-20"
+      "https://lanacion.com.ar/economia/campo/vacunos-oferta-abundante-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid20102026": "2026-10-20",
+      "https://bichosdecampo.com/que-demonios-vamos-a-comer-en-la-sial-de-paris-premiaron-a-unas-papas-fritas-con-agua-chips-de-salame-y-hasta-fideos-que-vienen-con-hielo": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/georges-breitschmitt-presidente-del-ipcva-tras-reuniones-con-importadores-europeos-donde-se-hablo-de-nid20102026": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9953,7 +9976,9 @@
       "contra esto competimos trump anuncio que destinara 8000 millones de dolares para subsidiar los costos de la cosecha gruesa": "2026-10-20",
       "desde los toldos tierra de queseros freddy fassler mantiene viva la tradicion familiar del gouda elaborado en la cocina de su casa": "2026-10-20",
       "a francisco franco le mataron 34 animales en un mes perdio 40 millones y decidio abandonar el campo no me dejan trabajar": "2026-10-20",
-      "vacunos oferta abundante y precios en baja en el mercado agroganadero de canuelas": "2026-10-20"
+      "vacunos oferta abundante y precios en baja en el mercado agroganadero de canuelas": "2026-10-20",
+      "que demonios vamos a comer en la sial de paris premiaron a unas papas fritas con agua chips de salame y hasta fideos que vienen con hielo": "2026-10-20",
+      "georges breitschmitt presidente del ipcva tras reuniones con importadores europeos donde se hablo de visec carne estamos listos hace tiempo": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10560,7 +10585,9 @@
       "e0e8b38e9a8cd605": "2026-10-20",
       "dc9f47eb6a463e89": "2026-10-20",
       "082e152bd54bc60b": "2026-10-20",
-      "47d0db9033962bde": "2026-10-20"
+      "47d0db9033962bde": "2026-10-20",
+      "01e4a3c8579f64e2": "2026-10-20",
+      "7a116f4598919ab4": "2026-10-20"
     }
   },
   "elegidas": [
@@ -12998,67 +13025,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fae50647430a_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "2a309765bad8",
-      "rep": {
-        "id": "2a309765bad8",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos/",
-        "canonical_url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos",
-        "titulo": "Contra las cuerdas: La chicharrita retrocedió en todo el país, pero advierten que no es momento de abandonar los monitoreos",
-        "titulo_norm": "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos",
-        "descripcion": "Las lluvias y la amplitud térmica de la primera mitad de octubre provocaron una fuerte caída de las poblaciones de chicharrita del maíz en las cinco regiones productivas del país. Según el último relevamiento de la Red Nacional de Monitoreo de Dalbulus maidis, las capturas se encuentran incluso por debajo de las registradas un año […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-20T16:15-03:00",
-        "capturado": "2026-10-20T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7a15980a1b368cfe"
-      },
-      "grupo": [
-        {
-          "id": "3426f86909d4",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas/",
-          "canonical_url": "https://infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas",
-          "titulo": "El clima sopla a favor del maíz: las lluvias y la amplitud térmica arrasaron a las chicharritas",
-          "titulo_norm": "el clima sopla a favor del maiz las lluvias y la amplitud termica arrasaron a las chicharritas",
-          "descripcion": "Según un nuevo informe de la red de monitoreo de la plaga, las condiciones climáticas han provocado una “contundente retracción” de las poblaciones de chicharritas. No obstante, “nunca hay que bajar la guardia”, advierten los expertos.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-10-20T16:41-03:00",
-          "capturado": "2026-10-20T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5ca276e40b7e893f"
-        },
-        {
-          "id": "2a309765bad8",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos/",
-          "canonical_url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos",
-          "titulo": "Contra las cuerdas: La chicharrita retrocedió en todo el país, pero advierten que no es momento de abandonar los monitoreos",
-          "titulo_norm": "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos",
-          "descripcion": "Las lluvias y la amplitud térmica de la primera mitad de octubre provocaron una fuerte caída de las poblaciones de chicharrita del maíz en las cinco regiones productivas del país. Según el último relevamiento de la Red Nacional de Monitoreo de Dalbulus maidis, las capturas se encuentran incluso por debajo de las registradas un año […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-20T16:15-03:00",
-          "capturado": "2026-10-20T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7a15980a1b368cfe"
-        }
-      ],
+      "cuando": "2026-10-20T19:02-03:00",
+      "titulo_original": "Contra las cuerdas: La chicharrita retrocedió en todo el país, pero advierten que no es momento de abandonar los monitoreos",
+      "descripcion": "Las lluvias y la amplitud térmica de la primera mitad de octubre provocaron una fuerte caída de las poblaciones de chicharrita del maíz en las cinco regiones productivas del país. Según el último relevamiento de la Red Nacional de Monitoreo de Dalbulus maidis, las capturas se encuentran incluso por ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos/",
+      "titular": "Caen las poblaciones de chicharrita del maíz en las cinco regiones productivas",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -13084,48 +13060,21 @@
           87
         ]
       },
-      "cuando": "2026-10-20T17:00-03:00"
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-20T19:00:00-03:00"
     },
     {
       "id": "c9b3bbeccedf",
-      "rep": {
-        "id": "c9b3bbeccedf",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades/",
-        "canonical_url": "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades",
-        "titulo": "Más agua y calor: el combo de El Niño que obliga a ajustar la prevención de enfermedades",
-        "titulo_norm": "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades",
-        "descripcion": "La presencia del fenómeno El Niño refuerza la importancia del monitoreo, la protección fungicida y la calidad de aplicación para sostener el potencial de rendimiento. “Proteger la sanidad es proteger los kilos”, destacan desde Rizobacter.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-20-at-12.47.54-PM.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-10-20T16:00-03:00",
-        "capturado": "2026-10-20T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7659cdda134ea23d"
-      },
-      "grupo": [
-        {
-          "id": "c9b3bbeccedf",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades/",
-          "canonical_url": "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades",
-          "titulo": "Más agua y calor: el combo de El Niño que obliga a ajustar la prevención de enfermedades",
-          "titulo_norm": "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades",
-          "descripcion": "La presencia del fenómeno El Niño refuerza la importancia del monitoreo, la protección fungicida y la calidad de aplicación para sostener el potencial de rendimiento. “Proteger la sanidad es proteger los kilos”, destacan desde Rizobacter.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-20-at-12.47.54-PM.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-10-20T16:00-03:00",
-          "capturado": "2026-10-20T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7659cdda134ea23d"
-        }
-      ],
+      "cuando": "2026-10-20T19:02-03:00",
+      "titulo_original": "Más agua y calor: el combo de El Niño que obliga a ajustar la prevención de enfermedades",
+      "descripcion": "La presencia del fenómeno El Niño refuerza la importancia del monitoreo, la protección fungicida y la calidad de aplicación para sostener el potencial de rendimiento. “Proteger la sanidad es proteger los kilos”, destacan desde Rizobacter.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades/",
+      "titular": "El Niño exige mayor control sanitario ante el clima húmedo",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 17,
         "interes_productores": 14,
@@ -13151,11 +13100,34 @@
           88
         ]
       },
-      "cuando": "2026-10-20T17:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-20T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5f3d9621-1067-4283-81c7-2722fe73985f",
+          "slug": "el-impacto-de-el-nino-en-la-campana-2026-27-claves-para-a66154",
+          "url": "https://www.diariolacampaña.com.ar/n/el-impacto-de-el-nino-en-la-campana-2026-27-claves-para-a66154",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18138891775636796",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1729944915803172",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c9b3bbeccedf_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-20T19:02:28-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-10-20T19:05:32-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
