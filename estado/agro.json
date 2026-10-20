@@ -8571,6 +8571,173 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e838bf8224cae348": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 66,
+      "commercial_score": 76,
+      "subtema": "ganaderia",
+      "tema": "nutricion animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El congreso de CAENA moviliza a la industria de nutrición animal y exportación de proteínas.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        65
+      ]
+    },
+    "d9a58b5bb8ba680c": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 72,
+      "commercial_score": 78,
+      "subtema": "empresas",
+      "tema": "frigorifico bustos y beltrán",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inversión frigorífica para exportación a China en un contexto de costos complejos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        73,
+        69
+      ]
+    },
+    "45364b97de22bf4a": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 52,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "pollolín",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Caso regional patagónico de avicultura enfocado en exportación.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e0e8b38e9a8cd605": {
+      "impacto_economico": 18,
+      "interes_productores": 13,
+      "innovacion": 4,
+      "cercania_argentina": 8,
+      "cercania_pba": 3,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 68,
+      "commercial_score": 76,
+      "subtema": "mercados",
+      "tema": "subsidios eeuu",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Fuerte impacto geopolítico y comercial por los subsidios de EEUU a productores.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        71,
+        63
+      ]
+    },
+    "dc9f47eb6a463e89": {
+      "impacto_economico": 4,
+      "interes_productores": 6,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 50,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "queso gouda los toldos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de color local sobre tradición quesera en Los Toldos, bajo impacto económico general.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "082e152bd54bc60b": {
+      "impacto_economico": 10,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 5,
+      "ai_score": 69,
+      "commercial_score": 68,
+      "subtema": "ganaderia",
+      "tema": "inseguridad rural olavarría",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Delito rural e inseguridad en provincia de Buenos Aires, tema muy sensible para productores.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        67
+      ]
+    },
+    "47d0db9033962bde": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 68,
+      "commercial_score": 71,
+      "subtema": "mercados",
+      "tema": "cañuelas precios vacunos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cotizaciones y movimiento del Mercado Agroganadero de Cañuelas, dato clave de precios.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        70
+      ]
     }
   },
   "indice": {
@@ -9172,7 +9339,14 @@
       "https://infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas": "2026-10-20",
       "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades": "2026-10-20",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/248926-estamos-ante-una-campana-para-invertir-en-fertilizacion-de-maiz-y-soja-con-r-rotondaro-fertlizar.html": "2026-10-20",
-      "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos": "2026-10-20"
+      "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos": "2026-10-20",
+      "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248927-el-impacto-de-la-nutricion-animal-en-la-produccion-de-proteinas-de-exportacion-con-a-bravo-caena.html": "2026-10-20",
+      "https://bichosdecampo.com/buscando-bajar-los-costos-el-frigorifico-bustos-y-beltran-aposto-por-la-inversion-y-comenzo-a-exportar-carne-a-china": "2026-10-20",
+      "https://bichosdecampo.com/pollolin-la-avicola-mas-austral-del-mundo-espera-ansiosa-por-la-reapertura-de-china-que-paga-hasta-cuatro-veces-mas-que-otros-destinos-por-productos-como-la-garra": "2026-10-20",
+      "https://bichosdecampo.com/contra-esto-competimos-trump-anuncio-que-destinara-8000-millones-de-dolares-para-subsidiar-los-costos-de-la-cosecha-gruesa": "2026-10-20",
+      "https://bichosdecampo.com/desde-los-toldos-tierra-de-queseros-freddy-fassler-mantiene-viva-la-tradicion-familiar-del-gouda-elaborado-en-la-cocina-de-su-casa": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/a-francisco-franco-le-faenaron-34-animales-en-un-mes-perdio-40-millones-y-decidio-abandonar-el-campo-nid20102026": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/vacunos-oferta-abundante-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid20102026": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9772,7 +9946,14 @@
       "el clima sopla a favor del maiz las lluvias y la amplitud termica arrasaron a las chicharritas": "2026-10-20",
       "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades": "2026-10-20",
       "maiz y soja es el momento de invertir en fertilizacion y potenciar los rindes con el nino con r rotondaro fertlizar": "2026-10-20",
-      "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos": "2026-10-20"
+      "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos": "2026-10-20",
+      "el impacto de la nutricion animal en la produccion de proteinas de exportacion con a bravo caena": "2026-10-20",
+      "buscando bajar los costos el frigorifico bustos y beltran aposto por la inversion y comenzo a exportar carne a china": "2026-10-20",
+      "pollolin la avicola mas austral del mundo espera ansiosa por la reapertura de china que paga hasta cuatro veces mas que otros destinos por productos como la garra": "2026-10-20",
+      "contra esto competimos trump anuncio que destinara 8000 millones de dolares para subsidiar los costos de la cosecha gruesa": "2026-10-20",
+      "desde los toldos tierra de queseros freddy fassler mantiene viva la tradicion familiar del gouda elaborado en la cocina de su casa": "2026-10-20",
+      "a francisco franco le mataron 34 animales en un mes perdio 40 millones y decidio abandonar el campo no me dejan trabajar": "2026-10-20",
+      "vacunos oferta abundante y precios en baja en el mercado agroganadero de canuelas": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10372,7 +10553,14 @@
       "5ca276e40b7e893f": "2026-10-20",
       "7659cdda134ea23d": "2026-10-20",
       "934cfcd36b166d49": "2026-10-20",
-      "7a15980a1b368cfe": "2026-10-20"
+      "7a15980a1b368cfe": "2026-10-20",
+      "e838bf8224cae348": "2026-10-20",
+      "d9a58b5bb8ba680c": "2026-10-20",
+      "45364b97de22bf4a": "2026-10-20",
+      "e0e8b38e9a8cd605": "2026-10-20",
+      "dc9f47eb6a463e89": "2026-10-20",
+      "082e152bd54bc60b": "2026-10-20",
+      "47d0db9033962bde": "2026-10-20"
     }
   },
   "elegidas": [
@@ -12745,6 +12933,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_dc168da0abc9_portada.jpg"
+    },
+    {
+      "id": "fae50647430a",
+      "cuando": "2026-10-20T18:00-03:00",
+      "titulo_original": "A Francisco Franco le mataron 34 animales en un mes, perdió $40 millones y decidió abandonar el campo: “No me dejan trabajar”",
+      "descripcion": "Sufrió dos ataques de faena en el establecimiento que alquila en el partido bonaerense de Olavarría; su caso se suma a una ola de delitos rurales denunciada por productores que alertan sobre el robo de ganado, la faena clandestina y los daños en alambrados",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/a-francisco-franco-le-faenaron-34-animales-en-un-mes-perdio-40-millones-y-decidio-abandonar-el-campo-nid20102026/",
+      "titular": "Olavarría: productor abandona el campo tras perder 34 animales por abigeato",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 5,
+        "ai_score": 69,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "inseguridad rural olavarría",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Delito rural e inseguridad en provincia de Buenos Aires, tema muy sensible para productores.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          67
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-20T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "83wGFr9eG4Q",
+          "url": "https://youtube.com/shorts/83wGFr9eG4Q",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "45dd0f04-d587-4278-8bdc-8f5988b57aee",
+          "slug": "inseguridad-rural-en-olavarria-productor-abandona-el-campo-tras-64a04f",
+          "url": "https://www.diariolacampaña.com.ar/n/inseguridad-rural-en-olavarria-productor-abandona-el-campo-tras-64a04f",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1008169075644869",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17873202066649265",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fae50647430a_portada.jpg"
     }
   ],
   "pendientes": [
@@ -12901,8 +13154,8 @@
       "cuando": "2026-10-20T17:00-03:00"
     }
   ],
-  "actualizado": "2026-10-20T17:03:17-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-20T18:05:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
