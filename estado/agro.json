@@ -8341,6 +8341,165 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "58e60bc245d14fc3": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 58,
+      "commercial_score": 58,
+      "subtema": "mercados",
+      "tema": "economía y futuro",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis macroeconómico general de Zuchovicki, de interés pero poco práctico para el día a día del productor pampeano.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dc0639b78deec178": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente contenido técnico y comercial sobre manejo y rentabilidad de maíz para la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        83,
+        58
+      ]
+    },
+    "9f16375b60d9ed2e": {
+      "impacto_economico": 8,
+      "interes_productores": 7,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 7,
+      "ai_score": 50,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "gestión administrativa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un taller administrativo específico; útil para nicho pero bajo atractivo periodístico masivo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c615faf469743cb2": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 82,
+      "subtema": "ganaderia",
+      "tema": "tambo y barro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy útil para tamberos de la cuenca lechera pampeana ante pronósticos de lluvias intensas.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        85,
+        80
+      ]
+    },
+    "b67f0daae31713cc": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 70,
+      "commercial_score": 64,
+      "subtema": "empresas",
+      "tema": "senasa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema político-institucional sensible sobre trazabilidad oficial que genera debate en el sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        72
+      ]
+    },
+    "781d27cf9aa38b5b": {
+      "impacto_economico": 2,
+      "interes_productores": 2,
+      "innovacion": 2,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 1,
+      "conversacion": 1,
+      "potencial_comercial": 2,
+      "ai_score": 12,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "becas eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Noticia institucional de becas en Estados Unidos sin relevancia para el productor local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8388e6d6d167de21": {
+      "impacto_economico": 10,
+      "interes_productores": 9,
+      "innovacion": 15,
+      "cercania_argentina": 4,
+      "cercania_pba": 0,
+      "potencial_reel": 9,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 63,
+      "commercial_score": 65,
+      "subtema": "agtech",
+      "tema": "robótica industrial",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Alta innovación con robots humanoides en fábricas de maquinaria, pero impacto directo lejano para Argentina.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -8931,7 +9090,14 @@
       "https://bichosdecampo.com/la-agenda-2030-sera-woke-pero-los-mercados-mandan-referentes-mundiales-de-la-carne-sustentable-se-reunieron-en-la-sede-de-la-sra-para-discutir-como-financiar-una-ganaderia-mas-verde": "2026-10-20",
       "https://bichosdecampo.com/mary-contreras-hace-de-todo-para-seguir-en-su-chacra-produce-frutas-y-verduras-elabora-dulces-y-contagia-a-los-turistas-de-sus-ganas-de-vivir-en-rio-colorado": "2026-10-20",
       "https://lacapital.com.ar/agro/la-cosecha-maiz-estados-unidos-avanza-al-33-y-presiona-los-precios-n10287699.html": "2026-10-20",
-      "https://intainforma.inta.gob.ar/con-pruebas-de-adn-verifican-la-identidad-de-los-cultivares-de-pecan": "2026-10-20"
+      "https://intainforma.inta.gob.ar/con-pruebas-de-adn-verifican-la-identidad-de-los-cultivares-de-pecan": "2026-10-20",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/248922-claudio-zuchovicki-y-la-necesaria-adaptacion-estamos-ante-un-cambio-demografico-tecnologico-y-del-consumo-como-pocos.html": "2026-10-20",
+      "https://agrositio.com.ar/noticia/248924-encuentros-que-rinden-maiz-volve-a-ver-las-presentaciones-de-una-jornada-clave-para-la-campana.html": "2026-10-20",
+      "https://agrositio.com.ar/noticia/248923-taller-administrativo-de-control-de-liquidaciones-de-granos-herramientas-para-mejorar-la-gestion-agropecuaria.html": "2026-10-20",
+      "https://bichosdecampo.com/tambo-y-super-nino-un-informe-revela-como-manejar-el-barro-para-cuidar-a-las-vacas-y-sostener-la-produccion": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/polemica-el-senasa-se-desligo-del-accionar-de-una-empresa-de-software-evito-dar-nombres-y-ya-gasto-nid20102026": "2026-10-20",
+      "https://croplife.com/crop-inputs/amvac-awards-eight-students-the-2026-southern-agriculture-industry-advancement-scholarship": "2026-10-20",
+      "https://croplife.com/smart-tech/agco-and-agility-robotics-advance-smart-manufacturing-with-humanoid-robot-pilot-in-hesston-ks-facility": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9520,7 +9686,14 @@
       "la agenda 2030 sera woke pero los mercados mandan referentes mundiales de la carne sustentable se reunieron en la sede de la sra para discutir como financiar una ganaderia mas verde": "2026-10-20",
       "mary contreras hace de todo para seguir en su chacra produce frutas y verduras elabora dulces y contagia a los turistas de sus ganas de vivir en rio colorado": "2026-10-20",
       "la cosecha de maiz en estados unidos avanza al 33 y presiona los precios": "2026-10-20",
-      "con pruebas de adn verifican la identidad de los cultivares de pecan": "2026-10-20"
+      "con pruebas de adn verifican la identidad de los cultivares de pecan": "2026-10-20",
+      "claudio zuchovicki analiza el cambio tecnologico demografico y economico que redefine nuestro futuro": "2026-10-20",
+      "encuentros que rinden maiz volve a ver las presentaciones de una jornada clave para la campana": "2026-10-20",
+      "taller administrativo de control de liquidaciones de granos herramientas para mejorar la gestion agropecuaria": "2026-10-20",
+      "tambo y super nino un informe revela como manejar el barro para cuidar a las vacas y sostener la produccion": "2026-10-20",
+      "polemica el senasa se desligo del accionar de una empresa de software evito dar nombres y ya gasto mas de 726 millones en un sistema": "2026-10-20",
+      "amvac awards eight students the 2026 southern agriculture industry advancement scholarship": "2026-10-20",
+      "agco and agility robotics advance smart manufacturing with humanoid robot pilot in hesston ks facility": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10109,7 +10282,14 @@
       "0b317e4cfd31a051": "2026-10-20",
       "bafead9798864885": "2026-10-20",
       "2909ff6ccfe2bd3f": "2026-10-20",
-      "c0bbbcb2a38f6dc9": "2026-10-20"
+      "c0bbbcb2a38f6dc9": "2026-10-20",
+      "58e60bc245d14fc3": "2026-10-20",
+      "dc0639b78deec178": "2026-10-20",
+      "9f16375b60d9ed2e": "2026-10-20",
+      "c615faf469743cb2": "2026-10-20",
+      "b67f0daae31713cc": "2026-10-20",
+      "781d27cf9aa38b5b": "2026-10-20",
+      "8388e6d6d167de21": "2026-10-20"
     }
   },
   "elegidas": [
@@ -12363,11 +12543,76 @@
       "fuera_de_cupo": false,
       "formato": "carrusel",
       "turno": "2026-10-20T11:00:00-03:00"
+    },
+    {
+      "id": "c0402a42ce9c",
+      "cuando": "2026-10-20T16:00-03:00",
+      "titulo_original": "Tambo y Súper Niño: Un informe revela cómo manejar el barro para cuidar a las vacas y sostener la producción",
+      "descripcion": "Las lluvias persistentes pueden complicar el funcionamiento de los tambos, afectar el bienestar de las vacas y sumar riesgos para quienes trabajan en los establecimientos. Frente a la posibilidad de que El Niño intensifique las precipitaciones durante los próximos meses, un informe técnico reúne rec",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/tambo-y-super-nino-un-informe-revela-como-manejar-el-barro-para-cuidar-a-las-vacas-y-sostener-la-produccion/",
+      "titular": "Tambos ante El Niño: cómo manejar el barro y cuidar vacas",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 82,
+        "subtema": "ganaderia",
+        "tema": "tambo y barro",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para tamberos de la cuenca lechera pampeana ante pronósticos de lluvias intensas.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          85,
+          80
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-20T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "6Cr9ZaRjBnU",
+          "url": "https://youtube.com/shorts/6Cr9ZaRjBnU",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "823453b4-d79c-4911-a46c-ac50e7b7815d",
+          "slug": "tambos-frente-a-el-nino-claves-tecnicas-para-manejar-el-barro-y-3a55e3",
+          "url": "https://www.diariolacampaña.com.ar/n/tambos-frente-a-el-nino-claves-tecnicas-para-manejar-el-barro-y-3a55e3",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "28849818561316891",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18090733742229845",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c0402a42ce9c_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-20T14:02:57-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-20T16:03:57-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
