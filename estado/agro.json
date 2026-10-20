@@ -8500,6 +8500,77 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7a15980a1b368cfe": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 86,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "chicharrita",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sanitaria clave para el maíz en zona núcleo, con impacto directo en decisiones de siembra.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        84,
+        87
+      ]
+    },
+    "7659cdda134ea23d": {
+      "impacto_economico": 17,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 83,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "enfermedades",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy relevante para el manejo sanitario bajo El Niño, con alto potencial de sponsors de fungicidas.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        79,
+        88
+      ]
+    },
+    "934cfcd36b166d49": {
+      "impacto_economico": 17,
+      "interes_productores": 15,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 10,
+      "ai_score": 86,
+      "commercial_score": 88,
+      "subtema": "agro",
+      "tema": "fertilización",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran interés agronómico y comercial para marcas de fertilizantes aprovechando el contexto climático favorable.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9097,7 +9168,11 @@
       "https://bichosdecampo.com/tambo-y-super-nino-un-informe-revela-como-manejar-el-barro-para-cuidar-a-las-vacas-y-sostener-la-produccion": "2026-10-20",
       "https://lanacion.com.ar/economia/campo/polemica-el-senasa-se-desligo-del-accionar-de-una-empresa-de-software-evito-dar-nombres-y-ya-gasto-nid20102026": "2026-10-20",
       "https://croplife.com/crop-inputs/amvac-awards-eight-students-the-2026-southern-agriculture-industry-advancement-scholarship": "2026-10-20",
-      "https://croplife.com/smart-tech/agco-and-agility-robotics-advance-smart-manufacturing-with-humanoid-robot-pilot-in-hesston-ks-facility": "2026-10-20"
+      "https://croplife.com/smart-tech/agco-and-agility-robotics-advance-smart-manufacturing-with-humanoid-robot-pilot-in-hesston-ks-facility": "2026-10-20",
+      "https://infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas": "2026-10-20",
+      "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades": "2026-10-20",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/248926-estamos-ante-una-campana-para-invertir-en-fertilizacion-de-maiz-y-soja-con-r-rotondaro-fertlizar.html": "2026-10-20",
+      "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9693,7 +9768,11 @@
       "tambo y super nino un informe revela como manejar el barro para cuidar a las vacas y sostener la produccion": "2026-10-20",
       "polemica el senasa se desligo del accionar de una empresa de software evito dar nombres y ya gasto mas de 726 millones en un sistema": "2026-10-20",
       "amvac awards eight students the 2026 southern agriculture industry advancement scholarship": "2026-10-20",
-      "agco and agility robotics advance smart manufacturing with humanoid robot pilot in hesston ks facility": "2026-10-20"
+      "agco and agility robotics advance smart manufacturing with humanoid robot pilot in hesston ks facility": "2026-10-20",
+      "el clima sopla a favor del maiz las lluvias y la amplitud termica arrasaron a las chicharritas": "2026-10-20",
+      "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades": "2026-10-20",
+      "maiz y soja es el momento de invertir en fertilizacion y potenciar los rindes con el nino con r rotondaro fertlizar": "2026-10-20",
+      "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10289,7 +10368,11 @@
       "c615faf469743cb2": "2026-10-20",
       "b67f0daae31713cc": "2026-10-20",
       "781d27cf9aa38b5b": "2026-10-20",
-      "8388e6d6d167de21": "2026-10-20"
+      "8388e6d6d167de21": "2026-10-20",
+      "5ca276e40b7e893f": "2026-10-20",
+      "7659cdda134ea23d": "2026-10-20",
+      "934cfcd36b166d49": "2026-10-20",
+      "7a15980a1b368cfe": "2026-10-20"
     }
   },
   "elegidas": [
@@ -12608,11 +12691,218 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c0402a42ce9c_portada.jpg"
+    },
+    {
+      "id": "dc168da0abc9",
+      "cuando": "2026-10-20T17:00-03:00",
+      "titulo_original": "Maíz y Soja: ¿es el momento de invertir en Fertilización y potenciar los rindes con El Niño?; con R. Rotondaro - Fertlizar",
+      "descripcion": "Por un lado la oportunidad de ElNiño, y los pronósticos de buen caudal de precipitaciones. Por el otro, la oportunidad de potenciar la ecuación P x Q. Una nota con el Ing. Agr. Roberto Rotondaro, Pre. de FERTILIZAR, que destaca un pronóstico favorable, y la oportunidad para fertilizar maíz y soja. E",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248926-estamos-ante-una-campana-para-invertir-en-fertilizacion-de-maiz-y-soja-con-r-rotondaro-fertlizar.html",
+      "titular": "Maíz y soja: fertilización y El Niño para potenciar rindes",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 15,
+        "innovacion": 9,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 10,
+        "ai_score": 86,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "fertilización",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran interés agronómico y comercial para marcas de fertilizantes aprovechando el contexto climático favorable.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-20T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b48b90d8-eff3-4a35-8f32-cca008f486bb",
+          "slug": "maiz-y-soja-como-potenciar-rindes-con-el-nino-segun-el-ing-agr-a238f5",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-y-soja-como-potenciar-rindes-con-el-nino-segun-el-ing-agr-a238f5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17920472133243980",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1729866325811031",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_dc168da0abc9_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-10-20T16:03:57-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [
+    {
+      "id": "2a309765bad8",
+      "rep": {
+        "id": "2a309765bad8",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos/",
+        "canonical_url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos",
+        "titulo": "Contra las cuerdas: La chicharrita retrocedió en todo el país, pero advierten que no es momento de abandonar los monitoreos",
+        "titulo_norm": "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos",
+        "descripcion": "Las lluvias y la amplitud térmica de la primera mitad de octubre provocaron una fuerte caída de las poblaciones de chicharrita del maíz en las cinco regiones productivas del país. Según el último relevamiento de la Red Nacional de Monitoreo de Dalbulus maidis, las capturas se encuentran incluso por debajo de las registradas un año […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-20T16:15-03:00",
+        "capturado": "2026-10-20T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7a15980a1b368cfe"
+      },
+      "grupo": [
+        {
+          "id": "3426f86909d4",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas/",
+          "canonical_url": "https://infocampo.com.ar/el-clima-sopla-a-favor-del-maiz-las-lluvias-y-la-amplitud-termica-arrasaron-a-las-chicharritas",
+          "titulo": "El clima sopla a favor del maíz: las lluvias y la amplitud térmica arrasaron a las chicharritas",
+          "titulo_norm": "el clima sopla a favor del maiz las lluvias y la amplitud termica arrasaron a las chicharritas",
+          "descripcion": "Según un nuevo informe de la red de monitoreo de la plaga, las condiciones climáticas han provocado una “contundente retracción” de las poblaciones de chicharritas. No obstante, “nunca hay que bajar la guardia”, advierten los expertos.",
+          "imagen_url": "",
+          "autor": "infocampo",
+          "publicado": "2026-10-20T16:41-03:00",
+          "capturado": "2026-10-20T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5ca276e40b7e893f"
+        },
+        {
+          "id": "2a309765bad8",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos/",
+          "canonical_url": "https://bichosdecampo.com/contra-las-cuerdas-la-chicharrita-retrocedio-en-todo-el-pais-pero-advierten-que-no-es-momento-de-abandonar-los-monitoreos",
+          "titulo": "Contra las cuerdas: La chicharrita retrocedió en todo el país, pero advierten que no es momento de abandonar los monitoreos",
+          "titulo_norm": "contra las cuerdas la chicharrita retrocedio en todo el pais pero advierten que no es momento de abandonar los monitoreos",
+          "descripcion": "Las lluvias y la amplitud térmica de la primera mitad de octubre provocaron una fuerte caída de las poblaciones de chicharrita del maíz en las cinco regiones productivas del país. Según el último relevamiento de la Red Nacional de Monitoreo de Dalbulus maidis, las capturas se encuentran incluso por debajo de las registradas un año […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-20T16:15-03:00",
+          "capturado": "2026-10-20T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7a15980a1b368cfe"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 86,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "chicharrita",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sanitaria clave para el maíz en zona núcleo, con impacto directo en decisiones de siembra.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          84,
+          87
+        ]
+      },
+      "cuando": "2026-10-20T17:00-03:00"
+    },
+    {
+      "id": "c9b3bbeccedf",
+      "rep": {
+        "id": "c9b3bbeccedf",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades/",
+        "canonical_url": "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades",
+        "titulo": "Más agua y calor: el combo de El Niño que obliga a ajustar la prevención de enfermedades",
+        "titulo_norm": "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades",
+        "descripcion": "La presencia del fenómeno El Niño refuerza la importancia del monitoreo, la protección fungicida y la calidad de aplicación para sostener el potencial de rendimiento. “Proteger la sanidad es proteger los kilos”, destacan desde Rizobacter.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-20-at-12.47.54-PM.jpeg",
+        "autor": "infocampo",
+        "publicado": "2026-10-20T16:00-03:00",
+        "capturado": "2026-10-20T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7659cdda134ea23d"
+      },
+      "grupo": [
+        {
+          "id": "c9b3bbeccedf",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades/",
+          "canonical_url": "https://infocampo.com.ar/mas-agua-y-calor-el-combo-de-el-nino-que-obliga-a-ajustar-la-prevencion-de-enfermedades",
+          "titulo": "Más agua y calor: el combo de El Niño que obliga a ajustar la prevención de enfermedades",
+          "titulo_norm": "mas agua y calor el combo de el nino que obliga a ajustar la prevencion de enfermedades",
+          "descripcion": "La presencia del fenómeno El Niño refuerza la importancia del monitoreo, la protección fungicida y la calidad de aplicación para sostener el potencial de rendimiento. “Proteger la sanidad es proteger los kilos”, destacan desde Rizobacter.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-20-at-12.47.54-PM.jpeg",
+          "autor": "infocampo",
+          "publicado": "2026-10-20T16:00-03:00",
+          "capturado": "2026-10-20T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7659cdda134ea23d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "enfermedades",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para el manejo sanitario bajo El Niño, con alto potencial de sponsors de fungicidas.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          79,
+          88
+        ]
+      },
+      "cuando": "2026-10-20T17:00-03:00"
+    }
+  ],
+  "actualizado": "2026-10-20T17:03:17-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
