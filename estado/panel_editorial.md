@@ -1,109 +1,51 @@
 # Panel editorial — Diario y Radio
-Actualizado: 19/10/2026 20:21 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 20/10/2026 04:41 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-10-19)
+## Hoy (2026-10-20)
 
-### 18:05 — 2 de 3 hechos policiales
-Notas policiales leídas: 43 · fuera del radio: 9 · ubicación pendiente: 0 · repetidas: 0 · armadas: 3
-
-| Hecho | Lugar | YouTube | Web | Facebook | Instagram |
-|---|---|---|---|---|---|
-| Un motociclista terminó internado tras chocar contra un auto en Chacab | Chacabuco (50.1 km) | ✅ | ✅ | ✅ | 🚫 la cuenta ya uso 89 de sus 100 posteos de 24 h; los ultimos |
-| Balea con proyectil de goma a un joven que eludió un control en moto | Carmen de Areco (88.2 km) | ✅ | ✅ | ✅ | 🚫 la cuenta ya uso 88 de sus 100 posteos de 24 h; los ultimos |
-
-**No salieron en esta pasada:**
-- Desarticulan búnker narco en Junín y detienen a un hombre de 48 años — no apta: El nota_web copia 17 palabras seguidas de la nota original («estuvo a cargo de la delegacion departamental de investigaciones del trafico de drogas ili»), aun después de pedir que lo reescriba.
-
-**Fuera del radio de 100 km:**
-- Cañuelas (115.9 km) ×4 · Pehuajó (198.5 km) ×1 · Rojas (101.6 km) ×1 · Carlos Tejedor (225.1 km) ×1 · Las Flores (149.6 km) ×1 · Trenque Lauquen (273.4 km) ×1
-
-### 15:05 — 1 de 3 hechos policiales
-Notas policiales leídas: 39 · fuera del radio: 8 · ubicación pendiente: 0 · repetidas: 0 · armadas: 3
-
-| Hecho | Lugar | YouTube | Web | Facebook | Instagram |
-|---|---|---|---|---|---|
-| Robaron seis celulares de un local de Claro en el centro de San Antoni | San Antonio de Areco (88.2 km) | ✅ | ✅ | ✅ | 🚫 la cuenta ya uso 91 de sus 100 posteos de 24 h; los ultimos |
-
-**No salieron en esta pasada:**
-- La Justicia suspendió la sanción a Sarmiento y podría jugar con público — no apta: No es del temario de policiales (según la IA): Es una noticia sobre un fallo judicial deportivo y administrativo relacionado con un club de fútbol, sin constituir un delito penal, siniestro vial o hecho poli El bajada copia 25 palabras seguidas de la nota original («hizo lugar a una medida cautelar presentada por el club y suspendio la clausura del estadi»), aun después de pedir que lo reescriba.
-- Analizan el peligro y las medidas en las dársenas gastronómicas de Junín — no apta: No es del temario de policiales (según la IA): La nota trata sobre obras gastronómicas en Junín y no constituye un hecho policial, accidente, alerta meteorológica ni causa penal.
-
-**Fuera del radio de 100 km:**
-- Cañuelas (115.9 km) ×4 · Pehuajó (198.5 km) ×1 · Rojas (101.6 km) ×1 · Carlos Tejedor (225.1 km) ×1 · Las Flores (149.6 km) ×1
-
-### 12:05 — 3 de 3 hechos policiales
-Notas policiales leídas: 35 · fuera del radio: 8 · ubicación pendiente: 0 · repetidas: 0 · armadas: 7
-
-| Hecho | Lugar | YouTube | Web | Facebook | Instagram |
-|---|---|---|---|---|---|
-| Chocaron un auto y una moto en la Ruta 7 y dos mujeres fueron hospital | Chacabuco (50.1 km) | — ese hecho ya está en el canal de YouTube («Dos mujeres herid | ✅ | ✅ | 🚫 la cuenta ya uso 81 de sus 100 posteos de 24 h; los ultimos |
-| Aprehendieron a un hombre armado tras resistirse en el camino real a M | Alberti (28.1 km) | ✅ | ✅ | ✅ | 🚫 la cuenta ya uso 82 de sus 100 posteos de 24 h; los ultimos |
-| Conductor chocó contra un árbol tras descompensarse en Alberti | Alberti (28.1 km) | ✅ | ✅ | — no está entre las 2 más virales de la pasada (esta: viral 5/ | 🚫 la cuenta ya uso 84 de sus 100 posteos de 24 h; los ultimos |
-
-**No salieron en esta pasada:**
-- Kicillof encabezó el acto por el Día de la Lealtad y criticó al Gobierno — no apta: No es del temario de policiales (según la IA): Acto político por el Día de la Lealtad Peronista y declaraciones partidarias
-- Treinta y seis actas, diez motos retenidas y un demorado en Lobos — no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)
-- Tres vehículos chocaron en cadena en una calle de Bragado — no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)
-- Un auto cayó al zanjón en la esquina de Cichero y La Plata — no entra en la pasada: como mucho 3 hechos policiales por pasada, un reel cada 30 minutos (3 lugares libres)
-
-**Fuera del radio de 100 km:**
-- Cañuelas (115.9 km) ×4 · Pehuajó (198.5 km) ×1 · Rojas (101.6 km) ×1 · Carlos Tejedor (225.1 km) ×1 · Las Flores (149.6 km) ×1
-
-**Nacionales y categorías:**
-- [general] El Estado nacional acumula más de 77 mil puestos menos desde diciembre de 2023 — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
-- [general] Karina Milei encabezó el traslado de reclusos de Devoto y suma protagonismo polí — YouTube ✅ Web ✅ Facebook ✅ TikTok (buzón) ✅
-
-### 09:05 — 0 de 3 hechos policiales
-Notas policiales leídas: 11 · fuera del radio: 3 · ubicación pendiente: 0 · repetidas: 0 · armadas: 2
-
-**No salieron en esta pasada:**
-- Accidente temprano en Chacabuco — no apta: No es del temario de policiales (según la IA): La nota no contiene información sobre el accidente mencionado en el titular original.
-- Secuestraron marihuana y hallaron una moto abandonada en la Ruta 46 — no apta: El nota_web copia 28 palabras seguidas de la nota original («durante la inspeccion del habitaculo delantero los agentes encontraron un frasco de vidrio»), aun después de pedir que lo reescriba.
-
-**Fuera del radio de 100 km:**
-- Cañuelas (115.9 km) ×2 · Estación Díaz (150.3 km) ×1
+_Todavía no hay pasadas registradas hoy._
 
 ## Últimos 7 días: volumen por destino
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
 |---|---:|---:|---:|---:|---:|
-| Policiales | 61 | 64 | 34 | 28 | 55 |
-| Nacionales | 117 | 117 | 53 | 0 | 37 |
+| Policiales | 57 | 60 | 30 | 26 | 49 |
+| Nacionales | 126 | 126 | 56 | 0 | 41 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 104 piezas · mediana vistas 16 · mediana likes 0
+### YouTube — 124 piezas · mediana vistas 16.5 · mediana likes 0
 
-- **Por categoría:** cine_series: 2, vistas 23, likes 0 ⚠️muestra chica · deportes: 5, vistas 18, likes 0 · espectaculos: 2, vistas 726.5, likes 0.5 ⚠️muestra chica · general: 45, vistas 7, likes 0 · internacionales: 3, vistas 135, likes 0 ⚠️muestra chica · policiales: 47, vistas 36, likes 0
-- **Por franja:** madrugada (0-6): 3, vistas 295, likes 2 ⚠️muestra chica · mañana (6-12): 20, vistas 14.5, likes 0 · noche (18-24): 36, vistas 18, likes 0 · tarde (12-18): 45, vistas 9, likes 0
-- **Por día:** domingo: 25, vistas 12, likes 0 · jueves: 36, vistas 18, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 20, vistas 14.5, likes 0 · viernes: 22, vistas 16.5, likes 0
-- **Por distancia:** 50 a 100 km: 5, vistas 21, likes 0
+- **Por categoría:** cine_series: 3, vistas 29, likes 0 ⚠️muestra chica · deportes: 8, vistas 58, likes 0 · espectaculos: 7, vistas 52, likes 0 · general: 49, vistas 7, likes 0 · internacionales: 7, vistas 135, likes 0 · policiales: 49, vistas 36, likes 0 · tecnologia_ia: 1, vistas 3, likes 0 ⚠️muestra chica
+- **Por franja:** madrugada (0-6): 11, vistas 52, likes 0 · mañana (6-12): 20, vistas 14.5, likes 0 · noche (18-24): 48, vistas 19, likes 0 · tarde (12-18): 45, vistas 9, likes 0
+- **Por día:** domingo: 37, vistas 13, likes 0 · jueves: 36, vistas 18, likes 0 · lunes: 8, vistas 35.5, likes 0 · miércoles: 1, vistas 262, likes 0 ⚠️muestra chica · sábado: 20, vistas 14.5, likes 0 · viernes: 22, vistas 16.5, likes 0
+- **Por distancia:** 50 a 100 km: 6, vistas 33, likes 0 · hasta 50 km: 1, vistas 5, likes 0 ⚠️muestra chica
 
-### Facebook — 23 piezas · mediana vistas 470 · mediana likes 1
+### Facebook — 24 piezas · mediana vistas 471 · mediana likes 1
 
-- **Por categoría:** policiales: 23, vistas 470, likes 1
-- **Por franja:** madrugada (0-6): 2, vistas 593.5, likes 1 ⚠️muestra chica · mañana (6-12): 5, vistas 425, likes 1 · noche (18-24): 6, vistas 563, likes 1 · tarde (12-18): 10, vistas 439.5, likes 1
-- **Por día:** domingo: 3, vistas 563, likes 0 ⚠️muestra chica · jueves: 9, vistas 425, likes 1 · miércoles: 1, vistas 286, likes 1 ⚠️muestra chica · sábado: 6, vistas 596, likes 1.5 · viernes: 4, vistas 525.5, likes 2.5 ⚠️muestra chica
-- **Por distancia:** 50 a 100 km: 4, vistas 588.5, likes 0.5 ⚠️muestra chica
+- **Por categoría:** policiales: 24, vistas 471, likes 1
+- **Por franja:** madrugada (0-6): 2, vistas 593.5, likes 1 ⚠️muestra chica · mañana (6-12): 5, vistas 425, likes 1 · noche (18-24): 7, vistas 592, likes 1 · tarde (12-18): 10, vistas 439.5, likes 1
+- **Por día:** domingo: 4, vistas 577.5, likes 0.5 ⚠️muestra chica · jueves: 9, vistas 425, likes 1 · miércoles: 1, vistas 286, likes 1 ⚠️muestra chica · sábado: 6, vistas 596, likes 1.5 · viernes: 4, vistas 525.5, likes 2.5 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 4, vistas 588.5, likes 0.5 ⚠️muestra chica · hasta 50 km: 1, vistas 592, likes 2 ⚠️muestra chica
 
-### Instagram — 52 piezas · mediana vistas s/d · mediana likes 4.5
+### Instagram — 73 piezas · mediana vistas s/d · mediana likes 5
 
-- **Por categoría:** cine_series: 2, likes 11.5 ⚠️muestra chica · deportes: 3, likes 4 ⚠️muestra chica · espectaculos: 1, likes 0 ⚠️muestra chica · general: 1, likes 0 ⚠️muestra chica · internacionales: 2, likes 11.5 ⚠️muestra chica · policiales: 43, likes 5
-- **Por franja:** madrugada (0-6): 3, likes 13 ⚠️muestra chica · mañana (6-12): 8, likes 6 · noche (18-24): 22, likes 3.5 · tarde (12-18): 19, likes 4
-- **Por día:** domingo: 12, likes 5 · jueves: 22, likes 2 · miércoles: 1, likes 4 ⚠️muestra chica · sábado: 7, likes 5 · viernes: 10, likes 8.5
-- **Por distancia:** 50 a 100 km: 4, likes 9.5 ⚠️muestra chica
+- **Por categoría:** cine_series: 4, likes 5 ⚠️muestra chica · deportes: 7, likes 6 · espectaculos: 4, likes 6 ⚠️muestra chica · general: 6, likes 2 · internacionales: 6, likes 20 · policiales: 45, likes 5 · tecnologia_ia: 1, likes 3 ⚠️muestra chica
+- **Por franja:** madrugada (0-6): 13, likes 9 · mañana (6-12): 8, likes 6 · noche (18-24): 33, likes 4 · tarde (12-18): 19, likes 4
+- **Por día:** domingo: 23, likes 6 · jueves: 22, likes 2 · lunes: 10, likes 6 · miércoles: 1, likes 4 ⚠️muestra chica · sábado: 7, likes 5 · viernes: 10, likes 8.5
+- **Por distancia:** 50 a 100 km: 5, likes 7 · hasta 50 km: 1, likes 7 ⚠️muestra chica
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-anterior al control: 147 · procesado: 113 · subido, se verifica en la pasada siguiente: 2
+anterior al control: 140 · procesado: 120 · subido, se verifica en la pasada siguiente: 7
 
 ## Controles (sin tocar código)
 
