@@ -16,6 +16,9 @@ from reels import turnos as T
 # la mecánica, no los horarios. Los horarios reales viven en reels/cupo.py (19/10/2026: 18:05 y 23:35).
 from reels import cupo as _CUPO  # noqa: E402
 _CUPO.PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+_CUPO.PASADAS_FINDE = ()
+from reels import turnos as _TUR  # noqa: E402
+_TUR.MINUTOS, _TUR.DEMORA_PRIMERO, _TUR.SEPARACION = 15, 15, 2
 
 fallas, total = [], 0
 

@@ -25,6 +25,10 @@ from reels import publicador as PUB
 # la mecánica, no los horarios. Los horarios reales viven en reels/cupo.py (19/10/2026: 18:05 y 23:35).
 from reels import cupo as _CUPO  # noqa: E402
 _CUPO.PASADAS_AR = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+_CUPO.PASADAS_FINDE = ()
+_CUPO.DIAS = 3650               # las pasadas de prueba (17/10) no se borran por viejas
+from reels import turnos as _TUR  # noqa: E402
+_TUR.MINUTOS, _TUR.DEMORA_PRIMERO, _TUR.SEPARACION = 15, 15, 2
 PUB.PASADAS_AR = _CUPO.PASADAS_AR
 
 # La hora argentina fija en una pasada «de 2» (18:05): los reels de prueba por pasada

@@ -1576,10 +1576,7 @@ def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
     """Cuántas piezas entran en esta pasada a MINUTOS_ENTRE_POSTEOS: la primera ya, y las demás
     hasta MARGEN_PASADA_MIN antes de la pasada siguiente. Entre 1 y el cupo de la pasada."""
     ahora = ahora_ar or _hora_ar()
-    proxima = min(ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
-                  for d in (0, 1) for h, m in PASADAS_AR
-                  if ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
-                  > ahora + timedelta(minutes=20))
+    proxima = min(c for c in CUPO.inicios(ahora, (0, 1), PASADAS_AR) if c > ahora + timedelta(minutes=20))
     libres = (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
     return max(1, min(CUPO.maximo() or 1, int(libres // MINUTOS_ENTRE_POSTEOS) + 1))
 
@@ -1724,10 +1721,7 @@ def _publicar_esperado(red: str, turno: dict, carpeta: Path, ledger: dict, pid: 
 def _minutos_hasta_el_cierre() -> float:
     """Minutos hasta MARGEN_PASADA_MIN antes de la pasada siguiente."""
     ahora = _hora_ar()
-    proxima = min(ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
-                  for d in (0, 1) for h, m in PASADAS_AR
-                  if ahora.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
-                  > ahora + timedelta(minutes=20))
+    proxima = min(c for c in CUPO.inicios(ahora, (0, 1), PASADAS_AR) if c > ahora + timedelta(minutes=20))
     return (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
 
 

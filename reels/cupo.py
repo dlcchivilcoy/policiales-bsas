@@ -24,7 +24,28 @@ MAX_DEFAULT = 3
 # Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Si
 # cambian los horarios de cron-job.org, se cambian acá.
 # 19/10/2026: el editor sacó las de las 09:05, 12:05, 15:05 y 21:05.
-PASADAS_AR = ((18, 5), (23, 35))
+# 20/10/2026 («la corrida de policiales cambie el horario a 20 hs y 22 hs; sábado y domingo, que se una a
+# nacionales en sus 4 corridas pero que se intercalen los posteos»): lunes a viernes 20 y 22; sábado y
+# domingo 10, 14, 18 y 21, a la par de nacionales (reels/turnos.py los intercala).
+PASADAS_SEMANA = ((20, 0), (22, 0))
+PASADAS_FINDE = ((10, 0), (14, 0), (18, 0), (21, 0))
+PASADAS_AR = PASADAS_SEMANA
+
+
+def del_dia(dia: datetime, pasadas_ar=None) -> tuple:
+    """Las pasadas de ese día: las del finde el sábado y el domingo (si PASADAS_FINDE no está vacía)."""
+    if PASADAS_FINDE and dia.weekday() >= 5:
+        return PASADAS_FINDE
+    return PASADAS_AR if pasadas_ar is None else pasadas_ar
+
+
+def inicios(desde: datetime, dias, pasadas_ar=None) -> list:
+    """Los horarios de las pasadas de los días `desde + d` (d en `dias`), con la zona de `desde`."""
+    out = []
+    for d in dias:
+        dia = desde + timedelta(days=d)
+        out += [dia.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in del_dia(dia, pasadas_ar)]
+    return out
 DIAS = 3                       # lo que se guarda: alcanza para auditar y no crece sin fin
 TZ_AR = timezone(timedelta(hours=-3))
 # Una corrida que arranca hasta 10 minutos ANTES de su horario es de ese horario.
@@ -42,9 +63,7 @@ def pasada_id(pasadas_ar, ahora_ar: datetime = None) -> str:
     """El horario de la pasada a la que pertenece este momento: el último de `pasadas_ar`
     ((hora, minuto), hora argentina) que ya empezó. Antes de la primera del día, la última de ayer."""
     ahora = (ahora_ar or datetime.now(TZ_AR)).replace(tzinfo=None) + timedelta(minutes=TOLERANCIA_MIN)
-    inicios = [ahora.replace(hour=h, minute=m, second=0, microsecond=0) - timedelta(days=d)
-               for d in (0, 1) for h, m in pasadas_ar]
-    inicio = max(i for i in inicios if i <= ahora)
+    inicio = max(i for i in inicios(ahora, (0, -1), pasadas_ar) if i <= ahora)
     return inicio.strftime("%Y-%m-%dT%H:%M")
 
 

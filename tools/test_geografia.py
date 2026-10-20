@@ -123,6 +123,7 @@ chequear("publicador: la pieza nueva vuelve a medir sus coordenadas",
 
 # --- 6. El cupo de la pasada -------------------------------------------------------------------
 PAS = ((9, 5), (12, 5), (15, 5), (18, 5), (21, 5), (23, 35))
+CUPO.PASADAS_FINDE = ()          # el 17 y 18/10 son sábado y domingo: acá se prueba la grilla de siempre
 AR = timezone(timedelta(hours=-3))
 chequear("pasada: 12:20 es la de las 12:05", CUPO.pasada_id(PAS, datetime(2026, 10, 17, 12, 20, tzinfo=AR))
          == "2026-10-17T12:05")

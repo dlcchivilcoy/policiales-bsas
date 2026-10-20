@@ -29,8 +29,12 @@ from datetime import datetime, timedelta, timezone
 from reels import cupo as CUPO
 
 TZ_AR = timezone(timedelta(hours=-3))
-MINUTOS = 15                   # entre un posteo y el siguiente
-DEMORA_PRIMERO = 15            # el primer turno, a los 15 minutos del horario de la pasada
+# 20/10/2026: policiales comparte horario con nacionales (finde) y la de las 22 se cruza con la de las 21 de
+# nacionales; nacionales sale a los :15 y :45, así que policiales va a los :30 y :00 — uno cada 30 minutos,
+# el primero a los 30 minutos de la pasada, seguidos (ya no comparten fila: se intercalan por la hora).
+MINUTOS = 30                   # entre un posteo y el siguiente
+DEMORA_PRIMERO = 30            # el primer turno, a los 30 minutos del horario de la pasada
+SEPARACION = 1                 # turnos entre dos policiales (2 = nunca dos seguidos, la fila vieja)
 POR_PASADA = 12                # turnos por pasada, como mucho
 TOLERANCIA_ATRASO = timedelta(minutes=3)   # un turno que empezó hace menos que esto todavía se usa
 API = "https://api.github.com"
@@ -60,9 +64,7 @@ def inicio(pid: str) -> datetime:
 
 
 def _siguiente_pasada(desde: datetime) -> datetime:
-    candidatos = [desde.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=d)
-                  for d in (0, 1) for h, m in CUPO.PASADAS_AR]
-    return min(c for c in candidatos if c > desde)
+    return min(c for c in CUPO.inicios(desde, (0, 1)) if c > desde)
 
 
 def grilla(pid: str) -> list:
@@ -226,11 +228,11 @@ def plan_policiales(fila: Fila, n: int, ahora: datetime) -> list:
         return []
     ya = _policiales(fila.ocupados())
     primero, ultimo = disponibles[0][0], len(grilla(fila.pid)) - 1
-    paso = max(2, (ultimo - primero + 1) // n)
+    paso = SEPARACION if SEPARACION <= 1 else max(SEPARACION, (ultimo - primero + 1) // n)
     elegidos, objetivo = [], primero
     for _ in range(n):
         opcion = next(((k, t) for k, t in disponibles if k >= objetivo
-                       and all(abs(k - e) >= 2 for e in [x for x, _t in elegidos] + list(ya))), None)
+                       and all(abs(k - e) >= SEPARACION for e in [x for x, _t in elegidos] + list(ya))), None)
         if opcion is None:
             break
         elegidos.append(opcion)
