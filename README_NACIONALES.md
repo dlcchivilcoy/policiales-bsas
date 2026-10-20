@@ -137,7 +137,7 @@ agenda (`nacionales/agenda.py`). TODO sale como **reel con el video original de 
 
 | días | corridas | qué sale en cada corrida |
 |---|---|---|
-| lunes a viernes | 18 · 21 | 2 generales, 1 viral, 1 mundo |
+| lunes a viernes | 18 · 21 | 3 generales (1 política, 1 economía, 1 sociedad) y 1 viral; mundo solo el finde. Todo reel: con video si lo hay, si no con la foto (generales) |
 | sábado y domingo | 10 · 14 · 18 · 21 | 6 de las 7: viral, mundo, IA, general, deporte, cine/serie, espectáculo (1 de cada una, las más virales) |
 
 «Mundo» = internacionales con algo policial o de violencia/conflicto (`agenda.es_mundo`).

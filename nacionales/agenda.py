@@ -5,11 +5,18 @@ Las nacionales tienen sus corridas propias (no van en las pasadas de policiales)
 el video original de la nota: sin video, la nota no sale (ni como carrusel).
 
     días              corridas            qué sale en cada corrida
-    lunes a viernes   18 · 21             2 generales, 1 viral, 1 mundo
+    lunes a viernes   18 · 21             3 generales (1 política, 1 economía, 1 sociedad) y 1 viral
     sábado/domingo    10 · 14 · 18 · 21   6 de: viral, mundo, IA, general, deporte, cine/serie,
                                           espectáculo — 1 de cada una, las 6 más virales
 
-«Mundo» = internacionales virales con video de algo policial o de violencia/conflicto (es_mundo).
+«Mundo» = internacionales virales con video de algo policial o de violencia/conflicto (es_mundo). Desde el
+20/10/2026 a la noche, SOLO el sábado y el domingo («la categoría mundo dejala solo para fin de semana»).
+
+Las generales de lunes a viernes (pedido del 20/10/2026, noche: «3 generales: 1 política, 1 economía, 1
+sociedad, y un viral; todo que sea reel y, si se puede, con video mejor»): la fila de las generales se parte
+por la sección de Infobae (subgeneral: política + judiciales, economía, y sociedad + salud). Todo sale como
+REEL: con el video de la nota si alguna de las mejores lo trae; si no, reel con la foto de la nota
+(reel_con_foto). El viral, como siempre, solo con su video.
 
 (Historia: el 19/10 a la mañana, 10 · 18 · 21 con todo junto; a la tarde, 11 · 12 · 16 · 18 · 21; a la
 noche, solo 18 y 21 con 2 por categoría y 1 reel + 1 carrusel. El 20/10, esta agenda.)
@@ -36,8 +43,10 @@ MINUTOS_FINDE = 30
 FIN_DE_SEMANA = (5, 6)                 # sábado, domingo
 GENERALES = ""                         # la «categoría» de las nacionales generales
 
-# Lunes a viernes, en cada corrida: {categoría: cuántas}.
-SEMANA = {GENERALES: 2, "virales": 1, "internacionales": 1}
+SUBGENERALES = ("politica", "economia", "sociedad")
+GENERALES_TODAS = (GENERALES,) + SUBGENERALES        # las que se ordenan por «puntos» (no por impacto)
+# Lunes a viernes, en cada corrida: {categoría: cuántas}. Mundo, solo el finde (20/10/2026, noche).
+SEMANA = {"politica": 1, "economia": 1, "sociedad": 1, "virales": 1}
 # Sábado y domingo: 1 de cada categoría, y en total las POR_CORRIDA_FINDE más virales.
 FINDE = {"virales": 1, "internacionales": 1, "tecnologia_ia": 1, GENERALES: 1, "deportes": 1,
          "cine_series": 1, "espectaculos": 1}
@@ -52,6 +61,22 @@ def solo_reel(cat: str) -> bool:
     if cat in SOLO_REEL:
         return True
     return (os.environ.get("NAC_TODO_REEL") or "1").strip() != "0" and cat in (set(FINDE) | set(SEMANA))
+
+def reel_con_foto(cat: str) -> bool:
+    """¿Sale como reel aunque no tenga video (con la foto de la nota)? Las generales de lunes a viernes."""
+    return cat in SUBGENERALES
+
+
+def subgeneral(c: dict) -> str:
+    """«politica», «economia» o «sociedad»: la sección de Infobae de una nacional general."""
+    from urllib.parse import urlparse
+    p = urlparse(c.get("url") or "").path
+    if p.startswith(("/politica/", "/judiciales/")):
+        return "politica"
+    if p.startswith("/economia/"):
+        return "economia"
+    return "sociedad"
+
 
 # MUNDO: internacionales con algo policial o de violencia / conflicto (pedido del 20/10/2026).
 _MUNDO = re.compile(

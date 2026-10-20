@@ -218,8 +218,10 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
             medios["video"], medios["video_de"] = v, otra
             break
     # Virales e internacionales salen SOLO como reel con el video de la nota (19/10/2026): sin video, ni
-    # se gasta la IA.
-    solo_reel = AG.solo_reel(nota.get("categoria") or "")
+    # se gasta la IA. Las generales de lunes a viernes (20/10/2026, noche): reel siempre, con video si lo
+    # hay y si no con la foto (AG.reel_con_foto).
+    con_foto = AG.reel_con_foto(nota.get("subgeneral") or "")
+    solo_reel = AG.solo_reel(nota.get("subgeneral") or nota.get("categoria") or "") and not con_foto
     if solo_reel and not medios.get("video"):
         return {"nota": nota, "url_original": nota["url"],
                 "guion": {"apta": False, "motivo": f"{nota.get('categoria')} sin el video original en la nota"}}
@@ -245,7 +247,7 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     # Una nota de LISTA (las cinco películas…) sale como carrusel, una lámina por elemento, aunque traiga
     # video: el video del portal no dice cuáles son (18/10/2026, el posteo de Netflix).
     lista = g.get("lista") or []
-    es_lista = len(lista) >= 3 and not solo_reel
+    es_lista = len(lista) >= 3 and not solo_reel and not con_foto
     if medios.get("video") and (not es_lista or not foto):
         from reels.flujo import _bajar_video
         clip = _bajar_video(medios["video"], base.with_name(base.name + "_original.mp4"))
@@ -280,8 +282,8 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     R.anotar_tema(pieza["video"].get("tema", ""))
     pieza["placa"] = pieza["video"].get("placa")
     # Instagram: todas desde el 18/10/2026
-    pieza["formato"] = "reel" if clip else "carrusel"
-    if not clip:
+    pieza["formato"] = "reel" if clip or con_foto else "carrusel"
+    if not clip and not con_foto:
         laminas = g.get("laminas") or []
         if es_lista:
             laminas = [{"titulo": x["nombre"], "texto": x.get("detalle") or x["nombre"]} for x in lista][:9]
@@ -661,7 +663,8 @@ def proxima_categoria(colas: dict, topes: dict, hechas: dict, ultima=None, permi
     del turno anterior, salvo `permitir_igual` (no queda otra). None si no queda nada."""
     def peso(c):
         x = colas[c][0]
-        return ((x.get("impacto") if c else x.get("puntos")) or 0) - PENALIDAD_CATEGORIA * hechas.get(c, 0)
+        return (((x.get("puntos") if c in AG.GENERALES_TODAS else x.get("impacto")) or 0)
+                - PENALIDAD_CATEGORIA * hechas.get(c, 0))
     opciones = [c for c, l in colas.items() if l and hechas.get(c, 0) < topes.get(c, 0)
                 and (permitir_igual or c != ultima)]
     return max(opciones, key=lambda c: (peso(c), c == ""), default=None)
@@ -738,6 +741,11 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # de la corrida. (Hasta el 19/10 se restaba lo publicado en el día, y lo de la madrugada —de la
             # última pasada de la noche anterior— dejó en cero las generales de las 16.)
             topes = dict(AG.topes(inicio))
+            # Lunes a viernes, las generales en 3 filas: política, economía y sociedad (20/10/2026, noche).
+            if any(s in topes for s in AG.SUBGENERALES):
+                for c in colas.pop("", []):
+                    s = AG.subgeneral(c)
+                    colas.setdefault(s, []).append(dict(c, subgeneral=s))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
             if "internacionales" in colas:
@@ -870,6 +878,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                                        {"estado": "omitida", "detalle": "no se pudo dejar en el buzón"})
             registro = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
                     "categoria": nota.get("categoria") or "", "formato": pieza.get("formato") or "",
+                    "subgeneral": nota.get("subgeneral") or "",
                     "medio_origen": PO.fuente_de(nota) if nota.get("categoria") else (nota.get("medio") or ""),
                     "video_original": pieza.get("video_original") or "",
                     "impacto": nota.get("impacto"), "impacto_razones": nota.get("impacto_razones") or [],
@@ -891,7 +900,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             if publicar:
                 mem["piezas"][nota["url"]] = registro
                 guardar(mem)                         # tras cada pieza: un corte no borra lo hecho
-            pieza = preparar(cat)
+            pieza = preparar(nota.get("subgeneral") or cat)
 
     if (con_carrusel or solo_carrusel) and "carrusel" not in informe:
         objetivo = _ahora().replace(hour=HORA_CARRUSEL[0], minute=HORA_CARRUSEL[1], second=0, microsecond=0)

@@ -832,8 +832,12 @@ from nacionales import agenda as AGE
 os.environ["NAC_TODO_REEL"] = "1"
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
-chequear("agenda: lunes a las 18 y 21, 2 generales, 1 viral y 1 mundo (20/10/2026)",
-         AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"": 2, "virales": 1, "internacionales": 1})
+chequear("agenda: lunes a las 18 y 21, 1 política, 1 economía, 1 sociedad y 1 viral; mundo no (20/10/2026)",
+         AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"politica": 1, "economia": 1, "sociedad": 1, "virales": 1})
+chequear("agenda: la sección de cada general (judiciales con política, salud con sociedad)",
+         [AGE.subgeneral({"url": f"https://www.infobae.com/{x}/2026/10/20/n/"}) for x in
+          ("politica", "judiciales", "economia", "sociedad", "salud", "sociedad/policiales")]
+         == ["politica", "politica", "economia", "sociedad", "sociedad", "sociedad"])
 chequear("agenda: entre semana solo hay corridas a las 18 y a las 21",
          all(not AGE.topes(_lun(h)) for h in (10, 11, 12, 14, 16)))
 chequear("agenda: el finde, 4 corridas (10, 14, 18 y 21) con 1 de cada una de las 7 categorías",
@@ -850,8 +854,9 @@ chequear("agenda: cada 30 min, también el finde; el primero a los 15 minutos",
          and AGE.turnos(_lun(18), 4) == [_lun(18, 15), _lun(18, 45), _lun(19, 15), _lun(19, 45)])
 chequear("agenda: si la corrida arrancó tarde (esperó a la anterior), sus turnos corren desde que arranca",
          AGE.turnos(_lun(21), 2, ahora=_lun(21, 40)) == [_lun(21, 45), _lun(22, 15)])
-chequear("agenda: tope del día (lunes: 4 generales, 2 virales; sábado: 4 de cada una)",
-         AGE.tope_del_dia("virales", _lun(18)) == 2 and AGE.tope_del_dia("", _lun(18)) == 4
+chequear("agenda: tope del día (lunes: 2 de política, 2 virales, mundo 0; sábado: 4 de cada una)",
+         AGE.tope_del_dia("virales", _lun(18)) == 2 and AGE.tope_del_dia("politica", _lun(18)) == 2
+         and AGE.tope_del_dia("internacionales", _lun(18)) == 0 and AGE.tope_del_dia("internacionales", _sab(18)) == 4
          and AGE.tope_del_dia("deportes", _lun(18)) == 0 and AGE.tope_del_dia("deportes", _sab(18)) == 4)
 chequear("agenda: TODO sale como reel con video (generales, IA, deportes… también)",
          all(AGE.solo_reel(c) for c in ("", "virales", "internacionales", "tecnologia_ia", "deportes",
@@ -870,7 +875,7 @@ def _nv(titulo, seccion, slug, cat, cuando):
 
 VIDEO = {"video": "https://cdn.jwplayer.com/videos/v.mp4", "imagen": ""}
 SIN = {"video": "", "imagen": ""}
-# Lunes 18:00: 2 generales, 1 viral y 1 mundo, todo con video; deportes no (es lunes).
+# Lunes 18:00: 1 política, 1 economía, 1 sociedad y 1 viral, todo reel; mundo y deportes no (es lunes).
 FOTO_OK.parent.mkdir(parents=True, exist_ok=True)
 Image.new("RGB", (1200, 800), (120, 90, 60)).save(FOTO_OK, "JPEG")
 PA.MEMORIA = estado_tmp / "nacionales_agenda.json"
@@ -879,6 +884,8 @@ _gen = [dict(nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo
              fecha=_lun(17).timestamp()),
         dict(nota_cat("La CGT anunció un paro general para fin de mes", "politica", "ag2"), fecha=_lun(17).timestamp()),
         dict(nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "ag3"),
+             fecha=_lun(17).timestamp()),
+        dict(nota_cat("Vacunación antigripal: amplían la campaña a los mayores de 50", "sociedad", "ag4"),
              fecha=_lun(17).timestamp())]
 _var = [_nv("El video del perro que aprendió a abrir la heladera", "virales", "av1", "virales", _lun(18)),
         _nv("Elecciones en Estados Unidos: qué votan este martes", "america", "av2", "internacionales", _lun(18)),
@@ -887,19 +894,23 @@ _var = [_nv("El video del perro que aprendió a abrir la heladera", "virales", "
         _nv("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "av4", "deportes", _lun(18))]
 _pag = {n["url"]: VIDEO for n in _var + _gen}
 _pag[_gen[2]["url"]] = SIN                                       # la del Senado, sin video
+_pag[_gen[3]["url"]] = SIN                                       # la de sociedad, sin video
 inf_a = PA.pasada(True, redactar=redactar_lam, notas=_gen, notas_variedad=_var, agenda=True,
                   leer_pagina=lambda u: _pag.get(u, SIN))
 _cats = [p.get("categoria") for p in inf_a["piezas"]]
 _titulos = " ".join(p["titulo_original"] for p in inf_a["piezas"])
-chequear("agenda lunes 18: 2 generales, 1 viral y 1 mundo; deportes no (es lunes)",
-         sorted(_cats, key=str) == ["", "", "internacionales", "virales"]
+_subs = sorted(p.get("subgeneral") or p.get("categoria") for p in inf_a["piezas"])
+chequear("agenda lunes 18: 1 política, 1 economía, 1 sociedad y 1 viral; mundo y deportes no",
+         _subs == ["economia", "politica", "sociedad", "virales"]
          and [p["turno"] for p in inf_a["piezas"]] == ["18:15", "18:45", "19:15", "19:45"])
-if sorted(_cats, key=str) != ["", "", "internacionales", "virales"]:
-    print("   ", _cats, inf_a["descartadas"], inf_a["fallas"])
-chequear("agenda: el mundo es el tiroteo, no las elecciones (sin violencia ni conflicto)",
-         "Tiroteo" in _titulos and "Elecciones" not in _titulos)
-chequear("agenda: todo sale como reel; la general sin video no sale",
-         all(p.get("formato") == "reel" for p in inf_a["piezas"]) and "Senado" not in _titulos)
+if _subs != ["economia", "politica", "sociedad", "virales"]:
+    print("   ", _subs, inf_a["descartadas"], inf_a["fallas"])
+chequear("agenda: el lunes no sale mundo (ni el tiroteo)", "Tiroteo" not in _titulos and "Elecciones" not in _titulos)
+chequear("agenda: todo sale como reel; de política, la que trae video (el paro) antes que el Senado sin video",
+         all(p.get("formato") == "reel" for p in inf_a["piezas"]) and "CGT" in _titulos and "Senado" not in _titulos)
+_soc = next((p for p in inf_a["piezas"] if p.get("subgeneral") == "sociedad"), {})
+chequear("agenda: la general sin video sale igual como reel, con la foto de la nota",
+         _soc.get("formato") == "reel" and not _soc.get("video_original"))
 
 # Sábado 10:00: 7 categorías con video → salen las 6 más virales, 1 de cada una, cada 30 min.
 PA.MEMORIA = estado_tmp / "nacionales_agenda_sab.json"
