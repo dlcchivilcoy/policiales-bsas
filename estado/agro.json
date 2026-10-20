@@ -7487,6 +7487,94 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cd339b25ecb13558": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el bolsillo del productor de la región núcleo por la caída de precios y el impacto en la comercialización.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        74,
+        75
+      ]
+    },
+    "9609d2cb9270e108": {
+      "impacto_economico": 14,
+      "interes_productores": 8,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 54,
+      "commercial_score": 60,
+      "subtema": "empresas",
+      "tema": "ganadería",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inversión ganadera de gran escala en el NOA, interesante para el sector empresario pero con menor impacto directo en la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d4a038bde1736e63": {
+      "impacto_economico": 2,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 2,
+      "ai_score": 16,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "agroinfluencers",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Premio internacional de nicho sin relevancia práctica para el productor de Chivilcoy o la región pampeana.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "433346a939ead419": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Relevante para el sector ganadero por el traslado de hacienda debido a la crecida del Paraná y su efecto en precios.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -8011,7 +8099,12 @@
       "https://argentina.gob.ar/noticias/la-afe-y-la-secretaria-de-agricultura-refuerzan-el-monitoreo-conjunto-frente-al-fenomeno-0": "2026-10-19",
       "https://bichosdecampo.com/tiene-37-anos-es-cuarta-generacion-de-productores-en-chaco-y-ve-como-el-campo-se-va-vaciando-german-sanko-encontro-refugio-en-la-alfalfa": "2026-10-19",
       "https://lanacion.com.ar/economia/campo/juan-capozzolo-productor-de-reconquista-evacua-vacas-de-las-islas-si-empieza-a-llover-va-a-ser-muy-nid19102026": "2026-10-19",
-      "https://agfundernews.com/it-will-take-more-than-data-to-improve-traceability-in-the-cotton-supply-chain": "2026-10-19"
+      "https://agfundernews.com/it-will-take-more-than-data-to-improve-traceability-in-the-cotton-supply-chain": "2026-10-19",
+      "https://infocampo.com.ar/el-productor-que-quiera-vender-animales-para-exportar-carne-a-europa-tiene-que-amigarse-con-el-visec": "2026-10-19",
+      "https://bichosdecampo.com/fuerte-baja-de-los-precios-de-la-soja-con-una-carniceria-en-el-mercado-disponible": "2026-10-19",
+      "https://bichosdecampo.com/se-expande-juramento-la-principal-empresa-ganadera-del-noa-desembolso-casi-23-millones-de-dolares-para-comprar-otras-11-mil-hectareas-en-salta": "2026-10-19",
+      "https://lanacion.com.ar/economia/campo/anunciaron-los-finalistas-de-un-premio-internacional-a-los-agroinfluencers-nid19102026": "2026-10-19",
+      "https://lanacion.com.ar/economia/campo/hablan-los-expertos-miles-de-vacunos-deben-salir-de-las-islas-y-anticipan-que-puede-pasar-con-los-nid19102026": "2026-10-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -8534,7 +8627,12 @@
       "la afe y la secretaria de agricultura refuerzan el monitoreo conjunto frente al fenomeno el nino": "2026-10-19",
       "tiene 37 anos es cuarta generacion de productores en chaco y ve como el campo se va vaciando german sanko encontro refugio en la alfalfa": "2026-10-19",
       "juan capozzolo productor de reconquista evacua vacas de las islas si empieza a llover va a ser muy dramatico": "2026-10-19",
-      "it will take more than data to improve traceability in the cotton supply chain": "2026-10-19"
+      "it will take more than data to improve traceability in the cotton supply chain": "2026-10-19",
+      "el productor que quiera vender animales para exportar carne a europa tiene que amigarse con el visec": "2026-10-19",
+      "fuerte baja de los precios de la soja con una carniceria en el mercado disponible": "2026-10-19",
+      "se expande juramento la principal empresa ganadera del noa desembolso casi 23 millones de dolares para comprar otras 11 mil hectareas en salta": "2026-10-19",
+      "anunciaron los finalistas de un premio internacional a los agroinfluencers": "2026-10-19",
+      "hablan los expertos miles de vacunos deben salir de las islas y anticipan que puede pasar con los precios de la carne": "2026-10-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -9057,7 +9155,12 @@
       "e227fc9a0f5ab324": "2026-10-19",
       "507cd22a046d66a1": "2026-10-19",
       "6824198098bae00f": "2026-10-19",
-      "6264ef2d62681498": "2026-10-19"
+      "6264ef2d62681498": "2026-10-19",
+      "393d7dc62ceff951": "2026-10-19",
+      "cd339b25ecb13558": "2026-10-19",
+      "9609d2cb9270e108": "2026-10-19",
+      "d4a038bde1736e63": "2026-10-19",
+      "433346a939ead419": "2026-10-19"
     }
   },
   "elegidas": [
@@ -11090,10 +11193,50 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cc8f71128636_portada.jpg"
+    },
+    {
+      "id": "ddbb516fa014",
+      "cuando": "2026-10-19T21:00-03:00",
+      "titulo_original": "Fuerte baja de los precios de la soja con una “carnicería” en el mercado disponible",
+      "descripcion": "Los mayores esfuerzos de las compaías agroexportadoras argentinas están focalizados en la gestión comercial y logística de trigo ante el catalamitoso panorama productivo presente en el ámbito del Mercosur. La soja pasó a un segundo plano y, por ende, quedó expuesta a la dinámica externa. La mala not",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/fuerte-baja-de-los-precios-de-la-soja-con-una-carniceria-en-el-mercado-disponible/",
+      "titular": "Soja: el disponible cayó a 361 dólares por tonelada en Rosario",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente el bolsillo del productor de la región núcleo por la caída de precios y el impacto en la comercialización.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          74,
+          75
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-19T21:00:00-03:00"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-19T19:04:22-03:00",
+  "actualizado": "2026-10-19T21:02:36-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
