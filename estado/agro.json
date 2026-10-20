@@ -7684,6 +7684,77 @@
       "urgente": true,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3912f3f61d610ed2": {
+      "impacto_economico": 18,
+      "interes_productores": 11,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 73,
+      "commercial_score": 74,
+      "subtema": "agro",
+      "tema": "empleo agroindustrial",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto en la generación de empleo privado nacional y alto potencial para carrusel estadístico.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        73,
+        73
+      ]
+    },
+    "c420804677c47a72": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 67,
+      "commercial_score": 67,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Tema central para el productor sojero de la zona núcleo aunque sea una columna de análisis de mercado.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        62
+      ]
+    },
+    "473e14bb2341de56": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 45,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "peperina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante nicho de economías regionales con sello de calidad pero bajo impacto masivo en zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -8233,7 +8304,10 @@
       "https://agrositio.com.ar/noticia/248912-check-list-de-siembra-5-errores-de-calibracion-de-equipos-que-se-repiten-cada-campana.html": "2026-10-20",
       "https://agrositio.com.ar/noticia/248913-la-deforestacion-en-el-centro-de-la-escena-en-la-sial-paris.html": "2026-10-20",
       "https://agrositio.com.ar/noticia/248907-casafe-presenta-una-publicacion-tecnica-para-promover-las-buenas-practicas-en-aplicaciones-con-drones.html": "2026-10-20",
-      "https://bichosdecampo.com/granja-tres-arroyos-declara-una-deuda-laboral-de-62-448-millones-de-pesos-y-pide-por-favor-al-juez-que-dicte-la-apertura-del-concurso": "2026-10-20"
+      "https://bichosdecampo.com/granja-tres-arroyos-declara-una-deuda-laboral-de-62-448-millones-de-pesos-y-pide-por-favor-al-juez-que-dicte-la-apertura-del-concurso": "2026-10-20",
+      "https://agrositio.com.ar/noticia/248917-en-nuestro-changuito-tambien-hay-trabajo-mas-de-4-millones-de-empleos-generados-por-la-agroindustria.html": "2026-10-20",
+      "https://agrositio.com.ar/noticia/248916-podra-el-rally-del-crudo-revertir-la-tendencia-bajista-para-la-soja-por-manuel-alvarado-ledesma.html": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/de-uso-medicinal-y-culinario-la-peperina-la-popular-hierba-nativa-argentina-logro-el-sello-de-nid20102026": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -8781,7 +8855,10 @@
       "check list de siembra 5 errores de calibracion de equipos que se repiten cada campana": "2026-10-20",
       "la deforestacion en el centro de la escena en la sial paris": "2026-10-20",
       "casafe presenta una publicacion tecnica para promover las buenas practicas en aplicaciones con drones": "2026-10-20",
-      "granja tres arroyos declara una deuda laboral de 62 448 millones de pesos y pide por favor al juez que dicte la apertura del concurso": "2026-10-20"
+      "granja tres arroyos declara una deuda laboral de 62 448 millones de pesos y pide por favor al juez que dicte la apertura del concurso": "2026-10-20",
+      "en nuestro changuito tambien hay trabajo mas de 4 millones de empleos generados por la agroindustria": "2026-10-20",
+      "podra el rally del crudo revertir la tendencia bajista para la soja por manuel alvarado ledesma": "2026-10-20",
+      "la peperina la popular hierba nativa argentina logro el sello de indicacion geografica": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -9329,7 +9406,10 @@
       "8cb42016c8cde004": "2026-10-20",
       "ef783fefc5442883": "2026-10-20",
       "42bde889612dc07f": "2026-10-20",
-      "8bf347b9bd26fe0a": "2026-10-20"
+      "8bf347b9bd26fe0a": "2026-10-20",
+      "3912f3f61d610ed2": "2026-10-20",
+      "c420804677c47a72": "2026-10-20",
+      "473e14bb2341de56": "2026-10-20"
     }
   },
   "elegidas": [
@@ -11466,7 +11546,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-20T07:07:30-03:00",
+  "actualizado": "2026-10-20T08:03:24-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
