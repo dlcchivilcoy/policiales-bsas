@@ -1,13 +1,14 @@
 name: Noticias nacionales
 
-# LAS CORRIDAS PROPIAS DE NACIONALES (pedidos del editor, 19/10/2026; nacionales/agenda.py). 2 posteos de
-# cada categoría por corrida, intercalados en categoría y formato (1 reel y 1 carrusel cuando se puede):
+# LAS CORRIDAS PROPIAS DE NACIONALES (pedido del editor, 20/10/2026; nacionales/agenda.py). TODO sale como
+# REEL con el video original de la nota (sin video, no sale):
 #
-#   18:00  virales · internacionales · generales   (+ IA, espectáculos y cine/series el finde)
-#   21:00  virales · internacionales · generales   (+ deportes el finde)
+#   lunes a viernes  18:00 · 21:00                  2 generales, 1 viral, 1 mundo
+#   sábado/domingo   10:00 · 14:00 · 18:00 · 21:00  6 de las 7 (viral, mundo, IA, general, deporte,
+#                                                   cine/serie, espectáculo): 1 de cada una, las más virales
 #
-# Virales e internacionales salen SOLO como reel con el video de la nota. Un posteo cada 30 minutos (cada
-# 15 los sábados y domingos), el primero a los 15 minutos del horario. Los policiales siguen en reels.yml.
+# «Mundo» = internacionales con algo policial o de violencia/conflicto. Un posteo cada 30 minutos, el primero
+# a los 15 minutos del horario. Los policiales siguen en reels.yml.
 #
 # QUIÉN DISPARA: cron-job.org a horario exacto (tarea 8677866), con {"ref":"main","inputs":{"origen":"cron"}}.
 # El `schedule:` de abajo es el RESPALDO, 20 minutos después: la primera corrida que llega toma la corrida
@@ -16,6 +17,8 @@ on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 21 * * *"   # 18:20 Argentina (respaldo de la de las 18)
     - cron: "20 0 * * *"    # 21:20 Argentina (respaldo de la de las 21)
+    - cron: "20 13 * * 6,0" # 10:20 Argentina, sábado y domingo (respaldo de la de las 10)
+    - cron: "20 17 * * 6,0" # 14:20 Argentina, sábado y domingo (respaldo de la de las 14)
   workflow_dispatch:
     inputs:
       publicar:
@@ -37,7 +40,7 @@ permissions:
 jobs:
   nacionales:
     runs-on: ubuntu-latest
-    # La más larga: la de las 18 del finde, 8 posteos cada 15 minutos (≈ 2 h 15); holgura de sobra.
+    # La más larga: una del finde, 6 posteos cada 30 minutos (≈ 2 h 45); holgura de sobra.
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4

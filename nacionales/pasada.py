@@ -219,7 +219,7 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
             break
     # Virales e internacionales salen SOLO como reel con el video de la nota (19/10/2026): sin video, ni
     # se gasta la IA.
-    solo_reel = nota.get("categoria") in AG.SOLO_REEL
+    solo_reel = AG.solo_reel(nota.get("categoria") or "")
     if solo_reel and not medios.get("video"):
         return {"nota": nota, "url_original": nota["url"],
                 "guion": {"apta": False, "motivo": f"{nota.get('categoria')} sin el video original en la nota"}}
@@ -626,7 +626,7 @@ def adelantar_con_video(cola: list, sirve, leer, mirar: int = 4) -> bool:
 
 def formato_probable(c: dict, cat: str, leer) -> str:
     """«reel» si la nota (o la de otro portal del mismo tema) trae video; si no, «carrusel»."""
-    if cat in AG.SOLO_REEL:
+    if AG.solo_reel(cat):
         return "reel"
     urls = [c["url"]] + list(c.get("otras_urls") or [])[:2]
     return "reel" if any((leer(u) or {}).get("video") for u in urls) else "carrusel"
@@ -648,7 +648,7 @@ def adelantar_formato(cola: list, quiero: str, cat: str, sirve, leer, mirar: int
 def formato_buscado(cat: str, formatos: dict, ultimo: str) -> str:
     """Qué formato conviene para la próxima de `cat`: el otro del que ya salió en esa categoría (1 reel y 1
     carrusel); si todavía no salió ninguna, el otro del último posteo. "" si da igual."""
-    if cat in AG.SOLO_REEL:
+    if AG.solo_reel(cat):
         return ""
     ya = formatos.get(cat) or []
     base = ya[-1] if ya else ultimo
@@ -739,6 +739,9 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # última pasada de la noche anterior— dejó en cero las generales de las 16.)
             topes = dict(AG.topes(inicio))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
+            # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
+            if "internacionales" in colas:
+                colas["internacionales"] = [c for c in colas["internacionales"] if AG.es_mundo(c)]
         informe["topes"] = topes
 
         # LA FILA (18/10/2026, noche; reels/turnos.py): un posteo cada 15 minutos entre policiales y
@@ -751,6 +754,9 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # Cuántos pueden salir de verdad (no más que las candidatas de cada categoría): de eso depende
             # cuánto se achica el espaciado para terminar antes de la corrida siguiente.
             posibles = sum(min(n, len(colas.get(c) or [])) for c, n in topes.items())
+            # El finde, las 6 más virales (1 por categoría) de las 7 categorías.
+            if AG.maximo(inicio):
+                posibles = min(posibles, AG.maximo(inicio))
             turnos = AG.turnos(inicio, posibles, holgura=posibles, ahora=ahora)
             cuantos = cuantos or posibles
         else:
@@ -782,12 +788,12 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
 
         def preparar(ultima):
             """La próxima pieza: la categoría con el tema más fuerte que no sea la del turno anterior."""
-            for _intento in range(40):
+            for _intento in range(120):              # solo reel: muchas se caen por no traer video
                 cat = (proxima_categoria(colas, topes, hechas, ultima)
                        or proxima_categoria(colas, topes, hechas, ultima, permitir_igual=True))
                 if cat is None:
                     return None
-                if cat in CON_VIDEO_PRIMERO:
+                if cat in CON_VIDEO_PRIMERO or (agenda and AG.solo_reel(cat)):
                     adelantar_con_video(colas[cat], sirve, leer_una)
                 if agenda:
                     quiero = formato_buscado(cat, formatos, ultimo_formato[0])

@@ -129,17 +129,17 @@ venv\Scripts\python.exe tools\test_nacionales.py
 
 Memoria: `estado/nacionales.json` (piezas, descartadas por la IA y carruseles, 7 días).
 
-## Agenda propia: 18 y 21 (19/10/2026, noche)
+## Agenda propia (20/10/2026)
 
 Las nacionales tienen su workflow (`.github/workflows/nacionales.yml`, `python -m nacionales.pasada --agenda`) y su
-agenda (`nacionales/agenda.py`). 2 posteos por categoría y corrida, intercalados en categoría y formato (1 reel y
-1 carrusel cuando la categoría admite los dos), cada 30 min (15 el finde). Las corridas van de a una.
+agenda (`nacionales/agenda.py`). TODO sale como **reel con el video original de la nota**: sin video, no sale
+(`NAC_TODO_REEL=0` vuelve a permitir el carrusel). Un posteo cada 30 minutos; las corridas van de a una.
 
-| categoría | días | corridas |
+| días | corridas | qué sale en cada corrida |
 |---|---|---|
-| virales, internacionales (solo reel con su video) | todos | 18 · 21 |
-| generales | todos | 18 · 21 |
-| IA, espectáculos, cine y series | sábado y domingo | 18 |
-| deportes | sábado y domingo | 21 |
+| lunes a viernes | 18 · 21 | 2 generales, 1 viral, 1 mundo |
+| sábado y domingo | 10 · 14 · 18 · 21 | 6 de las 7: viral, mundo, IA, general, deporte, cine/serie, espectáculo (1 de cada una, las más virales) |
+
+«Mundo» = internacionales con algo policial o de violencia/conflicto (`agenda.es_mundo`).
 
 YouTube: un reel de más de 3 minutos (sin la placa) no se sube (`YT_SHORT_MAX_SEG`); sale en Instagram y Facebook.
