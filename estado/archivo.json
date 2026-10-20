@@ -13,7 +13,8 @@
     "p:18134": "2026-10-16",
     "h:1938-10-17:47235990": "2026-10-17",
     "p:15994": "2026-10-17",
-    "h:1930-10-18:9a039fe5": "2026-10-18"
+    "h:1930-10-18:9a039fe5": "2026-10-18",
+    "h:1936-10-20:cc88ad85": "2026-10-20"
   },
   "preguntas": [
     {
@@ -407,7 +408,30 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-20:efemeride": {
+      "titular": "En 1936, la Escuela Normal lanzó su primera revista estudiantil",
+      "subtipo": "efemeride",
+      "cuando": "2026-10-20T13:30:40-03:00",
+      "intentos": 1,
+      "fuente": {
+        "fecha": "20 de octubre de 1936",
+        "hace": 90,
+        "posts": [
+          17621,
+          16708,
+          15983
+        ],
+        "dedicado": null,
+        "candidatas": 1,
+        "coincide_anio": true
+      },
+      "estado": "ok",
+      "id": "18634001299008870",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-19T20:30:23-03:00"
+  "actualizado": "2026-10-20T13:30:29-03:00"
 }
