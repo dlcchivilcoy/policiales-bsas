@@ -7985,6 +7985,73 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "153f38f8d32822e9": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 76,
+      "subtema": "ganaderia",
+      "tema": "lecheria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra un récord histórico en sólidos útiles que interesa de lleno a la cuenca lechera de la región pampeana.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        76,
+        75
+      ]
+    },
+    "c6ec1f3bafd07c3f": {
+      "impacto_economico": 4,
+      "interes_productores": 4,
+      "innovacion": 5,
+      "cercania_argentina": 8,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 36,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "vitivinicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de esfuerzo inspiradora pero queda geográficamente muy lejos del productor de la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "12e63af9e23dcf7e": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 51,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "impuestos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Reclamo gremial histórico sobre coparticipación que genera debate pero no aporta datos técnicos nuevos para el día a día.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -8549,7 +8616,12 @@
       "https://bichosdecampo.com/brasil-padece-un-brote-de-newcastle-en-una-granja-avicola-cercana-a-misiones-y-sufre-un-traspie-en-sus-exportaciones": "2026-10-20",
       "https://bichosdecampo.com/la-union-europea-incrementa-su-nivel-de-exigencia-ambiental-y-no-solo-en-materia-de-deforestacion-hay-muchas-luces-amarillas-avisa-el-agregado-agricola-gaston-funes": "2026-10-20",
       "https://lanacion.com.ar/economia/campo/opinion-la-paradoja-de-la-carne-menos-oferta-no-significa-menos-produccion-nid20102026": "2026-10-20",
-      "https://intainforma.inta.gob.ar/algarrobo-blanco-un-recurso-forrajero-para-sistemas-silvopastoriles": "2026-10-20"
+      "https://intainforma.inta.gob.ar/algarrobo-blanco-un-recurso-forrajero-para-sistemas-silvopastoriles": "2026-10-20",
+      "https://infocampo.com.ar/riesgo-pais-hoy-14-de-octubre-5": "2026-10-20",
+      "https://infocampo.com.ar/la-lecheria-cada-vez-mas-solida-un-indicador-clave-de-la-produccion-tambera-esta-en-nivel-record": "2026-10-20",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-20-octubre-2026": "2026-10-20",
+      "https://bichosdecampo.com/donde-habia-un-bosque-talado-hoy-crecen-vides-la-familia-adamow-llego-a-lago-puelo-armo-una-bodega-y-tuvo-que-esperar-13-anos-para-obtener-su-primera-botella": "2026-10-20",
+      "https://bichosdecampo.com/productores-memoriosos-la-sociedad-rural-de-rosario-recordo-que-la-coparticipacion-de-impuestos-es-un-tema-pendiente-desde-hace-30-anos": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9112,7 +9184,12 @@
       "brasil padece un brote de newcastle en una granja avicola cercana a misiones y sufre un traspie en sus exportaciones": "2026-10-20",
       "la union europea incrementa su nivel de exigencia ambiental y no solo en materia de deforestacion hay muchas luces amarillas avisa el agregado agricola gaston funes": "2026-10-20",
       "opinion la paradoja de la carne menos oferta no significa menos produccion": "2026-10-20",
-      "algarrobo blanco un recurso forrajero para sistemas silvopastoriles": "2026-10-20"
+      "algarrobo blanco un recurso forrajero para sistemas silvopastoriles": "2026-10-20",
+      "riesgo pais hoy 20 de octubre de 2026": "2026-10-20",
+      "la lecheria cada vez mas solida un indicador clave de la produccion tambera esta en nivel record": "2026-10-20",
+      "dolar blue a cuanto cotizan hoy en cordoba 20 octubre 2026": "2026-10-20",
+      "donde habia un bosque talado hoy crecen vides la familia adamow llego a lago puelo armo una bodega y tuvo que esperar 13 anos para obtener su primera botella": "2026-10-20",
+      "productores memoriosos la sociedad rural de rosario recordo que la coparticipacion de impuestos es un tema pendiente desde hace 30 anos": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -9675,7 +9752,12 @@
       "db900fb0c60ec376": "2026-10-20",
       "a3a73805759c3a1b": "2026-10-20",
       "7ac6ea5d1baa6e31": "2026-10-20",
-      "0c8992bab085fa54": "2026-10-20"
+      "0c8992bab085fa54": "2026-10-20",
+      "a87df6e358701cc6": "2026-10-20",
+      "153f38f8d32822e9": "2026-10-20",
+      "7d8c09215910bf8a": "2026-10-20",
+      "c6ec1f3bafd07c3f": "2026-10-20",
+      "12e63af9e23dcf7e": "2026-10-20"
     }
   },
   "elegidas": [
@@ -11889,10 +11971,50 @@
       "fuera_de_cupo": false,
       "formato": "reel",
       "turno": "2026-10-20T10:00:00-03:00"
+    },
+    {
+      "id": "5e6dca7e9909",
+      "cuando": "2026-10-20T11:00-03:00",
+      "titulo_original": "La lechería, cada vez más “sólida”: un indicador clave de la producción tambera está en nivel récord",
+      "descripcion": "La producción de sólidos útiles; es decir, grasa butirosa y proteína, está en el valor más alto al menos desde que existen registros, en los últimos 21 años. El ordeñe en general sigue creciendo, aunque en desaceleración y con riesgos por El Niño.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/la-lecheria-cada-vez-mas-solida-un-indicador-clave-de-la-produccion-tambera-esta-en-nivel-record/",
+      "titular": "Sólidos útiles en tambos alcanzan récord histórico",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 76,
+        "subtema": "ganaderia",
+        "tema": "lecheria",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un récord histórico en sólidos útiles que interesa de lleno a la cuenca lechera de la región pampeana.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          76,
+          75
+        ]
+      },
+      "apta": true,
+      "revision": true,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-10-20T11:00:00-03:00"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-20T10:03:20-03:00",
+  "actualizado": "2026-10-20T11:02:27-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
