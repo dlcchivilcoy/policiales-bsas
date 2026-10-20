@@ -26,6 +26,8 @@ Cada reel: IG, FB (9:16 con bandas) y web; el **Short de YouTube, solo el primer
 cupo de la API lo comparten policiales y nacionales). Entre dos reels hay siempre 20 minutos: si uno
 salió tarde, los siguientes también se corren. Puntaje mínimo 60 (`AGRO_SCORE_MIN`), hasta 36 por día
 (`AGRO_MAX_DIA`).
+Las notas con precios, retenciones o regulaciones de un medio ya no quedan «retenidas para revisión»: salen
+solas (`AGRO_REVISION_SENSIBLE=1` lo vuelve a prender). Las de fuentes que se contradicen siguen retenidas.
 
 Hasta el 19/10/2026 eran 1 reel + 1 carrusel por corrida (una hora entre los dos).
 

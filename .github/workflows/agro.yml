@@ -109,6 +109,7 @@ jobs:
           AGRO_POR_CORRIDA: ${{ vars.AGRO_POR_CORRIDA }}
           AGRO_INTERVALO_MIN: ${{ vars.AGRO_INTERVALO_MIN }}
           AGRO_UN_SITIO_POR_CORRIDA: ${{ vars.AGRO_UN_SITIO_POR_CORRIDA }}
+          AGRO_REVISION_SENSIBLE: ${{ vars.AGRO_REVISION_SENSIBLE }}
           AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}

@@ -12,7 +12,11 @@ versión si hace falta. Lo propio de agro:
     disponibilidad;
   - REVISIÓN (requires_review): un dato sensible (precios, retenciones, regulaciones, estadísticas)
     sin una fuente oficial en el grupo, o fuentes que se contradicen → no se publica sola.
+    20/10/2026 (pedido del editor: «apagá la retención para revisión así salen también las notas con precios
+    o regulaciones»): el dato sensible ya NO retiene (AGRO_REVISION_SENSIBLE=1 lo vuelve a prender); las
+    fuentes que se contradicen, sí.
 """
+import os
 import re
 
 from reels import guion as G
@@ -344,13 +348,17 @@ def generar(rep: dict, cuerpo: str, otras: list, score: dict, redactar=None) -> 
     # Revisión humana (punto 12): no se publica sola.
     oficiales = [n for n in [rep] + list(otras) if n.get("tipo_fuente") == "oficial"]
     motivos = []
-    if score.get("sensible") and not oficiales:
+    if score.get("sensible") and not oficiales and revision_sensible():
         motivos.append("dato sensible (precios, regulaciones o estadísticas) sin una fuente oficial que lo confirme")
     if g["datos_contradictorios"]:
         motivos.append("las fuentes se contradicen" + (f": {g['detalle_contradiccion']}" if g["detalle_contradiccion"] else ""))
     g["requires_review"] = bool(motivos)
     g["motivo_revision"] = "; ".join(motivos)
     return g
+
+
+def revision_sensible() -> bool:
+    return (os.environ.get("AGRO_REVISION_SENSIBLE") or "0").strip() == "1"
 
 
 def texto_red(g: dict, red: str, url_web: str = "") -> str:

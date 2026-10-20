@@ -297,9 +297,13 @@ g3, c3, f3, n3 = GU.reparar_copia(dict(g_c, datos_clave=["Koppert", "tres días"
 chequear("copia: un arreglo que pierde un dato se descarta (y se reintenta hasta 3 veces)",
          g3["nota_web"] == g_c["nota_web"] and n3 == GU.REPARACIONES)
 g = GU.generar(rep, CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
-chequear("dato sensible de un medio → requiere revisión", g["requires_review"])
+chequear("dato sensible de un medio → sale igual (20/10/2026: sin retención)", not g["requires_review"])
+os.environ["AGRO_REVISION_SENSIBLE"] = "1"
+g = GU.generar(rep, CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
+chequear("AGRO_REVISION_SENSIBLE=1: dato sensible de un medio → requiere revisión", g["requires_review"])
 g = GU.generar(dict(rep, tipo_fuente="oficial"), CUERPO, [], {"sensible": True}, redactar=ia_guion([BUENA]))
 chequear("dato sensible de una fuente oficial → no requiere revisión", not g["requires_review"])
+os.environ.pop("AGRO_REVISION_SENSIBLE")
 g = GU.generar(rep, CUERPO, [], {"sensible": False},
                redactar=ia_guion([dict(BUENA, datos_contradictorios=True, detalle_contradiccion="2% vs 3%")]))
 chequear("fuentes que se contradicen → revisión con el detalle",
