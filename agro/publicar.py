@@ -113,6 +113,8 @@ def publicar(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
     if pieza.get("formato") == "carrusel":
         salida = publicar_carrusel(pieza, ya, log=log)
     else:
+        if pieza.get("youtube") is False:              # solo el primer reel de cada corrida (agro/pasada.py)
+            redes = tuple(r for r in redes if r != "youtube")
         salida = publicar_reel(pieza, ya, redes, log=log, portada_url=portada_url)
     salida["portada_url"] = portada_url
     return salida

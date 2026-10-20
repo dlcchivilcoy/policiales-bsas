@@ -15,9 +15,23 @@ las contiene:
 
 = 6 reels + 6 carruseles + 3 tandas de historias por día, reel y carrusel alternados todo el día.
 
+20/10/2026 (pedido del editor: «en cada corrida necesito 5 reels publicados cada 20 minutos, y cada reel
+tiene que provenir de una web distinta; en total deberían ser 30 reels por día»): cada corrida publica
+POR_CORRIDA reels (5), uno cada INTERVALO_MIN (20), sin carruseles; las historias, igual que antes:
+
+    corrida 07   07:00 historias + reel · 07:20 · 07:40 · 08:00 · 08:20
+    corrida 10   10:00 · 10:20 · 10:40 · 11:00 · 11:20
+    corrida 13   13:00 · 13:20 · 13:40 · 14:00 (+ historias del mediodía) · 14:20
+    corrida 16   16:00 · 16:20 · 16:40 · 17:00 · 17:20
+    corrida 18   18:00 · 18:20 · 18:40 · 19:00 (+ historias «Así cerró el mercado») · 19:20
+    corrida 21   21:00 · 21:20 · 21:40 · 22:00 · 22:20
+
+= 30 reels + 3 tandas de historias. Cada reel de la corrida viene de un sitio distinto (agro/pasada.py).
+AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN los cambian; AGRO_AGENDA sigue pisando todo.
+
 Cada corrida es UNA corrida en la nube (cron-job.org a la hora exacta, con un respaldo 20 min después)
 que publica lo suyo y espera hasta el horario siguiente (agro/pasada.py, correr_corrida). Entre dos
-posteos del feed de la misma corrida hay siempre MARGEN_MIN: si el primero salió tarde, el segundo
+posteos del feed de la misma corrida hay siempre intervalo_min(): si el primero salió tarde, el segundo
 también se corre. La memoria (estado/agro.json) frena al respaldo: lo que ya salió no se repite.
 
 Se cambia sin tocar código con las variables del repo AGRO_AGENDA («07:00 historias, 07:00 reel, …») y
@@ -26,24 +40,48 @@ AGRO_CORRIDAS («07:00,10:00,…»).
 import os
 from datetime import datetime, timedelta
 
-AGENDA_DEFECTO = ("07:00 historias, 07:00 reel, 08:00 carrusel, "
-                  "10:00 reel, 11:00 carrusel, "
-                  "13:00 reel, 14:00 carrusel, 14:00 historias, "
-                  "16:00 reel, 17:00 carrusel, "
-                  "18:00 reel, 19:00 carrusel, 19:00 historias, "
-                  "21:00 reel, 22:00 carrusel")
+HISTORIAS_DEFECTO = ((7, 0), (14, 0), (19, 0))
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
-MARGEN_MIN = 60              # entre dos posteos del feed (reel o carrusel) de la misma corrida
+POR_CORRIDA = 5              # reels por corrida (20/10/2026)
+INTERVALO_MIN = 20           # entre un reel y el siguiente de la misma corrida
 TIPOS = ("reel", "carrusel", "historias")
 TOLERANCIA_MIN = 40          # una corrida que arranca hasta 40 min tarde es la de ese horario
 ANTES_MIN = 5                # y hasta 5 min antes (el reloj de cron-job.org y el de GitHub)
 BLOQUES = ("manana", "mediodia", "cierre")
 
 
+def _entero(nombre: str, defecto: int) -> int:
+    try:
+        return max(1, int((os.environ.get(nombre) or "").strip()))
+    except ValueError:
+        return defecto
+
+
+def por_corrida() -> int:
+    return _entero("AGRO_POR_CORRIDA", POR_CORRIDA)
+
+
+def intervalo_min() -> int:
+    """Entre dos posteos del feed de la misma corrida (si el primero salió tarde, el segundo también se corre)."""
+    return _entero("AGRO_INTERVALO_MIN", INTERVALO_MIN)
+
+
+def agenda_texto_defecto() -> str:
+    """Por cada corrida, por_corrida() reels cada intervalo_min(), sin pasarse de la corrida siguiente;
+    más las historias de siempre."""
+    inicios = [h * 60 + m for h, m in corridas()]
+    partes = [f"{h:02d}:{m:02d} historias" for h, m in HISTORIAS_DEFECTO]
+    for i, ini in enumerate(inicios):
+        fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
+        partes += [f"{t // 60:02d}:{t % 60:02d} reel"
+                   for t in (ini + k * intervalo_min() for k in range(por_corrida())) if t < fin]
+    return ", ".join(partes)
+
+
 def agenda() -> list:
     """[(hora, minuto, tipo), …] ordenada. Lo que no se entiende se saltea."""
     salida = []
-    for parte in (os.environ.get("AGRO_AGENDA") or AGENDA_DEFECTO).split(","):
+    for parte in (os.environ.get("AGRO_AGENDA") or agenda_texto_defecto()).split(","):
         bits = parte.split()
         if len(bits) != 2 or bits[1].lower() not in TIPOS:
             continue
@@ -76,6 +114,13 @@ def corridas() -> list:
         except ValueError:
             continue
     return sorted(set(salida)) or [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)]
+
+
+def inicio_corrida(horario: datetime):
+    """El inicio de la corrida a la que pertenece `horario` (la última que arrancó ese día), o None."""
+    previos = [horario.replace(hour=h, minute=m, second=0, microsecond=0) for h, m in corridas()]
+    previos = [t for t in previos if t <= horario]
+    return previos[-1] if previos else None
 
 
 def _orden(item):

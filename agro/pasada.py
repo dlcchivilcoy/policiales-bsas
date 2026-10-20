@@ -25,6 +25,7 @@ salida_agro/memoria_sim.json (fuera de git).
 """
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -55,7 +56,8 @@ DIAS_MEMORIA = 7
 DIAS_INDICE = 10                  # lo visto se recuerda 10 días (más que la ventana más larga, la de la Bolsa: 7)
 DIAS_REPETIDA = 3                 # contra lo elegido estos días se busca la misma noticia
 PENDIENTE_HORAS = 36              # una buena que no entró espera a las corridas siguientes este tiempo
-MAX_REEMPLAZOS = 3                # piezas frenadas (copia, IA) que se reponen con la siguiente, por corrida
+MAX_PENDIENTES = 120              # 20/10/2026: con 5 sitios por corrida hace falta más reserva (eran 40)
+MAX_REEMPLAZOS = 4                # piezas frenadas (copia, IA) que se reponen con la siguiente, por turno
 
 # Tableros automáticos («Precio del maíz en Rosario hoy 13 octubre 2026», «Dólar blue hoy…», «Clima
 # en San Luis hoy…», «Riesgo país hoy 9 de octubre»): no son noticias, se descartan antes de gastar IA.
@@ -133,6 +135,40 @@ def tema_siguiente(mem: dict) -> str:
     return DIS.tema_siguiente(mem.get("tema_ultimo", ""))
 
 
+def un_sitio_por_corrida() -> bool:
+    """20/10/2026 (pedido del editor): «cada reel tiene que provenir de una web distinta» dentro de la
+    corrida. AGRO_UN_SITIO_POR_CORRIDA=0 lo apaga."""
+    return (os.environ.get("AGRO_UN_SITIO_POR_CORRIDA") or "1").strip() != "0"
+
+
+def sitios_de_la_corrida(mem: dict, horario: datetime) -> set:
+    """Las fuentes que ya salieron (o están saliendo) en la corrida de `horario`, antes de él."""
+    inicio = AG.inicio_corrida(horario)
+    if inicio is None:
+        return set()
+    usadas = set()
+    for p in mem.get("elegidas", []):
+        if not p.get("publicado") or p.get("revision") or not p.get("apta", True):
+            continue
+        try:
+            t = datetime.fromisoformat(p.get("turno") or p.get("cuando") or "")
+        except ValueError:
+            continue
+        try:
+            if inicio <= t < horario:
+                usadas.add(p.get("fuente"))
+        except TypeError:                              # una fecha sin zona horaria: no se compara
+            continue
+    return usadas
+
+
+def con_youtube(horario: datetime) -> bool:
+    """El Short de YouTube, solo del PRIMER reel de cada corrida: el cupo diario de la API lo comparten
+    policiales y nacionales (6 por día, como antes; con 30 los dejaría sin Shorts)."""
+    inicio = AG.inicio_corrida(horario)
+    return inicio is None or horario <= inicio
+
+
 def ya_publicado(mem: dict, horario: datetime, tipo: str):
     """Lo que ya salió (o está saliendo) en ese horario, o None."""
     iso = horario.isoformat()
@@ -197,8 +233,8 @@ def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_pieza
             continue
         objetivo = horario
         if tipo != "historias" and ultimo_feed:
-            # Una hora entre posteo y posteo del feed, aunque el primero haya salido tarde.
-            objetivo = max(objetivo, ultimo_feed + timedelta(minutes=AG.MARGEN_MIN))
+            # El intervalo entre posteo y posteo del feed (20 min), aunque el primero haya salido tarde.
+            objetivo = max(objetivo, ultimo_feed + timedelta(minutes=AG.intervalo_min()))
         _esperar(objetivo, log)
         momento = _ahora()
         if tipo != "historias":
@@ -340,14 +376,20 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     conteos[f"Con ≥ {SE.score_min()}"] = sum(1 for c in candidatos if c["score"]["ai_score"] >= SE.score_min())
 
     log(f"5) Selección editorial ({formato})")
+    # Un sitio distinto por reel dentro de la corrida (20/10/2026): las de un sitio que ya salió en
+    # esta corrida esperan a la siguiente (siguen pendientes, no se descartan).
+    usadas = sitios_de_la_corrida(mem, horario) if un_sitio_por_corrida() else set()
+    elegibles = [c for c in candidatos if c["rep"].get("fuente") not in usadas]
+    if usadas:
+        log(f"   ya salieron en esta corrida: {', '.join(sorted(usadas))}")
     hoy = ahora.strftime("%Y-%m-%d")
     # Las frenadas (NO APTA) y las retenidas para revisión no ocupan lugar en el cupo del día.
     de_hoy = [p for p in mem.get("elegidas", []) if p.get("cuando", "").startswith(hoy)
               and p.get("apta", True) and not p.get("revision") and not p.get("fuera_de_cupo")]
-    elegidos, desc = SE.elegir(candidatos, de_hoy, formato=formato)
+    elegidos, desc = SE.elegir(elegibles, de_hoy, formato=formato)
     if not elegidos and any("tope de" in m for _, m in desc):
         # Antes que dejar el horario vacío, se repite subtema con una que pase el mínimo.
-        elegidos, desc = SE.elegir(candidatos, de_hoy, formato=formato, relajar=True)
+        elegidos, desc = SE.elegir(elegibles, de_hoy, formato=formato, relajar=True)
         if elegidos:
             log(f"   sin variedad de temas: entra igual la mejor ({elegidos[0]['score']['subtema']})")
     for c, motivo in desc:
@@ -372,7 +414,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         ocupados = de_hoy + [{"score": p["score"]} for p in piezas
                              if p["guion"]["apta"] and not p["guion"]["requires_review"]] + \
             [{"score": x["score"]} for x in cola]
-        pool = [x for x in candidatos if x["id"] not in probadas and all(x["id"] != y["id"] for y in cola)]
+        pool = [x for x in elegibles if x["id"] not in probadas and all(x["id"] != y["id"] for y in cola)]
         nuevo, _ = SE.elegir(pool, ocupados, formato=formato)
         if not nuevo:
             nuevo, _ = SE.elegir(pool, ocupados, formato=formato, relajar=True)
@@ -414,7 +456,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         elif publicar and g["requires_review"]:
             reponer("retenida para revisión")
         base = carpeta / f"{k + 1:02d}_{WEB.slugify(g['titular'] or rep['titulo'], 40)}"
-        pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g, "formato": formato}
+        pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g, "formato": formato,
+                 "youtube": con_youtube(horario)}
         tema = tema_siguiente(mem)
         if g["apta"]:
             pieza["imagen"] = imagen_previa or IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
@@ -511,7 +554,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     # Las buenas que no se probaron esperan a las corridas siguientes (hasta PENDIENTE_HORAS).
     mem["pendientes"] = [{k: c[k] for k in ("id", "rep", "grupo", "score", "cuando")}
                          for c in candidatos
-                         if c["score"]["ai_score"] >= SE.score_min() and c["id"] not in probadas][:40]
+                         if c["score"]["ai_score"] >= SE.score_min() and c["id"] not in probadas][:MAX_PENDIENTES]
     conteos["Quedan pendientes"] = len(mem["pendientes"])
     if publicar:
         conteos["Publicadas"] = sum(1 for p in piezas if p.get("publicado"))

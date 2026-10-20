@@ -18,6 +18,10 @@ del documento suman un poco según su prioridad (clima primero, reglas y agenda 
 carrusel pesa además si la noticia se puede EXPLICAR (potencial_carrusel).
 
 19/10/2026: 6 corridas con 1 reel + 1 carrusel cada una → AGRO_MAX_DIA = 12.
+
+20/10/2026: 6 corridas con 5 reels cada una, cada reel de un sitio distinto → AGRO_MAX_DIA = 36 (30 y
+margen para las que fallan al publicar) y AGRO_SCORE_MIN = 60: con 75 había corridas sin ninguna y la
+mejor de cada sitio rara vez llega.
 """
 import math
 import os
@@ -35,11 +39,11 @@ def _entero(nombre: str, defecto: int) -> int:
 
 
 def score_min() -> int:
-    return _entero("AGRO_SCORE_MIN", 75)
+    return _entero("AGRO_SCORE_MIN", 60)
 
 
 def max_dia() -> int:
-    return _entero("AGRO_MAX_DIA", 12)
+    return _entero("AGRO_MAX_DIA", 36)
 
 
 def por_pasada() -> int:

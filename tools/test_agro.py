@@ -8,6 +8,9 @@ import os
 # real no sale) se prueba al final con AGRO_IMAGEN_IA=0.
 os.environ["AGRO_IMAGEN_IA"] = "1"
 import sys
+# Las pruebas de selección fijan el mínimo viejo (75): prueban la mecánica, no el valor (desde el
+# 20/10/2026 el de fábrica es 60; se prueba más abajo).
+os.environ["AGRO_SCORE_MIN"] = "75"
 import tempfile
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -674,18 +677,16 @@ for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_),
              and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
              and c_["pendientes"] == [{"id": "p-nuevo"}])
 
-# --- agenda (19/10/2026): 6 corridas, 1 reel + 1 carrusel cada una, 1 h entre posteos ----------------
+# --- agenda (20/10/2026): 6 corridas de 5 reels, uno cada 20 min, cada uno de un sitio distinto ----
 from agro import agenda as AG  # noqa: E402
 
-os.environ.pop("AGRO_AGENDA", None)
-os.environ.pop("AGRO_CORRIDAS", None)
+for _k in ("AGRO_AGENDA", "AGRO_CORRIDAS", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN"):
+    os.environ.pop(_k, None)
 _ag = AG.agenda()
-chequear("agenda: 6 reels, 6 carruseles y 3 tandas de historias",
-         AG.cuantos("reel") == 6 and AG.cuantos("carrusel") == 6 and AG.cuantos("historias") == 3)
-_feed = [(h * 60 + m, t) for h, m, t in _ag if t != "historias"]
-chequear("agenda: reel y carrusel intercalados todo el día, con al menos una hora entre posteos",
-         all(b - a >= 60 for (a, _), (b, _) in zip(_feed, _feed[1:]))
-         and all(t == ("reel" if i % 2 == 0 else "carrusel") for i, (_, t) in enumerate(_feed)))
+chequear("agenda: 30 reels, sin carruseles, y 3 tandas de historias",
+         AG.cuantos("reel") == 30 and AG.cuantos("carrusel") == 0 and AG.cuantos("historias") == 3)
+_feed = [h * 60 + m for h, m, t in _ag if t != "historias"]
+chequear("agenda: al menos 20 minutos entre un reel y el siguiente", all(b - a >= 20 for a, b in zip(_feed, _feed[1:])))
 chequear("corridas: 7, 10, 13, 16, 18 y 21", AG.corridas() == [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)])
 
 
@@ -697,20 +698,29 @@ def _hm(turnos):
     return [(f"{t:%H:%M}", tipo) for t, tipo in turnos]
 
 
+def _reels(*horas):
+    return [(h, "reel") for h in horas]
+
+
 _c = AG.corrida(_t(7, 3))
-chequear("la corrida de las 07: historias y reel a las 07:00, carrusel a las 08:00",
-         _c[:2] == (_t(7, 0), True) and _hm(_c[2]) == [("07:00", "historias"), ("07:00", "reel"), ("08:00", "carrusel")])
-chequear("la de las 13: reel, y a las 14:00 historias del mediodía y carrusel",
-         _hm(AG.corrida(_t(13, 0))[2]) == [("13:00", "reel"), ("14:00", "historias"), ("14:00", "carrusel")])
-chequear("la de las 16: reel 16:00 y carrusel 17:00 (no se mete en la de las 18)",
-         _hm(AG.corrida(_t(16, 10))[2]) == [("16:00", "reel"), ("17:00", "carrusel")])
-chequear("la de las 21: reel 21:00 y carrusel 22:00", _hm(AG.corrida(_t(21, 39))[2]) == [("21:00", "reel"), ("22:00", "carrusel")])
+chequear("la corrida de las 07: historias y 5 reels (07:00 a 08:20)",
+         _c[:2] == (_t(7, 0), True)
+         and _hm(_c[2]) == [("07:00", "historias")] + _reels("07:00", "07:20", "07:40", "08:00", "08:20"))
+chequear("la de las 13: a las 14:00 primero las historias del mediodía y después el reel",
+         _hm(AG.corrida(_t(13, 0))[2]) == _reels("13:00", "13:20", "13:40") + [("14:00", "historias")]
+         + _reels("14:00", "14:20"))
+chequear("la de las 16: 16:00 a 17:20 (no se mete en la de las 18)",
+         _hm(AG.corrida(_t(16, 10))[2]) == _reels("16:00", "16:20", "16:40", "17:00", "17:20"))
+chequear("la de las 21: 21:00 a 22:20", _hm(AG.corrida(_t(21, 39))[2]) == _reels("21:00", "21:20", "21:40", "22:00", "22:20"))
 chequear("a las 10:45 ya no (40 min de tolerancia): la próxima es la de las 13",
          AG.corrida(_t(10, 45))[:2] == (_t(13, 0), False))
 chequear("a las 23:00: la próxima es mañana a las 07", AG.corrida(_t(23, 0))[:2] == (_t(7, 0, 17), False))
 chequear("las tres tandas de historias: mañana, mediodía y cierre",
          [AG.bloque(_t(7, 0)), AG.bloque(_t(14, 0)), AG.bloque(_t(19, 0))] == ["manana", "mediodia", "cierre"])
-chequear("sábado: el primer carrusel (08:00) es «Los números de la semana»",
+chequear("el inicio de la corrida de un horario", AG.inicio_corrida(_t(14, 20)) == _t(13, 0)
+         and AG.inicio_corrida(_t(13, 0)) == _t(13, 0) and AG.inicio_corrida(_t(6, 0)) is None)
+os.environ["AGRO_AGENDA"] = "08:00 carrusel, 11:00 carrusel"
+chequear("sábado: con carruseles en AGRO_AGENDA, el primero es «Los números de la semana»",
          AG.es_primer_carrusel_del_sabado(_t(8, 0, 17)) and not AG.es_primer_carrusel_del_sabado(_t(11, 0, 17))
          and not AG.es_primer_carrusel_del_sabado(_t(8, 0, 16)))
 os.environ["AGRO_AGENDA"] = "06:30 historias, 10:00 reel, basura, 25:00 reel"
@@ -719,8 +729,39 @@ chequear("AGRO_AGENDA se puede cambiar (y lo que no se entiende se saltea)",
 os.environ.pop("AGRO_AGENDA")
 os.environ["AGRO_CORRIDAS"] = "08:00, 20:00, x"
 chequear("AGRO_CORRIDAS se puede cambiar", AG.corridas() == [(8, 0), (20, 0)])
+os.environ["AGRO_CORRIDAS"] = "16:00, 17:00"
+chequear("los reels de una corrida no se pasan a la siguiente",
+         [(h, m) for h, m, t in AG.agenda() if t == "reel"] == [(16, 0), (16, 20), (16, 40), (17, 0), (17, 20), (17, 40),
+                                                                (18, 0), (18, 20)])
 os.environ.pop("AGRO_CORRIDAS")
-chequear("cupo del día: 12 noticias (6 reels + 6 carruseles), una por horario", SE.max_dia() == 12 and SE.por_pasada() == 1)
+os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"] = "3", "30"
+chequear("AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN: 3 reels cada 30 min",
+         _hm(AG.corrida(_t(10, 0))[2]) == _reels("10:00", "10:30", "11:00") and AG.cuantos("reel") == 18)
+os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
+_smin = os.environ.pop("AGRO_SCORE_MIN")
+chequear("de fábrica: hasta 36 por día (30 y margen), mínimo 60, una por horario",
+         SE.max_dia() == 36 and SE.score_min() == 60 and SE.por_pasada() == 1)
+os.environ["AGRO_SCORE_MIN"] = _smin
+
+# --- un sitio distinto por reel dentro de la corrida; el Short, solo del primero -------------------
+_iso = lambda h, m: _t(h, m).isoformat()  # noqa: E731
+_mem_sit = {"elegidas": [
+    {"turno": _iso(13, 0), "fuente": "Infocampo", "publicado": {"instagram": {"id": "1"}}},
+    {"turno": _iso(13, 20), "fuente": "Agrositio", "publicado": {"instagram": {"id": "2"}}, "revision": True},
+    {"turno": _iso(13, 20), "fuente": "INTA", "publicado": None},
+    {"turno": _iso(10, 0), "fuente": "TodoAgro", "publicado": {"instagram": {"id": "3"}}},
+    {"turno": _iso(13, 20), "fuente": "Bichos de Campo", "publicado": {"estado": "publicando"}},
+    {"turno": "", "cuando": "basura", "fuente": "X", "publicado": {"a": 1}}]}
+chequear("sitios de la corrida: solo lo que salió (o está saliendo) en ESTA corrida",
+         PA.sitios_de_la_corrida(_mem_sit, _t(13, 40)) == {"Infocampo", "Bichos de Campo"}
+         and PA.sitios_de_la_corrida(_mem_sit, _t(16, 0)) == set()
+         and PA.sitios_de_la_corrida(_mem_sit, _t(13, 0)) == set())
+chequear("YouTube: solo el primer reel de cada corrida (el cupo de la API es compartido)",
+         [PA.con_youtube(_t(h, m)) for h, m in ((7, 0), (7, 20), (13, 0), (14, 0), (14, 20), (16, 0))]
+         == [True, False, True, False, False, True])
+os.environ["AGRO_UN_SITIO_POR_CORRIDA"] = "0"
+chequear("AGRO_UN_SITIO_POR_CORRIDA=0 lo apaga", not PA.un_sitio_por_corrida())
+os.environ.pop("AGRO_UN_SITIO_POR_CORRIDA")
 
 # --- la corrida: publica lo suyo y espera el horario siguiente -------------------------------------
 _reloj = {"t": _t(7, 2)}
@@ -746,15 +787,17 @@ def _dormir_falso(seg):
 
 
 with tempfile.TemporaryDirectory() as _tmpc:
-    _o = (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar)
+    _o = (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar, PA._guardar_en_la_nube)
     try:
         PA.MEMORIA_REAL, PA.SALIDA = Path(_tmpc) / "agro.json", Path(_tmpc) / "salida"
         PA._un_turno, PA._ahora, PA._dormir = _turno_falso, lambda: _reloj["t"], _dormir_falso
         PA.entorno.cargar = lambda: None
+        PA._guardar_en_la_nube = lambda log=print: None
         PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
-        chequear("corrida de las 07: historias y reel ya, carrusel una hora después del reel",
-                 _hechos == [("historias", "07:00", "07:02"), ("reel", "07:00", "07:08"), ("carrusel", "08:00", "08:08")]
-                 and _durmio == [54])
+        chequear("corrida de las 07: historias y 5 reels, 20 min entre uno y otro (corridos por la demora)",
+                 _hechos == [("historias", "07:00", "07:02"), ("reel", "07:00", "07:08"), ("reel", "07:20", "07:28"),
+                             ("reel", "07:40", "07:48"), ("reel", "08:00", "08:08"), ("reel", "08:20", "08:28")]
+                 and _durmio == [14, 14, 14, 14])
         _hechos.clear()
         _reloj["t"] = _t(7, 22)
         PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
@@ -762,13 +805,13 @@ with tempfile.TemporaryDirectory() as _tmpc:
         _hechos.clear(), _durmio.clear()
         _reloj["t"] = _t(10, 38)                       # arrancó tarde
         PA.correr(publicar=True, momento=_reloj["t"], log=lambda m: None)
-        chequear("si el reel salió tarde (10:38), el carrusel espera su hora entera (11:38)",
-                 _hechos == [("reel", "10:00", "10:38"), ("carrusel", "11:00", "11:38")] and _durmio == [54])
+        chequear("si arrancó tarde (10:38), cada reel espera sus 20 minutos enteros",
+                 [h[2] for h in _hechos] == ["10:38", "10:58", "11:18", "11:38", "11:58"] and _durmio == [14, 14, 14, 14])
         _hechos.clear()
         _reloj["t"] = _t(13, 1)
 
         def _falla_reel(publicar, tipo, horario, ahora, carpeta, **kw):
-            if tipo == "reel":
+            if tipo == "reel" and f"{horario:%H:%M}" == "13:00":
                 raise RuntimeError("se cayó la red")
             return _turno_falso(publicar, tipo, horario, ahora, carpeta, **kw)
         PA._un_turno = _falla_reel
@@ -777,10 +820,11 @@ with tempfile.TemporaryDirectory() as _tmpc:
             _aviso = False
         except RuntimeError as e:
             _aviso = "se cayó la red" in str(e)
-        chequear("si el reel falla, igual salen historias y carrusel, y la corrida avisa al final",
-                 _aviso and [h[0] for h in _hechos] == ["historias", "carrusel"])
+        chequear("si un reel falla, igual sale el resto de la corrida, y la corrida avisa al final",
+                 _aviso and [h[0] for h in _hechos] == ["reel", "reel", "historias", "reel", "reel"])
     finally:
-        PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar = _o
+        (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar,
+         PA._guardar_en_la_nube) = _o
 
 # --- prioridades del documento «ideas agro» -------------------------------------------------------
 _s = SC.limpiar({"tema_doc": "Clima", "urgente": "sí", "potencial_carrusel": 14})

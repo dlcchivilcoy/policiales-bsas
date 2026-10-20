@@ -3,29 +3,31 @@
 Vertical de noticias del campo y AgTech. **Publica sola desde el 14/10/2026** (workflow
 `.github/workflows/agro.yml`, variable del repo `AGRO_PUBLICAR=1`; en 0 sigue armando y simula).
 
-## Qué sale cada día (desde el 19/10/2026)
+## Qué sale cada día (desde el 20/10/2026)
 
-6 corridas por día (7, 10, 13, 16, 18 y 21 h). Cada una lee todas las fuentes, arma y publica 1 reel y,
-una hora después, 1 carrusel: 6 reels + 6 carruseles intercalados + 3 tandas de historias (10 historias).
-La corrida espera dentro de la máquina el horario de su segundo posteo (`agro/agenda.py`,
-`agro/pasada.py` → `correr_corrida`; se cambia sin tocar código con las variables del repo
-`AGRO_AGENDA` y `AGRO_CORRIDAS`):
+6 corridas por día (7, 10, 13, 16, 18 y 21 h). Cada una publica **5 reels, uno cada 20 minutos, cada uno
+de un sitio distinto**: antes de cada reel vuelve a leer todas las fuentes y elige la mejor noticia de un
+sitio que todavía no salió en esa corrida (las de los sitios ya usados esperan a la corrida siguiente).
+= **30 reels por día** + 3 tandas de historias. Sin carruseles (se vuelven con `AGRO_AGENDA`).
+La corrida espera dentro de la máquina el horario de cada reel (`agro/agenda.py`, `agro/pasada.py` →
+`correr_corrida`; variables del repo `AGRO_POR_CORRIDA` (5), `AGRO_INTERVALO_MIN` (20), `AGRO_CORRIDAS`,
+`AGRO_AGENDA` (pisa todo), `AGRO_UN_SITIO_POR_CORRIDA=0` apaga lo del sitio distinto):
 
-| Corrida | Horario | Qué | Dónde |
-|---|---|---|---|
-| 07 | 07:00 | Historias «El campo hoy»: clima de la zona, granos, dólar, lo que tenés que saber | IG + FB |
-| 07 | 07:00 | Reel 4:5 de una noticia | IG, FB (9:16 con bandas), Short, web |
-| 07 | 08:00 | Carrusel «deslizá e informate» (sábados: «Los números de la semana») | IG, FB (fotos + link), web |
-| 10 | 10:00 · 11:00 | Reel · Carrusel | ídem |
-| 13 | 13:00 · 14:00 | Reel · Carrusel | ídem |
-| 13 | 14:00 | Historias: «Tu zona en el mapa» (lluvias), Chicago, la novedad del día | IG + FB |
-| 16 | 16:00 · 17:00 | Reel · Carrusel | ídem |
-| 18 | 18:00 · 19:00 | Reel · Carrusel | ídem |
-| 18 | 19:00 | Historias «Así cerró el mercado»: pizarra de Rosario, dólar, Chicago | IG + FB |
-| 21 | 21:00 · 22:00 | Reel · Carrusel | ídem |
+| Corrida | Reels | Además |
+|---|---|---|
+| 07 | 07:00 · 07:20 · 07:40 · 08:00 · 08:20 | 07:00 historias «El campo hoy» |
+| 10 | 10:00 · 10:20 · 10:40 · 11:00 · 11:20 | |
+| 13 | 13:00 · 13:20 · 13:40 · 14:00 · 14:20 | 14:00 historias: mapa de lluvias, Chicago, la novedad |
+| 16 | 16:00 · 16:20 · 16:40 · 17:00 · 17:20 | |
+| 18 | 18:00 · 18:20 · 18:40 · 19:00 · 19:20 | 19:00 historias «Así cerró el mercado» |
+| 21 | 21:00 · 21:20 · 21:40 · 22:00 · 22:20 | |
 
-Entre dos posteos del feed de la misma corrida hay siempre una hora: si el reel salió tarde, el
-carrusel también se corre.
+Cada reel: IG, FB (9:16 con bandas) y web; el **Short de YouTube, solo el primero de cada corrida** (el
+cupo de la API lo comparten policiales y nacionales). Entre dos reels hay siempre 20 minutos: si uno
+salió tarde, los siguientes también se corren. Puntaje mínimo 60 (`AGRO_SCORE_MIN`), hasta 36 por día
+(`AGRO_MAX_DIA`).
+
+Hasta el 19/10/2026 eran 1 reel + 1 carrusel por corrida (una hora entre los dos).
 
 Sábados y domingos (sin mercados) las historias son clima, mapa, «Los números de la semana» y el resumen.
 Una alerta del SMN que toca la zona va primera en la tanda siguiente. Una noticia URGENTE (alerta,
@@ -62,11 +64,11 @@ Probar sin publicar: `venv\Scripts\python.exe -m agro.pasada --tipo reel|carruse
 
 | Pieza | Uso por día | Límite gratis |
 |---|---|---|
-| GitHub Actions (repo público) | 6 corridas, ~70 min c/u (casi todo espera) | sin tope para repos públicos |
+| GitHub Actions (repo público) | 6 corridas, ~90 min c/u (casi todo espera) | sin tope para repos públicos |
 | Gemini (clave gratis) | ~100-140 llamadas (puntaje, textos, carrusel, control de letras) | cupo gratis de la clave |
 | Cloudflare Workers AI | ~1.600-3.200 neuronas (recreación ~130 c/u) | 10.000 por día, compartido con el Archivo |
 | YouTube Data API | 6 Shorts (~9.800 unidades) | 10.000 por día, compartido con policiales y nacionales: sin cupo, el reel sale igual en las otras redes |
-| Instagram | 22 publicaciones (6 reels, 6 carruseles, 10 historias) | 100 cada 24 h |
+| Instagram | 40 publicaciones (30 reels, 10 historias) | 100 cada 24 h (cuenta propia, no la del diario) |
 | Datos (CAC, BCRA, BNA, SMN, Yahoo) | ~10 pedidos por tanda | públicos |
 
 Las historias no usan IA. Si Gemini o Cloudflare se quedan sin cupo, la pieza sale igual con el banco
