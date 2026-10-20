@@ -76,6 +76,12 @@
       "pregunta": "¿Qué consejo de tus abuelos todavía aplicás todos los días en Chivilcoy?",
       "categoria": "Mayores y generaciones",
       "tema": "los consejos de los abuelos"
+    },
+    {
+      "dia": "2026-10-20",
+      "pregunta": "¿En qué lugar de Chivilcoy disfrutaste del mejor recital de tu vida?",
+      "categoria": "Cultura y espectáculos",
+      "tema": "los recitales locales"
     }
   ],
   "publicaciones": {
@@ -431,7 +437,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-20:pregunta": {
+      "titular": "¿En qué lugar de Chivilcoy disfrutaste del mejor recital de tu vida?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-20T20:30:39-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Cultura y espectáculos",
+        "tema": "los recitales locales"
+      },
+      "estado": "ok",
+      "id": "18385535629229587",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-20T13:30:29-03:00"
+  "actualizado": "2026-10-20T20:30:25-03:00"
 }
