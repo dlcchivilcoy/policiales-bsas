@@ -9564,6 +9564,94 @@
         64,
         68
       ]
+    },
+    "37aabb51dcfc0261": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 7,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 33,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "sucesión familiar",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una historia inspiradora de afuera pero con bajo impacto y cercanía directa para la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "60dcc4282b9e5dbd": {
+      "impacto_economico": 11,
+      "interes_productores": 10,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 68,
+      "subtema": "agtech",
+      "tema": "ganadería de precisión",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Desarrollo nacional del INTA muy útil para ganaderos que buscan eficientizar la gestión de rodeos.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        64
+      ]
+    },
+    "bcb20f4142a084a1": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 13,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 86,
+      "commercial_score": 90,
+      "subtema": "agtech",
+      "tema": "drones alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aplica drones comerciales y machine learning a la alfalfa, directo para productores y asesores de la región pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d0f75bfb30743616": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 76,
+      "commercial_score": 85,
+      "subtema": "ganaderia",
+      "tema": "cría vacuna",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Información clave del INTA Cuenca del Salado sobre manejo nutricional de cría, de altísimo interés local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -10242,7 +10330,11 @@
       "https://agfundernews.com/brevel-teams-up-with-the-wave-group-to-scale-illuminated-fermentation-in-india": "2026-10-21",
       "https://agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html": "2026-10-21",
       "https://bichosdecampo.com/el-granizo-agita-la-rosca-mendocina-un-senador-de-petri-desafia-a-cornejo-y-pide-1000-millones-de-pesos-para-volver-a-financiar-la-lucha-antigranizo": "2026-10-21",
-      "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay": "2026-10-21"
+      "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/rachael-sharp-la-abogada-que-volvio-al-campo-familiar-y-ayudo-a-su-padre-de-78-anos-a-sostener-el-nid21102026": "2026-10-21",
+      "https://intainforma.inta.gob.ar/una-plataforma-para-ampliar-las-fronteras-de-la-ganaderia-de-precision": "2026-10-21",
+      "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales": "2026-10-21",
+      "https://intainforma.inta.gob.ar/la-nutricion-de-la-vaca-puede-definir-el-futuro-productivo-del-ternero": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10919,7 +11011,11 @@
       "brevel teams up with the wave group to scale illuminated fermentation in india": "2026-10-21",
       "lluvias de variada intensidad sobre el norte y el oeste del area agricola con fuertes tormentas sobre el norte del litoral fluvial": "2026-10-21",
       "el granizo agita la rosca mendocina un senador de petri desafia a cornejo y pide 1000 millones de pesos para volver a financiar la lucha antigranizo": "2026-10-21",
-      "la carne vacuna en argentina sigue siendo mas barata que la de estados unidos o australia pero ya es mas cara que en brasil o paraguay": "2026-10-21"
+      "la carne vacuna en argentina sigue siendo mas barata que la de estados unidos o australia pero ya es mas cara que en brasil o paraguay": "2026-10-21",
+      "rachael sharp la abogada que volvio al campo familiar y ayudo a su padre de 78 anos a sostener el negocio esta granja no existiria sin ella": "2026-10-21",
+      "una plataforma para ampliar las fronteras de la ganaderia de precision": "2026-10-21",
+      "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales": "2026-10-21",
+      "la nutricion de la vaca puede definir el futuro productivo del ternero": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11596,7 +11692,11 @@
       "b97a69be39ff7646": "2026-10-21",
       "d4a7f87c5eb594c7": "2026-10-21",
       "3accbfb78f6a40b8": "2026-10-21",
-      "a3bc3876ab65d72c": "2026-10-21"
+      "a3bc3876ab65d72c": "2026-10-21",
+      "37aabb51dcfc0261": "2026-10-21",
+      "60dcc4282b9e5dbd": "2026-10-21",
+      "bcb20f4142a084a1": "2026-10-21",
+      "d0f75bfb30743616": "2026-10-21"
     }
   },
   "elegidas": [
@@ -14708,9 +14808,193 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ec8699265856_portada.jpg"
+    },
+    {
+      "id": "0075ec1b55b6",
+      "cuando": "2026-10-21T14:02-03:00",
+      "titulo_original": "La nutrición de la vaca puede definir el futuro productivo del ternero",
+      "descripcion": "Un trabajo del INTA Cuenca del Salado determinó que la alimentación de la madre durante la gestación influye en el crecimiento, la calidad de carne, la fertilidad y la salud de la descendencia. Los efectos pueden extenderse durante toda la vida del animal. La entrada La nutrición de la vaca puede de",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/la-nutricion-de-la-vaca-puede-definir-el-futuro-productivo-del-ternero/",
+      "titular": "La nutrición materna define el futuro productivo y sanitario del ternero",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 76,
+        "commercial_score": 85,
+        "subtema": "ganaderia",
+        "tema": "cría vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información clave del INTA Cuenca del Salado sobre manejo nutricional de cría, de altísimo interés local.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4157443b-627d-4487-a8c3-fd84043cf609",
+          "slug": "la-nutricion-de-la-vaca-durante-la-prenez-condiciona-el-futuro-812388",
+          "url": "https://www.diariolacampaña.com.ar/n/la-nutricion-de-la-vaca-durante-la-prenez-condiciona-el-futuro-812388",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1444624364455293",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18123538385515639",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0075ec1b55b6_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "44b663bae42e",
+      "rep": {
+        "id": "44b663bae42e",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/una-plataforma-para-ampliar-las-fronteras-de-la-ganaderia-de-precision/",
+        "canonical_url": "https://intainforma.inta.gob.ar/una-plataforma-para-ampliar-las-fronteras-de-la-ganaderia-de-precision",
+        "titulo": "Una plataforma para ampliar las fronteras de la ganadería de precisión",
+        "titulo_norm": "una plataforma para ampliar las fronteras de la ganaderia de precision",
+        "descripcion": "Se trata de IPGeo y está diseñada para obtener datos georreferenciados, es decir espacialmente explícitos, sobre eventos de mortalidad ganadera y sobre el desempeño de estrategias de manejo para mitigar las pérdidas de productividad. Fue desarrollada en una iniciativa interinstitucional por un equipo de investigadores del INTA Santa Cruz y del INTA Bariloche. La entrada Una plataforma para ampliar las fronteras de la ganadería de precisión se publicó primero en INTA Informa.",
+        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/app-ipgeo-2.jpg",
+        "autor": "Cecilia Ayesta",
+        "publicado": "2026-10-21T13:44-03:00",
+        "capturado": "2026-10-21T14:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "60dcc4282b9e5dbd"
+      },
+      "grupo": [
+        {
+          "id": "44b663bae42e",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/una-plataforma-para-ampliar-las-fronteras-de-la-ganaderia-de-precision/",
+          "canonical_url": "https://intainforma.inta.gob.ar/una-plataforma-para-ampliar-las-fronteras-de-la-ganaderia-de-precision",
+          "titulo": "Una plataforma para ampliar las fronteras de la ganadería de precisión",
+          "titulo_norm": "una plataforma para ampliar las fronteras de la ganaderia de precision",
+          "descripcion": "Se trata de IPGeo y está diseñada para obtener datos georreferenciados, es decir espacialmente explícitos, sobre eventos de mortalidad ganadera y sobre el desempeño de estrategias de manejo para mitigar las pérdidas de productividad. Fue desarrollada en una iniciativa interinstitucional por un equipo de investigadores del INTA Santa Cruz y del INTA Bariloche. La entrada Una plataforma para ampliar las fronteras de la ganadería de precisión se publicó primero en INTA Informa.",
+          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/app-ipgeo-2.jpg",
+          "autor": "Cecilia Ayesta",
+          "publicado": "2026-10-21T13:44-03:00",
+          "capturado": "2026-10-21T14:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "60dcc4282b9e5dbd"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 68,
+        "subtema": "agtech",
+        "tema": "ganadería de precisión",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Desarrollo nacional del INTA muy útil para ganaderos que buscan eficientizar la gestión de rodeos.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          64
+        ]
+      },
+      "cuando": "2026-10-21T14:02-03:00"
+    },
+    {
+      "id": "9a91d81e1698",
+      "rep": {
+        "id": "9a91d81e1698",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales/",
+        "canonical_url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales",
+        "titulo": "Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales",
+        "titulo_norm": "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales",
+        "descripcion": "Especialistas del INTA Catamarca y Marcos Juárez combinaron imágenes obtenidas con un dron comercial y algoritmos de aprendizaje automático para identificar la presencia de malezas en alfalfa en activo crecimiento. La herramienta ofrece una alternativa accesible para evaluar lotes degradados y orientar decisiones de manejo. La entrada Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales se publicó primero en INTA Informa.",
+        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/alfalfa-drones-3.jpg",
+        "autor": "Cecilia Ayesta",
+        "publicado": "2026-10-21T13:43-03:00",
+        "capturado": "2026-10-21T14:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "bcb20f4142a084a1"
+      },
+      "grupo": [
+        {
+          "id": "9a91d81e1698",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales/",
+          "canonical_url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales",
+          "titulo": "Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales",
+          "titulo_norm": "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales",
+          "descripcion": "Especialistas del INTA Catamarca y Marcos Juárez combinaron imágenes obtenidas con un dron comercial y algoritmos de aprendizaje automático para identificar la presencia de malezas en alfalfa en activo crecimiento. La herramienta ofrece una alternativa accesible para evaluar lotes degradados y orientar decisiones de manejo. La entrada Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales se publicó primero en INTA Informa.",
+          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/alfalfa-drones-3.jpg",
+          "autor": "Cecilia Ayesta",
+          "publicado": "2026-10-21T13:43-03:00",
+          "capturado": "2026-10-21T14:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "bcb20f4142a084a1"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 13,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 86,
+        "commercial_score": 90,
+        "subtema": "agtech",
+        "tema": "drones alfalfa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Aplica drones comerciales y machine learning a la alfalfa, directo para productores y asesores de la región pampeana.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T14:02-03:00"
+    },
     {
       "id": "d1b0a9e26717",
       "rep": {
@@ -15102,8 +15386,8 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T14:02:30-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T14:05:38-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
