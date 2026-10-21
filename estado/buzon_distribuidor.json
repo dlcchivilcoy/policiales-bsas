@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-21T00:31:58.000Z",
+  "actualizado": "2026-10-21T00:48:22.000Z",
   "eventos": [
     {
       "id": "nacionales:e50827dd69db5a5d",
@@ -1252,6 +1252,31 @@
       "categoria": "incendio",
       "distancia_km": 49.3,
       "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "nacionales:4ce13bf44cf7dbc5",
+      "origen": "nacionales",
+      "tipo": "video",
+      "generado": "2026-10-21T00:48:22.000Z",
+      "titulo": "ARBA acusa a la Nación de bloquear fondos para obras clave contra inundaciones",
+      "descripcion": "Cristian Girard cuestionó al Ejecutivo nacional por retener avales para créditos internacionales destinados a la provincia. Aseguró que la administración de Axel Kicillof sufre asfixia financiera y advirtió una fuerte caída en la actividad económica.",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_4ce13bf44c_arba-acusa-a-la-nacion-de-bloquear-fondos-para.mp4",
+      "duracion_seg": 905.1,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/arba-acusa-a-luis-caputo-de-bloquear-creditos-internacionales-4ce13b",
+      "youtube_url": "",
+      "prioridad": 7,
+      "urgente": false,
+      "volanta": "Financiamiento bonaerense",
+      "categoria": "Economía",
+      "categoria_nacional": "",
+      "hashtags": [
+        "Economia",
+        "ARBA"
+      ],
       "plataformas": [
         "x",
         "tiktok"
