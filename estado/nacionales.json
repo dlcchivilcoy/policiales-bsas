@@ -12258,7 +12258,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-20T18:15:00-03:00"
+        "cuando": "2026-10-20T18:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "8c816643-87de-4c06-bc8b-afca6a61a9ec",
@@ -12412,7 +12413,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-20T19:15:00-03:00"
+        "cuando": "2026-10-20T19:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "4120738b-26b9-42ca-bf1b-f50bee55b339",
@@ -12492,7 +12494,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-20T21:15:00-03:00"
+        "cuando": "2026-10-20T21:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "79fa26d4-8bff-4a7a-a559-7b3b3458745b",
@@ -12648,7 +12651,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-20T22:15:00-03:00"
+        "cuando": "2026-10-20T22:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "6b380649-3708-4844-beb1-b322089fb316",
@@ -12669,6 +12673,296 @@
       "tiktok_buzon": {
         "estado": "ok",
         "id": "nacionales:b164c7aa50445aed"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/21/el-gobierno-informo-la-razon-por-la-que-javier-milei-uso-una-venda-durante-su-viaje-a-espana/": {
+      "titulo_original": "El Gobierno informó la razón por la que Javier Milei usó una venda durante su viaje a España",
+      "titular": "Por qué Javier Milei usó una venda en el cuello durante su visita a Madrid",
+      "volanta": "Viaje a España",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "politica",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 83,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 4.º de 34 en «portada»",
+        "Google News: 1.º de 70 en «nacionales»",
+        "cobertura: 11 medios (Infobae, Ámbito, El Cronista, La Nación, Clarín)",
+        "2.º más leída de Clarín",
+        "video que explota en La Nación: «Milei desde Madrid: \"Yo no dije que no hubiera pob» (39.292 vistas. 7.093 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El presidente argentino usó un vendaje tras sufrir un golpe en la bañadera. Durante su estadía en Madrid, mantuvo una intensa agenda política y criticó con dureza al jefe del Gobierno español.",
+      "seccion": "Política",
+      "tema": [
+        "*espana",
+        "*milei",
+        "espana",
+        "gobierno",
+        "informo",
+        "javier",
+        "milei",
+        "razon",
+        "venda",
+        "viaje"
+      ],
+      "viral": 6,
+      "puntos": 75,
+      "nivel": "política",
+      "cobertura": 3,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T18:15:52-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "18:15",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/ASOLHXK3QJDLHJDX6HDBRVFD7Q.jpg?auth=3a448cf69a7112b0348dd35faec328c839e446facf5ce296ac70a818cc6c1fea&smart=true&width=1920&height=1080",
+      "foto": "El presidente argentino se encuentra en España.",
+      "youtube": {
+        "id": "ds2mkQFQb28",
+        "url": "https://youtube.com/shorts/ds2mkQFQb28",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T18:15:00-03:00"
+      },
+      "web": {
+        "id": "fddeead6-2a49-4832-9722-8d978cb0038f",
+        "slug": "javier-milei-en-espana-el-motivo-de-su-venda-en-el-cuello-y-los-41a427",
+        "url": "https://www.diariolacampaña.com.ar/n/javier-milei-en-espana-el-motivo-de-su-venda-en-el-cuello-y-los-41a427",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T18:15:05-03:00"
+      },
+      "instagram": {
+        "id": "17962319736249965",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T18:15:08-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:41a4276d3cbfa924"
+      }
+    },
+    "https://www.infobae.com/economia/2026/10/21/anses-quienes-cobran-hoy-miercoles-21-de-octubre-de-2026/": {
+      "titulo_original": "ANSES: quiénes cobran hoy, miércoles 21 de octubre de 2026",
+      "titular": "ANSES: quiénes cobran este miércoles 21 de octubre de 2026",
+      "volanta": "ANSES",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "economia",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 51,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 28.º de 70 en «nacionales»",
+        "cobertura: 7 medios (Infobae, El Cronista, La Nación)"
+      ],
+      "fuentes": [],
+      "bajada": "El organismo previsional continúa este miércoles con el cronograma de haberes. Conocé los montos actualizados, los bonos vigentes y qué documentos perciben el beneficio hoy.",
+      "seccion": "Economía",
+      "tema": [
+        "*anses",
+        "21",
+        "anses",
+        "cobran"
+      ],
+      "viral": 8,
+      "puntos": 74,
+      "nivel": "bolsillo",
+      "cobertura": 3,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T18:45:58-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "18:45",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/VUZSSQY7K5DFHIK67KMTTJWGEU.jpg?auth=19a732901d2338a3cee68c5b3109917ce72eb6b8b9661462257fe5eccbc92cc0&smart=true&width=1920&height=1080",
+      "foto": "Los jubilados que perciben el haber mínimo y los beneficiarios de la AUH con documento terminado en 8 cobran este 21 de octubre",
+      "youtube": {
+        "id": "rZqwQP-t_4I",
+        "url": "https://youtube.com/shorts/rZqwQP-t_4I",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T18:45:00-03:00"
+      },
+      "web": {
+        "id": "13ae610d-a773-4524-b4ca-c0e1c18119c6",
+        "slug": "anses-quienes-cobran-este-miercoles-21-de-octubre-de-2026-y-64c61b",
+        "url": "https://www.diariolacampaña.com.ar/n/anses-quienes-cobran-este-miercoles-21-de-octubre-de-2026-y-64c61b",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T18:45:05-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2065628161045476",
+        "estado": "ok",
+        "cuando": "2026-10-21T18:45:08-03:00"
+      },
+      "instagram": {
+        "id": "18099022973439812",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T18:45:11-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:64c61b88e47d5daf"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/21/milei-descalifico-a-una-periodista-espanola-por-una-pregunta-sobre-pp-y-vox/": {
+      "titulo_original": "Milei descalificó a una periodista española por una pregunta sobre PP y Vox",
+      "titular": "Javier Milei trató de «miserables» a una periodista española que le hizo una pregunta",
+      "volanta": "España",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "politica",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 73,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 4.º de 34 en «portada»",
+        "Google News: 1.º de 70 en «nacionales»",
+        "cobertura: 9 medios (Infobae, La Nación, Clarín)",
+        "video que explota en La Nación: «Milei agredió a una periodista española: \"Corta in» (29.288 vistas. 5.107 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El presidente argentino agredió verbalmente a una cronista de la Cadena SER que le consultó sobre su vínculo con los partidos opositores durante su estadía en Madrid.",
+      "seccion": "Política",
+      "tema": [
+        "*vox",
+        "descalifico",
+        "espanola",
+        "milei",
+        "periodista",
+        "pregunta"
+      ],
+      "viral": 7,
+      "puntos": 54,
+      "nivel": "política",
+      "cobertura": 1,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T19:16:01-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "19:15",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/6JA7U23P3ZHJDJMHS32PECNGEM.png?auth=d5ec41e80274082bf955e9e77bd88c23ef2eb01f13530e960664f6d952207ea6&smart=true&width=1710&height=961",
+      "foto": null,
+      "youtube": {
+        "id": "9WrNChFwTWw",
+        "url": "https://youtube.com/shorts/9WrNChFwTWw",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T19:15:00-03:00"
+      },
+      "web": {
+        "id": "18c76ffb-e3d7-450e-8a37-1b61ab5417c0",
+        "slug": "javier-milei-insulto-a-una-periodista-espanola-tras-una-a7e424",
+        "url": "https://www.diariolacampaña.com.ar/n/javier-milei-insulto-a-una-periodista-espanola-tras-una-a7e424",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T19:15:06-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2065645434377082",
+        "estado": "ok",
+        "cuando": "2026-10-21T19:15:08-03:00"
+      },
+      "instagram": {
+        "id": "17949975249323373",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T19:15:13-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:a7e42407f5ea13c5"
+      }
+    },
+    "https://www.infobae.com/economia/2026/10/21/como-funciona-la-nueva-linea-de-prestamos-personales-para-la-compra-de-casas-prefabricadas-y-quienes-pueden-acceder/": {
+      "titulo_original": "Cómo funciona la nueva línea de préstamos personales para la compra de casas prefabricadas y quiénes pueden acceder",
+      "titular": "Banco Provincia lanzó préstamos de hasta 50 millones para casas prefabricadas",
+      "volanta": "Créditos hipotecarios",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "economia",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 25,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)"
+      ],
+      "fuentes": [],
+      "bajada": "La entidad financiera ofrece financiamiento indexado en UVA para adquirir viviendas industrializadas mediante canales digitales, con plazos de hasta 96 cuotas mensuales.",
+      "seccion": "Economía",
+      "tema": [
+        "acceder",
+        "casas",
+        "compra",
+        "funciona",
+        "linea",
+        "personale",
+        "prefabricada",
+        "prestamo",
+        "pueden"
+      ],
+      "viral": 8,
+      "puntos": 35,
+      "nivel": "bolsillo",
+      "cobertura": 1,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T19:46:28-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "19:45",
+      "copia": 6,
+      "foto_url": "https://www.infobae.com/resizer/v2/GZQ4Z3FUTFHCXB5477LJ47B3V4.jpg?auth=de3919fd70c4f4105daff0119a464f6cce4fc4074058cd069098f0c92ce34f60&smart=true&width=1262&height=744",
+      "foto": "Los solicitantes pueden elegir un plazo de devolución de entre 12 y 96 cuotas",
+      "youtube": {
+        "id": "EbdFuZNpCqU",
+        "url": "https://youtube.com/shorts/EbdFuZNpCqU",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T19:45:00-03:00"
+      },
+      "web": {
+        "id": "5e5dd28b-ee25-4859-8898-ea4b44e466f3",
+        "slug": "banco-provincia-como-son-los-prestamos-para-comprar-casas-780212",
+        "url": "https://www.diariolacampaña.com.ar/n/banco-provincia-como-son-los-prestamos-para-comprar-casas-780212",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T19:45:08-03:00"
+      },
+      "instagram": {
+        "id": "17905850985355619",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T19:45:12-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:780212f6b8352df4"
       }
     }
   },
@@ -12772,6 +13066,10 @@
     "https://www.infobae.com/politica/2026/10/20/los-movimientos-populares-organizaran-un-encuentro-previo-a-la-llegada-del-papa-leon-xiv/": {
       "motivo": "sin imagen que se pueda usar (foto de agencia (EFE))",
       "cuando": "2026-10-20T20:56:48-03:00"
+    },
+    "https://www.infobae.com/economia/2026/10/21/el-dolar-subio-por-cuarto-dia-consecutivo-y-marco-un-nuevo-record-nominal/": {
+      "motivo": "sin imagen que se pueda usar (foto de agencia (Reuters))",
+      "cuando": "2026-10-21T18:00:30-03:00"
     }
   },
   "carruseles": {
@@ -12986,5 +13284,5 @@
       ]
     }
   },
-  "actualizado": "2026-10-20T22:16:06-03:00"
+  "actualizado": "2026-10-21T19:46:28-03:00"
 }
