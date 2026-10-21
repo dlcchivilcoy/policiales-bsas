@@ -9040,6 +9040,31 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dd10a00d4cc371ac": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 7,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 52,
+      "commercial_score": 53,
+      "subtema": "mercados",
+      "tema": "chicago",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta directo los precios locales pero es un reporte de rutina sin novedades disruptivas para la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        55
+      ]
     }
   },
   "indice": {
@@ -9681,7 +9706,10 @@
       "https://agrositio.com.ar/noticia/248925-la-serenisima-presento-bienestar-mas-alla-de-la-alimentacion.html": "2026-10-21",
       "https://agrositio.com.ar/noticia/248921-la-seguridad-alimentaria-ya-no-es-una-cuestion-agricola.html": "2026-10-21",
       "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u": "2026-10-21",
-      "https://bichosdecampo.com/despues-del-asado-siempre-es-bueno-un-buen-cafe-jorge-cabrales-que-es-criador-de-angus-busca-desarrollar-la-produccion-local-de-esa-infusion-en-el-norte-del-pais": "2026-10-21"
+      "https://bichosdecampo.com/despues-del-asado-siempre-es-bueno-un-buen-cafe-jorge-cabrales-que-es-criador-de-angus-busca-desarrollar-la-produccion-local-de-esa-infusion-en-el-norte-del-pais": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248942-chicago-profundiza-las-bajas-por-la-liquidacion-de-fondos-y-la-presion-de-la-cosecha-estadounidense.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248941-jornada-bajista-para-los-granos-en-chicago-por-liquidacion-de-posiciones-y-avance-de-la-cosecha.html": "2026-10-21",
+      "https://bichosdecampo.com/es-inadminisible-el-agro-salio-con-los-tapones-de-punta-contra-la-nueva-ley-que-permite-a-los-intendentes-bonaerenses-desviar-fondos-de-los-caminos-rurales-hacia-obras-hidricas": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10321,7 +10349,10 @@
       "la serenisima presento bienestar mas alla de la alimentacion": "2026-10-21",
       "la seguridad alimentaria ya no es una cuestion agricola": "2026-10-21",
       "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano": "2026-10-21",
-      "despues del asado siempre es bueno un buen cafe jorge cabrales que es criador de angus busca desarrollar la produccion local de esa infusion en el norte del pais": "2026-10-21"
+      "despues del asado siempre es bueno un buen cafe jorge cabrales que es criador de angus busca desarrollar la produccion local de esa infusion en el norte del pais": "2026-10-21",
+      "chicago profundiza las bajas por la liquidacion de fondos y la presion de la cosecha estadounidense": "2026-10-21",
+      "jornada bajista para los granos en chicago por liquidacion de posiciones y avance de la cosecha": "2026-10-21",
+      "es inadminisible el agro salio con los tapones de punta contra la nueva ley que permite a los intendentes bonaerenses desviar fondos de los caminos rurales hacia obras hidricas": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10961,7 +10992,10 @@
       "bf297d53cb406306": "2026-10-21",
       "f332d1728f1f0867": "2026-10-21",
       "c1efe7e87e78f259": "2026-10-21",
-      "fe6a2b6b70281263": "2026-10-21"
+      "fe6a2b6b70281263": "2026-10-21",
+      "a08d3df9408b45a0": "2026-10-21",
+      "dd10a00d4cc371ac": "2026-10-21",
+      "ca80a5fea38cb18a": "2026-10-21"
     }
   },
   "elegidas": [
@@ -13785,49 +13819,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_30c07855c9af_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "ca3363a2f78c",
-      "rep": {
-        "id": "ca3363a2f78c",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u/",
-        "canonical_url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u",
-        "titulo": "No es momento de ratonear: Con el “Súper Niño” de aliado, advierten que recortar fertilizantes es “tirarse un tiro en los pies” y que hoy nutrir conviene más que hace un año",
-        "titulo_norm": "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano",
-        "descripcion": "Luego de meses convulsionados por los efectos de la guerra sobre el precio de los insumos, y de cara a una temporada en la que no habrá problemas de disponibilidad de agua, los especialistas del sector sostienen -calculadora en mano- que esta campaña gruesa fertilizar será aún más conveniente que la anterior. Pero no sólo […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/rotondaro-fertilizar-1-scaled.png",
-        "autor": "Lucas Torsiglieri",
-        "publicado": "2026-10-21T08:02-03:00",
-        "capturado": "2026-10-21T08:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c1efe7e87e78f259"
-      },
-      "grupo": [
-        {
-          "id": "ca3363a2f78c",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u/",
-          "canonical_url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u",
-          "titulo": "No es momento de ratonear: Con el “Súper Niño” de aliado, advierten que recortar fertilizantes es “tirarse un tiro en los pies” y que hoy nutrir conviene más que hace un año",
-          "titulo_norm": "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano",
-          "descripcion": "Luego de meses convulsionados por los efectos de la guerra sobre el precio de los insumos, y de cara a una temporada en la que no habrá problemas de disponibilidad de agua, los especialistas del sector sostienen -calculadora en mano- que esta campaña gruesa fertilizar será aún más conveniente que la anterior. Pero no sólo […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/rotondaro-fertilizar-1-scaled.png",
-          "autor": "Lucas Torsiglieri",
-          "publicado": "2026-10-21T08:02-03:00",
-          "capturado": "2026-10-21T08:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c1efe7e87e78f259"
-        }
-      ],
+      "cuando": "2026-10-21T10:00-03:00",
+      "titulo_original": "No es momento de ratonear: Con el “Súper Niño” de aliado, advierten que recortar fertilizantes es “tirarse un tiro en los pies” y que hoy nutrir conviene más que hace un año",
+      "descripcion": "Luego de meses convulsionados por los efectos de la guerra sobre el precio de los insumos, y de cara a una temporada en la que no habrá problemas de disponibilidad de agua, los especialistas del sector sostienen -calculadora en mano- que esta campaña gruesa fertilizar será aún más conveniente que la",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u/",
+      "titular": "Fertilizar en la campaña gruesa deja más margen que hace un año",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -13849,11 +13850,41 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-21T08:02-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "9lTDLKRhhEo",
+          "url": "https://youtube.com/shorts/9lTDLKRhhEo",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "314f0290-c671-408b-b42c-7ab3e2b5fb1f",
+          "slug": "campana-gruesa-por-que-fertilizar-hoy-es-mas-conveniente-que-el-51a882",
+          "url": "https://www.diariolacampaña.com.ar/n/campana-gruesa-por-que-fertilizar-hoy-es-mas-conveniente-que-el-51a882",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1111180414835013",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18437137300198684",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ca3363a2f78c_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-21T08:23:43-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-10-21T10:04:10-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
