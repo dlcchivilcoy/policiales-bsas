@@ -8931,6 +8931,73 @@
         64,
         53
       ]
+    },
+    "3185d58b1163f2bb": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 65,
+      "commercial_score": 64,
+      "subtema": "empresas",
+      "tema": "pymes exportadoras",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a la agroindustria regional pero aborda la exportación de forma muy general y conceptual.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        65
+      ]
+    },
+    "bf297d53cb406306": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 30,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "la serenísima",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Evento institucional de consumo masivo sin relevancia directa para el trabajo cotidiano del productor agropecuario.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f332d1728f1f0867": {
+      "impacto_economico": 10,
+      "interes_productores": 5,
+      "innovacion": 2,
+      "cercania_argentina": 6,
+      "cercania_pba": 3,
+      "potencial_reel": 3,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 38,
+      "commercial_score": 45,
+      "subtema": "mercados",
+      "tema": "seguridad alimentaria",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Reflexión geopolítica sobre producción de alimentos, demasiado abstracta para el día a día del productor pampeano.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9566,7 +9633,11 @@
       "https://bichosdecampo.com/trigo-forrajero-siguen-llegando-noticias-dramaticas-de-la-situacion-del-cereal-en-brasil": "2026-10-21",
       "https://lanacion.com.ar/economia/campo/lucas-maglio-ingeniero-en-acuicultura-sobre-un-negocio-en-auge-quizas-haya-llegado-el-momento-de-nid21102026": "2026-10-21",
       "https://lacapital.com.ar/agro/clima-y-agro-lluvias-itinerantes-nuevos-pulsos-aire-fresco-y-un-parana-ascenso-n10287800.html": "2026-10-21",
-      "https://lacapital.com.ar/agro/algarrobo-blanco-un-recurso-forrajero-la-ganaderia-sistemas-silvopastoriles-n10287755.html": "2026-10-21"
+      "https://lacapital.com.ar/agro/algarrobo-blanco-un-recurso-forrajero-la-ganaderia-sistemas-silvopastoriles-n10287755.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248931-las-lluvias-y-la-amplitud-termica-arrasaron-las-poblaciones-de-chicharritas-en-todo-el-pais.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248925-la-serenisima-presento-bienestar-mas-alla-de-la-alimentacion.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248921-la-seguridad-alimentaria-ya-no-es-una-cuestion-agricola.html": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10200,7 +10271,11 @@
       "trigo forrajero siguen llegando noticias dramaticas de la situacion del cereal en brasil": "2026-10-21",
       "lucas maglio ingeniero en acuicultura sobre un negocio en auge quizas haya llegado el momento de comenzar a mirar tambien hacia el agua": "2026-10-21",
       "clima y agro lluvias itinerantes nuevos pulsos de aire fresco y un parana en ascenso": "2026-10-21",
-      "algarrobo blanco un recurso forrajero para la ganaderia en sistemas silvopastoriles": "2026-10-21"
+      "algarrobo blanco un recurso forrajero para la ganaderia en sistemas silvopastoriles": "2026-10-21",
+      "las lluvias y la amplitud termica arrasaron las poblaciones de chicharritas en todo el pais": "2026-10-21",
+      "el record agroindustrial argentino abre una nueva discusion como lograr que mas pymes lleguen a exportar": "2026-10-21",
+      "la serenisima presento bienestar mas alla de la alimentacion": "2026-10-21",
+      "la seguridad alimentaria ya no es una cuestion agricola": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10834,7 +10909,11 @@
       "0cfa52450f2d5433": "2026-10-21",
       "a5b53892a1cbc013": "2026-10-21",
       "a2f1d9a7e63a2245": "2026-10-21",
-      "e88456b45c4de936": "2026-10-21"
+      "e88456b45c4de936": "2026-10-21",
+      "9d369b5c9ad23c59": "2026-10-21",
+      "3185d58b1163f2bb": "2026-10-21",
+      "bf297d53cb406306": "2026-10-21",
+      "f332d1728f1f0867": "2026-10-21"
     }
   },
   "elegidas": [
@@ -13546,49 +13625,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8772f565f2fb_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "44e4112d3ad5",
-      "rep": {
-        "id": "44e4112d3ad5",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/parece-joda-se-viene-un-nino-extraordinario-y-el-gobierno-sigue-acaparando-mas-del-40-del-fondo-de-infraestructura-hidrica-para-colocarlo-en-titulos-publicos/",
-        "canonical_url": "https://bichosdecampo.com/parece-joda-se-viene-un-nino-extraordinario-y-el-gobierno-sigue-acaparando-mas-del-40-del-fondo-de-infraestructura-hidrica-para-colocarlo-en-titulos-publicos",
-        "titulo": "Parece joda: Se viene un “Niño” extraordinario y el gobierno sigue acaparando más del 40% del Fondo de Infraestructura Hídrica para colocarlo en títulos públicos",
-        "titulo_norm": "parece joda se viene un nino extraordinario y el gobierno sigue acaparando mas del 40 del fondo de infraestructura hidrica para colocarlo en titulos publicos",
-        "descripcion": "Luego de las movilizaciones y quejas realizadas en 2025 por productores bonaerenses, este año el gobierno nacional comenzó a liberar recursos para realizar obras comprendidas en el Plan Maestro de la Cuenca del Río Salado, las cuales habían sido abandonadas desde fines de 2023. Un informe del Ministerio de Economía de la Nación muestra que […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-4.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-21T01:37-03:00",
-        "capturado": "2026-10-21T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a3e6e492cf9db5fa"
-      },
-      "grupo": [
-        {
-          "id": "44e4112d3ad5",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/parece-joda-se-viene-un-nino-extraordinario-y-el-gobierno-sigue-acaparando-mas-del-40-del-fondo-de-infraestructura-hidrica-para-colocarlo-en-titulos-publicos/",
-          "canonical_url": "https://bichosdecampo.com/parece-joda-se-viene-un-nino-extraordinario-y-el-gobierno-sigue-acaparando-mas-del-40-del-fondo-de-infraestructura-hidrica-para-colocarlo-en-titulos-publicos",
-          "titulo": "Parece joda: Se viene un “Niño” extraordinario y el gobierno sigue acaparando más del 40% del Fondo de Infraestructura Hídrica para colocarlo en títulos públicos",
-          "titulo_norm": "parece joda se viene un nino extraordinario y el gobierno sigue acaparando mas del 40 del fondo de infraestructura hidrica para colocarlo en titulos publicos",
-          "descripcion": "Luego de las movilizaciones y quejas realizadas en 2025 por productores bonaerenses, este año el gobierno nacional comenzó a liberar recursos para realizar obras comprendidas en el Plan Maestro de la Cuenca del Río Salado, las cuales habían sido abandonadas desde fines de 2023. Un informe del Ministerio de Economía de la Nación muestra que […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-4.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-21T01:37-03:00",
-          "capturado": "2026-10-21T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a3e6e492cf9db5fa"
-        }
-      ],
+      "cuando": "2026-10-21T07:22-03:00",
+      "titulo_original": "Parece joda: Se viene un “Niño” extraordinario y el gobierno sigue acaparando más del 40% del Fondo de Infraestructura Hídrica para colocarlo en títulos públicos",
+      "descripcion": "Luego de las movilizaciones y quejas realizadas en 2025 por productores bonaerenses, este año el gobierno nacional comenzó a liberar recursos para realizar obras comprendidas en el Plan Maestro de la Cuenca del Río Salado, las cuales habían sido abandonadas desde fines de 2023. Un informe del Minist",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/parece-joda-se-viene-un-nino-extraordinario-y-el-gobierno-sigue-acaparando-mas-del-40-del-fondo-de-infraestructura-hidrica-para-colocarlo-en-titulos-publicos/",
+      "titular": "Gobierno nacional destina a títulos públicos el 42% del Fondo Hídric",
+      "volanta": "Infraestructura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -13610,11 +13656,102 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-21T07:02-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9a96357c-af0e-4a62-97ac-4b5e2859928f",
+          "slug": "reclaman-por-fondos-hidricos-retenidos-en-titulos-publicos-ante-24c4e4",
+          "url": "https://www.diariolacampaña.com.ar/n/reclaman-por-fondos-hidricos-retenidos-en-titulos-publicos-ante-24c4e4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "27841560635520187",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17999859051034249",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_44e4112d3ad5_portada.jpg"
     }
   ],
-  "actualizado": "2026-10-21T07:05:28-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [
+    {
+      "id": "30c07855c9af",
+      "rep": {
+        "id": "30c07855c9af",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html",
+        "titulo": "El récord agroindustrial argentino abre una nueva discusión: cómo lograr que más pymes lleguen a exportar",
+        "titulo_norm": "el record agroindustrial argentino abre una nueva discusion como lograr que mas pymes lleguen a exportar",
+        "descripcion": "El crecimiento de los envíos de productos procesados amplía las oportunidades para las empresas argentinas, pero también exige resolver con mayor planificación la logística, la documentación y la coordinación de cada operación internacional....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_248930_79498143.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-20T18:47-03:00",
+        "capturado": "2026-10-21T07:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3185d58b1163f2bb"
+      },
+      "grupo": [
+        {
+          "id": "30c07855c9af",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html",
+          "titulo": "El récord agroindustrial argentino abre una nueva discusión: cómo lograr que más pymes lleguen a exportar",
+          "titulo_norm": "el record agroindustrial argentino abre una nueva discusion como lograr que mas pymes lleguen a exportar",
+          "descripcion": "El crecimiento de los envíos de productos procesados amplía las oportunidades para las empresas argentinas, pero también exige resolver con mayor planificación la logística, la documentación y la coordinación de cada operación internacional....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_248930_79498143.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-20T18:47-03:00",
+          "capturado": "2026-10-21T07:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3185d58b1163f2bb"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 65,
+        "commercial_score": 64,
+        "subtema": "empresas",
+        "tema": "pymes exportadoras",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa a la agroindustria regional pero aborda la exportación de forma muy general y conceptual.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "cuando": "2026-10-21T07:22-03:00"
+    }
+  ],
+  "actualizado": "2026-10-21T07:25:30-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
