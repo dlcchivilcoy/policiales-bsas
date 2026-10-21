@@ -9539,6 +9539,31 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a3bc3876ab65d72c": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 66,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa a toda la cadena ganadera y genera debate por la competitividad exportadora frente a la región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        68
+      ]
     }
   },
   "indice": {
@@ -10216,7 +10241,8 @@
       "https://agfundernews.com/lumi-ai-finds-new-home-at-newforma-as-agentic-analytics-takes-off": "2026-10-21",
       "https://agfundernews.com/brevel-teams-up-with-the-wave-group-to-scale-illuminated-fermentation-in-india": "2026-10-21",
       "https://agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html": "2026-10-21",
-      "https://bichosdecampo.com/el-granizo-agita-la-rosca-mendocina-un-senador-de-petri-desafia-a-cornejo-y-pide-1000-millones-de-pesos-para-volver-a-financiar-la-lucha-antigranizo": "2026-10-21"
+      "https://bichosdecampo.com/el-granizo-agita-la-rosca-mendocina-un-senador-de-petri-desafia-a-cornejo-y-pide-1000-millones-de-pesos-para-volver-a-financiar-la-lucha-antigranizo": "2026-10-21",
+      "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10892,7 +10918,8 @@
       "lumi ai finds new home at newforma as agentic analytics gathers pace": "2026-10-21",
       "brevel teams up with the wave group to scale illuminated fermentation in india": "2026-10-21",
       "lluvias de variada intensidad sobre el norte y el oeste del area agricola con fuertes tormentas sobre el norte del litoral fluvial": "2026-10-21",
-      "el granizo agita la rosca mendocina un senador de petri desafia a cornejo y pide 1000 millones de pesos para volver a financiar la lucha antigranizo": "2026-10-21"
+      "el granizo agita la rosca mendocina un senador de petri desafia a cornejo y pide 1000 millones de pesos para volver a financiar la lucha antigranizo": "2026-10-21",
+      "la carne vacuna en argentina sigue siendo mas barata que la de estados unidos o australia pero ya es mas cara que en brasil o paraguay": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11568,7 +11595,8 @@
       "10594a1bc783c5fe": "2026-10-21",
       "b97a69be39ff7646": "2026-10-21",
       "d4a7f87c5eb594c7": "2026-10-21",
-      "3accbfb78f6a40b8": "2026-10-21"
+      "3accbfb78f6a40b8": "2026-10-21",
+      "a3bc3876ab65d72c": "2026-10-21"
     }
   },
   "elegidas": [
@@ -14626,9 +14654,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5320123b2f51_portada.jpg"
+    },
+    {
+      "id": "ec8699265856",
+      "cuando": "2026-10-21T13:40-03:00",
+      "titulo_original": "“Los biológicos no van a reemplazar a los agroquímicos”: Daniel Germinara, experto de UPL, explica por qué la nueva agronomía será una convivencia entre ambas herramientas",
+      "descripcion": "Por su apellido, Daniel Germinara parecía condenado desde el nacimiento a estudiar Agronomía. Y efectivamente lo hizo. Pero muchos años después de recibirse le toca trabajar en uno de los capítulos que más está modificando el ejercicio de esa profesión: la incorporación de productos biológicos a esq",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-biologicos-no-van-a-reemplazar-a-los-agroquimicos-daniel-germinara-experto-de-upl-explica-por-que-la-nueva-agronomia-sera-una-convivencia-entre-ambas-herramientas/",
+      "titular": "Biológicos y químicos convivirán en el campo según experto de UPL",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 74,
+        "commercial_score": 70,
+        "subtema": "agtech",
+        "tema": "biológicos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Visión técnica sobre el rol de los biológicos y agroquímicos, muy consultado por asesores y productores.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "313283fd-a021-49de-a22a-dec75ab47922",
+          "slug": "biologicos-y-quimicos-en-el-campo-argentino-por-que-upl-apuesta-1b6e17",
+          "url": "https://www.diariolacampaña.com.ar/n/biologicos-y-quimicos-en-el-campo-argentino-por-que-upl-apuesta-1b6e17",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1642412630570489",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18110634425183238",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ec8699265856_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d1b0a9e26717",
+      "rep": {
+        "id": "d1b0a9e26717",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay/",
+        "canonical_url": "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay",
+        "titulo": "La carne vacuna en Argentina sigue siendo más barata que la de Estados Unidos o Australia, pero ya es más cara que en Brasil o Paraguay",
+        "titulo_norm": "la carne vacuna en argentina sigue siendo mas barata que la de estados unidos o australia pero ya es mas cara que en brasil o paraguay",
+        "descripcion": "Un informe de la Fundación Mediterránea que cada tanto compara el precio de un kilo de carne vacuna en la Argentina frente a otros países productores del mismo alimento, afirma que el bife criollo es más barato aquí todavía que en países más desarrollados, como Estados Unidos, Canadá o Australia, pero que ya se ubica […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/carne-ieral.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-21T13:28-03:00",
+        "capturado": "2026-10-21T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a3bc3876ab65d72c"
+      },
+      "grupo": [
+        {
+          "id": "d1b0a9e26717",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay/",
+          "canonical_url": "https://bichosdecampo.com/la-carne-vacuna-en-argentina-sigue-siendo-mas-barata-que-la-de-estados-unidos-o-australia-pero-ya-es-mas-cara-que-en-brasil-o-paraguay",
+          "titulo": "La carne vacuna en Argentina sigue siendo más barata que la de Estados Unidos o Australia, pero ya es más cara que en Brasil o Paraguay",
+          "titulo_norm": "la carne vacuna en argentina sigue siendo mas barata que la de estados unidos o australia pero ya es mas cara que en brasil o paraguay",
+          "descripcion": "Un informe de la Fundación Mediterránea que cada tanto compara el precio de un kilo de carne vacuna en la Argentina frente a otros países productores del mismo alimento, afirma que el bife criollo es más barato aquí todavía que en países más desarrollados, como Estados Unidos, Canadá o Australia, pero que ya se ubica […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/carne-ieral.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-21T13:28-03:00",
+          "capturado": "2026-10-21T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a3bc3876ab65d72c"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 66,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Interesa a toda la cadena ganadera y genera debate por la competitividad exportadora frente a la región.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          68
+        ]
+      },
+      "cuando": "2026-10-21T13:40-03:00"
+    },
     {
       "id": "e8774da12297",
       "rep": {
@@ -14823,69 +14972,6 @@
       "cuando": "2026-10-21T13:00-03:00"
     },
     {
-      "id": "ec8699265856",
-      "rep": {
-        "id": "ec8699265856",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-biologicos-no-van-a-reemplazar-a-los-agroquimicos-daniel-germinara-experto-de-upl-explica-por-que-la-nueva-agronomia-sera-una-convivencia-entre-ambas-herramientas/",
-        "canonical_url": "https://bichosdecampo.com/los-biologicos-no-van-a-reemplazar-a-los-agroquimicos-daniel-germinara-experto-de-upl-explica-por-que-la-nueva-agronomia-sera-una-convivencia-entre-ambas-herramientas",
-        "titulo": "“Los biológicos no van a reemplazar a los agroquímicos”: Daniel Germinara, experto de UPL, explica por qué la nueva agronomía será una convivencia entre ambas herramientas",
-        "titulo_norm": "los biologicos no van a reemplazar a los agroquimicos daniel germinara experto de upl explica por que la nueva agronomia sera una convivencia entre ambas herramientas",
-        "descripcion": "Por su apellido, Daniel Germinara parecía condenado desde el nacimiento a estudiar Agronomía. Y efectivamente lo hizo. Pero muchos años después de recibirse le toca trabajar en uno de los capítulos que más está modificando el ejercicio de esa profesión: la incorporación de productos biológicos a esquemas agrícolas que durante décadas estuvieron dominados por herramientas […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/bioinsumos.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-21T11:44-03:00",
-        "capturado": "2026-10-21T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e33e00339bf53a72"
-      },
-      "grupo": [
-        {
-          "id": "ec8699265856",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-biologicos-no-van-a-reemplazar-a-los-agroquimicos-daniel-germinara-experto-de-upl-explica-por-que-la-nueva-agronomia-sera-una-convivencia-entre-ambas-herramientas/",
-          "canonical_url": "https://bichosdecampo.com/los-biologicos-no-van-a-reemplazar-a-los-agroquimicos-daniel-germinara-experto-de-upl-explica-por-que-la-nueva-agronomia-sera-una-convivencia-entre-ambas-herramientas",
-          "titulo": "“Los biológicos no van a reemplazar a los agroquímicos”: Daniel Germinara, experto de UPL, explica por qué la nueva agronomía será una convivencia entre ambas herramientas",
-          "titulo_norm": "los biologicos no van a reemplazar a los agroquimicos daniel germinara experto de upl explica por que la nueva agronomia sera una convivencia entre ambas herramientas",
-          "descripcion": "Por su apellido, Daniel Germinara parecía condenado desde el nacimiento a estudiar Agronomía. Y efectivamente lo hizo. Pero muchos años después de recibirse le toca trabajar en uno de los capítulos que más está modificando el ejercicio de esa profesión: la incorporación de productos biológicos a esquemas agrícolas que durante décadas estuvieron dominados por herramientas […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/bioinsumos.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-21T11:44-03:00",
-          "capturado": "2026-10-21T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e33e00339bf53a72"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 12,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 8,
-        "ai_score": 74,
-        "commercial_score": 70,
-        "subtema": "agtech",
-        "tema": "biológicos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Visión técnica sobre el rol de los biológicos y agroquímicos, muy consultado por asesores y productores.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T13:00-03:00"
-    },
-    {
       "id": "03ad69dee039",
       "rep": {
         "id": "03ad69dee039",
@@ -15016,8 +15102,8 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T13:23:55-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T13:44:33-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
