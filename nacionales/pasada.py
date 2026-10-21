@@ -208,8 +208,12 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     # Los portales cuyo RSS trae solo el titular (Ámbito, Clarín, Olé, ESPN…): el texto de la página.
     if len(medios.get("texto") or "") > len(nota.get("cuerpo") or "") and len(nota.get("cuerpo") or "") < 1500:
         nota = dict(nota, cuerpo=medios["texto"])
+    # Las generales de lunes a viernes, reel SOLO con la foto (21/10/2026): el video de la nota no se usa.
+    if AG.reel_con_foto(nota.get("subgeneral") or ""):
+        medios["video"] = ""
     # Sin video en esta nota: el mismo tema en otro portal puede traer el suyo (18/10/2026).
-    for otra in ([] if medios.get("video") else (nota.get("otras_urls") or [])[:3]):
+    for otra in ([] if medios.get("video") or AG.reel_con_foto(nota.get("subgeneral") or "")
+                 else (nota.get("otras_urls") or [])[:3]):
         try:
             v = (leer(otra) or {}).get("video")
         except Exception:                        # noqa: BLE001 — una página que no anda no frena
@@ -745,7 +749,8 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             if any(s in topes for s in AG.SUBGENERALES):
                 for c in colas.pop("", []):
                     s = AG.subgeneral(c)
-                    colas.setdefault(s, []).append(dict(c, subgeneral=s))
+                    if s:                            # lo local, de la región o de la provincia, no
+                        colas.setdefault(s, []).append(dict(c, subgeneral=s))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
             if "internacionales" in colas:
@@ -801,7 +806,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                        or proxima_categoria(colas, topes, hechas, ultima, permitir_igual=True))
                 if cat is None:
                     return None
-                if cat in CON_VIDEO_PRIMERO or (agenda and AG.solo_reel(cat)):
+                if cat in CON_VIDEO_PRIMERO or (agenda and AG.solo_reel(cat) and not AG.reel_con_foto(cat)):
                     adelantar_con_video(colas[cat], sirve, leer_una)
                 if agenda:
                     quiero = formato_buscado(cat, formatos, ultimo_formato[0])

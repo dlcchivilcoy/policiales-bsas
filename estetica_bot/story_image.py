@@ -1239,9 +1239,10 @@ def compose_note_slide(photo_path: Path, volanta: str, titular: str, site_url: s
 #     alternan uno y uno dos estilos: "A" (foto grande, filete naranja, titular en
 #     mayúsculas con la volanta en naranja) y "B" (foto más chica con pestaña naranja,
 #     titular + bajada).
-#   • Fotos CUADRADAS o VERTICALES: "C", la foto a sangre y el titular en una caja
-#     semitransparente que NUNCA tapa una cara: va abajo, o arriba (debajo de los logos)
-#     si las caras están abajo.
+#   • Fotos CUADRADAS o VERTICALES: también A/B (21/10/2026, pedido del editor: el básquet y
+#     los Juegos Bonaerenses salieron «con una estética distinta a la que habíamos quedado»):
+#     la foto arriba recortada cuidando las caras y el bloque de texto abajo. "C" (la foto a
+#     sangre con el titular en una caja semitransparente) queda solo para las placas SIN foto.
 #   • Logo «La Campaña / RADIO DEL CENTRO» arriba a la izquierda, isologo arriba a la
 #     derecha. Número de la placa y flecha abajo a la derecha (invitan a deslizar).
 # compose_note_slide (arriba) queda para los posteos sueltos de Facebook de nacionales.
@@ -1317,11 +1318,11 @@ def es_horizontal(photo_path) -> bool:
 
 
 def estilos_carrusel(fotos: list) -> list:
-    """Estilo de cada placa: "C" las cuadradas/verticales (y las que no tienen foto); las
-    horizontales alternan "A", "B", "A"… en el orden en que aparecen."""
+    """Estilo de cada placa: las que tienen foto (horizontal, cuadrada o vertical) alternan "A", "B",
+    "A"… en el orden en que aparecen; "C", solo las que no tienen foto (21/10/2026)."""
     estilos, n = [], 0
     for foto in fotos:
-        if foto and es_horizontal(foto):
+        if foto:
             estilos.append("AB"[n % 2])
             n += 1
         else:
@@ -1549,11 +1550,11 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
                            site_url: str = "", idx: int | None = None, total: int | None = None,
                            *, tema: str = "claro", estilo: str | None = None) -> Path:
     """Placa 4:5 del carrusel, estilo portal (ver el bloque de arriba). `estilo`: "A", "B" o
-    "C"; sin estilo, "C" si la foto es cuadrada o vertical y "A" si es horizontal (el que
-    alterna es el que llama, con estilos_carrusel)."""
+    "C"; sin estilo, "A" si hay foto (de cualquier forma) y "C" si no hay (el que alterna es el
+    que llama, con estilos_carrusel)."""
     t = TEMAS_CARRUSEL.get(tema, TEMAS_CARRUSEL["claro"])
     if estilo not in ("A", "B", "C"):
-        estilo = "A" if photo_path and es_horizontal(photo_path) else "C"
+        estilo = "A" if photo_path else "C"
     canvas = Image.new("RGB", (SLIDE_W, SLIDE_H), t["fondo"])
     foto = None
     if photo_path:
@@ -1650,6 +1651,109 @@ def compose_carrusel_slide(photo_path, volanta: str, titular: str, bajada: str =
     _pie_carrusel(canvas, draw, t, bx0 + pad, bx1 - pad, by1 - pad - fila_pie // 2 + 6, idx, total,
                   site_url, color_sitio=t["texto"])
     return _save(canvas, "carrusel_" + _safe_stem(titular or volanta, "nota"))
+
+
+def compose_lamina_carrusel(photo_path, volanta: str, titulo: str, texto: str, site_url: str = "",
+                            idx: int | None = None, total: int | None = None, *, tema: str = "claro") -> Path:
+    """Una LÁMINA del carrusel EXPLICATIVO de cada nota local (pedido del usuario 2026-10-18: las notas
+    del carrusel de las 10 salen una por una, cada una como carrusel explicativo). 4:5, misma estética
+    que la portada (compose_carrusel_slide, estilo B): la foto de la nota arriba con los logos, la
+    franja naranja, la volanta, el título de la lámina y el texto; abajo «Seguí leyendo en…», el número
+    y la flecha si hay otra. Sin foto, el texto ocupa todo el alto."""
+    t = TEMAS_CARRUSEL.get(tema, TEMAS_CARRUSEL["claro"])
+    canvas = Image.new("RGB", (SLIDE_W, SLIDE_H), t["fondo"])
+    m = CARRUSEL_MARGEN
+    ancho = SLIDE_W - 2 * m
+    foto = None
+    if photo_path:
+        try:
+            foto = _abrir_foto(photo_path)
+        except Exception as e:
+            logger.warning(f"No se pudo abrir la foto de la lámina: {e}")
+    if foto is None:
+        return _lamina_solo_texto(volanta, titulo, texto, site_url, idx, total, t)
+    foto_h = FOTO_B_H - 80 if foto is not None else 0
+    if foto is not None:
+        canvas.paste(_encuadrar(foto, SLIDE_W, foto_h), (0, 0))
+        _cabecera_carrusel(canvas)
+    draw = ImageDraw.Draw(canvas)
+    if foto is not None:
+        draw.rectangle((0, foto_h, SLIDE_W, foto_h + 10), fill=t["acento"])
+        y = foto_h + 10 + 52
+    else:
+        draw.rectangle((m, 70, m + 200, 79), fill=t["acento"])
+        y = 130
+    vol = (volanta or "").strip().upper()
+    if vol:
+        fv = _sans(30, 700)
+        draw.text((m, y), vol, font=fv, fill=t["acento"], anchor="lt")
+        y += 30 + 30
+    pie_y = SLIDE_H - 66
+    titulo = (titulo or "").strip()
+    if titulo:
+        ft, lt, lht = _medir_texto(draw, [(w, t["texto"]) for w in titulo.split()], ancho, 230,
+                                   lambda s_: _sans(s_, 700), max_size=64, min_size=44, salto=1.14,
+                                   max_lineas=3)
+        y = _dibujar_renglones(draw, m, y, lt, ft, lht) + round(lht * 0.25) + 34
+    alto = pie_y - 60 - y
+    if alto >= 40 and (texto or "").strip():
+        fx, lx, lhx = _medir_texto(draw, [(w, t["suave"]) for w in texto.split()], ancho, alto,
+                                   lambda s_: _sans(s_, 400), max_size=52, min_size=34, salto=1.38)
+        _dibujar_renglones(draw, m, y, lx, fx, lhx)
+    _pie_carrusel(canvas, draw, t, m, SLIDE_W - m, pie_y, idx, total, site_url)
+    return _save(canvas, f"lamina_{_safe_stem(titulo or volanta, 'nota')}_{idx or 0:02d}")
+
+
+def _lamina_solo_texto(volanta: str, titulo: str, texto: str, site_url: str, idx, total, t: dict) -> Path:
+    """La lámina SOLO TEXTO del carrusel explicativo (pedido del usuario 2026-10-18: «la primera con
+    imagen y las siguientes enfocate en hacer solo texto bien diseñado»). Arriba el isotipo, el nombre
+    del diario y «02 / 06» con un filete; el número de la lámina enorme y tenue de fondo; el bloque
+    centrado (volanta con su filo naranja, título y texto); abajo el pie de siempre (sitio, número,
+    flecha)."""
+    W, H = SLIDE_W, SLIDE_H
+    m = 84
+    ancho = W - 2 * m
+    claro = sum(t["fondo"]) > 600
+    tenue = tuple(round(f * 0.94 + a * 0.06) for f, a in zip(t["fondo"], t["acento"]))
+    linea = (226, 228, 233) if claro else (64, 66, 74)
+    canvas = Image.new("RGB", (W, H), t["fondo"])
+    draw = ImageDraw.Draw(canvas)
+    if idx:
+        draw.text((W - 40, H - 150), f"{idx:02d}", font=_sans(520, 800), fill=tenue, anchor="rs")
+    # Cabecera: isotipo + DIARIO LA CAMPAÑA a la izquierda, «02 / 06» a la derecha.
+    x = _paste_iso(canvas, m, 70, 50, orange=True) + 16
+    draw.text((x, 95), "DIARIO LA CAMPAÑA", font=_sans(24, 700), fill=t["texto"], anchor="lm")
+    if idx and total:
+        draw.text((W - m, 95), f"{idx:02d} / {total:02d}", font=_sans(32, 700), fill=t["acento"],
+                  anchor="rm")
+    draw.line((m, 160, W - m, 160), fill=linea, width=2)
+    # El bloque, medido antes de dibujar para centrarlo entre el filete y el pie.
+    arriba, abajo = 210, H - 170
+    vol = (volanta or "").strip().upper()
+    alto_vol = 30 + 24 + 8 + 40 if vol else 0
+    titulo = (titulo or "").strip()
+    ft, lt, lht = _medir_texto(draw, [(w, t["texto"]) for w in titulo.split()], ancho, 330,
+                               lambda s_: _sans(s_, 700), max_size=76, min_size=48, salto=1.12,
+                               max_lineas=4) if titulo else (None, [], 0)
+    resto = abajo - arriba - alto_vol - len(lt) * lht - 44
+    fx, lx, lhx = _medir_texto(draw, [(w, t["suave"]) for w in (texto or "").split()], ancho, max(resto, 120),
+                               lambda s_: _sans(s_, 400), max_size=50, min_size=34,
+                               salto=1.38) if (texto or "").strip() else (None, [], 0)
+    alto = alto_vol + len(lt) * lht + (44 if lt and lx else 0) + len(lx) * lhx
+    y = arriba + max(0, (abajo - arriba - alto) // 2)
+    if vol:
+        draw.text((m, y), vol, font=_sans(30, 700), fill=t["acento"], anchor="lt")
+        y += 30 + 24
+        draw.rectangle((m, y, m + 96, y + 8), fill=t["acento"])
+        y += 8 + 40
+    if lt:
+        _dibujar_renglones(draw, m, y, lt, ft, lht)
+        y += len(lt) * lht + 44
+    if lx:
+        _dibujar_renglones(draw, m, y, lx, fx, lhx)
+    draw.line((m, H - 120, W - m, H - 120), fill=linea, width=2)
+    _pie_carrusel(canvas, draw, t, m, W - m, H - 66, idx, total, site_url)
+    return _save(canvas, f"lamina_{_safe_stem(titulo or volanta, 'nota')}_{idx or 0:02d}")
 
 
 def compose_tapa_slide(cover_path: Path) -> Path:

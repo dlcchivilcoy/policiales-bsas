@@ -47,8 +47,9 @@ TEMAS = RAIZ / "estado" / "tema_reels.json"
 SEG_REEL_FOTO = 13.0
 # Si el medio publico un video propio: va ENTERO y CON SU SONIDO (pedido del editor, 18/10/2026: «no
 # saques el sonido ni cortes los videos de los reels si duran más de 30 segundos»). Antes: 15 s mudos.
-# El único tope es el de Instagram para un reel por la API (15 min); REEL_VIDEO_MAX_SEG lo cambia.
-SEG_REEL_VIDEO = float(os.environ.get("REEL_VIDEO_MAX_SEG") or 900)
+# Desde el 21/10/2026 el tope es de 3 minutos («no quiero reels con video de más de 3 minutos»): un video más
+# largo ni se baja (reels/flujo._bajar_video); REEL_VIDEO_MAX_SEG lo cambia.
+SEG_REEL_VIDEO = float(os.environ.get("REEL_VIDEO_MAX_SEG") or 180)
 
 # Las perillas del motor que policiales fija. Solo se ponen si no vienen del entorno.
 PERILLAS = {

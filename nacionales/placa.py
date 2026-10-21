@@ -167,7 +167,7 @@ def _story_image():
 
 
 def estilos_carrusel(fotos: list) -> list:
-    """Estilo de cada diapositiva del carrusel (las horizontales alternan A y B; las demás, C)."""
+    """Estilo de cada diapositiva del carrusel (con foto alternan A y B; sin foto, C — 21/10/2026)."""
     return _story_image().estilos_carrusel(fotos)
 
 
@@ -175,9 +175,9 @@ def slide_carrusel(seccion: str, volanta: str, titular: str, bajada: str, destin
                    sitio: str = "", idx: int = None, total: int = None, semilla: int = 0, foto=None,
                    estilo: str = None) -> Path:
     """Placa 4:5 del carrusel de Instagram o del posteo de Facebook (sin idx: sin número ni
-    flecha), fondo grafito. Sin `estilo`, lo decide la foto: horizontal → foto arriba (A);
-    cuadrada o vertical → a sangre con la caja (C). Sin foto (agencia o la nota no trae): el
-    fondo propio a sangre y el titular en la caja."""
+    flecha), fondo grafito. Sin `estilo`: con foto (de cualquier forma), la foto arriba y el bloque
+    de texto abajo (A; desde el 21/10/2026 también las cuadradas y verticales). Sin foto (agencia o
+    la nota no trae): el fondo propio a sangre y el titular en la caja (C)."""
     si = _story_image()
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)

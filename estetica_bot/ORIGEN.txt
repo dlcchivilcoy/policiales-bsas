@@ -2,5 +2,7 @@ Copia del motor de reels del bot del diario (dlcchivilcoy/social_publisher).
 NO EDITAR A MANO: se pisa con  venv\Scripts\python.exe tools\traer_estetica_bot.py
 Lo propio de policiales va en reels/reel_bot.py; utils/ es un reemplazo chico.
 
-commit del bot: 0dc6968 (18/10/2026 11:03)
-traido: 18/10/2026 11:04
+commit del bot: b83ce4b (21/10/2026 10:04)
+traido: 21/10/2026 10:08
+OJO: habia cambios SIN COMMITEAR en el bot:
+M story_image.py

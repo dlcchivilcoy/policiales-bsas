@@ -5,7 +5,7 @@ Las nacionales tienen sus corridas propias (no van en las pasadas de policiales)
 el video original de la nota: sin video, la nota no sale (ni como carrusel).
 
     días              corridas            qué sale en cada corrida
-    lunes a viernes   18 · 21             3 generales (1 política, 1 economía, 1 sociedad) y 1 viral
+    lunes a viernes   18 · 21             2 de política y 2 de economía nacional (reel con imagen)
     sábado/domingo    10 · 14 · 18 · 21   6 de: viral, mundo, IA, general, deporte, cine/serie,
                                           espectáculo — 1 de cada una, las 6 más virales
 
@@ -17,6 +17,12 @@ sociedad, y un viral; todo que sea reel y, si se puede, con video mejor»): la f
 por la sección de Infobae (subgeneral: política + judiciales, economía, y sociedad + salud). Todo sale como
 REEL: con el video de la nota si alguna de las mejores lo trae; si no, reel con la foto de la nota
 (reel_con_foto). El viral, como siempre, solo con su video.
+
+21/10/2026 (pedido del editor: «las corridas de nacionales sean reels solo de política y economía a nivel
+nacional de lunes a viernes, y que el reel se haga solo con imagen, no con video»): de lunes a viernes, 2 de
+política (sección /politica/ de Infobae) y 2 de economía (/economia/), solo de alcance NACIONAL (nada de
+Chivilcoy, la región ni la provincia), y el reel se arma SIEMPRE con la foto de la nota, nunca con su video.
+Sin viral, sin sociedad y sin mundo entre semana. NAC_AGENDA_POLITICA / NAC_AGENDA_ECONOMIA cambian cuántas.
 
 (Historia: el 19/10 a la mañana, 10 · 18 · 21 con todo junto; a la tarde, 11 · 12 · 16 · 18 · 21; a la
 noche, solo 18 y 21 con 2 por categoría y 1 reel + 1 carrusel. El 20/10, esta agenda.)
@@ -44,9 +50,11 @@ FIN_DE_SEMANA = (5, 6)                 # sábado, domingo
 GENERALES = ""                         # la «categoría» de las nacionales generales
 
 SUBGENERALES = ("politica", "economia", "sociedad")
+# Lo que NO es de alcance nacional (nacionales/filtro.py, «nivel»): lo local, la región y la provincia.
+NIVELES_NO_NACIONALES = {"Chivilcoy", "directa", "región", "provincia"}
 GENERALES_TODAS = (GENERALES,) + SUBGENERALES        # las que se ordenan por «puntos» (no por impacto)
 # Lunes a viernes, en cada corrida: {categoría: cuántas}. Mundo, solo el finde (20/10/2026, noche).
-SEMANA = {"politica": 1, "economia": 1, "sociedad": 1, "virales": 1}
+SEMANA = {"politica": 2, "economia": 2}              # 21/10/2026: solo política y economía nacional
 # Sábado y domingo: 1 de cada categoría, y en total las POR_CORRIDA_FINDE más virales.
 FINDE = {"virales": 1, "internacionales": 1, "tecnologia_ia": 1, GENERALES: 1, "deportes": 1,
          "cine_series": 1, "espectaculos": 1}
@@ -63,15 +71,18 @@ def solo_reel(cat: str) -> bool:
     return (os.environ.get("NAC_TODO_REEL") or "1").strip() != "0" and cat in (set(FINDE) | set(SEMANA))
 
 def reel_con_foto(cat: str) -> bool:
-    """¿Sale como reel aunque no tenga video (con la foto de la nota)? Las generales de lunes a viernes."""
+    """¿Sale como reel con la FOTO de la nota (nunca con su video)? Las generales de lunes a viernes."""
     return cat in SUBGENERALES
 
 
 def subgeneral(c: dict) -> str:
-    """«politica», «economia» o «sociedad»: la sección de Infobae de una nacional general."""
+    """«politica», «economia» o «sociedad»: la sección de Infobae de una nacional general. Lo que no es de
+    alcance nacional (Chivilcoy, la región, la provincia: NIVELES_NO_NACIONALES) da "" y no entra."""
     from urllib.parse import urlparse
+    if (c.get("nivel") or "") in NIVELES_NO_NACIONALES:
+        return ""
     p = urlparse(c.get("url") or "").path
-    if p.startswith(("/politica/", "/judiciales/")):
+    if p.startswith("/politica/"):
         return "politica"
     if p.startswith("/economia/"):
         return "economia"

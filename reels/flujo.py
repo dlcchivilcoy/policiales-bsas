@@ -334,6 +334,24 @@ def _foto_usable(nota: dict, destino: Path) -> tuple:
 # suele ser una pelicula entera mal enlazada o un stream, y no vale la pena esperarlo
 # para despues usar 8 segundos.
 MAX_VIDEO_MB = 150          # el video del medio va entero desde el 18/10/2026 (antes 60 y 15 s mudos)
+# Ningún reel con un video de más de 3 minutos (pedido del editor, 21/10/2026): uno más largo no se usa
+# (el video no se corta: la pieza sigue con la foto, o no sale si necesitaba el video). REEL_VIDEO_MAX_SEG.
+MAX_VIDEO_SEG = 180
+
+
+def max_video_seg() -> float:
+    try:
+        return float(os.environ.get("REEL_VIDEO_MAX_SEG") or MAX_VIDEO_SEG)
+    except ValueError:
+        return MAX_VIDEO_SEG
+
+
+def _dura_demasiado(video: Path) -> bool:
+    try:
+        from reels import reel_bot as R
+        return float(R.motor().duration_seconds(video) or 0) > max_video_seg()
+    except Exception:                                  # noqa: BLE001 — sin poder medirlo, no se frena
+        return False
 
 
 def _bajar_video(url: str, destino: Path) -> Path | None:
@@ -360,7 +378,12 @@ def _bajar_video(url: str, destino: Path) -> Path | None:
                         destino.unlink(missing_ok=True)
                         return None
                     fh.write(trozo)
-        return destino if total > 10240 else None     # menos de 10 KB no es un video
+        if total <= 10240:                             # menos de 10 KB no es un video
+            return None
+        if _dura_demasiado(destino):                   # más de 3 minutos: no va (21/10/2026)
+            destino.unlink(missing_ok=True)
+            return None
+        return destino
     except Exception:
         destino.unlink(missing_ok=True)
         return None
