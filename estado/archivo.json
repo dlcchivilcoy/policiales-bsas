@@ -83,6 +83,12 @@
       "pregunta": "¿En qué lugar de Chivilcoy disfrutaste del mejor recital de tu vida?",
       "categoria": "Cultura y espectáculos",
       "tema": "los recitales locales"
+    },
+    {
+      "dia": "2026-10-21",
+      "pregunta": "¿A qué club de barrio ibas de chico a pasar las tardes?",
+      "categoria": "Deportes y clubes",
+      "tema": "los clubes de barrio"
     }
   ],
   "publicaciones": {
@@ -478,7 +484,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-21:pregunta": {
+      "titular": "¿A qué club de barrio ibas de chico a pasar las tardes?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-21T20:30:41-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Deportes y clubes",
+        "tema": "los clubes de barrio"
+      },
+      "estado": "ok",
+      "id": "17953507962309818",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-21T13:30:32-03:00"
+  "actualizado": "2026-10-21T20:30:30-03:00"
 }
