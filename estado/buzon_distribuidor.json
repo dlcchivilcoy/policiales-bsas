@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-10-21T00:16:02.000Z",
+  "actualizado": "2026-10-21T00:31:58.000Z",
   "eventos": [
-    {
-      "id": "nacionales:509780bc5420f2f5",
-      "origen": "nacionales",
-      "tipo": "video",
-      "generado": "2026-10-19T00:21:01.000Z",
-      "titulo": "Graves disturbios en Milán y Bolonia contra el costo de vida con 7 detenidos",
-      "descripcion": "El 18 de octubre de 2026 se registraron violentos enfrentamientos, saqueos y destrozos en Milán y Bolonia durante protestas por la situación económica, con un saldo de siete detenidos.",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_509780bc54_graves-disturbios-en-milan-y-bolonia-contra-el.mp4",
-      "duracion_seg": 31.2,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/violentos-disturbios-y-saqueos-en-milan-y-bolonia-en-medio-de-509780",
-      "youtube_url": "https://youtube.com/shorts/dnlKpoT9KQg",
-      "prioridad": 8,
-      "urgente": false,
-      "volanta": "Protestas y violencia en Italia",
-      "categoria": "Mundo",
-      "categoria_nacional": "internacionales",
-      "hashtags": [
-        "Italia",
-        "Milan"
-      ],
-      "plataformas": [
-        "tiktok"
-      ]
-    },
     {
       "id": "nacionales:e50827dd69db5a5d",
       "origen": "nacionales",
@@ -1252,6 +1228,30 @@
         "Malvinas",
         "Politica"
       ],
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31026/principio-de-incendio-en-un-departamento-del-barrio-fonavi-2-movilizo-a-los-bomberos.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-21T00:31:58.000Z",
+      "titulo": "Fuego en un departamento del barrio Fonavi 2 movilizó a los bomberos",
+      "descripcion": "Una dotación de bomberos controló un foco ígneo que se desató en la cocina de un cuarto piso. No hubo heridos y solo se registraron daños materiales.",
+      "texto_tiktok": "Un principio de incendio se desató en la cocina de un departamento del barrio Fonavi 2 de Bragado.\n\nEl hecho afectó al inmueble del piso 4 de la Torre C, propiedad de Jorge Altamirano, de 37 años.\n\nUna dotación de bomberos al mando del oficial Horacio Castroman acudió al lugar y logró sofocar las llamas.\n\nAfortunadamente, no se registraron personas lesionadas y solo hubo daños materiales.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Incendio #Bomberos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-20_2304_08_bragado_fuego-en-un-departamento-del-b.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-un-principio-de-incendio-en-un-departamento-del-barrio-4ab108",
+      "youtube_url": "https://youtube.com/shorts/96X1XoOsXM0",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Incendio en Bragado",
+      "categoria": "incendio",
+      "distancia_km": 49.3,
+      "radio_ok": true,
       "plataformas": [
         "x",
         "tiktok"
