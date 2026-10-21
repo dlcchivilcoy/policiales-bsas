@@ -9895,6 +9895,98 @@
         65,
         68
       ]
+    },
+    "05802ffffe23e0e3": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 8,
+      "cercania_argentina": 7,
+      "cercania_pba": 6,
+      "potencial_reel": 7,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 67,
+      "subtema": "agro",
+      "tema": "sorgo",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Abre una alternativa de valor agregado para un cultivo secundario de la región.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        63
+      ]
+    },
+    "a0952b8b7c612e19": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 81,
+      "commercial_score": 85,
+      "subtema": "maquinaria",
+      "tema": "agropartes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la cadena metalmecánica y los proveedores de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "13d0cf405f382650": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 82,
+      "subtema": "empresas",
+      "tema": "financiamiento",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El acceso al crédito preocupa al productor de la región para encarar la campaña.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "50042ed469f655b8": {
+      "impacto_economico": 8,
+      "interes_productores": 4,
+      "innovacion": 12,
+      "cercania_argentina": 4,
+      "cercania_pba": 1,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 6,
+      "ai_score": 42,
+      "commercial_score": 44,
+      "subtema": "agtech",
+      "tema": "venture capital",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Muestra tendencias globales de inversión, pero con baja llegada directa al productor local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        28
+      ]
     }
   },
   "indice": {
@@ -10589,7 +10681,11 @@
       "https://lanacion.com.ar/economia/campo/financiamiento-sostenible-que-hacen-la-argentina-brasil-y-bolivia-para-impulsar-la-produccion-nid21102026": "2026-10-21",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html": "2026-10-21",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html": "2026-10-21",
-      "https://agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html": "2026-10-21"
+      "https://agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html": "2026-10-21",
+      "https://bichosdecampo.com/puede-el-sorgo-dejar-de-ser-solo-comida-para-animales-en-la-mayor-feria-alimentaria-del-mundo-premiaron-unos-fideos-elaborados-100-con-este-cereal": "2026-10-21",
+      "https://bichosdecampo.com/la-industria-de-maquinaria-agricola-tambien-acusa-el-golpe-de-las-politicas-de-milei-y-las-agropartes-se-desploman-hasta-33-en-cordoba": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026": "2026-10-21",
+      "https://croplife.com/smart-tech/q3-2026-agtech-venture-capital-investment-and-exit-round-up": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11282,7 +11378,11 @@
       "financiamiento sostenible que hacen la argentina brasil y bolivia para impulsar la produccion agropecuaria": "2026-10-21",
       "panel de maiz como potenciar el rendimiento con nuevas tecnologias manejo nutricional y ventas": "2026-10-21",
       "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias": "2026-10-21",
-      "un gran momento para la carne argentina en sial paris 2026": "2026-10-21"
+      "un gran momento para la carne argentina en sial paris 2026": "2026-10-21",
+      "puede el sorgo dejar de ser solo comida para animales en la mayor feria alimentaria del mundo premiaron unos fideos elaborados 100 con este cereal": "2026-10-21",
+      "la industria de maquinaria agricola tambien acusa el golpe de las politicas de milei y las agropartes se desploman hasta 33 en cordoba": "2026-10-21",
+      "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse": "2026-10-21",
+      "q3 2026 agtech venture capital investment and exit round up": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11975,7 +12075,11 @@
       "e05741f1d1025229": "2026-10-21",
       "bd28f58699cfd6bd": "2026-10-21",
       "e18a04fae7db37c5": "2026-10-21",
-      "d6dcf4bb95d9e296": "2026-10-21"
+      "d6dcf4bb95d9e296": "2026-10-21",
+      "05802ffffe23e0e3": "2026-10-21",
+      "a0952b8b7c612e19": "2026-10-21",
+      "13d0cf405f382650": "2026-10-21",
+      "50042ed469f655b8": "2026-10-21"
     }
   },
   "elegidas": [
@@ -15364,9 +15468,189 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9a91d81e1698_portada.jpg"
+    },
+    {
+      "id": "93acca93477d",
+      "cuando": "2026-10-21T17:00-03:00",
+      "titulo_original": "Lluvias, frío y nubes: el inusual patrón climático que domina la primera mitad de octubre - CCA/Agrositio",
+      "descripcion": "Las lluvias importantes han sido sectorizadas, las proyecciones mejoran sobre el oeste para los próximos días....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html",
+      "titular": "Lluvias sectorizadas y frío dominan el clima de octubre",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El clima inusual en plena campaña gruesa interesa directamente al productor de la región núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "034a4b9f-9edf-464c-b0fe-f22a164ef680",
+          "slug": "lluvias-sectorizadas-y-frio-dominan-el-clima-de-octubre-con-un-3685b0",
+          "url": "https://www.diariolacampaña.com.ar/n/lluvias-sectorizadas-y-frio-dominan-el-clima-de-octubre-con-un-3685b0",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1602371805022477",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18097878893448164",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_93acca93477d_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "814ebe1f60f4",
+      "rep": {
+        "id": "814ebe1f60f4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-industria-de-maquinaria-agricola-tambien-acusa-el-golpe-de-las-politicas-de-milei-y-las-agropartes-se-desploman-hasta-33-en-cordoba/",
+        "canonical_url": "https://bichosdecampo.com/la-industria-de-maquinaria-agricola-tambien-acusa-el-golpe-de-las-politicas-de-milei-y-las-agropartes-se-desploman-hasta-33-en-cordoba",
+        "titulo": "La industria de maquinaria agrícola también acusa el golpe de las políticas de Milei y las agropartes se desploman hasta 33% en Córdoba",
+        "titulo_norm": "la industria de maquinaria agricola tambien acusa el golpe de las politicas de milei y las agropartes se desploman hasta 33 en cordoba",
+        "descripcion": "En los últimos años se exhibe en Argentina un fenómeno de cáida en la producción industrial casi generalizada. Puntualmente la maquinaria agrícola, que aun sigue gozando de reputación en todo el mundo por sus altos niveles de innovación y tecnología, vive momentos de zozobra, con sus industrias metalúrgica cada vez más flacas. Motorizado por diversos […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-21T16:41-03:00",
+        "capturado": "2026-10-21T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a0952b8b7c612e19"
+      },
+      "grupo": [
+        {
+          "id": "814ebe1f60f4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-industria-de-maquinaria-agricola-tambien-acusa-el-golpe-de-las-politicas-de-milei-y-las-agropartes-se-desploman-hasta-33-en-cordoba/",
+          "canonical_url": "https://bichosdecampo.com/la-industria-de-maquinaria-agricola-tambien-acusa-el-golpe-de-las-politicas-de-milei-y-las-agropartes-se-desploman-hasta-33-en-cordoba",
+          "titulo": "La industria de maquinaria agrícola también acusa el golpe de las políticas de Milei y las agropartes se desploman hasta 33% en Córdoba",
+          "titulo_norm": "la industria de maquinaria agricola tambien acusa el golpe de las politicas de milei y las agropartes se desploman hasta 33 en cordoba",
+          "descripcion": "En los últimos años se exhibe en Argentina un fenómeno de cáida en la producción industrial casi generalizada. Puntualmente la maquinaria agrícola, que aun sigue gozando de reputación en todo el mundo por sus altos niveles de innovación y tecnología, vive momentos de zozobra, con sus industrias metalúrgica cada vez más flacas. Motorizado por diversos […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-21T16:41-03:00",
+          "capturado": "2026-10-21T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a0952b8b7c612e19"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 81,
+        "commercial_score": 85,
+        "subtema": "maquinaria",
+        "tema": "agropartes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la cadena metalmecánica y los proveedores de la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T17:00-03:00"
+    },
+    {
+      "id": "28b97dccb7a4",
+      "rep": {
+        "id": "28b97dccb7a4",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026",
+        "titulo": "“La primera respuesta”: un informe advierte que las empresas agropecuarias observan condiciones más difíciles para financiarse",
+        "titulo_norm": "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse",
+        "descripcion": "“No dejaron de necesitar crédito; lo que cambió es cuánto les cuesta conseguirlo”, señaló Hernán Satorre, titular de Tasómetro, que hizo un relevamiento",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WKYK5TR64ZAEXIEMHSF4PB3IZ4.jpg?auth=2a67b6313e19d39c4c7cb5ff1d6cd9131fbb13b5c9872799329d4fdfd80700d8&smart=true",
+        "autor": "Gabriela Origlia",
+        "publicado": "2026-10-21T16:41-03:00",
+        "capturado": "2026-10-21T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "13d0cf405f382650"
+      },
+      "grupo": [
+        {
+          "id": "28b97dccb7a4",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026",
+          "titulo": "“La primera respuesta”: un informe advierte que las empresas agropecuarias observan condiciones más difíciles para financiarse",
+          "titulo_norm": "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse",
+          "descripcion": "“No dejaron de necesitar crédito; lo que cambió es cuánto les cuesta conseguirlo”, señaló Hernán Satorre, titular de Tasómetro, que hizo un relevamiento",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WKYK5TR64ZAEXIEMHSF4PB3IZ4.jpg?auth=2a67b6313e19d39c4c7cb5ff1d6cd9131fbb13b5c9872799329d4fdfd80700d8&smart=true",
+          "autor": "Gabriela Origlia",
+          "publicado": "2026-10-21T16:41-03:00",
+          "capturado": "2026-10-21T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "13d0cf405f382650"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 82,
+        "subtema": "empresas",
+        "tema": "financiamiento",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El acceso al crédito preocupa al productor de la región para encarar la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T17:00-03:00"
+    },
     {
       "id": "68963bd1a12f",
       "rep": {
@@ -15689,69 +15973,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-21T16:00-03:00"
-    },
-    {
-      "id": "93acca93477d",
-      "rep": {
-        "id": "93acca93477d",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html",
-        "titulo": "Lluvias, frío y nubes: el inusual patrón climático que domina la primera mitad de octubre - CCA/Agrositio",
-        "titulo_norm": "lluvias frio y nubes el inusual patron climatico que domina la primera mitad de octubre cca agrositio",
-        "descripcion": "Las lluvias importantes han sido sectorizadas, las proyecciones mejoran sobre el oeste para los próximos días....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248950_43102606.jpg",
-        "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
-        "publicado": "2026-10-21T14:16-03:00",
-        "capturado": "2026-10-21T14:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "db88c08a6a61e598"
-      },
-      "grupo": [
-        {
-          "id": "93acca93477d",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html",
-          "titulo": "Lluvias, frío y nubes: el inusual patrón climático que domina la primera mitad de octubre - CCA/Agrositio",
-          "titulo_norm": "lluvias frio y nubes el inusual patron climatico que domina la primera mitad de octubre cca agrositio",
-          "descripcion": "Las lluvias importantes han sido sectorizadas, las proyecciones mejoran sobre el oeste para los próximos días....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248950_43102606.jpg",
-          "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
-          "publicado": "2026-10-21T14:16-03:00",
-          "capturado": "2026-10-21T14:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "db88c08a6a61e598"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "clima",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El clima inusual en plena campaña gruesa interesa directamente al productor de la región núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T14:22-03:00"
     },
     {
       "id": "44b663bae42e",
@@ -16085,8 +16306,8 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T16:43:51-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T17:03:27-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
