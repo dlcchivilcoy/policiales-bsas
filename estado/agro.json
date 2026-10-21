@@ -8998,6 +8998,27 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c1efe7e87e78f259": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 10,
+      "ai_score": 88,
+      "commercial_score": 88,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en el bolsillo y la estrategia de fertilización de toda la zona núcleo para la campaña gruesa.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9637,7 +9658,8 @@
       "https://agrositio.com.ar/noticia/248931-las-lluvias-y-la-amplitud-termica-arrasaron-las-poblaciones-de-chicharritas-en-todo-el-pais.html": "2026-10-21",
       "https://agrositio.com.ar/noticia/248930-el-record-agroindustrial-argentino-abre-una-nueva-discusion-como-lograr-que-mas-pymes-lleguen-a-exportar.html": "2026-10-21",
       "https://agrositio.com.ar/noticia/248925-la-serenisima-presento-bienestar-mas-alla-de-la-alimentacion.html": "2026-10-21",
-      "https://agrositio.com.ar/noticia/248921-la-seguridad-alimentaria-ya-no-es-una-cuestion-agricola.html": "2026-10-21"
+      "https://agrositio.com.ar/noticia/248921-la-seguridad-alimentaria-ya-no-es-una-cuestion-agricola.html": "2026-10-21",
+      "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10275,7 +10297,8 @@
       "las lluvias y la amplitud termica arrasaron las poblaciones de chicharritas en todo el pais": "2026-10-21",
       "el record agroindustrial argentino abre una nueva discusion como lograr que mas pymes lleguen a exportar": "2026-10-21",
       "la serenisima presento bienestar mas alla de la alimentacion": "2026-10-21",
-      "la seguridad alimentaria ya no es una cuestion agricola": "2026-10-21"
+      "la seguridad alimentaria ya no es una cuestion agricola": "2026-10-21",
+      "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10913,7 +10936,8 @@
       "9d369b5c9ad23c59": "2026-10-21",
       "3185d58b1163f2bb": "2026-10-21",
       "bf297d53cb406306": "2026-10-21",
-      "f332d1728f1f0867": "2026-10-21"
+      "f332d1728f1f0867": "2026-10-21",
+      "c1efe7e87e78f259": "2026-10-21"
     }
   },
   "elegidas": [
@@ -13739,8 +13763,72 @@
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_30c07855c9af_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-10-21T07:46:29-03:00",
+  "pendientes": [
+    {
+      "id": "ca3363a2f78c",
+      "rep": {
+        "id": "ca3363a2f78c",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u/",
+        "canonical_url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u",
+        "titulo": "No es momento de ratonear: Con el “Súper Niño” de aliado, advierten que recortar fertilizantes es “tirarse un tiro en los pies” y que hoy nutrir conviene más que hace un año",
+        "titulo_norm": "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano",
+        "descripcion": "Luego de meses convulsionados por los efectos de la guerra sobre el precio de los insumos, y de cara a una temporada en la que no habrá problemas de disponibilidad de agua, los especialistas del sector sostienen -calculadora en mano- que esta campaña gruesa fertilizar será aún más conveniente que la anterior. Pero no sólo […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/rotondaro-fertilizar-1-scaled.png",
+        "autor": "Lucas Torsiglieri",
+        "publicado": "2026-10-21T08:02-03:00",
+        "capturado": "2026-10-21T08:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c1efe7e87e78f259"
+      },
+      "grupo": [
+        {
+          "id": "ca3363a2f78c",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u/",
+          "canonical_url": "https://bichosdecampo.com/no-es-momento-de-ratonear-con-el-super-nino-de-aliado-advierten-que-recortar-fertilizantes-es-tirarse-un-tiro-en-los-pies-y-que-hoy-nutrir-conviene-mas-que-hace-u",
+          "titulo": "No es momento de ratonear: Con el “Súper Niño” de aliado, advierten que recortar fertilizantes es “tirarse un tiro en los pies” y que hoy nutrir conviene más que hace un año",
+          "titulo_norm": "no es momento de ratonear con el super nino de aliado advierten que recortar fertilizantes es tirarse un tiro en los pies y que hoy nutrir conviene mas que hace un ano",
+          "descripcion": "Luego de meses convulsionados por los efectos de la guerra sobre el precio de los insumos, y de cara a una temporada en la que no habrá problemas de disponibilidad de agua, los especialistas del sector sostienen -calculadora en mano- que esta campaña gruesa fertilizar será aún más conveniente que la anterior. Pero no sólo […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/rotondaro-fertilizar-1-scaled.png",
+          "autor": "Lucas Torsiglieri",
+          "publicado": "2026-10-21T08:02-03:00",
+          "capturado": "2026-10-21T08:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c1efe7e87e78f259"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 10,
+        "ai_score": 88,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en el bolsillo y la estrategia de fertilización de toda la zona núcleo para la campaña gruesa.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T08:02-03:00"
+    }
+  ],
+  "actualizado": "2026-10-21T08:03:46-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
