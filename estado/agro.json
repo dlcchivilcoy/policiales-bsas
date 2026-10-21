@@ -10012,6 +10012,77 @@
         65,
         73
       ]
+    },
+    "e17a7dc6e74cf9e5": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 70,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "costos ganaderos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en los criadores y invernadores de la región núcleo por el aumento de costos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        75
+      ]
+    },
+    "232d4d35f20fd641": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 6,
+      "cercania_argentina": 8,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 44,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "gaseosa de yerba",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una innovación comercial interesante pero de baja relevancia para el productor típico de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ec118bee54736838": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 6,
+      "ai_score": 53,
+      "commercial_score": 60,
+      "subtema": "empresas",
+      "tema": "pistachos san juan",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Fuerte inversión en economías regionales pero geográficamente alejada del productor pampeano.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        53
+      ]
     }
   },
   "indice": {
@@ -10712,7 +10783,10 @@
       "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026": "2026-10-21",
       "https://croplife.com/smart-tech/q3-2026-agtech-venture-capital-investment-and-exit-round-up": "2026-10-21",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/248957-la-revolucion-de-las-oleaginosas-expansion-y-crecimiento-del-girasol-y-la-canola-con-nuevos-hibridos-y-manejo.html": "2026-10-21",
-      "https://lanacion.com.ar/economia/campo/en-estados-unidos-cuesta-un-82-mas-como-quedo-en-octubre-el-precio-de-la-carne-argentina-frente-a-nid21102026": "2026-10-21"
+      "https://lanacion.com.ar/economia/campo/en-estados-unidos-cuesta-un-82-mas-como-quedo-en-octubre-el-precio-de-la-carne-argentina-frente-a-nid21102026": "2026-10-21",
+      "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio": "2026-10-21",
+      "https://bichosdecampo.com/la-cooperativa-yerbatera-pipore-presento-en-paris-una-gaseosa-de-yerba-mate-en-lata-para-llegar-a-paises-donde-no-es-habitual-cebarse-unos-amargos": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/oro-verde-invertiran-us195-millones-en-san-juan-para-ampliar-la-produccion-de-alimentos-y-pistachos-nid21102026": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11411,7 +11485,10 @@
       "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse": "2026-10-21",
       "q3 2026 agtech venture capital investment and exit round up": "2026-10-21",
       "la revolucion de las oleaginosas expansion y crecimiento del girasol y la canola con nuevos hibridos y manejo": "2026-10-21",
-      "en estados unidos cuesta un 82 mas como quedo en octubre el precio de la carne argentina frente a otros paises": "2026-10-21"
+      "en estados unidos cuesta un 82 mas como quedo en octubre el precio de la carne argentina frente a otros paises": "2026-10-21",
+      "un freno al optimismo ganadero el productor y ex vicepresidente del senasa carlos milicevic advierte que la inflacion y los costos estan deteriorando los numeros del negocio": "2026-10-21",
+      "la cooperativa yerbatera pipore presento en paris una gaseosa de yerba mate en lata para llegar a paises donde no es habitual cebarse unos amargos": "2026-10-21",
+      "oro verde invertiran us 19 5 millones en san juan para ampliar la produccion de alimentos y pistachos": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12110,7 +12187,10 @@
       "13d0cf405f382650": "2026-10-21",
       "50042ed469f655b8": "2026-10-21",
       "5858b296c76eefde": "2026-10-21",
-      "0b7d643140a5c030": "2026-10-21"
+      "0b7d643140a5c030": "2026-10-21",
+      "e17a7dc6e74cf9e5": "2026-10-21",
+      "232d4d35f20fd641": "2026-10-21",
+      "ec118bee54736838": "2026-10-21"
     }
   },
   "elegidas": [
@@ -15611,9 +15691,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d4fa34e358de_portada.jpg"
+    },
+    {
+      "id": "ac0ccfe3c37b",
+      "cuando": "2026-10-21T18:00-03:00",
+      "titulo_original": "Panel de Maíz: ¿cómo potenciar el rendimiento con nuevas tecnologías, manejo nutricional, y ventas?",
+      "descripcion": "El cierre del evento - Encuentros que rinden - Edición Maíz- de Corteva Biologicals. Con los principales conceptos de un Panel de especialistas: G. Iturriza (mercados), C. Álvarez (suelos), F. Scaramuzza (siembras de precisión), S. Abrahin (nuevas tecnologías), y R. Bindi (moderador). En agricultura",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html",
+      "titular": "Maíz: cómo potenciar el rendimiento y la rentabilidad",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 86,
+        "subtema": "agtech",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente cobertura técnica y comercial para productores de maíz en la zona núcleo.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "zC967hWYLd4",
+          "url": "https://youtube.com/shorts/zC967hWYLd4",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "76bff6ce-466f-4c6d-9d9c-fa31d204ed9d",
+          "slug": "claves-para-potenciar-el-rendimiento-del-maiz-con-tecnologia-y-890b24",
+          "url": "https://www.diariolacampaña.com.ar/n/claves-para-potenciar-el-rendimiento-del-maiz-con-tecnologia-y-890b24",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2161991461382034",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18116222168115674",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ac0ccfe3c37b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "af9c1a422406",
+      "rep": {
+        "id": "af9c1a422406",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio/",
+        "canonical_url": "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio",
+        "titulo": "Un freno al optimismo ganadero: El productor y ex vicepresidente del Senasa Carlos Milicevic advierte que la inflación y los costos están deteriorando los números del negocio",
+        "titulo_norm": "un freno al optimismo ganadero el productor y ex vicepresidente del senasa carlos milicevic advierte que la inflacion y los costos estan deteriorando los numeros del negocio",
+        "descripcion": "En los últimos años, la recuperación de los precios de la hacienda alimentó las expectativas de una nueva etapa de expansión para la ganadería argentina, pero no todos los eslabones de la cadena están consiguiendo transformar esa mejora en rentabilidad. Carlos Milicevic, productor y ex vicepresidente del SENASA, advirtió que el negocio atraviesa un momento […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-21T17:59-03:00",
+        "capturado": "2026-10-21T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e17a7dc6e74cf9e5"
+      },
+      "grupo": [
+        {
+          "id": "af9c1a422406",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio/",
+          "canonical_url": "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio",
+          "titulo": "Un freno al optimismo ganadero: El productor y ex vicepresidente del Senasa Carlos Milicevic advierte que la inflación y los costos están deteriorando los números del negocio",
+          "titulo_norm": "un freno al optimismo ganadero el productor y ex vicepresidente del senasa carlos milicevic advierte que la inflacion y los costos estan deteriorando los numeros del negocio",
+          "descripcion": "En los últimos años, la recuperación de los precios de la hacienda alimentó las expectativas de una nueva etapa de expansión para la ganadería argentina, pero no todos los eslabones de la cadena están consiguiendo transformar esa mejora en rentabilidad. Carlos Milicevic, productor y ex vicepresidente del SENASA, advirtió que el negocio atraviesa un momento […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-21T17:59-03:00",
+          "capturado": "2026-10-21T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e17a7dc6e74cf9e5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 70,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "costos ganaderos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en los criadores y invernadores de la región núcleo por el aumento de costos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          75
+        ]
+      },
+      "cuando": "2026-10-21T18:00-03:00"
+    },
     {
       "id": "a472ce9b526b",
       "rep": {
@@ -15936,69 +16144,6 @@
         ]
       },
       "cuando": "2026-10-21T16:40-03:00"
-    },
-    {
-      "id": "ac0ccfe3c37b",
-      "rep": {
-        "id": "ac0ccfe3c37b",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html",
-        "titulo": "Panel de Maíz: ¿cómo potenciar el rendimiento con nuevas tecnologías, manejo nutricional, y ventas?",
-        "titulo_norm": "panel de maiz como potenciar el rendimiento con nuevas tecnologias manejo nutricional y ventas",
-        "descripcion": "El cierre del evento - Encuentros que rinden - Edición Maíz- de Corteva Biologicals. Con los principales conceptos de un Panel de especialistas: G. Iturriza (mercados), C. Álvarez (suelos), F. Scaramuzza (siembras de precisión), S. Abrahin (nuevas tecnologías), y R. Bindi (moderador). En agricultura coinciden en que la combinación de tecnología, manejo nutricional equilibrado y estrategias comerciales inteligentes. La visión de agronomía de precisión para potenciar todas las variables del sistema productivo, y el foco puesto en mejorar el rendimiento y la rentabilidad en la campaña de maíz...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/Sjqasksmw3M.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-10-21T16:16-03:00",
-        "capturado": "2026-10-21T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bd28f58699cfd6bd"
-      },
-      "grupo": [
-        {
-          "id": "ac0ccfe3c37b",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html",
-          "titulo": "Panel de Maíz: ¿cómo potenciar el rendimiento con nuevas tecnologías, manejo nutricional, y ventas?",
-          "titulo_norm": "panel de maiz como potenciar el rendimiento con nuevas tecnologias manejo nutricional y ventas",
-          "descripcion": "El cierre del evento - Encuentros que rinden - Edición Maíz- de Corteva Biologicals. Con los principales conceptos de un Panel de especialistas: G. Iturriza (mercados), C. Álvarez (suelos), F. Scaramuzza (siembras de precisión), S. Abrahin (nuevas tecnologías), y R. Bindi (moderador). En agricultura coinciden en que la combinación de tecnología, manejo nutricional equilibrado y estrategias comerciales inteligentes. La visión de agronomía de precisión para potenciar todas las variables del sistema productivo, y el foco puesto en mejorar el rendimiento y la rentabilidad en la campaña de maíz...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/Sjqasksmw3M.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-10-21T16:16-03:00",
-          "capturado": "2026-10-21T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bd28f58699cfd6bd"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 86,
-        "commercial_score": 86,
-        "subtema": "agtech",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente cobertura técnica y comercial para productores de maíz en la zona núcleo.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T16:20-03:00"
     },
     {
       "id": "aa751ba1d61a",
@@ -16395,8 +16540,8 @@
       "cuando": "2026-10-21T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-21T17:24:26-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T18:03:57-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
