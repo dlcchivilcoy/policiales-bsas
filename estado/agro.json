@@ -15102,7 +15102,7 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T13:44:33-03:00",
+  "actualizado": "2026-10-21T14:02:30-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -16080,6 +16080,79 @@
           ]
         }
       }
+    },
+    "2026-10-21T14:00:00-03:00": {
+      "dia": "2026-10-21",
+      "bloque": "mediodia",
+      "items": [
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "18123935374932367"
+            },
+            "facebook": {
+              "id": "1055950180794580"
+            }
+          }
+        },
+        {
+          "tipo": "chicago",
+          "clave": "chicago",
+          "publicado": {
+            "instagram": {
+              "id": "18131954974767584"
+            },
+            "facebook": {
+              "id": "2185388398997033"
+            }
+          }
+        },
+        {
+          "tipo": "novedad",
+          "clave": "novedad",
+          "publicado": {
+            "instagram": {
+              "id": "18136941214643356"
+            },
+            "facebook": {
+              "id": "2386959162073341"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18123935374932367"
+              },
+              "facebook": {
+                "id": "1055950180794580"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18131954974767584"
+              },
+              "facebook": {
+                "id": "2185388398997033"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18136941214643356"
+              },
+              "facebook": {
+                "id": "2386959162073341"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "mercado": {
@@ -16203,6 +16276,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-10-20": {
+        "fecha": "2026-10-20",
+        "productos": {
+          "trigo": {
+            "ars": 344100.0,
+            "usd": 226.98,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "maiz": {
+            "ars": 279000.0,
+            "usd": 184.04,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 803480.0,
+            "usd": 530.0,
+            "estimado": true,
+            "direccion": "sube"
+          },
+          "soja": {
+            "ars": 550000.0,
+            "usd": 362.8,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "sorgo": {
+            "ars": 288040.0,
+            "usd": 190.0,
+            "estimado": false,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1516.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -16239,6 +16352,20 @@
         "hora": "17:00",
         "billete": {
           "fecha": "2026-10-20",
+          "compra": 1495.0,
+          "venta": 1545.0
+        },
+        "divisa": {
+          "fecha": "2026-10-20",
+          "compra": 1516.0,
+          "venta": 1525.0
+        }
+      },
+      "2026-10-21": {
+        "fuente": "Banco Nación",
+        "hora": "09:46",
+        "billete": {
+          "fecha": "2026-10-21",
           "compra": 1495.0,
           "venta": 1545.0
         },
@@ -16394,7 +16521,7 @@
       },
       "2026-10-21": {
         "fecha": "2026-10-21",
-        "usd_t": 457.2
+        "usd_t": 457.3
       }
     },
     "chicago_maiz": {
@@ -16496,7 +16623,7 @@
       },
       "2026-10-21": {
         "fecha": "2026-10-21",
-        "usd_t": 180.9
+        "usd_t": 181.8
       }
     },
     "chicago_trigo": {
@@ -16598,7 +16725,7 @@
       },
       "2026-10-21": {
         "fecha": "2026-10-21",
-        "usd_t": 234.5
+        "usd_t": 231.3
       }
     }
   }
