@@ -9694,6 +9694,140 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "61a9d1ac7bfb31ba": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 32,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "responsabilidad social",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un evento benéfico y social del sector, de bajo interés productivo directo para el productor de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2dccad56fe958a82": {
+      "impacto_economico": 16,
+      "interes_productores": 11,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 68,
+      "commercial_score": 70,
+      "subtema": "mercados",
+      "tema": "sorgo",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Destaca la fuerte competencia geopolítica y comercial en el mercado exportador de sorgo con China.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        72
+      ]
+    },
+    "d535e7933736a360": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 3,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "subsidios eeuu",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es una medida de ayuda estatal en Estados Unidos, con nula incidencia práctica para el productor local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2b21014ae60c36d5": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe directo de precios y tendencias del mercado de hacienda en Cañuelas, clave para ganaderos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a8bee2e46f9eda1a": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 44,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Columna de opinión sobre el debate de los biocombustibles, sin aportar datos duros ni novedades urgentes.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e05741f1d1025229": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 6,
+      "ai_score": 55,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "financiamiento verde",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aborda el financiamiento sostenible regional, un tema cada vez más presente para la exportación.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        55
+      ]
     }
   },
   "indice": {
@@ -10378,7 +10512,14 @@
       "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales": "2026-10-21",
       "https://intainforma.inta.gob.ar/la-nutricion-de-la-vaca-puede-definir-el-futuro-productivo-del-ternero": "2026-10-21",
       "https://agrositio.com.ar/noticia/248950-lluvias-frio-y-nubes-el-inusual-patron-climatico-que-domina-la-primera-mitad-de-octubre-ccaagrositio.html": "2026-10-21",
-      "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas": "2026-10-21"
+      "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas": "2026-10-21",
+      "https://infocampo.com.ar/el-desafio-de-las-100-becas-un-torneo-de-golf-vuelve-a-reunir-al-agro-y-la-educacion": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248951-vacunacion-antiaftosa-procedimientos-para-la-libre-eleccion-de-veterinarios-acreditados.html": "2026-10-21",
+      "https://bichosdecampo.com/adios-ee-uu-brasil-sorpresa-y-la-argentina-se-quedaron-con-el-mercado-chino-de-sorgo": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/trump-ayudara-con-us8000-millones-a-los-productores-de-estados-unidos-por-el-aumento-del-gasoil-nid21102026": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/opinion-lo-que-no-se-discute-en-el-debate-por-los-biocombustibles-nid21102026": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/financiamiento-sostenible-que-hacen-la-argentina-brasil-y-bolivia-para-impulsar-la-produccion-nid21102026": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11061,7 +11202,14 @@
       "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales": "2026-10-21",
       "la nutricion de la vaca puede definir el futuro productivo del ternero": "2026-10-21",
       "lluvias frio y nubes el inusual patron climatico que domina la primera mitad de octubre cca agrositio": "2026-10-21",
-      "no saben que no saben un especialista aeronautico cuestiona el nivel de capacitacion detras de los drones agricolas y alerta que la falta de controles puede costar vidas": "2026-10-21"
+      "no saben que no saben un especialista aeronautico cuestiona el nivel de capacitacion detras de los drones agricolas y alerta que la falta de controles puede costar vidas": "2026-10-21",
+      "el desafio de las 100 becas un torneo de golf vuelve a reunir al agro y la educacion": "2026-10-21",
+      "vacunacion antiaftosa procedimientos para la libre eleccion de veterinarios acreditados": "2026-10-21",
+      "adios ee uu brasil sorpresa y la argentina se quedaron con el mercado chino de sorgo": "2026-10-21",
+      "trump ayudara con us 8000 millones a los productores de estados unidos por el aumento del gasoil": "2026-10-21",
+      "vacunos demanda tranquila y nuevas bajas en el mercado agroganadero de canuelas": "2026-10-21",
+      "opinion lo que no se discute en el debate por los biocombustibles": "2026-10-21",
+      "financiamiento sostenible que hacen la argentina brasil y bolivia para impulsar la produccion agropecuaria": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11744,7 +11892,14 @@
       "bcb20f4142a084a1": "2026-10-21",
       "d0f75bfb30743616": "2026-10-21",
       "db88c08a6a61e598": "2026-10-21",
-      "6f47a0440e46bffa": "2026-10-21"
+      "6f47a0440e46bffa": "2026-10-21",
+      "61a9d1ac7bfb31ba": "2026-10-21",
+      "69b38b0efa1972e7": "2026-10-21",
+      "2dccad56fe958a82": "2026-10-21",
+      "d535e7933736a360": "2026-10-21",
+      "2b21014ae60c36d5": "2026-10-21",
+      "a8bee2e46f9eda1a": "2026-10-21",
+      "e05741f1d1025229": "2026-10-21"
     }
   },
   "elegidas": [
@@ -14964,9 +15119,200 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cfc041aae576_portada.jpg"
+    },
+    {
+      "id": "ec9aa4f20a4b",
+      "cuando": "2026-10-21T16:00-03:00",
+      "titulo_original": "“No saben que no saben”: Un especialista aeronáutico cuestiona el nivel de capacitación detrás de los drones agrícolas y alerta que la falta de controles puede costar vidas",
+      "descripcion": "Luego de mucho tiempo de pugna, y de ser resistidos por el sector aeronáutico tradicional, los drones y aviones empiezan a tejer puentes. El diálogo apunta, precisamente, a equiparar las condiciones que se le imponen a una y otra actividad, con una normativa que hoy exhibe un franco desbalance y que",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas/",
+      "titular": "Drones agrícolas: alertan sobre falta de capacitación y riesgos operativos",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 81,
+        "commercial_score": 80,
+        "subtema": "agtech",
+        "tema": "drones agrícolas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sobre seguridad y normativas en drones, un tema crítico y de plena vigencia para aplicadores.",
+        "tema_doc": "tecnologia",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "96Kd0tdFXvY",
+          "url": "https://youtube.com/shorts/96Kd0tdFXvY",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "cc632b6f-653b-4a90-932a-46c8fb17e258",
+          "slug": "drones-agricolas-en-argentina-alertan-por-falta-de-capacitacion-4c2610",
+          "url": "https://www.diariolacampaña.com.ar/n/drones-agricolas-en-argentina-alertan-por-falta-de-capacitacion-4c2610",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1090830290610555",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17955413631269602",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ec9aa4f20a4b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "aa751ba1d61a",
+      "rep": {
+        "id": "aa751ba1d61a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/adios-ee-uu-brasil-sorpresa-y-la-argentina-se-quedaron-con-el-mercado-chino-de-sorgo/",
+        "canonical_url": "https://bichosdecampo.com/adios-ee-uu-brasil-sorpresa-y-la-argentina-se-quedaron-con-el-mercado-chino-de-sorgo",
+        "titulo": "Adiós EE.UU: Brasil (¡sorpresa!) y la Argentina se quedaron con el mercado chino de sorgo",
+        "titulo_norm": "adios ee uu brasil sorpresa y la argentina se quedaron con el mercado chino de sorgo",
+        "descripcion": "Brasil superó a la Argentina para pasar a ser principal proveedor de sorgo de China del Mercosur, mientras que EE.UU. está quedando cada vez más relegado de ese mercado por parte de la nación asiática. No es la soja, sino el sorgo, el cultivo con mayor peso geopolítico en el marco de las negociaciones bilaterales […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/anec.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-21T15:13-03:00",
+        "capturado": "2026-10-21T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2dccad56fe958a82"
+      },
+      "grupo": [
+        {
+          "id": "aa751ba1d61a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/adios-ee-uu-brasil-sorpresa-y-la-argentina-se-quedaron-con-el-mercado-chino-de-sorgo/",
+          "canonical_url": "https://bichosdecampo.com/adios-ee-uu-brasil-sorpresa-y-la-argentina-se-quedaron-con-el-mercado-chino-de-sorgo",
+          "titulo": "Adiós EE.UU: Brasil (¡sorpresa!) y la Argentina se quedaron con el mercado chino de sorgo",
+          "titulo_norm": "adios ee uu brasil sorpresa y la argentina se quedaron con el mercado chino de sorgo",
+          "descripcion": "Brasil superó a la Argentina para pasar a ser principal proveedor de sorgo de China del Mercosur, mientras que EE.UU. está quedando cada vez más relegado de ese mercado por parte de la nación asiática. No es la soja, sino el sorgo, el cultivo con mayor peso geopolítico en el marco de las negociaciones bilaterales […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/anec.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-21T15:13-03:00",
+          "capturado": "2026-10-21T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2dccad56fe958a82"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 11,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 68,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "sorgo",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Destaca la fuerte competencia geopolítica y comercial en el mercado exportador de sorgo con China.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          72
+        ]
+      },
+      "cuando": "2026-10-21T16:00-03:00"
+    },
+    {
+      "id": "644d3a9b5c15",
+      "rep": {
+        "id": "644d3a9b5c15",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026",
+        "titulo": "Vacunos: demanda tranquila y nuevas bajas en el Mercado Agroganadero de Cañuelas",
+        "titulo_norm": "vacunos demanda tranquila y nuevas bajas en el mercado agroganadero de canuelas",
+        "descripcion": "Con una entrada de 7132 vacunos, se pagó $4400 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3926,156",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/KJBRNLCURBEKHEQCF7ZMMFW6V4.jpeg?auth=a2f1e10edd5c2ff2c8e914b23cadcf2c01788d5f54e51fe3fc7ecebcd16667ce&smart=true",
+        "autor": "",
+        "publicado": "2026-10-21T15:45-03:00",
+        "capturado": "2026-10-21T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2b21014ae60c36d5"
+      },
+      "grupo": [
+        {
+          "id": "644d3a9b5c15",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026",
+          "titulo": "Vacunos: demanda tranquila y nuevas bajas en el Mercado Agroganadero de Cañuelas",
+          "titulo_norm": "vacunos demanda tranquila y nuevas bajas en el mercado agroganadero de canuelas",
+          "descripcion": "Con una entrada de 7132 vacunos, se pagó $4400 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3926,156",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/KJBRNLCURBEKHEQCF7ZMMFW6V4.jpeg?auth=a2f1e10edd5c2ff2c8e914b23cadcf2c01788d5f54e51fe3fc7ecebcd16667ce&smart=true",
+          "autor": "",
+          "publicado": "2026-10-21T15:45-03:00",
+          "capturado": "2026-10-21T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2b21014ae60c36d5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "hacienda",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe directo de precios y tendencias del mercado de hacienda en Cañuelas, clave para ganaderos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T16:00-03:00"
+    },
     {
       "id": "93acca93477d",
       "rep": {
@@ -15026,69 +15372,6 @@
         "tema_doc": "clima",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T14:22-03:00"
-    },
-    {
-      "id": "ec9aa4f20a4b",
-      "rep": {
-        "id": "ec9aa4f20a4b",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas/",
-        "canonical_url": "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas",
-        "titulo": "“No saben que no saben”: Un especialista aeronáutico cuestiona el nivel de capacitación detrás de los drones agrícolas y alerta que la falta de controles puede costar vidas",
-        "titulo_norm": "no saben que no saben un especialista aeronautico cuestiona el nivel de capacitacion detras de los drones agricolas y alerta que la falta de controles puede costar vidas",
-        "descripcion": "Luego de mucho tiempo de pugna, y de ser resistidos por el sector aeronáutico tradicional, los drones y aviones empiezan a tejer puentes. El diálogo apunta, precisamente, a equiparar las condiciones que se le imponen a una y otra actividad, con una normativa que hoy exhibe un franco desbalance y que demuestra que siempre la […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/03/cargando_drone_con_iseeds.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-21T14:20-03:00",
-        "capturado": "2026-10-21T14:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6f47a0440e46bffa"
-      },
-      "grupo": [
-        {
-          "id": "ec9aa4f20a4b",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas/",
-          "canonical_url": "https://bichosdecampo.com/no-saben-que-no-saben-un-especialista-aeronautico-cuestiona-el-nivel-de-capacitacion-detras-de-los-drones-agricolas-y-alerta-que-la-falta-de-controles-puede-costar-vidas",
-          "titulo": "“No saben que no saben”: Un especialista aeronáutico cuestiona el nivel de capacitación detrás de los drones agrícolas y alerta que la falta de controles puede costar vidas",
-          "titulo_norm": "no saben que no saben un especialista aeronautico cuestiona el nivel de capacitacion detras de los drones agricolas y alerta que la falta de controles puede costar vidas",
-          "descripcion": "Luego de mucho tiempo de pugna, y de ser resistidos por el sector aeronáutico tradicional, los drones y aviones empiezan a tejer puentes. El diálogo apunta, precisamente, a equiparar las condiciones que se le imponen a una y otra actividad, con una normativa que hoy exhibe un franco desbalance y que demuestra que siempre la […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/03/cargando_drone_con_iseeds.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-21T14:20-03:00",
-          "capturado": "2026-10-21T14:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6f47a0440e46bffa"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 14,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 81,
-        "commercial_score": 80,
-        "subtema": "agtech",
-        "tema": "drones agrícolas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Alerta sobre seguridad y normativas en drones, un tema crítico y de plena vigencia para aplicadores.",
-        "tema_doc": "tecnologia",
-        "urgente": true,
-        "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-21T14:22-03:00"
@@ -15551,8 +15834,8 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T14:25:51-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T16:03:52-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
