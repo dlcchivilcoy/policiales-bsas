@@ -10083,6 +10083,52 @@
         52,
         53
       ]
+    },
+    "307ce0ab26976076": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 9,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 73,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja y trigo",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad de la campaña y genera gran debate entre los productores de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f52e46b81c54eace": {
+      "impacto_economico": 18,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 69,
+      "commercial_score": 74,
+      "subtema": "agro",
+      "tema": "exportaciones agroindustriales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra el volumen macroeconómico del sector, muy relevante para entender el ingreso de divisas y el humor de la cadena.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        68
+      ]
     }
   },
   "indice": {
@@ -10786,7 +10832,9 @@
       "https://lanacion.com.ar/economia/campo/en-estados-unidos-cuesta-un-82-mas-como-quedo-en-octubre-el-precio-de-la-carne-argentina-frente-a-nid21102026": "2026-10-21",
       "https://bichosdecampo.com/un-freno-al-optimismo-ganadero-el-productor-y-ex-vicepresidente-del-senasa-carlos-milicevic-advierte-que-la-inflacion-y-los-costos-estan-deteriorando-los-numeros-del-negocio": "2026-10-21",
       "https://bichosdecampo.com/la-cooperativa-yerbatera-pipore-presento-en-paris-una-gaseosa-de-yerba-mate-en-lata-para-llegar-a-paises-donde-no-es-habitual-cebarse-unos-amargos": "2026-10-21",
-      "https://lanacion.com.ar/economia/campo/oro-verde-invertiran-us195-millones-en-san-juan-para-ampliar-la-produccion-de-alimentos-y-pistachos-nid21102026": "2026-10-21"
+      "https://lanacion.com.ar/economia/campo/oro-verde-invertiran-us195-millones-en-san-juan-para-ampliar-la-produccion-de-alimentos-y-pistachos-nid21102026": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026": "2026-10-21",
+      "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11488,7 +11536,9 @@
       "en estados unidos cuesta un 82 mas como quedo en octubre el precio de la carne argentina frente a otros paises": "2026-10-21",
       "un freno al optimismo ganadero el productor y ex vicepresidente del senasa carlos milicevic advierte que la inflacion y los costos estan deteriorando los numeros del negocio": "2026-10-21",
       "la cooperativa yerbatera pipore presento en paris una gaseosa de yerba mate en lata para llegar a paises donde no es habitual cebarse unos amargos": "2026-10-21",
-      "oro verde invertiran us 19 5 millones en san juan para ampliar la produccion de alimentos y pistachos": "2026-10-21"
+      "oro verde invertiran us 19 5 millones en san juan para ampliar la produccion de alimentos y pistachos": "2026-10-21",
+      "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas": "2026-10-21",
+      "las exportaciones agroindustriales crecieron 13 2": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12190,7 +12240,9 @@
       "0b7d643140a5c030": "2026-10-21",
       "e17a7dc6e74cf9e5": "2026-10-21",
       "232d4d35f20fd641": "2026-10-21",
-      "ec118bee54736838": "2026-10-21"
+      "ec118bee54736838": "2026-10-21",
+      "307ce0ab26976076": "2026-10-21",
+      "f52e46b81c54eace": "2026-10-21"
     }
   },
   "elegidas": [
@@ -15806,9 +15858,193 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_814ebe1f60f4_portada.jpg"
+    },
+    {
+      "id": "28b97dccb7a4",
+      "cuando": "2026-10-21T18:40-03:00",
+      "titulo_original": "“La primera respuesta”: un informe advierte que las empresas agropecuarias observan condiciones más difíciles para financiarse",
+      "descripcion": "“No dejaron de necesitar crédito; lo que cambió es cuánto les cuesta conseguirlo”, señaló Hernán Satorre, titular de Tasómetro, que hizo un relevamiento",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026/",
+      "titular": "Empresas agropecuarias postergan inversiones por el encarecimiento del crédito",
+      "volanta": "Finanzas",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 82,
+        "subtema": "empresas",
+        "tema": "financiamiento",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El acceso al crédito preocupa al productor de la región para encarar la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1263db37-ca6a-4195-bdbf-7231e4671def",
+          "slug": "el-costo-del-credito-obliga-a-las-empresas-agropecuarias-a-4ae4f5",
+          "url": "https://www.diariolacampaña.com.ar/n/el-costo-del-credito-obliga-a-las-empresas-agropecuarias-a-4ae4f5",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "949788277851092",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18467182915190954",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_28b97dccb7a4_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d809adddbe67",
+      "rep": {
+        "id": "d809adddbe67",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026",
+        "titulo": "La soja cayó a su menor precio desde agosto y el trigo tocó un mínimo de 14 semanas",
+        "titulo_norm": "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas",
+        "descripcion": "La oleaginosa perdió un 3,62% en ocho ruedas y este miércoles cerró en US$457,55 por tonelada en la Bolsa de Chicago; el avance de la cosecha estadounidense presionó sobre los precios, aunque los especialistas señalan que todavía se mantienen por encima de los niveles de julio",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/5VDQTFG7LJFTRNOBYDRK7IK5XY.png?auth=b196bab5e3b76058f491a92939e12d72c6d276dcb409a40ff4c93b9ae81944eb&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-10-21T18:24-03:00",
+        "capturado": "2026-10-21T18:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "307ce0ab26976076"
+      },
+      "grupo": [
+        {
+          "id": "d809adddbe67",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026",
+          "titulo": "La soja cayó a su menor precio desde agosto y el trigo tocó un mínimo de 14 semanas",
+          "titulo_norm": "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas",
+          "descripcion": "La oleaginosa perdió un 3,62% en ocho ruedas y este miércoles cerró en US$457,55 por tonelada en la Bolsa de Chicago; el avance de la cosecha estadounidense presionó sobre los precios, aunque los especialistas señalan que todavía se mantienen por encima de los niveles de julio",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/5VDQTFG7LJFTRNOBYDRK7IK5XY.png?auth=b196bab5e3b76058f491a92939e12d72c6d276dcb409a40ff4c93b9ae81944eb&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-10-21T18:24-03:00",
+          "capturado": "2026-10-21T18:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "307ce0ab26976076"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 9,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja y trigo",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad de la campaña y genera gran debate entre los productores de la zona núcleo.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T18:40-03:00"
+    },
+    {
+      "id": "04b8c19f5225",
+      "rep": {
+        "id": "04b8c19f5225",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
+        "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
+        "titulo": "Las exportaciones agroindustriales crecieron 13,2%",
+        "titulo_norm": "las exportaciones agroindustriales crecieron 13 2",
+        "descripcion": "El sector acumuló ventas por u$s 42.304 millones en los primeros nueve meses de 2026. En septiembre, los embarques alcanzaron los u$s 5.500 millones",
+        "imagen_url": "https://media.lacapital.com.ar/p/b3b3fc801d9155880bf69e10a07421e3/adjuntos/305/imagenes/100/200/0100200292/barco-puerto.jpg",
+        "autor": "",
+        "publicado": "2026-10-21T18:30-03:00",
+        "capturado": "2026-10-21T18:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f52e46b81c54eace"
+      },
+      "grupo": [
+        {
+          "id": "04b8c19f5225",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
+          "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
+          "titulo": "Las exportaciones agroindustriales crecieron 13,2%",
+          "titulo_norm": "las exportaciones agroindustriales crecieron 13 2",
+          "descripcion": "El sector acumuló ventas por u$s 42.304 millones en los primeros nueve meses de 2026. En septiembre, los embarques alcanzaron los u$s 5.500 millones",
+          "imagen_url": "https://media.lacapital.com.ar/p/b3b3fc801d9155880bf69e10a07421e3/adjuntos/305/imagenes/100/200/0100200292/barco-puerto.jpg",
+          "autor": "",
+          "publicado": "2026-10-21T18:30-03:00",
+          "capturado": "2026-10-21T18:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f52e46b81c54eace"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 69,
+        "commercial_score": 74,
+        "subtema": "agro",
+        "tema": "exportaciones agroindustriales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra el volumen macroeconómico del sector, muy relevante para entender el ingreso de divisas y el humor de la cadena.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          68
+        ]
+      },
+      "cuando": "2026-10-21T18:40-03:00"
+    },
     {
       "id": "af9c1a422406",
       "rep": {
@@ -15942,69 +16178,6 @@
         ]
       },
       "cuando": "2026-10-21T17:20-03:00"
-    },
-    {
-      "id": "28b97dccb7a4",
-      "rep": {
-        "id": "28b97dccb7a4",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026",
-        "titulo": "“La primera respuesta”: un informe advierte que las empresas agropecuarias observan condiciones más difíciles para financiarse",
-        "titulo_norm": "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse",
-        "descripcion": "“No dejaron de necesitar crédito; lo que cambió es cuánto les cuesta conseguirlo”, señaló Hernán Satorre, titular de Tasómetro, que hizo un relevamiento",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WKYK5TR64ZAEXIEMHSF4PB3IZ4.jpg?auth=2a67b6313e19d39c4c7cb5ff1d6cd9131fbb13b5c9872799329d4fdfd80700d8&smart=true",
-        "autor": "Gabriela Origlia",
-        "publicado": "2026-10-21T16:41-03:00",
-        "capturado": "2026-10-21T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "13d0cf405f382650"
-      },
-      "grupo": [
-        {
-          "id": "28b97dccb7a4",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/la-primera-respuesta-un-informe-advierte-que-las-empresas-agropecuarias-observan-condiciones-mas-nid21102026",
-          "titulo": "“La primera respuesta”: un informe advierte que las empresas agropecuarias observan condiciones más difíciles para financiarse",
-          "titulo_norm": "la primera respuesta un informe advierte que las empresas agropecuarias observan condiciones mas dificiles para financiarse",
-          "descripcion": "“No dejaron de necesitar crédito; lo que cambió es cuánto les cuesta conseguirlo”, señaló Hernán Satorre, titular de Tasómetro, que hizo un relevamiento",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WKYK5TR64ZAEXIEMHSF4PB3IZ4.jpg?auth=2a67b6313e19d39c4c7cb5ff1d6cd9131fbb13b5c9872799329d4fdfd80700d8&smart=true",
-          "autor": "Gabriela Origlia",
-          "publicado": "2026-10-21T16:41-03:00",
-          "capturado": "2026-10-21T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "13d0cf405f382650"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 75,
-        "commercial_score": 82,
-        "subtema": "empresas",
-        "tema": "financiamiento",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El acceso al crédito preocupa al productor de la región para encarar la campaña.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T17:00-03:00"
     },
     {
       "id": "68963bd1a12f",
@@ -16531,8 +16704,8 @@
       "cuando": "2026-10-21T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-21T18:23:40-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T18:43:55-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
