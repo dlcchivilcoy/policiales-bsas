@@ -9065,6 +9065,90 @@
         51,
         55
       ]
+    },
+    "71e3ab693d51e954": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 83,
+      "commercial_score": 83,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en el margen de los productores de la zona núcleo al advertir sobre el manejo de nutrientes.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1f017cd51826ef16": {
+      "impacto_economico": 12,
+      "interes_productores": 5,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 42,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "azúcar",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Buena información regional pero de baja relevancia directa para el productor de la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "037d0991da45fe32": {
+      "impacto_economico": 5,
+      "interes_productores": 8,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 8,
+      "potencial_comercial": 3,
+      "ai_score": 44,
+      "commercial_score": 52,
+      "subtema": "mercados",
+      "tema": "granos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un homenaje emotivo e interesante para el ambiente granario, pero aporta poco valor productivo técnico.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "46e3862fd0487190": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 2,
+      "ai_score": 25,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema muy acotado a una economía regional ajena a la provincia de Buenos Aires y de bajo impacto general.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9709,7 +9793,12 @@
       "https://bichosdecampo.com/despues-del-asado-siempre-es-bueno-un-buen-cafe-jorge-cabrales-que-es-criador-de-angus-busca-desarrollar-la-produccion-local-de-esa-infusion-en-el-norte-del-pais": "2026-10-21",
       "https://agrositio.com.ar/noticia/248942-chicago-profundiza-las-bajas-por-la-liquidacion-de-fondos-y-la-presion-de-la-cosecha-estadounidense.html": "2026-10-21",
       "https://agrositio.com.ar/noticia/248941-jornada-bajista-para-los-granos-en-chicago-por-liquidacion-de-posiciones-y-avance-de-la-cosecha.html": "2026-10-21",
-      "https://bichosdecampo.com/es-inadminisible-el-agro-salio-con-los-tapones-de-punta-contra-la-nueva-ley-que-permite-a-los-intendentes-bonaerenses-desviar-fondos-de-los-caminos-rurales-hacia-obras-hidricas": "2026-10-21"
+      "https://bichosdecampo.com/es-inadminisible-el-agro-salio-con-los-tapones-de-punta-contra-la-nueva-ley-que-permite-a-los-intendentes-bonaerenses-desviar-fondos-de-los-caminos-rurales-hacia-obras-hidricas": "2026-10-21",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-21-octubre-2026": "2026-10-21",
+      "https://infocampo.com.ar/la-matematica-del-lote-ajustar-el-fertilizante-es-pegarse-un-tiro-en-los-pies": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248943-tucuman-supera-el-millon-de-toneladas-de-azucar-y-produce-casi-143-millones-de-litros-de-bioetanol.html": "2026-10-21",
+      "https://bichosdecampo.com/el-valor-de-la-palabra-a-mitad-de-su-vida-enrique-erize-tuvo-que-vender-hasta-el-auto-para-honrar-sus-deudas-pero-recupero-confianza-hasta-convertirse-en-el-mejor-analista-del-mercado-de-granos": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/reasignan-18-millones-para-pagar-gastos-de-pasajes-y-hotel-en-misiones-comerciales-para-la-yerba-nid21102026": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10352,7 +10441,12 @@
       "despues del asado siempre es bueno un buen cafe jorge cabrales que es criador de angus busca desarrollar la produccion local de esa infusion en el norte del pais": "2026-10-21",
       "chicago profundiza las bajas por la liquidacion de fondos y la presion de la cosecha estadounidense": "2026-10-21",
       "jornada bajista para los granos en chicago por liquidacion de posiciones y avance de la cosecha": "2026-10-21",
-      "es inadminisible el agro salio con los tapones de punta contra la nueva ley que permite a los intendentes bonaerenses desviar fondos de los caminos rurales hacia obras hidricas": "2026-10-21"
+      "es inadminisible el agro salio con los tapones de punta contra la nueva ley que permite a los intendentes bonaerenses desviar fondos de los caminos rurales hacia obras hidricas": "2026-10-21",
+      "dolar blue a cuanto cotizan hoy en cordoba 21 octubre 2026": "2026-10-21",
+      "la matematica del lote ajustar el fertilizante es pegarse un tiro en los pies": "2026-10-21",
+      "tucuman supera el millon de toneladas de azucar y produce casi 143 millones de litros de bioetanol": "2026-10-21",
+      "el valor de la palabra a mitad de su vida enrique erize tuvo que vender hasta el auto para honrar sus deudas pero recupero confianza hasta convertirse en el mejor analista del mercado de granos": "2026-10-21",
+      "reasignan 18 millones para pagar gastos de pasajes y hotel en misiones comerciales para la yerba mate": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10995,7 +11089,12 @@
       "fe6a2b6b70281263": "2026-10-21",
       "a08d3df9408b45a0": "2026-10-21",
       "dd10a00d4cc371ac": "2026-10-21",
-      "ca80a5fea38cb18a": "2026-10-21"
+      "ca80a5fea38cb18a": "2026-10-21",
+      "7bf5873441513142": "2026-10-21",
+      "71e3ab693d51e954": "2026-10-21",
+      "1f017cd51826ef16": "2026-10-21",
+      "037d0991da45fe32": "2026-10-21",
+      "46e3862fd0487190": "2026-10-21"
     }
   },
   "elegidas": [
@@ -13880,11 +13979,65 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ca3363a2f78c_portada.jpg"
+    },
+    {
+      "id": "00a5a454c0a7",
+      "cuando": "2026-10-21T10:20-03:00",
+      "titulo_original": "La matemática del lote: “Ajustar el fertilizante es pegarse un tiro en los pies”",
+      "descripcion": "\"Hay una parte de la biología que también tiene matemática\", plantearon desde Fertilizar AC en un desayuno en el que llamaron a los productores a incluir en su \"Excel\" un aspecto clave para un balance positivo y sustentable: los suelos.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/la-matematica-del-lote-ajustar-el-fertilizante-es-pegarse-un-tiro-en-los-pies/",
+      "titular": "Fertilizar advierte que el suelo sufre por falta de nutrientes",
+      "volanta": "Fertilizantes",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 83,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en el margen de los productores de la zona núcleo al advertir sobre el manejo de nutrientes.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5077706f-0a5d-43a5-b5a0-86df5a53b4c7",
+          "slug": "advierten-por-el-deterioro-de-suelos-y-piden-no-descuidar-la-3a2395",
+          "url": "https://www.diariolacampaña.com.ar/n/advierten-por-el-deterioro-de-suelos-y-piden-no-descuidar-la-3a2395",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1757991981923922",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18132629509715417",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_00a5a454c0a7_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-10-21T10:04:10-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T10:24:06-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
