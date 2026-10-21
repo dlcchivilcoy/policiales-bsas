@@ -8759,6 +8759,48 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6c38f9b293bbb6f4": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 7,
+      "ai_score": 77,
+      "commercial_score": 77,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente la infraestructura vial y los fondos municipales de la provincia de Buenos Aires.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e1bdcbfa4cc112ce": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 73,
+      "commercial_score": 73,
+      "subtema": "mercados",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Modifica el mercado de granos y la agroindustria aceitera con impacto en toda la región pampeana.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9369,7 +9411,10 @@
       "https://lanacion.com.ar/economia/campo/a-francisco-franco-le-faenaron-34-animales-en-un-mes-perdio-40-millones-y-decidio-abandonar-el-campo-nid20102026": "2026-10-20",
       "https://lanacion.com.ar/economia/campo/vacunos-oferta-abundante-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid20102026": "2026-10-20",
       "https://bichosdecampo.com/que-demonios-vamos-a-comer-en-la-sial-de-paris-premiaron-a-unas-papas-fritas-con-agua-chips-de-salame-y-hasta-fideos-que-vienen-con-hielo": "2026-10-20",
-      "https://lanacion.com.ar/economia/campo/georges-breitschmitt-presidente-del-ipcva-tras-reuniones-con-importadores-europeos-donde-se-hablo-de-nid20102026": "2026-10-20"
+      "https://lanacion.com.ar/economia/campo/georges-breitschmitt-presidente-del-ipcva-tras-reuniones-con-importadores-europeos-donde-se-hablo-de-nid20102026": "2026-10-20",
+      "https://infocampo.com.ar/en-buenos-aires-municipios-podran-usar-fondos-para-caminos-rurales-en-obras-hidricas-rechazo-de-la-sociedad-rural": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/biocombustibles-las-pymes-pidieron-elevar-el-corte-del-biodiesel-y-las-aceiteras-reclamaron-aprobar-nid20102026": "2026-10-20",
+      "https://lanacion.com.ar/economia/campo/emergencia-sanitaria-brasil-detecto-un-brote-de-newcastle-en-una-granja-de-pavos-y-mexico-suspendio-nid20102026": "2026-10-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -9978,7 +10023,10 @@
       "a francisco franco le mataron 34 animales en un mes perdio 40 millones y decidio abandonar el campo no me dejan trabajar": "2026-10-20",
       "vacunos oferta abundante y precios en baja en el mercado agroganadero de canuelas": "2026-10-20",
       "que demonios vamos a comer en la sial de paris premiaron a unas papas fritas con agua chips de salame y hasta fideos que vienen con hielo": "2026-10-20",
-      "georges breitschmitt presidente del ipcva tras reuniones con importadores europeos donde se hablo de visec carne estamos listos hace tiempo": "2026-10-20"
+      "georges breitschmitt presidente del ipcva tras reuniones con importadores europeos donde se hablo de visec carne estamos listos hace tiempo": "2026-10-20",
+      "en buenos aires municipios podran usar fondos para caminos rurales en obras hidricas rechazo del agro": "2026-10-20",
+      "biocombustibles las pymes pidieron elevar el corte del biodiesel y las aceiteras reclamaron aprobar la ley sin cambios": "2026-10-20",
+      "emergencia sanitaria brasil detecto un brote de newcastle en una granja de pavos y mexico suspendio las compras de pollo": "2026-10-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -10587,7 +10635,10 @@
       "082e152bd54bc60b": "2026-10-20",
       "47d0db9033962bde": "2026-10-20",
       "01e4a3c8579f64e2": "2026-10-20",
-      "7a116f4598919ab4": "2026-10-20"
+      "7a116f4598919ab4": "2026-10-20",
+      "6c38f9b293bbb6f4": "2026-10-20",
+      "e1bdcbfa4cc112ce": "2026-10-20",
+      "f53fa398b6476e65": "2026-10-20"
     }
   },
   "elegidas": [
@@ -13123,11 +13174,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c9b3bbeccedf_portada.jpg"
+    },
+    {
+      "id": "d8dbaa3fc26e",
+      "cuando": "2026-10-20T21:00-03:00",
+      "titulo_original": "En Buenos Aires, municipios podrán usar fondos para caminos rurales en obras hídricas: rechazo del agro",
+      "descripcion": "Por 180 días, los municipios bonaerenses quedaron habilitados a desviar los fondos que les son coparticipados para obras en caminos rurales hacia obras preventivas ante El Niño. La Sociedad Rural Argentina y CARBAP se pronunciaron en contra.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/en-buenos-aires-municipios-podran-usar-fondos-para-caminos-rurales-en-obras-hidricas-rechazo-de-la-sociedad-rural/",
+      "titular": "Buenos Aires autoriza desviar fondos viales a obras hídricas y el campo",
+      "volanta": "Caminos Rurales",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 77,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente la infraestructura vial y los fondos municipales de la provincia de Buenos Aires.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-20T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "J6KECvbVvfM",
+          "url": "https://youtube.com/shorts/J6KECvbVvfM",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "d6ef56ee-2ffa-42bc-9beb-e0fc43f7926a",
+          "slug": "polemica-en-buenos-aires-municipios-podran-desviar-fondos-15b3ac",
+          "url": "https://www.diariolacampaña.com.ar/n/polemica-en-buenos-aires-municipios-podran-desviar-fondos-15b3ac",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1886451036047701",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18092312564660430",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d8dbaa3fc26e_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-10-20T19:05:32-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [
+    {
+      "id": "a34c491f8fbf",
+      "rep": {
+        "id": "a34c491f8fbf",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/biocombustibles-las-pymes-pidieron-elevar-el-corte-del-biodiesel-y-las-aceiteras-reclamaron-aprobar-nid20102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/biocombustibles-las-pymes-pidieron-elevar-el-corte-del-biodiesel-y-las-aceiteras-reclamaron-aprobar-nid20102026",
+        "titulo": "Biocombustibles: las pymes pidieron elevar el corte del biodiésel y las aceiteras reclamaron aprobar la ley sin cambios",
+        "titulo_norm": "biocombustibles las pymes pidieron elevar el corte del biodiesel y las aceiteras reclamaron aprobar la ley sin cambios",
+        "descripcion": "En una reunión informativa en Diputados, Cepreb propuso llevar la mezcla obligatoria al 12% o al 12,5% para preservar su participación, mientras Ciara defendió el acuerdo del Senado; el proyecto podría obtener dictamen la próxima semana",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/E6ZQBQHLW5HSPIJ3ZIGDWQLLPI.png?auth=3d17f6ba7f333a0162d32393cb5f330fa436e3953ef8d6a6e666e11a2d40f337&smart=true",
+        "autor": "Belkis Martínez",
+        "publicado": "2026-10-20T19:38-03:00",
+        "capturado": "2026-10-20T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e1bdcbfa4cc112ce"
+      },
+      "grupo": [
+        {
+          "id": "a34c491f8fbf",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/biocombustibles-las-pymes-pidieron-elevar-el-corte-del-biodiesel-y-las-aceiteras-reclamaron-aprobar-nid20102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/biocombustibles-las-pymes-pidieron-elevar-el-corte-del-biodiesel-y-las-aceiteras-reclamaron-aprobar-nid20102026",
+          "titulo": "Biocombustibles: las pymes pidieron elevar el corte del biodiésel y las aceiteras reclamaron aprobar la ley sin cambios",
+          "titulo_norm": "biocombustibles las pymes pidieron elevar el corte del biodiesel y las aceiteras reclamaron aprobar la ley sin cambios",
+          "descripcion": "En una reunión informativa en Diputados, Cepreb propuso llevar la mezcla obligatoria al 12% o al 12,5% para preservar su participación, mientras Ciara defendió el acuerdo del Senado; el proyecto podría obtener dictamen la próxima semana",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/E6ZQBQHLW5HSPIJ3ZIGDWQLLPI.png?auth=3d17f6ba7f333a0162d32393cb5f330fa436e3953ef8d6a6e666e11a2d40f337&smart=true",
+          "autor": "Belkis Martínez",
+          "publicado": "2026-10-20T19:38-03:00",
+          "capturado": "2026-10-20T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e1bdcbfa4cc112ce"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 73,
+        "subtema": "mercados",
+        "tema": "biocombustibles",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Modifica el mercado de granos y la agroindustria aceitera con impacto en toda la región pampeana.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-20T21:00-03:00"
+    }
+  ],
+  "actualizado": "2026-10-20T21:04:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
