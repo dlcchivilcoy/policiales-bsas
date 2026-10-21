@@ -9149,6 +9149,52 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6a49f9e06d5a93d0": {
+      "impacto_economico": 15,
+      "interes_productores": 11,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 70,
+      "commercial_score": 69,
+      "subtema": "mercados",
+      "tema": "biodiésel",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve la agroindustria exportadora aunque con menor volumen que en sus mejores años.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        68
+      ]
+    },
+    "79e2aa880851fb3d": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 8,
+      "cercania_argentina": 5,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 33,
+      "commercial_score": 35,
+      "subtema": "agtech",
+      "tema": "arquitectura sustentable",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es arquitectura bioclimática urbana, de poca relevancia directa para el productor agropecuario.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9798,7 +9844,10 @@
       "https://infocampo.com.ar/la-matematica-del-lote-ajustar-el-fertilizante-es-pegarse-un-tiro-en-los-pies": "2026-10-21",
       "https://agrositio.com.ar/noticia/248943-tucuman-supera-el-millon-de-toneladas-de-azucar-y-produce-casi-143-millones-de-litros-de-bioetanol.html": "2026-10-21",
       "https://bichosdecampo.com/el-valor-de-la-palabra-a-mitad-de-su-vida-enrique-erize-tuvo-que-vender-hasta-el-auto-para-honrar-sus-deudas-pero-recupero-confianza-hasta-convertirse-en-el-mejor-analista-del-mercado-de-granos": "2026-10-21",
-      "https://lanacion.com.ar/economia/campo/reasignan-18-millones-para-pagar-gastos-de-pasajes-y-hotel-en-misiones-comerciales-para-la-yerba-nid21102026": "2026-10-21"
+      "https://lanacion.com.ar/economia/campo/reasignan-18-millones-para-pagar-gastos-de-pasajes-y-hotel-en-misiones-comerciales-para-la-yerba-nid21102026": "2026-10-21",
+      "https://infocampo.com.ar/se-reactivo-la-demanda-europea-y-el-biodiesel-argentino-vuelve-a-tomar-energia-exportadora": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248944-un-edificio-sustentable-logra-generar-el-80-de-la-energia-que-necesita-para-funcionar.html": "2026-10-21",
+      "https://bichosdecampo.com/producir-granos-en-argentina-ya-no-implica-pagar-insumos-mucho-mas-caros-la-brecha-de-precios-con-los-competidores-bajo-del-6-al-04-en-un-ano": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10446,7 +10495,10 @@
       "la matematica del lote ajustar el fertilizante es pegarse un tiro en los pies": "2026-10-21",
       "tucuman supera el millon de toneladas de azucar y produce casi 143 millones de litros de bioetanol": "2026-10-21",
       "el valor de la palabra a mitad de su vida enrique erize tuvo que vender hasta el auto para honrar sus deudas pero recupero confianza hasta convertirse en el mejor analista del mercado de granos": "2026-10-21",
-      "reasignan 18 millones para pagar gastos de pasajes y hotel en misiones comerciales para la yerba mate": "2026-10-21"
+      "reasignan 18 millones para pagar gastos de pasajes y hotel en misiones comerciales para la yerba mate": "2026-10-21",
+      "se reactivo la demanda europea y el biodiesel argentino vuelve a tomar energia exportadora": "2026-10-21",
+      "un edificio sustentable logra generar el 80 de la energia que necesita para funcionar": "2026-10-21",
+      "producir granos en argentina ya no implica pagar insumos mucho mas caros la brecha de precios con los competidores bajo del 6 al 0 4 en un ano": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11094,7 +11146,10 @@
       "71e3ab693d51e954": "2026-10-21",
       "1f017cd51826ef16": "2026-10-21",
       "037d0991da45fe32": "2026-10-21",
-      "46e3862fd0487190": "2026-10-21"
+      "46e3862fd0487190": "2026-10-21",
+      "6a49f9e06d5a93d0": "2026-10-21",
+      "79e2aa880851fb3d": "2026-10-21",
+      "093f83c5d76195bf": "2026-10-21"
     }
   },
   "elegidas": [
@@ -14035,8 +14090,76 @@
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_00a5a454c0a7_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-10-21T10:24:06-03:00",
+  "pendientes": [
+    {
+      "id": "d4fa34e358de",
+      "rep": {
+        "id": "d4fa34e358de",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/se-reactivo-la-demanda-europea-y-el-biodiesel-argentino-vuelve-a-tomar-energia-exportadora/",
+        "canonical_url": "https://infocampo.com.ar/se-reactivo-la-demanda-europea-y-el-biodiesel-argentino-vuelve-a-tomar-energia-exportadora",
+        "titulo": "Se reactivó la demanda europea y el biodiésel argentino vuelve a tomar energía exportadora",
+        "titulo_norm": "se reactivo la demanda europea y el biodiesel argentino vuelve a tomar energia exportadora",
+        "descripcion": "En los últimos meses, el flujo de exportaciones de biodiésel mostró una aceleración, con importates compras por parte de las petroleras del viejo continente. De todos modos, las operaciones aún siguen lejos de los años récord que tuvo la actividad.",
+        "imagen_url": "",
+        "autor": "Javier Preciado Patiño",
+        "publicado": "2026-10-21T10:30-03:00",
+        "capturado": "2026-10-21T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6a49f9e06d5a93d0"
+      },
+      "grupo": [
+        {
+          "id": "d4fa34e358de",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/se-reactivo-la-demanda-europea-y-el-biodiesel-argentino-vuelve-a-tomar-energia-exportadora/",
+          "canonical_url": "https://infocampo.com.ar/se-reactivo-la-demanda-europea-y-el-biodiesel-argentino-vuelve-a-tomar-energia-exportadora",
+          "titulo": "Se reactivó la demanda europea y el biodiésel argentino vuelve a tomar energía exportadora",
+          "titulo_norm": "se reactivo la demanda europea y el biodiesel argentino vuelve a tomar energia exportadora",
+          "descripcion": "En los últimos meses, el flujo de exportaciones de biodiésel mostró una aceleración, con importates compras por parte de las petroleras del viejo continente. De todos modos, las operaciones aún siguen lejos de los años récord que tuvo la actividad.",
+          "imagen_url": "",
+          "autor": "Javier Preciado Patiño",
+          "publicado": "2026-10-21T10:30-03:00",
+          "capturado": "2026-10-21T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6a49f9e06d5a93d0"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 70,
+        "commercial_score": 69,
+        "subtema": "mercados",
+        "tema": "biodiésel",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve la agroindustria exportadora aunque con menor volumen que en sus mejores años.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          68
+        ]
+      },
+      "cuando": "2026-10-21T10:40-03:00"
+    }
+  ],
+  "actualizado": "2026-10-21T10:41:51-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
