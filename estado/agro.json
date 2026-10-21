@@ -9849,6 +9849,52 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e18a04fae7db37c5": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "empresas",
+      "tema": "integración vertical",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente caso de diversificación y escala que interesa a productores y da pie a contenido de gestión.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d6dcf4bb95d9e296": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 67,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "exportación carne",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Gran impacto para la cadena ganadera y exportadora, relevante por los mercados internacionales y la cuota UE.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        68
+      ]
     }
   },
   "indice": {
@@ -10541,7 +10587,9 @@
       "https://lanacion.com.ar/economia/campo/vacunos-demanda-tranquila-y-nuevas-bajas-en-el-mercado-agroganadero-de-canuelas-nid21102026": "2026-10-21",
       "https://lanacion.com.ar/economia/campo/opinion-lo-que-no-se-discute-en-el-debate-por-los-biocombustibles-nid21102026": "2026-10-21",
       "https://lanacion.com.ar/economia/campo/financiamiento-sostenible-que-hacen-la-argentina-brasil-y-bolivia-para-impulsar-la-produccion-nid21102026": "2026-10-21",
-      "https://agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html": "2026-10-21"
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/248953-panel-de-maiz-como-potenciar-el-rendimiento-con-nuevas-tecnologias-manejo-nutricional-y-ventas.html": "2026-10-21",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html": "2026-10-21",
+      "https://agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11232,7 +11280,9 @@
       "vacunos demanda tranquila y nuevas bajas en el mercado agroganadero de canuelas": "2026-10-21",
       "opinion lo que no se discute en el debate por los biocombustibles": "2026-10-21",
       "financiamiento sostenible que hacen la argentina brasil y bolivia para impulsar la produccion agropecuaria": "2026-10-21",
-      "panel de maiz como potenciar el rendimiento con nuevas tecnologias manejo nutricional y ventas": "2026-10-21"
+      "panel de maiz como potenciar el rendimiento con nuevas tecnologias manejo nutricional y ventas": "2026-10-21",
+      "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias": "2026-10-21",
+      "un gran momento para la carne argentina en sial paris 2026": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11923,7 +11973,9 @@
       "2b21014ae60c36d5": "2026-10-21",
       "a8bee2e46f9eda1a": "2026-10-21",
       "e05741f1d1025229": "2026-10-21",
-      "bd28f58699cfd6bd": "2026-10-21"
+      "bd28f58699cfd6bd": "2026-10-21",
+      "e18a04fae7db37c5": "2026-10-21",
+      "d6dcf4bb95d9e296": "2026-10-21"
     }
   },
   "elegidas": [
@@ -15258,9 +15310,193 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_03ad69dee039_portada.jpg"
+    },
+    {
+      "id": "9a91d81e1698",
+      "cuando": "2026-10-21T16:40-03:00",
+      "titulo_original": "Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales",
+      "descripcion": "Especialistas del INTA Catamarca y Marcos Juárez combinaron imágenes obtenidas con un dron comercial y algoritmos de aprendizaje automático para identificar la presencia de malezas en alfalfa en activo crecimiento. La herramienta ofrece una alternativa accesible para evaluar lotes degradados y orien",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales/",
+      "titular": "Alfalfa: crean método con drones y CatBoost para detectar malezas",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 13,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 86,
+        "commercial_score": 90,
+        "subtema": "agtech",
+        "tema": "drones alfalfa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Aplica drones comerciales y machine learning a la alfalfa, directo para productores y asesores de la región pampeana.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f6cd546c-3376-4441-8e31-b1bc72c3ab71",
+          "slug": "alfalfa-desarrollan-metodo-con-drones-comerciales-y-catboost-58ff94",
+          "url": "https://www.diariolacampaña.com.ar/n/alfalfa-desarrollan-metodo-con-drones-comerciales-y-catboost-58ff94",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1581780013271966",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18103436729263591",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9a91d81e1698_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "68963bd1a12f",
+      "rep": {
+        "id": "68963bd1a12f",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
+        "titulo": "\"Los Cerini\": una empresa familiar que maneja 67.000 Has. y suma valor con Cerdos y Carncerías",
+        "titulo_norm": "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias",
+        "descripcion": "La familia Cerini es de Entre Ríos y gestiona una empresa con 67.000 hectáreas de agricultura, una granja de 2.200 madres porcinas y 15 carnicerías. La integración vertical y la diversificación, son sus estrategias para agregar valor y mantener rentabilidad en un contexto complejo. /Cómo están viendo el contextos país y de mercados hoy, y como planifican sus próximas inversiones?...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/TrQwjOK2EGI.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-10-21T16:37-03:00",
+        "capturado": "2026-10-21T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e18a04fae7db37c5"
+      },
+      "grupo": [
+        {
+          "id": "68963bd1a12f",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
+          "titulo": "\"Los Cerini\": una empresa familiar que maneja 67.000 Has. y suma valor con Cerdos y Carncerías",
+          "titulo_norm": "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias",
+          "descripcion": "La familia Cerini es de Entre Ríos y gestiona una empresa con 67.000 hectáreas de agricultura, una granja de 2.200 madres porcinas y 15 carnicerías. La integración vertical y la diversificación, son sus estrategias para agregar valor y mantener rentabilidad en un contexto complejo. /Cómo están viendo el contextos país y de mercados hoy, y como planifican sus próximas inversiones?...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/TrQwjOK2EGI.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-10-21T16:37-03:00",
+          "capturado": "2026-10-21T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e18a04fae7db37c5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "empresas",
+        "tema": "integración vertical",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente caso de diversificación y escala que interesa a productores y da pie a contenido de gestión.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T16:40-03:00"
+    },
+    {
+      "id": "20ea77a4f9f4",
+      "rep": {
+        "id": "20ea77a4f9f4",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html",
+        "titulo": "Un gran momento para la carne argentina en SIAL París 2026",
+        "titulo_norm": "un gran momento para la carne argentina en sial paris 2026",
+        "descripcion": "El IPCVA cerró una destacada participación en una de las ferias de alimentos más importantes del mundo, junto con 30 empresas exportadoras. El Pabellón Argentine Beef recibió a cientos de importadores y clientes internacionales, en un escenario de buenos valores comerciales y nuevas oportunidades para la carne argentina. La normativa europea sobre productos libres de deforestación, las restricciones a Brasil y la nueva cuota Unión Europea-Mercosur estuvieron en el centro de las negociaciones....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_248954_67504758.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-21T16:30-03:00",
+        "capturado": "2026-10-21T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d6dcf4bb95d9e296"
+      },
+      "grupo": [
+        {
+          "id": "20ea77a4f9f4",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/248954-un-gran-momento-para-la-carne-argentina-en-sial-paris-2026.html",
+          "titulo": "Un gran momento para la carne argentina en SIAL París 2026",
+          "titulo_norm": "un gran momento para la carne argentina en sial paris 2026",
+          "descripcion": "El IPCVA cerró una destacada participación en una de las ferias de alimentos más importantes del mundo, junto con 30 empresas exportadoras. El Pabellón Argentine Beef recibió a cientos de importadores y clientes internacionales, en un escenario de buenos valores comerciales y nuevas oportunidades para la carne argentina. La normativa europea sobre productos libres de deforestación, las restricciones a Brasil y la nueva cuota Unión Europea-Mercosur estuvieron en el centro de las negociaciones....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_248954_67504758.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-21T16:30-03:00",
+          "capturado": "2026-10-21T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d6dcf4bb95d9e296"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 67,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "exportación carne",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Gran impacto para la cadena ganadera y exportadora, relevante por los mercados internacionales y la cuota UE.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          68
+        ]
+      },
+      "cuando": "2026-10-21T16:40-03:00"
+    },
     {
       "id": "ac0ccfe3c37b",
       "rep": {
@@ -15585,69 +15821,6 @@
       "cuando": "2026-10-21T14:02-03:00"
     },
     {
-      "id": "9a91d81e1698",
-      "rep": {
-        "id": "9a91d81e1698",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales/",
-        "canonical_url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales",
-        "titulo": "Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales",
-        "titulo_norm": "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales",
-        "descripcion": "Especialistas del INTA Catamarca y Marcos Juárez combinaron imágenes obtenidas con un dron comercial y algoritmos de aprendizaje automático para identificar la presencia de malezas en alfalfa en activo crecimiento. La herramienta ofrece una alternativa accesible para evaluar lotes degradados y orientar decisiones de manejo. La entrada Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/alfalfa-drones-3.jpg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-10-21T13:43-03:00",
-        "capturado": "2026-10-21T14:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bcb20f4142a084a1"
-      },
-      "grupo": [
-        {
-          "id": "9a91d81e1698",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales/",
-          "canonical_url": "https://intainforma.inta.gob.ar/alfalfa-desarrollan-una-herramienta-para-detectar-malezas-con-drones-comerciales",
-          "titulo": "Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales",
-          "titulo_norm": "alfalfa desarrollan una herramienta para detectar malezas con drones comerciales",
-          "descripcion": "Especialistas del INTA Catamarca y Marcos Juárez combinaron imágenes obtenidas con un dron comercial y algoritmos de aprendizaje automático para identificar la presencia de malezas en alfalfa en activo crecimiento. La herramienta ofrece una alternativa accesible para evaluar lotes degradados y orientar decisiones de manejo. La entrada Alfalfa: desarrollan una herramienta para detectar malezas con drones comerciales se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/alfalfa-drones-3.jpg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-10-21T13:43-03:00",
-          "capturado": "2026-10-21T14:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bcb20f4142a084a1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 14,
-        "innovacion": 13,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 86,
-        "commercial_score": 90,
-        "subtema": "agtech",
-        "tema": "drones alfalfa",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Aplica drones comerciales y machine learning a la alfalfa, directo para productores y asesores de la región pampeana.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T14:02-03:00"
-    },
-    {
       "id": "d1b0a9e26717",
       "rep": {
         "id": "d1b0a9e26717",
@@ -15912,8 +16085,8 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T16:23:07-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T16:43:51-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
