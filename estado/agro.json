@@ -9195,6 +9195,48 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b1c1878af64c5758": {
+      "impacto_economico": 6,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 28,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a productores yerbateros de Misiones y Corrientes, con nula relevancia directa para la zona núcleo bonaerense.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "551e57c01c1a8a1c": {
+      "impacto_economico": 8,
+      "interes_productores": 5,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 6,
+      "ai_score": 43,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Importante para la cadena ganadera nacional y exportadores, aunque de interés moderado para el productor mixto promedio de la región pampeana.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -9849,7 +9891,14 @@
       "https://agrositio.com.ar/noticia/248944-un-edificio-sustentable-logra-generar-el-80-de-la-energia-que-necesita-para-funcionar.html": "2026-10-21",
       "https://bichosdecampo.com/producir-granos-en-argentina-ya-no-implica-pagar-insumos-mucho-mas-caros-la-brecha-de-precios-con-los-competidores-bajo-del-6-al-04-en-un-ano": "2026-10-21",
       "https://infocampo.com.ar/riesgo-pais-hoy-14-de-octubre-6": "2026-10-21",
-      "https://agrositio.com.ar/noticia/248945-cuando-hay-que-resolver-no-sesionan-cuando-hay-que-sacarle-fondos-al-campo-si.html": "2026-10-21"
+      "https://agrositio.com.ar/noticia/248945-cuando-hay-que-resolver-no-sesionan-cuando-hay-que-sacarle-fondos-al-campo-si.html": "2026-10-21",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-21-octubre-2026": "2026-10-21",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-21-octubre-2026": "2026-10-21",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-21-octubre-2026": "2026-10-21",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-21-octubre-2026": "2026-10-21",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-21-octubre-2026": "2026-10-21",
+      "https://bichosdecampo.com/las-contradicciones-del-nuevo-inym-ya-no-puede-intervenir-en-el-precio-que-cobran-los-productores-pero-ahora-financiara-viajes-y-alojamiento-a-los-exportadores": "2026-10-21",
+      "https://bichosdecampo.com/el-stand-argentino-fue-uno-de-los-mas-grandes-de-toda-la-exposicion-georges-breitschmitt-presidente-del-ipcva-hizo-su-balance-de-la-sial-de-paris-y-defendio-el-trabajo-para-cumplir-con-las-exig": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -10502,7 +10551,14 @@
       "un edificio sustentable logra generar el 80 de la energia que necesita para funcionar": "2026-10-21",
       "producir granos en argentina ya no implica pagar insumos mucho mas caros la brecha de precios con los competidores bajo del 6 al 0 4 en un ano": "2026-10-21",
       "riesgo pais hoy 21 de octubre de 2026": "2026-10-21",
-      "cuando hay que resolver no sesionan cuando hay que sacarle fondos al campo si": "2026-10-21"
+      "cuando hay que resolver no sesionan cuando hay que sacarle fondos al campo si": "2026-10-21",
+      "precio del maiz en rosario hoy 21 octubre 2026": "2026-10-21",
+      "precio del trigo en rosario hoy 21 octubre 2026": "2026-10-21",
+      "precio del girasol en rosario hoy 21 octubre 2026": "2026-10-21",
+      "precio de la soja en rosario hoy 21 octubre 2026": "2026-10-21",
+      "precio del sorgo en rosario hoy 21 octubre 2026": "2026-10-21",
+      "las contradicciones del nuevo inym ya no puede intervenir en el precio que cobran los productores pero ahora financiara viajes y alojamiento a los exportadores": "2026-10-21",
+      "el stand argentino fue uno de los mas grandes de toda la exposicion georges breitschmitt presidente del ipcva hizo su balance de la sial de paris y defendio el trabajo para cumplir con las exigencias de europa": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -11155,7 +11211,14 @@
       "79e2aa880851fb3d": "2026-10-21",
       "093f83c5d76195bf": "2026-10-21",
       "027cdce2455ee557": "2026-10-21",
-      "6fb61b96110d0212": "2026-10-21"
+      "6fb61b96110d0212": "2026-10-21",
+      "c56ea252a4fd9b53": "2026-10-21",
+      "cd5dc27ee8ab8a2d": "2026-10-21",
+      "1768074a4bfe1898": "2026-10-21",
+      "12e0a20edfa30dbe": "2026-10-21",
+      "1838d46fafee1845": "2026-10-21",
+      "b1c1878af64c5758": "2026-10-21",
+      "551e57c01c1a8a1c": "2026-10-21"
     }
   },
   "elegidas": [
@@ -14165,7 +14228,7 @@
       "cuando": "2026-10-21T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-21T11:01:41-03:00",
+  "actualizado": "2026-10-21T11:21:56-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
