@@ -10129,6 +10129,48 @@
         69,
         68
       ]
+    },
+    "950b525beda580ff": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 78,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto macroeconómico y alta relevancia para el productor de la zona núcleo al repasar el cambio de dinámica exportadora.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2ce5d2b7c042b817": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 76,
+      "commercial_score": 78,
+      "subtema": "agro",
+      "tema": "canola",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente propuesta de cultivo alternativo con potencial en la región pampeana y gran atractivo comercial para insumos.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -10834,7 +10876,9 @@
       "https://bichosdecampo.com/la-cooperativa-yerbatera-pipore-presento-en-paris-una-gaseosa-de-yerba-mate-en-lata-para-llegar-a-paises-donde-no-es-habitual-cebarse-unos-amargos": "2026-10-21",
       "https://lanacion.com.ar/economia/campo/oro-verde-invertiran-us195-millones-en-san-juan-para-ampliar-la-produccion-de-alimentos-y-pistachos-nid21102026": "2026-10-21",
       "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026": "2026-10-21",
-      "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html": "2026-10-21"
+      "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html": "2026-10-21",
+      "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11538,7 +11582,9 @@
       "la cooperativa yerbatera pipore presento en paris una gaseosa de yerba mate en lata para llegar a paises donde no es habitual cebarse unos amargos": "2026-10-21",
       "oro verde invertiran us 19 5 millones en san juan para ampliar la produccion de alimentos y pistachos": "2026-10-21",
       "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas": "2026-10-21",
-      "las exportaciones agroindustriales crecieron 13 2": "2026-10-21"
+      "las exportaciones agroindustriales crecieron 13 2": "2026-10-21",
+      "rebelde la agroindustria argentina incremento sus exportaciones pero la soja dejo de ser el motor de ese crecimiento": "2026-10-21",
+      "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12242,7 +12288,9 @@
       "232d4d35f20fd641": "2026-10-21",
       "ec118bee54736838": "2026-10-21",
       "307ce0ab26976076": "2026-10-21",
-      "f52e46b81c54eace": "2026-10-21"
+      "f52e46b81c54eace": "2026-10-21",
+      "950b525beda580ff": "2026-10-21",
+      "2ce5d2b7c042b817": "2026-10-21"
     }
   },
   "elegidas": [
@@ -15970,9 +16018,193 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_04b8c19f5225_portada.jpg"
+    },
+    {
+      "id": "7410d79865cf",
+      "cuando": "2026-10-21T19:22-03:00",
+      "titulo_original": "El ternero pisó el freno y va a contramano de su tendencia histórica: perdió más de 7% en tres meses",
+      "descripcion": "El precio de la invernada cayó por tercer mes consecutivo y volvió a ubicarse por debajo de los $5.800 por kilo. Esta tendencia va a contramano de lo normal, que es una suba para esta época del año. De todos modos, sigue con un valor por encima del histórico.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-ternero-piso-el-freno-y-va-a-contramano-de-su-tendencia-historica-perdio-mas-de-7-en-tres-meses/",
+      "titular": "El ternero cayó más de 7% en tres meses consecutivos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 69,
+        "subtema": "ganaderia",
+        "tema": "ternero",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directo en la invernada y la recría de la zona núcleo, con datos de precios clave para el ganadero.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T19:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2587ea22-452e-467d-9225-20b6859424e3",
+          "slug": "el-ternero-cayo-mas-de-7-en-tres-meses-y-rompe-su-tendencia-27b2e6",
+          "url": "https://www.diariolacampaña.com.ar/n/el-ternero-cayo-mas-de-7-en-tres-meses-y-rompe-su-tendencia-27b2e6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "943402655194021",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18663641026044470",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7410d79865cf_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "333a81b72928",
+      "rep": {
+        "id": "333a81b72928",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento/",
+        "canonical_url": "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento",
+        "titulo": "Rebelde: La agroindustria argentina incrementó sus exportaciones, pero la soja dejó de ser el motor de ese crecimiento",
+        "titulo_norm": "rebelde la agroindustria argentina incremento sus exportaciones pero la soja dejo de ser el motor de ese crecimiento",
+        "descripcion": "En el sector exportador argentino se está dando un fenómeno extraño. Al menos que hace tiempo no se veía: el complejo soja ya no es el motor del crecimiento de los embarques al exterior. Las exportaciones agroindustriales argentinas crecieron 13,2% entre enero y septiembre, pero el principal complejo exportador del país no acompañó esa expansión. […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-21T19:12-03:00",
+        "capturado": "2026-10-21T19:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "950b525beda580ff"
+      },
+      "grupo": [
+        {
+          "id": "333a81b72928",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento/",
+          "canonical_url": "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento",
+          "titulo": "Rebelde: La agroindustria argentina incrementó sus exportaciones, pero la soja dejó de ser el motor de ese crecimiento",
+          "titulo_norm": "rebelde la agroindustria argentina incremento sus exportaciones pero la soja dejo de ser el motor de ese crecimiento",
+          "descripcion": "En el sector exportador argentino se está dando un fenómeno extraño. Al menos que hace tiempo no se veía: el complejo soja ya no es el motor del crecimiento de los embarques al exterior. Las exportaciones agroindustriales argentinas crecieron 13,2% entre enero y septiembre, pero el principal complejo exportador del país no acompañó esa expansión. […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-21T19:12-03:00",
+          "capturado": "2026-10-21T19:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "950b525beda580ff"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto macroeconómico y alta relevancia para el productor de la zona núcleo al repasar el cambio de dinámica exportadora.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T19:22-03:00"
+    },
+    {
+      "id": "5c689699a28a",
+      "rep": {
+        "id": "5c689699a28a",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026",
+        "titulo": "Hay 40.000 hectáreas: el “cultivo estratégico” conectado con el mundo que promete un boom como combustible",
+        "titulo_norm": "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible",
+        "descripcion": "En un encuentro realizado en Rosario, especialistas y referentes de la cadena analizaron las perspectivas de la canola y las claves de manejo; se presentaron experiencias con mejoras en los rendimientos de la soja y el trigo posteriores",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/4ADU6ISZQVBF5HIOO5AZD2FPAA.jpeg?auth=c022618555a84e4c3aef98645e79f46d9b5ffef7cf79dcf9d3909de57264e5e3&smart=true",
+        "autor": "",
+        "publicado": "2026-10-21T19:13-03:00",
+        "capturado": "2026-10-21T19:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2ce5d2b7c042b817"
+      },
+      "grupo": [
+        {
+          "id": "5c689699a28a",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026",
+          "titulo": "Hay 40.000 hectáreas: el “cultivo estratégico” conectado con el mundo que promete un boom como combustible",
+          "titulo_norm": "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible",
+          "descripcion": "En un encuentro realizado en Rosario, especialistas y referentes de la cadena analizaron las perspectivas de la canola y las claves de manejo; se presentaron experiencias con mejoras en los rendimientos de la soja y el trigo posteriores",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/4ADU6ISZQVBF5HIOO5AZD2FPAA.jpeg?auth=c022618555a84e4c3aef98645e79f46d9b5ffef7cf79dcf9d3909de57264e5e3&smart=true",
+          "autor": "",
+          "publicado": "2026-10-21T19:13-03:00",
+          "capturado": "2026-10-21T19:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2ce5d2b7c042b817"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 9,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 76,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "canola",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente propuesta de cultivo alternativo con potencial en la región pampeana y gran atractivo comercial para insumos.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T19:22-03:00"
+    },
     {
       "id": "d809adddbe67",
       "rep": {
@@ -16626,77 +16858,10 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-21T13:20-03:00"
-    },
-    {
-      "id": "7410d79865cf",
-      "rep": {
-        "id": "7410d79865cf",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-ternero-piso-el-freno-y-va-a-contramano-de-su-tendencia-historica-perdio-mas-de-7-en-tres-meses/",
-        "canonical_url": "https://infocampo.com.ar/el-ternero-piso-el-freno-y-va-a-contramano-de-su-tendencia-historica-perdio-mas-de-7-en-tres-meses",
-        "titulo": "El ternero pisó el freno y va a contramano de su tendencia histórica: perdió más de 7% en tres meses",
-        "titulo_norm": "el ternero piso el freno y va a contramano de su tendencia historica perdio mas de 7 en tres meses",
-        "descripcion": "El precio de la invernada cayó por tercer mes consecutivo y volvió a ubicarse por debajo de los $5.800 por kilo. Esta tendencia va a contramano de lo normal, que es una suba para esta época del año. De todos modos, sigue con un valor por encima del histórico.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-3.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-21T12:21-03:00",
-        "capturado": "2026-10-21T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1a5ab85c5350a091"
-      },
-      "grupo": [
-        {
-          "id": "7410d79865cf",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-ternero-piso-el-freno-y-va-a-contramano-de-su-tendencia-historica-perdio-mas-de-7-en-tres-meses/",
-          "canonical_url": "https://infocampo.com.ar/el-ternero-piso-el-freno-y-va-a-contramano-de-su-tendencia-historica-perdio-mas-de-7-en-tres-meses",
-          "titulo": "El ternero pisó el freno y va a contramano de su tendencia histórica: perdió más de 7% en tres meses",
-          "titulo_norm": "el ternero piso el freno y va a contramano de su tendencia historica perdio mas de 7 en tres meses",
-          "descripcion": "El precio de la invernada cayó por tercer mes consecutivo y volvió a ubicarse por debajo de los $5.800 por kilo. Esta tendencia va a contramano de lo normal, que es una suba para esta época del año. De todos modos, sigue con un valor por encima del histórico.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-3.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-21T12:21-03:00",
-          "capturado": "2026-10-21T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1a5ab85c5350a091"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 69,
-        "commercial_score": 69,
-        "subtema": "ganaderia",
-        "tema": "ternero",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta directo en la invernada y la recría de la zona núcleo, con datos de precios clave para el ganadero.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          72
-        ]
-      },
-      "cuando": "2026-10-21T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-21T19:05:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T19:25:16-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
