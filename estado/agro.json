@@ -15912,6 +15912,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_28b97dccb7a4_portada.jpg"
+    },
+    {
+      "id": "04b8c19f5225",
+      "cuando": "2026-10-21T19:02-03:00",
+      "titulo_original": "Las exportaciones agroindustriales crecieron 13,2%",
+      "descripcion": "El sector acumuló ventas por u$s 42.304 millones en los primeros nueve meses de 2026. En septiembre, los embarques alcanzaron los u$s 5.500 millones",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
+      "titular": "Las exportaciones agroindustriales crecieron 13,2% en nueve meses",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 69,
+        "commercial_score": 74,
+        "subtema": "agro",
+        "tema": "exportaciones agroindustriales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra el volumen macroeconómico del sector, muy relevante para entender el ingreso de divisas y el humor de la cadena.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9af81573-e446-4e04-9c39-e96c3042e7b2",
+          "slug": "las-exportaciones-agroindustriales-sumaron-u-s-42-304-millones-14cddf",
+          "url": "https://www.diariolacampaña.com.ar/n/las-exportaciones-agroindustriales-sumaron-u-s-42-304-millones-14cddf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1834134714293478",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18647200543027918",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_04b8c19f5225_portada.jpg"
     }
   ],
   "pendientes": [
@@ -15975,73 +16033,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T18:40-03:00"
-    },
-    {
-      "id": "04b8c19f5225",
-      "rep": {
-        "id": "04b8c19f5225",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
-        "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
-        "titulo": "Las exportaciones agroindustriales crecieron 13,2%",
-        "titulo_norm": "las exportaciones agroindustriales crecieron 13 2",
-        "descripcion": "El sector acumuló ventas por u$s 42.304 millones en los primeros nueve meses de 2026. En septiembre, los embarques alcanzaron los u$s 5.500 millones",
-        "imagen_url": "https://media.lacapital.com.ar/p/b3b3fc801d9155880bf69e10a07421e3/adjuntos/305/imagenes/100/200/0100200292/barco-puerto.jpg",
-        "autor": "",
-        "publicado": "2026-10-21T18:30-03:00",
-        "capturado": "2026-10-21T18:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f52e46b81c54eace"
-      },
-      "grupo": [
-        {
-          "id": "04b8c19f5225",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
-          "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html",
-          "titulo": "Las exportaciones agroindustriales crecieron 13,2%",
-          "titulo_norm": "las exportaciones agroindustriales crecieron 13 2",
-          "descripcion": "El sector acumuló ventas por u$s 42.304 millones en los primeros nueve meses de 2026. En septiembre, los embarques alcanzaron los u$s 5.500 millones",
-          "imagen_url": "https://media.lacapital.com.ar/p/b3b3fc801d9155880bf69e10a07421e3/adjuntos/305/imagenes/100/200/0100200292/barco-puerto.jpg",
-          "autor": "",
-          "publicado": "2026-10-21T18:30-03:00",
-          "capturado": "2026-10-21T18:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f52e46b81c54eace"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 11,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 69,
-        "commercial_score": 74,
-        "subtema": "agro",
-        "tema": "exportaciones agroindustriales",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Muestra el volumen macroeconómico del sector, muy relevante para entender el ingreso de divisas y el humor de la cadena.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          68
-        ]
       },
       "cuando": "2026-10-21T18:40-03:00"
     },
@@ -16704,8 +16695,8 @@
       "cuando": "2026-10-21T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-21T19:02:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T19:05:17-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
