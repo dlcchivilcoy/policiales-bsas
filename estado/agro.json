@@ -16295,6 +16295,96 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d809adddbe67_portada.jpg"
+    },
+    {
+      "id": "e8774da12297",
+      "cuando": "2026-10-21T21:40-03:00",
+      "titulo_original": "Lluvias de variada intensidad sobre el norte y el oeste del área agrícola, con fuertes tormentas sobre el norte del litoral fluvial",
+      "descripcion": "A dicho pronostico de la Bolsa de Cereales de Buenos Aires se le suma registros escasos sobre el centro de su extensión, acompañadas por una moderada oscilación térmica....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html",
+      "titular": "Lluvias y tormentas de hasta 100 mm en el norte y oeste",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de lluvias es clave para la campaña y moviliza decisiones inmediatas de los productores.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T21:40:00-03:00"
+    },
+    {
+      "id": "68963bd1a12f",
+      "cuando": "2026-10-21T21:40-03:00",
+      "titulo_original": "\"Los Cerini\": una empresa familiar que maneja 67.000 Has. y suma valor con Cerdos y Carncerías",
+      "descripcion": "La familia Cerini es de Entre Ríos y gestiona una empresa con 67.000 hectáreas de agricultura, una granja de 2.200 madres porcinas y 15 carnicerías. La integración vertical y la diversificación, son sus estrategias para agregar valor y mantener rentabilidad en un contexto complejo. /Cómo están viend",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
+      "titular": "Empresa entrerriana gestiona 67.000 hectáreas, cerdos y carnicerías propias",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "empresas",
+        "tema": "integración vertical",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente caso de diversificación y escala que interesa a productores y da pie a contenido de gestión.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T21:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6257a2ed-3c4d-411b-afba-ccdace0f277e",
+          "slug": "el-modelo-de-el-hinojo-67-000-hectareas-cerdos-y-carnicerias-69b5cc",
+          "url": "https://www.diariolacampaña.com.ar/n/el-modelo-de-el-hinojo-67-000-hectareas-cerdos-y-carnicerias-69b5cc",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1433331298259771",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18103361807262460",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_68963bd1a12f_portada.jpg"
     }
   ],
   "pendientes": [
@@ -16756,69 +16846,6 @@
       "cuando": "2026-10-21T17:20-03:00"
     },
     {
-      "id": "68963bd1a12f",
-      "rep": {
-        "id": "68963bd1a12f",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
-        "titulo": "\"Los Cerini\": una empresa familiar que maneja 67.000 Has. y suma valor con Cerdos y Carncerías",
-        "titulo_norm": "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias",
-        "descripcion": "La familia Cerini es de Entre Ríos y gestiona una empresa con 67.000 hectáreas de agricultura, una granja de 2.200 madres porcinas y 15 carnicerías. La integración vertical y la diversificación, son sus estrategias para agregar valor y mantener rentabilidad en un contexto complejo. /Cómo están viendo el contextos país y de mercados hoy, y como planifican sus próximas inversiones?...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/TrQwjOK2EGI.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-10-21T16:37-03:00",
-        "capturado": "2026-10-21T16:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e18a04fae7db37c5"
-      },
-      "grupo": [
-        {
-          "id": "68963bd1a12f",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/248955-los-cerini-una-empresa-familiar-que-maneja-67000-has-y-suma-valor-con-cerdos-y-carncerias.html",
-          "titulo": "\"Los Cerini\": una empresa familiar que maneja 67.000 Has. y suma valor con Cerdos y Carncerías",
-          "titulo_norm": "los cerini una empresa familiar que maneja 67 000 has y suma valor con cerdos y carncerias",
-          "descripcion": "La familia Cerini es de Entre Ríos y gestiona una empresa con 67.000 hectáreas de agricultura, una granja de 2.200 madres porcinas y 15 carnicerías. La integración vertical y la diversificación, son sus estrategias para agregar valor y mantener rentabilidad en un contexto complejo. /Cómo están viendo el contextos país y de mercados hoy, y como planifican sus próximas inversiones?...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/TrQwjOK2EGI.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-10-21T16:37-03:00",
-          "capturado": "2026-10-21T16:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e18a04fae7db37c5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 7,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 74,
-        "commercial_score": 74,
-        "subtema": "empresas",
-        "tema": "integración vertical",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente caso de diversificación y escala que interesa a productores y da pie a contenido de gestión.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T16:40-03:00"
-    },
-    {
       "id": "20ea77a4f9f4",
       "rep": {
         "id": "20ea77a4f9f4",
@@ -17148,73 +17175,10 @@
         ]
       },
       "cuando": "2026-10-21T13:40-03:00"
-    },
-    {
-      "id": "e8774da12297",
-      "rep": {
-        "id": "e8774da12297",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html",
-        "titulo": "Lluvias de variada intensidad sobre el norte y el oeste del área agrícola, con fuertes tormentas sobre el norte del litoral fluvial",
-        "titulo_norm": "lluvias de variada intensidad sobre el norte y el oeste del area agricola con fuertes tormentas sobre el norte del litoral fluvial",
-        "descripcion": "A dicho pronostico de la Bolsa de Cereales de Buenos Aires se le suma registros escasos sobre el centro de su extensión, acompañadas por una moderada oscilación térmica....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248949_36783809.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-21T13:10-03:00",
-        "capturado": "2026-10-21T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d4a7f87c5eb594c7"
-      },
-      "grupo": [
-        {
-          "id": "e8774da12297",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248949-lluvias-de-variada-intensidad-sobre-el-norte-y-el-oeste-del-area-agricola-con-fuertes-tormentas-sobre-el-norte-del-litoral-fluvial.html",
-          "titulo": "Lluvias de variada intensidad sobre el norte y el oeste del área agrícola, con fuertes tormentas sobre el norte del litoral fluvial",
-          "titulo_norm": "lluvias de variada intensidad sobre el norte y el oeste del area agricola con fuertes tormentas sobre el norte del litoral fluvial",
-          "descripcion": "A dicho pronostico de la Bolsa de Cereales de Buenos Aires se le suma registros escasos sobre el centro de su extensión, acompañadas por una moderada oscilación térmica....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248949_36783809.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-21T13:10-03:00",
-          "capturado": "2026-10-21T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d4a7f87c5eb594c7"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 72,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "lluvias",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El pronóstico de lluvias es clave para la campaña y moviliza decisiones inmediatas de los productores.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T13:20-03:00"
     }
   ],
-  "actualizado": "2026-10-21T21:23:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T21:44:00-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
