@@ -11331,6 +11331,73 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "30d8288fc802520b": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 80,
+      "commercial_score": 80,
+      "subtema": "ganaderia",
+      "tema": "suplementacion animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran interés para la ganadería de la región núcleo con alto potencial comercial para nutrición animal.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "db191cc01728aa89": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 80,
+      "commercial_score": 82,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la comercialización y estrategia de venta de los productores trigueros de la zona.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bc957b47a1f01642": {
+      "impacto_economico": 15,
+      "interes_productores": 9,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 61,
+      "subtema": "empresas",
+      "tema": "cresud",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Resultado financiero de un gran jugador corporativo, de menor utilidad directa para el productor mediano.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        62
+      ]
     }
   },
   "indice": {
@@ -12124,7 +12191,11 @@
       "https://croplife.com/crop-inputs/seed-biotech/put-test-plot-data-to-work-in-your-seed-strategy": "2026-10-22",
       "https://croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds": "2026-10-22",
       "https://infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro": "2026-10-22",
-      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/octubre-raro-para-el-trigo-pesar": "2026-10-22"
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/octubre-raro-para-el-trigo-pesar": "2026-10-22",
+      "https://infocampo.com.ar/enojo-ganadero-acusan-a-frigorificos-de-aplicar-descuentos-a-la-hacienda-no-inscripta-en-el-visec": "2026-10-22",
+      "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html": "2026-10-22",
+      "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12916,7 +12987,11 @@
       "put test plot data to work in your seed strategy": "2026-10-22",
       "pioneer adds victrato seed treatment to help farmers get ahead of scn and sds": "2026-10-22",
       "por primera vez argentina exporto por mas de u s 10 000 millones en un mes cuanto aporto el agro": "2026-10-22",
-      "octubre raro para el trigo a pesar de la menor radiacion el frio y las heladas el rinde estimado es de 43 qq ha para la region nucleo": "2026-10-22"
+      "octubre raro para el trigo a pesar de la menor radiacion el frio y las heladas el rinde estimado es de 43 qq ha para la region nucleo": "2026-10-22",
+      "enojo ganadero acusan a frigorificos de aplicar descuentos a la hacienda no inscripta en el visec": "2026-10-22",
+      "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia": "2026-10-22",
+      "gran noticia para productores de trigo con paciencia molinos brasilenos tendran que importar un volumen record y rezan para que la argentina logre obtener buena calidad": "2026-10-22",
+      "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13708,7 +13783,11 @@
       "9c4980868385af2f": "2026-10-22",
       "a4fe502226c1fe55": "2026-10-22",
       "aa6b9fa3ae0c1bbb": "2026-10-22",
-      "73a149306afd4ea4": "2026-10-22"
+      "73a149306afd4ea4": "2026-10-22",
+      "b8fb21a03415dd54": "2026-10-22",
+      "30d8288fc802520b": "2026-10-22",
+      "db191cc01728aa89": "2026-10-22",
+      "bc957b47a1f01642": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18769,9 +18848,263 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_03a2199f6859_portada.jpg"
+    },
+    {
+      "id": "78e667782016",
+      "cuando": "2026-10-22T18:00-03:00",
+      "titulo_original": "La ONU advierte que El Niño podría alcanzar una intensidad “sin precedentes” y alerta por sus efectos sobre el agro",
+      "descripcion": "El próximo episodio de El Niño podría alcanzar una intensidad excepcional y alterar los patrones de lluvias y temperaturas en distintas regiones del mundo. La advertencia fue formulada por la Organización Meteorológica Mundial (OMM), que anticipó que el fenómeno alcanzaría su punto máximo hacia dici",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro/",
+      "titular": "Advierten sobre un Súper Niño sin precedentes y fuerte impacto agrícola",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 9,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Una alerta global de la OMM sobre un fenómeno extremo de El Niño afecta de lleno las decisiones productivas y planificación de campaña en la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "jnWA5ymg6Cw",
+          "url": "https://youtube.com/shorts/jnWA5ymg6Cw",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "584a7334-22a8-468f-a0ec-ad54d5806a49",
+          "slug": "alerta-climatica-global-advierten-un-super-nino-historico-con-2f513c",
+          "url": "https://www.diariolacampaña.com.ar/n/alerta-climatica-global-advierten-un-super-nino-historico-con-2f513c",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2384890802315696",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18104849999526893",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_78e667782016_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "4338b8df5fea",
+      "rep": {
+        "id": "4338b8df5fea",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
+        "titulo": "Alimentos balanceados y suplementación estratégica en la recría y en aumento del peso de faena en la ganadería",
+        "titulo_norm": "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia",
+        "descripcion": "El rol de los alimentos balanceados en los planteos ganaderos y lecheros. Una charla con el Med. Vet. Emanuel Gatti, Gte. de la Cooperativa Guillermo Lehmann, que nos explica en el Congreso de Nutrición Animal, cómo la tecnología en alimentación y la suplementación estratégica están ayudando a productores a mejorar kilos y eficiencia en la ganadería argentina...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/_d7QoOcJ8FY.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-10-22T17:34-03:00",
+        "capturado": "2026-10-22T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "30d8288fc802520b"
+      },
+      "grupo": [
+        {
+          "id": "4338b8df5fea",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
+          "titulo": "Alimentos balanceados y suplementación estratégica en la recría y en aumento del peso de faena en la ganadería",
+          "titulo_norm": "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia",
+          "descripcion": "El rol de los alimentos balanceados en los planteos ganaderos y lecheros. Una charla con el Med. Vet. Emanuel Gatti, Gte. de la Cooperativa Guillermo Lehmann, que nos explica en el Congreso de Nutrición Animal, cómo la tecnología en alimentación y la suplementación estratégica están ayudando a productores a mejorar kilos y eficiencia en la ganadería argentina...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/_d7QoOcJ8FY.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-10-22T17:34-03:00",
+          "capturado": "2026-10-22T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "30d8288fc802520b"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 80,
+        "commercial_score": 80,
+        "subtema": "ganaderia",
+        "tema": "suplementacion animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran interés para la ganadería de la región núcleo con alto potencial comercial para nutrición animal.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T18:00-03:00"
+    },
+    {
+      "id": "f0024451f56f",
+      "rep": {
+        "id": "f0024451f56f",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad/",
+        "canonical_url": "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad",
+        "titulo": "Gran noticia para productores de trigo con paciencia: Molinos brasileños tendrán que importar un volumen récord y rezan para que la Argentina logre obtener buena calidad",
+        "titulo_norm": "gran noticia para productores de trigo con paciencia molinos brasilenos tendran que importar un volumen record y rezan para que la argentina logre obtener buena calidad",
+        "descripcion": "Aquellos productores que logren obtener partidas de trigo de buena calidad panadera tienen por delante un panorama comercial muy auspicioso si tienen paciencia suficiente para saber interpretar los “tiempos” del mercado. Este jueves, en el marco del Congreso de Abritrigo 2026, la entidad que agrupa a los principales molinos harineros de Brasil, el presidente de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cepea-1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-22T17:54-03:00",
+        "capturado": "2026-10-22T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "db191cc01728aa89"
+      },
+      "grupo": [
+        {
+          "id": "f0024451f56f",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad/",
+          "canonical_url": "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad",
+          "titulo": "Gran noticia para productores de trigo con paciencia: Molinos brasileños tendrán que importar un volumen récord y rezan para que la Argentina logre obtener buena calidad",
+          "titulo_norm": "gran noticia para productores de trigo con paciencia molinos brasilenos tendran que importar un volumen record y rezan para que la argentina logre obtener buena calidad",
+          "descripcion": "Aquellos productores que logren obtener partidas de trigo de buena calidad panadera tienen por delante un panorama comercial muy auspicioso si tienen paciencia suficiente para saber interpretar los “tiempos” del mercado. Este jueves, en el marco del Congreso de Abritrigo 2026, la entidad que agrupa a los principales molinos harineros de Brasil, el presidente de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cepea-1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-22T17:54-03:00",
+          "capturado": "2026-10-22T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "db191cc01728aa89"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 80,
+        "commercial_score": 82,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la comercialización y estrategia de venta de los productores trigueros de la zona.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T18:00-03:00"
+    },
+    {
+      "id": "3246f34674b5",
+      "rep": {
+        "id": "3246f34674b5",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026",
+        "titulo": "El gigante Cresud produjo más y mejoró ingresos, pero el negocio agropecuario tuvo una pérdida operativa de $15.441 millones",
+        "titulo_norm": "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones",
+        "descripcion": "Cresud, el brazo agropecuario del grupo empresario vinculado con IRSA, aumentó un 32% su producción de granos y otros cultivos, pero pasó de una ganancia operativa de $64.885 millones a una pérdida de $15.441 millones en su negocio agropecuario; los mayores costos y los menores resultados por la venta de campos afectaron su balance",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/OUADNP4Z3ZHPTKEOXIGSQOEAPU.jpg?auth=4d6b88b5c3bfdcbd58c9978161506d8f2c9d71684db5a0ba4e1517fcf4ed8955&smart=true",
+        "autor": "",
+        "publicado": "2026-10-22T17:33-03:00",
+        "capturado": "2026-10-22T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "bc957b47a1f01642"
+      },
+      "grupo": [
+        {
+          "id": "3246f34674b5",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026",
+          "titulo": "El gigante Cresud produjo más y mejoró ingresos, pero el negocio agropecuario tuvo una pérdida operativa de $15.441 millones",
+          "titulo_norm": "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones",
+          "descripcion": "Cresud, el brazo agropecuario del grupo empresario vinculado con IRSA, aumentó un 32% su producción de granos y otros cultivos, pero pasó de una ganancia operativa de $64.885 millones a una pérdida de $15.441 millones en su negocio agropecuario; los mayores costos y los menores resultados por la venta de campos afectaron su balance",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/OUADNP4Z3ZHPTKEOXIGSQOEAPU.jpg?auth=4d6b88b5c3bfdcbd58c9978161506d8f2c9d71684db5a0ba4e1517fcf4ed8955&smart=true",
+          "autor": "",
+          "publicado": "2026-10-22T17:33-03:00",
+          "capturado": "2026-10-22T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "bc957b47a1f01642"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 9,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 61,
+        "commercial_score": 61,
+        "subtema": "empresas",
+        "tema": "cresud",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Resultado financiero de un gran jugador corporativo, de menor utilidad directa para el productor mediano.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          62
+        ]
+      },
+      "cuando": "2026-10-22T18:00-03:00"
+    },
     {
       "id": "2bc281870fbc",
       "rep": {
@@ -18968,69 +19301,6 @@
         ]
       },
       "cuando": "2026-10-22T16:40-03:00"
-    },
-    {
-      "id": "78e667782016",
-      "rep": {
-        "id": "78e667782016",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro/",
-        "canonical_url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro",
-        "titulo": "La ONU advierte que El Niño podría alcanzar una intensidad “sin precedentes” y alerta por sus efectos sobre el agro",
-        "titulo_norm": "la onu advierte que el nino podria alcanzar una intensidad sin precedentes y alerta por sus efectos sobre el agro",
-        "descripcion": "El próximo episodio de El Niño podría alcanzar una intensidad excepcional y alterar los patrones de lluvias y temperaturas en distintas regiones del mundo. La advertencia fue formulada por la Organización Meteorológica Mundial (OMM), que anticipó que el fenómeno alcanzaría su punto máximo hacia diciembre de 2026, aunque sus efectos podrían prolongarse durante los meses […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/3-WMO-SG_Press-Conference-ElNino_21-10-26.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-22T16:05-03:00",
-        "capturado": "2026-10-22T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "588b36b17edbf4af"
-      },
-      "grupo": [
-        {
-          "id": "78e667782016",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro/",
-          "canonical_url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro",
-          "titulo": "La ONU advierte que El Niño podría alcanzar una intensidad “sin precedentes” y alerta por sus efectos sobre el agro",
-          "titulo_norm": "la onu advierte que el nino podria alcanzar una intensidad sin precedentes y alerta por sus efectos sobre el agro",
-          "descripcion": "El próximo episodio de El Niño podría alcanzar una intensidad excepcional y alterar los patrones de lluvias y temperaturas en distintas regiones del mundo. La advertencia fue formulada por la Organización Meteorológica Mundial (OMM), que anticipó que el fenómeno alcanzaría su punto máximo hacia diciembre de 2026, aunque sus efectos podrían prolongarse durante los meses […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/3-WMO-SG_Press-Conference-ElNino_21-10-26.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-22T16:05-03:00",
-          "capturado": "2026-10-22T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "588b36b17edbf4af"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 9,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 73,
-        "commercial_score": 80,
-        "subtema": "agro",
-        "tema": "el niño",
-        "ambito": "internacional",
-        "sensible": false,
-        "explicacion": "Una alerta global de la OMM sobre un fenómeno extremo de El Niño afecta de lleno las decisiones productivas y planificación de campaña en la región.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T16:20-03:00"
     },
     {
       "id": "043c14db8921",
@@ -19646,73 +19916,6 @@
       "cuando": "2026-10-22T07:03-03:00"
     },
     {
-      "id": "169bc1580d34",
-      "rep": {
-        "id": "169bc1580d34",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro/",
-        "canonical_url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro",
-        "titulo": "Fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre EE.UU. y Rusia que permita terminar con el “apagón logístico” del mar Negro",
-        "titulo_norm": "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro",
-        "descripcion": "Los precios de los contratos de trigo y de aceite de soja del CME Group (“Chicago”) registraron este miércoles caídas fuertes en línea con la expectativa de un acuerdo entre Rusia y EE.UU. que destrabe el “apagón logístico” vigente en el mar Negro. Este miércoles el presidente ruso, Vladímir Putin, se reunió durante casi tres […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/precioscme.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-21T19:30-03:00",
-        "capturado": "2026-10-21T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6ff1ce8b5f653c6e"
-      },
-      "grupo": [
-        {
-          "id": "169bc1580d34",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro/",
-          "canonical_url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro",
-          "titulo": "Fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre EE.UU. y Rusia que permita terminar con el “apagón logístico” del mar Negro",
-          "titulo_norm": "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro",
-          "descripcion": "Los precios de los contratos de trigo y de aceite de soja del CME Group (“Chicago”) registraron este miércoles caídas fuertes en línea con la expectativa de un acuerdo entre Rusia y EE.UU. que destrabe el “apagón logístico” vigente en el mar Negro. Este miércoles el presidente ruso, Vladímir Putin, se reunió durante casi tres […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/precioscme.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-21T19:30-03:00",
-          "capturado": "2026-10-21T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6ff1ce8b5f653c6e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 0,
-        "cercania_argentina": 8,
-        "cercania_pba": 7,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 62,
-        "commercial_score": 66,
-        "subtema": "mercados",
-        "tema": "trigo y aceite de soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en la formación de precios internacionales y afecta la rentabilidad local de trigo y soja.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          66
-        ]
-      },
-      "cuando": "2026-10-21T21:00-03:00"
-    },
-    {
       "id": "af9c1a422406",
       "rep": {
         "id": "af9c1a422406",
@@ -20044,8 +20247,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T17:23:24-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T18:03:49-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
