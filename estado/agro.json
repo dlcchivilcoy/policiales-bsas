@@ -11398,6 +11398,48 @@
         60,
         62
       ]
+    },
+    "ba9ab662197e23f3": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 38,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "inta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una entrevista institucional y reflexiva sobre política agropecuaria sin impacto productivo directo ni urgente.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "10c6dfce396eb531": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "granizo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta de lleno a la zona núcleo con daños severos en cultivos y hacienda, generando alta preocupación.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12195,7 +12237,9 @@
       "https://infocampo.com.ar/enojo-ganadero-acusan-a-frigorificos-de-aplicar-descuentos-a-la-hacienda-no-inscripta-en-el-visec": "2026-10-22",
       "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html": "2026-10-22",
       "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad": "2026-10-22",
-      "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026": "2026-10-22"
+      "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026": "2026-10-22",
+      "https://bichosdecampo.com/de-vuelta-al-ruedo-agronomico-el-ex-presidente-del-inta-juan-cruz-molina-afirma-en-el-2008-se-genero-una-mistica-que-hoy-no-escucho-con-la-misma-potencia": "2026-10-22",
+      "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12991,7 +13035,9 @@
       "enojo ganadero acusan a frigorificos de aplicar descuentos a la hacienda no inscripta en el visec": "2026-10-22",
       "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia": "2026-10-22",
       "gran noticia para productores de trigo con paciencia molinos brasilenos tendran que importar un volumen record y rezan para que la argentina logre obtener buena calidad": "2026-10-22",
-      "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones": "2026-10-22"
+      "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones": "2026-10-22",
+      "de vuelta al ruedo agronomico el ex presidente del inta juan cruz molina afirma en el 2008 se genero una mistica que hoy no escucho con la misma potencia": "2026-10-22",
+      "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13787,7 +13833,9 @@
       "b8fb21a03415dd54": "2026-10-22",
       "30d8288fc802520b": "2026-10-22",
       "db191cc01728aa89": "2026-10-22",
-      "bc957b47a1f01642": "2026-10-22"
+      "bc957b47a1f01642": "2026-10-22",
+      "ba9ab662197e23f3": "2026-10-22",
+      "10c6dfce396eb531": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18909,49 +18957,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_78e667782016_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "4338b8df5fea",
-      "rep": {
-        "id": "4338b8df5fea",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
-        "titulo": "Alimentos balanceados y suplementación estratégica en la recría y en aumento del peso de faena en la ganadería",
-        "titulo_norm": "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia",
-        "descripcion": "El rol de los alimentos balanceados en los planteos ganaderos y lecheros. Una charla con el Med. Vet. Emanuel Gatti, Gte. de la Cooperativa Guillermo Lehmann, que nos explica en el Congreso de Nutrición Animal, cómo la tecnología en alimentación y la suplementación estratégica están ayudando a productores a mejorar kilos y eficiencia en la ganadería argentina...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/_d7QoOcJ8FY.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-10-22T17:34-03:00",
-        "capturado": "2026-10-22T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "30d8288fc802520b"
-      },
-      "grupo": [
-        {
-          "id": "4338b8df5fea",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
-          "titulo": "Alimentos balanceados y suplementación estratégica en la recría y en aumento del peso de faena en la ganadería",
-          "titulo_norm": "alimentos balanceados y suplementacion estrategica en la recria y en aumento del peso de faena en la ganaderia",
-          "descripcion": "El rol de los alimentos balanceados en los planteos ganaderos y lecheros. Una charla con el Med. Vet. Emanuel Gatti, Gte. de la Cooperativa Guillermo Lehmann, que nos explica en el Congreso de Nutrición Animal, cómo la tecnología en alimentación y la suplementación estratégica están ayudando a productores a mejorar kilos y eficiencia en la ganadería argentina...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/_d7QoOcJ8FY.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-10-22T17:34-03:00",
-          "capturado": "2026-10-22T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "30d8288fc802520b"
-        }
-      ],
+      "cuando": "2026-10-22T18:20-03:00",
+      "titulo_original": "Alimentos balanceados y suplementación estratégica en la recría y en aumento del peso de faena en la ganadería",
+      "descripcion": "El rol de los alimentos balanceados en los planteos ganaderos y lecheros. Una charla con el Med. Vet. Emanuel Gatti, Gte. de la Cooperativa Guillermo Lehmann, que nos explica en el Congreso de Nutrición Animal, cómo la tecnología en alimentación y la suplementación estratégica están ayudando a produ",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248970-alimentos-balanceados-y-suplementacion-estrategica-en-la-recria-y-en-aumento-del-peso-de-faena-en-la-ganaderia.html",
+      "titular": "Alimentos balanceados y suplementación para sumar kilos de faena",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 14,
         "interes_productores": 12,
@@ -18973,7 +18988,94 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-22T18:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8c62b41f-147c-4ac7-9183-9e0e648580a0",
+          "slug": "como-la-suplementacion-estrategica-y-los-alimentos-balanceados-9fd58e",
+          "url": "https://www.diariolacampaña.com.ar/n/como-la-suplementacion-estrategica-y-los-alimentos-balanceados-9fd58e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1429492105304604",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18110851952616184",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4338b8df5fea_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "41e3aa2ab03a",
+      "rep": {
+        "id": "41e3aa2ab03a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales/",
+        "canonical_url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales",
+        "titulo": "Crónicas robadas: Una tormenta con granizo en Santa Fe dejó desde lotes agrícolas severamente dañados hasta pérdidas de animales",
+        "titulo_norm": "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales",
+        "descripcion": "El sitio Aire Agro, de la provincia de Santa Fe relevó los daños que dejó en ese territorio una feroz tormenta de granizo. El fenómeno dejó perdidas totales en lotes agrícolas y también mortandad de animales. Reproducimos a continuación el reporte del periodista Juan Manuel Fernández: Intensas mangas de granizo afectaron durante la mañana de […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-22T18:03-03:00",
+        "capturado": "2026-10-22T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "10c6dfce396eb531"
+      },
+      "grupo": [
+        {
+          "id": "41e3aa2ab03a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales/",
+          "canonical_url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales",
+          "titulo": "Crónicas robadas: Una tormenta con granizo en Santa Fe dejó desde lotes agrícolas severamente dañados hasta pérdidas de animales",
+          "titulo_norm": "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales",
+          "descripcion": "El sitio Aire Agro, de la provincia de Santa Fe relevó los daños que dejó en ese territorio una feroz tormenta de granizo. El fenómeno dejó perdidas totales en lotes agrícolas y también mortandad de animales. Reproducimos a continuación el reporte del periodista Juan Manuel Fernández: Intensas mangas de granizo afectaron durante la mañana de […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-22T18:03-03:00",
+          "capturado": "2026-10-22T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "10c6dfce396eb531"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "granizo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta de lleno a la zona núcleo con daños severos en cultivos y hacienda, generando alta preocupación.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T18:20-03:00"
     },
     {
       "id": "f0024451f56f",
@@ -20247,8 +20349,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T18:03:49-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-22T18:23:29-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
