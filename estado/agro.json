@@ -10171,6 +10171,77 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "30fc062420131748": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 4,
+      "ai_score": 75,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "tormentas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta meteorológica crítica para la zona núcleo y pampeana, de interés directo e inmediato para productores.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6ff1ce8b5f653c6e": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 7,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 66,
+      "subtema": "mercados",
+      "tema": "trigo y aceite de soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la formación de precios internacionales y afecta la rentabilidad local de trigo y soja.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        66
+      ]
+    },
+    "b8497f9cc312097e": {
+      "impacto_economico": 18,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 70,
+      "subtema": "empresas",
+      "tema": "exportaciones agroindustriales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cifras récord de exportación oficializadas que marcan el pulso macroeconómico del sector agropecuario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        70
+      ]
     }
   },
   "indice": {
@@ -10878,7 +10949,10 @@
       "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026": "2026-10-21",
       "https://lacapital.com.ar/agro/las-exportaciones-agroindustriales-crecieron-132-n10287931.html": "2026-10-21",
       "https://bichosdecampo.com/rebelde-la-agroindustria-argentina-incremento-sus-exportaciones-pero-la-soja-dejo-de-ser-el-motor-de-ese-crecimiento": "2026-10-21",
-      "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026": "2026-10-21"
+      "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026": "2026-10-21",
+      "https://bichosdecampo.com/alerta-naranja-se-vienen-tormentas-intensas-en-gran-parte-de-la-zona-pampeana-y-el-litoral": "2026-10-21",
+      "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro": "2026-10-21",
+      "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11584,7 +11658,10 @@
       "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas": "2026-10-21",
       "las exportaciones agroindustriales crecieron 13 2": "2026-10-21",
       "rebelde la agroindustria argentina incremento sus exportaciones pero la soja dejo de ser el motor de ese crecimiento": "2026-10-21",
-      "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible": "2026-10-21"
+      "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible": "2026-10-21",
+      "alerta naranja se vienen tormentas intensas en gran parte de la zona pampeana y el litoral": "2026-10-21",
+      "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro": "2026-10-21",
+      "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12290,7 +12367,10 @@
       "307ce0ab26976076": "2026-10-21",
       "f52e46b81c54eace": "2026-10-21",
       "950b525beda580ff": "2026-10-21",
-      "2ce5d2b7c042b817": "2026-10-21"
+      "2ce5d2b7c042b817": "2026-10-21",
+      "30fc062420131748": "2026-10-21",
+      "6ff1ce8b5f653c6e": "2026-10-21",
+      "b8497f9cc312097e": "2026-10-21"
     }
   },
   "elegidas": [
@@ -16076,9 +16156,204 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7410d79865cf_portada.jpg"
+    },
+    {
+      "id": "c8c16f5efb29",
+      "cuando": "2026-10-21T21:00-03:00",
+      "titulo_original": "Alerta naranja: Se vienen tormentas intensas en gran parte de la zona pampeana y el Litoral",
+      "descripcion": "El Servicio Meteorológico Nacional (SMN) emitió una “alerta naranja” por tormentas severas para este jueves en gran parte de la región norte de la zona pampeana y el Litoral, así como también en el norte patagónico. La “alerta naranja” (fenómenos meteorológicos peligrosos para la sociedad, la vida, ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/alerta-naranja-se-vienen-tormentas-intensas-en-gran-parte-de-la-zona-pampeana-y-el-litoral/",
+      "titular": "Alerta naranja por tormentas severas y excesos hídricos en la región pampeana",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 4,
+        "ai_score": 75,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "tormentas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta meteorológica crítica para la zona núcleo y pampeana, de interés directo e inmediato para productores.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "bRa__dhCebA",
+          "url": "https://youtube.com/shorts/bRa__dhCebA",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "543896fe-2405-4e6c-8bf1-fb38d133291d",
+          "slug": "alerta-naranja-por-tormentas-severas-y-excesos-hidricos-en-la-0a222d",
+          "url": "https://www.diariolacampaña.com.ar/n/alerta-naranja-por-tormentas-severas-y-excesos-hidricos-en-la-0a222d",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1776932200025635",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18039789779849598",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c8c16f5efb29_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "169bc1580d34",
+      "rep": {
+        "id": "169bc1580d34",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro/",
+        "canonical_url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro",
+        "titulo": "Fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre EE.UU. y Rusia que permita terminar con el “apagón logístico” del mar Negro",
+        "titulo_norm": "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro",
+        "descripcion": "Los precios de los contratos de trigo y de aceite de soja del CME Group (“Chicago”) registraron este miércoles caídas fuertes en línea con la expectativa de un acuerdo entre Rusia y EE.UU. que destrabe el “apagón logístico” vigente en el mar Negro. Este miércoles el presidente ruso, Vladímir Putin, se reunió durante casi tres […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/precioscme.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-21T19:30-03:00",
+        "capturado": "2026-10-21T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6ff1ce8b5f653c6e"
+      },
+      "grupo": [
+        {
+          "id": "169bc1580d34",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro/",
+          "canonical_url": "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro",
+          "titulo": "Fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre EE.UU. y Rusia que permita terminar con el “apagón logístico” del mar Negro",
+          "titulo_norm": "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro",
+          "descripcion": "Los precios de los contratos de trigo y de aceite de soja del CME Group (“Chicago”) registraron este miércoles caídas fuertes en línea con la expectativa de un acuerdo entre Rusia y EE.UU. que destrabe el “apagón logístico” vigente en el mar Negro. Este miércoles el presidente ruso, Vladímir Putin, se reunió durante casi tres […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/precioscme.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-21T19:30-03:00",
+          "capturado": "2026-10-21T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6ff1ce8b5f653c6e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 8,
+        "cercania_pba": 7,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 66,
+        "subtema": "mercados",
+        "tema": "trigo y aceite de soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la formación de precios internacionales y afecta la rentabilidad local de trigo y soja.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          66
+        ]
+      },
+      "cuando": "2026-10-21T21:00-03:00"
+    },
+    {
+      "id": "f60243adc84c",
+      "rep": {
+        "id": "f60243adc84c",
+        "fuente": "Secretaría de Agricultura",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+        "url": "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
+        "canonical_url": "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
+        "titulo": "Las Exportaciones agroindustriales fueron récord en septiembre crecieron 17% en volumen",
+        "titulo_norm": "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen",
+        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que las exportaciones de la agroindustria argentina alcanzaron en septiembre récord en volumen y en valor, se exportaron 11,43 millones de toneladas por un monto de USD5.654 millones, resultado que significó un crecimiento de 17% y 14% respectivamente en la comparación interanual, según datos procesados por la Subsecretaría de Mercados Agroalimentarios e Inserción Internacional, en base a estadísticas de INDEC. Los complejos (productos primarios y sus derivados) que mostraron los mejores resultados en septiembre fueron: cebada con una mejora del 276% en volumen y del 311% en valor, seguido por el maíz con un incremento del 112% en volumen y del 121% en valor; el olivo con el 53% y 32% de aumentos en volumen y valor; el trigo con 25% y 34%; las legumbres con el 16% y 15%; preparaciones alimenti",
+        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/expo_record_1.jpeg",
+        "autor": "pconsiglio",
+        "publicado": "2026-10-21T18:20-03:00",
+        "capturado": "2026-10-21T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b8497f9cc312097e"
+      },
+      "grupo": [
+        {
+          "id": "f60243adc84c",
+          "fuente": "Secretaría de Agricultura",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+          "url": "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
+          "canonical_url": "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
+          "titulo": "Las Exportaciones agroindustriales fueron récord en septiembre crecieron 17% en volumen",
+          "titulo_norm": "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen",
+          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que las exportaciones de la agroindustria argentina alcanzaron en septiembre récord en volumen y en valor, se exportaron 11,43 millones de toneladas por un monto de USD5.654 millones, resultado que significó un crecimiento de 17% y 14% respectivamente en la comparación interanual, según datos procesados por la Subsecretaría de Mercados Agroalimentarios e Inserción Internacional, en base a estadísticas de INDEC. Los complejos (productos primarios y sus derivados) que mostraron los mejores resultados en septiembre fueron: cebada con una mejora del 276% en volumen y del 311% en valor, seguido por el maíz con un incremento del 112% en volumen y del 121% en valor; el olivo con el 53% y 32% de aumentos en volumen y valor; el trigo con 25% y 34%; las legumbres con el 16% y 15%; preparaciones alimenti",
+          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/expo_record_1.jpeg",
+          "autor": "pconsiglio",
+          "publicado": "2026-10-21T18:20-03:00",
+          "capturado": "2026-10-21T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b8497f9cc312097e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "exportaciones agroindustriales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cifras récord de exportación oficializadas que marcan el pulso macroeconómico del sector agropecuario.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          70
+        ]
+      },
+      "cuando": "2026-10-21T21:00-03:00"
+    },
     {
       "id": "333a81b72928",
       "rep": {
@@ -16860,8 +17135,8 @@
       "cuando": "2026-10-21T13:20-03:00"
     }
   ],
-  "actualizado": "2026-10-21T19:25:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-21T21:04:19-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
