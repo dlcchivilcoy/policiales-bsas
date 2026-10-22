@@ -12727,7 +12727,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-21T18:15:00-03:00"
+        "cuando": "2026-10-21T18:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "fddeead6-2a49-4832-9722-8d978cb0038f",
@@ -12793,7 +12794,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-21T18:45:00-03:00"
+        "cuando": "2026-10-21T18:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "13ae610d-a773-4524-b4ca-c0e1c18119c6",
@@ -12868,7 +12870,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-21T19:15:00-03:00"
+        "cuando": "2026-10-21T19:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "18c76ffb-e3d7-450e-8a37-1b61ab5417c0",
@@ -12942,7 +12945,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-21T19:45:00-03:00"
+        "cuando": "2026-10-21T19:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "5e5dd28b-ee25-4859-8898-ea4b44e466f3",
@@ -12963,6 +12967,227 @@
       "tiktok_buzon": {
         "estado": "ok",
         "id": "nacionales:780212f6b8352df4"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/21/diputados-en-vivo-ultimas-noticias-del-debate-sobre-discapacidad-endeudamiento-familiar-y-propiedad-privada/": {
+      "titulo_original": "En medio de negociaciones, comenzó el debate en Diputados por la Ley de Discapacidad",
+      "titular": "Diputados aprobó propiedad privada, trazabilidad de fármacos y endureció penas rurales",
+      "volanta": "Sesión en Diputados",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "politica",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 52,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 15.º de 70 en «nacionales»",
+        "cobertura: 6 medios (Infobae, La Nación)"
+      ],
+      "fuentes": [],
+      "bajada": "La Cámara baja avaló la inviolabilidad de la propiedad privada, la trazabilidad de medicamentos de alto riesgo tras el caso del fentanilo contaminado y subió sanciones por vandalismo en campos. Prosigue el debate sobre discapacidad y endeudamiento.",
+      "seccion": "Política",
+      "tema": [
+        "*discapacidad",
+        "*ley",
+        "comenzo",
+        "debate",
+        "diputado",
+        "discapacidad",
+        "medio",
+        "negociacione"
+      ],
+      "viral": 6,
+      "puntos": 60,
+      "nivel": "política",
+      "cobertura": 3,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T21:16:06-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "21:15",
+      "copia": 9,
+      "foto_url": "https://www.infobae.com/resizer/v2/KCCOIWLA7VHYPINOIVE445RWYE.jpg?auth=c3954db1854a3e5d6035a02d4b3b903471f24d983f3307c3506a5fae55c468c9&smart=true&width=1920&height=1280",
+      "foto": "Un patrullero de la policía rural permanece en la entrada del campo donde un joven falleció a causa de un disparo accidental. (FM La Marea)",
+      "youtube": {
+        "id": "-qfB5gGSgEg",
+        "url": "https://youtube.com/shorts/-qfB5gGSgEg",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T21:15:00-03:00"
+      },
+      "web": {
+        "id": "b3381948-e526-48e7-bda6-7900959b4cdb",
+        "slug": "diputados-aprobo-propiedad-privada-trazabilidad-de-farmacos-y-89b6dd",
+        "url": "https://www.diariolacampaña.com.ar/n/diputados-aprobo-propiedad-privada-trazabilidad-de-farmacos-y-89b6dd",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T21:15:06-03:00"
+      },
+      "instagram": {
+        "id": "17901103389386514",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T21:15:09-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:89b6dd1b304f6c4e"
+      }
+    },
+    "https://www.infobae.com/economia/2026/10/21/el-aumento-de-las-tarifas-y-los-servicios-publicos-que-mas-triplico-a-la-inflacion-desde-que-asumio-milei/": {
+      "titulo_original": "El aumento de las tarifas y los servicios públicos que más triplicó a la inflación desde que asumió Milei",
+      "titular": "Las tarifas del AMBA subieron 860% desde diciembre de 2023 y superan a la inflación",
+      "volanta": "Tarifas y subsidios",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "economia",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 23,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)"
+      ],
+      "fuentes": [],
+      "bajada": "Un informe de la UBA y el Conicet reveló que la canasta de servicios públicos trepó muy por encima del 261% de inflación acumulada. El transporte encabeza las subas y los usuarios cubren el 57% del costo real.",
+      "seccion": "Economía",
+      "tema": [
+        "*milei",
+        "asumio",
+        "aumento",
+        "inflacion",
+        "milei",
+        "publico",
+        "servicio",
+        "tarifa",
+        "triplico"
+      ],
+      "viral": 8,
+      "puntos": 35,
+      "nivel": "bolsillo",
+      "cobertura": 1,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T21:45:47-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "21:45",
+      "copia": 7,
+      "foto_url": "https://www.infobae.com/resizer/v2/UCPBKXD7N5GX7PAJ5CXXSSS63Q.png?auth=5715327f8323acf998ad52b69242d76ab4e2e285bb4c2fa8506da343b150d51c&smart=true&width=1536&height=1024",
+      "foto": "La canasta de servicios públicos del AMBA incluye transporte, agua, luz y gas, y acumula una suba de 860% desde diciembre de 2023 (Imagen Ilustrativa Infobae)",
+      "youtube": {
+        "id": "1aDoJ_rUB0I",
+        "url": "https://youtube.com/shorts/1aDoJ_rUB0I",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T21:45:00-03:00"
+      },
+      "web": {
+        "id": "849c637c-e77b-4ad6-ade3-cce16c3678a2",
+        "slug": "tarifas-en-el-amba-aumentaron-860-desde-diciembre-de-2023-y-b3aa9e",
+        "url": "https://www.diariolacampaña.com.ar/n/tarifas-en-el-amba-aumentaron-860-desde-diciembre-de-2023-y-b3aa9e",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T21:45:05-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2065738427701116",
+        "estado": "ok",
+        "cuando": "2026-10-21T21:45:08-03:00"
+      },
+      "instagram": {
+        "id": "18125568617299502",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T21:45:13-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b3aa9eb0744c0822"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/21/quien-es-la-jueza-argentina-que-integra-el-organismo-que-resolvera-el-reclamo-por-el-petroleo-de-malvinas/": {
+      "titulo_original": "Quién es la jueza argentina que integra el organismo que resolverá el reclamo por el petróleo de Malvinas",
+      "titular": "Quién es la jueza argentina que integra el tribunal que evaluará a Londres",
+      "volanta": "Malvinas y petróleo",
+      "categoria": "",
+      "formato": "reel",
+      "subgeneral": "politica",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 60,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 8.º de 70 en «nacionales»",
+        "cobertura: 15 medios (Infobae, El Cronista, La Nación, Clarín)",
+        "video que explota en Clarín: «Milei pidió \"sacar a patadas a los socialistas\" en» (2.045 vistas. 170 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El Tribunal Internacional fijó las audiencias pedidas por la administración de Javier Milei para frenar la explotación petrolera británica en Malvinas.",
+      "seccion": "Política",
+      "tema": [
+        "*malvina",
+        "argentina",
+        "integra",
+        "jueza",
+        "malvina",
+        "organismo",
+        "petroleo",
+        "reclamo",
+        "resolvera"
+      ],
+      "viral": 7,
+      "puntos": 55,
+      "nivel": "política",
+      "cobertura": 2,
+      "dia": "2026-10-21",
+      "cuando": "2026-10-21T22:16:12-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:15",
+      "copia": 10,
+      "foto_url": "https://www.infobae.com/resizer/v2/DS26NT2OBFC23H56HDXQRIFVKI.jpeg?auth=557849e47833d8a1c481bd2f3c4c64acd22c632642ccf406cbd2bf905fed593f&smart=true&width=676&height=504",
+      "foto": "En mayo de 2023, Frida Armas Pfirter fue reconocida como personalidad destacada por la Legislatura porteña en el ámbito de las Ciencias Jurídicas",
+      "youtube": {
+        "id": "6O_EOWeXYlE",
+        "url": "https://youtube.com/shorts/6O_EOWeXYlE",
+        "privacidad": "public",
+        "subida": "uploaded",
+        "sin_placa": true,
+        "miniatura": "portada del reel",
+        "estado": "ok",
+        "cuando": "2026-10-21T22:15:00-03:00"
+      },
+      "web": {
+        "id": "ea2675bb-0404-481e-9dc9-3c7eb79780c6",
+        "slug": "quien-es-la-jueza-argentina-que-interviene-en-el-reclamo-por-b7b142",
+        "url": "https://www.diariolacampaña.com.ar/n/quien-es-la-jueza-argentina-que-interviene-en-el-reclamo-por-b7b142",
+        "foto": true,
+        "video": true,
+        "estado": "ok",
+        "cuando": "2026-10-21T22:15:07-03:00"
+      },
+      "facebook": {
+        "id": "1456376377985890_2065755997699359",
+        "estado": "ok",
+        "cuando": "2026-10-21T22:15:08-03:00"
+      },
+      "instagram": {
+        "id": "17877093360634147",
+        "portada": "propia",
+        "estado": "ok",
+        "cuando": "2026-10-21T22:15:13-03:00",
+        "formato": "reel"
+      },
+      "tiktok_buzon": {
+        "estado": "ok",
+        "id": "nacionales:b7b1426a9ab6b8b3"
       }
     }
   },
@@ -13070,6 +13295,14 @@
     "https://www.infobae.com/economia/2026/10/21/el-dolar-subio-por-cuarto-dia-consecutivo-y-marco-un-nuevo-record-nominal/": {
       "motivo": "sin imagen que se pueda usar (foto de agencia (Reuters))",
       "cuando": "2026-10-21T18:00:30-03:00"
+    },
+    "https://www.infobae.com/economia/2026/10/21/la-uia-pidio-al-gobierno-que-se-hagan-las-obras-necesarias-para-que-el-gas-de-vaca-muerta-llegue-a-todo-el-pais/": {
+      "motivo": "sin imagen que se pueda usar (foto de agencia (Reuters))",
+      "cuando": "2026-10-21T21:00:33-03:00"
+    },
+    "https://www.infobae.com/economia/2026/10/21/baja-demanda-poca-produccion-y-menor-empleo-las-senales-de-alerta-de-dos-sectores-clave-para-lo-que-resta-de-2026/": {
+      "motivo": "sin imagen que se pueda usar (foto de agencia (EFE))",
+      "cuando": "2026-10-21T21:00:33-03:00"
     }
   },
   "carruseles": {
@@ -13284,5 +13517,5 @@
       ]
     }
   },
-  "actualizado": "2026-10-21T19:46:28-03:00"
+  "actualizado": "2026-10-21T22:16:12-03:00"
 }
