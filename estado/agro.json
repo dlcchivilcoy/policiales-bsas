@@ -11461,6 +11461,48 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c81097cb9ec86114": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 80,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran oportunidad exportadora para el trigo argentino por la mayor demanda de Brasil.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7fe56f805d5d920f": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 6,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 26,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "syngenta",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Entrevista institucional lejana al productor de la zona núcleo pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12261,7 +12303,9 @@
       "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026": "2026-10-22",
       "https://bichosdecampo.com/de-vuelta-al-ruedo-agronomico-el-ex-presidente-del-inta-juan-cruz-molina-afirma-en-el-2008-se-genero-una-mistica-que-hoy-no-escucho-con-la-misma-potencia": "2026-10-22",
       "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales": "2026-10-22",
-      "https://bichosdecampo.com/alerta-en-europa-por-el-virus-shamonda-que-afecta-al-ganado-vacuno-y-registra-el-primer-caso-humano": "2026-10-22"
+      "https://bichosdecampo.com/alerta-en-europa-por-el-virus-shamonda-que-afecta-al-ganado-vacuno-y-registra-el-primer-caso-humano": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026": "2026-10-22",
+      "https://croplife.com/crop-inputs/croplife-on-the-road-one-on-one-with-syngentas-jeff-cecil": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13060,7 +13104,9 @@
       "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones": "2026-10-22",
       "de vuelta al ruedo agronomico el ex presidente del inta juan cruz molina afirma en el 2008 se genero una mistica que hoy no escucho con la misma potencia": "2026-10-22",
       "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales": "2026-10-22",
-      "alerta en europa por el virus shamonda que afecta al ganado vacuno y registra el primer caso humano": "2026-10-22"
+      "alerta en europa por el virus shamonda que afecta al ganado vacuno y registra el primer caso humano": "2026-10-22",
+      "ano extraordinario brasil preve la mayor importacion de trigo en 30 anos y abre una oportunidad para la argentina": "2026-10-22",
+      "croplife on the road one on one with syngenta s jeff cecil": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13859,7 +13905,9 @@
       "bc957b47a1f01642": "2026-10-22",
       "ba9ab662197e23f3": "2026-10-22",
       "10c6dfce396eb531": "2026-10-22",
-      "323cd5bdad6252aa": "2026-10-22"
+      "323cd5bdad6252aa": "2026-10-22",
+      "c81097cb9ec86114": "2026-10-22",
+      "7fe56f805d5d920f": "2026-10-22"
     }
   },
   "elegidas": [
@@ -19089,9 +19137,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a3a895793436_portada.jpg"
+    },
+    {
+      "id": "ca1c871566c9",
+      "cuando": "2026-10-22T19:02-03:00",
+      "titulo_original": "Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS",
+      "descripcion": "New seed treatment option combines broad soybean protection with trusted pioneer genetics and agronomic expertise. The post Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS appeared first on CropLife.",
+      "fuente": "CropLife",
+      "url": "https://www.croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds/",
+      "titular": "Soja: Pioneer suma el tratamiento Victrato para proteger el rendimiento",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 9,
+        "cercania_argentina": 6,
+        "cercania_pba": 6,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 62,
+        "commercial_score": 66,
+        "subtema": "agtech",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Nuevo tratamiento de semillas para soja de Pioneer; aunque es internacional, la marca y plagas aplican.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          60
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e7dfeb32-f89b-4958-8db0-e3f435e13e7a",
+          "slug": "soja-pioneer-incorpora-el-tratamiento-victrato-para-potenciar-5610bf",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-pioneer-incorpora-el-tratamiento-victrato-para-potenciar-5610bf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1659976395564098",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18336278875278342",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ca1c871566c9_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "08e3f3c39cd3",
+      "rep": {
+        "id": "08e3f3c39cd3",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026",
+        "titulo": "“Año extraordinario”: Brasil prevé la mayor importación de trigo en 30 años y abre una oportunidad para la Argentina",
+        "titulo_norm": "ano extraordinario brasil preve la mayor importacion de trigo en 30 anos y abre una oportunidad para la argentina",
+        "descripcion": "Según Abitrigo, que agrupa a la industria del vecino país, las compras de 2026/2027 podrían alcanzar o superar los 9 millones de toneladas por la menor oferta interna; el sector privado argentino anticipa excedentes para abastecer parte de esa demanda y posibilidades de aumentar las ventas de harina",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/4TYL5L2EYNA3DDIXWDMWK4LVWY.jpeg?auth=36769e49331297935e3c50112f66799e28ea479e8b69ad1cbf57795f81e14785&smart=true",
+        "autor": "Belkis Martínez",
+        "publicado": "2026-10-22T18:52-03:00",
+        "capturado": "2026-10-22T19:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c81097cb9ec86114"
+      },
+      "grupo": [
+        {
+          "id": "08e3f3c39cd3",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026",
+          "titulo": "“Año extraordinario”: Brasil prevé la mayor importación de trigo en 30 años y abre una oportunidad para la Argentina",
+          "titulo_norm": "ano extraordinario brasil preve la mayor importacion de trigo en 30 anos y abre una oportunidad para la argentina",
+          "descripcion": "Según Abitrigo, que agrupa a la industria del vecino país, las compras de 2026/2027 podrían alcanzar o superar los 9 millones de toneladas por la menor oferta interna; el sector privado argentino anticipa excedentes para abastecer parte de esa demanda y posibilidades de aumentar las ventas de harina",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/4TYL5L2EYNA3DDIXWDMWK4LVWY.jpeg?auth=36769e49331297935e3c50112f66799e28ea479e8b69ad1cbf57795f81e14785&smart=true",
+          "autor": "Belkis Martínez",
+          "publicado": "2026-10-22T18:52-03:00",
+          "capturado": "2026-10-22T19:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c81097cb9ec86114"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 80,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran oportunidad exportadora para el trigo argentino por la mayor demanda de Brasil.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T19:02-03:00"
+    },
     {
       "id": "41e3aa2ab03a",
       "rep": {
@@ -19412,73 +19581,6 @@
         "urgente": false,
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T16:40-03:00"
-    },
-    {
-      "id": "ca1c871566c9",
-      "rep": {
-        "id": "ca1c871566c9",
-        "fuente": "CropLife",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.croplife.com/feed/",
-        "url": "https://www.croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds/",
-        "canonical_url": "https://croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds",
-        "titulo": "Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS",
-        "titulo_norm": "pioneer adds victrato seed treatment to help farmers get ahead of scn and sds",
-        "descripcion": "New seed treatment option combines broad soybean protection with trusted pioneer genetics and agronomic expertise. The post Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS appeared first on CropLife.",
-        "imagen_url": "",
-        "autor": "CropLife Staff",
-        "publicado": "2026-10-22T12:43-03:00",
-        "capturado": "2026-10-22T16:40-03:00",
-        "idioma": "en",
-        "pais": "INT",
-        "hash": "a4fe502226c1fe55"
-      },
-      "grupo": [
-        {
-          "id": "ca1c871566c9",
-          "fuente": "CropLife",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.croplife.com/feed/",
-          "url": "https://www.croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds/",
-          "canonical_url": "https://croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds",
-          "titulo": "Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS",
-          "titulo_norm": "pioneer adds victrato seed treatment to help farmers get ahead of scn and sds",
-          "descripcion": "New seed treatment option combines broad soybean protection with trusted pioneer genetics and agronomic expertise. The post Pioneer Adds Victrato Seed Treatment to Help Farmers Get Ahead of SCN and SDS appeared first on CropLife.",
-          "imagen_url": "",
-          "autor": "CropLife Staff",
-          "publicado": "2026-10-22T12:43-03:00",
-          "capturado": "2026-10-22T16:40-03:00",
-          "idioma": "en",
-          "pais": "INT",
-          "hash": "a4fe502226c1fe55"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 11,
-        "innovacion": 9,
-        "cercania_argentina": 6,
-        "cercania_pba": 6,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 8,
-        "ai_score": 62,
-        "commercial_score": 66,
-        "subtema": "agtech",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": false,
-        "explicacion": "Nuevo tratamiento de semillas para soja de Pioneer; aunque es internacional, la marca y plagas aplican.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          60
-        ]
       },
       "cuando": "2026-10-22T16:40-03:00"
     },
@@ -20364,8 +20466,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T19:02:07-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-22T19:04:56-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
