@@ -10681,6 +10681,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "52b889eb508131bb": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 12,
+      "cercania_argentina": 2,
+      "cercania_pba": 1,
+      "potencial_reel": 7,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 40,
+      "commercial_score": 45,
+      "subtema": "agtech",
+      "tema": "kubota",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es innovación pura en tractores autónomos, pero de baja aplicación directa en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -11433,7 +11454,8 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-22-octubre-2026": "2026-10-22",
       "https://bichosdecampo.com/llegan-tiempos-de-revancha-para-la-cana-transgenica-en-el-gobierno-analizan-autorizar-una-variedad-resistente-al-glifosato-cuando-hubo-otra-que-fue-retirada-hace-diez-anos": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/riesgo-sanitario-la-argentina-suspendio-importaciones-de-productos-aviares-de-una-zona-de-brasil-nid22102026": "2026-10-22",
-      "https://lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026": "2026-10-22"
+      "https://lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026": "2026-10-22",
+      "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kubota-and-agtonomy-introduce-autonomous-m5l-tractor-for-specialty-crops": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12184,7 +12206,8 @@
       "dolar blue a cuanto cotizan hoy en cordoba 22 octubre 2026": "2026-10-22",
       "llegan tiempos de revancha para la cana transgenica en el gobierno analizan autorizar una variedad resistente al glifosato cuando hubo otra que fue retirada hace diez anos": "2026-10-22",
       "riesgo sanitario la argentina suspendio importaciones de productos aviares de una zona de brasil": "2026-10-22",
-      "la frazada corta de los caminos rurales": "2026-10-22"
+      "la frazada corta de los caminos rurales": "2026-10-22",
+      "kubota and agtonomy introduce autonomous m5l tractor for specialty crops": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12935,7 +12958,8 @@
       "7e2bb9a45f4b8c3f": "2026-10-22",
       "21566cfd04340f6c": "2026-10-22",
       "67669e04bf8107ba": "2026-10-22",
-      "37b7203902675170": "2026-10-22"
+      "37b7203902675170": "2026-10-22",
+      "52b889eb508131bb": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18323,7 +18347,7 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T10:44:08-03:00",
+  "actualizado": "2026-10-22T11:01:41-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
