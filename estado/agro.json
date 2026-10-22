@@ -10635,6 +10635,31 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "21566cfd04340f6c": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 54,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "caña transgénica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a una economía regional específica (NOA) con bajo impacto directo en la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        55
+      ]
     }
   },
   "indice": {
@@ -11383,7 +11408,10 @@
       "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/tecnologias/presentan-una-publicacion-tecnica-para-promover-las-buenas-practicas-agricolas-en-aplicaciones-con-nid22102026": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/pedro-un-agricultor-de-50-anos-que-maneja-600-hectareas-muevo-400000-euros-al-mes-nid22102026": "2026-10-22",
-      "https://intainforma.inta.gob.ar/como-se-transforma-el-trabajo-en-los-territorios-frente-a-los-nuevos-desafios": "2026-10-22"
+      "https://intainforma.inta.gob.ar/como-se-transforma-el-trabajo-en-los-territorios-frente-a-los-nuevos-desafios": "2026-10-22",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-22-octubre-2026": "2026-10-22",
+      "https://bichosdecampo.com/llegan-tiempos-de-revancha-para-la-cana-transgenica-en-el-gobierno-analizan-autorizar-una-variedad-resistente-al-glifosato-cuando-hubo-otra-que-fue-retirada-hace-diez-anos": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/riesgo-sanitario-la-argentina-suspendio-importaciones-de-productos-aviares-de-una-zona-de-brasil-nid22102026": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12130,7 +12158,10 @@
       "se ilusionan las cerealeras la sorpresiva salida del grupo mexico deja al holding agroexportador en carrera para controlar el belgrano cargas por el proximo medio siglo": "2026-10-22",
       "presentan una publicacion tecnica para promover las buenas practicas agricolas en aplicaciones con drones": "2026-10-22",
       "pedro un agricultor de 50 anos que maneja 600 hectareas muevo 400 000 euros al mes": "2026-10-22",
-      "como se transforma el trabajo en los territorios frente a los nuevos desafios": "2026-10-22"
+      "como se transforma el trabajo en los territorios frente a los nuevos desafios": "2026-10-22",
+      "dolar blue a cuanto cotizan hoy en cordoba 22 octubre 2026": "2026-10-22",
+      "llegan tiempos de revancha para la cana transgenica en el gobierno analizan autorizar una variedad resistente al glifosato cuando hubo otra que fue retirada hace diez anos": "2026-10-22",
+      "riesgo sanitario la argentina suspendio importaciones de productos aviares de una zona de brasil": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12877,7 +12908,10 @@
       "969650d64044c62f": "2026-10-22",
       "a932d47d4becac1f": "2026-10-22",
       "f71e0ffa39cd19c2": "2026-10-22",
-      "24132f020c577889": "2026-10-22"
+      "24132f020c577889": "2026-10-22",
+      "7e2bb9a45f4b8c3f": "2026-10-22",
+      "21566cfd04340f6c": "2026-10-22",
+      "67669e04bf8107ba": "2026-10-22"
     }
   },
   "elegidas": [
@@ -17272,6 +17306,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5c689699a28a_portada.jpg"
+    },
+    {
+      "id": "563c71620987",
+      "cuando": "2026-10-22T10:20-03:00",
+      "titulo_original": "Se ilusionan las cerealeras: La sorpresiva salida del Grupo México deja al holding agroexportador en carrera para controlar el Belgrano Cargas por el próximo medio siglo",
+      "descripcion": "La privatización del Belgrano Cargas, la empresa que controla casi 7600 kilómetros de ramales que conectan a varias zonas productivas, entra en su fase final y pierde en el camino a uno de los principales interesados, el Grupo México. Uno de los oferentes que hasta ahora encabezaba la lista de los f",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo/",
+      "titular": "Grupo México abandona la licitación del Belgrano Cargas",
+      "volanta": "Agroindustria",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 74,
+        "commercial_score": 85,
+        "subtema": "empresas",
+        "tema": "belgrano cargas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "La privatización ferroviaria impacta en los costos logísticos de toda la cadena agroexportadora.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7b0f9750-8983-4894-b219-11e3f77121ca",
+          "slug": "belgrano-cargas-grupo-mexico-abandona-la-licitacion-y-abre-paso-e8c281",
+          "url": "https://www.diariolacampaña.com.ar/n/belgrano-cargas-grupo-mexico-abandona-la-licitacion-y-abre-paso-e8c281",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1109092055437492",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18495708709103166",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_563c71620987_portada.jpg"
     }
   ],
   "pendientes": [
@@ -17468,69 +17556,6 @@
         "tema_doc": "ganaderia",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T10:00-03:00"
-    },
-    {
-      "id": "563c71620987",
-      "rep": {
-        "id": "563c71620987",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo/",
-        "canonical_url": "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo",
-        "titulo": "Se ilusionan las cerealeras: La sorpresiva salida del Grupo México deja al holding agroexportador en carrera para controlar el Belgrano Cargas por el próximo medio siglo",
-        "titulo_norm": "se ilusionan las cerealeras la sorpresiva salida del grupo mexico deja al holding agroexportador en carrera para controlar el belgrano cargas por el proximo medio siglo",
-        "descripcion": "La privatización del Belgrano Cargas, la empresa que controla casi 7600 kilómetros de ramales que conectan a varias zonas productivas, entra en su fase final y pierde en el camino a uno de los principales interesados, el Grupo México. Uno de los oferentes que hasta ahora encabezaba la lista de los favoritos, con una promesa […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2021/03/belgrano-cargas-3.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-22T09:03-03:00",
-        "capturado": "2026-10-22T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "969650d64044c62f"
-      },
-      "grupo": [
-        {
-          "id": "563c71620987",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo/",
-          "canonical_url": "https://bichosdecampo.com/se-ilusionan-las-cerealeras-la-sorpresiva-salida-del-grupo-mexico-deja-al-holding-agroexportador-en-carrera-para-controlar-el-belgrano-cargas-por-el-proximo-medio-siglo",
-          "titulo": "Se ilusionan las cerealeras: La sorpresiva salida del Grupo México deja al holding agroexportador en carrera para controlar el Belgrano Cargas por el próximo medio siglo",
-          "titulo_norm": "se ilusionan las cerealeras la sorpresiva salida del grupo mexico deja al holding agroexportador en carrera para controlar el belgrano cargas por el proximo medio siglo",
-          "descripcion": "La privatización del Belgrano Cargas, la empresa que controla casi 7600 kilómetros de ramales que conectan a varias zonas productivas, entra en su fase final y pierde en el camino a uno de los principales interesados, el Grupo México. Uno de los oferentes que hasta ahora encabezaba la lista de los favoritos, con una promesa […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2021/03/belgrano-cargas-3.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-22T09:03-03:00",
-          "capturado": "2026-10-22T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "969650d64044c62f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 74,
-        "commercial_score": 85,
-        "subtema": "empresas",
-        "tema": "belgrano cargas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "La privatización ferroviaria impacta en los costos logísticos de toda la cadena agroexportadora.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-22T10:00-03:00"
@@ -18220,8 +18245,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T10:04:05-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T10:23:38-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
