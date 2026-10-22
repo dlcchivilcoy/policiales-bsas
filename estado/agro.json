@@ -10987,6 +10987,69 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "417facade6fdcd65": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 48,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "lácteos verónica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta en la cadena láctea nacional aunque su centro esté en Santa Fe.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a27602d8e52c96e3": {
+      "impacto_economico": 12,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 5,
+      "potencial_comercial": 3,
+      "ai_score": 38,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "algodonera",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es relevante para el sector agroindustrial pero alejado de la zona núcleo y la producción agrícola local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8acce3f41588e2d0": {
+      "impacto_economico": 8,
+      "interes_productores": 9,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 48,
+      "commercial_score": 55,
+      "subtema": "ganaderia",
+      "tema": "apicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Útil guía técnica del INTA para apicultores ante alertas climáticas en la región.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -11763,7 +11826,10 @@
       "https://bichosdecampo.com/cuatro-siglos-despues-de-los-jesuitas-el-vino-vuelve-a-poner-a-huaco-en-el-mapa-de-la-mano-de-un-proyecto-familiar-el-valle-riojano-consiguio-su-propia-indicacion-geografica": "2026-10-22",
       "https://bichosdecampo.com/contra-esto-competimos-en-2026-los-productores-estadounidenses-recibirian-un-record-historico-de-subsidios-por-mas-de-55-000-millones-de-dolares": "2026-10-22",
       "https://agfundernews.com/recent-agrifood-cyberattacks-are-a-wakeup-call-for-the-industry-as-ransomware-incidences-increase": "2026-10-22",
-      "https://agfundernews.com/%f0%9f%8e%a5-earth-rover-bets-on-pulsed-light-to-tackle-weeds-without-chemicals": "2026-10-22"
+      "https://agfundernews.com/%f0%9f%8e%a5-earth-rover-bets-on-pulsed-light-to-tackle-weeds-without-chemicals": "2026-10-22",
+      "https://bichosdecampo.com/lacteos-veronica-cada-vez-mas-cerca-de-la-quiebra-este-viernes-se-sortearan-los-sindicos-del-concurso-de-acreedores": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/tras-la-quiebra-la-justicia-busca-posibles-compradores-para-una-reconocida-algodonera-nid22102026": "2026-10-22",
+      "https://intainforma.inta.gob.ar/apiarios-como-anticiparse-y-actuar-ante-un-anegamiento": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12538,7 +12604,10 @@
       "cuatro siglos despues de los jesuitas el vino vuelve a poner a huaco en el mapa de la mano de un proyecto familiar el valle riojano consiguio su propia indicacion geografica": "2026-10-22",
       "contra esto competimos en 2026 los productores estadounidenses recibirian un record historico de subsidios por mas de 55 000 millones de dolares": "2026-10-22",
       "recent agrifood cyberattacks are a wakeup call for the industry as ransomware incidences increase": "2026-10-22",
-      "earth rover bets on pulsed light to tackle weeds without chemicals": "2026-10-22"
+      "earth rover bets on pulsed light to tackle weeds without chemicals": "2026-10-22",
+      "lacteos veronica cada vez mas cerca de la quiebra este viernes se sortearan los sindicos del concurso de acreedores": "2026-10-22",
+      "tras la quiebra la justicia busca posibles compradores para una reconocida algodonera": "2026-10-22",
+      "apiarios como anticiparse y actuar ante un anegamiento": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13313,7 +13382,10 @@
       "9d81b84ab96d5686": "2026-10-22",
       "132e78562645f9b3": "2026-10-22",
       "d84d89cb5427bf39": "2026-10-22",
-      "340737354fd71353": "2026-10-22"
+      "340737354fd71353": "2026-10-22",
+      "417facade6fdcd65": "2026-10-22",
+      "a27602d8e52c96e3": "2026-10-22",
+      "8acce3f41588e2d0": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18097,49 +18169,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3bf9b68917fd_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "8d91a8fd4cc6",
-      "rep": {
-        "id": "8d91a8fd4cc6",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda/",
-        "canonical_url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda",
-        "titulo": "“Una excusa para pagar menos”: CRA apunta contra la industria por usar al Visec como argumento para descontar el precio de la hacienda",
-        "titulo_norm": "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda",
-        "descripcion": "Lo venían advirtiendo abiertamente los propios industriales: la implementación del reglamento antideforestación de la Unión Europea, recién pautado para fin de año, ya tiene efectos sobre el precio de la hacienda en el frigorífico, y los productores denuncian que afrontan castigos económicos por no estar adheridos al Visec. La plataforma es una de las herramientas […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/ganaderia-1.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-22T13:30-03:00",
-        "capturado": "2026-10-22T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "acf8b7351fcb1879"
-      },
-      "grupo": [
-        {
-          "id": "8d91a8fd4cc6",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda/",
-          "canonical_url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda",
-          "titulo": "“Una excusa para pagar menos”: CRA apunta contra la industria por usar al Visec como argumento para descontar el precio de la hacienda",
-          "titulo_norm": "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda",
-          "descripcion": "Lo venían advirtiendo abiertamente los propios industriales: la implementación del reglamento antideforestación de la Unión Europea, recién pautado para fin de año, ya tiene efectos sobre el precio de la hacienda en el frigorífico, y los productores denuncian que afrontan castigos económicos por no estar adheridos al Visec. La plataforma es una de las herramientas […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/ganaderia-1.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-22T13:30-03:00",
-          "capturado": "2026-10-22T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "acf8b7351fcb1879"
-        }
-      ],
+      "cuando": "2026-10-22T16:00-03:00",
+      "titulo_original": "“Una excusa para pagar menos”: CRA apunta contra la industria por usar al Visec como argumento para descontar el precio de la hacienda",
+      "descripcion": "Lo venían advirtiendo abiertamente los propios industriales: la implementación del reglamento antideforestación de la Unión Europea, recién pautado para fin de año, ya tiene efectos sobre el precio de la hacienda en el frigorífico, y los productores denuncian que afrontan castigos económicos por no ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda/",
+      "titular": "CRA cuestiona rebajas en hacienda ligadas al Visec",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 16,
         "interes_productores": 14,
@@ -18161,8 +18200,39 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-22T13:40-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "ISRAZVBR7VE",
+          "url": "https://youtube.com/shorts/ISRAZVBR7VE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "c6b61eb4-d07e-430c-9222-0995cd964d14",
+          "slug": "cra-cruzo-a-los-frigorificos-por-usar-el-visec-para-bajar-el-66b457",
+          "url": "https://www.diariolacampaña.com.ar/n/cra-cruzo-a-los-frigorificos-por-usar-el-visec-para-bajar-el-66b457",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "983817514771339",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18068392703512066",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8d91a8fd4cc6_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "043c14db8921",
       "rep": {
@@ -19175,8 +19245,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T14:25:38-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-22T16:03:25-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
