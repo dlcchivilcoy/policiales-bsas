@@ -3690,6 +3690,71 @@
           "comentarios": 1
         }
       }
+    },
+    "policiales:https://www.chacabuquero.com.ar/2026/10/vecina-acosada-en-la-noche-de-chacabuco.html": {
+      "publicado": "2026-10-21T01:30:06+00:00",
+      "horas": 28.6,
+      "capturado": "2026-10-22T06:06:23+00:00",
+      "origen": "policiales",
+      "categoria": "policiales",
+      "titular": "Acoso y persecución de una ex pareja que intentó meterse a robar por los fondos",
+      "localidad": "Chacabuco",
+      "km": 50.1,
+      "franja": "noche (18-24)",
+      "dia": "martes",
+      "destinos": {
+        "instagram": {
+          "likes": 4,
+          "comentarios": 0
+        },
+        "facebook": {
+          "vistas": 299,
+          "likes": 2,
+          "comentarios": 0,
+          "formato": "reel"
+        },
+        "youtube": {
+          "vistas": 138,
+          "likes": 0,
+          "comentarios": 0
+        }
+      }
+    },
+    "nacionales:https://www.infobae.com/economia/2026/10/20/el-titular-de-arba-reclamo-que-caputo-no-autoriza-creditos-para-obras-contra-las-inundaciones-discrimina-a-la-provincia/": {
+      "publicado": "2026-10-21T00:45:00+00:00",
+      "horas": 29.4,
+      "capturado": "2026-10-22T06:06:23+00:00",
+      "origen": "nacionales",
+      "categoria": "general",
+      "titular": "ARBA acusa a la Nación de bloquear fondos para obras clave contra inundaciones",
+      "localidad": "",
+      "km": null,
+      "franja": "noche (18-24)",
+      "dia": "martes",
+      "destinos": {}
+    },
+    "nacionales:https://www.infobae.com/sociedad/policiales/2026/10/20/el-padre-de-agostina-paez-se-nego-a-declarar-por-el-robo-de-15-millones-que-ofrecera-su-abogado-para-pedir-la-excarcelacion/": {
+      "publicado": "2026-10-21T01:15:00+00:00",
+      "horas": 28.9,
+      "capturado": "2026-10-22T06:06:23+00:00",
+      "origen": "nacionales",
+      "categoria": "general",
+      "titular": "Padre de Agostina Páez se negó a declarar y piden su excarcelación",
+      "localidad": "",
+      "km": null,
+      "franja": "noche (18-24)",
+      "dia": "martes",
+      "destinos": {
+        "instagram": {
+          "likes": 15,
+          "comentarios": 0
+        },
+        "youtube": {
+          "vistas": 287,
+          "likes": 1,
+          "comentarios": 0
+        }
+      }
     }
   },
   "no_disponible": "Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema."
