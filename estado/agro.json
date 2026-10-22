@@ -19030,7 +19030,7 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T13:44:04-03:00",
+  "actualizado": "2026-10-22T14:02:11-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -20307,6 +20307,99 @@
           ]
         }
       }
+    },
+    "2026-10-22T14:00:00-03:00": {
+      "dia": "2026-10-22",
+      "bloque": "mediodia",
+      "items": [
+        {
+          "tipo": "alerta",
+          "clave": "alerta|Tormentas|naranja|2026-10-22T15:00:00-03:00",
+          "publicado": {
+            "instagram": {
+              "id": "17891506677653985"
+            },
+            "facebook": {
+              "id": "3089155698110837"
+            }
+          }
+        },
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "17920591947242954"
+            },
+            "facebook": {
+              "id": "1101547095803812"
+            }
+          }
+        },
+        {
+          "tipo": "chicago",
+          "clave": "chicago",
+          "publicado": {
+            "instagram": {
+              "id": "17994976095108080"
+            },
+            "facebook": {
+              "id": "1118521484209019"
+            }
+          }
+        },
+        {
+          "tipo": "novedad",
+          "clave": "novedad",
+          "publicado": {
+            "instagram": {
+              "id": "18064972511790414"
+            },
+            "facebook": {
+              "id": "972313412038960"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17891506677653985"
+              },
+              "facebook": {
+                "id": "3089155698110837"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17920591947242954"
+              },
+              "facebook": {
+                "id": "1101547095803812"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17994976095108080"
+              },
+              "facebook": {
+                "id": "1118521484209019"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18064972511790414"
+              },
+              "facebook": {
+                "id": "972313412038960"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "mercado": {
@@ -20470,6 +20563,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-10-21": {
+        "fecha": "2026-10-21",
+        "productos": {
+          "trigo": {
+            "ars": 329300.0,
+            "usd": 217.07,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "maiz": {
+            "ars": 277875.0,
+            "usd": 183.17,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 804010.0,
+            "usd": 530.0,
+            "estimado": true,
+            "direccion": "sube"
+          },
+          "soja": {
+            "ars": 550000.0,
+            "usd": 362.56,
+            "estimado": true,
+            "direccion": "igual"
+          },
+          "sorgo": {
+            "ars": 288230.0,
+            "usd": 190.0,
+            "estimado": false,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1517.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -20522,6 +20655,20 @@
           "fecha": "2026-10-21",
           "compra": 1495.0,
           "venta": 1545.0
+        },
+        "divisa": {
+          "fecha": "2026-10-21",
+          "compra": 1517.0,
+          "venta": 1526.0
+        }
+      },
+      "2026-10-22": {
+        "fuente": "Banco Nación",
+        "hora": "10:30",
+        "billete": {
+          "fecha": "2026-10-22",
+          "compra": 1500.0,
+          "venta": 1550.0
         },
         "divisa": {
           "fecha": "2026-10-21",
@@ -20683,7 +20830,7 @@
       },
       "2026-10-22": {
         "fecha": "2026-10-22",
-        "usd_t": 457.9
+        "usd_t": 460.9
       }
     },
     "chicago_maiz": {
@@ -20789,7 +20936,7 @@
       },
       "2026-10-22": {
         "fecha": "2026-10-22",
-        "usd_t": 182.9
+        "usd_t": 182.0
       }
     },
     "chicago_trigo": {
@@ -20895,7 +21042,7 @@
       },
       "2026-10-22": {
         "fecha": "2026-10-22",
-        "usd_t": 230.9
+        "usd_t": 230.5
       }
     }
   }
