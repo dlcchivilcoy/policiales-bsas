@@ -11289,6 +11289,48 @@
         63,
         60
       ]
+    },
+    "aa6b9fa3ae0c1bbb": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Récord histórico de exportaciones agroindustriales con gran impacto macroeconómico y alta repercusión en el sector.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "73a149306afd4ea4": {
+      "impacto_economico": 17,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 8,
+      "ai_score": 78,
+      "commercial_score": 88,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Datos clave de rinde y estado del trigo en la región núcleo, de máxima utilidad directa para los productores locales.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12080,7 +12122,9 @@
       "https://croplife.com/crop-inputs/fertilizer/huma-enters-granular-fertilizer-market": "2026-10-22",
       "https://croplife.com/crop-inputs/seed-biotech/biolumic-and-irri-field-test-rice-trait-technology-to-protect-yields-cut-methane-and-water-use": "2026-10-22",
       "https://croplife.com/crop-inputs/seed-biotech/put-test-plot-data-to-work-in-your-seed-strategy": "2026-10-22",
-      "https://croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds": "2026-10-22"
+      "https://croplife.com/crop-inputs/seed-biotech/pioneer-adds-victrato-seed-treatment-to-help-farmers-get-ahead-of-scn-and-sds": "2026-10-22",
+      "https://infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro": "2026-10-22",
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/octubre-raro-para-el-trigo-pesar": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12870,7 +12914,9 @@
       "huma enters granular fertilizer market": "2026-10-22",
       "biolumic and irri field test rice trait technology to protect yields cut methane and water use": "2026-10-22",
       "put test plot data to work in your seed strategy": "2026-10-22",
-      "pioneer adds victrato seed treatment to help farmers get ahead of scn and sds": "2026-10-22"
+      "pioneer adds victrato seed treatment to help farmers get ahead of scn and sds": "2026-10-22",
+      "por primera vez argentina exporto por mas de u s 10 000 millones en un mes cuanto aporto el agro": "2026-10-22",
+      "octubre raro para el trigo a pesar de la menor radiacion el frio y las heladas el rinde estimado es de 43 qq ha para la region nucleo": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13660,7 +13706,9 @@
       "da6a8936c8b437fa": "2026-10-22",
       "30961ce5eff47b71": "2026-10-22",
       "9c4980868385af2f": "2026-10-22",
-      "a4fe502226c1fe55": "2026-10-22"
+      "a4fe502226c1fe55": "2026-10-22",
+      "aa6b9fa3ae0c1bbb": "2026-10-22",
+      "73a149306afd4ea4": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18613,9 +18661,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b2852912a8ba_portada.jpg"
+    },
+    {
+      "id": "cfdfc385db29",
+      "cuando": "2026-10-22T17:00-03:00",
+      "titulo_original": "Octubre “raro” para el trigo: a pesar de la menor radiación, el frío y las heladas, el rinde estimado es de 43 qq/ha para la región núcleo",
+      "descripcion": "La cosecha no va a tener la espectacularidad del año pasado, pero muestra muy buenos números a pesar de todo. Con 6,7 Mt, la región cosecharían casi 60% más que el promedio de los últimos 16 años.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/octubre-raro-para-el-trigo-pesar",
+      "titular": "Trigo en región núcleo: estiman 43 qq/ha y una cosecha de 6,7",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Datos clave de rinde y estado del trigo en la región núcleo, de máxima utilidad directa para los productores locales.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f20c63cf-3874-44a4-8658-189d0d941ddd",
+          "slug": "trigo-en-la-region-nucleo-estiman-43-qq-ha-y-una-cosecha-de-6-7-950ec9",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-la-region-nucleo-estiman-43-qq-ha-y-una-cosecha-de-6-7-950ec9",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2068919197084453",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17875875867585350",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cfdfc385db29_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "03a2199f6859",
+      "rep": {
+        "id": "03a2199f6859",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro/",
+        "canonical_url": "https://infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro",
+        "titulo": "Por primera vez, Argentina exportó por más de U$S 10.000 millones en un mes: ¿cuánto aportó el agro?",
+        "titulo_norm": "por primera vez argentina exporto por mas de u s 10 000 millones en un mes cuanto aporto el agro",
+        "descripcion": "Las ventas externas de las diferentes cadenas agroindustriales crecieron alrededor de un 14% y representaron más de la mitad del récord exportador. La cebada, el maíz y el girasol se destacaron entre los principales motores de la expansión.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/caa.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-10-22T16:56-03:00",
+        "capturado": "2026-10-22T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "aa6b9fa3ae0c1bbb"
+      },
+      "grupo": [
+        {
+          "id": "03a2199f6859",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro/",
+          "canonical_url": "https://infocampo.com.ar/por-primera-vez-argentina-exporto-por-mas-de-us-10-000-millones-en-un-mes-cuanto-aporto-el-agro",
+          "titulo": "Por primera vez, Argentina exportó por más de U$S 10.000 millones en un mes: ¿cuánto aportó el agro?",
+          "titulo_norm": "por primera vez argentina exporto por mas de u s 10 000 millones en un mes cuanto aporto el agro",
+          "descripcion": "Las ventas externas de las diferentes cadenas agroindustriales crecieron alrededor de un 14% y representaron más de la mitad del récord exportador. La cebada, el maíz y el girasol se destacaron entre los principales motores de la expansión.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/caa.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-10-22T16:56-03:00",
+          "capturado": "2026-10-22T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "aa6b9fa3ae0c1bbb"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Récord histórico de exportaciones agroindustriales con gran impacto macroeconómico y alta repercusión en el sector.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T17:00-03:00"
+    },
     {
       "id": "2bc281870fbc",
       "rep": {
@@ -19888,8 +20053,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T16:43:22-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T17:03:34-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
