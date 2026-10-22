@@ -15,7 +15,9 @@
     "p:15994": "2026-10-17",
     "h:1930-10-18:9a039fe5": "2026-10-18",
     "h:1936-10-20:cc88ad85": "2026-10-20",
-    "h:1960-10-21:bc3f304c": "2026-10-21"
+    "h:1960-10-21:bc3f304c": "2026-10-21",
+    "h:1854-10-22:240d12c0": "2026-10-22",
+    "p:17660": "2026-10-22"
   },
   "preguntas": [
     {
@@ -499,7 +501,33 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-22:efemeride": {
+      "titular": "En 1854, Chivilcoy nacía cuando Valentín Fernández Coria clavaba la histórica pala",
+      "subtipo": "efemeride",
+      "cuando": "2026-10-22T13:30:50-03:00",
+      "intentos": 1,
+      "fuente": {
+        "fecha": "22 de octubre de 1854",
+        "hace": 172,
+        "posts": [
+          18265,
+          17462,
+          15981,
+          9282,
+          5854,
+          393
+        ],
+        "dedicado": 17660,
+        "candidatas": 3,
+        "coincide_anio": true
+      },
+      "estado": "ok",
+      "id": "17954492967269384",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-21T20:30:30-03:00"
+  "actualizado": "2026-10-22T13:30:35-03:00"
 }
