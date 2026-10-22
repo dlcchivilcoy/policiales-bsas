@@ -16937,6 +16937,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a7a6a53e6923_portada.jpg"
+    },
+    {
+      "id": "f60243adc84c",
+      "cuando": "2026-10-22T08:23-03:00",
+      "titulo_original": "Las Exportaciones agroindustriales fueron récord en septiembre crecieron 17% en volumen",
+      "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que las exportaciones de la agroindustria argentina alcanzaron en septiembre récord en volumen y en valor, se exportaron 11,43 millones de toneladas por un monto de USD5.654 millones, resultado que signif",
+      "fuente": "Secretaría de Agricultura",
+      "url": "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
+      "titular": "Exportaciones agroindustriales marcan récord en septiembre con 11,43 millones de toneladas",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "exportaciones agroindustriales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cifras récord de exportación oficializadas que marcan el pulso macroeconómico del sector agropecuario.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          70
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "06af6198-2f3b-4e15-9214-61b9aee58970",
+          "slug": "exportaciones-agroindustriales-record-en-septiembre-con-11-43-58bf27",
+          "url": "https://www.diariolacampaña.com.ar/n/exportaciones-agroindustriales-record-en-septiembre-con-11-43-58bf27",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2552040568604571",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18466255933184946",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f60243adc84c_portada.jpg"
     }
   ],
   "pendientes": [
@@ -17222,73 +17280,6 @@
         "dobles": [
           60,
           66
-        ]
-      },
-      "cuando": "2026-10-21T21:00-03:00"
-    },
-    {
-      "id": "f60243adc84c",
-      "rep": {
-        "id": "f60243adc84c",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
-        "canonical_url": "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
-        "titulo": "Las Exportaciones agroindustriales fueron récord en septiembre crecieron 17% en volumen",
-        "titulo_norm": "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que las exportaciones de la agroindustria argentina alcanzaron en septiembre récord en volumen y en valor, se exportaron 11,43 millones de toneladas por un monto de USD5.654 millones, resultado que significó un crecimiento de 17% y 14% respectivamente en la comparación interanual, según datos procesados por la Subsecretaría de Mercados Agroalimentarios e Inserción Internacional, en base a estadísticas de INDEC. Los complejos (productos primarios y sus derivados) que mostraron los mejores resultados en septiembre fueron: cebada con una mejora del 276% en volumen y del 311% en valor, seguido por el maíz con un incremento del 112% en volumen y del 121% en valor; el olivo con el 53% y 32% de aumentos en volumen y valor; el trigo con 25% y 34%; las legumbres con el 16% y 15%; preparaciones alimenti",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/expo_record_1.jpeg",
-        "autor": "pconsiglio",
-        "publicado": "2026-10-21T18:20-03:00",
-        "capturado": "2026-10-21T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b8497f9cc312097e"
-      },
-      "grupo": [
-        {
-          "id": "f60243adc84c",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
-          "canonical_url": "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen",
-          "titulo": "Las Exportaciones agroindustriales fueron récord en septiembre crecieron 17% en volumen",
-          "titulo_norm": "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que las exportaciones de la agroindustria argentina alcanzaron en septiembre récord en volumen y en valor, se exportaron 11,43 millones de toneladas por un monto de USD5.654 millones, resultado que significó un crecimiento de 17% y 14% respectivamente en la comparación interanual, según datos procesados por la Subsecretaría de Mercados Agroalimentarios e Inserción Internacional, en base a estadísticas de INDEC. Los complejos (productos primarios y sus derivados) que mostraron los mejores resultados en septiembre fueron: cebada con una mejora del 276% en volumen y del 311% en valor, seguido por el maíz con un incremento del 112% en volumen y del 121% en valor; el olivo con el 53% y 32% de aumentos en volumen y valor; el trigo con 25% y 34%; las legumbres con el 16% y 15%; preparaciones alimenti",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/expo_record_1.jpeg",
-          "autor": "pconsiglio",
-          "publicado": "2026-10-21T18:20-03:00",
-          "capturado": "2026-10-21T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b8497f9cc312097e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 11,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 70,
-        "subtema": "empresas",
-        "tema": "exportaciones agroindustriales",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Cifras récord de exportación oficializadas que marcan el pulso macroeconómico del sector agropecuario.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          70
         ]
       },
       "cuando": "2026-10-21T21:00-03:00"
@@ -17755,8 +17746,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T08:06:39-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T08:26:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
