@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-22T00:16:05.000Z",
+  "actualizado": "2026-10-22T00:42:23.000Z",
   "eventos": [
     {
       "id": "nacionales:9e0c09454f9048c5",
@@ -538,6 +538,30 @@
         "Diputados",
         "Congreso"
       ],
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diariodelujan.com/un-robo-dos-sospechosos-detenidos-en-lujan/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-22T00:42:23.000Z",
+      "titulo": "Dos detenidos tras cuatro allanamientos por un robo",
+      "descripcion": "La DDI realizó cuatro procedimientos en el marco de un asalto cometido en julio. Secuestraron un arma y notificaron a un preso en Mercedes.",
+      "texto_tiktok": "La investigación por un violento asalto cometido en la localidad de Duggan sumó avances concretos tras una serie de operativos simultáneos.\n\nLos procedimientos incluyeron cuatro allanamientos en distintos distritos bonaerenses a cargo del personal de la DDI.\n\nUno de los sospechosos fue atrapado en Luján junto con un revólver, mientras que el segundo implicado fue notificado en una cárcel de Mercedes.\n\nLa fiscalía interviniente continúa con las diligencias para esclarecer el hecho y determinar la vinculación de los acusados con otros delitos.\n\n📲 Más noticias de Luján en www.diariolacampaña.com.ar\n\n#Lujan #Robo #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-21_2305_05_lujan_dos-detenidos-tras-cuatro-alla.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/lujan-dos-detenidos-y-un-arma-secuestrada-por-un-violento-robo-7aab97",
+      "youtube_url": "https://youtube.com/shorts/SPh5IPXwFIQ",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Luján",
+      "volanta": "Operativo en Luján y Duggan",
+      "categoria": "robo",
+      "distancia_km": 90.1,
+      "radio_ok": true,
       "plataformas": [
         "x",
         "tiktok"
