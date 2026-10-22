@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-22T02:01:05.000Z",
+  "actualizado": "2026-10-22T21:15:47.000Z",
   "eventos": [
     {
       "id": "nacionales:fb8bbb9c2285b74b",
@@ -537,6 +537,31 @@
       "categoria": "otro_policial",
       "distancia_km": 50.1,
       "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "nacionales:e25c9cf3646e5306",
+      "origen": "nacionales",
+      "tipo": "video",
+      "generado": "2026-10-22T21:15:47.000Z",
+      "titulo": "Diputados y ministros saludaron al presidente Javier Milei por su cumpleaños",
+      "descripcion": "Funcionarios y legisladores de La Libertad Avanza celebraron el cumpleaños número 56 del mandatario con mensajes en redes sociales y un festejo en el Congreso encabezado por Karina Milei y Martín Menem.",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_e25c9cf364_diputados-y-ministros-saludaron-al-presidente.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/el-oficialismo-saludo-a-javier-milei-por-su-cumpleanos-numero-e25c9c",
+      "youtube_url": "https://youtube.com/shorts/935r-7nZec0",
+      "prioridad": 5,
+      "urgente": false,
+      "volanta": "Javier Milei",
+      "categoria": "Política",
+      "categoria_nacional": "",
+      "hashtags": [
+        "JavierMilei",
+        "Politica"
+      ],
       "plataformas": [
         "x",
         "tiktok"
