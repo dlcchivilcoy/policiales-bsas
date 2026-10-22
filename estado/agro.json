@@ -10242,6 +10242,27 @@
         60,
         70
       ]
+    },
+    "100ee2675ad9019e": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 81,
+      "commercial_score": 81,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacto directo masivo en zona núcleo con estimaciones oficiales de cosecha y alertas climáticas.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -10952,7 +10973,8 @@
       "https://lanacion.com.ar/economia/campo/hay-40000-hectareas-el-cultivo-estrategico-conectado-con-el-mundo-que-promete-un-boom-como-nid21102026": "2026-10-21",
       "https://bichosdecampo.com/alerta-naranja-se-vienen-tormentas-intensas-en-gran-parte-de-la-zona-pampeana-y-el-litoral": "2026-10-21",
       "https://bichosdecampo.com/fuerte-baja-de-precios-del-trigo-y-el-aceite-de-soja-ante-la-posibilidad-de-un-acuerdo-entre-ee-uu-y-rusia-que-permita-terminar-con-el-apagon-logistico-del-mar-negro": "2026-10-21",
-      "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen": "2026-10-21"
+      "https://argentina.gob.ar/noticias/las-exportaciones-agroindustriales-fueron-record-en-septiembre-crecieron-17-en-volumen": "2026-10-21",
+      "https://lanacion.com.ar/economia/campo/octubre-tan-extrano-anticipan-que-la-cosecha-de-trigo-sera-la-segunda-de-mayor-importancia-de-la-nid21102026": "2026-10-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -11661,7 +11683,8 @@
       "hay 40 000 hectareas el cultivo estrategico conectado con el mundo que promete un boom como combustible": "2026-10-21",
       "alerta naranja se vienen tormentas intensas en gran parte de la zona pampeana y el litoral": "2026-10-21",
       "fuerte baja de precios del trigo y el aceite de soja ante la posibilidad de un acuerdo entre ee uu y rusia que permita terminar con el apagon logistico del mar negro": "2026-10-21",
-      "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen": "2026-10-21"
+      "las exportaciones agroindustriales fueron record en septiembre crecieron 17 en volumen": "2026-10-21",
+      "octubre tan extrano anticipan que la cosecha de trigo sera la segunda de mayor importancia de la historia pero acecha un temor": "2026-10-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -12370,7 +12393,8 @@
       "2ce5d2b7c042b817": "2026-10-21",
       "30fc062420131748": "2026-10-21",
       "6ff1ce8b5f653c6e": "2026-10-21",
-      "b8497f9cc312097e": "2026-10-21"
+      "b8497f9cc312097e": "2026-10-21",
+      "100ee2675ad9019e": "2026-10-21"
     }
   },
   "elegidas": [
@@ -16217,9 +16241,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c8c16f5efb29_portada.jpg"
+    },
+    {
+      "id": "d809adddbe67",
+      "cuando": "2026-10-21T21:20-03:00",
+      "titulo_original": "La soja cayó a su menor precio desde agosto y el trigo tocó un mínimo de 14 semanas",
+      "descripcion": "La oleaginosa perdió un 3,62% en ocho ruedas y este miércoles cerró en US$457,55 por tonelada en la Bolsa de Chicago; el avance de la cosecha estadounidense presionó sobre los precios, aunque los especialistas señalan que todavía se mantienen por encima de los niveles de julio",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026/",
+      "titular": "La soja cayó a US$457,55 por tonelada en la Bolsa de Chicago",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 9,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja y trigo",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad de la campaña y genera gran debate entre los productores de la zona núcleo.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-21T21:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "71f5dd56-b89a-44a6-9f14-dbdc21c45caa",
+          "slug": "la-soja-cayo-a-us-457-55-por-tonelada-en-chicago-tras-ocho-72c5f3",
+          "url": "https://www.diariolacampaña.com.ar/n/la-soja-cayo-a-us-457-55-por-tonelada-en-chicago-tras-ocho-72c5f3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1794527058334465",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17895674703611387",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d809adddbe67_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "6ceebed5ddb7",
+      "rep": {
+        "id": "6ceebed5ddb7",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/octubre-tan-extrano-anticipan-que-la-cosecha-de-trigo-sera-la-segunda-de-mayor-importancia-de-la-nid21102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/octubre-tan-extrano-anticipan-que-la-cosecha-de-trigo-sera-la-segunda-de-mayor-importancia-de-la-nid21102026",
+        "titulo": "“Octubre tan extraño”: anticipan que la cosecha de trigo será la segunda de mayor importancia de la historia, pero acecha un temor",
+        "titulo_norm": "octubre tan extrano anticipan que la cosecha de trigo sera la segunda de mayor importancia de la historia pero acecha un temor",
+        "descripcion": "La Bolsa de Comercio de Rosario estimó una producción de 23,8 millones de toneladas; advirtió sobre las consecuencias de un escenario “marcado por el frío, la menor radiación y lluvias por debajo de lo esperado” en el ciclo",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/BBCKXXRCLBAXVKNOST35N7WV6Y.jpeg?auth=a1bb50cffb3c4156490b91ec63ed5577a184230c1e7cdb3220824fa14fd75329&smart=true",
+        "autor": "",
+        "publicado": "2026-10-21T20:57-03:00",
+        "capturado": "2026-10-21T21:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "100ee2675ad9019e"
+      },
+      "grupo": [
+        {
+          "id": "6ceebed5ddb7",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/octubre-tan-extrano-anticipan-que-la-cosecha-de-trigo-sera-la-segunda-de-mayor-importancia-de-la-nid21102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/octubre-tan-extrano-anticipan-que-la-cosecha-de-trigo-sera-la-segunda-de-mayor-importancia-de-la-nid21102026",
+          "titulo": "“Octubre tan extraño”: anticipan que la cosecha de trigo será la segunda de mayor importancia de la historia, pero acecha un temor",
+          "titulo_norm": "octubre tan extrano anticipan que la cosecha de trigo sera la segunda de mayor importancia de la historia pero acecha un temor",
+          "descripcion": "La Bolsa de Comercio de Rosario estimó una producción de 23,8 millones de toneladas; advirtió sobre las consecuencias de un escenario “marcado por el frío, la menor radiación y lluvias por debajo de lo esperado” en el ciclo",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/BBCKXXRCLBAXVKNOST35N7WV6Y.jpeg?auth=a1bb50cffb3c4156490b91ec63ed5577a184230c1e7cdb3220824fa14fd75329&smart=true",
+          "autor": "",
+          "publicado": "2026-10-21T20:57-03:00",
+          "capturado": "2026-10-21T21:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "100ee2675ad9019e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 81,
+        "commercial_score": 81,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto directo masivo en zona núcleo con estimaciones oficiales de cosecha y alertas climáticas.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-21T21:20-03:00"
+    },
     {
       "id": "169bc1580d34",
       "rep": {
@@ -16479,69 +16620,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-21T19:22-03:00"
-    },
-    {
-      "id": "d809adddbe67",
-      "rep": {
-        "id": "d809adddbe67",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026",
-        "titulo": "La soja cayó a su menor precio desde agosto y el trigo tocó un mínimo de 14 semanas",
-        "titulo_norm": "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas",
-        "descripcion": "La oleaginosa perdió un 3,62% en ocho ruedas y este miércoles cerró en US$457,55 por tonelada en la Bolsa de Chicago; el avance de la cosecha estadounidense presionó sobre los precios, aunque los especialistas señalan que todavía se mantienen por encima de los niveles de julio",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/5VDQTFG7LJFTRNOBYDRK7IK5XY.png?auth=b196bab5e3b76058f491a92939e12d72c6d276dcb409a40ff4c93b9ae81944eb&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-10-21T18:24-03:00",
-        "capturado": "2026-10-21T18:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "307ce0ab26976076"
-      },
-      "grupo": [
-        {
-          "id": "d809adddbe67",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/la-soja-cayo-a-su-menor-precio-desde-agosto-y-el-trigo-toco-un-minimo-de-14-semanas-nid21102026",
-          "titulo": "La soja cayó a su menor precio desde agosto y el trigo tocó un mínimo de 14 semanas",
-          "titulo_norm": "la soja cayo a su menor precio desde agosto y el trigo toco un minimo de 14 semanas",
-          "descripcion": "La oleaginosa perdió un 3,62% en ocho ruedas y este miércoles cerró en US$457,55 por tonelada en la Bolsa de Chicago; el avance de la cosecha estadounidense presionó sobre los precios, aunque los especialistas señalan que todavía se mantienen por encima de los niveles de julio",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/5VDQTFG7LJFTRNOBYDRK7IK5XY.png?auth=b196bab5e3b76058f491a92939e12d72c6d276dcb409a40ff4c93b9ae81944eb&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-10-21T18:24-03:00",
-          "capturado": "2026-10-21T18:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "307ce0ab26976076"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 9,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "soja y trigo",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en la rentabilidad de la campaña y genera gran debate entre los productores de la zona núcleo.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-21T18:40-03:00"
     },
     {
       "id": "af9c1a422406",
@@ -17135,8 +17213,8 @@
       "cuando": "2026-10-21T13:20-03:00"
     }
   ],
-  "actualizado": "2026-10-21T21:04:19-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-21T21:23:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
