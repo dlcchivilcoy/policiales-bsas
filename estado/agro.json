@@ -10899,6 +10899,94 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9d81b84ab96d5686": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 4,
+      "cercania_argentina": 8,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "vino",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un proyecto vitivinícola regional de nicho en La Rioja, con nulo arraigo para el productor de la zona núcleo bonaerense.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "132e78562645f9b3": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 57,
+      "commercial_score": 56,
+      "subtema": "mercados",
+      "tema": "subsidios",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Los millonarios subsidios en EE.UU. generan fuerte debate sobre competitividad y precios, interesando a todo productor agrícola.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        48
+      ]
+    },
+    "d84d89cb5427bf39": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 8,
+      "cercania_argentina": 4,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 42,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "ciberseguridad",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Los ciberataques a la agroindustria son una advertencia global, aunque de impacto abstracto para el productor local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "340737354fd71353": {
+      "impacto_economico": 12,
+      "interes_productores": 11,
+      "innovacion": 14,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 9,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "malezas",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Robótica avanzada con luz pulsada para control de malezas sin químicos, ideal para mostrar tecnología de punta.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -11671,7 +11759,11 @@
       "https://futurefarming.com/tech-in-focus/field-robots/dutch-robot-builder-aigro-declared-bankrupt": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/gran-paso-el-campo-celebro-la-media-sancion-de-una-ley-que-busca-endurecer-las-penas-por-danos-a-la-nid22102026": "2026-10-22",
       "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda": "2026-10-22",
-      "https://lanacion.com.ar/economia/campo/es-el-momento-una-industria-que-mueve-us15000-millones-pidio-eliminar-aranceles-a-insumos-y-nid22102026": "2026-10-22"
+      "https://lanacion.com.ar/economia/campo/es-el-momento-una-industria-que-mueve-us15000-millones-pidio-eliminar-aranceles-a-insumos-y-nid22102026": "2026-10-22",
+      "https://bichosdecampo.com/cuatro-siglos-despues-de-los-jesuitas-el-vino-vuelve-a-poner-a-huaco-en-el-mapa-de-la-mano-de-un-proyecto-familiar-el-valle-riojano-consiguio-su-propia-indicacion-geografica": "2026-10-22",
+      "https://bichosdecampo.com/contra-esto-competimos-en-2026-los-productores-estadounidenses-recibirian-un-record-historico-de-subsidios-por-mas-de-55-000-millones-de-dolares": "2026-10-22",
+      "https://agfundernews.com/recent-agrifood-cyberattacks-are-a-wakeup-call-for-the-industry-as-ransomware-incidences-increase": "2026-10-22",
+      "https://agfundernews.com/%f0%9f%8e%a5-earth-rover-bets-on-pulsed-light-to-tackle-weeds-without-chemicals": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12442,7 +12534,11 @@
       "dutch robot builder aigro declared bankrupt": "2026-10-22",
       "gran paso el campo celebro la media sancion de una ley que busca endurecer las penas por danos a la produccion": "2026-10-22",
       "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda": "2026-10-22",
-      "es el momento una industria que mueve us 15 000 millones pidio eliminar aranceles a insumos y percepciones de iva y ganancias": "2026-10-22"
+      "es el momento una industria que mueve us 15 000 millones pidio eliminar aranceles a insumos y percepciones de iva y ganancias": "2026-10-22",
+      "cuatro siglos despues de los jesuitas el vino vuelve a poner a huaco en el mapa de la mano de un proyecto familiar el valle riojano consiguio su propia indicacion geografica": "2026-10-22",
+      "contra esto competimos en 2026 los productores estadounidenses recibirian un record historico de subsidios por mas de 55 000 millones de dolares": "2026-10-22",
+      "recent agrifood cyberattacks are a wakeup call for the industry as ransomware incidences increase": "2026-10-22",
+      "earth rover bets on pulsed light to tackle weeds without chemicals": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13213,7 +13309,11 @@
       "50afcf807cf0fa89": "2026-10-22",
       "25e80b77c302bc66": "2026-10-22",
       "acf8b7351fcb1879": "2026-10-22",
-      "b178edbd27411220": "2026-10-22"
+      "b178edbd27411220": "2026-10-22",
+      "9d81b84ab96d5686": "2026-10-22",
+      "132e78562645f9b3": "2026-10-22",
+      "d84d89cb5427bf39": "2026-10-22",
+      "340737354fd71353": "2026-10-22"
     }
   },
   "elegidas": [
@@ -17943,6 +18043,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_995506ae8ec4_portada.jpg"
+    },
+    {
+      "id": "3bf9b68917fd",
+      "cuando": "2026-10-22T14:22-03:00",
+      "titulo_original": "🎥 Earth Rover bets on pulsed light to tackle weeds without chemicals",
+      "descripcion": "Earth Rover's CLAWS robot targets individual weeds with pulsed light to destroy the meristem without harming surrounding plants or soil. The post 🎥 Earth Rover bets on pulsed light to tackle weeds without chemicals appeared first on AgFunderNews.",
+      "fuente": "AgFunderNews",
+      "url": "https://agfundernews.com/%f0%9f%8e%a5-earth-rover-bets-on-pulsed-light-to-tackle-weeds-without-chemicals",
+      "titular": "El robot solar Earth Rover CLAWS elimina malezas con luz pulsada",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 14,
+        "cercania_argentina": 6,
+        "cercania_pba": 4,
+        "potencial_reel": 9,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "malezas",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Robótica avanzada con luz pulsada para control de malezas sin químicos, ideal para mostrar tecnología de punta.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1e196798-d9e7-418d-8e81-b2b36b5afe2d",
+          "slug": "conoce-el-robot-solar-que-elimina-malezas-con-luz-pulsada-y-3bf9b6",
+          "url": "https://www.diariolacampaña.com.ar/n/conoce-el-robot-solar-que-elimina-malezas-con-luz-pulsada-y-3bf9b6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1795218134940625",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17906688714597633",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3bf9b68917fd_portada.jpg"
     }
   ],
   "pendientes": [
@@ -19021,8 +19175,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T14:05:09-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T14:25:38-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
