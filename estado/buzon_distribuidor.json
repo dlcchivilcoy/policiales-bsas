@@ -1,31 +1,6 @@
 {
-  "actualizado": "2026-10-22T01:32:00.000Z",
+  "actualizado": "2026-10-22T02:01:05.000Z",
   "eventos": [
-    {
-      "id": "nacionales:7473fc970bead57a",
-      "origen": "nacionales",
-      "tipo": "video",
-      "generado": "2026-10-20T01:46:16.000Z",
-      "titulo": "Superávit energético histórico: USD 9.427 millones explicados por Vaca Muerta",
-      "descripcion": "Entre enero y septiembre, la balanza comercial energética alcanzó un saldo positivo de USD 9.427 millones, superando marcas previas impulsada por la producción de hidrocarburos y mayores ventas al exterior.",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_7473fc970b_superavit-energetico-historico-usd-9-427-millones.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/vaca-muerta-dispara-el-superavit-energetico-a-usd-9-427-7473fc",
-      "youtube_url": "https://youtube.com/shorts/tQ0EQ5FkatM",
-      "prioridad": 7,
-      "urgente": false,
-      "volanta": "Vaca Muerta y energía",
-      "categoria": "Economía",
-      "categoria_nacional": "",
-      "hashtags": [
-        "VacaMuerta",
-        "Energia"
-      ],
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/10/ladrones-al-acecho-en-las-afueras-de.html",
       "origen": "policiales",
@@ -585,6 +560,30 @@
       "volanta": "San Antonio de Areco",
       "categoria": "robo",
       "distancia_km": 88.2,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/10/motociclista-accidentada-en-chacabuco.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-22T02:01:05.000Z",
+      "titulo": "Una motociclista de 20 años sufrió un accidente en Chacabuco y la moto desapareció",
+      "descripcion": "Una joven de 20 años resultó herida esta tarde tras protagonizar un accidente en su moto en Chacabuco. Fue trasladada al hospital y no hubo otros vehículos involucrados, pero la policía halló la escena sin el rodado.",
+      "texto_tiktok": "Una joven de 20 años protagonizó un accidente vial esta tarde en la ciudad de Chacabuco.\n\nEl hecho ocurrió en la esquina de Alem y Pueyrredón, donde la conductora sufrió heridas por causas que se investigan.\n\nSegún informaron fuentes policiales, no hubo otro vehículo involucrado en el siniestro.\n\nLa víctima fue trasladada en ambulancia al hospital municipal, mientras que la moto ya no se encontraba en el lugar cuando arribó la policía.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-22_0104_04_chacabuco_una-motociclista-de-20-a-os-su.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-motociclista-de-20-anos-hospitalizada-tras-un-extrano-dc59c5",
+      "youtube_url": "https://youtube.com/shorts/O_7zp65rxFY",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Siniestro vial en Chacabuco",
+      "categoria": "otro_policial",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
