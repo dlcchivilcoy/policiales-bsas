@@ -11440,6 +11440,27 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "323cd5bdad6252aa": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 33,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "virus shamonda",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una alerta sanitaria internacional relevante para la ganadería pero de baja incidencia directa actual en la región pampeana.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12239,7 +12260,8 @@
       "https://bichosdecampo.com/gran-noticia-para-productores-de-trigo-con-paciencia-molinos-brasilenos-tendran-que-importar-un-volumen-record-y-rezan-para-que-la-argentina-logre-obtener-buena-calidad": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/el-gigante-cresud-produjo-mas-y-mejoro-ingresos-pero-su-negocio-agropecuario-tuvo-una-perdida-nid22102026": "2026-10-22",
       "https://bichosdecampo.com/de-vuelta-al-ruedo-agronomico-el-ex-presidente-del-inta-juan-cruz-molina-afirma-en-el-2008-se-genero-una-mistica-que-hoy-no-escucho-con-la-misma-potencia": "2026-10-22",
-      "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales": "2026-10-22"
+      "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales": "2026-10-22",
+      "https://bichosdecampo.com/alerta-en-europa-por-el-virus-shamonda-que-afecta-al-ganado-vacuno-y-registra-el-primer-caso-humano": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13037,7 +13059,8 @@
       "gran noticia para productores de trigo con paciencia molinos brasilenos tendran que importar un volumen record y rezan para que la argentina logre obtener buena calidad": "2026-10-22",
       "el gigante cresud produjo mas y mejoro ingresos pero el negocio agropecuario tuvo una perdida operativa de 15 441 millones": "2026-10-22",
       "de vuelta al ruedo agronomico el ex presidente del inta juan cruz molina afirma en el 2008 se genero una mistica que hoy no escucho con la misma potencia": "2026-10-22",
-      "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales": "2026-10-22"
+      "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales": "2026-10-22",
+      "alerta en europa por el virus shamonda que afecta al ganado vacuno y registra el primer caso humano": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13835,7 +13858,8 @@
       "db191cc01728aa89": "2026-10-22",
       "bc957b47a1f01642": "2026-10-22",
       "ba9ab662197e23f3": "2026-10-22",
-      "10c6dfce396eb531": "2026-10-22"
+      "10c6dfce396eb531": "2026-10-22",
+      "323cd5bdad6252aa": "2026-10-22"
     }
   },
   "elegidas": [
@@ -19011,6 +19035,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4338b8df5fea_portada.jpg"
+    },
+    {
+      "id": "a3a895793436",
+      "cuando": "2026-10-22T18:40-03:00",
+      "titulo_original": "La frazada corta de los caminos rurales",
+      "descripcion": "Es momento de recuperar los recursos que perdieron los caminos rurales y garantizar que cada peso destinado a infraestructura se transforme en obras",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026/",
+      "titular": "Caminos rurales bonaerenses: piden rediscutir fondos del Impuesto Inmobiliario Rural",
+      "volanta": "Infraestructura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la logistica de transporte de toda la region pampeana.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7b86bce2-9b29-492a-af98-abe52a59e899",
+          "slug": "caminos-rurales-en-la-mira-piden-revisar-el-reparto-del-1b2fc3",
+          "url": "https://www.diariolacampaña.com.ar/n/caminos-rurales-en-la-mira-piden-revisar-el-reparto-del-1b2fc3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2128520147750906",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18397311709161085",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a3a895793436_portada.jpg"
     }
   ],
   "pendientes": [
@@ -19537,69 +19615,6 @@
         ]
       },
       "cuando": "2026-10-22T13:00-03:00"
-    },
-    {
-      "id": "a3a895793436",
-      "rep": {
-        "id": "a3a895793436",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026",
-        "titulo": "La frazada corta de los caminos rurales",
-        "titulo_norm": "la frazada corta de los caminos rurales",
-        "descripcion": "Es momento de recuperar los recursos que perdieron los caminos rurales y garantizar que cada peso destinado a infraestructura se transforme en obras",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/ZURJIKITORBNFGBGULYPPIRYR4.png?auth=6f437572e429ed63a0b99c941427f9955b1399ad9d284bb55e15171ee1829c8f&smart=true",
-        "autor": "Tomás Palazón",
-        "publicado": "2026-10-22T10:20-03:00",
-        "capturado": "2026-10-22T10:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "37b7203902675170"
-      },
-      "grupo": [
-        {
-          "id": "a3a895793436",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/la-frazada-corta-de-los-caminos-rurales-nid22102026",
-          "titulo": "La frazada corta de los caminos rurales",
-          "titulo_norm": "la frazada corta de los caminos rurales",
-          "descripcion": "Es momento de recuperar los recursos que perdieron los caminos rurales y garantizar que cada peso destinado a infraestructura se transforme en obras",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/ZURJIKITORBNFGBGULYPPIRYR4.png?auth=6f437572e429ed63a0b99c941427f9955b1399ad9d284bb55e15171ee1829c8f&smart=true",
-          "autor": "Tomás Palazón",
-          "publicado": "2026-10-22T10:20-03:00",
-          "capturado": "2026-10-22T10:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "37b7203902675170"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 72,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "caminos rurales",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente la logistica de transporte de toda la region pampeana.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T10:40-03:00"
     },
     {
       "id": "9063939f3344",
@@ -20349,8 +20364,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T18:23:29-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T18:43:21-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
