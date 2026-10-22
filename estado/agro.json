@@ -11050,6 +11050,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1b3ec1d739211d35": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "geopolítica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un análisis político general que no impacta de forma directa y práctica en el día a día del productor agropecuario de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c30ba8d55cb15082": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales clave sobre el avance de siembra y el impacto climático en la campaña gruesa que interesan directamente a toda la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "588b36b17edbf4af": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 9,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 73,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Una alerta global de la OMM sobre un fenómeno extremo de El Niño afecta de lleno las decisiones productivas y planificación de campaña en la región.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -11829,7 +11892,10 @@
       "https://agfundernews.com/%f0%9f%8e%a5-earth-rover-bets-on-pulsed-light-to-tackle-weeds-without-chemicals": "2026-10-22",
       "https://bichosdecampo.com/lacteos-veronica-cada-vez-mas-cerca-de-la-quiebra-este-viernes-se-sortearan-los-sindicos-del-concurso-de-acreedores": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/tras-la-quiebra-la-justicia-busca-posibles-compradores-para-una-reconocida-algodonera-nid22102026": "2026-10-22",
-      "https://intainforma.inta.gob.ar/apiarios-como-anticiparse-y-actuar-ante-un-anegamiento": "2026-10-22"
+      "https://intainforma.inta.gob.ar/apiarios-como-anticiparse-y-actuar-ante-un-anegamiento": "2026-10-22",
+      "https://agrositio.com.ar/canal-agrositio/30-online/248967-milei-trump-china-malvinas-y-la-necesidad-de-construir-consensos-para-crecer-con-j-negri-univ-di-tella.html": "2026-10-22",
+      "https://agrositio.com.ar/noticia/248966-las-bajas-temperaturas-y-la-escasa-radiacion-condicionan-la-evolucion-de-los-cultivos.html": "2026-10-22",
+      "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12607,7 +12673,10 @@
       "earth rover bets on pulsed light to tackle weeds without chemicals": "2026-10-22",
       "lacteos veronica cada vez mas cerca de la quiebra este viernes se sortearan los sindicos del concurso de acreedores": "2026-10-22",
       "tras la quiebra la justicia busca posibles compradores para una reconocida algodonera": "2026-10-22",
-      "apiarios como anticiparse y actuar ante un anegamiento": "2026-10-22"
+      "apiarios como anticiparse y actuar ante un anegamiento": "2026-10-22",
+      "milei trump china malvinas y como construir consensos para crecer con juan negri univ di tella": "2026-10-22",
+      "las bajas temperaturas y la escasa radiacion condicionan la evolucion de los cultivos": "2026-10-22",
+      "la onu advierte que el nino podria alcanzar una intensidad sin precedentes y alerta por sus efectos sobre el agro": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13385,7 +13454,10 @@
       "340737354fd71353": "2026-10-22",
       "417facade6fdcd65": "2026-10-22",
       "a27602d8e52c96e3": "2026-10-22",
-      "8acce3f41588e2d0": "2026-10-22"
+      "8acce3f41588e2d0": "2026-10-22",
+      "1b3ec1d739211d35": "2026-10-22",
+      "c30ba8d55cb15082": "2026-10-22",
+      "588b36b17edbf4af": "2026-10-22"
     }
   },
   "elegidas": [
@@ -18230,9 +18302,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8d91a8fd4cc6_portada.jpg"
+    },
+    {
+      "id": "c0d5470b5efa",
+      "cuando": "2026-10-22T16:20-03:00",
+      "titulo_original": "Las bajas temperaturas y la escasa radiación condicionan la evolución de los cultivos",
+      "descripcion": "Según el informe de la Bolsa de Cereales de Buenos Aires, al presente informe, la siembra de maíz con destino grano comercial alcanza el 39,8 % de las 8,4 MHa proyectadas, luego de un progreso intersemanal de 5 puntos porcentuales....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248966-las-bajas-temperaturas-y-la-escasa-radiacion-condicionan-la-evolucion-de-los-cultivos.html",
+      "titular": "Frío y baja radiación condicionan al maíz, girasol y trigo",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales clave sobre el avance de siembra y el impacto climático en la campaña gruesa que interesan directamente a toda la zona núcleo.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "243f3e8b-7aab-4f0c-9765-8a67b53decb8",
+          "slug": "frio-y-baja-radiacion-condicionan-el-desarrollo-de-maiz-girasol-619a95",
+          "url": "https://www.diariolacampaña.com.ar/n/frio-y-baja-radiacion-condicionan-el-desarrollo-de-maiz-girasol-619a95",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "953411770750965",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18221412754346921",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c0d5470b5efa_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "78e667782016",
+      "rep": {
+        "id": "78e667782016",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro/",
+        "canonical_url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro",
+        "titulo": "La ONU advierte que El Niño podría alcanzar una intensidad “sin precedentes” y alerta por sus efectos sobre el agro",
+        "titulo_norm": "la onu advierte que el nino podria alcanzar una intensidad sin precedentes y alerta por sus efectos sobre el agro",
+        "descripcion": "El próximo episodio de El Niño podría alcanzar una intensidad excepcional y alterar los patrones de lluvias y temperaturas en distintas regiones del mundo. La advertencia fue formulada por la Organización Meteorológica Mundial (OMM), que anticipó que el fenómeno alcanzaría su punto máximo hacia diciembre de 2026, aunque sus efectos podrían prolongarse durante los meses […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/3-WMO-SG_Press-Conference-ElNino_21-10-26.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-22T16:05-03:00",
+        "capturado": "2026-10-22T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "588b36b17edbf4af"
+      },
+      "grupo": [
+        {
+          "id": "78e667782016",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro/",
+          "canonical_url": "https://bichosdecampo.com/la-onu-advierte-que-el-nino-podria-alcanzar-una-intensidad-sin-precedentes-y-alerta-por-sus-efectos-sobre-el-agro",
+          "titulo": "La ONU advierte que El Niño podría alcanzar una intensidad “sin precedentes” y alerta por sus efectos sobre el agro",
+          "titulo_norm": "la onu advierte que el nino podria alcanzar una intensidad sin precedentes y alerta por sus efectos sobre el agro",
+          "descripcion": "El próximo episodio de El Niño podría alcanzar una intensidad excepcional y alterar los patrones de lluvias y temperaturas en distintas regiones del mundo. La advertencia fue formulada por la Organización Meteorológica Mundial (OMM), que anticipó que el fenómeno alcanzaría su punto máximo hacia diciembre de 2026, aunque sus efectos podrían prolongarse durante los meses […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/3-WMO-SG_Press-Conference-ElNino_21-10-26.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-22T16:05-03:00",
+          "capturado": "2026-10-22T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "588b36b17edbf4af"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 9,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Una alerta global de la OMM sobre un fenómeno extremo de El Niño afecta de lleno las decisiones productivas y planificación de campaña en la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T16:20-03:00"
+    },
     {
       "id": "043c14db8921",
       "rep": {
@@ -19245,8 +19434,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T16:03:25-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T16:23:27-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
