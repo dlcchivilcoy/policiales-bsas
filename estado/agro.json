@@ -10878,6 +10878,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "acf8b7351fcb1879": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 79,
+      "commercial_score": 79,
+      "subtema": "ganaderia",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el bolsillo del ganadero bonaerense por descuentos de precios bajo excusas normativas europeas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -11648,7 +11669,9 @@
       "https://lanacion.com.ar/economia/campo/millones-en-juego-una-jueza-de-estados-unidos-le-abrio-una-puerta-a-bioceres-crop-solutions-en-una-nid22102026": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026": "2026-10-22",
       "https://futurefarming.com/tech-in-focus/field-robots/dutch-robot-builder-aigro-declared-bankrupt": "2026-10-22",
-      "https://lanacion.com.ar/economia/campo/gran-paso-el-campo-celebro-la-media-sancion-de-una-ley-que-busca-endurecer-las-penas-por-danos-a-la-nid22102026": "2026-10-22"
+      "https://lanacion.com.ar/economia/campo/gran-paso-el-campo-celebro-la-media-sancion-de-una-ley-que-busca-endurecer-las-penas-por-danos-a-la-nid22102026": "2026-10-22",
+      "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/es-el-momento-una-industria-que-mueve-us15000-millones-pidio-eliminar-aranceles-a-insumos-y-nid22102026": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -12417,7 +12440,9 @@
       "millones en juego una jueza de estados unidos le abrio una puerta a bioceres crop solutions en una dura disputa con un poderoso fondo": "2026-10-22",
       "sergio iraeta reconocio que hay impuestos y aranceles que afectan a la industria de la nutricion animal estamos trabajando en eso": "2026-10-22",
       "dutch robot builder aigro declared bankrupt": "2026-10-22",
-      "gran paso el campo celebro la media sancion de una ley que busca endurecer las penas por danos a la produccion": "2026-10-22"
+      "gran paso el campo celebro la media sancion de una ley que busca endurecer las penas por danos a la produccion": "2026-10-22",
+      "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda": "2026-10-22",
+      "es el momento una industria que mueve us 15 000 millones pidio eliminar aranceles a insumos y percepciones de iva y ganancias": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13186,7 +13211,9 @@
       "53ebeaaac12995bc": "2026-10-22",
       "afb2a67618b305fb": "2026-10-22",
       "50afcf807cf0fa89": "2026-10-22",
-      "25e80b77c302bc66": "2026-10-22"
+      "25e80b77c302bc66": "2026-10-22",
+      "acf8b7351fcb1879": "2026-10-22",
+      "b178edbd27411220": "2026-10-22"
     }
   },
   "elegidas": [
@@ -17808,49 +17835,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_04f948ff5e6a_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "ce0bd3b7b119",
-      "rep": {
-        "id": "ce0bd3b7b119",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/una-buena-en-la-maquinaria-agricola-case-ih-fabricara-cabezales-en-cordoba-y-hay-otros-proyectos-por-sumarse/",
-        "canonical_url": "https://infocampo.com.ar/una-buena-en-la-maquinaria-agricola-case-ih-fabricara-cabezales-en-cordoba-y-hay-otros-proyectos-por-sumarse",
-        "titulo": "Una buena en la maquinaria agrícola: Case IH fabricará cabezales en Córdoba y “hay otros proyectos” por sumarse",
-        "titulo_norm": "una buena en la maquinaria agricola case ih fabricara cabezales en cordoba y hay otros proyectos por sumarse",
-        "descripcion": "En un contexto en el que en general predominan las noticias negativas, la multinacional de maquinaria agrícola adelantó planes para crecer en la producción industrial en su planta cordobesa.",
-        "imagen_url": "",
-        "autor": "Favio Re",
-        "publicado": "2026-10-22T11:43-03:00",
-        "capturado": "2026-10-22T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b366110228a56468"
-      },
-      "grupo": [
-        {
-          "id": "ce0bd3b7b119",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/una-buena-en-la-maquinaria-agricola-case-ih-fabricara-cabezales-en-cordoba-y-hay-otros-proyectos-por-sumarse/",
-          "canonical_url": "https://infocampo.com.ar/una-buena-en-la-maquinaria-agricola-case-ih-fabricara-cabezales-en-cordoba-y-hay-otros-proyectos-por-sumarse",
-          "titulo": "Una buena en la maquinaria agrícola: Case IH fabricará cabezales en Córdoba y “hay otros proyectos” por sumarse",
-          "titulo_norm": "una buena en la maquinaria agricola case ih fabricara cabezales en cordoba y hay otros proyectos por sumarse",
-          "descripcion": "En un contexto en el que en general predominan las noticias negativas, la multinacional de maquinaria agrícola adelantó planes para crecer en la producción industrial en su planta cordobesa.",
-          "imagen_url": "",
-          "autor": "Favio Re",
-          "publicado": "2026-10-22T11:43-03:00",
-          "capturado": "2026-10-22T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b366110228a56468"
-        }
-      ],
+      "cuando": "2026-10-22T13:40-03:00",
+      "titulo_original": "Una buena en la maquinaria agrícola: Case IH fabricará cabezales en Córdoba y “hay otros proyectos” por sumarse",
+      "descripcion": "En un contexto en el que en general predominan las noticias negativas, la multinacional de maquinaria agrícola adelantó planes para crecer en la producción industrial en su planta cordobesa.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/una-buena-en-la-maquinaria-agricola-case-ih-fabricara-cabezales-en-cordoba-y-hay-otros-proyectos-por-sumarse/",
+      "titular": "Case IH fabricará cabezales en Córdoba pese a la caída de ventas",
+      "volanta": "Maquinaria",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 13,
@@ -17872,7 +17866,94 @@
         "potencial_carrusel": 6,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-22T13:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "adbee98d-e213-47a6-9bfa-c44271728fe4",
+          "slug": "case-ih-fabricara-cabezales-en-cordoba-para-aprovechar-la-7bb898",
+          "url": "https://www.diariolacampaña.com.ar/n/case-ih-fabricara-cabezales-en-cordoba-para-aprovechar-la-7bb898",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1464442229200703",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17965965899983087",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ce0bd3b7b119_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "8d91a8fd4cc6",
+      "rep": {
+        "id": "8d91a8fd4cc6",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda/",
+        "canonical_url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda",
+        "titulo": "“Una excusa para pagar menos”: CRA apunta contra la industria por usar al Visec como argumento para descontar el precio de la hacienda",
+        "titulo_norm": "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda",
+        "descripcion": "Lo venían advirtiendo abiertamente los propios industriales: la implementación del reglamento antideforestación de la Unión Europea, recién pautado para fin de año, ya tiene efectos sobre el precio de la hacienda en el frigorífico, y los productores denuncian que afrontan castigos económicos por no estar adheridos al Visec. La plataforma es una de las herramientas […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/ganaderia-1.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-22T13:30-03:00",
+        "capturado": "2026-10-22T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "acf8b7351fcb1879"
+      },
+      "grupo": [
+        {
+          "id": "8d91a8fd4cc6",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda/",
+          "canonical_url": "https://bichosdecampo.com/una-excusa-para-pagar-menos-cra-apunta-contra-la-industria-por-usar-al-visec-como-argumento-para-descontar-el-precio-de-la-hacienda",
+          "titulo": "“Una excusa para pagar menos”: CRA apunta contra la industria por usar al Visec como argumento para descontar el precio de la hacienda",
+          "titulo_norm": "una excusa para pagar menos cra apunta contra la industria por usar al visec como argumento para descontar el precio de la hacienda",
+          "descripcion": "Lo venían advirtiendo abiertamente los propios industriales: la implementación del reglamento antideforestación de la Unión Europea, recién pautado para fin de año, ya tiene efectos sobre el precio de la hacienda en el frigorífico, y los productores denuncian que afrontan castigos económicos por no estar adheridos al Visec. La plataforma es una de las herramientas […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/ganaderia-1.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-22T13:30-03:00",
+          "capturado": "2026-10-22T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "acf8b7351fcb1879"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "ganaderia",
+        "tema": "visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente el bolsillo del ganadero bonaerense por descuentos de precios bajo excusas normativas europeas.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T13:40-03:00"
     },
     {
       "id": "043c14db8921",
@@ -18949,8 +19030,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T13:24:21-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T13:44:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
