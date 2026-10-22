@@ -91,6 +91,12 @@
       "pregunta": "¿A qué club de barrio ibas de chico a pasar las tardes?",
       "categoria": "Deportes y clubes",
       "tema": "los clubes de barrio"
+    },
+    {
+      "dia": "2026-10-22",
+      "pregunta": "¿Cuál es el mejor banco de la plaza principal para sentarse a tomar mate?",
+      "categoria": "Espacios públicos",
+      "tema": "la plaza principal"
     }
   ],
   "publicaciones": {
@@ -527,7 +533,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-22:pregunta": {
+      "titular": "¿Cuál es el mejor banco de la plaza principal para sentarse a tomar mate?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-22T20:30:37-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Espacios públicos",
+        "tema": "la plaza principal"
+      },
+      "estado": "ok",
+      "id": "18152131846551444",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-22T13:30:35-03:00"
+  "actualizado": "2026-10-22T20:30:24-03:00"
 }
