@@ -12298,6 +12298,27 @@
         69,
         67
       ]
+    },
+    "6b59c1aed7ea6b15": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 1,
+      "ai_score": 26,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un debate político sobre desregulaciones que afecta a economías regionales lejanas a la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13162,7 +13183,8 @@
       "https://bichosdecampo.com/a-que-no-adivinas-que-hay-ahi-dentro-los-salesianos-de-misiones-prepararon-una-cosecha-especial-de-su-yerba-mate-don-bosco-para-celebrar-su-centenario": "2026-10-23",
       "https://bichosdecampo.com/que-haya-yerba-y-ganado-en-el-monte-misionero-misiones-flexibilizo-el-uso-productivo-de-las-zonas-amarillas-del-bosque-nativo-y-amplio-las-posibilidades-de-manejo-integrado": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/un-referente-de-la-poderosa-industria-alimentaria-de-brasil-sobre-las-medidas-de-milei-son-muy-duras-nid23102026": "2026-10-23",
-      "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026": "2026-10-23"
+      "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026": "2026-10-23",
+      "https://bichosdecampo.com/llegaste-20-anos-tarde-fede-los-yerbateros-le-recuerdan-a-sturzenegger-que-festeja-hitos-exportadores-que-ocurren-desde-2005-y-que-no-fue-su-magia-desreguladora-la-que-los-hizo-pos": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14025,7 +14047,8 @@
       "a que no adivinas que hay ahi dentro los salesianos de misiones prepararon una cosecha especial de su yerba mate don bosco para celebrar su centenario": "2026-10-23",
       "que haya yerba y ganado en el monte misionero la provincia flexibilizo el uso productivo del bosque nativo y amplio las posibilidades de manejo integrado": "2026-10-23",
       "un referente de la poderosa industria alimentaria de brasil sobre las medidas de milei son muy duras y perjudican principalmente a los mas pobres": "2026-10-23",
-      "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores": "2026-10-23"
+      "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores": "2026-10-23",
+      "llegaste 20 anos tarde fede los yerbateros le recuerdan a sturzenegger que festeja hitos exportadores que ocurren desde 2005 y que no fue su magia desreguladora la que los hizo posibles": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14888,7 +14911,8 @@
       "ccaf7c8b47c09fea": "2026-10-23",
       "a1aaf40ed5139875": "2026-10-23",
       "bbcc7764ce62429f": "2026-10-23",
-      "dd64536be0178c2a": "2026-10-23"
+      "dd64536be0178c2a": "2026-10-23",
+      "6b59c1aed7ea6b15": "2026-10-23"
     }
   },
   "elegidas": [
@@ -20868,6 +20892,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_31b5d53764eb_portada.jpg"
+    },
+    {
+      "id": "6f3ea10ec102",
+      "cuando": "2026-10-23T14:01-03:00",
+      "titulo_original": "Vandalismo rural: las claves de una problemática que se transformó en prioritaria para el campo",
+      "descripcion": "El sexto programa de Infocampo Estudio entra de lleno al debate vinculado al vandalismo rural, tras la aprobación en el Congreso de la ley que agrava penas para delitos cometidos en el campo. Además, la SIAL París, El Niño y la formación profesional de los agrónomos.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/vandalismo-rural-las-claves-de-una-problematica-que-se-transformo-en-prioritaria-para-el-campo/",
+      "titular": "Ley de Vandalismo Rural con media sanción en la Cámara de Diputados",
+      "volanta": "Seguridad Rural",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 5,
+        "ai_score": 68,
+        "commercial_score": 62,
+        "subtema": "agro",
+        "tema": "vandalismo rural",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la seguridad de los campos de la región y genera debate diario.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          71
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f60b397f-6130-41ac-9820-d3ce757a05a3",
+          "slug": "avanza-en-diputados-la-ley-de-vandalismo-rural-para-endurecer-637baa",
+          "url": "https://www.diariolacampaña.com.ar/n/avanza-en-diputados-la-ley-de-vandalismo-rural-para-endurecer-637baa",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1346851267381161",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17866794546675772",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6f3ea10ec102_portada.jpg"
     }
   ],
   "pendientes": [
@@ -20937,73 +21019,6 @@
         ]
       },
       "cuando": "2026-10-23T13:40-03:00"
-    },
-    {
-      "id": "6f3ea10ec102",
-      "rep": {
-        "id": "6f3ea10ec102",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/vandalismo-rural-las-claves-de-una-problematica-que-se-transformo-en-prioritaria-para-el-campo/",
-        "canonical_url": "https://infocampo.com.ar/vandalismo-rural-las-claves-de-una-problematica-que-se-transformo-en-prioritaria-para-el-campo",
-        "titulo": "Vandalismo rural: las claves de una problemática que se transformó en prioritaria para el campo",
-        "titulo_norm": "vandalismo rural las claves de una problematica que se transformo en prioritaria para el campo",
-        "descripcion": "El sexto programa de Infocampo Estudio entra de lleno al debate vinculado al vandalismo rural, tras la aprobación en el Congreso de la ley que agrava penas para delitos cometidos en el campo. Además, la SIAL París, El Niño y la formación profesional de los agrónomos.",
-        "imagen_url": "https://www.youtube.com/embed/bC3PnAfardI",
-        "autor": "infocampo",
-        "publicado": "2026-10-23T12:06-03:00",
-        "capturado": "2026-10-23T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "75df28d700e88901"
-      },
-      "grupo": [
-        {
-          "id": "6f3ea10ec102",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/vandalismo-rural-las-claves-de-una-problematica-que-se-transformo-en-prioritaria-para-el-campo/",
-          "canonical_url": "https://infocampo.com.ar/vandalismo-rural-las-claves-de-una-problematica-que-se-transformo-en-prioritaria-para-el-campo",
-          "titulo": "Vandalismo rural: las claves de una problemática que se transformó en prioritaria para el campo",
-          "titulo_norm": "vandalismo rural las claves de una problematica que se transformo en prioritaria para el campo",
-          "descripcion": "El sexto programa de Infocampo Estudio entra de lleno al debate vinculado al vandalismo rural, tras la aprobación en el Congreso de la ley que agrava penas para delitos cometidos en el campo. Además, la SIAL París, El Niño y la formación profesional de los agrónomos.",
-          "imagen_url": "https://www.youtube.com/embed/bC3PnAfardI",
-          "autor": "infocampo",
-          "publicado": "2026-10-23T12:06-03:00",
-          "capturado": "2026-10-23T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "75df28d700e88901"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 5,
-        "ai_score": 68,
-        "commercial_score": 62,
-        "subtema": "agro",
-        "tema": "vandalismo rural",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Impacta directamente en la seguridad de los campos de la región y genera debate diario.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          71
-        ]
-      },
-      "cuando": "2026-10-23T13:00-03:00"
     },
     {
       "id": "29e87eaa61bf",
@@ -22214,8 +22229,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T14:01:43-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T14:04:42-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
