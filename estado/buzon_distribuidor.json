@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-23T00:42:04.000Z",
+  "actualizado": "2026-10-23T00:45:50.000Z",
   "eventos": [
     {
       "id": "nacionales:4ce13bf44cf7dbc5",
@@ -512,6 +512,31 @@
       "categoria": "otro_policial",
       "distancia_km": 50.1,
       "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "nacionales:47f4536459d66a4a",
+      "origen": "nacionales",
+      "tipo": "video",
+      "generado": "2026-10-23T00:45:50.000Z",
+      "titulo": "ANSES: montos, jubilaciones y quiénes cobran este jueves 22 de octubre",
+      "descripcion": "El organismo previsional ejecuta este jueves el cronograma de haberes con un incremento del 1,66%. Los detalles sobre los pagos a jubilados, la AUH, la Prestación por Desempleo y los topes vigentes.",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_47f4536459_anses-montos-jubilaciones-y-quienes-cobran-este.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/anses-jubilacion-minima-de-435-662-86-montos-y-quienes-cobran-47f453",
+      "youtube_url": "https://youtube.com/shorts/gB2P2pUEshU",
+      "prioridad": 9,
+      "urgente": false,
+      "volanta": "ANSES",
+      "categoria": "Economía",
+      "categoria_nacional": "",
+      "hashtags": [
+        "ANSES",
+        "Jubilados"
+      ],
       "plataformas": [
         "x",
         "tiktok"
