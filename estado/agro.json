@@ -11524,6 +11524,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c309a72f5da193c0": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 8,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 23,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "biotecnologia",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Problemas financieros de una planta de biotecnología en EE.UU., lejano para el productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fc061f966ae79cf0": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 7,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 33,
+      "commercial_score": 48,
+      "subtema": "agtech",
+      "tema": "john deere",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Menciones globales sobre energías renovables y ciberseguridad en maquinaria que toca de costado al sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c9f116fc881939e7": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 6,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 21,
+      "commercial_score": 28,
+      "subtema": "empresas",
+      "tema": "carne cultivada",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Compra de planta de carne celular en EE.UU., sin relevancia directa para la producción ganadera de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12328,7 +12391,10 @@
       "https://lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026": "2026-10-22",
       "https://croplife.com/crop-inputs/croplife-on-the-road-one-on-one-with-syngentas-jeff-cecil": "2026-10-22",
       "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto": "2026-10-22",
-      "https://lanacion.com.ar/economia/campo/una-violenta-caida-de-mucho-granizo-mato-a-decenas-de-animales-y-dejo-graves-danos-nid22102026": "2026-10-22"
+      "https://lanacion.com.ar/economia/campo/una-violenta-caida-de-mucho-granizo-mato-a-decenas-de-animales-y-dejo-graves-danos-nid22102026": "2026-10-22",
+      "https://agfundernews.com/no-acceptable-offers-for-liberation-bioindustries-as-firm-seeks-to-plug-25m-funding-gap": "2026-10-22",
+      "https://agfundernews.com/agrifood-signals-danone-turns-yogurt-into-renewable-energy-bison-ventures-lands-160m-biochar-projects": "2026-10-22",
+      "https://agfundernews.com/unnamed-bidder-submits-letter-of-intent-to-acquire-believer-meats-us-cultivated-meat-site": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13131,7 +13197,10 @@
       "ano extraordinario brasil preve la mayor importacion de trigo en 30 anos y abre una oportunidad para la argentina": "2026-10-22",
       "croplife on the road one on one with syngenta s jeff cecil": "2026-10-22",
       "esta todo listo para una masacre de precios del trigo en plena cosecha mercado no apto para operar al descubierto": "2026-10-22",
-      "un violento fenomeno con mucho granizo mato a decenas de animales y dejo graves danos": "2026-10-22"
+      "un violento fenomeno con mucho granizo mato a decenas de animales y dejo graves danos": "2026-10-22",
+      "no acceptable offers for liberation bioindustries as firm seeks to plug 25m funding gap": "2026-10-22",
+      "agrifood signals danone turns yogurt into renewable energy bison ventures lands 160m biochar projects": "2026-10-22",
+      "unnamed bidder submits letter of intent to acquire believer meats us cultivated meat site": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13934,7 +14003,10 @@
       "c81097cb9ec86114": "2026-10-22",
       "7fe56f805d5d920f": "2026-10-22",
       "45234461b8dc4631": "2026-10-22",
-      "e45fd64c48e0d132": "2026-10-22"
+      "e45fd64c48e0d132": "2026-10-22",
+      "c309a72f5da193c0": "2026-10-22",
+      "fc061f966ae79cf0": "2026-10-22",
+      "c9f116fc881939e7": "2026-10-22"
     }
   },
   "elegidas": [
@@ -19341,6 +19413,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_20ea77a4f9f4_portada.jpg"
+    },
+    {
+      "id": "32a59341c5ce",
+      "cuando": "2026-10-22T21:40-03:00",
+      "titulo_original": "Sergio Iraeta reconoció que hay impuestos y aranceles que afectan a la industria de la nutrición animal: “Estamos trabajando en eso”",
+      "descripcion": "Durante el Congreso de Caena, el secretario de Agricultura aseguró que el Gobierno tiene en estudio los reclamos vinculados con los aranceles a la importación de insumos críticos para la elaboración de alimentos balanceados",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026/",
+      "titular": "Nutrición animal: analizan quitar impuestos y aranceles a insumos críticos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 66,
+        "commercial_score": 71,
+        "subtema": "agro",
+        "tema": "nutrición animal",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Relevante para costos e insumos ganaderos y de producción de alimentos balanceados.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          64
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T21:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "69826b47-4171-49e1-92f6-90dfd7fffa6a",
+          "slug": "nutricion-animal-el-gobierno-analiza-cambios-en-aranceles-e-c04f1b",
+          "url": "https://www.diariolacampaña.com.ar/n/nutricion-animal-el-gobierno-analiza-cambios-en-aranceles-e-c04f1b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1059495203777400",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18096271592455798",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_32a59341c5ce_portada.jpg"
     }
   ],
   "pendientes": [
@@ -19793,73 +19923,6 @@
         "dobles": [
           57,
           66
-        ]
-      },
-      "cuando": "2026-10-22T13:00-03:00"
-    },
-    {
-      "id": "32a59341c5ce",
-      "rep": {
-        "id": "32a59341c5ce",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026",
-        "titulo": "Sergio Iraeta reconoció que hay impuestos y aranceles que afectan a la industria de la nutrición animal: “Estamos trabajando en eso”",
-        "titulo_norm": "sergio iraeta reconocio que hay impuestos y aranceles que afectan a la industria de la nutricion animal estamos trabajando en eso",
-        "descripcion": "Durante el Congreso de Caena, el secretario de Agricultura aseguró que el Gobierno tiene en estudio los reclamos vinculados con los aranceles a la importación de insumos críticos para la elaboración de alimentos balanceados",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WOCHQSLORJGKTNR4G5QL5GKSRI.JPEG?auth=ba9ecc77e015900f738ddeba93bbb09be056c485ee606c52e12f6b13844d44db&smart=true",
-        "autor": "Belkis Martínez",
-        "publicado": "2026-10-22T11:41-03:00",
-        "capturado": "2026-10-22T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "afb2a67618b305fb"
-      },
-      "grupo": [
-        {
-          "id": "32a59341c5ce",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/sergio-iraeta-reconocio-que-hay-impuestos-y-aranceles-que-afectan-a-la-industria-de-la-nutricion-nid22102026",
-          "titulo": "Sergio Iraeta reconoció que hay impuestos y aranceles que afectan a la industria de la nutrición animal: “Estamos trabajando en eso”",
-          "titulo_norm": "sergio iraeta reconocio que hay impuestos y aranceles que afectan a la industria de la nutricion animal estamos trabajando en eso",
-          "descripcion": "Durante el Congreso de Caena, el secretario de Agricultura aseguró que el Gobierno tiene en estudio los reclamos vinculados con los aranceles a la importación de insumos críticos para la elaboración de alimentos balanceados",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WOCHQSLORJGKTNR4G5QL5GKSRI.JPEG?auth=ba9ecc77e015900f738ddeba93bbb09be056c485ee606c52e12f6b13844d44db&smart=true",
-          "autor": "Belkis Martínez",
-          "publicado": "2026-10-22T11:41-03:00",
-          "capturado": "2026-10-22T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "afb2a67618b305fb"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 7,
-        "potencial_comercial": 7,
-        "ai_score": 66,
-        "commercial_score": 71,
-        "subtema": "agro",
-        "tema": "nutrición animal",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Relevante para costos e insumos ganaderos y de producción de alimentos balanceados.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          64
         ]
       },
       "cuando": "2026-10-22T13:00-03:00"
@@ -20545,8 +20608,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T21:23:24-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T21:42:56-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
