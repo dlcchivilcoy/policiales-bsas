@@ -353,6 +353,109 @@ def _historia_facebook(url: str) -> dict:
     return {"id": str(d.get("post_id") or d.get("id") or foto)}
 
 
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# @diarioyradio (23/10/2026, pedido del editor: «quiero que las historias de @diarioyradioagro también se
+# carguen en @diarioyradio (clima, alertas, commodities, dólar, soja, trigo, maíz)» y el reel de datos de
+# las 5 «como colab»). Acá SÍ se usan las credenciales del diario, a propósito y solo para esto; la
+# salvaguarda (credenciales_diario) mira que sean las de @diarioyradio y no las de agro.
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+TIPOS_AL_DIARIO = {"alerta", "clima", "clima_manana", "granos", "dolar", "chicago",
+                   "semana_granos", "semana_dolar", "semana_chicago"}
+DIARIO_IG_USUARIO = "diarioyradio"
+
+
+def historias_al_diario() -> bool:
+    """AGRO_HISTORIAS_DIARIO=0 deja de copiar las historias de datos en @diarioyradio."""
+    return (os.environ.get("AGRO_HISTORIAS_DIARIO") or "1").strip() != "0"
+
+
+def usuario_diario() -> str:
+    return (os.environ.get("DIARIO_IG_USUARIO") or DIARIO_IG_USUARIO).strip().lstrip("@")
+
+
+def credenciales_diario() -> dict:
+    """Las del diario tal como están en el entorno (las que usan policiales y nacionales), verificadas."""
+    ig = (os.environ.get("INSTAGRAM_USER_ID") or "").strip()
+    pag = (os.environ.get("FACEBOOK_PAGE_ID") or "").strip()
+    tok_fb = (os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN") or "").strip()
+    tok_ig = (os.environ.get("INSTAGRAM_ACCESS_TOKEN") or "").strip() or tok_fb
+    faltan = [n for n, v in (("INSTAGRAM_USER_ID", ig), ("FACEBOOK_PAGE_ID", pag),
+                             ("FACEBOOK_PAGE_ACCESS_TOKEN", tok_fb)) if not v]
+    if faltan:
+        raise SalvaguardaAgro("faltan las del diario: " + ", ".join(faltan))
+    if ig not in DIARIO_IDS or pag not in DIARIO_IDS:
+        raise SalvaguardaAgro("las credenciales del diario no son las de @diarioyradio")
+    return {"INSTAGRAM_USER_ID": ig, "INSTAGRAM_ACCESS_TOKEN": tok_ig, "FACEBOOK_PAGE_ID": pag,
+            "FACEBOOK_PAGE_ACCESS_TOKEN": tok_fb}
+
+
+def publicar_historias_diario(tanda: list, log=print) -> dict:
+    """Las historias de datos también en Instagram y Facebook de @diarioyradio. En Instagram solo si al
+    diario le queda cupo (las 100 por día las comparte con el bot, policiales y nacionales)."""
+    from reels import publicador as PB
+    try:
+        credenciales_diario()
+    except SalvaguardaAgro as e:
+        log(f"   @diarioyradio: no se copian las historias ({e})")
+        return {"error": str(e)}
+    lugar = PB._lugar_en_instagram()
+    con_ig = lugar is None or lugar[0] >= len(tanda)
+    if not con_ig:
+        log(f"   @diarioyradio: sin cupo de Instagram ({lugar[1]}/{lugar[2]}): las historias van solo a Facebook")
+    items = []
+    for i, h in enumerate(tanda):
+        r = {}
+        try:
+            url = PB.subir_a_release(Path(h["archivo"]), f"agro_hist_diario_{Path(h['archivo']).parent.name}_{i:02d}.jpg")
+        except Exception as e:                             # noqa: BLE001
+            items.append({"error": f"subida: {e}"[:200]})
+            continue
+        for red, fn in (("instagram", _historia_instagram), ("facebook", _historia_facebook)):
+            if red == "instagram" and not con_ig:
+                r[red] = {"omitido": "sin cupo de Instagram"}
+                continue
+            try:
+                r[red] = fn(url)
+            except Exception as e:                         # noqa: BLE001
+                r[red] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+        log(f"   @diarioyradio historia {i + 1} ({h['tipo']}): IG {_ver(r.get('instagram'))} · FB {_ver(r.get('facebook'))}")
+        items.append(r)
+    return {"items": items}
+
+
+def _ver(r) -> str:
+    r = r or {}
+    return str(r.get("id") or r.get("error") or r.get("omitido") or "—")
+
+
+def aceptar_colab(media_id: str, log=print, esperas=(5, 10, 20, 30, 60)) -> dict:
+    """Con la cuenta de @diarioyradio, acepta la invitación a colaborar en `media_id` (Instagram,
+    /collaboration_invites, desde diciembre de 2025). La invitación tarda unos segundos en aparecer."""
+    from reels import publicador as PB
+    c = credenciales_diario()
+    uid, tok = c["INSTAGRAM_USER_ID"], c["INSTAGRAM_ACCESS_TOKEN"]
+    ultimo = ""
+    for espera in (0,) + tuple(esperas):
+        if espera:
+            PB._dormir(espera)
+        r = PB._pedir("GET", f"{PB.GRAPH}/{uid}/collaboration_invites", tok)
+        if r.status_code >= 400:
+            ultimo = PB._error(r, "invitaciones de colab")
+            continue
+        ids = {str(x.get("media_id") or x.get("id") or "") for x in (r.json() or {}).get("data") or []}
+        if str(media_id) not in ids:
+            ultimo = "la invitación todavía no aparece"
+            continue
+        r = PB._pedir("POST", f"{PB.GRAPH}/{uid}/collaboration_invites", tok,
+                      data={"media_id": str(media_id), "accept": "true"})
+        if r.status_code < 400 and (r.json() or {}).get("success", True):
+            log("   colab: @diarioyradio aceptó")
+            return {"estado": "aceptada"}
+        ultimo = PB._error(r, "aceptar la colab")
+    log(f"   colab: no se pudo aceptar sola ({ultimo}); queda para aceptarla desde la app de @diarioyradio")
+    return {"estado": "pendiente", "detalle": ultimo}
+
+
 def publicar_historias(tanda: list, log=print) -> dict:
     """Cada historia en Instagram y en Facebook, en orden. Una que falla no frena a las demás.
     {"items": [{"instagram": {...}, "facebook": {...}}…]}."""

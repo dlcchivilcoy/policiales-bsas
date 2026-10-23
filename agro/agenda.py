@@ -44,7 +44,10 @@ HISTORIAS_DEFECTO = ((7, 0), (14, 0), (19, 0))
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
 POR_CORRIDA = 5              # reels por corrida (20/10/2026)
 INTERVALO_MIN = 20           # entre un reel y el siguiente de la misma corrida
-TIPOS = ("reel", "carrusel", "historias")
+TIPOS = ("reel", "carrusel", "historias", "reel_datos")
+# 23/10/2026: el REEL DE DATOS de cada mañana (agro/reel_datos.py), con su propia corrida. AGRO_REEL_DATOS
+# cambia la hora; "0" lo apaga.
+REEL_DATOS_DEFECTO = "05:00"
 TOLERANCIA_MIN = 40          # una corrida que arranca hasta 40 min tarde es la de ese horario
 ANTES_MIN = 5                # y hasta 5 min antes (el reloj de cron-job.org y el de GitHub)
 BLOQUES = ("manana", "mediodia", "cierre")
@@ -69,8 +72,11 @@ def intervalo_min() -> int:
 def agenda_texto_defecto() -> str:
     """Por cada corrida, por_corrida() reels cada intervalo_min(), sin pasarse de la corrida siguiente;
     más las historias de siempre."""
-    inicios = [h * 60 + m for h, m in corridas()]
+    inicios = [h * 60 + m for h, m in corridas_noticias()]
     partes = [f"{h:02d}:{m:02d} historias" for h, m in HISTORIAS_DEFECTO]
+    datos = hora_reel_datos()
+    if datos:
+        partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
     for i, ini in enumerate(inicios):
         fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
         partes += [f"{t // 60:02d}:{t % 60:02d} reel"
@@ -103,7 +109,27 @@ def agenda_defecto() -> list:
             os.environ["AGRO_AGENDA"] = viejo
 
 
+def hora_reel_datos():
+    """(hora, minuto) del reel de datos, o None si está apagado (AGRO_REEL_DATOS="0")."""
+    crudo = (os.environ.get("AGRO_REEL_DATOS") or REEL_DATOS_DEFECTO).strip()
+    if crudo.lower() in ("0", "no", "off"):
+        return None
+    h, _, m = crudo.partition(":")
+    try:
+        if 0 <= int(h) < 24 and 0 <= int(m or 0) < 60:
+            return int(h), int(m or 0)
+    except ValueError:
+        pass
+    return 5, 0
+
+
 def corridas() -> list:
+    """Las corridas del día: las de noticias y, si está prendido, la del reel de datos."""
+    datos = hora_reel_datos()
+    return sorted(set(corridas_noticias() + ([datos] if datos else [])))
+
+
+def corridas_noticias() -> list:
     """[(hora, minuto), …] de AGRO_CORRIDAS, ordenadas. Lo que no se entiende se saltea."""
     salida = []
     for parte in (os.environ.get("AGRO_CORRIDAS") or CORRIDAS_DEFECTO).split(","):

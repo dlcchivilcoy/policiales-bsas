@@ -160,10 +160,38 @@ def componer(bloque: Image.Image) -> Image.Image:
     return im
 
 
+H45 = 1350                    # el reel de datos (23/10/2026) va en 4:5
+SEGURA_45 = (70, 1280)
+
+
+def componer_45(bloque: Image.Image) -> Image.Image:
+    """El mismo bloque en 4:5 (1080x1350), centrado y achicado si no entra: las placas del reel de datos."""
+    caja = bloque.getbbox() or (0, 0, W, 1)
+    bloque = bloque.crop((0, 0, W, caja[3]))
+    alto_zona = SEGURA_45[1] - SEGURA_45[0]
+    if bloque.height > alto_zona:
+        k = alto_zona / bloque.height
+        bloque = bloque.resize((round(W * k), alto_zona), Image.LANCZOS)
+    im = Image.new("RGBA", (W, H45), FONDO + (255,))
+    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.NARANJA)
+    marca = D.isologo(700)
+    marca.putalpha(marca.getchannel("A").point(lambda a: round(a * 0.05)))
+    im.alpha_composite(marca, (W - marca.width + 200, H45 - marca.height - 60))
+    im.alpha_composite(bloque, ((W - bloque.width) // 2, SEGURA_45[0] + (alto_zona - bloque.height) // 2))
+    return im
+
+
+def ruta_45(destino) -> Path:
+    """Dónde queda la versión 4:5 de una placa: «historia_00_clima.jpg» → «historia_00_clima_45.jpg»."""
+    destino = Path(destino)
+    return destino.with_name(destino.stem + "_45.jpg")
+
+
 def guardar(im, destino: Path) -> Path:
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
     componer(im).convert("RGB").save(destino, "JPEG", quality=92)
+    componer_45(im).convert("RGB").save(ruta_45(destino), "JPEG", quality=92)
     return destino
 
 

@@ -175,6 +175,9 @@ def ya_publicado(mem: dict, horario: datetime, tipo: str):
     if tipo == "historias":
         h = (mem.get("historias") or {}).get(iso)
         return h if h and h.get("publicado") else None
+    if tipo == "reel_datos":
+        h = (mem.get("reel_datos") or {}).get(iso)
+        return h if h and h.get("publicado") else None
     return next((p for p in mem.get("elegidas", []) if p.get("turno") == iso and p.get("publicado")), None)
 
 
@@ -266,6 +269,10 @@ def _un_turno(publicar: bool, tipo: str, horario: datetime, ahora: datetime, car
     if tipo == "historias":
         return pasada_historias(publicar=publicar, horario=horario, bloque=bloque or AG.bloque(horario), log=log,
                                 publicador=publicador, carpeta=carpeta, ahora=ahora)
+    if tipo == "reel_datos":
+        from agro import reel_datos as RD
+        return RD.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), publicador=publicador,
+                         carpeta=carpeta, ahora=ahora)
     if tipo == "numeros" or (tipo == "carrusel" and AG.es_primer_carrusel_del_sabado(horario) and not max_piezas):
         return pasada_numeros(publicar=publicar, horario=horario, log=log, publicador=publicador,
                               carpeta=carpeta, ahora=ahora)
@@ -657,6 +664,12 @@ def pasada_historias(publicar: bool, horario: datetime, bloque: str, log=print, 
         registro["publicado"] = {"estado": "listo", "resultado": res}
         for item, r in zip(registro["items"], res.get("items") or []):
             item["publicado"] = r
+        # 23/10/2026: las de datos (clima, alertas, granos, dólar, Chicago) también en @diarioyradio.
+        from agro import publicar as PUB
+        if publicador is PUB.publicar_historias and PUB.historias_al_diario():
+            al_diario = [t for t in tanda if t["tipo"] in PUB.TIPOS_AL_DIARIO]
+            if al_diario:
+                registro["diario"] = PUB.publicar_historias_diario(al_diario, log=log)
     else:
         mem["historias"][horario.isoformat()] = dict(registro, simulado=True) if not publicar else registro
     for it in registro["items"]:

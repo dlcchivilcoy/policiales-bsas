@@ -31,6 +31,18 @@ solas (`AGRO_REVISION_SENSIBLE=1` lo vuelve a prender). Las de fuentes que se co
 
 Hasta el 19/10/2026 eran 1 reel + 1 carrusel por corrida (una hora entre los dos).
 
+### Reel de datos de las 05:00 y las historias en @diarioyradio (23/10/2026)
+
+- **05:00, todos los días** (`agro/reel_datos.py`, `AGRO_REEL_DATOS`, "0" lo apaga): las placas de datos de las
+  historias en **4:5** (alertas del SMN, clima, granos de Rosario, dólar, Chicago), **5 s cada una**, en un reel
+  mudo. Instagram: en @diarioyradioagro con **@diarioyradio de colaborador** (`collaborators`); la invitación la
+  acepta sola la cuenta del diario (`/collaboration_invites`). Facebook no tiene colab: sale en las dos páginas
+  (`AGRO_REEL_DATOS_FB_DIARIO=0` deja solo la de agro). Sin Short de YouTube ni nota web.
+- **Historias de datos también en @diarioyradio** (`AGRO_HISTORIAS_DIARIO=0` lo apaga): clima, alertas, granos,
+  dólar y Chicago (y sus versiones del finde) se copian en Instagram y Facebook del diario; titulares, novedad
+  y mapa no. En Instagram solo si al diario le queda cupo (las 100 diarias, con `IG_RESERVA_BOT`).
+- Usa las credenciales del diario a propósito; `credenciales_diario()` verifica que sean las de @diarioyradio.
+
 Sábados y domingos (sin mercados) las historias son clima, mapa, «Los números de la semana» y el resumen.
 Una alerta del SMN que toca la zona va primera en la tanda siguiente. Una noticia URGENTE (alerta,
 sanidad, norma) pasa primera en la selección.

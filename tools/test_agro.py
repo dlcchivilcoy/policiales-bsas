@@ -691,7 +691,11 @@ chequear("agenda: 30 reels, sin carruseles, y 3 tandas de historias",
          AG.cuantos("reel") == 30 and AG.cuantos("carrusel") == 0 and AG.cuantos("historias") == 3)
 _feed = [h * 60 + m for h, m, t in _ag if t != "historias"]
 chequear("agenda: al menos 20 minutos entre un reel y el siguiente", all(b - a >= 20 for a, b in zip(_feed, _feed[1:])))
-chequear("corridas: 7, 10, 13, 16, 18 y 21", AG.corridas() == [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)])
+chequear("corridas: la del reel de datos (05) y las de noticias 7, 10, 13, 16, 18 y 21",
+         AG.corridas() == [(5, 0), (7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)]
+         and AG.corridas_noticias() == [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)])
+chequear("la corrida de las 05: solo el reel de datos", AG.corrida(datetime(2026, 10, 16, 5, 2, tzinfo=CA.TZ_AR))[2]
+         == [(datetime(2026, 10, 16, 5, 0, tzinfo=CA.TZ_AR), "reel_datos")] and AG.cuantos("reel_datos") == 1)
 
 
 def _t(h, m, dia=16):
@@ -718,11 +722,11 @@ chequear("la de las 16: 16:00 a 17:20 (no se mete en la de las 18)",
 chequear("la de las 21: 21:00 a 22:20", _hm(AG.corrida(_t(21, 39))[2]) == _reels("21:00", "21:20", "21:40", "22:00", "22:20"))
 chequear("a las 10:45 ya no (40 min de tolerancia): la próxima es la de las 13",
          AG.corrida(_t(10, 45))[:2] == (_t(13, 0), False))
-chequear("a las 23:00: la próxima es mañana a las 07", AG.corrida(_t(23, 0))[:2] == (_t(7, 0, 17), False))
+chequear("a las 23:00: la próxima es mañana a las 05 (el reel de datos)", AG.corrida(_t(23, 0))[:2] == (_t(5, 0, 17), False))
 chequear("las tres tandas de historias: mañana, mediodía y cierre",
          [AG.bloque(_t(7, 0)), AG.bloque(_t(14, 0)), AG.bloque(_t(19, 0))] == ["manana", "mediodia", "cierre"])
 chequear("el inicio de la corrida de un horario", AG.inicio_corrida(_t(14, 20)) == _t(13, 0)
-         and AG.inicio_corrida(_t(13, 0)) == _t(13, 0) and AG.inicio_corrida(_t(6, 0)) is None)
+         and AG.inicio_corrida(_t(13, 0)) == _t(13, 0) and AG.inicio_corrida(_t(4, 0)) is None)
 os.environ["AGRO_AGENDA"] = "08:00 carrusel, 11:00 carrusel"
 chequear("sábado: con carruseles en AGRO_AGENDA, el primero es «Los números de la semana»",
          AG.es_primer_carrusel_del_sabado(_t(8, 0, 17)) and not AG.es_primer_carrusel_del_sabado(_t(11, 0, 17))
@@ -732,7 +736,13 @@ chequear("AGRO_AGENDA se puede cambiar (y lo que no se entiende se saltea)",
          AG.agenda() == [(6, 30, "historias"), (10, 0, "reel")])
 os.environ.pop("AGRO_AGENDA")
 os.environ["AGRO_CORRIDAS"] = "08:00, 20:00, x"
-chequear("AGRO_CORRIDAS se puede cambiar", AG.corridas() == [(8, 0), (20, 0)])
+chequear("AGRO_CORRIDAS se puede cambiar", AG.corridas_noticias() == [(8, 0), (20, 0)]
+         and AG.corridas() == [(5, 0), (8, 0), (20, 0)])
+os.environ["AGRO_REEL_DATOS"] = "0"
+chequear("AGRO_REEL_DATOS=0 apaga el reel de datos", AG.corridas() == [(8, 0), (20, 0)] and not AG.cuantos("reel_datos"))
+os.environ["AGRO_REEL_DATOS"] = "04:30"
+chequear("AGRO_REEL_DATOS cambia la hora", (4, 30) in AG.corridas())
+os.environ.pop("AGRO_REEL_DATOS")
 os.environ["AGRO_CORRIDAS"] = "16:00, 17:00"
 chequear("los reels de una corrida no se pasan a la siguiente",
          [(h, m) for h, m, t in AG.agenda() if t == "reel"] == [(16, 0), (16, 20), (16, 40), (17, 0), (17, 20), (17, 40),
@@ -766,6 +776,77 @@ chequear("YouTube: solo el primer reel de cada corrida (el cupo de la API es com
 os.environ["AGRO_UN_SITIO_POR_CORRIDA"] = "0"
 chequear("AGRO_UN_SITIO_POR_CORRIDA=0 lo apaga", not PA.un_sitio_por_corrida())
 os.environ.pop("AGRO_UN_SITIO_POR_CORRIDA")
+
+
+# --- el reel de datos de las 05 y las historias de datos en @diarioyradio (23/10/2026) ---------------
+from agro import reel_datos as RD  # noqa: E402
+from agro import historias as _HI  # noqa: E402
+from agro import publicar as _PUBd  # noqa: E402
+
+with tempfile.TemporaryDirectory() as _tmpd:
+    _b, _d = _HI.lienzo()
+    _d.rectangle((0, 0, 500, 300), fill=(200, 100, 0, 255))
+    _p = _HI.guardar(_b, Path(_tmpd) / "historia_00_x.jpg")
+    from PIL import Image as _Im  # noqa: E402
+    chequear("cada placa de historia sale también en 4:5 (1080x1350)",
+             _Im.open(_p).size == (1080, 1920) and _Im.open(_HI.ruta_45(_p)).size == (1080, 1350))
+    _v = RD.armar_video([_HI.ruta_45(_p), _HI.ruta_45(_p), _HI.ruta_45(_p)], Path(_tmpd) / "r.mp4")
+    from reels import reel_bot as _Rb  # noqa: E402
+    chequear("reel de datos: 5 segundos por placa (3 placas = 15 s), en 4:5",
+             abs(_Rb.motor().duration_seconds(_v) - 15) < 0.3)
+_cap = RD.caption(_t(5, 0), ["alerta", "clima", "granos", "dolar", "chicago"])
+chequear("texto del reel de datos: qué trae, sin links",
+         "alertas del SMN" in _cap and "soja, el trigo y el maíz" in _cap and "http" not in _cap and "/n/" not in _cap)
+chequear("a @diarioyradio van solo las de datos (clima, alertas, granos, dólar, Chicago), no las noticias",
+         {"clima", "alerta", "granos", "dolar", "chicago"} <= _PUBd.TIPOS_AL_DIARIO
+         and not {"titulares", "novedad", "mapa", "resumen"} & _PUBd.TIPOS_AL_DIARIO)
+_env0 = {k: os.environ.get(k) for k in ("INSTAGRAM_USER_ID", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")}
+os.environ.update(INSTAGRAM_USER_ID="17841427698320458", FACEBOOK_PAGE_ID="101271341650483", FACEBOOK_PAGE_ACCESS_TOKEN="t")
+try:
+    _PUBd.credenciales_diario()
+    _salva = False
+except _PUBd.SalvaguardaAgro:
+    _salva = True
+os.environ.update(INSTAGRAM_USER_ID="17841405971293744", FACEBOOK_PAGE_ID="1456376377985890")
+chequear("salvaguarda: lo «del diario» tiene que ser @diarioyradio (con las de agro, no)",
+         _salva and _PUBd.credenciales_diario()["INSTAGRAM_USER_ID"] == "17841405971293744")
+from reels import publicador as _PBd  # noqa: E402
+
+
+class _Rta:
+    def __init__(self, cod, d):
+        self.status_code, self._d = cod, d
+
+    def json(self):
+        return self._d
+
+
+_pedidos = []
+_vistas = {"n": 0}
+
+
+def _pedir_falso(metodo, url, tok, **kw):
+    _pedidos.append((metodo, url.rsplit("/", 1)[-1], kw.get("data")))
+    if metodo == "GET":
+        _vistas["n"] += 1
+        return _Rta(200, {"data": [{"media_id": "999"}] if _vistas["n"] >= 2 else []})
+    return _Rta(200, {"success": True})
+
+
+_o = (_PBd._pedir, _PBd._dormir)
+_PBd._pedir, _PBd._dormir = _pedir_falso, lambda s: None
+try:
+    _res = _PUBd.aceptar_colab("999", log=lambda m: None)
+finally:
+    _PBd._pedir, _PBd._dormir = _o
+chequear("colab: espera a que aparezca la invitación y la acepta con la cuenta del diario",
+         _res == {"estado": "aceptada"} and _pedidos[-1] == ("POST", "collaboration_invites",
+                                                             {"media_id": "999", "accept": "true"}))
+for _k, _v0 in _env0.items():
+    if _v0 is None:
+        os.environ.pop(_k, None)
+    else:
+        os.environ[_k] = _v0
 
 # --- la corrida: publica lo suyo y espera el horario siguiente -------------------------------------
 _reloj = {"t": _t(7, 2)}
