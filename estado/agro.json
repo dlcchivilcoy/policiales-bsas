@@ -12683,6 +12683,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a3d0dc8fa1cb59a2": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 42,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia tradicional de inicio de cosecha que interesa regionalmente pero tiene baja relevancia técnica.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13566,7 +13587,8 @@
       "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina": "2026-10-23",
       "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026": "2026-10-23",
-      "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase": "2026-10-23"
+      "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase": "2026-10-23",
+      "https://infocampo.com.ar/con-alma-cooperativa-el-primer-lote-de-trigo-2026-27-llego-del-norte-cordobes": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14448,7 +14470,8 @@
       "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina": "2026-10-23",
       "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos": "2026-10-23",
       "vacunos escasa oferta en el mercado agroganadero de canuelas": "2026-10-23",
-      "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase": "2026-10-23"
+      "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase": "2026-10-23",
+      "con alma cooperativa el primer lote de trigo 2026 27 llego del norte cordobes": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15330,7 +15353,8 @@
       "3c600032738840b4": "2026-10-23",
       "8ab1745e76b507d4": "2026-10-23",
       "6cd409eb820cc858": "2026-10-23",
-      "f6cab2eb0bc3b5d1": "2026-10-23"
+      "f6cab2eb0bc3b5d1": "2026-10-23",
+      "a3d0dc8fa1cb59a2": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21870,6 +21894,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_02e6348726d5_portada.jpg"
+    },
+    {
+      "id": "c4149a1ec7d8",
+      "cuando": "2026-10-23T18:40-03:00",
+      "titulo_original": "En septiembre nueva suba de la actividad inmobiliaria rural",
+      "descripcion": "la actividad se mantiene estable con una muy leve tendencia positiva. Se mantiene la poca oferta de campos agrícolas buenos frente a una demanda insatisfecha...",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248979-en-septiembre-nueva-suba-de-la-actividad-inmobiliaria-rural.html",
+      "titular": "Inmobiliaria rural: septiembre anota 54,31 puntos con firme demanda",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 10,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 60,
+        "commercial_score": 72,
+        "subtema": "empresas",
+        "tema": "inmobiliaria rural",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Interesa a inversores y grandes productores aunque no define el día a día operativo.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          61
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2ab8fb6d-cad3-4808-a93b-0d5b7ae2dc43",
+          "slug": "inmobiliaria-rural-el-indice-de-septiembre-marca-54-31-puntos-9ed030",
+          "url": "https://www.diariolacampaña.com.ar/n/inmobiliaria-rural-el-indice-de-septiembre-marca-54-31-puntos-9ed030",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1385571340041718",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18067050422789093",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c4149a1ec7d8_portada.jpg"
     }
   ],
   "pendientes": [
@@ -22393,73 +22475,6 @@
         "dobles": [
           65,
           62
-        ]
-      },
-      "cuando": "2026-10-23T13:00-03:00"
-    },
-    {
-      "id": "c4149a1ec7d8",
-      "rep": {
-        "id": "c4149a1ec7d8",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248979-en-septiembre-nueva-suba-de-la-actividad-inmobiliaria-rural.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248979-en-septiembre-nueva-suba-de-la-actividad-inmobiliaria-rural.html",
-        "titulo": "En septiembre nueva suba de la actividad inmobiliaria rural",
-        "titulo_norm": "en septiembre nueva suba de la actividad inmobiliaria rural",
-        "descripcion": "la actividad se mantiene estable con una muy leve tendencia positiva. Se mantiene la poca oferta de campos agrícolas buenos frente a una demanda insatisfecha...",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248979_74065254.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-23T12:13-03:00",
-        "capturado": "2026-10-23T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3742c07f1fe4e3c2"
-      },
-      "grupo": [
-        {
-          "id": "c4149a1ec7d8",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248979-en-septiembre-nueva-suba-de-la-actividad-inmobiliaria-rural.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248979-en-septiembre-nueva-suba-de-la-actividad-inmobiliaria-rural.html",
-          "titulo": "En septiembre nueva suba de la actividad inmobiliaria rural",
-          "titulo_norm": "en septiembre nueva suba de la actividad inmobiliaria rural",
-          "descripcion": "la actividad se mantiene estable con una muy leve tendencia positiva. Se mantiene la poca oferta de campos agrícolas buenos frente a una demanda insatisfecha...",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248979_74065254.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-23T12:13-03:00",
-          "capturado": "2026-10-23T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3742c07f1fe4e3c2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 10,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 8,
-        "ai_score": 60,
-        "commercial_score": 72,
-        "subtema": "empresas",
-        "tema": "inmobiliaria rural",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Interesa a inversores y grandes productores aunque no define el día a día operativo.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          61
         ]
       },
       "cuando": "2026-10-23T13:00-03:00"
@@ -23279,8 +23294,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T18:23:29-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T18:43:22-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
