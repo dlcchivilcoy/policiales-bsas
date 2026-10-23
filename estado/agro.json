@@ -12616,6 +12616,52 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8ab1745e76b507d4": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 68,
+      "subtema": "ganaderia",
+      "tema": "calidad de carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a ganaderos y exportadores de la región por el foco en valor agregado y tecnología de clasificación.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6cd409eb820cc858": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 62,
+      "subtema": "ganaderia",
+      "tema": "cañuelas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos de mercado diarios y cotizaciones clave para ganaderos, con alta sensibilidad informativa.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        65
+      ]
     }
   },
   "indice": {
@@ -13496,7 +13542,9 @@
       "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien": "2026-10-23",
       "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026": "2026-10-23",
-      "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina": "2026-10-23"
+      "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina": "2026-10-23",
+      "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14375,7 +14423,9 @@
       "el frigorifico compania bernal comenzo a exportar carne vacuna a los paises escandinavos que piden calidad y pagan muy bien": "2026-10-23",
       "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026": "2026-10-23",
       "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra": "2026-10-23",
-      "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina": "2026-10-23"
+      "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina": "2026-10-23",
+      "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos": "2026-10-23",
+      "vacunos escasa oferta en el mercado agroganadero de canuelas": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15254,7 +15304,9 @@
       "2fa33de7d13f16b6": "2026-10-23",
       "e79e69c28b8a1295": "2026-10-23",
       "12a48024b07a37da": "2026-10-23",
-      "3c600032738840b4": "2026-10-23"
+      "3c600032738840b4": "2026-10-23",
+      "8ab1745e76b507d4": "2026-10-23",
+      "6cd409eb820cc858": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21675,9 +21727,200 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d65dac096217_portada.jpg"
+    },
+    {
+      "id": "907d37c65ab4",
+      "cuando": "2026-10-23T18:00-03:00",
+      "titulo_original": "Habremos perdido la final del mundo, pero nuestro maíz se está vengando: Gana mercados y apunta a un récord de exportaciones en 2026",
+      "descripcion": "El maíz argentino atraviesa una campaña comercial excepcional. Con ventas externas registradas por 39 millones de toneladas, el país podría cerrar el ciclo 2025/26 con exportaciones por 45 millones de toneladas, impulsado por una cosecha histórica y un escenario internacional que favorece a los prov",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026/",
+      "titular": "Maíz: exportaciones argentinas apuntan a un récord de 45 millones de toneladas",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 85,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto masivo en la zona núcleo por el récord de exportaciones y campaña excepcional de maíz.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "7TtpRB6JfJQ",
+          "url": "https://youtube.com/shorts/7TtpRB6JfJQ",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "816767bc-56b8-4ee0-afae-9b3d30854128",
+          "slug": "maiz-argentino-apunta-a-un-record-de-45-millones-de-toneladas-7408c7",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-argentino-apunta-a-un-record-de-45-millones-de-toneladas-7408c7",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1156280646831768",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18374494195209542",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_907d37c65ab4_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "dcd12d359924",
+      "rep": {
+        "id": "dcd12d359924",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos/",
+        "canonical_url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos",
+        "titulo": "¿De qué hablamos cuando hablamos de calidad de carne? La uruguaya Gessy Duillet explica en qué consiste una nueva tecnología que comenzaron a aplicar los exportadores argentinos",
+        "titulo_norm": "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos",
+        "descripcion": "La calidad de la carne vacuna se convirtió en una variable cada vez más determinante para competir en los mercados internacionales. Ya no alcanza con ofrecer volumen, cumplir con los requisitos sanitarios y garantizar la entrega, sino que los compradores también buscan atributos específicos, como el marmoleo, la grasa intramuscular que aporta jugosidad, sabor y […]",
+        "imagen_url": "",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-23T17:53-03:00",
+        "capturado": "2026-10-23T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8ab1745e76b507d4"
+      },
+      "grupo": [
+        {
+          "id": "dcd12d359924",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos/",
+          "canonical_url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos",
+          "titulo": "¿De qué hablamos cuando hablamos de calidad de carne? La uruguaya Gessy Duillet explica en qué consiste una nueva tecnología que comenzaron a aplicar los exportadores argentinos",
+          "titulo_norm": "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos",
+          "descripcion": "La calidad de la carne vacuna se convirtió en una variable cada vez más determinante para competir en los mercados internacionales. Ya no alcanza con ofrecer volumen, cumplir con los requisitos sanitarios y garantizar la entrega, sino que los compradores también buscan atributos específicos, como el marmoleo, la grasa intramuscular que aporta jugosidad, sabor y […]",
+          "imagen_url": "",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-23T17:53-03:00",
+          "capturado": "2026-10-23T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8ab1745e76b507d4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "calidad de carne",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa a ganaderos y exportadores de la región por el foco en valor agregado y tecnología de clasificación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T18:00-03:00"
+    },
+    {
+      "id": "02e6348726d5",
+      "rep": {
+        "id": "02e6348726d5",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026",
+        "titulo": "Vacunos: escasa oferta en el Mercado Agroganadero de Cañuelas",
+        "titulo_norm": "vacunos escasa oferta en el mercado agroganadero de canuelas",
+        "descripcion": "Con una entrada de 2851 animales, el Índice General de Mercado Agroganadero fue de $3617,842, mientras que el peso promedio general resultó de 433 kilos",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/IM6OLTMRXZA4POO25JSVEDCCIU.jpeg?auth=94af0ddfd7b0821fb51b4402ba65d43c47a4d308a49d43ea59bf46f8e61ae234&smart=true",
+        "autor": "",
+        "publicado": "2026-10-23T17:28-03:00",
+        "capturado": "2026-10-23T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6cd409eb820cc858"
+      },
+      "grupo": [
+        {
+          "id": "02e6348726d5",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026",
+          "titulo": "Vacunos: escasa oferta en el Mercado Agroganadero de Cañuelas",
+          "titulo_norm": "vacunos escasa oferta en el mercado agroganadero de canuelas",
+          "descripcion": "Con una entrada de 2851 animales, el Índice General de Mercado Agroganadero fue de $3617,842, mientras que el peso promedio general resultó de 433 kilos",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/IM6OLTMRXZA4POO25JSVEDCCIU.jpeg?auth=94af0ddfd7b0821fb51b4402ba65d43c47a4d308a49d43ea59bf46f8e61ae234&smart=true",
+          "autor": "",
+          "publicado": "2026-10-23T17:28-03:00",
+          "capturado": "2026-10-23T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6cd409eb820cc858"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "cañuelas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos de mercado diarios y cotizaciones clave para ganaderos, con alta sensibilidad informativa.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "cuando": "2026-10-23T18:00-03:00"
+    },
     {
       "id": "2af40dc3ef82",
       "rep": {
@@ -21872,69 +22115,6 @@
           66,
           75
         ]
-      },
-      "cuando": "2026-10-23T17:00-03:00"
-    },
-    {
-      "id": "907d37c65ab4",
-      "rep": {
-        "id": "907d37c65ab4",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026/",
-        "canonical_url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026",
-        "titulo": "Habremos perdido la final del mundo, pero nuestro maíz se está vengando: Gana mercados y apunta a un récord de exportaciones en 2026",
-        "titulo_norm": "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026",
-        "descripcion": "El maíz argentino atraviesa una campaña comercial excepcional. Con ventas externas registradas por 39 millones de toneladas, el país podría cerrar el ciclo 2025/26 con exportaciones por 45 millones de toneladas, impulsado por una cosecha histórica y un escenario internacional que favorece a los proveedores del hemisferio sur. El último informe de la Bolsa de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-23-164053.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-23T16:43-03:00",
-        "capturado": "2026-10-23T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e79e69c28b8a1295"
-      },
-      "grupo": [
-        {
-          "id": "907d37c65ab4",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026/",
-          "canonical_url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026",
-          "titulo": "Habremos perdido la final del mundo, pero nuestro maíz se está vengando: Gana mercados y apunta a un récord de exportaciones en 2026",
-          "titulo_norm": "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026",
-          "descripcion": "El maíz argentino atraviesa una campaña comercial excepcional. Con ventas externas registradas por 39 millones de toneladas, el país podría cerrar el ciclo 2025/26 con exportaciones por 45 millones de toneladas, impulsado por una cosecha histórica y un escenario internacional que favorece a los proveedores del hemisferio sur. El último informe de la Bolsa de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-23-164053.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-23T16:43-03:00",
-          "capturado": "2026-10-23T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e79e69c28b8a1295"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 7,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 83,
-        "commercial_score": 85,
-        "subtema": "mercados",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacto masivo en la zona núcleo por el récord de exportaciones y campaña excepcional de maíz.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-23T17:00-03:00"
     },
@@ -23021,8 +23201,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T17:23:28-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T18:04:18-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
