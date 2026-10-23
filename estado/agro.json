@@ -11855,6 +11855,27 @@
         57,
         54
       ]
+    },
+    "6af76077abf8f082": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 41,
+      "commercial_score": 41,
+      "subtema": "agro",
+      "tema": "horticultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una cobertura institucional de un gobernador en una muestra regional de nicho, con baja relevancia general para la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12690,7 +12711,9 @@
       "https://bichosdecampo.com/caduco-la-caducidad-un-cruce-de-resoluciones-de-martin-famulari-el-titular-del-inase-expuso-la-fragilidad-de-los-controles-sobre-las-semilleras": "2026-10-23",
       "https://bichosdecampo.com/ni-estados-unidos-quiere-depender-de-los-fertilizantes-importados-trump-impulsa-inversiones-por-1-300-millones-de-dolares-para-fabricar-mas-insumos-con-sello-propio": "2026-10-23",
       "https://bichosdecampo.com/rodrigo-aguilar-el-sacerdote-agronomo-que-lleva-el-evangelio-a-mas-de-80-mil-personas-por-dia-cuenta-como-sintio-el-llamado-por-que-no-dejo-atras-su-amor-por-lo-rural": "2026-10-23",
-      "https://intainforma.inta.gob.ar/ovoprotect-recibio-el-premio-alimentacion-del-futuro": "2026-10-23"
+      "https://intainforma.inta.gob.ar/ovoprotect-recibio-el-premio-alimentacion-del-futuro": "2026-10-23",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-23-octubre-2026": "2026-10-23",
+      "https://lacapital.com.ar/agro/pullaro-exphortar-la-horticultura-tiene-una-potencialidad-muy-grande-n10288218.html": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13524,7 +13547,9 @@
       "caduco la caducidad un cruce de resoluciones de martin famulari el titular del inase expuso la fragilidad de los controles sobre las semilleras": "2026-10-23",
       "ni estados unidos quiere depender de los fertilizantes importados trump impulsa inversiones por 1 300 millones de dolares para fabricar mas insumos con sello propio": "2026-10-23",
       "rodrigo aguilar el sacerdote agronomo que predica a mas de 80 mil personas por dia cuenta como sintio el llamado y por que no dejo atras su amor por lo rural": "2026-10-23",
-      "ovoprotect recibio el premio alimentacion del futuro": "2026-10-23"
+      "ovoprotect recibio el premio alimentacion del futuro": "2026-10-23",
+      "dolar blue a cuanto cotizan hoy en cordoba 23 octubre 2026": "2026-10-23",
+      "pullaro en exphortar la horticultura tiene una potencialidad muy grande": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14358,7 +14383,9 @@
       "3d9b30905cb3e2da": "2026-10-23",
       "46f97955935cc28a": "2026-10-23",
       "83def048939a1959": "2026-10-23",
-      "dac2f8732ac1f713": "2026-10-23"
+      "dac2f8732ac1f713": "2026-10-23",
+      "d96f1e71ef64e344": "2026-10-23",
+      "6af76077abf8f082": "2026-10-23"
     }
   },
   "elegidas": [
@@ -20061,6 +20088,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f29c024b656a_portada.jpg"
+    },
+    {
+      "id": "d05d5dabb1af",
+      "cuando": "2026-10-23T10:20-03:00",
+      "titulo_original": "El Senasa evaluó la calidad de aplicación de aviones, drones y equipos terrestres para el control de langostas",
+      "descripcion": "Las pruebas realizadas en Córdoba registraron una calidad de aplicación superior al 90 % para el avión agrícola y cercana al 88 % para el dron. La jornada reunió a técnicos de distintas regiones del país y permitió analizar tecnologías y parámetros operativos para optimizar las tareas de control de ",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248978-el-senasa-evaluo-la-calidad-de-aplicacion-de-aviones-drones-y-equipos-terrestres-para-el-control-de-langostas.html",
+      "titular": "Senasa evaluó aviones y drones para el control de langostas en Córdoba",
+      "volanta": "Tecnología",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 13,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 8,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "maquinaria",
+        "tema": "drones agrícolas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Compara la eficacia de aviones y drones para aplicaciones, un tema muy actual para contratistas.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6eed5bc6-9afc-4323-ae44-f5cfdcca588c",
+          "slug": "senasa-evaluo-aviones-y-drones-para-el-control-de-langostas-en-0670e6",
+          "url": "https://www.diariolacampaña.com.ar/n/senasa-evaluo-aviones-y-drones-para-el-control-de-langostas-en-0670e6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1996301057613146",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18108374285254865",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d05d5dabb1af_portada.jpg"
     }
   ],
   "pendientes": [
@@ -20121,69 +20202,6 @@
         "sensible": false,
         "explicacion": "Afecta directamente el rendimiento del trigo en plena zona núcleo durante el llenado de granos.",
         "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T10:00-03:00"
-    },
-    {
-      "id": "d05d5dabb1af",
-      "rep": {
-        "id": "d05d5dabb1af",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248978-el-senasa-evaluo-la-calidad-de-aplicacion-de-aviones-drones-y-equipos-terrestres-para-el-control-de-langostas.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248978-el-senasa-evaluo-la-calidad-de-aplicacion-de-aviones-drones-y-equipos-terrestres-para-el-control-de-langostas.html",
-        "titulo": "El Senasa evaluó la calidad de aplicación de aviones, drones y equipos terrestres para el control de langostas",
-        "titulo_norm": "el senasa evaluo la calidad de aplicacion de aviones drones y equipos terrestres para el control de langostas",
-        "descripcion": "Las pruebas realizadas en Córdoba registraron una calidad de aplicación superior al 90 % para el avión agrícola y cercana al 88 % para el dron. La jornada reunió a técnicos de distintas regiones del país y permitió analizar tecnologías y parámetros operativos para optimizar las tareas de control de la plaga....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248978_13092976.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-23T09:42-03:00",
-        "capturado": "2026-10-23T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fab360796249105c"
-      },
-      "grupo": [
-        {
-          "id": "d05d5dabb1af",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248978-el-senasa-evaluo-la-calidad-de-aplicacion-de-aviones-drones-y-equipos-terrestres-para-el-control-de-langostas.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248978-el-senasa-evaluo-la-calidad-de-aplicacion-de-aviones-drones-y-equipos-terrestres-para-el-control-de-langostas.html",
-          "titulo": "El Senasa evaluó la calidad de aplicación de aviones, drones y equipos terrestres para el control de langostas",
-          "titulo_norm": "el senasa evaluo la calidad de aplicacion de aviones drones y equipos terrestres para el control de langostas",
-          "descripcion": "Las pruebas realizadas en Córdoba registraron una calidad de aplicación superior al 90 % para el avión agrícola y cercana al 88 % para el dron. La jornada reunió a técnicos de distintas regiones del país y permitió analizar tecnologías y parámetros operativos para optimizar las tareas de control de la plaga....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248978_13092976.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-23T09:42-03:00",
-          "capturado": "2026-10-23T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fab360796249105c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 13,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 8,
-        "conversacion": 7,
-        "potencial_comercial": 8,
-        "ai_score": 78,
-        "commercial_score": 78,
-        "subtema": "maquinaria",
-        "tema": "drones agrícolas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Compara la eficacia de aviones y drones para aplicaciones, un tema muy actual para contratistas.",
-        "tema_doc": "tecnologia",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
@@ -21001,8 +21019,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T10:03:47-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T10:23:00-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
