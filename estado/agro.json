@@ -12704,6 +12704,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fc39c9437d1fda36": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 13,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 78,
+      "commercial_score": 78,
+      "subtema": "agtech",
+      "tema": "biológicos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Los bioinsumos son tendencia clave en la zona núcleo y despiertan alto interés comercial y técnico.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13588,7 +13609,8 @@
       "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026": "2026-10-23",
       "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase": "2026-10-23",
-      "https://infocampo.com.ar/con-alma-cooperativa-el-primer-lote-de-trigo-2026-27-llego-del-norte-cordobes": "2026-10-23"
+      "https://infocampo.com.ar/con-alma-cooperativa-el-primer-lote-de-trigo-2026-27-llego-del-norte-cordobes": "2026-10-23",
+      "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14471,7 +14493,8 @@
       "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos": "2026-10-23",
       "vacunos escasa oferta en el mercado agroganadero de canuelas": "2026-10-23",
       "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase": "2026-10-23",
-      "con alma cooperativa el primer lote de trigo 2026 27 llego del norte cordobes": "2026-10-23"
+      "con alma cooperativa el primer lote de trigo 2026 27 llego del norte cordobes": "2026-10-23",
+      "los biologicos son una moda nicolas gruz los produce desde tucuman y recuerda que hasta los romanos inoculaban sus cultivos": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15354,7 +15377,8 @@
       "8ab1745e76b507d4": "2026-10-23",
       "6cd409eb820cc858": "2026-10-23",
       "f6cab2eb0bc3b5d1": "2026-10-23",
-      "a3d0dc8fa1cb59a2": "2026-10-23"
+      "a3d0dc8fa1cb59a2": "2026-10-23",
+      "fc39c9437d1fda36": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21952,9 +21976,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c4149a1ec7d8_portada.jpg"
+    },
+    {
+      "id": "29e87eaa61bf",
+      "cuando": "2026-10-23T19:02-03:00",
+      "titulo_original": "El modelo de la ganadería uruguaya viene a Rosario: “¿Qué animal debemos producir?”",
+      "descripcion": "El CEO de Origen Uruguay, Patricio Cortabarría, participará del Congreso Federal Ganadero. En la previa, explicó cómo evolucionan los sistemas ganaderos de su país pensando en las nuevas exigencias, con la mira puesta en obtener animales más pesados a edades tempranas.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-modelo-de-la-ganaderia-uruguaya-viene-a-rosario-que-animal-debemos-producir/",
+      "titular": "El modelo ganadero uruguayo apunta a producir animales más pesados",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 9,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "ganadería uruguaya",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Útil para criadores de la zona núcleo que buscan eficientizar la producción de carne.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8d73121f-3dd2-4ca7-90b4-0e8345aaa180",
+          "slug": "el-modelo-ganadero-de-uruguay-llega-a-rosario-para-debatir-74755c",
+          "url": "https://www.diariolacampaña.com.ar/n/el-modelo-ganadero-de-uruguay-llega-a-rosario-para-debatir-74755c",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2157700025105323",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18099085712194538",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_29e87eaa61bf_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7ea91d322c46",
+      "rep": {
+        "id": "7ea91d322c46",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos/",
+        "canonical_url": "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos",
+        "titulo": "¿Los biológicos son una moda? Nicolás Gruz los produce desde Tucumán y recuerda que hasta los romanos inoculaban sus cultivos",
+        "titulo_norm": "los biologicos son una moda nicolas gruz los produce desde tucuman y recuerda que hasta los romanos inoculaban sus cultivos",
+        "descripcion": "Hay palabras que de golpe parecen nuevas aunque lleven décadas, o incluso siglos, dando vueltas. Algo de eso ocurre hoy con los productos biológicos para el agro, que ganaron protagonismo en congresos, exposiciones, laboratorios y hasta en los planes de inversión de grandes multinacionales. Pero para Nicolás Gruz, ingeniero agrónomo vinculado a Laboratorio San Pablo, […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-23T18:51-03:00",
+        "capturado": "2026-10-23T19:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fc39c9437d1fda36"
+      },
+      "grupo": [
+        {
+          "id": "7ea91d322c46",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos/",
+          "canonical_url": "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos",
+          "titulo": "¿Los biológicos son una moda? Nicolás Gruz los produce desde Tucumán y recuerda que hasta los romanos inoculaban sus cultivos",
+          "titulo_norm": "los biologicos son una moda nicolas gruz los produce desde tucuman y recuerda que hasta los romanos inoculaban sus cultivos",
+          "descripcion": "Hay palabras que de golpe parecen nuevas aunque lleven décadas, o incluso siglos, dando vueltas. Algo de eso ocurre hoy con los productos biológicos para el agro, que ganaron protagonismo en congresos, exposiciones, laboratorios y hasta en los planes de inversión de grandes multinacionales. Pero para Nicolás Gruz, ingeniero agrónomo vinculado a Laboratorio San Pablo, […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-23T18:51-03:00",
+          "capturado": "2026-10-23T19:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fc39c9437d1fda36"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 13,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agtech",
+        "tema": "biológicos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Los bioinsumos son tendencia clave en la zona núcleo y despiertan alto interés comercial y técnico.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T19:02-03:00"
+    },
     {
       "id": "d01fe2d1c4c4",
       "rep": {
@@ -22411,73 +22556,6 @@
         ]
       },
       "cuando": "2026-10-23T14:21-03:00"
-    },
-    {
-      "id": "29e87eaa61bf",
-      "rep": {
-        "id": "29e87eaa61bf",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-modelo-de-la-ganaderia-uruguaya-viene-a-rosario-que-animal-debemos-producir/",
-        "canonical_url": "https://infocampo.com.ar/el-modelo-de-la-ganaderia-uruguaya-viene-a-rosario-que-animal-debemos-producir",
-        "titulo": "El modelo de la ganadería uruguaya viene a Rosario: “¿Qué animal debemos producir?”",
-        "titulo_norm": "el modelo de la ganaderia uruguaya viene a rosario que animal debemos producir",
-        "descripcion": "El CEO de Origen Uruguay, Patricio Cortabarría, participará del Congreso Federal Ganadero. En la previa, explicó cómo evolucionan los sistemas ganaderos de su país pensando en las nuevas exigencias, con la mira puesta en obtener animales más pesados a edades tempranas.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-4.36.40-PM-1.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-10-23T11:28-03:00",
-        "capturado": "2026-10-23T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "63341f6bb4c0c758"
-      },
-      "grupo": [
-        {
-          "id": "29e87eaa61bf",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-modelo-de-la-ganaderia-uruguaya-viene-a-rosario-que-animal-debemos-producir/",
-          "canonical_url": "https://infocampo.com.ar/el-modelo-de-la-ganaderia-uruguaya-viene-a-rosario-que-animal-debemos-producir",
-          "titulo": "El modelo de la ganadería uruguaya viene a Rosario: “¿Qué animal debemos producir?”",
-          "titulo_norm": "el modelo de la ganaderia uruguaya viene a rosario que animal debemos producir",
-          "descripcion": "El CEO de Origen Uruguay, Patricio Cortabarría, participará del Congreso Federal Ganadero. En la previa, explicó cómo evolucionan los sistemas ganaderos de su país pensando en las nuevas exigencias, con la mira puesta en obtener animales más pesados a edades tempranas.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-4.36.40-PM-1.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-10-23T11:28-03:00",
-          "capturado": "2026-10-23T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "63341f6bb4c0c758"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 12,
-        "innovacion": 6,
-        "cercania_argentina": 9,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "ganadería uruguaya",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Útil para criadores de la zona núcleo que buscan eficientizar la producción de carne.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          62
-        ]
-      },
-      "cuando": "2026-10-23T13:00-03:00"
     },
     {
       "id": "9cdb73ac7a3b",
@@ -23294,8 +23372,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T19:02:33-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T19:07:27-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
