@@ -21232,49 +21232,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_48197d2bdcd7_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "cf985b53a9ce",
-      "rep": {
-        "id": "cf985b53a9ce",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros/",
-        "canonical_url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros",
-        "titulo": "La industria agudiza el ingenio: El frigorífico Recreo invirtió más de 5 millones de dólares para aprovechar hasta los descartes y meterse en la exportación de cueros",
-        "titulo_norm": "la industria agudiza el ingenio el frigorifico recreo invirtio mas de 5 millones de dolares para aprovechar hasta los descartes y meterse en la exportacion de cueros",
-        "descripcion": "El frigorífico Recreo, una histórica firma de la provincia de Santa Fe, decidió avanzar sobre una parte del negocio que durante años quedaba en manos de terceros: el procesamiento de los subproductos de la faena. Con una inversión de 5,5 millones de dólares, puso en marcha una planta de rendering que transforma los desperdicios de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/frigorifico-recreo-nueva-planta-e1792775142187.jpeg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-23T14:27-03:00",
-        "capturado": "2026-10-23T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2e36df009854cf64"
-      },
-      "grupo": [
-        {
-          "id": "cf985b53a9ce",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros/",
-          "canonical_url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros",
-          "titulo": "La industria agudiza el ingenio: El frigorífico Recreo invirtió más de 5 millones de dólares para aprovechar hasta los descartes y meterse en la exportación de cueros",
-          "titulo_norm": "la industria agudiza el ingenio el frigorifico recreo invirtio mas de 5 millones de dolares para aprovechar hasta los descartes y meterse en la exportacion de cueros",
-          "descripcion": "El frigorífico Recreo, una histórica firma de la provincia de Santa Fe, decidió avanzar sobre una parte del negocio que durante años quedaba en manos de terceros: el procesamiento de los subproductos de la faena. Con una inversión de 5,5 millones de dólares, puso en marcha una planta de rendering que transforma los desperdicios de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/frigorifico-recreo-nueva-planta-e1792775142187.jpeg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-23T14:27-03:00",
-          "capturado": "2026-10-23T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2e36df009854cf64"
-        }
-      ],
+      "cuando": "2026-10-23T16:20-03:00",
+      "titulo_original": "La industria agudiza el ingenio: El frigorífico Recreo invirtió más de 5 millones de dólares para aprovechar hasta los descartes y meterse en la exportación de cueros",
+      "descripcion": "El frigorífico Recreo, una histórica firma de la provincia de Santa Fe, decidió avanzar sobre una parte del negocio que durante años quedaba en manos de terceros: el procesamiento de los subproductos de la faena. Con una inversión de 5,5 millones de dólares, puso en marcha una planta de rendering qu",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros/",
+      "titular": "Frigorífico Recreo invirtió US$ 5,5 millones para procesar subproductos",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 10,
@@ -21296,8 +21263,32 @@
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-23T16:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b9c98158-ca61-4e81-9703-5d70559851ee",
+          "slug": "frigorifico-recreo-invirtio-us-5-5-millones-en-su-nueva-planta-703d24",
+          "url": "https://www.diariolacampaña.com.ar/n/frigorifico-recreo-invirtio-us-5-5-millones-en-su-nueva-planta-703d24",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1110283778487756",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17915124069513422",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cf985b53a9ce_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "b2f69cee91ee",
       "rep": {
@@ -22645,8 +22636,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T16:03:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T16:23:25-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
