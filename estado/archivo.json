@@ -99,6 +99,12 @@
       "pregunta": "¿Cuál es el mejor banco de la plaza principal para sentarse a tomar mate?",
       "categoria": "Espacios públicos",
       "tema": "la plaza principal"
+    },
+    {
+      "dia": "2026-10-23",
+      "pregunta": "¿Cuál es la esquina más difícil para cruzar manejando en el centro de Chivilcoy?",
+      "categoria": "Movilidad y tránsito",
+      "tema": "el tránsito en el centro"
     }
   ],
   "publicaciones": {
@@ -576,7 +582,22 @@
       "prueba": {
         "graduation_strategy": "SS_PERFORMANCE"
       }
+    },
+    "2026-10-23:pregunta": {
+      "titular": "¿Cuál es la esquina más difícil para cruzar manejando en el centro de Chivilcoy?",
+      "subtipo": "pregunta",
+      "cuando": "2026-10-23T20:30:49-03:00",
+      "intentos": 1,
+      "fuente": {
+        "categoria": "Movilidad y tránsito",
+        "tema": "el tránsito en el centro"
+      },
+      "estado": "ok",
+      "id": "18144654751607110",
+      "prueba": {
+        "graduation_strategy": "SS_PERFORMANCE"
+      }
     }
   },
-  "actualizado": "2026-10-23T13:30:33-03:00"
+  "actualizado": "2026-10-23T20:30:26-03:00"
 }
