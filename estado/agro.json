@@ -11675,6 +11675,27 @@
         69,
         70
       ]
+    },
+    "311efa49fd037b8f": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 8,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 32,
+      "commercial_score": 45,
+      "subtema": "agtech",
+      "tema": "robotica agricola",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un evento de robótica en EE.UU. con baja relevancia directa y local para Chivilcoy.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12502,7 +12523,8 @@
       "https://agrositio.com.ar/noticia/248968-envejecimiento-de-la-poblacion-en-europa-que-significa-para-el-negocio-hortofruticola.html": "2026-10-23",
       "https://bichosdecampo.com/el-listado-completo-cual-es-la-valuacion-de-todos-los-inmuebles-de-granja-tres-arroyos": "2026-10-23",
       "https://bichosdecampo.com/no-es-competencia-sino-complementariedad-la-vision-de-rodrigo-troncoso-que-redefine-el-negocio-carnico-argentino": "2026-10-23",
-      "https://lacapital.com.ar/agro/la-bolsa-rosario-estimo-una-cosecha-trigo-238-millones-toneladas-n10288216.html": "2026-10-23"
+      "https://lacapital.com.ar/agro/la-bolsa-rosario-estimo-una-cosecha-trigo-238-millones-toneladas-n10288216.html": "2026-10-23",
+      "https://futurefarming.com/tech-in-focus/field-robots/fira-usa-draws-agtech-and-robotics-industry-and-growers-to-yakima-valley": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13328,7 +13350,8 @@
       "envejecimiento de la poblacion en europa que significa para el negocio hortofruticola": "2026-10-23",
       "el listado completo cual es la valuacion de todos los inmuebles de granja tres arroyos": "2026-10-23",
       "no es competencia sino complementariedad la vision de rodrigo troncoso que redefine el negocio carnico argentino": "2026-10-23",
-      "la bolsa de rosario estimo una cosecha de trigo de 23 8 millones de toneladas": "2026-10-23"
+      "la bolsa de rosario estimo una cosecha de trigo de 23 8 millones de toneladas": "2026-10-23",
+      "fira usa draws agtech and robotics industry and growers to yakima valley": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14154,7 +14177,8 @@
       "0f637877ea5184f7": "2026-10-23",
       "e5d1a0d3ac05bbeb": "2026-10-23",
       "cf27426815e41d56": "2026-10-23",
-      "1998020a18039175": "2026-10-23"
+      "1998020a18039175": "2026-10-23",
+      "311efa49fd037b8f": "2026-10-23"
     }
   },
   "elegidas": [
@@ -20539,7 +20563,7 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T08:03:12-03:00",
+  "actualizado": "2026-10-23T08:23:18-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
