@@ -12662,6 +12662,27 @@
         64,
         65
       ]
+    },
+    "f6cab2eb0bc3b5d1": {
+      "impacto_economico": 18,
+      "interes_productores": 13,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 84,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja visec",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta de lleno en la comercialización de soja de la zona núcleo al integrar la trazabilidad europea en los futuros.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13544,7 +13565,8 @@
       "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026": "2026-10-23",
       "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina": "2026-10-23",
       "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos": "2026-10-23",
-      "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026": "2026-10-23"
+      "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026": "2026-10-23",
+      "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14425,7 +14447,8 @@
       "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra": "2026-10-23",
       "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina": "2026-10-23",
       "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos": "2026-10-23",
-      "vacunos escasa oferta en el mercado agroganadero de canuelas": "2026-10-23"
+      "vacunos escasa oferta en el mercado agroganadero de canuelas": "2026-10-23",
+      "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15306,7 +15329,8 @@
       "12a48024b07a37da": "2026-10-23",
       "3c600032738840b4": "2026-10-23",
       "8ab1745e76b507d4": "2026-10-23",
-      "6cd409eb820cc858": "2026-10-23"
+      "6cd409eb820cc858": "2026-10-23",
+      "f6cab2eb0bc3b5d1": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21788,9 +21812,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_907d37c65ab4_portada.jpg"
+    },
+    {
+      "id": "02e6348726d5",
+      "cuando": "2026-10-23T18:20-03:00",
+      "titulo_original": "Vacunos: escasa oferta en el Mercado Agroganadero de Cañuelas",
+      "descripcion": "Con una entrada de 2851 animales, el Índice General de Mercado Agroganadero fue de $3617,842, mientras que el peso promedio general resultó de 433 kilos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026/",
+      "titular": "Hacienda: caen los ingresos en Cañuelas por las lluvias",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "cañuelas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos de mercado diarios y cotizaciones clave para ganaderos, con alta sensibilidad informativa.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2a2b0f88-9419-461d-9c1d-6badcef774a9",
+          "slug": "hacienda-fuerte-baja-en-el-ingreso-de-animales-al-mercado-589ec6",
+          "url": "https://www.diariolacampaña.com.ar/n/hacienda-fuerte-baja-en-el-ingreso-de-animales-al-mercado-589ec6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2079222009401702",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18123870524297517",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_02e6348726d5_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d01fe2d1c4c4",
+      "rep": {
+        "id": "d01fe2d1c4c4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase/",
+        "canonical_url": "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase",
+        "titulo": "EUDR: La “soja Visec” llega al mercado argentino de futuros agrícolas (por el momento con un pase)",
+        "titulo_norm": "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase",
+        "descripcion": "A partir del próximo lunes 26 de octubre de 2026, A3 Mercados habilitará una nueva condición de entrega del contrato de futuros de Soja Rosario en dólares, denominada Soja Visec, para aquellas partidas que se encuentren registradas en la plataforma diseñada para cumplir con el Reglamento 2023/1115 de la UE-27 sobre “Productos Libres de Deforestación” […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Foto-de-Ezequiel-Tambornini-1.jpg",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-23T18:19-03:00",
+        "capturado": "2026-10-23T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f6cab2eb0bc3b5d1"
+      },
+      "grupo": [
+        {
+          "id": "d01fe2d1c4c4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase/",
+          "canonical_url": "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase",
+          "titulo": "EUDR: La “soja Visec” llega al mercado argentino de futuros agrícolas (por el momento con un pase)",
+          "titulo_norm": "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase",
+          "descripcion": "A partir del próximo lunes 26 de octubre de 2026, A3 Mercados habilitará una nueva condición de entrega del contrato de futuros de Soja Rosario en dólares, denominada Soja Visec, para aquellas partidas que se encuentren registradas en la plataforma diseñada para cumplir con el Reglamento 2023/1115 de la UE-27 sobre “Productos Libres de Deforestación” […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Foto-de-Ezequiel-Tambornini-1.jpg",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-23T18:19-03:00",
+          "capturado": "2026-10-23T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f6cab2eb0bc3b5d1"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 13,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 84,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja visec",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta de lleno en la comercialización de soja de la zona núcleo al integrar la trazabilidad europea en los futuros.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T18:20-03:00"
+    },
     {
       "id": "dcd12d359924",
       "rep": {
@@ -21851,73 +21996,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T18:00-03:00"
-    },
-    {
-      "id": "02e6348726d5",
-      "rep": {
-        "id": "02e6348726d5",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026",
-        "titulo": "Vacunos: escasa oferta en el Mercado Agroganadero de Cañuelas",
-        "titulo_norm": "vacunos escasa oferta en el mercado agroganadero de canuelas",
-        "descripcion": "Con una entrada de 2851 animales, el Índice General de Mercado Agroganadero fue de $3617,842, mientras que el peso promedio general resultó de 433 kilos",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/IM6OLTMRXZA4POO25JSVEDCCIU.jpeg?auth=94af0ddfd7b0821fb51b4402ba65d43c47a4d308a49d43ea59bf46f8e61ae234&smart=true",
-        "autor": "",
-        "publicado": "2026-10-23T17:28-03:00",
-        "capturado": "2026-10-23T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6cd409eb820cc858"
-      },
-      "grupo": [
-        {
-          "id": "02e6348726d5",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-escasa-oferta-en-el-mercado-agroganadero-de-canuelas-nid23102026",
-          "titulo": "Vacunos: escasa oferta en el Mercado Agroganadero de Cañuelas",
-          "titulo_norm": "vacunos escasa oferta en el mercado agroganadero de canuelas",
-          "descripcion": "Con una entrada de 2851 animales, el Índice General de Mercado Agroganadero fue de $3617,842, mientras que el peso promedio general resultó de 433 kilos",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/IM6OLTMRXZA4POO25JSVEDCCIU.jpeg?auth=94af0ddfd7b0821fb51b4402ba65d43c47a4d308a49d43ea59bf46f8e61ae234&smart=true",
-          "autor": "",
-          "publicado": "2026-10-23T17:28-03:00",
-          "capturado": "2026-10-23T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6cd409eb820cc858"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 62,
-        "subtema": "ganaderia",
-        "tema": "cañuelas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos de mercado diarios y cotizaciones clave para ganaderos, con alta sensibilidad informativa.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          65
-        ]
       },
       "cuando": "2026-10-23T18:00-03:00"
     },
@@ -23201,8 +23279,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T18:04:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T18:23:29-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
