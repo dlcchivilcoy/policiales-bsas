@@ -12319,6 +12319,56 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5f4e7eb45b04a38f": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 64,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Importante para ganaderos y frigoríficos por las exigencias de exportación a Europa, aunque es una declaración general.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        66
+      ]
+    },
+    "61f34e12c9dd74d6": {
+      "impacto_economico": 7,
+      "interes_productores": 6,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 6,
+      "ai_score": 52,
+      "commercial_score": 49,
+      "subtema": "empresas",
+      "tema": "propiedad intelectual",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Útil para fabricantes de maquinaria y desarrolladores AgTech que buscan exportar, pero acotado a un nicho.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        44
+      ]
     }
   },
   "indice": {
@@ -13184,7 +13234,9 @@
       "https://bichosdecampo.com/que-haya-yerba-y-ganado-en-el-monte-misionero-misiones-flexibilizo-el-uso-productivo-de-las-zonas-amarillas-del-bosque-nativo-y-amplio-las-posibilidades-de-manejo-integrado": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/un-referente-de-la-poderosa-industria-alimentaria-de-brasil-sobre-las-medidas-de-milei-son-muy-duras-nid23102026": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026": "2026-10-23",
-      "https://bichosdecampo.com/llegaste-20-anos-tarde-fede-los-yerbateros-le-recuerdan-a-sturzenegger-que-festeja-hitos-exportadores-que-ocurren-desde-2005-y-que-no-fue-su-magia-desreguladora-la-que-los-hizo-pos": "2026-10-23"
+      "https://bichosdecampo.com/llegaste-20-anos-tarde-fede-los-yerbateros-le-recuerdan-a-sturzenegger-que-festeja-hitos-exportadores-que-ocurren-desde-2005-y-que-no-fue-su-magia-desreguladora-la-que-los-hizo-pos": "2026-10-23",
+      "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html": "2026-10-23",
+      "https://intainforma.inta.gob.ar/como-proteger-una-tecnologia-antes-de-salir-a-nuevos-mercados": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14048,7 +14100,9 @@
       "que haya yerba y ganado en el monte misionero la provincia flexibilizo el uso productivo del bosque nativo y amplio las posibilidades de manejo integrado": "2026-10-23",
       "un referente de la poderosa industria alimentaria de brasil sobre las medidas de milei son muy duras y perjudican principalmente a los mas pobres": "2026-10-23",
       "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores": "2026-10-23",
-      "llegaste 20 anos tarde fede los yerbateros le recuerdan a sturzenegger que festeja hitos exportadores que ocurren desde 2005 y que no fue su magia desreguladora la que los hizo posibles": "2026-10-23"
+      "llegaste 20 anos tarde fede los yerbateros le recuerdan a sturzenegger que festeja hitos exportadores que ocurren desde 2005 y que no fue su magia desreguladora la que los hizo posibles": "2026-10-23",
+      "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos": "2026-10-23",
+      "como proteger una tecnologia antes de salir a nuevos mercados": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14912,7 +14966,9 @@
       "a1aaf40ed5139875": "2026-10-23",
       "bbcc7764ce62429f": "2026-10-23",
       "dd64536be0178c2a": "2026-10-23",
-      "6b59c1aed7ea6b15": "2026-10-23"
+      "6b59c1aed7ea6b15": "2026-10-23",
+      "5f4e7eb45b04a38f": "2026-10-23",
+      "61f34e12c9dd74d6": "2026-10-23"
     }
   },
   "elegidas": [
@@ -20950,49 +21006,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6f3ea10ec102_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "2d238cb09d91",
-      "rep": {
-        "id": "2d238cb09d91",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026",
-        "titulo": "“Influye mucho o algo”: una encuesta señala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
-        "titulo_norm": "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
-        "descripcion": "Según un relevamiento del Centro de Agronegocios y Alimentos de la Universidad Austral, el 49% identifica el escenario político como un condicionante, seguido por la incertidumbre climática, con el 38%, y las tasas o condiciones de financiamiento, con el 24%",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/27AVAQU6BFEEJL7TS3TG54TOA4.jpg?auth=c68f3436ba3f365004cde765c0a58016f6a3f62a08e147a6330d9e91d78f1e65&smart=true",
-        "autor": "",
-        "publicado": "2026-10-23T13:18-03:00",
-        "capturado": "2026-10-23T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "dd64536be0178c2a"
-      },
-      "grupo": [
-        {
-          "id": "2d238cb09d91",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026",
-          "titulo": "“Influye mucho o algo”: una encuesta señala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
-          "titulo_norm": "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
-          "descripcion": "Según un relevamiento del Centro de Agronegocios y Alimentos de la Universidad Austral, el 49% identifica el escenario político como un condicionante, seguido por la incertidumbre climática, con el 38%, y las tasas o condiciones de financiamiento, con el 24%",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/27AVAQU6BFEEJL7TS3TG54TOA4.jpg?auth=c68f3436ba3f365004cde765c0a58016f6a3f62a08e147a6330d9e91d78f1e65&smart=true",
-          "autor": "",
-          "publicado": "2026-10-23T13:18-03:00",
-          "capturado": "2026-10-23T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "dd64536be0178c2a"
-        }
-      ],
+      "cuando": "2026-10-23T14:21-03:00",
+      "titulo_original": "“Influye mucho o algo”: una encuesta señala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
+      "descripcion": "Según un relevamiento del Centro de Agronegocios y Alimentos de la Universidad Austral, el 49% identifica el escenario político como un condicionante, seguido por la incertidumbre climática, con el 38%, y las tasas o condiciones de financiamiento, con el 24%",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026/",
+      "titular": "Incertidumbre electoral de 2027 frena las inversiones de los productores",
+      "volanta": "Agroecología y Economía",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 12,
@@ -21018,7 +21041,98 @@
           67
         ]
       },
-      "cuando": "2026-10-23T13:40-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ea2a25e9-2485-4722-946f-162e10a4f863",
+          "slug": "incertidumbre-electoral-de-2027-frena-las-inversiones-de-los-b844f4",
+          "url": "https://www.diariolacampaña.com.ar/n/incertidumbre-electoral-de-2027-frena-las-inversiones-de-los-b844f4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2016403755742287",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18166797181489490",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2d238cb09d91_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "33b81c0b10a0",
+      "rep": {
+        "id": "33b81c0b10a0",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
+        "titulo": "Javier Peralta: “La demanda europea de carne es mucha, pero tenemos que cumplir los requisitos\"",
+        "titulo_norm": "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos",
+        "descripcion": "La demanda europea por carne vacuna argentina abre una oportunidad para la industria frigorífica, pero aprovecharla dependerá de que los productores y las plantas puedan cumplir con los requisitos de trazabilidad y certificación que exige ese mercado. Así lo señaló Javier Peralta, directivo de la Asociación de Frigoríficos Industriales de la Carne de Córdoba (AFIC) y representante de una empresa socia de esa entidad y de FIFRA, durante la feria SIAL de París....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_248982_17348356.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-23T14:02-03:00",
+        "capturado": "2026-10-23T14:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "5f4e7eb45b04a38f"
+      },
+      "grupo": [
+        {
+          "id": "33b81c0b10a0",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
+          "titulo": "Javier Peralta: “La demanda europea de carne es mucha, pero tenemos que cumplir los requisitos\"",
+          "titulo_norm": "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos",
+          "descripcion": "La demanda europea por carne vacuna argentina abre una oportunidad para la industria frigorífica, pero aprovecharla dependerá de que los productores y las plantas puedan cumplir con los requisitos de trazabilidad y certificación que exige ese mercado. Así lo señaló Javier Peralta, directivo de la Asociación de Frigoríficos Industriales de la Carne de Córdoba (AFIC) y representante de una empresa socia de esa entidad y de FIFRA, durante la feria SIAL de París....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_248982_17348356.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-23T14:02-03:00",
+          "capturado": "2026-10-23T14:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5f4e7eb45b04a38f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 64,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Importante para ganaderos y frigoríficos por las exigencias de exportación a Europa, aunque es una declaración general.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          66
+        ]
+      },
+      "cuando": "2026-10-23T14:21-03:00"
     },
     {
       "id": "29e87eaa61bf",
@@ -21220,69 +21334,6 @@
         ]
       },
       "cuando": "2026-10-23T13:00-03:00"
-    },
-    {
-      "id": "3acacc049548",
-      "rep": {
-        "id": "3acacc049548",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/brasil-dejo-un-hueco-en-europa-pero-argentina-puede-no-aprovecharlo-por-falta-de-novillos-trazados-arrebeef-busca-alianzas-con-productores-para-no-perder-negocios/",
-        "canonical_url": "https://bichosdecampo.com/brasil-dejo-un-hueco-en-europa-pero-argentina-puede-no-aprovecharlo-por-falta-de-novillos-trazados-arrebeef-busca-alianzas-con-productores-para-no-perder-negocios",
-        "titulo": "Brasil dejó un hueco en Europa, pero Argentina puede no aprovecharlo por falta de novillos trazados: ArreBeef busca alianzas con productores para no perder negocios",
-        "titulo_norm": "brasil dejo un hueco en europa pero argentina puede no aprovecharlo por falta de novillos trazados arrebeef busca alianzas con productores para no perder negocios",
-        "descripcion": "La salida de Brasil del mercado europeo abre una oportunidad para la carne vacuna argentina, pero la industria enfrenta un problema que puede limitar su capacidad para aprovecharla: la falta de hacienda con toda la información necesaria para cumplir con el reglamento antideforestación de la Unión Europea. Hugo Borrell hijo, de la empresa exportadora ArreBeef, […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-18-at-06.03.24.jpeg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-23T11:15-03:00",
-        "capturado": "2026-10-23T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "00332c8ce72a6eca"
-      },
-      "grupo": [
-        {
-          "id": "3acacc049548",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/brasil-dejo-un-hueco-en-europa-pero-argentina-puede-no-aprovecharlo-por-falta-de-novillos-trazados-arrebeef-busca-alianzas-con-productores-para-no-perder-negocios/",
-          "canonical_url": "https://bichosdecampo.com/brasil-dejo-un-hueco-en-europa-pero-argentina-puede-no-aprovecharlo-por-falta-de-novillos-trazados-arrebeef-busca-alianzas-con-productores-para-no-perder-negocios",
-          "titulo": "Brasil dejó un hueco en Europa, pero Argentina puede no aprovecharlo por falta de novillos trazados: ArreBeef busca alianzas con productores para no perder negocios",
-          "titulo_norm": "brasil dejo un hueco en europa pero argentina puede no aprovecharlo por falta de novillos trazados arrebeef busca alianzas con productores para no perder negocios",
-          "descripcion": "La salida de Brasil del mercado europeo abre una oportunidad para la carne vacuna argentina, pero la industria enfrenta un problema que puede limitar su capacidad para aprovecharla: la falta de hacienda con toda la información necesaria para cumplir con el reglamento antideforestación de la Unión Europea. Hugo Borrell hijo, de la empresa exportadora ArreBeef, […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-18-at-06.03.24.jpeg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-23T11:15-03:00",
-          "capturado": "2026-10-23T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "00332c8ce72a6eca"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 72,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "novillos trazados",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Gran oportunidad exportadora frenada por falta de trazabilidad, clave para ganaderos de la región.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T11:20-03:00"
     },
     {
       "id": "d65dac096217",
@@ -22229,8 +22280,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T14:04:42-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T14:25:19-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
