@@ -12595,6 +12595,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3c600032738840b4": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 77,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "harina de soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en el mercado de exportación de soja argentina y genera debate en la región núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13474,7 +13495,8 @@
       "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html": "2026-10-23",
       "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien": "2026-10-23",
       "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026": "2026-10-23",
-      "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026": "2026-10-23"
+      "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026": "2026-10-23",
+      "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14352,7 +14374,8 @@
       "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion": "2026-10-23",
       "el frigorifico compania bernal comenzo a exportar carne vacuna a los paises escandinavos que piden calidad y pagan muy bien": "2026-10-23",
       "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026": "2026-10-23",
-      "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra": "2026-10-23"
+      "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra": "2026-10-23",
+      "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15230,7 +15253,8 @@
       "59e66a669ff59e6a": "2026-10-23",
       "2fa33de7d13f16b6": "2026-10-23",
       "e79e69c28b8a1295": "2026-10-23",
-      "12a48024b07a37da": "2026-10-23"
+      "12a48024b07a37da": "2026-10-23",
+      "3c600032738840b4": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21593,9 +21617,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b2f69cee91ee_portada.jpg"
+    },
+    {
+      "id": "d65dac096217",
+      "cuando": "2026-10-23T17:20-03:00",
+      "titulo_original": "La economía de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico en su nivel de actividad",
+      "descripcion": "El Producto Bruto Geográfico (PBG) de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico. La provincia explicó 10,4% del valor agregado nacional, y los bienes agros generaron el 33,1% del PBG y el 72% del VA de los sectores productores de bienes.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-economia-8",
+      "titular": "Santa Fe marcó récord histórico tras trepar 5,5 por ciento su producto",
+      "volanta": "Economía",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 60,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "economía santa fe",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Dato estadístico provincial relevante pero de interés más general o institucional.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          58,
+          64
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "65a01665-225a-4f24-bfc0-644ef3f05bea",
+          "slug": "santa-fe-alcanzo-un-record-historico-en-su-economia-tras-crecer-def08f",
+          "url": "https://www.diariolacampaña.com.ar/n/santa-fe-alcanzo-un-record-historico-en-su-economia-tras-crecer-def08f",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2171772990076909",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17954114151325595",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d65dac096217_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "2af40dc3ef82",
+      "rep": {
+        "id": "2af40dc3ef82",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina/",
+        "canonical_url": "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina",
+        "titulo": "EUDR: Los europeos jodieron a la harina de soja brasileña para beneficiar a la argentina",
+        "titulo_norm": "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina",
+        "descripcion": "La entidad que agrupa a las compañías agroexportadoras brasileñas (Anec) actualizó la proyección de embarques de harina de soja para el presente mes de octubre y ahora estima una cifra de 2,51 millones de toneladas, frente a las 1,72 millones del mismo mes de 2025. Se trata de un volumen muy superior al registrado hasta […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/anec-1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-23T17:01-03:00",
+        "capturado": "2026-10-23T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3c600032738840b4"
+      },
+      "grupo": [
+        {
+          "id": "2af40dc3ef82",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina/",
+          "canonical_url": "https://bichosdecampo.com/eudr-los-europeos-jodieron-a-la-harina-de-soja-brasilena-para-beneficiar-a-la-argentina",
+          "titulo": "EUDR: Los europeos jodieron a la harina de soja brasileña para beneficiar a la argentina",
+          "titulo_norm": "eudr los europeos jodieron a la harina de soja brasilena para beneficiar a la argentina",
+          "descripcion": "La entidad que agrupa a las compañías agroexportadoras brasileñas (Anec) actualizó la proyección de embarques de harina de soja para el presente mes de octubre y ahora estima una cifra de 2,51 millones de toneladas, frente a las 1,72 millones del mismo mes de 2025. Se trata de un volumen muy superior al registrado hasta […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/anec-1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-23T17:01-03:00",
+          "capturado": "2026-10-23T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3c600032738840b4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "harina de soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en el mercado de exportación de soja argentina y genera debate en la región núcleo.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T17:20-03:00"
+    },
     {
       "id": "49acc8355cbc",
       "rep": {
@@ -21789,69 +21934,6 @@
         "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T17:00-03:00"
-    },
-    {
-      "id": "6de34bfaa769",
-      "rep": {
-        "id": "6de34bfaa769",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026",
-        "titulo": "Camino a un récord: la Argentina vive un veranito de exportaciones de maíz por los problemas de Ucrania con la guerra",
-        "titulo_norm": "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra",
-        "descripcion": "Según la Bolsa de Comercio de Rosario, las trabas logísticas en el Mar Negro y una menor oferta exportable de Brasil y Estados Unidos favorecieron la competitividad local; este mes los embarques argentinos podrían alcanzar 3,9 millones de toneladas, un volumen 67% superior al promedio histórico para ese periodo",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/UDKPY6SVR5DCZML5MCU62W7E7A.jpg?auth=a711800f26a7576a3c61de4f0d81ba94508f67da21b3b19448c6486566700fcf&smart=true",
-        "autor": "",
-        "publicado": "2026-10-23T16:49-03:00",
-        "capturado": "2026-10-23T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "12a48024b07a37da"
-      },
-      "grupo": [
-        {
-          "id": "6de34bfaa769",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026",
-          "titulo": "Camino a un récord: la Argentina vive un veranito de exportaciones de maíz por los problemas de Ucrania con la guerra",
-          "titulo_norm": "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra",
-          "descripcion": "Según la Bolsa de Comercio de Rosario, las trabas logísticas en el Mar Negro y una menor oferta exportable de Brasil y Estados Unidos favorecieron la competitividad local; este mes los embarques argentinos podrían alcanzar 3,9 millones de toneladas, un volumen 67% superior al promedio histórico para ese periodo",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/UDKPY6SVR5DCZML5MCU62W7E7A.jpg?auth=a711800f26a7576a3c61de4f0d81ba94508f67da21b3b19448c6486566700fcf&smart=true",
-          "autor": "",
-          "publicado": "2026-10-23T16:49-03:00",
-          "capturado": "2026-10-23T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "12a48024b07a37da"
-        }
-      ],
-      "score": {
-        "impacto_economico": 17,
-        "interes_productores": 13,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 76,
-        "commercial_score": 80,
-        "subtema": "mercados",
-        "tema": "exportaciones de maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Coyuntura internacional muy favorable que posiciona al productor maicero local con embarques récord.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-23T17:00-03:00"
@@ -22190,73 +22272,6 @@
         ]
       },
       "cuando": "2026-10-23T13:00-03:00"
-    },
-    {
-      "id": "d65dac096217",
-      "rep": {
-        "id": "d65dac096217",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-economia-8",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-economia-8",
-        "titulo": "La economía de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico en su nivel de actividad",
-        "titulo_norm": "la economia de santa fe crecio 5 5 en 2025 y alcanzo un maximo historico en su nivel de actividad",
-        "descripcion": "El Producto Bruto Geográfico (PBG) de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico. La provincia explicó 10,4% del valor agregado nacional, y los bienes agros generaron el 33,1% del PBG y el 72% del VA de los sectores productores de bienes.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/santa_fe_portada_4.png?itok=zfVpE8SI",
-        "autor": "",
-        "publicado": "2026-10-22T09:00-03:00",
-        "capturado": "2026-10-23T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c3065f1c8a073542"
-      },
-      "grupo": [
-        {
-          "id": "d65dac096217",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-economia-8",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-economia-8",
-          "titulo": "La economía de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico en su nivel de actividad",
-          "titulo_norm": "la economia de santa fe crecio 5 5 en 2025 y alcanzo un maximo historico en su nivel de actividad",
-          "descripcion": "El Producto Bruto Geográfico (PBG) de Santa Fe creció 5,5% en 2025 y alcanzó un máximo histórico. La provincia explicó 10,4% del valor agregado nacional, y los bienes agros generaron el 33,1% del PBG y el 72% del VA de los sectores productores de bienes.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/santa_fe_portada_4.png?itok=zfVpE8SI",
-          "autor": "",
-          "publicado": "2026-10-22T09:00-03:00",
-          "capturado": "2026-10-23T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c3065f1c8a073542"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 10,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 60,
-        "commercial_score": 64,
-        "subtema": "agro",
-        "tema": "economía santa fe",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Dato estadístico provincial relevante pero de interés más general o institucional.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          58,
-          64
-        ]
-      },
-      "cuando": "2026-10-23T11:20-03:00"
     },
     {
       "id": "a16d1daeb9f9",
@@ -23006,8 +23021,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T17:03:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T17:23:28-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
