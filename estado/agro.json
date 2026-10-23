@@ -12369,6 +12369,98 @@
         59,
         44
       ]
+    },
+    "e68b53623cd4b024": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 84,
+      "commercial_score": 82,
+      "subtema": "agtech",
+      "tema": "utelemetry",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Plataforma integral de sensores muy relevante para productores y contratistas de la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2e36df009854cf64": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 11,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 76,
+      "subtema": "empresas",
+      "tema": "frigorífico recreo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inversión millonaria en Santa Fe para valor agregado y exportación en ganadería.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "69fe483e28e597cf": {
+      "impacto_economico": 11,
+      "interes_productores": 7,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 63,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "caña de azúcar",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran innovación tecnológica de Arcor pero focalizada en un cultivo regional ajeno a la pampa húmeda.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        62
+      ]
+    },
+    "07b59307b4dcfbde": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 63,
+      "commercial_score": 62,
+      "subtema": "ganaderia",
+      "tema": "cerdos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales de consumo y ventas de carne porcina que interesan al productor porcino local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        61
+      ]
     }
   },
   "indice": {
@@ -13236,7 +13328,12 @@
       "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026": "2026-10-23",
       "https://bichosdecampo.com/llegaste-20-anos-tarde-fede-los-yerbateros-le-recuerdan-a-sturzenegger-que-festeja-hitos-exportadores-que-ocurren-desde-2005-y-que-no-fue-su-magia-desreguladora-la-que-los-hizo-pos": "2026-10-23",
       "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html": "2026-10-23",
-      "https://intainforma.inta.gob.ar/como-proteger-una-tecnologia-antes-de-salir-a-nuevos-mercados": "2026-10-23"
+      "https://intainforma.inta.gob.ar/como-proteger-una-tecnologia-antes-de-salir-a-nuevos-mercados": "2026-10-23",
+      "https://infocampo.com.ar/de-las-silobolsas-al-gasoil-y-los-suelos-la-plataforma-que-mide-todas-las-variables-del-campo-en-un-solo-tablero": "2026-10-23",
+      "https://infocampo.com.ar/argentina-vs-sus-principales-competidores-ganaderos-es-mas-barata-o-cara-la-carne-de-vaca-y-pollo": "2026-10-23",
+      "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14102,7 +14199,12 @@
       "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores": "2026-10-23",
       "llegaste 20 anos tarde fede los yerbateros le recuerdan a sturzenegger que festeja hitos exportadores que ocurren desde 2005 y que no fue su magia desreguladora la que los hizo posibles": "2026-10-23",
       "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos": "2026-10-23",
-      "como proteger una tecnologia antes de salir a nuevos mercados": "2026-10-23"
+      "como proteger una tecnologia antes de salir a nuevos mercados": "2026-10-23",
+      "de las silobolsas al gasoil y los suelos la plataforma que mide todas las variables del campo en un solo tablero": "2026-10-23",
+      "argentina vs sus principales competidores ganaderos es mas barata o cara la carne de vaca y pollo": "2026-10-23",
+      "la industria agudiza el ingenio el frigorifico recreo invirtio mas de 5 millones de dolares para aprovechar hasta los descartes y meterse en la exportacion de cueros": "2026-10-23",
+      "cambia la logica una nueva tecnologia busca transformar la plantacion de cana de azucar y reducir hasta un 90 la semilla utilizada": "2026-10-23",
+      "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14968,7 +15070,12 @@
       "dd64536be0178c2a": "2026-10-23",
       "6b59c1aed7ea6b15": "2026-10-23",
       "5f4e7eb45b04a38f": "2026-10-23",
-      "61f34e12c9dd74d6": "2026-10-23"
+      "61f34e12c9dd74d6": "2026-10-23",
+      "e68b53623cd4b024": "2026-10-23",
+      "b4a4c84017716de8": "2026-10-23",
+      "2e36df009854cf64": "2026-10-23",
+      "69fe483e28e597cf": "2026-10-23",
+      "07b59307b4dcfbde": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21064,9 +21171,267 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2d238cb09d91_portada.jpg"
+    },
+    {
+      "id": "48197d2bdcd7",
+      "cuando": "2026-10-23T16:00-03:00",
+      "titulo_original": "De las silobolsas, al gasoil y los suelos: la plataforma que mide todas las variables del campo en un solo tablero",
+      "descripcion": "Frente a un mercado que ofrece un aparato distinto para cada problema, UTelemetry ofrece una plataforma que integra cualquier sensor sobre cualquier conectividad. Silobolsas, agua, gasoil, suelos, galpones y feedlots, en un solo tablero.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/de-las-silobolsas-al-gasoil-y-los-suelos-la-plataforma-que-mide-todas-las-variables-del-campo-en-un-solo-tablero/",
+      "titular": "UTelemetry lanza plataforma única para medir variables en el campo",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 84,
+        "commercial_score": 82,
+        "subtema": "agtech",
+        "tema": "utelemetry",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Plataforma integral de sensores muy relevante para productores y contratistas de la zona núcleo.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "ejwtGzlQHQA",
+          "url": "https://youtube.com/shorts/ejwtGzlQHQA",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "d7c35f27-8b7d-4740-af41-225f013ff65c",
+          "slug": "utelemetry-presenta-plataforma-universal-para-integrar-cb5b65",
+          "url": "https://www.diariolacampaña.com.ar/n/utelemetry-presenta-plataforma-universal-para-integrar-cb5b65",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1818272516045108",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18025340294871577",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_48197d2bdcd7_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "cf985b53a9ce",
+      "rep": {
+        "id": "cf985b53a9ce",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros/",
+        "canonical_url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros",
+        "titulo": "La industria agudiza el ingenio: El frigorífico Recreo invirtió más de 5 millones de dólares para aprovechar hasta los descartes y meterse en la exportación de cueros",
+        "titulo_norm": "la industria agudiza el ingenio el frigorifico recreo invirtio mas de 5 millones de dolares para aprovechar hasta los descartes y meterse en la exportacion de cueros",
+        "descripcion": "El frigorífico Recreo, una histórica firma de la provincia de Santa Fe, decidió avanzar sobre una parte del negocio que durante años quedaba en manos de terceros: el procesamiento de los subproductos de la faena. Con una inversión de 5,5 millones de dólares, puso en marcha una planta de rendering que transforma los desperdicios de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/frigorifico-recreo-nueva-planta-e1792775142187.jpeg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-23T14:27-03:00",
+        "capturado": "2026-10-23T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2e36df009854cf64"
+      },
+      "grupo": [
+        {
+          "id": "cf985b53a9ce",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros/",
+          "canonical_url": "https://bichosdecampo.com/la-industria-agudiza-el-ingenio-el-frigorifico-recreo-invirtio-mas-de-5-millones-de-dolares-para-aprovechar-hasta-los-descartes-y-meterse-en-la-exportacion-de-cueros",
+          "titulo": "La industria agudiza el ingenio: El frigorífico Recreo invirtió más de 5 millones de dólares para aprovechar hasta los descartes y meterse en la exportación de cueros",
+          "titulo_norm": "la industria agudiza el ingenio el frigorifico recreo invirtio mas de 5 millones de dolares para aprovechar hasta los descartes y meterse en la exportacion de cueros",
+          "descripcion": "El frigorífico Recreo, una histórica firma de la provincia de Santa Fe, decidió avanzar sobre una parte del negocio que durante años quedaba en manos de terceros: el procesamiento de los subproductos de la faena. Con una inversión de 5,5 millones de dólares, puso en marcha una planta de rendering que transforma los desperdicios de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/frigorifico-recreo-nueva-planta-e1792775142187.jpeg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-23T14:27-03:00",
+          "capturado": "2026-10-23T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2e36df009854cf64"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 11,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 76,
+        "subtema": "empresas",
+        "tema": "frigorífico recreo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Inversión millonaria en Santa Fe para valor agregado y exportación en ganadería.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T16:00-03:00"
+    },
+    {
+      "id": "b2f69cee91ee",
+      "rep": {
+        "id": "b2f69cee91ee",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026",
+        "titulo": "“Cambia la lógica”: una nueva tecnología busca transformar la plantación de caña de azúcar y reducir hasta un 90% la semilla utilizada",
+        "titulo_norm": "cambia la logica una nueva tecnologia busca transformar la plantacion de cana de azucar y reducir hasta un 90 la semilla utilizada",
+        "descripcion": "Desarrollada por Grupo Arcor y la Estación Experimental Agroindustrial Obispo Colombres (Eeaoc), Uninod convierte cada yema en una unidad individual protegida y dosificable; apunta a mejorar la eficiencia de la implantación, reducir los costos operativos y aprovechar una mayor proporción de la materia prima para la industria",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3IVC62FBUFEFZEKEQCEMMEVUOI.png?auth=c81ae6de5e512f5216727409fafac52ecddff7a789b549db3574f6f2d9d938f2&smart=true",
+        "autor": "",
+        "publicado": "2026-10-23T15:42-03:00",
+        "capturado": "2026-10-23T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "69fe483e28e597cf"
+      },
+      "grupo": [
+        {
+          "id": "b2f69cee91ee",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026",
+          "titulo": "“Cambia la lógica”: una nueva tecnología busca transformar la plantación de caña de azúcar y reducir hasta un 90% la semilla utilizada",
+          "titulo_norm": "cambia la logica una nueva tecnologia busca transformar la plantacion de cana de azucar y reducir hasta un 90 la semilla utilizada",
+          "descripcion": "Desarrollada por Grupo Arcor y la Estación Experimental Agroindustrial Obispo Colombres (Eeaoc), Uninod convierte cada yema en una unidad individual protegida y dosificable; apunta a mejorar la eficiencia de la implantación, reducir los costos operativos y aprovechar una mayor proporción de la materia prima para la industria",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3IVC62FBUFEFZEKEQCEMMEVUOI.png?auth=c81ae6de5e512f5216727409fafac52ecddff7a789b549db3574f6f2d9d938f2&smart=true",
+          "autor": "",
+          "publicado": "2026-10-23T15:42-03:00",
+          "capturado": "2026-10-23T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "69fe483e28e597cf"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 7,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 2,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "caña de azúcar",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran innovación tecnológica de Arcor pero focalizada en un cultivo regional ajeno a la pampa húmeda.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          62
+        ]
+      },
+      "cuando": "2026-10-23T16:00-03:00"
+    },
+    {
+      "id": "747ab1c987eb",
+      "rep": {
+        "id": "747ab1c987eb",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026",
+        "titulo": "Fuerte contraste: la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
+        "titulo_norm": "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
+        "descripcion": "El informe de septiembre de Caicha mostró una suba del 13,4% en los cortes frescos mientras los chacinados registraron una caída de 9,7% y encadenaron siete meses consecutivos en baja",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WRDXI2OYZVGUROVMPOHSZ5VMNM.png?auth=448480598f7e716d46c97026dcb921382d12f6aee1e4608c69c2beeb42bb485d&smart=true",
+        "autor": "Mariana Reinke",
+        "publicado": "2026-10-23T14:32-03:00",
+        "capturado": "2026-10-23T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "07b59307b4dcfbde"
+      },
+      "grupo": [
+        {
+          "id": "747ab1c987eb",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026",
+          "titulo": "Fuerte contraste: la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
+          "titulo_norm": "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
+          "descripcion": "El informe de septiembre de Caicha mostró una suba del 13,4% en los cortes frescos mientras los chacinados registraron una caída de 9,7% y encadenaron siete meses consecutivos en baja",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WRDXI2OYZVGUROVMPOHSZ5VMNM.png?auth=448480598f7e716d46c97026dcb921382d12f6aee1e4608c69c2beeb42bb485d&smart=true",
+          "autor": "Mariana Reinke",
+          "publicado": "2026-10-23T14:32-03:00",
+          "capturado": "2026-10-23T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "07b59307b4dcfbde"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "cerdos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales de consumo y ventas de carne porcina que interesan al productor porcino local.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          61
+        ]
+      },
+      "cuando": "2026-10-23T16:00-03:00"
+    },
     {
       "id": "33b81c0b10a0",
       "rep": {
@@ -22280,8 +22645,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T14:25:19-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T16:03:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
