@@ -20732,6 +20732,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a8c31f832c71_portada.jpg"
+    },
+    {
+      "id": "ab0a6b64d525",
+      "cuando": "2026-10-23T13:20-03:00",
+      "titulo_original": "Registro de lluvias caídas en las ultimas horas - 22/10/2026 al 23/10/2026",
+      "descripcion": "Registro correspondiente desde el 07/10 al 08/10 del corriente en varias zonas de país, provistos por las redes de productores y técnicos…",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/248980-registro-de-lluvias-caidas-en-las-ultimas-horas-22102026-al-23102026.html",
+      "titular": "Lluvias en Buenos Aires: registros de hasta 50 milímetros en Tandil",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 10,
+        "potencial_comercial": 5,
+        "ai_score": 71,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información clave y de consulta obligatoria para todo productor de la zona núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "33ee8ce9-524f-4cb6-bf39-75fea2174682",
+          "slug": "lluvias-en-buenos-aires-el-registro-zona-por-zona-con-picos-de-31f7c4",
+          "url": "https://www.diariolacampaña.com.ar/n/lluvias-en-buenos-aires-el-registro-zona-por-zona-con-picos-de-31f7c4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1362932202422850",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17908098747588682",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab0a6b64d525_portada.jpg"
     }
   ],
   "pendientes": [
@@ -20866,69 +20920,6 @@
           65,
           62
         ]
-      },
-      "cuando": "2026-10-23T13:00-03:00"
-    },
-    {
-      "id": "ab0a6b64d525",
-      "rep": {
-        "id": "ab0a6b64d525",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248980-registro-de-lluvias-caidas-en-las-ultimas-horas-22102026-al-23102026.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248980-registro-de-lluvias-caidas-en-las-ultimas-horas-22102026-al-23102026.html",
-        "titulo": "Registro de lluvias caídas en las ultimas horas - 22/10/2026 al 23/10/2026",
-        "titulo_norm": "registro de lluvias caidas en las ultimas horas 22 10 2026 al 23 10 2026",
-        "descripcion": "Registro correspondiente desde el 07/10 al 08/10 del corriente en varias zonas de país, provistos por las redes de productores y técnicos…",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248980_64826277.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-23T12:31-03:00",
-        "capturado": "2026-10-23T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "df85c97f1c994c85"
-      },
-      "grupo": [
-        {
-          "id": "ab0a6b64d525",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248980-registro-de-lluvias-caidas-en-las-ultimas-horas-22102026-al-23102026.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248980-registro-de-lluvias-caidas-en-las-ultimas-horas-22102026-al-23102026.html",
-          "titulo": "Registro de lluvias caídas en las ultimas horas - 22/10/2026 al 23/10/2026",
-          "titulo_norm": "registro de lluvias caidas en las ultimas horas 22 10 2026 al 23 10 2026",
-          "descripcion": "Registro correspondiente desde el 07/10 al 08/10 del corriente en varias zonas de país, provistos por las redes de productores y técnicos…",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248980_64826277.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-23T12:31-03:00",
-          "capturado": "2026-10-23T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "df85c97f1c994c85"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 10,
-        "potencial_comercial": 5,
-        "ai_score": 71,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "lluvias",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Información clave y de consulta obligatoria para todo productor de la zona núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-23T13:00-03:00"
     },
@@ -21192,73 +21183,6 @@
         "dobles": [
           58,
           64
-        ]
-      },
-      "cuando": "2026-10-23T11:20-03:00"
-    },
-    {
-      "id": "c04b222716f9",
-      "rep": {
-        "id": "c04b222716f9",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-y-0",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-y-0",
-        "titulo": "Mercados y economía: reporte de la semana",
-        "titulo_norm": "mercados y economia reporte de la semana",
-        "descripcion": "Las exportaciones superaron los US$ 10.000 millones en septiembre. El Gobierno postergó la implementación del FAL y el petróleo tocó máximos en cinco meses.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
-        "autor": "",
-        "publicado": "2026-10-22T09:00-03:00",
-        "capturado": "2026-10-23T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9d7d514c13bf07c3"
-      },
-      "grupo": [
-        {
-          "id": "c04b222716f9",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-y-0",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-y-0",
-          "titulo": "Mercados y economía: reporte de la semana",
-          "titulo_norm": "mercados y economia reporte de la semana",
-          "descripcion": "Las exportaciones superaron los US$ 10.000 millones en septiembre. El Gobierno postergó la implementación del FAL y el petróleo tocó máximos en cinco meses.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
-          "autor": "",
-          "publicado": "2026-10-22T09:00-03:00",
-          "capturado": "2026-10-23T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9d7d514c13bf07c3"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 60,
-        "commercial_score": 65,
-        "subtema": "mercados",
-        "tema": "reporte semanal",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Resumen macroeconómico y de exportaciones útil para tener el panorama general de la semana.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          58
         ]
       },
       "cuando": "2026-10-23T11:20-03:00"
@@ -22204,8 +22128,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T13:03:58-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T13:23:05-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
