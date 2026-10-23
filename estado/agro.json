@@ -12503,6 +12503,98 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "59e66a669ff59e6a": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 68,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "exportación de carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Análisis clave sobre el futuro de la ganadería, Visec y mercados externos de alto valor para los productores.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        68
+      ]
+    },
+    "2fa33de7d13f16b6": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 74,
+      "subtema": "empresas",
+      "tema": "frigorífico bernal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena noticia de un frigorífico bonaerense expandiéndose a mercados exigentes como Escandinavia.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        75
+      ]
+    },
+    "e79e69c28b8a1295": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 85,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacto masivo en la zona núcleo por el récord de exportaciones y campaña excepcional de maíz.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "12a48024b07a37da": {
+      "impacto_economico": 17,
+      "interes_productores": 13,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 80,
+      "subtema": "mercados",
+      "tema": "exportaciones de maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Coyuntura internacional muy favorable que posiciona al productor maicero local con embarques récord.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13378,7 +13470,11 @@
       "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026": "2026-10-23",
       "https://infocampo.com.ar/exportaciones-record-el-maiz-argentino-avanza-a-todo-ritmo-y-domina-el-mercado-mundial": "2026-10-23",
       "https://bichosdecampo.com/cada-vez-se-brinda-menos-la-cosecha-de-uva-argentina-registro-una-de-sus-peores-campanas-y-la-produccion-de-vino-retrocedio-casi-10-en-un-ano": "2026-10-23",
-      "https://agfundernews.com/us-aquaculture-needs-more-than-vc-dollars-to-grow-report": "2026-10-23"
+      "https://agfundernews.com/us-aquaculture-needs-more-than-vc-dollars-to-grow-report": "2026-10-23",
+      "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html": "2026-10-23",
+      "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien": "2026-10-23",
+      "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14252,7 +14348,11 @@
       "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan": "2026-10-23",
       "exportaciones record el maiz argentino avanza a todo ritmo y domina el mercado mundial": "2026-10-23",
       "cada vez se brinda menos la cosecha de uva argentina registro una de sus peores campanas y la produccion de vino retrocedio casi 10 en un ano": "2026-10-23",
-      "us aquaculture needs more than vc dollars to grow report": "2026-10-23"
+      "us aquaculture needs more than vc dollars to grow report": "2026-10-23",
+      "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion": "2026-10-23",
+      "el frigorifico compania bernal comenzo a exportar carne vacuna a los paises escandinavos que piden calidad y pagan muy bien": "2026-10-23",
+      "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026": "2026-10-23",
+      "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15126,7 +15226,11 @@
       "07b59307b4dcfbde": "2026-10-23",
       "b945e5cf5708180b": "2026-10-23",
       "6d53ab61176a2251": "2026-10-23",
-      "b5d8d2727be8ec19": "2026-10-23"
+      "b5d8d2727be8ec19": "2026-10-23",
+      "59e66a669ff59e6a": "2026-10-23",
+      "2fa33de7d13f16b6": "2026-10-23",
+      "e79e69c28b8a1295": "2026-10-23",
+      "12a48024b07a37da": "2026-10-23"
     }
   },
   "elegidas": [
@@ -21431,49 +21535,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3e73707bc158_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "b2f69cee91ee",
-      "rep": {
-        "id": "b2f69cee91ee",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026",
-        "titulo": "“Cambia la lógica”: una nueva tecnología busca transformar la plantación de caña de azúcar y reducir hasta un 90% la semilla utilizada",
-        "titulo_norm": "cambia la logica una nueva tecnologia busca transformar la plantacion de cana de azucar y reducir hasta un 90 la semilla utilizada",
-        "descripcion": "Desarrollada por Grupo Arcor y la Estación Experimental Agroindustrial Obispo Colombres (Eeaoc), Uninod convierte cada yema en una unidad individual protegida y dosificable; apunta a mejorar la eficiencia de la implantación, reducir los costos operativos y aprovechar una mayor proporción de la materia prima para la industria",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3IVC62FBUFEFZEKEQCEMMEVUOI.png?auth=c81ae6de5e512f5216727409fafac52ecddff7a789b549db3574f6f2d9d938f2&smart=true",
-        "autor": "",
-        "publicado": "2026-10-23T15:42-03:00",
-        "capturado": "2026-10-23T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "69fe483e28e597cf"
-      },
-      "grupo": [
-        {
-          "id": "b2f69cee91ee",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026",
-          "titulo": "“Cambia la lógica”: una nueva tecnología busca transformar la plantación de caña de azúcar y reducir hasta un 90% la semilla utilizada",
-          "titulo_norm": "cambia la logica una nueva tecnologia busca transformar la plantacion de cana de azucar y reducir hasta un 90 la semilla utilizada",
-          "descripcion": "Desarrollada por Grupo Arcor y la Estación Experimental Agroindustrial Obispo Colombres (Eeaoc), Uninod convierte cada yema en una unidad individual protegida y dosificable; apunta a mejorar la eficiencia de la implantación, reducir los costos operativos y aprovechar una mayor proporción de la materia prima para la industria",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3IVC62FBUFEFZEKEQCEMMEVUOI.png?auth=c81ae6de5e512f5216727409fafac52ecddff7a789b549db3574f6f2d9d938f2&smart=true",
-          "autor": "",
-          "publicado": "2026-10-23T15:42-03:00",
-          "capturado": "2026-10-23T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "69fe483e28e597cf"
-        }
-      ],
+      "cuando": "2026-10-23T17:00-03:00",
+      "titulo_original": "“Cambia la lógica”: una nueva tecnología busca transformar la plantación de caña de azúcar y reducir hasta un 90% la semilla utilizada",
+      "descripcion": "Desarrollada por Grupo Arcor y la Estación Experimental Agroindustrial Obispo Colombres (Eeaoc), Uninod convierte cada yema en una unidad individual protegida y dosificable; apunta a mejorar la eficiencia de la implantación, reducir los costos operativos y aprovechar una mayor proporción de la mater",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/cambia-la-logica-una-nueva-tecnologia-busca-transformar-la-plantacion-de-cana-de-azucar-y-reducir-nid23102026/",
+      "titular": "Caña de azúcar: nueva tecnología recorta hasta 90% la semilla",
+      "volanta": "AgTech",
       "score": {
         "impacto_economico": 11,
         "interes_productores": 7,
@@ -21499,7 +21570,291 @@
           62
         ]
       },
-      "cuando": "2026-10-23T16:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c2a33116-11e0-4755-84ae-f71be718dcc3",
+          "slug": "nueva-tecnologia-reduce-hasta-un-90-el-uso-de-semilla-en-la-f3f53f",
+          "url": "https://www.diariolacampaña.com.ar/n/nueva-tecnologia-reduce-hasta-un-90-el-uso-de-semilla-en-la-f3f53f",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1099411629334991",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18109033633940970",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b2f69cee91ee_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "49acc8355cbc",
+      "rep": {
+        "id": "49acc8355cbc",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
+        "titulo": "¿Puede el mercado interno absorber más Carne? El análisis de Rodrigo Troncoso sobre Visec, consumo, y exportación",
+        "titulo_norm": "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion",
+        "descripcion": "Las exportaciones y sus requisitos. El rol de Visec y las demandas para exportar a la Unión Europea, un mercado de alto valor. ¿Qué debemos hacer y cómo prepararnos rápido? Una nota con el Ing. P. Agr. Rodrigo Troncoso, Consultor ganadero, ex Subs. de Ganadería, y ex Dir. ejec. de la Cámara de Feedlot. Aanaliza el consumo y producción de carnes en Argentina, y sus estrategias. Destaca que el mercado interno consume alrededor de 115 kilos por habitante, y que el crecimiento futuro debe enfocarse en la exportación ante límites de absorción local...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/ibKWsCDrK_M.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-10-23T16:51-03:00",
+        "capturado": "2026-10-23T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "59e66a669ff59e6a"
+      },
+      "grupo": [
+        {
+          "id": "49acc8355cbc",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
+          "titulo": "¿Puede el mercado interno absorber más Carne? El análisis de Rodrigo Troncoso sobre Visec, consumo, y exportación",
+          "titulo_norm": "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion",
+          "descripcion": "Las exportaciones y sus requisitos. El rol de Visec y las demandas para exportar a la Unión Europea, un mercado de alto valor. ¿Qué debemos hacer y cómo prepararnos rápido? Una nota con el Ing. P. Agr. Rodrigo Troncoso, Consultor ganadero, ex Subs. de Ganadería, y ex Dir. ejec. de la Cámara de Feedlot. Aanaliza el consumo y producción de carnes en Argentina, y sus estrategias. Destaca que el mercado interno consume alrededor de 115 kilos por habitante, y que el crecimiento futuro debe enfocarse en la exportación ante límites de absorción local...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/ibKWsCDrK_M.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-10-23T16:51-03:00",
+          "capturado": "2026-10-23T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "59e66a669ff59e6a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "exportación de carne",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Análisis clave sobre el futuro de la ganadería, Visec y mercados externos de alto valor para los productores.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          68
+        ]
+      },
+      "cuando": "2026-10-23T17:00-03:00"
+    },
+    {
+      "id": "502f4f94a9cb",
+      "rep": {
+        "id": "502f4f94a9cb",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien/",
+        "canonical_url": "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien",
+        "titulo": "El frigorífico Compañía Bernal comenzó a exportar carne vacuna a los países escandinavos, que piden calidad y pagan muy bien",
+        "titulo_norm": "el frigorifico compania bernal comenzo a exportar carne vacuna a los paises escandinavos que piden calidad y pagan muy bien",
+        "descripcion": "La búsqueda de mercados que paguen por calidad y permitan compensar una futura caída en la disponibilidad de hacienda es una de las estrategias de Compañía Bernal, el frigorífico del conurbano bonaerense que dirige Romina Rolando. Con un negocio donde el 70% de la producción se destina a la exportación y el 30% al consumo […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/romina-rolando-y-mariano-durand-de-bernal-4-scaled.jpeg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-23T16:48-03:00",
+        "capturado": "2026-10-23T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2fa33de7d13f16b6"
+      },
+      "grupo": [
+        {
+          "id": "502f4f94a9cb",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien/",
+          "canonical_url": "https://bichosdecampo.com/el-frigorifico-compania-bernal-comenzo-a-exportar-carne-vacuna-a-los-paises-escandinavos-que-piden-calidad-y-pagan-muy-bien",
+          "titulo": "El frigorífico Compañía Bernal comenzó a exportar carne vacuna a los países escandinavos, que piden calidad y pagan muy bien",
+          "titulo_norm": "el frigorifico compania bernal comenzo a exportar carne vacuna a los paises escandinavos que piden calidad y pagan muy bien",
+          "descripcion": "La búsqueda de mercados que paguen por calidad y permitan compensar una futura caída en la disponibilidad de hacienda es una de las estrategias de Compañía Bernal, el frigorífico del conurbano bonaerense que dirige Romina Rolando. Con un negocio donde el 70% de la producción se destina a la exportación y el 30% al consumo […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/romina-rolando-y-mariano-durand-de-bernal-4-scaled.jpeg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-23T16:48-03:00",
+          "capturado": "2026-10-23T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2fa33de7d13f16b6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 74,
+        "subtema": "empresas",
+        "tema": "frigorífico bernal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Buena noticia de un frigorífico bonaerense expandiéndose a mercados exigentes como Escandinavia.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          75
+        ]
+      },
+      "cuando": "2026-10-23T17:00-03:00"
+    },
+    {
+      "id": "907d37c65ab4",
+      "rep": {
+        "id": "907d37c65ab4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026/",
+        "canonical_url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026",
+        "titulo": "Habremos perdido la final del mundo, pero nuestro maíz se está vengando: Gana mercados y apunta a un récord de exportaciones en 2026",
+        "titulo_norm": "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026",
+        "descripcion": "El maíz argentino atraviesa una campaña comercial excepcional. Con ventas externas registradas por 39 millones de toneladas, el país podría cerrar el ciclo 2025/26 con exportaciones por 45 millones de toneladas, impulsado por una cosecha histórica y un escenario internacional que favorece a los proveedores del hemisferio sur. El último informe de la Bolsa de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-23-164053.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-23T16:43-03:00",
+        "capturado": "2026-10-23T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e79e69c28b8a1295"
+      },
+      "grupo": [
+        {
+          "id": "907d37c65ab4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026/",
+          "canonical_url": "https://bichosdecampo.com/habremos-perdido-la-final-del-mundo-pero-nuestro-maiz-se-esta-vengando-gana-mercados-y-apunta-a-un-record-de-exportaciones-en-2026",
+          "titulo": "Habremos perdido la final del mundo, pero nuestro maíz se está vengando: Gana mercados y apunta a un récord de exportaciones en 2026",
+          "titulo_norm": "habremos perdido la final del mundo pero nuestro maiz se esta vengando gana mercados y apunta a un record de exportaciones en 2026",
+          "descripcion": "El maíz argentino atraviesa una campaña comercial excepcional. Con ventas externas registradas por 39 millones de toneladas, el país podría cerrar el ciclo 2025/26 con exportaciones por 45 millones de toneladas, impulsado por una cosecha histórica y un escenario internacional que favorece a los proveedores del hemisferio sur. El último informe de la Bolsa de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-23-164053.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-23T16:43-03:00",
+          "capturado": "2026-10-23T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e79e69c28b8a1295"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 85,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto masivo en la zona núcleo por el récord de exportaciones y campaña excepcional de maíz.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T17:00-03:00"
+    },
+    {
+      "id": "6de34bfaa769",
+      "rep": {
+        "id": "6de34bfaa769",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026",
+        "titulo": "Camino a un récord: la Argentina vive un veranito de exportaciones de maíz por los problemas de Ucrania con la guerra",
+        "titulo_norm": "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra",
+        "descripcion": "Según la Bolsa de Comercio de Rosario, las trabas logísticas en el Mar Negro y una menor oferta exportable de Brasil y Estados Unidos favorecieron la competitividad local; este mes los embarques argentinos podrían alcanzar 3,9 millones de toneladas, un volumen 67% superior al promedio histórico para ese periodo",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/UDKPY6SVR5DCZML5MCU62W7E7A.jpg?auth=a711800f26a7576a3c61de4f0d81ba94508f67da21b3b19448c6486566700fcf&smart=true",
+        "autor": "",
+        "publicado": "2026-10-23T16:49-03:00",
+        "capturado": "2026-10-23T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "12a48024b07a37da"
+      },
+      "grupo": [
+        {
+          "id": "6de34bfaa769",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/camino-a-un-record-la-argentina-vive-un-veranito-de-exportaciones-de-maiz-por-los-problemas-de-nid23102026",
+          "titulo": "Camino a un récord: la Argentina vive un veranito de exportaciones de maíz por los problemas de Ucrania con la guerra",
+          "titulo_norm": "camino a un record la argentina vive un veranito de exportaciones de maiz por los problemas de ucrania con la guerra",
+          "descripcion": "Según la Bolsa de Comercio de Rosario, las trabas logísticas en el Mar Negro y una menor oferta exportable de Brasil y Estados Unidos favorecieron la competitividad local; este mes los embarques argentinos podrían alcanzar 3,9 millones de toneladas, un volumen 67% superior al promedio histórico para ese periodo",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/UDKPY6SVR5DCZML5MCU62W7E7A.jpg?auth=a711800f26a7576a3c61de4f0d81ba94508f67da21b3b19448c6486566700fcf&smart=true",
+          "autor": "",
+          "publicado": "2026-10-23T16:49-03:00",
+          "capturado": "2026-10-23T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "12a48024b07a37da"
+        }
+      ],
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 80,
+        "subtema": "mercados",
+        "tema": "exportaciones de maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Coyuntura internacional muy favorable que posiciona al productor maicero local con embarques récord.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T17:00-03:00"
     },
     {
       "id": "747ab1c987eb",
@@ -22651,8 +23006,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T16:43:35-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T17:03:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
