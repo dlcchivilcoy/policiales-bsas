@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-22T23:31:07.000Z",
+  "actualizado": "2026-10-23T00:00:55.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/31032/un-auto-choco-desde-atras-a-una-moto-y-cuatro-personas-fueron-hospitalizadas.html",
@@ -511,6 +511,30 @@
       "volanta": "Robo en Salto",
       "categoria": "robo",
       "distancia_km": 70.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.lamanana.com.ar/alerta-naranja-y-amarillo-por-tormentas-en-el-centro-bonaerense/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-23T00:00:55.000Z",
+      "titulo": "Rige alerta naranja y amarilla por fuertes tormentas en la provincia de Buenos Aires",
+      "descripcion": "El Servicio Meteorológico Nacional y Defensa Civil emitieron advertencias por precipitaciones intensas, ráfagas de hasta 90 kilómetros por hora y posible caída de granizo en distritos del centro y norte bonaerense durante este jueves.",
+      "texto_tiktok": "El Servicio Meteorológico Nacional junto a Defensa Civil lanzaron advertencias de niveles amarillo y naranja para varios partidos del territorio bonaerense.\n\nSe esperan chaparrones intensos, actividad eléctrica constante, ráfagas muy fuertes que podrían alcanzar los 90 kilómetros por hora y posible caída de granizo.\n\nLos acumulados de agua estimados rondarán entre los 40 y 70 milímetros en las zonas bajo advertencia amarilla, mientras que en las áreas con nivel naranja podrían trepar hasta los 100 milímetros.\n\n📲 Más noticias de 25 de Mayo en www.diariolacampaña.com.ar\n\n#25DeMayo #AlertaMeteorologica #Tormentas #DefensaCivil #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-22_2304_02_25-de-mayo_rige-alerta-naranja-y-amarilla.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/25-de-mayo-rige-alerta-naranja-y-amarilla-por-tormentas-fuertes-07fc62",
+      "youtube_url": "https://youtube.com/shorts/w-u1dut_2TM",
+      "prioridad": 9,
+      "urgente": true,
+      "localidad": "25 de Mayo",
+      "volanta": "Alerta en 25 de Mayo",
+      "categoria": "alerta_meteorologica",
+      "distancia_km": 61.1,
       "radio_ok": true,
       "plataformas": [
         "x",
