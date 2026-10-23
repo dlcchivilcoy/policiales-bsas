@@ -11503,6 +11503,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "45234461b8dc4631": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 76,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Alerta crítica sobre la caída de precios del trigo en plena cosecha que afecta directo el bolsillo del productor.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -12305,7 +12326,9 @@
       "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales": "2026-10-22",
       "https://bichosdecampo.com/alerta-en-europa-por-el-virus-shamonda-que-afecta-al-ganado-vacuno-y-registra-el-primer-caso-humano": "2026-10-22",
       "https://lanacion.com.ar/economia/campo/ano-extraordinario-brasil-preve-la-mayor-importacion-de-trigo-en-30-anos-y-abre-una-oportunidad-para-nid22102026": "2026-10-22",
-      "https://croplife.com/crop-inputs/croplife-on-the-road-one-on-one-with-syngentas-jeff-cecil": "2026-10-22"
+      "https://croplife.com/crop-inputs/croplife-on-the-road-one-on-one-with-syngentas-jeff-cecil": "2026-10-22",
+      "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto": "2026-10-22",
+      "https://lanacion.com.ar/economia/campo/una-violenta-caida-de-mucho-granizo-mato-a-decenas-de-animales-y-dejo-graves-danos-nid22102026": "2026-10-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13106,7 +13129,9 @@
       "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales": "2026-10-22",
       "alerta en europa por el virus shamonda que afecta al ganado vacuno y registra el primer caso humano": "2026-10-22",
       "ano extraordinario brasil preve la mayor importacion de trigo en 30 anos y abre una oportunidad para la argentina": "2026-10-22",
-      "croplife on the road one on one with syngenta s jeff cecil": "2026-10-22"
+      "croplife on the road one on one with syngenta s jeff cecil": "2026-10-22",
+      "esta todo listo para una masacre de precios del trigo en plena cosecha mercado no apto para operar al descubierto": "2026-10-22",
+      "un violento fenomeno con mucho granizo mato a decenas de animales y dejo graves danos": "2026-10-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -13907,7 +13932,9 @@
       "10c6dfce396eb531": "2026-10-22",
       "323cd5bdad6252aa": "2026-10-22",
       "c81097cb9ec86114": "2026-10-22",
-      "7fe56f805d5d920f": "2026-10-22"
+      "7fe56f805d5d920f": "2026-10-22",
+      "45234461b8dc4631": "2026-10-22",
+      "e45fd64c48e0d132": "2026-10-22"
     }
   },
   "elegidas": [
@@ -19195,9 +19222,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ca1c871566c9_portada.jpg"
+    },
+    {
+      "id": "41e3aa2ab03a",
+      "cuando": "2026-10-22T21:00-03:00",
+      "titulo_original": "Crónicas robadas: Una tormenta con granizo en Santa Fe dejó desde lotes agrícolas severamente dañados hasta pérdidas de animales",
+      "descripcion": "El sitio Aire Agro, de la provincia de Santa Fe relevó los daños que dejó en ese territorio una feroz tormenta de granizo. El fenómeno dejó perdidas totales en lotes agrícolas y también mortandad de animales. Reproducimos a continuación el reporte del periodista Juan Manuel Fernández: Intensas manga",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales/",
+      "titular": "Santa Fe: feroz tormenta de granizo destruye cultivos y animales",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "granizo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta de lleno a la zona núcleo con daños severos en cultivos y hacienda, generando alta preocupación.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-22T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "Aldt9udX0KQ",
+          "url": "https://youtube.com/shorts/Aldt9udX0KQ",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "2378c6ad-f6a7-4ce4-8896-e4e72043917d",
+          "slug": "santa-fe-tormenta-de-granizo-destruye-cultivos-y-causa-a4a750",
+          "url": "https://www.diariolacampaña.com.ar/n/santa-fe-tormenta-de-granizo-destruye-cultivos-y-causa-a4a750",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1157231293395426",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18130807897834083",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_41e3aa2ab03a_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f29c024b656a",
+      "rep": {
+        "id": "f29c024b656a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto/",
+        "canonical_url": "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto",
+        "titulo": "Está todo listo para una «masacre» de precios del trigo en plena cosecha (mercado no apto para operar al descubierto)",
+        "titulo_norm": "esta todo listo para una masacre de precios del trigo en plena cosecha mercado no apto para operar al descubierto",
+        "descripcion": "No hay buenas noticias para los productores que están “descubiertos” en trigo y tengan que vender gran parte del cereal en cosecha para generar liquidez. “La concentración de ventas durante la cosecha puede generar una presión bajista importante, especialmente si se combina con problemas logísticos y de calidad”, advirtió hoy el consultor agrícola Agustín Baqué. […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-5.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-22T19:38-03:00",
+        "capturado": "2026-10-22T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "45234461b8dc4631"
+      },
+      "grupo": [
+        {
+          "id": "f29c024b656a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto/",
+          "canonical_url": "https://bichosdecampo.com/esta-todo-listo-para-una-masacre-de-precios-del-trigo-en-plena-cosecha-mercado-no-apto-para-operar-al-descubierto",
+          "titulo": "Está todo listo para una «masacre» de precios del trigo en plena cosecha (mercado no apto para operar al descubierto)",
+          "titulo_norm": "esta todo listo para una masacre de precios del trigo en plena cosecha mercado no apto para operar al descubierto",
+          "descripcion": "No hay buenas noticias para los productores que están “descubiertos” en trigo y tengan que vender gran parte del cereal en cosecha para generar liquidez. “La concentración de ventas durante la cosecha puede generar una presión bajista importante, especialmente si se combina con problemas logísticos y de calidad”, advirtió hoy el consultor agrícola Agustín Baqué. […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/A3-5.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-22T19:38-03:00",
+          "capturado": "2026-10-22T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "45234461b8dc4631"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 76,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alerta crítica sobre la caída de precios del trigo en plena cosecha que afecta directo el bolsillo del productor.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-22T21:00-03:00"
+    },
     {
       "id": "08e3f3c39cd3",
       "rep": {
@@ -19260,69 +19411,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-22T19:02-03:00"
-    },
-    {
-      "id": "41e3aa2ab03a",
-      "rep": {
-        "id": "41e3aa2ab03a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales/",
-        "canonical_url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales",
-        "titulo": "Crónicas robadas: Una tormenta con granizo en Santa Fe dejó desde lotes agrícolas severamente dañados hasta pérdidas de animales",
-        "titulo_norm": "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales",
-        "descripcion": "El sitio Aire Agro, de la provincia de Santa Fe relevó los daños que dejó en ese territorio una feroz tormenta de granizo. El fenómeno dejó perdidas totales en lotes agrícolas y también mortandad de animales. Reproducimos a continuación el reporte del periodista Juan Manuel Fernández: Intensas mangas de granizo afectaron durante la mañana de […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-22T18:03-03:00",
-        "capturado": "2026-10-22T18:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "10c6dfce396eb531"
-      },
-      "grupo": [
-        {
-          "id": "41e3aa2ab03a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales/",
-          "canonical_url": "https://bichosdecampo.com/cronicas-robadas-una-tormenta-con-granizo-en-santa-fe-dejo-desde-lotes-agricolas-severamente-danados-hasta-perdidas-de-animales",
-          "titulo": "Crónicas robadas: Una tormenta con granizo en Santa Fe dejó desde lotes agrícolas severamente dañados hasta pérdidas de animales",
-          "titulo_norm": "cronicas robadas una tormenta con granizo en santa fe dejo desde lotes agricolas severamente danados hasta perdidas de animales",
-          "descripcion": "El sitio Aire Agro, de la provincia de Santa Fe relevó los daños que dejó en ese territorio una feroz tormenta de granizo. El fenómeno dejó perdidas totales en lotes agrícolas y también mortandad de animales. Reproducimos a continuación el reporte del periodista Juan Manuel Fernández: Intensas mangas de granizo afectaron durante la mañana de […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-22T18:03-03:00",
-          "capturado": "2026-10-22T18:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "10c6dfce396eb531"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 82,
-        "subtema": "agro",
-        "tema": "granizo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta de lleno a la zona núcleo con daños severos en cultivos y hacienda, generando alta preocupación.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T18:20-03:00"
     },
     {
       "id": "f0024451f56f",
@@ -20466,8 +20554,8 @@
       "cuando": "2026-10-21T13:40-03:00"
     }
   ],
-  "actualizado": "2026-10-22T19:23:10-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-22T21:02:40-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
