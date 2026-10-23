@@ -12273,6 +12273,31 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dd64536be0178c2a": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "inversiones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Refleja el humor y los frenos de inversión de los productores de la zona núcleo ante el factor político.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        67
+      ]
     }
   },
   "indice": {
@@ -13136,7 +13161,8 @@
       "https://bichosdecampo.com/los-productores-argentinos-estarian-chochos-si-no-hubiera-dos-cosas-que-los-mantienen-en-guardia-y-cautelosos-el-nino-y-la-sensacion-de-recambio-en-las-proximas-elecciones": "2026-10-23",
       "https://bichosdecampo.com/a-que-no-adivinas-que-hay-ahi-dentro-los-salesianos-de-misiones-prepararon-una-cosecha-especial-de-su-yerba-mate-don-bosco-para-celebrar-su-centenario": "2026-10-23",
       "https://bichosdecampo.com/que-haya-yerba-y-ganado-en-el-monte-misionero-misiones-flexibilizo-el-uso-productivo-de-las-zonas-amarillas-del-bosque-nativo-y-amplio-las-posibilidades-de-manejo-integrado": "2026-10-23",
-      "https://lanacion.com.ar/economia/campo/un-referente-de-la-poderosa-industria-alimentaria-de-brasil-sobre-las-medidas-de-milei-son-muy-duras-nid23102026": "2026-10-23"
+      "https://lanacion.com.ar/economia/campo/un-referente-de-la-poderosa-industria-alimentaria-de-brasil-sobre-las-medidas-de-milei-son-muy-duras-nid23102026": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -13998,7 +14024,8 @@
       "los productores argentinos estarian chochos si no hubiera dos cosas que los mantienen en guardia y cautelosos el nino y la sensacion de recambio en las proximas elecciones": "2026-10-23",
       "a que no adivinas que hay ahi dentro los salesianos de misiones prepararon una cosecha especial de su yerba mate don bosco para celebrar su centenario": "2026-10-23",
       "que haya yerba y ganado en el monte misionero la provincia flexibilizo el uso productivo del bosque nativo y amplio las posibilidades de manejo integrado": "2026-10-23",
-      "un referente de la poderosa industria alimentaria de brasil sobre las medidas de milei son muy duras y perjudican principalmente a los mas pobres": "2026-10-23"
+      "un referente de la poderosa industria alimentaria de brasil sobre las medidas de milei son muy duras y perjudican principalmente a los mas pobres": "2026-10-23",
+      "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -14860,7 +14887,8 @@
       "efc0aafb9138a042": "2026-10-23",
       "ccaf7c8b47c09fea": "2026-10-23",
       "a1aaf40ed5139875": "2026-10-23",
-      "bbcc7764ce62429f": "2026-10-23"
+      "bbcc7764ce62429f": "2026-10-23",
+      "dd64536be0178c2a": "2026-10-23"
     }
   },
   "elegidas": [
@@ -20786,9 +20814,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab0a6b64d525_portada.jpg"
+    },
+    {
+      "id": "31b5d53764eb",
+      "cuando": "2026-10-23T13:40-03:00",
+      "titulo_original": "“Te deja una oportunidad en Europa, pero te arruina Estados Unidos”: El exportador Maximiliano Morello explica cómo Brasil está cambiando el negocio de la carne argentina",
+      "descripcion": "En un negocio mundial de la carne vacuna que ofrece oportunidades inéditas, pero también cambia de reglas al ritmo de las decisiones políticas, la industria frigorífica argentina enfrenta una ecuación cada vez más difícil: faltante de hacienda, costos crecientes en dólares, mercados que dejan de pag",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/te-deja-una-oportunidad-en-europa-pero-te-arruina-estados-unidos-el-exportador-maximiliano-morello-explica-como-brasil-esta-cambiando-el-negocio-de-la-carne-argentina/",
+      "titular": "Frigoríficos advierten que Brasil complica la exportación de carne a Estados Unidos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 13,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 82,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Análisis profundo sobre los desafíos de la ganadería y la competencia con Brasil, muy comentado por ganaderos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7c32b92a-c9ba-4922-8468-dc3210ead84f",
+          "slug": "carne-vacuna-advierten-que-la-estrategia-de-brasil-deprime-los-e4092d",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-vacuna-advierten-que-la-estrategia-de-brasil-deprime-los-e4092d",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1791564098789975",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18638924749042210",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_31b5d53764eb_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "2d238cb09d91",
+      "rep": {
+        "id": "2d238cb09d91",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026",
+        "titulo": "“Influye mucho o algo”: una encuesta señala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
+        "titulo_norm": "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
+        "descripcion": "Según un relevamiento del Centro de Agronegocios y Alimentos de la Universidad Austral, el 49% identifica el escenario político como un condicionante, seguido por la incertidumbre climática, con el 38%, y las tasas o condiciones de financiamiento, con el 24%",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/27AVAQU6BFEEJL7TS3TG54TOA4.jpg?auth=c68f3436ba3f365004cde765c0a58016f6a3f62a08e147a6330d9e91d78f1e65&smart=true",
+        "autor": "",
+        "publicado": "2026-10-23T13:18-03:00",
+        "capturado": "2026-10-23T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "dd64536be0178c2a"
+      },
+      "grupo": [
+        {
+          "id": "2d238cb09d91",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/influye-mucho-o-algo-una-encuesta-senala-que-la-incertidumbre-electoral-para-2027-es-el-mayor-freno-nid23102026",
+          "titulo": "“Influye mucho o algo”: una encuesta señala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
+          "titulo_norm": "influye mucho o algo una encuesta senala que la incertidumbre electoral para 2027 es el mayor freno a las inversiones de los productores",
+          "descripcion": "Según un relevamiento del Centro de Agronegocios y Alimentos de la Universidad Austral, el 49% identifica el escenario político como un condicionante, seguido por la incertidumbre climática, con el 38%, y las tasas o condiciones de financiamiento, con el 24%",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/27AVAQU6BFEEJL7TS3TG54TOA4.jpg?auth=c68f3436ba3f365004cde765c0a58016f6a3f62a08e147a6330d9e91d78f1e65&smart=true",
+          "autor": "",
+          "publicado": "2026-10-23T13:18-03:00",
+          "capturado": "2026-10-23T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "dd64536be0178c2a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "inversiones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Refleja el humor y los frenos de inversión de los productores de la zona núcleo ante el factor político.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          67
+        ]
+      },
+      "cuando": "2026-10-23T13:40-03:00"
+    },
     {
       "id": "6f3ea10ec102",
       "rep": {
@@ -21913,69 +22062,6 @@
       "cuando": "2026-10-22T10:00-03:00"
     },
     {
-      "id": "31b5d53764eb",
-      "rep": {
-        "id": "31b5d53764eb",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/te-deja-una-oportunidad-en-europa-pero-te-arruina-estados-unidos-el-exportador-maximiliano-morello-explica-como-brasil-esta-cambiando-el-negocio-de-la-carne-argentina/",
-        "canonical_url": "https://bichosdecampo.com/te-deja-una-oportunidad-en-europa-pero-te-arruina-estados-unidos-el-exportador-maximiliano-morello-explica-como-brasil-esta-cambiando-el-negocio-de-la-carne-argentina",
-        "titulo": "“Te deja una oportunidad en Europa, pero te arruina Estados Unidos”: El exportador Maximiliano Morello explica cómo Brasil está cambiando el negocio de la carne argentina",
-        "titulo_norm": "te deja una oportunidad en europa pero te arruina estados unidos el exportador maximiliano morello explica como brasil esta cambiando el negocio de la carne argentina",
-        "descripcion": "En un negocio mundial de la carne vacuna que ofrece oportunidades inéditas, pero también cambia de reglas al ritmo de las decisiones políticas, la industria frigorífica argentina enfrenta una ecuación cada vez más difícil: faltante de hacienda, costos crecientes en dólares, mercados que dejan de pagar precios competitivos y un consumo interno que no logra […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne-en-paquete.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-22T09:47-03:00",
-        "capturado": "2026-10-22T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bb40c30e4c081aec"
-      },
-      "grupo": [
-        {
-          "id": "31b5d53764eb",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/te-deja-una-oportunidad-en-europa-pero-te-arruina-estados-unidos-el-exportador-maximiliano-morello-explica-como-brasil-esta-cambiando-el-negocio-de-la-carne-argentina/",
-          "canonical_url": "https://bichosdecampo.com/te-deja-una-oportunidad-en-europa-pero-te-arruina-estados-unidos-el-exportador-maximiliano-morello-explica-como-brasil-esta-cambiando-el-negocio-de-la-carne-argentina",
-          "titulo": "“Te deja una oportunidad en Europa, pero te arruina Estados Unidos”: El exportador Maximiliano Morello explica cómo Brasil está cambiando el negocio de la carne argentina",
-          "titulo_norm": "te deja una oportunidad en europa pero te arruina estados unidos el exportador maximiliano morello explica como brasil esta cambiando el negocio de la carne argentina",
-          "descripcion": "En un negocio mundial de la carne vacuna que ofrece oportunidades inéditas, pero también cambia de reglas al ritmo de las decisiones políticas, la industria frigorífica argentina enfrenta una ecuación cada vez más difícil: faltante de hacienda, costos crecientes en dólares, mercados que dejan de pagar precios competitivos y un consumo interno que no logra […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne-en-paquete.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-22T09:47-03:00",
-          "capturado": "2026-10-22T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bb40c30e4c081aec"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 13,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 72,
-        "commercial_score": 82,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Análisis profundo sobre los desafíos de la ganadería y la competencia con Brasil, muy comentado por ganaderos.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-22T10:00-03:00"
-    },
-    {
       "id": "f4a11e809103",
       "rep": {
         "id": "f4a11e809103",
@@ -22128,8 +22214,8 @@
       "cuando": "2026-10-22T07:03-03:00"
     }
   ],
-  "actualizado": "2026-10-23T13:23:05-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T13:43:35-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
