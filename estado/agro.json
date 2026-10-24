@@ -24975,7 +24975,7 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T18:41:14-03:00",
+  "actualizado": "2026-10-24T19:01:29-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -26879,6 +26879,99 @@
             },
             "facebook": {
               "id": "29210128372011518"
+            }
+          }
+        ]
+      }
+    },
+    "2026-10-24T19:00:00-03:00": {
+      "dia": "2026-10-24",
+      "bloque": "cierre",
+      "items": [
+        {
+          "tipo": "semana_chicago",
+          "clave": "semana_chicago",
+          "publicado": {
+            "instagram": {
+              "id": "18248142943312719"
+            },
+            "facebook": {
+              "id": "1837257663956178"
+            }
+          }
+        },
+        {
+          "tipo": "clima_manana",
+          "clave": "clima_manana",
+          "publicado": {
+            "instagram": {
+              "id": "18131254592307540"
+            },
+            "facebook": {
+              "id": "1755560499524478"
+            }
+          }
+        },
+        {
+          "tipo": "resumen",
+          "clave": "resumen",
+          "publicado": {
+            "instagram": {
+              "id": "18118630747994049"
+            },
+            "facebook": {
+              "id": "1689243429288797"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18248142943312719"
+              },
+              "facebook": {
+                "id": "1837257663956178"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18131254592307540"
+              },
+              "facebook": {
+                "id": "1755560499524478"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18118630747994049"
+              },
+              "facebook": {
+                "id": "1689243429288797"
+              }
+            }
+          ]
+        }
+      },
+      "diario": {
+        "items": [
+          {
+            "instagram": {
+              "id": "17931990777163220"
+            },
+            "facebook": {
+              "id": "2144119666140870"
+            }
+          },
+          {
+            "instagram": {
+              "id": "18168223045466084"
+            },
+            "facebook": {
+              "id": "1142685371617769"
             }
           }
         ]
