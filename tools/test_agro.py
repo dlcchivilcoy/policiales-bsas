@@ -848,6 +848,138 @@ for _k, _v0 in _env0.items():
     else:
         os.environ[_k] = _v0
 
+
+# --- el posteo de datos de las 05 como CARRUSEL, con el mapa de lluvia y la etiqueta de IA (24/10/2026) ---
+from agro import mapa_lluvia as ML  # noqa: E402
+from datetime import timezone as _tzu  # noqa: E402
+
+chequear("posteo de datos: de fábrica es carrusel (AGRO_DATOS_FORMATO=reel vuelve al reel)",
+         RD.formato() == "carrusel")
+os.environ["AGRO_DATOS_FORMATO"] = "reel"
+chequear("AGRO_DATOS_FORMATO=reel", RD.formato() == "reel")
+os.environ.pop("AGRO_DATOS_FORMATO")
+_t0 = datetime(2026, 10, 24, 8, 0, tzinfo=_tzu.utc)
+_serie = ([{"time": (_t0 + timedelta(hours=h)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "data": {"next_1_hours": {"details": {"precipitation_amount": 1.0}},
+                     "next_6_hours": {"details": {"precipitation_amount": 6.0}}}} for h in range(60)]
+          + [{"time": (_t0 + timedelta(hours=h)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "data": {"next_6_hours": {"details": {"precipitation_amount": 3.0}}}} for h in range(60, 96, 6)])
+_tot, _dias = ML.sumar(_serie, _t0, _t0 + timedelta(hours=72))
+chequear("mapa: la lluvia se suma de a una hora y, donde el pronóstico va de a 6, de a 6 (sin contar dos veces)",
+         abs(_tot - (60 + 2 * 3)) < 1e-6 and abs(sum(_dias.values()) - _tot) < 1e-6)
+
+
+class _RtaMet:
+    status_code = 200
+
+    def __init__(self, mm):
+        self._mm = mm
+
+    def json(self):
+        return {"properties": {"timeseries": [
+            {"time": (_t0 + timedelta(hours=h)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+             "data": {"next_1_hours": {"details": {"precipitation_amount": self._mm}}}} for h in range(72)]}}
+
+
+_pedidos_met = []
+
+
+def _get_met(url, params):
+    _pedidos_met.append(params)
+    return _RtaMet(0.5 if float(params["lon"]) < -60 else 0.0)      # llueve al oeste de Chivilcoy
+
+
+_ll = ML.lluvia(ahora=_t0, get=_get_met, log=lambda m: None)
+chequear("mapa: una grilla de puntos alrededor de Chivilcoy, con Chivilcoy en el centro",
+         len(_ll["grilla"]) == ML.NODOS + 2 and _ll["sin_dato"] == 0
+         and all(abs(v_ - ML.LADO / 2) < 1e-6 for v_ in ML._xy(ML.CENTRO[1], ML.CENTRO[0]))
+         and all(len(p_["lat"].split(".")[1]) <= 4 for p_ in _pedidos_met))
+chequear("mapa: Chivilcoy por día y en total (para la portada)", abs(_ll["chivilcoy_total"] - 36) < 1e-6)
+_ll_vacia = ML.lluvia(ahora=_t0, get=lambda u, p: type("R", (), {"status_code": 503})(), log=lambda m: None)
+chequear("mapa: si MET Norway no contesta, no hay mapa (y el carrusel sale igual)", _ll_vacia is None)
+with tempfile.TemporaryDirectory() as _tmpm:
+    _pm = ML.placa(_ll, Path(_tmpm) / "mapa.jpg", _t0.date())
+    from PIL import Image as _Imm  # noqa: E402
+    chequear("mapa: la placa sale en 9:16 y en 4:5", _Imm.open(_pm).size == (1080, 1920)
+             and _Imm.open(_HI.ruta_45(_pm)).size == (1080, 1350))
+    _datos_c = {"pizarra": {"fecha": "2026-10-22", "productos": {"soja": {"ars": 550000, "usd": 380},
+                                                                   "trigo": {"ars": 300000}}},
+                "mayorista": {"fecha": "2026-10-23", "valor": 1528.26},
+                "chicago": {"soja": {"fecha": "2026-10-23", "usd_t": 462.0, "cambio_pct": -2.4, "contrato": "X",
+                                     "cent_bu": 1258}},
+                "alertas": [], "pronostico": {}}
+    _tab = RD.tablero(_datos_c, {}, _ll)
+    chequear("portada: el tablero con soja, trigo, dólar, Chicago y la lluvia en Chivilcoy",
+             [t_["rotulo"] for t_ in _tab] == ["SOJA ROSARIO", "TRIGO ROSARIO", "DÓLAR MAYORISTA", "SOJA CHICAGO",
+                                               "LLUVIA EN CHIVILCOY"])
+    chequear("portada: el gancho es el mayor movimiento, en pasado (los precios son del último cierre)",
+             RD.gancho(_datos_c, _tab, {"chivilcoy_total": 2}) == "La soja bajó 2,4% en Chicago")
+    chequear("portada: con 5 mm o más, el gancho es la lluvia; con una alerta, la alerta",
+             RD.gancho(_datos_c, _tab, {"chivilcoy_total": 18.2}) == "Llegan 18 mm de lluvia a Chivilcoy"
+             and RD.gancho(dict(_datos_c, alertas=[{"nivel": "amarilla", "evento": "Tormentas"}]), _tab, None)
+             == "Alerta amarilla por tormentas en la zona")
+    chequear("portada: dice de qué día es cada cierre",
+             RD.cierres(_tab) == "Últimos cierres: Rosario 22/10 · dólar 23/10 · Chicago 23/10")
+    _orig_lluvia = ML.lluvia
+    ML.lluvia = lambda **k: _ll
+    try:
+        _lista, _ = RD.armar_carrusel(_datos_c, {}, Path(_tmpm), datetime(2026, 10, 24, 5, 0, tzinfo=CA.TZ_AR),
+                                      log=lambda m: None)
+    finally:
+        ML.lluvia = _orig_lluvia
+    _tipos = [x["tipo"] for x in _lista]
+    chequear("carrusel: portada, mapa, los datos y el cierre (hasta 10), todo en 4:5",
+             _tipos[:2] == ["portada", "mapa"] and _tipos[-1] == "cierre" and "granos" in _tipos
+             and len(_lista) <= 10 and all(_Imm.open(x["archivo"]).size == (1080, 1350) for x in _lista))
+    chequear("etiqueta de IA: cada diapositiva lleva el metadato IPTC que lee Meta",
+             all(RD.IPTC_IA.encode() in (_Imm.open(x["archivo"]).info.get("xmp") or b"") for x in _lista))
+    _cap = RD.caption_carrusel(datetime(2026, 10, 24, 5, 0, tzinfo=CA.TZ_AR), _datos_c, _tab)
+    chequear("texto del carrusel: arranca con lo que se busca, dice la IA y no lleva links",
+             _cap.startswith("🌾 EL CAMPO HOY · Sábado 24 de octubre: precio de la soja")
+             and "generada con IA" in _cap and "Soja en Chicago" in _cap and "http" not in _cap and "/n/" not in _cap)
+
+    # Publicar: Instagram CAROUSEL con @diarioyradio de colaborador y álbum de Facebook en las dos páginas.
+    _llam = []
+    _o2 = (_PBd._contenedor_listo, _PBd._publicar_contenedor, _PBd.subir_a_release, _PBd._pedir, _PUBd.aceptar_colab,
+           _PUBd.credenciales_agro)
+    from contextlib import contextmanager as _cm  # noqa: E402
+
+    @_cm
+    def _cred_falsas():
+        yield {}
+
+    def _pedir_fb(metodo, url, tok, **kw):
+        _llam.append(("fb", url.rsplit("/", 1)[-1]))
+        return _Rta(200, {"id": "f1", "post_id": "p1"})
+
+    _PBd._contenedor_listo = lambda uid, tok, params: _llam.append(("ig", params.get("media_type") or "hijo",
+                                                                     params.get("collaborators"))) or "c"
+    _PBd._publicar_contenedor = lambda uid, tok, cid, cap: "m1"
+    _PBd.subir_a_release = lambda ruta, nombre: f"https://gh/{nombre}"
+    _PBd._pedir = _pedir_fb
+    _PUBd.aceptar_colab = lambda mid, log=print: {"estado": "aceptada"}
+    _PUBd.credenciales_agro = _cred_falsas
+    os.environ.update(INSTAGRAM_USER_ID="17841405971293744", FACEBOOK_PAGE_ID="1456376377985890",
+                      FACEBOOK_PAGE_ACCESS_TOKEN="t", INSTAGRAM_ACCESS_TOKEN="t")
+    try:
+        _res = RD.publicar_carrusel([x["archivo"] for x in _lista], _cap, log=lambda m: None)
+    finally:
+        (_PBd._contenedor_listo, _PBd._publicar_contenedor, _PBd.subir_a_release, _PBd._pedir, _PUBd.aceptar_colab,
+         _PUBd.credenciales_agro) = _o2
+        for _k, _v0 in _env0.items():
+            if _v0 is None:
+                os.environ.pop(_k, None)
+            else:
+                os.environ[_k] = _v0
+    _padre = [x for x in _llam if x[0] == "ig" and x[1] == "CAROUSEL"]
+    chequear("publicar: un carrusel de Instagram con @diarioyradio de colaborador, y la colab aceptada",
+             len(_padre) == 1 and '"diarioyradio"' in (_padre[0][2] or "")
+             and sum(1 for x in _llam if x[0] == "ig" and x[1] == "hijo") == len(_lista)
+             and _res["instagram"]["colab"] == "@diarioyradio" and _res["colab"]["estado"] == "aceptada")
+    chequear("publicar: álbum de Facebook en agro y en el diario (fotos sin publicar + un posteo)",
+             _res["facebook"]["fotos"] == len(_lista) and _res["facebook_diario"]["fotos"] == len(_lista)
+             and sum(1 for x in _llam if x == ("fb", "feed")) == 2)
+
 # --- la corrida: publica lo suyo y espera el horario siguiente -------------------------------------
 _reloj = {"t": _t(7, 2)}
 _hechos, _durmio = [], []

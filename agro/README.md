@@ -31,6 +31,25 @@ solas (`AGRO_REVISION_SENSIBLE=1` lo vuelve a prender). Las de fuentes que se co
 
 Hasta el 19/10/2026 eran 1 reel + 1 carrusel por corrida (una hora entre los dos).
 
+### Carrusel de datos de las 05:00, con el mapa de lluvia (24/10/2026)
+
+El reel de datos de las 5 ahora es un **carrusel 4:5** (`agro/reel_datos.py`; `AGRO_DATOS_FORMATO=reel` vuelve
+al reel), en colab con @diarioyradio como antes y como álbum en las dos páginas de Facebook:
+
+1. **Portada**: una frase que engancha (la alerta del SMN, la lluvia que llega a Chivilcoy o el mayor movimiento
+   del último cierre) y un tablero con soja, maíz y trigo en Rosario, dólar mayorista, soja en Chicago y la
+   lluvia prevista en Chivilcoy, sobre una imagen del campo del banco de imágenes IA. Dice de qué día es cada
+   cierre.
+2. **Mapa de dónde va a llover**, con Chivilcoy en el centro (`agro/mapa_lluvia.py`): lluvia acumulada de las
+   próximas 72 horas en una grilla de MET Norway (modelo ECMWF, uso comercial permitido citando la fuente),
+   partidos del IGN, anillos de 50 y 100 km. El fondo se arma una vez con `python -m agro.mapa_lluvia --base`.
+3. Alertas, clima, pizarra, dólar y Chicago (las placas de las historias en 4:5).
+4. **Cierre**: guardalo, compartilo y seguinos.
+
+Etiqueta de IA: cada diapositiva lleva el metadato IPTC `DigitalSourceType` que Meta lee para poner
+«Información de IA» (la API no tiene otro modo), y el texto lo dice. El texto arranca con lo que se busca
+(precio de la soja, dólar, lluvias en Chivilcoy), repite el tablero y no lleva links.
+
 ### Reel de datos de las 05:00 y las historias en @diarioyradio (23/10/2026)
 
 - **05:00, todos los días** (`agro/reel_datos.py`, `AGRO_REEL_DATOS`, "0" lo apaga): las placas de datos de las
