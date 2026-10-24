@@ -13169,6 +13169,31 @@
         61,
         66
       ]
+    },
+    "28c289016cc93ee4": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 5,
+      "ai_score": 64,
+      "commercial_score": 62,
+      "subtema": "ganaderia",
+      "tema": "hacienda islas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Alta relevancia por el impacto en la ganadería de islas ante una crecida inminente del Paraná.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        65
+      ]
     }
   },
   "indice": {
@@ -14078,7 +14103,8 @@
       "https://infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais": "2026-10-24",
       "https://bichosdecampo.com/en-el-partido-de-9-de-julio-las-aguas-vuelven-a-cubrir-los-campos-y-cortar-los-caminos-mientras-estalla-la-comision-vial-disenada-por-funcionarios-y-productores-para-enfrentar-esa-crisis": "2026-10-24",
       "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028": "2026-10-24",
-      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-24-octubre-2026": "2026-10-24"
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-24-octubre-2026": "2026-10-24",
+      "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14986,7 +15012,8 @@
       "la legua por dentro la historia familiar de uno de los remates de genetica mas grandes del pais": "2026-10-24",
       "en el partido de 9 de julio las aguas vuelven a cubrir los campos y cortar los caminos mientras estalla la comision vial disenada por funcionarios y productores para enfrentar esa crisis": "2026-10-24",
       "se sortearon los sindicos para el concurso de lacteos veronica que podria comenzar a andar el lunes y se extenderia en un tedioso tramite hasta febrero de 2028": "2026-10-24",
-      "dolar blue a cuanto cotizan hoy en cordoba 24 octubre 2026": "2026-10-24"
+      "dolar blue a cuanto cotizan hoy en cordoba 24 octubre 2026": "2026-10-24",
+      "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15894,7 +15921,8 @@
       "f21d6862830314b7": "2026-10-24",
       "28bad929359186e4": "2026-10-24",
       "7a7cd753cb5e1700": "2026-10-24",
-      "8d1fbd4d87f5036f": "2026-10-24"
+      "8d1fbd4d87f5036f": "2026-10-24",
+      "28c289016cc93ee4": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23119,9 +23147,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5c6b8ee27b50_portada.jpg"
+    },
+    {
+      "id": "14ca01bdc0cf",
+      "cuando": "2026-10-24T10:40-03:00",
+      "titulo_original": "El trigo también extraña el sol: entre las nubes y el frío, hay dudas sobre cómo se comportarán los rindes",
+      "descripcion": "La falta de sol ha afectado el cociente fototermal del trigo, lo que podría comprometer los potenciales de rendimiento. Por ahora, se mantiene la expectativa de altas productividades, pero el octubre “atípico” en temperaturas suma incertidumbre.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-trigo-tambien-extrana-el-sol-entre-las-nubes-y-el-frio-hay-dudas-sobre-como-se-comportaran-los-rindes/",
+      "titular": "Trigo en duda: frío y nubes desafían el rinde",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente el rendimiento del trigo en plena zona núcleo durante el llenado de granos.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7babaea0-51d5-4550-b8c4-01a49b400d16",
+          "slug": "trigo-en-duda-frio-nubes-y-menor-radiacion-desafian-los-rindes-4389d9",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-duda-frio-nubes-y-menor-radiacion-desafian-los-rindes-4389d9",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1516261260341211",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18117822223790977",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_14ca01bdc0cf_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f79edf9e923e",
+      "rep": {
+        "id": "f79edf9e923e",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas/",
+        "canonical_url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas",
+        "titulo": "Apurate José: Aseguran que en territorio santafesino ya se evacuó más del 70% de la hacienda que engordaba en las islas",
+        "titulo_norm": "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas",
+        "descripcion": "El gobierno de Santa Fe informó que, a la espera de una gran creciente en el sistema fluvial del río Paraná, ya logró evacuarse el 70% de la hacienda que estaba pastando en la zona de islas. “Tras las alertas y las medidas implementadas, el número de animales en zonas anegables bajó de más de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/barco-de-hacienda.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-24T10:31-03:00",
+        "capturado": "2026-10-24T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "28c289016cc93ee4"
+      },
+      "grupo": [
+        {
+          "id": "f79edf9e923e",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas/",
+          "canonical_url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas",
+          "titulo": "Apurate José: Aseguran que en territorio santafesino ya se evacuó más del 70% de la hacienda que engordaba en las islas",
+          "titulo_norm": "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas",
+          "descripcion": "El gobierno de Santa Fe informó que, a la espera de una gran creciente en el sistema fluvial del río Paraná, ya logró evacuarse el 70% de la hacienda que estaba pastando en la zona de islas. “Tras las alertas y las medidas implementadas, el número de animales en zonas anegables bajó de más de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/barco-de-hacienda.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-24T10:31-03:00",
+          "capturado": "2026-10-24T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "28c289016cc93ee4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 5,
+        "ai_score": 64,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "hacienda islas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alta relevancia por el impacto en la ganadería de islas ante una crecida inminente del Paraná.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "cuando": "2026-10-24T10:40-03:00"
+    },
     {
       "id": "8ccf9ab7838e",
       "rep": {
@@ -24122,69 +24271,6 @@
       "cuando": "2026-10-23T10:40-03:00"
     },
     {
-      "id": "14ca01bdc0cf",
-      "rep": {
-        "id": "14ca01bdc0cf",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-trigo-tambien-extrana-el-sol-entre-las-nubes-y-el-frio-hay-dudas-sobre-como-se-comportaran-los-rindes/",
-        "canonical_url": "https://infocampo.com.ar/el-trigo-tambien-extrana-el-sol-entre-las-nubes-y-el-frio-hay-dudas-sobre-como-se-comportaran-los-rindes",
-        "titulo": "El trigo también extraña el sol: entre las nubes y el frío, hay dudas sobre cómo se comportarán los rindes",
-        "titulo_norm": "el trigo tambien extrana el sol entre las nubes y el frio hay dudas sobre como se comportaran los rindes",
-        "descripcion": "La falta de sol ha afectado el cociente fototermal del trigo, lo que podría comprometer los potenciales de rendimiento. Por ahora, se mantiene la expectativa de altas productividades, pero el octubre “atípico” en temperaturas suma incertidumbre.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/iq_mejor_calidad.png",
-        "autor": "Favio Re",
-        "publicado": "2026-10-23T08:50-03:00",
-        "capturado": "2026-10-23T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "51a76e675c1bf4b1"
-      },
-      "grupo": [
-        {
-          "id": "14ca01bdc0cf",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-trigo-tambien-extrana-el-sol-entre-las-nubes-y-el-frio-hay-dudas-sobre-como-se-comportaran-los-rindes/",
-          "canonical_url": "https://infocampo.com.ar/el-trigo-tambien-extrana-el-sol-entre-las-nubes-y-el-frio-hay-dudas-sobre-como-se-comportaran-los-rindes",
-          "titulo": "El trigo también extraña el sol: entre las nubes y el frío, hay dudas sobre cómo se comportarán los rindes",
-          "titulo_norm": "el trigo tambien extrana el sol entre las nubes y el frio hay dudas sobre como se comportaran los rindes",
-          "descripcion": "La falta de sol ha afectado el cociente fototermal del trigo, lo que podría comprometer los potenciales de rendimiento. Por ahora, se mantiene la expectativa de altas productividades, pero el octubre “atípico” en temperaturas suma incertidumbre.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/iq_mejor_calidad.png",
-          "autor": "Favio Re",
-          "publicado": "2026-10-23T08:50-03:00",
-          "capturado": "2026-10-23T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "51a76e675c1bf4b1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 74,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente el rendimiento del trigo en plena zona núcleo durante el llenado de granos.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T10:00-03:00"
-    },
-    {
       "id": "93ebe88b0191",
       "rep": {
         "id": "93ebe88b0191",
@@ -24319,8 +24405,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T10:23:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-24T10:43:33-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
