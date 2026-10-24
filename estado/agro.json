@@ -13081,6 +13081,27 @@
         69,
         56
       ]
+    },
+    "4ea2bae20b2e55c5": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 8,
+      "conversacion": 7,
+      "potencial_comercial": 9,
+      "ai_score": 79,
+      "commercial_score": 79,
+      "subtema": "maquinaria",
+      "tema": "case ih",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra por dentro la fabricación nacional de maquinaria pesada, interesando a contratistas y generando buen gancho comercial con marcas.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13985,7 +14006,8 @@
       "https://agrositio.com.ar/noticia/248998-cambio-climatico-upl-sostiene-dos-programas-que-ya-muestran-resultados-en-los-campos-argentinos.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248999-se-habilita-la-inscripcion-de-establecimientos-citricolas-para-exportacion-en-la-campana-2026-2027.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248994-un-productor-de-santiago-del-estero-midio-diferencias-de-hasta-400-kilos-de-soja-por-hectarea-en-dos-campanas.html": "2026-10-24",
-      "https://agrositio.com.ar/noticia/248981-solfrut-invertira-usd-195-millones-en-san-juan-para-impulsar-nuevos-desarrollos-industriales-y-agregar-valor-a-la-produccion-local.html": "2026-10-24"
+      "https://agrositio.com.ar/noticia/248981-solfrut-invertira-usd-195-millones-en-san-juan-para-impulsar-nuevos-desarrollos-industriales-y-agregar-valor-a-la-produccion-local.html": "2026-10-24",
+      "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14888,7 +14910,8 @@
       "cambio climatico upl sostiene dos programas que ya muestran resultados en los campos argentinos": "2026-10-24",
       "se habilita la inscripcion de establecimientos citricolas para exportacion en la campana 2026 2027": "2026-10-24",
       "un productor de santiago del estero midio diferencias de hasta 400 kilos de soja por hectarea en dos campanas": "2026-10-24",
-      "solfrut invertira usd 19 5 millones en san juan para impulsar nuevos desarrollos industriales y agregar valor a la produccion local": "2026-10-24"
+      "solfrut invertira usd 19 5 millones en san juan para impulsar nuevos desarrollos industriales y agregar valor a la produccion local": "2026-10-24",
+      "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15791,7 +15814,8 @@
       "6ef76d830eff419b": "2026-10-24",
       "ac449334e4915277": "2026-10-24",
       "56f87f39fc55a06b": "2026-10-24",
-      "67a0371bf81b1386": "2026-10-24"
+      "67a0371bf81b1386": "2026-10-24",
+      "4ea2bae20b2e55c5": "2026-10-24"
     }
   },
   "elegidas": [
@@ -22905,6 +22929,69 @@
   ],
   "pendientes": [
     {
+      "id": "2f9285de2853",
+      "rep": {
+        "id": "2f9285de2853",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih/",
+        "canonical_url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih",
+        "titulo": "Una recorrida “a calzón quitado” por la megaplanta de CNH en Córdoba: ¿Cómo es el día de un operario que fabrica tractores y cosechadoras para Case IH?",
+        "titulo_norm": "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih",
+        "descripcion": "Para quien se siente un “sapo de otro pozo” al caminar entre tractores y cosechadoras en cada una de las exposiciones agropecuarias, como es el caso de esta periodista, una recorrida “a calzón quitado” por una megafábrica como la que CNH opera en Ferreyra, provincia de Córdoba, puede ser muy formativa y, confesión mediante, hasta […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/20261021_083125-scaled.jpg",
+        "autor": "Sofia Selasco",
+        "publicado": "2026-10-24T08:11-03:00",
+        "capturado": "2026-10-24T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "4ea2bae20b2e55c5"
+      },
+      "grupo": [
+        {
+          "id": "2f9285de2853",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih/",
+          "canonical_url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih",
+          "titulo": "Una recorrida “a calzón quitado” por la megaplanta de CNH en Córdoba: ¿Cómo es el día de un operario que fabrica tractores y cosechadoras para Case IH?",
+          "titulo_norm": "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih",
+          "descripcion": "Para quien se siente un “sapo de otro pozo” al caminar entre tractores y cosechadoras en cada una de las exposiciones agropecuarias, como es el caso de esta periodista, una recorrida “a calzón quitado” por una megafábrica como la que CNH opera en Ferreyra, provincia de Córdoba, puede ser muy formativa y, confesión mediante, hasta […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/20261021_083125-scaled.jpg",
+          "autor": "Sofia Selasco",
+          "publicado": "2026-10-24T08:11-03:00",
+          "capturado": "2026-10-24T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "4ea2bae20b2e55c5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 8,
+        "conversacion": 7,
+        "potencial_comercial": 9,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "maquinaria",
+        "tema": "case ih",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra por dentro la fabricación nacional de maquinaria pesada, interesando a contratistas y generando buen gancho comercial con marcas.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T08:22-03:00"
+    },
+    {
       "id": "67ad71c9bb37",
       "rep": {
         "id": "67ad71c9bb37",
@@ -23971,7 +24058,7 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T08:06:12-03:00",
+  "actualizado": "2026-10-24T08:23:00-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
