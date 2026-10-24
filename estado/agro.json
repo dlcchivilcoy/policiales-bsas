@@ -13102,6 +13102,73 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f21d6862830314b7": {
+      "impacto_economico": 12,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 70,
+      "subtema": "ganaderia",
+      "tema": "genética bovina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia de cabaña en provincia de Buenos Aires, de gran interés para ganaderos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "28bad929359186e4": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 5,
+      "ai_score": 72,
+      "commercial_score": 65,
+      "subtema": "agro",
+      "tema": "inundaciones 9 de julio",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directo a la zona núcleo y genera alta conversación local por caminos rurales y anegamientos.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7a7cd753cb5e1700": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 62,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "lácteos verónica",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Noticia relevante para la cadena láctea y proveedores por el concurso de acreedores.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        66
+      ]
     }
   },
   "indice": {
@@ -14007,7 +14074,10 @@
       "https://agrositio.com.ar/noticia/248999-se-habilita-la-inscripcion-de-establecimientos-citricolas-para-exportacion-en-la-campana-2026-2027.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248994-un-productor-de-santiago-del-estero-midio-diferencias-de-hasta-400-kilos-de-soja-por-hectarea-en-dos-campanas.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248981-solfrut-invertira-usd-195-millones-en-san-juan-para-impulsar-nuevos-desarrollos-industriales-y-agregar-valor-a-la-produccion-local.html": "2026-10-24",
-      "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih": "2026-10-24"
+      "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih": "2026-10-24",
+      "https://infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais": "2026-10-24",
+      "https://bichosdecampo.com/en-el-partido-de-9-de-julio-las-aguas-vuelven-a-cubrir-los-campos-y-cortar-los-caminos-mientras-estalla-la-comision-vial-disenada-por-funcionarios-y-productores-para-enfrentar-esa-crisis": "2026-10-24",
+      "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14911,7 +14981,10 @@
       "se habilita la inscripcion de establecimientos citricolas para exportacion en la campana 2026 2027": "2026-10-24",
       "un productor de santiago del estero midio diferencias de hasta 400 kilos de soja por hectarea en dos campanas": "2026-10-24",
       "solfrut invertira usd 19 5 millones en san juan para impulsar nuevos desarrollos industriales y agregar valor a la produccion local": "2026-10-24",
-      "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih": "2026-10-24"
+      "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih": "2026-10-24",
+      "la legua por dentro la historia familiar de uno de los remates de genetica mas grandes del pais": "2026-10-24",
+      "en el partido de 9 de julio las aguas vuelven a cubrir los campos y cortar los caminos mientras estalla la comision vial disenada por funcionarios y productores para enfrentar esa crisis": "2026-10-24",
+      "se sortearon los sindicos para el concurso de lacteos veronica que podria comenzar a andar el lunes y se extenderia en un tedioso tramite hasta febrero de 2028": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15815,7 +15888,10 @@
       "ac449334e4915277": "2026-10-24",
       "56f87f39fc55a06b": "2026-10-24",
       "67a0371bf81b1386": "2026-10-24",
-      "4ea2bae20b2e55c5": "2026-10-24"
+      "4ea2bae20b2e55c5": "2026-10-24",
+      "f21d6862830314b7": "2026-10-24",
+      "28bad929359186e4": "2026-10-24",
+      "7a7cd753cb5e1700": "2026-10-24"
     }
   },
   "elegidas": [
@@ -22925,9 +23001,200 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_464eaff3ff58_portada.jpg"
+    },
+    {
+      "id": "25467fd6654e",
+      "cuando": "2026-10-24T10:00-03:00",
+      "titulo_original": "En el partido de 9 de Julio las aguas vuelven a cubrir los campos y cortar los caminos, mientras estalla la Comisión Vial diseñada por funcionarios y productores para enfrentar esa crisis",
+      "descripcion": "Luego de varios meses de trabajo en una Comisión Vial en la que se integraron todos los bloques de concejales (menos el de La Libertad Avanza) y todas las entidades agropecuarias del distrito de 9 de Julio, en el que las aguas comienzan de nuevo a cubrir los campos y cortar los cambios, las peleas [",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/en-el-partido-de-9-de-julio-las-aguas-vuelven-a-cubrir-los-campos-y-cortar-los-caminos-mientras-estalla-la-comision-vial-disenada-por-funcionarios-y-productores-para-enfrentar-esa-crisis/",
+      "titular": "Crisis en 9 de Julio por inundaciones y ruptura en caminos",
+      "volanta": "Política Agropecuaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 5,
+        "ai_score": 72,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "inundaciones 9 de julio",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directo a la zona núcleo y genera alta conversación local por caminos rurales y anegamientos.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "CmtpqBeHQDs",
+          "url": "https://youtube.com/shorts/CmtpqBeHQDs",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "0e37d22d-1c72-4ecc-b059-299accc6b4a2",
+          "slug": "inundaciones-y-crisis-en-9-de-julio-la-federacion-agraria-2d44db",
+          "url": "https://www.diariolacampaña.com.ar/n/inundaciones-y-crisis-en-9-de-julio-la-federacion-agraria-2d44db",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1499674475401972",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18095264483249495",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25467fd6654e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8ccf9ab7838e",
+      "rep": {
+        "id": "8ccf9ab7838e",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais/",
+        "canonical_url": "https://infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais",
+        "titulo": "La Legua, por dentro: la historia familiar de uno de los remates de genética más grandes del país",
+        "titulo_norm": "la legua por dentro la historia familiar de uno de los remates de genetica mas grandes del pais",
+        "descripcion": "Infocampo recorrió la casa matriz de Compañía La Legua, en Coronel Pringles, la cabaña que cumplió 54 remates ininterrumpidos. Cómo funciona el banco de genética del que salen reproductores para otros rodeos, y quiénes están detrás.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/La-Legua-Remate-de-Primavera-2026-3-scaled.jpeg",
+        "autor": "Manuela Herzel",
+        "publicado": "2026-10-24T08:36-03:00",
+        "capturado": "2026-10-24T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f21d6862830314b7"
+      },
+      "grupo": [
+        {
+          "id": "8ccf9ab7838e",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais/",
+          "canonical_url": "https://infocampo.com.ar/la-legua-por-dentro-una-historia-familiar-que-sostiene-uno-de-los-remates-mas-grandes-del-pais",
+          "titulo": "La Legua, por dentro: la historia familiar de uno de los remates de genética más grandes del país",
+          "titulo_norm": "la legua por dentro la historia familiar de uno de los remates de genetica mas grandes del pais",
+          "descripcion": "Infocampo recorrió la casa matriz de Compañía La Legua, en Coronel Pringles, la cabaña que cumplió 54 remates ininterrumpidos. Cómo funciona el banco de genética del que salen reproductores para otros rodeos, y quiénes están detrás.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/La-Legua-Remate-de-Primavera-2026-3-scaled.jpeg",
+          "autor": "Manuela Herzel",
+          "publicado": "2026-10-24T08:36-03:00",
+          "capturado": "2026-10-24T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f21d6862830314b7"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "genética bovina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Buena historia de cabaña en provincia de Buenos Aires, de gran interés para ganaderos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T10:00-03:00"
+    },
+    {
+      "id": "e21f9d443974",
+      "rep": {
+        "id": "e21f9d443974",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028/",
+        "canonical_url": "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028",
+        "titulo": "Se sortearon los síndicos para el concurso de Lácteos Verónica, que podría comenzar a andar el lunes y se extendería -en un tedioso trámite- hasta febrero de 2028",
+        "titulo_norm": "se sortearon los sindicos para el concurso de lacteos veronica que podria comenzar a andar el lunes y se extenderia en un tedioso tramite hasta febrero de 2028",
+        "descripcion": "Tal como lo había adelantado Bichos de Campo, este viernes se concocieron los resultados del sorteo dispuesto para designar a los síndicos a cargos del concurso de acreedores de Lácteos Verónica, que quedó abierto desde el pasado martes. La causa será observada de cerca por cientos de trabajadores, productores, proveedores y acreedores vinculados a la […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-3.56.09-PM.jpeg",
+        "autor": "Elida Thiery",
+        "publicado": "2026-10-24T08:54-03:00",
+        "capturado": "2026-10-24T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7a7cd753cb5e1700"
+      },
+      "grupo": [
+        {
+          "id": "e21f9d443974",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028/",
+          "canonical_url": "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028",
+          "titulo": "Se sortearon los síndicos para el concurso de Lácteos Verónica, que podría comenzar a andar el lunes y se extendería -en un tedioso trámite- hasta febrero de 2028",
+          "titulo_norm": "se sortearon los sindicos para el concurso de lacteos veronica que podria comenzar a andar el lunes y se extenderia en un tedioso tramite hasta febrero de 2028",
+          "descripcion": "Tal como lo había adelantado Bichos de Campo, este viernes se concocieron los resultados del sorteo dispuesto para designar a los síndicos a cargos del concurso de acreedores de Lácteos Verónica, que quedó abierto desde el pasado martes. La causa será observada de cerca por cientos de trabajadores, productores, proveedores y acreedores vinculados a la […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-3.56.09-PM.jpeg",
+          "autor": "Elida Thiery",
+          "publicado": "2026-10-24T08:54-03:00",
+          "capturado": "2026-10-24T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7a7cd753cb5e1700"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 62,
+        "commercial_score": 58,
+        "subtema": "empresas",
+        "tema": "lácteos verónica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Noticia relevante para la cadena láctea y proveedores por el concurso de acreedores.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          66
+        ]
+      },
+      "cuando": "2026-10-24T10:00-03:00"
+    },
     {
       "id": "2f9285de2853",
       "rep": {
@@ -24058,8 +24325,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T08:23:00-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-24T10:03:29-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
