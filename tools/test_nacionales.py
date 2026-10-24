@@ -269,6 +269,7 @@ def web_falsa(pedir, pieza, yt, foto_respaldo="", categorias=None):
 
 WEB.publicar = web_falsa
 PA.publicar_foto_facebook = lambda jpg, msg: llamadas.append(("facebook", msg)) or {"id": "fb"}
+PA.publicar_album_facebook = lambda jpgs, msg: llamadas.append(("facebook_album", msg)) or {"id": "album"}
 PA._yt_cambiar_descripcion = lambda vid, meta: llamadas.append(("yt_desc", meta["snippet"]["description"]))
 PUB._contenedor_listo = lambda uid, tok, params: llamadas.append(("ig_contenedor", params.get("media_type") or "hijo")) or "c"
 PUB._publicar_contenedor = lambda uid, tok, cid, cap: llamadas.append(("ig_publicar", cap)) or "media"
@@ -864,42 +865,40 @@ chequear("video del medio: uno de 1:35 se usa; uno de 4 minutos no se baja (tope
 chequear("tope de 3 minutos de fábrica", _FL.max_video_seg() == 180)
 
 shutil.rmtree(tmp, ignore_errors=True)
-# --- 11. La AGENDA propia de nacionales: 10, 18 y 21 (19/10/2026) ------------------------------------------
+_OK_WEB = lambda p: (p.get("web") or {}).get("estado") in ("ok", "simulado")   # noqa: E731
+# --- 11. La AGENDA propia de nacionales. v8 (24/10/2026): 04 solo web, 22 el carrusel del día ------------
 from nacionales import agenda as AGE
 os.environ["NAC_TODO_REEL"] = "1"
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
-chequear("agenda: lunes a las 18 y 21, 2 de política y 2 de economía; ni viral ni mundo (21/10/2026)",
-         AGE.topes(_lun(18)) == AGE.topes(_lun(21)) == {"politica": 2, "economia": 2})
-chequear("agenda: la sección de cada general; lo provincial o local no es nacional",
+_WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
+        "internacionales": 5, "virales": 5}
+chequear("agenda v8: a las 4, 5 de cada categoría para la web (también el sábado)",
+         AGE.topes(_lun(4)) == AGE.topes(_sab(4)) == _WEB and AGE.modo(_lun(4)) == AGE.modo(_sab(4)) == "web")
+chequear("agenda v8: a las 22, el carrusel con las 10 generales del día (también el sábado)",
+         AGE.topes(_lun(22)) == AGE.topes(_sab(22)) == {"": 10} and AGE.modo(_sab(22)) == "carrusel")
+chequear("agenda v8: ninguna otra corrida (ni las 18 y 21 de antes ni las 10 y 14 del finde)",
+         all(not AGE.topes(_lun(h)) and not AGE.topes(_sab(h)) for h in (10, 14, 18, 21)))
+chequear("agenda v8: deportes ya no sale",
+         "deportes" not in AGE.topes(_lun(4)) and "deportes" not in AGE.topes(_sab(4)))
+os.environ["NAC_WEB_VIRALES"] = "2"
+os.environ["NAC_CARRUSEL_NOTAS"] = "8"
+chequear("agenda v8: NAC_WEB_<CAT> y NAC_CARRUSEL_NOTAS cambian cuántas",
+         AGE.topes(_lun(4))["virales"] == 2 and AGE.topes(_lun(22)) == {"": 8})
+os.environ.pop("NAC_WEB_VIRALES")
+os.environ.pop("NAC_CARRUSEL_NOTAS")
+chequear("agenda: a qué corrida pertenece cada hora (cron-job.org puede llegar unos minutos antes)",
+         AGE.corrida(_lun(3, 55)) == _lun(4) and AGE.corrida(_lun(4, 20)) == _lun(4)
+         and AGE.corrida(_lun(12)) == _lun(4) and AGE.corrida(_lun(22, 5)) == _lun(22)
+         and AGE.corrida(_lun(2)) == _lun(22) - timedelta(days=1))
+chequear("agenda: la sección de cada general; para las redes, lo provincial o local no es nacional",
          [AGE.subgeneral({"url": f"https://www.infobae.com/{x}/2026/10/20/n/"}) for x in
           ("politica", "judiciales", "economia", "sociedad", "salud")]
          == ["politica", "sociedad", "economia", "sociedad", "sociedad"]
-         and AGE.subgeneral({"url": "https://www.infobae.com/politica/2026/10/20/n/", "nivel": "provincia"}) == ""
-         and AGE.subgeneral({"url": "https://www.infobae.com/economia/2026/10/20/n/", "nivel": "Chivilcoy"}) == "")
-chequear("agenda: entre semana solo hay corridas a las 18 y a las 21",
-         all(not AGE.topes(_lun(h)) for h in (10, 11, 12, 14, 16)))
-chequear("agenda: el finde, 4 corridas (10, 14, 18 y 21) con 1 de cada una de las 7 categorías",
-         all(AGE.topes(_sab(h)) == {c: 1 for c in ("virales", "internacionales", "tecnologia_ia", "", "deportes",
-                                                    "cine_series", "espectaculos")} for h in (10, 14, 18, 21))
-         and AGE.maximo(_sab(10)) == 6 and AGE.maximo(_lun(18)) is None)
-chequear("agenda: a qué corrida pertenece cada hora (cron-job.org puede llegar unos minutos antes)",
-         AGE.corrida(_lun(18, 7)) == _lun(18) and AGE.corrida(_lun(17, 55)) == _lun(18)
-         and AGE.corrida(_lun(22, 30)) == _lun(21) and AGE.corrida(_lun(12)) == _lun(21) - timedelta(days=1)
-         and AGE.corrida(_sab(10, 3)) == _sab(10) and AGE.corrida(_sab(13, 55)) == _sab(14)
-         and AGE.corrida(_lun(10)) == datetime(2026, 10, 18, 21, 0, tzinfo=AR))
-chequear("agenda: cada 30 min, también el finde; el primero a los 15 minutos",
-         AGE.minutos(_lun(18)) == 30 and AGE.minutos(_sab(18)) == 30
-         and AGE.turnos(_lun(18), 4) == [_lun(18, 15), _lun(18, 45), _lun(19, 15), _lun(19, 45)])
-chequear("agenda: si la corrida arrancó tarde (esperó a la anterior), sus turnos corren desde que arranca",
-         AGE.turnos(_lun(21), 2, ahora=_lun(21, 40)) == [_lun(21, 45), _lun(22, 15)])
-chequear("agenda: tope del día (lunes: 4 de política, ni virales ni mundo; sábado: 4 de cada una)",
-         AGE.tope_del_dia("virales", _lun(18)) == 0 and AGE.tope_del_dia("politica", _lun(18)) == 4
-         and AGE.tope_del_dia("internacionales", _lun(18)) == 0 and AGE.tope_del_dia("internacionales", _sab(18)) == 4
-         and AGE.tope_del_dia("deportes", _lun(18)) == 0 and AGE.tope_del_dia("deportes", _sab(18)) == 4)
-chequear("agenda: TODO sale como reel con video (generales, IA, deportes… también)",
-         all(AGE.solo_reel(c) for c in ("", "virales", "internacionales", "tecnologia_ia", "deportes",
-                                        "cine_series", "espectaculos")))
+         and AGE.subgeneral({"url": "https://www.infobae.com/politica/2026/10/20/n/", "nivel": "provincia"}) == "")
+chequear("agenda: en la web de las 4, lo provincial también entra",
+         AGE.subgeneral({"url": "https://www.infobae.com/politica/2026/10/20/n/", "nivel": "provincia"},
+                        solo_nacional=False) == "politica")
 chequear("mundo: internacionales con violencia, conflicto o algo policial, sí; lo demás, no",
          AGE.es_mundo({"titulo": "Francia: toques de queda tras violentas protestas y saqueos"})
          and AGE.es_mundo({"titulo": "Tiroteo en una escuela de Texas: hay tres heridos"})
@@ -914,63 +913,70 @@ def _nv(titulo, seccion, slug, cat, cuando):
 
 VIDEO = {"video": "https://cdn.jwplayer.com/videos/v.mp4", "imagen": ""}
 SIN = {"video": "", "imagen": ""}
-# Lunes 18:00: 2 de política y 2 de economía, reel con la foto (nunca el video); nada más (es lunes).
 FOTO_OK.parent.mkdir(parents=True, exist_ok=True)
 Image.new("RGB", (1200, 800), (120, 90, 60)).save(FOTO_OK, "JPEG")
-PA.MEMORIA = estado_tmp / "nacionales_agenda.json"
-reloj["ahora"] = _lun(18, 2)
-_gen = [dict(nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo el país", "economia", "ag1"),
-             fecha=_lun(17).timestamp()),
-        dict(nota_cat("La CGT anunció un paro general para fin de mes", "politica", "ag2"), fecha=_lun(17).timestamp()),
-        dict(nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "ag3"),
-             fecha=_lun(17).timestamp()),
-        dict(nota_cat("Vacunación antigripal: amplían la campaña a los mayores de 50", "sociedad", "ag4"),
-             fecha=_lun(17).timestamp()),
-        dict(nota_cat("El Gobierno anunció una baja de retenciones al trigo y al maíz", "economia", "ag5"),
-             fecha=_lun(17).timestamp())]
-_var = [_nv("El video del perro que aprendió a abrir la heladera", "virales", "av1", "virales", _lun(18)),
-        _nv("Elecciones en Estados Unidos: qué votan este martes", "america", "av2", "internacionales", _lun(18)),
-        dict(_nv("Tiroteo en un shopping de Texas: hay tres heridos", "america", "av3", "internacionales", _lun(18)),
-             medio="Infobae"),
-        _nv("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "av4", "deportes", _lun(18))]
-_pag = {n["url"]: VIDEO for n in _var + _gen}
-_pag[_gen[2]["url"]] = SIN                                       # la del Senado, sin video
-_pag[_gen[3]["url"]] = SIN                                       # la de sociedad, sin video
-inf_a = PA.pasada(True, redactar=redactar_lam, notas=_gen, notas_variedad=_var, agenda=True,
-                  leer_pagina=lambda u: _pag.get(u, SIN))
-_cats = [p.get("categoria") for p in inf_a["piezas"]]
-_titulos = " ".join(p["titulo_original"] for p in inf_a["piezas"])
-_subs = sorted(p.get("subgeneral") or p.get("categoria") for p in inf_a["piezas"])
-chequear("agenda lunes 18: 2 de política y 2 de economía; ni sociedad, ni viral, ni mundo, ni deportes",
-         _subs == ["economia", "economia", "politica", "politica"]
-         and [p["turno"] for p in inf_a["piezas"]] == ["18:15", "18:45", "19:15", "19:45"])
-if _subs != ["economia", "economia", "politica", "politica"]:
-    print("   ", _subs, inf_a["descartadas"], inf_a["fallas"])
-chequear("agenda: el lunes no sale mundo ni sociedad", "Tiroteo" not in _titulos and "Vacunación" not in _titulos)
-chequear("agenda: todo sale como reel armado con la foto, nunca con el video de la nota",
-         all(p.get("formato") == "reel" and not p.get("video_original") for p in inf_a["piezas"]))
 
-# Sábado 10:00: 7 categorías con video → salen las 6 más virales, 1 de cada una, cada 30 min.
-PA.MEMORIA = estado_tmp / "nacionales_agenda_sab.json"
-reloj["ahora"] = _sab(10, 1)
-_finde = [_nv("Netflix estrena en noviembre la serie de Mafalda", "que-puedo-ver", "sf1", "cine_series", _sab(10)),
-          _nv("Cómo se filmó El Eternauta, la serie más vista", "que-puedo-ver", "sf2", "cine_series", _sab(10)),
-          _nv("El video del gato que toca el piano y enamoró a todos", "virales", "sf3", "virales", _sab(10)),
-          dict(_nv("Bombardeo en Ucrania: decenas de muertos en Kiev", "mundo", "sf4", "internacionales", _sab(10)),
-               medio="Infobae"),
-          _nv("ChatGPT ya escribe y edita videos: cómo usarlo", "tecnologia", "sf5", "tecnologia_ia", _sab(10)),
-          _nv("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "sf6", "deportes", _sab(10)),
-          _nv("Wanda Nara habló de su separación en televisión", "teleshow", "sf7", "espectaculos", _sab(10))]
-_gen_s = [dict(_gen[0], fecha=_sab(9).timestamp())]
-_pag_s = {n["url"]: VIDEO for n in _finde + _gen_s}
-inf_s = PA.pasada(True, redactar=redactar_lam, notas=_gen_s, notas_variedad=_finde, agenda=True,
-                  leer_pagina=lambda u: _pag_s.get(u, SIN))
-_cats_s = [p.get("categoria") for p in inf_s["piezas"]]
-chequear("agenda sábado 10: 6 reels de 6 categorías distintas, cada 30 min",
-         len(_cats_s) == 6 and len(set(_cats_s)) == 6
-         and [p["turno"] for p in inf_s["piezas"]] == ["10:15", "10:45", "11:15", "11:45", "12:15", "12:45"]
-         and all(p.get("formato") == "reel" for p in inf_s["piezas"]))
-print("   agenda lunes:", list(zip([p["turno"] for p in inf_a["piezas"]], _cats)), "· sábado:", _cats_s)
+# Lunes 04:00: SOLO WEB. Las generales (también la provincial), los virales sin video, el mundo que no es
+# violento… todo a la web; deportes no; nada a las redes.
+PA.MEMORIA = estado_tmp / "nacionales_agenda.json"
+reloj["ahora"] = _lun(4, 2)
+_gen = [dict(nota_cat("Aumentan las tarifas de luz y gas desde noviembre en todo el país", "economia", "ag1"),
+             fecha=_lun(3).timestamp()),
+        dict(nota_cat("La CGT anunció un paro general para fin de mes", "politica", "ag2"), fecha=_lun(3).timestamp()),
+        dict(nota_cat("El Senado aprobó la ley de financiamiento universitario", "politica", "ag3"),
+             fecha=_lun(3).timestamp()),
+        dict(nota_cat("Vacunación antigripal: amplían la campaña a los mayores de 50", "sociedad", "ag4"),
+             fecha=_lun(3).timestamp())]
+_var = [_nv("El video del perro que aprendió a abrir la heladera", "virales", "av1", "virales", _lun(4)),
+        _nv("Elecciones en Estados Unidos: qué votan este martes", "america", "av2", "internacionales", _lun(4)),
+        _nv("Netflix estrena en noviembre la serie de Mafalda", "que-puedo-ver", "av5", "cine_series", _lun(4)),
+        _nv("Boca le ganó a Racing y quedó puntero del Torneo Clausura", "deportes", "av4", "deportes", _lun(4))]
+llamadas.clear()
+inf_a = PA.pasada(True, redactar=redactar_lam, notas=_gen, notas_variedad=_var, agenda=True,
+                  leer_pagina=lambda u: SIN)
+_titulos = " ".join(p["titulo_original"] for p in inf_a["piezas"])
+_redes = {l[0] for l in llamadas} - {"web", "release"}
+chequear("agenda 04: todo a la web y NADA a las redes (ni Short, ni Facebook, ni Instagram)",
+         inf_a["piezas"] and all(p.get("formato") == "web" and _OK_WEB(p) for p in inf_a["piezas"])
+         and not _redes and not any(k in p for p in inf_a["piezas"] for k in ("youtube", "facebook", "instagram")))
+chequear("agenda 04: las 4 generales, el viral sin video, el mundo no violento y la serie; deportes no",
+         len(inf_a["piezas"]) == 7 and "Boca" not in _titulos and "perro" in _titulos and "Elecciones" in _titulos,
+         )
+if len(inf_a["piezas"]) != 7:
+    print("   ", [p["titulo_original"][:30] for p in inf_a["piezas"]], inf_a["descartadas"], inf_a["fallas"])
+chequear("agenda 04: sin turnos ni esperas (en la web no hace falta espaciar)", not inf_a.get("fila"))
+
+# Lunes 22:00: el carrusel con las 10 más importantes del día (las de la web de las 4 + lo nuevo de la noche,
+# que también queda en la web). Instagram + álbum de Facebook.
+reloj["ahora"] = _lun(22, 1)
+_noche = [dict(nota_cat("El Gobierno anunció una baja de retenciones al trigo y al maíz", "economia", "ag5"),
+               fecha=_lun(21).timestamp()),
+          dict(nota_cat("Récord de turistas en el fin de semana largo de noviembre", "sociedad", "ag6"),
+               fecha=_lun(21).timestamp())]
+llamadas.clear()
+_album = []
+PA.publicar_album_facebook = lambda jpgs, msg: _album.append((len(jpgs), msg)) or {"id": "album", "fotos": len(jpgs)}
+inf_c = PA.pasada(True, redactar=redactar_lam, notas=_noche, notas_variedad=[], agenda=True,
+                  leer_pagina=lambda u: SIN)
+_c = inf_c.get("carrusel") or {}
+_hijos = [l for l in llamadas if l[0] == "ig_contenedor"]
+chequear("agenda 22: un carrusel con las generales de hoy (4 de la web de las 4 + 2 nuevas)",
+         _c.get("estado") == "ok" and len(_c.get("piezas") or []) == 6
+         and len(_hijos) == 6 + 1 and _hijos[-1][1] == "CAROUSEL")
+if _c.get("estado") != "ok" or len(_c.get("piezas") or []) != 6:
+    print("   ", _c, inf_c.get("elegidas_carrusel"), inf_c["descartadas"], inf_c["fallas"])
+chequear("agenda 22: lo nuevo de la noche también queda como nota en la web",
+         sum(1 for l in llamadas if l[0] == "web") == 2
+         and {e["de"] for e in inf_c.get("elegidas_carrusel") or []} == {"web de hoy", "nueva"})
+chequear("agenda 22: las de la web de las 4 que no son generales (viral, mundo, serie) no van al carrusel",
+         not any(t in " ".join(e["titular"] for e in inf_c.get("elegidas_carrusel") or [])
+                 for t in ("perro", "Elecciones", "Mafalda")))
+chequear("agenda 22: el mismo carrusel sale como álbum en Facebook, con el link a la sección",
+         _album and _album[0][0] == 6 and PA.SECCION_WEB in _album[0][1]
+         and (_c.get("facebook") or {}).get("estado") == "ok")
+chequear("agenda 22: ni Short ni reels", not any(l[0] == "youtube" for l in llamadas))
+chequear("carrusel: el texto numera hasta 10",
+         "🔟 Diez" in PA.caption_carrusel([f"T{i}" for i in range(9)] + ["Diez"], _lun(22)))
 os.environ["NAC_TODO_REEL"] = "0"
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")

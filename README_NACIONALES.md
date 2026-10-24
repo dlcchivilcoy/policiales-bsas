@@ -129,7 +129,19 @@ venv\Scripts\python.exe tools\test_nacionales.py
 
 Memoria: `estado/nacionales.json` (piezas, descartadas por la IA y carruseles, 7 días).
 
-## Agenda propia (20/10/2026)
+## Agenda v8 (24/10/2026): 04 solo web, 22 el carrusel del día
+
+Todos los días, también sábado y domingo (`nacionales/agenda.py`):
+
+| hora | qué hace |
+|---|---|
+| 04:00 | SOLO WEB: 5 notas de cada categoría (política, economía y sociedad —también lo provincial—, espectáculos, cine y series, tecnología/IA, mundo y virales). Ni Short, ni Facebook, ni Instagram, ni TikTok/X. `NAC_WEB_<CATEGORIA>` cambia cuántas. |
+| 22:00 | UN CARRUSEL en Instagram (y el mismo álbum en Facebook, con el link a la sección) con las 10 generales más importantes del día para Chivilcoy (los puntos de `filtro.py`): las de la web de las 4 y las nuevas de la noche, que también quedan como nota en la web. `NAC_CARRUSEL_NOTAS`, `NAC_CARRUSEL_FB=0`. |
+
+Deportes ya no sale. Sin foto real que se pueda usar, una nota no sale (tampoco en la web). Las corridas no
+usan fila ni turnos: la de las 4 publica una detrás de otra.
+
+## Agenda propia (20/10/2026, reemplazada por la v8)
 
 Las nacionales tienen su workflow (`.github/workflows/nacionales.yml`, `python -m nacionales.pasada --agenda`) y su
 agenda (`nacionales/agenda.py`). TODO sale como **reel con el video original de la nota**: sin video, no sale

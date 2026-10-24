@@ -43,6 +43,11 @@ Cómo queda, por pasada (corre en las mismas pasadas que policiales, en un traba
    foto arriba y las demás van a sangre con el titular en una caja que no tapa caras. Es un
    posteo NORMAL del feed: los «reels de prueba» de Instagram son solo para reels.
 
+DESDE EL 24/10/2026 (agenda v8, nacionales/agenda.py) las corridas propias son dos: a las 4, SOLO WEB (5 notas
+de cada categoría, sin redes: corrida_web) y a las 22, UN CARRUSEL con las 10 generales más importantes del
+día (corrida_carrusel), en Instagram y como álbum en Facebook. Lo de arriba sigue valiendo para las pasadas
+sin agenda.
+
 La memoria vive en estado/nacionales.json (se commitea como la de policiales).
 """
 import argparse
@@ -192,7 +197,7 @@ def foto_de_la_nota(nota: dict, destino: Path) -> dict:
     return {"archivo": str(destino), "url": url, "credito": credito}
 
 
-def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
+def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None, solo_web: bool = False) -> dict:
     """Guion + Short + placa de Facebook + imagen de la web. Lanza si la IA no contesta.
 
     Se lee la página de la nota para el VIDEO y la FOTO originales (la variedad desde el 18/10/2026, las
@@ -208,6 +213,8 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     # Los portales cuyo RSS trae solo el titular (Ámbito, Clarín, Olé, ESPN…): el texto de la página.
     if len(medios.get("texto") or "") > len(nota.get("cuerpo") or "") and len(nota.get("cuerpo") or "") < 1500:
         nota = dict(nota, cuerpo=medios["texto"])
+    if solo_web:
+        return _armar_web(nota, carpeta, redactar)
     # Las generales de lunes a viernes, reel SOLO con la foto (21/10/2026): el video de la nota no se usa.
     if AG.reel_con_foto(nota.get("subgeneral") or ""):
         medios["video"] = ""
@@ -311,6 +318,29 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None) -> dict:
     pieza["portada_web"] = str(P.portada_web(g["seccion"], g["volanta"], g["titular"],
                                              base.with_name(base.name + "_web.jpg"), semilla=semilla))
     # Para revisar después qué se publicó y con qué texto (va al artefacto de la corrida).
+    guardable = {k: v for k, v in pieza.items() if k != "nota"}
+    guardable["nota"] = {k: nota.get(k) for k in ("url", "titulo", "puntos", "nivel", "cobertura", "motivos", "otras")}
+    base.with_suffix(".json").write_text(json.dumps(guardable, ensure_ascii=False, indent=2), encoding="utf-8")
+    return pieza
+
+
+def _armar_web(nota: dict, carpeta: Path, redactar=None) -> dict:
+    """SOLO LA NOTA DE LA WEB (agenda v8, 24/10/2026): guion + foto + portada de la web; sin video, sin
+    reel ni placas de redes. Sin una foto real que se pueda usar, no sale (como en las redes)."""
+    semilla = _semilla(nota["url"])
+    carpeta.mkdir(parents=True, exist_ok=True)
+    info_foto = foto_de_la_nota(nota, carpeta / f"{semilla:08x}_foto.jpg")
+    if not info_foto.get("archivo"):
+        return {"nota": nota, "url_original": nota["url"], "foto": info_foto,
+                "guion": {"apta": False, "motivo": f"sin foto que se pueda usar ({info_foto.get('motivo')})"}}
+    g = NG.generar(nota, redactar)
+    pieza = {"nota": nota, "guion": g, "url_original": nota["url"], "foto": info_foto, "formato": "web",
+             "web": {"titulo": g["titulo_web"], "cuerpo": g["nota_web"]}}
+    if not g["apta"]:
+        return pieza
+    base = carpeta / WEB.slugify(g["titular"], 50)
+    pieza["portada_web"] = str(P.portada_web(g["seccion"], g["volanta"], g["titular"],
+                                             base.with_name(base.name + "_web.jpg"), semilla=semilla))
     guardable = {k: v for k, v in pieza.items() if k != "nota"}
     guardable["nota"] = {k: nota.get(k) for k in ("url", "titulo", "puntos", "nivel", "cobertura", "motivos", "otras")}
     base.with_suffix(".json").write_text(json.dumps(guardable, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -434,18 +464,7 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
                       {"estado": "cupo", "detalle": f"ya van {PUB.tope_youtube()} Shorts hoy entre nacionales y policiales"})
     yt_id = res["youtube"].get("id") if _ok(res["youtube"]) else ""
 
-    def _web():
-        nombre = f"nacional_{hashlib.sha1(pieza['url_original'].encode()).hexdigest()[:10]}_web.jpg"
-        placa_web = lambda: PUB.subir_a_release(Path(pieza["portada_web"]), nombre)   # noqa: E731
-        foto = (pieza.get("foto") or {})
-        # La foto de la nota (Wix la importa de Infobae); la placa propia si no hay foto usable o
-        # si Wix no la deja importar.
-        pieza["imagen_url"] = foto.get("url") if foto.get("archivo") else placa_web()
-        return WEB.publicar(lambda m, u, **kw: PUB._pedir(m, u, "", **kw), pieza, yt_id or "",
-                            placa_web if foto.get("archivo") else "",
-                            categorias=[CAT.seccion_web(cat) if cat else WEB.NACIONALES_ID,
-                                        WEB.NACIONALES_AUTO_ID])
-    res["web"] = _resultado(_web) if WEB.activa() else {"estado": "apagada"}
+    res["web"] = _resultado(publicar_web, pieza, yt_id or "") if WEB.activa() else {"estado": "apagada"}
     url_web = res["web"].get("url") if _ok(res["web"]) else ""
     if yt_id and not url_web:
         meta_sec = meta_youtube(pieza, SECCION_WEB)
@@ -474,6 +493,28 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
             res["instagram"] = dict(_resultado(publicar_imagen_instagram, Path(pieza["slide"]), caption, marca),
                                     formato="imagen")
     return res
+
+
+def publicar_web(pieza: dict, yt_id: str = "") -> dict:
+    """La nota en la web (Wix), en la sección de su categoría y en «Nacionales (auto)»."""
+    cat = pieza["nota"].get("categoria") or ""
+    nombre = f"nacional_{hashlib.sha1(pieza['url_original'].encode()).hexdigest()[:10]}_web.jpg"
+    placa_web = lambda: PUB.subir_a_release(Path(pieza["portada_web"]), nombre)   # noqa: E731
+    foto = (pieza.get("foto") or {})
+    # La foto de la nota (Wix la importa de Infobae); la placa propia si no hay foto usable o
+    # si Wix no la deja importar.
+    pieza["imagen_url"] = foto.get("url") if foto.get("archivo") else placa_web()
+    return WEB.publicar(lambda m, u, **kw: PUB._pedir(m, u, "", **kw), pieza, yt_id or "",
+                        placa_web if foto.get("archivo") else "",
+                        categorias=[CAT.seccion_web(cat) if cat else WEB.NACIONALES_ID,
+                                    WEB.NACIONALES_AUTO_ID])
+
+
+def publicar_solo_web(pieza: dict, publicar: bool) -> dict:
+    """Agenda v8: la pieza va SOLO a la web (ni Short, ni Facebook, ni Instagram, ni TikTok/X)."""
+    if not publicar:
+        return {"web": {"estado": "simulado", "url": url_web_prevista(pieza)}}
+    return {"web": _resultado(publicar_web, pieza) if WEB.activa() else {"estado": "apagada"}}
 
 
 def instagram_activo() -> bool:
@@ -516,8 +557,8 @@ def para_el_carrusel(mem: dict) -> list:
 
 
 def caption_carrusel(titulares: list, cuando: datetime) -> str:
-    numeros = ("1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣")
-    lista = "\n".join(f"{numeros[i]} {t.rstrip(' .')}" for i, t in enumerate(titulares[:9]))
+    numeros = ("1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟")
+    lista = "\n".join(f"{numeros[i]} {t.rstrip(' .')}" for i, t in enumerate(titulares[:10]))
     texto = (f"Noticias nacionales de hoy, {P.fecha_larga(cuando)} de {cuando.year}: lo más importante "
              f"de la Argentina y de la provincia de Buenos Aires en un solo resumen.\n\n{lista}\n\n"
              f"📲 Leelas completas en {WEB.SITIO}, sección Nacionales.\n\n"
@@ -537,11 +578,48 @@ def publicar_carrusel(jpgs: list, caption: str, marca: str) -> dict:
     return {"id": PUB._publicar_contenedor(uid, tok, padre, caption) or None, "diapositivas": len(jpgs)}
 
 
-def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime) -> dict:
+def texto_album_facebook(titulares: list, cuando: datetime) -> str:
+    """El mismo texto del carrusel, con el link a la sección (en Facebook los links se tocan)."""
+    return caption_carrusel(titulares, cuando).replace(f"Leelas completas en {WEB.SITIO}, sección Nacionales.",
+                                                       f"Leelas completas en {SECCION_WEB}")
+
+
+def publicar_album_facebook(jpgs: list, mensaje: str) -> dict:
+    """Un posteo de Facebook con varias fotos (lo que en Instagram es el carrusel): cada foto se sube sin
+    publicar y después va un solo posteo que las junta."""
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    ids = []
+    for j in jpgs:
+        r = PUB._pedir("POST", f"{PUB.GRAPH}/{pid}/photos", tok, data={"published": "false"},
+                       files={"source": (Path(j).name, Path(j).read_bytes(), "image/jpeg")})
+        if r.status_code >= 400:
+            raise PUB.FalloRed(PUB._error(r, "Facebook (foto del álbum)"))
+        ids.append(str((r.json() or {}).get("id") or ""))
+    data = {"message": mensaje}
+    for i, fid in enumerate(ids):
+        data[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})
+    try:
+        r = PUB._pedir("POST", f"{PUB.GRAPH}/{pid}/feed", tok, data=data)
+    except PUB._Cortado as e:
+        raise PUB.SinConfirmar(f"Facebook (álbum): {e}")
+    if r.status_code >= 400:
+        raise PUB.FalloRed(PUB._error(r, "Facebook (álbum)"))
+    return {"id": str((r.json() or {}).get("id") or ""), "fotos": len(ids)}
+
+
+def carrusel_facebook() -> bool:
+    """NAC_CARRUSEL_FB=0: el carrusel de las 22 sale solo en Instagram."""
+    return (os.environ.get("NAC_CARRUSEL_FB") or "1").strip() != "0"
+
+
+def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas: list = None) -> dict:
+    """El carrusel de Instagram (y, desde el 24/10/2026, el álbum de Facebook): una diapositiva por nota.
+    `elegidas` [(url, registro)] (corrida_carrusel); sin eso, lo publicado desde el carrusel anterior."""
     dia = ahora.date().isoformat()
     if _ok(mem["carruseles"].get(dia)):
         return {"estado": "ya_estaba"}
-    elegidas = para_el_carrusel(mem)
+    elegidas = list(elegidas)[:CARRUSEL_MAX] if elegidas is not None else para_el_carrusel(mem)
     if len(elegidas) < CARRUSEL_MIN:
         return {"estado": "omitido", "motivo": f"hay {len(elegidas)} nota(s) para el carrusel"}
     total = len(elegidas)
@@ -559,12 +637,15 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime) -> dict:
         jpgs.append(P.slide_carrusel(p.get("seccion") or "Nacionales", p.get("volanta") or "", p["titular"],
                                      p.get("bajada") or "", carpeta / f"carrusel_{i:02d}.jpg", sitio=WEB.SITIO,
                                      idx=i, total=total, semilla=_semilla(u), foto=foto, estilo=estilo))
-    caption = caption_carrusel([p["titular"] for _, p in elegidas], ahora)
+    titulares = [p["titular"] for _, p in elegidas]
+    caption = caption_carrusel(titulares, ahora)
     if not publicar:
         return {"estado": "simulado", "diapositivas": len(jpgs), "caption": caption,
                 "archivos": [str(j) for j in jpgs]}
     res = _resultado(publicar_carrusel, jpgs, caption, ahora.strftime("%Y%m%d"))
     res["piezas"] = [u for u, _ in elegidas]
+    if carrusel_facebook():
+        res["facebook"] = _resultado(publicar_album_facebook, jpgs, texto_album_facebook(titulares, ahora))
     mem["carruseles"][dia] = res
     return res
 
@@ -684,13 +765,15 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
     mem = cargar()
     ahora = _ahora()
     inicio = AG.corrida(ahora) if agenda else None
+    modo = AG.modo(inicio) if agenda else ""
     dia = ahora.date().isoformat()
     carpeta = SALIDA / ahora.strftime("%Y-%m-%d_%H%M")
     informe = {"cuando": ahora.isoformat(timespec="seconds"), "publicar": publicar, "piezas": [],
                "descartadas": [], "fallas": []}
 
     if agenda:
-        informe["corrida"] = {"inicio": inicio.isoformat(timespec="minutes"), "topes": AG.topes(inicio)}
+        informe["corrida"] = {"inicio": inicio.isoformat(timespec="minutes"), "topes": AG.topes(inicio),
+                              "modo": modo}
         if not informe["corrida"]["topes"]:
             informe["estado"] = "nada"
             return informe
@@ -748,14 +831,22 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # Lunes a viernes, las generales en 3 filas: política, economía y sociedad (20/10/2026, noche).
             if any(s in topes for s in AG.SUBGENERALES):
                 for c in colas.pop("", []):
-                    s = AG.subgeneral(c)
+                    s = AG.subgeneral(c, solo_nacional=modo != "web")
                     if s:                            # lo local, de la región o de la provincia, no
                         colas.setdefault(s, []).append(dict(c, subgeneral=s))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
-            if "internacionales" in colas:
+            if "internacionales" in colas and modo != "web":
                 colas["internacionales"] = [c for c in colas["internacionales"] if AG.es_mundo(c)]
         informe["topes"] = topes
+        # Agenda v8 (24/10/2026): la de las 4 es solo web y la de las 22, el carrusel. Sin fila ni turnos.
+        if modo == "web":
+            corrida_web(colas, topes, mem, publicar, carpeta, ahora, dia, redactar, leer_pagina, informe)
+            return _cierre(informe, mem, publicar, carpeta)
+        if modo == "carrusel":
+            corrida_carrusel(colas.get("", []), topes.get("", 0), mem, publicar, carpeta, ahora, dia, redactar,
+                             leer_pagina, informe)
+            return _cierre(informe, mem, publicar, carpeta)
 
         # LA FILA (18/10/2026, noche; reels/turnos.py): un posteo cada 15 minutos entre policiales y
         # nacionales, nunca dos de la misma categoría seguidos. Policiales reserva los suyos; esta pasada
@@ -881,22 +972,7 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                                             PUB.subir_a_release, nombre)
                 res["tiktok_buzon"] = ({"estado": "ok", "id": ev_id} if ev_id else
                                        {"estado": "omitida", "detalle": "no se pudo dejar en el buzón"})
-            registro = {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
-                    "categoria": nota.get("categoria") or "", "formato": pieza.get("formato") or "",
-                    "subgeneral": nota.get("subgeneral") or "",
-                    "medio_origen": PO.fuente_de(nota) if nota.get("categoria") else (nota.get("medio") or ""),
-                    "video_original": pieza.get("video_original") or "",
-                    "impacto": nota.get("impacto"), "impacto_razones": nota.get("impacto_razones") or [],
-                    "fuentes": nota.get("fuentes") or [],
-                    "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
-                    "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
-                    "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
-                    "turno": f"{turno:%H:%M}",
-                    "copia": (g.get("copia") or {}).get("racha"),
-                    # La foto, para el carrusel de las 22 (otra corrida: se vuelve a bajar).
-                    "foto_url": (pieza.get("foto") or {}).get("url") if (pieza.get("foto") or {}).get("archivo") else "",
-                    "foto": (pieza.get("foto") or {}).get("credito") or (pieza.get("foto") or {}).get("motivo"),
-                    **res}
+            registro = _registro(pieza, res, dia, f"{turno:%H:%M}")
             informe["piezas"].append(registro)
             for red, r in res.items():
                 if r.get("estado") == "fallo":
@@ -907,7 +983,127 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 guardar(mem)                         # tras cada pieza: un corte no borra lo hecho
             pieza = preparar(nota.get("subgeneral") or cat)
 
-    if (con_carrusel or solo_carrusel) and "carrusel" not in informe:
+    return _cierre(informe, mem, publicar, carpeta, con_carrusel or solo_carrusel, solo_carrusel, esperar_carrusel)
+
+
+def _registro(pieza: dict, res: dict, dia: str, turno: str) -> dict:
+    """Lo que queda en la memoria (y en el informe) de una pieza publicada."""
+    nota, g = pieza["nota"], pieza["guion"]
+    return {"titulo_original": nota["titulo"], "titular": g["titular"], "volanta": g["volanta"],
+            "categoria": nota.get("categoria") or "", "formato": pieza.get("formato") or "",
+            "subgeneral": nota.get("subgeneral") or "",
+            "medio_origen": PO.fuente_de(nota) if nota.get("categoria") else (nota.get("medio") or ""),
+            "video_original": pieza.get("video_original") or "",
+            "impacto": nota.get("impacto"), "impacto_razones": nota.get("impacto_razones") or [],
+            "fuentes": nota.get("fuentes") or [],
+            "bajada": g.get("bajada") or "", "seccion": g["seccion"], "tema": nota.get("tema") or [], "viral": g["viral"],
+            "puntos": nota.get("puntos"), "nivel": nota.get("nivel"), "cobertura": nota.get("cobertura"),
+            "dia": dia, "cuando": _ahora().isoformat(timespec="seconds"), "via": g.get("via"),
+            "turno": turno,
+            "copia": (g.get("copia") or {}).get("racha"),
+            # La foto, para el carrusel de las 22 (otra corrida: se vuelve a bajar).
+            "foto_url": (pieza.get("foto") or {}).get("url") if (pieza.get("foto") or {}).get("archivo") else "",
+            "foto": (pieza.get("foto") or {}).get("credito") or (pieza.get("foto") or {}).get("motivo"),
+            **res}
+
+
+INTENTOS_POR_NOTA = 3       # candidatas que se prueban, como mucho, por cada nota que se busca
+
+
+def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: datetime, dia: str, redactar, leer,
+                   informe: dict, contadas: list):
+    """Arma y publica (solo en la web) una candidata. Devuelve el registro, o None si no salió."""
+    try:
+        pieza = armar(c, carpeta, redactar, leer, solo_web=True)
+    except Exception as e:                           # noqa: BLE001 — la IA: se sigue con otra
+        informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
+        return None
+    if not pieza["guion"]["apta"]:
+        informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
+                                       "categoria": c.get("subgeneral") or c.get("categoria") or ""})
+        if publicar:
+            mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
+                                            "cuando": ahora.isoformat(timespec="seconds")}
+        return None
+    res = publicar_solo_web(pieza, publicar)
+    registro = _registro(pieza, res, dia, _ahora().strftime("%H:%M"))
+    informe["piezas"].append(registro)
+    if res["web"].get("estado") == "fallo":
+        informe["fallas"].append(f"web: «{pieza['guion']['titular'][:50]}»: {res['web'].get('error')}")
+    contadas.append({"titulo": pieza["guion"]["titular"], "tema": c.get("tema") or []})
+    if publicar:
+        mem["piezas"][c["url"]] = registro
+        guardar(mem)                                 # tras cada pieza: un corte no borra lo hecho
+    return registro if (_ok(res["web"]) or not publicar) else None
+
+
+def corrida_web(colas: dict, topes: dict, mem: dict, publicar: bool, carpeta: Path, ahora: datetime, dia: str,
+                redactar, leer, informe: dict):
+    """La corrida de las 4 (agenda v8): hasta topes[cat] notas de cada categoría, SOLO en la web, una detrás
+    de otra (en la web no hace falta espaciarlas)."""
+    contadas = []
+    paginas = {}
+
+    def leer_una(url):
+        if url not in paginas:
+            paginas[url] = dict((leer or CAT.leer_pagina)(url) or {})
+        return paginas[url]
+
+    for cat in [c for c in AG.WEB if c in topes] + [c for c in topes if c not in AG.WEB]:
+        hechas = intentos = 0
+        for c in colas.get(cat) or []:
+            if hechas >= topes[cat] or intentos >= topes[cat] * INTENTOS_POR_NOTA:
+                break
+            if not elegir([c], mem, 1, ahora, contadas):
+                continue
+            intentos += 1
+            if _una_pieza_web(c, mem, publicar, carpeta, ahora, dia, redactar, leer_una, informe, contadas):
+                hechas += 1
+        informe.setdefault("por_categoria", {})[cat] = hechas
+
+
+def corrida_carrusel(cola: list, n: int, mem: dict, publicar: bool, carpeta: Path, ahora: datetime, dia: str,
+                     redactar, leer, informe: dict):
+    """La corrida de las 22 (agenda v8): las `n` generales MÁS IMPORTANTES DEL DÍA para Chivilcoy (los
+    «puntos» de filtro.py) entre lo que ya salió hoy en la web (la corrida de las 4) y lo nuevo de la noche;
+    lo nuevo que entra también queda como nota en la web. Después, el carrusel con esas `n`."""
+    ya = {u for c in mem["carruseles"].values() if _ok(c) for u in c.get("piezas") or []}
+    previas = [(p.get("puntos") or 0, 1, u, p) for u, p in mem["piezas"].items()
+               if p.get("dia") == dia and not p.get("categoria") and _ok(p.get("web")) and u not in ya]
+    nuevas = [(c.get("puntos") or 0, 0, c["url"], c) for c in cola if c["url"] not in mem["piezas"]]
+    contadas, elegidas, intentos = [], [], 0
+    paginas = {}
+
+    def leer_una(url):
+        if url not in paginas:
+            paginas[url] = dict((leer or CAT.leer_pagina)(url) or {})
+        return paginas[url]
+
+    for _puntos, previa, url, x in sorted(previas + nuevas, key=lambda t: (-t[0], -t[1])):
+        if len(elegidas) >= n:
+            break
+        if previa:
+            elegidas.append((url, x))
+            continue
+        if intentos >= n * INTENTOS_POR_NOTA or not elegir([x], mem, 1, ahora, contadas):
+            continue
+        intentos += 1
+        reg = _una_pieza_web(x, mem, publicar, carpeta, ahora, dia, redactar, leer_una, informe, contadas)
+        if reg:
+            elegidas.append((url, reg))
+    de_antes = {u for _p, _x, u, _r in previas}
+    informe["elegidas_carrusel"] = [{"titular": p.get("titular"), "puntos": p.get("puntos"),
+                                     "de": "web de hoy" if u in de_antes else "nueva"} for u, p in elegidas]
+    informe["carrusel"] = carrusel(mem, publicar, carpeta, _ahora(), elegidas=elegidas)
+    if informe["carrusel"].get("estado") == "fallo":
+        informe["fallas"].append(f"carrusel: {informe['carrusel'].get('error')}")
+    if (informe["carrusel"].get("facebook") or {}).get("estado") == "fallo":
+        informe["fallas"].append(f"carrusel en Facebook: {informe['carrusel']['facebook'].get('error')}")
+
+
+def _cierre(informe: dict, mem: dict, publicar: bool, carpeta: Path, con_carrusel: bool = False, solo_carrusel: bool = False,
+            esperar_carrusel: str = "") -> dict:
+    if con_carrusel and "carrusel" not in informe:
         objetivo = _ahora().replace(hour=HORA_CARRUSEL[0], minute=HORA_CARRUSEL[1], second=0, microsecond=0)
         if esperar_carrusel:
             hh, mm = (int(x) for x in esperar_carrusel.split(":"))
@@ -941,8 +1137,15 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
 def resumen(inf: dict) -> str:
     l = [f"### Nacionales ({'PUBLICADO' if inf['publicar'] else 'simulación'}) — {inf['cuando']}", ""]
     if inf.get("corrida"):
-        l.append(f"Corrida de las {inf['corrida']['inicio'][11:16]} · categorías: "
+        modo = {"web": " (solo web)", "carrusel": " (carrusel del día)"}.get(inf["corrida"].get("modo") or "", "")
+        l.append(f"Corrida de las {inf['corrida']['inicio'][11:16]}{modo} · categorías: "
                  + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["corrida"]["topes"].items()))
+        if inf.get("por_categoria"):
+            l.append("Notas en la web por categoría: "
+                     + ", ".join(f"{c} {n}" for c, n in inf["por_categoria"].items()))
+        if inf.get("elegidas_carrusel"):
+            l.append("Carrusel: " + " · ".join(f"{i}. {e['titular']} ({e['de']}, {e['puntos']} pts)"
+                                               for i, e in enumerate(inf["elegidas_carrusel"], 1)))
         l.append("")
     if inf.get("estado"):
         l.append({"ya_corrio": "Esta corrida ya la hizo otra (cron-job.org o el respaldo): no se hace nada.",

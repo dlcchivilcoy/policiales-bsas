@@ -53,12 +53,9 @@ on:
     # (la de las 09:05 Argentina —«5 12 * * *»— la sacó el editor el 19/10/2026)
     # (12:05 y 15:05 Argentina —«5 15» y «5 18»— las sacó el editor el 19/10/2026)
     # (18:05 y 23:35 Argentina —«5 21» y «35 2»— el editor las cambió el 20/10/2026 por estas:)
-    - cron: "0 23 * * 1-5"  # 20:00 Argentina, lunes a viernes
-    - cron: "0 1 * * 2-6"   # 22:00 Argentina, lunes a viernes (en UTC ya es el día siguiente)
-    - cron: "0 13 * * 6,0"  # 10:00 Argentina, sábado y domingo (a la par de nacionales)
-    - cron: "0 17 * * 6,0"  # 14:00 Argentina, sábado y domingo
-    - cron: "0 21 * * 6,0"  # 18:00 Argentina, sábado y domingo
-    - cron: "0 0 * * 0,1"   # 21:00 Argentina, sábado y domingo (en UTC ya es el día siguiente)
+    # (lun-vie 20 y 22, sáb-dom 10, 14, 18 y 21: el editor las cambió el 24/10/2026 por estas, todos los días)
+    - cron: "0 20 * * *"    # 17:00 Argentina
+    - cron: "0 23 * * *"    # 20:00 Argentina
   workflow_dispatch:
     inputs:
       cuantos:

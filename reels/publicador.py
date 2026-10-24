@@ -1590,7 +1590,8 @@ def _falta(p: dict, ledger: dict) -> bool:
 def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set,
                         reservadas: frozenset = frozenset()) -> tuple:
     """(las `n` piezas de la pasada, salteadas). Primero las elegidas para Instagram o Facebook
-    (las de más potencial), después las de más viral y, a igual viral, la más cercana a Chivilcoy;
+    (las de más potencial), después las que traen VIDEO (24/10/2026: «priorizando reel con video»), las de
+    más viral y, a igual viral, la más cercana a Chivilcoy;
     las que entran salen en el orden de la pasada (la más nueva primero). Una pieza que ya salió en
     todas sus redes no ocupa lugar, y una que esta misma pasada ya había reservado (corrida
     repetida) entra sin ocupar uno nuevo."""
@@ -1598,7 +1599,9 @@ def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set,
         return _falta(p, ledger)
     ya = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) in reservadas]
     pendientes = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) not in reservadas]
-    rango = sorted(pendientes, key=lambda x: (_clave(x[1]) in preferidas, x[1].get("viral") or 5,
+    rango = sorted(pendientes, key=lambda x: (_clave(x[1]) in preferidas,
+                                              bool(x[1].get("tenia_video") or x[1].get("declaracion")),
+                                              x[1].get("viral") or 5,
                                               (x[1].get("geo") or {}).get("proximidad") or 0,
                                               -x[0]), reverse=True)
     entran = {i for i, _p in ya} | {i for i, _p in rango[:max(0, n)]}

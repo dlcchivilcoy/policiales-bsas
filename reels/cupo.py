@@ -27,8 +27,11 @@ MAX_DEFAULT = 3
 # 20/10/2026 («la corrida de policiales cambie el horario a 20 hs y 22 hs; sábado y domingo, que se una a
 # nacionales en sus 4 corridas pero que se intercalen los posteos»): lunes a viernes 20 y 22; sábado y
 # domingo 10, 14, 18 y 21, a la par de nacionales (reels/turnos.py los intercala).
-PASADAS_SEMANA = ((20, 0), (22, 0))
-PASADAS_FINDE = ((10, 0), (14, 0), (18, 0), (21, 0))
+# 24/10/2026 («dejar solo 2 corridas de policiales a las 17 hs y 20 hs, máximo 3 policiales por corrida con
+# posteos cada 30 minutos, priorizando reel con video»): 17 y 20 TODOS los días (el finde ya no tiene grilla
+# propia: las nacionales del finde salen solo en el carrusel de las 22).
+PASADAS_SEMANA = ((17, 0), (20, 0))
+PASADAS_FINDE = ()
 PASADAS_AR = PASADAS_SEMANA
 
 

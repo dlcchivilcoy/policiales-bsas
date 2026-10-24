@@ -1,5 +1,24 @@
 # -*- coding: utf-8 -*-
-"""LA AGENDA DE NACIONALES: qué sale en cada corrida (pedido del editor del 20/10/2026).
+"""LA AGENDA DE NACIONALES: qué sale en cada corrida.
+
+24/10/2026 (v8, pedido del editor): DOS corridas por día, todos los días (también sábado y domingo):
+
+    04:00  SOLO WEB: 5 notas de cada categoría —política, economía y sociedad (las nacionales generales),
+           espectáculos, cine y series, tecnología/IA, mundo y virales—, como nota de la web y nada más
+           (sin redes, sin Short). NAC_WEB_<CATEGORIA> cambia cuántas.
+    22:00  UN CARRUSEL en Instagram (y el mismo álbum en Facebook) con las 10 noticias generales más
+           importantes del día, las que más le tocan a Chivilcoy (los «puntos» de nacionales/filtro.py):
+           las de la web de las 4 y las nuevas de la noche, que también quedan como nota en la web.
+           NAC_CARRUSEL_NOTAS cambia cuántas.
+
+En sus palabras: «que la corrida de nacionales (política, economía, sociedad) cargue solo 1 carrusel a las
+22 hs con las 10 noticias más importantes del día, que traten de tener relevancia para la actualidad de
+Chivilcoy»; «para el fin de semana, que se deshabiliten los posteos de espectáculos, cine y series,
+tecnología/IA, mundo y virales para mis redes, que solo corran para web»; «habilitar scraping y posteo solo
+como noticia para mi web todos los días haciendo una corrida a las 4 am». Deportes ya no sale (no está en la
+lista). Los policiales van aparte (reels/cupo.py: 17 y 20).
+
+Lo de abajo es la historia (v1 a v7), con lo que sigue sirviendo a las pasadas sin agenda.
 
 Las nacionales tienen sus corridas propias (no van en las pasadas de policiales). TODO sale como REEL con
 el video original de la nota: sin video, la nota no sale (ni como carrusel).
@@ -40,8 +59,10 @@ import re
 from datetime import datetime, timedelta, timezone
 
 TZ_AR = timezone(timedelta(hours=-3))
-CORRIDAS_SEMANA = ((18, 0), (21, 0))
-CORRIDAS_FINDE = ((10, 0), (14, 0), (18, 0), (21, 0))
+CORRIDA_WEB = (4, 0)
+CORRIDA_CARRUSEL = (22, 0)
+CORRIDAS_SEMANA = (CORRIDA_WEB, CORRIDA_CARRUSEL)          # v8 (24/10/2026): las mismas todos los días
+CORRIDAS_FINDE = CORRIDAS_SEMANA
 CORRIDAS = CORRIDAS_SEMANA                     # (compatibilidad: las de todos los días)
 DEMORA_PRIMERO = 15
 MINUTOS_SEMANA = 30
@@ -50,6 +71,10 @@ FIN_DE_SEMANA = (5, 6)                 # sábado, domingo
 GENERALES = ""                         # la «categoría» de las nacionales generales
 
 SUBGENERALES = ("politica", "economia", "sociedad")
+# La corrida web de las 4 (24/10/2026): {categoría: cuántas notas}. «internacionales» es Mundo.
+WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
+       "internacionales": 5, "virales": 5}
+CARRUSEL_NOTAS = 10
 # Lo que NO es de alcance nacional (nacionales/filtro.py, «nivel»): lo local, la región y la provincia.
 NIVELES_NO_NACIONALES = {"Chivilcoy", "directa", "región", "provincia"}
 GENERALES_TODAS = (GENERALES,) + SUBGENERALES        # las que se ordenan por «puntos» (no por impacto)
@@ -75,11 +100,12 @@ def reel_con_foto(cat: str) -> bool:
     return cat in SUBGENERALES
 
 
-def subgeneral(c: dict) -> str:
+def subgeneral(c: dict, solo_nacional: bool = True) -> str:
     """«politica», «economia» o «sociedad»: la sección de Infobae de una nacional general. Lo que no es de
-    alcance nacional (Chivilcoy, la región, la provincia: NIVELES_NO_NACIONALES) da "" y no entra."""
+    alcance nacional (Chivilcoy, la región, la provincia: NIVELES_NO_NACIONALES) da "" y no entra, salvo
+    con solo_nacional=False (la web de las 4: lo de la provincia y la región también va)."""
     from urllib.parse import urlparse
-    if (c.get("nivel") or "") in NIVELES_NO_NACIONALES:
+    if solo_nacional and (c.get("nivel") or "") in NIVELES_NO_NACIONALES:
         return ""
     p = urlparse(c.get("url") or "").path
     if p.startswith("/politica/"):
@@ -142,10 +168,28 @@ def siguiente(inicio: datetime) -> datetime:
     return min(c for c in _candidatas(inicio, (0, 1)) if c > inicio)
 
 
+def modo(inicio: datetime) -> str:
+    """«web» (la de las 4), «carrusel» (la de las 22) o "" (un horario que no es de la agenda)."""
+    hm = (inicio.hour, inicio.minute)
+    if hm not in corridas_del_dia(inicio):
+        return ""
+    return {CORRIDA_WEB: "web", CORRIDA_CARRUSEL: "carrusel"}.get(hm, "")
+
+
 def topes(inicio: datetime) -> dict:
-    """{categoría: cuántas en esta corrida} (NAC_AGENDA_<CAT> cambia las de lunes a viernes)."""
+    """{categoría: cuántas en esta corrida}. v8: a las 4, WEB (NAC_WEB_<CAT>); a las 22, las generales del
+    carrusel (NAC_CARRUSEL_NOTAS)."""
     if (inicio.hour, inicio.minute) not in corridas_del_dia(inicio):
         return {}
+    if modo(inicio) == "web":
+        salida = {}
+        for cat, defecto in WEB.items():
+            n = _entero(f"NAC_WEB_{cat.upper()}", defecto)
+            if n:
+                salida[cat] = n
+        return salida
+    if modo(inicio) == "carrusel":
+        return {GENERALES: min(10, _entero("NAC_CARRUSEL_NOTAS", CARRUSEL_NOTAS))}
     if es_finde(inicio):
         return dict(FINDE)
     salida = {}
@@ -157,7 +201,9 @@ def topes(inicio: datetime) -> dict:
 
 
 def maximo(inicio: datetime):
-    """Cuántos posteos como mucho en la corrida (el finde, las 6 más virales); None = la suma de los topes."""
+    """Cuántos posteos como mucho en la corrida; None = la suma de los topes (siempre, desde la v8)."""
+    if modo(inicio):
+        return None
     return _entero("NAC_POR_CORRIDA_FINDE", POR_CORRIDA_FINDE) if es_finde(inicio) else None
 
 

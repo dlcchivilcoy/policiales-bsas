@@ -1585,5 +1585,19 @@ chequear("buzón: se sube al repo unido con lo que ya estaba allá (y reintenta 
          and "[skip ci]" in _cli.puts[-1]["message"])
 _DIST.BUZON = _buzon_real
 
+# 24/10/2026: policiales a las 17 y a las 20, todos los días; de las 3 de la pasada, primero las que traen video.
+import importlib.util as _ilu  # noqa: E402
+_spec = _ilu.spec_from_file_location("_cupo_real", Path(_CUPO.__file__))
+_cupo_real = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_cupo_real)
+chequear("policiales: pasadas a las 17 y a las 20, todos los días (sin grilla propia del finde)",
+         _cupo_real.PASADAS_AR == ((17, 0), (20, 0)) and _cupo_real.PASADAS_FINDE == ()
+         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((17, 0), (20, 0)) and _cupo_real.MAX_DEFAULT == 3)
+_sin_video = {"url_original": "https://a/1", "viral": 9, "orden": 1, "guion": {"titular": "Sin video"}}
+_con_video = {"url_original": "https://a/2", "viral": 6, "orden": 2, "tenia_video": True, "guion": {"titular": "Con video"}}
+_entran, _fuera = PUB.solo_las_que_entran([(_sin_video, "a.mp4"), (_con_video, "b.mp4")], {}, 1, set())
+chequear("policiales: con un solo lugar, entra el reel con video aunque el otro sea más viral",
+         [p["url_original"] for p, _m in _entran] == ["https://a/2"] and _fuera[0]["titular"] == "Sin video")
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
