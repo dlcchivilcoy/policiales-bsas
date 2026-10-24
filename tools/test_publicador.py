@@ -1590,14 +1590,64 @@ import importlib.util as _ilu  # noqa: E402
 _spec = _ilu.spec_from_file_location("_cupo_real", Path(_CUPO.__file__))
 _cupo_real = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_cupo_real)
-chequear("policiales: pasadas a las 17 y a las 20, todos los días (sin grilla propia del finde)",
-         _cupo_real.PASADAS_AR == ((17, 0), (20, 0)) and _cupo_real.PASADAS_FINDE == ()
-         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((17, 0), (20, 0)) and _cupo_real.MAX_DEFAULT == 3)
+chequear("policiales: UNA corrida a las 18:30 todos los días, máximo 5 (19:00 a 21:00, 24/10/2026 noche)",
+         _cupo_real.PASADAS_AR == ((18, 30),) and _cupo_real.PASADAS_FINDE == ()
+         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((18, 30),) and _cupo_real.MAX_DEFAULT == 5)
 _sin_video = {"url_original": "https://a/1", "viral": 9, "orden": 1, "guion": {"titular": "Sin video"}}
 _con_video = {"url_original": "https://a/2", "viral": 6, "orden": 2, "tenia_video": True, "guion": {"titular": "Con video"}}
 _entran, _fuera = PUB.solo_las_que_entran([(_sin_video, "a.mp4"), (_con_video, "b.mp4")], {}, 1, set())
 chequear("policiales: con un solo lugar, entra el reel con video aunque el otro sea más viral",
          [p["url_original"] for p, _m in _entran] == ["https://a/2"] and _fuera[0]["titular"] == "Sin video")
+
+
+# --- 24/10/2026 (noche): policiales en CARRUSEL «deslizá y leé» en Instagram y Facebook ---
+import tempfile as _tfc  # noqa: E402
+from reels import flujo as _FL  # noqa: E402
+os.environ.pop("POL_FORMATO", None)
+chequear("carrusel: de fábrica policiales va en carrusel (POL_FORMATO=reel vuelve al reel)", _FL.formato_redes() == "carrusel")
+_gc = {"volanta": "Chacabuco", "titular": "Detuvieron a dos jóvenes tras un allanamiento en Chacabuco",
+       "bajada": "La policía secuestró droga y un arma en una vivienda del barrio Los Pinos.",
+       "nota_web": "Párrafo uno de la nota con lo que pasó, a quién, dónde y cuándo ocurrió el hecho.\n\n"
+                   "Párrafo dos: el operativo empezó a la madrugada y participaron varias dependencias policiales.\n\n"
+                   "Párrafo tres: los detenidos quedaron a disposición de la fiscalía de turno de Junín.",
+       "laminas": []}
+chequear("carrusel: sin láminas de la IA, salen de los párrafos de la nota (desde el segundo)",
+         [l["titulo"] for l in _FL.laminas_de(_gc)] == ["Qué pasó", "Los detalles"])
+_gc["laminas"] = [{"titulo": f"Lámina {i}", "texto": "Texto de la lámina con datos del hecho y algo más."} for i in range(4)]
+with _tfc.TemporaryDirectory() as _tc:
+    from PIL import Image as _ImC
+    _foto = Path(_tc) / "foto.jpg"
+    _ImC.new("RGB", (1200, 800), (90, 90, 90)).save(_foto)
+    _sl = _FL.armar_carrusel(_gc, _foto, Path(_tc), "01_chacabuco")
+    chequear("carrusel: portada con la foto + una lámina por cada una de la IA, todas 4:5",
+             len(_sl) == 5 and all(_ImC.open(x).size == (1080, 1350) for x in _sl))
+    _pz = {"formato": "carrusel", "slides": _sl, "localidad_hecho": "Chacabuco", "guion": _gc,
+           "descripcion_tiktok": "Detuvieron a dos jóvenes.\n\n📲 Más noticias de Chacabuco en www.diario\n\n#Policiales"}
+    chequear("carrusel: las placas se encuentran (también al lado del lote)", len(PUB.slides_de(_pz, Path(_tc))) == 5
+             and len(PUB.slides_de(dict(_pz, slides=["C:\\otra\\" + Path(x).name for x in _sl]), Path(_tc))) == 5
+             and PUB.slides_de(dict(_pz, formato="reel"), Path(_tc)) == [])
+    _txt = PUB.texto_carrusel(_pz, "instagram")
+    chequear("carrusel: el texto invita a deslizar, antes de la línea del sitio",
+             _txt.index("👉 Deslizá") < _txt.index("📲"))
+    _ped, _sub = [], []
+    _cl0, _pc0, _sr0, _pe0 = PUB._contenedor_listo, PUB._publicar_contenedor, PUB.subir_a_release, PUB._pedir
+    PUB._contenedor_listo = lambda uid, tok, params: _ped.append(dict(params)) or f"c{len(_ped)}"
+    PUB._publicar_contenedor = lambda uid, tok, cid, cap: "m1"
+    PUB.subir_a_release = lambda ruta, nombre: _sub.append(nombre) or f"https://gh/{nombre}"
+    _fbp = []
+    PUB._pedir = lambda m, u, tok="", **k: _fbp.append((u, k.get("data") or {})) or type(
+        "R", (), {"status_code": 200, "json": lambda self: {"id": f"f{len(_fbp)}"}})()
+    try:
+        _ri = PUB.publicar_instagram(_pz, Path(_tc) / "01_chacabuco.mp4", "lote_01_chacabuco.mp4")
+        _rf = PUB.publicar_facebook(_pz, Path(_tc) / "01_chacabuco.mp4", "https://diario/n/x")
+    finally:
+        PUB._contenedor_listo, PUB._publicar_contenedor, PUB.subir_a_release, PUB._pedir = _cl0, _pc0, _sr0, _pe0
+    chequear("carrusel: Instagram sube 5 hijos y un CAROUSEL (no el reel)",
+             _ri.get("formato") == "carrusel" and sum(1 for x in _ped if x.get("is_carousel_item")) == 5
+             and _ped[-1].get("media_type") == "CAROUSEL" and not any("mp4" in n for n in _sub))
+    chequear("carrusel: Facebook arma un álbum (5 fotos sin publicar + 1 posteo con el link de la nota)",
+             _rf.get("formato") == "carrusel" and sum(1 for u, _d in _fbp if u.endswith("/photos")) == 5
+             and sum(1 for u, d in _fbp if u.endswith("/feed") and "https://diario/n/x" in d.get("message", "")) == 1)
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

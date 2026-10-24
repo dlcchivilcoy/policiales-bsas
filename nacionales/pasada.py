@@ -92,6 +92,12 @@ PENALIDAD_CATEGORIA = 12    # puntos que pierde una categoría por cada pieza qu
 CARRUSEL_MAX = 10           # diapositivas, una por nota (el tope de Instagram; sin tapa desde el 12/10)
 CARRUSEL_MIN = 2
 HORA_CARRUSEL = (22, 0)
+# 24/10/2026 (noche, «nacionales: hacer un reel que se postee 23 hs; si necesita hacer la corrida antes, tipo
+# 22 hs, hacela»): el resumen de las 10 noticias del día sale como REEL a las 23:00. La corrida sigue a las
+# 22 (elige, sube a la web lo nuevo y arma el video) y espera hasta las 23 para publicar.
+# NAC_RESUMEN_FORMATO=carrusel vuelve al carrusel de las 22.
+HORA_RESUMEN_REEL = (23, 0)
+SEG_POR_PLACA_RESUMEN = 5
 HORAS_TEMA = 24             # un tema ya contado no se repite en este lapso
 MAX_ESPERA_CARRUSEL = 100   # minutos: más que esto no se espera (la pasada vendría muy atrasada)
 
@@ -613,6 +619,66 @@ def carrusel_facebook() -> bool:
     return (os.environ.get("NAC_CARRUSEL_FB") or "1").strip() != "0"
 
 
+def resumen_formato() -> str:
+    return "carrusel" if (os.environ.get("NAC_RESUMEN_FORMATO") or "").strip().lower() == "carrusel" else "reel"
+
+
+def placa_vertical(jpg: Path, destino: Path, cuando: datetime) -> Path:
+    """La placa 4:5 del resumen en un cuadro 9:16 (1080x1920): arriba «NOTICIAS NACIONALES» y la fecha,
+    abajo el sitio, sobre el grafito de las placas."""
+    from PIL import Image, ImageDraw
+    lienzo = Image.new("RGB", (1080, 1920), P.GRAFITO_OSCURO)
+    placa = Image.open(jpg).convert("RGB").resize((1080, 1350))
+    lienzo.paste(placa, (0, 285))
+    d = ImageDraw.Draw(lienzo)
+    f1, f2, f3 = P.fuente(64, 800), P.fuente(40, 500), P.fuente(38, 600)
+    for texto, f, y, color in (("NOTICIAS NACIONALES", f1, 120, P.NARANJA),
+                               (f"{P.fecha_larga(cuando)} de {cuando.year}".capitalize(), f2, 205, P.GRIS),
+                               (WEB.SITIO, f3, 1720, P.BLANCO)):
+        ancho = d.textlength(texto, font=f)
+        d.text(((1080 - ancho) / 2, y), texto, font=f, fill=color)
+    Path(destino).parent.mkdir(parents=True, exist_ok=True)
+    lienzo.save(destino, quality=92)
+    return Path(destino)
+
+
+def video_del_resumen(jpgs: list, destino: Path, cuando: datetime, seg: float = SEG_POR_PLACA_RESUMEN) -> tuple:
+    """(mp4 9:16 con las placas una detrás de otra, portada). `seg` segundos cada una, pista muda."""
+    import subprocess
+    import imageio_ffmpeg
+    destino = Path(destino)
+    verticales = [placa_vertical(j, destino.with_name(f"{destino.stem}_v{i:02d}.jpg"), cuando)
+                  for i, j in enumerate(jpgs, 1)]
+    cmd = [imageio_ffmpeg.get_ffmpeg_exe(), "-loglevel", "error", "-y"]
+    for v in verticales:
+        cmd += ["-loop", "1", "-framerate", "30", "-t", f"{seg}", "-i", str(v)]
+    n = len(verticales)
+    cmd += ["-f", "lavfi", "-t", f"{seg * n}", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
+    filtro = "".join(f"[{i}:v]scale=1080:1920,setsar=1,format=yuv420p[v{i}];" for i in range(n))
+    filtro += "".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0[v]"
+    cmd += ["-filter_complex", filtro, "-map", "[v]", "-map", f"{n}:a", "-c:v", "libx264", "-preset", "medium",
+            "-crf", "23", "-r", "30", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-shortest",
+            "-movflags", "+faststart", str(destino)]
+    subprocess.run(cmd, check=True, capture_output=True)
+    return destino, verticales[0]
+
+
+def _esperar_hasta(hora: tuple):
+    objetivo = _ahora().replace(hour=hora[0], minute=hora[1], second=0, microsecond=0)
+    falta = (objetivo - _ahora()).total_seconds()
+    if 0 < falta <= 3 * 3600:
+        print(f"  El resumen sale a las {hora[0]:02d}:{hora[1]:02d}: espero {falta / 60:.0f} min…", flush=True)
+        _dormir(falta)
+
+
+def publicar_resumen_reel(mp4: Path, portada: Path, caption: str, texto_fb: str, marca: str) -> dict:
+    res = _resultado(publicar_reel_instagram, mp4, caption, marca, str(portada))
+    if carrusel_facebook():
+        pieza_fb = {"descripcion_tiktok": texto_fb, "video": {"duracion": SEG_POR_PLACA_RESUMEN * 10, "alto": 1920}}
+        res["facebook"] = _resultado(PUB.publicar_facebook, pieza_fb, mp4)
+    return res
+
+
 def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas: list = None) -> dict:
     """El carrusel de Instagram (y, desde el 24/10/2026, el álbum de Facebook): una diapositiva por nota.
     `elegidas` [(url, registro)] (corrida_carrusel); sin eso, lo publicado desde el carrusel anterior."""
@@ -639,6 +705,17 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas
                                      idx=i, total=total, semilla=_semilla(u), foto=foto, estilo=estilo))
     titulares = [p["titular"] for _, p in elegidas]
     caption = caption_carrusel(titulares, ahora)
+    if resumen_formato() == "reel":
+        mp4, portada = video_del_resumen(jpgs, carpeta / f"resumen_{ahora:%Y%m%d}.mp4", ahora)
+        if not publicar:
+            return {"estado": "simulado", "formato": "reel", "diapositivas": len(jpgs), "caption": caption,
+                    "archivo": str(mp4), "portada": str(portada)}
+        _esperar_hasta(HORA_RESUMEN_REEL)
+        res = publicar_resumen_reel(mp4, portada, caption, texto_album_facebook(titulares, ahora),
+                                    ahora.strftime("%Y%m%d"))
+        res.update(formato="reel", diapositivas=len(jpgs), piezas=[u for u, _ in elegidas])
+        mem["carruseles"][dia] = res
+        return res
     if not publicar:
         return {"estado": "simulado", "diapositivas": len(jpgs), "caption": caption,
                 "archivos": [str(j) for j in jpgs]}

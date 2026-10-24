@@ -446,3 +446,16 @@ por día en cada red por potencial viral, las programa en Buffer y evita repetir
   `descripcion_tiktok` de siempre.
 - `tools/guardar_estado.py` combina el buzón por id (nunca pisa lo de otra pasada).
 - Apagar: variable `DISTRIBUIDOR_POLICIALES=0`. Pruebas: `tools/test_distribuidor.py`.
+
+## 24/10/2026 (noche): policiales en CARRUSEL, una corrida a las 18:30
+
+- Corre una sola vez por día, a las 18:30 (`cupo.PASADAS_SEMANA = ((18, 30),)`), y publica hasta 5
+  piezas: 19:00, 19:30, 20:00, 20:30 y 21:00. El respaldo de GitHub corre a las 18:50.
+- En Instagram y Facebook sale un carrusel «deslizá y leé»:
+  - una portada con la foto real (`placa.slide_carrusel`);
+  - 3 a 5 láminas de texto (`placa.lamina_texto`), que la IA escribe en la misma llamada del guion
+    (campo `laminas`). Si la IA no las escribe, salen de los párrafos de la nota web.
+- Instagram publica un CAROUSEL; Facebook, un álbum con el link a la nota.
+- El reel se sigue armando: va a YouTube como Short y a la nota de la web.
+- Si no alcanza el texto para un carrusel, sale el reel.
+- `POL_FORMATO=reel` vuelve al reel.

@@ -155,3 +155,13 @@ agenda (`nacionales/agenda.py`). TODO sale como **reel con el video original de 
 «Mundo» = internacionales con algo policial o de violencia/conflicto (`agenda.es_mundo`).
 
 YouTube: un reel de más de 3 minutos (sin la placa) no se sube (`YT_SHORT_MAX_SEG`); sale en Instagram y Facebook.
+
+## 24/10/2026 (noche): el resumen de las 22 pasa a ser un REEL a las 23
+
+La corrida de las 22 sigue igual: elige las 10 noticias más importantes del día y sube a la web lo nuevo.
+Lo que cambia es la salida: las 10 placas se pasan a un video vertical 1080x1920. Cada placa dura 5
+segundos y lleva arriba «NOTICIAS NACIONALES» y la fecha, y abajo el sitio. La corrida espera hasta las
+23:00 y lo publica como reel en Instagram y en Facebook. El texto de Facebook lleva el link a la sección.
+
+- Código: `pasada.video_del_resumen`, `placa_vertical`, `publicar_resumen_reel` y `HORA_RESUMEN_REEL`.
+- `NAC_RESUMEN_FORMATO=carrusel` vuelve al carrusel de las 22.

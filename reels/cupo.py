@@ -20,7 +20,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 ARCHIVO = RAIZ / "estado" / "cupo_pasadas.json"
-MAX_DEFAULT = 3
+MAX_DEFAULT = 5                # 24/10/2026: 5 por corrida (19:00 a 21:00, uno cada 30 minutos)
 # Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Si
 # cambian los horarios de cron-job.org, se cambian acá.
 # 19/10/2026: el editor sacó las de las 09:05, 12:05, 15:05 y 21:05.
@@ -30,7 +30,10 @@ MAX_DEFAULT = 3
 # 24/10/2026 («dejar solo 2 corridas de policiales a las 17 hs y 20 hs, máximo 3 policiales por corrida con
 # posteos cada 30 minutos, priorizando reel con video»): 17 y 20 TODOS los días (el finde ya no tiene grilla
 # propia: las nacionales del finde salen solo en el carrusel de las 22).
-PASADAS_SEMANA = ((17, 0), (20, 0))
+# 24/10/2026 (noche, «1 corrida a una hora que genere 1 posteo cada 30 minutos entre 19 hs a 21 hs, que serían 5
+# posteos máximo», ahora en carrusel «deslizá y leé»): UNA corrida a las 18:30 todos los días; turnos.py
+# (DEMORA_PRIMERO 30, MINUTOS 30) la publica a las 19:00, 19:30, 20:00, 20:30 y 21:00.
+PASADAS_SEMANA = ((18, 30),)
 PASADAS_FINDE = ()
 PASADAS_AR = PASADAS_SEMANA
 

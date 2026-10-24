@@ -534,7 +534,86 @@ def contenedor_con_portada(uid: str, tok: str, params: dict, portada: str, nombr
     return _contenedor_listo(uid, tok, params), "de Instagram"
 
 
+# =============================================================================
+# Carrusel «deslizá y leé» (24/10/2026): portada con la foto + láminas, en vez del reel
+# =============================================================================
+
+def slides_de(pieza: dict, carpeta: Path) -> list:
+    """Las placas del carrusel de la pieza ([] si va como reel). Como el .mp4, si la ruta es de otra
+    máquina se buscan al lado del lote."""
+    if pieza.get("formato") != "carrusel":
+        return []
+    salida = []
+    for s_ in pieza.get("slides") or []:
+        ruta = Path(s_)
+        if not ruta.exists():
+            ruta = Path(carpeta) / re.split(r"[\\/]", s_)[-1]
+        if not ruta.exists():
+            return []                                 # falta una placa: va el reel
+        salida.append(ruta)
+    return salida if len(salida) >= 3 else []
+
+
+def texto_carrusel(pieza: dict, red: str, url_web: str = "") -> str:
+    """El texto del posteo con la invitación a deslizar, antes de la línea del link o de los hashtags."""
+    partes = texto_del_posteo(pieza, red, url_web).split("\n\n")
+    j = next((k for k, x in enumerate(partes) if x.startswith(("📲", "#"))), len(partes))
+    partes.insert(j, "👉 Deslizá y leé toda la información.")
+    texto = "\n\n".join(partes)
+    return texto[:MAX_CAPTION_IG - 1].rstrip() + "…" if red == "instagram" and len(texto) > MAX_CAPTION_IG else texto
+
+
+def publicar_carrusel_instagram(pieza: dict, slides: list, nombre: str) -> dict:
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    caption = texto_carrusel(pieza, "instagram")
+    hijos = []
+    for i, jpg in enumerate(slides):
+        url = subir_a_release(Path(jpg), f"{Path(nombre).stem}_c{i + 1:02d}.jpg")
+        hijos.append(_contenedor_listo(uid, tok, {"image_url": url, "is_carousel_item": "true"}))
+    params = {"media_type": "CAROUSEL", "children": ",".join(hijos), "caption": caption}
+    ubic = UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
+    if ubic:
+        params["location_id"] = ubic
+    try:
+        padre = _contenedor_listo(uid, tok, params)
+    except FalloRed as e:
+        if not ubic or "location" not in str(e).lower():
+            raise
+        params.pop("location_id", None)              # una ubicación rechazada no cuesta el posteo
+        ubic = ""
+        padre = _contenedor_listo(uid, tok, params)
+    media_id = _publicar_contenedor(uid, tok, padre, caption)
+    return {"id": media_id or None, "formato": "carrusel", "diapositivas": len(slides), "ubicacion": ubic or None}
+
+
+def publicar_album_facebook(pieza: dict, slides: list, url_web: str = "") -> dict:
+    """Lo que en Instagram es el carrusel: las fotos se suben sin publicar y un solo posteo las junta."""
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    ids = []
+    for jpg in slides:
+        r = _pedir("POST", f"{GRAPH}/{pid}/photos", tok, data={"published": "false"},
+                   files={"source": (Path(jpg).name, Path(jpg).read_bytes(), "image/jpeg")})
+        if r.status_code >= 400:
+            raise FalloRed(_error(r, "Facebook (foto del álbum)"))
+        ids.append(str((r.json() or {}).get("id") or ""))
+    data = {"message": texto_carrusel(pieza, "facebook", url_web)}
+    for i, fid in enumerate(ids):
+        data[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})
+    try:
+        r = _pedir("POST", f"{GRAPH}/{pid}/feed", tok, data=data)
+    except _Cortado as e:
+        raise SinConfirmar(f"Facebook (álbum): {e}")       # pudo haber salido: no se reintenta
+    if r.status_code >= 400:
+        raise FalloRed(_error(r, "Facebook (álbum)"))
+    return {"id": str((r.json() or {}).get("id") or ""), "formato": "carrusel", "fotos": len(ids)}
+
+
 def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
+    slides = slides_de(pieza, Path(mp4).parent)
+    if slides:
+        return publicar_carrusel_instagram(pieza, slides, nombre)
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     url = subir_a_release(mp4, nombre)
@@ -629,6 +708,9 @@ FB_REEL_MAX_SEG = 90
 
 
 def publicar_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
+    slides = slides_de(pieza, Path(mp4).parent)
+    if slides:
+        return publicar_album_facebook(pieza, slides, url_web)
     if float((pieza.get("video") or {}).get("duracion") or 0) > FB_REEL_MAX_SEG:
         return publicar_video_facebook(pieza, mp4, url_web)
     with tempfile.TemporaryDirectory(prefix="fb_") as t:

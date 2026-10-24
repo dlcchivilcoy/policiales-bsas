@@ -55,6 +55,43 @@ PESO_TIPO = {
 }
 PESO_GRAVEDAD = {"fatal": 40, "grave": 25, "media": 10, "leve": 0}
 
+# FORMATO EN INSTAGRAM Y FACEBOOK (24/10/2026, pedido del editor: «policiales scrappeados: cambiarlo a formato
+# carrusel estilo deslizá y leé»): la portada con la foto real del hecho y 3 a 5 láminas de texto (las mismas
+# placas del carrusel explicativo de nacionales). El reel se sigue armando: va a YouTube como Short y a la
+# nota de la web. POL_FORMATO=reel vuelve al reel en las redes.
+TITULOS_RESPALDO = ("Qué pasó", "Los detalles", "La investigación", "Cómo sigue", "Lo que se sabe")
+
+
+def formato_redes() -> str:
+    return "reel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "reel" else "carrusel"
+
+
+def laminas_de(g: dict) -> list:
+    """Las láminas del guion; si la IA no las escribió (o vinieron menos de 2), los párrafos de la nota de
+    la web desde el segundo (el primero ya lo cuenta la portada), con títulos genéricos."""
+    laminas = [l for l in (g.get("laminas") or []) if l.get("titulo") and l.get("texto")]
+    if len(laminas) >= 2:
+        return laminas[:5]
+    parrafos = [p.strip() for p in (g.get("nota_web") or "").split("\n\n") if len(p.strip()) >= 60][1:]
+    return [{"titulo": t, "texto": x[:320]} for t, x in zip(TITULOS_RESPALDO, parrafos)][:4]
+
+
+def armar_carrusel(g: dict, foto, carpeta: Path, nombre: str) -> list:
+    """Portada + láminas, 1080x1350, en `carpeta`. [] si no alcanza para un carrusel (menos de 3)."""
+    from nacionales import placa as P
+    laminas = laminas_de(g)
+    total = 1 + len(laminas)
+    if total < 3:
+        return []
+    semilla = sum(ord(c) for c in nombre)
+    slides = [str(P.slide_carrusel("Policiales", g.get("volanta") or "", g["titular"], g.get("bajada") or "",
+                                   carpeta / f"{nombre}_c01.jpg", sitio=SITIO, idx=1, total=total,
+                                   semilla=semilla, foto=foto))]
+    for i, l in enumerate(laminas, 2):
+        slides.append(str(P.lamina_texto("Policiales", l["titulo"], l["texto"], carpeta / f"{nombre}_c{i:02d}.jpg",
+                                         idx=i, total=total, sitio=SITIO, semilla=semilla)))
+    return slides
+
 
 def _ultimo_scrapeo() -> Path | None:
     archivos = sorted(glob.glob(str(RAIZ / "salida" / "policiales_*.json")))
@@ -562,6 +599,17 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
             R.placa_fija(g, foto, img)
         except Exception as e:
             avisos.append(f"No se pudo armar la vista fija: {type(e).__name__}: {e}")
+    # El carrusel de Instagram y Facebook (24/10/2026). La portada lleva la foto real; si el medio solo
+    # trajo video, un cuadro del video.
+    slides = []
+    if formato_redes() == "carrusel" and not g.get("fuera_de_temario"):
+        tapa = foto or R.cuadro_de_video(clip, tmp_dir / f"reel_cuadro_{idx}.jpg") if clip else foto
+        try:
+            slides = armar_carrusel(g, tapa, carpeta, nombre)
+        except Exception as e:                      # noqa: BLE001 — sin carrusel, sale el reel
+            avisos.append(f"No se pudo armar el carrusel ({type(e).__name__}: {e}); va el reel.")
+        if not slides:
+            avisos.append("No alcanzó el texto para un carrusel: en Instagram y Facebook va el reel.")
 
     # El camino SIN IA copia oraciones del medio tal cual y arma el zocalo truncando el
     # titular. Sirve para VER el flujo, no para publicar: publicar texto copiado del medio
@@ -641,6 +689,9 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "publicado": FR.publicado_utc(nota),
         "placa": str(img),
         "video": vid,
+        # «carrusel» (portada + láminas, `slides`) o «reel» en Instagram y Facebook (24/10/2026).
+        "formato": "carrusel" if slides else "reel",
+        "slides": slides,
         "estetica": f"bot {R.origen()}",
         "avisos": avisos,
     }

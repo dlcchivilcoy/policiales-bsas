@@ -22,6 +22,8 @@ from PIL import Image
 # Las pruebas de las secciones 1-10 son de la mecánica de antes (carrusel en generales, IA, espectáculos…):
 # corren con «todo reel» apagado; la agenda del 20/10/2026 (sección 11) lo prende.
 os.environ["NAC_TODO_REEL"] = "0"
+# El resumen de la noche es un REEL a las 23 desde el 24/10/2026 (prueba propia al final); lo de antes, carrusel.
+os.environ["NAC_RESUMEN_FORMATO"] = "carrusel"
 
 from nacionales import filtro as F, guion as NG, infobae as IB, pasada as PA, placa as P
 from reels import publicador as PUB, turnos as TURNOS, web as WEB
@@ -978,6 +980,45 @@ chequear("agenda 22: ni Short ni reels", not any(l[0] == "youtube" for l in llam
 chequear("carrusel: el texto numera hasta 10",
          "🔟 Diez" in PA.caption_carrusel([f"T{i}" for i in range(9)] + ["Diez"], _lun(22)))
 os.environ["NAC_TODO_REEL"] = "0"
+
+# --- 24/10/2026 (noche): el resumen de las 10 del día es un REEL que se publica a las 23:00 ---
+os.environ.pop("NAC_RESUMEN_FORMATO")
+chequear("resumen: de fábrica es reel (NAC_RESUMEN_FORMATO=carrusel vuelve al carrusel)", PA.resumen_formato() == "reel")
+_mar = lambda h, m=0: datetime(2026, 10, 20, h, m, tzinfo=AR)      # noqa: E731 — martes
+reloj["ahora"] = _mar(22, 1)
+_noche2 = [dict(nota_cat("El Banco Central bajó la tasa de interés por segunda vez en el mes", "economia", "bm1"),
+                fecha=_mar(21).timestamp()),
+           dict(nota_cat("Diputados aprobó la ley de financiamiento universitario", "politica", "bm2"),
+                fecha=_mar(21).timestamp()),
+           dict(nota_cat("Vacunación antigripal: amplían la campaña a mayores de 50", "sociedad", "bm3"),
+                fecha=_mar(20).timestamp())]
+llamadas.clear()
+_reels, _fb_reels = [], []
+_pub_reel0, _pub_fb0 = PA.publicar_reel_instagram, PUB.publicar_facebook
+PA.publicar_reel_instagram = lambda mp4, cap, marca, portada="": _reels.append(
+    (Path(mp4), cap, Path(portada), reloj["ahora"])) or {"id": "reel23"}
+PUB.publicar_facebook = lambda pieza, mp4, url_web="": _fb_reels.append((pieza, Path(mp4))) or {"id": "fbreel"}
+try:
+    inf_r = PA.pasada(True, redactar=redactar_lam, notas=_noche2, notas_variedad=[], agenda=True,
+                      leer_pagina=lambda u: SIN)
+finally:
+    PA.publicar_reel_instagram, PUB.publicar_facebook = _pub_reel0, _pub_fb0
+_c = inf_r.get("carrusel") or {}
+chequear("resumen 22→23: la corrida de las 22 espera y el reel sale a las 23:00",
+         len(_reels) == 1 and _reels[0][3].hour == 23 and _reels[0][3].minute == 0 and _c.get("formato") == "reel")
+if _reels:
+    from PIL import Image as _ImR
+    import subprocess as _sp, imageio_ffmpeg as _iff
+    _info = _sp.run([_iff.get_ffmpeg_exe(), "-i", str(_reels[0][0])], capture_output=True, text=True).stderr
+    chequear("resumen: un video vertical 1080x1920 con una placa cada 5 segundos, portada 9:16",
+             "1080x1920" in _info and _ImR.open(_reels[0][2]).size == (1080, 1920)
+             and f"Duration: 00:00:{5 * (_c.get('diapositivas') or 0):02d}" in _info)
+    chequear("resumen: el texto del reel es el del resumen (sin carrusel de Instagram)",
+             _reels[0][1].startswith("Noticias nacionales de hoy") and not any(l == ("ig_contenedor", "CAROUSEL")
+                                                                                for l in llamadas))
+chequear("resumen: el mismo reel sale en Facebook con el link a la sección",
+         len(_fb_reels) == 1 and PA.SECCION_WEB in _fb_reels[0][0]["descripcion_tiktok"]
+         and (_c.get("facebook") or {}).get("estado") == "ok")
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
