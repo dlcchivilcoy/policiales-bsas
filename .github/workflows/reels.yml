@@ -54,7 +54,7 @@ on:
     # (12:05 y 15:05 Argentina —«5 15» y «5 18»— las sacó el editor el 19/10/2026)
     # (18:05 y 23:35 Argentina —«5 21» y «35 2»— el editor las cambió el 20/10/2026 por estas:)
     # (lun-vie 20 y 22, sáb-dom 10, 14, 18 y 21: el editor las cambió el 24/10/2026 por estas, todos los días)
-    - cron: "50 21 * * *"   # 18:50 Argentina: respaldo de la corrida de las 18:30 (24/10/2026)
+    - cron: "30 21 * * *"   # 18:30 Argentina (24/10/2026). Mismo horario que la corrida: tools/respaldo.py busca desde ahí
   workflow_dispatch:
     inputs:
       cuantos:

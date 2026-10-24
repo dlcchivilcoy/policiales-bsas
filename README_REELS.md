@@ -450,7 +450,7 @@ por día en cada red por potencial viral, las programa en Buffer y evita repetir
 ## 24/10/2026 (noche): policiales en CARRUSEL, una corrida a las 18:30
 
 - Corre una sola vez por día, a las 18:30 (`cupo.PASADAS_SEMANA = ((18, 30),)`), y publica hasta 5
-  piezas: 19:00, 19:30, 20:00, 20:30 y 21:00. El respaldo de GitHub corre a las 18:50.
+  piezas: 19:00, 19:30, 20:00, 20:30 y 21:00. El respaldo de GitHub tiene el mismo horario (18:30): GitHub lo larga tarde y `tools/respaldo.py` solo lo deja correr si la de cron-job.org no terminó.
 - En Instagram y Facebook sale un carrusel «deslizá y leé»:
   - una portada con la foto real (`placa.slide_carrusel`);
   - 3 a 5 láminas de texto (`placa.lamina_texto`), que la IA escribe en la misma llamada del guion
