@@ -13353,6 +13353,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1de6924f0c30672a": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 73,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en los costos de implantación de los productores de la zona núcleo y su hábito de compra.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14274,7 +14295,8 @@
       "https://bichosdecampo.com/un-importante-frigorifico-exportador-confirmo-que-el-temor-de-los-productores-era-real-gorina-comenzara-a-aplicar-descuentos-por-la-hacienda-que-no-haya-hecho-el-tramite-visec": "2026-10-24",
       "https://lanacion.com.ar/economia/campo/queria-ser-el-unicornio-del-agro-llego-a-valer-mas-de-us1000-millones-y-ahora-aprobaron-su-nid24102026": "2026-10-24",
       "https://agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html": "2026-10-24",
-      "https://bichosdecampo.com/como-un-simbolo-de-la-persistencia-de-la-educacion-salesiana-eduardo-pezuk-ahora-cosecha-las-plantas-que-el-mismo-planto-como-alumno-para-poder-elaborar-la-yerba-mate-don-bosco": "2026-10-24"
+      "https://bichosdecampo.com/como-un-simbolo-de-la-persistencia-de-la-educacion-salesiana-eduardo-pezuk-ahora-cosecha-las-plantas-que-el-mismo-planto-como-alumno-para-poder-elaborar-la-yerba-mate-don-bosco": "2026-10-24",
+      "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15194,7 +15216,8 @@
       "un importante frigorifico exportador confirmo que el temor de los productores era real gorina comenzara a aplicar descuentos por la hacienda que no haya hecho el tramite visec": "2026-10-24",
       "queria ser el unicornio del agro llego a valer mas de us 1000 millones y ahora aprobaron su liquidacion con el 98 4 de los votos": "2026-10-24",
       "ganaderia juan pedro colombo destaca estabilidad de precios y expectativas de crecimiento": "2026-10-24",
-      "como un simbolo de la persistencia de la educacion salesiana eduardo pezuk ahora cosecha las plantas que el mismo planto como alumno para poder elaborar la yerba mate don bosco": "2026-10-24"
+      "como un simbolo de la persistencia de la educacion salesiana eduardo pezuk ahora cosecha las plantas que el mismo planto como alumno para poder elaborar la yerba mate don bosco": "2026-10-24",
+      "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16114,7 +16137,8 @@
       "71cf3a931e8f47fd": "2026-10-24",
       "31475f3a19476dc7": "2026-10-24",
       "2c3328834669ac23": "2026-10-24",
-      "836b1ae24f6b5a6e": "2026-10-24"
+      "836b1ae24f6b5a6e": "2026-10-24",
+      "1de6924f0c30672a": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23793,6 +23817,69 @@
   ],
   "pendientes": [
     {
+      "id": "b5ded5fd98a5",
+      "rep": {
+        "id": "b5ded5fd98a5",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento/",
+        "canonical_url": "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento",
+        "titulo": "El mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a último momento",
+        "titulo_norm": "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento",
+        "descripcion": "El mercado internacional de fertilizantes nitrogenados entró en un periodo de pausa luego de la fuerte recuperación de precios registrada la semana anterior. “El hito determinante de la semana fue la confirmación oficial de que la agencia estatal india IPL logró adjudicar únicamente 410.000 toneladas de urea sobre su objetivo inicial de 1,70 millones de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/grafico1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-24T16:46-03:00",
+        "capturado": "2026-10-24T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "1de6924f0c30672a"
+      },
+      "grupo": [
+        {
+          "id": "b5ded5fd98a5",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento/",
+          "canonical_url": "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento",
+          "titulo": "El mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a último momento",
+          "titulo_norm": "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento",
+          "descripcion": "El mercado internacional de fertilizantes nitrogenados entró en un periodo de pausa luego de la fuerte recuperación de precios registrada la semana anterior. “El hito determinante de la semana fue la confirmación oficial de que la agencia estatal india IPL logró adjudicar únicamente 410.000 toneladas de urea sobre su objetivo inicial de 1,70 millones de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/grafico1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-24T16:46-03:00",
+          "capturado": "2026-10-24T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "1de6924f0c30672a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en los costos de implantación de los productores de la zona núcleo y su hábito de compra.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T17:00-03:00"
+    },
+    {
       "id": "96d4643b49f8",
       "rep": {
         "id": "96d4643b49f8",
@@ -24804,7 +24891,7 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T16:41:15-03:00",
+  "actualizado": "2026-10-24T17:01:16-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
