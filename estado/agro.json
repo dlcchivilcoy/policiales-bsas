@@ -12788,6 +12788,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bf30f867d63d118a": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 8,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 57,
+      "commercial_score": 56,
+      "subtema": "mercados",
+      "tema": "chicago",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Mueve precios globales de granos, de alto interés para el productor pero sin impacto local directo en manejo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        53
+      ]
     }
   },
   "indice": {
@@ -13677,7 +13702,8 @@
       "https://lanacion.com.ar/economia/campo/soja-visec-habilitan-una-modalidad-para-negociar-el-premio-sobre-la-soja-tradicional-nid23102026": "2026-10-23",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249001-decisiones-y-practicas-agronomicas-que-potencian-rindes-en-maiz-con-n-reussi-y-j-pellegrino.html": "2026-10-23",
       "https://lanacion.com.ar/economia/campo/cambio-de-habitos-crecio-un-6-la-demanda-de-pastas-y-las-familias-eligen-las-variedades-mas-nid23102026": "2026-10-23",
-      "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado": "2026-10-23"
+      "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado": "2026-10-23",
+      "https://bichosdecampo.com/no-esperes-un-milagro-los-fondos-agricolas-en-chicago-siguen-liquidando-posiciones-de-maiz-y-soja": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14565,7 +14591,8 @@
       "soja visec habilitan una modalidad para negociar el premio sobre la soja tradicional": "2026-10-23",
       "decisiones y practicas agronomicas que potencian rindes en maiz con n reussi y j pellegrino": "2026-10-23",
       "cambio de habitos crecio un 6 la demanda de pastas y las familias eligen las variedades mas economicas": "2026-10-23",
-      "biotecnologia veterinaria como acelerar el camino del laboratorio al mercado": "2026-10-23"
+      "biotecnologia veterinaria como acelerar el camino del laboratorio al mercado": "2026-10-23",
+      "no esperes un milagro los fondos agricolas en chicago siguen liquidando posiciones de maiz y soja": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15453,7 +15480,8 @@
       "809a415733e194cd": "2026-10-23",
       "ebc9ac506ea0f676": "2026-10-23",
       "e92f9d4eaa2a69d3": "2026-10-23",
-      "59fb0130262a4efd": "2026-10-23"
+      "59fb0130262a4efd": "2026-10-23",
+      "bf30f867d63d118a": "2026-10-23"
     }
   },
   "elegidas": [
@@ -23258,7 +23286,7 @@
       "cuando": "2026-10-22T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-23T22:03:40-03:00",
+  "actualizado": "2026-10-23T22:21:24-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
