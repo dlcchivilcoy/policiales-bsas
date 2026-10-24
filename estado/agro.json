@@ -13194,6 +13194,77 @@
         64,
         65
       ]
+    },
+    "e5e2cbdc497455aa": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 11,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 74,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "avicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Mueve inversiones millonarias pero el freno financiero limita su atractivo inmediato para el productor común de la zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cfb4a1f974fc90ad": {
+      "impacto_economico": 9,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "suelos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy valioso para asesores y agrónomos de la región pampeana, aunque es más conceptual que comercial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        68
+      ]
+    },
+    "309be635e512e9c5": {
+      "impacto_economico": 11,
+      "interes_productores": 10,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 66,
+      "commercial_score": 68,
+      "subtema": "ganaderia",
+      "tema": "frigorificos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante estrategia de integración ganadera, pero apunta a un nicho específico de productores ganaderos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        70
+      ]
     }
   },
   "indice": {
@@ -14104,7 +14175,10 @@
       "https://bichosdecampo.com/en-el-partido-de-9-de-julio-las-aguas-vuelven-a-cubrir-los-campos-y-cortar-los-caminos-mientras-estalla-la-comision-vial-disenada-por-funcionarios-y-productores-para-enfrentar-esa-crisis": "2026-10-24",
       "https://bichosdecampo.com/se-sortearon-los-sindicos-para-el-concurso-de-lacteos-veronica-que-podria-comenzar-a-andar-el-lunes-y-se-extenderia-en-un-tedioso-tramite-hasta-febrero-de-2028": "2026-10-24",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-24-octubre-2026": "2026-10-24",
-      "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas": "2026-10-24"
+      "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas": "2026-10-24",
+      "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo": "2026-10-24",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos": "2026-10-24",
+      "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15013,7 +15087,10 @@
       "en el partido de 9 de julio las aguas vuelven a cubrir los campos y cortar los caminos mientras estalla la comision vial disenada por funcionarios y productores para enfrentar esa crisis": "2026-10-24",
       "se sortearon los sindicos para el concurso de lacteos veronica que podria comenzar a andar el lunes y se extenderia en un tedioso tramite hasta febrero de 2028": "2026-10-24",
       "dolar blue a cuanto cotizan hoy en cordoba 24 octubre 2026": "2026-10-24",
-      "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas": "2026-10-24"
+      "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas": "2026-10-24",
+      "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo": "2026-10-24",
+      "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos": "2026-10-24",
+      "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15922,7 +15999,10 @@
       "28bad929359186e4": "2026-10-24",
       "7a7cd753cb5e1700": "2026-10-24",
       "8d1fbd4d87f5036f": "2026-10-24",
-      "28c289016cc93ee4": "2026-10-24"
+      "28c289016cc93ee4": "2026-10-24",
+      "e5e2cbdc497455aa": "2026-10-24",
+      "cfb4a1f974fc90ad": "2026-10-24",
+      "309be635e512e9c5": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23201,9 +23281,260 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_14ca01bdc0cf_portada.jpg"
+    },
+    {
+      "id": "3db5e0ff3064",
+      "cuando": "2026-10-24T11:00-03:00",
+      "titulo_original": "Avanza la cosecha estadounidense y achata los precios del maíz y de la soja",
+      "descripcion": "Hay una constelación de factores bajistas que genera una tendencia bajista de las cotizaciones de los granos gruesos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/avanza-la-cosecha-estadounidense-y-achata-los-precios-del-maiz-y-de-la-soja-nid24102026/",
+      "titular": "La cosecha estadounidense presiona a la baja los precios de soja",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja y maíz",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en el bolsillo del productor de la región núcleo por la caída de precios de los granos.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ba8d3c11-b343-4b95-9e0e-52e0c4fb5eff",
+          "slug": "cosecha-en-ee-uu-y-cautela-de-china-hunden-los-precios-1aaedf",
+          "url": "https://www.diariolacampaña.com.ar/n/cosecha-en-ee-uu-y-cautela-de-china-hunden-los-precios-1aaedf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1135374385564569",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18117579638082262",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3db5e0ff3064_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "96d4643b49f8",
+      "rep": {
+        "id": "96d4643b49f8",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo/",
+        "canonical_url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo",
+        "titulo": "El sector avícola necesita 300 millones de dólares para invertir: “Hay que modernizar 1.000 galpones para bajar costos y ganar competitividad”, advierte Franco Santángelo",
+        "titulo_norm": "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo",
+        "descripcion": "Desde hace rato que se escucha: La avicultura argentina necesita modernizar sus galpones de engorde de pollos. El objetivo sería mejorar la eficiencia, reducir costos y ganar competitividad para aprovechar las oportunidades del mercado mundial. De todos modos, el objetivo todavía queda lejos: el financiamiento escasea y la presión impositiva y laboral sigue pesando sobre […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/franco-santangelo-de-bichos.png",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-24T10:59-03:00",
+        "capturado": "2026-10-24T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e5e2cbdc497455aa"
+      },
+      "grupo": [
+        {
+          "id": "96d4643b49f8",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo/",
+          "canonical_url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo",
+          "titulo": "El sector avícola necesita 300 millones de dólares para invertir: “Hay que modernizar 1.000 galpones para bajar costos y ganar competitividad”, advierte Franco Santángelo",
+          "titulo_norm": "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo",
+          "descripcion": "Desde hace rato que se escucha: La avicultura argentina necesita modernizar sus galpones de engorde de pollos. El objetivo sería mejorar la eficiencia, reducir costos y ganar competitividad para aprovechar las oportunidades del mercado mundial. De todos modos, el objetivo todavía queda lejos: el financiamiento escasea y la presión impositiva y laboral sigue pesando sobre […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/franco-santangelo-de-bichos.png",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-24T10:59-03:00",
+          "capturado": "2026-10-24T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e5e2cbdc497455aa"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 11,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 74,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "avicultura",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Mueve inversiones millonarias pero el freno financiero limita su atractivo inmediato para el productor común de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T11:00-03:00"
+    },
+    {
+      "id": "3d8755953b52",
+      "rep": {
+        "id": "3d8755953b52",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos/",
+        "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos",
+        "titulo": "Los dilemas de la agronomía: Fernando García pide “prender los faros largos” y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
+        "titulo_norm": "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
+        "descripcion": "Fernando García pide que no lo traten de usted. Le parece que esa formalidad, que otros podrían interpretar como una señal de respeto, empieza a sonar a despedida. “Me están dando la salida”, bromea. Después de 45 campañas (así cuenta este profesional sus años de carrera) como agrónomo, este reconocido especialista en suelos y nutrición […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/En-el-campo-DiaCampoAAPRESID-SE-Cba-2003-e1706750611395.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-24T10:49-03:00",
+        "capturado": "2026-10-24T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cfb4a1f974fc90ad"
+      },
+      "grupo": [
+        {
+          "id": "3d8755953b52",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos/",
+          "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos",
+          "titulo": "Los dilemas de la agronomía: Fernando García pide “prender los faros largos” y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
+          "titulo_norm": "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
+          "descripcion": "Fernando García pide que no lo traten de usted. Le parece que esa formalidad, que otros podrían interpretar como una señal de respeto, empieza a sonar a despedida. “Me están dando la salida”, bromea. Después de 45 campañas (así cuenta este profesional sus años de carrera) como agrónomo, este reconocido especialista en suelos y nutrición […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/En-el-campo-DiaCampoAAPRESID-SE-Cba-2003-e1706750611395.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-24T10:49-03:00",
+          "capturado": "2026-10-24T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cfb4a1f974fc90ad"
+        }
+      ],
+      "score": {
+        "impacto_economico": 9,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "suelos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy valioso para asesores y agrónomos de la región pampeana, aunque es más conceptual que comercial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          68
+        ]
+      },
+      "cuando": "2026-10-24T11:00-03:00"
+    },
+    {
+      "id": "abd8b4397aff",
+      "rep": {
+        "id": "abd8b4397aff",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados/",
+        "canonical_url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados",
+        "titulo": "Contratos a largo plazo con productores e innovación genética: La estrategia de Muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
+        "titulo_norm": "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
+        "descripcion": "En un negocio en el que conseguir hacienda con las características que demandan los mercados internacionales se vuelve cada vez más importante, el frigorífico Muge apuesta a integrar producción y comercialización, trabajar con los productores mediante acuerdos de abastecimiento a largo plazo Con dos plantas de ciclo II , la empresa busca asegurarse volumen y […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/unnamed-47-e1792849464830.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-24T10:47-03:00",
+        "capturado": "2026-10-24T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "309be635e512e9c5"
+      },
+      "grupo": [
+        {
+          "id": "abd8b4397aff",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados/",
+          "canonical_url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados",
+          "titulo": "Contratos a largo plazo con productores e innovación genética: La estrategia de Muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
+          "titulo_norm": "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
+          "descripcion": "En un negocio en el que conseguir hacienda con las características que demandan los mercados internacionales se vuelve cada vez más importante, el frigorífico Muge apuesta a integrar producción y comercialización, trabajar con los productores mediante acuerdos de abastecimiento a largo plazo Con dos plantas de ciclo II , la empresa busca asegurarse volumen y […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/unnamed-47-e1792849464830.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-24T10:47-03:00",
+          "capturado": "2026-10-24T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "309be635e512e9c5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 66,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "frigorificos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante estrategia de integración ganadera, pero apunta a un nicho específico de productores ganaderos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          70
+        ]
+      },
+      "cuando": "2026-10-24T11:00-03:00"
+    },
     {
       "id": "f79edf9e923e",
       "rep": {
@@ -23682,69 +24013,6 @@
         ]
       },
       "cuando": "2026-10-24T07:22-03:00"
-    },
-    {
-      "id": "3db5e0ff3064",
-      "rep": {
-        "id": "3db5e0ff3064",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/avanza-la-cosecha-estadounidense-y-achata-los-precios-del-maiz-y-de-la-soja-nid24102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/avanza-la-cosecha-estadounidense-y-achata-los-precios-del-maiz-y-de-la-soja-nid24102026",
-        "titulo": "Avanza la cosecha estadounidense y achata los precios del maíz y de la soja",
-        "titulo_norm": "avanza la cosecha estadounidense y achata los precios del maiz y de la soja",
-        "descripcion": "Hay una constelación de factores bajistas que genera una tendencia bajista de las cotizaciones de los granos gruesos",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/P5I2ABDC7FDB7MH23Q3EDKNU4Q.jpg?auth=83f3208d73b9ef64fdad04c53fb0a87cc1c8d83535f7efc81f941cda87ea1707&smart=true",
-        "autor": "Carlos Marin Moreno",
-        "publicado": "2026-10-24T06:05-03:00",
-        "capturado": "2026-10-24T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f9993939df9ce6b4"
-      },
-      "grupo": [
-        {
-          "id": "3db5e0ff3064",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/avanza-la-cosecha-estadounidense-y-achata-los-precios-del-maiz-y-de-la-soja-nid24102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/avanza-la-cosecha-estadounidense-y-achata-los-precios-del-maiz-y-de-la-soja-nid24102026",
-          "titulo": "Avanza la cosecha estadounidense y achata los precios del maíz y de la soja",
-          "titulo_norm": "avanza la cosecha estadounidense y achata los precios del maiz y de la soja",
-          "descripcion": "Hay una constelación de factores bajistas que genera una tendencia bajista de las cotizaciones de los granos gruesos",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/P5I2ABDC7FDB7MH23Q3EDKNU4Q.jpg?auth=83f3208d73b9ef64fdad04c53fb0a87cc1c8d83535f7efc81f941cda87ea1707&smart=true",
-          "autor": "Carlos Marin Moreno",
-          "publicado": "2026-10-24T06:05-03:00",
-          "capturado": "2026-10-24T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f9993939df9ce6b4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 72,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "soja y maíz",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en el bolsillo del productor de la región núcleo por la caída de precios de los granos.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-24T07:02-03:00"
     },
     {
       "id": "45e28a4d5029",
@@ -24405,8 +24673,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T10:43:33-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-24T11:04:29-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
