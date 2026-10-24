@@ -13286,6 +13286,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "31475f3a19476dc7": {
+      "impacto_economico": 11,
+      "interes_productores": 6,
+      "innovacion": 9,
+      "cercania_argentina": 9,
+      "cercania_pba": 6,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 59,
+      "commercial_score": 57,
+      "subtema": "empresas",
+      "tema": "bioceres",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia fuerte sobre el desplome de un emblema AgTech nacional, pero de impacto indirecto en el día a día del productor.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        54
+      ]
     }
   },
   "indice": {
@@ -14204,7 +14229,8 @@
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-24-octubre-2026": "2026-10-24",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248992-el-maiz-argentino-domina-el-mercado-mundial.html": "2026-10-24",
-      "https://bichosdecampo.com/un-importante-frigorifico-exportador-confirmo-que-el-temor-de-los-productores-era-real-gorina-comenzara-a-aplicar-descuentos-por-la-hacienda-que-no-haya-hecho-el-tramite-visec": "2026-10-24"
+      "https://bichosdecampo.com/un-importante-frigorifico-exportador-confirmo-que-el-temor-de-los-productores-era-real-gorina-comenzara-a-aplicar-descuentos-por-la-hacienda-que-no-haya-hecho-el-tramite-visec": "2026-10-24",
+      "https://lanacion.com.ar/economia/campo/queria-ser-el-unicornio-del-agro-llego-a-valer-mas-de-us1000-millones-y-ahora-aprobaron-su-nid24102026": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15121,7 +15147,8 @@
       "euro blue hoy precio y cotizacion de este 24 octubre 2026": "2026-10-24",
       "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo": "2026-10-24",
       "maiz argentino exportaciones record y una oportunidad global ante los problemas de brasil y ucrania": "2026-10-24",
-      "un importante frigorifico exportador confirmo que el temor de los productores era real gorina comenzara a aplicar descuentos por la hacienda que no haya hecho el tramite visec": "2026-10-24"
+      "un importante frigorifico exportador confirmo que el temor de los productores era real gorina comenzara a aplicar descuentos por la hacienda que no haya hecho el tramite visec": "2026-10-24",
+      "queria ser el unicornio del agro llego a valer mas de us 1000 millones y ahora aprobaron su liquidacion con el 98 4 de los votos": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16038,7 +16065,8 @@
       "5b50c47af2a231db": "2026-10-24",
       "f51da72905a17be0": "2026-10-24",
       "8867faff67f09836": "2026-10-24",
-      "71cf3a931e8f47fd": "2026-10-24"
+      "71cf3a931e8f47fd": "2026-10-24",
+      "31475f3a19476dc7": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23436,49 +23464,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f79edf9e923e_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "dff0ae5ff634",
-      "rep": {
-        "id": "dff0ae5ff634",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
-        "titulo": "Mario Navarro: «El Niño estará activo hasta 2028, traerá lluvias irregulares con riesgos de granizo»",
-        "titulo_norm": "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo",
-        "descripcion": "El climatólogo Mario Navarro analiza el fenómeno Niño en el evento CÓDIGO Maíz de Illinois Semillas. ¿Cuales serán los meses más lluviososo de primavera - verano? ¿Cómo son sus pronósticos de un Nino que se extenderá hasta 2028? Su influencia en las lluvias, temperaturas y vientos para la campaña de maíz en la zona núcleo argentina. Prevén lluvias irregulares, temperaturas más cálidas y posibles eventos climáticos extremos que impactarán en el cultivo.",
-        "imagen_url": "https://agrotv.agrositio.com/placas/C8QvECQcdgA.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-10-24T11:53-03:00",
-        "capturado": "2026-10-24T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f51da72905a17be0"
-      },
-      "grupo": [
-        {
-          "id": "dff0ae5ff634",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
-          "titulo": "Mario Navarro: «El Niño estará activo hasta 2028, traerá lluvias irregulares con riesgos de granizo»",
-          "titulo_norm": "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo",
-          "descripcion": "El climatólogo Mario Navarro analiza el fenómeno Niño en el evento CÓDIGO Maíz de Illinois Semillas. ¿Cuales serán los meses más lluviososo de primavera - verano? ¿Cómo son sus pronósticos de un Nino que se extenderá hasta 2028? Su influencia en las lluvias, temperaturas y vientos para la campaña de maíz en la zona núcleo argentina. Prevén lluvias irregulares, temperaturas más cálidas y posibles eventos climáticos extremos que impactarán en el cultivo.",
-          "imagen_url": "https://agrotv.agrositio.com/placas/C8QvECQcdgA.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-10-24T11:53-03:00",
-          "capturado": "2026-10-24T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f51da72905a17be0"
-        }
-      ],
+      "cuando": "2026-10-24T13:20-03:00",
+      "titulo_original": "Mario Navarro: «El Niño estará activo hasta 2028, traerá lluvias irregulares con riesgos de granizo»",
+      "descripcion": "El climatólogo Mario Navarro analiza el fenómeno Niño en el evento CÓDIGO Maíz de Illinois Semillas. ¿Cuales serán los meses más lluviososo de primavera - verano? ¿Cómo son sus pronósticos de un Nino que se extenderá hasta 2028? Su influencia en las lluvias, temperaturas y vientos para la campaña de",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
+      "titular": "El fenómeno El Niño activo hasta 2028 afectará al maíz",
+      "volanta": "Clima",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -23500,8 +23495,32 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-24T13:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8207332a-1eeb-43ca-8178-af2e132ab017",
+          "slug": "el-nino-activo-hasta-2028-traera-lluvias-irregulares-y-granizo-e7a0c4",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-activo-hasta-2028-traera-lluvias-irregulares-y-granizo-e7a0c4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1171332845552721",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18106493642359989",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_dff0ae5ff634_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "96d4643b49f8",
       "rep": {
@@ -24703,8 +24722,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T13:03:25-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-24T13:23:52-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
