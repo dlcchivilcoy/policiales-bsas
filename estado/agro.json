@@ -13311,6 +13311,27 @@
         64,
         54
       ]
+    },
+    "2c3328834669ac23": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 71,
+      "subtema": "ganaderia",
+      "tema": "precios ganaderos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran relevancia regional para criadores y invernadores bonaerenses por el análisis de precios y perspectivas del mercado de hacienda.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14230,7 +14251,8 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html": "2026-10-24",
       "https://agrositio.com.ar/noticia/248992-el-maiz-argentino-domina-el-mercado-mundial.html": "2026-10-24",
       "https://bichosdecampo.com/un-importante-frigorifico-exportador-confirmo-que-el-temor-de-los-productores-era-real-gorina-comenzara-a-aplicar-descuentos-por-la-hacienda-que-no-haya-hecho-el-tramite-visec": "2026-10-24",
-      "https://lanacion.com.ar/economia/campo/queria-ser-el-unicornio-del-agro-llego-a-valer-mas-de-us1000-millones-y-ahora-aprobaron-su-nid24102026": "2026-10-24"
+      "https://lanacion.com.ar/economia/campo/queria-ser-el-unicornio-del-agro-llego-a-valer-mas-de-us1000-millones-y-ahora-aprobaron-su-nid24102026": "2026-10-24",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15148,7 +15170,8 @@
       "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo": "2026-10-24",
       "maiz argentino exportaciones record y una oportunidad global ante los problemas de brasil y ucrania": "2026-10-24",
       "un importante frigorifico exportador confirmo que el temor de los productores era real gorina comenzara a aplicar descuentos por la hacienda que no haya hecho el tramite visec": "2026-10-24",
-      "queria ser el unicornio del agro llego a valer mas de us 1000 millones y ahora aprobaron su liquidacion con el 98 4 de los votos": "2026-10-24"
+      "queria ser el unicornio del agro llego a valer mas de us 1000 millones y ahora aprobaron su liquidacion con el 98 4 de los votos": "2026-10-24",
+      "ganaderia juan pedro colombo destaca estabilidad de precios y expectativas de crecimiento": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16066,7 +16089,8 @@
       "f51da72905a17be0": "2026-10-24",
       "8867faff67f09836": "2026-10-24",
       "71cf3a931e8f47fd": "2026-10-24",
-      "31475f3a19476dc7": "2026-10-24"
+      "31475f3a19476dc7": "2026-10-24",
+      "2c3328834669ac23": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23626,9 +23650,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8ccf9ab7838e_portada.jpg"
+    },
+    {
+      "id": "2f9285de2853",
+      "cuando": "2026-10-24T16:00-03:00",
+      "titulo_original": "Una recorrida “a calzón quitado” por la megaplanta de CNH en Córdoba: ¿Cómo es el día de un operario que fabrica tractores y cosechadoras para Case IH?",
+      "descripcion": "Para quien se siente un “sapo de otro pozo” al caminar entre tractores y cosechadoras en cada una de las exposiciones agropecuarias, como es el caso de esta periodista, una recorrida “a calzón quitado” por una megafábrica como la que CNH opera en Ferreyra, provincia de Córdoba, puede ser muy formati",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih/",
+      "titular": "La megaplanta de CNH en Córdoba produce siete tractores diarios tras invertir",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 8,
+        "conversacion": 7,
+        "potencial_comercial": 9,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "maquinaria",
+        "tema": "case ih",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra por dentro la fabricación nacional de maquinaria pesada, interesando a contratistas y generando buen gancho comercial con marcas.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "Imi4DrYAUvk",
+          "url": "https://youtube.com/shorts/Imi4DrYAUvk",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "a0d41c57-729d-4562-a049-fa32860ef7a0",
+          "slug": "adentro-de-la-megaplanta-de-cnh-en-cordoba-que-fabrica-f87149",
+          "url": "https://www.diariolacampaña.com.ar/n/adentro-de-la-megaplanta-de-cnh-en-cordoba-que-fabrica-f87149",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2150886052486355",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18122120893985935",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2f9285de2853_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "79bb275e3ae1",
+      "rep": {
+        "id": "79bb275e3ae1",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html",
+        "titulo": "Ganadería: Juan Pedro Colombo destaca estabilidad de precios y expectativas de crecimiento",
+        "titulo_norm": "ganaderia juan pedro colombo destaca estabilidad de precios y expectativas de crecimiento",
+        "descripcion": "El mercado ganadero encontrando sus equilibrios. Buenos valores en U$S para la exportación, aunque la rentabilidad interna nolo refleje tanto. ¿Puede volver a aumentar el consumo?, ¿qué perspectivas de aumentos en adelante? Una charla con el Ing. P. Agr. Juan Pedro Colombo, Pte. de Colombo & Magliano consignatarios, analizando la situación actual de la ganadería argentina, y mundial, destacando la estabilidad en precios tras un pico en marzo. La necesidad de paciencia para reconstruir el sector con mejores índices productivos y más kilos por animal...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/e99d8Df1BHY.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-10-24T15:26-03:00",
+        "capturado": "2026-10-24T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2c3328834669ac23"
+      },
+      "grupo": [
+        {
+          "id": "79bb275e3ae1",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html",
+          "titulo": "Ganadería: Juan Pedro Colombo destaca estabilidad de precios y expectativas de crecimiento",
+          "titulo_norm": "ganaderia juan pedro colombo destaca estabilidad de precios y expectativas de crecimiento",
+          "descripcion": "El mercado ganadero encontrando sus equilibrios. Buenos valores en U$S para la exportación, aunque la rentabilidad interna nolo refleje tanto. ¿Puede volver a aumentar el consumo?, ¿qué perspectivas de aumentos en adelante? Una charla con el Ing. P. Agr. Juan Pedro Colombo, Pte. de Colombo & Magliano consignatarios, analizando la situación actual de la ganadería argentina, y mundial, destacando la estabilidad en precios tras un pico en marzo. La necesidad de paciencia para reconstruir el sector con mejores índices productivos y más kilos por animal...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/e99d8Df1BHY.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-10-24T15:26-03:00",
+          "capturado": "2026-10-24T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2c3328834669ac23"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "ganaderia",
+        "tema": "precios ganaderos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran relevancia regional para criadores y invernadores bonaerenses por el análisis de precios y perspectivas del mercado de hacienda.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T16:00-03:00"
+    },
     {
       "id": "96d4643b49f8",
       "rep": {
@@ -23892,69 +24040,6 @@
         ]
       },
       "cuando": "2026-10-24T10:00-03:00"
-    },
-    {
-      "id": "2f9285de2853",
-      "rep": {
-        "id": "2f9285de2853",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih/",
-        "canonical_url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih",
-        "titulo": "Una recorrida “a calzón quitado” por la megaplanta de CNH en Córdoba: ¿Cómo es el día de un operario que fabrica tractores y cosechadoras para Case IH?",
-        "titulo_norm": "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih",
-        "descripcion": "Para quien se siente un “sapo de otro pozo” al caminar entre tractores y cosechadoras en cada una de las exposiciones agropecuarias, como es el caso de esta periodista, una recorrida “a calzón quitado” por una megafábrica como la que CNH opera en Ferreyra, provincia de Córdoba, puede ser muy formativa y, confesión mediante, hasta […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/20261021_083125-scaled.jpg",
-        "autor": "Sofia Selasco",
-        "publicado": "2026-10-24T08:11-03:00",
-        "capturado": "2026-10-24T08:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4ea2bae20b2e55c5"
-      },
-      "grupo": [
-        {
-          "id": "2f9285de2853",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih/",
-          "canonical_url": "https://bichosdecampo.com/una-recorrida-a-calzon-quitado-por-la-megaplanta-de-cnh-en-cordoba-como-es-el-dia-de-un-operario-que-fabrica-tractores-y-cosechadoras-para-case-ih",
-          "titulo": "Una recorrida “a calzón quitado” por la megaplanta de CNH en Córdoba: ¿Cómo es el día de un operario que fabrica tractores y cosechadoras para Case IH?",
-          "titulo_norm": "una recorrida a calzon quitado por la megaplanta de cnh en cordoba como es el dia de un operario que fabrica tractores y cosechadoras para case ih",
-          "descripcion": "Para quien se siente un “sapo de otro pozo” al caminar entre tractores y cosechadoras en cada una de las exposiciones agropecuarias, como es el caso de esta periodista, una recorrida “a calzón quitado” por una megafábrica como la que CNH opera en Ferreyra, provincia de Córdoba, puede ser muy formativa y, confesión mediante, hasta […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/20261021_083125-scaled.jpg",
-          "autor": "Sofia Selasco",
-          "publicado": "2026-10-24T08:11-03:00",
-          "capturado": "2026-10-24T08:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4ea2bae20b2e55c5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 8,
-        "conversacion": 7,
-        "potencial_comercial": 9,
-        "ai_score": 79,
-        "commercial_score": 79,
-        "subtema": "maquinaria",
-        "tema": "case ih",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muestra por dentro la fabricación nacional de maquinaria pesada, interesando a contratistas y generando buen gancho comercial con marcas.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-24T08:22-03:00"
     },
     {
       "id": "67ad71c9bb37",
@@ -24704,8 +24789,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T14:22:54-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-24T16:03:26-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
