@@ -13374,6 +13374,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "13a02681aaef7b4e": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 61,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena innovación comercial en ganadería y consumo, aunque apunta más a la industria cárnica que al productor primario de la región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        62
+      ]
     }
   },
   "indice": {
@@ -14296,7 +14321,8 @@
       "https://lanacion.com.ar/economia/campo/queria-ser-el-unicornio-del-agro-llego-a-valer-mas-de-us1000-millones-y-ahora-aprobaron-su-nid24102026": "2026-10-24",
       "https://agrositio.com.ar/canal-agrositio/30-online/249003-ganaderia-juan-pedro-colombo-destaca-estabilidad-de-precios-y-expectativas-de-crecimiento.html": "2026-10-24",
       "https://bichosdecampo.com/como-un-simbolo-de-la-persistencia-de-la-educacion-salesiana-eduardo-pezuk-ahora-cosecha-las-plantas-que-el-mismo-planto-como-alumno-para-poder-elaborar-la-yerba-mate-don-bosco": "2026-10-24",
-      "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento": "2026-10-24"
+      "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento": "2026-10-24",
+      "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15217,7 +15243,8 @@
       "queria ser el unicornio del agro llego a valer mas de us 1000 millones y ahora aprobaron su liquidacion con el 98 4 de los votos": "2026-10-24",
       "ganaderia juan pedro colombo destaca estabilidad de precios y expectativas de crecimiento": "2026-10-24",
       "como un simbolo de la persistencia de la educacion salesiana eduardo pezuk ahora cosecha las plantas que el mismo planto como alumno para poder elaborar la yerba mate don bosco": "2026-10-24",
-      "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento": "2026-10-24"
+      "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento": "2026-10-24",
+      "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16138,7 +16165,8 @@
       "31475f3a19476dc7": "2026-10-24",
       "2c3328834669ac23": "2026-10-24",
       "836b1ae24f6b5a6e": "2026-10-24",
-      "1de6924f0c30672a": "2026-10-24"
+      "1de6924f0c30672a": "2026-10-24",
+      "13a02681aaef7b4e": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23874,9 +23902,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7ea91d322c46_portada.jpg"
+    },
+    {
+      "id": "49acc8355cbc",
+      "cuando": "2026-10-24T18:20-03:00",
+      "titulo_original": "¿Puede el mercado interno absorber más Carne? El análisis de Rodrigo Troncoso sobre Visec, consumo, y exportación",
+      "descripcion": "Las exportaciones y sus requisitos. El rol de Visec y las demandas para exportar a la Unión Europea, un mercado de alto valor. ¿Qué debemos hacer y cómo prepararnos rápido? Una nota con el Ing. P. Agr. Rodrigo Troncoso, Consultor ganadero, ex Subs. de Ganadería, y ex Dir. ejec. de la Cámara de Feedl",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
+      "titular": "Carne bovina: el mercado interno consume 115 kilos por habitante",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "exportación de carne",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Análisis clave sobre el futuro de la ganadería, Visec y mercados externos de alto valor para los productores.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "71a2f9a3-c3ae-478e-95d3-40de79e0470a",
+          "slug": "carne-el-consumo-interno-marca-115-kilos-por-habitante-y-piden-48f02f",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-el-consumo-interno-marca-115-kilos-por-habitante-y-piden-48f02f",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1773261163727130",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18168770452467276",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_49acc8355cbc_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "54c39f4d6827",
+      "rep": {
+        "id": "54c39f4d6827",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas/",
+        "canonical_url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas",
+        "titulo": "La estrategia de Tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacío, con delivery las 24 horas",
+        "titulo_norm": "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas",
+        "descripcion": "La venta de la media res ya no alcanza para responder a las nuevas demandas del mercado interno de carne. Con esa premisa, la empresa Tomasello avanza en una transformación comercial que combina cortes envasados al vacío, porciones más pequeñas, productos elaborados, venta digital, atención las 24 horas y reparto a domicilio. El objetivo -afirman- […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/tomasello-1.jpeg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-24T18:15-03:00",
+        "capturado": "2026-10-24T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "13a02681aaef7b4e"
+      },
+      "grupo": [
+        {
+          "id": "54c39f4d6827",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas/",
+          "canonical_url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas",
+          "titulo": "La estrategia de Tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacío, con delivery las 24 horas",
+          "titulo_norm": "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas",
+          "descripcion": "La venta de la media res ya no alcanza para responder a las nuevas demandas del mercado interno de carne. Con esa premisa, la empresa Tomasello avanza en una transformación comercial que combina cortes envasados al vacío, porciones más pequeñas, productos elaborados, venta digital, atención las 24 horas y reparto a domicilio. El objetivo -afirman- […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/tomasello-1.jpeg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-24T18:15-03:00",
+          "capturado": "2026-10-24T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "13a02681aaef7b4e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 6,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 61,
+        "commercial_score": 61,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Buena innovación comercial en ganadería y consumo, aunque apunta más a la industria cárnica que al productor primario de la región.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          62
+        ]
+      },
+      "cuando": "2026-10-24T18:20-03:00"
+    },
     {
       "id": "b5ded5fd98a5",
       "rep": {
@@ -24420,73 +24573,6 @@
       "cuando": "2026-10-23T18:00-03:00"
     },
     {
-      "id": "49acc8355cbc",
-      "rep": {
-        "id": "49acc8355cbc",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
-        "titulo": "¿Puede el mercado interno absorber más Carne? El análisis de Rodrigo Troncoso sobre Visec, consumo, y exportación",
-        "titulo_norm": "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion",
-        "descripcion": "Las exportaciones y sus requisitos. El rol de Visec y las demandas para exportar a la Unión Europea, un mercado de alto valor. ¿Qué debemos hacer y cómo prepararnos rápido? Una nota con el Ing. P. Agr. Rodrigo Troncoso, Consultor ganadero, ex Subs. de Ganadería, y ex Dir. ejec. de la Cámara de Feedlot. Aanaliza el consumo y producción de carnes en Argentina, y sus estrategias. Destaca que el mercado interno consume alrededor de 115 kilos por habitante, y que el crecimiento futuro debe enfocarse en la exportación ante límites de absorción local...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/ibKWsCDrK_M.jpg",
-        "autor": "info@agrositio.com (Ricardo Bindi)",
-        "publicado": "2026-10-23T16:51-03:00",
-        "capturado": "2026-10-23T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "59e66a669ff59e6a"
-      },
-      "grupo": [
-        {
-          "id": "49acc8355cbc",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/248995-puede-el-mercado-interno-absorber-mas-carne-el-analisis-de-rodrigo-troncoso-sobre-visec-consumo-y-exportacion.html",
-          "titulo": "¿Puede el mercado interno absorber más Carne? El análisis de Rodrigo Troncoso sobre Visec, consumo, y exportación",
-          "titulo_norm": "puede el mercado interno absorber mas carne el analisis de rodrigo troncoso sobre visec consumo y exportacion",
-          "descripcion": "Las exportaciones y sus requisitos. El rol de Visec y las demandas para exportar a la Unión Europea, un mercado de alto valor. ¿Qué debemos hacer y cómo prepararnos rápido? Una nota con el Ing. P. Agr. Rodrigo Troncoso, Consultor ganadero, ex Subs. de Ganadería, y ex Dir. ejec. de la Cámara de Feedlot. Aanaliza el consumo y producción de carnes en Argentina, y sus estrategias. Destaca que el mercado interno consume alrededor de 115 kilos por habitante, y que el crecimiento futuro debe enfocarse en la exportación ante límites de absorción local...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/ibKWsCDrK_M.jpg",
-          "autor": "info@agrositio.com (Ricardo Bindi)",
-          "publicado": "2026-10-23T16:51-03:00",
-          "capturado": "2026-10-23T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "59e66a669ff59e6a"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 11,
-        "innovacion": 6,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 68,
-        "commercial_score": 72,
-        "subtema": "ganaderia",
-        "tema": "exportación de carne",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Análisis clave sobre el futuro de la ganadería, Visec y mercados externos de alto valor para los productores.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          68
-        ]
-      },
-      "cuando": "2026-10-23T17:00-03:00"
-    },
-    {
       "id": "502f4f94a9cb",
       "rep": {
         "id": "502f4f94a9cb",
@@ -24889,8 +24975,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T18:03:17-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-24T18:23:20-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
