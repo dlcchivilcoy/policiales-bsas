@@ -13265,6 +13265,27 @@
         63,
         70
       ]
+    },
+    "f51da72905a17be0": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 81,
+      "commercial_score": 81,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacto directo en la campaña de maíz de la zona núcleo con pronóstico a largo plazo muy consultado.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14178,7 +14199,12 @@
       "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas": "2026-10-24",
       "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo": "2026-10-24",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos": "2026-10-24",
-      "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados": "2026-10-24"
+      "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados": "2026-10-24",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-24-octubre-2026": "2026-10-24",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-24-octubre-2026": "2026-10-24",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html": "2026-10-24",
+      "https://agrositio.com.ar/noticia/248992-el-maiz-argentino-domina-el-mercado-mundial.html": "2026-10-24",
+      "https://bichosdecampo.com/un-importante-frigorifico-exportador-confirmo-que-el-temor-de-los-productores-era-real-gorina-comenzara-a-aplicar-descuentos-por-la-hacienda-que-no-haya-hecho-el-tramite-visec": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15090,7 +15116,12 @@
       "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas": "2026-10-24",
       "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo": "2026-10-24",
       "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos": "2026-10-24",
-      "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados": "2026-10-24"
+      "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados": "2026-10-24",
+      "dolar blue a cuanto cotizan hoy en mendoza 24 octubre 2026": "2026-10-24",
+      "euro blue hoy precio y cotizacion de este 24 octubre 2026": "2026-10-24",
+      "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo": "2026-10-24",
+      "maiz argentino exportaciones record y una oportunidad global ante los problemas de brasil y ucrania": "2026-10-24",
+      "un importante frigorifico exportador confirmo que el temor de los productores era real gorina comenzara a aplicar descuentos por la hacienda que no haya hecho el tramite visec": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16002,7 +16033,12 @@
       "28c289016cc93ee4": "2026-10-24",
       "e5e2cbdc497455aa": "2026-10-24",
       "cfb4a1f974fc90ad": "2026-10-24",
-      "309be635e512e9c5": "2026-10-24"
+      "309be635e512e9c5": "2026-10-24",
+      "e1bfb76ace1a4fac": "2026-10-24",
+      "5b50c47af2a231db": "2026-10-24",
+      "f51da72905a17be0": "2026-10-24",
+      "8867faff67f09836": "2026-10-24",
+      "71cf3a931e8f47fd": "2026-10-24"
     }
   },
   "elegidas": [
@@ -23335,9 +23371,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3db5e0ff3064_portada.jpg"
+    },
+    {
+      "id": "f79edf9e923e",
+      "cuando": "2026-10-24T13:00-03:00",
+      "titulo_original": "Apurate José: Aseguran que en territorio santafesino ya se evacuó más del 70% de la hacienda que engordaba en las islas",
+      "descripcion": "El gobierno de Santa Fe informó que, a la espera de una gran creciente en el sistema fluvial del río Paraná, ya logró evacuarse el 70% de la hacienda que estaba pastando en la zona de islas. “Tras las alertas y las medidas implementadas, el número de animales en zonas anegables bajó de más de […]",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas/",
+      "titular": "Santa Fe evacuó más del 70 por ciento de la hacienda",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 5,
+        "ai_score": 64,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "hacienda islas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alta relevancia por el impacto en la ganadería de islas ante una crecida inminente del Paraná.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-24T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "J7o8oy6jQUo",
+          "url": "https://youtube.com/shorts/J7o8oy6jQUo",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "f0a01d63-4db4-499d-8c89-75aa69e8c8b0",
+          "slug": "santa-fe-evacuo-mas-del-70-de-la-hacienda-en-islas-por-la-049137",
+          "url": "https://www.diariolacampaña.com.ar/n/santa-fe-evacuo-mas-del-70-de-la-hacienda-en-islas-por-la-049137",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1671861244452228",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18131623591875126",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f79edf9e923e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "dff0ae5ff634",
+      "rep": {
+        "id": "dff0ae5ff634",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
+        "titulo": "Mario Navarro: «El Niño estará activo hasta 2028, traerá lluvias irregulares con riesgos de granizo»",
+        "titulo_norm": "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo",
+        "descripcion": "El climatólogo Mario Navarro analiza el fenómeno Niño en el evento CÓDIGO Maíz de Illinois Semillas. ¿Cuales serán los meses más lluviososo de primavera - verano? ¿Cómo son sus pronósticos de un Nino que se extenderá hasta 2028? Su influencia en las lluvias, temperaturas y vientos para la campaña de maíz en la zona núcleo argentina. Prevén lluvias irregulares, temperaturas más cálidas y posibles eventos climáticos extremos que impactarán en el cultivo.",
+        "imagen_url": "https://agrotv.agrositio.com/placas/C8QvECQcdgA.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-10-24T11:53-03:00",
+        "capturado": "2026-10-24T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f51da72905a17be0"
+      },
+      "grupo": [
+        {
+          "id": "dff0ae5ff634",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249002-mario-navarro-el-nino-estara-activo-hasta-2028-traera-lluvias-irregulares-con-riesgos-de-granizo.html",
+          "titulo": "Mario Navarro: «El Niño estará activo hasta 2028, traerá lluvias irregulares con riesgos de granizo»",
+          "titulo_norm": "mario navarro el nino estara activo hasta 2028 traera lluvias irregulares con riesgos de granizo",
+          "descripcion": "El climatólogo Mario Navarro analiza el fenómeno Niño en el evento CÓDIGO Maíz de Illinois Semillas. ¿Cuales serán los meses más lluviososo de primavera - verano? ¿Cómo son sus pronósticos de un Nino que se extenderá hasta 2028? Su influencia en las lluvias, temperaturas y vientos para la campaña de maíz en la zona núcleo argentina. Prevén lluvias irregulares, temperaturas más cálidas y posibles eventos climáticos extremos que impactarán en el cultivo.",
+          "imagen_url": "https://agrotv.agrositio.com/placas/C8QvECQcdgA.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-10-24T11:53-03:00",
+          "capturado": "2026-10-24T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f51da72905a17be0"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 81,
+        "commercial_score": 81,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacto directo en la campaña de maíz de la zona núcleo con pronóstico a largo plazo muy consultado.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-24T13:00-03:00"
+    },
     {
       "id": "96d4643b49f8",
       "rep": {
@@ -23534,73 +23698,6 @@
         ]
       },
       "cuando": "2026-10-24T11:00-03:00"
-    },
-    {
-      "id": "f79edf9e923e",
-      "rep": {
-        "id": "f79edf9e923e",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas/",
-        "canonical_url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas",
-        "titulo": "Apurate José: Aseguran que en territorio santafesino ya se evacuó más del 70% de la hacienda que engordaba en las islas",
-        "titulo_norm": "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas",
-        "descripcion": "El gobierno de Santa Fe informó que, a la espera de una gran creciente en el sistema fluvial del río Paraná, ya logró evacuarse el 70% de la hacienda que estaba pastando en la zona de islas. “Tras las alertas y las medidas implementadas, el número de animales en zonas anegables bajó de más de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/barco-de-hacienda.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-24T10:31-03:00",
-        "capturado": "2026-10-24T10:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "28c289016cc93ee4"
-      },
-      "grupo": [
-        {
-          "id": "f79edf9e923e",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas/",
-          "canonical_url": "https://bichosdecampo.com/apurate-jose-aseguran-que-en-territorio-santafesino-ya-se-evacuo-mas-del-70-de-la-hacienda-que-engordaba-en-las-islas",
-          "titulo": "Apurate José: Aseguran que en territorio santafesino ya se evacuó más del 70% de la hacienda que engordaba en las islas",
-          "titulo_norm": "apurate jose aseguran que en territorio santafesino ya se evacuo mas del 70 de la hacienda que engordaba en las islas",
-          "descripcion": "El gobierno de Santa Fe informó que, a la espera de una gran creciente en el sistema fluvial del río Paraná, ya logró evacuarse el 70% de la hacienda que estaba pastando en la zona de islas. “Tras las alertas y las medidas implementadas, el número de animales en zonas anegables bajó de más de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/barco-de-hacienda.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-24T10:31-03:00",
-          "capturado": "2026-10-24T10:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "28c289016cc93ee4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 5,
-        "ai_score": 64,
-        "commercial_score": 62,
-        "subtema": "ganaderia",
-        "tema": "hacienda islas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Alta relevancia por el impacto en la ganadería de islas ante una crecida inminente del Paraná.",
-        "tema_doc": "sanidad",
-        "urgente": true,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          65
-        ]
-      },
-      "cuando": "2026-10-24T10:40-03:00"
     },
     {
       "id": "8ccf9ab7838e",
@@ -24606,8 +24703,8 @@
       "cuando": "2026-10-23T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-24T11:21:30-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-24T13:03:25-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
