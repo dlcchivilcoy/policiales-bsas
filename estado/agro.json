@@ -22278,6 +22278,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5be74a15e8a9_portada.jpg"
+    },
+    {
+      "id": "747ab1c987eb",
+      "cuando": "2026-10-23T22:00-03:00",
+      "titulo_original": "Fuerte contraste: la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
+      "descripcion": "El informe de septiembre de Caicha mostró una suba del 13,4% en los cortes frescos mientras los chacinados registraron una caída de 9,7% y encadenaron siete meses consecutivos en baja",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026/",
+      "titular": "La carne de cerdo subió 13,4% en septiembre y batió récord",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "cerdos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales de consumo y ventas de carne porcina que interesan al productor porcino local.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          61
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T22:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "05c8c536-b259-4438-8d8d-700eb752eff1",
+          "slug": "el-consumo-de-carne-de-cerdo-crecio-13-4-en-septiembre-y-los-050218",
+          "url": "https://www.diariolacampaña.com.ar/n/el-consumo-de-carne-de-cerdo-crecio-13-4-en-septiembre-y-los-050218",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1100800726206227",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18116347729996653",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_747ab1c987eb_portada.jpg"
     }
   ],
   "pendientes": [
@@ -22603,73 +22661,6 @@
         ]
       },
       "cuando": "2026-10-23T17:00-03:00"
-    },
-    {
-      "id": "747ab1c987eb",
-      "rep": {
-        "id": "747ab1c987eb",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026",
-        "titulo": "Fuerte contraste: la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
-        "titulo_norm": "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
-        "descripcion": "El informe de septiembre de Caicha mostró una suba del 13,4% en los cortes frescos mientras los chacinados registraron una caída de 9,7% y encadenaron siete meses consecutivos en baja",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WRDXI2OYZVGUROVMPOHSZ5VMNM.png?auth=448480598f7e716d46c97026dcb921382d12f6aee1e4608c69c2beeb42bb485d&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-10-23T14:32-03:00",
-        "capturado": "2026-10-23T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "07b59307b4dcfbde"
-      },
-      "grupo": [
-        {
-          "id": "747ab1c987eb",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/fuerte-contraste-la-carne-de-cerdo-dio-un-batacazo-de-ventas-y-los-chacinados-no-repuntan-nid23102026",
-          "titulo": "Fuerte contraste: la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
-          "titulo_norm": "fuerte contraste la carne de cerdo dio un batacazo de ventas y los chacinados no repuntan",
-          "descripcion": "El informe de septiembre de Caicha mostró una suba del 13,4% en los cortes frescos mientras los chacinados registraron una caída de 9,7% y encadenaron siete meses consecutivos en baja",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WRDXI2OYZVGUROVMPOHSZ5VMNM.png?auth=448480598f7e716d46c97026dcb921382d12f6aee1e4608c69c2beeb42bb485d&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-10-23T14:32-03:00",
-          "capturado": "2026-10-23T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "07b59307b4dcfbde"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 10,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 62,
-        "subtema": "ganaderia",
-        "tema": "cerdos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos oficiales de consumo y ventas de carne porcina que interesan al productor porcino local.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          61
-        ]
-      },
-      "cuando": "2026-10-23T16:00-03:00"
     },
     {
       "id": "33b81c0b10a0",
@@ -23265,144 +23256,10 @@
         ]
       },
       "cuando": "2026-10-22T13:00-03:00"
-    },
-    {
-      "id": "9063939f3344",
-      "rep": {
-        "id": "9063939f3344",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248963-la-expectativa-de-paz-entre-rusia-y-ucrania-presiona-al-trigo-en-chicago-mientras-el-maiz-encuentra-soporte-en-los-minimos.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248963-la-expectativa-de-paz-entre-rusia-y-ucrania-presiona-al-trigo-en-chicago-mientras-el-maiz-encuentra-soporte-en-los-minimos.html",
-        "titulo": "La expectativa de paz entre Rusia y Ucrania presiona al trigo en Chicago, mientras el maíz encuentra soporte en los mínimos",
-        "titulo_norm": "la expectativa de paz entre rusia y ucrania presiona al trigo en chicago mientras el maiz encuentra soporte en los minimos",
-        "descripcion": "Las señales diplomáticas entre Washington, Moscú y Kiev reactivaron las ventas de fondos en los mercados agrícolas ayer (21) en Chicago, ante la posibilidad de una reducción del riesgo geopolítico y una eventual normalización de los embarques por el mar Negro. El trigo fue el producto más afectado, mientras la soja mostró bajas moderadas y el maíz recuperó terreno desde sus mínimos recientes.....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248963_23117090.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-10-22T09:43-03:00",
-        "capturado": "2026-10-22T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "96814ece1ad6e0e0"
-      },
-      "grupo": [
-        {
-          "id": "9063939f3344",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248963-la-expectativa-de-paz-entre-rusia-y-ucrania-presiona-al-trigo-en-chicago-mientras-el-maiz-encuentra-soporte-en-los-minimos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248963-la-expectativa-de-paz-entre-rusia-y-ucrania-presiona-al-trigo-en-chicago-mientras-el-maiz-encuentra-soporte-en-los-minimos.html",
-          "titulo": "La expectativa de paz entre Rusia y Ucrania presiona al trigo en Chicago, mientras el maíz encuentra soporte en los mínimos",
-          "titulo_norm": "la expectativa de paz entre rusia y ucrania presiona al trigo en chicago mientras el maiz encuentra soporte en los minimos",
-          "descripcion": "Las señales diplomáticas entre Washington, Moscú y Kiev reactivaron las ventas de fondos en los mercados agrícolas ayer (21) en Chicago, ante la posibilidad de una reducción del riesgo geopolítico y una eventual normalización de los embarques por el mar Negro. El trigo fue el producto más afectado, mientras la soja mostró bajas moderadas y el maíz recuperó terreno desde sus mínimos recientes.....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248963_23117090.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-10-22T09:43-03:00",
-          "capturado": "2026-10-22T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "96814ece1ad6e0e0"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 13,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 72,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en las cotizaciones internacionales de granos que manejan los productores de la zona núcleo.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          66
-        ]
-      },
-      "cuando": "2026-10-22T10:00-03:00"
-    },
-    {
-      "id": "8615de290361",
-      "rep": {
-        "id": "8615de290361",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248962-incertidumbre-geopolitica-y-cosecha-sudamericana-marcan-el-rumbo-de-los-granos.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248962-incertidumbre-geopolitica-y-cosecha-sudamericana-marcan-el-rumbo-de-los-granos.html",
-        "titulo": "Incertidumbre geopolítica y cosecha sudamericana marcan el rumbo de los granos",
-        "titulo_norm": "incertidumbre geopolitica y cosecha sudamericana marcan el rumbo de los granos",
-        "descripcion": "Las expectativas de avances diplomáticos entre Estados Unidos, Rusia y Ucrania impulsaron las ventas de fondos en Chicago, ante la posibilidad de una eventual reapertura de los flujos comerciales por el mar Negro. El trigo SRW registró bajas ayer (21) de entre 7,5 y 16,5 centavos de dólar por bushel, luego de retroceder más de 20 centavos durante la rueda...",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248962_26407284.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-10-22T09:40-03:00",
-        "capturado": "2026-10-22T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "23ea13b04bd802c1"
-      },
-      "grupo": [
-        {
-          "id": "8615de290361",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248962-incertidumbre-geopolitica-y-cosecha-sudamericana-marcan-el-rumbo-de-los-granos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248962-incertidumbre-geopolitica-y-cosecha-sudamericana-marcan-el-rumbo-de-los-granos.html",
-          "titulo": "Incertidumbre geopolítica y cosecha sudamericana marcan el rumbo de los granos",
-          "titulo_norm": "incertidumbre geopolitica y cosecha sudamericana marcan el rumbo de los granos",
-          "descripcion": "Las expectativas de avances diplomáticos entre Estados Unidos, Rusia y Ucrania impulsaron las ventas de fondos en Chicago, ante la posibilidad de una eventual reapertura de los flujos comerciales por el mar Negro. El trigo SRW registró bajas ayer (21) de entre 7,5 y 16,5 centavos de dólar por bushel, luego de retroceder más de 20 centavos durante la rueda...",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248962_26407284.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-10-22T09:40-03:00",
-          "capturado": "2026-10-22T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "23ea13b04bd802c1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 13,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 72,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Trata sobre los movimientos en Chicago que afectan de lleno el negocio cerealero local.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          66
-        ]
-      },
-      "cuando": "2026-10-22T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-23T21:43:30-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-23T22:03:40-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
