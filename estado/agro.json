@@ -23286,7 +23286,7 @@
       "cuando": "2026-10-22T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-24T05:03:21-03:00",
+  "actualizado": "2026-10-24T07:02:06-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -25012,6 +25012,91 @@
             },
             "facebook": {
               "id": "2385474995321453"
+            }
+          }
+        ]
+      }
+    },
+    "2026-10-24T07:00:00-03:00": {
+      "dia": "2026-10-24",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "17933200614410559"
+            },
+            "facebook": {
+              "id": "1017024584764165"
+            }
+          }
+        },
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "18104861234015138"
+            },
+            "facebook": {
+              "id": "1732221404551016"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "id": "18088219190299270"
+            },
+            "facebook": {
+              "id": "1417479307259115"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17933200614410559"
+              },
+              "facebook": {
+                "id": "1017024584764165"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18104861234015138"
+              },
+              "facebook": {
+                "id": "1732221404551016"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18088219190299270"
+              },
+              "facebook": {
+                "id": "1417479307259115"
+              }
+            }
+          ]
+        }
+      },
+      "diario": {
+        "items": [
+          {
+            "instagram": {
+              "id": "18121228720938523"
+            },
+            "facebook": {
+              "id": "1638034784400928"
             }
           }
         ]
