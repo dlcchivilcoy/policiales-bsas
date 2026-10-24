@@ -12725,6 +12725,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ebc9ac506ea0f676": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 82,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy relevante para productores de zona núcleo por manejo de maíz y nutrición.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e92f9d4eaa2a69d3": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 29,
+      "commercial_score": 25,
+      "subtema": "mercados",
+      "tema": "consumo masivo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es consumo masivo urbano, poco impacto directo para el productor agropecuario.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "59fb0130262a4efd": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "biotecnología animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante desarrollo del INTA en salud animal con alto valor tecnológico.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -13611,7 +13674,10 @@
       "https://bichosdecampo.com/eudr-la-soja-visec-llega-al-mercado-argentino-de-futuros-agricolas-por-el-momento-con-un-pase": "2026-10-23",
       "https://infocampo.com.ar/con-alma-cooperativa-el-primer-lote-de-trigo-2026-27-llego-del-norte-cordobes": "2026-10-23",
       "https://bichosdecampo.com/los-biologicos-son-una-moda-nicolas-gruz-los-produce-desde-tucuman-y-recuerda-que-hasta-los-romanos-inoculaban-sus-cultivos": "2026-10-23",
-      "https://lanacion.com.ar/economia/campo/soja-visec-habilitan-una-modalidad-para-negociar-el-premio-sobre-la-soja-tradicional-nid23102026": "2026-10-23"
+      "https://lanacion.com.ar/economia/campo/soja-visec-habilitan-una-modalidad-para-negociar-el-premio-sobre-la-soja-tradicional-nid23102026": "2026-10-23",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249001-decisiones-y-practicas-agronomicas-que-potencian-rindes-en-maiz-con-n-reussi-y-j-pellegrino.html": "2026-10-23",
+      "https://lanacion.com.ar/economia/campo/cambio-de-habitos-crecio-un-6-la-demanda-de-pastas-y-las-familias-eligen-las-variedades-mas-nid23102026": "2026-10-23",
+      "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado": "2026-10-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -14496,7 +14562,10 @@
       "eudr la soja visec llega al mercado argentino de futuros agricolas por el momento con un pase": "2026-10-23",
       "con alma cooperativa el primer lote de trigo 2026 27 llego del norte cordobes": "2026-10-23",
       "los biologicos son una moda nicolas gruz los produce desde tucuman y recuerda que hasta los romanos inoculaban sus cultivos": "2026-10-23",
-      "soja visec habilitan una modalidad para negociar el premio sobre la soja tradicional": "2026-10-23"
+      "soja visec habilitan una modalidad para negociar el premio sobre la soja tradicional": "2026-10-23",
+      "decisiones y practicas agronomicas que potencian rindes en maiz con n reussi y j pellegrino": "2026-10-23",
+      "cambio de habitos crecio un 6 la demanda de pastas y las familias eligen las variedades mas economicas": "2026-10-23",
+      "biotecnologia veterinaria como acelerar el camino del laboratorio al mercado": "2026-10-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -15381,7 +15450,10 @@
       "f6cab2eb0bc3b5d1": "2026-10-23",
       "a3d0dc8fa1cb59a2": "2026-10-23",
       "fc39c9437d1fda36": "2026-10-23",
-      "809a415733e194cd": "2026-10-23"
+      "809a415733e194cd": "2026-10-23",
+      "ebc9ac506ea0f676": "2026-10-23",
+      "e92f9d4eaa2a69d3": "2026-10-23",
+      "59fb0130262a4efd": "2026-10-23"
     }
   },
   "elegidas": [
@@ -22037,9 +22109,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_29e87eaa61bf_portada.jpg"
+    },
+    {
+      "id": "c115053f17a2",
+      "cuando": "2026-10-23T21:00-03:00",
+      "titulo_original": "Decisiones y prácticas agronómicas que potencian rindes en Maíz: con N. Reussi y J. Pellegrino",
+      "descripcion": "Durante el Ciclo CÓDIGO Maíz del criadero Illinois, los Ings. Agrs. Nahuel Reussi Calvo y Jorge Pellegrino, analizaron la importancia del ambiente productivo, el análisis integral del suelo y la fecha de siembra para maximizar el rendimiento del maíz. Destacan que el agua, la estructura del suelo, y",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249001-decisiones-y-practicas-agronomicas-que-potencian-rindes-en-maiz-con-n-reussi-y-j-pellegrino.html",
+      "titular": "Maíz: cómo potencian rindes Reussi Calvo y Pellegrino",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 82,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para productores de zona núcleo por manejo de maíz y nutrición.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-23T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "JjfYwZ6GxA0",
+          "url": "https://youtube.com/shorts/JjfYwZ6GxA0",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "42d1f6fd-d170-4b9d-b37a-7002fbc6510e",
+          "slug": "maiz-practicas-agronomicas-para-potenciar-rindes-segun-reussi-093254",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-practicas-agronomicas-para-potenciar-rindes-segun-reussi-093254",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1382393373806806",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18168813298490041",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c115053f17a2_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "5be74a15e8a9",
+      "rep": {
+        "id": "5be74a15e8a9",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado/",
+        "canonical_url": "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado",
+        "titulo": "Biotecnología veterinaria: cómo acelerar el camino del laboratorio al mercado",
+        "titulo_norm": "biotecnologia veterinaria como acelerar el camino del laboratorio al mercado",
+        "descripcion": "Nuevas vacunas, productos biológicos y herramientas diagnósticas abren oportunidades para la salud animal. En Crossing Over Latam, el INTA compartió su experiencia en maduración y transferencia de tecnologías, un proceso clave para reducir riesgos y facilitar la adopción de desarrollos por parte de las empresas. La entrada Biotecnología veterinaria: cómo acelerar el camino del laboratorio al mercado se publicó primero en INTA Informa.",
+        "imagen_url": "",
+        "autor": "INTA Informa",
+        "publicado": "2026-10-23T19:57-03:00",
+        "capturado": "2026-10-23T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "59fb0130262a4efd"
+      },
+      "grupo": [
+        {
+          "id": "5be74a15e8a9",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado/",
+          "canonical_url": "https://intainforma.inta.gob.ar/biotecnologia-veterinaria-como-acelerar-el-camino-del-laboratorio-al-mercado",
+          "titulo": "Biotecnología veterinaria: cómo acelerar el camino del laboratorio al mercado",
+          "titulo_norm": "biotecnologia veterinaria como acelerar el camino del laboratorio al mercado",
+          "descripcion": "Nuevas vacunas, productos biológicos y herramientas diagnósticas abren oportunidades para la salud animal. En Crossing Over Latam, el INTA compartió su experiencia en maduración y transferencia de tecnologías, un proceso clave para reducir riesgos y facilitar la adopción de desarrollos por parte de las empresas. La entrada Biotecnología veterinaria: cómo acelerar el camino del laboratorio al mercado se publicó primero en INTA Informa.",
+          "imagen_url": "",
+          "autor": "INTA Informa",
+          "publicado": "2026-10-23T19:57-03:00",
+          "capturado": "2026-10-23T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "59fb0130262a4efd"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 10,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "biotecnología animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante desarrollo del INTA en salud animal con alto valor tecnológico.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-23T21:00-03:00"
+    },
     {
       "id": "7ea91d322c46",
       "rep": {
@@ -23223,8 +23419,8 @@
       "cuando": "2026-10-22T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-23T19:24:21-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-23T21:03:28-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
