@@ -13692,6 +13692,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a69d256a5065751e": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "comercialización granos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy relevante para el productor de la región núcleo por el asesoramiento directo en la venta de granos y manejo de inventarios.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14634,7 +14655,8 @@
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-25-octubre-2026": "2026-10-25",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-orgulloso-de-lucir-una-remera-de-iron-maiden-el-beto-peralta-se-pregunta-por-que-saber-mas-no-siempre-alcanza-para-hacer-las-cosas-mejor": "2026-10-25",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249004-la-gaucha-yankee-dejo-spotify-en-ny-para-trabajar-el-campo-de-su-abuelo-y-hoy-tiene-miles-de-seguidores-de-su-vida-rura.html": "2026-10-25",
-      "https://infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra": "2026-10-25"
+      "https://infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra": "2026-10-25",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15575,7 +15597,8 @@
       "euro blue hoy precio y cotizacion de este 25 octubre 2026": "2026-10-25",
       "los dilemas de la agronomia orgulloso de lucir una remera de iron maiden el beto peralta se pregunta por que saber mas no siempre alcanza para hacer las cosas mejor": "2026-10-25",
       "la gaucha yankee dejo spotify en ny para trabajar el campo de su abuelo y hoy tiene miles de seguidores de su vida rura": "2026-10-25",
-      "queremos obras y caminos transitables no que se nos obligue a elegir entre una cosa y la otra": "2026-10-25"
+      "queremos obras y caminos transitables no que se nos obligue a elegir entre una cosa y la otra": "2026-10-25",
+      "estrategias para vender maiz soja y trigo en un mercado complejo y volatil con h bergamini": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16516,7 +16539,8 @@
       "045f90458298764d": "2026-10-25",
       "6f1e45fc142c8680": "2026-10-25",
       "5e7da360abb268d0": "2026-10-25",
-      "f69ea11e864a599c": "2026-10-25"
+      "f69ea11e864a599c": "2026-10-25",
+      "a69d256a5065751e": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24880,6 +24904,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7bade2971e9f_portada.jpg"
+    },
+    {
+      "id": "642f35cfc0cf",
+      "cuando": "2026-10-25T14:21-03:00",
+      "titulo_original": "Estrategias para vender maíz, soja y trigo en un mercado complejo y volátil; con H. Bergamini",
+      "descripcion": "Geopolítica como factor de alta influencia en precios de granos. Log'sitica compleja, petróleo muy caro, y el tema climático y su influencia en hemisferio norte y dsur. Una nota con el Ing. Agr. Hernán Bergamini, asesor en mercados granarios. Contexto internacional y local, ¿qué afecta los mercados ",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html",
+      "titular": "Granos: claves para fijar precios de maíz, soja y trigo",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "comercialización granos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para el productor de la región núcleo por el asesoramiento directo en la venta de granos y manejo de inventarios.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ef24c59a-b072-4078-a4e5-413473f7324d",
+          "slug": "estrategias-para-comercializar-maiz-soja-y-trigo-en-un-mercado-4721cc",
+          "url": "https://www.diariolacampaña.com.ar/n/estrategias-para-comercializar-maiz-soja-y-trigo-en-un-mercado-4721cc",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1798437717727264",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18120124226605910",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_642f35cfc0cf_portada.jpg"
     }
   ],
   "pendientes": [
@@ -25152,8 +25230,8 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T14:04:54-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-25T14:24:05-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
