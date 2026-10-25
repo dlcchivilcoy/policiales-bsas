@@ -13780,6 +13780,90 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b976a788e6bc827e": {
+      "impacto_economico": 2,
+      "interes_productores": 3,
+      "innovacion": 4,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 1,
+      "potencial_comercial": 2,
+      "ai_score": 15,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "educación agtech",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una iniciativa corporativa de EE.UU. sin impacto ni relevancia directa para el productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "865af3c2d35ac4b3": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 8,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "agricultura regenerativa",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Plataforma de datos para agricultura regenerativa enfocada estrictamente en el mercado estadounidense.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e264260182763c2f": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 2,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 25,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Gestión política sobre permisos de producción de fertilizantes en EE.UU., de baja injerencia local.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1da7ff6d20c05785": {
+      "impacto_economico": 2,
+      "interes_productores": 1,
+      "innovacion": 1,
+      "cercania_argentina": 0,
+      "cercania_pba": 0,
+      "potencial_reel": 1,
+      "conversacion": 0,
+      "potencial_comercial": 1,
+      "ai_score": 6,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "política local eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Visita de un legislador estadounidense a una cooperativa de Illinois sin interés para la región pampeana.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14726,7 +14810,11 @@
       "https://agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html": "2026-10-25",
       "https://agrositio.com.ar/canal-agrositio/30-online/249006-fenomeno-nino-forgioni-advierte-sobre-riesgos-de-lluvias-intensas-y-temperaturas-bajas.html": "2026-10-25",
       "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica": "2026-10-25",
-      "https://bichosdecampo.com/al-bufalo-hay-que-visualizarlo-porque-me-da-la-impresion-de-que-estuvo-escondido-siempre-maria-nilda-silva-impulsa-la-genetica-bubalina-desde-una-cabana-especifica-en-corrientes": "2026-10-25"
+      "https://bichosdecampo.com/al-bufalo-hay-que-visualizarlo-porque-me-da-la-impresion-de-que-estuvo-escondido-siempre-maria-nilda-silva-impulsa-la-genetica-bubalina-desde-una-cabana-especifica-en-corrientes": "2026-10-25",
+      "https://croplife.com/croplife-top-100/helena-agri-enterprises-inspires-the-next-generation-of-ag-innovators-with-season-2-of-innovation-never-stop-series": "2026-10-25",
+      "https://croplife.com/management/sustainability/viridis-view-to-launch-at-sustainable-ag-summit-to-track-progress-for-regenerative-agriculture": "2026-10-25",
+      "https://croplife.com/management/legislation/tfi-backs-bipartisan-permitting-reform-to-boost-u-s-fertilizer-production-and-strengthen-supply-chains": "2026-10-25",
+      "https://croplife.com/croplife-top-100/congressman-eric-sorensen-visits-west-central-fs-to-discuss-illinois-agriculture-and-farmer-needs": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15671,7 +15759,11 @@
       "estrategias para vender maiz soja y trigo en un mercado complejo y volatil con h bergamini": "2026-10-25",
       "fenomeno nino forgioni advierte sobre riesgos de lluvias intensas y temperaturas bajas": "2026-10-25",
       "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica": "2026-10-25",
-      "al bufalo hay que visualizarlo porque me da la impresion de que estuvo escondido siempre maria nilda silva impulsa la genetica bubalina desde una cabana especifica en corrientes": "2026-10-25"
+      "al bufalo hay que visualizarlo porque me da la impresion de que estuvo escondido siempre maria nilda silva impulsa la genetica bubalina desde una cabana especifica en corrientes": "2026-10-25",
+      "helena agri enterprises inspires the next generation of ag innovators with season 2 of innovation never stops series": "2026-10-25",
+      "viridis view to launch at sustainable ag summit to track progress for regenerative agriculture": "2026-10-25",
+      "tfi backs bipartisan permitting reform to boost u s fertilizer production and strengthen supply chains": "2026-10-25",
+      "congressman eric sorensen visits west central fs to discuss illinois agriculture and farmer needs": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16616,7 +16708,11 @@
       "a69d256a5065751e": "2026-10-25",
       "da48f12832e41823": "2026-10-25",
       "e6cf1c4e95b06235": "2026-10-25",
-      "0ac7667a1ad3c1c9": "2026-10-25"
+      "0ac7667a1ad3c1c9": "2026-10-25",
+      "b976a788e6bc827e": "2026-10-25",
+      "865af3c2d35ac4b3": "2026-10-25",
+      "e264260182763c2f": "2026-10-25",
+      "1da7ff6d20c05785": "2026-10-25"
     }
   },
   "elegidas": [
@@ -25423,7 +25519,7 @@
       "cuando": "2026-10-24T11:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T19:01:36-03:00",
+  "actualizado": "2026-10-25T19:02:29-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
