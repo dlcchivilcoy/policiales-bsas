@@ -1,31 +1,6 @@
 {
-  "actualizado": "2026-10-25T22:31:06.000Z",
+  "actualizado": "2026-10-25T23:31:06.000Z",
   "eventos": [
-    {
-      "id": "nacionales:ae9e5a4804b66987",
-      "origen": "nacionales",
-      "tipo": "video",
-      "generado": "2026-10-23T22:45:55.000Z",
-      "titulo": "ARCA y Banco Ciudad rematan vinos de alta gama y tecnología desde $50.000",
-      "descripcion": "El Banco Ciudad realizará dos subastas online los días 5 y 12 de noviembre por cuenta de ARCA. Habrá más de 1.100 botellas de vino y whiskys, además de consolas Pioneer, parlantes JBL y equipos de audio.",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/nacional_ae9e5a4804_arca-y-banco-ciudad-rematan-vinos-de-alta-gama-y.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/arca-remata-vinos-de-alta-gama-whiskys-y-tecnologia-con-precios-ae9e5a",
-      "youtube_url": "https://youtube.com/shorts/qVERJf7R1Eg",
-      "prioridad": 7,
-      "urgente": false,
-      "volanta": "Subastas de ARCA",
-      "categoria": "Economía",
-      "categoria_nacional": "",
-      "hashtags": [
-        "Economia",
-        "Subastas"
-      ],
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/347002-quiso-pagar-con-una-billetera-virtual-trucha-en-un",
       "origen": "policiales",
@@ -311,6 +286,30 @@
       "volanta": "Robo calificado en Bragado",
       "categoria": "robo",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.latrochadigital.com.ar/2026/10/25/rally-de-chivilcoy-un-violento-vuelco-pudo-terminar-en-tragedia/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-25T23:31:06.000Z",
+      "titulo": "Grave accidente de un piloto de Mercedes en el Rally de Chivilcoy",
+      "descripcion": "El piloto Luis Zuffo sufrió múltiples fracturas tras un violento vuelco durante la competencia automovilística. Su vehículo despistó en un sector de alta velocidad.",
+      "texto_tiktok": "Un violento vuelco protagonizado este sábado por un automóvil de competición encendió las alarmas durante el desarrollo del Rally de Chivilcoy.\n\nEl siniestro vial ocurrió cuando el piloto Luis Zuffo perdió el control de su vehículo en una zona de alta velocidad y terminó dando varios tumbos.\n\nTras el grave despiste, los bomberos voluntarios y el personal médico acudieron rápidamente al lugar para rescatar y asistir a los tripulantes.\n\nZuffo fue trasladado de urgencia al Hospital Municipal de Chivilcoy, donde el secretario de Salud, Dr.\n\nJosé Luis Nene, confirmó que padece traumatismo de tórax y diversas fracturas.\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #SiniestroVial #Transito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-25_2134_06_9-de-julio_grave-accidente-de-un-piloto-d.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/grave-accidente-en-el-rally-de-chivilcoy-volco-un-auto-y-el-5fb80d",
+      "youtube_url": "https://youtube.com/shorts/UODfk-2XyPc",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "Vuelco en el Rally de Chivilcoy",
+      "categoria": "accidente_vial",
+      "distancia_km": 0.0,
       "radio_ok": true,
       "plataformas": [
         "x",
