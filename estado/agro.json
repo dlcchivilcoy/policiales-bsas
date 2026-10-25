@@ -13629,6 +13629,27 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6f1e45fc142c8680": {
+      "impacto_economico": 2,
+      "interes_productores": 4,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 1,
+      "ai_score": 28,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "agronomía",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una crónica de color sobre un agrónomo y un congreso, sin impacto técnico ni comercial relevante para la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14566,7 +14587,10 @@
       "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos": "2026-10-25",
       "https://lanacion.com.ar/economia/campo/hugo-lattanzi-productor-que-invirtio-en-un-campo-en-rio-negro-siempre-vi-a-la-zona-con-mucho-nid25102026": "2026-10-25",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-25-octubre-2026": "2026-10-25",
-      "https://bichosdecampo.com/dos-yunguenas-producen-la-curiosa-espirulina-en-palma-sola-sin-esconder-ninguno-de-sus-secretos-y-convencidas-de-que-este-super-alimento-terminara-por-imponerse": "2026-10-25"
+      "https://bichosdecampo.com/dos-yunguenas-producen-la-curiosa-espirulina-en-palma-sola-sin-esconder-ninguno-de-sus-secretos-y-convencidas-de-que-este-super-alimento-terminara-por-imponerse": "2026-10-25",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-25-octubre-2026": "2026-10-25",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-25-octubre-2026": "2026-10-25",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-orgulloso-de-lucir-una-remera-de-iron-maiden-el-beto-peralta-se-pregunta-por-que-saber-mas-no-siempre-alcanza-para-hacer-las-cosas-mejor": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15502,7 +15526,10 @@
       "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos": "2026-10-25",
       "hugo lattanzi productor que invirtio en un campo en rio negro siempre vi a la zona con mucho potencial": "2026-10-25",
       "dolar blue a cuanto cotizan hoy en cordoba 25 octubre 2026": "2026-10-25",
-      "dos yunguenas producen la curiosa espirulina en palma sola sin esconder ninguno de sus secretos y convencidas de que este super alimento terminara por imponerse": "2026-10-25"
+      "dos yunguenas producen la curiosa espirulina en palma sola sin esconder ninguno de sus secretos y convencidas de que este super alimento terminara por imponerse": "2026-10-25",
+      "dolar blue a cuanto cotizan hoy en mendoza 25 octubre 2026": "2026-10-25",
+      "euro blue hoy precio y cotizacion de este 25 octubre 2026": "2026-10-25",
+      "los dilemas de la agronomia orgulloso de lucir una remera de iron maiden el beto peralta se pregunta por que saber mas no siempre alcanza para hacer las cosas mejor": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16438,7 +16465,10 @@
       "4949cd44d51141a1": "2026-10-25",
       "a99b6019ea903743": "2026-10-25",
       "db5f702934104929": "2026-10-25",
-      "d07c6493140d15f3": "2026-10-25"
+      "d07c6493140d15f3": "2026-10-25",
+      "7434ba06f42b73d4": "2026-10-25",
+      "045f90458298764d": "2026-10-25",
+      "6f1e45fc142c8680": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24683,6 +24713,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_24d44a7bc16d_portada.jpg"
+    },
+    {
+      "id": "3d8755953b52",
+      "cuando": "2026-10-25T13:00-03:00",
+      "titulo_original": "Los dilemas de la agronomía: Fernando García pide “prender los faros largos” y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
+      "descripcion": "Fernando García pide que no lo traten de usted. Le parece que esa formalidad, que otros podrían interpretar como una señal de respeto, empieza a sonar a despedida. “Me están dando la salida”, bromea. Después de 45 campañas (así cuenta este profesional sus años de carrera) como agrónomo, este reconoc",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos/",
+      "titular": "Fernando García pide llevar el cuidado del suelo al campo",
+      "volanta": "Suelos",
+      "score": {
+        "impacto_economico": 9,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "suelos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy valioso para asesores y agrónomos de la región pampeana, aunque es más conceptual que comercial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "EzUY1u2xTSs",
+          "url": "https://youtube.com/shorts/EzUY1u2xTSs",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "50bee8fa-d763-4086-b57f-b3604107c1f4",
+          "slug": "fernando-garcia-y-los-dilemas-de-la-agronomia-cuidar-el-suelo-c7188c",
+          "url": "https://www.diariolacampaña.com.ar/n/fernando-garcia-y-los-dilemas-de-la-agronomia-cuidar-el-suelo-c7188c",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2069638827080359",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18426645931150112",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3d8755953b52_portada.jpg"
     }
   ],
   "pendientes": [
@@ -24821,73 +24916,6 @@
       "cuando": "2026-10-24T18:20-03:00"
     },
     {
-      "id": "3d8755953b52",
-      "rep": {
-        "id": "3d8755953b52",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos/",
-        "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos",
-        "titulo": "Los dilemas de la agronomía: Fernando García pide “prender los faros largos” y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
-        "titulo_norm": "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
-        "descripcion": "Fernando García pide que no lo traten de usted. Le parece que esa formalidad, que otros podrían interpretar como una señal de respeto, empieza a sonar a despedida. “Me están dando la salida”, bromea. Después de 45 campañas (así cuenta este profesional sus años de carrera) como agrónomo, este reconocido especialista en suelos y nutrición […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/En-el-campo-DiaCampoAAPRESID-SE-Cba-2003-e1706750611395.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-24T10:49-03:00",
-        "capturado": "2026-10-24T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cfb4a1f974fc90ad"
-      },
-      "grupo": [
-        {
-          "id": "3d8755953b52",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos/",
-          "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernando-garcia-pide-prender-los-faros-largos-y-que-el-cuidado-del-suelo-salga-de-los-congresos-para-llegar-a-ser-aplicado-efectivamente-en-los-campos",
-          "titulo": "Los dilemas de la agronomía: Fernando García pide “prender los faros largos” y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
-          "titulo_norm": "los dilemas de la agronomia fernando garcia pide prender los faros largos y que el cuidado del suelo salga de los congresos para llegar a ser aplicado efectivamente en los campos",
-          "descripcion": "Fernando García pide que no lo traten de usted. Le parece que esa formalidad, que otros podrían interpretar como una señal de respeto, empieza a sonar a despedida. “Me están dando la salida”, bromea. Después de 45 campañas (así cuenta este profesional sus años de carrera) como agrónomo, este reconocido especialista en suelos y nutrición […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/En-el-campo-DiaCampoAAPRESID-SE-Cba-2003-e1706750611395.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-24T10:49-03:00",
-          "capturado": "2026-10-24T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cfb4a1f974fc90ad"
-        }
-      ],
-      "score": {
-        "impacto_economico": 9,
-        "interes_productores": 12,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 64,
-        "subtema": "agro",
-        "tema": "suelos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy valioso para asesores y agrónomos de la región pampeana, aunque es más conceptual que comercial.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          68
-        ]
-      },
-      "cuando": "2026-10-24T11:00-03:00"
-    },
-    {
       "id": "abd8b4397aff",
       "rep": {
         "id": "abd8b4397aff",
@@ -25022,8 +25050,8 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T11:21:12-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-25T13:03:24-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
