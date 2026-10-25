@@ -13713,6 +13713,52 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "da48f12832e41823": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 82,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta directa sobre lluvias y siembra temprana para la zona núcleo que moviliza decisiones clave de los productores.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e6cf1c4e95b06235": {
+      "impacto_economico": 17,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 65,
+      "commercial_score": 64,
+      "subtema": "mercados",
+      "tema": "actividad económica",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales de caída de actividad que impactan en el humor y la macroeconomía del sector agropecuario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        65
+      ]
     }
   },
   "indice": {
@@ -14656,7 +14702,9 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-orgulloso-de-lucir-una-remera-de-iron-maiden-el-beto-peralta-se-pregunta-por-que-saber-mas-no-siempre-alcanza-para-hacer-las-cosas-mejor": "2026-10-25",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249004-la-gaucha-yankee-dejo-spotify-en-ny-para-trabajar-el-campo-de-su-abuelo-y-hoy-tiene-miles-de-seguidores-de-su-vida-rura.html": "2026-10-25",
       "https://infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra": "2026-10-25",
-      "https://agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html": "2026-10-25"
+      "https://agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html": "2026-10-25",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249006-fenomeno-nino-forgioni-advierte-sobre-riesgos-de-lluvias-intensas-y-temperaturas-bajas.html": "2026-10-25",
+      "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15598,7 +15646,9 @@
       "los dilemas de la agronomia orgulloso de lucir una remera de iron maiden el beto peralta se pregunta por que saber mas no siempre alcanza para hacer las cosas mejor": "2026-10-25",
       "la gaucha yankee dejo spotify en ny para trabajar el campo de su abuelo y hoy tiene miles de seguidores de su vida rura": "2026-10-25",
       "queremos obras y caminos transitables no que se nos obligue a elegir entre una cosa y la otra": "2026-10-25",
-      "estrategias para vender maiz soja y trigo en un mercado complejo y volatil con h bergamini": "2026-10-25"
+      "estrategias para vender maiz soja y trigo en un mercado complejo y volatil con h bergamini": "2026-10-25",
+      "fenomeno nino forgioni advierte sobre riesgos de lluvias intensas y temperaturas bajas": "2026-10-25",
+      "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16540,7 +16590,9 @@
       "6f1e45fc142c8680": "2026-10-25",
       "5e7da360abb268d0": "2026-10-25",
       "f69ea11e864a599c": "2026-10-25",
-      "a69d256a5065751e": "2026-10-25"
+      "a69d256a5065751e": "2026-10-25",
+      "da48f12832e41823": "2026-10-25",
+      "e6cf1c4e95b06235": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24958,9 +25010,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_642f35cfc0cf_portada.jpg"
+    },
+    {
+      "id": "2faaceb5a1e7",
+      "cuando": "2026-10-25T16:00-03:00",
+      "titulo_original": "Fenómeno Niño: Forgioni advierte sobre riesgos de lluvias intensas y temperaturas bajas",
+      "descripcion": "El climatólogo Fernando Forgioni explicó en 30online cómo el fenómeno Niño está generando lluvias intensas y temperaturas bajas en distintas regiones agrícolas de Argentina. Advirtió que el impacto es heterogéneo y que la zona núcleo debe cuidar la siembra temprana ante el exceso de humedad...",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249006-fenomeno-nino-forgioni-advierte-sobre-riesgos-de-lluvias-intensas-y-temperaturas-bajas.html",
+      "titular": "Zona núcleo: alertan por lluvias intensas y bajas temperaturas",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 82,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta directa sobre lluvias y siembra temprana para la zona núcleo que moviliza decisiones clave de los productores.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "TpGOcZxGysA",
+          "url": "https://youtube.com/shorts/TpGOcZxGysA",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "fb976123-f36e-4d42-9714-b9766c2f7a47",
+          "slug": "fenomeno-nino-advierten-por-lluvias-intensas-y-bajas-9d2ba9",
+          "url": "https://www.diariolacampaña.com.ar/n/fenomeno-nino-advierten-por-lluvias-intensas-y-bajas-9d2ba9",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1036341936142183",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17989398509876163",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2faaceb5a1e7_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "89330936f255",
+      "rep": {
+        "id": "89330936f255",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica/",
+        "canonical_url": "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica",
+        "titulo": "Argentina sigue siendo Argentina: El agro salió de la escena y se cayó la actividad económica",
+        "titulo_norm": "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica",
+        "descripcion": "En agosto de 2026, el estimador mensual de actividad económica (EMAE) registró una caída del 1,7% en términos interanuales, ya que los pocos sectores que registraron un incremento de la actividad no lograron compensar la caída generalizada experimentada en el resto de los rubros. Los principales sectores que conforman el EMAE que registraron subas en […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/grafico-2.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-25T15:38-03:00",
+        "capturado": "2026-10-25T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e6cf1c4e95b06235"
+      },
+      "grupo": [
+        {
+          "id": "89330936f255",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica/",
+          "canonical_url": "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica",
+          "titulo": "Argentina sigue siendo Argentina: El agro salió de la escena y se cayó la actividad económica",
+          "titulo_norm": "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica",
+          "descripcion": "En agosto de 2026, el estimador mensual de actividad económica (EMAE) registró una caída del 1,7% en términos interanuales, ya que los pocos sectores que registraron un incremento de la actividad no lograron compensar la caída generalizada experimentada en el resto de los rubros. Los principales sectores que conforman el EMAE que registraron subas en […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/grafico-2.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-25T15:38-03:00",
+          "capturado": "2026-10-25T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e6cf1c4e95b06235"
+        }
+      ],
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 65,
+        "commercial_score": 64,
+        "subtema": "mercados",
+        "tema": "actividad económica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales de caída de actividad que impactan en el humor y la macroeconomía del sector agropecuario.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "cuando": "2026-10-25T16:00-03:00"
+    },
     {
       "id": "0545a9915f55",
       "rep": {
@@ -25230,8 +25410,8 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T14:24:05-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-25T16:03:14-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
