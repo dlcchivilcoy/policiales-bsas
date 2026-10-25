@@ -24858,7 +24858,7 @@
       "cuando": "2026-10-23T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-25T05:02:37-03:00",
+  "actualizado": "2026-10-25T07:02:08-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -26855,6 +26855,91 @@
             },
             "facebook": {
               "id": "1142685371617769"
+            }
+          }
+        ]
+      }
+    },
+    "2026-10-25T07:00:00-03:00": {
+      "dia": "2026-10-25",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "18094239827653453"
+            },
+            "facebook": {
+              "id": "1486471333427917"
+            }
+          }
+        },
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "17872503567647822"
+            },
+            "facebook": {
+              "id": "4472497983013280"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "error": "FalloRed: Instagram: publicar: HTTP 400 — El contenido multimedia no está listo para publicarse. Espera un momento."
+            },
+            "facebook": {
+              "id": "1132744665842416"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18094239827653453"
+              },
+              "facebook": {
+                "id": "1486471333427917"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17872503567647822"
+              },
+              "facebook": {
+                "id": "4472497983013280"
+              }
+            },
+            {
+              "instagram": {
+                "error": "FalloRed: Instagram: publicar: HTTP 400 — El contenido multimedia no está listo para publicarse. Espera un momento."
+              },
+              "facebook": {
+                "id": "1132744665842416"
+              }
+            }
+          ]
+        }
+      },
+      "diario": {
+        "items": [
+          {
+            "instagram": {
+              "id": "18143825017587266"
+            },
+            "facebook": {
+              "id": "2832468254007298"
             }
           }
         ]
