@@ -13420,6 +13420,31 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "627044ea7698e916": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 59,
+      "commercial_score": 55,
+      "subtema": "empresas",
+      "tema": "transición generacional",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un caso de gestión empresaria familiar de gran interés para productores agropecuarios de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        59
+      ]
     }
   },
   "indice": {
@@ -14345,7 +14370,8 @@
       "https://bichosdecampo.com/el-mercado-argentino-de-fertilizantes-operan-con-lo-justo-ante-productores-que-se-habituaron-a-comprar-a-ultimo-momento": "2026-10-24",
       "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas": "2026-10-24",
       "https://bichosdecampo.com/quien-es-jalles-machado-el-gigante-brasileno-que-procesa-7-millones-de-toneladas-de-cana-y-exporta-azucar-organica": "2026-10-24",
-      "https://bichosdecampo.com/sentate-arriba-del-trigo-a-esperar-tranquilo-proyectan-que-brasil-podria-llegar-a-importar-hasta-10-millones-de-toneladas-del-cereal": "2026-10-24"
+      "https://bichosdecampo.com/sentate-arriba-del-trigo-a-esperar-tranquilo-proyectan-que-brasil-podria-llegar-a-importar-hasta-10-millones-de-toneladas-del-cereal": "2026-10-24",
+      "https://bichosdecampo.com/un-consejo-integrado-por-17-primos-es-la-receta-del-grupo-capelle-para-consolidar-la-transicion-generacional": "2026-10-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15269,7 +15295,8 @@
       "el mercado argentino de fertilizantes operan con lo justo ante productores que se habituaron a comprar a ultimo momento": "2026-10-24",
       "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas": "2026-10-24",
       "quien es jalles machado el gigante brasileno que procesa 7 millones de toneladas de cana y exporta azucar organica": "2026-10-24",
-      "sentate arriba del trigo a esperar tranquilo proyectan que brasil podria llegar a importar hasta 10 millones de toneladas del cereal": "2026-10-24"
+      "sentate arriba del trigo a esperar tranquilo proyectan que brasil podria llegar a importar hasta 10 millones de toneladas del cereal": "2026-10-24",
+      "un consejo integrado por 17 primos es la receta del grupo capelle para consolidar la transicion generacional": "2026-10-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16193,7 +16220,8 @@
       "1de6924f0c30672a": "2026-10-24",
       "13a02681aaef7b4e": "2026-10-24",
       "aada62fa2e52944e": "2026-10-24",
-      "68b68613084c0a3e": "2026-10-24"
+      "68b68613084c0a3e": "2026-10-24",
+      "627044ea7698e916": "2026-10-24"
     }
   },
   "elegidas": [
@@ -24897,7 +24925,7 @@
       "cuando": "2026-10-23T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-24T21:23:02-03:00",
+  "actualizado": "2026-10-24T21:41:16-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
