@@ -13623,7 +13623,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T18:15:00-03:00"
+        "cuando": "2026-10-23T18:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "f1a7f11e-bdda-480d-8c9a-8a45618cc495",
@@ -13699,7 +13700,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T18:45:00-03:00"
+        "cuando": "2026-10-23T18:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "42f9ff59-a1e6-407f-9738-b2ac263fd697",
@@ -13777,7 +13779,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T19:15:00-03:00"
+        "cuando": "2026-10-23T19:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "c1d8ff6e-4794-4a2a-8068-f5a4f4db134d",
@@ -13848,7 +13851,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T19:45:00-03:00"
+        "cuando": "2026-10-23T19:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "a553f0cc-8f7c-4797-9230-f10066d0dea8",
@@ -13922,7 +13926,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T21:15:00-03:00"
+        "cuando": "2026-10-23T21:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "f4ce0fed-3ed5-41d5-a610-2acaa15df8f2",
@@ -13998,7 +14003,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T21:45:00-03:00"
+        "cuando": "2026-10-23T21:45:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "91c64e32-acd2-4d73-8cec-123a4054aaf7",
@@ -14080,7 +14086,8 @@
         "sin_placa": true,
         "miniatura": "portada del reel",
         "estado": "ok",
-        "cuando": "2026-10-23T22:15:00-03:00"
+        "cuando": "2026-10-23T22:15:00-03:00",
+        "verificado": "procesado"
       },
       "web": {
         "id": "390d317a-9be5-41d3-a971-f8379abbdc0a",
@@ -14101,6 +14108,540 @@
       "tiktok_buzon": {
         "estado": "ok",
         "id": "nacionales:48bb4e9d6ed706f8"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/24/el-papa-leon-xiv-recibio-una-carta-de-las-universidades-argentinas-con-duras-criticas-al-gobierno-por-la-crisis-presupuestaria/": {
+      "titulo_original": "El papa León XIV recibió una carta de las universidades argentinas con duras críticas al gobierno por la crisis presupuestaria",
+      "titular": "Universidades entregaron una carta al Papa con críticas a Milei por los fondos",
+      "volanta": "Universidades públicas",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 66,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 10.º de 67 en «nacionales»",
+        "cobertura: 13 medios (Infobae, Ámbito, La Nación, Clarín)",
+        "video que explota en Infobae: «Dos jubiladas acusadas de regentear prostíbulos en» (31.632 vistas. 1.260 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El Consejo Interuniversitario Nacional le entregó un documento a León XIV en el Vaticano para cuestionar la caída del presupuesto educativo y la falta de aplicación de leyes vigentes.",
+      "seccion": "Política",
+      "tema": [
+        "*leon",
+        "*xiv",
+        "argentina",
+        "carta",
+        "crisi",
+        "critica",
+        "duras",
+        "gobierno",
+        "leon",
+        "papa",
+        "presupuestaria",
+        "recibio",
+        "universidade"
+      ],
+      "viral": 6,
+      "puntos": 75,
+      "nivel": "política",
+      "cobertura": 4,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:01:18-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:01",
+      "copia": 9,
+      "foto_url": "https://www.infobae.com/resizer/v2/PMOA7D2PWZCXTLKRZ3ZZA7TMZU.png?auth=1291a1cbb66e5980b8cc64cff1c973e447e085614fa9767cf89c1bd85a9b71c0&smart=true&width=857&height=617",
+      "foto": "El rector de la Universidad Nacional de Rosario le entregó al papa León XIV una carta con duras críticas al Gobierno",
+      "web": {
+        "id": "80346092-ec6e-4dc7-a7e8-4400ec186730",
+        "slug": "universidades-publicas-le-entregaron-una-carta-al-papa-leon-xiv-66795e",
+        "url": "https://www.diariolacampaña.com.ar/n/universidades-publicas-le-entregaron-una-carta-al-papa-leon-xiv-66795e",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:01:17-03:00"
+      }
+    },
+    "https://www.infobae.com/judiciales/2026/10/24/las-sociedades-hoteleras-inmobiliarias-y-constructoras-que-quedaron-bajo-la-lupa-judicial-en-el-caso-los-sauces-y-hotesur/": {
+      "titulo_original": "Las sociedades hoteleras, inmobiliarias y constructoras que quedaron bajo la lupa judicial en el caso Los Sauces y Hotesur",
+      "titular": "Comenzó el juicio unificado por lavado de dinero en las causas Hotesur y Los Sauces",
+      "volanta": "Causa Los Sauces y Hotesur",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 46,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 2 medios (Infobae, La Nación)",
+        "video que explota en Clarín: «EN VIVO: COMIENZA EL JUICIO POR HOTESUR Y LOS SAUC» (75.201 vistas. 2.419 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El Tribunal Oral Federal 5 dio inicio al debate oral que analiza un presunto esquema de lavado de dinero y asociación ilícita a través de negocios hoteleros e inmobiliarios vinculados a la expresidenta Cristina Fernández y otros 30 imputados.",
+      "seccion": "Justicia",
+      "tema": [
+        "*hotesur",
+        "*sauce",
+        "caso",
+        "constructora",
+        "hotelera",
+        "hotesur",
+        "inmobiliaria",
+        "judicial",
+        "lupa",
+        "quedaron",
+        "sauce",
+        "sociedade"
+      ],
+      "viral": 8,
+      "puntos": 74,
+      "nivel": "justicia",
+      "cobertura": 5,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:01:27-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:01",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/3OVSE32WYRGTTFOQXMP6AST55Y.png?auth=f5a41071743fe4f71a4c45fd00d304b66da957a904ea52c03ab44b4e575406f4&smart=true&width=1326&height=680",
+      "foto": "Comenzó el juicio por Los Sauces y Hotesur: Las claves de la acusación que exponen contratos simulados, obras viales y el circuito de fondos que le habrían pagado a la familia Kirchner",
+      "web": {
+        "id": "130d1129-8769-4a01-a7be-0f53ef672974",
+        "slug": "comenzo-el-juicio-oral-y-unificado-por-las-causas-los-sauces-y-8ec987",
+        "url": "https://www.diariolacampaña.com.ar/n/comenzo-el-juicio-oral-y-unificado-por-las-causas-los-sauces-y-8ec987",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:01:25-03:00"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/23/milei-hablo-de-la-causa-libra-tras-ser-sobreseido-intentaron-un-golpe-de-estado-y-no-pudieron/": {
+      "titulo_original": "Milei habló de la causa $LIBRA tras ser sobreseído: “Intentaron un golpe de Estado y no pudieron”",
+      "titular": "Milei tras su sobreseimiento: Intentaron un golpe de Estado",
+      "volanta": "Causa $LIBRA",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 65,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 3.º de 34 en «portada»",
+        "cobertura: 11 medios (Infobae, Ámbito, El Cronista, La Nación, Clarín)",
+        "video que explota en La Nación: «Milei dijo que la causa $LIBRA tuvo “fines golpist» (17.493 vistas. 710 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El presidente Javier Milei celebró su sobreseimiento en la causa $LIBRA junto a Karina Milei y apuntó contra una operación política. Fue en un evento de la Fundación Faro que comanda Agustín Laje.",
+      "seccion": "Política",
+      "tema": [
+        "*intentaron",
+        "*libra",
+        "causa",
+        "estado",
+        "golpe",
+        "hablo",
+        "intentaron",
+        "libra",
+        "milei",
+        "pudieron",
+        "sobreseido"
+      ],
+      "viral": 8,
+      "puntos": 58,
+      "nivel": "política",
+      "cobertura": 2,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:01:36-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:01",
+      "copia": 9,
+      "foto_url": "https://www.infobae.com/resizer/v2/OL7TIMIEGNFRXD7V5GG6UGVKWI.png?auth=25f9c7a37cdc85fd49acd344be3e0bc172f5c603dcfc0053ec13feaafcd8a0ee&smart=true&width=1920&height=1080",
+      "foto": "Javier Milei en la Fundación Faro",
+      "web": {
+        "id": "4e1819dd-531e-423b-ba07-0facbd188c2c",
+        "slug": "javier-milei-hablo-tras-su-sobreseimiento-en-la-causa-libra-y-362ae0",
+        "url": "https://www.diariolacampaña.com.ar/n/javier-milei-hablo-tras-su-sobreseimiento-en-la-causa-libra-y-362ae0",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:01:35-03:00"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/24/conflicto-universitario-convocaron-a-un-nuevo-paro-nacional-por-una-semana/": {
+      "titulo_original": "Conflicto universitario: convocaron a un nuevo paro nacional por una semana",
+      "titular": "Universidades: habrá un paro de una semana y protestas de nodocentes",
+      "volanta": "Conflicto universitario",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 57,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 24.º de 67 en «nacionales»",
+        "cobertura: 5 medios (Infobae)",
+        "video que explota en Infobae: «LEY MALVINAS: ESTADOS UNIDOS y el conflicto que IN» (16.392 vistas. 471 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "Gremios docentes y nodocentes anunciaron nuevas medidas de fuerza en reclamo de fondos y mejoras salariales. Hubo 25 detenidos frente al Congreso durante la última marcha.",
+      "seccion": "Política",
+      "tema": [
+        "conflicto",
+        "convocaron",
+        "nacional",
+        "paro",
+        "universitario"
+      ],
+      "viral": 8,
+      "puntos": 51,
+      "nivel": "bolsillo",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:01:45-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:01",
+      "copia": 12,
+      "foto_url": "https://www.infobae.com/resizer/v2/7YBN3W6ONJHR7MLQNXZ7XXLNWQ.png?auth=16a07bb14e8512025f4bba509772b01cc98adc564ca3271009e0b1cef2507fba&smart=true&width=681&height=364",
+      "foto": "El paro docente se dispuso luego de la masiva 5° Marcha Federal Universitaria (RS Fotos)",
+      "web": {
+        "id": "1a555eef-d9cb-4547-a951-f00280285941",
+        "slug": "universidades-nacionales-convocan-a-un-paro-de-una-semana-y-59380d",
+        "url": "https://www.diariolacampaña.com.ar/n/universidades-nacionales-convocan-a-un-paro-de-una-semana-y-59380d",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:01:44-03:00"
+      }
+    },
+    "https://www.infobae.com/sociedad/2026/10/23/el-nino-se-espera-un-repunte-del-parana-en-los-proximos-dias-por-las-lluvias-en-la-cuenca-alta/": {
+      "titulo_original": "El Niño: se espera un repunte del Paraná en los próximos días por las lluvias en la cuenca alta",
+      "titular": "El Niño: advierten un repunte del Paraná y cortes de rutas por las lluvias",
+      "volanta": "Crecida del Paraná",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 45,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 50.º de 67 en «nacionales»",
+        "cobertura: 6 medios (Infobae, Clarín)"
+      ],
+      "fuentes": [],
+      "bajada": "El INA alertó sobre un incremento en el caudal del río Paraná debido a las precipitaciones en la cuenca alta por el fenómeno de El Niño. Hay rutas cortadas y pasos fronterizos cerrados en Misiones.",
+      "seccion": "Sociedad",
+      "tema": [
+        "*nino",
+        "*parana",
+        "alta",
+        "cuenca",
+        "espera",
+        "lluvia",
+        "nino",
+        "parana",
+        "proximo",
+        "repunte"
+      ],
+      "viral": 7,
+      "puntos": 47,
+      "nivel": "sociedad",
+      "cobertura": 3,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:01:55-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:01",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/Z7CAYW4RF5BPXKS3I46JYP7ILY.jpg?auth=5e64423a79b5d359bdbe154e916a7fd198350f5f91002fc90ed4feee4b344971&smart=true&width=1920&height=864",
+      "foto": "Vialidad Nacional trabaja en Corrientes para combatir las inundaciones",
+      "web": {
+        "id": "dec01662-06df-4cdc-b8a6-96efb15cb130",
+        "slug": "crecida-del-parana-por-el-nino-advierten-repunte-rutas-cortadas-e6ea75",
+        "url": "https://www.diariolacampaña.com.ar/n/crecida-del-parana-por-el-nino-advierten-repunte-rutas-cortadas-e6ea75",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:01:54-03:00"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/23/javier-milei-recibe-hoy-a-christopher-landau-en-casa-rosada-tras-acordar-cambios-en-la-ley-sobre-malvinas/": {
+      "titulo_original": "Javier Milei recibió a Christopher Landau en Casa Rosada tras acordar cambios en la ley sobre Malvinas",
+      "titular": "Milei recibió a Christopher Landau tras acordar cambios en la ley sobre Malvinas",
+      "volanta": "Ley de Malvinas",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 56,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 31.º de 67 en «nacionales»",
+        "cobertura: 5 medios (Infobae, La Nación)",
+        "video que explota en La Nación: «Así fue el momento en que intentaron ingresar a la» (25.268 vistas. 1.087 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El presidente mantuvo una reunión de dos horas con el vicesecretario de Estado norteamericano en la Casa Rosada, tras acordar modificaciones en el proyecto de soberanía para evitar sanciones a firmas que no operan de manera directa en el archipiélago.",
+      "seccion": "Política",
+      "tema": [
+        "*casa",
+        "*christopher",
+        "*landau",
+        "*malvina",
+        "*milei",
+        "*rosada",
+        "acordar",
+        "cambio",
+        "casa",
+        "christopher",
+        "javier",
+        "landau",
+        "malvina",
+        "milei",
+        "recibio",
+        "rosada"
+      ],
+      "viral": 7,
+      "puntos": 47,
+      "nivel": "política",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:02:05-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:02",
+      "copia": 10,
+      "foto_url": "https://www.infobae.com/resizer/v2/IDAOKCYYXJH4FLOGEYR2VRUG3Y.png?auth=b33840d5a9d88b0b25b446e24a5cd960f0fe0f32bc20b25a28fd41fe61635bcf&smart=true&width=1920&height=1080",
+      "foto": "Javier Milei y Christopher Landau, esta mañana en Casa Rosada",
+      "web": {
+        "id": "7440cbba-d6de-4e08-ba7b-8432bc1ab7b2",
+        "slug": "javier-milei-recibio-a-christopher-landau-en-casa-rosada-tras-b41dd8",
+        "url": "https://www.diariolacampaña.com.ar/n/javier-milei-recibio-a-christopher-landau-en-casa-rosada-tras-b41dd8",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:02:03-03:00"
+      }
+    },
+    "https://www.infobae.com/economia/2026/10/24/el-banco-nacion-otorgo-210-creditos-hipotecarios-con-los-fondos-de-la-primera-licitacion-del-fgs/": {
+      "titulo_original": "El Banco Nación otorgó 210 créditos hipotecarios con los fondos de la primera licitación del FGS",
+      "titular": "El Banco Nación otorgó 210 préstamos con fondos de la primera licitación del FGS",
+      "volanta": "Créditos hipotecarios",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 32,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 2 medios (Infobae, Ámbito)"
+      ],
+      "fuentes": [],
+      "bajada": "La entidad financiera colocó la totalidad de los 32.000 millones de pesos obtenidos en la subasta inicial para financiar viviendas y ya recibió fondos adicionales en una segunda convocatoria.",
+      "seccion": "Economía",
+      "tema": [
+        "*banco",
+        "*fgs",
+        "210",
+        "banco",
+        "credito",
+        "fondo",
+        "hipotecario",
+        "licitacion",
+        "nacion",
+        "otorgo",
+        "primera"
+      ],
+      "viral": 7,
+      "puntos": 44,
+      "nivel": "bolsillo",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:02:16-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:02",
+      "copia": 7,
+      "foto_url": "https://www.infobae.com/resizer/v2/53D6YUIICNBJVMSKMPTAHXCSGM.jpg?auth=b4f89232fddb41c117f265447e1de76315d337ba1cc85ab64c4a34f45a00450a&smart=true&width=1920&height=1080",
+      "foto": "El Banco Nación recibió $32.000 millones en la primera licitación del FGS para ampliar el financiamiento hipotecario.",
+      "web": {
+        "id": "30619eda-fb0e-4211-a063-74957bfac8e8",
+        "slug": "el-banco-nacion-completo-la-colocacion-de-210-creditos-9e226a",
+        "url": "https://www.diariolacampaña.com.ar/n/el-banco-nacion-completo-la-colocacion-de-210-creditos-9e226a",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:02:14-03:00"
+      }
+    },
+    "https://www.infobae.com/politica/2026/10/24/el-presupuesto-bajo-presion-las-concesiones-en-discapacidad-le-abren-al-gobierno-un-complicado-flanco-fiscal/": {
+      "titulo_original": "El Presupuesto bajo presión: las concesiones en discapacidad le abren al Gobierno un complicado flanco fiscal",
+      "titular": "Diputados giró al Senado la ley de discapacidad y tensa el debate del Presupuesto",
+      "volanta": "Presupuesto y discapacidad",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 46,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "Google News: 28.º de 67 en «nacionales»",
+        "cobertura: 5 medios (Infobae)"
+      ],
+      "fuentes": [],
+      "bajada": "La Cámara baja aprobó por amplia mayoría el proyecto sobre discapacidad y lo envió a la Cámara alta. Los cambios aceptados por el oficialismo suman un costo fiscal que complica el cálculo de gastos para el próximo año.",
+      "seccion": "Política",
+      "tema": [
+        "*presupuesto",
+        "abren",
+        "complicado",
+        "concesione",
+        "discapacidad",
+        "fiscal",
+        "flanco",
+        "gobierno",
+        "presion",
+        "presupuesto"
+      ],
+      "viral": 6,
+      "puntos": 42,
+      "nivel": "política",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:02:26-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:02",
+      "copia": 6,
+      "foto_url": "https://www.infobae.com/resizer/v2/CBZST4IMWJAPFMERLNTJD7STOM.jpg?auth=d9e11967f6eb62e96e08c70c890c757c7d76558d966a3c83740caf142e779c1f&smart=true&width=1920&height=1279",
+      "foto": "Carlos Guberman en la Comisión de Presupuesto 2027",
+      "web": {
+        "id": "bce03004-8633-46be-b764-f54a639957e3",
+        "slug": "ley-de-discapacidad-con-media-sancion-el-costo-fiscal-complica-344639",
+        "url": "https://www.diariolacampaña.com.ar/n/ley-de-discapacidad-con-media-sancion-el-costo-fiscal-complica-344639",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:02:24-03:00"
+      }
+    },
+    "https://www.infobae.com/judiciales/2026/10/23/sur-finanzas-ordenaron-detener-a-maximiliano-vallejo-el-financista-ligado-a-claudio-chiqui-tapia/": {
+      "titulo_original": "Sur Finanzas: detuvieron a Ariel Vallejo, el financista ligado a Claudio “Chiqui” Tapia",
+      "titular": "Detuvieron al financista Ariel Vallejo por incumplir reglas en causa por lavado",
+      "volanta": "Sur Finanzas",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 41,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 2 medios (Infobae, La Nación)",
+        "video que explota en TN: «SUR FINANZAS: Detuvieron por lavado de dinero a Ar» (14.163 vistas. 440 por hora)"
+      ],
+      "fuentes": [],
+      "bajada": "El juez federal Tomás Rodríguez Ponte ordenó apresar a Ariel Vallejo, ligado a Claudio \"Chiqui\" Tapia, tras hallar nuevas pruebas sobre lavado de dinero y la compra de una propiedad por USD 500 mil.",
+      "seccion": "Justicia",
+      "tema": [
+        "*ariel",
+        "*chiqui",
+        "*claudio",
+        "*finanza",
+        "*tapia",
+        "*vallejo",
+        "ariel",
+        "chiqui",
+        "claudio",
+        "detuvieron",
+        "financista",
+        "finanza",
+        "ligado",
+        "tapia",
+        "vallejo"
+      ],
+      "viral": 8,
+      "puntos": 39,
+      "nivel": "justicia",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:02:36-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:02",
+      "copia": 8,
+      "foto_url": "https://www.infobae.com/resizer/v2/UC2PHDPFIBFJJLJKDJSYYA3RZA.jpg?auth=f990398beab830826ff0449a6171aaafb8f167d663949f137e021bfc698eca14&smart=true&width=583&height=328",
+      "foto": "Ordenaron detener al financista Ariel Vallejo",
+      "web": {
+        "id": "6d4e215c-bb02-4a56-88d4-6077a3c07c9b",
+        "slug": "detuvieron-al-financista-ariel-vallejo-tras-hallar-nuevas-ae730a",
+        "url": "https://www.diariolacampaña.com.ar/n/detuvieron-al-financista-ariel-vallejo-tras-hallar-nuevas-ae730a",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:02:34-03:00"
+      }
+    },
+    "https://www.infobae.com/judiciales/2026/10/24/ricardo-lorenzetti-en-expoterra-tanto-el-agua-como-la-tierra-son-recursos-escasos-los-hemos-sobreutilizado-para-otros-fines-y-al-haber-hecho-esto-hemos-llegado-a-agotarlos/": {
+      "titulo_original": "Ricardo Lorenzetti en Expoterra: “Tanto el agua como la tierra son recursos escasos; los hemos sobreutilizado para otros fines y, al haber hecho esto, hemos llegado a agotarlos”",
+      "titular": "Congreso de derecho ambiental en la UBA con Aída Kemelmajer y Ricardo Lorenzetti",
+      "volanta": "Derecho ambiental",
+      "categoria": "",
+      "formato": "web",
+      "subgeneral": "",
+      "medio_origen": "",
+      "video_original": "",
+      "impacto": 33,
+      "impacto_razones": [
+        "fuente: Infobae (1.º de 5 en el orden del PDF)",
+        "cobertura: 2 medios (Infobae, Clarín)"
+      ],
+      "fuentes": [],
+      "bajada": "El XI Congreso Argentino de Derecho Ambiental reunió a 450 asistentes los días 22 y 23 de octubre en la Facultad de Derecho. El cierre estuvo a cargo de Ricardo Lorenzetti.",
+      "seccion": "Política",
+      "tema": [
+        "*expoterra",
+        "*lorenzetti",
+        "*tanto",
+        "agotarlo",
+        "agua",
+        "escaso",
+        "esto",
+        "expoterra",
+        "fines",
+        "haber",
+        "hecho",
+        "hemos",
+        "llegado",
+        "lorenzetti",
+        "recurso",
+        "ricardo",
+        "sobreutilizado",
+        "tanto",
+        "tierra"
+      ],
+      "viral": 5,
+      "puntos": 34,
+      "nivel": "justicia",
+      "cobertura": 1,
+      "dia": "2026-10-24",
+      "cuando": "2026-10-24T22:02:45-03:00",
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "turno": "22:02",
+      "copia": 10,
+      "foto_url": "https://www.infobae.com/resizer/v2/6MK2JAEG2BHTJBUYXE4E3SEVKU.jpeg?auth=7b1adf22c3412043e0a384186e033dadb162b02c0edcf3912e1ab0aba07b4d97&smart=true&width=1280&height=854",
+      "foto": "El Aula Magna de la Facultad de Derecho de la UBA fue sede de las dos jornadas del XI Congreso Argentino de Derecho Ambiental",
+      "web": {
+        "id": "592a5775-ff28-4801-af40-6cfebe7e1190",
+        "slug": "se-realizo-el-xi-congreso-argentino-de-derecho-ambiental-en-la-4fc2d5",
+        "url": "https://www.diariolacampaña.com.ar/n/se-realizo-el-xi-congreso-argentino-de-derecho-ambiental-en-la-4fc2d5",
+        "foto": true,
+        "video": false,
+        "estado": "ok",
+        "cuando": "2026-10-24T22:02:43-03:00"
       }
     }
   },
@@ -14240,6 +14781,26 @@
     "https://www.infobae.com/economia/2026/10/23/jornada-financiera-las-acciones-argentinas-rebotaron-hasta-6-en-wall-street-pero-el-riesgo-pais-volvio-a-subir/": {
       "motivo": "sin imagen que se pueda usar (foto de agencia (REUTERS))",
       "cuando": "2026-10-23T20:52:47-03:00"
+    },
+    "https://www.infobae.com/politica/2026/10/24/ladron-y-mentiroso-milei-respondio-los-dichos-de-lula-sobre-su-gobierno-durante-el-debate-con-bolsonaro/": {
+      "motivo": "sin foto que se pueda usar (foto de agencia (Reuters))",
+      "cuando": "2026-10-24T22:00:27-03:00"
+    },
+    "https://www.infobae.com/politica/2026/10/24/el-gobierno-navega-cortocircuitos-internos-por-el-proyecto-malvinas-y-apura-un-dictamen-para-el-martes/": {
+      "motivo": "sin foto que se pueda usar (foto de agencia (REUTERS))",
+      "cuando": "2026-10-24T22:00:27-03:00"
+    },
+    "https://www.infobae.com/politica/2026/10/23/el-primer-ministro-del-reino-unido-defendio-ante-trump-la-explotacion-petrolera-en-las-islas-malvinas-y-cuestiono-las-sanciones-de-argentina/": {
+      "motivo": "sin foto que se pueda usar (foto de agencia (Reuters))",
+      "cuando": "2026-10-24T22:00:27-03:00"
+    },
+    "https://www.infobae.com/politica/2026/10/24/javier-milei-dijo-que-esta-supertranquilo-sobre-sus-chances-de-reeleccion-no-veo-a-los-argentinos-votando-para-atras/": {
+      "motivo": "sin foto que se pueda usar (foto de agencia (REUTERS))",
+      "cuando": "2026-10-24T22:00:27-03:00"
+    },
+    "https://www.infobae.com/politica/2026/10/24/javier-milei-condiciona-los-pasos-de-su-gobierno-y-suma-tension-al-vinculo-con-los-aliados/": {
+      "motivo": "sin foto que se pueda usar (foto de agencia (REUTERS))",
+      "cuando": "2026-10-24T22:00:27-03:00"
     }
   },
   "carruseles": {
@@ -14452,7 +15013,32 @@
         "https://www.infobae.com/politica/2026/10/16/estados-unidos-envia-a-sus-dos-principales-funcionarios-para-la-region-a-la-argentina-para-impulsar-el-corredor-andes-atlantico/",
         "https://www.infobae.com/sociedad/2026/10/11/gran-fondo-buenos-aires-que-avenidas-y-autopistas-estan-cortadas-por-la-carrera-de-ciclismo/"
       ]
+    },
+    "2026-10-24": {
+      "id": "18147777232600400",
+      "portada": "propia",
+      "estado": "ok",
+      "cuando": "2026-10-24T23:00:00-03:00",
+      "facebook": {
+        "id": "1087101594141103",
+        "estado": "ok",
+        "cuando": "2026-10-24T23:00:46-03:00"
+      },
+      "formato": "reel",
+      "diapositivas": 10,
+      "piezas": [
+        "https://www.infobae.com/politica/2026/10/24/el-papa-leon-xiv-recibio-una-carta-de-las-universidades-argentinas-con-duras-criticas-al-gobierno-por-la-crisis-presupuestaria/",
+        "https://www.infobae.com/judiciales/2026/10/24/las-sociedades-hoteleras-inmobiliarias-y-constructoras-que-quedaron-bajo-la-lupa-judicial-en-el-caso-los-sauces-y-hotesur/",
+        "https://www.infobae.com/politica/2026/10/23/milei-hablo-de-la-causa-libra-tras-ser-sobreseido-intentaron-un-golpe-de-estado-y-no-pudieron/",
+        "https://www.infobae.com/politica/2026/10/24/conflicto-universitario-convocaron-a-un-nuevo-paro-nacional-por-una-semana/",
+        "https://www.infobae.com/sociedad/2026/10/23/el-nino-se-espera-un-repunte-del-parana-en-los-proximos-dias-por-las-lluvias-en-la-cuenca-alta/",
+        "https://www.infobae.com/politica/2026/10/23/javier-milei-recibe-hoy-a-christopher-landau-en-casa-rosada-tras-acordar-cambios-en-la-ley-sobre-malvinas/",
+        "https://www.infobae.com/economia/2026/10/24/el-banco-nacion-otorgo-210-creditos-hipotecarios-con-los-fondos-de-la-primera-licitacion-del-fgs/",
+        "https://www.infobae.com/politica/2026/10/24/el-presupuesto-bajo-presion-las-concesiones-en-discapacidad-le-abren-al-gobierno-un-complicado-flanco-fiscal/",
+        "https://www.infobae.com/judiciales/2026/10/23/sur-finanzas-ordenaron-detener-a-maximiliano-vallejo-el-financista-ligado-a-claudio-chiqui-tapia/",
+        "https://www.infobae.com/judiciales/2026/10/24/ricardo-lorenzetti-en-expoterra-tanto-el-agua-como-la-tierra-son-recursos-escasos-los-hemos-sobreutilizado-para-otros-fines-y-al-haber-hecho-esto-hemos-llegado-a-agotarlos/"
+      ]
     }
   },
-  "actualizado": "2026-10-23T22:15:49-03:00"
+  "actualizado": "2026-10-24T23:01:30-03:00"
 }
