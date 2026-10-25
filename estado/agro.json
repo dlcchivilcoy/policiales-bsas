@@ -13671,6 +13671,27 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f69ea11e864a599c": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 73,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente de lleno en los productores y la logística de la provincia de Buenos Aires.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14612,7 +14633,8 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-25-octubre-2026": "2026-10-25",
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-25-octubre-2026": "2026-10-25",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-orgulloso-de-lucir-una-remera-de-iron-maiden-el-beto-peralta-se-pregunta-por-que-saber-mas-no-siempre-alcanza-para-hacer-las-cosas-mejor": "2026-10-25",
-      "https://agrositio.com.ar/canal-agrositio/entrevistas/249004-la-gaucha-yankee-dejo-spotify-en-ny-para-trabajar-el-campo-de-su-abuelo-y-hoy-tiene-miles-de-seguidores-de-su-vida-rura.html": "2026-10-25"
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249004-la-gaucha-yankee-dejo-spotify-en-ny-para-trabajar-el-campo-de-su-abuelo-y-hoy-tiene-miles-de-seguidores-de-su-vida-rura.html": "2026-10-25",
+      "https://infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15552,7 +15574,8 @@
       "dolar blue a cuanto cotizan hoy en mendoza 25 octubre 2026": "2026-10-25",
       "euro blue hoy precio y cotizacion de este 25 octubre 2026": "2026-10-25",
       "los dilemas de la agronomia orgulloso de lucir una remera de iron maiden el beto peralta se pregunta por que saber mas no siempre alcanza para hacer las cosas mejor": "2026-10-25",
-      "la gaucha yankee dejo spotify en ny para trabajar el campo de su abuelo y hoy tiene miles de seguidores de su vida rura": "2026-10-25"
+      "la gaucha yankee dejo spotify en ny para trabajar el campo de su abuelo y hoy tiene miles de seguidores de su vida rura": "2026-10-25",
+      "queremos obras y caminos transitables no que se nos obligue a elegir entre una cosa y la otra": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16492,7 +16515,8 @@
       "7434ba06f42b73d4": "2026-10-25",
       "045f90458298764d": "2026-10-25",
       "6f1e45fc142c8680": "2026-10-25",
-      "5e7da360abb268d0": "2026-10-25"
+      "5e7da360abb268d0": "2026-10-25",
+      "f69ea11e864a599c": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24802,6 +24826,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3d8755953b52_portada.jpg"
+    },
+    {
+      "id": "7bade2971e9f",
+      "cuando": "2026-10-25T14:01-03:00",
+      "titulo_original": "“Queremos obras y caminos transitables, no que se nos obligue a elegir entre una cosa y la otra”",
+      "descripcion": "Coninagro se sumó al reclamo del ruralismo contra la ley aprobada por la legislatura bonaerense que permite desviar fondos destinados al arreglo de caminos rurales a obras hídricas. Piden que los municipios rindan cuentas del manejo de estos recursos.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra/",
+      "titular": "Coninagro rechaza ley bonaerense que desvía fondos de caminos rurales a obras",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente de lleno en los productores y la logística de la provincia de Buenos Aires.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ca1f0dda-bff1-45a2-beb3-68fe47e179c0",
+          "slug": "coninagro-rechaza-la-ley-bonaerense-que-desvia-fondos-de-8cdc07",
+          "url": "https://www.diariolacampaña.com.ar/n/coninagro-rechaza-la-ley-bonaerense-que-desvia-fondos-de-8cdc07",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4646710412324007",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18465387043186252",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7bade2971e9f_portada.jpg"
     }
   ],
   "pendientes": [
@@ -25074,8 +25152,8 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T14:01:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-25T14:04:54-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
