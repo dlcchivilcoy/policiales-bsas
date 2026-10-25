@@ -13491,6 +13491,52 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f04ea992bee635a5": {
+      "impacto_economico": 11,
+      "interes_productores": 8,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 59,
+      "commercial_score": 56,
+      "subtema": "ganaderia",
+      "tema": "algarrobo blanco",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aporta valor forrajero innovador pero su foco está en el norte, restando algo de cercanía directa con la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        56
+      ]
+    },
+    "4f0cac60a548ce19": {
+      "impacto_economico": 4,
+      "interes_productores": 5,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 8,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 47,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "agro influencers",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un tema cultural y de entretenimiento del sector, liviano para redes pero de baja utilidad productiva.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14420,7 +14466,9 @@
       "https://bichosdecampo.com/un-consejo-integrado-por-17-primos-es-la-receta-del-grupo-capelle-para-consolidar-la-transicion-generacional": "2026-10-24",
       "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-25-octubre-2026": "2026-10-25",
       "https://lanacion.com.ar/economia/campo/opinion-no-a-todo-el-campo-le-va-bien-nid25102026": "2026-10-25",
-      "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026": "2026-10-25"
+      "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026": "2026-10-25",
+      "https://bichosdecampo.com/el-inta-encontro-en-el-algarrobo-blanco-una-fuente-de-proteinas-para-alimentar-al-ganado-puede-aportar-hasta-82-kilos-por-hectarea": "2026-10-25",
+      "https://bichosdecampo.com/nosotros-no-contamos-nuestra-vida-comunicamos-a-traves-de-ficcion-los-agro-influencers-han-crecido-y-hasta-llegaron-al-teatro-narrando-el-campo-desde-el-humor": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15348,7 +15396,9 @@
       "un consejo integrado por 17 primos es la receta del grupo capelle para consolidar la transicion generacional": "2026-10-24",
       "dolar blue hoy a cuanto cotiza el 25 octubre 2026": "2026-10-25",
       "opinion no a todo el campo le va bien": "2026-10-25",
-      "visec carne asi funciona el mundo de los negocios guste o no": "2026-10-25"
+      "visec carne asi funciona el mundo de los negocios guste o no": "2026-10-25",
+      "el inta encontro en el algarrobo blanco una fuente de proteinas para alimentar al ganado puede aportar hasta 82 kilos por hectarea": "2026-10-25",
+      "nosotros no contamos nuestra vida comunicamos a traves de ficcion los agro influencers han crecido y hasta llegaron al teatro narrando el campo desde el humor": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16276,7 +16326,9 @@
       "627044ea7698e916": "2026-10-24",
       "9e19f78f89d86456": "2026-10-25",
       "7f4aa076d3baec92": "2026-10-25",
-      "63f84bb60a05b8f9": "2026-10-25"
+      "63f84bb60a05b8f9": "2026-10-25",
+      "f04ea992bee635a5": "2026-10-25",
+      "4f0cac60a548ce19": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24674,7 +24726,7 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T08:03:21-03:00",
+  "actualizado": "2026-10-25T08:23:18-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
