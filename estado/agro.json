@@ -13537,6 +13537,77 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e8dc04e455d490fc": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "industria frigorífica",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Radiografía profunda de la crisis de rentabilidad del principal faenador del país, clave para toda la cadena ganadera.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4949cd44d51141a1": {
+      "impacto_economico": 12,
+      "interes_productores": 11,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 7,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 68,
+      "commercial_score": 70,
+      "subtema": "ganaderia",
+      "tema": "genética vacuna",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inspira y muestra integración vertical en ganadería, aunque geográficamente esté en Entre Ríos y no en zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        73
+      ]
+    },
+    "a99b6019ea903743": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 66,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alto interés técnico por los rindes bajo riego en zonas no tradicionales, muy atractivo para asesores y productores.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        62
+      ]
     }
   },
   "indice": {
@@ -14468,7 +14539,11 @@
       "https://lanacion.com.ar/economia/campo/opinion-no-a-todo-el-campo-le-va-bien-nid25102026": "2026-10-25",
       "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026": "2026-10-25",
       "https://bichosdecampo.com/el-inta-encontro-en-el-algarrobo-blanco-una-fuente-de-proteinas-para-alimentar-al-ganado-puede-aportar-hasta-82-kilos-por-hectarea": "2026-10-25",
-      "https://bichosdecampo.com/nosotros-no-contamos-nuestra-vida-comunicamos-a-traves-de-ficcion-los-agro-influencers-han-crecido-y-hasta-llegaron-al-teatro-narrando-el-campo-desde-el-humor": "2026-10-25"
+      "https://bichosdecampo.com/nosotros-no-contamos-nuestra-vida-comunicamos-a-traves-de-ficcion-los-agro-influencers-han-crecido-y-hasta-llegaron-al-teatro-narrando-el-campo-desde-el-humor": "2026-10-25",
+      "https://infocampo.com.ar/el-nino-en-las-islas-de-santa-fe-aseguran-que-ya-fue-evacuada-el-70-de-la-hacienda-en-peligro": "2026-10-25",
+      "https://bichosdecampo.com/las-cuentas-no-dan-hace-rato-confeso-el-empresario-leonardo-lequio-el-que-mas-ganado-faena-en-la-argentina-aun-con-mercados-internacionales-que-estan-en-valores-historicos-es-muy-complicado": "2026-10-25",
+      "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos": "2026-10-25",
+      "https://lanacion.com.ar/economia/campo/hugo-lattanzi-productor-que-invirtio-en-un-campo-en-rio-negro-siempre-vi-a-la-zona-con-mucho-nid25102026": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15398,7 +15473,11 @@
       "opinion no a todo el campo le va bien": "2026-10-25",
       "visec carne asi funciona el mundo de los negocios guste o no": "2026-10-25",
       "el inta encontro en el algarrobo blanco una fuente de proteinas para alimentar al ganado puede aportar hasta 82 kilos por hectarea": "2026-10-25",
-      "nosotros no contamos nuestra vida comunicamos a traves de ficcion los agro influencers han crecido y hasta llegaron al teatro narrando el campo desde el humor": "2026-10-25"
+      "nosotros no contamos nuestra vida comunicamos a traves de ficcion los agro influencers han crecido y hasta llegaron al teatro narrando el campo desde el humor": "2026-10-25",
+      "el nino en las islas de santa fe aseguran que ya fue evacuada el 70 de la hacienda en peligro": "2026-10-25",
+      "las cuentas no dan hace rato confeso el empresario leonardo lequio el que mas ganado faena en la argentina aun con mercados internacionales que estan en valores historicos es muy complicado": "2026-10-25",
+      "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos": "2026-10-25",
+      "hugo lattanzi productor que invirtio en un campo en rio negro siempre vi a la zona con mucho potencial": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16328,7 +16407,11 @@
       "7f4aa076d3baec92": "2026-10-25",
       "63f84bb60a05b8f9": "2026-10-25",
       "f04ea992bee635a5": "2026-10-25",
-      "4f0cac60a548ce19": "2026-10-25"
+      "4f0cac60a548ce19": "2026-10-25",
+      "7275ce5d936424e8": "2026-10-25",
+      "e8dc04e455d490fc": "2026-10-25",
+      "4949cd44d51141a1": "2026-10-25",
+      "a99b6019ea903743": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24454,9 +24537,204 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_67ad71c9bb37_portada.jpg"
+    },
+    {
+      "id": "f027a1dc4c37",
+      "cuando": "2026-10-25T10:00-03:00",
+      "titulo_original": "Hugo Lattanzi, productor que invirtió en un campo en Río Negro: “Siempre vi a la zona con mucho potencial”",
+      "descripcion": "En Lamarque, en el Valle Medio, apunta a estabilizar rindes de maíz superiores a los 120 quintales gracias a condiciones ambientales únicas y con riego",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/hugo-lattanzi-productor-que-invirtio-en-un-campo-en-rio-negro-siempre-vi-a-la-zona-con-mucho-nid25102026/",
+      "titular": "Productor invierte en Río Negro y busca altísimos rindes de maíz",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 4,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 66,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alto interés técnico por los rindes bajo riego en zonas no tradicionales, muy atractivo para asesores y productores.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "XNWcIvtvHLA",
+          "url": "https://youtube.com/shorts/XNWcIvtvHLA",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "3628e06f-4827-451c-acb8-1d4515ea5406",
+          "slug": "productor-cordobes-invierte-en-rio-negro-y-apunta-a-altos-0c6784",
+          "url": "https://www.diariolacampaña.com.ar/n/productor-cordobes-invierte-en-rio-negro-y-apunta-a-altos-0c6784",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1476602914324593",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17909843100583603",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f027a1dc4c37_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "24d44a7bc16d",
+      "rep": {
+        "id": "24d44a7bc16d",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/las-cuentas-no-dan-hace-rato-confeso-el-empresario-leonardo-lequio-el-que-mas-ganado-faena-en-la-argentina-aun-con-mercados-internacionales-que-estan-en-valores-historicos-es-muy-complicado/",
+        "canonical_url": "https://bichosdecampo.com/las-cuentas-no-dan-hace-rato-confeso-el-empresario-leonardo-lequio-el-que-mas-ganado-faena-en-la-argentina-aun-con-mercados-internacionales-que-estan-en-valores-historicos-es-muy-complicado",
+        "titulo": "“Las cuentas no dan hace rato”, confesó el empresario Leonardo Lequio, el que más ganado faena en la Argentina: “Aún con mercados internacionales que están en valores históricos, es muy complicado”",
+        "titulo_norm": "las cuentas no dan hace rato confeso el empresario leonardo lequio el que mas ganado faena en la argentina aun con mercados internacionales que estan en valores historicos es muy complicado",
+        "descripcion": "Los buenos precios internacionales de la carne vacuna no alcanzan para garantizar la rentabilidad de la industria frigorífica argentina. Con una hacienda cara en dólares, costos crecientes y un tipo de cambio que perdió competitividad frente a la inflación, las cuentas de las plantas exportadoras están cada vez más ajustadas. “No dan las cuentas hace […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/06/faena-en-blac-bamboo.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-25T09:42-03:00",
+        "capturado": "2026-10-25T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e8dc04e455d490fc"
+      },
+      "grupo": [
+        {
+          "id": "24d44a7bc16d",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/las-cuentas-no-dan-hace-rato-confeso-el-empresario-leonardo-lequio-el-que-mas-ganado-faena-en-la-argentina-aun-con-mercados-internacionales-que-estan-en-valores-historicos-es-muy-complicado/",
+          "canonical_url": "https://bichosdecampo.com/las-cuentas-no-dan-hace-rato-confeso-el-empresario-leonardo-lequio-el-que-mas-ganado-faena-en-la-argentina-aun-con-mercados-internacionales-que-estan-en-valores-historicos-es-muy-complicado",
+          "titulo": "“Las cuentas no dan hace rato”, confesó el empresario Leonardo Lequio, el que más ganado faena en la Argentina: “Aún con mercados internacionales que están en valores históricos, es muy complicado”",
+          "titulo_norm": "las cuentas no dan hace rato confeso el empresario leonardo lequio el que mas ganado faena en la argentina aun con mercados internacionales que estan en valores historicos es muy complicado",
+          "descripcion": "Los buenos precios internacionales de la carne vacuna no alcanzan para garantizar la rentabilidad de la industria frigorífica argentina. Con una hacienda cara en dólares, costos crecientes y un tipo de cambio que perdió competitividad frente a la inflación, las cuentas de las plantas exportadoras están cada vez más ajustadas. “No dan las cuentas hace […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/06/faena-en-blac-bamboo.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-25T09:42-03:00",
+          "capturado": "2026-10-25T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e8dc04e455d490fc"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "industria frigorífica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Radiografía profunda de la crisis de rentabilidad del principal faenador del país, clave para toda la cadena ganadera.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-25T10:00-03:00"
+    },
+    {
+      "id": "0545a9915f55",
+      "rep": {
+        "id": "0545a9915f55",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos/",
+        "canonical_url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos",
+        "titulo": "De Entre Ríos al mundo: Abuelo Julio apostó primero por desarrollar la genética vacuna, y ahora por exportar la carne a diversos destinos",
+        "titulo_norm": "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos",
+        "descripcion": "Abuelo Julio nació como una empresa ganadera familiar en Entre Ríos, pero desde 2020 comenzó a integrar progresivamente todos los eslabones de la cadena, desde la producción hasta la comercialización de carne. Cuarta generación de productores, la familia tiene su establecimiento en San José de Feliciano, donde combina agricultura, cría, genética, recría y engorde, con […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/abuelo-julio-scaled-e1792930779696.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-25T09:24-03:00",
+        "capturado": "2026-10-25T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "4949cd44d51141a1"
+      },
+      "grupo": [
+        {
+          "id": "0545a9915f55",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos/",
+          "canonical_url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos",
+          "titulo": "De Entre Ríos al mundo: Abuelo Julio apostó primero por desarrollar la genética vacuna, y ahora por exportar la carne a diversos destinos",
+          "titulo_norm": "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos",
+          "descripcion": "Abuelo Julio nació como una empresa ganadera familiar en Entre Ríos, pero desde 2020 comenzó a integrar progresivamente todos los eslabones de la cadena, desde la producción hasta la comercialización de carne. Cuarta generación de productores, la familia tiene su establecimiento en San José de Feliciano, donde combina agricultura, cría, genética, recría y engorde, con […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/abuelo-julio-scaled-e1792930779696.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-25T09:24-03:00",
+          "capturado": "2026-10-25T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "4949cd44d51141a1"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 7,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 68,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "genética vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Inspira y muestra integración vertical en ganadería, aunque geográficamente esté en Entre Ríos y no en zona núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          73
+        ]
+      },
+      "cuando": "2026-10-25T10:00-03:00"
+    },
     {
       "id": "54c39f4d6827",
       "rep": {
@@ -24726,8 +25004,8 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T08:23:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-25T10:03:58-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
