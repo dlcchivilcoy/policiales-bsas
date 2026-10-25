@@ -459,3 +459,15 @@ por día en cada red por potencial viral, las programa en Buffer y evita repetir
 - El reel se sigue armando: va a YouTube como Short y a la nota de la web.
 - Si no alcanza el texto para un carrusel, sale el reel.
 - `POL_FORMATO=reel` vuelve al reel.
+
+## 25/10/2026: arreglos de las corridas que fallaban todos los días
+
+- **Policiales:** la pasada cierra a las 21:30 como máximo (`VENTANA_PASADA_MIN = 180`,
+  `cierre_de_la_pasada`). Con una sola corrida por día, «hasta la pasada siguiente» era el día siguiente:
+  la corrida publicaba los 5 y se quedaba esperando hasta que GitHub la cortaba a las 5 h.
+- **Intercalado APAGADO de fábrica** (`INTERCALADO=1` lo prende): con 5 policiales seguidos de 19 a 21,
+  dejaba esperando 3 de los 5 en Instagram.
+- **Instagram 9007 / 2207027** («el contenido multimedia no está listo para publicarse»): se reintenta. Pasaba
+  casi todos los días con las historias de agro y dejaba la corrida en rojo.
+- **Wix 5xx/429** al crear o publicar una nota: se reintenta (5 s y 15 s). Antes, un 504 dejaba en rojo la
+  corrida de nacionales de las 04.

@@ -149,9 +149,48 @@ BONO_COBERTURA = 8          # por cada nota de más que Infobae le dedica al mis
 TOPE_COBERTURA = 4          # …hasta 4 (o sea, +32)
 HORAS_VENTANA = 36          # lo de antes de ayer ya no es noticia del día
 
+# --- Cercanía: lo que el vecino de Chivilcoy siente en el día a día (pedido del editor, 25/10/2026) --------
+# «Poner noticias más cercanas a Chivilcoy (ej: aumento de peajes Olivera, Acceso Oeste, tarifas, impuestos,
+# VTV, jubilaciones, PAMI, ANSES, IOMA, paros, sindicatos, feriados, visitas de personajes públicos a
+# Chivilcoy, Cuenta DNI, inicio de clases, SUTEBA, Ruta 5, 30 y 51, accidentes, aumentos, inflación, dólar,
+# créditos, bancos, eventos climáticos, vacunación, dengue, gripe, hospital, EDEN, ABSA, Camuzzi, cortes,
+# manifestaciones)». Varias ya estaban arriba pero como DEBILES (solo con «cuánto», «aumenta»…): la política
+# general (30 puntos) les ganaba el resumen de la noche. Si el título o la bajada nombran uno de estos temas,
+# la nota sube a CERCANIA_PISO como mínimo y suma CERCANIA_BONO (+5 por cada tema más, hasta 3).
+CERCANOS = rx([
+    "peaje", "peajes", "olivera", "acceso oeste", "autopista del oeste", "tarifa", "tarifas", "impuesto",
+    "impuestos", "vtv", "jubilacion", "jubilaciones", "jubilado", "jubilados", "pami", "anses", "ioma",
+    "paro", "paros", "sindicato", "sindicatos", "gremio", "gremios", "cgt", "feriado", "feriados",
+    "fin de semana largo", "cuenta dni", "inicio de clases", "inicio del ciclo lectivo", "ciclo lectivo",
+    "comienzo de clases", "vuelta a clases", "suteba", "ruta 5", "ruta nacional 5", "ruta 30", "ruta 51",
+    "accidente", "accidentes", "choque", "aumento", "aumentos", "aumenta", "aumentan", "inflacion", "dolar",
+    "credito", "creditos", "bancos", "banco provincia", "banco nacion", "tormenta", "tormentas",
+    "temporal", "granizo", "alerta meteorologica", "ola de calor", "ola polar", "inundacion", "inundaciones",
+    "vacunacion", "vacuna", "vacunas", "dengue", "gripe", "hospital", "hospitales", "eden", "absa", "camuzzi",
+    "corte de luz", "cortes de luz", "corte de agua", "cortes de agua", "corte de gas", "cortes de gas",
+    "manifestacion", "manifestaciones", "movilizacion", "protesta", "protestas", "piquete", "piquetes",
+    "corte de ruta", "cortes de ruta"])
+CERCANIA_PISO = 50
+CERCANIA_BONO = 20
+
 
 def puntuar(n: dict, ahora: float) -> tuple:
-    """(puntos, nivel, motivos) de UNA nota, sin contar todavía la cobertura del tema."""
+    """(puntos, nivel, motivos) de UNA nota, sin contar todavía la cobertura del tema: el puntaje de siempre
+    (_puntuar_base) más el bono de cercanía. Lo que el filtro descarta (exterior, otra provincia, AMBA,
+    otra sección) sigue afuera, y los policiales de otros lados no suben por esto."""
+    puntos, nivel, motivos = _puntuar_base(n, ahora)
+    if puntos <= 0 or nivel in ("Chivilcoy", "policial", "mercados"):
+        return puntos, nivel, motivos
+    cabeza = f"{norm(n.get('titulo'))} . {norm(n.get('resumen'))}"
+    temas = sorted(set(CERCANOS.findall(cabeza)))
+    if not temas:
+        return puntos, nivel, motivos
+    puntos = max(puntos, CERCANIA_PISO) + CERCANIA_BONO + 5 * min(len(temas) - 1, 3)
+    return puntos, nivel, motivos + [f"cercanía: {', '.join(temas[:3])}"]
+
+
+def _puntuar_base(n: dict, ahora: float) -> tuple:
+    """(puntos, nivel, motivos) por las reglas de siempre (06/10/2026)."""
     if ahora - (n.get("fecha") or 0) > HORAS_VENTANA * 3600:
         return 0, "", ["vieja"]
     titulo, resumen = norm(n.get("titulo")), norm(n.get("resumen"))

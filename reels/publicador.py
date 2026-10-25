@@ -267,7 +267,11 @@ def _transitorio(r: httpx.Response) -> bool:
         err = (r.json() or {}).get("error") or {}
     except ValueError:
         return False
-    return bool(err.get("is_transient")) or err.get("code") in (1, 2, 4, 17, 32, 341)
+    # 9007 / 2207027 = «El contenido multimedia no está listo para publicarse. Espera un momento.»: el
+    # contenedor dice FINISHED pero media_publish todavía no lo toma. Pasaba casi todos los días con las
+    # historias de agro (la corrida entera quedaba en rojo, 24-25/10/2026): se espera y se reintenta.
+    return (bool(err.get("is_transient")) or err.get("code") in (1, 2, 4, 17, 32, 341, 9007)
+            or err.get("error_subcode") == 2207027)
 
 
 # =============================================================================
@@ -1654,12 +1658,29 @@ MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la p
 # que entra a 30 minutos antes de la pasada siguiente.
 
 
-def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
-    """Cuántas piezas entran en esta pasada a MINUTOS_ENTRE_POSTEOS: la primera ya, y las demás
-    hasta MARGEN_PASADA_MIN antes de la pasada siguiente. Entre 1 y el cupo de la pasada."""
+# Lo más que dura una pasada (25/10/2026). Con una sola corrida por día (18:30), «hasta la pasada
+# siguiente» era el día siguiente: el 24/10 la corrida publicó los 5 de 19 a 21 y se quedó esperando el
+# intercalado hasta que GitHub la cortó a las 5 h («timed out after 300 minutes»). Ahora cierra a las
+# 18:30 + 3 h = 21:30 (el último turno es a las 21:00). Con pasadas cada 3 h o menos no cambia nada.
+VENTANA_PASADA_MIN = 180
+
+
+def cierre_de_la_pasada(ahora_ar: datetime = None) -> datetime:
+    """Hasta cuándo puede publicar la pasada en curso: MARGEN_PASADA_MIN antes de la siguiente, y nunca
+    más de VENTANA_PASADA_MIN después de su propio horario."""
     ahora = ahora_ar or _hora_ar()
     proxima = min(c for c in CUPO.inicios(ahora, (0, 1), PASADAS_AR) if c > ahora + timedelta(minutes=20))
-    libres = (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
+    # La pasada en curso es la que viene justo antes de `proxima` (a 20 minutos de una pasada ya se la
+    # cuenta como la actual, igual que `proxima`).
+    inicio = max(c for c in CUPO.inicios(ahora, (-1, 0, 1), PASADAS_AR) if c < proxima)
+    return min(proxima - timedelta(minutes=MARGEN_PASADA_MIN), inicio + timedelta(minutes=VENTANA_PASADA_MIN))
+
+
+def lugares_en_la_pasada(ahora_ar: datetime = None) -> int:
+    """Cuántas piezas entran en esta pasada a MINUTOS_ENTRE_POSTEOS: la primera ya, y las demás
+    hasta el cierre de la pasada (cierre_de_la_pasada). Entre 1 y el cupo de la pasada."""
+    ahora = ahora_ar or _hora_ar()
+    libres = (cierre_de_la_pasada(ahora) - ahora).total_seconds() / 60
     return max(1, min(CUPO.maximo() or 1, int(libres // MINUTOS_ENTRE_POSTEOS) + 1))
 
 
@@ -1804,10 +1825,9 @@ def _publicar_esperado(red: str, turno: dict, carpeta: Path, ledger: dict, pid: 
 
 
 def _minutos_hasta_el_cierre() -> float:
-    """Minutos hasta MARGEN_PASADA_MIN antes de la pasada siguiente."""
+    """Minutos hasta el cierre de la pasada (cierre_de_la_pasada)."""
     ahora = _hora_ar()
-    proxima = min(c for c in CUPO.inicios(ahora, (0, 1), PASADAS_AR) if c > ahora + timedelta(minutes=20))
-    return (proxima - timedelta(minutes=MARGEN_PASADA_MIN) - ahora).total_seconds() / 60
+    return (cierre_de_la_pasada(ahora) - ahora).total_seconds() / 60
 
 
 def _esperar_intercalado(en_espera: dict, carpeta: Path, ledger: dict, pid: str):

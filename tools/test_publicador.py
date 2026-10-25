@@ -1649,5 +1649,44 @@ with _tfc.TemporaryDirectory() as _tc:
              _rf.get("formato") == "carrusel" and sum(1 for u, _d in _fbp if u.endswith("/photos")) == 5
              and sum(1 for u, d in _fbp if u.endswith("/feed") and "https://diario/n/x" in d.get("message", "")) == 1)
 
+
+# --- 25/10/2026: la corrida de las 18:30 cierra a las 21:30 (el 24/10 esperó el intercalado hasta el timeout) ---
+from datetime import timezone as _tzc  # noqa: E402
+_tz = _tzc(timedelta(hours=-3))
+_PA0 = PUB.PASADAS_AR
+PUB.PASADAS_AR = ((18, 30),)
+_CUPO.PASADAS_AR = ((18, 30),)
+try:
+    _c = PUB.cierre_de_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz))
+    chequear("policiales: la pasada de las 18:30 cierra a las 21:30, no al día siguiente",
+             (_c.day, _c.hour, _c.minute) == (24, 21, 30))
+    _max0 = os.environ.get("MAX_POLICE_REELS_PER_PASS")
+    os.environ["MAX_POLICE_REELS_PER_PASS"] = "5"
+    chequear("policiales: entran los 5 (19:00 a 21:00)", PUB.lugares_en_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz)) == 5)
+    if _max0 is None:
+        os.environ.pop("MAX_POLICE_REELS_PER_PASS")
+    else:
+        os.environ["MAX_POLICE_REELS_PER_PASS"] = _max0
+finally:
+    PUB.PASADAS_AR = _PA0
+    _CUPO.PASADAS_AR = _PA0
+os.environ.pop("INTERCALADO", None)
+from reels import intercalado as _INT  # noqa: E402
+chequear("intercalado: apagado de fábrica desde el 25/10/2026 (5 policiales seguidos de 19 a 21)", not _INT.activo())
+os.environ["INTERCALADO"] = "0"
+_r9007 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
+    "code": 9007, "error_subcode": 2207027, "message": "El contenido multimedia no está listo para publicarse."}}})()
+chequear("Instagram «no está listo para publicarse» (9007) se reintenta", PUB._transitorio(_r9007))
+from reels import web as _WEB  # noqa: E402
+_resp = [503, 504, 200]
+_hechas = []
+_r = _WEB._con_reintentos(lambda: _hechas.append(1) or type("R", (), {"status_code": _resp[len(_hechas) - 1]})(),
+                          dormir=lambda s: None)
+chequear("Wix: un 5xx se reintenta y la tercera sale", _r.status_code == 200 and len(_hechas) == 3)
+_hechas.clear()
+_resp = [400]
+chequear("Wix: un 4xx no se reintenta", _WEB._con_reintentos(lambda: _hechas.append(1) or type(
+    "R", (), {"status_code": 400})(), dormir=lambda s: None).status_code == 400 and len(_hechas) == 1)
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

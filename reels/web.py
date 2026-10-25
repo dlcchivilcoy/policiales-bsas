@@ -179,6 +179,27 @@ def _importar_foto(pedir, url: str, titulo: str) -> str:
         return ""
 
 
+# Wix a veces contesta 5xx (el 25/10/2026, «DEADLINE_EXCEEDED» 504 al crear el borrador): una nota perdida y
+# la corrida entera en rojo. Se reintenta ante 5xx y 429, nunca ante un 4xx (volvería a fallar igual).
+ESPERAS_WIX = (5, 15)
+
+
+def _con_reintentos(llamar, ya_salio=None, dormir=None):
+    """La respuesta de `llamar()`, reintentando ante 5xx/429. Antes de cada reintento, si `ya_salio()` dice
+    que lo pedido ya está hecho, devuelve None."""
+    import time
+    dormir = dormir or time.sleep
+    r = llamar()
+    for espera in ESPERAS_WIX:
+        if r.status_code < 500 and r.status_code != 429:
+            return r
+        dormir(espera)
+        if ya_salio and ya_salio():
+            return None
+        r = llamar()
+    return r
+
+
 def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="", categorias=None) -> dict:
     """Crea y publica la nota. Devuelve {id, slug, url}. `pedir(metodo, url, **kw)` es el
     cliente HTTP del publicador (el mismo que se reemplaza en las pruebas). `foto_respaldo`
@@ -198,11 +219,15 @@ def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="", categor
             url = ""
         file_id = _importar_foto(pedir, url, titulo)
     cuerpo = armar_borrador(pieza, file_id, youtube_id, categorias=categorias)
-    r = pedir("POST", DRAFT_POSTS_URL, headers=_headers(), json=cuerpo, timeout=30)
+    r = _con_reintentos(lambda: pedir("POST", DRAFT_POSTS_URL, headers=_headers(), json=cuerpo, timeout=30))
     draft_id = (_json(r, "crear borrador").get("draftPost") or {}).get("id")
     if not draft_id:
         raise FalloWeb("Wix (crear borrador): no devolvió el id")
-    r = pedir("POST", f"{DRAFT_POSTS_URL}/{draft_id}/publish", headers=_headers(), json={}, timeout=30)
+    r = _con_reintentos(lambda: pedir("POST", f"{DRAFT_POSTS_URL}/{draft_id}/publish", headers=_headers(),
+                                      json={}, timeout=30),
+                        ya_salio=lambda: _ya_publicada(pedir, slug))
+    if r is None:                                   # el «error» era mentira: la nota ya está
+        return {"id": draft_id, "slug": slug, "url": link(slug), "foto": bool(file_id), "video": bool(youtube_id)}
     _json(r, "publicar")
     return {"id": draft_id, "slug": slug, "url": link(slug), "foto": bool(file_id),
             "video": bool(youtube_id)}

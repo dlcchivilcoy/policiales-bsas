@@ -983,7 +983,9 @@ os.environ["NAC_TODO_REEL"] = "0"
 
 # --- 24/10/2026 (noche): el resumen de las 10 del día es un REEL que se publica a las 23:00 ---
 os.environ.pop("NAC_RESUMEN_FORMATO")
-chequear("resumen: de fábrica es reel (NAC_RESUMEN_FORMATO=carrusel vuelve al carrusel)", PA.resumen_formato() == "reel")
+chequear("resumen: de fábrica es CARRUSEL desde el 25/10/2026 (NAC_RESUMEN_FORMATO=reel vuelve al reel)",
+         PA.resumen_formato() == "carrusel")
+os.environ["NAC_RESUMEN_FORMATO"] = "reel"
 _mar = lambda h, m=0: datetime(2026, 10, 20, h, m, tzinfo=AR)      # noqa: E731 — martes
 reloj["ahora"] = _mar(22, 1)
 _noche2 = [dict(nota_cat("El Banco Central bajó la tasa de interés por segunda vez en el mes", "economia", "bm1"),
@@ -1019,6 +1021,39 @@ if _reels:
 chequear("resumen: el mismo reel sale en Facebook con el link a la sección",
          len(_fb_reels) == 1 and PA.SECCION_WEB in _fb_reels[0][0]["descripcion_tiktok"]
          and (_c.get("facebook") or {}).get("estado") == "ok")
+
+os.environ.pop("NAC_RESUMEN_FORMATO")
+
+# --- 25/10/2026: el resumen vuelve a CARRUSEL, igual a las 23:00 ---
+_mie = lambda h, m=0: datetime(2026, 10, 21, h, m, tzinfo=AR)      # noqa: E731 — miércoles
+reloj["ahora"] = _mie(22, 1)
+_noche3 = [dict(nota_cat("Aumentan los peajes de la autopista Acceso Oeste desde noviembre", "economia", "cm1"),
+                fecha=_mie(21).timestamp()),
+           dict(nota_cat("Paro docente de SUTEBA: no habrá clases el lunes", "sociedad", "cm2"),
+                fecha=_mie(21).timestamp())]
+_hora_car = []
+_pc0 = PA.publicar_carrusel
+PA.publicar_carrusel = lambda jpgs, cap, marca: _hora_car.append(reloj["ahora"]) or {"id": "car23", "diapositivas": len(jpgs)}
+try:
+    inf_k = PA.pasada(True, redactar=redactar_lam, notas=_noche3, notas_variedad=[], agenda=True,
+                      leer_pagina=lambda u: SIN)
+finally:
+    PA.publicar_carrusel = _pc0
+chequear("resumen carrusel: la corrida de las 22 lo publica a las 23:00 en Instagram",
+         len(_hora_car) == 1 and (_hora_car[0].hour, _hora_car[0].minute) == (23, 0)
+         and (inf_k.get("carrusel") or {}).get("estado") == "ok")
+
+# --- 25/10/2026: cercanía con Chivilcoy (peajes, SUTEBA, Cuenta DNI…) le gana a la política general ---
+_ah = time.time()
+_pt = lambda t, sec: F.puntuar({"titulo": t, "resumen": "", "cuerpo": "", "fecha": _ah,  # noqa: E731
+                                "url": f"https://www.infobae.com/{sec}/2026/10/25/x/"}, _ah)[0]
+chequear("cercanía: peajes del Acceso Oeste, paro de SUTEBA y Cuenta DNI pasan a la interna política",
+         min(_pt("Aumentan los peajes de la autopista Acceso Oeste desde noviembre", "economia"),
+             _pt("Paro docente de SUTEBA: no habrá clases el lunes", "sociedad"),
+             _pt("Cuenta DNI: los descuentos de noviembre en supermercados", "economia"))
+         > _pt("Tensa negociación en el Senado por promesas incumplidas de la Casa Rosada", "politica") + 20)
+chequear("cercanía: lo de afuera sigue afuera aunque nombre un tema cercano",
+         _pt("Paro de transporte en Brasil: protestas en San Pablo", "politica") == 0)
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

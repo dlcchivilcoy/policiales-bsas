@@ -96,6 +96,8 @@ HORA_CARRUSEL = (22, 0)
 # 22 hs, hacela»): el resumen de las 10 noticias del día sale como REEL a las 23:00. La corrida sigue a las
 # 22 (elige, sube a la web lo nuevo y arma el video) y espera hasta las 23 para publicar.
 # NAC_RESUMEN_FORMATO=carrusel vuelve al carrusel de las 22.
+# 25/10/2026 («corrida/posteo Nacionales: cambiarlo a formato carrusel»): vuelve a ser CARRUSEL de fábrica,
+# y sigue saliendo a las 23:00. NAC_RESUMEN_FORMATO=reel vuelve al reel.
 HORA_RESUMEN_REEL = (23, 0)
 SEG_POR_PLACA_RESUMEN = 5
 HORAS_TEMA = 24             # un tema ya contado no se repite en este lapso
@@ -620,7 +622,7 @@ def carrusel_facebook() -> bool:
 
 
 def resumen_formato() -> str:
-    return "carrusel" if (os.environ.get("NAC_RESUMEN_FORMATO") or "").strip().lower() == "carrusel" else "reel"
+    return "reel" if (os.environ.get("NAC_RESUMEN_FORMATO") or "").strip().lower() == "reel" else "carrusel"
 
 
 def placa_vertical(jpg: Path, destino: Path, cuando: datetime) -> Path:
@@ -679,7 +681,8 @@ def publicar_resumen_reel(mp4: Path, portada: Path, caption: str, texto_fb: str,
     return res
 
 
-def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas: list = None) -> dict:
+def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas: list = None,
+             esperar: bool = False) -> dict:
     """El carrusel de Instagram (y, desde el 24/10/2026, el álbum de Facebook): una diapositiva por nota.
     `elegidas` [(url, registro)] (corrida_carrusel); sin eso, lo publicado desde el carrusel anterior."""
     dia = ahora.date().isoformat()
@@ -710,7 +713,8 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas
         if not publicar:
             return {"estado": "simulado", "formato": "reel", "diapositivas": len(jpgs), "caption": caption,
                     "archivo": str(mp4), "portada": str(portada)}
-        _esperar_hasta(HORA_RESUMEN_REEL)
+        if esperar:
+            _esperar_hasta(HORA_RESUMEN_REEL)
         res = publicar_resumen_reel(mp4, portada, caption, texto_album_facebook(titulares, ahora),
                                     ahora.strftime("%Y%m%d"))
         res.update(formato="reel", diapositivas=len(jpgs), piezas=[u for u, _ in elegidas])
@@ -719,6 +723,8 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas
     if not publicar:
         return {"estado": "simulado", "diapositivas": len(jpgs), "caption": caption,
                 "archivos": [str(j) for j in jpgs]}
+    if esperar:                                      # la corrida de las 22 publica a las 23 (24-25/10/2026)
+        _esperar_hasta(HORA_RESUMEN_REEL)
     res = _resultado(publicar_carrusel, jpgs, caption, ahora.strftime("%Y%m%d"))
     res["piezas"] = [u for u, _ in elegidas]
     if carrusel_facebook():
@@ -1171,7 +1177,7 @@ def corrida_carrusel(cola: list, n: int, mem: dict, publicar: bool, carpeta: Pat
     de_antes = {u for _p, _x, u, _r in previas}
     informe["elegidas_carrusel"] = [{"titular": p.get("titular"), "puntos": p.get("puntos"),
                                      "de": "web de hoy" if u in de_antes else "nueva"} for u, p in elegidas]
-    informe["carrusel"] = carrusel(mem, publicar, carpeta, _ahora(), elegidas=elegidas)
+    informe["carrusel"] = carrusel(mem, publicar, carpeta, _ahora(), elegidas=elegidas, esperar=True)
     if informe["carrusel"].get("estado") == "fallo":
         informe["fallas"].append(f"carrusel: {informe['carrusel'].get('error')}")
     if (informe["carrusel"].get("facebook") or {}).get("estado") == "fallo":

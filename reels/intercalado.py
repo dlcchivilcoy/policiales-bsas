@@ -33,7 +33,10 @@ DEMORA_LISTADO = timedelta(minutes=2)
 
 
 def activo() -> bool:
-    return (os.environ.get("INTERCALADO") or "1").strip().lower() not in ("0", "no", "false", "off")
+    """APAGADO de fábrica desde el 25/10/2026: el editor pidió 5 policiales, uno cada 30 minutos de 19 a 21
+    (corrida de las 18:30), y con el intercalado prendido el 24/10 Instagram dejó esperando 3 de los 5.
+    INTERCALADO=1 lo vuelve a prender."""
+    return (os.environ.get("INTERCALADO") or "0").strip().lower() not in ("0", "no", "false", "off")
 
 
 def minimo() -> int:

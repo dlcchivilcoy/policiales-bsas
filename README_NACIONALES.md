@@ -165,3 +165,16 @@ segundos y lleva arriba «NOTICIAS NACIONALES» y la fecha, y abajo el sitio. La
 
 - Código: `pasada.video_del_resumen`, `placa_vertical`, `publicar_resumen_reel` y `HORA_RESUMEN_REEL`.
 - `NAC_RESUMEN_FORMATO=carrusel` vuelve al carrusel de las 22.
+
+## 25/10/2026: el resumen vuelve a CARRUSEL (a las 23) y prioriza lo cercano a Chivilcoy
+
+- `NAC_RESUMEN_FORMATO` de fábrica es carrusel; con `reel` vuelve el reel. La corrida de las 22 lo
+  publica a las 23:00 en los dos formatos.
+- Bono de cercanía (`filtro.CERCANOS`, `CERCANIA_PISO` y `CERCANIA_BONO`): temas como peajes (Olivera,
+  Acceso Oeste), tarifas, impuestos, VTV, jubilaciones, PAMI, ANSES, IOMA, paros y sindicatos, SUTEBA,
+  feriados, Cuenta DNI, inicio de clases, Rutas 5, 30 y 51, accidentes, aumentos, inflación, dólar,
+  créditos, bancos, clima, vacunación, dengue, gripe, hospitales, EDEN, ABSA, Camuzzi, cortes y
+  manifestaciones.
+- Si el título o la bajada nombran alguno de esos temas, la nota sube a 50 puntos como mínimo y suma 20
+  (más 5 por cada tema extra, hasta 3). Así le gana a la política general, que tiene 30 puntos.
+- Lo de afuera (exterior, otras provincias, solo AMBA) sigue afuera.
