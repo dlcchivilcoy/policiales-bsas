@@ -13445,6 +13445,52 @@
         59,
         59
       ]
+    },
+    "7f4aa076d3baec92": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 50,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "rentabilidad",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una columna de opinión general sobre rentabilidad, útil pero sin datos duros ni novedades operativas.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        50
+      ]
+    },
+    "63f84bb60a05b8f9": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "visec carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directo en el negocio ganadero de exportación por la exigencia de trazabilidad y deforestación europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14371,7 +14417,10 @@
       "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas": "2026-10-24",
       "https://bichosdecampo.com/quien-es-jalles-machado-el-gigante-brasileno-que-procesa-7-millones-de-toneladas-de-cana-y-exporta-azucar-organica": "2026-10-24",
       "https://bichosdecampo.com/sentate-arriba-del-trigo-a-esperar-tranquilo-proyectan-que-brasil-podria-llegar-a-importar-hasta-10-millones-de-toneladas-del-cereal": "2026-10-24",
-      "https://bichosdecampo.com/un-consejo-integrado-por-17-primos-es-la-receta-del-grupo-capelle-para-consolidar-la-transicion-generacional": "2026-10-24"
+      "https://bichosdecampo.com/un-consejo-integrado-por-17-primos-es-la-receta-del-grupo-capelle-para-consolidar-la-transicion-generacional": "2026-10-24",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-25-octubre-2026": "2026-10-25",
+      "https://lanacion.com.ar/economia/campo/opinion-no-a-todo-el-campo-le-va-bien-nid25102026": "2026-10-25",
+      "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15296,7 +15345,10 @@
       "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas": "2026-10-24",
       "quien es jalles machado el gigante brasileno que procesa 7 millones de toneladas de cana y exporta azucar organica": "2026-10-24",
       "sentate arriba del trigo a esperar tranquilo proyectan que brasil podria llegar a importar hasta 10 millones de toneladas del cereal": "2026-10-24",
-      "un consejo integrado por 17 primos es la receta del grupo capelle para consolidar la transicion generacional": "2026-10-24"
+      "un consejo integrado por 17 primos es la receta del grupo capelle para consolidar la transicion generacional": "2026-10-24",
+      "dolar blue hoy a cuanto cotiza el 25 octubre 2026": "2026-10-25",
+      "opinion no a todo el campo le va bien": "2026-10-25",
+      "visec carne asi funciona el mundo de los negocios guste o no": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16221,7 +16273,10 @@
       "13a02681aaef7b4e": "2026-10-24",
       "aada62fa2e52944e": "2026-10-24",
       "68b68613084c0a3e": "2026-10-24",
-      "627044ea7698e916": "2026-10-24"
+      "627044ea7698e916": "2026-10-24",
+      "9e19f78f89d86456": "2026-10-25",
+      "7f4aa076d3baec92": "2026-10-25",
+      "63f84bb60a05b8f9": "2026-10-25"
     }
   },
   "elegidas": [
@@ -24174,9 +24229,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ad5538883bc6_portada.jpg"
+    },
+    {
+      "id": "96d4643b49f8",
+      "cuando": "2026-10-25T07:02-03:00",
+      "titulo_original": "El sector avícola necesita 300 millones de dólares para invertir: “Hay que modernizar 1.000 galpones para bajar costos y ganar competitividad”, advierte Franco Santángelo",
+      "descripcion": "Desde hace rato que se escucha: La avicultura argentina necesita modernizar sus galpones de engorde de pollos. El objetivo sería mejorar la eficiencia, reducir costos y ganar competitividad para aprovechar las oportunidades del mercado mundial. De todos modos, el objetivo todavía queda lejos: el fin",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo/",
+      "titular": "El sector avícola precisa 300 millones de dólares para modernizar galpones",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 11,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 74,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "avicultura",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Mueve inversiones millonarias pero el freno financiero limita su atractivo inmediato para el productor común de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "KLtVcGjG3IA",
+          "url": "https://youtube.com/shorts/KLtVcGjG3IA",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "90fd9121-87d4-4f28-a7da-eb2e2d2e93dc",
+          "slug": "el-sector-avicola-necesita-300-millones-de-dolares-para-7d2400",
+          "url": "https://www.diariolacampaña.com.ar/n/el-sector-avicola-necesita-300-millones-de-dolares-para-7d2400",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1148055547737118",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18122287804925947",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_96d4643b49f8_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "5cee7bcc499f",
+      "rep": {
+        "id": "5cee7bcc499f",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026",
+        "titulo": "Visec Carne: así funciona el mundo de los negocios, guste o no",
+        "titulo_norm": "visec carne asi funciona el mundo de los negocios guste o no",
+        "descripcion": "La decisión que tomen los productores en relación a la exigencia europea que entrará en vigor en enero sobre deforestación afectará de manera positiva o negativa en su actividad",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/TF4OFWBD7BH53KVXNJ3YKROPZA.jpeg?auth=6c80322adb2a419b96d26a1782854116ab56bbcec26a0e6e98f2b854ea363127&smart=true",
+        "autor": "Víctor Tonelli",
+        "publicado": "2026-10-25T06:30-03:00",
+        "capturado": "2026-10-25T07:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "63f84bb60a05b8f9"
+      },
+      "grupo": [
+        {
+          "id": "5cee7bcc499f",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/visec-carne-asi-funciona-el-mundo-de-los-negocios-guste-o-no-nid25102026",
+          "titulo": "Visec Carne: así funciona el mundo de los negocios, guste o no",
+          "titulo_norm": "visec carne asi funciona el mundo de los negocios guste o no",
+          "descripcion": "La decisión que tomen los productores en relación a la exigencia europea que entrará en vigor en enero sobre deforestación afectará de manera positiva o negativa en su actividad",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/TF4OFWBD7BH53KVXNJ3YKROPZA.jpeg?auth=6c80322adb2a419b96d26a1782854116ab56bbcec26a0e6e98f2b854ea363127&smart=true",
+          "autor": "Víctor Tonelli",
+          "publicado": "2026-10-25T06:30-03:00",
+          "capturado": "2026-10-25T07:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "63f84bb60a05b8f9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "visec carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directo en el negocio ganadero de exportación por la exigencia de trazabilidad y deforestación europea.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-25T07:02-03:00"
+    },
     {
       "id": "54c39f4d6827",
       "rep": {
@@ -24243,69 +24422,6 @@
         ]
       },
       "cuando": "2026-10-24T18:20-03:00"
-    },
-    {
-      "id": "96d4643b49f8",
-      "rep": {
-        "id": "96d4643b49f8",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo/",
-        "canonical_url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo",
-        "titulo": "El sector avícola necesita 300 millones de dólares para invertir: “Hay que modernizar 1.000 galpones para bajar costos y ganar competitividad”, advierte Franco Santángelo",
-        "titulo_norm": "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo",
-        "descripcion": "Desde hace rato que se escucha: La avicultura argentina necesita modernizar sus galpones de engorde de pollos. El objetivo sería mejorar la eficiencia, reducir costos y ganar competitividad para aprovechar las oportunidades del mercado mundial. De todos modos, el objetivo todavía queda lejos: el financiamiento escasea y la presión impositiva y laboral sigue pesando sobre […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/franco-santangelo-de-bichos.png",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-24T10:59-03:00",
-        "capturado": "2026-10-24T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e5e2cbdc497455aa"
-      },
-      "grupo": [
-        {
-          "id": "96d4643b49f8",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo/",
-          "canonical_url": "https://bichosdecampo.com/el-sector-avicola-necesita-300-millones-de-dolares-para-invertir-hay-que-modernizar-1-000-galpones-para-bajar-costos-y-ganar-competitividad-advierte-franco-santangelo",
-          "titulo": "El sector avícola necesita 300 millones de dólares para invertir: “Hay que modernizar 1.000 galpones para bajar costos y ganar competitividad”, advierte Franco Santángelo",
-          "titulo_norm": "el sector avicola necesita 300 millones de dolares para invertir hay que modernizar 1 000 galpones para bajar costos y ganar competitividad advierte franco santangelo",
-          "descripcion": "Desde hace rato que se escucha: La avicultura argentina necesita modernizar sus galpones de engorde de pollos. El objetivo sería mejorar la eficiencia, reducir costos y ganar competitividad para aprovechar las oportunidades del mercado mundial. De todos modos, el objetivo todavía queda lejos: el financiamiento escasea y la presión impositiva y laboral sigue pesando sobre […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/franco-santangelo-de-bichos.png",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-24T10:59-03:00",
-          "capturado": "2026-10-24T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e5e2cbdc497455aa"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 11,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 8,
-        "ai_score": 74,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "avicultura",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Mueve inversiones millonarias pero el freno financiero limita su atractivo inmediato para el productor común de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-24T11:00-03:00"
     },
     {
       "id": "3d8755953b52",
@@ -24592,274 +24708,10 @@
         ]
       },
       "cuando": "2026-10-24T07:22-03:00"
-    },
-    {
-      "id": "dcd12d359924",
-      "rep": {
-        "id": "dcd12d359924",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos/",
-        "canonical_url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos",
-        "titulo": "¿De qué hablamos cuando hablamos de calidad de carne? La uruguaya Gessy Duillet explica en qué consiste una nueva tecnología que comenzaron a aplicar los exportadores argentinos",
-        "titulo_norm": "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos",
-        "descripcion": "La calidad de la carne vacuna se convirtió en una variable cada vez más determinante para competir en los mercados internacionales. Ya no alcanza con ofrecer volumen, cumplir con los requisitos sanitarios y garantizar la entrega, sino que los compradores también buscan atributos específicos, como el marmoleo, la grasa intramuscular que aporta jugosidad, sabor y […]",
-        "imagen_url": "",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-23T17:53-03:00",
-        "capturado": "2026-10-23T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8ab1745e76b507d4"
-      },
-      "grupo": [
-        {
-          "id": "dcd12d359924",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos/",
-          "canonical_url": "https://bichosdecampo.com/de-que-hablamos-cuando-hablamos-de-calidad-de-carne-la-uruguaya-gessy-duillet-explica-en-que-consiste-una-nueva-tecnologia-que-comenzaron-a-aplicar-los-exportadores-argentinos",
-          "titulo": "¿De qué hablamos cuando hablamos de calidad de carne? La uruguaya Gessy Duillet explica en qué consiste una nueva tecnología que comenzaron a aplicar los exportadores argentinos",
-          "titulo_norm": "de que hablamos cuando hablamos de calidad de carne la uruguaya gessy duillet explica en que consiste una nueva tecnologia que comenzaron a aplicar los exportadores argentinos",
-          "descripcion": "La calidad de la carne vacuna se convirtió en una variable cada vez más determinante para competir en los mercados internacionales. Ya no alcanza con ofrecer volumen, cumplir con los requisitos sanitarios y garantizar la entrega, sino que los compradores también buscan atributos específicos, como el marmoleo, la grasa intramuscular que aporta jugosidad, sabor y […]",
-          "imagen_url": "",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-23T17:53-03:00",
-          "capturado": "2026-10-23T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8ab1745e76b507d4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 6,
-        "potencial_comercial": 7,
-        "ai_score": 74,
-        "commercial_score": 68,
-        "subtema": "ganaderia",
-        "tema": "calidad de carne",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesa a ganaderos y exportadores de la región por el foco en valor agregado y tecnología de clasificación.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-23T18:00-03:00"
-    },
-    {
-      "id": "33b81c0b10a0",
-      "rep": {
-        "id": "33b81c0b10a0",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
-        "titulo": "Javier Peralta: “La demanda europea de carne es mucha, pero tenemos que cumplir los requisitos\"",
-        "titulo_norm": "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos",
-        "descripcion": "La demanda europea por carne vacuna argentina abre una oportunidad para la industria frigorífica, pero aprovecharla dependerá de que los productores y las plantas puedan cumplir con los requisitos de trazabilidad y certificación que exige ese mercado. Así lo señaló Javier Peralta, directivo de la Asociación de Frigoríficos Industriales de la Carne de Córdoba (AFIC) y representante de una empresa socia de esa entidad y de FIFRA, durante la feria SIAL de París....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_248982_17348356.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-23T14:02-03:00",
-        "capturado": "2026-10-23T14:21-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5f4e7eb45b04a38f"
-      },
-      "grupo": [
-        {
-          "id": "33b81c0b10a0",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/248982-javier-peralta-la-demanda-europea-de-carne-es-mucha-pero-tenemos-que-cumplir-los-requisitos.html",
-          "titulo": "Javier Peralta: “La demanda europea de carne es mucha, pero tenemos que cumplir los requisitos\"",
-          "titulo_norm": "javier peralta la demanda europea de carne es mucha pero tenemos que cumplir los requisitos",
-          "descripcion": "La demanda europea por carne vacuna argentina abre una oportunidad para la industria frigorífica, pero aprovecharla dependerá de que los productores y las plantas puedan cumplir con los requisitos de trazabilidad y certificación que exige ese mercado. Así lo señaló Javier Peralta, directivo de la Asociación de Frigoríficos Industriales de la Carne de Córdoba (AFIC) y representante de una empresa socia de esa entidad y de FIFRA, durante la feria SIAL de París....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_248982_17348356.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-23T14:02-03:00",
-          "capturado": "2026-10-23T14:21-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5f4e7eb45b04a38f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 64,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Importante para ganaderos y frigoríficos por las exigencias de exportación a Europa, aunque es una declaración general.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          66
-        ]
-      },
-      "cuando": "2026-10-23T14:21-03:00"
-    },
-    {
-      "id": "9cdb73ac7a3b",
-      "rep": {
-        "id": "9cdb73ac7a3b",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-productores-argentinos-estarian-chochos-si-no-hubiera-dos-cosas-que-los-mantienen-en-guardia-y-cautelosos-el-nino-y-la-sensacion-de-recambio-en-las-proximas-elecciones/",
-        "canonical_url": "https://bichosdecampo.com/los-productores-argentinos-estarian-chochos-si-no-hubiera-dos-cosas-que-los-mantienen-en-guardia-y-cautelosos-el-nino-y-la-sensacion-de-recambio-en-las-proximas-elecciones",
-        "titulo": "Los productores argentinos estarían chochos si no hubiera dos cosas que los mantienen en guardia y “cautelosos”: El Niño y la sensación de recambio en las próximas elecciones",
-        "titulo_norm": "los productores argentinos estarian chochos si no hubiera dos cosas que los mantienen en guardia y cautelosos el nino y la sensacion de recambio en las proximas elecciones",
-        "descripcion": "Siempre es entretenido mirar los resultados del AG Barometer, la medición que realiza la Universidad Austral sobre las expectativas de los productores agropecuarios (aunque, vale aclararlo, con cierto sesgo a favor hacia los ” pampeanos acomodados”, pues se entrevista a 406 empresarios de granos, carne y leche cuyo valor bruto de producción es igual o […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ag-baroimeter.png",
-        "autor": "Matias Longoni",
-        "publicado": "2026-10-23T12:53-03:00",
-        "capturado": "2026-10-23T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "efc0aafb9138a042"
-      },
-      "grupo": [
-        {
-          "id": "9cdb73ac7a3b",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-productores-argentinos-estarian-chochos-si-no-hubiera-dos-cosas-que-los-mantienen-en-guardia-y-cautelosos-el-nino-y-la-sensacion-de-recambio-en-las-proximas-elecciones/",
-          "canonical_url": "https://bichosdecampo.com/los-productores-argentinos-estarian-chochos-si-no-hubiera-dos-cosas-que-los-mantienen-en-guardia-y-cautelosos-el-nino-y-la-sensacion-de-recambio-en-las-proximas-elecciones",
-          "titulo": "Los productores argentinos estarían chochos si no hubiera dos cosas que los mantienen en guardia y “cautelosos”: El Niño y la sensación de recambio en las próximas elecciones",
-          "titulo_norm": "los productores argentinos estarian chochos si no hubiera dos cosas que los mantienen en guardia y cautelosos el nino y la sensacion de recambio en las proximas elecciones",
-          "descripcion": "Siempre es entretenido mirar los resultados del AG Barometer, la medición que realiza la Universidad Austral sobre las expectativas de los productores agropecuarios (aunque, vale aclararlo, con cierto sesgo a favor hacia los ” pampeanos acomodados”, pues se entrevista a 406 empresarios de granos, carne y leche cuyo valor bruto de producción es igual o […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ag-baroimeter.png",
-          "autor": "Matias Longoni",
-          "publicado": "2026-10-23T12:53-03:00",
-          "capturado": "2026-10-23T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "efc0aafb9138a042"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 13,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "expectativas campo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Refleja el ánimo de los productores pampeanos frente al clima y la política.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          70
-        ]
-      },
-      "cuando": "2026-10-23T13:00-03:00"
-    },
-    {
-      "id": "a16d1daeb9f9",
-      "rep": {
-        "id": "a16d1daeb9f9",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/entre-resquemores-y-acusaciones-de-morenismo-encubierto-las-petroleras-tuvieron-que-presentar-sus-proyectos-de-agricultura-en-vaca-muerta-van-a-hacer-hasta-hidroponia/",
-        "canonical_url": "https://bichosdecampo.com/entre-resquemores-y-acusaciones-de-morenismo-encubierto-las-petroleras-tuvieron-que-presentar-sus-proyectos-de-agricultura-en-vaca-muerta-van-a-hacer-hasta-hidroponia",
-        "titulo": "Entre resquemores y acusaciones de “morenismo encubierto”, las petroleras tuvieron que presentar sus proyectos de agricultura en Vaca Muerta: Van a hacer hasta hidroponia",
-        "titulo_norm": "entre resquemores y acusaciones de morenismo encubierto las petroleras tuvieron que presentar sus proyectos de agricultura en vaca muerta van a hacer hasta hidroponia",
-        "descripcion": "El proyecto neuquino para poner en producción unas 5000 hectáreas en zonas de yacimientos ya recibe sus primeras propuestas. La iniciativa para que las propias petroleras financien proyectos agrícolas y los provean con el agua de sus acueductos no fue del todo bien recibido en la industria, a la que no le cayó bien que […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/09/red-azul-neuquen-agua-riego-3.webp",
-        "autor": "Lucas Torsiglieri",
-        "publicado": "2026-10-23T10:20-03:00",
-        "capturado": "2026-10-23T10:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1b06753804f9c76d"
-      },
-      "grupo": [
-        {
-          "id": "a16d1daeb9f9",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/entre-resquemores-y-acusaciones-de-morenismo-encubierto-las-petroleras-tuvieron-que-presentar-sus-proyectos-de-agricultura-en-vaca-muerta-van-a-hacer-hasta-hidroponia/",
-          "canonical_url": "https://bichosdecampo.com/entre-resquemores-y-acusaciones-de-morenismo-encubierto-las-petroleras-tuvieron-que-presentar-sus-proyectos-de-agricultura-en-vaca-muerta-van-a-hacer-hasta-hidroponia",
-          "titulo": "Entre resquemores y acusaciones de “morenismo encubierto”, las petroleras tuvieron que presentar sus proyectos de agricultura en Vaca Muerta: Van a hacer hasta hidroponia",
-          "titulo_norm": "entre resquemores y acusaciones de morenismo encubierto las petroleras tuvieron que presentar sus proyectos de agricultura en vaca muerta van a hacer hasta hidroponia",
-          "descripcion": "El proyecto neuquino para poner en producción unas 5000 hectáreas en zonas de yacimientos ya recibe sus primeras propuestas. La iniciativa para que las propias petroleras financien proyectos agrícolas y los provean con el agua de sus acueductos no fue del todo bien recibido en la industria, a la que no le cayó bien que […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/09/red-azul-neuquen-agua-riego-3.webp",
-          "autor": "Lucas Torsiglieri",
-          "publicado": "2026-10-23T10:20-03:00",
-          "capturado": "2026-10-23T10:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1b06753804f9c76d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 8,
-        "innovacion": 11,
-        "cercania_argentina": 10,
-        "cercania_pba": 2,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 56,
-        "subtema": "agro",
-        "tema": "vaca muerta",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Combina energía y agro con proyectos innovadores en Vaca Muerta, generando debate en el sector.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          65
-        ]
-      },
-      "cuando": "2026-10-23T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-25T07:02:08-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-25T07:05:17-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
