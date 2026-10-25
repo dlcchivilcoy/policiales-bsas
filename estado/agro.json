@@ -13759,6 +13759,27 @@
         65,
         65
       ]
+    },
+    "0ac7667a1ad3c1c9": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 5,
+      "conversacion": 4,
+      "potencial_comercial": 4,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "genética bubalina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una alternativa ganadera interesante pero marginal para la zona núcleo de Buenos Aires.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14704,7 +14725,8 @@
       "https://infocampo.com.ar/queremos-obras-y-caminos-transitables-no-que-se-nos-obligue-a-elegir-entre-una-cosa-y-la-otra": "2026-10-25",
       "https://agrositio.com.ar/canal-agrositio/30-online/249005-estrategias-para-vender-maiz-soja-y-trigo-en-un-mercado-complejo-y-volatil-con-h-bergamini.html": "2026-10-25",
       "https://agrositio.com.ar/canal-agrositio/30-online/249006-fenomeno-nino-forgioni-advierte-sobre-riesgos-de-lluvias-intensas-y-temperaturas-bajas.html": "2026-10-25",
-      "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica": "2026-10-25"
+      "https://bichosdecampo.com/argentina-sigue-siendo-argentina-el-agro-salio-de-la-escena-y-se-cayo-la-actividad-economica": "2026-10-25",
+      "https://bichosdecampo.com/al-bufalo-hay-que-visualizarlo-porque-me-da-la-impresion-de-que-estuvo-escondido-siempre-maria-nilda-silva-impulsa-la-genetica-bubalina-desde-una-cabana-especifica-en-corrientes": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15648,7 +15670,8 @@
       "queremos obras y caminos transitables no que se nos obligue a elegir entre una cosa y la otra": "2026-10-25",
       "estrategias para vender maiz soja y trigo en un mercado complejo y volatil con h bergamini": "2026-10-25",
       "fenomeno nino forgioni advierte sobre riesgos de lluvias intensas y temperaturas bajas": "2026-10-25",
-      "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica": "2026-10-25"
+      "argentina sigue siendo argentina el agro salio de la escena y se cayo la actividad economica": "2026-10-25",
+      "al bufalo hay que visualizarlo porque me da la impresion de que estuvo escondido siempre maria nilda silva impulsa la genetica bubalina desde una cabana especifica en corrientes": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16592,7 +16615,8 @@
       "f69ea11e864a599c": "2026-10-25",
       "a69d256a5065751e": "2026-10-25",
       "da48f12832e41823": "2026-10-25",
-      "e6cf1c4e95b06235": "2026-10-25"
+      "e6cf1c4e95b06235": "2026-10-25",
+      "0ac7667a1ad3c1c9": "2026-10-25"
     }
   },
   "elegidas": [
@@ -25401,7 +25425,7 @@
       "cuando": "2026-10-24T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T17:01:24-03:00",
+  "actualizado": "2026-10-25T17:21:17-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
