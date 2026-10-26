@@ -13906,6 +13906,77 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9abc12e1efa6bfb2": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 68,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "tambo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena nota de gestión lechera para la cuenca oeste de Buenos Aires, enfocada en costos y eficiencia.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        71
+      ]
+    },
+    "c725d7a4ce4cae59": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 58,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema macroeconómico y comercial relevante para exportadores, aunque algo abstracto para el día a día del productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        64
+      ]
+    },
+    "c7241b4bd1e44b23": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 12,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 3,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "proteina de insectos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Innovación interesante en Europa pero con nula aplicación práctica actual en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14858,7 +14929,11 @@
       "https://croplife.com/management/legislation/tfi-backs-bipartisan-permitting-reform-to-boost-u-s-fertilizer-production-and-strengthen-supply-chains": "2026-10-25",
       "https://croplife.com/croplife-top-100/congressman-eric-sorensen-visits-west-central-fs-to-discuss-illinois-agriculture-and-farmer-needs": "2026-10-25",
       "https://bichosdecampo.com/maiz-el-usda-admite-que-se-equivoco-y-los-farmers-aseguran-que-la-confianza-en-el-organismo-se-erosiona-cada-vez-mas": "2026-10-25",
-      "https://infocampo.com.ar/elecciones-en-brasil-lula-da-silva-fue-reelecto-en-un-renido-y-polemico-balotaje": "2026-10-25"
+      "https://infocampo.com.ar/elecciones-en-brasil-lula-da-silva-fue-reelecto-en-un-renido-y-polemico-balotaje": "2026-10-25",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-26-octubre-2026": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/martin-gana-sobre-el-negocio-de-los-tambos-la-crisis-no-se-enfrenta-solamente-esperando-un-mejor-nid26102026": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026": "2026-10-26",
+      "https://agfundernews.com/finnish-insect-ag-firm-volare-opens-5000-ton-protein-factory-in-finland-explores-2nd-plant": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15809,7 +15884,11 @@
       "tfi backs bipartisan permitting reform to boost u s fertilizer production and strengthen supply chains": "2026-10-25",
       "congressman eric sorensen visits west central fs to discuss illinois agriculture and farmer needs": "2026-10-25",
       "maiz el usda admite que se equivoco y los farmers aseguran que la confianza en el organismo se erosiona cada vez mas": "2026-10-25",
-      "elecciones en brasil lula da silva fue reelecto en un renido y polemico balotaje": "2026-10-25"
+      "elecciones en brasil lula da silva fue reelecto en un renido y polemico balotaje": "2026-10-25",
+      "dolar blue hoy a cuanto cotiza el 26 octubre 2026": "2026-10-26",
+      "martin gana sobre el negocio de los tambos la crisis no se enfrenta solamente esperando un mejor precio": "2026-10-26",
+      "visec las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino": "2026-10-26",
+      "finnish insect ag firm volare opens 5 000 ton protein factory in finland explores 2nd plant": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16760,7 +16839,11 @@
       "e264260182763c2f": "2026-10-25",
       "1da7ff6d20c05785": "2026-10-25",
       "22ffd89180f100f2": "2026-10-25",
-      "f38ee577d9ef62f8": "2026-10-25"
+      "f38ee577d9ef62f8": "2026-10-25",
+      "913d24417397dbe9": "2026-10-26",
+      "9abc12e1efa6bfb2": "2026-10-26",
+      "c725d7a4ce4cae59": "2026-10-26",
+      "c7241b4bd1e44b23": "2026-10-26"
     }
   },
   "elegidas": [
@@ -25427,146 +25510,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0545a9915f55_portada.jpg"
+    },
+    {
+      "id": "9413f6aae083",
+      "cuando": "2026-10-26T07:22-03:00",
+      "titulo_original": "Martín Gana sobre el negocio de los tambos: “La crisis no se enfrenta solamente esperando un mejor precio”",
+      "descripcion": "Según el experto, es clave trabajar sobre aquello que se puede controlar, como la gestión, la estructura de costos, el financiamiento, entre otros puntos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/martin-gana-sobre-el-negocio-de-los-tambos-la-crisis-no-se-enfrenta-solamente-esperando-un-mejor-nid26102026/",
+      "titular": "Tambos: la crisis exige revisar costos y gestión ante precios bajos",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "tambo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Buena nota de gestión lechera para la cuenca oeste de Buenos Aires, enfocada en costos y eficiencia.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          71
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cb8ac050-25ad-4804-91cd-6f0c3032a883",
+          "slug": "tambos-en-crisis-la-facturacion-cayo-un-11-y-piden-revisar-2b4142",
+          "url": "https://www.diariolacampaña.com.ar/n/tambos-en-crisis-la-facturacion-cayo-un-11-y-piden-revisar-2b4142",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1809426140079000",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18170963359465144",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9413f6aae083_portada.jpg"
     }
   ],
   "pendientes": [
     {
-      "id": "54c39f4d6827",
+      "id": "f5b30af6ca85",
       "rep": {
-        "id": "54c39f4d6827",
-        "fuente": "Bichos de Campo",
+        "id": "f5b30af6ca85",
+        "fuente": "LA NACION Campo",
         "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas/",
-        "canonical_url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas",
-        "titulo": "La estrategia de Tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacío, con delivery las 24 horas",
-        "titulo_norm": "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas",
-        "descripcion": "La venta de la media res ya no alcanza para responder a las nuevas demandas del mercado interno de carne. Con esa premisa, la empresa Tomasello avanza en una transformación comercial que combina cortes envasados al vacío, porciones más pequeñas, productos elaborados, venta digital, atención las 24 horas y reparto a domicilio. El objetivo -afirman- […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/tomasello-1.jpeg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-24T18:15-03:00",
-        "capturado": "2026-10-24T18:20-03:00",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026",
+        "titulo": "Visec: las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino",
+        "titulo_norm": "visec las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino",
+        "descripcion": "Cumplir con el mundo es una necesidad comercial, defender la competitividad y la libertad de los productores es una responsabilidad del país",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/MUWUDE7BMJADBGQMU7EOE5JAZU.jpg?auth=e35c58fc618390c092d3ed5ed806e700171dc15e0622084ae35f9146bb4f6e7b&smart=true",
+        "autor": "Pablo Ginestet",
+        "publicado": "2026-10-26T06:00-03:00",
+        "capturado": "2026-10-26T07:22-03:00",
         "idioma": "es",
         "pais": "AR",
-        "hash": "13a02681aaef7b4e"
+        "hash": "c725d7a4ce4cae59"
       },
       "grupo": [
         {
-          "id": "54c39f4d6827",
-          "fuente": "Bichos de Campo",
+          "id": "f5b30af6ca85",
+          "fuente": "LA NACION Campo",
           "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas/",
-          "canonical_url": "https://bichosdecampo.com/la-estrategia-de-tomasello-para-adaptarse-a-los-cambios-en-el-consumo-de-carne-vacuna-incluye-la-venta-de-porciones-y-cortes-envasados-al-vacio-con-delivery-las-24-horas",
-          "titulo": "La estrategia de Tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacío, con delivery las 24 horas",
-          "titulo_norm": "la estrategia de tomasello para adaptarse a los cambios en el consumo de carne vacuna incluye la venta de porciones y cortes envasados al vacio con delivery las 24 horas",
-          "descripcion": "La venta de la media res ya no alcanza para responder a las nuevas demandas del mercado interno de carne. Con esa premisa, la empresa Tomasello avanza en una transformación comercial que combina cortes envasados al vacío, porciones más pequeñas, productos elaborados, venta digital, atención las 24 horas y reparto a domicilio. El objetivo -afirman- […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/tomasello-1.jpeg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-24T18:15-03:00",
-          "capturado": "2026-10-24T18:20-03:00",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026",
+          "titulo": "Visec: las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino",
+          "titulo_norm": "visec las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino",
+          "descripcion": "Cumplir con el mundo es una necesidad comercial, defender la competitividad y la libertad de los productores es una responsabilidad del país",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/MUWUDE7BMJADBGQMU7EOE5JAZU.jpg?auth=e35c58fc618390c092d3ed5ed806e700171dc15e0622084ae35f9146bb4f6e7b&smart=true",
+          "autor": "Pablo Ginestet",
+          "publicado": "2026-10-26T06:00-03:00",
+          "capturado": "2026-10-26T07:22-03:00",
           "idioma": "es",
           "pais": "AR",
-          "hash": "13a02681aaef7b4e"
+          "hash": "c725d7a4ce4cae59"
         }
       ],
       "score": {
-        "impacto_economico": 10,
-        "interes_productores": 6,
-        "innovacion": 8,
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 2,
         "cercania_argentina": 10,
         "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 6,
+        "potencial_reel": 4,
+        "conversacion": 7,
         "potencial_comercial": 6,
         "ai_score": 61,
-        "commercial_score": 61,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
+        "commercial_score": 58,
+        "subtema": "agro",
+        "tema": "exportaciones",
         "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Buena innovación comercial en ganadería y consumo, aunque apunta más a la industria cárnica que al productor primario de la región.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          62
-        ]
-      },
-      "cuando": "2026-10-24T18:20-03:00"
-    },
-    {
-      "id": "abd8b4397aff",
-      "rep": {
-        "id": "abd8b4397aff",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados/",
-        "canonical_url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados",
-        "titulo": "Contratos a largo plazo con productores e innovación genética: La estrategia de Muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
-        "titulo_norm": "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
-        "descripcion": "En un negocio en el que conseguir hacienda con las características que demandan los mercados internacionales se vuelve cada vez más importante, el frigorífico Muge apuesta a integrar producción y comercialización, trabajar con los productores mediante acuerdos de abastecimiento a largo plazo Con dos plantas de ciclo II , la empresa busca asegurarse volumen y […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/unnamed-47-e1792849464830.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-24T10:47-03:00",
-        "capturado": "2026-10-24T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "309be635e512e9c5"
-      },
-      "grupo": [
-        {
-          "id": "abd8b4397aff",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados/",
-          "canonical_url": "https://bichosdecampo.com/contratos-a-largo-plazo-con-productores-e-innovacion-genetica-la-estrategia-de-muge-para-garantizarse-carne-de-calidad-para-atender-mejor-a-los-diferentes-mercados",
-          "titulo": "Contratos a largo plazo con productores e innovación genética: La estrategia de Muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
-          "titulo_norm": "contratos a largo plazo con productores e innovacion genetica la estrategia de muge para garantizarse carne de calidad para atender mejor a los diferentes mercados",
-          "descripcion": "En un negocio en el que conseguir hacienda con las características que demandan los mercados internacionales se vuelve cada vez más importante, el frigorífico Muge apuesta a integrar producción y comercialización, trabajar con los productores mediante acuerdos de abastecimiento a largo plazo Con dos plantas de ciclo II , la empresa busca asegurarse volumen y […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/unnamed-47-e1792849464830.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-24T10:47-03:00",
-          "capturado": "2026-10-24T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "309be635e512e9c5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 11,
-        "interes_productores": 10,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 6,
-        "potencial_comercial": 7,
-        "ai_score": 66,
-        "commercial_score": 68,
-        "subtema": "ganaderia",
-        "tema": "frigorificos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesante estrategia de integración ganadera, pero apunta a un nicho específico de productores ganaderos.",
-        "tema_doc": "ganaderia",
+        "sensible": true,
+        "explicacion": "Tema macroeconómico y comercial relevante para exportadores, aunque algo abstracto para el día a día del productor.",
+        "tema_doc": "reglas",
         "urgente": false,
         "potencial_carrusel": 6,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "dobles": [
-          63,
-          70
+          57,
+          64
         ]
       },
-      "cuando": "2026-10-24T11:00-03:00"
+      "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T07:02:42-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T07:25:37-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
