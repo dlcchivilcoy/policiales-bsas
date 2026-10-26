@@ -13864,6 +13864,27 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "22ffd89180f100f2": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 6,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 36,
+      "commercial_score": 36,
+      "subtema": "mercados",
+      "tema": "usda",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta la formación de precios internacionales pero tiene poca cercanía directa con la Pampa Húmeda.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14814,7 +14835,8 @@
       "https://croplife.com/croplife-top-100/helena-agri-enterprises-inspires-the-next-generation-of-ag-innovators-with-season-2-of-innovation-never-stop-series": "2026-10-25",
       "https://croplife.com/management/sustainability/viridis-view-to-launch-at-sustainable-ag-summit-to-track-progress-for-regenerative-agriculture": "2026-10-25",
       "https://croplife.com/management/legislation/tfi-backs-bipartisan-permitting-reform-to-boost-u-s-fertilizer-production-and-strengthen-supply-chains": "2026-10-25",
-      "https://croplife.com/croplife-top-100/congressman-eric-sorensen-visits-west-central-fs-to-discuss-illinois-agriculture-and-farmer-needs": "2026-10-25"
+      "https://croplife.com/croplife-top-100/congressman-eric-sorensen-visits-west-central-fs-to-discuss-illinois-agriculture-and-farmer-needs": "2026-10-25",
+      "https://bichosdecampo.com/maiz-el-usda-admite-que-se-equivoco-y-los-farmers-aseguran-que-la-confianza-en-el-organismo-se-erosiona-cada-vez-mas": "2026-10-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15763,7 +15785,8 @@
       "helena agri enterprises inspires the next generation of ag innovators with season 2 of innovation never stops series": "2026-10-25",
       "viridis view to launch at sustainable ag summit to track progress for regenerative agriculture": "2026-10-25",
       "tfi backs bipartisan permitting reform to boost u s fertilizer production and strengthen supply chains": "2026-10-25",
-      "congressman eric sorensen visits west central fs to discuss illinois agriculture and farmer needs": "2026-10-25"
+      "congressman eric sorensen visits west central fs to discuss illinois agriculture and farmer needs": "2026-10-25",
+      "maiz el usda admite que se equivoco y los farmers aseguran que la confianza en el organismo se erosiona cada vez mas": "2026-10-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16712,7 +16735,8 @@
       "b976a788e6bc827e": "2026-10-25",
       "865af3c2d35ac4b3": "2026-10-25",
       "e264260182763c2f": "2026-10-25",
-      "1da7ff6d20c05785": "2026-10-25"
+      "1da7ff6d20c05785": "2026-10-25",
+      "22ffd89180f100f2": "2026-10-25"
     }
   },
   "elegidas": [
@@ -25314,49 +25338,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e21f9d443974_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "0545a9915f55",
-      "rep": {
-        "id": "0545a9915f55",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos/",
-        "canonical_url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos",
-        "titulo": "De Entre Ríos al mundo: Abuelo Julio apostó primero por desarrollar la genética vacuna, y ahora por exportar la carne a diversos destinos",
-        "titulo_norm": "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos",
-        "descripcion": "Abuelo Julio nació como una empresa ganadera familiar en Entre Ríos, pero desde 2020 comenzó a integrar progresivamente todos los eslabones de la cadena, desde la producción hasta la comercialización de carne. Cuarta generación de productores, la familia tiene su establecimiento en San José de Feliciano, donde combina agricultura, cría, genética, recría y engorde, con […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/abuelo-julio-scaled-e1792930779696.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-25T09:24-03:00",
-        "capturado": "2026-10-25T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4949cd44d51141a1"
-      },
-      "grupo": [
-        {
-          "id": "0545a9915f55",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos/",
-          "canonical_url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos",
-          "titulo": "De Entre Ríos al mundo: Abuelo Julio apostó primero por desarrollar la genética vacuna, y ahora por exportar la carne a diversos destinos",
-          "titulo_norm": "de entre rios al mundo abuelo julio aposto primero por desarrollar la genetica vacuna y ahora por exportar la carne a diversos destinos",
-          "descripcion": "Abuelo Julio nació como una empresa ganadera familiar en Entre Ríos, pero desde 2020 comenzó a integrar progresivamente todos los eslabones de la cadena, desde la producción hasta la comercialización de carne. Cuarta generación de productores, la familia tiene su establecimiento en San José de Feliciano, donde combina agricultura, cría, genética, recría y engorde, con […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/abuelo-julio-scaled-e1792930779696.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-25T09:24-03:00",
-          "capturado": "2026-10-25T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4949cd44d51141a1"
-        }
-      ],
+      "cuando": "2026-10-25T21:00-03:00",
+      "titulo_original": "De Entre Ríos al mundo: Abuelo Julio apostó primero por desarrollar la genética vacuna, y ahora por exportar la carne a diversos destinos",
+      "descripcion": "Abuelo Julio nació como una empresa ganadera familiar en Entre Ríos, pero desde 2020 comenzó a integrar progresivamente todos los eslabones de la cadena, desde la producción hasta la comercialización de carne. Cuarta generación de productores, la familia tiene su establecimiento en San José de Felic",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/de-entre-rios-al-mundo-abuelo-julio-aposto-primero-por-desarrollar-la-genetica-vacuna-y-ahora-por-exportar-la-carne-a-diversos-destinos/",
+      "titular": "Abuelo Julio exporta carne desde Entre Ríos a Europa",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 12,
         "interes_productores": 11,
@@ -25382,8 +25373,39 @@
           73
         ]
       },
-      "cuando": "2026-10-25T10:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-25T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "yxfS8P8pm8E",
+          "url": "https://youtube.com/shorts/yxfS8P8pm8E",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "49d478f9-ba13-41ce-acce-92dbc7c6e120",
+          "slug": "abuelo-julio-la-ganaderia-entrerriana-que-integra-toda-la-42c6c4",
+          "url": "https://www.diariolacampaña.com.ar/n/abuelo-julio-la-ganaderia-entrerriana-que-integra-toda-la-42c6c4",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2151960055419125",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18118694467976045",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0545a9915f55_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "54c39f4d6827",
       "rep": {
@@ -25519,8 +25541,8 @@
       "cuando": "2026-10-24T11:00-03:00"
     }
   ],
-  "actualizado": "2026-10-25T19:22:23-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-25T21:04:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
