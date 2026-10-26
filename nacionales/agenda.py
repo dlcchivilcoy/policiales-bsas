@@ -6,7 +6,11 @@
     04:00  SOLO WEB: 5 notas de cada categoría —política, economía y sociedad (las nacionales generales),
            espectáculos, cine y series, tecnología/IA, mundo y virales—, como nota de la web y nada más
            (sin redes, sin Short). NAC_WEB_<CATEGORIA> cambia cuántas.
-    22:00  UN CARRUSEL en Instagram (y el mismo álbum en Facebook) con las 10 noticias generales más
+           Desde el 25/10/2026 (v11), además, las 10 GENERALES más importantes del día para Chivilcoy (los
+           «puntos» de nacionales/filtro.py), las que antes subía la corrida de las 22; NAC_WEB_GENERALES
+           cambia cuántas. Van al final: las que ya salieron en política, economía o sociedad no se repiten.
+    22:00  APAGADA desde el 25/10/2026 (pedido del editor; ni cron-job.org ni respaldo). Era
+           UN CARRUSEL en Instagram (y el mismo álbum en Facebook) con las 10 noticias generales más
            importantes del día, las que más le tocan a Chivilcoy (los «puntos» de nacionales/filtro.py):
            las de la web de las 4 y las nuevas de la noche, que también quedan como nota en la web.
            NAC_CARRUSEL_NOTAS cambia cuántas.
@@ -74,6 +78,9 @@ SUBGENERALES = ("politica", "economia", "sociedad")
 # La corrida web de las 4 (24/10/2026): {categoría: cuántas notas}. «internacionales» es Mundo.
 WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
        "internacionales": 5, "virales": 5}
+# 25/10/2026 (v11, «sumá a la corrida de las 04 las notas generales del día que subía la de las 22, solo a la
+# web»): además de WEB, las WEB_GENERALES de más puntos para Chivilcoy, también lo provincial y lo regional.
+WEB_GENERALES = 10
 CARRUSEL_NOTAS = 10
 # Lo que NO es de alcance nacional (nacionales/filtro.py, «nivel»): lo local, la región y la provincia.
 NIVELES_NO_NACIONALES = {"Chivilcoy", "directa", "región", "provincia"}
@@ -177,8 +184,8 @@ def modo(inicio: datetime) -> str:
 
 
 def topes(inicio: datetime) -> dict:
-    """{categoría: cuántas en esta corrida}. v8: a las 4, WEB (NAC_WEB_<CAT>); a las 22, las generales del
-    carrusel (NAC_CARRUSEL_NOTAS)."""
+    """{categoría: cuántas en esta corrida}. v8: a las 4, WEB (NAC_WEB_<CAT>) y, desde la v11, las generales
+    (NAC_WEB_GENERALES); a las 22, las generales del carrusel (NAC_CARRUSEL_NOTAS)."""
     if (inicio.hour, inicio.minute) not in corridas_del_dia(inicio):
         return {}
     if modo(inicio) == "web":
@@ -187,6 +194,9 @@ def topes(inicio: datetime) -> dict:
             n = _entero(f"NAC_WEB_{cat.upper()}", defecto)
             if n:
                 salida[cat] = n
+        n = _entero("NAC_WEB_GENERALES", WEB_GENERALES)
+        if n:
+            salida[GENERALES] = n
         return salida
     if modo(inicio) == "carrusel":
         return {GENERALES: min(10, _entero("NAC_CARRUSEL_NOTAS", CARRUSEL_NOTAS))}

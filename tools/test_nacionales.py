@@ -874,8 +874,8 @@ os.environ["NAC_TODO_REEL"] = "1"
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
 _WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
-        "internacionales": 5, "virales": 5}
-chequear("agenda v8: a las 4, 5 de cada categoría para la web (también el sábado)",
+        "internacionales": 5, "virales": 5, "": 10}
+chequear("agenda v8: a las 4, 5 de cada categoría y las 10 generales del día para la web (también el sábado)",
          AGE.topes(_lun(4)) == AGE.topes(_sab(4)) == _WEB and AGE.modo(_lun(4)) == AGE.modo(_sab(4)) == "web")
 chequear("agenda v8: a las 22, el carrusel con las 10 generales del día (también el sábado)",
          AGE.topes(_lun(22)) == AGE.topes(_sab(22)) == {"": 10} and AGE.modo(_sab(22)) == "carrusel")
@@ -889,6 +889,9 @@ chequear("agenda v8: NAC_WEB_<CAT> y NAC_CARRUSEL_NOTAS cambian cuántas",
          AGE.topes(_lun(4))["virales"] == 2 and AGE.topes(_lun(22)) == {"": 8})
 os.environ.pop("NAC_WEB_VIRALES")
 os.environ.pop("NAC_CARRUSEL_NOTAS")
+os.environ["NAC_WEB_GENERALES"] = "0"
+chequear("agenda v11: NAC_WEB_GENERALES=0 saca las generales de la web de las 4", "" not in AGE.topes(_lun(4)))
+os.environ.pop("NAC_WEB_GENERALES")
 chequear("agenda: a qué corrida pertenece cada hora (cron-job.org puede llegar unos minutos antes)",
          AGE.corrida(_lun(3, 55)) == _lun(4) and AGE.corrida(_lun(4, 20)) == _lun(4)
          and AGE.corrida(_lun(12)) == _lun(4) and AGE.corrida(_lun(22, 5)) == _lun(22)
@@ -947,6 +950,26 @@ chequear("agenda 04: las 4 generales, el viral sin video, el mundo no violento y
 if len(inf_a["piezas"]) != 7:
     print("   ", [p["titulo_original"][:30] for p in inf_a["piezas"]], inf_a["descartadas"], inf_a["fallas"])
 chequear("agenda 04: sin turnos ni esperas (en la web no hace falta espaciar)", not inf_a.get("fila"))
+chequear("agenda 04 (v11): las generales no repiten lo que ya salió en política, economía y sociedad",
+         inf_a.get("por_categoria", {}).get("") == 0)
+
+# v11 (25/10/2026): con 1 de política, 1 de economía y 1 de sociedad, la general que sobra entra igual por
+# «generales» (lo que antes subía la corrida de las 22).
+_mem_agenda = PA.MEMORIA
+for _k in ("POLITICA", "ECONOMIA", "SOCIEDAD"):
+    os.environ[f"NAC_WEB_{_k}"] = "1"
+PA.MEMORIA = estado_tmp / "nacionales_v11.json"
+inf_g = PA.pasada(False, redactar=redactar_lam, notas=_gen, notas_variedad=[], agenda=True,
+                  leer_pagina=lambda u: SIN)
+_pc = inf_g.get("por_categoria", {})
+chequear("agenda 04 (v11): la general que no entró en su sección sale por «generales»",
+         len(inf_g["piezas"]) == 4 and _pc.get("") == 1
+         and sum(_pc.get(s, 0) for s in ("politica", "economia", "sociedad")) == 3)
+if len(inf_g["piezas"]) != 4:
+    print("   ", _pc, [p["titulo_original"][:30] for p in inf_g["piezas"]], inf_g["descartadas"], inf_g["fallas"])
+for _k in ("POLITICA", "ECONOMIA", "SOCIEDAD"):
+    os.environ.pop(f"NAC_WEB_{_k}")
+PA.MEMORIA = _mem_agenda
 
 # Lunes 22:00: el carrusel con las 10 más importantes del día (las de la web de las 4 + lo nuevo de la noche,
 # que también queda en la web). Instagram + álbum de Facebook.

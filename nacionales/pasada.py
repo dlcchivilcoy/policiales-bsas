@@ -912,11 +912,17 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # última pasada de la noche anterior— dejó en cero las generales de las 16.)
             topes = dict(AG.topes(inicio))
             # Lunes a viernes, las generales en 3 filas: política, economía y sociedad (20/10/2026, noche).
+            generales = colas.get("", [])
             if any(s in topes for s in AG.SUBGENERALES):
                 for c in colas.pop("", []):
                     s = AG.subgeneral(c, solo_nacional=modo != "web")
                     if s:                            # lo local, de la región o de la provincia, no
                         colas.setdefault(s, []).append(dict(c, subgeneral=s))
+            # La web de las 4 suma las generales de más puntos para Chivilcoy (v11, 25/10/2026: las que
+            # subía la corrida de las 22). Van después de política, economía y sociedad: lo que ya salió
+            # ahí no se repite (elegir) y entran las siguientes.
+            if modo == "web" and topes.get(AG.GENERALES):
+                colas[AG.GENERALES] = sorted(generales, key=lambda c: -(c.get("puntos") or 0))
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
             if "internacionales" in colas and modo != "web":
@@ -1225,7 +1231,7 @@ def resumen(inf: dict) -> str:
                  + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["corrida"]["topes"].items()))
         if inf.get("por_categoria"):
             l.append("Notas en la web por categoría: "
-                     + ", ".join(f"{c} {n}" for c, n in inf["por_categoria"].items()))
+                     + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["por_categoria"].items()))
         if inf.get("elegidas_carrusel"):
             l.append("Carrusel: " + " · ".join(f"{i}. {e['titular']} ({e['de']}, {e['puntos']} pts)"
                                                for i, e in enumerate(inf["elegidas_carrusel"], 1)))
