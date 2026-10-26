@@ -15174,6 +15174,52 @@
         56,
         58
       ]
+    },
+    "651d4114d6e4e862": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 65,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "obras hidráulicas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente a productores bonaerenses por inundaciones y genera fuerte debate político.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        66
+      ]
+    },
+    "4244dae9342ea951": {
+      "impacto_economico": 8,
+      "interes_productores": 4,
+      "innovacion": 6,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 5,
+      "ai_score": 28,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "fertilizantes",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Inversión en fertilizantes en Estados Unidos, con nula incidencia directa en la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -16208,7 +16254,10 @@
       "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html": "2026-10-26",
       "https://bichosdecampo.com/finalemente-el-inta-exonero-a-virginia-aparicio-investigadora-a-cargo-del-proyecto-sprint-que-investigo-la-presencia-de-agroquimicos-en-las-personas": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026": "2026-10-26",
-      "https://lacapital.com.ar/agro/exphortar-puso-el-foco-los-desafios-la-produccion-y-comercializacion-hortalizas-n10288826.html": "2026-10-26"
+      "https://lacapital.com.ar/agro/exphortar-puso-el-foco-los-desafios-la-produccion-y-comercializacion-hortalizas-n10288826.html": "2026-10-26",
+      "https://agrositio.com.ar/noticia/249032-que-esperar-cuando-brasil-golpea-duramente-los-precios-de-la-soja-y-el-maiz-por-manuel-alvarado-ledesna.html": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026": "2026-10-26",
+      "https://croplife.com/croplife-top-100/growmark-invests-in-wabash-valley-resources-indiana-ammonia-fertilizer-project": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17241,7 +17290,10 @@
       "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos": "2026-10-26",
       "finalmente el inta exonero a virginia aparicio investigadora a cargo del proyecto sprint que investigo la presencia de agroquimicos en las personas": "2026-10-26",
       "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores": "2026-10-26",
-      "exphortar puso el foco en los desafios de la produccion y comercializacion de hortalizas": "2026-10-26"
+      "exphortar puso el foco en los desafios de la produccion y comercializacion de hortalizas": "2026-10-26",
+      "que esperar cuando brasil golpea duramente los precios de soja y maiz por manuel alvarado ledesna": "2026-10-26",
+      "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas": "2026-10-26",
+      "growmark invests in wabash valley resources indiana ammonia fertilizer project": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18274,7 +18326,10 @@
       "9b481dc710d1cfa5": "2026-10-26",
       "ff490476c11c1a16": "2026-10-26",
       "aa9b8b335ce5f435": "2026-10-26",
-      "1e4a97cf3c3f3263": "2026-10-26"
+      "1e4a97cf3c3f3263": "2026-10-26",
+      "0cc58f71351c5541": "2026-10-26",
+      "651d4114d6e4e862": "2026-10-26",
+      "4244dae9342ea951": "2026-10-26"
     }
   },
   "elegidas": [
@@ -28051,9 +28106,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9c4d057dfe49_portada.jpg"
+    },
+    {
+      "id": "b7f4dde41041",
+      "cuando": "2026-10-26T18:40-03:00",
+      "titulo_original": "Baja más el maíz en EE.UU. pero nosotros nos contagiamos…; con Lorena D´ Angelo - Clínica de Granos",
+      "descripcion": "Las cotizaciones del cereal en nuestro país no pudieron quedar fuera de la presión externa. Así los valores se acercaron a la paridad de pago del sector exportación que continúa realizando negocios al exterior hasta que ingrese la producción estadounidense…",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
+      "titular": "Maíz: la caída en Estados Unidos presiona los valores locales",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 4,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 67,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto directo de los mercados internacionales sobre la cotización local del maíz en plena campaña.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          63
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cbd5c0fd-cb09-49fb-bd5f-e058648d0621",
+          "slug": "maiz-en-baja-la-caida-en-estados-unidos-presiona-los-precios-en-4105da",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-en-baja-la-caida-en-estados-unidos-presiona-los-precios-en-4105da",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1143776208098781",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18154572127524291",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b7f4dde41041_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d3ba1e819e69",
+      "rep": {
+        "id": "d3ba1e819e69",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026",
+        "titulo": "“Silencio estatal”: productores bonaerenses fueron a la Justicia contra el ministerio de Katopodis por las obras hidráulicas",
+        "titulo_norm": "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas",
+        "descripcion": "Son de Carlos Casares y, según indicaron, no recibieron respuesta a un pedido de información sobre los trabajos previstos en la cuenca del río Salado y los fondos destinados a prevenir anegamientos; desde la cartera provincial aseguraron que responderán a la brevedad",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/SZ5YJMEE4ND25IROTVUTBEISCQ.JPG?auth=6d670843acf9192aaff43ef72aa01442e0f1b460aa1f4f7f88247a478fb858ab&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-10-26T18:24-03:00",
+        "capturado": "2026-10-26T18:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "651d4114d6e4e862"
+      },
+      "grupo": [
+        {
+          "id": "d3ba1e819e69",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026",
+          "titulo": "“Silencio estatal”: productores bonaerenses fueron a la Justicia contra el ministerio de Katopodis por las obras hidráulicas",
+          "titulo_norm": "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas",
+          "descripcion": "Son de Carlos Casares y, según indicaron, no recibieron respuesta a un pedido de información sobre los trabajos previstos en la cuenca del río Salado y los fondos destinados a prevenir anegamientos; desde la cartera provincial aseguraron que responderán a la brevedad",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/SZ5YJMEE4ND25IROTVUTBEISCQ.JPG?auth=6d670843acf9192aaff43ef72aa01442e0f1b460aa1f4f7f88247a478fb858ab&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-10-26T18:24-03:00",
+          "capturado": "2026-10-26T18:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "651d4114d6e4e862"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 65,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "obras hidráulicas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente a productores bonaerenses por inundaciones y genera fuerte debate político.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          66
+        ]
+      },
+      "cuando": "2026-10-26T18:40-03:00"
+    },
     {
       "id": "8fccb54bb5e8",
       "rep": {
@@ -28177,73 +28357,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T18:00-03:00"
-    },
-    {
-      "id": "b7f4dde41041",
-      "rep": {
-        "id": "b7f4dde41041",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
-        "titulo": "Baja más el maíz en EE.UU. pero nosotros nos contagiamos…; con Lorena D´ Angelo - Clínica de Granos",
-        "titulo_norm": "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos",
-        "descripcion": "Las cotizaciones del cereal en nuestro país no pudieron quedar fuera de la presión externa. Así los valores se acercaron a la paridad de pago del sector exportación que continúa realizando negocios al exterior hasta que ingrese la producción estadounidense…",
-        "imagen_url": "https://agrotv.agrositio.com/placas/xMN9U_oQ5gg.jpg",
-        "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-        "publicado": "2026-10-26T17:50-03:00",
-        "capturado": "2026-10-26T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9b481dc710d1cfa5"
-      },
-      "grupo": [
-        {
-          "id": "b7f4dde41041",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
-          "titulo": "Baja más el maíz en EE.UU. pero nosotros nos contagiamos…; con Lorena D´ Angelo - Clínica de Granos",
-          "titulo_norm": "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos",
-          "descripcion": "Las cotizaciones del cereal en nuestro país no pudieron quedar fuera de la presión externa. Así los valores se acercaron a la paridad de pago del sector exportación que continúa realizando negocios al exterior hasta que ingrese la producción estadounidense…",
-          "imagen_url": "https://agrotv.agrositio.com/placas/xMN9U_oQ5gg.jpg",
-          "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
-          "publicado": "2026-10-26T17:50-03:00",
-          "capturado": "2026-10-26T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9b481dc710d1cfa5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 4,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 67,
-        "subtema": "mercados",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacto directo de los mercados internacionales sobre la cotización local del maíz en plena campaña.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          63
-        ]
       },
       "cuando": "2026-10-26T18:00-03:00"
     },
@@ -28839,8 +28952,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T18:23:50-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T18:43:06-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
