@@ -449,8 +449,11 @@ def _shorts_hoy(mem: dict, dia: str) -> int:
     return policiales + sum(1 for p in de_hoy(mem, dia) if _ok(p.get("youtube")))
 
 
-def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: bool = True) -> dict:
-    """YouTube → web → Facebook → Instagram. Devuelve {red: resultado}."""
+def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: bool = True,
+                   instagram: bool = True) -> dict:
+    """YouTube → web → Facebook → Instagram. Devuelve {red: resultado}. instagram=False: sin Instagram (las
+    virales con Short de la corrida de las 4, que van solo a YouTube y a la web)."""
+    ig = instagram and instagram_activo()
     mp4 = Path(pieza["video"]["archivo"])
     cat = pieza["nota"].get("categoria") or ""        # deportes, espectáculos… (17/10/2026)
     url_prev = url_web_prevista(pieza)
@@ -461,7 +464,7 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
         res["web"] = {"estado": "simulado", "url": url_prev}
         if a_facebook:
             res["facebook"] = {"estado": "simulado", "texto": texto_facebook(pieza, url_prev)}
-        if instagram_activo():
+        if ig:
             res["instagram"] = {"estado": "simulado", "formato": pieza.get("formato"),
                                 "laminas": len(pieza.get("slides") or []), "texto": caption_instagram(pieza["guion"])}
         return res
@@ -484,11 +487,11 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
                                      texto_facebook(pieza, url_web or SECCION_WEB))
     # Instagram (18/10/2026): TODAS salen en el feed — REEL con el video original, o CARRUSEL explicativo
     # con la foto original. El texto, sin el link de la nota (caption_instagram).
-    lugar = _lugar_ig() if instagram_activo() else None
-    if instagram_activo() and lugar and lugar[0] <= 0:
+    lugar = _lugar_ig() if ig else None
+    if ig and lugar and lugar[0] <= 0:
         res["instagram"] = {"estado": "cupo", "detalle": f"la cuenta ya usó {lugar[1]} de sus {lugar[2]} posteos "
                                                          f"de 24 h; los últimos quedan para el bot del diario"}
-    elif instagram_activo():
+    elif ig:
         caption = caption_instagram(pieza["guion"])
         marca = hashlib.sha1(pieza["url_original"].encode()).hexdigest()[:10]
         if pieza.get("formato") == "reel":
@@ -923,6 +926,9 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # ahí no se repite (elegir) y entran las siguientes.
             if modo == "web" and topes.get(AG.GENERALES):
                 colas[AG.GENERALES] = sorted(generales, key=lambda c: -(c.get("puntos") or 0))
+            # v12 (25/10/2026, noche): 5 virales más, como Short + web, de la misma fila de virales.
+            if modo == "web" and topes.get(AG.VIRALES_SHORT):
+                colas[AG.VIRALES_SHORT] = list(colas.get("virales") or [])
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
             if "internacionales" in colas and modo != "web":
@@ -1096,29 +1102,37 @@ def _registro(pieza: dict, res: dict, dia: str, turno: str) -> dict:
             **res}
 
 
+NOMBRE_CATEGORIA = {"": "generales", AG.VIRALES_SHORT: "virales con Short"}     # para el informe
 INTENTOS_POR_NOTA = 3       # candidatas que se prueban, como mucho, por cada nota que se busca
 
 
 def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: datetime, dia: str, redactar, leer,
-                   informe: dict, contadas: list):
-    """Arma y publica (solo en la web) una candidata. Devuelve el registro, o None si no salió."""
+                   informe: dict, contadas: list, con_short: bool = False):
+    """Arma y publica (solo en la web) una candidata. Devuelve el registro, o None si no salió.
+    con_short (v12): además, el Short de YouTube con su video (la nota de la web lo lleva adentro); sin video
+    no sale, y queda para las virales solo web."""
     try:
-        pieza = armar(c, carpeta, redactar, leer, solo_web=True)
+        pieza = armar(c, carpeta, redactar, leer, solo_web=not con_short)
     except Exception as e:                           # noqa: BLE001 — la IA: se sigue con otra
         informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
         return None
     if not pieza["guion"]["apta"]:
         informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
                                        "categoria": c.get("subgeneral") or c.get("categoria") or ""})
-        if publicar:
+        if publicar and not con_short:               # la que no sirve para Short puede ir solo a la web
             mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
                                             "cuando": ahora.isoformat(timespec="seconds")}
         return None
-    res = publicar_solo_web(pieza, publicar)
+    if con_short:
+        con_youtube = _shorts_hoy(mem, dia) < PUB.tope_youtube() if publicar else True
+        res = publicar_pieza(pieza, False, publicar, con_youtube, instagram=False)
+    else:
+        res = publicar_solo_web(pieza, publicar)
     registro = _registro(pieza, res, dia, _ahora().strftime("%H:%M"))
     informe["piezas"].append(registro)
-    if res["web"].get("estado") == "fallo":
-        informe["fallas"].append(f"web: «{pieza['guion']['titular'][:50]}»: {res['web'].get('error')}")
+    for red, r in res.items():
+        if r.get("estado") == "fallo":
+            informe["fallas"].append(f"{red}: «{pieza['guion']['titular'][:50]}»: {r.get('error')}")
     contadas.append({"titulo": pieza["guion"]["titular"], "tema": c.get("tema") or []})
     if publicar:
         mem["piezas"][c["url"]] = registro
@@ -1138,7 +1152,9 @@ def corrida_web(colas: dict, topes: dict, mem: dict, publicar: bool, carpeta: Pa
             paginas[url] = dict((leer or CAT.leer_pagina)(url) or {})
         return paginas[url]
 
-    for cat in [c for c in AG.WEB if c in topes] + [c for c in topes if c not in AG.WEB]:
+    primero = (AG.VIRALES_SHORT,)                    # las virales con Short, antes que las solo web
+    for cat in ([c for c in primero + tuple(AG.WEB) if c in topes]
+                + [c for c in topes if c not in AG.WEB and c not in primero]):
         hechas = intentos = 0
         for c in colas.get(cat) or []:
             if hechas >= topes[cat] or intentos >= topes[cat] * INTENTOS_POR_NOTA:
@@ -1146,7 +1162,8 @@ def corrida_web(colas: dict, topes: dict, mem: dict, publicar: bool, carpeta: Pa
             if not elegir([c], mem, 1, ahora, contadas):
                 continue
             intentos += 1
-            if _una_pieza_web(c, mem, publicar, carpeta, ahora, dia, redactar, leer_una, informe, contadas):
+            if _una_pieza_web(c, mem, publicar, carpeta, ahora, dia, redactar, leer_una, informe, contadas,
+                              con_short=cat == AG.VIRALES_SHORT):
                 hechas += 1
         informe.setdefault("por_categoria", {})[cat] = hechas
 
@@ -1231,7 +1248,7 @@ def resumen(inf: dict) -> str:
                  + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["corrida"]["topes"].items()))
         if inf.get("por_categoria"):
             l.append("Notas en la web por categoría: "
-                     + ", ".join(f"{c or 'generales'} {n}" for c, n in inf["por_categoria"].items()))
+                     + ", ".join(f"{NOMBRE_CATEGORIA.get(c, c)} {n}" for c, n in inf["por_categoria"].items()))
         if inf.get("elegidas_carrusel"):
             l.append("Carrusel: " + " · ".join(f"{i}. {e['titular']} ({e['de']}, {e['puntos']} pts)"
                                                for i, e in enumerate(inf["elegidas_carrusel"], 1)))

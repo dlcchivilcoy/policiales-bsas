@@ -868,13 +868,14 @@ chequear("tope de 3 minutos de fábrica", _FL.max_video_seg() == 180)
 
 shutil.rmtree(tmp, ignore_errors=True)
 _OK_WEB = lambda p: (p.get("web") or {}).get("estado") in ("ok", "simulado")   # noqa: E731
+_ok_red = lambda p, r: (p.get(r) or {}).get("estado") in ("ok", "simulado")      # noqa: E731
 # --- 11. La AGENDA propia de nacionales. v8 (24/10/2026): 04 solo web, 22 el carrusel del día ------------
 from nacionales import agenda as AGE
 os.environ["NAC_TODO_REEL"] = "1"
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
 _WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
-        "internacionales": 5, "virales": 5, "": 10}
+        "internacionales": 5, "virales": 5, "": 10, "virales_short": 5}
 chequear("agenda v8: a las 4, 5 de cada categoría y las 10 generales del día para la web (también el sábado)",
          AGE.topes(_lun(4)) == AGE.topes(_sab(4)) == _WEB and AGE.modo(_lun(4)) == AGE.modo(_sab(4)) == "web")
 chequear("agenda v8: a las 22, el carrusel con las 10 generales del día (también el sábado)",
@@ -969,6 +970,37 @@ if len(inf_g["piezas"]) != 4:
     print("   ", _pc, [p["titulo_original"][:30] for p in inf_g["piezas"]], inf_g["descartadas"], inf_g["fallas"])
 for _k in ("POLITICA", "ECONOMIA", "SOCIEDAD"):
     os.environ.pop(f"NAC_WEB_{_k}")
+
+# v12 (25/10/2026, noche): 5 virales más, con su video, como Short + web. Sin Facebook ni Instagram; la viral
+# sin video no va al Short pero sí a la web.
+PA.MEMORIA = estado_tmp / "nacionales_v12.json"
+_vir = [_nv(t, "virales", f"vs{i}", "virales", _lun(4)) for i, t in enumerate((
+    "Un gato se subió al techo de un colectivo y recorrió la ciudad",
+    "La reacción de una abuela al probar sushi por primera vez",
+    "Un bebé imitó a su padre tocando la batería en un recital",
+    "El loro que canta el himno nacional en un balcón de Rosario",
+    "Una novia llegó a su boda en tractor y sorprendió a los invitados",
+    "El perro bombero que rescató a un cachorro de una inundación",
+    "Un nene de 6 años armó un cohete de cartón que voló diez metros",
+    "La tortuga más vieja del zoológico festejó 120 años con torta"))]
+_con_video = {v["url"] for v in _vir[:6]}
+llamadas.clear()
+inf_s = PA.pasada(True, redactar=redactar_lam, notas=[], notas_variedad=_vir, agenda=True,
+                  leer_pagina=lambda u: VIDEO if u in _con_video else SIN)
+_pc = inf_s.get("por_categoria", {})
+_shorts = [p for p in inf_s["piezas"] if _ok_red(p, "youtube")]
+chequear("agenda 04 (v12): 5 virales con Short + web y las que siguen, solo web",
+         _pc.get("virales_short") == 5 and _pc.get("virales") == 3 and len(_shorts) == 5
+         and all(_OK_WEB(p) for p in inf_s["piezas"]))
+if _pc.get("virales_short") != 5 or _pc.get("virales") != 3:
+    print("   ", _pc, inf_s["descartadas"], inf_s["fallas"])
+chequear("agenda 04 (v12): el Short va adentro de la nota de la web, y nada a Facebook ni a Instagram",
+         sum(1 for l in llamadas if l[0] == "web" and l[2]) == 5
+         and not {l[0] for l in llamadas} & {"facebook", "ig_contenedor", "ig_publicar"}
+         and not any(k in p for p in inf_s["piezas"] for k in ("facebook", "instagram")))
+os.environ["NAC_SHORT_VIRALES"] = "0"
+chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "virales_short" not in AGE.topes(_lun(4)))
+os.environ.pop("NAC_SHORT_VIRALES")
 PA.MEMORIA = _mem_agenda
 
 # Lunes 22:00: el carrusel con las 10 más importantes del día (las de la web de las 4 + lo nuevo de la noche,
