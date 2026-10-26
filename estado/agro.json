@@ -15220,6 +15220,31 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3e05ccf4f356ef50": {
+      "impacto_economico": 12,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 66,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la logística y producción lechera de la zona núcleo bonaerense por cuestiones climáticas.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        66
+      ]
     }
   },
   "indice": {
@@ -16257,7 +16282,9 @@
       "https://lacapital.com.ar/agro/exphortar-puso-el-foco-los-desafios-la-produccion-y-comercializacion-hortalizas-n10288826.html": "2026-10-26",
       "https://agrositio.com.ar/noticia/249032-que-esperar-cuando-brasil-golpea-duramente-los-precios-de-la-soja-y-el-maiz-por-manuel-alvarado-ledesna.html": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026": "2026-10-26",
-      "https://croplife.com/croplife-top-100/growmark-invests-in-wabash-valley-resources-indiana-ammonia-fertilizer-project": "2026-10-26"
+      "https://croplife.com/croplife-top-100/growmark-invests-in-wabash-valley-resources-indiana-ammonia-fertilizer-project": "2026-10-26",
+      "https://bichosdecampo.com/avalancha-bajista-para-la-soja-luego-de-la-super-devaluacion-brasilena-promovida-por-la-victoria-de-lula": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17293,7 +17320,9 @@
       "exphortar puso el foco en los desafios de la produccion y comercializacion de hortalizas": "2026-10-26",
       "que esperar cuando brasil golpea duramente los precios de soja y maiz por manuel alvarado ledesna": "2026-10-26",
       "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas": "2026-10-26",
-      "growmark invests in wabash valley resources indiana ammonia fertilizer project": "2026-10-26"
+      "growmark invests in wabash valley resources indiana ammonia fertilizer project": "2026-10-26",
+      "avalancha bajista para la soja luego de la super devaluacion brasilena promovida por la victoria de lula": "2026-10-26",
+      "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18329,7 +18358,9 @@
       "1e4a97cf3c3f3263": "2026-10-26",
       "0cc58f71351c5541": "2026-10-26",
       "651d4114d6e4e862": "2026-10-26",
-      "4244dae9342ea951": "2026-10-26"
+      "4244dae9342ea951": "2026-10-26",
+      "6219bdc9162b3ca1": "2026-10-26",
+      "3e05ccf4f356ef50": "2026-10-26"
     }
   },
   "elegidas": [
@@ -28164,9 +28195,166 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b7f4dde41041_portada.jpg"
+    },
+    {
+      "id": "f5692064c8ad",
+      "cuando": "2026-10-26T19:02-03:00",
+      "titulo_original": "Después de 20 años, Japón abre su mercado a la carne bovina argentina",
+      "descripcion": "Argentina y Japón acordaron los requisitos sanitarios para el ingreso de carne bovina y lengua provenientes de la zona libre de aftosa con vacunación. El entendimiento completa la apertura del mercado japonés para la carne argentina de todo el país, una negociación que se inició en 2006 y cobró nuev",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/despues-de-20-anos-japon-abre-su-mercado-a-la-carne-bovina-argentina/",
+      "titular": "Japón abre su mercado a la carne bovina y lengua argentina",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "carne bovina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Abre un mercado histórico para la carne argentina tras dos décadas de negociaciones, de alto impacto ganadero.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T19:00:00-03:00"
+    },
+    {
+      "id": "8fccb54bb5e8",
+      "cuando": "2026-10-26T19:02-03:00",
+      "titulo_original": "El Niño: impulsan una red federal para asistir a productores afectados por inundaciones",
+      "descripcion": "Es una iniciativa de CRA, que busca articular ayuda con las sociedades rurales de todo el país, mediante la disponibilidad de predios, logística, alimentos e insumos. Además, la entidad pide medidas tributarias de emergencia para quienes deben vender anticipadamente su hacienda.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones/",
+      "titular": "CRA impulsa red federal para asistir inundados y pide alivio fiscal",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 60,
+        "subtema": "ganaderia",
+        "tema": "inundaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran relevancia regional por la emergencia hídrica, moviliza a entidades y productores de la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c83315c5-1a2d-49ab-86b1-722953d18b60",
+          "slug": "inundaciones-cra-impulsa-red-federal-de-asistencia-y-reclama-7750c8",
+          "url": "https://www.diariolacampaña.com.ar/n/inundaciones-cra-impulsa-red-federal-de-asistencia-y-reclama-7750c8",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2973789906306356",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18180863497446729",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8fccb54bb5e8_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8154d9546f2b",
+      "rep": {
+        "id": "8154d9546f2b",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026",
+        "titulo": "Pablo Zurro, intendente de Pehuajó, prohibió la circulación por 48 horas y lanzó una advertencia a tamberos: “No me rompan los caminos”",
+        "titulo_norm": "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos",
+        "descripcion": "El jefe comunal de esa localidad bonaerense anunció que la restricción regirá este lunes y martes, con una excepción para quienes sacan la leche de los tambos; advirtió que podría extenderla si continúan las lluvias",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSF4OEV4EBFADGUF43QTD4RPEI.jpg?auth=765c54e01c329de005be626209fe612d5b61bdfbb11888798d29272689f1a91c&smart=true",
+        "autor": "",
+        "publicado": "2026-10-26T18:44-03:00",
+        "capturado": "2026-10-26T19:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3e05ccf4f356ef50"
+      },
+      "grupo": [
+        {
+          "id": "8154d9546f2b",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026",
+          "titulo": "Pablo Zurro, intendente de Pehuajó, prohibió la circulación por 48 horas y lanzó una advertencia a tamberos: “No me rompan los caminos”",
+          "titulo_norm": "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos",
+          "descripcion": "El jefe comunal de esa localidad bonaerense anunció que la restricción regirá este lunes y martes, con una excepción para quienes sacan la leche de los tambos; advirtió que podría extenderla si continúan las lluvias",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSF4OEV4EBFADGUF43QTD4RPEI.jpg?auth=765c54e01c329de005be626209fe612d5b61bdfbb11888798d29272689f1a91c&smart=true",
+          "autor": "",
+          "publicado": "2026-10-26T18:44-03:00",
+          "capturado": "2026-10-26T19:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3e05ccf4f356ef50"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 4,
+        "ai_score": 66,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la logística y producción lechera de la zona núcleo bonaerense por cuestiones climáticas.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          66
+        ]
+      },
+      "cuando": "2026-10-26T19:02-03:00"
+    },
     {
       "id": "d3ba1e819e69",
       "rep": {
@@ -28235,69 +28423,6 @@
       "cuando": "2026-10-26T18:40-03:00"
     },
     {
-      "id": "8fccb54bb5e8",
-      "rep": {
-        "id": "8fccb54bb5e8",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones/",
-        "canonical_url": "https://infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones",
-        "titulo": "El Niño: impulsan una red federal para asistir a productores afectados por inundaciones",
-        "titulo_norm": "el nino impulsan una red federal para asistir a productores afectados por inundaciones",
-        "descripcion": "Es una iniciativa de CRA, que busca articular ayuda con las sociedades rurales de todo el país, mediante la disponibilidad de predios, logística, alimentos e insumos. Además, la entidad pide medidas tributarias de emergencia para quienes deben vender anticipadamente su hacienda.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/CRA1-scaled.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-26T17:31-03:00",
-        "capturado": "2026-10-26T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6085f6ec2cef8eb4"
-      },
-      "grupo": [
-        {
-          "id": "8fccb54bb5e8",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones/",
-          "canonical_url": "https://infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones",
-          "titulo": "El Niño: impulsan una red federal para asistir a productores afectados por inundaciones",
-          "titulo_norm": "el nino impulsan una red federal para asistir a productores afectados por inundaciones",
-          "descripcion": "Es una iniciativa de CRA, que busca articular ayuda con las sociedades rurales de todo el país, mediante la disponibilidad de predios, logística, alimentos e insumos. Además, la entidad pide medidas tributarias de emergencia para quienes deben vender anticipadamente su hacienda.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/CRA1-scaled.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-26T17:31-03:00",
-          "capturado": "2026-10-26T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6085f6ec2cef8eb4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 72,
-        "commercial_score": 60,
-        "subtema": "ganaderia",
-        "tema": "inundaciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Gran relevancia regional por la emergencia hídrica, moviliza a entidades y productores de la zona núcleo.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T18:00-03:00"
-    },
-    {
       "id": "97f53ecd6fa7",
       "rep": {
         "id": "97f53ecd6fa7",
@@ -28359,69 +28484,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-26T18:00-03:00"
-    },
-    {
-      "id": "f5692064c8ad",
-      "rep": {
-        "id": "f5692064c8ad",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/despues-de-20-anos-japon-abre-su-mercado-a-la-carne-bovina-argentina/",
-        "canonical_url": "https://todoagro.com.ar/despues-de-20-anos-japon-abre-su-mercado-a-la-carne-bovina-argentina",
-        "titulo": "Después de 20 años, Japón abre su mercado a la carne bovina argentina",
-        "titulo_norm": "despues de 20 anos japon abre su mercado a la carne bovina argentina",
-        "descripcion": "Argentina y Japón acordaron los requisitos sanitarios para el ingreso de carne bovina y lengua provenientes de la zona libre de aftosa con vacunación. El entendimiento completa la apertura del mercado japonés para la carne argentina de todo el país, una negociación que se inició en 2006 y cobró nuevo impulso desde 2024. La entrada Después de 20 años, Japón abre su mercado a la carne bovina argentina pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-10-26T15:22-03:00",
-        "capturado": "2026-10-26T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "79e1d1e30bb84bf4"
-      },
-      "grupo": [
-        {
-          "id": "f5692064c8ad",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/despues-de-20-anos-japon-abre-su-mercado-a-la-carne-bovina-argentina/",
-          "canonical_url": "https://todoagro.com.ar/despues-de-20-anos-japon-abre-su-mercado-a-la-carne-bovina-argentina",
-          "titulo": "Después de 20 años, Japón abre su mercado a la carne bovina argentina",
-          "titulo_norm": "despues de 20 anos japon abre su mercado a la carne bovina argentina",
-          "descripcion": "Argentina y Japón acordaron los requisitos sanitarios para el ingreso de carne bovina y lengua provenientes de la zona libre de aftosa con vacunación. El entendimiento completa la apertura del mercado japonés para la carne argentina de todo el país, una negociación que se inició en 2006 y cobró nuevo impulso desde 2024. La entrada Después de 20 años, Japón abre su mercado a la carne bovina argentina pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-10-26T15:22-03:00",
-          "capturado": "2026-10-26T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "79e1d1e30bb84bf4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "carne bovina",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Abre un mercado histórico para la carne argentina tras dos décadas de negociaciones, de alto impacto ganadero.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T16:00-03:00"
     },
     {
       "id": "185134469419",
@@ -28952,8 +29014,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T19:02:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T19:06:44-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
