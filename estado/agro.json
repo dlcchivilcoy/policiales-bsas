@@ -14362,6 +14362,31 @@
         67,
         53
       ]
+    },
+    "eefb8f918ab855dd": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 58,
+      "subtema": "mercados",
+      "tema": "trigo brasil",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta directamente la competitividad del trigo argentino en el principal mercado de exportación.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        57
+      ]
     }
   },
   "indice": {
@@ -15351,7 +15376,8 @@
       "https://agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html": "2026-10-26",
       "https://bichosdecampo.com/a-las-puertas-de-la-nueva-cosecha-el-trigo-todavia-sale-a-buen-ritmo-argentina-embarca-mas-de-2-millones-de-toneladas-y-casi-triplica-lo-habitual-para-esta-epoca-del-ano": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/fitosanitarios-empieza-una-capacitacion-gratuita-nid26102026": "2026-10-26",
-      "https://infocampo.com.ar/riesgo-pais-hoy-26-10-2026": "2026-10-26"
+      "https://infocampo.com.ar/riesgo-pais-hoy-26-10-2026": "2026-10-26",
+      "https://bichosdecampo.com/la-victoria-de-lula-en-brasil-genero-una-mejora-enorme-de-la-competitividad-agroindustrial-los-productores-de-trigo-agradecidos": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16339,7 +16365,8 @@
       "personal de campo pautas basicas para una gestion laboral responsable": "2026-10-26",
       "a las puertas de la nueva cosecha el trigo todavia sale a buen ritmo argentina embarca mas de 2 millones de toneladas y casi triplica lo habitual para esta epoca del ano": "2026-10-26",
       "fitosanitarios empieza una capacitacion gratuita": "2026-10-26",
-      "riesgo pais hoy 26 de octubre de 2026": "2026-10-26"
+      "riesgo pais hoy 26 de octubre de 2026": "2026-10-26",
+      "la victoria de lula en brasil genero una mejora enorme de la competitividad agroindustrial los productores de trigo agradecidos": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17327,7 +17354,8 @@
       "7854fe2c88a8c4d6": "2026-10-26",
       "5a9a8a8c6ec0e69c": "2026-10-26",
       "479a872bfbe250b8": "2026-10-26",
-      "c270a228fe5550d6": "2026-10-26"
+      "c270a228fe5550d6": "2026-10-26",
+      "eefb8f918ab855dd": "2026-10-26"
     }
   },
   "elegidas": [
@@ -26659,7 +26687,7 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T11:02:59-03:00",
+  "actualizado": "2026-10-26T11:21:16-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
