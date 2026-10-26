@@ -14684,6 +14684,31 @@
         65,
         62
       ]
+    },
+    "14df0dddbf1486aa": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 60,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "ley de tierras",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el mercado inmobiliario rural y la propiedad de la tierra en la provincia de Buenos Aires.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        60
+      ]
     }
   },
   "indice": {
@@ -15694,7 +15719,8 @@
       "https://bichosdecampo.com/itaipu-cierra-la-canilla-tras-26-dias-la-represa-de-brasil-y-paraguay-dejo-de-verter-agua-y-busca-amortiguar-la-crecida-del-parana": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/gravisima-situacion-abrieron-la-inscripcion-para-comprar-activos-de-la-quiebra-de-algodonera-nid26102026": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026": "2026-10-26",
-      "https://argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como": "2026-10-26"
+      "https://argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como": "2026-10-26",
+      "https://bichosdecampo.com/la-ley-de-tierras-de-kicillof-ya-tiene-una-alternativa-desde-la-oposicion-proponen-que-determinados-extranjeros-queden-exceptuados-de-los-limites-en-territorio-bonaerense": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16703,7 +16729,8 @@
       "itaipu cierra la canilla tras 26 dias la represa de brasil y paraguay dejo de verter agua y busca amortiguar la crecida del parana": "2026-10-26",
       "gravisima situacion abrieron la inscripcion para comprar activos de la quiebra de algodonera avellaneda y un edificio tiene una base de us 1 75 millones": "2026-10-26",
       "golpe en chicago la soja se desploma y toca su valor mas bajo en dos meses tras las elecciones en brasil y un dato de estados unidos": "2026-10-26",
-      "argentina recibio 60 auditorias sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial": "2026-10-26"
+      "argentina recibio 60 auditorias sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial": "2026-10-26",
+      "la ley de tierras de kicillof ya tiene una alternativa desde la oposicion proponen que determinados extranjeros queden exceptuados de los limites en territorio bonaerense": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17712,7 +17739,8 @@
       "cc6214a1af83770f": "2026-10-26",
       "20ec956cef1a254d": "2026-10-26",
       "7d765cb2de2831d7": "2026-10-26",
-      "11537fbd0d8d2497": "2026-10-26"
+      "11537fbd0d8d2497": "2026-10-26",
+      "14df0dddbf1486aa": "2026-10-26"
     }
   },
   "elegidas": [
@@ -26887,9 +26915,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d8f285eff223_portada.jpg"
+    },
+    {
+      "id": "585bc305c2a0",
+      "cuando": "2026-10-26T13:40-03:00",
+      "titulo_original": "Golpe en Chicago: la soja se desploma y toca su valor más bajo en dos meses tras las elecciones en Brasil y un dato de Estados Unidos",
+      "descripcion": "La oleaginosa pierde casi US$9 en el inicio de la semana en ese mercado de referencia global; el avance de la cosecha estadounidense y la depreciación del real brasileño tras el triunfo de Lula Da Silva presionaron los precios internacionales",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026/",
+      "titular": "La soja se desploma en Chicago y toca su menor valor",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja chicago",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en el bolsillo de los productores y la economía regional de la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e0e8d345-3521-484e-bac2-ddc68e26afc1",
+          "slug": "la-soja-se-desploma-en-chicago-y-toca-su-menor-valor-en-dos-aac775",
+          "url": "https://www.diariolacampaña.com.ar/n/la-soja-se-desploma-en-chicago-y-toca-su-menor-valor-en-dos-aac775",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2418901132186436",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18005427246005642",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_585bc305c2a0_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "185134469419",
+      "rep": {
+        "id": "185134469419",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-ley-de-tierras-de-kicillof-ya-tiene-una-alternativa-desde-la-oposicion-proponen-que-determinados-extranjeros-queden-exceptuados-de-los-limites-en-territorio-bonaerense/",
+        "canonical_url": "https://bichosdecampo.com/la-ley-de-tierras-de-kicillof-ya-tiene-una-alternativa-desde-la-oposicion-proponen-que-determinados-extranjeros-queden-exceptuados-de-los-limites-en-territorio-bonaerense",
+        "titulo": "La Ley de Tierras de Kicillof ya tiene una alternativa: Desde la oposición proponen que determinados extranjeros queden exceptuados de los límites en territorio bonaerense",
+        "titulo_norm": "la ley de tierras de kicillof ya tiene una alternativa desde la oposicion proponen que determinados extranjeros queden exceptuados de los limites en territorio bonaerense",
+        "descripcion": "Los idas y vueltas a nivel nacional en torno a la Ley de Tierras, con las recientes decisiones de la Corte Suprema y la restitución aprobada en Diputados, no mueven el termómetro de la discusión en la provincia de Buenos Aires, donde hace ya algunas semanas toma forma una legislación que fijaría límites propios en […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Viviana-Romano-y-Fabian-Luayza-nuevos-aires.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-26T13:27-03:00",
+        "capturado": "2026-10-26T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "14df0dddbf1486aa"
+      },
+      "grupo": [
+        {
+          "id": "185134469419",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-ley-de-tierras-de-kicillof-ya-tiene-una-alternativa-desde-la-oposicion-proponen-que-determinados-extranjeros-queden-exceptuados-de-los-limites-en-territorio-bonaerense/",
+          "canonical_url": "https://bichosdecampo.com/la-ley-de-tierras-de-kicillof-ya-tiene-una-alternativa-desde-la-oposicion-proponen-que-determinados-extranjeros-queden-exceptuados-de-los-limites-en-territorio-bonaerense",
+          "titulo": "La Ley de Tierras de Kicillof ya tiene una alternativa: Desde la oposición proponen que determinados extranjeros queden exceptuados de los límites en territorio bonaerense",
+          "titulo_norm": "la ley de tierras de kicillof ya tiene una alternativa desde la oposicion proponen que determinados extranjeros queden exceptuados de los limites en territorio bonaerense",
+          "descripcion": "Los idas y vueltas a nivel nacional en torno a la Ley de Tierras, con las recientes decisiones de la Corte Suprema y la restitución aprobada en Diputados, no mueven el termómetro de la discusión en la provincia de Buenos Aires, donde hace ya algunas semanas toma forma una legislación que fijaría límites propios en […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Viviana-Romano-y-Fabian-Luayza-nuevos-aires.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-26T13:27-03:00",
+          "capturado": "2026-10-26T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "14df0dddbf1486aa"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 60,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "ley de tierras",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente el mercado inmobiliario rural y la propiedad de la tierra en la provincia de Buenos Aires.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          60
+        ]
+      },
+      "cuando": "2026-10-26T13:40-03:00"
+    },
     {
       "id": "08d0b8a28c51",
       "rep": {
@@ -27218,69 +27367,6 @@
       "cuando": "2026-10-26T13:00-03:00"
     },
     {
-      "id": "585bc305c2a0",
-      "rep": {
-        "id": "585bc305c2a0",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026",
-        "titulo": "Golpe en Chicago: la soja se desploma y toca su valor más bajo en dos meses tras las elecciones en Brasil y un dato de Estados Unidos",
-        "titulo_norm": "golpe en chicago la soja se desploma y toca su valor mas bajo en dos meses tras las elecciones en brasil y un dato de estados unidos",
-        "descripcion": "La oleaginosa pierde casi US$9 en el inicio de la semana en ese mercado de referencia global; el avance de la cosecha estadounidense y la depreciación del real brasileño tras el triunfo de Lula Da Silva presionaron los precios internacionales",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/67LHDFSNJZBNHJ6KCYYU32DHRE.png?auth=c7a66bd88a16811f0022f7e8bba552f2fba21ea0a7ffd42927f704a01db922b8&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-10-26T11:58-03:00",
-        "capturado": "2026-10-26T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7d765cb2de2831d7"
-      },
-      "grupo": [
-        {
-          "id": "585bc305c2a0",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026",
-          "titulo": "Golpe en Chicago: la soja se desploma y toca su valor más bajo en dos meses tras las elecciones en Brasil y un dato de Estados Unidos",
-          "titulo_norm": "golpe en chicago la soja se desploma y toca su valor mas bajo en dos meses tras las elecciones en brasil y un dato de estados unidos",
-          "descripcion": "La oleaginosa pierde casi US$9 en el inicio de la semana en ese mercado de referencia global; el avance de la cosecha estadounidense y la depreciación del real brasileño tras el triunfo de Lula Da Silva presionaron los precios internacionales",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/67LHDFSNJZBNHJ6KCYYU32DHRE.png?auth=c7a66bd88a16811f0022f7e8bba552f2fba21ea0a7ffd42927f704a01db922b8&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-10-26T11:58-03:00",
-          "capturado": "2026-10-26T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7d765cb2de2831d7"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "soja chicago",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en el bolsillo de los productores y la economía regional de la zona núcleo.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T13:00-03:00"
-    },
-    {
       "id": "6a3bb67620c1",
       "rep": {
         "id": "6a3bb67620c1",
@@ -27549,8 +27635,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T13:24:45-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T13:43:15-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
