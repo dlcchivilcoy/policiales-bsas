@@ -25,6 +25,7 @@ con la foto original; un VIRAL sin video no sale.
 """
 import os
 import re
+import time
 
 from nacionales import filtro as F
 from nacionales.infobae import ruta
@@ -184,7 +185,53 @@ def bajar(fuentes=None, cliente=None) -> tuple:
     for n in map(clasificar, notas):
         if n["url"] not in salida or (n["categoria"] and not salida[n["url"]]["categoria"]):
             salida[n["url"]] = n
-    return list(salida.values()), fallas, conteo
+    lista = list(salida.values())
+    try:
+        conteo["virales por IA"] = marcar_virales_ia(lista, time.time())
+    except Exception as e:                           # noqa: BLE001 — sin la IA quedan los del título
+        fallas.append(f"virales por IA: {type(e).__name__}: {str(e)[:120]}")
+    return lista, fallas, conteo
+
+
+# 26/10/2026: el título casi nunca dice «viral» (1 en 72 h entre seis portales), y la corrida de las 4 pide
+# 10 virales (5 con Short). Una sola consulta a la IA por corrida, con los titulares generales del día.
+VIRALES_IA_HORAS = 24
+VIRALES_IA_TOPE = 350
+VIRALES_IA_SISTEMA = (
+    "Sos editor de redes de un diario de Chivilcoy (provincia de Buenos Aires). Te paso titulares de las "
+    "últimas noticias de portales argentinos, numerados. Elegí entre 10 y 25 que sirvan como VIRALES: lo que la "
+    "gente comparte y comenta en redes. Sí: historias de vida que sorprenden o emocionan, gente común que hizo "
+    "algo fuera de lo común, curiosidades, hallazgos, récords, animales y mascotas, rescates con final feliz, "
+    "videos llamativos, cosas insólitas de acá o del mundo. No: política, economía, policiales, crímenes, "
+    "accidentes con heridos, muertes, deportes, famosos y espectáculos, el dólar, el clima, los feriados, "
+    "consejos de salud, recetas, guías y notas de servicio. Primero las que más se compartirían. "
+    'Respondé SOLO con JSON: {"virales": [números]}')
+
+
+def marcar_virales_ia(notas: list, ahora: float, redactar=None) -> int:
+    """Marca como «virales» las notas generales del día (sin categoría) que la IA ve virales. Devuelve
+    cuántas. NAC_VIRALES_IA=0 la apaga; sin credencial de IA no hace nada."""
+    if (os.environ.get("NAC_VIRALES_IA") or "1").strip() == "0":
+        return 0
+    from reels import ia as IA
+    if redactar is None and not IA.proveedor_disponible():
+        return 0
+    elegibles = [n for n in notas if not de_que_categoria(n) and n.get("titulo")
+                 and ahora - (n.get("fecha") or 0) <= VIRALES_IA_HORAS * 3600
+                 and not POLICIAL.search(F.norm(n["titulo"]))]
+    elegibles.sort(key=lambda n: -(n.get("fecha") or 0))
+    elegibles = elegibles[:VIRALES_IA_TOPE]
+    if not elegibles:
+        return 0
+    material = "\n".join(f"{i}. {n['titulo'][:160]}" for i, n in enumerate(elegibles, 1))
+    datos, _ = (redactar or IA.redactar)(VIRALES_IA_SISTEMA, material)
+    marcadas = 0
+    for i in dict.fromkeys((datos or {}).get("virales") or []):
+        if isinstance(i, int) and 1 <= i <= len(elegibles):
+            n = elegibles[i - 1]
+            n.update(categoria="virales", seccion_feed="virales", viral_ia=True)
+            marcadas += 1
+    return marcadas
 
 
 # =============================================================================

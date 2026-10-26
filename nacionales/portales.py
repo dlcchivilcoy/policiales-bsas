@@ -110,6 +110,13 @@ FUENTES = (
     ("general", "Clarín", "rss", CLARIN.format("lo-ultimo"), {}),
     ("general", "Ámbito", "rss", AMBITO.format("informacion-general"), {}),
     ("general", "El Cronista", "rss", "https://www.cronista.com/files/rss/news.xml", {}),
+    # 26/10/2026: las secciones de virales casi no publican (Infobae, una nota cada dos o tres días; TN
+    # «Increíble», de mayo). Las últimas noticias de TN, La Nación e Infobae traen las historias que se
+    # comparten; las marca Gemini (categorias.marcar_virales_ia).
+    ("general", "TN", "rss", "https://tn.com.ar/arc/outboundfeeds/rss/?outputType=xml", {}),
+    ("general", "La Nación", "rss", "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml", {}),
+    ("general", "La Nación", "rss", LANACION("lifestyle"), {}),
+    ("general", "Infobae", "rss", "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml", {}),
     # --- IA para comercios y emprendedores ---
     ("tecnologia_ia", "Zapier", "rss", "https://zapier.com/blog/feeds/latest/", {}),
     ("tecnologia_ia", "Google Workspace", "lista", "https://workspace.google.com/blog/ai-and-machine-learning",

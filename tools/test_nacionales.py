@@ -1003,6 +1003,53 @@ chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "vira
 os.environ.pop("NAC_SHORT_VIRALES")
 PA.MEMORIA = _mem_agenda
 
+# 26/10/2026: la IA marca los virales entre las últimas noticias generales (las secciones de virales casi no
+# publican). Un policial no se le pasa nunca, ni lo que ya tiene categoría.
+_ahora_v = _lun(4).timestamp()
+_gen_v = [dict(url=f"https://tn.com.ar/sociedad/2026/10/19/g{i}/", titulo=t, categoria="", fecha=_ahora_v - 3600)
+          for i, t in enumerate(("Una pareja construyó una casa con 1100 neumáticos",
+                                 "El Gobierno anunció una baja de retenciones",
+                                 "Robaron una moto en la puerta de una casa",
+                                 "El perro que esperó a su dueño diez años en la estación"))]
+_gen_v.append(dict(url="https://www.infobae.com/deportes/2026/10/19/x/", titulo="Boca ganó el clásico",
+                   categoria="", fecha=_ahora_v - 3600))
+_gen_v.append(dict(url="https://tn.com.ar/sociedad/2026/10/15/vieja/", titulo="Un gato que toca el piano",
+                   categoria="", fecha=_ahora_v - 5 * 86400))
+_vistos = []
+
+
+def _ia_virales(system, material):
+    _vistos.append(material)
+    return {"virales": [1, 3, 3, 99]}, "falsa"
+
+
+_n_v = CAT.marcar_virales_ia(_gen_v, _ahora_v, redactar=_ia_virales)
+chequear("virales por IA: marca las que elige la IA, sin repetir ni salirse de la lista",
+         _n_v == 2 and [n["categoria"] for n in _gen_v[:4]] == ["virales", "", "", "virales"]
+         and all(n.get("viral_ia") for n in _gen_v if n["categoria"] == "virales"))
+chequear("virales por IA: ni policiales, ni lo que ya tiene sección (deportes), ni lo viejo llegan a la IA",
+         "Robaron" not in _vistos[0] and "Boca" not in _vistos[0] and "piano" not in _vistos[0])
+os.environ["NAC_VIRALES_IA"] = "0"
+chequear("virales por IA: NAC_VIRALES_IA=0 la apaga",
+         CAT.marcar_virales_ia([dict(_gen_v[1], categoria="")], _ahora_v, redactar=_ia_virales) == 0)
+os.environ.pop("NAC_VIRALES_IA")
+
+# Una nota que Gemini se niega a redactar (contenido bloqueado) es un descarte, no una falla de la corrida.
+PA.MEMORIA = estado_tmp / "nacionales_bloqueo.json"
+reloj["ahora"] = _lun(4, 2)
+
+
+def _bloqueada(system, material):
+    raise RuntimeError("gemini: Gemini devolvió algo inesperado: {'promptFeedback': {'blockReason': "
+                       "'PROHIBITED_CONTENT'}}")
+
+
+inf_b = PA.pasada(True, redactar=_bloqueada, notas=_gen[:1], notas_variedad=[], agenda=True,
+                  leer_pagina=lambda u: SIN)
+chequear("contenido bloqueado por la IA: va a descartadas y la corrida no queda en rojo",
+         not inf_b["fallas"] and any("contenido bloqueado" in d["motivo"] for d in inf_b["descartadas"]))
+PA.MEMORIA = _mem_agenda
+
 # Lunes 22:00: el carrusel con las 10 más importantes del día (las de la web de las 4 + lo nuevo de la noche,
 # que también queda en la web). Instagram + álbum de Facebook.
 reloj["ahora"] = _lun(22, 1)

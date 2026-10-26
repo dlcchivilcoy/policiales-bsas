@@ -1005,7 +1005,11 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
                 try:
                     pieza = armar(c, carpeta, redactar, leer_una)
                 except Exception as e:               # noqa: BLE001 — la IA o el motor: se sigue con otra
-                    informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
+                    if bloqueada_por_ia(e):
+                        _descartar_bloqueada(c, mem, publicar, ahora, informe)
+                    else:
+                        informe["fallas"].append(
+                            f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
                     continue
                 if not pieza["guion"]["apta"]:
                     informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
@@ -1103,6 +1107,20 @@ def _registro(pieza: dict, res: dict, dia: str, turno: str) -> dict:
 
 
 NOMBRE_CATEGORIA = {"": "generales", AG.VIRALES_SHORT: "virales con Short"}     # para el informe
+def bloqueada_por_ia(e: Exception) -> bool:
+    """¿Gemini se negó a redactar la nota (contenido bloqueado)? Eso es un descarte de la nota, no una falla
+    de la corrida (26/10/2026: una sola así dejó en rojo la de las 4, que había subido 29 notas)."""
+    return any(x in str(e) for x in ("PROHIBITED_CONTENT", "blockReason", "SAFETY"))
+
+
+def _descartar_bloqueada(c: dict, mem: dict, publicar: bool, ahora: datetime, informe: dict):
+    motivo = "la IA no quiso redactarla (contenido bloqueado por Gemini)"
+    informe["descartadas"].append({"titulo": c["titulo"], "motivo": motivo,
+                                   "categoria": c.get("subgeneral") or c.get("categoria") or ""})
+    if publicar:
+        mem["descartadas"][c["url"]] = {"motivo": motivo, "cuando": ahora.isoformat(timespec="seconds")}
+
+
 INTENTOS_POR_NOTA = 3       # candidatas que se prueban, como mucho, por cada nota que se busca
 
 
@@ -1114,7 +1132,10 @@ def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: dat
     try:
         pieza = armar(c, carpeta, redactar, leer, solo_web=not con_short)
     except Exception as e:                           # noqa: BLE001 — la IA: se sigue con otra
-        informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
+        if bloqueada_por_ia(e):
+            _descartar_bloqueada(c, mem, publicar, ahora, informe)
+        else:
+            informe["fallas"].append(f"no se pudo armar «{c['titulo'][:60]}»: {type(e).__name__}: {e}"[:300])
         return None
     if not pieza["guion"]["apta"]:
         informe["descartadas"].append({"titulo": c["titulo"], "motivo": pieza["guion"]["motivo"],
