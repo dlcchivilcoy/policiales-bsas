@@ -14659,6 +14659,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "11537fbd0d8d2497": {
+      "impacto_economico": 15,
+      "interes_productores": 11,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 63,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra la apertura de mercados y el flujo exportador, de gran interés para productores ganaderos y agroindustriales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        62
+      ]
     }
   },
   "indice": {
@@ -15668,7 +15693,8 @@
       "https://bichosdecampo.com/entre-el-nino-y-la-merma-de-ventas-el-sector-fruticola-del-alto-valle-pide-un-salvavidas-para-llegar-a-fin-de-ano-los-productores-solicitaron-a-la-nacion-financiamiento-por-7-mil-millones-de-pesos": "2026-10-26",
       "https://bichosdecampo.com/itaipu-cierra-la-canilla-tras-26-dias-la-represa-de-brasil-y-paraguay-dejo-de-verter-agua-y-busca-amortiguar-la-crecida-del-parana": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/gravisima-situacion-abrieron-la-inscripcion-para-comprar-activos-de-la-quiebra-de-algodonera-nid26102026": "2026-10-26",
-      "https://lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026": "2026-10-26"
+      "https://lanacion.com.ar/economia/campo/golpe-en-chicago-la-soja-se-desploma-y-toca-su-valor-mas-bajo-en-dos-meses-tras-las-elecciones-en-nid26102026": "2026-10-26",
+      "https://argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16676,7 +16702,8 @@
       "entre el nino y la merma de ventas el sector fruticola del alto valle pide un salvavidas para llegar a fin de ano los productores solicitaron a la nacion financiamiento por 7 mil millones de pesos": "2026-10-26",
       "itaipu cierra la canilla tras 26 dias la represa de brasil y paraguay dejo de verter agua y busca amortiguar la crecida del parana": "2026-10-26",
       "gravisima situacion abrieron la inscripcion para comprar activos de la quiebra de algodonera avellaneda y un edificio tiene una base de us 1 75 millones": "2026-10-26",
-      "golpe en chicago la soja se desploma y toca su valor mas bajo en dos meses tras las elecciones en brasil y un dato de estados unidos": "2026-10-26"
+      "golpe en chicago la soja se desploma y toca su valor mas bajo en dos meses tras las elecciones en brasil y un dato de estados unidos": "2026-10-26",
+      "argentina recibio 60 auditorias sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17684,7 +17711,8 @@
       "3f97c38793db27ca": "2026-10-26",
       "cc6214a1af83770f": "2026-10-26",
       "20ec956cef1a254d": "2026-10-26",
-      "7d765cb2de2831d7": "2026-10-26"
+      "7d765cb2de2831d7": "2026-10-26",
+      "11537fbd0d8d2497": "2026-10-26"
     }
   },
   "elegidas": [
@@ -26805,9 +26833,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_db89df16bb11_portada.jpg"
+    },
+    {
+      "id": "d8f285eff223",
+      "cuando": "2026-10-26T13:20-03:00",
+      "titulo_original": "Compactación de suelos: el problema invisible que puede hacerle perder hasta 2.000 kilos de maíz por hectárea",
+      "descripcion": "",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249013-compactacion-de-suelos-el-problema-invisible-que-puede-hacerle-perder-hasta-2000-kilos-de-maiz-por-hectarea.html",
+      "titular": "La compactación del suelo reduce hasta 2.000 kilos el rendimiento del maíz",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 87,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Problema técnico crítico y muy frecuente en suelos de la región con gran pérdida de rinde.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "09ac2a1b-3143-4d81-a1d3-71907e8785eb",
+          "slug": "la-compactacion-del-suelo-hace-perder-hasta-2-000-kilos-de-maiz-c29937",
+          "url": "https://www.diariolacampaña.com.ar/n/la-compactacion-del-suelo-hace-perder-hasta-2-000-kilos-de-maiz-c29937",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1083760037806481",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18109153388137645",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d8f285eff223_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "08d0b8a28c51",
+      "rep": {
+        "id": "08d0b8a28c51",
+        "fuente": "Secretaría de Agricultura",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+        "url": "https://www.argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como",
+        "canonical_url": "https://argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como",
+        "titulo": "Argentina recibió 60 auditorías sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial",
+        "titulo_norm": "argentina recibio 60 auditorias sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial",
+        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación, destaca que, entre diciembre de 2023 y octubre de 2026, Argentina recibió 60 auditorías internacionales, con un promedio de 20 por año, realizadas por autoridades sanitarias de países interesados en importar productos agroalimentarios argentinos. Chile y China fueron los países que más auditorías realizaron, con evaluaciones vinculadas principalmente con carne bovina, lácteos, frutas y reconocimiento de condiciones sanitarias. Les siguieron Brasil, con 5 auditorías, Corea, con 4 y Filipinas, México y Perú, con 3 cada uno. El resto de los países registró entre 1 y 2 auditorías, sobre una amplia variedad de productos, entre ellos carnes, productos pesqueros, lácteos, genética animal, semillas y alimentos para animales. Las auditorías constituyen una herramienta clave para sostener y ampliar el acceso a",
+        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/naranja_expo1.jpg",
+        "autor": "pconsiglio",
+        "publicado": "2026-10-26T10:43-03:00",
+        "capturado": "2026-10-26T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "11537fbd0d8d2497"
+      },
+      "grupo": [
+        {
+          "id": "08d0b8a28c51",
+          "fuente": "Secretaría de Agricultura",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+          "url": "https://www.argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como",
+          "canonical_url": "https://argentina.gob.ar/noticias/argentina-recibio-60-auditorias-sanitarias-que-consolidan-su-posicionamiento-como",
+          "titulo": "Argentina recibió 60 auditorías sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial",
+          "titulo_norm": "argentina recibio 60 auditorias sanitarias que consolidan su posicionamiento como exportador agroindustrial de nivel mundial",
+          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación, destaca que, entre diciembre de 2023 y octubre de 2026, Argentina recibió 60 auditorías internacionales, con un promedio de 20 por año, realizadas por autoridades sanitarias de países interesados en importar productos agroalimentarios argentinos. Chile y China fueron los países que más auditorías realizaron, con evaluaciones vinculadas principalmente con carne bovina, lácteos, frutas y reconocimiento de condiciones sanitarias. Les siguieron Brasil, con 5 auditorías, Corea, con 4 y Filipinas, México y Perú, con 3 cada uno. El resto de los países registró entre 1 y 2 auditorías, sobre una amplia variedad de productos, entre ellos carnes, productos pesqueros, lácteos, genética animal, semillas y alimentos para animales. Las auditorías constituyen una herramienta clave para sostener y ampliar el acceso a",
+          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/naranja_expo1.jpg",
+          "autor": "pconsiglio",
+          "publicado": "2026-10-26T10:43-03:00",
+          "capturado": "2026-10-26T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "11537fbd0d8d2497"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 63,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra la apertura de mercados y el flujo exportador, de gran interés para productores ganaderos y agroindustriales.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          62
+        ]
+      },
+      "cuando": "2026-10-26T13:20-03:00"
+    },
     {
       "id": "60969f55f0a1",
       "rep": {
@@ -26935,69 +27084,6 @@
           57,
           66
         ]
-      },
-      "cuando": "2026-10-26T13:00-03:00"
-    },
-    {
-      "id": "d8f285eff223",
-      "rep": {
-        "id": "d8f285eff223",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249013-compactacion-de-suelos-el-problema-invisible-que-puede-hacerle-perder-hasta-2000-kilos-de-maiz-por-hectarea.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249013-compactacion-de-suelos-el-problema-invisible-que-puede-hacerle-perder-hasta-2000-kilos-de-maiz-por-hectarea.html",
-        "titulo": "Compactación de suelos: el problema invisible que puede hacerle perder hasta 2.000 kilos de maíz por hectárea",
-        "titulo_norm": "compactacion de suelos el problema invisible que puede hacerle perder hasta 2 000 kilos de maiz por hectarea",
-        "descripcion": "",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249013_18123191.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-26T12:41-03:00",
-        "capturado": "2026-10-26T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5dec87796f5d478a"
-      },
-      "grupo": [
-        {
-          "id": "d8f285eff223",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249013-compactacion-de-suelos-el-problema-invisible-que-puede-hacerle-perder-hasta-2000-kilos-de-maiz-por-hectarea.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249013-compactacion-de-suelos-el-problema-invisible-que-puede-hacerle-perder-hasta-2000-kilos-de-maiz-por-hectarea.html",
-          "titulo": "Compactación de suelos: el problema invisible que puede hacerle perder hasta 2.000 kilos de maíz por hectárea",
-          "titulo_norm": "compactacion de suelos el problema invisible que puede hacerle perder hasta 2 000 kilos de maiz por hectarea",
-          "descripcion": "",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249013_18123191.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-26T12:41-03:00",
-          "capturado": "2026-10-26T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5dec87796f5d478a"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 15,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 87,
-        "commercial_score": 88,
-        "subtema": "agro",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Problema técnico crítico y muy frecuente en suelos de la región con gran pérdida de rinde.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-26T13:00-03:00"
     },
@@ -27463,8 +27549,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T13:03:32-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T13:24:45-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
