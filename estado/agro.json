@@ -13977,6 +13977,27 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ff9ac3e3d7e5daf0": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 87,
+      "commercial_score": 87,
+      "subtema": "agro",
+      "tema": "fertilización",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alta relevancia zonal para productores de la región núcleo que buscan optimizar rindes y costos de fertilización tras las lluvias.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14933,7 +14954,8 @@
       "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-26-octubre-2026": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/martin-gana-sobre-el-negocio-de-los-tambos-la-crisis-no-se-enfrenta-solamente-esperando-un-mejor-nid26102026": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026": "2026-10-26",
-      "https://agfundernews.com/finnish-insect-ag-firm-volare-opens-5000-ton-protein-factory-in-finland-explores-2nd-plant": "2026-10-26"
+      "https://agfundernews.com/finnish-insect-ag-firm-volare-opens-5000-ton-protein-factory-in-finland-explores-2nd-plant": "2026-10-26",
+      "https://intainforma.inta.gob.ar/como-aprovechar-la-lluvia-para-potenciar-los-rindes": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15888,7 +15910,8 @@
       "dolar blue hoy a cuanto cotiza el 26 octubre 2026": "2026-10-26",
       "martin gana sobre el negocio de los tambos la crisis no se enfrenta solamente esperando un mejor precio": "2026-10-26",
       "visec las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino": "2026-10-26",
-      "finnish insect ag firm volare opens 5 000 ton protein factory in finland explores 2nd plant": "2026-10-26"
+      "finnish insect ag firm volare opens 5 000 ton protein factory in finland explores 2nd plant": "2026-10-26",
+      "como aprovechar la lluvia para potenciar los rindes": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16843,7 +16866,8 @@
       "913d24417397dbe9": "2026-10-26",
       "9abc12e1efa6bfb2": "2026-10-26",
       "c725d7a4ce4cae59": "2026-10-26",
-      "c7241b4bd1e44b23": "2026-10-26"
+      "c7241b4bd1e44b23": "2026-10-26",
+      "ff9ac3e3d7e5daf0": "2026-10-26"
     }
   },
   "elegidas": [
@@ -25568,6 +25592,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9413f6aae083_portada.jpg"
+    },
+    {
+      "id": "64c321c649b4",
+      "cuando": "2026-10-26T08:02-03:00",
+      "titulo_original": "Cómo aprovechar la lluvia para potenciar los rindes",
+      "descripcion": "Una mayor disponibilidad de agua abre la posibilidad de alcanzar mejores rendimientos, pero para aprovecharla los cultivos necesitan una nutrición acorde con su potencial. Especialistas del INTA Balcarce, la Universidad Nacional de Mar del Plata y el Conicet explican por qué el análisis de suelo es ",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/como-aprovechar-la-lluvia-para-potenciar-los-rindes/",
+      "titular": "Maíz, soja y girasol: análisis de suelo para ganar rinde",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 87,
+        "commercial_score": 87,
+        "subtema": "agro",
+        "tema": "fertilización",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alta relevancia zonal para productores de la región núcleo que buscan optimizar rindes y costos de fertilización tras las lluvias.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T08:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "09d100fc-4e32-49f7-9490-e8977e029343",
+          "slug": "suelos-agricolas-por-que-el-analisis-previo-es-clave-para-maiz-b1bd31",
+          "url": "https://www.diariolacampaña.com.ar/n/suelos-agricolas-por-que-el-analisis-previo-es-clave-para-maiz-b1bd31",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1139278092011125",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18178626853452899",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_64c321c649b4_portada.jpg"
     }
   ],
   "pendientes": [
@@ -25639,8 +25717,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T07:43:37-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T08:06:17-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
