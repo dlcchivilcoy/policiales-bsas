@@ -115,10 +115,13 @@ def _tanda(tanda: list, redactar, log) -> dict:
         log(f"  puntaje: la IA no contestó una tanda de {len(tanda)} ({type(e).__name__})")
         return {}
     salida = {}
-    for d in datos.get("notas") or []:
+    # A veces Gemini devuelve la lista sola, sin el {"notas": [...]} (26/10/2026: «'list' object has no
+    # attribute 'get'» tumbó el reel de las 07:00).
+    items = datos if isinstance(datos, list) else (datos or {}).get("notas") or []
+    for d in items:
         try:
             i = int(d.get("n")) - 1
-        except (TypeError, ValueError):
+        except (AttributeError, TypeError, ValueError):
             continue
         if 0 <= i < len(tanda):
             salida[i] = dict(limpiar(d), via=via)
