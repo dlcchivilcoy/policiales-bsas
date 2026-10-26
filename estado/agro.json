@@ -14291,6 +14291,77 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7854fe2c88a8c4d6": {
+      "impacto_economico": 9,
+      "interes_productores": 11,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 60,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "gestión laboral",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante para productores de la región pero de bajo impacto comercial directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        56
+      ]
+    },
+    "5a9a8a8c6ec0e69c": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 85,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran volumen exportador con alto impacto en la economía triguera de la zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "479a872bfbe250b8": {
+      "impacto_economico": 8,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 58,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "fitosanitarios",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Útil por la capacitación local en BPA pero poco atractiva comercialmente.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        53
+      ]
     }
   },
   "indice": {
@@ -15276,7 +15347,10 @@
       "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
       "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
       "https://agrositio.com.ar/noticia/249009-mercados-en-tension-reeleccion-brasilena-real-debil-y-soja-a-la-baja.html": "2026-10-26",
-      "https://bichosdecampo.com/casi-analfabeto-y-amansador-de-caballos-de-san-antonio-de-areco-al-gaucho-mosco-pereyra-siempre-le-gusto-trabajar-solo-y-asi-solo-tambien-aprendio-a-tocar-la-guitarra-y-escribio-su": "2026-10-26"
+      "https://bichosdecampo.com/casi-analfabeto-y-amansador-de-caballos-de-san-antonio-de-areco-al-gaucho-mosco-pereyra-siempre-le-gusto-trabajar-solo-y-asi-solo-tambien-aprendio-a-tocar-la-guitarra-y-escribio-su": "2026-10-26",
+      "https://agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html": "2026-10-26",
+      "https://bichosdecampo.com/a-las-puertas-de-la-nueva-cosecha-el-trigo-todavia-sale-a-buen-ritmo-argentina-embarca-mas-de-2-millones-de-toneladas-y-casi-triplica-lo-habitual-para-esta-epoca-del-ano": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/fitosanitarios-empieza-una-capacitacion-gratuita-nid26102026": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16260,7 +16334,10 @@
       "clima hoy en misiones el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
       "clima hoy en mar del plata el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
       "mercados en tension reeleccion brasilena real debil y soja a la baja": "2026-10-26",
-      "casi analfabeto y amansador de caballos de san antonio de areco al gaucho mosco pereyra siempre le gusto trabajar solo y asi solo tambien aprendio a tocar la guitarra y escribio sus propias milongas": "2026-10-26"
+      "casi analfabeto y amansador de caballos de san antonio de areco al gaucho mosco pereyra siempre le gusto trabajar solo y asi solo tambien aprendio a tocar la guitarra y escribio sus propias milongas": "2026-10-26",
+      "personal de campo pautas basicas para una gestion laboral responsable": "2026-10-26",
+      "a las puertas de la nueva cosecha el trigo todavia sale a buen ritmo argentina embarca mas de 2 millones de toneladas y casi triplica lo habitual para esta epoca del ano": "2026-10-26",
+      "fitosanitarios empieza una capacitacion gratuita": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17244,7 +17321,10 @@
       "812fe990c048e661": "2026-10-26",
       "eed70e08dc46c464": "2026-10-26",
       "1c3268a6e62d7322": "2026-10-26",
-      "226688fbe1de58c5": "2026-10-26"
+      "226688fbe1de58c5": "2026-10-26",
+      "7854fe2c88a8c4d6": "2026-10-26",
+      "5a9a8a8c6ec0e69c": "2026-10-26",
+      "479a872bfbe250b8": "2026-10-26"
     }
   },
   "elegidas": [
@@ -26192,9 +26272,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_503d63b274b6_portada.jpg"
+    },
+    {
+      "id": "9957f983af29",
+      "cuando": "2026-10-26T10:40-03:00",
+      "titulo_original": "A las puertas de la nueva cosecha, el trigo todavía sale a buen ritmo: Argentina embarca más de 2 millones de toneladas y casi triplica lo habitual para esta época del año",
+      "descripcion": "Antes del ingreso fuerte de la nueva cosecha de trigo al mercado, Argentina sigue exportando el de la anterior a un ritmo inusual para esta época. Tras una campaña histórica para el cultivo de invierno, entre septiembre y octubre se estaría despachando más de 2 millones de toneladas, un volumen muy ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/a-las-puertas-de-la-nueva-cosecha-el-trigo-todavia-sale-a-buen-ritmo-argentina-embarca-mas-de-2-millones-de-toneladas-y-casi-triplica-lo-habitual-para-esta-epoca-del-ano/",
+      "titular": "Trigo: Argentina embarca más de 2 millones de toneladas antes",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 85,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran volumen exportador con alto impacto en la economía triguera de la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1657927c-e063-4e38-91ba-f2f15347445c",
+          "slug": "trigo-argentina-embarca-mas-de-dos-millones-de-toneladas-antes-2e7df6",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-argentina-embarca-mas-de-dos-millones-de-toneladas-antes-2e7df6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1101241459330320",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18633379192018463",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9957f983af29_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "979f30c4dcfc",
+      "rep": {
+        "id": "979f30c4dcfc",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html",
+        "titulo": "Personal de campo: Pautas básicas para una gestión laboral responsable",
+        "titulo_norm": "personal de campo pautas basicas para una gestion laboral responsable",
+        "descripcion": "Además de cuestiones ambientales y económicas, el concepto de producción sustentable implica el cuidado y gestión responsable de las personas que trabajan en el campo. Desde Aapresid Certificaciones repasan los principales aspectos que los productores deben tener en cuenta....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249010_72329896.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-26T10:33-03:00",
+        "capturado": "2026-10-26T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7854fe2c88a8c4d6"
+      },
+      "grupo": [
+        {
+          "id": "979f30c4dcfc",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249010-personal-de-campo-pautas-basicas-para-una-gestion-laboral-responsable.html",
+          "titulo": "Personal de campo: Pautas básicas para una gestión laboral responsable",
+          "titulo_norm": "personal de campo pautas basicas para una gestion laboral responsable",
+          "descripcion": "Además de cuestiones ambientales y económicas, el concepto de producción sustentable implica el cuidado y gestión responsable de las personas que trabajan en el campo. Desde Aapresid Certificaciones repasan los principales aspectos que los productores deben tener en cuenta....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249010_72329896.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-26T10:33-03:00",
+          "capturado": "2026-10-26T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7854fe2c88a8c4d6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 9,
+        "interes_productores": 11,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 4,
+        "ai_score": 60,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "gestión laboral",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante para productores de la región pero de bajo impacto comercial directo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          56
+        ]
+      },
+      "cuando": "2026-10-26T10:40-03:00"
+    },
     {
       "id": "6a3bb67620c1",
       "rep": {
@@ -26464,8 +26665,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T10:24:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T10:44:31-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
