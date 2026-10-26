@@ -15149,6 +15149,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1e4a97cf3c3f3263": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 57,
+      "commercial_score": 56,
+      "subtema": "agro",
+      "tema": "hortalizas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es de interés regional por tratarse de la zona núcleo, pero enfocado en un sector hortícola específico.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        58
+      ]
     }
   },
   "indice": {
@@ -16182,7 +16207,8 @@
       "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html": "2026-10-26",
       "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html": "2026-10-26",
       "https://bichosdecampo.com/finalemente-el-inta-exonero-a-virginia-aparicio-investigadora-a-cargo-del-proyecto-sprint-que-investigo-la-presencia-de-agroquimicos-en-las-personas": "2026-10-26",
-      "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026": "2026-10-26"
+      "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026": "2026-10-26",
+      "https://lacapital.com.ar/agro/exphortar-puso-el-foco-los-desafios-la-produccion-y-comercializacion-hortalizas-n10288826.html": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17214,7 +17240,8 @@
       "hasta cuando puede seguir bajando el trigo con lorena d angelo clinica de granos": "2026-10-26",
       "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos": "2026-10-26",
       "finalmente el inta exonero a virginia aparicio investigadora a cargo del proyecto sprint que investigo la presencia de agroquimicos en las personas": "2026-10-26",
-      "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores": "2026-10-26"
+      "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores": "2026-10-26",
+      "exphortar puso el foco en los desafios de la produccion y comercializacion de hortalizas": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18246,7 +18273,8 @@
       "8e89664336d945ea": "2026-10-26",
       "9b481dc710d1cfa5": "2026-10-26",
       "ff490476c11c1a16": "2026-10-26",
-      "aa9b8b335ce5f435": "2026-10-26"
+      "aa9b8b335ce5f435": "2026-10-26",
+      "1e4a97cf3c3f3263": "2026-10-26"
     }
   },
   "elegidas": [
@@ -27969,6 +27997,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bd97f08563ae_portada.jpg"
+    },
+    {
+      "id": "9c4d057dfe49",
+      "cuando": "2026-10-26T18:20-03:00",
+      "titulo_original": "Ley de semillas: la industria dijo que amplió una propuesta para exceptuar del pago por el uso propio a más productores",
+      "descripcion": "ASA afirmó que busca acercar posiciones con las entidades rurales, aunque no precisó cuántas hectáreas quedarían comprendidas; persisten diferencias sobre quiénes deberían pagar por el uso propio y durante cuánto tiempo",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026/",
+      "titular": "Ley de semillas: semilleros amplían área exceptuada del pago por uso propio",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 82,
+        "commercial_score": 85,
+        "subtema": "empresas",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Tema central para la economía de los cultivos extensivos y la industria semillera, de alto interés y patrocinio.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ed7e2e8e-911c-4b58-b8c4-7b2fa60dc8be",
+          "slug": "ley-de-semillas-semilleros-amplian-superficie-exceptuada-del-011df3",
+          "url": "https://www.diariolacampaña.com.ar/n/ley-de-semillas-semilleros-amplian-superficie-exceptuada-del-011df3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "949626198227587",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17962680186227777",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9c4d057dfe49_portada.jpg"
     }
   ],
   "pendientes": [
@@ -28162,69 +28244,6 @@
           68,
           63
         ]
-      },
-      "cuando": "2026-10-26T18:00-03:00"
-    },
-    {
-      "id": "9c4d057dfe49",
-      "rep": {
-        "id": "9c4d057dfe49",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026",
-        "titulo": "Ley de semillas: la industria dijo que amplió una propuesta para exceptuar del pago por el uso propio a más productores",
-        "titulo_norm": "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores",
-        "descripcion": "ASA afirmó que busca acercar posiciones con las entidades rurales, aunque no precisó cuántas hectáreas quedarían comprendidas; persisten diferencias sobre quiénes deberían pagar por el uso propio y durante cuánto tiempo",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RTXRQZBY2RAZXNYA2QTO5D76PE.jpeg?auth=abe9292d4a2991fae79674957f0bfe2cd3065aa9ed29ecf2369b873a25732a20&smart=true",
-        "autor": "",
-        "publicado": "2026-10-26T17:44-03:00",
-        "capturado": "2026-10-26T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "aa9b8b335ce5f435"
-      },
-      "grupo": [
-        {
-          "id": "9c4d057dfe49",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026",
-          "titulo": "Ley de semillas: la industria dijo que amplió una propuesta para exceptuar del pago por el uso propio a más productores",
-          "titulo_norm": "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores",
-          "descripcion": "ASA afirmó que busca acercar posiciones con las entidades rurales, aunque no precisó cuántas hectáreas quedarían comprendidas; persisten diferencias sobre quiénes deberían pagar por el uso propio y durante cuánto tiempo",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RTXRQZBY2RAZXNYA2QTO5D76PE.jpeg?auth=abe9292d4a2991fae79674957f0bfe2cd3065aa9ed29ecf2369b873a25732a20&smart=true",
-          "autor": "",
-          "publicado": "2026-10-26T17:44-03:00",
-          "capturado": "2026-10-26T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "aa9b8b335ce5f435"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 82,
-        "commercial_score": 85,
-        "subtema": "empresas",
-        "tema": "ley de semillas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Tema central para la economía de los cultivos extensivos y la industria semillera, de alto interés y patrocinio.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-26T18:00-03:00"
     },
@@ -28820,8 +28839,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T18:04:03-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T18:23:50-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
