@@ -4,8 +4,9 @@ name: Noticias nacionales
 #
 #   04:00  SOLO WEB: 5 notas de cada categoría (política, economía, sociedad, espectáculos, cine y series,
 #          tecnología/IA, mundo y virales), sin redes.
-#   22:00  UN CARRUSEL en Instagram (y álbum en Facebook) con las 10 generales más importantes del día para
-#          Chivilcoy; las nuevas de la noche también quedan como nota en la web.
+#   22:00  APAGADA desde el 25/10/2026 a pedido del editor (era el carrusel en Instagram y álbum en Facebook con
+#          las 10 generales del día para Chivilcoy, a las 23). Para volver: hora 22 en cron-job.org (job 8677866)
+#          y el respaldo «20 1 * * *» acá abajo.
 #
 # Los policiales siguen en reels.yml (17 y 20).
 #
@@ -15,7 +16,7 @@ name: Noticias nacionales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 7 * * *"    # 04:20 Argentina (respaldo de la de las 4, solo web)
-    - cron: "20 1 * * *"    # 22:20 Argentina (respaldo de la del carrusel; en UTC ya es el día siguiente)
+    # (22:20 Argentina —«20 1 * * *», respaldo del carrusel de las 22— la sacó el editor el 25/10/2026: carrusel apagado)
   workflow_dispatch:
     inputs:
       publicar:
