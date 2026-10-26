@@ -14973,6 +14973,69 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bc6ecde136de7964": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "empresas",
+      "tema": "logística láctea",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta de lleno a la competitividad de los tamberos y la industria en la región pampeana por el peso del costo logístico.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "08bd6bbe4aa5184e": {
+      "impacto_economico": 6,
+      "interes_productores": 3,
+      "innovacion": 12,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 31,
+      "commercial_score": 35,
+      "subtema": "agtech",
+      "tema": "biotecnología",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Iniciativa de fermentación en EE.UU. muy lejana y de nicho específico para el productor promedio de Chivilcoy.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "10a113dd62d6486f": {
+      "impacto_economico": 2,
+      "interes_productores": 2,
+      "innovacion": 5,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 1,
+      "potencial_comercial": 2,
+      "ai_score": 15,
+      "commercial_score": 20,
+      "subtema": "agtech",
+      "tema": "wearables salud",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Columna de opinión genérica sobre datos de salud y wearables sin aplicación directa en la producción agropecuaria local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -15997,7 +16060,10 @@
       "https://bichosdecampo.com/algo-hay-que-festejar-el-gobierno-ahora-celebra-auditorias-sanitarias-y-esta-orgulloso-de-haber-completado-20-por-cada-ano-de-gestion-60-en-total": "2026-10-26",
       "https://infocampo.com.ar/mauricio-el-zootecnista-que-se-enamoro-de-el-impenetrable-y-mejora-el-agromonte-junto-a-comunidades-indigenas": "2026-10-26",
       "https://agrositio.com.ar/noticia/249025-contrapunto-en-brasil-la-motosierra-se-quedo-sin-nafta.html": "2026-10-26",
-      "https://lanacion.com.ar/economia/campo/todos-tienen-sus-sinuelos-los-animales-que-conocen-el-camino-y-guian-a-miles-de-vacas-para-escapar-nid26102026": "2026-10-26"
+      "https://lanacion.com.ar/economia/campo/todos-tienen-sus-sinuelos-los-animales-que-conocen-el-camino-y-guian-a-miles-de-vacas-para-escapar-nid26102026": "2026-10-26",
+      "https://infocampo.com.ar/advierten-por-un-costo-argentino-que-perjudica-cada-vez-mas-a-la-industria-lactea-la-logistica": "2026-10-26",
+      "https://agfundernews.com/primients-iproof-facility-aims-to-bridge-biotechs-valley-of-death": "2026-10-26",
+      "https://agfundernews.com/guest-article-health-data-is-booming-meaningful-insights-not-so-much": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17020,7 +17086,10 @@
       "algo hay que festejar el gobierno ahora celebra auditorias sanitarias y esta orgulloso de haber completado 20 por cada ano de gestion 60 en total": "2026-10-26",
       "mauricio el zootecnista que se enamoro de el impenetrable y mejora el agromonte junto a comunidades indigenas": "2026-10-26",
       "contrapunto en brasil la motosierra se quedo sin nafta": "2026-10-26",
-      "todos tienen sus sinuelos los animales que conocen el camino y guian a miles de vacas para escapar de la inundacion": "2026-10-26"
+      "todos tienen sus sinuelos los animales que conocen el camino y guian a miles de vacas para escapar de la inundacion": "2026-10-26",
+      "advierten por un costo argentino que perjudica cada vez mas a la industria lactea la logistica": "2026-10-26",
+      "primient s iproof facility aims to bridge biotech s valley of death": "2026-10-26",
+      "guest article health data is booming meaningful insights not so much": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18043,7 +18112,10 @@
       "8b6eff9b7daaa1e1": "2026-10-26",
       "08f41a203c34a414": "2026-10-26",
       "c40625a491f223dc": "2026-10-26",
-      "4491c793c04e3336": "2026-10-26"
+      "4491c793c04e3336": "2026-10-26",
+      "bc6ecde136de7964": "2026-10-26",
+      "08bd6bbe4aa5184e": "2026-10-26",
+      "10a113dd62d6486f": "2026-10-26"
     }
   },
   "elegidas": [
@@ -27647,6 +27719,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_49490a7d0aa0_portada.jpg"
+    },
+    {
+      "id": "c7ad10fb69e0",
+      "cuando": "2026-10-26T17:20-03:00",
+      "titulo_original": "Advierten por un “costo argentino” que perjudica cada vez más a la industria láctea: la logística",
+      "descripcion": "Un informe de Focus Market advierte que la distribución representa el 29% de los costos de las empresas lácteas argentinas. La caída del consumo, la menor carga por camión y una estructura logística que no se ajustó al mismo ritmo agravan el problema de competitividad.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/advierten-por-un-costo-argentino-que-perjudica-cada-vez-mas-a-la-industria-lactea-la-logistica/",
+      "titular": "La logística láctea consume el 29% de los costos en Argentina",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "empresas",
+        "tema": "logística láctea",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta de lleno a la competitividad de los tamberos y la industria en la región pampeana por el peso del costo logístico.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "bcbf8792-fb79-4edf-93ee-d25ce77a85f0",
+          "slug": "la-logistica-lactea-consume-el-29-de-los-costos-en-argentina-f91b21",
+          "url": "https://www.diariolacampaña.com.ar/n/la-logistica-lactea-consume-el-29-de-los-costos-en-argentina-f91b21",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2319583118829679",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18114027868946349",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c7ad10fb69e0_portada.jpg"
     }
   ],
   "pendientes": [
@@ -28309,8 +28435,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T17:05:57-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T17:23:31-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
