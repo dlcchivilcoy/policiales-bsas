@@ -14910,6 +14910,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "08f41a203c34a414": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 3,
+      "cercania_argentina": 8,
+      "cercania_pba": 1,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 2,
+      "ai_score": 34,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "agromonte",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia humana interesante pero de bajo impacto productivo directo para la zona núcleo bonaerense.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c40625a491f223dc": {
+      "impacto_economico": 6,
+      "interes_productores": 3,
+      "innovacion": 1,
+      "cercania_argentina": 4,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 23,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "brasil",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Análisis político internacional sobre Brasil que toca de manera muy indirecta al productor pampeano.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4491c793c04e3336": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 72,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "inundación",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Fuerte impacto en ganadería regional del litoral con gran interés y alto potencial de lectura y conversación.",
+      "tema_doc": "ganaderia",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -15931,7 +15994,10 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-la-docente-monica-lopez-propone-parar-la-pelota-para-no-confundir-la-repeticion-de-recetas-con-el-verdadero-conocimiento": "2026-10-26",
       "https://bichosdecampo.com/la-industria-semillera-volvio-a-presionar-para-que-se-defina-una-nueva-ley-de-semillas-que-reconozca-la-propiedad-intelectual": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/la-industria-frigorifica-anticipa-menores-precios-para-la-hacienda-que-no-cumpla-con-la-exigencia-nid26102026": "2026-10-26",
-      "https://bichosdecampo.com/algo-hay-que-festejar-el-gobierno-ahora-celebra-auditorias-sanitarias-y-esta-orgulloso-de-haber-completado-20-por-cada-ano-de-gestion-60-en-total": "2026-10-26"
+      "https://bichosdecampo.com/algo-hay-que-festejar-el-gobierno-ahora-celebra-auditorias-sanitarias-y-esta-orgulloso-de-haber-completado-20-por-cada-ano-de-gestion-60-en-total": "2026-10-26",
+      "https://infocampo.com.ar/mauricio-el-zootecnista-que-se-enamoro-de-el-impenetrable-y-mejora-el-agromonte-junto-a-comunidades-indigenas": "2026-10-26",
+      "https://agrositio.com.ar/noticia/249025-contrapunto-en-brasil-la-motosierra-se-quedo-sin-nafta.html": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/todos-tienen-sus-sinuelos-los-animales-que-conocen-el-camino-y-guian-a-miles-de-vacas-para-escapar-nid26102026": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16951,7 +17017,10 @@
       "los dilemas de la agronomia la docente monica lopez propone parar la pelota para no confundir la repeticion de recetas con el verdadero conocimiento": "2026-10-26",
       "la industria semillera volvio a presionar para que se defina una nueva ley de semillas que reconozca la propiedad intelectual": "2026-10-26",
       "la industria frigorifica anticipa menores precios para la hacienda que no cumpla con la exigencia europea sobre deforestacion": "2026-10-26",
-      "algo hay que festejar el gobierno ahora celebra auditorias sanitarias y esta orgulloso de haber completado 20 por cada ano de gestion 60 en total": "2026-10-26"
+      "algo hay que festejar el gobierno ahora celebra auditorias sanitarias y esta orgulloso de haber completado 20 por cada ano de gestion 60 en total": "2026-10-26",
+      "mauricio el zootecnista que se enamoro de el impenetrable y mejora el agromonte junto a comunidades indigenas": "2026-10-26",
+      "contrapunto en brasil la motosierra se quedo sin nafta": "2026-10-26",
+      "todos tienen sus sinuelos los animales que conocen el camino y guian a miles de vacas para escapar de la inundacion": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17971,7 +18040,10 @@
       "b456d55beb039af8": "2026-10-26",
       "3dedd4ef2e6fe165": "2026-10-26",
       "901124d0a665d873": "2026-10-26",
-      "8b6eff9b7daaa1e1": "2026-10-26"
+      "8b6eff9b7daaa1e1": "2026-10-26",
+      "08f41a203c34a414": "2026-10-26",
+      "c40625a491f223dc": "2026-10-26",
+      "4491c793c04e3336": "2026-10-26"
     }
   },
   "elegidas": [
@@ -27521,6 +27593,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_60a3a8ec05c7_portada.jpg"
+    },
+    {
+      "id": "49490a7d0aa0",
+      "cuando": "2026-10-26T17:00-03:00",
+      "titulo_original": "“Todos tienen sus siñuelos”: los animales que conocen el camino y guían a miles de vacas para escapar de la inundación",
+      "descripcion": "Son, en general, novillos castrados que realizan una tradición del trabajo ganadero en las islas del Paraná; en Santa Fe ayudan a conducir la hacienda a través de ríos y bañados, en una evacuación que ya dejó terneros perdidos y amenaza la próxima parición",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/todos-tienen-sus-sinuelos-los-animales-que-conocen-el-camino-y-guian-a-miles-de-vacas-para-escapar-nid26102026/",
+      "titular": "Novillos siñuelos guían miles de vacas ante inundaciones en el Paraná",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "inundación",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Fuerte impacto en ganadería regional del litoral con gran interés y alto potencial de lectura y conversación.",
+        "tema_doc": "ganaderia",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8d7ec755-844a-443c-9941-42c9b05dd1f4",
+          "slug": "novillos-sinuelos-guian-la-evacuacion-de-45-000-vacas-en-el-179c9b",
+          "url": "https://www.diariolacampaña.com.ar/n/novillos-sinuelos-guian-la-evacuacion-de-45-000-vacas-en-el-179c9b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1811776099953075",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18101661422429983",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_49490a7d0aa0_portada.jpg"
     }
   ],
   "pendientes": [
@@ -28183,8 +28309,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T16:43:24-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T17:05:57-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
