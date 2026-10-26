@@ -15036,6 +15036,119 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6085f6ec2cef8eb4": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 72,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "inundaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran relevancia regional por la emergencia hídrica, moviliza a entidades y productores de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8e89664336d945ea": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 65,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis de precios y comercialización de trigo de plena utilidad para el productor cerealero pampeano.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9b481dc710d1cfa5": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 67,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacto directo de los mercados internacionales sobre la cotización local del maíz en plena campaña.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        63
+      ]
+    },
+    "ff490476c11c1a16": {
+      "impacto_economico": 6,
+      "interes_productores": 10,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 2,
+      "ai_score": 48,
+      "commercial_score": 42,
+      "subtema": "empresas",
+      "tema": "inta",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Noticia institucional fuerte sobre agroquímicos e INTA Balcarce, genera debate pero bajo impacto comercial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        45
+      ]
+    },
+    "aa9b8b335ce5f435": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 9,
+      "ai_score": 82,
+      "commercial_score": 85,
+      "subtema": "empresas",
+      "tema": "ley de semillas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema central para la economía de los cultivos extensivos y la industria semillera, de alto interés y patrocinio.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -16063,7 +16176,13 @@
       "https://lanacion.com.ar/economia/campo/todos-tienen-sus-sinuelos-los-animales-que-conocen-el-camino-y-guian-a-miles-de-vacas-para-escapar-nid26102026": "2026-10-26",
       "https://infocampo.com.ar/advierten-por-un-costo-argentino-que-perjudica-cada-vez-mas-a-la-industria-lactea-la-logistica": "2026-10-26",
       "https://agfundernews.com/primients-iproof-facility-aims-to-bridge-biotechs-valley-of-death": "2026-10-26",
-      "https://agfundernews.com/guest-article-health-data-is-booming-meaningful-insights-not-so-much": "2026-10-26"
+      "https://agfundernews.com/guest-article-health-data-is-booming-meaningful-insights-not-so-much": "2026-10-26",
+      "https://infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones": "2026-10-26",
+      "https://infocampo.com.ar/un-costo-argentino-que-perjudica-a-la-industria-lactea-por-que-la-logistica-es-cada-vez-mas-cara": "2026-10-26",
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html": "2026-10-26",
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html": "2026-10-26",
+      "https://bichosdecampo.com/finalemente-el-inta-exonero-a-virginia-aparicio-investigadora-a-cargo-del-proyecto-sprint-que-investigo-la-presencia-de-agroquimicos-en-las-personas": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17089,7 +17208,13 @@
       "todos tienen sus sinuelos los animales que conocen el camino y guian a miles de vacas para escapar de la inundacion": "2026-10-26",
       "advierten por un costo argentino que perjudica cada vez mas a la industria lactea la logistica": "2026-10-26",
       "primient s iproof facility aims to bridge biotech s valley of death": "2026-10-26",
-      "guest article health data is booming meaningful insights not so much": "2026-10-26"
+      "guest article health data is booming meaningful insights not so much": "2026-10-26",
+      "el nino impulsan una red federal para asistir a productores afectados por inundaciones": "2026-10-26",
+      "un costo argentino que perjudica a la industria lactea por que la logistica es cada vez mas cara": "2026-10-26",
+      "hasta cuando puede seguir bajando el trigo con lorena d angelo clinica de granos": "2026-10-26",
+      "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos": "2026-10-26",
+      "finalmente el inta exonero a virginia aparicio investigadora a cargo del proyecto sprint que investigo la presencia de agroquimicos en las personas": "2026-10-26",
+      "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18115,7 +18240,13 @@
       "4491c793c04e3336": "2026-10-26",
       "bc6ecde136de7964": "2026-10-26",
       "08bd6bbe4aa5184e": "2026-10-26",
-      "10a113dd62d6486f": "2026-10-26"
+      "10a113dd62d6486f": "2026-10-26",
+      "6085f6ec2cef8eb4": "2026-10-26",
+      "8a4f23fd7bbca905": "2026-10-26",
+      "8e89664336d945ea": "2026-10-26",
+      "9b481dc710d1cfa5": "2026-10-26",
+      "ff490476c11c1a16": "2026-10-26",
+      "aa9b8b335ce5f435": "2026-10-26"
     }
   },
   "elegidas": [
@@ -27773,9 +27904,330 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c7ad10fb69e0_portada.jpg"
+    },
+    {
+      "id": "bd97f08563ae",
+      "cuando": "2026-10-26T18:00-03:00",
+      "titulo_original": "Según los referentes del gigante industrial Marfrig, con Brasil afuera de los mercados europeos, mejoran las oportunidades para la carne argentina",
+      "descripcion": "La salida de Brasil del mercado europeo abrió una oportunidad para la carne vacuna argentina, con mejoras de precios para cortes como la nalga y el peceto. En paralelo, la mayor competencia en Estados Unidos y China obliga a los frigoríficos a redireccionar sus exportaciones para defender el valor d",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/segun-los-referentes-del-gigante-industrial-marfrig-con-brasil-afuera-de-los-mercados-europeos-mejoran-las-oportunidades-para-la-carne-argentina/",
+      "titular": "Carne vacuna: suben los precios en Europa por la salida de Brasil",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 70,
+        "commercial_score": 78,
+        "subtema": "ganaderia",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Oportunidades comerciales concretas para la carne vacuna por cambios de contexto en Brasil.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          70
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "mvLDA6TC7gE",
+          "url": "https://youtube.com/shorts/mvLDA6TC7gE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "b06392fc-0d91-4852-a891-3646f210094d",
+          "slug": "carne-vacuna-precios-en-alza-en-europa-por-la-ausencia-de-brasil-1b46b3",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-vacuna-precios-en-alza-en-europa-por-la-ausencia-de-brasil-1b46b3",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1669573764720786",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18113616791462957",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bd97f08563ae_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8fccb54bb5e8",
+      "rep": {
+        "id": "8fccb54bb5e8",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones/",
+        "canonical_url": "https://infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones",
+        "titulo": "El Niño: impulsan una red federal para asistir a productores afectados por inundaciones",
+        "titulo_norm": "el nino impulsan una red federal para asistir a productores afectados por inundaciones",
+        "descripcion": "Es una iniciativa de CRA, que busca articular ayuda con las sociedades rurales de todo el país, mediante la disponibilidad de predios, logística, alimentos e insumos. Además, la entidad pide medidas tributarias de emergencia para quienes deben vender anticipadamente su hacienda.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/CRA1-scaled.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-10-26T17:31-03:00",
+        "capturado": "2026-10-26T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6085f6ec2cef8eb4"
+      },
+      "grupo": [
+        {
+          "id": "8fccb54bb5e8",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones/",
+          "canonical_url": "https://infocampo.com.ar/el-nino-impulsan-una-red-federal-para-asistir-a-productores-afectados-por-inundaciones",
+          "titulo": "El Niño: impulsan una red federal para asistir a productores afectados por inundaciones",
+          "titulo_norm": "el nino impulsan una red federal para asistir a productores afectados por inundaciones",
+          "descripcion": "Es una iniciativa de CRA, que busca articular ayuda con las sociedades rurales de todo el país, mediante la disponibilidad de predios, logística, alimentos e insumos. Además, la entidad pide medidas tributarias de emergencia para quienes deben vender anticipadamente su hacienda.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/CRA1-scaled.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-10-26T17:31-03:00",
+          "capturado": "2026-10-26T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6085f6ec2cef8eb4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 60,
+        "subtema": "ganaderia",
+        "tema": "inundaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran relevancia regional por la emergencia hídrica, moviliza a entidades y productores de la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-26T18:00-03:00"
+    },
+    {
+      "id": "97f53ecd6fa7",
+      "rep": {
+        "id": "97f53ecd6fa7",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html",
+        "titulo": "¿Hasta cuándo puede seguir bajando el Trigo?; con Lorena D´ Angelo - Clínica de Granos",
+        "titulo_norm": "hasta cuando puede seguir bajando el trigo con lorena d angelo clinica de granos",
+        "descripcion": "Los precios del cereal tuvieron un fuerte golpe bajista del contexto internacional pero también el comienzo de la cosecha local y las existencias, sumaron mayor presión. Los actuales precios disponibles y a cosecha son buenos si los comparamos con el año pasado a la misma fecha y al esperar una mayor presión de la oferta por la cosecha…",
+        "imagen_url": "https://agrotv.agrositio.com/placas/WogkdC72DSQ.jpg",
+        "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
+        "publicado": "2026-10-26T17:52-03:00",
+        "capturado": "2026-10-26T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8e89664336d945ea"
+      },
+      "grupo": [
+        {
+          "id": "97f53ecd6fa7",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249028-hasta-cuando-puede-seguir-bajando-el-trigo-con-lorena-d-angelo-clinica-de-granos.html",
+          "titulo": "¿Hasta cuándo puede seguir bajando el Trigo?; con Lorena D´ Angelo - Clínica de Granos",
+          "titulo_norm": "hasta cuando puede seguir bajando el trigo con lorena d angelo clinica de granos",
+          "descripcion": "Los precios del cereal tuvieron un fuerte golpe bajista del contexto internacional pero también el comienzo de la cosecha local y las existencias, sumaron mayor presión. Los actuales precios disponibles y a cosecha son buenos si los comparamos con el año pasado a la misma fecha y al esperar una mayor presión de la oferta por la cosecha…",
+          "imagen_url": "https://agrotv.agrositio.com/placas/WogkdC72DSQ.jpg",
+          "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
+          "publicado": "2026-10-26T17:52-03:00",
+          "capturado": "2026-10-26T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8e89664336d945ea"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 65,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Análisis de precios y comercialización de trigo de plena utilidad para el productor cerealero pampeano.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-26T18:00-03:00"
+    },
+    {
+      "id": "b7f4dde41041",
+      "rep": {
+        "id": "b7f4dde41041",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
+        "titulo": "Baja más el maíz en EE.UU. pero nosotros nos contagiamos…; con Lorena D´ Angelo - Clínica de Granos",
+        "titulo_norm": "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos",
+        "descripcion": "Las cotizaciones del cereal en nuestro país no pudieron quedar fuera de la presión externa. Así los valores se acercaron a la paridad de pago del sector exportación que continúa realizando negocios al exterior hasta que ingrese la producción estadounidense…",
+        "imagen_url": "https://agrotv.agrositio.com/placas/xMN9U_oQ5gg.jpg",
+        "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
+        "publicado": "2026-10-26T17:50-03:00",
+        "capturado": "2026-10-26T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9b481dc710d1cfa5"
+      },
+      "grupo": [
+        {
+          "id": "b7f4dde41041",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249027-baja-mas-el-maiz-en-eeuu-pero-nosotros-nos-contagiamos-con-lorena-d-angelo-clinica-de-granos.html",
+          "titulo": "Baja más el maíz en EE.UU. pero nosotros nos contagiamos…; con Lorena D´ Angelo - Clínica de Granos",
+          "titulo_norm": "baja mas el maiz en ee uu pero nosotros nos contagiamos con lorena d angelo clinica de granos",
+          "descripcion": "Las cotizaciones del cereal en nuestro país no pudieron quedar fuera de la presión externa. Así los valores se acercaron a la paridad de pago del sector exportación que continúa realizando negocios al exterior hasta que ingrese la producción estadounidense…",
+          "imagen_url": "https://agrotv.agrositio.com/placas/xMN9U_oQ5gg.jpg",
+          "autor": "info@agrositio.com (Lorena D´ Angelo  (AZ Group))",
+          "publicado": "2026-10-26T17:50-03:00",
+          "capturado": "2026-10-26T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9b481dc710d1cfa5"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 4,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 67,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto directo de los mercados internacionales sobre la cotización local del maíz en plena campaña.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          63
+        ]
+      },
+      "cuando": "2026-10-26T18:00-03:00"
+    },
+    {
+      "id": "9c4d057dfe49",
+      "rep": {
+        "id": "9c4d057dfe49",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026",
+        "titulo": "Ley de semillas: la industria dijo que amplió una propuesta para exceptuar del pago por el uso propio a más productores",
+        "titulo_norm": "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores",
+        "descripcion": "ASA afirmó que busca acercar posiciones con las entidades rurales, aunque no precisó cuántas hectáreas quedarían comprendidas; persisten diferencias sobre quiénes deberían pagar por el uso propio y durante cuánto tiempo",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RTXRQZBY2RAZXNYA2QTO5D76PE.jpeg?auth=abe9292d4a2991fae79674957f0bfe2cd3065aa9ed29ecf2369b873a25732a20&smart=true",
+        "autor": "",
+        "publicado": "2026-10-26T17:44-03:00",
+        "capturado": "2026-10-26T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "aa9b8b335ce5f435"
+      },
+      "grupo": [
+        {
+          "id": "9c4d057dfe49",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/ley-de-semillas-la-industria-dijo-que-amplio-una-propuesta-para-exceptuar-del-pago-por-el-uso-propio-nid26102026",
+          "titulo": "Ley de semillas: la industria dijo que amplió una propuesta para exceptuar del pago por el uso propio a más productores",
+          "titulo_norm": "ley de semillas la industria dijo que amplio una propuesta para exceptuar del pago por el uso propio a mas productores",
+          "descripcion": "ASA afirmó que busca acercar posiciones con las entidades rurales, aunque no precisó cuántas hectáreas quedarían comprendidas; persisten diferencias sobre quiénes deberían pagar por el uso propio y durante cuánto tiempo",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RTXRQZBY2RAZXNYA2QTO5D76PE.jpeg?auth=abe9292d4a2991fae79674957f0bfe2cd3065aa9ed29ecf2369b873a25732a20&smart=true",
+          "autor": "",
+          "publicado": "2026-10-26T17:44-03:00",
+          "capturado": "2026-10-26T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "aa9b8b335ce5f435"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 82,
+        "commercial_score": 85,
+        "subtema": "empresas",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Tema central para la economía de los cultivos extensivos y la industria semillera, de alto interés y patrocinio.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-26T18:00-03:00"
+    },
     {
       "id": "f5692064c8ad",
       "rep": {
@@ -27836,73 +28288,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T16:00-03:00"
-    },
-    {
-      "id": "bd97f08563ae",
-      "rep": {
-        "id": "bd97f08563ae",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/segun-los-referentes-del-gigante-industrial-marfrig-con-brasil-afuera-de-los-mercados-europeos-mejoran-las-oportunidades-para-la-carne-argentina/",
-        "canonical_url": "https://bichosdecampo.com/segun-los-referentes-del-gigante-industrial-marfrig-con-brasil-afuera-de-los-mercados-europeos-mejoran-las-oportunidades-para-la-carne-argentina",
-        "titulo": "Según los referentes del gigante industrial Marfrig, con Brasil afuera de los mercados europeos, mejoran las oportunidades para la carne argentina",
-        "titulo_norm": "segun los referentes del gigante industrial marfrig con brasil afuera de los mercados europeos mejoran las oportunidades para la carne argentina",
-        "descripcion": "La salida de Brasil del mercado europeo abrió una oportunidad para la carne vacuna argentina, con mejoras de precios para cortes como la nalga y el peceto. En paralelo, la mayor competencia en Estados Unidos y China obliga a los frigoríficos a redireccionar sus exportaciones para defender el valor de la producción. Así lo describió […]",
-        "imagen_url": "",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-26T15:46-03:00",
-        "capturado": "2026-10-26T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "339ec219976a6af9"
-      },
-      "grupo": [
-        {
-          "id": "bd97f08563ae",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/segun-los-referentes-del-gigante-industrial-marfrig-con-brasil-afuera-de-los-mercados-europeos-mejoran-las-oportunidades-para-la-carne-argentina/",
-          "canonical_url": "https://bichosdecampo.com/segun-los-referentes-del-gigante-industrial-marfrig-con-brasil-afuera-de-los-mercados-europeos-mejoran-las-oportunidades-para-la-carne-argentina",
-          "titulo": "Según los referentes del gigante industrial Marfrig, con Brasil afuera de los mercados europeos, mejoran las oportunidades para la carne argentina",
-          "titulo_norm": "segun los referentes del gigante industrial marfrig con brasil afuera de los mercados europeos mejoran las oportunidades para la carne argentina",
-          "descripcion": "La salida de Brasil del mercado europeo abrió una oportunidad para la carne vacuna argentina, con mejoras de precios para cortes como la nalga y el peceto. En paralelo, la mayor competencia en Estados Unidos y China obliga a los frigoríficos a redireccionar sus exportaciones para defender el valor de la producción. Así lo describió […]",
-          "imagen_url": "",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-26T15:46-03:00",
-          "capturado": "2026-10-26T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "339ec219976a6af9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 70,
-        "commercial_score": 78,
-        "subtema": "ganaderia",
-        "tema": "exportaciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Oportunidades comerciales concretas para la carne vacuna por cambios de contexto en Brasil.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          70
-        ]
       },
       "cuando": "2026-10-26T16:00-03:00"
     },
@@ -28435,8 +28820,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T17:23:31-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T18:04:03-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
