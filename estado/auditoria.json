@@ -5687,71 +5687,8 @@
         "cuando": "2026-10-25T23:42:17-03:00"
       },
       "nacionales": {
-        "candidatas": 36,
+        "candidatas": 42,
         "piezas": [
-          {
-            "titular": "El boleto mínimo de colectivo en la Provincia subió casi seis veces más que la inflación",
-            "categoria": "general",
-            "seccion": "Economía",
-            "viral": 8,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "Alerta en la CGT por una crisis casi terminal en las obras sociales",
-            "categoria": "general",
-            "seccion": "Política",
-            "viral": 8,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "Crecida histórica: cierran el Circuito Superior y hay 124 viviendas afectadas",
-            "categoria": "general",
-            "seccion": "Sociedad",
-            "viral": 7,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "Nuevas herramientas y vías de crédito para las pymes frente al freno bancario",
-            "categoria": "general",
-            "seccion": "Economía",
-            "viral": 7,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "Conductor ebrio dobló en U y chocó a un motociclista en Ensenada",
-            "categoria": "general",
-            "seccion": "Policiales",
-            "viral": 7,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "Las extracciones en cajeros cayeron a la mitad y se desploma el uso de efectivo",
-            "categoria": "general",
-            "seccion": "Economía",
-            "viral": 7,
-            "destinos": {
-              "web": "ok"
-            }
-          },
-          {
-            "titular": "La UIA reclamará un régimen fiscal sectorial en su 32 Conferencia Anual",
-            "categoria": "general",
-            "seccion": "Economía",
-            "viral": 6,
-            "destinos": {
-              "web": "ok"
-            }
-          },
           {
             "titular": "Nueva ruta marítima a Malvinas desde Chile reabre tensión diplomática con Argentina",
             "categoria": "general",
@@ -6021,6 +5958,101 @@
             "destinos": {
               "web": "ok"
             }
+          },
+          {
+            "titular": "Atleta viral por un accidente fisiológico al levantar pesas",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 7,
+            "destinos": {
+              "youtube": "ok",
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Rescatan ambulancia al borde de un precipicio tras ceder un camino en Neuquén",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 8,
+            "destinos": {
+              "youtube": "ok",
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Lleva 780 días sin cortarse el pelo por una promesa al Manchester United",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 7,
+            "destinos": {
+              "youtube": "ok",
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "A los 70 y 72 años recorren América en motorhome: \"Encontramos gente valiosa\"",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 8,
+            "destinos": {
+              "youtube": "ok",
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Construyeron una casa con 1100 neumáticos en Nueva Zelanda y ahora la pusieron a la venta",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 7,
+            "destinos": {
+              "youtube": "ok",
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "De bombero en Valladolid a campeón europeo de parapente: la historia de Moncho",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 6,
+            "destinos": {
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "De limpiar pisos a reinar en el góspel: la inspiradora historia de Mahalia Jackson",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 7,
+            "destinos": {
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Aparecen yacarés y serpientes en zonas urbanas del Litoral por las inundaciones",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 8,
+            "destinos": {
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Sufrió un ACV corriendo una maratón y reconstruyó su vida junto a sus hijas",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 8,
+            "destinos": {
+              "web": "ok"
+            }
+          },
+          {
+            "titular": "Hallan una tumba de cuatro mil años con extrañas formas de piedra en el Sahara",
+            "categoria": "virales",
+            "seccion": "Virales",
+            "viral": 6,
+            "destinos": {
+              "web": "ok"
+            }
           }
         ],
         "descartadas": [
@@ -6108,9 +6140,34 @@
             "titulo": "La intransigencia de Milei hace estallar la guerra interna",
             "motivo": "calca 17 palabras seguidas del original (nota_web)",
             "categoria": "general"
+          },
+          {
+            "titulo": "El sueño de volar que ha llevado a Víctor Rodríguez 'Moncho' a reinar en parapente",
+            "motivo": "virales sin el video original en la nota",
+            "categoria": "virales"
+          },
+          {
+            "titulo": "Abandonó la escuela para limpiar pisos y terminó convirtiéndose en la mejor artista de góspel del mundo: el camino de Mahalia Jackson",
+            "motivo": "virales sin el video original en la nota",
+            "categoria": "virales"
+          },
+          {
+            "titulo": "Efecto El Niño: por las inundaciones en el Litoral, registran el avance de serpientes y yacarés en zonas urbanas",
+            "motivo": "virales sin el video original en la nota",
+            "categoria": "virales"
+          },
+          {
+            "titulo": "Un ACV lo dejó inmóvil en plena carrera y aprendió a reconstruirse con el apoyo de sus hijas: “Fue una lección de amor”",
+            "motivo": "virales sin el video original en la nota",
+            "categoria": "virales"
+          },
+          {
+            "titulo": "Arqueólogos descubrieron una tumba milenaria con “antenas” en el desierto del Sahara",
+            "motivo": "virales sin el video original en la nota",
+            "categoria": "virales"
           }
         ],
-        "cuando": "2026-10-26T04:06:33-03:00"
+        "cuando": "2026-10-26T10:48:13-03:00"
       }
     }
   }
