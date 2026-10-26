@@ -327,12 +327,26 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # Historias
 # ─────────────────────────────────────────────────────────────────────────────────────────────
+ESPERAS_HISTORIA_IG = (20, 60)       # contenedores nuevos si Instagram confirma que la historia no salió
+
+
 def _historia_instagram(url: str) -> dict:
     from reels import publicador as PB
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
-    cid = PB._contenedor_listo(uid, tok, {"image_url": url, "media_type": "STORIES"})
-    return {"id": PB._publicar_contenedor(uid, tok, cid, "") or None}
+    # 26/10/2026: media_publish contestó 400 «No se encuentra el contenido multimedia con el identificador…»
+    # con un contenedor FINISHED (la historia del dólar de las 19; la corrida quedó en rojo). Ese contenedor
+    # ya no sirve: se arma uno NUEVO. FalloRed = Instagram confirmó que NO salió, así que no se duplica.
+    for intento in range(len(ESPERAS_HISTORIA_IG) + 1):
+        if intento:
+            PB._dormir(ESPERAS_HISTORIA_IG[intento - 1])
+        try:
+            cid = PB._contenedor_listo(uid, tok, {"image_url": url, "media_type": "STORIES"})
+            return {"id": PB._publicar_contenedor(uid, tok, cid, "") or None}
+        except PB.FalloRed as e:
+            if intento == len(ESPERAS_HISTORIA_IG):
+                raise
+            print(f"   (Instagram: la historia no salió — {str(e)[:120]}; va con un contenedor nuevo)")
 
 
 def _historia_facebook(url: str) -> dict:

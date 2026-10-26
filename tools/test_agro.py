@@ -1354,5 +1354,44 @@ with tempfile.TemporaryDirectory() as _t0:
     os.environ["AGRO_IMAGEN_IA"] = "1"
 
 
+# 26/10/2026: media_publish de una historia contestó «No se encuentra el contenido multimedia…» (FalloRed):
+# se arma un contenedor nuevo en vez de dejar la corrida en rojo; si sigue fallando, se avisa.
+from reels import publicador as _PBh  # noqa: E402
+_orig_h = (_PBh._contenedor_listo, _PBh._publicar_contenedor, _PBh._dormir)
+_cont_h, _resp_h = [], []
+
+
+def _publicar_h(uid, tok, cid, caption):
+    r = _resp_h.pop(0)
+    if isinstance(r, Exception):
+        raise r
+    return r
+
+
+_PBh._contenedor_listo = lambda uid, tok, params: _cont_h.append(params) or f"c{len(_cont_h)}"
+_PBh._publicar_contenedor = _publicar_h
+_PBh._dormir = lambda s: None
+_resp_h[:] = [_PBh.FalloRed("Instagram: publicar: HTTP 400 — No se encuentra el contenido multimedia"), "1789"]
+chequear("historia IG: «no se encuentra el contenido» → contenedor nuevo y sale",
+         PUBA._historia_instagram("https://x/h.jpg") == {"id": "1789"} and len(_cont_h) == 2)
+_cont_h.clear()
+_resp_h[:] = [_PBh.FalloRed("x")] * 3
+try:
+    PUBA._historia_instagram("https://x/h.jpg")
+    _sigue = False
+except _PBh.FalloRed:
+    _sigue = True
+chequear("historia IG: si falla las 3 veces, avisa (no se queda callada)", _sigue and len(_cont_h) == 3)
+_cont_h.clear()
+_resp_h[:] = [_PBh.SinConfirmar("y")]
+try:
+    PUBA._historia_instagram("https://x/h.jpg")
+    _dup = False
+except _PBh.SinConfirmar:
+    _dup = len(_cont_h) == 1
+chequear("historia IG: sin confirmar NO se repite (podría haber salido)", _dup)
+_PBh._contenedor_listo, _PBh._publicar_contenedor, _PBh._dormir = _orig_h
+
+
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)
