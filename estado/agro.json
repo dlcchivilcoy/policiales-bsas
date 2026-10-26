@@ -14245,6 +14245,52 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1c3268a6e62d7322": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 60,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta directamente el precio internacional de la soja por la competencia brasileña y el tipo de cambio.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        59
+      ]
+    },
+    "226688fbe1de58c5": {
+      "impacto_economico": 2,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 7,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 5,
+      "potencial_comercial": 3,
+      "ai_score": 36,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "cultura rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una crónica de color y tradición local en San Antonio de Areco, con escasa relevancia productiva o económica.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -15219,7 +15265,18 @@
       "https://bichosdecampo.com/que-cosa-no-va-a-cambiar-con-lula-ricardo-santin-de-la-asociacion-brasilena-de-proteina-animal-explico-como-impulsan-la-produccion-con-un-plan-de-financiamiento-que-trasciende-a-los-gobiernos": "2026-10-26",
       "https://bichosdecampo.com/nuestro-cuello-de-botella-esta-en-generar-mas-novillos-mas-kilos-de-carne-y-de-mas-calidad-evaluo-el-exportador-fausto-brighenti-tras-la-sial-2026": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026": "2026-10-26",
-      "https://lanacion.com.ar/economia/campo/el-gobierno-declaro-la-emergencia-agropecuaria-por-inundaciones-en-dos-partidos-bonaerenses-nid26102026": "2026-10-26"
+      "https://lanacion.com.ar/economia/campo/el-gobierno-declaro-la-emergencia-agropecuaria-por-inundaciones-en-dos-partidos-bonaerenses-nid26102026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-en-la-rioja-nubes-dispersas-el-pronostico-para-hoy-26-de-octubre": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-26-octubre-2026": "2026-10-26",
+      "https://agrositio.com.ar/noticia/249009-mercados-en-tension-reeleccion-brasilena-real-debil-y-soja-a-la-baja.html": "2026-10-26",
+      "https://bichosdecampo.com/casi-analfabeto-y-amansador-de-caballos-de-san-antonio-de-areco-al-gaucho-mosco-pereyra-siempre-le-gusto-trabajar-solo-y-asi-solo-tambien-aprendio-a-tocar-la-guitarra-y-escribio-su": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -16192,7 +16249,18 @@
       "que cosa no va a cambiar con lula ricardo santin de la asociacion brasilena de proteina animal explico como impulsan la produccion con un plan de financiamiento que trasciende a los gobiernos": "2026-10-26",
       "nuestro cuello de botella esta en generar mas novillos mas kilos de carne y de mas calidad evaluo el exportador fausto brighenti tras la sial 2026": "2026-10-26",
       "juan pablo timpone una campana con buena oferta hidrica exige prestar mas atencion a la sanidad": "2026-10-26",
-      "el gobierno declaro la emergencia agropecuaria por inundaciones en dos partidos bonaerenses": "2026-10-26"
+      "el gobierno declaro la emergencia agropecuaria por inundaciones en dos partidos bonaerenses": "2026-10-26",
+      "clima hoy en cordoba el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "clima hoy en rosario el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "clima hoy en corrientes el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "clima hoy en salta el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "clima hoy en san luis el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "dolar blue a cuanto cotizan hoy en cordoba 26 octubre 2026": "2026-10-26",
+      "clima en la rioja nubes dispersas el pronostico para hoy 26 de octubre": "2026-10-26",
+      "clima hoy en misiones el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "clima hoy en mar del plata el pronostico del tiempo para este 26 octubre 2026": "2026-10-26",
+      "mercados en tension reeleccion brasilena real debil y soja a la baja": "2026-10-26",
+      "casi analfabeto y amansador de caballos de san antonio de areco al gaucho mosco pereyra siempre le gusto trabajar solo y asi solo tambien aprendio a tocar la guitarra y escribio sus propias milongas": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -17165,7 +17233,18 @@
       "dfa576b0c2545bed": "2026-10-26",
       "793c423fd83dc7ff": "2026-10-26",
       "67484a9ad209ff26": "2026-10-26",
-      "d821b793ff72065d": "2026-10-26"
+      "d821b793ff72065d": "2026-10-26",
+      "95d3c49e2d0ea537": "2026-10-26",
+      "9effc95ff231239a": "2026-10-26",
+      "d1718edc9300ac80": "2026-10-26",
+      "e9e9d78115928db1": "2026-10-26",
+      "025332f043ed63d3": "2026-10-26",
+      "2d158d8e986f5da4": "2026-10-26",
+      "40ecafac8ff89fde": "2026-10-26",
+      "812fe990c048e661": "2026-10-26",
+      "eed70e08dc46c464": "2026-10-26",
+      "1c3268a6e62d7322": "2026-10-26",
+      "226688fbe1de58c5": "2026-10-26"
     }
   },
   "elegidas": [
@@ -26059,6 +26138,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9b74a63c2b91_portada.jpg"
+    },
+    {
+      "id": "503d63b274b6",
+      "cuando": "2026-10-26T10:20-03:00",
+      "titulo_original": "Juan Pablo Timpone: “Una campaña con buena oferta hídrica exige prestar más atención a la sanidad”",
+      "descripcion": "Si bien una situación de buena disponibilidad de agua ayuda a los rindes, en el ciclo agrícola también es clave proteger esa mayor productividad",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026/",
+      "titular": "El Niño exige mayor sanidad y calidad de aplicación",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 79,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "sanidad",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para la zona núcleo en campañas con agua, donde el manejo sanitario de cultivos define el margen.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "823af09a-9b5e-4343-bc8a-d81adea05836",
+          "slug": "el-nino-obliga-a-reforzar-la-sanidad-y-la-calidad-de-aplicacion-ca4c75",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-obliga-a-reforzar-la-sanidad-y-la-calidad-de-aplicacion-ca4c75",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1698604038548186",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17988332630879402",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_503d63b274b6_portada.jpg"
     }
   ],
   "pendientes": [
@@ -26197,69 +26330,6 @@
       "cuando": "2026-10-26T10:00-03:00"
     },
     {
-      "id": "503d63b274b6",
-      "rep": {
-        "id": "503d63b274b6",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026",
-        "titulo": "Juan Pablo Timpone: “Una campaña con buena oferta hídrica exige prestar más atención a la sanidad”",
-        "titulo_norm": "juan pablo timpone una campana con buena oferta hidrica exige prestar mas atencion a la sanidad",
-        "descripcion": "Si bien una situación de buena disponibilidad de agua ayuda a los rindes, en el ciclo agrícola también es clave proteger esa mayor productividad",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/K5352DE2ARGTRANJXSSFQD6PC4.jpg?auth=f07ee1073e21e6a876ab9c5565fd10eb58ab46ff0ec237b9171e6eb6b76ed614&smart=true",
-        "autor": "",
-        "publicado": "2026-10-26T09:54-03:00",
-        "capturado": "2026-10-26T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "67484a9ad209ff26"
-      },
-      "grupo": [
-        {
-          "id": "503d63b274b6",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/juan-pablo-timpone-una-campana-con-buena-oferta-hidrica-exige-prestar-mas-atencion-a-la-sanidad-nid26102026",
-          "titulo": "Juan Pablo Timpone: “Una campaña con buena oferta hídrica exige prestar más atención a la sanidad”",
-          "titulo_norm": "juan pablo timpone una campana con buena oferta hidrica exige prestar mas atencion a la sanidad",
-          "descripcion": "Si bien una situación de buena disponibilidad de agua ayuda a los rindes, en el ciclo agrícola también es clave proteger esa mayor productividad",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/K5352DE2ARGTRANJXSSFQD6PC4.jpg?auth=f07ee1073e21e6a876ab9c5565fd10eb58ab46ff0ec237b9171e6eb6b76ed614&smart=true",
-          "autor": "",
-          "publicado": "2026-10-26T09:54-03:00",
-          "capturado": "2026-10-26T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "67484a9ad209ff26"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 15,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 79,
-        "commercial_score": 88,
-        "subtema": "agro",
-        "tema": "sanidad",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Altamente relevante para la zona núcleo en campañas con agua, donde el manejo sanitario de cultivos define el margen.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-26T10:00-03:00"
-    },
-    {
       "id": "6fb4dd3740f6",
       "rep": {
         "id": "6fb4dd3740f6",
@@ -26394,8 +26464,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T10:04:06-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T10:24:18-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
