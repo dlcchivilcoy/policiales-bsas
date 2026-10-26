@@ -13998,6 +13998,98 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2148fc516c4e4e2c": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "iva sisa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la caja de todos los productores bonaerenses por la carga fiscal y el SISA.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d6a83bd183998584": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "emergencia agropecuaria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a partidos clave de la provincia de Buenos Aires como 9 de Julio por inundaciones.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        66
+      ]
+    },
+    "ee5ffc4f7d01a1b9": {
+      "impacto_economico": 6,
+      "interes_productores": 7,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 8,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 56,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "ovinos citrícolas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia de diversificación y manejo regenerativo, atractiva pero de nicho regional.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        52
+      ]
+    },
+    "26ece83216c3473c": {
+      "impacto_economico": 3,
+      "interes_productores": 4,
+      "innovacion": 9,
+      "cercania_argentina": 2,
+      "cercania_pba": 1,
+      "potencial_reel": 5,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "cámara cultivos frutales",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Tecnología para frutales en el exterior, de escasa relevancia para la zona núcleo pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -14955,7 +15047,11 @@
       "https://lanacion.com.ar/economia/campo/martin-gana-sobre-el-negocio-de-los-tambos-la-crisis-no-se-enfrenta-solamente-esperando-un-mejor-nid26102026": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/visec-las-reglas-del-comercio-internacional-no-pueden-transformarse-en-barreras-para-el-agro-nid26102026": "2026-10-26",
       "https://agfundernews.com/finnish-insect-ag-firm-volare-opens-5000-ton-protein-factory-in-finland-explores-2nd-plant": "2026-10-26",
-      "https://intainforma.inta.gob.ar/como-aprovechar-la-lluvia-para-potenciar-los-rindes": "2026-10-26"
+      "https://intainforma.inta.gob.ar/como-aprovechar-la-lluvia-para-potenciar-los-rindes": "2026-10-26",
+      "https://bichosdecampo.com/la-letra-chica-explicada-el-saldo-a-favor-en-iva-y-el-nuevo-sisa-o-el-prestamo-a-tasa-cero-que-el-campo-le-sigue-haciendo-al-estado": "2026-10-26",
+      "https://bichosdecampo.com/nacion-homologo-la-emergencia-agropecuaria-por-inundaciones-en-9-de-julio-y-necochea-apenas-cinco-dias-antes-de-que-finalice-el-periodo-declarado-por-el-gobierno-bonaerense": "2026-10-26",
+      "https://bichosdecampo.com/hay-que-atreverse-a-ser-ovejas-negras-la-familia-entrerriana-que-metio-ovinos-entre-los-citricos-convirtio-al-pastoreo-en-su-herbicida-natural-y-se-animo-a-salirse-del-libreto-de-u": "2026-10-26",
+      "https://futurefarming.com/smart-farming/edencore-targets-tree-and-bush-fruit-growers-with-its-viewer-crop-camera": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -15911,7 +16007,11 @@
       "martin gana sobre el negocio de los tambos la crisis no se enfrenta solamente esperando un mejor precio": "2026-10-26",
       "visec las reglas del comercio internacional no pueden transformarse en barreras para el agro argentino": "2026-10-26",
       "finnish insect ag firm volare opens 5 000 ton protein factory in finland explores 2nd plant": "2026-10-26",
-      "como aprovechar la lluvia para potenciar los rindes": "2026-10-26"
+      "como aprovechar la lluvia para potenciar los rindes": "2026-10-26",
+      "la letra chica explicada el saldo a favor en iva y el nuevo sisa o el prestamo a tasa cero que el campo le sigue haciendo al estado": "2026-10-26",
+      "nacion homologo la emergencia agropecuaria por inundaciones en 9 de julio y necochea apenas cinco dias antes de que finalice el periodo declarado por el gobierno bonaerense": "2026-10-26",
+      "hay que atreverse a ser ovejas negras la familia entrerriana que metio ovinos entre los citricos convirtio al pastoreo en su herbicida natural y se animo a salirse del libreto de una actividad muy tradicional": "2026-10-26",
+      "edencore targets tree and bush fruit growers with its viewer crop camera": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -16867,7 +16967,11 @@
       "9abc12e1efa6bfb2": "2026-10-26",
       "c725d7a4ce4cae59": "2026-10-26",
       "c7241b4bd1e44b23": "2026-10-26",
-      "ff9ac3e3d7e5daf0": "2026-10-26"
+      "ff9ac3e3d7e5daf0": "2026-10-26",
+      "2148fc516c4e4e2c": "2026-10-26",
+      "d6a83bd183998584": "2026-10-26",
+      "ee5ffc4f7d01a1b9": "2026-10-26",
+      "26ece83216c3473c": "2026-10-26"
     }
   },
   "elegidas": [
@@ -25646,9 +25750,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_64c321c649b4_portada.jpg"
+    },
+    {
+      "id": "7d38862e4b1b",
+      "cuando": "2026-10-26T08:22-03:00",
+      "titulo_original": "La letra chica explicada: El saldo a favor en IVA y el nuevo SISA, o “el préstamo a tasa cero que el campo le sigue haciendo al Estado”",
+      "descripcion": "Por Pablo María Larcade, contador especializado del Estudio Tailhade – Bouquet – Ovejero Hay una frase que se repite en cada jornada técnica, en las charlas de café de la exposición rural y en los despachos de los tributaristas del agro: “El saldo a favor de IVA no es un ahorro, es liquidez confisca",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-letra-chica-explicada-el-saldo-a-favor-en-iva-y-el-nuevo-sisa-o-el-prestamo-a-tasa-cero-que-el-campo-le-sigue-haciendo-al-estado/",
+      "titular": "Saldo a favor de IVA y SISA: el costo financiero para productores",
+      "volanta": "Impuestos",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "iva sisa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la caja de todos los productores bonaerenses por la carga fiscal y el SISA.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1bde75eb-b698-4b24-af24-ead5682a4b94",
+          "slug": "el-saldo-a-favor-de-iva-y-las-nuevas-exigencias-del-sisa-7c893e",
+          "url": "https://www.diariolacampaña.com.ar/n/el-saldo-a-favor-de-iva-y-las-nuevas-exigencias-del-sisa-7c893e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1680517957051852",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18102593294530507",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7d38862e4b1b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "6fb4dd3740f6",
+      "rep": {
+        "id": "6fb4dd3740f6",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/nacion-homologo-la-emergencia-agropecuaria-por-inundaciones-en-9-de-julio-y-necochea-apenas-cinco-dias-antes-de-que-finalice-el-periodo-declarado-por-el-gobierno-bonaerense/",
+        "canonical_url": "https://bichosdecampo.com/nacion-homologo-la-emergencia-agropecuaria-por-inundaciones-en-9-de-julio-y-necochea-apenas-cinco-dias-antes-de-que-finalice-el-periodo-declarado-por-el-gobierno-bonaerense",
+        "titulo": "Nación homologó la emergencia agropecuaria por inundaciones en 9 de Julio y Necochea, apenas cinco días antes de que finalice el período declarado por el gobierno bonaerense",
+        "titulo_norm": "nacion homologo la emergencia agropecuaria por inundaciones en 9 de julio y necochea apenas cinco dias antes de que finalice el periodo declarado por el gobierno bonaerense",
+        "descripcion": "A casi dos meses de que el gobierno de Axel Kicillof declarara la emergencia agropecuaria por inundaciones en 9 de Julio y Necochea, el gobierno nacional resolvió hoy homologar aquella disposición en el marco de la Ley 26.509. A través de la Resolución 1850/2026 del Ministerio de Economía, las autoridades fijaron el “estado de emergencia […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-26T08:05-03:00",
+        "capturado": "2026-10-26T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d6a83bd183998584"
+      },
+      "grupo": [
+        {
+          "id": "6fb4dd3740f6",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/nacion-homologo-la-emergencia-agropecuaria-por-inundaciones-en-9-de-julio-y-necochea-apenas-cinco-dias-antes-de-que-finalice-el-periodo-declarado-por-el-gobierno-bonaerense/",
+          "canonical_url": "https://bichosdecampo.com/nacion-homologo-la-emergencia-agropecuaria-por-inundaciones-en-9-de-julio-y-necochea-apenas-cinco-dias-antes-de-que-finalice-el-periodo-declarado-por-el-gobierno-bonaerense",
+          "titulo": "Nación homologó la emergencia agropecuaria por inundaciones en 9 de Julio y Necochea, apenas cinco días antes de que finalice el período declarado por el gobierno bonaerense",
+          "titulo_norm": "nacion homologo la emergencia agropecuaria por inundaciones en 9 de julio y necochea apenas cinco dias antes de que finalice el periodo declarado por el gobierno bonaerense",
+          "descripcion": "A casi dos meses de que el gobierno de Axel Kicillof declarara la emergencia agropecuaria por inundaciones en 9 de Julio y Necochea, el gobierno nacional resolvió hoy homologar aquella disposición en el marco de la Ley 26.509. A través de la Resolución 1850/2026 del Ministerio de Economía, las autoridades fijaron el “estado de emergencia […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-26T08:05-03:00",
+          "capturado": "2026-10-26T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d6a83bd183998584"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "emergencia agropecuaria",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta a partidos clave de la provincia de Buenos Aires como 9 de Julio por inundaciones.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          66
+        ]
+      },
+      "cuando": "2026-10-26T08:22-03:00"
+    },
     {
       "id": "f5b30af6ca85",
       "rep": {
@@ -25717,8 +25942,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T08:06:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-26T08:25:56-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
