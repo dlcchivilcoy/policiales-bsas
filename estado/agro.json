@@ -15245,6 +15245,31 @@
         65,
         66
       ]
+    },
+    "46ec1ce7cf04e6e9": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 65,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "horticultura la plata",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directo a productores bonaerenses y genera alta conversación por el reclamo gremial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        65
+      ]
     }
   },
   "indice": {
@@ -16284,7 +16309,8 @@
       "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026": "2026-10-26",
       "https://croplife.com/croplife-top-100/growmark-invests-in-wabash-valley-resources-indiana-ammonia-fertilizer-project": "2026-10-26",
       "https://bichosdecampo.com/avalancha-bajista-para-la-soja-luego-de-la-super-devaluacion-brasilena-promovida-por-la-victoria-de-lula": "2026-10-26",
-      "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026": "2026-10-26"
+      "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026": "2026-10-26",
+      "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17322,7 +17348,8 @@
       "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas": "2026-10-26",
       "growmark invests in wabash valley resources indiana ammonia fertilizer project": "2026-10-26",
       "avalancha bajista para la soja luego de la super devaluacion brasilena promovida por la victoria de lula": "2026-10-26",
-      "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos": "2026-10-26"
+      "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos": "2026-10-26",
+      "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18360,7 +18387,8 @@
       "651d4114d6e4e862": "2026-10-26",
       "4244dae9342ea951": "2026-10-26",
       "6219bdc9162b3ca1": "2026-10-26",
-      "3e05ccf4f356ef50": "2026-10-26"
+      "3e05ccf4f356ef50": "2026-10-26",
+      "46ec1ce7cf04e6e9": "2026-10-26"
     }
   },
   "elegidas": [
@@ -28289,6 +28317,73 @@
   ],
   "pendientes": [
     {
+      "id": "850a8817691a",
+      "rep": {
+        "id": "850a8817691a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion/",
+        "canonical_url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion",
+        "titulo": "Productores del cinturón hortícola de La Plata harán un tractorazo para reclamar por caminos destruidos, robos y falta de iluminación",
+        "titulo_norm": "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion",
+        "descripcion": "Los productores hortícolas del cinturón verde de La Plata realizarán este miércoles 28 de octubre un tractorazo hasta la Municipalidad para reclamar por el estado de los caminos rurales, la falta de iluminación y los problemas de seguridad que afectan a las familias y a la actividad productiva. La protesta partirá de la zona de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-26-at-15.51.27.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-26T19:16-03:00",
+        "capturado": "2026-10-26T19:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "46ec1ce7cf04e6e9"
+      },
+      "grupo": [
+        {
+          "id": "850a8817691a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion/",
+          "canonical_url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion",
+          "titulo": "Productores del cinturón hortícola de La Plata harán un tractorazo para reclamar por caminos destruidos, robos y falta de iluminación",
+          "titulo_norm": "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion",
+          "descripcion": "Los productores hortícolas del cinturón verde de La Plata realizarán este miércoles 28 de octubre un tractorazo hasta la Municipalidad para reclamar por el estado de los caminos rurales, la falta de iluminación y los problemas de seguridad que afectan a las familias y a la actividad productiva. La protesta partirá de la zona de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-26-at-15.51.27.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-26T19:16-03:00",
+          "capturado": "2026-10-26T19:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "46ec1ce7cf04e6e9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 4,
+        "ai_score": 65,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "horticultura la plata",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directo a productores bonaerenses y genera alta conversación por el reclamo gremial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "cuando": "2026-10-26T19:22-03:00"
+    },
+    {
       "id": "8154d9546f2b",
       "rep": {
         "id": "8154d9546f2b",
@@ -29014,7 +29109,7 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T19:06:44-03:00",
+  "actualizado": "2026-10-26T19:23:27-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
