@@ -1,55 +1,55 @@
 # Panel editorial — Diario y Radio
-Actualizado: 24/10/2026 23:36 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 25/10/2026 21:08 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-10-24)
+## Hoy (2026-10-25)
 
 ### 18:30 — 0 de 5 hechos policiales
-Notas policiales leídas: 37 · fuera del radio: 10 · ubicación pendiente: 0 · repetidas: 1 · armadas: 7
+Notas policiales leídas: 41 · fuera del radio: 4 · ubicación pendiente: 0 · repetidas: 1 · armadas: 7
 
 **Fuera del radio de 100 km:**
-- Trenque Lauquen (273.4 km) ×3 · Pergamino (122.9 km) ×3 · Las Flores (149.6 km) ×2 · Cañuelas (115.9 km) ×1 · Pehuajó (198.5 km) ×1
+- Carlos Casares (146.5 km) ×1 · Cañuelas (115.9 km) ×1 · General Villegas (273.4 km) ×1 · Trenque Lauquen (273.4 km) ×1
 
 ## Últimos 7 días: volumen por destino
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
 |---|---:|---:|---:|---:|---:|
-| Policiales | 30 | 31 | 12 | 8 | 20 |
-| Nacionales | 89 | 91 | 31 | 0 | 66 |
+| Policiales | 31 | 32 | 11 | 7 | 19 |
+| Nacionales | 65 | 109 | 23 | 0 | 51 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 119 piezas · mediana vistas 29 · mediana likes 0
+### YouTube — 96 piezas · mediana vistas 46 · mediana likes 0
 
-- **Por categoría:** cine_series: 4, vistas 50.5, likes 0 ⚠️muestra chica · deportes: 9, vistas 49, likes 0 · espectaculos: 9, vistas 49, likes 0 · general: 43, vistas 10, likes 0 · internacionales: 15, vistas 28, likes 0 · policiales: 34, vistas 82.5, likes 0 · tecnologia_ia: 2, vistas 5, likes 0 ⚠️muestra chica · virales: 3, vistas 12, likes 0 ⚠️muestra chica
-- **Por franja:** madrugada (0-6): 10, vistas 48.5, likes 0 · mañana (6-12): 16, vistas 33, likes 0 · noche (18-24): 76, vistas 48, likes 0 · tarde (12-18): 17, vistas 11, likes 0
-- **Por día:** domingo: 37, vistas 13, likes 0 · jueves: 10, vistas 86, likes 1 · lunes: 36, vistas 17.5, likes 0 · martes: 10, vistas 110, likes 0 · miércoles: 13, vistas 49, likes 0 · viernes: 13, vistas 148, likes 0
-- **Por distancia:** 50 a 100 km: 27, vistas 83, likes 0 · hasta 50 km: 7, vistas 82, likes 0
+- **Por categoría:** cine_series: 2, vistas 75.5, likes 0.5 ⚠️muestra chica · deportes: 5, vistas 49, likes 0 · espectaculos: 6, vistas 50.5, likes 0 · general: 32, vistas 37.5, likes 0 · internacionales: 12, vistas 27, likes 0 · policiales: 35, vistas 82, likes 0 · tecnologia_ia: 1, vistas 7, likes 0 ⚠️muestra chica · virales: 3, vistas 12, likes 0 ⚠️muestra chica
+- **Por franja:** madrugada (0-6): 10, vistas 48.5, likes 0 · mañana (6-12): 11, vistas 28, likes 0 · noche (18-24): 69, vistas 57, likes 0 · tarde (12-18): 6, vistas 9.5, likes 0
+- **Por día:** domingo: 9, vistas 165, likes 1 · jueves: 10, vistas 86, likes 1 · lunes: 36, vistas 17.5, likes 0 · martes: 10, vistas 110, likes 0 · miércoles: 13, vistas 49, likes 0 · sábado: 5, vistas 21, likes 0 · viernes: 13, vistas 148, likes 0
+- **Por distancia:** 50 a 100 km: 28, vistas 76, likes 0 · hasta 50 km: 7, vistas 82, likes 0
 
-### Facebook — 18 piezas · mediana vistas 432.5 · mediana likes 1
+### Facebook — 15 piezas · mediana vistas 388 · mediana likes 1
 
-- **Por categoría:** policiales: 18, vistas 432.5, likes 1
-- **Por franja:** mañana (6-12): 1, vistas 337, likes 0 ⚠️muestra chica · noche (18-24): 13, vistas 477, likes 1 · tarde (12-18): 4, vistas 464.5, likes 1 ⚠️muestra chica
-- **Por día:** domingo: 4, vistas 577.5, likes 0.5 ⚠️muestra chica · jueves: 1, vistas 3511, likes 3 ⚠️muestra chica · lunes: 5, vistas 366, likes 1 · martes: 3, vistas 350, likes 1 ⚠️muestra chica · miércoles: 2, vistas 501, likes 2 ⚠️muestra chica · viernes: 3, vistas 293, likes 1 ⚠️muestra chica
-- **Por distancia:** 50 a 100 km: 13, vistas 366, likes 1 · hasta 50 km: 5, vistas 592, likes 2
+- **Por categoría:** policiales: 15, vistas 388, likes 1
+- **Por franja:** noche (18-24): 12, vistas 432.5, likes 1 · tarde (12-18): 3, vistas 366, likes 1 ⚠️muestra chica
+- **Por día:** domingo: 1, vistas 592, likes 2 ⚠️muestra chica · jueves: 1, vistas 3511, likes 3 ⚠️muestra chica · lunes: 5, vistas 366, likes 1 · martes: 3, vistas 350, likes 1 ⚠️muestra chica · miércoles: 2, vistas 501, likes 2 ⚠️muestra chica · viernes: 3, vistas 293, likes 1 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 10, vistas 332.5, likes 1 · hasta 50 km: 5, vistas 592, likes 2
 
-### Instagram — 62 piezas · mediana vistas s/d · mediana likes 6
+### Instagram — 52 piezas · mediana vistas s/d · mediana likes 7
 
-- **Por categoría:** cine_series: 4, likes 5 ⚠️muestra chica · deportes: 7, likes 6 · espectaculos: 4, likes 6 ⚠️muestra chica · general: 17, likes 3 · internacionales: 8, likes 13 · policiales: 21, likes 7 · tecnologia_ia: 1, likes 3 ⚠️muestra chica
-- **Por franja:** madrugada (0-6): 10, likes 6 · mañana (6-12): 2, likes 3.5 ⚠️muestra chica · noche (18-24): 45, likes 6 · tarde (12-18): 5, likes 6
-- **Por día:** domingo: 23, likes 6 · jueves: 5, likes 9 · lunes: 15, likes 5 · martes: 6, likes 11 · miércoles: 8, likes 2.5 · viernes: 5, likes 10
-- **Por distancia:** 50 a 100 km: 17, likes 8 · hasta 50 km: 4, likes 7 ⚠️muestra chica
+- **Por categoría:** cine_series: 2, likes 5 ⚠️muestra chica · deportes: 4, likes 11.5 ⚠️muestra chica · espectaculos: 3, likes 9 ⚠️muestra chica · general: 15, likes 3 · internacionales: 6, likes 20 · policiales: 22, likes 8.5
+- **Por franja:** madrugada (0-6): 10, likes 6 · mañana (6-12): 1, likes 0 ⚠️muestra chica · noche (18-24): 41, likes 8
+- **Por día:** domingo: 9, likes 11 · jueves: 5, likes 9 · lunes: 15, likes 5 · martes: 6, likes 11 · miércoles: 8, likes 2.5 · sábado: 4, likes 13 ⚠️muestra chica · viernes: 5, likes 10
+- **Por distancia:** 50 a 100 km: 18, likes 9.5 · hasta 50 km: 4, likes 7 ⚠️muestra chica
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-procesado: 131 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 12
+procesado: 139 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 5
 
 ## Controles (sin tocar código)
 
