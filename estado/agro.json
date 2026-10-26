@@ -28952,7 +28952,7 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T18:43:06-03:00",
+  "actualizado": "2026-10-26T19:02:31-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -31430,6 +31430,107 @@
           }
         ]
       }
+    },
+    "2026-10-26T19:00:00-03:00": {
+      "dia": "2026-10-26",
+      "bloque": "cierre",
+      "items": [
+        {
+          "tipo": "granos",
+          "clave": "granos",
+          "publicado": {
+            "instagram": {
+              "id": "18358919566223140"
+            },
+            "facebook": {
+              "id": "990078730106790"
+            }
+          }
+        },
+        {
+          "tipo": "dolar",
+          "clave": "dolar",
+          "publicado": {
+            "instagram": {
+              "error": "FalloRed: Instagram: publicar: HTTP 400 — No se encuentra el contenido multimedia con el identificador 18.124.400.113.923.278."
+            },
+            "facebook": {
+              "id": "1686441953114627"
+            }
+          }
+        },
+        {
+          "tipo": "chicago",
+          "clave": "chicago",
+          "publicado": {
+            "instagram": {
+              "id": "18119188573983567"
+            },
+            "facebook": {
+              "id": "1174209995278950"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18358919566223140"
+              },
+              "facebook": {
+                "id": "990078730106790"
+              }
+            },
+            {
+              "instagram": {
+                "error": "FalloRed: Instagram: publicar: HTTP 400 — No se encuentra el contenido multimedia con el identificador 18.124.400.113.923.278."
+              },
+              "facebook": {
+                "id": "1686441953114627"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18119188573983567"
+              },
+              "facebook": {
+                "id": "1174209995278950"
+              }
+            }
+          ]
+        }
+      },
+      "diario": {
+        "items": [
+          {
+            "instagram": {
+              "id": "18095337338250874"
+            },
+            "facebook": {
+              "id": "975079631763884"
+            }
+          },
+          {
+            "instagram": {
+              "id": "17913321372489482"
+            },
+            "facebook": {
+              "id": "1424550709874721"
+            }
+          },
+          {
+            "instagram": {
+              "id": "17923926486440783"
+            },
+            "facebook": {
+              "id": "1641554187482660"
+            }
+          }
+        ]
+      }
     }
   },
   "mercado": {
@@ -31802,16 +31903,16 @@
       },
       "2026-10-26": {
         "fuente": "Banco Nación",
-        "hora": "13:03",
+        "hora": "17:04",
         "billete": {
           "fecha": "2026-10-26",
           "compra": 1510.0,
           "venta": 1560.0
         },
         "divisa": {
-          "fecha": "2026-10-23",
-          "compra": 1520.5,
-          "venta": 1529.5
+          "fecha": "2026-10-26",
+          "compra": 1532.0,
+          "venta": 1541.0
         }
       }
     },
@@ -31871,6 +31972,10 @@
       "2026-10-23": {
         "fecha": "2026-10-23",
         "valor": 1528.263
+      },
+      "2026-10-26": {
+        "fecha": "2026-10-26",
+        "valor": 1540.4751
       }
     },
     "chicago_soja": {
@@ -31984,7 +32089,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 455.1
+        "usd_t": 456.4
       }
     },
     "chicago_maiz": {
@@ -32098,7 +32203,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 179.0
+        "usd_t": 179.1
       }
     },
     "chicago_trigo": {
@@ -32212,7 +32317,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 226.4
+        "usd_t": 226.2
       }
     }
   }
