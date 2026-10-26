@@ -5381,9 +5381,9 @@
     },
     "2026-10-25T18:30": {
       "armado": {
-        "notas_scrapeadas": 41,
-        "sin_foto_ni_video": 13,
-        "ya_tuvieron_reel": 5,
+        "notas_scrapeadas": 62,
+        "sin_foto_ni_video": 14,
+        "ya_tuvieron_reel": 15,
         "fuera_de_radio": [
           {
             "titulo": "Policia de Carlos Casares secuestro un vehículo de alta gama",
@@ -5412,6 +5412,48 @@
             "km": 273.4,
             "motivo": "fuera del radio: Trenque Lauquen está a 273.4 km de Chivilcoy (máximo 100)",
             "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Se realizó la marcha de silencio pidiendo justicia por la muerte de Alessandro Tamburi",
+            "localidad": "General Villegas",
+            "km": 273.4,
+            "motivo": "fuera del radio: General Villegas está a 273.4 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Detuvieron a tres personas por golpear y mantener cautivo a un hombre en Azul",
+            "localidad": "Las Flores",
+            "km": 149.6,
+            "motivo": "fuera del radio: Las Flores está a 149.6 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Liberaron a todos los aprehendidos por una pelea y disturbios en el hospital",
+            "localidad": "Lincoln",
+            "km": 137.8,
+            "motivo": "fuera del radio: Lincoln está a 137.8 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Agredieron a inspectores de Tránsito y provocaron daños en un móvil",
+            "localidad": "Lincoln",
+            "km": 137.8,
+            "motivo": "fuera del radio: Lincoln está a 137.8 km de Chivilcoy (máximo 100)",
+            "etapa": "antes del guion"
+          },
+          {
+            "titulo": "Policiales Cae el último prófugo por la estafa del \"cuento del tío\" La policía capturó al acusado que faltaba ",
+            "localidad": "Vedia",
+            "km": 146.1,
+            "motivo": "fuera del radio: Vedia está a 146.1 km de Chivilcoy (máximo 100)",
+            "etapa": "con el guion"
+          },
+          {
+            "titulo": "Murió una mujer de 53 años tras ser prendida fuego por su expareja",
+            "localidad": "Baradero",
+            "km": 130.1,
+            "motivo": "fuera del radio: Baradero está a 130.1 km de Chivilcoy (máximo 100)",
+            "etapa": "con el guion"
           }
         ],
         "pendientes_ubicacion": [],
@@ -5419,6 +5461,10 @@
           {
             "titulo": "Dos detenidos por presunta comercialización de estupefacientes",
             "motivo": "repite un hecho ya publicado: «Cayó una dupla familiar por venta de drogas y detuvieron a un prófugo» (2026-10-24; la IA: La nota nueva relata exactamente el mismo procedimiento de allanamientos en el barrio La Celeste y la detención de los dos hombres de 66 y 34 años, publicado previamente por otro medio.)"
+          },
+          {
+            "titulo": "Una de las jóvenes pergaminenses baleada por la Policía de Arrecifes está internada en Terapia Intensiva 25/10",
+            "motivo": "repite un hecho ya publicado: «Dos policías demorados y dos jóvenes heridas tras una balacera en Arre» (2026-10-25; la IA: La nota nueva relata exactamente el mismo hecho de la persecución y balacera policial en Arrecifes ocurrida el 25/10/2026, aportando solo detalles sobre la internación de las víctimas.)"
           }
         ],
         "otras_descartadas": [],
@@ -5485,9 +5531,83 @@
             "viral": 7,
             "apta": true,
             "por_que_no": ""
+          },
+          {
+            "titular": "Chacabuco: dos aprehendidos y allanamientos tras robar una ferretería",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 7,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Volcó una camioneta en la Ruta 46 cerca de Morse y el conductor fue hospitalizado",
+            "localidad": "Morse",
+            "km": 76.6,
+            "banda": "zona",
+            "viral": 6,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Detienen a cuatro sospechosos tras una persecución en auto y recuperan lo robado",
+            "localidad": "Bragado",
+            "km": 49.3,
+            "banda": "cercana",
+            "viral": 9,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Heridas dos mujeres de bala tras una persecución el 25/10/2026 en Chacabuco",
+            "localidad": "Chacabuco",
+            "km": 50.1,
+            "banda": "zona",
+            "viral": 9,
+            "apta": true,
+            "por_que_no": ""
+          },
+          {
+            "titular": "Detienen a un hombre tras el robo de herramientas en Luján",
+            "localidad": "Luján",
+            "km": 90.1,
+            "banda": "zona",
+            "viral": 3,
+            "apta": false,
+            "por_que_no": "No es del temario de policiales (según la IA): El texto proporcionado es un aviso genérico de la página y no detalla ningún hecho policial específico."
           }
         ],
-        "cuando": "2026-10-25T18:36:19-03:00"
+        "cuando": "2026-10-25T21:35:39-03:00"
+      },
+      "publicacion": {
+        "maximo": 5,
+        "reservadas": 5,
+        "piezas": [],
+        "salteadas": [
+          {
+            "titular": "Detienen a un hombre tras el robo de herramientas en Luján",
+            "motivo": "no apta: No es del temario de policiales (según la IA): El texto proporcionado es un aviso genérico de la página y no detalla ningún hecho policial específico."
+          },
+          {
+            "titular": "Chacabuco: dos aprehendidos y allanamientos tras robar una ferretería",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          },
+          {
+            "titular": "Volcó una camioneta en la Ruta 46 cerca de Morse y el conductor fue hospitalizado",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          },
+          {
+            "titular": "Detienen a cuatro sospechosos tras una persecución en auto y recuperan lo robado",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          },
+          {
+            "titular": "Heridas dos mujeres de bala tras una persecución el 25/10/2026 en Chacabuco",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          }
+        ],
+        "buzon_x_tiktok": 0,
+        "cuando": "2026-10-25T21:35:48-03:00"
       }
     }
   }
