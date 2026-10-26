@@ -14572,7 +14572,7 @@
       "cuando": "2026-10-25T22:00:04",
       "verificado": "procesado"
     },
-    "ultimo": "2026-10-25T22:00:07",
+    "ultimo": "2026-10-25T22:12:59",
     "web": {
       "estado": "ok",
       "id": "f0afbdab-e051-4f00-95c7-23170d4d92e3",
@@ -14581,6 +14581,21 @@
       "foto": true,
       "video": true,
       "cuando": "2026-10-25T22:00:07"
+    },
+    "facebook": {
+      "estado": "ok",
+      "id": "1456376377985890_2069738430634449",
+      "formato": "carrusel",
+      "fotos": 5,
+      "cuando": "2026-10-25T22:11:49"
+    },
+    "instagram": {
+      "estado": "ok",
+      "id": "18126734153483325",
+      "formato": "carrusel",
+      "diapositivas": 5,
+      "ubicacion": "106519452717237",
+      "cuando": "2026-10-25T22:12:59"
     }
   },
   "https://www.bragadotv.com.ar/noticias/2026/10/25/26556-esclarecieron-un-robo-en-bragado-dos-aprehendidos-y-elementos-recuperados": {
@@ -14605,7 +14620,7 @@
       "cuando": "2026-10-25T22:30:05",
       "verificado": "procesado"
     },
-    "ultimo": "2026-10-25T22:30:07",
+    "ultimo": "2026-10-25T22:42:45",
     "web": {
       "estado": "ok",
       "id": "0d3aedec-971c-48a7-ad0e-c4a811fe49ea",
@@ -14614,6 +14629,14 @@
       "foto": true,
       "video": true,
       "cuando": "2026-10-25T22:30:07"
+    },
+    "instagram": {
+      "estado": "ok",
+      "id": "18029284148858646",
+      "formato": "carrusel",
+      "diapositivas": 5,
+      "ubicacion": "113204428694383",
+      "cuando": "2026-10-25T22:42:45"
     }
   },
   "https://diarionucleo.com/ciudad/pergamino/291155-dos-jovenes-pergamino-resultaron-heridas-bala-dura": {
@@ -14647,6 +14670,16 @@
       "foto": true,
       "video": true,
       "cuando": "2026-10-25T23:00:06"
+    },
+    "instagram": {
+      "estado": "rechazado",
+      "detalle": "mismo hecho que la balacera de Arrecifes ya publicada (sacado a mano 25/10)",
+      "cuando": "2026-10-25T22:44:00"
+    },
+    "facebook": {
+      "estado": "rechazado",
+      "detalle": "mismo hecho que la balacera de Arrecifes ya publicada (sacado a mano 25/10)",
+      "cuando": "2026-10-25T22:44:00"
     }
   },
   "https://www.latrochadigital.com.ar/2026/10/25/rally-de-chivilcoy-un-violento-vuelco-pudo-terminar-en-tragedia/": {
@@ -14680,6 +14713,21 @@
       "foto": true,
       "video": true,
       "cuando": "2026-10-25T23:30:07"
+    },
+    "facebook": {
+      "estado": "ok",
+      "id": "1456376377985890_2069782677296691",
+      "formato": "carrusel",
+      "fotos": 5,
+      "cuando": "2026-10-25T23:11:28"
+    },
+    "instagram": {
+      "estado": "ok",
+      "id": "18480304258112394",
+      "formato": "carrusel",
+      "diapositivas": 5,
+      "ubicacion": "114613695215506",
+      "cuando": "2026-10-25T23:12:32"
     }
   },
   "https://www.latrochadigital.com.ar/2026/10/25/chivilcoy-le-robaron-la-moto-frente-a-su-casa-y-la-exhibieron-en-redes-sociales/": {
@@ -14713,6 +14761,14 @@
       "foto": true,
       "video": true,
       "cuando": "2026-10-26T00:00:07"
+    },
+    "instagram": {
+      "estado": "ok",
+      "id": "18119803402985406",
+      "formato": "carrusel",
+      "diapositivas": 5,
+      "ubicacion": "114613695215506",
+      "cuando": "2026-10-25T23:42:16"
     }
   }
 }

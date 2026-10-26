@@ -5583,7 +5583,76 @@
       "publicacion": {
         "maximo": 5,
         "reservadas": 5,
-        "piezas": [],
+        "piezas": [
+          {
+            "orden": 1,
+            "titular": "Dos policías demorados y dos jóvenes heridas tras una balacera en Arrecifes",
+            "localidad": "Pergamino",
+            "km": 92.6,
+            "hora": null,
+            "destinos": {}
+          },
+          {
+            "orden": 2,
+            "titular": "Dos aprehendidos por el robo a la casa de un productor agropecuario en Bragado",
+            "localidad": "Bragado",
+            "km": 49.3,
+            "hora": null,
+            "destinos": {
+              "facebook": {
+                "estado": "omitida",
+                "detalle": "no está entre las 2 más virales de la pasada (esta: viral 7/10 +2 por cercanía)",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 3,
+            "titular": "Dos jóvenes de Pergamino baleadas en una persecución policial",
+            "localidad": "Pergamino",
+            "km": 92.6,
+            "hora": null,
+            "destinos": {}
+          },
+          {
+            "orden": 6,
+            "titular": "Grave accidente de un piloto de Mercedes en el Rally de Chivilcoy",
+            "localidad": "9 de Julio",
+            "km": 0.0,
+            "hora": "2026-10-25T23:11",
+            "destinos": {
+              "facebook": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              }
+            }
+          },
+          {
+            "orden": 7,
+            "titular": "Le robaron la moto en la puerta de su casa y la publicaron en Instagram",
+            "localidad": "9 de Julio",
+            "km": 0.0,
+            "hora": "2026-10-25T23:41",
+            "destinos": {
+              "facebook": {
+                "estado": "omitida",
+                "detalle": "no está entre las 2 más virales de la pasada (esta: viral 7/10 +3 por cercanía)",
+                "url": ""
+              },
+              "instagram": {
+                "estado": "ok",
+                "detalle": "",
+                "url": ""
+              }
+            }
+          }
+        ],
         "salteadas": [
           {
             "titular": "Detienen a un hombre tras el robo de herramientas en Luján",
@@ -5604,10 +5673,18 @@
           {
             "titular": "Heridas dos mujeres de bala tras una persecución el 25/10/2026 en Chacabuco",
             "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          },
+          {
+            "titular": "Camión cisterna volcó en la Ruta 5 este sábado 24 de octubre de 2026",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
+          },
+          {
+            "titular": "Motociclista grave tras chocar contra una Hilux en un acceso a Chacabuco",
+            "motivo": "no entra en la pasada: como mucho 5 hechos policiales por pasada, un reel cada 30 minutos (0 lugares libres)"
           }
         ],
-        "buzon_x_tiktok": 0,
-        "cuando": "2026-10-25T21:35:48-03:00"
+        "buzon_x_tiktok": 1,
+        "cuando": "2026-10-25T23:42:17-03:00"
       },
       "nacionales": {
         "candidatas": 32,
