@@ -16250,6 +16250,27 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c53cfb874a3519bf": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "precios internacionales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la decisión de venta de los productores de la zona núcleo frente a la caída de precios.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17366,7 +17387,10 @@
       "https://bichosdecampo.com/las-razones-de-bunge-los-detalles-detras-del-cierre-de-la-planta-de-campana-donde-la-multinacional-producia-un-popular-fertilizante-liquido": "2026-10-27",
       "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026": "2026-10-27",
-      "https://lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026": "2026-10-27"
+      "https://lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026": "2026-10-27",
+      "https://bichosdecampo.com/mas-garantias-el-gobierno-anuncio-una-mejora-en-los-avales-para-sacar-creditos-ganaderos-a-valor-producto": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/el-primero-del-pais-un-feedlot-logro-una-certificacion-internacional-de-bienestar-animal-nid27102026": "2026-10-27",
+      "https://lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18481,7 +18505,10 @@
       "las razones de bunge los detalles detras del cierre de la planta de campana donde la multinacional producia un popular fertilizante liquido": "2026-10-27",
       "las ventajas de tener una moneda propia los productores brasilenos no se enteraron del derrumbre de los precios de la soja y el maiz": "2026-10-27",
       "comenzo la semana con subas en el mercado agroganadero de canuelas": "2026-10-27",
-      "historica colaboracion entre el inta y la universidad de florida por la soja": "2026-10-27"
+      "historica colaboracion entre el inta y la universidad de florida por la soja": "2026-10-27",
+      "mas garantias el gobierno anuncio una mejora en los avales para sacar creditos ganaderos a valor producto": "2026-10-27",
+      "el primero del pais un feedlot logro una certificacion internacional de bienestar animal": "2026-10-27",
+      "granos la caida de los precios internacionales frena ventas en argentina": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19596,7 +19623,10 @@
       "03fb83a1c7047ed7": "2026-10-27",
       "b347f0608c15cf39": "2026-10-27",
       "0e66ba3d92250f37": "2026-10-27",
-      "3c2573dfaf202315": "2026-10-27"
+      "3c2573dfaf202315": "2026-10-27",
+      "eb416fbab97b231e": "2026-10-27",
+      "be479114dd5e44b9": "2026-10-27",
+      "c53cfb874a3519bf": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30584,6 +30614,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bc70eb5e4d13_portada.jpg"
+    },
+    {
+      "id": "e4034f2c6251",
+      "cuando": "2026-10-27T16:20-03:00",
+      "titulo_original": "Granos: la caída de los precios internacionales frena ventas en Argentina",
+      "descripcion": "Dante Romano, profesor e investigador del Centro de Agronegocios y Alimentos de la Universidad Austral, analizó el avance de la siembra de maíz, las perspectivas para el trigo y los factores globales que condicionan al mercado de granos.",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html",
+      "titular": "Precios bajos frenan ventas de granos en Argentina según la Austral",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "precios internacionales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la decisión de venta de los productores de la zona núcleo frente a la caída de precios.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6b62a84b-3c61-429e-95b1-a2c0c2d0cde0",
+          "slug": "precios-internacionales-bajos-frenan-las-ventas-de-granos-en-7ec5de",
+          "url": "https://www.diariolacampaña.com.ar/n/precios-internacionales-bajos-frenan-las-ventas-de-granos-en-7ec5de",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1433165492349212",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18127398979954321",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e4034f2c6251_portada.jpg"
     }
   ],
   "pendientes": [
@@ -31506,8 +31590,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T16:03:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T16:23:16-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
