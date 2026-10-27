@@ -28798,6 +28798,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_95003d99cd39_portada.jpg"
+    },
+    {
+      "id": "8f16888fa4b3",
+      "cuando": "2026-10-27T07:23-03:00",
+      "titulo_original": "Clima y agro: cambian los vientos, suben las temperaturas y se esperan nuevas lluvias",
+      "descripcion": "Tras varios días de precipitaciones irregulares y temperaturas bajas, el viento rotará hacia el norte y favorecerá el ingreso de humedad. Qué se espera para el sur de Santa Fe, la región núcleo y el Litoral",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/clima-y-agro-cambian-los-vientos-suben-las-temperaturas-y-se-esperan-nuevas-lluvias-n10288845.html",
+      "titular": "Lluvias dispares y ascenso térmico marcan la semana agrícola",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 15,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Pronóstico clave con entrada de humedad para sur de Santa Fe y región núcleo en pleno ciclo agrícola.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b875f8f6-4640-400f-85ac-037a207734be",
+          "slug": "clima-en-el-campo-rotan-los-vientos-suben-las-marcas-termicas-y-2a5475",
+          "url": "https://www.diariolacampaña.com.ar/n/clima-en-el-campo-rotan-los-vientos-suben-las-marcas-termicas-y-2a5475",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2965018630515074",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18118716515097116",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8f16888fa4b3_portada.jpg"
     }
   ],
   "pendientes": [
@@ -28860,69 +28914,6 @@
         "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T07:03-03:00"
-    },
-    {
-      "id": "8f16888fa4b3",
-      "rep": {
-        "id": "8f16888fa4b3",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/clima-y-agro-cambian-los-vientos-suben-las-temperaturas-y-se-esperan-nuevas-lluvias-n10288845.html",
-        "canonical_url": "https://lacapital.com.ar/agro/clima-y-agro-cambian-los-vientos-suben-las-temperaturas-y-se-esperan-nuevas-lluvias-n10288845.html",
-        "titulo": "Clima y agro: cambian los vientos, suben las temperaturas y se esperan nuevas lluvias",
-        "titulo_norm": "clima y agro cambian los vientos suben las temperaturas y se esperan nuevas lluvias",
-        "descripcion": "Tras varios días de precipitaciones irregulares y temperaturas bajas, el viento rotará hacia el norte y favorecerá el ingreso de humedad. Qué se espera para el sur de Santa Fe, la región núcleo y el Litoral",
-        "imagen_url": "https://media.lacapital.com.ar/p/264275f9479f9230be5b4b79012c9ffc/adjuntos/305/imagenes/101/827/0101827611/1200x675/359x513:379x533/campo-molino.jpg",
-        "autor": "",
-        "publicado": "2026-10-27T06:10-03:00",
-        "capturado": "2026-10-27T07:03-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4a0a0e9f6587fb45"
-      },
-      "grupo": [
-        {
-          "id": "8f16888fa4b3",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/clima-y-agro-cambian-los-vientos-suben-las-temperaturas-y-se-esperan-nuevas-lluvias-n10288845.html",
-          "canonical_url": "https://lacapital.com.ar/agro/clima-y-agro-cambian-los-vientos-suben-las-temperaturas-y-se-esperan-nuevas-lluvias-n10288845.html",
-          "titulo": "Clima y agro: cambian los vientos, suben las temperaturas y se esperan nuevas lluvias",
-          "titulo_norm": "clima y agro cambian los vientos suben las temperaturas y se esperan nuevas lluvias",
-          "descripcion": "Tras varios días de precipitaciones irregulares y temperaturas bajas, el viento rotará hacia el norte y favorecerá el ingreso de humedad. Qué se espera para el sur de Santa Fe, la región núcleo y el Litoral",
-          "imagen_url": "https://media.lacapital.com.ar/p/264275f9479f9230be5b4b79012c9ffc/adjuntos/305/imagenes/101/827/0101827611/1200x675/359x513:379x533/campo-molino.jpg",
-          "autor": "",
-          "publicado": "2026-10-27T06:10-03:00",
-          "capturado": "2026-10-27T07:03-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4a0a0e9f6587fb45"
-        }
-      ],
-      "score": {
-        "impacto_economico": 17,
-        "interes_productores": 15,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 80,
-        "commercial_score": 85,
-        "subtema": "agro",
-        "tema": "clima",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Pronóstico clave con entrada de humedad para sur de Santa Fe y región núcleo en pleno ciclo agrícola.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-27T07:03-03:00"
@@ -29582,8 +29573,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T07:06:20-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T07:26:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
