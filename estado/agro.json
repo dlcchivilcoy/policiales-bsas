@@ -15764,6 +15764,52 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9102facd3a58d606": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 3,
+      "conversacion": 8,
+      "potencial_comercial": 2,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "fallecimiento dirigente",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Homenaje a una figura histórica del agro bonaerense con fuerte resonancia gremial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5148c50a0293e333": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 10,
+      "potencial_comercial": 4,
+      "ai_score": 67,
+      "commercial_score": 52,
+      "subtema": "empresas",
+      "tema": "cierre planta bunge",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Fuerte impacto industrial y laboral en la provincia de Buenos Aires por el cierre de una planta clave.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        65
+      ]
     }
   },
   "indice": {
@@ -16845,7 +16891,9 @@
       "https://agrositio.com.ar/noticia/249049-del-taller-al-papa-la-historia-detras-del-sillon-de-madera-que-se-fabrica-en-santa-fe-para-la-visita-de-leon-xiv.html": "2026-10-27",
       "https://agrositio.com.ar/noticia/249048-granos-en-chicago-cotizaciones-mixtas-en-una-jornada-marcada-por-la-cosecha-en-eeuu-y-el-real-brasileno.html": "2026-10-27",
       "https://agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html": "2026-10-27",
-      "https://bichosdecampo.com/fadel-convierte-los-subproductos-avicolas-en-nuevos-negocios-comenzo-a-exportar-a-chile-aceite-de-soja-derivada-de-su-propia-produccion-del-alimentos-balanceados": "2026-10-27"
+      "https://bichosdecampo.com/fadel-convierte-los-subproductos-avicolas-en-nuevos-negocios-comenzo-a-exportar-a-chile-aceite-de-soja-derivada-de-su-propia-produccion-del-alimentos-balanceados": "2026-10-27",
+      "https://infocampo.com.ar/dolor-en-el-agro-fallecio-armando-zavala-productor-y-comunicador-que-hizo-de-la-defensa-del-sector-su-bandera": "2026-10-27",
+      "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17925,7 +17973,9 @@
       "del taller al papa la historia detras del sillon de madera que se fabrica en santa fe para la visita de leon xiv": "2026-10-27",
       "granos en chicago cotizaciones mixtas en una jornada marcada por la cosecha en ee uu y el real brasileno": "2026-10-27",
       "la soja podria mostrar mayor resistencia que el maiz en chicago mientras crece la incertidumbre sobre la produccion brasilena y la evolucion de los fondos": "2026-10-27",
-      "fadel convierte los subproductos avicolas en nuevos negocios comenzo a exportar a chile aceite de soja derivada de su propia produccion del alimentos balanceados": "2026-10-27"
+      "fadel convierte los subproductos avicolas en nuevos negocios comenzo a exportar a chile aceite de soja derivada de su propia produccion del alimentos balanceados": "2026-10-27",
+      "dolor en el agro fallecio armando zavala productor y comunicador que hizo de la defensa del sector su bandera": "2026-10-27",
+      "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19005,7 +19055,9 @@
       "581490d721f12d0c": "2026-10-27",
       "51bcce0a948f90ab": "2026-10-27",
       "5b6232c8dd7cd236": "2026-10-27",
-      "3ab6763b96df7a2a": "2026-10-27"
+      "3ab6763b96df7a2a": "2026-10-27",
+      "9102facd3a58d606": "2026-10-27",
+      "5148c50a0293e333": "2026-10-27"
     }
   },
   "elegidas": [
@@ -29539,9 +29591,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_72a880e9ece5_portada.jpg"
+    },
+    {
+      "id": "d3ba1e819e69",
+      "cuando": "2026-10-27T10:40-03:00",
+      "titulo_original": "“Silencio estatal”: productores bonaerenses fueron a la Justicia contra el ministerio de Katopodis por las obras hidráulicas",
+      "descripcion": "Son de Carlos Casares y, según indicaron, no recibieron respuesta a un pedido de información sobre los trabajos previstos en la cuenca del río Salado y los fondos destinados a prevenir anegamientos; desde la cartera provincial aseguraron que responderán a la brevedad",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026/",
+      "titular": "Productores de Carlos Casares accionan judicialmente por obras hídricas",
+      "volanta": "Infraestructura",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 65,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "obras hidráulicas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente a productores bonaerenses por inundaciones y genera fuerte debate político.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          66
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1924d216-69da-4fab-b51e-04683e3905a2",
+          "slug": "productores-de-carlos-casares-iniciaron-acciones-legales-frente-f24542",
+          "url": "https://www.diariolacampaña.com.ar/n/productores-de-carlos-casares-iniciaron-acciones-legales-frente-f24542",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2035187627079837",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18107955236289543",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d3ba1e819e69_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "96b2b21b9ed7",
+      "rep": {
+        "id": "96b2b21b9ed7",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora/",
+        "canonical_url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora",
+        "titulo": "Bunge anuncia el cierre de su planta en Campana y despide a unos 130 trabajadores: Apuntan contra la apertura importadora",
+        "titulo_norm": "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora",
+        "descripcion": "De manera sorpresiva, ayer por la tarde Bunge anunció el cierre definitivo de su planta de Campana. Con una notificación conjunta a todos sus trabajadores y la cúpula sindical, dispusieron el cese de actividades para el turno noche y aseguraron que despedirán a sus más de 130 operarios. En total, estiman desde el gremio, el […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/plabta-bunge-campana-e1793107778423.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-27T10:35-03:00",
+        "capturado": "2026-10-27T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "5148c50a0293e333"
+      },
+      "grupo": [
+        {
+          "id": "96b2b21b9ed7",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora/",
+          "canonical_url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora",
+          "titulo": "Bunge anuncia el cierre de su planta en Campana y despide a unos 130 trabajadores: Apuntan contra la apertura importadora",
+          "titulo_norm": "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora",
+          "descripcion": "De manera sorpresiva, ayer por la tarde Bunge anunció el cierre definitivo de su planta de Campana. Con una notificación conjunta a todos sus trabajadores y la cúpula sindical, dispusieron el cese de actividades para el turno noche y aseguraron que despedirán a sus más de 130 operarios. En total, estiman desde el gremio, el […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/plabta-bunge-campana-e1793107778423.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-27T10:35-03:00",
+          "capturado": "2026-10-27T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5148c50a0293e333"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 10,
+        "potencial_comercial": 4,
+        "ai_score": 67,
+        "commercial_score": 52,
+        "subtema": "empresas",
+        "tema": "cierre planta bunge",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Fuerte impacto industrial y laboral en la provincia de Buenos Aires por el cierre de una planta clave.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          65
+        ]
+      },
+      "cuando": "2026-10-27T10:40-03:00"
+    },
     {
       "id": "bb79481fb7a2",
       "rep": {
@@ -29874,73 +30051,6 @@
       "cuando": "2026-10-26T19:22-03:00"
     },
     {
-      "id": "d3ba1e819e69",
-      "rep": {
-        "id": "d3ba1e819e69",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026",
-        "titulo": "“Silencio estatal”: productores bonaerenses fueron a la Justicia contra el ministerio de Katopodis por las obras hidráulicas",
-        "titulo_norm": "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas",
-        "descripcion": "Son de Carlos Casares y, según indicaron, no recibieron respuesta a un pedido de información sobre los trabajos previstos en la cuenca del río Salado y los fondos destinados a prevenir anegamientos; desde la cartera provincial aseguraron que responderán a la brevedad",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/SZ5YJMEE4ND25IROTVUTBEISCQ.JPG?auth=6d670843acf9192aaff43ef72aa01442e0f1b460aa1f4f7f88247a478fb858ab&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-10-26T18:24-03:00",
-        "capturado": "2026-10-26T18:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "651d4114d6e4e862"
-      },
-      "grupo": [
-        {
-          "id": "d3ba1e819e69",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/silencio-estatal-productores-bonaerenses-fueron-a-la-justicia-contra-el-ministerio-de-katopodis-por-nid26102026",
-          "titulo": "“Silencio estatal”: productores bonaerenses fueron a la Justicia contra el ministerio de Katopodis por las obras hidráulicas",
-          "titulo_norm": "silencio estatal productores bonaerenses fueron a la justicia contra el ministerio de katopodis por las obras hidraulicas",
-          "descripcion": "Son de Carlos Casares y, según indicaron, no recibieron respuesta a un pedido de información sobre los trabajos previstos en la cuenca del río Salado y los fondos destinados a prevenir anegamientos; desde la cartera provincial aseguraron que responderán a la brevedad",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/SZ5YJMEE4ND25IROTVUTBEISCQ.JPG?auth=6d670843acf9192aaff43ef72aa01442e0f1b460aa1f4f7f88247a478fb858ab&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-10-26T18:24-03:00",
-          "capturado": "2026-10-26T18:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "651d4114d6e4e862"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 65,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "obras hidráulicas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta directamente a productores bonaerenses por inundaciones y genera fuerte debate político.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          66
-        ]
-      },
-      "cuando": "2026-10-26T18:40-03:00"
-    },
-    {
       "id": "185134469419",
       "rep": {
         "id": "185134469419",
@@ -30209,8 +30319,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T10:23:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T10:43:08-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
