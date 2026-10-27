@@ -16271,6 +16271,52 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aa55a38e6488285f": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve volumen importante de exportación cárnica pero se apoya en datos oficiales del INDEC que requieren chequeo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        65
+      ]
+    },
+    "c2dfa24b84adae5a": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 76,
+      "commercial_score": 78,
+      "subtema": "ganaderia",
+      "tema": "certificación bienestar animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran relevancia regional para feedlots y cooperativas al certificar bienestar animal e inocuidad con impacto comercial directo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17390,7 +17436,9 @@
       "https://lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026": "2026-10-27",
       "https://bichosdecampo.com/mas-garantias-el-gobierno-anuncio-una-mejora-en-los-avales-para-sacar-creditos-ganaderos-a-valor-producto": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/el-primero-del-pais-un-feedlot-logro-una-certificacion-internacional-de-bienestar-animal-nid27102026": "2026-10-27",
-      "https://lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html": "2026-10-27"
+      "https://lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html": "2026-10-27",
+      "https://todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador": "2026-10-27",
+      "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18508,7 +18556,9 @@
       "historica colaboracion entre el inta y la universidad de florida por la soja": "2026-10-27",
       "mas garantias el gobierno anuncio una mejora en los avales para sacar creditos ganaderos a valor producto": "2026-10-27",
       "el primero del pais un feedlot logro una certificacion internacional de bienestar animal": "2026-10-27",
-      "granos la caida de los precios internacionales frena ventas en argentina": "2026-10-27"
+      "granos la caida de los precios internacionales frena ventas en argentina": "2026-10-27",
+      "exportaciones las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-27",
+      "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19626,7 +19676,9 @@
       "3c2573dfaf202315": "2026-10-27",
       "eb416fbab97b231e": "2026-10-27",
       "be479114dd5e44b9": "2026-10-27",
-      "c53cfb874a3519bf": "2026-10-27"
+      "c53cfb874a3519bf": "2026-10-27",
+      "aa55a38e6488285f": "2026-10-27",
+      "c2dfa24b84adae5a": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30668,49 +30720,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e4034f2c6251_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "9570dfe69329",
-      "rep": {
-        "id": "9570dfe69329",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10-000-millones-para-el-sector-ganadero/",
-        "canonical_url": "https://todoagro.com.ar/creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10-000-millones-para-el-sector-ganadero",
-        "titulo": "Créditos en Valor Producto: Nuevo cupo de garantías de hasta $10.000 millones para el sector ganadero",
-        "titulo_norm": "creditos en valor producto nuevo cupo de garantias de hasta 10 000 millones para el sector ganadero",
-        "descripcion": "Los créditos en Valor Producto de BICE para el sector ganadero fueron lanzados hace más de un año y financian desde inversiones para la compra de vaquillonas y retención de terneras, capital de trabajo para recría y engorde, hasta la incorporación de ejemplares con alto valor genético. Ya se otorgaron más de $30.000 millones. La entrada Créditos en Valor Producto: Nuevo cupo de garantías de hasta $10.000 millones para el sector ganadero pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-10-27T15:39-03:00",
-        "capturado": "2026-10-27T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4a5db58ef0134fde"
-      },
-      "grupo": [
-        {
-          "id": "9570dfe69329",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10-000-millones-para-el-sector-ganadero/",
-          "canonical_url": "https://todoagro.com.ar/creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10-000-millones-para-el-sector-ganadero",
-          "titulo": "Créditos en Valor Producto: Nuevo cupo de garantías de hasta $10.000 millones para el sector ganadero",
-          "titulo_norm": "creditos en valor producto nuevo cupo de garantias de hasta 10 000 millones para el sector ganadero",
-          "descripcion": "Los créditos en Valor Producto de BICE para el sector ganadero fueron lanzados hace más de un año y financian desde inversiones para la compra de vaquillonas y retención de terneras, capital de trabajo para recría y engorde, hasta la incorporación de ejemplares con alto valor genético. Ya se otorgaron más de $30.000 millones. La entrada Créditos en Valor Producto: Nuevo cupo de garantías de hasta $10.000 millones para el sector ganadero pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-10-27T15:39-03:00",
-          "capturado": "2026-10-27T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4a5db58ef0134fde"
-        }
-      ],
+      "cuando": "2026-10-27T16:40-03:00",
+      "titulo_original": "Créditos en Valor Producto: Nuevo cupo de garantías de hasta $10.000 millones para el sector ganadero",
+      "descripcion": "Los créditos en Valor Producto de BICE para el sector ganadero fueron lanzados hace más de un año y financian desde inversiones para la compra de vaquillonas y retención de terneras, capital de trabajo para recría y engorde, hasta la incorporación de ejemplares con alto valor genético. Ya se otorgar",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10-000-millones-para-el-sector-ganadero/",
+      "titular": "Ganadería: BICE lanza nuevo cupo de garantías por $10.000 millones",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 16,
         "interes_productores": 14,
@@ -30732,7 +30751,161 @@
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-27T16:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "37805b06-41b2-4756-9067-7ddd00dd69a8",
+          "slug": "ganaderia-bice-amplia-el-financiamiento-con-un-cupo-de-10-000-8722db",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-bice-amplia-el-financiamiento-con-un-cupo-de-10-000-8722db",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1119939034238501",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18095638049464249",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9570dfe69329_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "0b16438c56dd",
+      "rep": {
+        "id": "0b16438c56dd",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador/",
+        "canonical_url": "https://todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador",
+        "titulo": "Exportaciones: Las cuotas llegaron para cambiar el ritmo del negocio exportador",
+        "titulo_norm": "exportaciones las cuotas llegaron para cambiar el ritmo del negocio exportador",
+        "descripcion": "Las exportaciones argentinas de carne vacuna registraron un nivel elevado en septiembre y en línea con la dinámica del año previo. Según datos del INDEC, los embarques de carne enfriada y congelada alcanzaron las 71.881 toneladas peso producto, el segundo registro más alto de 2026, detrás de las 76.887 toneladas correspondientes a agosto. La entrada Exportaciones: Las cuotas llegaron para cambiar el ritmo del negocio exportador pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-10-27T16:25-03:00",
+        "capturado": "2026-10-27T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "aa55a38e6488285f"
+      },
+      "grupo": [
+        {
+          "id": "0b16438c56dd",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador/",
+          "canonical_url": "https://todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador",
+          "titulo": "Exportaciones: Las cuotas llegaron para cambiar el ritmo del negocio exportador",
+          "titulo_norm": "exportaciones las cuotas llegaron para cambiar el ritmo del negocio exportador",
+          "descripcion": "Las exportaciones argentinas de carne vacuna registraron un nivel elevado en septiembre y en línea con la dinámica del año previo. Según datos del INDEC, los embarques de carne enfriada y congelada alcanzaron las 71.881 toneladas peso producto, el segundo registro más alto de 2026, detrás de las 76.887 toneladas correspondientes a agosto. La entrada Exportaciones: Las cuotas llegaron para cambiar el ritmo del negocio exportador pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-10-27T16:25-03:00",
+          "capturado": "2026-10-27T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "aa55a38e6488285f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "exportación carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve volumen importante de exportación cárnica pero se apoya en datos oficiales del INDEC que requieren chequeo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ]
+      },
+      "cuando": "2026-10-27T16:40-03:00"
+    },
+    {
+      "id": "8c700dcadd8c",
+      "rep": {
+        "id": "8c700dcadd8c",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola/",
+        "canonical_url": "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola",
+        "titulo": "Pinitos de festejo: Dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avícola",
+        "titulo_norm": "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola",
+        "descripcion": "La Asociación de Cooperativas Argentinas (ACA) y la Unión Agrícola de Avellaneda (UAA) consiguieron certificaciones internacionales para dos de sus actividades agroindustriales. La primera se convirtió en la titular del primer feedlot del país en obtener el sello Welfair® de bienestar animal, mientras que la segunda certificó bajo el sistema HACCP la inocuidad de los […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Welfair-3.jfif_.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-27T16:26-03:00",
+        "capturado": "2026-10-27T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c2dfa24b84adae5a"
+      },
+      "grupo": [
+        {
+          "id": "8c700dcadd8c",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola/",
+          "canonical_url": "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola",
+          "titulo": "Pinitos de festejo: Dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avícola",
+          "titulo_norm": "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola",
+          "descripcion": "La Asociación de Cooperativas Argentinas (ACA) y la Unión Agrícola de Avellaneda (UAA) consiguieron certificaciones internacionales para dos de sus actividades agroindustriales. La primera se convirtió en la titular del primer feedlot del país en obtener el sello Welfair® de bienestar animal, mientras que la segunda certificó bajo el sistema HACCP la inocuidad de los […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Welfair-3.jfif_.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-27T16:26-03:00",
+          "capturado": "2026-10-27T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c2dfa24b84adae5a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 76,
+        "commercial_score": 78,
+        "subtema": "ganaderia",
+        "tema": "certificación bienestar animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran relevancia regional para feedlots y cooperativas al certificar bienestar animal e inocuidad con impacto comercial directo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T16:40-03:00"
     },
     {
       "id": "e456e0f2a2ba",
@@ -31590,8 +31763,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T16:23:16-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T16:43:36-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
