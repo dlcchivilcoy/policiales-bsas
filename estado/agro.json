@@ -16011,6 +16011,27 @@
         53,
         64
       ]
+    },
+    "2db6e779d1d3cd52": {
+      "impacto_economico": 10,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 3,
+      "ai_score": 38,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a economías regionales específicas pero genera debate político nacional.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17113,7 +17134,8 @@
       "https://bichosdecampo.com/la-fruticultura-del-alto-valle-tambien-exporta-impuestos-por-cada-caja-de-peras-y-manzanas-que-vende-al-exterior-arrastra-una-carga-fiscal-del-23-que-no-logra-compensar": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/murio-armando-zavala-el-productor-del-megafono-que-convirtio-la-defensa-del-campo-en-una-causa-de-nid27102026": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/tiene-110-empleados-bunge-cerro-una-planta-de-productos-para-el-campo-de-mas-de-50-anos-nid27102026": "2026-10-27",
-      "https://futurefarming.com/tech-in-focus/field-robots/laser-weeding-and-electrocution-at-the-same-time": "2026-10-27"
+      "https://futurefarming.com/tech-in-focus/field-robots/laser-weeding-and-electrocution-at-the-same-time": "2026-10-27",
+      "https://bichosdecampo.com/tantos-escandalos-rodean-la-gestion-libertaria-que-el-inym-se-llamara-ahora-instituto-de-nominaciones-y-meritos-el-organismo-yerbatero-se-lleno-de-designaciones-sospechosas": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18214,7 +18236,8 @@
       "la fruticultura del alto valle tambien exporta impuestos por cada caja de peras y manzanas que vende al exterior arrastra una carga fiscal del 23 que no logra compensar": "2026-10-27",
       "murio armando zavala el productor del megafono que convirtio la defensa del campo en un compromiso que dejo una huella": "2026-10-27",
       "tiene 110 empleados bunge cerro una planta de productos para el campo de mas de 50 anos": "2026-10-27",
-      "laser weeding and electrocution at the same time": "2026-10-27"
+      "laser weeding and electrocution at the same time": "2026-10-27",
+      "tantos escandalos rodean la gestion libertaria que el inym se llamara ahora instituto de nominaciones y meritos el organismo yerbatero se lleno de designaciones sospechosas": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19315,7 +19338,8 @@
       "0c27055a53e922db": "2026-10-27",
       "0c639ad4afcd111d": "2026-10-27",
       "033f26e2c3da6710": "2026-10-27",
-      "e40e3734a3a91e10": "2026-10-27"
+      "e40e3734a3a91e10": "2026-10-27",
+      "2db6e779d1d3cd52": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30080,49 +30104,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9f76dae3b1fd_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "45a22fb332f7",
-      "rep": {
-        "id": "45a22fb332f7",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
-        "titulo": "Apertura Comercial: Récord de Exportaciones con Nuevos Motores y el Desafío de Consolidar el Crecimiento",
-        "titulo_norm": "apertura comercial record de exportaciones con nuevos motores y el desafio de consolidar el crecimiento",
-        "descripcion": "Después de una década en la cual Argentina tuvo una participación muy errática en el comercio mundial, nuestro país atraviesa un cambio de escala en su inserción externa. Las exportaciones de bienes llegaron a USD 87.000 millones en 2025 (+9,1% interanual) y las proyecciones anticipan para este año un récord por encima de los USD 100.000 millones....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249053_13926105.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-27T12:20-03:00",
-        "capturado": "2026-10-27T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0338dad6f91b7f56"
-      },
-      "grupo": [
-        {
-          "id": "45a22fb332f7",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
-          "titulo": "Apertura Comercial: Récord de Exportaciones con Nuevos Motores y el Desafío de Consolidar el Crecimiento",
-          "titulo_norm": "apertura comercial record de exportaciones con nuevos motores y el desafio de consolidar el crecimiento",
-          "descripcion": "Después de una década en la cual Argentina tuvo una participación muy errática en el comercio mundial, nuestro país atraviesa un cambio de escala en su inserción externa. Las exportaciones de bienes llegaron a USD 87.000 millones en 2025 (+9,1% interanual) y las proyecciones anticipan para este año un récord por encima de los USD 100.000 millones....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249053_13926105.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-27T12:20-03:00",
-          "capturado": "2026-10-27T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0338dad6f91b7f56"
-        }
-      ],
+      "cuando": "2026-10-27T13:20-03:00",
+      "titulo_original": "Apertura Comercial: Récord de Exportaciones con Nuevos Motores y el Desafío de Consolidar el Crecimiento",
+      "descripcion": "Después de una década en la cual Argentina tuvo una participación muy errática en el comercio mundial, nuestro país atraviesa un cambio de escala en su inserción externa. Las exportaciones de bienes llegaron a USD 87.000 millones en 2025 (+9,1% interanual) y las proyecciones anticipan para este año ",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
+      "titular": "Exportaciones argentinas apuntan a superar los USD 100.000 millones este año",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 12,
@@ -30144,8 +30135,32 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-27T13:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2fff88a9-6517-44d6-8ef1-2857a9903ddf",
+          "slug": "exportaciones-argentinas-proyectan-superar-los-usd-100-000-1547a7",
+          "url": "https://www.diariolacampaña.com.ar/n/exportaciones-argentinas-proyectan-superar-los-usd-100-000-1547a7",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1709900273838428",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17964223038238522",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_45a22fb332f7_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "8690be8d3dd1",
       "rep": {
@@ -30746,8 +30761,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T13:05:24-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T13:23:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
