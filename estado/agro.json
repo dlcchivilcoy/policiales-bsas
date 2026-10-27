@@ -16451,6 +16451,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a32f83e598de18dc": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 7,
+      "cercania_pba": 3,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 62,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Mueve el tablero mundial de precios de la soja por el impacto climático en el principal productor global.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        63
+      ]
     }
   },
   "indice": {
@@ -17582,7 +17607,8 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-pablo-cattani-se-canso-del-discurso-de-la-catastrofe-y-reclama-discutir-desde-el-conocimiento-no-desde-el-interes": "2026-10-27",
       "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse": "2026-10-27",
       "https://infocampo.com.ar/el-nino-las-provincias-avanzan-con-obras-preventivas-y-la-hidrovia-suma-refuerzos-internacionales": "2026-10-27",
-      "https://agrositio.com.ar/noticia/249061-ley-de-semillas-amcham-presiona-para-que-argentina-adhiera-a-upov-91-y-advierte-sobre-las-inversiones-en-el-agro.html": "2026-10-27"
+      "https://agrositio.com.ar/noticia/249061-ley-de-semillas-amcham-presiona-para-que-argentina-adhiera-a-upov-91-y-advierte-sobre-las-inversiones-en-el-agro.html": "2026-10-27",
+      "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18712,7 +18738,8 @@
       "los dilemas de la agronomia pablo cattani se canso del discurso de la catastrofe y reclama discutir desde el conocimiento no desde el interes": "2026-10-27",
       "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse": "2026-10-27",
       "el nino las provincias avanzan con obras preventivas y la hidrovia suma refuerzos internacionales": "2026-10-27",
-      "ley de semillas amcham presiona para que argentina adhiera a upov 91 y advierte sobre las inversiones en el agro": "2026-10-27"
+      "ley de semillas amcham presiona para que argentina adhiera a upov 91 y advierte sobre las inversiones en el agro": "2026-10-27",
+      "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19842,7 +19869,8 @@
       "e00b9317e8c3b576": "2026-10-27",
       "853551abefee4581": "2026-10-27",
       "5116eea4e2501118": "2026-10-27",
-      "34351d6e52f68d7a": "2026-10-27"
+      "34351d6e52f68d7a": "2026-10-27",
+      "a32f83e598de18dc": "2026-10-27"
     }
   },
   "elegidas": [
@@ -31259,9 +31287,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_19102c293de8_portada.jpg"
+    },
+    {
+      "id": "b1a24993766f",
+      "cuando": "2026-10-27T19:02-03:00",
+      "titulo_original": "Comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
+      "descripcion": "Con una entrada de 5119 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4216,059",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026/",
+      "titular": "Hacienda: subas en Cañuelas por escasa oferta",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 59,
+        "subtema": "ganaderia",
+        "tema": "mag cañuelas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cotizaciones diarias de hacienda en Cañuelas, dato cotidiano y sensible de interés para ganaderos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          67
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9ac64316-16a6-4899-879e-0ead1ca61e50",
+          "slug": "hacienda-en-canuelas-subas-generalizadas-y-novillos-a-4500-4af25b",
+          "url": "https://www.diariolacampaña.com.ar/n/hacienda-en-canuelas-subas-generalizadas-y-novillos-a-4500-4af25b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1871466804204409",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18122839678939239",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b1a24993766f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d5b8158a1992",
+      "rep": {
+        "id": "d5b8158a1992",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil/",
+        "canonical_url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil",
+        "titulo": "Ojo al piojo: Un estudio advierte que el “Súper Niño” puede liquidar casi un 10% de la cosecha prevista de soja en Brasil",
+        "titulo_norm": "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil",
+        "descripcion": "El fenómeno ENSO “El Niño” de alta intensidad (“Súper Niño”) podría reducir en un 9,7% la producción brasileña de soja de la presente campaña con respecto a la proyección vigente de 181,2 millones de toneladas. Se trata de una pérdida probable de 17,6 millones de toneladas en la cosecha 2026/27, según un estudio publicado este […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ENSO.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-27T18:44-03:00",
+        "capturado": "2026-10-27T19:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a32f83e598de18dc"
+      },
+      "grupo": [
+        {
+          "id": "d5b8158a1992",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil/",
+          "canonical_url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil",
+          "titulo": "Ojo al piojo: Un estudio advierte que el “Súper Niño” puede liquidar casi un 10% de la cosecha prevista de soja en Brasil",
+          "titulo_norm": "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil",
+          "descripcion": "El fenómeno ENSO “El Niño” de alta intensidad (“Súper Niño”) podría reducir en un 9,7% la producción brasileña de soja de la presente campaña con respecto a la proyección vigente de 181,2 millones de toneladas. Se trata de una pérdida probable de 17,6 millones de toneladas en la cosecha 2026/27, según un estudio publicado este […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ENSO.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-27T18:44-03:00",
+          "capturado": "2026-10-27T19:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a32f83e598de18dc"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 7,
+        "cercania_pba": 3,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 62,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Mueve el tablero mundial de precios de la soja por el impacto climático en el principal productor global.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          63
+        ]
+      },
+      "cuando": "2026-10-27T19:02-03:00"
+    },
     {
       "id": "333114b4eb90",
       "rep": {
@@ -31582,73 +31735,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T16:00-03:00"
-    },
-    {
-      "id": "b1a24993766f",
-      "rep": {
-        "id": "b1a24993766f",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026",
-        "titulo": "Comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
-        "titulo_norm": "comenzo la semana con subas en el mercado agroganadero de canuelas",
-        "descripcion": "Con una entrada de 5119 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4216,059",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3T3ELV6ETFB5NCENHS3PLJXL2Y.png?auth=1c07b3383e3103fc901a19401d2c2c48a27c11206e5be3cb1303bd907c466edc&smart=true",
-        "autor": "",
-        "publicado": "2026-10-27T15:43-03:00",
-        "capturado": "2026-10-27T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0e66ba3d92250f37"
-      },
-      "grupo": [
-        {
-          "id": "b1a24993766f",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/ganaderia/comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid27102026",
-          "titulo": "Comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
-          "titulo_norm": "comenzo la semana con subas en el mercado agroganadero de canuelas",
-          "descripcion": "Con una entrada de 5119 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4216,059",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3T3ELV6ETFB5NCENHS3PLJXL2Y.png?auth=1c07b3383e3103fc901a19401d2c2c48a27c11206e5be3cb1303bd907c466edc&smart=true",
-          "autor": "",
-          "publicado": "2026-10-27T15:43-03:00",
-          "capturado": "2026-10-27T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0e66ba3d92250f37"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 59,
-        "subtema": "ganaderia",
-        "tema": "mag cañuelas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Cotizaciones diarias de hacienda en Cañuelas, dato cotidiano y sensible de interés para ganaderos.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          67
-        ]
       },
       "cuando": "2026-10-27T16:00-03:00"
     },
@@ -32055,8 +32141,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T19:02:15-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T19:05:51-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
