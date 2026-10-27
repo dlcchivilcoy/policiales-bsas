@@ -15538,6 +15538,119 @@
         55,
         49
       ]
+    },
+    "650879e4044b7333": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 58,
+      "subtema": "ganaderia",
+      "tema": "industria frigorífica",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a toda la cadena cárnica nacional y plantea un debate sobre costos y competitividad.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        60
+      ]
+    },
+    "6c4d157a4cb3c0db": {
+      "impacto_economico": 2,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 28,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "maría auxiliadora",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Efeméride tradicional de interés general pero de bajo impacto productivo o comercial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1a11a8f91f1b101f": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 5,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "cerezas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesante reporte sobre economías regionales y el impacto de las heladas tardías.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bf90159e04925e56": {
+      "impacto_economico": 7,
+      "interes_productores": 6,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 47,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "sidra de río negro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena nota de color y valor agregado sobre Indicación Geográfica de una economía regional.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d118f98671f232d7": {
+      "impacto_economico": 10,
+      "interes_productores": 13,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 62,
+      "commercial_score": 48,
+      "subtema": "ganaderia",
+      "tema": "abigeato",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca de cerca a los productores bonaerenses por la inseguridad rural y genera fuerte debate.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        61
+      ]
     }
   },
   "indice": {
@@ -16607,7 +16720,13 @@
       "https://intainforma.inta.gob.ar/estudian-el-comportamiento-del-arroz-durante-el-almacenamiento-postcosecha": "2026-10-27",
       "https://agrositio.com.ar/noticia/249036-superavit-comercial-record.html": "2026-10-27",
       "https://agrositio.com.ar/noticia/249035-china-acelera-las-compras-de-soja-de-estados-unidos-y-supera-los-3-millones-de-toneladas-en-seis-ruedas.html": "2026-10-27",
-      "https://bichosdecampo.com/aguafiestas-a-menos-de-16-horas-de-cerrar-sus-compuertas-itaipu-volvio-a-descargar-sobre-el-parana-y-hay-versiones-cruzadas-sobre-el-motivo": "2026-10-27"
+      "https://bichosdecampo.com/aguafiestas-a-menos-de-16-horas-de-cerrar-sus-compuertas-itaipu-volvio-a-descargar-sobre-el-parana-y-hay-versiones-cruzadas-sobre-el-motivo": "2026-10-27",
+      "https://infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica": "2026-10-27",
+      "https://infocampo.com.ar/dia-de-la-patrona-del-agro-argentino-el-campo-celebra-a-maria-auxiliadora": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249040-cerezas-argentinas-la-temporada-comenzara-con-15-dias-de-atraso-y-el-clima-mantiene-en-alerta-al-sector.html": "2026-10-27",
+      "https://bichosdecampo.com/antimicrobianos-en-los-feedlot-fernando-storni-explica-por-que-argentina-esta-lejos-del-problema-que-enfrenta-brasil-y-que-lo-dejo-fuera-del-mercado-europeo": "2026-10-27",
+      "https://bichosdecampo.com/el-timing-justo-para-fin-de-ano-la-sidra-de-rio-negro-avanza-hacia-la-indicacion-geografica-y-busca-un-lindo-motivo-para-brindar": "2026-10-27",
+      "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17675,7 +17794,13 @@
       "estudian el comportamiento del arroz durante el almacenamiento postcosecha": "2026-10-27",
       "superavit comercial record": "2026-10-27",
       "china acelera las compras de soja de estados unidos y supera los 3 millones de toneladas en seis ruedas": "2026-10-27",
-      "aguafiestas a menos de 16 horas de cerrar sus compuertas itaipu volvio a descargar sobre el parana y hay versiones cruzadas sobre el motivo": "2026-10-27"
+      "aguafiestas a menos de 16 horas de cerrar sus compuertas itaipu volvio a descargar sobre el parana y hay versiones cruzadas sobre el motivo": "2026-10-27",
+      "impuestos sanidad e informalidad los sobrecostos que restan competitividad en la industria frigorifica": "2026-10-27",
+      "dia de la patrona del agro argentino el campo celebra a maria auxiliadora": "2026-10-27",
+      "cerezas argentinas la temporada comenzara con 15 dias de atraso y el clima mantiene en alerta al sector": "2026-10-27",
+      "antimicrobianos en los feedlot fernando storni explica por que argentina esta lejos del problema que enfrenta brasil y que lo dejo fuera del mercado europeo": "2026-10-27",
+      "el timing justo para fin de ano la sidra de rio negro avanza hacia la indicacion geografica y busca un lindo motivo para brindar": "2026-10-27",
+      "como en la pandemia pero para frenar a los cuatreros olavarria bloqueo una calle con monticulos de tierra por el aumento de los casos de abigeato y desperto criticas": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18743,7 +18868,13 @@
       "732f94ef942f39eb": "2026-10-27",
       "53cb26b017bf4a09": "2026-10-27",
       "964b7e33209586fe": "2026-10-27",
-      "10924a6fdfa8bba3": "2026-10-27"
+      "10924a6fdfa8bba3": "2026-10-27",
+      "650879e4044b7333": "2026-10-27",
+      "6c4d157a4cb3c0db": "2026-10-27",
+      "1a11a8f91f1b101f": "2026-10-27",
+      "5624b8ae217e521e": "2026-10-27",
+      "bf90159e04925e56": "2026-10-27",
+      "d118f98671f232d7": "2026-10-27"
     }
   },
   "elegidas": [
@@ -29158,49 +29289,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bffe65ca1fb5_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "25c70a6bd88b",
-      "rep": {
-        "id": "25c70a6bd88b",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249036-superavit-comercial-record.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249036-superavit-comercial-record.html",
-        "titulo": "Superávit comercial récord",
-        "titulo_norm": "superavit comercial record",
-        "descripcion": "En dólares constantes, el superávit comercial de septiembre fue el mayor para ese mes desde 1992, y triplicó el de un año atrás. La mejora combinó mayores exportaciones con menores importaciones, y fue amplia: tanto la energía, cuyo saldo marcó un récord histórico también en términos reales,...",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249036_48566589.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-27T08:17-03:00",
-        "capturado": "2026-10-27T08:23-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "53cb26b017bf4a09"
-      },
-      "grupo": [
-        {
-          "id": "25c70a6bd88b",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249036-superavit-comercial-record.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249036-superavit-comercial-record.html",
-          "titulo": "Superávit comercial récord",
-          "titulo_norm": "superavit comercial record",
-          "descripcion": "En dólares constantes, el superávit comercial de septiembre fue el mayor para ese mes desde 1992, y triplicó el de un año atrás. La mejora combinó mayores exportaciones con menores importaciones, y fue amplia: tanto la energía, cuyo saldo marcó un récord histórico también en términos reales,...",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249036_48566589.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-27T08:17-03:00",
-          "capturado": "2026-10-27T08:23-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "53cb26b017bf4a09"
-        }
-      ],
+      "cuando": "2026-10-27T10:00-03:00",
+      "titulo_original": "Superávit comercial récord",
+      "descripcion": "En dólares constantes, el superávit comercial de septiembre fue el mayor para ese mes desde 1992, y triplicó el de un año atrás. La mejora combinó mayores exportaciones con menores importaciones, y fue amplia: tanto la energía, cuyo saldo marcó un récord histórico también en términos reales,...",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249036-superavit-comercial-record.html",
+      "titular": "Superávit comercial récord en septiembre mientras el trigo sufre heladas y bajas",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 17,
         "interes_productores": 11,
@@ -29226,7 +29324,172 @@
           63
         ]
       },
-      "cuando": "2026-10-27T08:23-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "1tzwhpNZMjE",
+          "url": "https://youtube.com/shorts/1tzwhpNZMjE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "e8857613-618a-4755-8120-b5774d4ac1dd",
+          "slug": "superavit-comercial-record-en-septiembre-y-la-cosecha-de-trigo-e8032c",
+          "url": "https://www.diariolacampaña.com.ar/n/superavit-comercial-record-en-septiembre-y-la-cosecha-de-trigo-e8032c",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1379747420629455",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18065791625538828",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25c70a6bd88b_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "c120dacf9bc6",
+      "rep": {
+        "id": "c120dacf9bc6",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica/",
+        "canonical_url": "https://infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica",
+        "titulo": "Impuestos, sanidad e informalidad: los “sobrecostos” que restan competitividad en la industria frigorífica",
+        "titulo_norm": "impuestos sanidad e informalidad los sobrecostos que restan competitividad en la industria frigorifica",
+        "descripcion": "La industria frigorífica enfrenta dificultades estructurales que no podemos seguir postergando, Si logramos estabilidad, seguridad jurídica y una reducción de los sobrecostos que arrastra la actividad, la ganadería argentina tiene todo para crecer.",
+        "imagen_url": "",
+        "autor": "Columnistas",
+        "publicado": "2026-10-27T09:16-03:00",
+        "capturado": "2026-10-27T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "650879e4044b7333"
+      },
+      "grupo": [
+        {
+          "id": "c120dacf9bc6",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica/",
+          "canonical_url": "https://infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica",
+          "titulo": "Impuestos, sanidad e informalidad: los “sobrecostos” que restan competitividad en la industria frigorífica",
+          "titulo_norm": "impuestos sanidad e informalidad los sobrecostos que restan competitividad en la industria frigorifica",
+          "descripcion": "La industria frigorífica enfrenta dificultades estructurales que no podemos seguir postergando, Si logramos estabilidad, seguridad jurídica y una reducción de los sobrecostos que arrastra la actividad, la ganadería argentina tiene todo para crecer.",
+          "imagen_url": "",
+          "autor": "Columnistas",
+          "publicado": "2026-10-27T09:16-03:00",
+          "capturado": "2026-10-27T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "650879e4044b7333"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 61,
+        "commercial_score": 58,
+        "subtema": "ganaderia",
+        "tema": "industria frigorífica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta a toda la cadena cárnica nacional y plantea un debate sobre costos y competitividad.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          60
+        ]
+      },
+      "cuando": "2026-10-27T10:00-03:00"
+    },
+    {
+      "id": "c1a267984b18",
+      "rep": {
+        "id": "c1a267984b18",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas/",
+        "canonical_url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas",
+        "titulo": "Como en la pandemia, pero para frenar a los cuatreros: Olavarría bloqueó una calle con montículos de tierra por el aumento de los casos de abigeato y despertó críticas",
+        "titulo_norm": "como en la pandemia pero para frenar a los cuatreros olavarria bloqueo una calle con monticulos de tierra por el aumento de los casos de abigeato y desperto criticas",
+        "descripcion": "En un intento por frenar los reiterados casos de abigeato que vienen denunciando los productores ganaderos de Olavarría, las autoridades de ese municipio bonaerense decidieron recurrir a una particular medida: colocar montículos de tierra para frenar la circulación en un camino que conecta a distintos establecimientos rurales. La decisión, que recuerda a los bloqueos de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/olavarria-4.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-27T08:35-03:00",
+        "capturado": "2026-10-27T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d118f98671f232d7"
+      },
+      "grupo": [
+        {
+          "id": "c1a267984b18",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas/",
+          "canonical_url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas",
+          "titulo": "Como en la pandemia, pero para frenar a los cuatreros: Olavarría bloqueó una calle con montículos de tierra por el aumento de los casos de abigeato y despertó críticas",
+          "titulo_norm": "como en la pandemia pero para frenar a los cuatreros olavarria bloqueo una calle con monticulos de tierra por el aumento de los casos de abigeato y desperto criticas",
+          "descripcion": "En un intento por frenar los reiterados casos de abigeato que vienen denunciando los productores ganaderos de Olavarría, las autoridades de ese municipio bonaerense decidieron recurrir a una particular medida: colocar montículos de tierra para frenar la circulación en un camino que conecta a distintos establecimientos rurales. La decisión, que recuerda a los bloqueos de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/olavarria-4.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-27T08:35-03:00",
+          "capturado": "2026-10-27T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d118f98671f232d7"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 13,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 62,
+        "commercial_score": 48,
+        "subtema": "ganaderia",
+        "tema": "abigeato",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca de cerca a los productores bonaerenses por la inseguridad rural y genera fuerte debate.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          61
+        ]
+      },
+      "cuando": "2026-10-27T10:00-03:00"
     },
     {
       "id": "0316d35dd664",
@@ -29694,8 +29957,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T08:25:51-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T10:04:19-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
