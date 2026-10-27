@@ -16476,6 +16476,52 @@
         62,
         63
       ]
+    },
+    "7668b0477a26e368": {
+      "impacto_economico": 8,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 3,
+      "ai_score": 34,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "paritaria maderera",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Acuerdo paritario sectorial de madera sin impacto directo en la producción agrícola de la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6f9bd2999af02d26": {
+      "impacto_economico": 13,
+      "interes_productores": 11,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 64,
+      "subtema": "empresas",
+      "tema": "basf general lagos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta la logística de fitosanitarios en la región núcleo y genera preocupación en la industria proveedora.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        55
+      ]
     }
   },
   "indice": {
@@ -17608,7 +17654,9 @@
       "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse": "2026-10-27",
       "https://infocampo.com.ar/el-nino-las-provincias-avanzan-con-obras-preventivas-y-la-hidrovia-suma-refuerzos-internacionales": "2026-10-27",
       "https://agrositio.com.ar/noticia/249061-ley-de-semillas-amcham-presiona-para-que-argentina-adhiera-a-upov-91-y-advierte-sobre-las-inversiones-en-el-agro.html": "2026-10-27",
-      "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil": "2026-10-27"
+      "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil": "2026-10-27",
+      "https://bichosdecampo.com/fumata-blanca-entre-la-industria-maderera-y-los-trabajadores-acordaron-aumentos-salariales-hasta-enero-de-2027": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18739,7 +18787,9 @@
       "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse": "2026-10-27",
       "el nino las provincias avanzan con obras preventivas y la hidrovia suma refuerzos internacionales": "2026-10-27",
       "ley de semillas amcham presiona para que argentina adhiera a upov 91 y advierte sobre las inversiones en el agro": "2026-10-27",
-      "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil": "2026-10-27"
+      "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil": "2026-10-27",
+      "fumata blanca entre la industria maderera y los trabajadores acordaron aumentos salariales hasta enero de 2027": "2026-10-27",
+      "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19870,7 +19920,9 @@
       "853551abefee4581": "2026-10-27",
       "5116eea4e2501118": "2026-10-27",
       "34351d6e52f68d7a": "2026-10-27",
-      "a32f83e598de18dc": "2026-10-27"
+      "a32f83e598de18dc": "2026-10-27",
+      "7668b0477a26e368": "2026-10-27",
+      "6f9bd2999af02d26": "2026-10-27"
     }
   },
   "elegidas": [
@@ -31345,9 +31397,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b1a24993766f_portada.jpg"
+    },
+    {
+      "id": "a6b0bdc5f439",
+      "cuando": "2026-10-27T19:22-03:00",
+      "titulo_original": "Carne porcina, entre las proteínas de mayor crecimiento en la Argentina",
+      "descripcion": "Un análisis del INTA Marcos Juárez —Córdoba— destaca el avance de su consumo en los últimos años y explica cuáles son los factores que lo impulsan. La mejora en la calidad de la carne, una mayor presencia de puntos de venta especializados y, sobre todo, un menor costo final por kilogramo explica bue",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina/",
+      "titular": "El consumo de carne porcina trepó a 18 kilos en Argentina",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "carne porcina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es un tema relevante para la diversificación productiva en la región pampeana, con datos claros del INTA.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T19:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a835c323-25e8-4c60-9668-8442f15afda6",
+          "slug": "el-consumo-de-carne-porcina-trepo-a-18-kilos-en-argentina-segun-7010cf",
+          "url": "https://www.diariolacampaña.com.ar/n/el-consumo-de-carne-porcina-trepo-a-18-kilos-en-argentina-segun-7010cf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1474607914543093",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18110697137613422",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a6b0bdc5f439_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "9efcd90ddd14",
+      "rep": {
+        "id": "9efcd90ddd14",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026",
+        "titulo": "Un gigante alemán reduce un turno en una planta industrial y un sindicato se declaró en alerta",
+        "titulo_norm": "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta",
+        "descripcion": "En General Lagos, BASF, que tiene producción química y un centro de distribución de productos para la protección de cultivos, empezará a funcionar con un turno menos a partir del 1° de noviembre; el gremio dijo que se ofreció un plan de retiros voluntarios",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/A4EXB23KEBFGJBJEYRC2Y6UTRA.jpeg?auth=b397b714a4095500044d6acbef744cc8dd46bca852cb3b7a51e3cbe9debfa877&smart=true",
+        "autor": "Germán de los Santos",
+        "publicado": "2026-10-27T19:19-03:00",
+        "capturado": "2026-10-27T19:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6f9bd2999af02d26"
+      },
+      "grupo": [
+        {
+          "id": "9efcd90ddd14",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026",
+          "titulo": "Un gigante alemán reduce un turno en una planta industrial y un sindicato se declaró en alerta",
+          "titulo_norm": "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta",
+          "descripcion": "En General Lagos, BASF, que tiene producción química y un centro de distribución de productos para la protección de cultivos, empezará a funcionar con un turno menos a partir del 1° de noviembre; el gremio dijo que se ofreció un plan de retiros voluntarios",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/A4EXB23KEBFGJBJEYRC2Y6UTRA.jpeg?auth=b397b714a4095500044d6acbef744cc8dd46bca852cb3b7a51e3cbe9debfa877&smart=true",
+          "autor": "Germán de los Santos",
+          "publicado": "2026-10-27T19:19-03:00",
+          "capturado": "2026-10-27T19:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6f9bd2999af02d26"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 11,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 64,
+        "subtema": "empresas",
+        "tema": "basf general lagos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta la logística de fitosanitarios en la región núcleo y genera preocupación en la industria proveedora.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          55
+        ]
+      },
+      "cuando": "2026-10-27T19:22-03:00"
+    },
     {
       "id": "d5b8158a1992",
       "rep": {
@@ -31739,73 +31916,6 @@
       "cuando": "2026-10-27T16:00-03:00"
     },
     {
-      "id": "a6b0bdc5f439",
-      "rep": {
-        "id": "a6b0bdc5f439",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina/",
-        "canonical_url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina",
-        "titulo": "Carne porcina, entre las proteínas de mayor crecimiento en la Argentina",
-        "titulo_norm": "carne porcina entre las proteinas de mayor crecimiento en la argentina",
-        "descripcion": "Un análisis del INTA Marcos Juárez —Córdoba— destaca el avance de su consumo en los últimos años y explica cuáles son los factores que lo impulsan. La mejora en la calidad de la carne, una mayor presencia de puntos de venta especializados y, sobre todo, un menor costo final por kilogramo explica buena parte de este avance. La entrada Carne porcina, entre las proteínas de mayor crecimiento en la Argentina se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-27-at-12.31.31.jpeg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-10-27T14:02-03:00",
-        "capturado": "2026-10-27T14:21-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "364781725bbc68fd"
-      },
-      "grupo": [
-        {
-          "id": "a6b0bdc5f439",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina/",
-          "canonical_url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina",
-          "titulo": "Carne porcina, entre las proteínas de mayor crecimiento en la Argentina",
-          "titulo_norm": "carne porcina entre las proteinas de mayor crecimiento en la argentina",
-          "descripcion": "Un análisis del INTA Marcos Juárez —Córdoba— destaca el avance de su consumo en los últimos años y explica cuáles son los factores que lo impulsan. La mejora en la calidad de la carne, una mayor presencia de puntos de venta especializados y, sobre todo, un menor costo final por kilogramo explica buena parte de este avance. La entrada Carne porcina, entre las proteínas de mayor crecimiento en la Argentina se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-27-at-12.31.31.jpeg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-10-27T14:02-03:00",
-          "capturado": "2026-10-27T14:21-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "364781725bbc68fd"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 10,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "carne porcina",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es un tema relevante para la diversificación productiva en la región pampeana, con datos claros del INTA.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          65
-        ]
-      },
-      "cuando": "2026-10-27T14:21-03:00"
-    },
-    {
       "id": "96b2b21b9ed7",
       "rep": {
         "id": "96b2b21b9ed7",
@@ -32141,8 +32251,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T19:05:51-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T19:24:52-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
