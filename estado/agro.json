@@ -16032,6 +16032,48 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9fb8b07354189127": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 79,
+      "subtema": "ganaderia",
+      "tema": "cría bovina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la rentabilidad del criador de la Cuenca del Salado con datos prácticos del INTA.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f23d9ac47fb7f776": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 80,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relevante para ganaderos y tamberos de la región núcleo por el impacto de la genética en pasturas.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17135,7 +17177,9 @@
       "https://lanacion.com.ar/economia/campo/murio-armando-zavala-el-productor-del-megafono-que-convirtio-la-defensa-del-campo-en-una-causa-de-nid27102026": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/tiene-110-empleados-bunge-cerro-una-planta-de-productos-para-el-campo-de-mas-de-50-anos-nid27102026": "2026-10-27",
       "https://futurefarming.com/tech-in-focus/field-robots/laser-weeding-and-electrocution-at-the-same-time": "2026-10-27",
-      "https://bichosdecampo.com/tantos-escandalos-rodean-la-gestion-libertaria-que-el-inym-se-llamara-ahora-instituto-de-nominaciones-y-meritos-el-organismo-yerbatero-se-lleno-de-designaciones-sospechosas": "2026-10-27"
+      "https://bichosdecampo.com/tantos-escandalos-rodean-la-gestion-libertaria-que-el-inym-se-llamara-ahora-instituto-de-nominaciones-y-meritos-el-organismo-yerbatero-se-lleno-de-designaciones-sospechosas": "2026-10-27",
+      "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero": "2026-10-27",
+      "https://intainforma.inta.gob.ar/mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18237,7 +18281,9 @@
       "murio armando zavala el productor del megafono que convirtio la defensa del campo en un compromiso que dejo una huella": "2026-10-27",
       "tiene 110 empleados bunge cerro una planta de productos para el campo de mas de 50 anos": "2026-10-27",
       "laser weeding and electrocution at the same time": "2026-10-27",
-      "tantos escandalos rodean la gestion libertaria que el inym se llamara ahora instituto de nominaciones y meritos el organismo yerbatero se lleno de designaciones sospechosas": "2026-10-27"
+      "tantos escandalos rodean la gestion libertaria que el inym se llamara ahora instituto de nominaciones y meritos el organismo yerbatero se lleno de designaciones sospechosas": "2026-10-27",
+      "lo barato puede salir caro en la cria bovina el inta encontro que restringir la alimentacion de las vacas prenadas puede restarle 10 kilos al ternero": "2026-10-27",
+      "mejoramiento genetico de alfalfa el inta presento innovaciones clave para sistemas productivos": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19339,7 +19385,9 @@
       "0c639ad4afcd111d": "2026-10-27",
       "033f26e2c3da6710": "2026-10-27",
       "e40e3734a3a91e10": "2026-10-27",
-      "2db6e779d1d3cd52": "2026-10-27"
+      "2db6e779d1d3cd52": "2026-10-27",
+      "9fb8b07354189127": "2026-10-27",
+      "f23d9ac47fb7f776": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30216,9 +30264,122 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c87ed83d4c4a_portada.jpg"
+    },
+    {
+      "id": "4bc2ba5b574f",
+      "cuando": "2026-10-27T14:01-03:00",
+      "titulo_original": "Mejoramiento genético de alfalfa: el INTA presentó innovaciones clave para sistemas productivos",
+      "descripcion": "Más allá de su rol forrajero, la especie aporta a la salud del suelo, la biodiversidad y la fijación de nitrógeno. Con más de cinco décadas de trayectoria, el programa del INTA Manfredi combina mejoramiento convencional, edición génica y articulación público-privada para garantizar estabilidad produ",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos/",
+      "titular": "Alfalfa: el INTA presenta avances en genética para mayor resistencia",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 80,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "alfalfa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Relevante para ganaderos y tamberos de la región núcleo por el impacto de la genética en pasturas.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "error": "FalloWeb: Wix (crear borrador): HTTP 400 — {\"message\":\"INVALID_ARGUMENT: Media image with provided 82cea5_afb2a06c4e8442b39af5e295ecb35d96~mv2.jpg id not found\",\"details\":{\"applicationError\":{\"code\":\"INVALID_RE"
+        },
+        "facebook": {
+          "id": "1719032599643791",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18120775502589463",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4bc2ba5b574f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "bc70eb5e4d13",
+      "rep": {
+        "id": "bc70eb5e4d13",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero/",
+        "canonical_url": "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero",
+        "titulo": "Lo barato puede salir caro en la cría bovina: El INTA encontró que restringir la alimentación de las vacas preñadas puede restarle 10 kilos al ternero",
+        "titulo_norm": "lo barato puede salir caro en la cria bovina el inta encontro que restringir la alimentacion de las vacas prenadas puede restarle 10 kilos al ternero",
+        "descripcion": "La alimentación de una vaca durante la gestación no solo condiciona el desarrollo de su cría antes del nacimiento, sino que también puede determinar su futuro productivo. Así lo advierten investigadores del INTA Cuenca del Salado, que estudian los efectos de la llamada programación fetal y encontraron que una restricción nutricional durante la preñez puede […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/programacion_fetal_2.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-27T13:57-03:00",
+        "capturado": "2026-10-27T14:01-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9fb8b07354189127"
+      },
+      "grupo": [
+        {
+          "id": "bc70eb5e4d13",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero/",
+          "canonical_url": "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero",
+          "titulo": "Lo barato puede salir caro en la cría bovina: El INTA encontró que restringir la alimentación de las vacas preñadas puede restarle 10 kilos al ternero",
+          "titulo_norm": "lo barato puede salir caro en la cria bovina el inta encontro que restringir la alimentacion de las vacas prenadas puede restarle 10 kilos al ternero",
+          "descripcion": "La alimentación de una vaca durante la gestación no solo condiciona el desarrollo de su cría antes del nacimiento, sino que también puede determinar su futuro productivo. Así lo advierten investigadores del INTA Cuenca del Salado, que estudian los efectos de la llamada programación fetal y encontraron que una restricción nutricional durante la preñez puede […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/programacion_fetal_2.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-27T13:57-03:00",
+          "capturado": "2026-10-27T14:01-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9fb8b07354189127"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "ganaderia",
+        "tema": "cría bovina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la rentabilidad del criador de la Cuenca del Salado con datos prácticos del INTA.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T14:01-03:00"
+    },
     {
       "id": "8690be8d3dd1",
       "rep": {
@@ -30752,8 +30913,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T14:01:07-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T14:04:18-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
