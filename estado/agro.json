@@ -16384,6 +16384,52 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e00b9317e8c3b576": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 3,
+      "ai_score": 44,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "agronomia",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota de opinión y reflexión profesional, interesante para el debate pero sin impacto económico directo ni datos técnicos aplicables.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "853551abefee4581": {
+      "impacto_economico": 14,
+      "interes_productores": 9,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 62,
+      "commercial_score": 66,
+      "subtema": "ganaderia",
+      "tema": "exportacion carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra la estrategia exportadora de un frigorífico y tracciona interés en la cadena ganadera y comercialización de hacienda.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        58
+      ]
     }
   },
   "indice": {
@@ -17511,7 +17557,9 @@
       "https://agrositio.com.ar/noticia/249055-creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10000-millones-para-el-sector-ganadero.html": "2026-10-27",
       "https://infocampo.com.ar/creditos-a-valor-producto-el-gobierno-amplia-el-financiamiento-para-el-sector-ganadero": "2026-10-27",
       "https://lanacion.com.ar/economia/campo/es-una-tomada-de-pelo-escandalo-porque-un-intendente-de-la-campora-bloqueo-una-calle-con-monticulos-nid27102026": "2026-10-27",
-      "https://agfundernews.com/biocle-tackles-bioactives-bioavailability-challenge-with-novel-delivery-tech": "2026-10-27"
+      "https://agfundernews.com/biocle-tackles-bioactives-bioavailability-challenge-with-novel-delivery-tech": "2026-10-27",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-pablo-cattani-se-canso-del-discurso-de-la-catastrofe-y-reclama-discutir-desde-el-conocimiento-no-desde-el-interes": "2026-10-27",
+      "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18637,7 +18685,9 @@
       "creditos en valor producto nuevo cupo de garantias de hasta 10 000 mill para ganaderos": "2026-10-27",
       "creditos a valor producto el gobierno amplia el financiamiento para el sector ganadero": "2026-10-27",
       "es una tomada de pelo escandalo porque un intendente de la campora bloqueo una calle con monticulos de tierra para frenar el robo de vacas": "2026-10-27",
-      "biocle tackles bioactives bioavailability challenge with novel delivery tech": "2026-10-27"
+      "biocle tackles bioactives bioavailability challenge with novel delivery tech": "2026-10-27",
+      "los dilemas de la agronomia pablo cattani se canso del discurso de la catastrofe y reclama discutir desde el conocimiento no desde el interes": "2026-10-27",
+      "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19763,7 +19813,9 @@
       "2ebab5bf582ee64f": "2026-10-27",
       "afa0d7cbe6e52f24": "2026-10-27",
       "e89aa6fc7b63818f": "2026-10-27",
-      "e641a764feaab765": "2026-10-27"
+      "e641a764feaab765": "2026-10-27",
+      "e00b9317e8c3b576": "2026-10-27",
+      "853551abefee4581": "2026-10-27"
     }
   },
   "elegidas": [
@@ -31036,9 +31088,166 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_850a8817691a_portada.jpg"
+    },
+    {
+      "id": "e456e0f2a2ba",
+      "cuando": "2026-10-27T18:20-03:00",
+      "titulo_original": "La nutrición animal gana protagonismo: “El mundo demanda proteínas y mira a la Argentina”",
+      "descripcion": "CAENA reunió en su Congreso anual a más de 600 participantes y generó 82 reuniones de negocios. Los desafíos de eficiencia, innovación y competitividad de las cadenas de nutrición animal, un sector que moviliza U$S 45.000 millones anuales.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/la-nutricion-animal-gana-protagonismo-el-mundo-demanda-proteinas-y-mira-a-la-argentina/",
+      "titular": "Nutrición animal: el sector moviliza 45.000 millones de dólares anuales",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 9,
+        "ai_score": 79,
+        "commercial_score": 82,
+        "subtema": "empresas",
+        "tema": "nutrición animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Mueve un volumen enorme de dinero en insumos y convoca a los principales actores de la cadena.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T18:20:00-03:00"
+    },
+    {
+      "id": "8690be8d3dd1",
+      "cuando": "2026-10-27T18:20-03:00",
+      "titulo_original": "ACA obtuvo la primera certificación Welfair® de bienestar animal para un feedlot en Argentina",
+      "descripcion": "El establecimiento Los Aromos, ubicado en Cafferata, Santa Fe, fue reconocido por cumplir con estándares internacionales de bienestar animal. La certificación se basa en indicadores científicos y una evaluación independiente, y representa un avance para la producción ganadera argentina.",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
+      "titular": "Feedlot Los Aromos logra la primera certificación Welfair de bienestar animal",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 10,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "bienestar animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es un hito importante en ganadería y certificación de calidad en la región pampeana.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0705b6de-6649-4334-a7c6-6dd2e95fbc21",
+          "slug": "el-feedlot-los-aromos-logro-la-primera-certificacion-welfair-de-dcdc7f",
+          "url": "https://www.diariolacampaña.com.ar/n/el-feedlot-los-aromos-logro-la-primera-certificacion-welfair-de-dcdc7f",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "3201620596704974",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17906488743597643",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8690be8d3dd1_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "333114b4eb90",
+      "rep": {
+        "id": "333114b4eb90",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse/",
+        "canonical_url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse",
+        "titulo": "El frigorífico Tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40% de su producción, aseguró su titular, Martín Lacasse",
+        "titulo_norm": "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse",
+        "descripcion": "La industria frigorífica argentina tiene un desafío que va más allá de conseguir nuevos compradores: necesita adaptar sus plantas, mejorar la integración de la res y encontrar mercados que paguen mejor por cada corte. En ese camino está Tresnal, que llegó a la SIAL de París con el objetivo de ampliar su negocio exportador y […]",
+        "imagen_url": "",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-27T18:08-03:00",
+        "capturado": "2026-10-27T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "853551abefee4581"
+      },
+      "grupo": [
+        {
+          "id": "333114b4eb90",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse/",
+          "canonical_url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse",
+          "titulo": "El frigorífico Tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40% de su producción, aseguró su titular, Martín Lacasse",
+          "titulo_norm": "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse",
+          "descripcion": "La industria frigorífica argentina tiene un desafío que va más allá de conseguir nuevos compradores: necesita adaptar sus plantas, mejorar la integración de la res y encontrar mercados que paguen mejor por cada corte. En ese camino está Tresnal, que llegó a la SIAL de París con el objetivo de ampliar su negocio exportador y […]",
+          "imagen_url": "",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-27T18:08-03:00",
+          "capturado": "2026-10-27T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "853551abefee4581"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 9,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 62,
+        "commercial_score": 66,
+        "subtema": "ganaderia",
+        "tema": "exportacion carne",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra la estrategia exportadora de un frigorífico y tracciona interés en la cadena ganadera y comercialización de hacienda.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          58
+        ]
+      },
+      "cuando": "2026-10-27T18:20-03:00"
+    },
     {
       "id": "7a69d2220daa",
       "rep": {
@@ -31231,69 +31440,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-27T16:40-03:00"
-    },
-    {
-      "id": "e456e0f2a2ba",
-      "rep": {
-        "id": "e456e0f2a2ba",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/la-nutricion-animal-gana-protagonismo-el-mundo-demanda-proteinas-y-mira-a-la-argentina/",
-        "canonical_url": "https://infocampo.com.ar/la-nutricion-animal-gana-protagonismo-el-mundo-demanda-proteinas-y-mira-a-la-argentina",
-        "titulo": "La nutrición animal gana protagonismo: “El mundo demanda proteínas y mira a la Argentina”",
-        "titulo_norm": "la nutricion animal gana protagonismo el mundo demanda proteinas y mira a la argentina",
-        "descripcion": "CAENA reunió en su Congreso anual a más de 600 participantes y generó 82 reuniones de negocios. Los desafíos de eficiencia, innovación y competitividad de las cadenas de nutrición animal, un sector que moviliza U$S 45.000 millones anuales.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Alejandro-Bravo-presidente-de-CAENA_1.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-27T15:27-03:00",
-        "capturado": "2026-10-27T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "11557084d383d327"
-      },
-      "grupo": [
-        {
-          "id": "e456e0f2a2ba",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/la-nutricion-animal-gana-protagonismo-el-mundo-demanda-proteinas-y-mira-a-la-argentina/",
-          "canonical_url": "https://infocampo.com.ar/la-nutricion-animal-gana-protagonismo-el-mundo-demanda-proteinas-y-mira-a-la-argentina",
-          "titulo": "La nutrición animal gana protagonismo: “El mundo demanda proteínas y mira a la Argentina”",
-          "titulo_norm": "la nutricion animal gana protagonismo el mundo demanda proteinas y mira a la argentina",
-          "descripcion": "CAENA reunió en su Congreso anual a más de 600 participantes y generó 82 reuniones de negocios. Los desafíos de eficiencia, innovación y competitividad de las cadenas de nutrición animal, un sector que moviliza U$S 45.000 millones anuales.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Alejandro-Bravo-presidente-de-CAENA_1.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-27T15:27-03:00",
-          "capturado": "2026-10-27T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "11557084d383d327"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 9,
-        "ai_score": 79,
-        "commercial_score": 82,
-        "subtema": "empresas",
-        "tema": "nutrición animal",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Mueve un volumen enorme de dinero en insumos y convoca a los principales actores de la cadena.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T16:00-03:00"
     },
     {
       "id": "987cf813a68e",
@@ -31491,69 +31637,6 @@
         ]
       },
       "cuando": "2026-10-27T14:21-03:00"
-    },
-    {
-      "id": "8690be8d3dd1",
-      "rep": {
-        "id": "8690be8d3dd1",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
-        "titulo": "ACA obtuvo la primera certificación Welfair® de bienestar animal para un feedlot en Argentina",
-        "titulo_norm": "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina",
-        "descripcion": "El establecimiento Los Aromos, ubicado en Cafferata, Santa Fe, fue reconocido por cumplir con estándares internacionales de bienestar animal. La certificación se basa en indicadores científicos y una evaluación independiente, y representa un avance para la producción ganadera argentina.",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249051_59664591.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-27T11:19-03:00",
-        "capturado": "2026-10-27T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5d83cbe86d778713"
-      },
-      "grupo": [
-        {
-          "id": "8690be8d3dd1",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
-          "titulo": "ACA obtuvo la primera certificación Welfair® de bienestar animal para un feedlot en Argentina",
-          "titulo_norm": "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina",
-          "descripcion": "El establecimiento Los Aromos, ubicado en Cafferata, Santa Fe, fue reconocido por cumplir con estándares internacionales de bienestar animal. La certificación se basa en indicadores científicos y una evaluación independiente, y representa un avance para la producción ganadera argentina.",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249051_59664591.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-27T11:19-03:00",
-          "capturado": "2026-10-27T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5d83cbe86d778713"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 10,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 71,
-        "commercial_score": 72,
-        "subtema": "ganaderia",
-        "tema": "bienestar animal",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es un hito importante en ganadería y certificación de calidad en la región pampeana.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T11:20-03:00"
     },
     {
       "id": "96b2b21b9ed7",
@@ -31891,8 +31974,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T18:06:33-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T18:23:59-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
