@@ -15810,6 +15810,48 @@
         68,
         65
       ]
+    },
+    "5d83cbe86d778713": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "bienestar animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un hito importante en ganadería y certificación de calidad en la región pampeana.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8a5437311152c8bf": {
+      "impacto_economico": 2,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 7,
+      "potencial_comercial": 2,
+      "ai_score": 40,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "productor autoconvocado",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de carácter institucional y emotivo sobre una figura histórica del sector, con baja tracción comercial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -16894,7 +16936,15 @@
       "https://bichosdecampo.com/fadel-convierte-los-subproductos-avicolas-en-nuevos-negocios-comenzo-a-exportar-a-chile-aceite-de-soja-derivada-de-su-propia-produccion-del-alimentos-balanceados": "2026-10-27",
       "https://infocampo.com.ar/dolor-en-el-agro-fallecio-armando-zavala-productor-y-comunicador-que-hizo-de-la-defensa-del-sector-su-bandera": "2026-10-27",
       "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora": "2026-10-27",
-      "https://infocampo.com.ar/riesgo-pais-hoy-27-10-2026": "2026-10-27"
+      "https://infocampo.com.ar/riesgo-pais-hoy-27-10-2026": "2026-10-27",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-27-octubre-2026": "2026-10-27",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-27-octubre-2026": "2026-10-27",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-27-octubre-2026": "2026-10-27",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-27-octubre-2026": "2026-10-27",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-27-octubre-2026": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html": "2026-10-27",
+      "https://bichosdecampo.com/el-autoconvocado-silvio-montenegro-tiene-mucho-que-decir-para-despedir-a-su-colega-y-amigo-armando-zavala-se-nos-fue-el-mas-grande": "2026-10-27",
+      "https://bichosdecampo.com/fallecio-armando-zavala-un-historico-productor-autoconvocado-que-hizo-propia-la-lucha-para-defender-al-campo-y-puso-el-ojo-en-las-causas-justas": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17977,7 +18027,15 @@
       "fadel convierte los subproductos avicolas en nuevos negocios comenzo a exportar a chile aceite de soja derivada de su propia produccion del alimentos balanceados": "2026-10-27",
       "dolor en el agro fallecio armando zavala productor y comunicador que hizo de la defensa del sector su bandera": "2026-10-27",
       "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora": "2026-10-27",
-      "riesgo pais hoy 27 de octubre de 2026": "2026-10-27"
+      "riesgo pais hoy 27 de octubre de 2026": "2026-10-27",
+      "precio del maiz en rosario hoy 27 octubre 2026": "2026-10-27",
+      "precio del trigo en rosario hoy 27 octubre 2026": "2026-10-27",
+      "precio del girasol en rosario hoy 27 octubre 2026": "2026-10-27",
+      "precio de la soja en rosario hoy 27 octubre 2026": "2026-10-27",
+      "precio del sorgo en rosario hoy 27 octubre 2026": "2026-10-27",
+      "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina": "2026-10-27",
+      "el autoconvocado silvio montenegro tiene mucho que decir para despedir a su colega y amigo armando zavala se nos fue el mas grande": "2026-10-27",
+      "fallecio armando zavala un historico productor autoconvocado que hizo propia la lucha para defender al campo y puso el ojo en las causas justas": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19060,7 +19118,15 @@
       "3ab6763b96df7a2a": "2026-10-27",
       "9102facd3a58d606": "2026-10-27",
       "5148c50a0293e333": "2026-10-27",
-      "00707d4f3906cc46": "2026-10-27"
+      "00707d4f3906cc46": "2026-10-27",
+      "acf1714dc4d9de69": "2026-10-27",
+      "ea22355d80de0840": "2026-10-27",
+      "e81c1f895e182ecf": "2026-10-27",
+      "51020aa1448156bc": "2026-10-27",
+      "28ef0f7c65acb4a2": "2026-10-27",
+      "5d83cbe86d778713": "2026-10-27",
+      "a71dc9246e748359": "2026-10-27",
+      "8a5437311152c8bf": "2026-10-27"
     }
   },
   "elegidas": [
@@ -29706,9 +29772,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0316d35dd664_portada.jpg"
+    },
+    {
+      "id": "c120dacf9bc6",
+      "cuando": "2026-10-27T11:20-03:00",
+      "titulo_original": "Impuestos, sanidad e informalidad: los “sobrecostos” que restan competitividad en la industria frigorífica",
+      "descripcion": "La industria frigorífica enfrenta dificultades estructurales que no podemos seguir postergando, Si logramos estabilidad, seguridad jurídica y una reducción de los sobrecostos que arrastra la actividad, la ganadería argentina tiene todo para crecer.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica/",
+      "titular": "Advierten sobrecostos y menor oferta en la industria frigorífica argentina",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 61,
+        "commercial_score": 58,
+        "subtema": "ganaderia",
+        "tema": "industria frigorífica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta a toda la cadena cárnica nacional y plantea un debate sobre costos y competitividad.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          60
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T11:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "94725aa0-ec2d-474a-9664-e10f44297f15",
+          "slug": "advierten-sobrecostos-y-menor-oferta-que-afectan-a-la-industria-7ff99e",
+          "url": "https://www.diariolacampaña.com.ar/n/advierten-sobrecostos-y-menor-oferta-que-afectan-a-la-industria-7ff99e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1743457010078609",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17873325510640852",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c120dacf9bc6_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8690be8d3dd1",
+      "rep": {
+        "id": "8690be8d3dd1",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
+        "titulo": "ACA obtuvo la primera certificación Welfair® de bienestar animal para un feedlot en Argentina",
+        "titulo_norm": "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina",
+        "descripcion": "El establecimiento Los Aromos, ubicado en Cafferata, Santa Fe, fue reconocido por cumplir con estándares internacionales de bienestar animal. La certificación se basa en indicadores científicos y una evaluación independiente, y representa un avance para la producción ganadera argentina.",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249051_59664591.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-27T11:19-03:00",
+        "capturado": "2026-10-27T11:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "5d83cbe86d778713"
+      },
+      "grupo": [
+        {
+          "id": "8690be8d3dd1",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html",
+          "titulo": "ACA obtuvo la primera certificación Welfair® de bienestar animal para un feedlot en Argentina",
+          "titulo_norm": "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina",
+          "descripcion": "El establecimiento Los Aromos, ubicado en Cafferata, Santa Fe, fue reconocido por cumplir con estándares internacionales de bienestar animal. La certificación se basa en indicadores científicos y una evaluación independiente, y representa un avance para la producción ganadera argentina.",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249051_59664591.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-27T11:19-03:00",
+          "capturado": "2026-10-27T11:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5d83cbe86d778713"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 10,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "bienestar animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es un hito importante en ganadería y certificación de calidad en la región pampeana.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T11:20-03:00"
+    },
     {
       "id": "96b2b21b9ed7",
       "rep": {
@@ -29842,73 +30029,6 @@
         ]
       },
       "cuando": "2026-10-27T10:20-03:00"
-    },
-    {
-      "id": "c120dacf9bc6",
-      "rep": {
-        "id": "c120dacf9bc6",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica/",
-        "canonical_url": "https://infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica",
-        "titulo": "Impuestos, sanidad e informalidad: los “sobrecostos” que restan competitividad en la industria frigorífica",
-        "titulo_norm": "impuestos sanidad e informalidad los sobrecostos que restan competitividad en la industria frigorifica",
-        "descripcion": "La industria frigorífica enfrenta dificultades estructurales que no podemos seguir postergando, Si logramos estabilidad, seguridad jurídica y una reducción de los sobrecostos que arrastra la actividad, la ganadería argentina tiene todo para crecer.",
-        "imagen_url": "",
-        "autor": "Columnistas",
-        "publicado": "2026-10-27T09:16-03:00",
-        "capturado": "2026-10-27T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "650879e4044b7333"
-      },
-      "grupo": [
-        {
-          "id": "c120dacf9bc6",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica/",
-          "canonical_url": "https://infocampo.com.ar/impuestos-sanidad-e-informalidad-los-sobrecostos-que-restan-competitividad-en-la-industria-frigorifica",
-          "titulo": "Impuestos, sanidad e informalidad: los “sobrecostos” que restan competitividad en la industria frigorífica",
-          "titulo_norm": "impuestos sanidad e informalidad los sobrecostos que restan competitividad en la industria frigorifica",
-          "descripcion": "La industria frigorífica enfrenta dificultades estructurales que no podemos seguir postergando, Si logramos estabilidad, seguridad jurídica y una reducción de los sobrecostos que arrastra la actividad, la ganadería argentina tiene todo para crecer.",
-          "imagen_url": "",
-          "autor": "Columnistas",
-          "publicado": "2026-10-27T09:16-03:00",
-          "capturado": "2026-10-27T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "650879e4044b7333"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 11,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 61,
-        "commercial_score": 58,
-        "subtema": "ganaderia",
-        "tema": "industria frigorífica",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta a toda la cadena cárnica nacional y plantea un debate sobre costos y competitividad.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          60
-        ]
-      },
-      "cuando": "2026-10-27T10:00-03:00"
     },
     {
       "id": "c1a267984b18",
@@ -30313,8 +30433,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T11:03:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T11:23:34-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
