@@ -50,6 +50,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reels import cercania as CER
+from reels import colab_agro as CA
 from reels import cupo as CUPO
 from reels import distribuidor as DIST
 from reels import geografia as GEO
@@ -579,16 +580,20 @@ def publicar_carrusel_instagram(pieza: dict, slides: list, nombre: str) -> dict:
     ubic = UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
     if ubic:
         params["location_id"] = ubic
+    # Lo del campo, también en @diarioyradioagro como colaboración (reels/colab_agro.py, 27/10/2026).
+    colab = CA.colaborador_para(caption, uid)
+    crear = lambda p: _contenedor_listo(uid, tok, p)                       # noqa: E731
     try:
-        padre = _contenedor_listo(uid, tok, params)
+        padre, colab = CA.contenedor(crear, params, colab)
     except FalloRed as e:
         if not ubic or "location" not in str(e).lower():
             raise
         params.pop("location_id", None)              # una ubicación rechazada no cuesta el posteo
         ubic = ""
-        padre = _contenedor_listo(uid, tok, params)
+        padre, colab = CA.contenedor(crear, params, colab)
     media_id = _publicar_contenedor(uid, tok, padre, caption)
-    return {"id": media_id or None, "formato": "carrusel", "diapositivas": len(slides), "ubicacion": ubic or None}
+    return {"id": media_id or None, "formato": "carrusel", "diapositivas": len(slides), "ubicacion": ubic or None,
+            "colab": CA.aceptar(media_id) if colab and media_id else None}
 
 
 def publicar_album_facebook(pieza: dict, slides: list, url_web: str = "") -> dict:
@@ -627,18 +632,23 @@ def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
     params = IG.contenedor_reel(url, caption, ubicacion=ubic)      # ← la regla del reel de prueba
     portada = portada_del_reel(pieza, mp4)
     nombre_portada = f"{Path(nombre).stem}_portada.jpg"
+    # Lo del campo, también en @diarioyradioagro como colaboración (reels/colab_agro.py, 27/10/2026). Con
+    # la cuenta de agro publicando acá (agro/publicar.py) el uid no es el del diario y no hay colab.
+    colab = CA.colaborador_para(caption, uid)
+    crear = lambda p: contenedor_con_portada(uid, tok, p, portada, nombre_portada)   # noqa: E731
     try:
-        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
+        (cid, con_portada), colab = CA.contenedor(crear, params, colab)
     except FalloRed as e:
         if not ubic or "location" not in str(e).lower():
             raise
         # Una ubicación que Instagram no acepta no puede costar el reel: sale sin ella.
         params.pop("location_id", None)
         ubic = ""
-        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
+        (cid, con_portada), colab = CA.contenedor(crear, params, colab)
     media_id = _publicar_contenedor(uid, tok, cid, caption)
     return {"id": media_id or None, "prueba": json.loads(params.get("trial_params") or "null"),
-            "ubicacion": ubic or None, "portada": con_portada}
+            "ubicacion": ubic or None, "portada": con_portada,
+            "colab": CA.aceptar(media_id) if colab and media_id else None}
 
 
 # =============================================================================

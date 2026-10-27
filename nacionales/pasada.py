@@ -539,18 +539,25 @@ def publicar_reel_instagram(mp4: Path, caption: str, marca: str, portada: str = 
     from reels import instagram as IG
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    from reels import colab_agro as CA
     url = PUB.subir_a_release(mp4, f"variedad_{marca}_{mp4.name}")
-    cid, con_portada = PUB.contenedor_con_portada(uid, tok, IG.contenedor_reel(url, caption, prueba=False),
-                                                  portada, f"variedad_{marca}_portada.jpg")
-    return {"id": PUB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": con_portada}
+    # Lo del campo, también en @diarioyradioagro como colaboración (reels/colab_agro.py, 27/10/2026).
+    (cid, con_portada), colab = CA.contenedor(
+        lambda p: PUB.contenedor_con_portada(uid, tok, p, portada, f"variedad_{marca}_portada.jpg"),
+        IG.contenedor_reel(url, caption, prueba=False), CA.colaborador_para(caption, uid))
+    media_id = PUB._publicar_contenedor(uid, tok, cid, caption) or None
+    return {"id": media_id, "portada": con_portada, "colab": CA.aceptar(media_id) if colab and media_id else None}
 
 
 def publicar_imagen_instagram(jpg: Path, caption: str, marca: str) -> dict:
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    from reels import colab_agro as CA
     url = PUB.subir_a_release(jpg, f"variedad_{marca}.jpg")
-    cid = PUB._contenedor_listo(uid, tok, {"image_url": url, "caption": caption})
-    return {"id": PUB._publicar_contenedor(uid, tok, cid, caption) or None}
+    cid, colab = CA.contenedor(lambda p: PUB._contenedor_listo(uid, tok, p), {"image_url": url, "caption": caption},
+                               CA.colaborador_para(caption, uid))
+    media_id = PUB._publicar_contenedor(uid, tok, cid, caption) or None
+    return {"id": media_id, "colab": CA.aceptar(media_id) if colab and media_id else None}
 
 
 # =============================================================================
@@ -577,16 +584,20 @@ def caption_carrusel(titulares: list, cuando: datetime) -> str:
     return texto[:PUB.MAX_CAPTION_IG]
 
 
-def publicar_carrusel(jpgs: list, caption: str, marca: str) -> dict:
+def publicar_carrusel(jpgs: list, caption: str, marca: str, colab: bool = True) -> dict:
+    """`colab=False`: el resumen de varias notas juntas no invita a @diarioyradioagro."""
+    from reels import colab_agro as CA
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     hijos = []
     for i, j in enumerate(jpgs):
         url = PUB.subir_a_release(Path(j), f"nacionales_{marca}_{i:02d}.jpg")
         hijos.append(PUB._contenedor_listo(uid, tok, {"image_url": url, "is_carousel_item": "true"}))
-    padre = PUB._contenedor_listo(uid, tok, {"media_type": "CAROUSEL", "children": ",".join(hijos),
-                                             "caption": caption})
-    return {"id": PUB._publicar_contenedor(uid, tok, padre, caption) or None, "diapositivas": len(jpgs)}
+    padre, colab_ = CA.contenedor(lambda p: PUB._contenedor_listo(uid, tok, p),
+                                  {"media_type": "CAROUSEL", "children": ",".join(hijos), "caption": caption},
+                                  CA.colaborador_para(caption, uid) if colab else "")
+    media_id = PUB._publicar_contenedor(uid, tok, padre, caption) or None
+    return {"id": media_id, "diapositivas": len(jpgs), "colab": CA.aceptar(media_id) if colab_ and media_id else None}
 
 
 def texto_album_facebook(titulares: list, cuando: datetime) -> str:
@@ -728,7 +739,7 @@ def carrusel(mem: dict, publicar: bool, carpeta: Path, ahora: datetime, elegidas
                 "archivos": [str(j) for j in jpgs]}
     if esperar:                                      # la corrida de las 22 publica a las 23 (24-25/10/2026)
         _esperar_hasta(HORA_RESUMEN_REEL)
-    res = _resultado(publicar_carrusel, jpgs, caption, ahora.strftime("%Y%m%d"))
+    res = _resultado(publicar_carrusel, jpgs, caption, ahora.strftime("%Y%m%d"), False)
     res["piezas"] = [u for u, _ in elegidas]
     if carrusel_facebook():
         res["facebook"] = _resultado(publicar_album_facebook, jpgs, texto_album_facebook(titulares, ahora))

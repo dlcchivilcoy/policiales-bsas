@@ -225,6 +225,10 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          # Colab con @diarioyradioagro (reels/colab_agro.py, 27/10/2026): la cuenta de agro acepta al momento.
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
           IG_POR_PASADA: ${{ vars.IG_POR_PASADA }}
           IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
           # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 2 por pasada,

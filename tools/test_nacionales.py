@@ -1135,7 +1135,7 @@ _noche3 = [dict(nota_cat("Aumentan los peajes de la autopista Acceso Oeste desde
                 fecha=_mie(21).timestamp())]
 _hora_car = []
 _pc0 = PA.publicar_carrusel
-PA.publicar_carrusel = lambda jpgs, cap, marca: _hora_car.append(reloj["ahora"]) or {"id": "car23", "diapositivas": len(jpgs)}
+PA.publicar_carrusel = lambda jpgs, cap, marca, *_: _hora_car.append(reloj["ahora"]) or {"id": "car23", "diapositivas": len(jpgs)}
 try:
     inf_k = PA.pasada(True, redactar=redactar_lam, notas=_noche3, notas_variedad=[], agenda=True,
                       leer_pagina=lambda u: SIN)

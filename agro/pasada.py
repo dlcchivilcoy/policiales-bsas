@@ -759,6 +759,11 @@ def main():
         return 0
     if a.fuera_de_cupo and not a.tipo:
         ap.error("--fuera-de-cupo necesita --tipo")
+    if a.publicar:
+        # Lo del campo que publica @diarioyradio llega como invitación a colaborar (reels/colab_agro.py,
+        # 27/10/2026): acá se aceptan las que no se pudieron aceptar al momento (las del bot del diario).
+        from reels import colab_agro
+        colab_agro.aceptar_pendientes()
     ruta = correr(publicar=a.publicar, tipo=a.tipo, bloque=a.bloque, fuera_de_cupo=a.fuera_de_cupo,
                   max_piezas=a.piezas, con_reel=not a.sin_reel, horas=a.horas)
     fallas = []
