@@ -16363,6 +16363,27 @@
         55,
         64
       ]
+    },
+    "e641a764feaab765": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 12,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 30,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "bioactivos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una tecnología biotecnológica muy incipiente y de nicho, con nula llegada práctica actual al productor de la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17487,7 +17508,10 @@
       "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola": "2026-10-27",
       "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta": "2026-10-27",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249059-por-que-la-retencion-de-talentos-es-un-desafio-para-el-campo-y-los-crea-segun-fernando-preumayer.html": "2026-10-27",
-      "https://agrositio.com.ar/noticia/249055-creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10000-millones-para-el-sector-ganadero.html": "2026-10-27"
+      "https://agrositio.com.ar/noticia/249055-creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10000-millones-para-el-sector-ganadero.html": "2026-10-27",
+      "https://infocampo.com.ar/creditos-a-valor-producto-el-gobierno-amplia-el-financiamiento-para-el-sector-ganadero": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/es-una-tomada-de-pelo-escandalo-porque-un-intendente-de-la-campora-bloqueo-una-calle-con-monticulos-nid27102026": "2026-10-27",
+      "https://agfundernews.com/biocle-tackles-bioactives-bioavailability-challenge-with-novel-delivery-tech": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18610,7 +18634,10 @@
       "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola": "2026-10-27",
       "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta": "2026-10-27",
       "por que la retencion de talentos es un desafio para el campo y los crea segun fernando preumayer": "2026-10-27",
-      "creditos en valor producto nuevo cupo de garantias de hasta 10 000 mill para ganaderos": "2026-10-27"
+      "creditos en valor producto nuevo cupo de garantias de hasta 10 000 mill para ganaderos": "2026-10-27",
+      "creditos a valor producto el gobierno amplia el financiamiento para el sector ganadero": "2026-10-27",
+      "es una tomada de pelo escandalo porque un intendente de la campora bloqueo una calle con monticulos de tierra para frenar el robo de vacas": "2026-10-27",
+      "biocle tackles bioactives bioavailability challenge with novel delivery tech": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19733,7 +19760,10 @@
       "c2dfa24b84adae5a": "2026-10-27",
       "83687cad0d9acf41": "2026-10-27",
       "6563505b9387820c": "2026-10-27",
-      "2ebab5bf582ee64f": "2026-10-27"
+      "2ebab5bf582ee64f": "2026-10-27",
+      "afa0d7cbe6e52f24": "2026-10-27",
+      "e89aa6fc7b63818f": "2026-10-27",
+      "e641a764feaab765": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30941,6 +30971,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bb79481fb7a2_portada.jpg"
+    },
+    {
+      "id": "850a8817691a",
+      "cuando": "2026-10-27T18:00-03:00",
+      "titulo_original": "Productores del cinturón hortícola de La Plata harán un tractorazo para reclamar por caminos destruidos, robos y falta de iluminación",
+      "descripcion": "Los productores hortícolas del cinturón verde de La Plata realizarán este miércoles 28 de octubre un tractorazo hasta la Municipalidad para reclamar por el estado de los caminos rurales, la falta de iluminación y los problemas de seguridad que afectan a las familias y a la actividad productiva. La p",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion/",
+      "titular": "Horticultores de La Plata realizarán un tractorazo por caminos y seguridad",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 4,
+        "ai_score": 65,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "horticultura la plata",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directo a productores bonaerenses y genera alta conversación por el reclamo gremial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "ugeLSAterNE",
+          "url": "https://youtube.com/shorts/ugeLSAterNE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "32727616-1dc7-4faf-be2e-d805eb71df0e",
+          "slug": "tractorazo-horticola-en-la-plata-reclaman-por-caminos-robos-y-1444ad",
+          "url": "https://www.diariolacampaña.com.ar/n/tractorazo-horticola-en-la-plata-reclaman-por-caminos-robos-y-1444ad",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "922796340764569",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18641375605031533",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_850a8817691a_portada.jpg"
     }
   ],
   "pendientes": [
@@ -31595,73 +31690,6 @@
       "cuando": "2026-10-27T10:00-03:00"
     },
     {
-      "id": "850a8817691a",
-      "rep": {
-        "id": "850a8817691a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion/",
-        "canonical_url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion",
-        "titulo": "Productores del cinturón hortícola de La Plata harán un tractorazo para reclamar por caminos destruidos, robos y falta de iluminación",
-        "titulo_norm": "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion",
-        "descripcion": "Los productores hortícolas del cinturón verde de La Plata realizarán este miércoles 28 de octubre un tractorazo hasta la Municipalidad para reclamar por el estado de los caminos rurales, la falta de iluminación y los problemas de seguridad que afectan a las familias y a la actividad productiva. La protesta partirá de la zona de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-26-at-15.51.27.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-26T19:16-03:00",
-        "capturado": "2026-10-26T19:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "46ec1ce7cf04e6e9"
-      },
-      "grupo": [
-        {
-          "id": "850a8817691a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion/",
-          "canonical_url": "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion",
-          "titulo": "Productores del cinturón hortícola de La Plata harán un tractorazo para reclamar por caminos destruidos, robos y falta de iluminación",
-          "titulo_norm": "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion",
-          "descripcion": "Los productores hortícolas del cinturón verde de La Plata realizarán este miércoles 28 de octubre un tractorazo hasta la Municipalidad para reclamar por el estado de los caminos rurales, la falta de iluminación y los problemas de seguridad que afectan a las familias y a la actividad productiva. La protesta partirá de la zona de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-26-at-15.51.27.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-26T19:16-03:00",
-          "capturado": "2026-10-26T19:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "46ec1ce7cf04e6e9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 12,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 4,
-        "ai_score": 65,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "horticultura la plata",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directo a productores bonaerenses y genera alta conversación por el reclamo gremial.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          65
-        ]
-      },
-      "cuando": "2026-10-26T19:22-03:00"
-    },
-    {
       "id": "185134469419",
       "rep": {
         "id": "185134469419",
@@ -31863,8 +31891,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T17:24:00-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T18:06:33-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
