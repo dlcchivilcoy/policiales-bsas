@@ -16074,6 +16074,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "364781725bbc68fd": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "carne porcina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un tema relevante para la diversificación productiva en la región pampeana, con datos claros del INTA.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        65
+      ]
     }
   },
   "indice": {
@@ -17179,7 +17204,8 @@
       "https://futurefarming.com/tech-in-focus/field-robots/laser-weeding-and-electrocution-at-the-same-time": "2026-10-27",
       "https://bichosdecampo.com/tantos-escandalos-rodean-la-gestion-libertaria-que-el-inym-se-llamara-ahora-instituto-de-nominaciones-y-meritos-el-organismo-yerbatero-se-lleno-de-designaciones-sospechosas": "2026-10-27",
       "https://bichosdecampo.com/lo-barato-puede-salir-caro-en-la-cria-bovina-el-inta-encontro-que-restringir-la-alimentacion-de-las-vacas-prenadas-puede-restarle-10-kilos-al-ternero": "2026-10-27",
-      "https://intainforma.inta.gob.ar/mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos": "2026-10-27"
+      "https://intainforma.inta.gob.ar/mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos": "2026-10-27",
+      "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18283,7 +18309,8 @@
       "laser weeding and electrocution at the same time": "2026-10-27",
       "tantos escandalos rodean la gestion libertaria que el inym se llamara ahora instituto de nominaciones y meritos el organismo yerbatero se lleno de designaciones sospechosas": "2026-10-27",
       "lo barato puede salir caro en la cria bovina el inta encontro que restringir la alimentacion de las vacas prenadas puede restarle 10 kilos al ternero": "2026-10-27",
-      "mejoramiento genetico de alfalfa el inta presento innovaciones clave para sistemas productivos": "2026-10-27"
+      "mejoramiento genetico de alfalfa el inta presento innovaciones clave para sistemas productivos": "2026-10-27",
+      "carne porcina entre las proteinas de mayor crecimiento en la argentina": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19387,7 +19414,8 @@
       "e40e3734a3a91e10": "2026-10-27",
       "2db6e779d1d3cd52": "2026-10-27",
       "9fb8b07354189127": "2026-10-27",
-      "f23d9ac47fb7f776": "2026-10-27"
+      "f23d9ac47fb7f776": "2026-10-27",
+      "364781725bbc68fd": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30318,6 +30346,73 @@
   ],
   "pendientes": [
     {
+      "id": "a6b0bdc5f439",
+      "rep": {
+        "id": "a6b0bdc5f439",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina/",
+        "canonical_url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina",
+        "titulo": "Carne porcina, entre las proteínas de mayor crecimiento en la Argentina",
+        "titulo_norm": "carne porcina entre las proteinas de mayor crecimiento en la argentina",
+        "descripcion": "Un análisis del INTA Marcos Juárez —Córdoba— destaca el avance de su consumo en los últimos años y explica cuáles son los factores que lo impulsan. La mejora en la calidad de la carne, una mayor presencia de puntos de venta especializados y, sobre todo, un menor costo final por kilogramo explica buena parte de este avance. La entrada Carne porcina, entre las proteínas de mayor crecimiento en la Argentina se publicó primero en INTA Informa.",
+        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-27-at-12.31.31.jpeg",
+        "autor": "Cecilia Ayesta",
+        "publicado": "2026-10-27T14:02-03:00",
+        "capturado": "2026-10-27T14:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "364781725bbc68fd"
+      },
+      "grupo": [
+        {
+          "id": "a6b0bdc5f439",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina/",
+          "canonical_url": "https://intainforma.inta.gob.ar/carne-porcina-entre-las-proteinas-de-mayor-crecimiento-en-la-argentina",
+          "titulo": "Carne porcina, entre las proteínas de mayor crecimiento en la Argentina",
+          "titulo_norm": "carne porcina entre las proteinas de mayor crecimiento en la argentina",
+          "descripcion": "Un análisis del INTA Marcos Juárez —Córdoba— destaca el avance de su consumo en los últimos años y explica cuáles son los factores que lo impulsan. La mejora en la calidad de la carne, una mayor presencia de puntos de venta especializados y, sobre todo, un menor costo final por kilogramo explica buena parte de este avance. La entrada Carne porcina, entre las proteínas de mayor crecimiento en la Argentina se publicó primero en INTA Informa.",
+          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-27-at-12.31.31.jpeg",
+          "autor": "Cecilia Ayesta",
+          "publicado": "2026-10-27T14:02-03:00",
+          "capturado": "2026-10-27T14:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "364781725bbc68fd"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "carne porcina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es un tema relevante para la diversificación productiva en la región pampeana, con datos claros del INTA.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "cuando": "2026-10-27T14:21-03:00"
+    },
+    {
       "id": "bc70eb5e4d13",
       "rep": {
         "id": "bc70eb5e4d13",
@@ -30913,7 +31008,7 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T14:04:18-03:00",
+  "actualizado": "2026-10-27T14:22:11-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
