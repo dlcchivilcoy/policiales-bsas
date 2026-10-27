@@ -15852,6 +15852,165 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5eb3c9d7453db3d0": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 5,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 40,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "tambo pastoril",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un caso inspirador de lechería eficiente en Nueva Zelanda, pero queda lejos de la realidad pampeana.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0338dad6f91b7f56": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cifras macroeconómicas récord que mueven a todo el sector exportador nacional.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "447970aeb5054299": {
+      "impacto_economico": 12,
+      "interes_productores": 9,
+      "innovacion": 2,
+      "cercania_argentina": 7,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 52,
+      "commercial_score": 55,
+      "subtema": "mercados",
+      "tema": "cebada",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Panorama útil para productores de cebada, aunque con fuerte peso internacional.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        49
+      ]
+    },
+    "0c27055a53e922db": {
+      "impacto_economico": 13,
+      "interes_productores": 7,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 52,
+      "commercial_score": 54,
+      "subtema": "agro",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Carga impositiva elevada en economías regionales, tema recurrente de costos y reglas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        48
+      ]
+    },
+    "0c639ad4afcd111d": {
+      "impacto_economico": 5,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 48,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "dirigencia rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Homenaje a una figura histórica del campo; genera alta conversación pero bajo impacto económico directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "033f26e2c3da6710": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 80,
+      "subtema": "empresas",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cierre de planta de fertilizantes clave que afecta provisión local y costos de insumos en la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e40e3734a3a91e10": {
+      "impacto_economico": 9,
+      "interes_productores": 8,
+      "innovacion": 15,
+      "cercania_argentina": 3,
+      "cercania_pba": 1,
+      "potencial_reel": 8,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 58,
+      "commercial_score": 58,
+      "subtema": "agtech",
+      "tema": "robótica agrícola",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Innovación robótica punta en control de malezas, muy visual pero aún distante comercialmente para la pampa.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        64
+      ]
     }
   },
   "indice": {
@@ -16944,7 +17103,17 @@
       "https://infocampo.com.ar/precio-del-sorgo-hoy-27-octubre-2026": "2026-10-27",
       "https://agrositio.com.ar/noticia/249051-aca-obtuvo-la-primera-certificacion-welfair-de-bienestar-animal-para-un-feedlot-en-argentina.html": "2026-10-27",
       "https://bichosdecampo.com/el-autoconvocado-silvio-montenegro-tiene-mucho-que-decir-para-despedir-a-su-colega-y-amigo-armando-zavala-se-nos-fue-el-mas-grande": "2026-10-27",
-      "https://bichosdecampo.com/fallecio-armando-zavala-un-historico-productor-autoconvocado-que-hizo-propia-la-lucha-para-defender-al-campo-y-puso-el-ojo-en-las-causas-justas": "2026-10-27"
+      "https://bichosdecampo.com/fallecio-armando-zavala-un-historico-productor-autoconvocado-que-hizo-propia-la-lucha-para-defender-al-campo-y-puso-el-ojo-en-las-causas-justas": "2026-10-27",
+      "https://todoagro.com.ar/el-tambo-donde-el-concentrado-no-es-bienvenido-900-vacas-alimentadas-a-pasto-y-una-apuesta-por-la-sencillez": "2026-10-27",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-27-octubre-2026": "2026-10-27",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-27-octubre-2026": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249052-cebada-panorama-de-produccion-y-mercados-octubre-2026.html": "2026-10-27",
+      "https://bichosdecampo.com/luego-de-la-prohibicion-de-circular-y-el-acting-en-redes-sociales-los-productores-le-respondieron-al-intendente-de-pehuajo-los-caminos-rurales-nunca-estuvieron-a-la-altur": "2026-10-27",
+      "https://bichosdecampo.com/la-fruticultura-del-alto-valle-tambien-exporta-impuestos-por-cada-caja-de-peras-y-manzanas-que-vende-al-exterior-arrastra-una-carga-fiscal-del-23-que-no-logra-compensar": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/murio-armando-zavala-el-productor-del-megafono-que-convirtio-la-defensa-del-campo-en-una-causa-de-nid27102026": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/tiene-110-empleados-bunge-cerro-una-planta-de-productos-para-el-campo-de-mas-de-50-anos-nid27102026": "2026-10-27",
+      "https://futurefarming.com/tech-in-focus/field-robots/laser-weeding-and-electrocution-at-the-same-time": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18035,7 +18204,17 @@
       "precio del sorgo en rosario hoy 27 octubre 2026": "2026-10-27",
       "aca obtuvo la primera certificacion welfair de bienestar animal para un feedlot en argentina": "2026-10-27",
       "el autoconvocado silvio montenegro tiene mucho que decir para despedir a su colega y amigo armando zavala se nos fue el mas grande": "2026-10-27",
-      "fallecio armando zavala un historico productor autoconvocado que hizo propia la lucha para defender al campo y puso el ojo en las causas justas": "2026-10-27"
+      "fallecio armando zavala un historico productor autoconvocado que hizo propia la lucha para defender al campo y puso el ojo en las causas justas": "2026-10-27",
+      "el tambo donde el concentrado no es bienvenido 900 vacas alimentadas a pasto y una apuesta por la sencillez": "2026-10-27",
+      "dolar blue a cuanto cotizan hoy en mendoza 27 octubre 2026": "2026-10-27",
+      "euro blue hoy precio y cotizacion de este 27 octubre 2026": "2026-10-27",
+      "apertura comercial record de exportaciones con nuevos motores y el desafio de consolidar el crecimiento": "2026-10-27",
+      "cebada panorama de produccion y mercados octubre 2026": "2026-10-27",
+      "luego de la prohibicion de circular y el acting en redes sociales los productores le respondieron al intendente de pehuajo los caminos rurales nunca estuvieron a la altura": "2026-10-27",
+      "la fruticultura del alto valle tambien exporta impuestos por cada caja de peras y manzanas que vende al exterior arrastra una carga fiscal del 23 que no logra compensar": "2026-10-27",
+      "murio armando zavala el productor del megafono que convirtio la defensa del campo en un compromiso que dejo una huella": "2026-10-27",
+      "tiene 110 empleados bunge cerro una planta de productos para el campo de mas de 50 anos": "2026-10-27",
+      "laser weeding and electrocution at the same time": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19126,7 +19305,17 @@
       "28ef0f7c65acb4a2": "2026-10-27",
       "5d83cbe86d778713": "2026-10-27",
       "a71dc9246e748359": "2026-10-27",
-      "8a5437311152c8bf": "2026-10-27"
+      "8a5437311152c8bf": "2026-10-27",
+      "5eb3c9d7453db3d0": "2026-10-27",
+      "baf5578e7d0d7f92": "2026-10-27",
+      "a4a168606d9d1173": "2026-10-27",
+      "0338dad6f91b7f56": "2026-10-27",
+      "447970aeb5054299": "2026-10-27",
+      "12ee9369b27575ee": "2026-10-27",
+      "0c27055a53e922db": "2026-10-27",
+      "0c639ad4afcd111d": "2026-10-27",
+      "033f26e2c3da6710": "2026-10-27",
+      "e40e3734a3a91e10": "2026-10-27"
     }
   },
   "elegidas": [
@@ -29830,9 +30019,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c120dacf9bc6_portada.jpg"
+    },
+    {
+      "id": "9f76dae3b1fd",
+      "cuando": "2026-10-27T13:00-03:00",
+      "titulo_original": "Tiene 110 empleados: Bunge cerró una planta de productos para el campo de más de 50 años",
+      "descripcion": "La empresa dejó de producir amoníaco y tiosulfato de amonio, usados para fertilizantes; la medida está relacionada con problemas de infraestructura, limitaciones tecnológicas y cambios en las condiciones del mercado",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/tiene-110-empleados-bunge-cerro-una-planta-de-productos-para-el-campo-de-mas-de-50-anos-nid27102026/",
+      "titular": "Bunge cerró planta histórica de fertilizantes en Campana con 110 empleados",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 80,
+        "subtema": "empresas",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cierre de planta de fertilizantes clave que afecta provisión local y costos de insumos en la zona núcleo.",
+        "tema_doc": "costos",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "gxmmACukbKs",
+          "url": "https://youtube.com/shorts/gxmmACukbKs",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "27f11d33-ff6d-467d-830e-1e361a9bd60f",
+          "slug": "bunge-cerro-su-historica-planta-de-fertilizantes-en-campana-y-7a8ba0",
+          "url": "https://www.diariolacampaña.com.ar/n/bunge-cerro-su-historica-planta-de-fertilizantes-en-campana-y-7a8ba0",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1807894530350505",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18097332491125568",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9f76dae3b1fd_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "45a22fb332f7",
+      "rep": {
+        "id": "45a22fb332f7",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
+        "titulo": "Apertura Comercial: Récord de Exportaciones con Nuevos Motores y el Desafío de Consolidar el Crecimiento",
+        "titulo_norm": "apertura comercial record de exportaciones con nuevos motores y el desafio de consolidar el crecimiento",
+        "descripcion": "Después de una década en la cual Argentina tuvo una participación muy errática en el comercio mundial, nuestro país atraviesa un cambio de escala en su inserción externa. Las exportaciones de bienes llegaron a USD 87.000 millones en 2025 (+9,1% interanual) y las proyecciones anticipan para este año un récord por encima de los USD 100.000 millones....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249053_13926105.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-27T12:20-03:00",
+        "capturado": "2026-10-27T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "0338dad6f91b7f56"
+      },
+      "grupo": [
+        {
+          "id": "45a22fb332f7",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249053-apertura-comercial-record-de-exportaciones-con-nuevos-motores-y-el-desafio-de-consolidar-el-crecimiento.html",
+          "titulo": "Apertura Comercial: Récord de Exportaciones con Nuevos Motores y el Desafío de Consolidar el Crecimiento",
+          "titulo_norm": "apertura comercial record de exportaciones con nuevos motores y el desafio de consolidar el crecimiento",
+          "descripcion": "Después de una década en la cual Argentina tuvo una participación muy errática en el comercio mundial, nuestro país atraviesa un cambio de escala en su inserción externa. Las exportaciones de bienes llegaron a USD 87.000 millones en 2025 (+9,1% interanual) y las proyecciones anticipan para este año un récord por encima de los USD 100.000 millones....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249053_13926105.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-27T12:20-03:00",
+          "capturado": "2026-10-27T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "0338dad6f91b7f56"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cifras macroeconómicas récord que mueven a todo el sector exportador nacional.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T13:00-03:00"
+    },
     {
       "id": "8690be8d3dd1",
       "rep": {
@@ -30433,8 +30746,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T11:23:34-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T13:05:24-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
