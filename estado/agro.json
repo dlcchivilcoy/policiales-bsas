@@ -15270,6 +15270,27 @@
         65,
         65
       ]
+    },
+    "bde5739033515c5b": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 73,
+      "commercial_score": 70,
+      "subtema": "empresas",
+      "tema": "bayer",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante caso de adopción de agricultura de precisión en la región núcleo, ideal para mostrar prácticas sustentables.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -16310,7 +16331,9 @@
       "https://croplife.com/croplife-top-100/growmark-invests-in-wabash-valley-resources-indiana-ammonia-fertilizer-project": "2026-10-26",
       "https://bichosdecampo.com/avalancha-bajista-para-la-soja-luego-de-la-super-devaluacion-brasilena-promovida-por-la-victoria-de-lula": "2026-10-26",
       "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026": "2026-10-26",
-      "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion": "2026-10-26"
+      "https://bichosdecampo.com/productores-del-cinturon-horticola-de-la-plata-haran-un-tractorazo-para-reclamar-por-caminos-destruidos-robos-y-falta-de-iluminacion": "2026-10-26",
+      "https://infocampo.com.ar/la-industria-ha-demostrado-vocacion-de-dialogo-semilleros-redoblan-la-presion-por-una-nueva-ley": "2026-10-26",
+      "https://lanacion.com.ar/economia/campo/una-empresa-agropecuaria-con-una-historia-desde-1885-y-otra-que-viene-de-1930-entraron-a-la-red-de-nid26102026": "2026-10-26"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -17349,7 +17372,9 @@
       "growmark invests in wabash valley resources indiana ammonia fertilizer project": "2026-10-26",
       "avalancha bajista para la soja luego de la super devaluacion brasilena promovida por la victoria de lula": "2026-10-26",
       "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos": "2026-10-26",
-      "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion": "2026-10-26"
+      "productores del cinturon horticola de la plata haran un tractorazo para reclamar por caminos destruidos robos y falta de iluminacion": "2026-10-26",
+      "la industria ha demostrado vocacion de dialogo semilleros redoblan la presion por una nueva ley": "2026-10-26",
+      "una empresa agropecuaria con una historia desde 1885 y otra que viene de 1930 entraron a la red de bayer": "2026-10-26"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -18388,7 +18413,9 @@
       "4244dae9342ea951": "2026-10-26",
       "6219bdc9162b3ca1": "2026-10-26",
       "3e05ccf4f356ef50": "2026-10-26",
-      "46ec1ce7cf04e6e9": "2026-10-26"
+      "46ec1ce7cf04e6e9": "2026-10-26",
+      "2c90cda25eee1858": "2026-10-26",
+      "bde5739033515c5b": "2026-10-26"
     }
   },
   "elegidas": [
@@ -28313,9 +28340,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8fccb54bb5e8_portada.jpg"
+    },
+    {
+      "id": "8154d9546f2b",
+      "cuando": "2026-10-26T21:00-03:00",
+      "titulo_original": "Pablo Zurro, intendente de Pehuajó, prohibió la circulación por 48 horas y lanzó una advertencia a tamberos: “No me rompan los caminos”",
+      "descripcion": "El jefe comunal de esa localidad bonaerense anunció que la restricción regirá este lunes y martes, con una excepción para quienes sacan la leche de los tambos; advirtió que podría extenderla si continúan las lluvias",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026/",
+      "titular": "Pehuajó prohíbe circular por caminos rurales debido a lluvias",
+      "volanta": "Infraestructura Rural",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 4,
+        "ai_score": 66,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la logística y producción lechera de la zona núcleo bonaerense por cuestiones climáticas.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          66
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-26T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "ZT4q107v_9s",
+          "url": "https://youtube.com/shorts/ZT4q107v_9s",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "7eb01df7-cef2-4277-99a2-35db0dff2e0a",
+          "slug": "pehuajo-prohibio-la-circulacion-en-caminos-rurales-por-48-horas-4ce28a",
+          "url": "https://www.diariolacampaña.com.ar/n/pehuajo-prohibio-la-circulacion-en-caminos-rurales-por-48-horas-4ce28a",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1839687230702361",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18056729435581113",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8154d9546f2b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "bffe65ca1fb5",
+      "rep": {
+        "id": "bffe65ca1fb5",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/una-empresa-agropecuaria-con-una-historia-desde-1885-y-otra-que-viene-de-1930-entraron-a-la-red-de-nid26102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/una-empresa-agropecuaria-con-una-historia-desde-1885-y-otra-que-viene-de-1930-entraron-a-la-red-de-nid26102026",
+        "titulo": "Una empresa agropecuaria con una historia desde 1885 y otra que viene de 1930 entraron a la red de Bayer",
+        "titulo_norm": "una empresa agropecuaria con una historia desde 1885 y otra que viene de 1930 entraron a la red de bayer",
+        "descripcion": "La compañía incorporó dos establecimientos agropecuarios de Santa Fe y Córdoba a su programa ForwardFarming Members; las empresas familiares utilizan herramientas de agricultura de precisión y prácticas para mejorar la producción y cuidar los suelos",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/FW7DUQICUBCCFGCBRMNDI6IJUU.jpeg?auth=c678c8198b047655f97a8c38298e76cb84c6d9f1e6266e388f5a61142ae4e9cb&smart=true",
+        "autor": "",
+        "publicado": "2026-10-26T19:37-03:00",
+        "capturado": "2026-10-26T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "bde5739033515c5b"
+      },
+      "grupo": [
+        {
+          "id": "bffe65ca1fb5",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/una-empresa-agropecuaria-con-una-historia-desde-1885-y-otra-que-viene-de-1930-entraron-a-la-red-de-nid26102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/una-empresa-agropecuaria-con-una-historia-desde-1885-y-otra-que-viene-de-1930-entraron-a-la-red-de-nid26102026",
+          "titulo": "Una empresa agropecuaria con una historia desde 1885 y otra que viene de 1930 entraron a la red de Bayer",
+          "titulo_norm": "una empresa agropecuaria con una historia desde 1885 y otra que viene de 1930 entraron a la red de bayer",
+          "descripcion": "La compañía incorporó dos establecimientos agropecuarios de Santa Fe y Córdoba a su programa ForwardFarming Members; las empresas familiares utilizan herramientas de agricultura de precisión y prácticas para mejorar la producción y cuidar los suelos",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FW7DUQICUBCCFGCBRMNDI6IJUU.jpeg?auth=c678c8198b047655f97a8c38298e76cb84c6d9f1e6266e388f5a61142ae4e9cb&smart=true",
+          "autor": "",
+          "publicado": "2026-10-26T19:37-03:00",
+          "capturado": "2026-10-26T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "bde5739033515c5b"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "bayer",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante caso de adopción de agricultura de precisión en la región núcleo, ideal para mostrar prácticas sustentables.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-26T21:00-03:00"
+    },
     {
       "id": "850a8817691a",
       "rep": {
@@ -28382,73 +28537,6 @@
         ]
       },
       "cuando": "2026-10-26T19:22-03:00"
-    },
-    {
-      "id": "8154d9546f2b",
-      "rep": {
-        "id": "8154d9546f2b",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026",
-        "titulo": "Pablo Zurro, intendente de Pehuajó, prohibió la circulación por 48 horas y lanzó una advertencia a tamberos: “No me rompan los caminos”",
-        "titulo_norm": "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos",
-        "descripcion": "El jefe comunal de esa localidad bonaerense anunció que la restricción regirá este lunes y martes, con una excepción para quienes sacan la leche de los tambos; advirtió que podría extenderla si continúan las lluvias",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSF4OEV4EBFADGUF43QTD4RPEI.jpg?auth=765c54e01c329de005be626209fe612d5b61bdfbb11888798d29272689f1a91c&smart=true",
-        "autor": "",
-        "publicado": "2026-10-26T18:44-03:00",
-        "capturado": "2026-10-26T19:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3e05ccf4f356ef50"
-      },
-      "grupo": [
-        {
-          "id": "8154d9546f2b",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/pablo-zurro-intendente-de-pehuajo-prohibio-la-circulacion-por-48-horas-y-lanzo-una-advertencia-a-nid26102026",
-          "titulo": "Pablo Zurro, intendente de Pehuajó, prohibió la circulación por 48 horas y lanzó una advertencia a tamberos: “No me rompan los caminos”",
-          "titulo_norm": "pablo zurro intendente de pehuajo prohibio la circulacion por 48 horas y lanzo una advertencia a tamberos no me rompan los caminos",
-          "descripcion": "El jefe comunal de esa localidad bonaerense anunció que la restricción regirá este lunes y martes, con una excepción para quienes sacan la leche de los tambos; advirtió que podría extenderla si continúan las lluvias",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSF4OEV4EBFADGUF43QTD4RPEI.jpg?auth=765c54e01c329de005be626209fe612d5b61bdfbb11888798d29272689f1a91c&smart=true",
-          "autor": "",
-          "publicado": "2026-10-26T18:44-03:00",
-          "capturado": "2026-10-26T19:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3e05ccf4f356ef50"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 4,
-        "ai_score": 66,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "caminos rurales",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Impacta directamente en la logística y producción lechera de la zona núcleo bonaerense por cuestiones climáticas.",
-        "tema_doc": "reglas",
-        "urgente": true,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          66
-        ]
-      },
-      "cuando": "2026-10-26T19:02-03:00"
     },
     {
       "id": "d3ba1e819e69",
@@ -29109,8 +29197,8 @@
       "cuando": "2026-10-26T07:22-03:00"
     }
   ],
-  "actualizado": "2026-10-26T19:23:27-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-26T21:03:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -32060,16 +32148,16 @@
       },
       "2026-10-26": {
         "fuente": "Banco Nación",
-        "hora": "13:03",
+        "hora": "17:04",
         "billete": {
           "fecha": "2026-10-26",
           "compra": 1510.0,
           "venta": 1560.0
         },
         "divisa": {
-          "fecha": "2026-10-23",
-          "compra": 1520.5,
-          "venta": 1529.5
+          "fecha": "2026-10-26",
+          "compra": 1532.0,
+          "venta": 1541.0
         }
       }
     },
@@ -32246,7 +32334,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 455.1
+        "usd_t": 456.4
       }
     },
     "chicago_maiz": {
@@ -32360,7 +32448,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 179.0
+        "usd_t": 179.1
       }
     },
     "chicago_trigo": {
@@ -32474,7 +32562,7 @@
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 226.4
+        "usd_t": 226.2
       }
     }
   }
