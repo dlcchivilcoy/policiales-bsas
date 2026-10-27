@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-27T00:01:34.000Z",
+  "actualizado": "2026-10-27T00:01:35.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/10/24/incendio-en-el-fonavi-i-investigan-un-conflicto-entre-vecinos/",
@@ -235,6 +235,30 @@
       "volanta": "Robo en Bragado",
       "categoria": "robo",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/10/bomberos-incendio-en-un-auto-en.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-27T00:01:35.000Z",
+      "titulo": "Se prendió fuego un auto en plena marcha en Chacabuco",
+      "descripcion": "Un Chevrolet Astra sufrió un principio de incendio en el sector del motor cuando circulaba por la ciudad. El conductor logró recibir ayuda y los bomberos controlaron la situación. No se registraron heridos.",
+      "texto_tiktok": "Un automóvil sufrió un principio de incendio este fin de semana mientras circulaba por las calles de la ciudad.\n\nEl episodio ocurrió en la intersección de Perón y Quintana, cuando un Chevrolet Astra comenzó a arder en el sector del motor.\n\nEl conductor, identificado como Ramírez y de 44 años, recibió ayuda inicial de un vecino que arrojó agua con un balde.\n\nUna dotación de bomberos voluntarios acudió al lugar y controló rápidamente el siniestro.\n\nAfortunadamente no hubo personas heridas.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Incendio #Bomberos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-26_2135_03_chacabuco_se-prendi-fuego-un-auto-en-ple.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-se-prendio-fuego-un-auto-en-marcha-y-los-bomberos-504749",
+      "youtube_url": "https://youtube.com/shorts/6ZYsZuWQCu4",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Principio de incendio en Chacabuco",
+      "categoria": "incendio",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
