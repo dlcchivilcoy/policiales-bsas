@@ -16338,6 +16338,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6563505b9387820c": {
+      "impacto_economico": 10,
+      "interes_productores": 9,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 60,
+      "subtema": "empresas",
+      "tema": "recursos humanos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a productores grandes y empresas agropecuarias que gestionan equipos, aunque es más conceptual que práctico.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        64
+      ]
     }
   },
   "indice": {
@@ -17460,7 +17485,9 @@
       "https://lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html": "2026-10-27",
       "https://todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador": "2026-10-27",
       "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola": "2026-10-27",
-      "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta": "2026-10-27"
+      "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta": "2026-10-27",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249059-por-que-la-retencion-de-talentos-es-un-desafio-para-el-campo-y-los-crea-segun-fernando-preumayer.html": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249055-creditos-en-valor-producto-nuevo-cupo-de-garantias-de-hasta-10000-millones-para-el-sector-ganadero.html": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18581,7 +18608,9 @@
       "granos la caida de los precios internacionales frena ventas en argentina": "2026-10-27",
       "exportaciones las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-27",
       "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola": "2026-10-27",
-      "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta": "2026-10-27"
+      "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta": "2026-10-27",
+      "por que la retencion de talentos es un desafio para el campo y los crea segun fernando preumayer": "2026-10-27",
+      "creditos en valor producto nuevo cupo de garantias de hasta 10 000 mill para ganaderos": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19702,7 +19731,9 @@
       "c53cfb874a3519bf": "2026-10-27",
       "aa55a38e6488285f": "2026-10-27",
       "c2dfa24b84adae5a": "2026-10-27",
-      "83687cad0d9acf41": "2026-10-27"
+      "83687cad0d9acf41": "2026-10-27",
+      "6563505b9387820c": "2026-10-27",
+      "2ebab5bf582ee64f": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30852,6 +30883,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3523daa5ed81_portada.jpg"
+    },
+    {
+      "id": "bb79481fb7a2",
+      "cuando": "2026-10-27T17:20-03:00",
+      "titulo_original": "La soja podría mostrar mayor resistencia que el maíz en Chicago, mientras crece la incertidumbre sobre la producción brasileña y la evolución de los fondos",
+      "descripcion": "Los fondos redujeron su posición comprada en maíz desde más de 400.000 contratos hasta unos 150.000, mientras mantienen más de 200.000 contratos comprados en soja....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html",
+      "titular": "Soja: analizan menor presión en Chicago frente a la cosecha de Brasil",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 9,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 66,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Análisis de posición de fondos en soja y maíz, clave para entender la formación de precios que impacta en zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "dccac965-85fd-4720-a3e0-9ecbc90ac0ac",
+          "slug": "soja-y-maiz-como-impacta-la-cosecha-de-brasil-y-la-posicion-de-25cdea",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-y-maiz-como-impacta-la-cosecha-de-brasil-y-la-posicion-de-25cdea",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1314541707393542",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18130501258883653",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bb79481fb7a2_portada.jpg"
     }
   ],
   "pendientes": [
@@ -31439,73 +31528,6 @@
       "cuando": "2026-10-27T10:40-03:00"
     },
     {
-      "id": "bb79481fb7a2",
-      "rep": {
-        "id": "bb79481fb7a2",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html",
-        "titulo": "La soja podría mostrar mayor resistencia que el maíz en Chicago, mientras crece la incertidumbre sobre la producción brasileña y la evolución de los fondos",
-        "titulo_norm": "la soja podria mostrar mayor resistencia que el maiz en chicago mientras crece la incertidumbre sobre la produccion brasilena y la evolucion de los fondos",
-        "descripcion": "Los fondos redujeron su posición comprada en maíz desde más de 400.000 contratos hasta unos 150.000, mientras mantienen más de 200.000 contratos comprados en soja....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249047_94169410.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-10-27T10:08-03:00",
-        "capturado": "2026-10-27T10:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5b6232c8dd7cd236"
-      },
-      "grupo": [
-        {
-          "id": "bb79481fb7a2",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249047-la-soja-podria-mostrar-mayor-resistencia-que-el-maiz-en-chicago-mientras-crece-la-incertidumbre-sobre-la-produccion-brasilena-y-la-evolucion-de-los-fondos.html",
-          "titulo": "La soja podría mostrar mayor resistencia que el maíz en Chicago, mientras crece la incertidumbre sobre la producción brasileña y la evolución de los fondos",
-          "titulo_norm": "la soja podria mostrar mayor resistencia que el maiz en chicago mientras crece la incertidumbre sobre la produccion brasilena y la evolucion de los fondos",
-          "descripcion": "Los fondos redujeron su posición comprada en maíz desde más de 400.000 contratos hasta unos 150.000, mientras mantienen más de 200.000 contratos comprados en soja....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249047_94169410.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-10-27T10:08-03:00",
-          "capturado": "2026-10-27T10:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5b6232c8dd7cd236"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 9,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 66,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Análisis de posición de fondos en soja y maíz, clave para entender la formación de precios que impacta en zona núcleo.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          62
-        ]
-      },
-      "cuando": "2026-10-27T10:20-03:00"
-    },
-    {
       "id": "c1a267984b18",
       "rep": {
         "id": "c1a267984b18",
@@ -31841,8 +31863,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T17:03:53-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T17:24:00-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
