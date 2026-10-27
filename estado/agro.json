@@ -16317,6 +16317,27 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "83687cad0d9acf41": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 73,
+      "subtema": "ganaderia",
+      "tema": "carne porcina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra un cambio estructural relevante en la industria frigorífica cordobesa y nacional que afecta la cadena de ganados y carnes.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17438,7 +17459,8 @@
       "https://lanacion.com.ar/economia/campo/el-primero-del-pais-un-feedlot-logro-una-certificacion-internacional-de-bienestar-animal-nid27102026": "2026-10-27",
       "https://lacapital.com.ar/agro/granos-la-caida-los-precios-internacionales-frena-ventas-argentina-n10288996.html": "2026-10-27",
       "https://todoagro.com.ar/exportaciones-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador": "2026-10-27",
-      "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola": "2026-10-27"
+      "https://bichosdecampo.com/pinitos-de-festejo-dos-cooperativas-argentinas-obtuvieron-certificaciones-internacionales-para-sus-producciones-ganadera-y-avicola": "2026-10-27",
+      "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18558,7 +18580,8 @@
       "el primero del pais un feedlot logro una certificacion internacional de bienestar animal": "2026-10-27",
       "granos la caida de los precios internacionales frena ventas en argentina": "2026-10-27",
       "exportaciones las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-27",
-      "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola": "2026-10-27"
+      "pinitos de festejo dos cooperativas argentinas obtuvieron certificaciones internacionales para sus producciones ganadera y avicola": "2026-10-27",
+      "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19678,7 +19701,8 @@
       "be479114dd5e44b9": "2026-10-27",
       "c53cfb874a3519bf": "2026-10-27",
       "aa55a38e6488285f": "2026-10-27",
-      "c2dfa24b84adae5a": "2026-10-27"
+      "c2dfa24b84adae5a": "2026-10-27",
+      "83687cad0d9acf41": "2026-10-27"
     }
   },
   "elegidas": [
@@ -30774,9 +30798,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9570dfe69329_portada.jpg"
+    },
+    {
+      "id": "3523daa5ed81",
+      "cuando": "2026-10-27T17:00-03:00",
+      "titulo_original": "Histórica colaboración entre el INTA y la Universidad de Florida por la soja",
+      "descripcion": "El Centro Regional Córdoba del organismo técnico trabaja con la casa de estudios norteamericana en la calibración de modelos de simulación a partir de los registros de la Red de Evaluación de Cultivares de Soja (Recso); buscan identificar las variedades que expresen un mejor potencial productivo en ",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026/",
+      "titular": "El INTA y la Universidad de Florida potencian la soja",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "agtech",
+        "tema": "soja inta",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Crucial avance tecnológico y de modelcción agronómica entre INTA y EE.UU. para mejorar rindes de soja.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9cfbbca3-bd75-4104-8424-f8341435c767",
+          "slug": "el-inta-y-la-universidad-de-florida-se-unen-para-optimizar-los-9cb342",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-y-la-universidad-de-florida-se-unen-para-optimizar-los-9cb342",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1553304246554984",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18037975001848129",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3523daa5ed81_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7a69d2220daa",
+      "rep": {
+        "id": "7a69d2220daa",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta/",
+        "canonical_url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta",
+        "titulo": "Reconversión industrial: Por la caída en la faena vacuna, los frigoríficos producen cada vez más carne de cerdo para sostener la actividad, según reconoce desde Córdoba Javier Peralta",
+        "titulo_norm": "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta",
+        "descripcion": "La caída del consumo de carne vacuna y las dificultades para cubrir los costos están empujando a los frigoríficos argentinos a cambiar su modelo de negocios. Cada vez más plantas que históricamente trabajaron con bovinos incorporan la faena porcina para diversificar sus ingresos y mejorar el aprovechamiento de sus estructuras industriales. “La gran mayoría de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Peralta-afic.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-27T16:42-03:00",
+        "capturado": "2026-10-27T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "83687cad0d9acf41"
+      },
+      "grupo": [
+        {
+          "id": "7a69d2220daa",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta/",
+          "canonical_url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta",
+          "titulo": "Reconversión industrial: Por la caída en la faena vacuna, los frigoríficos producen cada vez más carne de cerdo para sostener la actividad, según reconoce desde Córdoba Javier Peralta",
+          "titulo_norm": "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta",
+          "descripcion": "La caída del consumo de carne vacuna y las dificultades para cubrir los costos están empujando a los frigoríficos argentinos a cambiar su modelo de negocios. Cada vez más plantas que históricamente trabajaron con bovinos incorporan la faena porcina para diversificar sus ingresos y mejorar el aprovechamiento de sus estructuras industriales. “La gran mayoría de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Peralta-afic.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-27T16:42-03:00",
+          "capturado": "2026-10-27T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "83687cad0d9acf41"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 73,
+        "subtema": "ganaderia",
+        "tema": "carne porcina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra un cambio estructural relevante en la industria frigorífica cordobesa y nacional que afecta la cadena de ganados y carnes.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T17:00-03:00"
+    },
     {
       "id": "0b16438c56dd",
       "rep": {
@@ -31097,69 +31238,6 @@
           65,
           67
         ]
-      },
-      "cuando": "2026-10-27T16:00-03:00"
-    },
-    {
-      "id": "3523daa5ed81",
-      "rep": {
-        "id": "3523daa5ed81",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026",
-        "titulo": "Histórica colaboración entre el INTA y la Universidad de Florida por la soja",
-        "titulo_norm": "historica colaboracion entre el inta y la universidad de florida por la soja",
-        "descripcion": "El Centro Regional Córdoba del organismo técnico trabaja con la casa de estudios norteamericana en la calibración de modelos de simulación a partir de los registros de la Red de Evaluación de Cultivares de Soja (Recso); buscan identificar las variedades que expresen un mejor potencial productivo en los distintos ambientes",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/FBAY3KXJN5AJJCQRGAB2TD7HD4.jpeg?auth=36261a3d93259b6449af9cb27d278d74ac2b8a9f4dbbf8efe9dec7fb5b97bd9e&smart=true",
-        "autor": "",
-        "publicado": "2026-10-27T14:45-03:00",
-        "capturado": "2026-10-27T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3c2573dfaf202315"
-      },
-      "grupo": [
-        {
-          "id": "3523daa5ed81",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/historica-colaboracion-entre-el-inta-y-la-universidad-de-florida-por-la-soja-nid27102026",
-          "titulo": "Histórica colaboración entre el INTA y la Universidad de Florida por la soja",
-          "titulo_norm": "historica colaboracion entre el inta y la universidad de florida por la soja",
-          "descripcion": "El Centro Regional Córdoba del organismo técnico trabaja con la casa de estudios norteamericana en la calibración de modelos de simulación a partir de los registros de la Red de Evaluación de Cultivares de Soja (Recso); buscan identificar las variedades que expresen un mejor potencial productivo en los distintos ambientes",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FBAY3KXJN5AJJCQRGAB2TD7HD4.jpeg?auth=36261a3d93259b6449af9cb27d278d74ac2b8a9f4dbbf8efe9dec7fb5b97bd9e&smart=true",
-          "autor": "",
-          "publicado": "2026-10-27T14:45-03:00",
-          "capturado": "2026-10-27T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3c2573dfaf202315"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 11,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 6,
-        "potencial_comercial": 7,
-        "ai_score": 71,
-        "commercial_score": 71,
-        "subtema": "agtech",
-        "tema": "soja inta",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Crucial avance tecnológico y de modelcción agronómica entre INTA y EE.UU. para mejorar rindes de soja.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-27T16:00-03:00"
     },
@@ -31763,8 +31841,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T16:43:36-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T17:03:53-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
