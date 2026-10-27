@@ -16430,6 +16430,27 @@
         67,
         58
       ]
+    },
+    "5116eea4e2501118": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 82,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "el niño obras",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente la infraestructura logística y productiva de la región núcleo y Buenos Aires frente al clima.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17559,7 +17580,9 @@
       "https://lanacion.com.ar/economia/campo/es-una-tomada-de-pelo-escandalo-porque-un-intendente-de-la-campora-bloqueo-una-calle-con-monticulos-nid27102026": "2026-10-27",
       "https://agfundernews.com/biocle-tackles-bioactives-bioavailability-challenge-with-novel-delivery-tech": "2026-10-27",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-pablo-cattani-se-canso-del-discurso-de-la-catastrofe-y-reclama-discutir-desde-el-conocimiento-no-desde-el-interes": "2026-10-27",
-      "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse": "2026-10-27"
+      "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse": "2026-10-27",
+      "https://infocampo.com.ar/el-nino-las-provincias-avanzan-con-obras-preventivas-y-la-hidrovia-suma-refuerzos-internacionales": "2026-10-27",
+      "https://agrositio.com.ar/noticia/249061-ley-de-semillas-amcham-presiona-para-que-argentina-adhiera-a-upov-91-y-advierte-sobre-las-inversiones-en-el-agro.html": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18687,7 +18710,9 @@
       "es una tomada de pelo escandalo porque un intendente de la campora bloqueo una calle con monticulos de tierra para frenar el robo de vacas": "2026-10-27",
       "biocle tackles bioactives bioavailability challenge with novel delivery tech": "2026-10-27",
       "los dilemas de la agronomia pablo cattani se canso del discurso de la catastrofe y reclama discutir desde el conocimiento no desde el interes": "2026-10-27",
-      "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse": "2026-10-27"
+      "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse": "2026-10-27",
+      "el nino las provincias avanzan con obras preventivas y la hidrovia suma refuerzos internacionales": "2026-10-27",
+      "ley de semillas amcham presiona para que argentina adhiera a upov 91 y advierte sobre las inversiones en el agro": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19815,7 +19840,9 @@
       "e89aa6fc7b63818f": "2026-10-27",
       "e641a764feaab765": "2026-10-27",
       "e00b9317e8c3b576": "2026-10-27",
-      "853551abefee4581": "2026-10-27"
+      "853551abefee4581": "2026-10-27",
+      "5116eea4e2501118": "2026-10-27",
+      "34351d6e52f68d7a": "2026-10-27"
     }
   },
   "elegidas": [
@@ -31178,6 +31205,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8690be8d3dd1_portada.jpg"
+    },
+    {
+      "id": "19102c293de8",
+      "cuando": "2026-10-27T18:40-03:00",
+      "titulo_original": "El Niño: las provincias avanzan con obras preventivas y la hidrovía suma “refuerzos” internacionales",
+      "descripcion": "Desde los gobiernos de Buenos Aires, Córdoba y Santa Fe repasaron en los últimos días las inversiones en marcha para reducir los posibles impactos de El Niño. A la par, la empresa concesionaria de la hidrovía informó que, ante las crecidas del Paraná, está trayendo dragas desde Singapur y Croacia pa",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-nino-las-provincias-avanzan-con-obras-preventivas-y-la-hidrovia-suma-refuerzos-internacionales/",
+      "titular": "El Niño desata obras preventivas y refuerzos en la hidrovía",
+      "volanta": "Clima y Logística",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 82,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "el niño obras",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la infraestructura logística y productiva de la región núcleo y Buenos Aires frente al clima.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "94dc5ca7-405a-4639-886e-827f43674f28",
+          "slug": "el-nino-provincias-hacen-obras-y-la-hidrovia-suma-dragas-desde-b13fcb",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-provincias-hacen-obras-y-la-hidrovia-suma-dragas-desde-b13fcb",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1852254582888160",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18399095965203658",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_19102c293de8_portada.jpg"
     }
   ],
   "pendientes": [
@@ -31974,8 +32055,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T18:23:59-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-27T18:43:08-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
