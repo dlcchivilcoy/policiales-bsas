@@ -17857,6 +17857,69 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4c5bfcef6a9d8f6c": {
+      "impacto_economico": 2,
+      "interes_productores": 1,
+      "innovacion": 0,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 1,
+      "ai_score": 9,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "protestas españa",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un hecho gremial internacional sin impacto directo ni utilidad práctica para el productor de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f91f027d32a41317": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 80,
+      "subtema": "ganaderia",
+      "tema": "precios toros",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales de precios de reproductores que mueven el mercado ganadero regional y generan fuerte interés en cabañeros.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "26209346ace4abdc": {
+      "impacto_economico": 6,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 7,
+      "potencial_comercial": 2,
+      "ai_score": 44,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "inta despido",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Conflicto gremial e institucional que involucra al INTA y genera debate en el sector, aunque de impacto productivo indirecto.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19074,7 +19137,10 @@
       "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos": "2026-10-28",
       "https://intainforma.inta.gob.ar/la-materia-organica-y-el-agua-definen-el-potencial-de-rendimiento": "2026-10-28",
       "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados": "2026-10-28",
-      "https://agrositio.com.ar/noticia/249072-china-y-la-reconfiguracion-del-mercado-global-de-legumbres-analisis-macroeconomico-y-de-demanda-2025-2026.html": "2026-10-28"
+      "https://agrositio.com.ar/noticia/249072-china-y-la-reconfiguracion-del-mercado-global-de-legumbres-analisis-macroeconomico-y-de-demanda-2025-2026.html": "2026-10-28",
+      "https://bichosdecampo.com/espana-suspendieron-un-masivo-tractorazo-por-el-tragico-accidente-ferroviario": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026": "2026-10-28",
+      "https://lacapital.com.ar/agro/bases-federadas-repudio-la-exoneracion-una-cientifica-del-inta-n10289223.html": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20290,7 +20356,10 @@
       "el inta amplia la evaluacion del bienestar animal en bovinos": "2026-10-28",
       "la materia organica y el agua definen el potencial de rendimiento": "2026-10-28",
       "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados": "2026-10-28",
-      "china y la reconfiguracion del mercado global de legumbres analisis macroeconomico y de demanda 2025 2026": "2026-10-28"
+      "china y la reconfiguracion del mercado global de legumbres analisis macroeconomico y de demanda 2025 2026": "2026-10-28",
+      "espana suspendieron un masivo tractorazo por el tragico accidente ferroviario": "2026-10-28",
+      "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones": "2026-10-28",
+      "bases federadas repudio la exoneracion de una cientifica del inta": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21506,7 +21575,10 @@
       "9babae6d03f7abe9": "2026-10-28",
       "9b8c3753748491d8": "2026-10-28",
       "4ba5a97fc926796b": "2026-10-28",
-      "1dc7fa3da4b7cf80": "2026-10-28"
+      "1dc7fa3da4b7cf80": "2026-10-28",
+      "4c5bfcef6a9d8f6c": "2026-10-28",
+      "f91f027d32a41317": "2026-10-28",
+      "26209346ace4abdc": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34226,49 +34298,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a7d890107eb1_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "c06a459d6d83",
-      "rep": {
-        "id": "c06a459d6d83",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados/",
-        "canonical_url": "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados",
-        "titulo": "Biocombustibles: otra vez el biodiésel traba el debate y el proyecto de ley se queda sin nafta en Diputados",
-        "titulo_norm": "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados",
-        "descripcion": "Diputados de Buenos Aires piden cambios que el Poder Ejecutivo no está dispuesto a ceder. Así, el riesgo de que el año termine sin nueva ley de biocombustibles es alto, a menos que sacando algún conejo de la galera el oficialismo logre los votos para que vaya al recinto tal como llegó del Senado.",
-        "imagen_url": "https://www.youtube.com/embed/Nh5jE6YJbJs",
-        "autor": "Javier Preciado Patiño",
-        "publicado": "2026-10-28T16:00-03:00",
-        "capturado": "2026-10-28T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4ba5a97fc926796b"
-      },
-      "grupo": [
-        {
-          "id": "c06a459d6d83",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados/",
-          "canonical_url": "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados",
-          "titulo": "Biocombustibles: otra vez el biodiésel traba el debate y el proyecto de ley se queda sin nafta en Diputados",
-          "titulo_norm": "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados",
-          "descripcion": "Diputados de Buenos Aires piden cambios que el Poder Ejecutivo no está dispuesto a ceder. Así, el riesgo de que el año termine sin nueva ley de biocombustibles es alto, a menos que sacando algún conejo de la galera el oficialismo logre los votos para que vaya al recinto tal como llegó del Senado.",
-          "imagen_url": "https://www.youtube.com/embed/Nh5jE6YJbJs",
-          "autor": "Javier Preciado Patiño",
-          "publicado": "2026-10-28T16:00-03:00",
-          "capturado": "2026-10-28T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4ba5a97fc926796b"
-        }
-      ],
+      "cuando": "2026-10-28T16:40-03:00",
+      "titulo_original": "Biocombustibles: otra vez el biodiésel traba el debate y el proyecto de ley se queda sin nafta en Diputados",
+      "descripcion": "Diputados de Buenos Aires piden cambios que el Poder Ejecutivo no está dispuesto a ceder. Así, el riesgo de que el año termine sin nueva ley de biocombustibles es alto, a menos que sacando algún conejo de la galera el oficialismo logre los votos para que vaya al recinto tal como llegó del Senado.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados/",
+      "titular": "Diputados frena la ley de biocombustibles por el corte de biodiésel",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 12,
@@ -34294,7 +34333,94 @@
           63
         ]
       },
-      "cuando": "2026-10-28T16:20-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "452cc204-f605-43a5-87c0-3fcf2f13e5c5",
+          "slug": "ley-de-biocombustibles-estancada-en-diputados-por-el-porcentaje-a02bcf",
+          "url": "https://www.diariolacampaña.com.ar/n/ley-de-biocombustibles-estancada-en-diputados-por-el-porcentaje-a02bcf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1776176590327510",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17918365008263055",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c06a459d6d83_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "7626ed382bbc",
+      "rep": {
+        "id": "7626ed382bbc",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026",
+        "titulo": "Remates: el precio de los toros subió un 61% y cada animal promedia los $10 millones",
+        "titulo_norm": "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones",
+        "descripcion": "Según la Secretaría de Agricultura, entre agosto y octubre el valor promedio fue de $9,77 millones por ejemplar; en dólares, el incremento alcanzó el 57%, sobre la base de operaciones por más de 15.500 cabezas",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/GQ5OGHEFHJC6ZEP7VZHENYVB7M.png?auth=7fa7b1a06cb424994cd980ac9c969304505ed49b9d31cdaa51ffb92009455515&smart=true",
+        "autor": "",
+        "publicado": "2026-10-28T16:35-03:00",
+        "capturado": "2026-10-28T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f91f027d32a41317"
+      },
+      "grupo": [
+        {
+          "id": "7626ed382bbc",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026",
+          "titulo": "Remates: el precio de los toros subió un 61% y cada animal promedia los $10 millones",
+          "titulo_norm": "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones",
+          "descripcion": "Según la Secretaría de Agricultura, entre agosto y octubre el valor promedio fue de $9,77 millones por ejemplar; en dólares, el incremento alcanzó el 57%, sobre la base de operaciones por más de 15.500 cabezas",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/GQ5OGHEFHJC6ZEP7VZHENYVB7M.png?auth=7fa7b1a06cb424994cd980ac9c969304505ed49b9d31cdaa51ffb92009455515&smart=true",
+          "autor": "",
+          "publicado": "2026-10-28T16:35-03:00",
+          "capturado": "2026-10-28T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f91f027d32a41317"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 80,
+        "subtema": "ganaderia",
+        "tema": "precios toros",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales de precios de reproductores que mueven el mercado ganadero regional y generan fuerte interés en cabañeros.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T16:40-03:00"
     },
     {
       "id": "6d0b5c675d09",
@@ -35018,69 +35144,6 @@
       "cuando": "2026-10-28T13:00-03:00"
     },
     {
-      "id": "567f0cfce6a3",
-      "rep": {
-        "id": "567f0cfce6a3",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0",
-        "canonical_url": "https://argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0",
-        "titulo": "Los remates de genética bovina marcaron un crecimiento interanual del 61% en el precio",
-        "titulo_norm": "los remates de genetica bovina marcaron un crecimiento interanual del 61 en el precio",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que, entre agosto y octubre de este año, en base a la comercialización de más de 15.500 cabezas, los precios de los reproductores bovinos machos (toros) resultaron un 61% en pesos y un 57% en dólares superiores a los resultados del mismo período del 2025, confirmando una consolidación de buenas expectativas para el sector ganadero nacional. En este sentido, el valor promedio en el periodo señalado fue de $ 9.770.983 y USD 6.324 en 2026, frente a $6.056.272 y USD 4.038, correspondientes al mismo periodo de 2025. Estos resultados responden al interés de los criadores y productores por mejorar la eficiencia y la calidad genética de sus rodeos, en un contexto de mayor estabilidad climática y mejores perspectivas forrajeras. Potenciado, a su vez, por la opción de utilizar los beneficios del Régimen",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/cuadro_toros3.jpg",
-        "autor": "pconsiglio",
-        "publicado": "2026-10-28T10:29-03:00",
-        "capturado": "2026-10-28T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "16a18f38bb54db15"
-      },
-      "grupo": [
-        {
-          "id": "567f0cfce6a3",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0",
-          "canonical_url": "https://argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0",
-          "titulo": "Los remates de genética bovina marcaron un crecimiento interanual del 61% en el precio",
-          "titulo_norm": "los remates de genetica bovina marcaron un crecimiento interanual del 61 en el precio",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que, entre agosto y octubre de este año, en base a la comercialización de más de 15.500 cabezas, los precios de los reproductores bovinos machos (toros) resultaron un 61% en pesos y un 57% en dólares superiores a los resultados del mismo período del 2025, confirmando una consolidación de buenas expectativas para el sector ganadero nacional. En este sentido, el valor promedio en el periodo señalado fue de $ 9.770.983 y USD 6.324 en 2026, frente a $6.056.272 y USD 4.038, correspondientes al mismo periodo de 2025. Estos resultados responden al interés de los criadores y productores por mejorar la eficiencia y la calidad genética de sus rodeos, en un contexto de mayor estabilidad climática y mejores perspectivas forrajeras. Potenciado, a su vez, por la opción de utilizar los beneficios del Régimen",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/cuadro_toros3.jpg",
-          "autor": "pconsiglio",
-          "publicado": "2026-10-28T10:29-03:00",
-          "capturado": "2026-10-28T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "16a18f38bb54db15"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 14,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 73,
-        "commercial_score": 79,
-        "subtema": "ganaderia",
-        "tema": "genética bovina",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Suba importante en precios de reproductores, dato clave para la invernada y cabañas.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:00-03:00"
-    },
-    {
       "id": "fd3f4c6f1bb8",
       "rep": {
         "id": "fd3f4c6f1bb8",
@@ -35205,73 +35268,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T11:20-03:00"
-    },
-    {
-      "id": "f314f5dbb329",
-      "rep": {
-        "id": "f314f5dbb329",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249063-mercados-agricolas-recuperacion-moderada-en-chicago-frente-a-la-presion-de-la-cosecha-y-brasil.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249063-mercados-agricolas-recuperacion-moderada-en-chicago-frente-a-la-presion-de-la-cosecha-y-brasil.html",
-        "titulo": "Mercados agrícolas: recuperación moderada en Chicago frente a la presión de la cosecha y Brasil",
-        "titulo_norm": "mercados agricolas recuperacion moderada en chicago frente a la presion de la cosecha y brasil",
-        "descripcion": "Los futuros agrícolas de Chicago muestran una recuperación moderada durante la rueda electrónica del miércoles 28 de octubre, después de una nueva jornada de bajas generalizadas....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249063_36491565.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-10-28T09:19-03:00",
-        "capturado": "2026-10-28T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a897609399b08a40"
-      },
-      "grupo": [
-        {
-          "id": "f314f5dbb329",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249063-mercados-agricolas-recuperacion-moderada-en-chicago-frente-a-la-presion-de-la-cosecha-y-brasil.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249063-mercados-agricolas-recuperacion-moderada-en-chicago-frente-a-la-presion-de-la-cosecha-y-brasil.html",
-          "titulo": "Mercados agrícolas: recuperación moderada en Chicago frente a la presión de la cosecha y Brasil",
-          "titulo_norm": "mercados agricolas recuperacion moderada en chicago frente a la presion de la cosecha y brasil",
-          "descripcion": "Los futuros agrícolas de Chicago muestran una recuperación moderada durante la rueda electrónica del miércoles 28 de octubre, después de una nueva jornada de bajas generalizadas....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249063_36491565.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-10-28T09:19-03:00",
-          "capturado": "2026-10-28T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a897609399b08a40"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 74,
-        "subtema": "mercados",
-        "tema": "chicago",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Cotizaciones y mercados internacionales habituales, de alta sensibilidad pero baja originalidad.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          69
-        ]
-      },
-      "cuando": "2026-10-28T10:00-03:00"
     },
     {
       "id": "9a9b41d6b973",
@@ -35798,8 +35794,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T16:23:18-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T16:43:13-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
