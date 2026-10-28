@@ -18004,6 +18004,31 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c5b6b6192288e080": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 7,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 65,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el comercio exterior y las exigencias fitosanitarias para los productores exportadores de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        65
+      ]
     }
   },
   "indice": {
@@ -19230,7 +19255,8 @@
       "https://agrositio.com.ar/noticia/249074-mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos.html": "2026-10-28",
       "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026": "2026-10-28",
-      "https://agfundernews.com/stacked-farm-outlines-the-long-game-for-vertical-farming-ahead-of-us-expansion": "2026-10-28"
+      "https://agfundernews.com/stacked-farm-outlines-the-long-game-for-vertical-farming-ahead-of-us-expansion": "2026-10-28",
+      "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20455,7 +20481,8 @@
       "alfalfa del futuro el inta combina genetica y tecnologia para lograr cultivos mas resilientes": "2026-10-28",
       "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante": "2026-10-28",
       "cosecha record el combustible y los fletes desafian el negocio agricola": "2026-10-28",
-      "stacked farm outlines the long game for vertical farming ahead of us expansion": "2026-10-28"
+      "stacked farm outlines the long game for vertical farming ahead of us expansion": "2026-10-28",
+      "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21680,7 +21707,8 @@
       "5b07ae8d709b53d3": "2026-10-28",
       "f840a4084a80db98": "2026-10-28",
       "62627fb0a6786490": "2026-10-28",
-      "af3dff49bac2a9ac": "2026-10-28"
+      "af3dff49bac2a9ac": "2026-10-28",
+      "c5b6b6192288e080": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34631,67 +34659,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2a5da8775b32_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "38aa102c11bf",
-      "rep": {
-        "id": "38aa102c11bf",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante/",
-        "canonical_url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante",
-        "titulo": "Podrá haber cosecha récord, pero con los valores del flete y del combustible no hay planilla de Excel que aguante",
-        "titulo_norm": "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante",
-        "descripcion": "La campaña agrícola 2026/27 arranca con perspectivas de una producción récord, pero los números que proyectan las cosechas conviven con una cuenta cada vez más exigente para los productores. Según un informe de Coninagro, el aumento de los costos operativos deterioró en septiembre el poder de compra de la soja y el maíz, especialmente frente […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-28-175353.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-28T17:59-03:00",
-        "capturado": "2026-10-28T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f840a4084a80db98"
-      },
-      "grupo": [
-        {
-          "id": "38aa102c11bf",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante/",
-          "canonical_url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante",
-          "titulo": "Podrá haber cosecha récord, pero con los valores del flete y del combustible no hay planilla de Excel que aguante",
-          "titulo_norm": "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante",
-          "descripcion": "La campaña agrícola 2026/27 arranca con perspectivas de una producción récord, pero los números que proyectan las cosechas conviven con una cuenta cada vez más exigente para los productores. Según un informe de Coninagro, el aumento de los costos operativos deterioró en septiembre el poder de compra de la soja y el maíz, especialmente frente […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-28-175353.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-28T17:59-03:00",
-          "capturado": "2026-10-28T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f840a4084a80db98"
-        },
-        {
-          "id": "f13d471eedfa",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026",
-          "titulo": "Cosecha récord: el combustible y los fletes desafían el negocio agrícola",
-          "titulo_norm": "cosecha record el combustible y los fletes desafian el negocio agricola",
-          "descripcion": "Un informe de Coninagro advierte sobre una pérdida de competitividad",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/F5AL2C27JVAXHBS6ABZ7LDSTWA.JPG?auth=3df3154456c75f11203dff5273b75730384d32ea23280c1bfa0ff37a250e4650&smart=true",
-          "autor": "",
-          "publicado": "2026-10-28T17:22-03:00",
-          "capturado": "2026-10-28T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "62627fb0a6786490"
-        }
-      ],
+      "cuando": "2026-10-28T18:20-03:00",
+      "titulo_original": "Podrá haber cosecha récord, pero con los valores del flete y del combustible no hay planilla de Excel que aguante",
+      "descripcion": "La campaña agrícola 2026/27 arranca con perspectivas de una producción récord, pero los números que proyectan las cosechas conviven con una cuenta cada vez más exigente para los productores. Según un informe de Coninagro, el aumento de los costos operativos deterioró en septiembre el poder de compra",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante/",
+      "titular": "Cosecha récord de granos pero con fletes y combustible en alza",
+      "volanta": "Costos y Cosecha",
       "score": {
         "impacto_economico": 19,
         "interes_productores": 15,
@@ -34713,7 +34690,98 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-28T18:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4171aa83-e19d-4c5d-9349-943f089ec54f",
+          "slug": "cosecha-record-de-granos-en-argentina-pero-con-fletes-y-ec3097",
+          "url": "https://www.diariolacampaña.com.ar/n/cosecha-record-de-granos-en-argentina-pero-con-fletes-y-ec3097",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2176143946332761",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17909600565581871",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_38aa102c11bf_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "35fb377375d0",
+      "rep": {
+        "id": "35fb377375d0",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas/",
+        "canonical_url": "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas",
+        "titulo": "El IICA advierte: SI las restricciones europeas a los pesticidas aumentan, estarán en riesgo miles de millones en exportaciones americanas",
+        "titulo_norm": "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas",
+        "descripcion": "Las restricciones que la Unión Europea (UE) analiza aplicar a los residuos de pesticidas en productos agrícolas importados podrían complicar el acceso de las exportaciones de las Américas al mercado europeo y poner en riesgo operaciones comerciales por miles de millones de dólares. Así lo advierte un nuevo estudio encargado por el Instituto Interamericano de […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-28T18:16-03:00",
+        "capturado": "2026-10-28T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c5b6b6192288e080"
+      },
+      "grupo": [
+        {
+          "id": "35fb377375d0",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas/",
+          "canonical_url": "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas",
+          "titulo": "El IICA advierte: SI las restricciones europeas a los pesticidas aumentan, estarán en riesgo miles de millones en exportaciones americanas",
+          "titulo_norm": "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas",
+          "descripcion": "Las restricciones que la Unión Europea (UE) analiza aplicar a los residuos de pesticidas en productos agrícolas importados podrían complicar el acceso de las exportaciones de las Américas al mercado europeo y poner en riesgo operaciones comerciales por miles de millones de dólares. Así lo advierte un nuevo estudio encargado por el Instituto Interamericano de […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-28T18:16-03:00",
+          "capturado": "2026-10-28T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c5b6b6192288e080"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 8,
+        "cercania_pba": 7,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente el comercio exterior y las exigencias fitosanitarias para los productores exportadores de la región.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          65
+        ]
+      },
+      "cuando": "2026-10-28T18:20-03:00"
     },
     {
       "id": "ab86b38d11f4",
@@ -36016,8 +36084,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T18:03:42-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T18:23:41-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
