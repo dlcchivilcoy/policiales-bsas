@@ -17581,6 +17581,31 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3f32a04c0d9ecc98": {
+      "impacto_economico": 15,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 62,
+      "commercial_score": 55,
+      "subtema": "ganaderia",
+      "tema": "ecocarnes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto en la cadena cárnica bonaerense por la crisis financiera de un frigorífico clave.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        64
+      ]
     }
   },
   "indice": {
@@ -18785,7 +18810,8 @@
       "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios": "2026-10-28",
       "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible": "2026-10-28",
       "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo": "2026-10-28",
-      "https://intainforma.inta.gob.ar/excesos-hidricos-claves-para-proteger-al-ganado-y-reducir-perdidas": "2026-10-28"
+      "https://intainforma.inta.gob.ar/excesos-hidricos-claves-para-proteger-al-ganado-y-reducir-perdidas": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19988,7 +20014,8 @@
       "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios": "2026-10-28",
       "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible": "2026-10-28",
       "el desafio no es solo producir forraje sino hacerlo aprovechable juan manuel pineiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo": "2026-10-28",
-      "excesos hidricos claves para proteger al ganado y reducir perdidas": "2026-10-28"
+      "excesos hidricos claves para proteger al ganado y reducir perdidas": "2026-10-28",
+      "conflicto paro en un frigorifico que tiene una deuda bancaria de 46 000 millones y mas de 25 000 millones en cheques rechazados": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21191,7 +21218,8 @@
       "7664cabc79e03252": "2026-10-28",
       "ba4455d77ac7ae04": "2026-10-28",
       "7a2457799af31f69": "2026-10-28",
-      "c412c796259b114f": "2026-10-28"
+      "c412c796259b114f": "2026-10-28",
+      "3f32a04c0d9ecc98": "2026-10-28"
     }
   },
   "elegidas": [
@@ -33738,9 +33766,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e3bf490958f8_portada.jpg"
+    },
+    {
+      "id": "daabb4e81ee7",
+      "cuando": "2026-10-28T14:21-03:00",
+      "titulo_original": "La ganadería impulsa una recuperación del valor de la tierra rural en Santa Fe",
+      "descripcion": "Un informe de la Bolsa de Comercio de la capital de la provincia repasó la evolución del mercado inmobiliario en los últimos años. Cuáles son las zonas más cotizadas",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html",
+      "titular": "Santa Fe: la ganadería impulsa la suba del campo",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 67,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "tierra rural",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Valor de la tierra en Santa Fe, de alto interés para inversores y productores de la región.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0f4abd3d-df39-41d2-9a03-1ca7943457a2",
+          "slug": "la-ganaderia-impulsa-la-recuperacion-del-valor-de-la-tierra-32c1a4",
+          "url": "https://www.diariolacampaña.com.ar/n/la-ganaderia-impulsa-la-recuperacion-del-valor-de-la-tierra-32c1a4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2031166520933146",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18123481997472780",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_daabb4e81ee7_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "dbc06f0b0b22",
+      "rep": {
+        "id": "dbc06f0b0b22",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026",
+        "titulo": "Conflicto: paro en un frigorífico que tiene una deuda bancaria de $46.000 millones y más de $25.000 millones en cheques rechazados",
+        "titulo_norm": "conflicto paro en un frigorifico que tiene una deuda bancaria de 46 000 millones y mas de 25 000 millones en cheques rechazados",
+        "descripcion": "En San Fernando, Ecocarnes dejó de faenar este lunes y derivaron los animales a otros establecimientos; los trabajadores mantienen una medida de fuerza ante el pago parcial de la quincena e incumplimientos en aportes vinculados con la cobertura de salud",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3CKOFT3VMNDT7HABO4AA2HBPGQ.png?auth=c7b4e224ae87f4f2ca21dea1a6545e66df8e11482b904aa4e077a5681d3fbd50&smart=true",
+        "autor": "Mariana Reinke",
+        "publicado": "2026-10-28T14:11-03:00",
+        "capturado": "2026-10-28T14:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3f32a04c0d9ecc98"
+      },
+      "grupo": [
+        {
+          "id": "dbc06f0b0b22",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026",
+          "titulo": "Conflicto: paro en un frigorífico que tiene una deuda bancaria de $46.000 millones y más de $25.000 millones en cheques rechazados",
+          "titulo_norm": "conflicto paro en un frigorifico que tiene una deuda bancaria de 46 000 millones y mas de 25 000 millones en cheques rechazados",
+          "descripcion": "En San Fernando, Ecocarnes dejó de faenar este lunes y derivaron los animales a otros establecimientos; los trabajadores mantienen una medida de fuerza ante el pago parcial de la quincena e incumplimientos en aportes vinculados con la cobertura de salud",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3CKOFT3VMNDT7HABO4AA2HBPGQ.png?auth=c7b4e224ae87f4f2ca21dea1a6545e66df8e11482b904aa4e077a5681d3fbd50&smart=true",
+          "autor": "Mariana Reinke",
+          "publicado": "2026-10-28T14:11-03:00",
+          "capturado": "2026-10-28T14:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3f32a04c0d9ecc98"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 62,
+        "commercial_score": 55,
+        "subtema": "ganaderia",
+        "tema": "ecocarnes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto en la cadena cárnica bonaerense por la crisis financiera de un frigorífico clave.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          64
+        ]
+      },
+      "cuando": "2026-10-28T14:21-03:00"
+    },
     {
       "id": "f584d6521e35",
       "rep": {
@@ -34254,73 +34407,6 @@
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:00-03:00"
-    },
-    {
-      "id": "daabb4e81ee7",
-      "rep": {
-        "id": "daabb4e81ee7",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html",
-        "canonical_url": "https://lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html",
-        "titulo": "La ganadería impulsa una recuperación del valor de la tierra rural en Santa Fe",
-        "titulo_norm": "la ganaderia impulsa una recuperacion del valor de la tierra rural en santa fe",
-        "descripcion": "Un informe de la Bolsa de Comercio de la capital de la provincia repasó la evolución del mercado inmobiliario en los últimos años. Cuáles son las zonas más cotizadas",
-        "imagen_url": "https://media.lacapital.com.ar/p/519389a84a0c30ebfbdb2ca7cbc9b4d1/adjuntos/305/imagenes/102/471/0102471685/1200x675/smart/ganaderiajpg.jpg",
-        "autor": "",
-        "publicado": "2026-10-28T11:30-03:00",
-        "capturado": "2026-10-28T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4a6234bd948e43e8"
-      },
-      "grupo": [
-        {
-          "id": "daabb4e81ee7",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html",
-          "canonical_url": "https://lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html",
-          "titulo": "La ganadería impulsa una recuperación del valor de la tierra rural en Santa Fe",
-          "titulo_norm": "la ganaderia impulsa una recuperacion del valor de la tierra rural en santa fe",
-          "descripcion": "Un informe de la Bolsa de Comercio de la capital de la provincia repasó la evolución del mercado inmobiliario en los últimos años. Cuáles son las zonas más cotizadas",
-          "imagen_url": "https://media.lacapital.com.ar/p/519389a84a0c30ebfbdb2ca7cbc9b4d1/adjuntos/305/imagenes/102/471/0102471685/1200x675/smart/ganaderiajpg.jpg",
-          "autor": "",
-          "publicado": "2026-10-28T11:30-03:00",
-          "capturado": "2026-10-28T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4a6234bd948e43e8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 67,
-        "commercial_score": 72,
-        "subtema": "mercados",
-        "tema": "tierra rural",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Valor de la tierra en Santa Fe, de alto interés para inversores y productores de la región.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          65
-        ]
       },
       "cuando": "2026-10-28T13:00-03:00"
     },
@@ -35042,8 +35128,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T14:05:22-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T14:24:33-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
