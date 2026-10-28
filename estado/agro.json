@@ -18146,6 +18146,27 @@
         53,
         57
       ]
+    },
+    "cd726ca0032e2112": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta de lleno a la agroindustria y genera fuerte debate político en el sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19378,7 +19399,8 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249078-nuevo-pte-de-barbechando-ignacio-garciarena-y-el-rol-clave-del-campo-en-el-congreso.html": "2026-10-28",
       "https://bichosdecampo.com/reelecto-con-el-agro-en-contra-lula-tendra-que-cuidar-el-corazon-del-modelo-y-resolver-sus-nuevas-urgencias-las-deudas-el-credito-caro-y-los-problemas-de-logistica": "2026-10-28",
       "https://bichosdecampo.com/que-rico-esta-este-pollo-la-avicola-familiar-sigue-invirtiendo-para-acceder-a-mas-mercados-y-ahora-va-por-su-planta-de-procesamiento-de-subproductos": "2026-10-28",
-      "https://lanacion.com.ar/economia/campo/don-pascual-de-82-anos-recupero-casi-60-chivas-extraviadas-gracias-a-un-dron-ahi-van-todas-nid28102026": "2026-10-28"
+      "https://lanacion.com.ar/economia/campo/don-pascual-de-82-anos-recupero-casi-60-chivas-extraviadas-gracias-a-un-dron-ahi-van-todas-nid28102026": "2026-10-28",
+      "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20609,7 +20631,8 @@
       "nuevo pte de barbechando ignacio garciarena y el rol clave del campo en el congreso": "2026-10-28",
       "reelecto con el agro en contra lula tendra que cuidar el corazon del modelo y resolver sus nuevas urgencias las deudas el credito caro y los problemas de logistica": "2026-10-28",
       "que rico esta este pollo la avicola familiar sigue invirtiendo para acceder a mas mercados y ahora va por su planta de procesamiento de subproductos": "2026-10-28",
-      "don pascual de 82 anos recupero casi 60 chivas extraviadas gracias a un dron ahi van todas": "2026-10-28"
+      "don pascual de 82 anos recupero casi 60 chivas extraviadas gracias a un dron ahi van todas": "2026-10-28",
+      "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21840,7 +21863,8 @@
       "e7c7828c1ec44d86": "2026-10-28",
       "2b4911cb8099b835": "2026-10-28",
       "7ccbb34c11f757b8": "2026-10-28",
-      "e26946fec6989311": "2026-10-28"
+      "e26946fec6989311": "2026-10-28",
+      "cd726ca0032e2112": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34957,9 +34981,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7626ed382bbc_portada.jpg"
+    },
+    {
+      "id": "13f6471d33ea",
+      "cuando": "2026-10-28T19:21-03:00",
+      "titulo_original": "El INTA amplía la evaluación del bienestar animal en bovinos",
+      "descripcion": "Desarrollados junto con el IPCVA, dos nuevos protocolos adaptan los criterios de Bienest.AR a la recría y al engorde semintensivo y extensivo. Con 36 y 34 mediciones, respectivamente, permiten diagnosticar las condiciones de alimentación, salud, alojamiento y comportamiento, e identificar oportunida",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos/",
+      "titular": "El INTA amplía la evaluación de bienestar en bovinos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 64,
+        "subtema": "ganaderia",
+        "tema": "bienestar animal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Nuevos protocolos de bienestar animal de INTA e IPCVA relevantes para ganaderos intensivos y extensivos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T19:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0dadf1c3-db33-4528-b12a-ae1c93ec7baa",
+          "slug": "el-inta-y-el-ipcva-presentan-nuevos-protocolos-de-bienestar-6a70cd",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-y-el-ipcva-presentan-nuevos-protocolos-de-bienestar-6a70cd",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1860064925009345",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18642689683058337",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_13f6471d33ea_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "aef83931a8af",
+      "rep": {
+        "id": "aef83931a8af",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles/",
+        "canonical_url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles",
+        "titulo": "Amigos son los amigos: Kirchnerismo, PRO y UCR se unieron para frenar el proyecto de biocombustibles",
+        "titulo_norm": "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles",
+        "descripcion": "Este miércoles se suponía que el proyecto de biocombustibles, que cuenta con media sanción del Senado, tendría dictamen favorable en la reunión plenaria de las comisiones de Energía, Presupuesto y Agricultura de la Cámara de Diputados. Pero eso no sucedió. Mientras que en el Senado la iniciativa promovida por el oficialismo (La Libertad Avanza) y […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/posteo-2.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-28T19:16-03:00",
+        "capturado": "2026-10-28T19:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cd726ca0032e2112"
+      },
+      "grupo": [
+        {
+          "id": "aef83931a8af",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles/",
+          "canonical_url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles",
+          "titulo": "Amigos son los amigos: Kirchnerismo, PRO y UCR se unieron para frenar el proyecto de biocombustibles",
+          "titulo_norm": "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles",
+          "descripcion": "Este miércoles se suponía que el proyecto de biocombustibles, que cuenta con media sanción del Senado, tendría dictamen favorable en la reunión plenaria de las comisiones de Energía, Presupuesto y Agricultura de la Cámara de Diputados. Pero eso no sucedió. Mientras que en el Senado la iniciativa promovida por el oficialismo (La Libertad Avanza) y […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/posteo-2.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-28T19:16-03:00",
+          "capturado": "2026-10-28T19:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cd726ca0032e2112"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "biocombustibles",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta de lleno a la agroindustria y genera fuerte debate político en el sector.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T19:21-03:00"
+    },
     {
       "id": "35fb377375d0",
       "rep": {
@@ -35150,73 +35295,6 @@
         "urgente": false,
         "potencial_carrusel": 6,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T16:00-03:00"
-    },
-    {
-      "id": "13f6471d33ea",
-      "rep": {
-        "id": "13f6471d33ea",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos/",
-        "canonical_url": "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos",
-        "titulo": "El INTA amplía la evaluación del bienestar animal en bovinos",
-        "titulo_norm": "el inta amplia la evaluacion del bienestar animal en bovinos",
-        "descripcion": "Desarrollados junto con el IPCVA, dos nuevos protocolos adaptan los criterios de Bienest.AR a la recría y al engorde semintensivo y extensivo. Con 36 y 34 mediciones, respectivamente, permiten diagnosticar las condiciones de alimentación, salud, alojamiento y comportamiento, e identificar oportunidades de mejora en los establecimientos ganaderos. Este tema será compartido en Argentina Alimenta 2026 del 17 al 19 de noviembre en La Rural de Palermo. La entrada El INTA amplía la evaluación del bienestar animal en bovinos se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/bienestar-animal.jpg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-10-28T15:11-03:00",
-        "capturado": "2026-10-28T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9babae6d03f7abe9"
-      },
-      "grupo": [
-        {
-          "id": "13f6471d33ea",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos/",
-          "canonical_url": "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos",
-          "titulo": "El INTA amplía la evaluación del bienestar animal en bovinos",
-          "titulo_norm": "el inta amplia la evaluacion del bienestar animal en bovinos",
-          "descripcion": "Desarrollados junto con el IPCVA, dos nuevos protocolos adaptan los criterios de Bienest.AR a la recría y al engorde semintensivo y extensivo. Con 36 y 34 mediciones, respectivamente, permiten diagnosticar las condiciones de alimentación, salud, alojamiento y comportamiento, e identificar oportunidades de mejora en los establecimientos ganaderos. Este tema será compartido en Argentina Alimenta 2026 del 17 al 19 de noviembre en La Rural de Palermo. La entrada El INTA amplía la evaluación del bienestar animal en bovinos se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/10/bienestar-animal.jpg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-10-28T15:11-03:00",
-          "capturado": "2026-10-28T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9babae6d03f7abe9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 11,
-        "innovacion": 6,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 64,
-        "subtema": "ganaderia",
-        "tema": "bienestar animal",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Nuevos protocolos de bienestar animal de INTA e IPCVA relevantes para ganaderos intensivos y extensivos.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          62,
-          68
-        ]
       },
       "cuando": "2026-10-28T16:00-03:00"
     },
@@ -36265,8 +36343,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T19:04:47-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T19:24:57-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
