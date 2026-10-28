@@ -17539,6 +17539,48 @@
         57,
         62
       ]
+    },
+    "7a2457799af31f69": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "sorgo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy útil para planteos ganaderos de la región núcleo que buscan eficiencia en la alimentación animal.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c412c796259b114f": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 71,
+      "commercial_score": 58,
+      "subtema": "ganaderia",
+      "tema": "inundaciones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Información crítica y urgente ante excesos hídricos, de alta relevancia para productores ganaderos afectados.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -18741,7 +18783,9 @@
       "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china": "2026-10-28",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249069-mercado-de-insumos-vicetto-advierte-volatilidad-y-welz-anticipa-efecto-espejo-y-mayor-consumo-por-ano-nino.html": "2026-10-28",
       "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios": "2026-10-28",
-      "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible": "2026-10-28"
+      "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible": "2026-10-28",
+      "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo": "2026-10-28",
+      "https://intainforma.inta.gob.ar/excesos-hidricos-claves-para-proteger-al-ganado-y-reducir-perdidas": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19942,7 +19986,9 @@
       "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china": "2026-10-28",
       "insumos vicetto advierte volatilidad y welz anticipa efecto espejo y mayor consumo por ano nino": "2026-10-28",
       "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios": "2026-10-28",
-      "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible": "2026-10-28"
+      "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible": "2026-10-28",
+      "el desafio no es solo producir forraje sino hacerlo aprovechable juan manuel pineiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo": "2026-10-28",
+      "excesos hidricos claves para proteger al ganado y reducir perdidas": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21143,7 +21189,9 @@
       "80566138790ac5d3": "2026-10-28",
       "f3fec2be60bcfaae": "2026-10-28",
       "7664cabc79e03252": "2026-10-28",
-      "ba4455d77ac7ae04": "2026-10-28"
+      "ba4455d77ac7ae04": "2026-10-28",
+      "7a2457799af31f69": "2026-10-28",
+      "c412c796259b114f": "2026-10-28"
     }
   },
   "elegidas": [
@@ -33600,9 +33648,162 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ad497807d974_portada.jpg"
+    },
+    {
+      "id": "ca95b42e04ce",
+      "cuando": "2026-10-28T14:01-03:00",
+      "titulo_original": "Excesos hídricos: claves para proteger al ganado y reducir pérdidas",
+      "descripcion": "Ante la creciente de los ríos y las lluvias en el norte de Santa Fe, especialistas del INTA Reconquista brindan una serie de recomendaciones sobre el traslado de hacienda, la alimentación del rodeo y la prevención de problemas sanitarios. El monitoreo de los niveles de agua, la planificación del pas",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/excesos-hidricos-claves-para-proteger-al-ganado-y-reducir-perdidas/",
+      "titular": "Santa Fe: recomiendan manejo de hacienda ante excesos hídricos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 58,
+        "subtema": "ganaderia",
+        "tema": "inundaciones",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información crítica y urgente ante excesos hídricos, de alta relevancia para productores ganaderos afectados.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T14:00:00-03:00"
+    },
+    {
+      "id": "e3bf490958f8",
+      "cuando": "2026-10-28T14:01-03:00",
+      "titulo_original": "Al ritmo de una mayor demanda mundial, la carne vacuna gana valor: El precio promedio de exportación subió 75% en dos años y los embarques ya representan 35% de la producción",
+      "descripcion": "El valor de la tonelada de carne exportada promedia los 5.416 dólares, de acuerdo con los datos publicados por la Secretaría de Agricultura. Ese valor es 35% superior al registrado en 2025 y 75% mayor al de 2024, lo que da cuenta de la valorización que tuvo la carne vacuna en el mercado mundial. La ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/al-ritmo-de-una-mayor-demanda-mundial-la-carne-vacuna-gana-valor-el-precio-promedio-de-exportacion-subio-75-en-dos-anos-y-los-embarques-ya-representan-35-de-la-produccion/",
+      "titular": "Carne vacuna: la tonelada cotiza a 5.416 dólares y sube 35% frente",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 85,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Fuerte suba en los valores de exportación de carne, dato muy comentado en el sector.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "66cee32e-6626-4c22-841f-68a1c0fad0b7",
+          "slug": "carne-vacuna-la-tonelada-cotiza-a-5-416-dolares-y-supera-en-35-5452af",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-vacuna-la-tonelada-cotiza-a-5-416-dolares-y-supera-en-35-5452af",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1429183122061446",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17926835526428964",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e3bf490958f8_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f584d6521e35",
+      "rep": {
+        "id": "f584d6521e35",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo/",
+        "canonical_url": "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo",
+        "titulo": "El desafío no es solo producir forraje, sino hacerlo aprovechable: Juan Manuel Piñeiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo",
+        "titulo_norm": "el desafio no es solo producir forraje sino hacerlo aprovechable juan manuel pineiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo",
+        "descripcion": "Producir forraje en cantidad es importante, aunque no lo es todo. Sucede que si ese alimento no tiene la calidad necesaria para que el animal lo aproveche, buena parte del esfuerzo realizado en el lote puede quedar por el camino. Y entre todos los componentes que definen esa cuestión hay uno que, según el veterinario […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/vacas-comiendo-rollos-1-1.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-28T13:50-03:00",
+        "capturado": "2026-10-28T14:01-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7a2457799af31f69"
+      },
+      "grupo": [
+        {
+          "id": "f584d6521e35",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo/",
+          "canonical_url": "https://bichosdecampo.com/el-desafio-no-es-solo-producir-forraje-sino-hacerlo-aprovechable-juan-manuel-pineiro-pone-el-foco-en-la-digestibilidad-y-el-procesamiento-de-cultivos-como-el-sorgo",
+          "titulo": "El desafío no es solo producir forraje, sino hacerlo aprovechable: Juan Manuel Piñeiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo",
+          "titulo_norm": "el desafio no es solo producir forraje sino hacerlo aprovechable juan manuel pineiro pone el foco en la digestibilidad y el procesamiento de cultivos como el sorgo",
+          "descripcion": "Producir forraje en cantidad es importante, aunque no lo es todo. Sucede que si ese alimento no tiene la calidad necesaria para que el animal lo aproveche, buena parte del esfuerzo realizado en el lote puede quedar por el camino. Y entre todos los componentes que definen esa cuestión hay uno que, según el veterinario […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/vacas-comiendo-rollos-1-1.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-28T13:50-03:00",
+          "capturado": "2026-10-28T14:01-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7a2457799af31f69"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 60,
+        "subtema": "ganaderia",
+        "tema": "sorgo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para planteos ganaderos de la región núcleo que buscan eficiencia en la alimentación animal.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T14:01-03:00"
+    },
     {
       "id": "1a5b19ac3ada",
       "rep": {
@@ -33733,73 +33934,6 @@
         "dobles": [
           63,
           68
-        ]
-      },
-      "cuando": "2026-10-28T13:40-03:00"
-    },
-    {
-      "id": "13cdec73ef56",
-      "rep": {
-        "id": "13cdec73ef56",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios/",
-        "canonical_url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios",
-        "titulo": "La negociación para actualizar la Ley de Semillas ingresó en una vía muerta y ahora solo queda que el gobierno mueva alguna ficha, mientras se agotan los tiempos parlamentarios",
-        "titulo_norm": "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios",
-        "descripcion": "Pasó octubre. Y en las últimas horas pasaron dos cosas sugestivas que dan cuenta de que ingresó en vía muerta y no prospera la negociación entre la industria semillera y las entidades del agro para actualizar la Ley de Semillas para acomodarla un poco a las exigencias de los obtentores (y de quien está detrás […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-mesa-de-trabajo-reunio-a-referentes-de-la-produccion-y-de-asa-para-avanzar-en-puntos-de-acuerdo-sobre-la-reforma-de-la-ley-de-semillas-foto-coninagro-F5W6JJTJ5NBATGGC2EYBSZ2M7E-1.jpg",
-        "autor": "Matias Longoni",
-        "publicado": "2026-10-28T13:29-03:00",
-        "capturado": "2026-10-28T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7664cabc79e03252"
-      },
-      "grupo": [
-        {
-          "id": "13cdec73ef56",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios/",
-          "canonical_url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios",
-          "titulo": "La negociación para actualizar la Ley de Semillas ingresó en una vía muerta y ahora solo queda que el gobierno mueva alguna ficha, mientras se agotan los tiempos parlamentarios",
-          "titulo_norm": "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios",
-          "descripcion": "Pasó octubre. Y en las últimas horas pasaron dos cosas sugestivas que dan cuenta de que ingresó en vía muerta y no prospera la negociación entre la industria semillera y las entidades del agro para actualizar la Ley de Semillas para acomodarla un poco a las exigencias de los obtentores (y de quien está detrás […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-mesa-de-trabajo-reunio-a-referentes-de-la-produccion-y-de-asa-para-avanzar-en-puntos-de-acuerdo-sobre-la-reforma-de-la-ley-de-semillas-foto-coninagro-F5W6JJTJ5NBATGGC2EYBSZ2M7E-1.jpg",
-          "autor": "Matias Longoni",
-          "publicado": "2026-10-28T13:29-03:00",
-          "capturado": "2026-10-28T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7664cabc79e03252"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 13,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 7,
-        "potencial_comercial": 7,
-        "ai_score": 70,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "ley de semillas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Tema institucional y regulatorio clave para el negocio agrícola, aunque con bajo dinamismo comercial inmediato.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          76
         ]
       },
       "cuando": "2026-10-28T13:40-03:00"
@@ -33991,69 +34125,6 @@
         "sensible": false,
         "explicacion": "Información clave sobre el estado hídrico del trigo y suelos en la región núcleo.",
         "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:00-03:00"
-    },
-    {
-      "id": "e3bf490958f8",
-      "rep": {
-        "id": "e3bf490958f8",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/al-ritmo-de-una-mayor-demanda-mundial-la-carne-vacuna-gana-valor-el-precio-promedio-de-exportacion-subio-75-en-dos-anos-y-los-embarques-ya-representan-35-de-la-produccion/",
-        "canonical_url": "https://bichosdecampo.com/al-ritmo-de-una-mayor-demanda-mundial-la-carne-vacuna-gana-valor-el-precio-promedio-de-exportacion-subio-75-en-dos-anos-y-los-embarques-ya-representan-35-de-la-produccion",
-        "titulo": "Al ritmo de una mayor demanda mundial, la carne vacuna gana valor: El precio promedio de exportación subió 75% en dos años y los embarques ya representan 35% de la producción",
-        "titulo_norm": "al ritmo de una mayor demanda mundial la carne vacuna gana valor el precio promedio de exportacion subio 75 en dos anos y los embarques ya representan 35 de la produccion",
-        "descripcion": "El valor de la tonelada de carne exportada promedia los 5.416 dólares, de acuerdo con los datos publicados por la Secretaría de Agricultura. Ese valor es 35% superior al registrado en 2025 y 75% mayor al de 2024, lo que da cuenta de la valorización que tuvo la carne vacuna en el mercado mundial. La […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/carne-1.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-28T12:39-03:00",
-        "capturado": "2026-10-28T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fb6fb89984716b4b"
-      },
-      "grupo": [
-        {
-          "id": "e3bf490958f8",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/al-ritmo-de-una-mayor-demanda-mundial-la-carne-vacuna-gana-valor-el-precio-promedio-de-exportacion-subio-75-en-dos-anos-y-los-embarques-ya-representan-35-de-la-produccion/",
-          "canonical_url": "https://bichosdecampo.com/al-ritmo-de-una-mayor-demanda-mundial-la-carne-vacuna-gana-valor-el-precio-promedio-de-exportacion-subio-75-en-dos-anos-y-los-embarques-ya-representan-35-de-la-produccion",
-          "titulo": "Al ritmo de una mayor demanda mundial, la carne vacuna gana valor: El precio promedio de exportación subió 75% en dos años y los embarques ya representan 35% de la producción",
-          "titulo_norm": "al ritmo de una mayor demanda mundial la carne vacuna gana valor el precio promedio de exportacion subio 75 en dos anos y los embarques ya representan 35 de la produccion",
-          "descripcion": "El valor de la tonelada de carne exportada promedia los 5.416 dólares, de acuerdo con los datos publicados por la Secretaría de Agricultura. Ese valor es 35% superior al registrado en 2025 y 75% mayor al de 2024, lo que da cuenta de la valorización que tuvo la carne vacuna en el mercado mundial. La […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/carne-1.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-28T12:39-03:00",
-          "capturado": "2026-10-28T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fb6fb89984716b4b"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 77,
-        "commercial_score": 85,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Fuerte suba en los valores de exportación de carne, dato muy comentado en el sector.",
-        "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
@@ -34971,8 +35042,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T14:01:35-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T14:05:22-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
