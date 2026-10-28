@@ -18029,6 +18029,73 @@
         65,
         65
       ]
+    },
+    "443a66fe893fdb91": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 61,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente la comercialización de granos y la estrategia de venta de los productores de la región núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        63
+      ]
+    },
+    "e7c7828c1ec44d86": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 5,
+      "potencial_comercial": 5,
+      "ai_score": 49,
+      "commercial_score": 55,
+      "subtema": "empresas",
+      "tema": "barbechando",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Importante a nivel institucional y político para el sector, aunque de menor interés práctico cotidiano para el productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2b4911cb8099b835": {
+      "impacto_economico": 12,
+      "interes_productores": 9,
+      "innovacion": 3,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 49,
+      "commercial_score": 58,
+      "subtema": "mercados",
+      "tema": "brasil",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Analiza la macro del principal competidor regional, relevante para entender el mercado de granos sudamericano.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19256,7 +19323,10 @@
       "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026": "2026-10-28",
       "https://agfundernews.com/stacked-farm-outlines-the-long-game-for-vertical-farming-ahead-of-us-expansion": "2026-10-28",
-      "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas": "2026-10-28"
+      "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249077-la-paradoja-de-mayor-produccion-pero-menor-disponibilidad-abre-una-esperanza-para-la-soja-y-demas-granos.html": "2026-10-28",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249078-nuevo-pte-de-barbechando-ignacio-garciarena-y-el-rol-clave-del-campo-en-el-congreso.html": "2026-10-28",
+      "https://bichosdecampo.com/reelecto-con-el-agro-en-contra-lula-tendra-que-cuidar-el-corazon-del-modelo-y-resolver-sus-nuevas-urgencias-las-deudas-el-credito-caro-y-los-problemas-de-logistica": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20482,7 +20552,10 @@
       "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante": "2026-10-28",
       "cosecha record el combustible y los fletes desafian el negocio agricola": "2026-10-28",
       "stacked farm outlines the long game for vertical farming ahead of us expansion": "2026-10-28",
-      "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas": "2026-10-28"
+      "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas": "2026-10-28",
+      "la paradoja de mayor produccion pero menor disponibilidad abre una esperanza para soja y los granos por manuel alvarado ledesma": "2026-10-28",
+      "nuevo pte de barbechando ignacio garciarena y el rol clave del campo en el congreso": "2026-10-28",
+      "reelecto con el agro en contra lula tendra que cuidar el corazon del modelo y resolver sus nuevas urgencias las deudas el credito caro y los problemas de logistica": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21708,7 +21781,10 @@
       "f840a4084a80db98": "2026-10-28",
       "62627fb0a6786490": "2026-10-28",
       "af3dff49bac2a9ac": "2026-10-28",
-      "c5b6b6192288e080": "2026-10-28"
+      "c5b6b6192288e080": "2026-10-28",
+      "443a66fe893fdb91": "2026-10-28",
+      "e7c7828c1ec44d86": "2026-10-28",
+      "2b4911cb8099b835": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34713,6 +34789,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_38aa102c11bf_portada.jpg"
+    },
+    {
+      "id": "ee259c261856",
+      "cuando": "2026-10-28T18:40-03:00",
+      "titulo_original": "La paradoja de mayor producción, pero menor disponibilidad abre una esperanza para Soja y los granos, por Manuel Alvarado Ledesma",
+      "descripcion": "El mercado está descontando una verdad nueva: no es lo mismo producir más que disponer de mayor mercadería…",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249077-la-paradoja-de-mayor-produccion-pero-menor-disponibilidad-abre-una-esperanza-para-la-soja-y-demas-granos.html",
+      "titular": "Soja y granos: la paradoja de mayor producción pero menor disponibilidad",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 61,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente la comercialización de granos y la estrategia de venta de los productores de la región núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          63
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "104b9520-4860-4c65-8163-7618dadf553a",
+          "slug": "soja-y-granos-por-que-una-mayor-produccion-global-no-garantiza-b45228",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-y-granos-por-que-una-mayor-produccion-global-no-garantiza-b45228",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1456136543113570",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18016754045955384",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ee259c261856_portada.jpg"
     }
   ],
   "pendientes": [
@@ -36084,8 +36218,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T18:23:41-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T18:43:06-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
