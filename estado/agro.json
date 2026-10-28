@@ -17811,6 +17811,52 @@
         65,
         56
       ]
+    },
+    "4ba5a97fc926796b": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 62,
+      "subtema": "empresas",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en la agroindustria y la normativa nacional, generando debate en el sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        63
+      ]
+    },
+    "1dc7fa3da4b7cf80": {
+      "impacto_economico": 8,
+      "interes_productores": 5,
+      "innovacion": 2,
+      "cercania_argentina": 4,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 3,
+      "ai_score": 29,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "legumbres",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis macroeconómico demasiado teórico y lejano para el productor promedio de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19026,7 +19072,9 @@
       "https://agfundernews.com/%f0%9f%8e%a5-amatera-tackles-plant-breeding-bottleneck-with-high-throughput-cell-screening-platform": "2026-10-28",
       "https://intainforma.inta.gob.ar/mal-de-la-tela-claves-para-detectar-la-enfermedad-en-los-yerbales": "2026-10-28",
       "https://intainforma.inta.gob.ar/el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos": "2026-10-28",
-      "https://intainforma.inta.gob.ar/la-materia-organica-y-el-agua-definen-el-potencial-de-rendimiento": "2026-10-28"
+      "https://intainforma.inta.gob.ar/la-materia-organica-y-el-agua-definen-el-potencial-de-rendimiento": "2026-10-28",
+      "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249072-china-y-la-reconfiguracion-del-mercado-global-de-legumbres-analisis-macroeconomico-y-de-demanda-2025-2026.html": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20240,7 +20288,9 @@
       "amatera tackles plant breeding bottleneck with high throughput cell screening platform": "2026-10-28",
       "mal de la tela claves para detectar la enfermedad en los yerbales": "2026-10-28",
       "el inta amplia la evaluacion del bienestar animal en bovinos": "2026-10-28",
-      "la materia organica y el agua definen el potencial de rendimiento": "2026-10-28"
+      "la materia organica y el agua definen el potencial de rendimiento": "2026-10-28",
+      "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados": "2026-10-28",
+      "china y la reconfiguracion del mercado global de legumbres analisis macroeconomico y de demanda 2025 2026": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21454,7 +21504,9 @@
       "35bab12e56b1cd98": "2026-10-28",
       "e18eaca8e51a8c79": "2026-10-28",
       "9babae6d03f7abe9": "2026-10-28",
-      "9b8c3753748491d8": "2026-10-28"
+      "9b8c3753748491d8": "2026-10-28",
+      "4ba5a97fc926796b": "2026-10-28",
+      "1dc7fa3da4b7cf80": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34120,75 +34172,129 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5c7c83c56685_portada.jpg"
+    },
+    {
+      "id": "a7d890107eb1",
+      "cuando": "2026-10-28T16:20-03:00",
+      "titulo_original": "Lo dice un informe: anticipan lluvias con focos de 200 milímetros en una región",
+      "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026/",
+      "titular": "Lluvias y calor anticipan dos semanas inestables en la región pampeana",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 6,
+        "ai_score": 76,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Acierta de lleno en la región pampeana con acumulados importantes que interesan a todo productor.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b16c623c-d738-4f1b-8a6f-a7bbd1e8476e",
+          "slug": "anticipan-dos-semanas-de-lluvias-desparejas-y-oscilaciones-ac9166",
+          "url": "https://www.diariolacampaña.com.ar/n/anticipan-dos-semanas-de-lluvias-desparejas-y-oscilaciones-ac9166",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1839647907488242",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17987631705088095",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a7d890107eb1_portada.jpg"
     }
   ],
   "pendientes": [
     {
-      "id": "0e4f369e1d1b",
+      "id": "c06a459d6d83",
       "rep": {
-        "id": "0e4f369e1d1b",
+        "id": "c06a459d6d83",
         "fuente": "Infocampo",
         "tipo_fuente": "medio",
         "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/crecidas-en-el-litoral-por-el-nino-segun-senasa-ya-se-trasladaron-casi-150-000-animales-de-las-islas/",
-        "canonical_url": "https://infocampo.com.ar/crecidas-en-el-litoral-por-el-nino-segun-senasa-ya-se-trasladaron-casi-150-000-animales-de-las-islas",
-        "titulo": "Crecidas en el Litoral por El Niño: según Senasa, ya se trasladaron casi 150.000 animales desde las islas",
-        "titulo_norm": "crecidas en el litoral por el nino segun senasa ya se trasladaron casi 150 000 animales desde las islas",
-        "descripcion": "El organismo sanitario tomó medidas para acelerar la salida de la hacienda desde las islas hacia zonas de tierra firme y alta. También recordó las recomendaciones a la hora de movilizar los animales y sumó una alerta: las plantas tóxicas.",
-        "imagen_url": "https://www.youtube.com/embed/cuo15s1eDZA",
-        "autor": "infocampo",
-        "publicado": "2026-10-28T14:57-03:00",
-        "capturado": "2026-10-28T16:00-03:00",
+        "url": "https://www.infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados/",
+        "canonical_url": "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados",
+        "titulo": "Biocombustibles: otra vez el biodiésel traba el debate y el proyecto de ley se queda sin nafta en Diputados",
+        "titulo_norm": "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados",
+        "descripcion": "Diputados de Buenos Aires piden cambios que el Poder Ejecutivo no está dispuesto a ceder. Así, el riesgo de que el año termine sin nueva ley de biocombustibles es alto, a menos que sacando algún conejo de la galera el oficialismo logre los votos para que vaya al recinto tal como llegó del Senado.",
+        "imagen_url": "https://www.youtube.com/embed/Nh5jE6YJbJs",
+        "autor": "Javier Preciado Patiño",
+        "publicado": "2026-10-28T16:00-03:00",
+        "capturado": "2026-10-28T16:20-03:00",
         "idioma": "es",
         "pais": "AR",
-        "hash": "ca922d0011c5c7f8"
+        "hash": "4ba5a97fc926796b"
       },
       "grupo": [
         {
-          "id": "0e4f369e1d1b",
+          "id": "c06a459d6d83",
           "fuente": "Infocampo",
           "tipo_fuente": "medio",
           "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/crecidas-en-el-litoral-por-el-nino-segun-senasa-ya-se-trasladaron-casi-150-000-animales-de-las-islas/",
-          "canonical_url": "https://infocampo.com.ar/crecidas-en-el-litoral-por-el-nino-segun-senasa-ya-se-trasladaron-casi-150-000-animales-de-las-islas",
-          "titulo": "Crecidas en el Litoral por El Niño: según Senasa, ya se trasladaron casi 150.000 animales desde las islas",
-          "titulo_norm": "crecidas en el litoral por el nino segun senasa ya se trasladaron casi 150 000 animales desde las islas",
-          "descripcion": "El organismo sanitario tomó medidas para acelerar la salida de la hacienda desde las islas hacia zonas de tierra firme y alta. También recordó las recomendaciones a la hora de movilizar los animales y sumó una alerta: las plantas tóxicas.",
-          "imagen_url": "https://www.youtube.com/embed/cuo15s1eDZA",
-          "autor": "infocampo",
-          "publicado": "2026-10-28T14:57-03:00",
-          "capturado": "2026-10-28T16:00-03:00",
+          "url": "https://www.infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados/",
+          "canonical_url": "https://infocampo.com.ar/biocombustibles-otra-vez-el-biodiesel-traba-el-debate-y-el-proyecto-de-ley-se-queda-sin-nafta-en-diputados",
+          "titulo": "Biocombustibles: otra vez el biodiésel traba el debate y el proyecto de ley se queda sin nafta en Diputados",
+          "titulo_norm": "biocombustibles otra vez el biodiesel traba el debate y el proyecto de ley se queda sin nafta en diputados",
+          "descripcion": "Diputados de Buenos Aires piden cambios que el Poder Ejecutivo no está dispuesto a ceder. Así, el riesgo de que el año termine sin nueva ley de biocombustibles es alto, a menos que sacando algún conejo de la galera el oficialismo logre los votos para que vaya al recinto tal como llegó del Senado.",
+          "imagen_url": "https://www.youtube.com/embed/Nh5jE6YJbJs",
+          "autor": "Javier Preciado Patiño",
+          "publicado": "2026-10-28T16:00-03:00",
+          "capturado": "2026-10-28T16:20-03:00",
           "idioma": "es",
           "pais": "AR",
-          "hash": "ca922d0011c5c7f8"
+          "hash": "4ba5a97fc926796b"
         }
       ],
       "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 4,
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
         "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 6,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
         "conversacion": 8,
         "potencial_comercial": 6,
         "ai_score": 64,
-        "commercial_score": 61,
-        "subtema": "ganaderia",
-        "tema": "hacienda",
+        "commercial_score": 62,
+        "subtema": "empresas",
+        "tema": "biocombustibles",
         "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Fuerte impacto por traslado masivo de hacienda y riesgo sanitario por crecidas en el Litoral.",
-        "tema_doc": "ganaderia",
-        "urgente": true,
-        "potencial_carrusel": 8,
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la agroindustria y la normativa nacional, generando debate en el sector.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "dobles": [
-          57,
-          67
+          65,
+          63
         ]
       },
-      "cuando": "2026-10-28T16:00-03:00"
+      "cuando": "2026-10-28T16:20-03:00"
     },
     {
       "id": "6d0b5c675d09",
@@ -34784,69 +34890,6 @@
         ]
       },
       "cuando": "2026-10-28T13:40-03:00"
-    },
-    {
-      "id": "a7d890107eb1",
-      "rep": {
-        "id": "a7d890107eb1",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026",
-        "titulo": "Lo dice un informe: anticipan lluvias con focos de 200 milímetros en una región",
-        "titulo_norm": "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region",
-        "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/ROIUSCQGNNBKBL36ISQSI47FVI.png?auth=6518ccfc3d4caf332366032d6e2a60e1113cb3ad2b5cc5ffa8ca2e5258a7c7d2&smart=true",
-        "autor": "",
-        "publicado": "2026-10-28T13:16-03:00",
-        "capturado": "2026-10-28T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e80bdea10fc8b573"
-      },
-      "grupo": [
-        {
-          "id": "a7d890107eb1",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026",
-          "titulo": "Lo dice un informe: anticipan lluvias con focos de 200 milímetros en una región",
-          "titulo_norm": "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region",
-          "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/ROIUSCQGNNBKBL36ISQSI47FVI.png?auth=6518ccfc3d4caf332366032d6e2a60e1113cb3ad2b5cc5ffa8ca2e5258a7c7d2&smart=true",
-          "autor": "",
-          "publicado": "2026-10-28T13:16-03:00",
-          "capturado": "2026-10-28T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e80bdea10fc8b573"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 10,
-        "potencial_comercial": 6,
-        "ai_score": 76,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "lluvias",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Acierta de lleno en la región pampeana con acumulados importantes que interesan a todo productor.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:20-03:00"
     },
     {
       "id": "7de24d5c7c19",
@@ -35755,8 +35798,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T16:03:45-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T16:23:18-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
