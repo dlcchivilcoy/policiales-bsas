@@ -18096,6 +18096,56 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7ccbb34c11f757b8": {
+      "impacto_economico": 11,
+      "interes_productores": 8,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 59,
+      "commercial_score": 62,
+      "subtema": "empresas",
+      "tema": "avicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra inversión y valor agregado en la avicultura nacional, interesante para el sector industrial.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        59
+      ]
+    },
+    "e26946fec6989311": {
+      "impacto_economico": 4,
+      "interes_productores": 8,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 1,
+      "potencial_reel": 10,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 54,
+      "commercial_score": 46,
+      "subtema": "ganaderia",
+      "tema": "drones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tiene un alto potencial viral y de redes por la emotividad y el uso práctico de drones en ganadería.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        57
+      ]
     }
   },
   "indice": {
@@ -19326,7 +19376,9 @@
       "https://bichosdecampo.com/el-iica-advierte-si-las-restricciones-europeas-a-los-pesticidas-aumentan-estaran-en-riesgo-miles-de-millones-en-exportaciones-americanas": "2026-10-28",
       "https://agrositio.com.ar/noticia/249077-la-paradoja-de-mayor-produccion-pero-menor-disponibilidad-abre-una-esperanza-para-la-soja-y-demas-granos.html": "2026-10-28",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249078-nuevo-pte-de-barbechando-ignacio-garciarena-y-el-rol-clave-del-campo-en-el-congreso.html": "2026-10-28",
-      "https://bichosdecampo.com/reelecto-con-el-agro-en-contra-lula-tendra-que-cuidar-el-corazon-del-modelo-y-resolver-sus-nuevas-urgencias-las-deudas-el-credito-caro-y-los-problemas-de-logistica": "2026-10-28"
+      "https://bichosdecampo.com/reelecto-con-el-agro-en-contra-lula-tendra-que-cuidar-el-corazon-del-modelo-y-resolver-sus-nuevas-urgencias-las-deudas-el-credito-caro-y-los-problemas-de-logistica": "2026-10-28",
+      "https://bichosdecampo.com/que-rico-esta-este-pollo-la-avicola-familiar-sigue-invirtiendo-para-acceder-a-mas-mercados-y-ahora-va-por-su-planta-de-procesamiento-de-subproductos": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/don-pascual-de-82-anos-recupero-casi-60-chivas-extraviadas-gracias-a-un-dron-ahi-van-todas-nid28102026": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20555,7 +20607,9 @@
       "el iica advierte si las restricciones europeas a los pesticidas aumentan estaran en riesgo miles de millones en exportaciones americanas": "2026-10-28",
       "la paradoja de mayor produccion pero menor disponibilidad abre una esperanza para soja y los granos por manuel alvarado ledesma": "2026-10-28",
       "nuevo pte de barbechando ignacio garciarena y el rol clave del campo en el congreso": "2026-10-28",
-      "reelecto con el agro en contra lula tendra que cuidar el corazon del modelo y resolver sus nuevas urgencias las deudas el credito caro y los problemas de logistica": "2026-10-28"
+      "reelecto con el agro en contra lula tendra que cuidar el corazon del modelo y resolver sus nuevas urgencias las deudas el credito caro y los problemas de logistica": "2026-10-28",
+      "que rico esta este pollo la avicola familiar sigue invirtiendo para acceder a mas mercados y ahora va por su planta de procesamiento de subproductos": "2026-10-28",
+      "don pascual de 82 anos recupero casi 60 chivas extraviadas gracias a un dron ahi van todas": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21784,7 +21838,9 @@
       "c5b6b6192288e080": "2026-10-28",
       "443a66fe893fdb91": "2026-10-28",
       "e7c7828c1ec44d86": "2026-10-28",
-      "2b4911cb8099b835": "2026-10-28"
+      "2b4911cb8099b835": "2026-10-28",
+      "7ccbb34c11f757b8": "2026-10-28",
+      "e26946fec6989311": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34847,6 +34903,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ee259c261856_portada.jpg"
+    },
+    {
+      "id": "7626ed382bbc",
+      "cuando": "2026-10-28T19:01-03:00",
+      "titulo_original": "Remates: el precio de los toros subió un 61% y cada animal promedia los $10 millones",
+      "descripcion": "Según la Secretaría de Agricultura, entre agosto y octubre el valor promedio fue de $9,77 millones por ejemplar; en dólares, el incremento alcanzó el 57%, sobre la base de operaciones por más de 15.500 cabezas",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026/",
+      "titular": "Toros: el precio sube 61% y promedia $9.770.983 por animal",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 80,
+        "subtema": "ganaderia",
+        "tema": "precios toros",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales de precios de reproductores que mueven el mercado ganadero regional y generan fuerte interés en cabañeros.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cf32bd36-bf28-43e2-a1bb-2f6fa8508648",
+          "slug": "toros-el-precio-sube-61-y-promedia-9-770-983-por-animal-en-93ff5b",
+          "url": "https://www.diariolacampaña.com.ar/n/toros-el-precio-sube-61-y-promedia-9-770-983-por-animal-en-93ff5b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1810591433397663",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17881422033548012",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7626ed382bbc_portada.jpg"
     }
   ],
   "pendientes": [
@@ -34979,69 +35089,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T17:00-03:00"
-    },
-    {
-      "id": "7626ed382bbc",
-      "rep": {
-        "id": "7626ed382bbc",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026",
-        "titulo": "Remates: el precio de los toros subió un 61% y cada animal promedia los $10 millones",
-        "titulo_norm": "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones",
-        "descripcion": "Según la Secretaría de Agricultura, entre agosto y octubre el valor promedio fue de $9,77 millones por ejemplar; en dólares, el incremento alcanzó el 57%, sobre la base de operaciones por más de 15.500 cabezas",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/GQ5OGHEFHJC6ZEP7VZHENYVB7M.png?auth=7fa7b1a06cb424994cd980ac9c969304505ed49b9d31cdaa51ffb92009455515&smart=true",
-        "autor": "",
-        "publicado": "2026-10-28T16:35-03:00",
-        "capturado": "2026-10-28T16:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f91f027d32a41317"
-      },
-      "grupo": [
-        {
-          "id": "7626ed382bbc",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026",
-          "titulo": "Remates: el precio de los toros subió un 61% y cada animal promedia los $10 millones",
-          "titulo_norm": "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones",
-          "descripcion": "Según la Secretaría de Agricultura, entre agosto y octubre el valor promedio fue de $9,77 millones por ejemplar; en dólares, el incremento alcanzó el 57%, sobre la base de operaciones por más de 15.500 cabezas",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/GQ5OGHEFHJC6ZEP7VZHENYVB7M.png?auth=7fa7b1a06cb424994cd980ac9c969304505ed49b9d31cdaa51ffb92009455515&smart=true",
-          "autor": "",
-          "publicado": "2026-10-28T16:35-03:00",
-          "capturado": "2026-10-28T16:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f91f027d32a41317"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 75,
-        "commercial_score": 80,
-        "subtema": "ganaderia",
-        "tema": "precios toros",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos oficiales de precios de reproductores que mueven el mercado ganadero regional y generan fuerte interés en cabañeros.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T16:40-03:00"
     },
     {
       "id": "6d0b5c675d09",
@@ -36218,8 +36265,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T19:01:30-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T19:04:47-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
