@@ -17129,6 +17129,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b9c3c2d173d1b306": {
+      "impacto_economico": 6,
+      "interes_productores": 6,
+      "innovacion": 11,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 4,
+      "ai_score": 56,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "pecán",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante innovación del INTA para economías regionales, aunque de nicho para la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        56
+      ]
     }
   },
   "indice": {
@@ -18305,7 +18330,8 @@
       "https://infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial": "2026-10-28",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-28-octubre-2026": "2026-10-28",
       "https://agrositio.com.ar/noticia/249065-pastizales-como-compatibilizar-la-produccion-ganadera-con-la-conservacion-de-la-naturaleza.html": "2026-10-28",
-      "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ": "2026-10-28"
+      "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ": "2026-10-28",
+      "https://bichosdecampo.com/como-un-test-de-paternidad-pero-para-los-arboles-el-inta-utiliza-pruebas-de-adn-para-identificar-variedades-de-pecan-y-evitar-problemas-de-polinizacion": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19480,7 +19506,8 @@
       "boom exportador con el agro como motor argentina recupera market share en el comercio mundial": "2026-10-28",
       "dolar blue a cuanto cotizan hoy en cordoba 28 octubre 2026": "2026-10-28",
       "pastizales como compatibilizar la produccion ganadera con la conservacion de la naturaleza": "2026-10-28",
-      "una carrera de obstaculos para la carne argentina el industrial luis viera advierte que solo la mitad de la hacienda esta lista para cumplir con la normativa antideforestacion europea": "2026-10-28"
+      "una carrera de obstaculos para la carne argentina el industrial luis viera advierte que solo la mitad de la hacienda esta lista para cumplir con la normativa antideforestacion europea": "2026-10-28",
+      "como un test de paternidad pero para los arboles el inta utiliza pruebas de adn para identificar variedades de pecan y evitar problemas de polinizacion": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -20655,7 +20682,8 @@
       "e2cc6ca3e40a0906": "2026-10-28",
       "0c6a93bf52e9c156": "2026-10-28",
       "1dd57a8a11a4e86d": "2026-10-28",
-      "2c21c7b5a4fb9e9c": "2026-10-28"
+      "2c21c7b5a4fb9e9c": "2026-10-28",
+      "b9c3c2d173d1b306": "2026-10-28"
     }
   },
   "elegidas": [
@@ -32827,6 +32855,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9de067497e93_portada.jpg"
+    },
+    {
+      "id": "25add703354c",
+      "cuando": "2026-10-28T10:40-03:00",
+      "titulo_original": "¿Y si el futuro de la ganadería Argentina no es tener más vacas, sino producir mejor?",
+      "descripcion": "Por Dr. Horacio M. Genesio (*) La discusión sobre cómo aumentar la producción argentina de carne vacuna es necesaria y oportuna. La posibilidad de mejorar la productividad mediante sistemas intensivos merece atención. Pero sería un error reducir el desafío a una única receta: más vientres, menos rec",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/y-si-el-futuro-de-la-ganaderia-argentina-no-es-tener-mas-vacas-sino-producir-mejor/",
+      "titular": "Ganadería vacuna eficiente: más carne con mejor gestión y recría pastoril",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 11,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "ganadería vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Nota de opinión sobre ganadería intensiva, interesante pero con formato de columna.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "14840a87-904f-4abe-9c47-ecadda011870",
+          "slug": "ganaderia-argentina-por-que-la-clave-para-producir-mas-carne-7e001e",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-argentina-por-que-la-clave-para-producir-mas-carne-7e001e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1101080669430053",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18010442826002707",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25add703354c_portada.jpg"
     }
   ],
   "pendientes": [
@@ -32955,73 +33041,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T10:20-03:00"
-    },
-    {
-      "id": "25add703354c",
-      "rep": {
-        "id": "25add703354c",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/y-si-el-futuro-de-la-ganaderia-argentina-no-es-tener-mas-vacas-sino-producir-mejor/",
-        "canonical_url": "https://todoagro.com.ar/y-si-el-futuro-de-la-ganaderia-argentina-no-es-tener-mas-vacas-sino-producir-mejor",
-        "titulo": "¿Y si el futuro de la ganadería Argentina no es tener más vacas, sino producir mejor?",
-        "titulo_norm": "y si el futuro de la ganaderia argentina no es tener mas vacas sino producir mejor",
-        "descripcion": "Por Dr. Horacio M. Genesio (*) La discusión sobre cómo aumentar la producción argentina de carne vacuna es necesaria y oportuna. La posibilidad de mejorar la productividad mediante sistemas intensivos merece atención. Pero sería un error reducir el desafío a una única receta: más vientres, menos recría pastoril o mayor permanencia de los animales en […] La entrada ¿Y si el futuro de la ganadería Argentina no es tener más vacas, sino producir mejor? pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-10-28T09:32-03:00",
-        "capturado": "2026-10-28T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fe7851b412740953"
-      },
-      "grupo": [
-        {
-          "id": "25add703354c",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/y-si-el-futuro-de-la-ganaderia-argentina-no-es-tener-mas-vacas-sino-producir-mejor/",
-          "canonical_url": "https://todoagro.com.ar/y-si-el-futuro-de-la-ganaderia-argentina-no-es-tener-mas-vacas-sino-producir-mejor",
-          "titulo": "¿Y si el futuro de la ganadería Argentina no es tener más vacas, sino producir mejor?",
-          "titulo_norm": "y si el futuro de la ganaderia argentina no es tener mas vacas sino producir mejor",
-          "descripcion": "Por Dr. Horacio M. Genesio (*) La discusión sobre cómo aumentar la producción argentina de carne vacuna es necesaria y oportuna. La posibilidad de mejorar la productividad mediante sistemas intensivos merece atención. Pero sería un error reducir el desafío a una única receta: más vientres, menos recría pastoril o mayor permanencia de los animales en […] La entrada ¿Y si el futuro de la ganadería Argentina no es tener más vacas, sino producir mejor? pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-10-28T09:32-03:00",
-          "capturado": "2026-10-28T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fe7851b412740953"
-        }
-      ],
-      "score": {
-        "impacto_economico": 11,
-        "interes_productores": 11,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 62,
-        "commercial_score": 68,
-        "subtema": "ganaderia",
-        "tema": "ganadería vacuna",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Nota de opinión sobre ganadería intensiva, interesante pero con formato de columna.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          68
-        ]
-      },
-      "cuando": "2026-10-28T10:00-03:00"
     },
     {
       "id": "f314f5dbb329",
@@ -33615,8 +33634,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T10:23:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T10:44:17-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
