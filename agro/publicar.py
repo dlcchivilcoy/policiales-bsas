@@ -379,8 +379,10 @@ DIARIO_IG_USUARIO = "diarioyradio"
 
 
 def historias_al_diario() -> bool:
-    """AGRO_HISTORIAS_DIARIO=0 deja de copiar las historias de datos en @diarioyradio."""
-    return (os.environ.get("AGRO_HISTORIAS_DIARIO") or "1").strip() != "0"
+    """¿Se copian las historias de datos en @diarioyradio? APAGADO desde el 28/10/2026 a pedido del editor
+    («deshabilitá las historias que se suben a @diarioyradio de @diarioyradioagro»). Variable del repo
+    AGRO_HISTORIAS_DIARIO=1 las vuelve a prender."""
+    return (os.environ.get("AGRO_HISTORIAS_DIARIO") or "0").strip() == "1"
 
 
 def usuario_diario() -> str:
