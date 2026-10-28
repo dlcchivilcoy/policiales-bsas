@@ -17941,6 +17941,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "80b2abc66b3837f3": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 9,
+      "ai_score": 87,
+      "commercial_score": 87,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en el mercado de maquinaria nacional y genera enorme debate entre productores y contratistas.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f840a4084a80db98": {
+      "impacto_economico": 19,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 9,
+      "ai_score": 83,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "costos de producción",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca el talón de Aquiles de la rentabilidad en zona núcleo con datos de Coninagro que interesan a todo productor.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "af3dff49bac2a9ac": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 10,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 31,
+      "commercial_score": 35,
+      "subtema": "agtech",
+      "tema": "vertical farming",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es agricultura vertical en EE.UU., una tecnología de nicho muy lejana para la realidad de la región pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19162,7 +19225,12 @@
       "https://bichosdecampo.com/espana-suspendieron-un-masivo-tractorazo-por-el-tragico-accidente-ferroviario": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026": "2026-10-28",
       "https://lacapital.com.ar/agro/bases-federadas-repudio-la-exoneracion-una-cientifica-del-inta-n10289223.html": "2026-10-28",
-      "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado": "2026-10-28"
+      "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado": "2026-10-28",
+      "https://infocampo.com.ar/pauny-en-crisis-1-000-millones-en-cheques-rechazados-atraso-salarial-y-una-posible-venta": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249074-mejoramiento-genetico-de-alfalfa-el-inta-presento-innovaciones-clave-para-sistemas-productivos.html": "2026-10-28",
+      "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026": "2026-10-28",
+      "https://agfundernews.com/stacked-farm-outlines-the-long-game-for-vertical-farming-ahead-of-us-expansion": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20382,7 +20450,12 @@
       "espana suspendieron un masivo tractorazo por el tragico accidente ferroviario": "2026-10-28",
       "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones": "2026-10-28",
       "bases federadas repudio la exoneracion de una cientifica del inta": "2026-10-28",
-      "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado": "2026-10-28"
+      "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado": "2026-10-28",
+      "pauny en crisis 1 000 millones en cheques rechazados atraso salarial y una posible venta": "2026-10-28",
+      "alfalfa del futuro el inta combina genetica y tecnologia para lograr cultivos mas resilientes": "2026-10-28",
+      "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante": "2026-10-28",
+      "cosecha record el combustible y los fletes desafian el negocio agricola": "2026-10-28",
+      "stacked farm outlines the long game for vertical farming ahead of us expansion": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21602,7 +21675,12 @@
       "4c5bfcef6a9d8f6c": "2026-10-28",
       "f91f027d32a41317": "2026-10-28",
       "26209346ace4abdc": "2026-10-28",
-      "341eba8827d2653e": "2026-10-28"
+      "341eba8827d2653e": "2026-10-28",
+      "80b2abc66b3837f3": "2026-10-28",
+      "5b07ae8d709b53d3": "2026-10-28",
+      "f840a4084a80db98": "2026-10-28",
+      "62627fb0a6786490": "2026-10-28",
+      "af3dff49bac2a9ac": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34492,9 +34570,151 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1075cf5debdb_portada.jpg"
+    },
+    {
+      "id": "2a5da8775b32",
+      "cuando": "2026-10-28T18:00-03:00",
+      "titulo_original": "Pauny, en crisis: $ 1.000 millones en cheques rechazados, atraso salarial y ¿una posible venta?",
+      "descripcion": "La fábrica cordobesa de tractores atraviesa una situación financiera e industrial cada vez más complicada. El Gobierno cordobés sigue de cerca el caso y se especula con la llegada de inversores o hasta la venta de la empresa.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/pauny-en-crisis-1-000-millones-en-cheques-rechazados-atraso-salarial-y-una-posible-venta/",
+      "titular": "Pauny acumula 1.000 millones en cheques rechazados y crisis salarial",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 87,
+        "commercial_score": 87,
+        "subtema": "maquinaria",
+        "tema": "pauny",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en el mercado de maquinaria nacional y genera enorme debate entre productores y contratistas.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "nKMS4R1SsdQ",
+          "url": "https://youtube.com/shorts/nKMS4R1SsdQ",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "d0c95745-a257-4605-a972-bf0978086297",
+          "slug": "crisis-en-pauny-mil-millones-en-cheques-rechazados-y-fuerte-b08976",
+          "url": "https://www.diariolacampaña.com.ar/n/crisis-en-pauny-mil-millones-en-cheques-rechazados-y-fuerte-b08976",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1115449951217112",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18022355003940803",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2a5da8775b32_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "38aa102c11bf",
+      "rep": {
+        "id": "38aa102c11bf",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante/",
+        "canonical_url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante",
+        "titulo": "Podrá haber cosecha récord, pero con los valores del flete y del combustible no hay planilla de Excel que aguante",
+        "titulo_norm": "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante",
+        "descripcion": "La campaña agrícola 2026/27 arranca con perspectivas de una producción récord, pero los números que proyectan las cosechas conviven con una cuenta cada vez más exigente para los productores. Según un informe de Coninagro, el aumento de los costos operativos deterioró en septiembre el poder de compra de la soja y el maíz, especialmente frente […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-28-175353.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-28T17:59-03:00",
+        "capturado": "2026-10-28T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f840a4084a80db98"
+      },
+      "grupo": [
+        {
+          "id": "38aa102c11bf",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante/",
+          "canonical_url": "https://bichosdecampo.com/podra-haber-cosecha-record-pero-con-los-valores-del-flete-y-del-combustible-no-hay-planilla-de-excel-que-aguante",
+          "titulo": "Podrá haber cosecha récord, pero con los valores del flete y del combustible no hay planilla de Excel que aguante",
+          "titulo_norm": "podra haber cosecha record pero con los valores del flete y del combustible no hay planilla de excel que aguante",
+          "descripcion": "La campaña agrícola 2026/27 arranca con perspectivas de una producción récord, pero los números que proyectan las cosechas conviven con una cuenta cada vez más exigente para los productores. Según un informe de Coninagro, el aumento de los costos operativos deterioró en septiembre el poder de compra de la soja y el maíz, especialmente frente […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-28-175353.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-28T17:59-03:00",
+          "capturado": "2026-10-28T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f840a4084a80db98"
+        },
+        {
+          "id": "f13d471eedfa",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/cosecha-record-el-combustible-y-los-fletes-desafian-el-negocio-agricola-nid28102026",
+          "titulo": "Cosecha récord: el combustible y los fletes desafían el negocio agrícola",
+          "titulo_norm": "cosecha record el combustible y los fletes desafian el negocio agricola",
+          "descripcion": "Un informe de Coninagro advierte sobre una pérdida de competitividad",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/F5AL2C27JVAXHBS6ABZ7LDSTWA.JPG?auth=3df3154456c75f11203dff5273b75730384d32ea23280c1bfa0ff37a250e4650&smart=true",
+          "autor": "",
+          "publicado": "2026-10-28T17:22-03:00",
+          "capturado": "2026-10-28T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "62627fb0a6786490"
+        }
+      ],
+      "score": {
+        "impacto_economico": 19,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "costos de producción",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca el talón de Aquiles de la rentabilidad en zona núcleo con datos de Coninagro que interesan a todo productor.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T18:00-03:00"
+    },
     {
       "id": "ab86b38d11f4",
       "rep": {
@@ -34681,73 +34901,6 @@
         "urgente": false,
         "potencial_carrusel": 6,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T16:00-03:00"
-    },
-    {
-      "id": "d8d7356dd904",
-      "rep": {
-        "id": "d8d7356dd904",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/biocombustibles-la-falta-de-acuerdo-con-el-pro-demora-el-dictamen-y-profundiza-las-diferencias-entre-nid28102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/biocombustibles-la-falta-de-acuerdo-con-el-pro-demora-el-dictamen-y-profundiza-las-diferencias-entre-nid28102026",
-        "titulo": "Biocombustibles: se profundizan las diferencias entre las cámaras del sector tras la falta de acuerdo en Diputados",
-        "titulo_norm": "biocombustibles se profundizan las diferencias entre las camaras del sector tras la falta de acuerdo en diputados",
-        "descripcion": "El oficialismo no logró reunir los apoyos para avanzar con el texto aprobado por el Senado; mientras Carbio reclama una rápida sanción, Cepreb exige cambios para las pymes y Casfer acepta mejoras si no comprometen el avance de la iniciativa",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/FJ4B5OFOQZAKLD3WHY74CHAQYM.gif?auth=d87a5bbf8ea1521202e2b62a0f0f0fbfb400c2fbc05091d1519cd3053b6c1640&smart=true",
-        "autor": "Belkis Martínez",
-        "publicado": "2026-10-28T14:49-03:00",
-        "capturado": "2026-10-28T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "38456185e45d99b2"
-      },
-      "grupo": [
-        {
-          "id": "d8d7356dd904",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/biocombustibles-la-falta-de-acuerdo-con-el-pro-demora-el-dictamen-y-profundiza-las-diferencias-entre-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/biocombustibles-la-falta-de-acuerdo-con-el-pro-demora-el-dictamen-y-profundiza-las-diferencias-entre-nid28102026",
-          "titulo": "Biocombustibles: se profundizan las diferencias entre las cámaras del sector tras la falta de acuerdo en Diputados",
-          "titulo_norm": "biocombustibles se profundizan las diferencias entre las camaras del sector tras la falta de acuerdo en diputados",
-          "descripcion": "El oficialismo no logró reunir los apoyos para avanzar con el texto aprobado por el Senado; mientras Carbio reclama una rápida sanción, Cepreb exige cambios para las pymes y Casfer acepta mejoras si no comprometen el avance de la iniciativa",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FJ4B5OFOQZAKLD3WHY74CHAQYM.gif?auth=d87a5bbf8ea1521202e2b62a0f0f0fbfb400c2fbc05091d1519cd3053b6c1640&smart=true",
-          "autor": "Belkis Martínez",
-          "publicado": "2026-10-28T14:49-03:00",
-          "capturado": "2026-10-28T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "38456185e45d99b2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 11,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 69,
-        "commercial_score": 72,
-        "subtema": "empresas",
-        "tema": "biocombustibles",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Discusión regulatoria clave para el negocio de biocombustibles y la agroindustria.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          68
-        ]
       },
       "cuando": "2026-10-28T16:00-03:00"
     },
@@ -35863,8 +36016,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T17:23:15-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T18:03:42-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
