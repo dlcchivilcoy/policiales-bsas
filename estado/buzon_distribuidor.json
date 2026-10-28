@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-28T23:01:57.000Z",
+  "actualizado": "2026-10-28T23:01:58.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/347110-rapidamente-resulto-esclarecido-el-ilicito-que-se",
@@ -187,6 +187,30 @@
       "volanta": "Bragado",
       "categoria": "operativo_policial",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/347232-esclarecieron-tres-robos-de-techos-solares-en-chac",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-28T23:01:58.000Z",
+      "titulo": "Detuvieron en Lomas de Zamora a un hombre de 41 años por robar techos solares",
+      "descripcion": "Cayó un sospechoso de 41 años acusado de sustraer los techos solares de tres Peugeot 207 en distintos puntos de Chacabuco entre enero y octubre de 2026. La investigación de la DDI Junín incluyó allanamientos en Lomas de Zamora.",
+      "texto_tiktok": "La DDI Junín detuvo a un hombre de 41 años en Lomas de Zamora tras acusarlo de robar techos solares de tres vehículos Peugeot 207 en Chacabuco.\n\nLos hechos ocurrieron entre enero y octubre de 2026 en diferentes calles de la ciudad.\n\nLa investigación estuvo a cargo del Grupo Operativo Chacabuco, que analizó cámaras de seguridad y cruces telefónicos para dar con el sospechoso y localizar el auto utilizado en los robos.\n\nDurante el allanamiento en una vivienda de la calle Pereyra Lucena, la policía secuestró un Fiat Cronos gris oscuro y un teléfono celular Samsung A55 negro.\n\nEn la causa intervienen la Unidad Funcional de Instrucción y Juicio N.º 11 de Chacabuco y el Tribunal en lo Criminal N.º 1 de Junín, a la espera de la declaración indagatoria.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Policiales #Detenido #Chacabuco #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-28_2134_01_chacabuco_detuvieron-en-lomas-de-zamora-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-detuvieron-a-un-hombre-de-41-anos-en-lomas-de-zamora-a80bb5",
+      "youtube_url": "https://youtube.com/shorts/H8IfT6pogVk",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Robos en Chacabuco",
+      "categoria": "robo",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
