@@ -32277,6 +32277,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8c700dcadd8c_portada.jpg"
+    },
+    {
+      "id": "9efcd90ddd14",
+      "cuando": "2026-10-28T08:04-03:00",
+      "titulo_original": "Un gigante alemán reduce un turno en una planta industrial y un sindicato se declaró en alerta",
+      "descripcion": "En General Lagos, BASF, que tiene producción química y un centro de distribución de productos para la protección de cultivos, empezará a funcionar con un turno menos a partir del 1° de noviembre; el gremio dijo que se ofreció un plan de retiros voluntarios",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026/",
+      "titular": "BASF reduce un turno en General Lagos y hay alerta sindical",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 11,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 64,
+        "subtema": "empresas",
+        "tema": "basf general lagos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta la logística de fitosanitarios en la región núcleo y genera preocupación en la industria proveedora.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          55
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T08:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "35357e74-d820-40a3-9afd-993883df6081",
+          "slug": "basf-reduce-un-turno-en-su-planta-de-general-lagos-y-el-gremio-af007e",
+          "url": "https://www.diariolacampaña.com.ar/n/basf-reduce-un-turno-en-su-planta-de-general-lagos-y-el-gremio-af007e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1709219510572684",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17946806061086161",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9efcd90ddd14_portada.jpg"
     }
   ],
   "pendientes": [
@@ -32602,73 +32660,6 @@
         ]
       },
       "cuando": "2026-10-28T07:04-03:00"
-    },
-    {
-      "id": "9efcd90ddd14",
-      "rep": {
-        "id": "9efcd90ddd14",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026",
-        "titulo": "Un gigante alemán reduce un turno en una planta industrial y un sindicato se declaró en alerta",
-        "titulo_norm": "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta",
-        "descripcion": "En General Lagos, BASF, que tiene producción química y un centro de distribución de productos para la protección de cultivos, empezará a funcionar con un turno menos a partir del 1° de noviembre; el gremio dijo que se ofreció un plan de retiros voluntarios",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/A4EXB23KEBFGJBJEYRC2Y6UTRA.jpeg?auth=b397b714a4095500044d6acbef744cc8dd46bca852cb3b7a51e3cbe9debfa877&smart=true",
-        "autor": "Germán de los Santos",
-        "publicado": "2026-10-27T19:19-03:00",
-        "capturado": "2026-10-27T19:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6f9bd2999af02d26"
-      },
-      "grupo": [
-        {
-          "id": "9efcd90ddd14",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026",
-          "titulo": "Un gigante alemán reduce un turno en una planta industrial y un sindicato se declaró en alerta",
-          "titulo_norm": "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta",
-          "descripcion": "En General Lagos, BASF, que tiene producción química y un centro de distribución de productos para la protección de cultivos, empezará a funcionar con un turno menos a partir del 1° de noviembre; el gremio dijo que se ofreció un plan de retiros voluntarios",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/A4EXB23KEBFGJBJEYRC2Y6UTRA.jpeg?auth=b397b714a4095500044d6acbef744cc8dd46bca852cb3b7a51e3cbe9debfa877&smart=true",
-          "autor": "Germán de los Santos",
-          "publicado": "2026-10-27T19:19-03:00",
-          "capturado": "2026-10-27T19:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6f9bd2999af02d26"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 11,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 62,
-        "commercial_score": 64,
-        "subtema": "empresas",
-        "tema": "basf general lagos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta la logística de fitosanitarios en la región núcleo y genera preocupación en la industria proveedora.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          55
-        ]
-      },
-      "cuando": "2026-10-27T19:22-03:00"
     },
     {
       "id": "d5b8158a1992",
@@ -33002,8 +32993,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T07:46:39-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T08:06:49-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
