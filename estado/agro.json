@@ -17397,6 +17397,27 @@
         69,
         65
       ]
+    },
+    "e80bdea10fc8b573": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 6,
+      "ai_score": 76,
+      "commercial_score": 70,
+      "subtema": "agro",
+      "tema": "lluvias",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Acierta de lleno en la región pampeana con acumulados importantes que interesan a todo productor.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -18591,7 +18612,8 @@
       "https://lanacion.com.ar/economia/campo/por-la-crecida-del-rio-parana-y-el-nino-traeran-dragas-desde-singapur-y-croacia-nid28102026": "2026-10-28",
       "https://argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones": "2026-10-28",
       "https://argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0": "2026-10-28",
-      "https://lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html": "2026-10-28"
+      "https://lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19784,7 +19806,8 @@
       "por la crecida del rio parana y el nino traeran dragas desde singapur y croacia": "2026-10-28",
       "fenomeno de el nino desde agosto ya se trasladaron 147 500 animales desde las regiones afectadas": "2026-10-28",
       "los remates de genetica bovina marcaron un crecimiento interanual del 61 en el precio": "2026-10-28",
-      "la ganaderia impulsa una recuperacion del valor de la tierra rural en santa fe": "2026-10-28"
+      "la ganaderia impulsa una recuperacion del valor de la tierra rural en santa fe": "2026-10-28",
+      "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -20977,7 +21000,8 @@
       "2cc24d412da468a9": "2026-10-28",
       "779acd4c69b20ac1": "2026-10-28",
       "16a18f38bb54db15": "2026-10-28",
-      "4a6234bd948e43e8": "2026-10-28"
+      "4a6234bd948e43e8": "2026-10-28",
+      "e80bdea10fc8b573": "2026-10-28"
     }
   },
   "elegidas": [
@@ -33322,9 +33346,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0b6c012e23c8_portada.jpg"
+    },
+    {
+      "id": "fe4ec0972934",
+      "cuando": "2026-10-28T13:20-03:00",
+      "titulo_original": "Fenómeno de El Niño: desde agosto ya se trasladaron 147.500 animales desde las regiones afectadas",
+      "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que ante el avance de las crecidas de los ríos vinculadas al fenómeno de El Niño, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) facilitó las gestiones para el traslado de animales des",
+      "fuente": "Secretaría de Agricultura",
+      "url": "https://www.argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones",
+      "titular": "Hacienda: evacuaron 147.500 animales por las crecidas de los ríos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 67,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales sobre traslado masivo de hacienda por inundaciones, alerta importante.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f1fa915e-4860-49d5-aee6-f8e7fb37fad9",
+          "slug": "crecidas-ya-trasladaron-147-500-animales-por-el-impacto-del-593de1",
+          "url": "https://www.diariolacampaña.com.ar/n/crecidas-ya-trasladaron-147-500-animales-por-el-impacto-del-593de1",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2191422618471786",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18116501177119625",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fe4ec0972934_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "a7d890107eb1",
+      "rep": {
+        "id": "a7d890107eb1",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026",
+        "titulo": "Lo dice un informe: anticipan lluvias con focos de 200 milímetros en una región",
+        "titulo_norm": "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region",
+        "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/ROIUSCQGNNBKBL36ISQSI47FVI.png?auth=6518ccfc3d4caf332366032d6e2a60e1113cb3ad2b5cc5ffa8ca2e5258a7c7d2&smart=true",
+        "autor": "",
+        "publicado": "2026-10-28T13:16-03:00",
+        "capturado": "2026-10-28T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e80bdea10fc8b573"
+      },
+      "grupo": [
+        {
+          "id": "a7d890107eb1",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026",
+          "titulo": "Lo dice un informe: anticipan lluvias con focos de 200 milímetros en una región",
+          "titulo_norm": "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region",
+          "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/ROIUSCQGNNBKBL36ISQSI47FVI.png?auth=6518ccfc3d4caf332366032d6e2a60e1113cb3ad2b5cc5ffa8ca2e5258a7c7d2&smart=true",
+          "autor": "",
+          "publicado": "2026-10-28T13:16-03:00",
+          "capturado": "2026-10-28T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e80bdea10fc8b573"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 6,
+        "ai_score": 76,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Acierta de lleno en la región pampeana con acumulados importantes que interesan a todo productor.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T13:20-03:00"
+    },
     {
       "id": "7de24d5c7c19",
       "rep": {
@@ -33511,73 +33656,6 @@
         "urgente": false,
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:00-03:00"
-    },
-    {
-      "id": "fe4ec0972934",
-      "rep": {
-        "id": "fe4ec0972934",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones",
-        "canonical_url": "https://argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones",
-        "titulo": "Fenómeno de El Niño: desde agosto ya se trasladaron 147.500 animales desde las regiones afectadas",
-        "titulo_norm": "fenomeno de el nino desde agosto ya se trasladaron 147 500 animales desde las regiones afectadas",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que ante el avance de las crecidas de los ríos vinculadas al fenómeno de El Niño, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) facilitó las gestiones para el traslado de animales desde las zonas afectadas por las contingencias hídricas y reitera a los productores la importancia de adoptar medidas preventivas para proteger la sanidad y el bienestar del rodeo. De acuerdo a los registros del organismo sanitario nacional desde agosto se evacuaron 147.500 bovinos y bubalinos de las regiones anegadas en las provincias de Corrientes, Chaco, Entre Ríos, Santa Fe y la zona de islas de Buenos Aires. La cantidad de cabezas movilizadas aumentó un 102% respecto al mismo período en 2025 y demandaron 7.448 traslados, formalizados con la emisión del Documento de Tránsito electrónico (DT-",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/arreo.jpg",
-        "autor": "pconsiglio",
-        "publicado": "2026-10-28T11:45-03:00",
-        "capturado": "2026-10-28T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "779acd4c69b20ac1"
-      },
-      "grupo": [
-        {
-          "id": "fe4ec0972934",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones",
-          "canonical_url": "https://argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones",
-          "titulo": "Fenómeno de El Niño: desde agosto ya se trasladaron 147.500 animales desde las regiones afectadas",
-          "titulo_norm": "fenomeno de el nino desde agosto ya se trasladaron 147 500 animales desde las regiones afectadas",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que ante el avance de las crecidas de los ríos vinculadas al fenómeno de El Niño, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) facilitó las gestiones para el traslado de animales desde las zonas afectadas por las contingencias hídricas y reitera a los productores la importancia de adoptar medidas preventivas para proteger la sanidad y el bienestar del rodeo. De acuerdo a los registros del organismo sanitario nacional desde agosto se evacuaron 147.500 bovinos y bubalinos de las regiones anegadas en las provincias de Corrientes, Chaco, Entre Ríos, Santa Fe y la zona de islas de Buenos Aires. La cantidad de cabezas movilizadas aumentó un 102% respecto al mismo período en 2025 y demandaron 7.448 traslados, formalizados con la emisión del Documento de Tránsito electrónico (DT-",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/2026/10/arreo.jpg",
-          "autor": "pconsiglio",
-          "publicado": "2026-10-28T11:45-03:00",
-          "capturado": "2026-10-28T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "779acd4c69b20ac1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 5,
-        "ai_score": 67,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "el niño",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos oficiales sobre traslado masivo de hacienda por inundaciones, alerta importante.",
-        "tema_doc": "sanidad",
-        "urgente": true,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          65
-        ]
       },
       "cuando": "2026-10-28T13:00-03:00"
     },
@@ -34429,8 +34507,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T13:05:10-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T13:24:04-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
