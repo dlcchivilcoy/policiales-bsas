@@ -16853,6 +16853,52 @@
         65,
         71
       ]
+    },
+    "d9203b0e626f4419": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Importante análisis de mercado y competitividad para los productores trigueros de la región pampeana.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        73
+      ]
+    },
+    "31003694b936af47": {
+      "impacto_economico": 2,
+      "interes_productores": 5,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "periodismo agropecuario",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Homenaje a una figura del periodismo rural, de bajo impacto productivo y comercial directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -18016,7 +18062,9 @@
       "https://agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html": "2026-10-28",
       "https://agrositio.com.ar/noticia/249058-tormentas-y-emergencias-guia-oficial-de-prevencion-ante-el-fenomeno-de-el-nino.html": "2026-10-28",
       "https://agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html": "2026-10-28",
-      "https://agrositio.com.ar/noticia/249046-bayer-amplia-su-red-forwardfarming-members-con-dos-nuevos-establecimientos-en-susana-santa-fe-y-rio-cuarto-cordoba.html": "2026-10-28"
+      "https://agrositio.com.ar/noticia/249046-bayer-amplia-su-red-forwardfarming-members-con-dos-nuevos-establecimientos-en-susana-santa-fe-y-rio-cuarto-cordoba.html": "2026-10-28",
+      "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse": "2026-10-28",
+      "https://bichosdecampo.com/una-verdadera-voz-del-interior-decano-del-periodismo-agropecuario-carlos-petroli-crecio-en-una-humilde-chacra-y-llego-a-dirigir-uno-de-los-grandes-suplementos-sobre-campo-del-pais": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19178,7 +19226,9 @@
       "maiz tardio como aprovechar oportunidades en un ano nino sin descuidar los riesgos": "2026-10-28",
       "tormentas y emergencias guia oficial de prevencion ante el fenomeno de el nino": "2026-10-28",
       "calor y humedad la combinacion que puede complicar la produccion porcina este verano": "2026-10-28",
-      "bayer amplia su red forwardfarming members con dos nuevos establecimientos en susana santa fe y rio cuarto cordoba": "2026-10-28"
+      "bayer amplia su red forwardfarming members con dos nuevos establecimientos en susana santa fe y rio cuarto cordoba": "2026-10-28",
+      "la competitividad del trigo argentino es imbatible solo tiene que esperar para lucirse": "2026-10-28",
+      "una verdadera voz del interior decano del periodismo agropecuario carlos petroli crecio en una humilde chacra y llego a dirigir uno de los grandes suplementos sobre campo del pais": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -20340,7 +20390,9 @@
       "b6d656b5cafb220b": "2026-10-28",
       "4c52d3ccb787e120": "2026-10-28",
       "4ee1b27e71d33bba": "2026-10-28",
-      "03efc5a1ea763500": "2026-10-28"
+      "03efc5a1ea763500": "2026-10-28",
+      "d9203b0e626f4419": "2026-10-28",
+      "31003694b936af47": "2026-10-28"
     }
   },
   "elegidas": [
@@ -32335,9 +32387,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9efcd90ddd14_portada.jpg"
+    },
+    {
+      "id": "f940488d4cf5",
+      "cuando": "2026-10-28T08:24-03:00",
+      "titulo_original": "Kingman Ag autonomous tractors (also) for GNSS-denied environments",
+      "descripcion": "If you’re looking to upgrade your tractor to perform autonomous operations in a dusty and/or GNSS-denied environment, then Kingman Ag has something to offer.",
+      "fuente": "Future Farming",
+      "url": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments/",
+      "titular": "Kit autónomo Minion Mini de Kingman Ag sin GPS ni LiDAR",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 14,
+        "cercania_argentina": 4,
+        "cercania_pba": 1,
+        "potencial_reel": 8,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 62,
+        "commercial_score": 66,
+        "subtema": "agtech",
+        "tema": "agricultura autónoma",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Tecnología de punta en autonomía sin GPS, muy atractiva para contratistas y asesores.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          56
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "996b2df2-0f50-41e4-a0e8-c970570c23ba",
+          "slug": "kit-autonomo-minion-mini-de-kingman-ag-sin-gps-ni-lidar-para-ae3844",
+          "url": "https://www.diariolacampaña.com.ar/n/kit-autonomo-minion-mini-de-kingman-ag-sin-gps-ni-lidar-para-ae3844",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4423592661227804",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18106405046633720",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f940488d4cf5_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "9de067497e93",
+      "rep": {
+        "id": "9de067497e93",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse/",
+        "canonical_url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse",
+        "titulo": "La competitividad del trigo argentino es imbatible: Sólo tiene que esperar para lucirse",
+        "titulo_norm": "la competitividad del trigo argentino es imbatible solo tiene que esperar para lucirse",
+        "descripcion": "Si bien por factores estacionales los precios del trigo argentino están mostrando una tendencia bajista a medida que se acerca el período de la cosecha en la región pampeana, resulta apropiado no perder de vista que la competitividad del trigo argentino es imbatible en la actual coyuntura. Con un precio FOB del trigo pan argentino […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-5.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-28T08:20-03:00",
+        "capturado": "2026-10-28T08:24-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d9203b0e626f4419"
+      },
+      "grupo": [
+        {
+          "id": "9de067497e93",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse/",
+          "canonical_url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse",
+          "titulo": "La competitividad del trigo argentino es imbatible: Sólo tiene que esperar para lucirse",
+          "titulo_norm": "la competitividad del trigo argentino es imbatible solo tiene que esperar para lucirse",
+          "descripcion": "Si bien por factores estacionales los precios del trigo argentino están mostrando una tendencia bajista a medida que se acerca el período de la cosecha en la región pampeana, resulta apropiado no perder de vista que la competitividad del trigo argentino es imbatible en la actual coyuntura. Con un precio FOB del trigo pan argentino […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-5.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-28T08:20-03:00",
+          "capturado": "2026-10-28T08:24-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d9203b0e626f4419"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Importante análisis de mercado y competitividad para los productores trigueros de la región pampeana.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          73
+        ]
+      },
+      "cuando": "2026-10-28T08:24-03:00"
+    },
     {
       "id": "ba3eb4f4b549",
       "rep": {
@@ -32591,73 +32768,6 @@
         "urgente": false,
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T07:04-03:00"
-    },
-    {
-      "id": "f940488d4cf5",
-      "rep": {
-        "id": "f940488d4cf5",
-        "fuente": "Future Farming",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.futurefarming.com/rss/",
-        "url": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments/",
-        "canonical_url": "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments",
-        "titulo": "Kingman Ag autonomous tractors (also) for GNSS-denied environments",
-        "titulo_norm": "kingman ag autonomous tractors also for gnss denied environments",
-        "descripcion": "If you’re looking to upgrade your tractor to perform autonomous operations in a dusty and/or GNSS-denied environment, then Kingman Ag has something to offer.",
-        "imagen_url": "https%3A%2F%2Fwww.futurefarming.com%2Fapp%2Fuploads%2F2026%2F10%2F01-IMG_9952-resize-2000.jpeg",
-        "autor": "René Koerhuis",
-        "publicado": "2026-10-28T04:00-03:00",
-        "capturado": "2026-10-28T07:04-03:00",
-        "idioma": "en",
-        "pais": "INT",
-        "hash": "69b6700b78d7bac0"
-      },
-      "grupo": [
-        {
-          "id": "f940488d4cf5",
-          "fuente": "Future Farming",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.futurefarming.com/rss/",
-          "url": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments/",
-          "canonical_url": "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments",
-          "titulo": "Kingman Ag autonomous tractors (also) for GNSS-denied environments",
-          "titulo_norm": "kingman ag autonomous tractors also for gnss denied environments",
-          "descripcion": "If you’re looking to upgrade your tractor to perform autonomous operations in a dusty and/or GNSS-denied environment, then Kingman Ag has something to offer.",
-          "imagen_url": "https%3A%2F%2Fwww.futurefarming.com%2Fapp%2Fuploads%2F2026%2F10%2F01-IMG_9952-resize-2000.jpeg",
-          "autor": "René Koerhuis",
-          "publicado": "2026-10-28T04:00-03:00",
-          "capturado": "2026-10-28T07:04-03:00",
-          "idioma": "en",
-          "pais": "INT",
-          "hash": "69b6700b78d7bac0"
-        }
-      ],
-      "score": {
-        "impacto_economico": 11,
-        "interes_productores": 10,
-        "innovacion": 14,
-        "cercania_argentina": 4,
-        "cercania_pba": 1,
-        "potencial_reel": 8,
-        "conversacion": 6,
-        "potencial_comercial": 8,
-        "ai_score": 62,
-        "commercial_score": 66,
-        "subtema": "agtech",
-        "tema": "agricultura autónoma",
-        "ambito": "internacional",
-        "sensible": false,
-        "explicacion": "Tecnología de punta en autonomía sin GPS, muy atractiva para contratistas y asesores.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          56
-        ]
       },
       "cuando": "2026-10-28T07:04-03:00"
     },
@@ -32993,8 +33103,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T08:06:49-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T08:27:48-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
