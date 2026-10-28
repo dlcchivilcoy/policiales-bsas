@@ -17418,6 +17418,127 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0c648e289d6afb11": {
+      "impacto_economico": 13,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 64,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "ruta 33",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente la logística de transporte de granos en la región pampeana, generando fuerte debate.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        64
+      ]
+    },
+    "80566138790ac5d3": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "carne bovina",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta en la cadena ganadera y la formación de precios, aunque el enfoque en cupos y exportación es amplio.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        68
+      ]
+    },
+    "f3fec2be60bcfaae": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 80,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "fitosanitarios",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Altamente relevante para la campaña en curso en la zona núcleo por costos, clima y disponibilidad de insumos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7664cabc79e03252": {
+      "impacto_economico": 16,
+      "interes_productores": 13,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 70,
+      "commercial_score": 70,
+      "subtema": "agro",
+      "tema": "ley de semillas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema institucional y regulatorio clave para el negocio agrícola, aunque con bajo dinamismo comercial inmediato.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        76
+      ]
+    },
+    "ba4455d77ac7ae04": {
+      "impacto_economico": 13,
+      "interes_productores": 10,
+      "innovacion": 8,
+      "cercania_argentina": 6,
+      "cercania_pba": 5,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 60,
+      "commercial_score": 58,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Muestra el avance del bioetanol de maíz en Brasil, relevante como tendencia regional para el cereal.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        62
+      ]
     }
   },
   "indice": {
@@ -18613,7 +18734,14 @@
       "https://argentina.gob.ar/noticias/fenomeno-de-el-nino-desde-agosto-ya-se-trasladaron-147500-animales-desde-las-regiones": "2026-10-28",
       "https://argentina.gob.ar/noticias/los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio-0": "2026-10-28",
       "https://lacapital.com.ar/agro/la-ganaderia-impulsa-una-recuperacion-del-valor-la-tierra-rural-santa-fe-n10288505.html": "2026-10-28",
-      "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026": "2026-10-28"
+      "https://lanacion.com.ar/economia/campo/lo-dice-un-informe-anticipan-lluvias-con-focos-de-200-milimetros-en-una-region-nid28102026": "2026-10-28",
+      "https://infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea": "2026-10-28",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-28-octubre-2026": "2026-10-28",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-28-octubre-2026": "2026-10-28",
+      "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china": "2026-10-28",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249069-mercado-de-insumos-vicetto-advierte-volatilidad-y-welz-anticipa-efecto-espejo-y-mayor-consumo-por-ano-nino.html": "2026-10-28",
+      "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios": "2026-10-28",
+      "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19807,7 +19935,14 @@
       "fenomeno de el nino desde agosto ya se trasladaron 147 500 animales desde las regiones afectadas": "2026-10-28",
       "los remates de genetica bovina marcaron un crecimiento interanual del 61 en el precio": "2026-10-28",
       "la ganaderia impulsa una recuperacion del valor de la tierra rural en santa fe": "2026-10-28",
-      "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region": "2026-10-28"
+      "lo dice un informe anticipan lluvias con focos de 200 milimetros en una region": "2026-10-28",
+      "el penoso estado de la ruta 33 el informe de infocampo estudio nominado a los premios fopea": "2026-10-28",
+      "dolar blue a cuanto cotizan hoy en mendoza 28 octubre 2026": "2026-10-28",
+      "euro blue hoy precio y cotizacion de este 28 octubre 2026": "2026-10-28",
+      "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china": "2026-10-28",
+      "insumos vicetto advierte volatilidad y welz anticipa efecto espejo y mayor consumo por ano nino": "2026-10-28",
+      "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios": "2026-10-28",
+      "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21001,7 +21136,14 @@
       "779acd4c69b20ac1": "2026-10-28",
       "16a18f38bb54db15": "2026-10-28",
       "4a6234bd948e43e8": "2026-10-28",
-      "e80bdea10fc8b573": "2026-10-28"
+      "e80bdea10fc8b573": "2026-10-28",
+      "0c648e289d6afb11": "2026-10-28",
+      "922b28b668cf0f54": "2026-10-28",
+      "fc6b1a5502750564": "2026-10-28",
+      "80566138790ac5d3": "2026-10-28",
+      "f3fec2be60bcfaae": "2026-10-28",
+      "7664cabc79e03252": "2026-10-28",
+      "ba4455d77ac7ae04": "2026-10-28"
     }
   },
   "elegidas": [
@@ -33404,9 +33546,331 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fe4ec0972934_portada.jpg"
+    },
+    {
+      "id": "ad497807d974",
+      "cuando": "2026-10-28T13:40-03:00",
+      "titulo_original": "Insumos: Vicetto advierte volatilidad, y Welz anticipa \"efecto espejo\" y mayor consumo por año Niño",
+      "descripcion": "Una campaña diferente. Compras de fitosanitarios a China con alta volatilidad global. Inventarios justos en las empresas y en las cadena distribuidoras. Una charla con los Ings. Agrs. Rodolfo Vicetto y Hermannd Welz, Gtes. de INSUAGRO. Detallan las dificultades en la provisión de insumos por conflic",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249069-mercado-de-insumos-vicetto-advierte-volatilidad-y-welz-anticipa-efecto-espejo-y-mayor-consumo-por-ano-nino.html",
+      "titular": "Insumos: alertan por volatilidad con China y mayor consumo por El Niño",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 80,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "fitosanitarios",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Altamente relevante para la campaña en curso en la zona núcleo por costos, clima y disponibilidad de insumos.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7ac92b45-535c-4da6-9c20-8031493d7cf4",
+          "slug": "insumos-agricolas-alertan-por-volatilidad-con-china-y-mayor-1a3761",
+          "url": "https://www.diariolacampaña.com.ar/n/insumos-agricolas-alertan-por-volatilidad-con-china-y-mayor-1a3761",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1061645516900807",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18250037737312449",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ad497807d974_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "1a5b19ac3ada",
+      "rep": {
+        "id": "1a5b19ac3ada",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea/",
+        "canonical_url": "https://infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea",
+        "titulo": "El penoso estado de la Ruta 33: el informe de Infocampo Estudio, nominado a los premios FOPEA",
+        "titulo_norm": "el penoso estado de la ruta 33 el informe de infocampo estudio nominado a los premios fopea",
+        "descripcion": "La investigación realizada entre los puertos del Gran Rosario y Bahía Blanca a lo largo de casi 800 kilómetros competirá por uno de los premios que otorga el Foro de Periodismo Argentino.",
+        "imagen_url": "https://www.youtube.com/embed/J4dOhaIEivk",
+        "autor": "infocampo",
+        "publicado": "2026-10-28T12:41-03:00",
+        "capturado": "2026-10-28T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "0c648e289d6afb11"
+      },
+      "grupo": [
+        {
+          "id": "1a5b19ac3ada",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea/",
+          "canonical_url": "https://infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea",
+          "titulo": "El penoso estado de la Ruta 33: el informe de Infocampo Estudio, nominado a los premios FOPEA",
+          "titulo_norm": "el penoso estado de la ruta 33 el informe de infocampo estudio nominado a los premios fopea",
+          "descripcion": "La investigación realizada entre los puertos del Gran Rosario y Bahía Blanca a lo largo de casi 800 kilómetros competirá por uno de los premios que otorga el Foro de Periodismo Argentino.",
+          "imagen_url": "https://www.youtube.com/embed/J4dOhaIEivk",
+          "autor": "infocampo",
+          "publicado": "2026-10-28T12:41-03:00",
+          "capturado": "2026-10-28T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "0c648e289d6afb11"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 64,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "ruta 33",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la logística de transporte de granos en la región pampeana, generando fuerte debate.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          64
+        ]
+      },
+      "cuando": "2026-10-28T13:40-03:00"
+    },
+    {
+      "id": "61771a35b1dc",
+      "rep": {
+        "id": "61771a35b1dc",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china/",
+        "canonical_url": "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china",
+        "titulo": "Una complicación para la carne bovina argentina: no llegaría a cumplir con la cuota exportadora a China",
+        "titulo_norm": "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china",
+        "descripcion": "El Rosgan advierte que el nuevo esquema de cupos está modificando la estacionalidad de los negocios y la formación de precios. Aunque las exportaciones argentinas crecen 5% en 2026, los embarques a China caen 8% y el país podría no completar su cuota anual.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-4.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-10-28T11:31-03:00",
+        "capturado": "2026-10-28T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "80566138790ac5d3"
+      },
+      "grupo": [
+        {
+          "id": "61771a35b1dc",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china/",
+          "canonical_url": "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china",
+          "titulo": "Una complicación para la carne bovina argentina: no llegaría a cumplir con la cuota exportadora a China",
+          "titulo_norm": "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china",
+          "descripcion": "El Rosgan advierte que el nuevo esquema de cupos está modificando la estacionalidad de los negocios y la formación de precios. Aunque las exportaciones argentinas crecen 5% en 2026, los embarques a China caen 8% y el país podría no completar su cuota anual.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-4.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-10-28T11:31-03:00",
+          "capturado": "2026-10-28T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "80566138790ac5d3"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "carne bovina",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta en la cadena ganadera y la formación de precios, aunque el enfoque en cupos y exportación es amplio.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          68
+        ]
+      },
+      "cuando": "2026-10-28T13:40-03:00"
+    },
+    {
+      "id": "13cdec73ef56",
+      "rep": {
+        "id": "13cdec73ef56",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios/",
+        "canonical_url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios",
+        "titulo": "La negociación para actualizar la Ley de Semillas ingresó en una vía muerta y ahora solo queda que el gobierno mueva alguna ficha, mientras se agotan los tiempos parlamentarios",
+        "titulo_norm": "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios",
+        "descripcion": "Pasó octubre. Y en las últimas horas pasaron dos cosas sugestivas que dan cuenta de que ingresó en vía muerta y no prospera la negociación entre la industria semillera y las entidades del agro para actualizar la Ley de Semillas para acomodarla un poco a las exigencias de los obtentores (y de quien está detrás […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-mesa-de-trabajo-reunio-a-referentes-de-la-produccion-y-de-asa-para-avanzar-en-puntos-de-acuerdo-sobre-la-reforma-de-la-ley-de-semillas-foto-coninagro-F5W6JJTJ5NBATGGC2EYBSZ2M7E-1.jpg",
+        "autor": "Matias Longoni",
+        "publicado": "2026-10-28T13:29-03:00",
+        "capturado": "2026-10-28T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7664cabc79e03252"
+      },
+      "grupo": [
+        {
+          "id": "13cdec73ef56",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios/",
+          "canonical_url": "https://bichosdecampo.com/la-negociacion-para-actualizar-la-ley-de-semillas-ingreso-en-una-via-muerta-y-ahora-solo-queda-que-el-gobierno-mueva-alguna-ficha-mientras-se-agotan-los-tiempos-parlamentarios",
+          "titulo": "La negociación para actualizar la Ley de Semillas ingresó en una vía muerta y ahora solo queda que el gobierno mueva alguna ficha, mientras se agotan los tiempos parlamentarios",
+          "titulo_norm": "la negociacion para actualizar la ley de semillas ingreso en una via muerta y ahora solo queda que el gobierno mueva alguna ficha mientras se agotan los tiempos parlamentarios",
+          "descripcion": "Pasó octubre. Y en las últimas horas pasaron dos cosas sugestivas que dan cuenta de que ingresó en vía muerta y no prospera la negociación entre la industria semillera y las entidades del agro para actualizar la Ley de Semillas para acomodarla un poco a las exigencias de los obtentores (y de quien está detrás […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-mesa-de-trabajo-reunio-a-referentes-de-la-produccion-y-de-asa-para-avanzar-en-puntos-de-acuerdo-sobre-la-reforma-de-la-ley-de-semillas-foto-coninagro-F5W6JJTJ5NBATGGC2EYBSZ2M7E-1.jpg",
+          "autor": "Matias Longoni",
+          "publicado": "2026-10-28T13:29-03:00",
+          "capturado": "2026-10-28T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7664cabc79e03252"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 70,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Tema institucional y regulatorio clave para el negocio agrícola, aunque con bajo dinamismo comercial inmediato.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          76
+        ]
+      },
+      "cuando": "2026-10-28T13:40-03:00"
+    },
+    {
+      "id": "a67578f52d41",
+      "rep": {
+        "id": "a67578f52d41",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible/",
+        "canonical_url": "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible",
+        "titulo": "Gente que va para adelante: En Brasil el biotanol de maíz ya representa el 20% de la oferta total del biocombustible",
+        "titulo_norm": "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible",
+        "descripcion": "La producción de bioetanol a base de maíz avanza en Brasil y representa un factor de demanda cada vez más relevante en el sistema de formación de precios del cereal. Según datos de la Agencia Nacional de Petróleo, Gas Natural y Biocombustibles de Brasil (ANP), la producción total de bioetanol en Brasil alcanzó los 14,51 […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/recuadro-2.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-28T13:26-03:00",
+        "capturado": "2026-10-28T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ba4455d77ac7ae04"
+      },
+      "grupo": [
+        {
+          "id": "a67578f52d41",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible/",
+          "canonical_url": "https://bichosdecampo.com/gente-que-va-para-adelante-en-brasil-el-biotanol-de-maiz-ya-representa-el-20-de-la-oferta-total-del-biocombustible",
+          "titulo": "Gente que va para adelante: En Brasil el biotanol de maíz ya representa el 20% de la oferta total del biocombustible",
+          "titulo_norm": "gente que va para adelante en brasil el biotanol de maiz ya representa el 20 de la oferta total del biocombustible",
+          "descripcion": "La producción de bioetanol a base de maíz avanza en Brasil y representa un factor de demanda cada vez más relevante en el sistema de formación de precios del cereal. Según datos de la Agencia Nacional de Petróleo, Gas Natural y Biocombustibles de Brasil (ANP), la producción total de bioetanol en Brasil alcanzó los 14,51 […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/recuadro-2.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-28T13:26-03:00",
+          "capturado": "2026-10-28T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ba4455d77ac7ae04"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 10,
+        "innovacion": 8,
+        "cercania_argentina": 6,
+        "cercania_pba": 5,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 60,
+        "commercial_score": 58,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Muestra el avance del bioetanol de maíz en Brasil, relevante como tendencia regional para el cereal.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          57,
+          62
+        ]
+      },
+      "cuando": "2026-10-28T13:40-03:00"
+    },
     {
       "id": "a7d890107eb1",
       "rep": {
@@ -34507,8 +34971,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T13:24:04-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T13:43:37-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
