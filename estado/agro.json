@@ -16761,6 +16761,98 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "33098679b96f147b": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 4,
+      "cercania_pba": 0,
+      "potencial_reel": 1,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 18,
+      "commercial_score": 25,
+      "subtema": "mercados",
+      "tema": "brasil",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis político internacional poco accionable para el productor de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b6d656b5cafb220b": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 88,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Altamente relevante para productores de zona núcleo evaluando genética y manejo en año Niño.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4c52d3ccb787e120": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 67,
+      "commercial_score": 59,
+      "subtema": "agro",
+      "tema": "clima",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Guía oficial preventiva esencial para productores ante riesgos climáticos inminentes.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        72
+      ]
+    },
+    "4ee1b27e71d33bba": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 69,
+      "commercial_score": 71,
+      "subtema": "ganaderia",
+      "tema": "porcinos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Útil para productores porcinos de la región que deben mitigar estrés térmico estival.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        71
+      ]
     }
   },
   "indice": {
@@ -17919,7 +18011,12 @@
       "https://agfundernews.com/from-climate-finance-to-ais-impact-on-smallholders-heres-what-to-expect-at-cop31": "2026-10-28",
       "https://futurefarming.com/machinery/china-s-zoomlion-breaks-records-with-1-600-hp-articulated-tractor": "2026-10-28",
       "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/kingman-ag-autonomous-tractors-also-for-gnss-denied-environments": "2026-10-28",
-      "https://futurefarming.com/tech-in-focus/field-robots/carbon-robotics-cuts-staff-amid-operational-restructuring-ahead-of-potential-ipo": "2026-10-28"
+      "https://futurefarming.com/tech-in-focus/field-robots/carbon-robotics-cuts-staff-amid-operational-restructuring-ahead-of-potential-ipo": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249062-economia-sencilla-brasil-despues-del-balotaje-el-costo-argentino-de-la-incertidumbre.html": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249058-tormentas-y-emergencias-guia-oficial-de-prevencion-ante-el-fenomeno-de-el-nino.html": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249046-bayer-amplia-su-red-forwardfarming-members-con-dos-nuevos-establecimientos-en-susana-santa-fe-y-rio-cuarto-cordoba.html": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19076,7 +19173,12 @@
       "from climate finance to ai s impact on smallholders here s what to expect at cop31": "2026-10-28",
       "china s zoomlion breaks records with 1 600 hp articulated tractor": "2026-10-28",
       "kingman ag autonomous tractors also for gnss denied environments": "2026-10-28",
-      "carbon robotics cuts nearly 50 jobs despite strong laserweeder sales": "2026-10-28"
+      "carbon robotics cuts nearly 50 jobs despite strong laserweeder sales": "2026-10-28",
+      "economia sencilla brasil despues del balotaje el costo argentino de la incertidumbre": "2026-10-28",
+      "maiz tardio como aprovechar oportunidades en un ano nino sin descuidar los riesgos": "2026-10-28",
+      "tormentas y emergencias guia oficial de prevencion ante el fenomeno de el nino": "2026-10-28",
+      "calor y humedad la combinacion que puede complicar la produccion porcina este verano": "2026-10-28",
+      "bayer amplia su red forwardfarming members con dos nuevos establecimientos en susana santa fe y rio cuarto cordoba": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -20233,7 +20335,12 @@
       "9c756b69ccaae60e": "2026-10-28",
       "a8adfa342f4d1d84": "2026-10-28",
       "69b6700b78d7bac0": "2026-10-28",
-      "00d4f44a929049a5": "2026-10-28"
+      "00d4f44a929049a5": "2026-10-28",
+      "33098679b96f147b": "2026-10-28",
+      "b6d656b5cafb220b": "2026-10-28",
+      "4c52d3ccb787e120": "2026-10-28",
+      "4ee1b27e71d33bba": "2026-10-28",
+      "03efc5a1ea763500": "2026-10-28"
     }
   },
   "elegidas": [
@@ -32058,9 +32165,197 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_74d989f14760_portada.jpg"
+    },
+    {
+      "id": "3d27a9cc5718",
+      "cuando": "2026-10-28T07:24-03:00",
+      "titulo_original": "Tormentas y emergencias: guía oficial de prevención ante el fenómeno de El Niño",
+      "descripcion": "El Niño puede generar lluvias intensas, tormentas y crecidas de ríos, aumentando el riesgo de inundaciones en distintas regiones del país. Conocé qué hacer ante una alerta meteorológica....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249058-tormentas-y-emergencias-guia-oficial-de-prevencion-ante-el-fenomeno-de-el-nino.html",
+      "titular": "El Niño: claves y alertas oficiales ante el riesgo de tormentas",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 67,
+        "commercial_score": 59,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Guía oficial preventiva esencial para productores ante riesgos climáticos inminentes.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5b3655bc-fdab-4d1d-be2b-c592d7de32cb",
+          "slug": "el-nino-y-tormentas-guia-oficial-de-prevencion-y-niveles-de-c1fd10",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-y-tormentas-guia-oficial-de-prevencion-y-niveles-de-c1fd10",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1874670867225497",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17867263962679658",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3d27a9cc5718_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "ba3eb4f4b549",
+      "rep": {
+        "id": "ba3eb4f4b549",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html",
+        "titulo": "Maíz tardío: cómo aprovechar oportunidades en un año Niño, sin descuidar los riesgos",
+        "titulo_norm": "maiz tardio como aprovechar oportunidades en un ano nino sin descuidar los riesgos",
+        "descripcion": "Las mayores precipitaciones pueden mejoran el potencial de rendimiento, pero también complicar las siembras y aumentar la presión sanitaria. Desde Stine destacan la importancia de elegir la genética adecuada para cada ambiente y ajustar el manejo para aprovechar la disponibilidad de agua. Los incentivos del mercado....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249060_45894806.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-27T17:11-03:00",
+        "capturado": "2026-10-28T07:24-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b6d656b5cafb220b"
+      },
+      "grupo": [
+        {
+          "id": "ba3eb4f4b549",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249060-maiz-tardio-como-aprovechar-oportunidades-en-un-ano-nino-sin-descuidar-los-riesgos.html",
+          "titulo": "Maíz tardío: cómo aprovechar oportunidades en un año Niño, sin descuidar los riesgos",
+          "titulo_norm": "maiz tardio como aprovechar oportunidades en un ano nino sin descuidar los riesgos",
+          "descripcion": "Las mayores precipitaciones pueden mejoran el potencial de rendimiento, pero también complicar las siembras y aumentar la presión sanitaria. Desde Stine destacan la importancia de elegir la genética adecuada para cada ambiente y ajustar el manejo para aprovechar la disponibilidad de agua. Los incentivos del mercado....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249060_45894806.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-27T17:11-03:00",
+          "capturado": "2026-10-28T07:24-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b6d656b5cafb220b"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 88,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para productores de zona núcleo evaluando genética y manejo en año Niño.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T07:24-03:00"
+    },
+    {
+      "id": "643436ca797e",
+      "rep": {
+        "id": "643436ca797e",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html",
+        "titulo": "Calor y humedad: la combinación que puede complicar la producción porcina este verano",
+        "titulo_norm": "calor y humedad la combinacion que puede complicar la produccion porcina este verano",
+        "descripcion": "La llegada de las altas temperaturas plantea nuevos desafíos para las granjas porcinas, especialmente cuando el calor se combina con elevados niveles de humedad. Desde PROVIMI advierten que esta situación puede reducir la eficacia de los sistemas de enfriamiento, afectar el consumo de alimento y comprometer el bienestar de los animales. Las claves para anticiparse y evitar pérdidas productivas....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249050_76635960.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-27T10:21-03:00",
+        "capturado": "2026-10-28T07:24-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "4ee1b27e71d33bba"
+      },
+      "grupo": [
+        {
+          "id": "643436ca797e",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249050-calor-y-humedad-la-combinacion-que-puede-complicar-la-produccion-porcina-este-verano.html",
+          "titulo": "Calor y humedad: la combinación que puede complicar la producción porcina este verano",
+          "titulo_norm": "calor y humedad la combinacion que puede complicar la produccion porcina este verano",
+          "descripcion": "La llegada de las altas temperaturas plantea nuevos desafíos para las granjas porcinas, especialmente cuando el calor se combina con elevados niveles de humedad. Desde PROVIMI advierten que esta situación puede reducir la eficacia de los sistemas de enfriamiento, afectar el consumo de alimento y comprometer el bienestar de los animales. Las claves para anticiparse y evitar pérdidas productivas....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249050_76635960.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-27T10:21-03:00",
+          "capturado": "2026-10-28T07:24-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "4ee1b27e71d33bba"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 69,
+        "commercial_score": 71,
+        "subtema": "ganaderia",
+        "tema": "porcinos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Útil para productores porcinos de la región que deben mitigar estrés térmico estival.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          71
+        ]
+      },
+      "cuando": "2026-10-28T07:24-03:00"
+    },
     {
       "id": "9cab0b396a2d",
       "rep": {
@@ -32716,8 +33011,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T07:07:09-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T07:26:44-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
