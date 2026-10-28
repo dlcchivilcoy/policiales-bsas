@@ -16522,6 +16522,69 @@
         68,
         55
       ]
+    },
+    "dc89c47cf39544cd": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 70,
+      "subtema": "empresas",
+      "tema": "semillas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en el negocio de semillas y la relación comercial con Estados Unidos, generando fuerte debate.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "49fc1c5d20f646ad": {
+      "impacto_economico": 12,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 5,
+      "cercania_pba": 3,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 40,
+      "commercial_score": 45,
+      "subtema": "mercados",
+      "tema": "costos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis general sobre mayores costos y riesgos para acopiadores, con baja repercusión local directa para el productor de la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "30baaadfdd2b1a3f": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 5,
+      "cercania_argentina": 4,
+      "cercania_pba": 3,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 27,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "syngenta",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Premio de recursos humanos a nivel global de una empresa, poco relevante para la toma de decisiones del productor pampeano.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -17656,7 +17719,10 @@
       "https://agrositio.com.ar/noticia/249061-ley-de-semillas-amcham-presiona-para-que-argentina-adhiera-a-upov-91-y-advierte-sobre-las-inversiones-en-el-agro.html": "2026-10-27",
       "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil": "2026-10-27",
       "https://bichosdecampo.com/fumata-blanca-entre-la-industria-maderera-y-los-trabajadores-acordaron-aumentos-salariales-hasta-enero-de-2027": "2026-10-27",
-      "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026": "2026-10-27"
+      "https://lanacion.com.ar/economia/campo/un-gigante-aleman-reduce-un-turno-en-una-planta-industrial-y-un-sindicato-se-declaro-en-alerta-nid27102026": "2026-10-27",
+      "https://lanacion.com.ar/economia/campo/amcham-pidio-adherir-a-un-tratado-internacional-por-semillas-y-alerto-sobre-el-posible-impacto-de-nid27102026": "2026-10-27",
+      "https://croplife.com/management/grain-merchandisers-face-higher-costs-larger-risks-and-increased-volatility": "2026-10-27",
+      "https://croplife.com/crop-inputs/syngenta-named-agricultures-leading-employer-by-science-magazine-for-10th-successive-year": "2026-10-27"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -18789,7 +18855,10 @@
       "ley de semillas amcham presiona para que argentina adhiera a upov 91 y advierte sobre las inversiones en el agro": "2026-10-27",
       "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil": "2026-10-27",
       "fumata blanca entre la industria maderera y los trabajadores acordaron aumentos salariales hasta enero de 2027": "2026-10-27",
-      "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta": "2026-10-27"
+      "un gigante aleman reduce un turno en una planta industrial y un sindicato se declaro en alerta": "2026-10-27",
+      "amcham pidio adherir a un tratado internacional por semillas y alerto sobre el posible impacto de incumplir un acuerdo con estados unidos": "2026-10-27",
+      "grain merchandisers face higher costs larger risks and increased volatility": "2026-10-27",
+      "syngenta named agriculture s leading employer by science magazine for 10th successive year": "2026-10-27"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -19922,7 +19991,10 @@
       "34351d6e52f68d7a": "2026-10-27",
       "a32f83e598de18dc": "2026-10-27",
       "7668b0477a26e368": "2026-10-27",
-      "6f9bd2999af02d26": "2026-10-27"
+      "6f9bd2999af02d26": "2026-10-27",
+      "dc89c47cf39544cd": "2026-10-27",
+      "49fc1c5d20f646ad": "2026-10-27",
+      "30baaadfdd2b1a3f": "2026-10-27"
     }
   },
   "elegidas": [
@@ -31455,9 +31527,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a6b0bdc5f439_portada.jpg"
+    },
+    {
+      "id": "987cf813a68e",
+      "cuando": "2026-10-27T21:00-03:00",
+      "titulo_original": "Las ventajas de tener una moneda propia: Los productores brasileños no se enteraron del derrumbre de los precios de la soja y el maíz",
+      "descripcion": "La devaluación del real provocó un derrumbe de los precios de la soja y el maíz en el mercado internacional, pero los productores brasileños resultaron inmunes a ese fenómeno. Una devaluación en un gigante agroindustrial como Brasil representa un fundamento bajista, dado que incentiva las exportacio",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz/",
+      "titular": "Soja brasileña sube un 2,0% tras fuerte devaluación del real",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "soja y maíz",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Análisis macroeconómico clave sobre la competitividad de Brasil y su impacto directo en precios locales.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-27T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "dcH28m5jA7Y",
+          "url": "https://youtube.com/shorts/dcH28m5jA7Y",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "bb8617cc-7f83-4032-a0c7-1b90a5054008",
+          "slug": "soja-en-brasil-sube-2-0-tras-la-fuerte-devaluacion-del-real-y-5a8803",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-en-brasil-sube-2-0-tras-la-fuerte-devaluacion-del-real-y-5a8803",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1496401739061481",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17970386847172839",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_987cf813a68e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e6e51d5c9e7f",
+      "rep": {
+        "id": "e6e51d5c9e7f",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/amcham-pidio-adherir-a-un-tratado-internacional-por-semillas-y-alerto-sobre-el-posible-impacto-de-nid27102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/amcham-pidio-adherir-a-un-tratado-internacional-por-semillas-y-alerto-sobre-el-posible-impacto-de-nid27102026",
+        "titulo": "AmCham pidió adherir a un tratado internacional por semillas y alertó sobre el posible impacto de incumplir un acuerdo con Estados Unidos",
+        "titulo_norm": "amcham pidio adherir a un tratado internacional por semillas y alerto sobre el posible impacto de incumplir un acuerdo con estados unidos",
+        "descripcion": "La cámara de las empresas norteamericanas en el país se pronunció sobre la discusión abierta por este tema entre productores y compañías",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/JEDNCWZ6CFHZDOIBYTSXVK4SIE.JPG?auth=252016cc165d40ca3b663a236d619f28708146de3dbecaf65eaa562208d83a2b&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-10-27T20:15-03:00",
+        "capturado": "2026-10-27T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "dc89c47cf39544cd"
+      },
+      "grupo": [
+        {
+          "id": "e6e51d5c9e7f",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/amcham-pidio-adherir-a-un-tratado-internacional-por-semillas-y-alerto-sobre-el-posible-impacto-de-nid27102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/amcham-pidio-adherir-a-un-tratado-internacional-por-semillas-y-alerto-sobre-el-posible-impacto-de-nid27102026",
+          "titulo": "AmCham pidió adherir a un tratado internacional por semillas y alertó sobre el posible impacto de incumplir un acuerdo con Estados Unidos",
+          "titulo_norm": "amcham pidio adherir a un tratado internacional por semillas y alerto sobre el posible impacto de incumplir un acuerdo con estados unidos",
+          "descripcion": "La cámara de las empresas norteamericanas en el país se pronunció sobre la discusión abierta por este tema entre productores y compañías",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/JEDNCWZ6CFHZDOIBYTSXVK4SIE.JPG?auth=252016cc165d40ca3b663a236d619f28708146de3dbecaf65eaa562208d83a2b&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-10-27T20:15-03:00",
+          "capturado": "2026-10-27T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "dc89c47cf39544cd"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "semillas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en el negocio de semillas y la relación comercial con Estados Unidos, generando fuerte debate.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-27T21:00-03:00"
+    },
     {
       "id": "9efcd90ddd14",
       "rep": {
@@ -31853,69 +32049,6 @@
       "cuando": "2026-10-27T16:40-03:00"
     },
     {
-      "id": "987cf813a68e",
-      "rep": {
-        "id": "987cf813a68e",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz/",
-        "canonical_url": "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz",
-        "titulo": "Las ventajas de tener una moneda propia: Los productores brasileños no se enteraron del derrumbre de los precios de la soja y el maíz",
-        "titulo_norm": "las ventajas de tener una moneda propia los productores brasilenos no se enteraron del derrumbre de los precios de la soja y el maiz",
-        "descripcion": "La devaluación del real provocó un derrumbe de los precios de la soja y el maíz en el mercado internacional, pero los productores brasileños resultaron inmunes a ese fenómeno. Una devaluación en un gigante agroindustrial como Brasil representa un fundamento bajista, dado que incentiva las exportaciones por la mejora de la competitividad cambiaria. Esa hipótesis […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cepea-2.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-27T15:01-03:00",
-        "capturado": "2026-10-27T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b347f0608c15cf39"
-      },
-      "grupo": [
-        {
-          "id": "987cf813a68e",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz/",
-          "canonical_url": "https://bichosdecampo.com/las-ventajas-de-tener-una-moneda-propia-los-productores-brasilenos-no-se-enteraron-del-derrumbre-de-los-precios-de-la-soja-y-el-maiz",
-          "titulo": "Las ventajas de tener una moneda propia: Los productores brasileños no se enteraron del derrumbre de los precios de la soja y el maíz",
-          "titulo_norm": "las ventajas de tener una moneda propia los productores brasilenos no se enteraron del derrumbre de los precios de la soja y el maiz",
-          "descripcion": "La devaluación del real provocó un derrumbe de los precios de la soja y el maíz en el mercado internacional, pero los productores brasileños resultaron inmunes a ese fenómeno. Una devaluación en un gigante agroindustrial como Brasil representa un fundamento bajista, dado que incentiva las exportaciones por la mejora de la competitividad cambiaria. Esa hipótesis […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cepea-2.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-27T15:01-03:00",
-          "capturado": "2026-10-27T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b347f0608c15cf39"
-        }
-      ],
-      "score": {
-        "impacto_economico": 17,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 7,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 71,
-        "commercial_score": 70,
-        "subtema": "mercados",
-        "tema": "soja y maíz",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Análisis macroeconómico clave sobre la competitividad de Brasil y su impacto directo en precios locales.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T16:00-03:00"
-    },
-    {
       "id": "96b2b21b9ed7",
       "rep": {
         "id": "96b2b21b9ed7",
@@ -32251,8 +32384,8 @@
       "cuando": "2026-10-26T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-27T19:24:52-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-27T21:03:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
