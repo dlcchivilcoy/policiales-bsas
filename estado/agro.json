@@ -17920,6 +17920,27 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "341eba8827d2653e": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 78,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "ganado bovino",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca un tema clave de la ganadería pampeana como el peso de faena y los cortes para exportación.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19140,7 +19161,8 @@
       "https://agrositio.com.ar/noticia/249072-china-y-la-reconfiguracion-del-mercado-global-de-legumbres-analisis-macroeconomico-y-de-demanda-2025-2026.html": "2026-10-28",
       "https://bichosdecampo.com/espana-suspendieron-un-masivo-tractorazo-por-el-tragico-accidente-ferroviario": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/remates-el-precio-de-los-toros-subio-un-61-y-cada-animal-promedia-los-10-millones-nid28102026": "2026-10-28",
-      "https://lacapital.com.ar/agro/bases-federadas-repudio-la-exoneracion-una-cientifica-del-inta-n10289223.html": "2026-10-28"
+      "https://lacapital.com.ar/agro/bases-federadas-repudio-la-exoneracion-una-cientifica-del-inta-n10289223.html": "2026-10-28",
+      "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20359,7 +20381,8 @@
       "china y la reconfiguracion del mercado global de legumbres analisis macroeconomico y de demanda 2025 2026": "2026-10-28",
       "espana suspendieron un masivo tractorazo por el tragico accidente ferroviario": "2026-10-28",
       "remates el precio de los toros subio un 61 y cada animal promedia los 10 millones": "2026-10-28",
-      "bases federadas repudio la exoneracion de una cientifica del inta": "2026-10-28"
+      "bases federadas repudio la exoneracion de una cientifica del inta": "2026-10-28",
+      "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21578,7 +21601,8 @@
       "1dc7fa3da4b7cf80": "2026-10-28",
       "4c5bfcef6a9d8f6c": "2026-10-28",
       "f91f027d32a41317": "2026-10-28",
-      "26209346ace4abdc": "2026-10-28"
+      "26209346ace4abdc": "2026-10-28",
+      "341eba8827d2653e": "2026-10-28"
     }
   },
   "elegidas": [
@@ -34356,9 +34380,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c06a459d6d83_portada.jpg"
+    },
+    {
+      "id": "9255a925860f",
+      "cuando": "2026-10-28T17:00-03:00",
+      "titulo_original": "Rentabilidad agrícola: los precios cayeron 28% y los costos por hectárea subieron 20% en 32 años",
+      "descripcion": "Los desafíos de la rentabilidad agrícola. Más producción, nuevos desafíos para el productor, en un trabajo realizado por los profesionales de Cazenave & Asoc....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249067-los-desafios-de-la-rentabilidad-agricola.html",
+      "titular": "Granos: precios cayeron 28% y costos subieron 20% en 32 años",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "rentabilidad agrícola",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Estudio clave sobre la caída de precios y suba de costos que afecta directamente el bolsillo del productor en zona núcleo.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "688488bc-0d80-46e4-9a75-73e9e814a9d5",
+          "slug": "el-campo-argentino-cuadruplico-su-cosecha-pero-la-rentabilidad-589426",
+          "url": "https://www.diariolacampaña.com.ar/n/el-campo-argentino-cuadruplico-su-cosecha-pero-la-rentabilidad-589426",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1424967159205912",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18114457595165427",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9255a925860f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "ab86b38d11f4",
+      "rep": {
+        "id": "ab86b38d11f4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado/",
+        "canonical_url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado",
+        "titulo": "De la genética al bife: Juan Carlos de Bernardo maneja un centro de inseminación, exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
+        "titulo_norm": "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
+        "descripcion": "La ganadería argentina empieza a cambiar su matriz productiva: los ganaderos retienen hembras, buscan aumentar sus rodeos y aprovechan la buena relación entre el costo del alimento y el precio de la carne para producir animales más pesados. Pero ese cambio también plantea un problema: conseguir cortes premium para exportación sin que el asado que […]",
+        "imagen_url": "",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-28T16:48-03:00",
+        "capturado": "2026-10-28T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "341eba8827d2653e"
+      },
+      "grupo": [
+        {
+          "id": "ab86b38d11f4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado/",
+          "canonical_url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado",
+          "titulo": "De la genética al bife: Juan Carlos de Bernardo maneja un centro de inseminación, exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
+          "titulo_norm": "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
+          "descripcion": "La ganadería argentina empieza a cambiar su matriz productiva: los ganaderos retienen hembras, buscan aumentar sus rodeos y aprovechan la buena relación entre el costo del alimento y el precio de la carne para producir animales más pesados. Pero ese cambio también plantea un problema: conseguir cortes premium para exportación sin que el asado que […]",
+          "imagen_url": "",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-28T16:48-03:00",
+          "capturado": "2026-10-28T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "341eba8827d2653e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "ganado bovino",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca un tema clave de la ganadería pampeana como el peso de faena y los cortes para exportación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T17:00-03:00"
+    },
     {
       "id": "7626ed382bbc",
       "rep": {
@@ -35207,69 +35348,6 @@
       "cuando": "2026-10-28T11:20-03:00"
     },
     {
-      "id": "9255a925860f",
-      "rep": {
-        "id": "9255a925860f",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249067-los-desafios-de-la-rentabilidad-agricola.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249067-los-desafios-de-la-rentabilidad-agricola.html",
-        "titulo": "Rentabilidad agrícola: los precios cayeron 28% y los costos por hectárea subieron 20% en 32 años",
-        "titulo_norm": "rentabilidad agricola los precios cayeron 28 y los costos por hectarea subieron 20 en 32 anos",
-        "descripcion": "Los desafíos de la rentabilidad agrícola. Más producción, nuevos desafíos para el productor, en un trabajo realizado por los profesionales de Cazenave & Asoc....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249067_27992801.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-28T11:09-03:00",
-        "capturado": "2026-10-28T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9d6972a7ddbb960c"
-      },
-      "grupo": [
-        {
-          "id": "9255a925860f",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249067-los-desafios-de-la-rentabilidad-agricola.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249067-los-desafios-de-la-rentabilidad-agricola.html",
-          "titulo": "Rentabilidad agrícola: los precios cayeron 28% y los costos por hectárea subieron 20% en 32 años",
-          "titulo_norm": "rentabilidad agricola los precios cayeron 28 y los costos por hectarea subieron 20 en 32 anos",
-          "descripcion": "Los desafíos de la rentabilidad agrícola. Más producción, nuevos desafíos para el productor, en un trabajo realizado por los profesionales de Cazenave & Asoc....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249067_27992801.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-28T11:09-03:00",
-          "capturado": "2026-10-28T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9d6972a7ddbb960c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 78,
-        "commercial_score": 82,
-        "subtema": "agro",
-        "tema": "rentabilidad agrícola",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Estudio clave sobre la caída de precios y suba de costos que afecta directamente el bolsillo del productor en zona núcleo.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T11:20-03:00"
-    },
-    {
       "id": "9a9b41d6b973",
       "rep": {
         "id": "9a9b41d6b973",
@@ -35794,8 +35872,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T16:43:13-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T17:03:30-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
