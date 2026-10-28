@@ -17066,6 +17066,69 @@
         50,
         53
       ]
+    },
+    "e2cc6ca3e40a0906": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto macroeconómico y protagonismo del agro, ideal para repasar números en carrusel.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1dd57a8a11a4e86d": {
+      "impacto_economico": 8,
+      "interes_productores": 7,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 5,
+      "ai_score": 49,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "pastizales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tema relevante para ganaderos pero de menor urgencia comercial directa para la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2c21c7b5a4fb9e9c": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muy relevante para la cadena ganadera y exportadora por el impacto de la normativa europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -18238,7 +18301,11 @@
       "https://agrositio.com.ar/noticia/249063-mercados-agricolas-recuperacion-moderada-en-chicago-frente-a-la-presion-de-la-cosecha-y-brasil.html": "2026-10-28",
       "https://bichosdecampo.com/el-que-se-va-se-va-pero-esto-no-se-desarma-luego-del-portazo-de-federacion-agraria-en-9-de-julio-aseguran-que-seguiran-discutiendo-la-creacion-de-la-comision-vial-para": "2026-10-28",
       "https://bichosdecampo.com/las-cerezas-argentinas-llegan-tarde-a-la-temporada-el-frio-retraso-la-cosecha-y-el-sector-mira-al-cielo-para-alcanzar-las-8-500-toneladas-exportables": "2026-10-28",
-      "https://futurefarming.com/smart-farming/from-stones-to-crop-defects-dutch-growers-embrace-ai-powered-sorting": "2026-10-28"
+      "https://futurefarming.com/smart-farming/from-stones-to-crop-defects-dutch-growers-embrace-ai-powered-sorting": "2026-10-28",
+      "https://infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial": "2026-10-28",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-28-octubre-2026": "2026-10-28",
+      "https://agrositio.com.ar/noticia/249065-pastizales-como-compatibilizar-la-produccion-ganadera-con-la-conservacion-de-la-naturaleza.html": "2026-10-28",
+      "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -19409,7 +19476,11 @@
       "mercados agricolas recuperacion moderada en chicago frente a la presion de la cosecha y brasil": "2026-10-28",
       "el que se va se va pero esto no se desarma luego del portazo de federacion agraria en 9 de julio aseguran que seguiran discutiendo la creacion de una comision vial local": "2026-10-28",
       "las cerezas argentinas llegan tarde a la temporada el frio retraso la cosecha y el sector mira al cielo para alcanzar las 8 500 toneladas exportables": "2026-10-28",
-      "from stones to crop defects dutch growers embrace ai powered sorting": "2026-10-28"
+      "from stones to crop defects dutch growers embrace ai powered sorting": "2026-10-28",
+      "boom exportador con el agro como motor argentina recupera market share en el comercio mundial": "2026-10-28",
+      "dolar blue a cuanto cotizan hoy en cordoba 28 octubre 2026": "2026-10-28",
+      "pastizales como compatibilizar la produccion ganadera con la conservacion de la naturaleza": "2026-10-28",
+      "una carrera de obstaculos para la carne argentina el industrial luis viera advierte que solo la mitad de la hacienda esta lista para cumplir con la normativa antideforestacion europea": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -20580,7 +20651,11 @@
       "a897609399b08a40": "2026-10-28",
       "282764587ac19711": "2026-10-28",
       "72c901986b0519b3": "2026-10-28",
-      "e7dcac3afcd2c312": "2026-10-28"
+      "e7dcac3afcd2c312": "2026-10-28",
+      "e2cc6ca3e40a0906": "2026-10-28",
+      "0c6a93bf52e9c156": "2026-10-28",
+      "1dd57a8a11a4e86d": "2026-10-28",
+      "2c21c7b5a4fb9e9c": "2026-10-28"
     }
   },
   "elegidas": [
@@ -32694,71 +32769,192 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ba3eb4f4b549_portada.jpg"
+    },
+    {
+      "id": "9de067497e93",
+      "cuando": "2026-10-28T10:20-03:00",
+      "titulo_original": "La competitividad del trigo argentino es imbatible: Sólo tiene que esperar para lucirse",
+      "descripcion": "Si bien por factores estacionales los precios del trigo argentino están mostrando una tendencia bajista a medida que se acerca el período de la cosecha en la región pampeana, resulta apropiado no perder de vista que la competitividad del trigo argentino es imbatible en la actual coyuntura. Con un pr",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse/",
+      "titular": "Trigo argentino: Brasil calcula gran competitividad y proyecta altas importaciones",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Importante análisis de mercado y competitividad para los productores trigueros de la región pampeana.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          73
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "271e1c91-e4cd-4bf9-b1a2-79f44b25f7a5",
+          "slug": "trigo-argentino-brasil-proyecta-altisima-demanda-e-5802e8",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-argentino-brasil-proyecta-altisima-demanda-e-5802e8",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4266132200292566",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18124027243942052",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9de067497e93_portada.jpg"
     }
   ],
   "pendientes": [
     {
-      "id": "a23fa84afee3",
+      "id": "4d04ac8bb21d",
       "rep": {
-        "id": "a23fa84afee3",
-        "fuente": "TodoAgro",
+        "id": "4d04ac8bb21d",
+        "fuente": "Infocampo",
         "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/el-cerdo-dejo-de-ser-la-alternativa-barata-y-se-convirtio-en-protagonista-de-la-mesa-argentina/",
-        "canonical_url": "https://todoagro.com.ar/el-cerdo-dejo-de-ser-la-alternativa-barata-y-se-convirtio-en-protagonista-de-la-mesa-argentina",
-        "titulo": "El cerdo dejó de ser la alternativa barata y se convirtió en protagonista de la mesa argentina",
-        "titulo_norm": "el cerdo dejo de ser la alternativa barata y se convirtio en protagonista de la mesa argentina",
-        "descripcion": "En poco más de tres décadas, el consumo de carne porcina pasó de apenas 3 a 18 kilos por habitante al año. Un informe del INTA Marcos Juárez explica qué hay detrás de este salto, por qué el precio fue clave para conquistar consumidores y cuánto margen tiene todavía esta proteína para seguir creciendo en la Argentina. La entrada El cerdo dejó de ser la alternativa barata y se convirtió en protagonista de la mesa argentina pertenece a Todo Agro.",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial/",
+        "canonical_url": "https://infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial",
+        "titulo": "Boom exportador: con el agro como motor, Argentina recupera “market share” en el comercio mundial",
+        "titulo_norm": "boom exportador con el agro como motor argentina recupera market share en el comercio mundial",
+        "descripcion": "En lo que va de la era Milei, el impulso a las exportaciones está mostrando resultados: nuestro país creció en participación en el comercio exterior global y este año se superarían los U$S 100.000 millones. El agro, como es usual, es el principal protagonista.",
         "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-10-28T09:45-03:00",
-        "capturado": "2026-10-28T10:00-03:00",
+        "autor": "infocampo",
+        "publicado": "2026-10-28T10:15-03:00",
+        "capturado": "2026-10-28T10:20-03:00",
         "idioma": "es",
         "pais": "AR",
-        "hash": "74acb601f3c1d18c"
+        "hash": "e2cc6ca3e40a0906"
       },
       "grupo": [
         {
-          "id": "a23fa84afee3",
-          "fuente": "TodoAgro",
+          "id": "4d04ac8bb21d",
+          "fuente": "Infocampo",
           "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/el-cerdo-dejo-de-ser-la-alternativa-barata-y-se-convirtio-en-protagonista-de-la-mesa-argentina/",
-          "canonical_url": "https://todoagro.com.ar/el-cerdo-dejo-de-ser-la-alternativa-barata-y-se-convirtio-en-protagonista-de-la-mesa-argentina",
-          "titulo": "El cerdo dejó de ser la alternativa barata y se convirtió en protagonista de la mesa argentina",
-          "titulo_norm": "el cerdo dejo de ser la alternativa barata y se convirtio en protagonista de la mesa argentina",
-          "descripcion": "En poco más de tres décadas, el consumo de carne porcina pasó de apenas 3 a 18 kilos por habitante al año. Un informe del INTA Marcos Juárez explica qué hay detrás de este salto, por qué el precio fue clave para conquistar consumidores y cuánto margen tiene todavía esta proteína para seguir creciendo en la Argentina. La entrada El cerdo dejó de ser la alternativa barata y se convirtió en protagonista de la mesa argentina pertenece a Todo Agro.",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial/",
+          "canonical_url": "https://infocampo.com.ar/boom-exportador-con-el-agro-como-motor-argentina-recupera-market-share-en-el-comercio-mundial",
+          "titulo": "Boom exportador: con el agro como motor, Argentina recupera “market share” en el comercio mundial",
+          "titulo_norm": "boom exportador con el agro como motor argentina recupera market share en el comercio mundial",
+          "descripcion": "En lo que va de la era Milei, el impulso a las exportaciones está mostrando resultados: nuestro país creció en participación en el comercio exterior global y este año se superarían los U$S 100.000 millones. El agro, como es usual, es el principal protagonista.",
           "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-10-28T09:45-03:00",
-          "capturado": "2026-10-28T10:00-03:00",
+          "autor": "infocampo",
+          "publicado": "2026-10-28T10:15-03:00",
+          "capturado": "2026-10-28T10:20-03:00",
           "idioma": "es",
           "pais": "AR",
-          "hash": "74acb601f3c1d18c"
+          "hash": "e2cc6ca3e40a0906"
         }
       ],
       "score": {
-        "impacto_economico": 14,
+        "impacto_economico": 18,
         "interes_productores": 12,
-        "innovacion": 6,
+        "innovacion": 2,
         "cercania_argentina": 10,
-        "cercania_pba": 10,
+        "cercania_pba": 8,
         "potencial_reel": 7,
         "conversacion": 8,
         "potencial_comercial": 7,
-        "ai_score": 74,
+        "ai_score": 72,
         "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "cerdo",
+        "subtema": "mercados",
+        "tema": "exportaciones",
         "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Gran crecimiento del consumo porcino nacional con datos del INTA que interesan al productor.",
-        "tema_doc": "ganaderia",
+        "sensible": true,
+        "explicacion": "Gran impacto macroeconómico y protagonismo del agro, ideal para repasar números en carrusel.",
+        "tema_doc": "internacional",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-28T10:00-03:00"
+      "cuando": "2026-10-28T10:20-03:00"
+    },
+    {
+      "id": "e784445c4e13",
+      "rep": {
+        "id": "e784445c4e13",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ/",
+        "canonical_url": "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ",
+        "titulo": "Una “carrera de obstáculos” para la carne argentina: El industrial Luis Viera advierte que solo la mitad de la hacienda está lista para cumplir con la normativa antideforestación europea",
+        "titulo_norm": "una carrera de obstaculos para la carne argentina el industrial luis viera advierte que solo la mitad de la hacienda esta lista para cumplir con la normativa antideforestacion europea",
+        "descripcion": "La carne argentina tiene mercados para crecer, pero cada vez encuentra más obstáculos para aprovechar las oportunidades. Así lo sostiene Luis Viera, gerente de Exportaciones de Rafaela Alimentos, quien dialogó con Bichos de Campo durante la feria SIAL de París y lanzó una advertencia: “El 50% de lo que hoy estamos comprando normalmente para exportar […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/hacienda-agromelu-3-scaled.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-28T10:15-03:00",
+        "capturado": "2026-10-28T10:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2c21c7b5a4fb9e9c"
+      },
+      "grupo": [
+        {
+          "id": "e784445c4e13",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ/",
+          "canonical_url": "https://bichosdecampo.com/una-carrera-de-obstaculos-para-la-carne-argentina-el-industrial-luis-viera-advierte-que-solo-la-mitad-de-la-hacienda-esta-lista-para-cumplir-con-la-normativa-antideforestacion-europ",
+          "titulo": "Una “carrera de obstáculos” para la carne argentina: El industrial Luis Viera advierte que solo la mitad de la hacienda está lista para cumplir con la normativa antideforestación europea",
+          "titulo_norm": "una carrera de obstaculos para la carne argentina el industrial luis viera advierte que solo la mitad de la hacienda esta lista para cumplir con la normativa antideforestacion europea",
+          "descripcion": "La carne argentina tiene mercados para crecer, pero cada vez encuentra más obstáculos para aprovechar las oportunidades. Así lo sostiene Luis Viera, gerente de Exportaciones de Rafaela Alimentos, quien dialogó con Bichos de Campo durante la feria SIAL de París y lanzó una advertencia: “El 50% de lo que hoy estamos comprando normalmente para exportar […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/hacienda-agromelu-3-scaled.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-28T10:15-03:00",
+          "capturado": "2026-10-28T10:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2c21c7b5a4fb9e9c"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "exportación carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muy relevante para la cadena ganadera y exportadora por el impacto de la normativa europea.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T10:20-03:00"
     },
     {
       "id": "25add703354c",
@@ -32956,73 +33152,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T10:00-03:00"
-    },
-    {
-      "id": "9de067497e93",
-      "rep": {
-        "id": "9de067497e93",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse/",
-        "canonical_url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse",
-        "titulo": "La competitividad del trigo argentino es imbatible: Sólo tiene que esperar para lucirse",
-        "titulo_norm": "la competitividad del trigo argentino es imbatible solo tiene que esperar para lucirse",
-        "descripcion": "Si bien por factores estacionales los precios del trigo argentino están mostrando una tendencia bajista a medida que se acerca el período de la cosecha en la región pampeana, resulta apropiado no perder de vista que la competitividad del trigo argentino es imbatible en la actual coyuntura. Con un precio FOB del trigo pan argentino […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-5.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-28T08:20-03:00",
-        "capturado": "2026-10-28T08:24-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d9203b0e626f4419"
-      },
-      "grupo": [
-        {
-          "id": "9de067497e93",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse/",
-          "canonical_url": "https://bichosdecampo.com/la-competitividad-del-trigo-argentino-es-imbatible-solo-tiene-que-esperar-para-lucirse",
-          "titulo": "La competitividad del trigo argentino es imbatible: Sólo tiene que esperar para lucirse",
-          "titulo_norm": "la competitividad del trigo argentino es imbatible solo tiene que esperar para lucirse",
-          "descripcion": "Si bien por factores estacionales los precios del trigo argentino están mostrando una tendencia bajista a medida que se acerca el período de la cosecha en la región pampeana, resulta apropiado no perder de vista que la competitividad del trigo argentino es imbatible en la actual coyuntura. Con un precio FOB del trigo pan argentino […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-5.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-28T08:20-03:00",
-          "capturado": "2026-10-28T08:24-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d9203b0e626f4419"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 72,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Importante análisis de mercado y competitividad para los productores trigueros de la región pampeana.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          73
-        ]
-      },
-      "cuando": "2026-10-28T08:24-03:00"
     },
     {
       "id": "643436ca797e",
@@ -33486,8 +33615,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T10:06:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T10:23:16-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
