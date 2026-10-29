@@ -35624,6 +35624,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_182781d050a9_portada.jpg"
+    },
+    {
+      "id": "80f2eec46cc2",
+      "cuando": "2026-10-29T07:41-03:00",
+      "titulo_original": "Las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de Santa Fe",
+      "descripcion": "Los primeros lotes rindieron entre 30 y 32 quintales por hectárea. La humedad también interrumpió la siembra de soja de primera, según la Bolsa de Comercio de Santa Fe",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
+      "titular": "Lluvias frenan cosecha de trigo y siembra de soja en Santa Fe",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 66,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Datos de rindes de trigo y demoras en siembra de soja por lluvias en la región central interesan directamente al productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          67
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T07:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "bcc2d0f8-ee48-4120-9451-eb311cce9af7",
+          "slug": "lluvias-frenan-la-cosecha-de-trigo-y-la-siembra-de-soja-en-f80606",
+          "url": "https://www.diariolacampaña.com.ar/n/lluvias-frenan-la-cosecha-de-trigo-y-la-siembra-de-soja-en-f80606",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1791066821934966",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17940390792381344",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_80f2eec46cc2_portada.jpg"
     }
   ],
   "pendientes": [
@@ -35753,73 +35811,6 @@
         "dobles": [
           69,
           74
-        ]
-      },
-      "cuando": "2026-10-28T21:00-03:00"
-    },
-    {
-      "id": "80f2eec46cc2",
-      "rep": {
-        "id": "80f2eec46cc2",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
-        "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
-        "titulo": "Las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de Santa Fe",
-        "titulo_norm": "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe",
-        "descripcion": "Los primeros lotes rindieron entre 30 y 32 quintales por hectárea. La humedad también interrumpió la siembra de soja de primera, según la Bolsa de Comercio de Santa Fe",
-        "imagen_url": "https://media.lacapital.com.ar/p/83018dfe3cb8577ed3ca561c9dc12275/adjuntos/203/imagenes/005/838/0005838095/1200x675/smart/revancha-la-ultima-cosecha-trigo-fue-muy-baja-ahora-se-recuperaria.jpg",
-        "autor": "",
-        "publicado": "2026-10-28T19:25-03:00",
-        "capturado": "2026-10-28T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f1098b504940a4e6"
-      },
-      "grupo": [
-        {
-          "id": "80f2eec46cc2",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
-          "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
-          "titulo": "Las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de Santa Fe",
-          "titulo_norm": "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe",
-          "descripcion": "Los primeros lotes rindieron entre 30 y 32 quintales por hectárea. La humedad también interrumpió la siembra de soja de primera, según la Bolsa de Comercio de Santa Fe",
-          "imagen_url": "https://media.lacapital.com.ar/p/83018dfe3cb8577ed3ca561c9dc12275/adjuntos/203/imagenes/005/838/0005838095/1200x675/smart/revancha-la-ultima-cosecha-trigo-fue-muy-baja-ahora-se-recuperaria.jpg",
-          "autor": "",
-          "publicado": "2026-10-28T19:25-03:00",
-          "capturado": "2026-10-28T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f1098b504940a4e6"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 69,
-        "commercial_score": 66,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Datos de rindes de trigo y demoras en siembra de soja por lluvias en la región central interesan directamente al productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          67
         ]
       },
       "cuando": "2026-10-28T21:00-03:00"
@@ -36538,8 +36529,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T07:24:30-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T07:44:26-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
