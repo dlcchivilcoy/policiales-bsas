@@ -18556,6 +18556,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "65f7c2c00100ee44": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 59,
+      "commercial_score": 57,
+      "subtema": "ganaderia",
+      "tema": "inundaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto ganadero y emergencia por crecida de ríos, aunque geográficamente alejado de la zona núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        59
+      ]
     }
   },
   "indice": {
@@ -19821,7 +19846,8 @@
       "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos": "2026-10-29",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-29-octubre-2026": "2026-10-29",
       "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana": "2026-10-29",
-      "https://bichosdecampo.com/orgullo-nacional-desarrollaron-un-nuevo-casino-virtual-no-pero-si-la-primera-variedad-de-triticale-resistente-a-un-herbicida-en-todo-el-mundo": "2026-10-29"
+      "https://bichosdecampo.com/orgullo-nacional-desarrollaron-un-nuevo-casino-virtual-no-pero-si-la-primera-variedad-de-triticale-resistente-a-un-herbicida-en-todo-el-mundo": "2026-10-29",
+      "https://bichosdecampo.com/ahora-le-toca-a-formosa-la-crecida-del-rio-paraguay-activa-el-plan-de-evacuacion-y-extiende-hacia-el-norte-una-emergencia-que-ya-movilizo-casi-150-000-animales": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21085,7 +21111,8 @@
       "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos": "2026-10-29",
       "dolar blue a cuanto cotizan hoy en cordoba 29 octubre 2026": "2026-10-29",
       "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana": "2026-10-29",
-      "orgullo nacional desarrollaron un nuevo casino virtual no pero si la primera variedad de triticale resistente a un herbicida en todo el mundo": "2026-10-29"
+      "orgullo nacional desarrollaron un nuevo casino virtual no pero si la primera variedad de triticale resistente a un herbicida en todo el mundo": "2026-10-29",
+      "ahora le toca a formosa la crecida del rio paraguay activa el plan de evacuacion y extiende hacia el norte una emergencia que ya movilizo casi 150 000 animales": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22349,7 +22376,8 @@
       "304453d3c80cefdf": "2026-10-29",
       "a08d35744553bbf1": "2026-10-29",
       "833190d06a4695b1": "2026-10-29",
-      "8eae90f59d3dc86d": "2026-10-29"
+      "8eae90f59d3dc86d": "2026-10-29",
+      "65f7c2c00100ee44": "2026-10-29"
     }
   },
   "elegidas": [
@@ -36177,49 +36205,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0da208b1c569_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "b4f5fe690819",
-      "rep": {
-        "id": "b4f5fe690819",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana/",
-        "canonical_url": "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana",
-        "titulo": "La logística, a contramano: el gasoil y los fletes golpean la rentabilidad de la nueva campaña",
-        "titulo_norm": "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana",
-        "descripcion": "Un informe de Coninagro advierte que los costos operativos avanzan por encima de los precios de los granos y deterioran el poder de compra de los productores. El gasoil, el transporte de granos y la mano de obra son los ítems con mayor alza.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/coninagro.png",
-        "autor": "infocampo",
-        "publicado": "2026-10-29T10:05-03:00",
-        "capturado": "2026-10-29T10:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "833190d06a4695b1"
-      },
-      "grupo": [
-        {
-          "id": "b4f5fe690819",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana/",
-          "canonical_url": "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana",
-          "titulo": "La logística, a contramano: el gasoil y los fletes golpean la rentabilidad de la nueva campaña",
-          "titulo_norm": "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana",
-          "descripcion": "Un informe de Coninagro advierte que los costos operativos avanzan por encima de los precios de los granos y deterioran el poder de compra de los productores. El gasoil, el transporte de granos y la mano de obra son los ítems con mayor alza.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/coninagro.png",
-          "autor": "infocampo",
-          "publicado": "2026-10-29T10:05-03:00",
-          "capturado": "2026-10-29T10:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "833190d06a4695b1"
-        }
-      ],
+      "cuando": "2026-10-29T10:40-03:00",
+      "titulo_original": "La logística, a contramano: el gasoil y los fletes golpean la rentabilidad de la nueva campaña",
+      "descripcion": "Un informe de Coninagro advierte que los costos operativos avanzan por encima de los precios de los granos y deterioran el poder de compra de los productores. El gasoil, el transporte de granos y la mano de obra son los ítems con mayor alza.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana/",
+      "titular": "El gasoil y los fletes golpean la rentabilidad de la campaña",
+      "volanta": "Economía",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -36241,8 +36236,72 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-29T10:20-03:00"
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T10:40:00-03:00"
     },
+    {
+      "id": "5989ad4b9b8a",
+      "cuando": "2026-10-29T10:40-03:00",
+      "titulo_original": "La calidad de la producción láctea argentina registra su nivel más alto en 12 años",
+      "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que la calidad de la producción láctea argentina registra su nivel más alto en 12 años, la producción de sólidos útiles (grasa y proteína) aumentó 4,8% en los primeros 9 meses del año y la concentración p",
+      "fuente": "Secretaría de Agricultura",
+      "url": "https://www.argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
+      "titular": "Leche: la calidad y los sólidos útiles logran récord en doce años",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 11,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 60,
+        "commercial_score": 66,
+        "subtema": "ganaderia",
+        "tema": "lechería",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales sobre mejora en calidad de leche que interesan al sector tambero de la cuenca.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2b004fa1-03a6-48e9-ae32-f538c3b9825b",
+          "slug": "la-leche-argentina-alcanza-su-mejor-calidad-en-doce-anos-con-ceb8f1",
+          "url": "https://www.diariolacampaña.com.ar/n/la-leche-argentina-alcanza-su-mejor-calidad-en-doce-anos-con-ceb8f1",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4010449685769870",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18385523959229654",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5989ad4b9b8a_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "293594558f96",
       "rep": {
@@ -36305,73 +36364,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "dobles": [
           66,
-          62
-        ]
-      },
-      "cuando": "2026-10-29T10:00-03:00"
-    },
-    {
-      "id": "5989ad4b9b8a",
-      "rep": {
-        "id": "5989ad4b9b8a",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
-        "canonical_url": "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
-        "titulo": "La calidad de la producción láctea argentina registra su nivel más alto en 12 años",
-        "titulo_norm": "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que la calidad de la producción láctea argentina registra su nivel más alto en 12 años, la producción de sólidos útiles (grasa y proteína) aumentó 4,8% en los primeros 9 meses del año y la concentración promedio de sólidos paso de 7,34% a 7,39%. Este dato refleja una mejora en la composición y el rendimiento industrial de la leche. En este sentido, continuar trabajando sobre la mejora de los sólidos constituye un objetivo estratégico para fortalecer la competitividad de la cadena y, al mismo tiempo, reconocer el esfuerzo de los productores. En cuanto a producción nacional de leche, entre los meses de enero y septiembre de 2026, se alcanzó los 8.647 millones de litros, frente a los 8.308 millones del mismo período del año 2025, lo que representa un crecimiento interanual del 4,1%, de acuerdo al",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/vacas_leche_3.jpg",
-        "autor": "pconsiglio",
-        "publicado": "2026-10-29T09:30-03:00",
-        "capturado": "2026-10-29T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "304453d3c80cefdf"
-      },
-      "grupo": [
-        {
-          "id": "5989ad4b9b8a",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
-          "canonical_url": "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
-          "titulo": "La calidad de la producción láctea argentina registra su nivel más alto en 12 años",
-          "titulo_norm": "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que la calidad de la producción láctea argentina registra su nivel más alto en 12 años, la producción de sólidos útiles (grasa y proteína) aumentó 4,8% en los primeros 9 meses del año y la concentración promedio de sólidos paso de 7,34% a 7,39%. Este dato refleja una mejora en la composición y el rendimiento industrial de la leche. En este sentido, continuar trabajando sobre la mejora de los sólidos constituye un objetivo estratégico para fortalecer la competitividad de la cadena y, al mismo tiempo, reconocer el esfuerzo de los productores. En cuanto a producción nacional de leche, entre los meses de enero y septiembre de 2026, se alcanzó los 8.647 millones de litros, frente a los 8.308 millones del mismo período del año 2025, lo que representa un crecimiento interanual del 4,1%, de acuerdo al",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/vacas_leche_3.jpg",
-          "autor": "pconsiglio",
-          "publicado": "2026-10-29T09:30-03:00",
-          "capturado": "2026-10-29T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "304453d3c80cefdf"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 11,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 5,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 60,
-        "commercial_score": 66,
-        "subtema": "ganaderia",
-        "tema": "lechería",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos oficiales sobre mejora en calidad de leche que interesan al sector tambero de la cuenca.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
           62
         ]
       },
@@ -37091,8 +37083,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T10:23:02-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T10:45:00-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
