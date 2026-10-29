@@ -19242,6 +19242,31 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "82ea30d241681e4e": {
+      "impacto_economico": 9,
+      "interes_productores": 7,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 56,
+      "commercial_score": 57,
+      "subtema": "agro",
+      "tema": "recursos humanos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a empresas y productores de la región que buscan personal calificado, aunque tiene bajo impacto en mercados.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        54
+      ]
     }
   },
   "indice": {
@@ -20545,7 +20570,8 @@
       "https://agrositio.com.ar/noticia/249094-por-unanimidad-reeligen-por-septima-vez-a-diego-cifarelli-al-frente-de-la-federacion-argentina-de-la-industria-molinera.html": "2026-10-29",
       "https://bichosdecampo.com/pais-federal-en-septiembre-la-leche-y-el-asado-fueron-mas-caros-en-el-interior-que-en-la-capital-pero-no-asi-el-pan": "2026-10-29",
       "https://lanacion.com.ar/economia/campo/llore-grite-y-me-frustre-los-perros-atacaron-su-campo-y-perdio-casi-todas-sus-ovejas-nid29102026": "2026-10-29",
-      "https://agfundernews.com/agrifood-corporates-find-a-new-model-for-financing-regenerative-agriculture-via-soil-capital-partnership": "2026-10-29"
+      "https://agfundernews.com/agrifood-corporates-find-a-new-model-for-financing-regenerative-agriculture-via-soil-capital-partnership": "2026-10-29",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249103-seleccion-de-rrhh-en-el-agro-flexibilidad-desafios-y-proposito-mueven-a-los-jovenesy-a-muchos-grandes.html": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21847,7 +21873,8 @@
       "diego cifarelli seguira al frente de faim los desafios de la industria molinera para crecer y exportar": "2026-10-29",
       "pais federal en septiembre la leche y el asado fueron mas caros en el interior que en la capital pero no asi el pan": "2026-10-29",
       "los perros atacaron su campo y perdio casi todas sus ovejas": "2026-10-29",
-      "agrifood corporates find a new model for financing regenerative agriculture via soil capital partnership": "2026-10-29"
+      "agrifood corporates find a new model for financing regenerative agriculture via soil capital partnership": "2026-10-29",
+      "seleccion de rr hh en el agro flexibilidad desafios y proposito mueven a los jovenes y a muchos grandes": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23149,7 +23176,8 @@
       "c673d5b580d14c80": "2026-10-29",
       "d8e3d652c6ff4ba3": "2026-10-29",
       "1486dc8a9462bc43": "2026-10-29",
-      "7b7f50a7ea93fe46": "2026-10-29"
+      "7b7f50a7ea93fe46": "2026-10-29",
+      "82ea30d241681e4e": "2026-10-29"
     }
   },
   "elegidas": [
@@ -37413,6 +37441,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_644af70f9933_portada.jpg"
+    },
+    {
+      "id": "eac9dc8c2fbb",
+      "cuando": "2026-10-29T16:20-03:00",
+      "titulo_original": "¡Cuidado! En la gestión de liquidez de corto plazo la “comodidad” está generando una pérdida considerable",
+      "descripcion": "En la actual coyuntura, la “comodidad” al momento de gestionar la liquidez de corto plazo de una empresa agropecuaria se puede transformar en un perjuicio que, si bien puede llegar a resultar “invisible”, no implica que sea menos dañino. Actualmente, el rendimiento de un fondo común de inversión (FC",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable/",
+      "titular": "La liquidez cómoda en empresas agropecuarias genera pérdidas frente a la inflación",
+      "volanta": "Finanzas Rurales",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "finanzas agropecuarias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Apunta directo a la gestión financiera del productor pampeano en un tema muy sensible para el negocio.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e435f38b-06cc-409b-b6a8-c3f88bd97723",
+          "slug": "gestion-financiera-agropecuaria-por-que-los-fondos-money-market-0ffadc",
+          "url": "https://www.diariolacampaña.com.ar/n/gestion-financiera-agropecuaria-por-que-los-fondos-money-market-0ffadc",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1681731526961769",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17895853248681712",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_eac9dc8c2fbb_portada.jpg"
     }
   ],
   "pendientes": [
@@ -37547,69 +37629,6 @@
           70,
           71
         ]
-      },
-      "cuando": "2026-10-29T16:00-03:00"
-    },
-    {
-      "id": "d289d0231e33",
-      "rep": {
-        "id": "d289d0231e33",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249071-los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249071-los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio.html",
-        "titulo": "Toros reproductores: los precios treparon 61% en pesos y 57% en dólares",
-        "titulo_norm": "toros reproductores los precios treparon 61 en pesos y 57 en dolares",
-        "descripcion": "Los remates de genética bovina marcaron un crecimiento interanual del 61% en el precio. Los resultados corresponden al período agosto-octubre de este año, el más trascendente en lo referente a remates de las cabañas de genética reproductora. Y reflejan un acentuado interés por invertir en genética para mejorar la calidad del rodeo argentino....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249071_79378355.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-28T15:58-03:00",
-        "capturado": "2026-10-29T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9eecc91fca8ebcd4"
-      },
-      "grupo": [
-        {
-          "id": "d289d0231e33",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249071-los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249071-los-remates-de-genetica-bovina-marcaron-un-crecimiento-interanual-del-61-en-el-precio.html",
-          "titulo": "Toros reproductores: los precios treparon 61% en pesos y 57% en dólares",
-          "titulo_norm": "toros reproductores los precios treparon 61 en pesos y 57 en dolares",
-          "descripcion": "Los remates de genética bovina marcaron un crecimiento interanual del 61% en el precio. Los resultados corresponden al período agosto-octubre de este año, el más trascendente en lo referente a remates de las cabañas de genética reproductora. Y reflejan un acentuado interés por invertir en genética para mejorar la calidad del rodeo argentino....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249071_79378355.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-28T15:58-03:00",
-          "capturado": "2026-10-29T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9eecc91fca8ebcd4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 7,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 79,
-        "commercial_score": 87,
-        "subtema": "ganaderia",
-        "tema": "genética bovina",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Fuerte suba en toros reproductores, dato clave para ganaderos de la región pampeana.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-29T16:00-03:00"
     },
@@ -38079,69 +38098,6 @@
       "cuando": "2026-10-29T08:01-03:00"
     },
     {
-      "id": "eac9dc8c2fbb",
-      "rep": {
-        "id": "eac9dc8c2fbb",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable/",
-        "canonical_url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable",
-        "titulo": "¡Cuidado! En la gestión de liquidez de corto plazo la “comodidad” está generando una pérdida considerable",
-        "titulo_norm": "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable",
-        "descripcion": "En la actual coyuntura, la “comodidad” al momento de gestionar la liquidez de corto plazo de una empresa agropecuaria se puede transformar en un perjuicio que, si bien puede llegar a resultar “invisible”, no implica que sea menos dañino. Actualmente, el rendimiento de un fondo común de inversión (FCI) “money market” de liquidez inmediata está […]",
-        "imagen_url": "",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-28T21:06-03:00",
-        "capturado": "2026-10-28T21:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "16825b127393ef2c"
-      },
-      "grupo": [
-        {
-          "id": "eac9dc8c2fbb",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable/",
-          "canonical_url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable",
-          "titulo": "¡Cuidado! En la gestión de liquidez de corto plazo la “comodidad” está generando una pérdida considerable",
-          "titulo_norm": "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable",
-          "descripcion": "En la actual coyuntura, la “comodidad” al momento de gestionar la liquidez de corto plazo de una empresa agropecuaria se puede transformar en un perjuicio que, si bien puede llegar a resultar “invisible”, no implica que sea menos dañino. Actualmente, el rendimiento de un fondo común de inversión (FCI) “money market” de liquidez inmediata está […]",
-          "imagen_url": "",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-28T21:06-03:00",
-          "capturado": "2026-10-28T21:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "16825b127393ef2c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 8,
-        "ai_score": 72,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "finanzas agropecuarias",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Apunta directo a la gestión financiera del productor pampeano en un tema muy sensible para el negocio.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T21:20-03:00"
-    },
-    {
       "id": "aef83931a8af",
       "rep": {
         "id": "aef83931a8af",
@@ -38595,8 +38551,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T16:03:48-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T16:23:10-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
