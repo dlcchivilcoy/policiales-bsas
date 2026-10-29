@@ -18372,6 +18372,31 @@
         69,
         67
       ]
+    },
+    "6e2f0fd77280f87b": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 65,
+      "commercial_score": 58,
+      "subtema": "ganaderia",
+      "tema": "crecida paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente al sector ganadero del Litoral por el impacto del clima en la hacienda.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        67
+      ]
     }
   },
   "indice": {
@@ -19627,7 +19652,8 @@
       "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026": "2026-10-29",
       "https://agrositio.com.ar/noticia/249079-el-financiamiento-universitario-se-decide-en-el-presupuesto-libertad-y-progreso-pide-al-congreso-que-lo-resuelva-ahora-que-se-lo-esta-tratando.html": "2026-10-29",
       "https://agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html": "2026-10-29",
-      "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias": "2026-10-29"
+      "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias": "2026-10-29",
+      "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20881,7 +20907,8 @@
       "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes": "2026-10-29",
       "el financiamiento universitario se decide en el presupuesto libertad y progreso pide al congreso que lo resuelva ahora que se lo esta tratando": "2026-10-29",
       "inundaciones se facilita la gestion de movimientos para la evacuacion de hacienda por el fenomeno el nino": "2026-10-29",
-      "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias": "2026-10-29"
+      "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias": "2026-10-29",
+      "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22135,7 +22162,8 @@
       "a9dc3364e1e20da8": "2026-10-29",
       "093e39a8695af1e4": "2026-10-29",
       "89909e763e556bd7": "2026-10-29",
-      "a268d22f3ad8c16e": "2026-10-29"
+      "a268d22f3ad8c16e": "2026-10-29",
+      "6e2f0fd77280f87b": "2026-10-29"
     }
   },
   "elegidas": [
@@ -35768,9 +35796,156 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_61771a35b1dc_portada.jpg"
+    },
+    {
+      "id": "036a0d1e4784",
+      "cuando": "2026-10-29T08:21-03:00",
+      "titulo_original": "Gerardo Bartolomé, de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos: “Tenemos dos países”",
+      "descripcion": "Fundador de Don Mario, contó cómo una conversación en un semáforo lo llevó a impulsar un proyecto educativo en Tigre; en una disertación en el Rotary Club de Buenos Aires también cuestionó las retenciones y advirtió que la Argentina pierde inversiones por la falta de protección de la propiedad intel",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026/",
+      "titular": "Fundador de Don Mario impulsa escuela en Tigre y cuestiona retenciones",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 12,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "propiedad intelectual",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Declaran sobre retenciones y ley de semillas figuras de peso en la industria, generando debate clave en la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          74
+        ]
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T08:20:00-03:00"
+    },
+    {
+      "id": "dbc06f0b0b22",
+      "cuando": "2026-10-29T08:21-03:00",
+      "titulo_original": "Conflicto: paro en un frigorífico que tiene una deuda bancaria de $46.000 millones y más de $25.000 millones en cheques rechazados",
+      "descripcion": "En San Fernando, Ecocarnes dejó de faenar este lunes y derivaron los animales a otros establecimientos; los trabajadores mantienen una medida de fuerza ante el pago parcial de la quincena e incumplimientos en aportes vinculados con la cobertura de salud",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026/",
+      "titular": "Paro total en el frigorífico Ecocarnes por millonaria deuda",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 62,
+        "commercial_score": 55,
+        "subtema": "ganaderia",
+        "tema": "ecocarnes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto en la cadena cárnica bonaerense por la crisis financiera de un frigorífico clave.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          64
+        ]
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T08:20:00-03:00"
     }
   ],
   "pendientes": [
+    {
+      "id": "6719c69e7d5a",
+      "rep": {
+        "id": "6719c69e7d5a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto/",
+        "canonical_url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto",
+        "titulo": "El Niño ya inundó las islas del norte santafesino y crece la preocupación por el futuro de la hacienda y la falta de pasto",
+        "titulo_norm": "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto",
+        "descripcion": "El fenómeno de El Niño ya comienza a sentirse en el norte de Santa Fe, donde la crecida del río Paraná inundó los bajos y el valle de inundación del humedal Jaaukanigás. En esa región, ubicada en el noreste del departamento General Obligado, los productores ganaderos debieron anticiparse al avance del agua y retirar la […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-8.jpeg",
+        "autor": "Diego Mañas",
+        "publicado": "2026-10-29T08:02-03:00",
+        "capturado": "2026-10-29T08:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6e2f0fd77280f87b"
+      },
+      "grupo": [
+        {
+          "id": "6719c69e7d5a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto/",
+          "canonical_url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto",
+          "titulo": "El Niño ya inundó las islas del norte santafesino y crece la preocupación por el futuro de la hacienda y la falta de pasto",
+          "titulo_norm": "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto",
+          "descripcion": "El fenómeno de El Niño ya comienza a sentirse en el norte de Santa Fe, donde la crecida del río Paraná inundó los bajos y el valle de inundación del humedal Jaaukanigás. En esa región, ubicada en el noreste del departamento General Obligado, los productores ganaderos debieron anticiparse al avance del agua y retirar la […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-8.jpeg",
+          "autor": "Diego Mañas",
+          "publicado": "2026-10-29T08:02-03:00",
+          "capturado": "2026-10-29T08:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6e2f0fd77280f87b"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 65,
+        "commercial_score": 58,
+        "subtema": "ganaderia",
+        "tema": "crecida paraná",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente al sector ganadero del Litoral por el impacto del clima en la hacienda.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          67
+        ]
+      },
+      "cuando": "2026-10-29T08:21-03:00"
+    },
     {
       "id": "a5ac7f55d852",
       "rep": {
@@ -35900,73 +36075,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T21:20-03:00"
-    },
-    {
-      "id": "036a0d1e4784",
-      "rep": {
-        "id": "036a0d1e4784",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026",
-        "titulo": "Gerardo Bartolomé, de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos: “Tenemos dos países”",
-        "titulo_norm": "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises",
-        "descripcion": "Fundador de Don Mario, contó cómo una conversación en un semáforo lo llevó a impulsar un proyecto educativo en Tigre; en una disertación en el Rotary Club de Buenos Aires también cuestionó las retenciones y advirtió que la Argentina pierde inversiones por la falta de protección de la propiedad intelectual en semillas",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/K3OYGLJHXBDKBDYWJQQO24BBYY.jpeg?auth=23ae900be8a524cba6751124d276ee9c5be508f792a7366374f4620ac49a667f&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-10-28T19:27-03:00",
-        "capturado": "2026-10-28T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c7f82118702e58d2"
-      },
-      "grupo": [
-        {
-          "id": "036a0d1e4784",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026",
-          "titulo": "Gerardo Bartolomé, de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos: “Tenemos dos países”",
-          "titulo_norm": "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises",
-          "descripcion": "Fundador de Don Mario, contó cómo una conversación en un semáforo lo llevó a impulsar un proyecto educativo en Tigre; en una disertación en el Rotary Club de Buenos Aires también cuestionó las retenciones y advirtió que la Argentina pierde inversiones por la falta de protección de la propiedad intelectual en semillas",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/K3OYGLJHXBDKBDYWJQQO24BBYY.jpeg?auth=23ae900be8a524cba6751124d276ee9c5be508f792a7366374f4620ac49a667f&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-10-28T19:27-03:00",
-          "capturado": "2026-10-28T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c7f82118702e58d2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 12,
-        "innovacion": 7,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 71,
-        "commercial_score": 72,
-        "subtema": "agro",
-        "tema": "propiedad intelectual",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Declaran sobre retenciones y ley de semillas figuras de peso en la industria, generando debate clave en la zona núcleo.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          74
-        ]
-      },
-      "cuando": "2026-10-28T21:00-03:00"
     },
     {
       "id": "aef83931a8af",
@@ -36160,73 +36268,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T16:00-03:00"
-    },
-    {
-      "id": "dbc06f0b0b22",
-      "rep": {
-        "id": "dbc06f0b0b22",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026",
-        "titulo": "Conflicto: paro en un frigorífico que tiene una deuda bancaria de $46.000 millones y más de $25.000 millones en cheques rechazados",
-        "titulo_norm": "conflicto paro en un frigorifico que tiene una deuda bancaria de 46 000 millones y mas de 25 000 millones en cheques rechazados",
-        "descripcion": "En San Fernando, Ecocarnes dejó de faenar este lunes y derivaron los animales a otros establecimientos; los trabajadores mantienen una medida de fuerza ante el pago parcial de la quincena e incumplimientos en aportes vinculados con la cobertura de salud",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3CKOFT3VMNDT7HABO4AA2HBPGQ.png?auth=c7b4e224ae87f4f2ca21dea1a6545e66df8e11482b904aa4e077a5681d3fbd50&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-10-28T14:11-03:00",
-        "capturado": "2026-10-28T14:21-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3f32a04c0d9ecc98"
-      },
-      "grupo": [
-        {
-          "id": "dbc06f0b0b22",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/conflicto-paro-en-un-frigorifico-que-tiene-una-deuda-bancaria-de-46000-millones-y-mas-de-25000-nid28102026",
-          "titulo": "Conflicto: paro en un frigorífico que tiene una deuda bancaria de $46.000 millones y más de $25.000 millones en cheques rechazados",
-          "titulo_norm": "conflicto paro en un frigorifico que tiene una deuda bancaria de 46 000 millones y mas de 25 000 millones en cheques rechazados",
-          "descripcion": "En San Fernando, Ecocarnes dejó de faenar este lunes y derivaron los animales a otros establecimientos; los trabajadores mantienen una medida de fuerza ante el pago parcial de la quincena e incumplimientos en aportes vinculados con la cobertura de salud",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3CKOFT3VMNDT7HABO4AA2HBPGQ.png?auth=c7b4e224ae87f4f2ca21dea1a6545e66df8e11482b904aa4e077a5681d3fbd50&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-10-28T14:11-03:00",
-          "capturado": "2026-10-28T14:21-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3f32a04c0d9ecc98"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 11,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 62,
-        "commercial_score": 55,
-        "subtema": "ganaderia",
-        "tema": "ecocarnes",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Gran impacto en la cadena cárnica bonaerense por la crisis financiera de un frigorífico clave.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          64
-        ]
-      },
-      "cuando": "2026-10-28T14:21-03:00"
     },
     {
       "id": "f584d6521e35",
@@ -36615,7 +36656,7 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T08:05:14-03:00",
+  "actualizado": "2026-10-29T08:23:23-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
