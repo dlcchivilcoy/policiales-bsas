@@ -18903,6 +18903,52 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8f3485d916c3ba24": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 66,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "aujeszky cerdos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sanitaria porcina grave en granjas comerciales de gran impacto regional.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        69
+      ]
+    },
+    "10df13ab4231ba1d": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "malezas el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy relevante para la zona núcleo por el pronóstico hídrico y el manejo de malezas.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -20191,7 +20237,9 @@
       "https://lanacion.com.ar/economia/campo/ocho-jovenes-van-a-canada-por-la-gloria-en-una-competencia-internacional-vamos-a-buscar-ganar-nid29102026": "2026-10-29",
       "https://lacapital.com.ar/agro/un-tercio-del-costo-lacteo-se-explica-la-logistica-n10289072.html": "2026-10-29",
       "https://croplife.com/management/from-selling-inputs-to-selling-outcomes-how-ag-retailers-can-prove-their-value-to-growers": "2026-10-29",
-      "https://croplife.com/management/crop-protection-inventory-cuts-could-leave-ag-retailers-exposed-in-2027": "2026-10-29"
+      "https://croplife.com/management/crop-protection-inventory-cuts-could-leave-ag-retailers-exposed-in-2027": "2026-10-29",
+      "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes": "2026-10-29",
+      "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21478,7 +21526,9 @@
       "ocho jovenes van a canada por la gloria en una competencia internacional vamos a buscar ganar": "2026-10-29",
       "un tercio del costo lacteo se explica por la logistica": "2026-10-29",
       "from selling inputs to selling outcomes how ag retailers can prove their value to growers": "2026-10-29",
-      "crop protection inventory cuts could leave ag retailers exposed in 2027": "2026-10-29"
+      "crop protection inventory cuts could leave ag retailers exposed in 2027": "2026-10-29",
+      "alerta en el negocio porcino a pesar del plan de control la enfermedad de aujeszky se expande y avanza sobre las granjas mas grandes": "2026-10-29",
+      "mas agua mas malezas y el desafio del manejo responsable": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22765,7 +22815,9 @@
       "50487a3d65345a3e": "2026-10-29",
       "86cb6bc16f8675f5": "2026-10-29",
       "fb42728dbed909b3": "2026-10-29",
-      "c202bf571936c143": "2026-10-29"
+      "c202bf571936c143": "2026-10-29",
+      "8f3485d916c3ba24": "2026-10-29",
+      "10df13ab4231ba1d": "2026-10-29"
     }
   },
   "elegidas": [
@@ -36802,9 +36854,197 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9a9b41d6b973_portada.jpg"
+    },
+    {
+      "id": "c6db82e8ab7f",
+      "cuando": "2026-10-29T13:40-03:00",
+      "titulo_original": "Impacto geopolítico en los mercados Agrícolas: Proyecciones y tendencias de precios",
+      "descripcion": "Según el informe de la Bolsa de Cereales de Córdoba, durante octubre, los mercados internacionales, entre ellos el de commotidies, continuaron condicionados por un escenario de incertidumbre geopolítica y comercial. Entre ellas, las relaciones entre Estados Unidos y China en lo que respecta a la soj",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249093-impacto-geopolitico-en-los-mercados-agricolas-proyecciones-y-tendencias-de-precios.html",
+      "titular": "Soja global alcanza récord productivo según el informe del USDA",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 68,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Relevante por el impacto de la geopolítica en los precios internacionales de la soja y la demanda china.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          67
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4031a289-6eea-4bd2-b0a7-60b7755c0347",
+          "slug": "soja-mundial-alcanza-record-de-442-7-millones-de-toneladas-73abe3",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-mundial-alcanza-record-de-442-7-millones-de-toneladas-73abe3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1662701562315101",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18138779500726812",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c6db82e8ab7f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "bdbdee8f10f4",
+      "rep": {
+        "id": "bdbdee8f10f4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes/",
+        "canonical_url": "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes",
+        "titulo": "Alerta en el negocio porcino: A pesar del plan de control, la enfermedad de Aujeszky se expande y avanza sobre las granjas más grandes",
+        "titulo_norm": "alerta en el negocio porcino a pesar del plan de control la enfermedad de aujeszky se expande y avanza sobre las granjas mas grandes",
+        "descripcion": "La enfermedad de Aujeszky encendió nuevamente señales de alarma en la producción porcina argentina. El año pasado, su irrupción en la mayor empresa productora de genética y de carne de cerdos puso al sector privado en alerta e impulsó el reclamo por un plan de control de la enfermedad, pero por ahora se sigue expandiendo. […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/07/Cerdos-en-granja.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-29T13:29-03:00",
+        "capturado": "2026-10-29T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8f3485d916c3ba24"
+      },
+      "grupo": [
+        {
+          "id": "bdbdee8f10f4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes/",
+          "canonical_url": "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes",
+          "titulo": "Alerta en el negocio porcino: A pesar del plan de control, la enfermedad de Aujeszky se expande y avanza sobre las granjas más grandes",
+          "titulo_norm": "alerta en el negocio porcino a pesar del plan de control la enfermedad de aujeszky se expande y avanza sobre las granjas mas grandes",
+          "descripcion": "La enfermedad de Aujeszky encendió nuevamente señales de alarma en la producción porcina argentina. El año pasado, su irrupción en la mayor empresa productora de genética y de carne de cerdos puso al sector privado en alerta e impulsó el reclamo por un plan de control de la enfermedad, pero por ahora se sigue expandiendo. […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/07/Cerdos-en-granja.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-29T13:29-03:00",
+          "capturado": "2026-10-29T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8f3485d916c3ba24"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 66,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "aujeszky cerdos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sanitaria porcina grave en granjas comerciales de gran impacto regional.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          69
+        ]
+      },
+      "cuando": "2026-10-29T13:40-03:00"
+    },
+    {
+      "id": "5886e0e0b222",
+      "rep": {
+        "id": "5886e0e0b222",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable/",
+        "canonical_url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable",
+        "titulo": "Más agua, más malezas y el desafío del manejo responsable",
+        "titulo_norm": "mas agua mas malezas y el desafio del manejo responsable",
+        "descripcion": "El pronóstico climático para la campaña 2026/27 anticipa un escenario con mayor disponibilidad de agua debido al fenómeno El Niño. Ante la dinámica de las malezas, un equipo de especialistas del INTA señalan que la estrategia debe basarse en el monitoreo, la precisión operativa y el manejo integrado. La entrada Más agua, más malezas y el desafío del manejo responsable se publicó primero en INTA Informa.",
+        "imagen_url": "",
+        "autor": "Cecilia Ayesta",
+        "publicado": "2026-10-29T13:23-03:00",
+        "capturado": "2026-10-29T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "10df13ab4231ba1d"
+      },
+      "grupo": [
+        {
+          "id": "5886e0e0b222",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable/",
+          "canonical_url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable",
+          "titulo": "Más agua, más malezas y el desafío del manejo responsable",
+          "titulo_norm": "mas agua mas malezas y el desafio del manejo responsable",
+          "descripcion": "El pronóstico climático para la campaña 2026/27 anticipa un escenario con mayor disponibilidad de agua debido al fenómeno El Niño. Ante la dinámica de las malezas, un equipo de especialistas del INTA señalan que la estrategia debe basarse en el monitoreo, la precisión operativa y el manejo integrado. La entrada Más agua, más malezas y el desafío del manejo responsable se publicó primero en INTA Informa.",
+          "imagen_url": "",
+          "autor": "Cecilia Ayesta",
+          "publicado": "2026-10-29T13:23-03:00",
+          "capturado": "2026-10-29T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "10df13ab4231ba1d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "malezas el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para la zona núcleo por el pronóstico hídrico y el manejo de malezas.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-29T13:40-03:00"
+    },
     {
       "id": "58d703762d37",
       "rep": {
@@ -36868,73 +37108,6 @@
         "dobles": [
           60,
           66
-        ]
-      },
-      "cuando": "2026-10-29T13:00-03:00"
-    },
-    {
-      "id": "c6db82e8ab7f",
-      "rep": {
-        "id": "c6db82e8ab7f",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249093-impacto-geopolitico-en-los-mercados-agricolas-proyecciones-y-tendencias-de-precios.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249093-impacto-geopolitico-en-los-mercados-agricolas-proyecciones-y-tendencias-de-precios.html",
-        "titulo": "Impacto geopolítico en los mercados Agrícolas: Proyecciones y tendencias de precios",
-        "titulo_norm": "impacto geopolitico en los mercados agricolas proyecciones y tendencias de precios",
-        "descripcion": "Según el informe de la Bolsa de Cereales de Córdoba, durante octubre, los mercados internacionales, entre ellos el de commotidies, continuaron condicionados por un escenario de incertidumbre geopolítica y comercial. Entre ellas, las relaciones entre Estados Unidos y China en lo que respecta a la soja, las compras del país asiático constituyen un factor determinante para la demanda estadounidense y la competitividad de los principales exportadores sudamericanos.....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249093_15913571.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-29T11:45-03:00",
-        "capturado": "2026-10-29T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4baee2595de158ae"
-      },
-      "grupo": [
-        {
-          "id": "c6db82e8ab7f",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249093-impacto-geopolitico-en-los-mercados-agricolas-proyecciones-y-tendencias-de-precios.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249093-impacto-geopolitico-en-los-mercados-agricolas-proyecciones-y-tendencias-de-precios.html",
-          "titulo": "Impacto geopolítico en los mercados Agrícolas: Proyecciones y tendencias de precios",
-          "titulo_norm": "impacto geopolitico en los mercados agricolas proyecciones y tendencias de precios",
-          "descripcion": "Según el informe de la Bolsa de Cereales de Córdoba, durante octubre, los mercados internacionales, entre ellos el de commotidies, continuaron condicionados por un escenario de incertidumbre geopolítica y comercial. Entre ellas, las relaciones entre Estados Unidos y China en lo que respecta a la soja, las compras del país asiático constituyen un factor determinante para la demanda estadounidense y la competitividad de los principales exportadores sudamericanos.....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249093_15913571.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-29T11:45-03:00",
-          "capturado": "2026-10-29T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4baee2595de158ae"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 68,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Relevante por el impacto de la geopolítica en los precios internacionales de la soja y la demanda china.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          67
         ]
       },
       "cuando": "2026-10-29T13:00-03:00"
@@ -37065,73 +37238,6 @@
         "dobles": [
           70,
           68
-        ]
-      },
-      "cuando": "2026-10-29T13:00-03:00"
-    },
-    {
-      "id": "c3252485f3b5",
-      "rep": {
-        "id": "c3252485f3b5",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/un-tercio-del-costo-lacteo-se-explica-la-logistica-n10289072.html",
-        "canonical_url": "https://lacapital.com.ar/agro/un-tercio-del-costo-lacteo-se-explica-la-logistica-n10289072.html",
-        "titulo": "Un tercio del costo lácteo se explica por la logística",
-        "titulo_norm": "un tercio del costo lacteo se explica por la logistica",
-        "descripcion": "Un informe de la consultora Focus Market señaló que 29 de cada 100 pesos que cuestan los productos están asociados al sistema de transporte y distribución. Es el segundo componente de mayor peso, detrás de la leche",
-        "imagen_url": "https://media.lacapital.com.ar/p/50f7c244331afcba64f5021fb6599d64/adjuntos/305/imagenes/030/756/0030756731/1200x675/smart/lacteosjpg.jpg",
-        "autor": "",
-        "publicado": "2026-10-29T11:35-03:00",
-        "capturado": "2026-10-29T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "86cb6bc16f8675f5"
-      },
-      "grupo": [
-        {
-          "id": "c3252485f3b5",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/un-tercio-del-costo-lacteo-se-explica-la-logistica-n10289072.html",
-          "canonical_url": "https://lacapital.com.ar/agro/un-tercio-del-costo-lacteo-se-explica-la-logistica-n10289072.html",
-          "titulo": "Un tercio del costo lácteo se explica por la logística",
-          "titulo_norm": "un tercio del costo lacteo se explica por la logistica",
-          "descripcion": "Un informe de la consultora Focus Market señaló que 29 de cada 100 pesos que cuestan los productos están asociados al sistema de transporte y distribución. Es el segundo componente de mayor peso, detrás de la leche",
-          "imagen_url": "https://media.lacapital.com.ar/p/50f7c244331afcba64f5021fb6599d64/adjuntos/305/imagenes/030/756/0030756731/1200x675/smart/lacteosjpg.jpg",
-          "autor": "",
-          "publicado": "2026-10-29T11:35-03:00",
-          "capturado": "2026-10-29T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "86cb6bc16f8675f5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 69,
-        "commercial_score": 71,
-        "subtema": "agro",
-        "tema": "logística láctea",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos clave sobre costos de transporte que afectan directamente a la cadena láctea de la región.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          69
         ]
       },
       "cuando": "2026-10-29T13:00-03:00"
@@ -37854,8 +37960,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T13:23:08-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T13:43:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
