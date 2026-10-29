@@ -36635,7 +36635,7 @@
       "cuando": "2026-10-27T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-29T05:02:44-03:00",
+  "actualizado": "2026-10-29T07:01:55-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -39808,6 +39808,99 @@
           ]
         }
       }
+    },
+    "2026-10-29T07:00:00-03:00": {
+      "dia": "2026-10-29",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "17920305225462945"
+            },
+            "facebook": {
+              "id": "1566031311958048"
+            }
+          }
+        },
+        {
+          "tipo": "granos",
+          "clave": "granos",
+          "publicado": {
+            "instagram": {
+              "id": "18075676196766697"
+            },
+            "facebook": {
+              "id": "1091639000347484"
+            }
+          }
+        },
+        {
+          "tipo": "dolar",
+          "clave": "dolar",
+          "publicado": {
+            "instagram": {
+              "id": "18125173186981038"
+            },
+            "facebook": {
+              "id": "1718751989834594"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "id": "17992000916864751"
+            },
+            "facebook": {
+              "id": "1800326410910663"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17920305225462945"
+              },
+              "facebook": {
+                "id": "1566031311958048"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18075676196766697"
+              },
+              "facebook": {
+                "id": "1091639000347484"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18125173186981038"
+              },
+              "facebook": {
+                "id": "1718751989834594"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17992000916864751"
+              },
+              "facebook": {
+                "id": "1800326410910663"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "mercado": {
@@ -40620,7 +40713,7 @@
       },
       "2026-10-29": {
         "fecha": "2026-10-29",
-        "usd_t": 178.0
+        "usd_t": 177.6
       }
     },
     "chicago_trigo": {
@@ -40746,7 +40839,7 @@
       },
       "2026-10-29": {
         "fecha": "2026-10-29",
-        "usd_t": 220.0
+        "usd_t": 220.4
       }
     }
   }
