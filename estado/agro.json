@@ -18514,6 +18514,48 @@
         61,
         62
       ]
+    },
+    "833190d06a4695b1": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 79,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "costos de flete y gasoil",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en la rentabilidad de los productores de la región núcleo y genera debate inmediato.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8eae90f59d3dc86d": {
+      "impacto_economico": 12,
+      "interes_productores": 13,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 82,
+      "commercial_score": 82,
+      "subtema": "agtech",
+      "tema": "triticale resistente",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Innovación genética mundial desarrollada en la provincia de Buenos Aires con gran valor para cultivos de servicio.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19776,7 +19818,10 @@
       "https://agrositio.com.ar/noticia/249080-maiz-la-materia-organica-y-el-agua-definen-el-potencial-de-rendimiento.html": "2026-10-29",
       "https://bichosdecampo.com/si-no-hay-estimulo-economico-el-visec-no-va-a-funcionar-javier-preciado-patino-cree-que-la-union-europea-debe-pagar-mas-por-la-carne-libre-de-deforestacion": "2026-10-29",
       "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad": "2026-10-29",
-      "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos": "2026-10-29"
+      "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos": "2026-10-29",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana": "2026-10-29",
+      "https://bichosdecampo.com/orgullo-nacional-desarrollaron-un-nuevo-casino-virtual-no-pero-si-la-primera-variedad-de-triticale-resistente-a-un-herbicida-en-todo-el-mundo": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21037,7 +21082,10 @@
       "maiz la materia organica y el agua definen el potencial de rendimiento": "2026-10-29",
       "si no hay estimulo economico el visec no va a funcionar javier preciado patino cree que la union europea debe pagar mas por la carne libre de deforestacion": "2026-10-29",
       "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad": "2026-10-29",
-      "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos": "2026-10-29"
+      "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos": "2026-10-29",
+      "dolar blue a cuanto cotizan hoy en cordoba 29 octubre 2026": "2026-10-29",
+      "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana": "2026-10-29",
+      "orgullo nacional desarrollaron un nuevo casino virtual no pero si la primera variedad de triticale resistente a un herbicida en todo el mundo": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22298,7 +22346,10 @@
       "ff4e3187b50cb30b": "2026-10-29",
       "f2ab640f00bb53c6": "2026-10-29",
       "623c0ea6ae84df07": "2026-10-29",
-      "304453d3c80cefdf": "2026-10-29"
+      "304453d3c80cefdf": "2026-10-29",
+      "a08d35744553bbf1": "2026-10-29",
+      "833190d06a4695b1": "2026-10-29",
+      "8eae90f59d3dc86d": "2026-10-29"
     }
   },
   "elegidas": [
@@ -36072,138 +36123,125 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6d0b5c675d09_portada.jpg"
+    },
+    {
+      "id": "0da208b1c569",
+      "cuando": "2026-10-29T10:20-03:00",
+      "titulo_original": "Orgullo nacional: ¿Desarrollaron un nuevo casino virtual? No, pero sí la primera variedad de triticale resistente a un herbicida en todo el mundo",
+      "descripcion": "Dos investigadores de la Chacra Experimental Integrada Barrow, ubicada muy cerca de Tres Arroyos, en el sur bonaerense, lograron el desarrollo del primer triticale resistente a herbicidas imidazolinonas a nivel mundial. La innovación, mediante mejoramiento genético tradicional, permitiría una mayor ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/orgullo-nacional-desarrollaron-un-nuevo-casino-virtual-no-pero-si-la-primera-variedad-de-triticale-resistente-a-un-herbicida-en-todo-el-mundo/",
+      "titular": "Crean el primer triticale resistente a herbicidas en el mundo",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 13,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 82,
+        "commercial_score": 82,
+        "subtema": "agtech",
+        "tema": "triticale resistente",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Innovación genética mundial desarrollada en la provincia de Buenos Aires con gran valor para cultivos de servicio.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b8c40233-1d29-4bfe-9c53-31a45cb0ad23",
+          "slug": "crean-en-tres-arroyos-el-primer-triticale-resistente-a-3bab24",
+          "url": "https://www.diariolacampaña.com.ar/n/crean-en-tres-arroyos-el-primer-triticale-resistente-a-3bab24",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4055213284781795",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17872674216645080",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0da208b1c569_portada.jpg"
     }
   ],
   "pendientes": [
     {
-      "id": "13fcc9022640",
+      "id": "b4f5fe690819",
       "rep": {
-        "id": "13fcc9022640",
+        "id": "b4f5fe690819",
         "fuente": "Infocampo",
         "tipo_fuente": "medio",
         "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios/",
-        "canonical_url": "https://infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios",
-        "titulo": "Crece la inversión en genética: la temporada de remates marcó una fuerte suba de precios",
-        "titulo_norm": "crece la inversion en genetica la temporada de remates marco una fuerte suba de precios",
-        "descripcion": "Entre agosto y octubre, los precios promedio de los toros registraron una suba interanual del 61% en pesos y del 57% en dólares. El comportamiento del mercado refleja el interés de los productores por mejorar la calidad genética de sus rodeos.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/unnamed-8-1.jpg",
+        "url": "https://www.infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana/",
+        "canonical_url": "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana",
+        "titulo": "La logística, a contramano: el gasoil y los fletes golpean la rentabilidad de la nueva campaña",
+        "titulo_norm": "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana",
+        "descripcion": "Un informe de Coninagro advierte que los costos operativos avanzan por encima de los precios de los granos y deterioran el poder de compra de los productores. El gasoil, el transporte de granos y la mano de obra son los ítems con mayor alza.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/coninagro.png",
         "autor": "infocampo",
-        "publicado": "2026-10-29T09:39-03:00",
-        "capturado": "2026-10-29T10:00-03:00",
+        "publicado": "2026-10-29T10:05-03:00",
+        "capturado": "2026-10-29T10:20-03:00",
         "idioma": "es",
         "pais": "AR",
-        "hash": "df431ae08967074e"
+        "hash": "833190d06a4695b1"
       },
       "grupo": [
         {
-          "id": "13fcc9022640",
+          "id": "b4f5fe690819",
           "fuente": "Infocampo",
           "tipo_fuente": "medio",
           "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios/",
-          "canonical_url": "https://infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios",
-          "titulo": "Crece la inversión en genética: la temporada de remates marcó una fuerte suba de precios",
-          "titulo_norm": "crece la inversion en genetica la temporada de remates marco una fuerte suba de precios",
-          "descripcion": "Entre agosto y octubre, los precios promedio de los toros registraron una suba interanual del 61% en pesos y del 57% en dólares. El comportamiento del mercado refleja el interés de los productores por mejorar la calidad genética de sus rodeos.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/unnamed-8-1.jpg",
+          "url": "https://www.infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana/",
+          "canonical_url": "https://infocampo.com.ar/la-logistica-a-contramano-el-gasoil-y-los-fletes-golpean-la-rentabilidad-de-la-nueva-campana",
+          "titulo": "La logística, a contramano: el gasoil y los fletes golpean la rentabilidad de la nueva campaña",
+          "titulo_norm": "la logistica a contramano el gasoil y los fletes golpean la rentabilidad de la nueva campana",
+          "descripcion": "Un informe de Coninagro advierte que los costos operativos avanzan por encima de los precios de los granos y deterioran el poder de compra de los productores. El gasoil, el transporte de granos y la mano de obra son los ítems con mayor alza.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/coninagro.png",
           "autor": "infocampo",
-          "publicado": "2026-10-29T09:39-03:00",
-          "capturado": "2026-10-29T10:00-03:00",
+          "publicado": "2026-10-29T10:05-03:00",
+          "capturado": "2026-10-29T10:20-03:00",
           "idioma": "es",
           "pais": "AR",
-          "hash": "df431ae08967074e"
+          "hash": "833190d06a4695b1"
         }
       ],
       "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 79,
-        "commercial_score": 82,
-        "subtema": "ganaderia",
-        "tema": "genética bovina",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Gran interés para ganaderos de la región pampeana por el repunte de precios en remates de reproductores.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-29T10:00-03:00"
-    },
-    {
-      "id": "c6e59dbe2e1d",
-      "rep": {
-        "id": "c6e59dbe2e1d",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
-        "titulo": "Trigo en baja por avances en el Mar Negro; maíz resiste por etanol y la soja no remonta",
-        "titulo_norm": "trigo en baja por avances en el mar negro maiz resiste por etanol y la soja no remonta",
-        "descripcion": "La geopolítica volvió a dominar el mercado de cereales, luego de confirmarse una próxima reunión de negociación entre Ucrania, Rusia y Estados Unidos en Abu Dabi y de autorizarse la salida de buques graneleros del mar de Azov hasta el 15 de noviembre....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249081_33609861.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-29T09:48-03:00",
-        "capturado": "2026-10-29T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0e846cedf579a6a9"
-      },
-      "grupo": [
-        {
-          "id": "c6e59dbe2e1d",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
-          "titulo": "Trigo en baja por avances en el Mar Negro; maíz resiste por etanol y la soja no remonta",
-          "titulo_norm": "trigo en baja por avances en el mar negro maiz resiste por etanol y la soja no remonta",
-          "descripcion": "La geopolítica volvió a dominar el mercado de cereales, luego de confirmarse una próxima reunión de negociación entre Ucrania, Rusia y Estados Unidos en Abu Dabi y de autorizarse la salida de buques graneleros del mar de Azov hasta el 15 de noviembre....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249081_33609861.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-29T09:48-03:00",
-          "capturado": "2026-10-29T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0e846cedf579a6a9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
+        "impacto_economico": 18,
+        "interes_productores": 15,
         "innovacion": 2,
         "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 67,
-        "commercial_score": 70,
-        "subtema": "mercados",
-        "tema": "granos y geopolítica",
-        "ambito": "internacional",
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 79,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "costos de flete y gasoil",
+        "ambito": "argentina",
         "sensible": true,
-        "explicacion": "Impacta directo en la pizarra local aunque dependa de factores externos del Mar Negro.",
-        "tema_doc": "precios",
+        "explicacion": "Impacta de lleno en la rentabilidad de los productores de la región núcleo y genera debate inmediato.",
+        "tema_doc": "costos",
         "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          69
-        ]
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-29T10:00-03:00"
+      "cuando": "2026-10-29T10:20-03:00"
     },
     {
       "id": "293594558f96",
@@ -37053,8 +37091,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T10:03:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T10:23:02-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
