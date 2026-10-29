@@ -35336,6 +35336,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c898ca5ce00b_portada.jpg"
+    },
+    {
+      "id": "1a5b19ac3ada",
+      "cuando": "2026-10-28T22:00-03:00",
+      "titulo_original": "El penoso estado de la Ruta 33: el informe de Infocampo Estudio, nominado a los premios FOPEA",
+      "descripcion": "La investigación realizada entre los puertos del Gran Rosario y Bahía Blanca a lo largo de casi 800 kilómetros competirá por uno de los premios que otorga el Foro de Periodismo Argentino.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea/",
+      "titular": "Ruta 33: informe sobre su deterioro compite en premios FOPEA",
+      "volanta": "Infraestructura",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 64,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "ruta 33",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la logística de transporte de granos en la región pampeana, generando fuerte debate.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          64
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T22:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7c0a5fc9-ef52-4fe7-9256-8efc180d77ef",
+          "slug": "ruta-33-investigacion-sobre-su-critico-estado-vial-compite-en-16c652",
+          "url": "https://www.diariolacampaña.com.ar/n/ruta-33-investigacion-sobre-su-critico-estado-vial-compite-en-16c652",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "968342965870558",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17913813768505390",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1a5b19ac3ada_portada.jpg"
     }
   ],
   "pendientes": [
@@ -35921,73 +35979,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-28T14:01-03:00"
-    },
-    {
-      "id": "1a5b19ac3ada",
-      "rep": {
-        "id": "1a5b19ac3ada",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea/",
-        "canonical_url": "https://infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea",
-        "titulo": "El penoso estado de la Ruta 33: el informe de Infocampo Estudio, nominado a los premios FOPEA",
-        "titulo_norm": "el penoso estado de la ruta 33 el informe de infocampo estudio nominado a los premios fopea",
-        "descripcion": "La investigación realizada entre los puertos del Gran Rosario y Bahía Blanca a lo largo de casi 800 kilómetros competirá por uno de los premios que otorga el Foro de Periodismo Argentino.",
-        "imagen_url": "https://www.youtube.com/embed/J4dOhaIEivk",
-        "autor": "infocampo",
-        "publicado": "2026-10-28T12:41-03:00",
-        "capturado": "2026-10-28T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0c648e289d6afb11"
-      },
-      "grupo": [
-        {
-          "id": "1a5b19ac3ada",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea/",
-          "canonical_url": "https://infocampo.com.ar/el-penoso-estado-de-la-ruta-33-el-informe-de-infocampo-estudio-nominado-a-los-premios-fopea",
-          "titulo": "El penoso estado de la Ruta 33: el informe de Infocampo Estudio, nominado a los premios FOPEA",
-          "titulo_norm": "el penoso estado de la ruta 33 el informe de infocampo estudio nominado a los premios fopea",
-          "descripcion": "La investigación realizada entre los puertos del Gran Rosario y Bahía Blanca a lo largo de casi 800 kilómetros competirá por uno de los premios que otorga el Foro de Periodismo Argentino.",
-          "imagen_url": "https://www.youtube.com/embed/J4dOhaIEivk",
-          "autor": "infocampo",
-          "publicado": "2026-10-28T12:41-03:00",
-          "capturado": "2026-10-28T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0c648e289d6afb11"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 64,
-        "commercial_score": 52,
-        "subtema": "agro",
-        "tema": "ruta 33",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente la logística de transporte de granos en la región pampeana, generando fuerte debate.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          64
-        ]
-      },
-      "cuando": "2026-10-28T13:40-03:00"
     },
     {
       "id": "61771a35b1dc",
@@ -36642,77 +36633,10 @@
         ]
       },
       "cuando": "2026-10-27T10:40-03:00"
-    },
-    {
-      "id": "c1a267984b18",
-      "rep": {
-        "id": "c1a267984b18",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas/",
-        "canonical_url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas",
-        "titulo": "Como en la pandemia, pero para frenar a los cuatreros: Olavarría bloqueó una calle con montículos de tierra por el aumento de los casos de abigeato y despertó críticas",
-        "titulo_norm": "como en la pandemia pero para frenar a los cuatreros olavarria bloqueo una calle con monticulos de tierra por el aumento de los casos de abigeato y desperto criticas",
-        "descripcion": "En un intento por frenar los reiterados casos de abigeato que vienen denunciando los productores ganaderos de Olavarría, las autoridades de ese municipio bonaerense decidieron recurrir a una particular medida: colocar montículos de tierra para frenar la circulación en un camino que conecta a distintos establecimientos rurales. La decisión, que recuerda a los bloqueos de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/olavarria-4.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-27T08:35-03:00",
-        "capturado": "2026-10-27T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d118f98671f232d7"
-      },
-      "grupo": [
-        {
-          "id": "c1a267984b18",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas/",
-          "canonical_url": "https://bichosdecampo.com/como-en-la-pandemia-pero-para-frenar-a-los-cuatreros-olavarria-bloqueo-una-calle-con-monticulos-de-tierra-por-el-aumento-de-los-casos-de-abigeato-y-desperto-criticas",
-          "titulo": "Como en la pandemia, pero para frenar a los cuatreros: Olavarría bloqueó una calle con montículos de tierra por el aumento de los casos de abigeato y despertó críticas",
-          "titulo_norm": "como en la pandemia pero para frenar a los cuatreros olavarria bloqueo una calle con monticulos de tierra por el aumento de los casos de abigeato y desperto criticas",
-          "descripcion": "En un intento por frenar los reiterados casos de abigeato que vienen denunciando los productores ganaderos de Olavarría, las autoridades de ese municipio bonaerense decidieron recurrir a una particular medida: colocar montículos de tierra para frenar la circulación en un camino que conecta a distintos establecimientos rurales. La decisión, que recuerda a los bloqueos de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/olavarria-4.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-27T08:35-03:00",
-          "capturado": "2026-10-27T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d118f98671f232d7"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 13,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 62,
-        "commercial_score": 48,
-        "subtema": "ganaderia",
-        "tema": "abigeato",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Toca de cerca a los productores bonaerenses por la inseguridad rural y genera fuerte debate.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          61
-        ]
-      },
-      "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T21:43:09-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T22:03:07-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
