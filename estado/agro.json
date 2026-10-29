@@ -18397,6 +18397,123 @@
         65,
         67
       ]
+    },
+    "df431ae08967074e": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 79,
+      "commercial_score": 82,
+      "subtema": "ganaderia",
+      "tema": "genética bovina",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran interés para ganaderos de la región pampeana por el repunte de precios en remates de reproductores.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0e846cedf579a6a9": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 67,
+      "commercial_score": 70,
+      "subtema": "mercados",
+      "tema": "granos y geopolítica",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directo en la pizarra local aunque dependa de factores externos del Mar Negro.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        69
+      ]
+    },
+    "f2ab640f00bb53c6": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 49,
+      "commercial_score": 53,
+      "subtema": "ganaderia",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema de debate sobre exportaciones cárnicas y exigencias europeas que afecta a la industria.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "623c0ea6ae84df07": {
+      "impacto_economico": 11,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 63,
+      "commercial_score": 58,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reclamo directo de productores bonaerenses por infraestructura y seguridad que genera fuerte empatía regional.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        62
+      ]
+    },
+    "304453d3c80cefdf": {
+      "impacto_economico": 13,
+      "interes_productores": 11,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 60,
+      "commercial_score": 66,
+      "subtema": "ganaderia",
+      "tema": "lechería",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales sobre mejora en calidad de leche que interesan al sector tambero de la cuenca.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        62
+      ]
     }
   },
   "indice": {
@@ -19653,7 +19770,13 @@
       "https://agrositio.com.ar/noticia/249079-el-financiamiento-universitario-se-decide-en-el-presupuesto-libertad-y-progreso-pide-al-congreso-que-lo-resuelva-ahora-que-se-lo-esta-tratando.html": "2026-10-29",
       "https://agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html": "2026-10-29",
       "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias": "2026-10-29",
-      "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto": "2026-10-29"
+      "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto": "2026-10-29",
+      "https://infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios": "2026-10-29",
+      "https://agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html": "2026-10-29",
+      "https://agrositio.com.ar/noticia/249080-maiz-la-materia-organica-y-el-agua-definen-el-potencial-de-rendimiento.html": "2026-10-29",
+      "https://bichosdecampo.com/si-no-hay-estimulo-economico-el-visec-no-va-a-funcionar-javier-preciado-patino-cree-que-la-union-europea-debe-pagar-mas-por-la-carne-libre-de-deforestacion": "2026-10-29",
+      "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad": "2026-10-29",
+      "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20908,7 +21031,13 @@
       "el financiamiento universitario se decide en el presupuesto libertad y progreso pide al congreso que lo resuelva ahora que se lo esta tratando": "2026-10-29",
       "inundaciones se facilita la gestion de movimientos para la evacuacion de hacienda por el fenomeno el nino": "2026-10-29",
       "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias": "2026-10-29",
-      "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto": "2026-10-29"
+      "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto": "2026-10-29",
+      "crece la inversion en genetica la temporada de remates marco una fuerte suba de precios": "2026-10-29",
+      "trigo en baja por avances en el mar negro maiz resiste por etanol y la soja no remonta": "2026-10-29",
+      "maiz la materia organica y el agua definen el potencial de rendimiento": "2026-10-29",
+      "si no hay estimulo economico el visec no va a funcionar javier preciado patino cree que la union europea debe pagar mas por la carne libre de deforestacion": "2026-10-29",
+      "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad": "2026-10-29",
+      "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22163,7 +22292,13 @@
       "093e39a8695af1e4": "2026-10-29",
       "89909e763e556bd7": "2026-10-29",
       "a268d22f3ad8c16e": "2026-10-29",
-      "6e2f0fd77280f87b": "2026-10-29"
+      "6e2f0fd77280f87b": "2026-10-29",
+      "df431ae08967074e": "2026-10-29",
+      "0e846cedf579a6a9": "2026-10-29",
+      "ff4e3187b50cb30b": "2026-10-29",
+      "f2ab640f00bb53c6": "2026-10-29",
+      "623c0ea6ae84df07": "2026-10-29",
+      "304453d3c80cefdf": "2026-10-29"
     }
   },
   "elegidas": [
@@ -35876,9 +36011,334 @@
       "fuera_de_cupo": false,
       "formato": "reel",
       "turno": "2026-10-29T08:20:00-03:00"
+    },
+    {
+      "id": "6d0b5c675d09",
+      "cuando": "2026-10-29T10:00-03:00",
+      "titulo_original": "Precipitaciones generales de variada intensidad, con focos de tormentas, pero dejando amplias extensiones sin aportes significativos",
+      "descripcion": "Según lo que expresa el informe de la Bolsa de Cereales de Buenos Aires, dicho pronostico será acompañado por una marcada oscilación térmica....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249070-precipitaciones-generales-de-variada-intensidad-con-focos-de-tormentas-pero-dejando-amplias-extensiones-sin-aportes-significativos.html",
+      "titular": "Lluvias desparejas y marcas térmicas extremas llegan al área agrícola",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El clima y las precipitaciones interesan de forma directa a toda la zona núcleo en plena campaña.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "nYW-D68j4Ws",
+          "url": "https://youtube.com/shorts/nYW-D68j4Ws",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "c1511346-ac7a-459a-995c-1886a870415d",
+          "slug": "lluvias-desparejas-tormentas-de-mas-de-150-mm-y-calor-extremo-f1815d",
+          "url": "https://www.diariolacampaña.com.ar/n/lluvias-desparejas-tormentas-de-mas-de-150-mm-y-calor-extremo-f1815d",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1465231908905785",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17914734789517090",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6d0b5c675d09_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "13fcc9022640",
+      "rep": {
+        "id": "13fcc9022640",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios/",
+        "canonical_url": "https://infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios",
+        "titulo": "Crece la inversión en genética: la temporada de remates marcó una fuerte suba de precios",
+        "titulo_norm": "crece la inversion en genetica la temporada de remates marco una fuerte suba de precios",
+        "descripcion": "Entre agosto y octubre, los precios promedio de los toros registraron una suba interanual del 61% en pesos y del 57% en dólares. El comportamiento del mercado refleja el interés de los productores por mejorar la calidad genética de sus rodeos.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/unnamed-8-1.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-10-29T09:39-03:00",
+        "capturado": "2026-10-29T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "df431ae08967074e"
+      },
+      "grupo": [
+        {
+          "id": "13fcc9022640",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios/",
+          "canonical_url": "https://infocampo.com.ar/crece-la-inversion-en-genetica-la-temporada-de-remates-marco-una-fuerte-suba-de-precios",
+          "titulo": "Crece la inversión en genética: la temporada de remates marcó una fuerte suba de precios",
+          "titulo_norm": "crece la inversion en genetica la temporada de remates marco una fuerte suba de precios",
+          "descripcion": "Entre agosto y octubre, los precios promedio de los toros registraron una suba interanual del 61% en pesos y del 57% en dólares. El comportamiento del mercado refleja el interés de los productores por mejorar la calidad genética de sus rodeos.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/unnamed-8-1.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-10-29T09:39-03:00",
+          "capturado": "2026-10-29T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "df431ae08967074e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 79,
+        "commercial_score": 82,
+        "subtema": "ganaderia",
+        "tema": "genética bovina",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran interés para ganaderos de la región pampeana por el repunte de precios en remates de reproductores.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-29T10:00-03:00"
+    },
+    {
+      "id": "c6e59dbe2e1d",
+      "rep": {
+        "id": "c6e59dbe2e1d",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
+        "titulo": "Trigo en baja por avances en el Mar Negro; maíz resiste por etanol y la soja no remonta",
+        "titulo_norm": "trigo en baja por avances en el mar negro maiz resiste por etanol y la soja no remonta",
+        "descripcion": "La geopolítica volvió a dominar el mercado de cereales, luego de confirmarse una próxima reunión de negociación entre Ucrania, Rusia y Estados Unidos en Abu Dabi y de autorizarse la salida de buques graneleros del mar de Azov hasta el 15 de noviembre....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249081_33609861.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-29T09:48-03:00",
+        "capturado": "2026-10-29T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "0e846cedf579a6a9"
+      },
+      "grupo": [
+        {
+          "id": "c6e59dbe2e1d",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249081-trigo-en-baja-por-avances-en-el-mar-negro-maiz-resiste-por-etanol-y-la-soja-no-remonta.html",
+          "titulo": "Trigo en baja por avances en el Mar Negro; maíz resiste por etanol y la soja no remonta",
+          "titulo_norm": "trigo en baja por avances en el mar negro maiz resiste por etanol y la soja no remonta",
+          "descripcion": "La geopolítica volvió a dominar el mercado de cereales, luego de confirmarse una próxima reunión de negociación entre Ucrania, Rusia y Estados Unidos en Abu Dabi y de autorizarse la salida de buques graneleros del mar de Azov hasta el 15 de noviembre....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249081_33609861.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-29T09:48-03:00",
+          "capturado": "2026-10-29T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "0e846cedf579a6a9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "granos y geopolítica",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directo en la pizarra local aunque dependa de factores externos del Mar Negro.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          69
+        ]
+      },
+      "cuando": "2026-10-29T10:00-03:00"
+    },
+    {
+      "id": "293594558f96",
+      "rep": {
+        "id": "293594558f96",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad/",
+        "canonical_url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad",
+        "titulo": "Aunque les frenaron los tractores, los productores hortícolas de La Plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
+        "titulo_norm": "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
+        "descripcion": "Tal como adelantó Bichos de Campo, los productores hortícolas del cinturón agrícola de La Plata llegaron ayer hasta las puertas de la Municipalidad para reclamar por el deterioro de los caminos rurales, la falta de iluminación y los problemas inseguridad en las zonas de quintas. Y aunque no fue tal como estaba previsto, porque el […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-plata-3.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-29T08:51-03:00",
+        "capturado": "2026-10-29T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "623c0ea6ae84df07"
+      },
+      "grupo": [
+        {
+          "id": "293594558f96",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad/",
+          "canonical_url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad",
+          "titulo": "Aunque les frenaron los tractores, los productores hortícolas de La Plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
+          "titulo_norm": "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
+          "descripcion": "Tal como adelantó Bichos de Campo, los productores hortícolas del cinturón agrícola de La Plata llegaron ayer hasta las puertas de la Municipalidad para reclamar por el deterioro de los caminos rurales, la falta de iluminación y los problemas inseguridad en las zonas de quintas. Y aunque no fue tal como estaba previsto, porque el […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-plata-3.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-29T08:51-03:00",
+          "capturado": "2026-10-29T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "623c0ea6ae84df07"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 63,
+        "commercial_score": 58,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Reclamo directo de productores bonaerenses por infraestructura y seguridad que genera fuerte empatía regional.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          62
+        ]
+      },
+      "cuando": "2026-10-29T10:00-03:00"
+    },
+    {
+      "id": "5989ad4b9b8a",
+      "rep": {
+        "id": "5989ad4b9b8a",
+        "fuente": "Secretaría de Agricultura",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+        "url": "https://www.argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
+        "canonical_url": "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
+        "titulo": "La calidad de la producción láctea argentina registra su nivel más alto en 12 años",
+        "titulo_norm": "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos",
+        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que la calidad de la producción láctea argentina registra su nivel más alto en 12 años, la producción de sólidos útiles (grasa y proteína) aumentó 4,8% en los primeros 9 meses del año y la concentración promedio de sólidos paso de 7,34% a 7,39%. Este dato refleja una mejora en la composición y el rendimiento industrial de la leche. En este sentido, continuar trabajando sobre la mejora de los sólidos constituye un objetivo estratégico para fortalecer la competitividad de la cadena y, al mismo tiempo, reconocer el esfuerzo de los productores. En cuanto a producción nacional de leche, entre los meses de enero y septiembre de 2026, se alcanzó los 8.647 millones de litros, frente a los 8.308 millones del mismo período del año 2025, lo que representa un crecimiento interanual del 4,1%, de acuerdo al",
+        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/vacas_leche_3.jpg",
+        "autor": "pconsiglio",
+        "publicado": "2026-10-29T09:30-03:00",
+        "capturado": "2026-10-29T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "304453d3c80cefdf"
+      },
+      "grupo": [
+        {
+          "id": "5989ad4b9b8a",
+          "fuente": "Secretaría de Agricultura",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+          "url": "https://www.argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
+          "canonical_url": "https://argentina.gob.ar/noticias/la-calidad-de-la-produccion-lactea-argentina-registra-su-nivel-mas-alto-en-12-anos",
+          "titulo": "La calidad de la producción láctea argentina registra su nivel más alto en 12 años",
+          "titulo_norm": "la calidad de la produccion lactea argentina registra su nivel mas alto en 12 anos",
+          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que la calidad de la producción láctea argentina registra su nivel más alto en 12 años, la producción de sólidos útiles (grasa y proteína) aumentó 4,8% en los primeros 9 meses del año y la concentración promedio de sólidos paso de 7,34% a 7,39%. Este dato refleja una mejora en la composición y el rendimiento industrial de la leche. En este sentido, continuar trabajando sobre la mejora de los sólidos constituye un objetivo estratégico para fortalecer la competitividad de la cadena y, al mismo tiempo, reconocer el esfuerzo de los productores. En cuanto a producción nacional de leche, entre los meses de enero y septiembre de 2026, se alcanzó los 8.647 millones de litros, frente a los 8.308 millones del mismo período del año 2025, lo que representa un crecimiento interanual del 4,1%, de acuerdo al",
+          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/vacas_leche_3.jpg",
+          "autor": "pconsiglio",
+          "publicado": "2026-10-29T09:30-03:00",
+          "capturado": "2026-10-29T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "304453d3c80cefdf"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 11,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 60,
+        "commercial_score": 66,
+        "subtema": "ganaderia",
+        "tema": "lechería",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos oficiales sobre mejora en calidad de leche que interesan al sector tambero de la cuenca.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          62
+        ]
+      },
+      "cuando": "2026-10-29T10:00-03:00"
+    },
     {
       "id": "6719c69e7d5a",
       "rep": {
@@ -36205,69 +36665,6 @@
         ]
       },
       "cuando": "2026-10-28T18:20-03:00"
-    },
-    {
-      "id": "6d0b5c675d09",
-      "rep": {
-        "id": "6d0b5c675d09",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249070-precipitaciones-generales-de-variada-intensidad-con-focos-de-tormentas-pero-dejando-amplias-extensiones-sin-aportes-significativos.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249070-precipitaciones-generales-de-variada-intensidad-con-focos-de-tormentas-pero-dejando-amplias-extensiones-sin-aportes-significativos.html",
-        "titulo": "Precipitaciones generales de variada intensidad, con focos de tormentas, pero dejando amplias extensiones sin aportes significativos",
-        "titulo_norm": "precipitaciones generales de variada intensidad con focos de tormentas pero dejando amplias extensiones sin aportes significativos",
-        "descripcion": "Según lo que expresa el informe de la Bolsa de Cereales de Buenos Aires, dicho pronostico será acompañado por una marcada oscilación térmica....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249070_69557845.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-28T15:00-03:00",
-        "capturado": "2026-10-28T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "207ced7ad0d5f5c0"
-      },
-      "grupo": [
-        {
-          "id": "6d0b5c675d09",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249070-precipitaciones-generales-de-variada-intensidad-con-focos-de-tormentas-pero-dejando-amplias-extensiones-sin-aportes-significativos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249070-precipitaciones-generales-de-variada-intensidad-con-focos-de-tormentas-pero-dejando-amplias-extensiones-sin-aportes-significativos.html",
-          "titulo": "Precipitaciones generales de variada intensidad, con focos de tormentas, pero dejando amplias extensiones sin aportes significativos",
-          "titulo_norm": "precipitaciones generales de variada intensidad con focos de tormentas pero dejando amplias extensiones sin aportes significativos",
-          "descripcion": "Según lo que expresa el informe de la Bolsa de Cereales de Buenos Aires, dicho pronostico será acompañado por una marcada oscilación térmica....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249070_69557845.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-28T15:00-03:00",
-          "capturado": "2026-10-28T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "207ced7ad0d5f5c0"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 71,
-        "commercial_score": 65,
-        "subtema": "agro",
-        "tema": "clima",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El clima y las precipitaciones interesan de forma directa a toda la zona núcleo en plena campaña.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T16:00-03:00"
     },
     {
       "id": "f584d6521e35",
@@ -36656,8 +37053,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T08:23:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T10:03:16-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
