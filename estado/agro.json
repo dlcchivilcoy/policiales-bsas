@@ -18949,6 +18949,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1fa51e899fc679b6": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 57,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "barbechando",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Institucional y político, de interés medio pero bajo impacto comercial directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        63
+      ]
     }
   },
   "indice": {
@@ -20239,7 +20264,8 @@
       "https://croplife.com/management/from-selling-inputs-to-selling-outcomes-how-ag-retailers-can-prove-their-value-to-growers": "2026-10-29",
       "https://croplife.com/management/crop-protection-inventory-cuts-could-leave-ag-retailers-exposed-in-2027": "2026-10-29",
       "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes": "2026-10-29",
-      "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable": "2026-10-29"
+      "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable": "2026-10-29",
+      "https://lanacion.com.ar/economia/campo/nuevo-presidente-ignacio-garciarena-quedo-al-frente-de-la-fundacion-barbechando-nid29102026": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21528,7 +21554,8 @@
       "from selling inputs to selling outcomes how ag retailers can prove their value to growers": "2026-10-29",
       "crop protection inventory cuts could leave ag retailers exposed in 2027": "2026-10-29",
       "alerta en el negocio porcino a pesar del plan de control la enfermedad de aujeszky se expande y avanza sobre las granjas mas grandes": "2026-10-29",
-      "mas agua mas malezas y el desafio del manejo responsable": "2026-10-29"
+      "mas agua mas malezas y el desafio del manejo responsable": "2026-10-29",
+      "nuevo presidente ignacio garciarena quedo al frente de la fundacion barbechando": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22817,7 +22844,8 @@
       "fb42728dbed909b3": "2026-10-29",
       "c202bf571936c143": "2026-10-29",
       "8f3485d916c3ba24": "2026-10-29",
-      "10df13ab4231ba1d": "2026-10-29"
+      "10df13ab4231ba1d": "2026-10-29",
+      "1fa51e899fc679b6": "2026-10-29"
     }
   },
   "elegidas": [
@@ -36912,6 +36940,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c6db82e8ab7f_portada.jpg"
+    },
+    {
+      "id": "5886e0e0b222",
+      "cuando": "2026-10-29T14:01-03:00",
+      "titulo_original": "Más agua, más malezas y el desafío del manejo responsable",
+      "descripcion": "El pronóstico climático para la campaña 2026/27 anticipa un escenario con mayor disponibilidad de agua debido al fenómeno El Niño. Ante la dinámica de las malezas, un equipo de especialistas del INTA señalan que la estrategia debe basarse en el monitoreo, la precisión operativa y el manejo integrado",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable/",
+      "titular": "Lluvias de El Niño exigen mayor precisión ante las malezas",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "malezas el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para la zona núcleo por el pronóstico hídrico y el manejo de malezas.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5d889833-5feb-4eb7-a53d-bd056e084b2e",
+          "slug": "el-nino-y-malezas-claves-del-inta-para-la-campana-2026-27-con-aa97e0",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-y-malezas-claves-del-inta-para-la-campana-2026-27-con-aa97e0",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "29074654348829456",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18014483483981588",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5886e0e0b222_portada.jpg"
     }
   ],
   "pendientes": [
@@ -36979,69 +37061,6 @@
           61,
           69
         ]
-      },
-      "cuando": "2026-10-29T13:40-03:00"
-    },
-    {
-      "id": "5886e0e0b222",
-      "rep": {
-        "id": "5886e0e0b222",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable/",
-        "canonical_url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable",
-        "titulo": "Más agua, más malezas y el desafío del manejo responsable",
-        "titulo_norm": "mas agua mas malezas y el desafio del manejo responsable",
-        "descripcion": "El pronóstico climático para la campaña 2026/27 anticipa un escenario con mayor disponibilidad de agua debido al fenómeno El Niño. Ante la dinámica de las malezas, un equipo de especialistas del INTA señalan que la estrategia debe basarse en el monitoreo, la precisión operativa y el manejo integrado. La entrada Más agua, más malezas y el desafío del manejo responsable se publicó primero en INTA Informa.",
-        "imagen_url": "",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-10-29T13:23-03:00",
-        "capturado": "2026-10-29T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "10df13ab4231ba1d"
-      },
-      "grupo": [
-        {
-          "id": "5886e0e0b222",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable/",
-          "canonical_url": "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable",
-          "titulo": "Más agua, más malezas y el desafío del manejo responsable",
-          "titulo_norm": "mas agua mas malezas y el desafio del manejo responsable",
-          "descripcion": "El pronóstico climático para la campaña 2026/27 anticipa un escenario con mayor disponibilidad de agua debido al fenómeno El Niño. Ante la dinámica de las malezas, un equipo de especialistas del INTA señalan que la estrategia debe basarse en el monitoreo, la precisión operativa y el manejo integrado. La entrada Más agua, más malezas y el desafío del manejo responsable se publicó primero en INTA Informa.",
-          "imagen_url": "",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-10-29T13:23-03:00",
-          "capturado": "2026-10-29T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "10df13ab4231ba1d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 79,
-        "commercial_score": 80,
-        "subtema": "agro",
-        "tema": "malezas el niño",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy relevante para la zona núcleo por el pronóstico hídrico y el manejo de malezas.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-29T13:40-03:00"
     },
@@ -37241,73 +37260,6 @@
         ]
       },
       "cuando": "2026-10-29T13:00-03:00"
-    },
-    {
-      "id": "293594558f96",
-      "rep": {
-        "id": "293594558f96",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad/",
-        "canonical_url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad",
-        "titulo": "Aunque les frenaron los tractores, los productores hortícolas de La Plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
-        "titulo_norm": "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
-        "descripcion": "Tal como adelantó Bichos de Campo, los productores hortícolas del cinturón agrícola de La Plata llegaron ayer hasta las puertas de la Municipalidad para reclamar por el deterioro de los caminos rurales, la falta de iluminación y los problemas inseguridad en las zonas de quintas. Y aunque no fue tal como estaba previsto, porque el […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-plata-3.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-29T08:51-03:00",
-        "capturado": "2026-10-29T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "623c0ea6ae84df07"
-      },
-      "grupo": [
-        {
-          "id": "293594558f96",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad/",
-          "canonical_url": "https://bichosdecampo.com/aunque-les-frenaron-los-tractores-los-productores-horticolas-de-la-plata-llevaron-a-pie-su-reclamo-por-el-estado-de-los-caminos-y-la-inseguridad-al-centro-de-la-ciudad",
-          "titulo": "Aunque les frenaron los tractores, los productores hortícolas de La Plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
-          "titulo_norm": "aunque les frenaron los tractores los productores horticolas de la plata llevaron a pie su reclamo por el estado de los caminos y la inseguridad al centro de la ciudad",
-          "descripcion": "Tal como adelantó Bichos de Campo, los productores hortícolas del cinturón agrícola de La Plata llegaron ayer hasta las puertas de la Municipalidad para reclamar por el deterioro de los caminos rurales, la falta de iluminación y los problemas inseguridad en las zonas de quintas. Y aunque no fue tal como estaba previsto, porque el […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/la-plata-3.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-29T08:51-03:00",
-          "capturado": "2026-10-29T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "623c0ea6ae84df07"
-        }
-      ],
-      "score": {
-        "impacto_economico": 11,
-        "interes_productores": 12,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 63,
-        "commercial_score": 58,
-        "subtema": "agro",
-        "tema": "caminos rurales",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Reclamo directo de productores bonaerenses por infraestructura y seguridad que genera fuerte empatía regional.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          62
-        ]
-      },
-      "cuando": "2026-10-29T10:00-03:00"
     },
     {
       "id": "6719c69e7d5a",
@@ -37960,8 +37912,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T14:01:05-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T14:03:49-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
