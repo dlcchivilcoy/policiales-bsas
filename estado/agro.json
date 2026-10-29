@@ -18280,6 +18280,31 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a9dc3364e1e20da8": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 9,
+      "potencial_comercial": 4,
+      "ai_score": 63,
+      "commercial_score": 56,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a una terminal de tractores clave para la región pampeana y genera fuerte debate en el sector.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        63
+      ]
     }
   },
   "indice": {
@@ -19518,7 +19543,21 @@
       "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026": "2026-10-28",
       "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html": "2026-10-28",
       "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable": "2026-10-28",
-      "https://lanacion.com.ar/economia/campo/el-negocio-de-agro-de-ypf-facturo-us344-millones-y-acumula-us826-millones-en-el-ano-un-salto-del-231-nid28102026": "2026-10-28"
+      "https://lanacion.com.ar/economia/campo/el-negocio-de-agro-de-ypf-facturo-us344-millones-y-acumula-us826-millones-en-el-ano-un-salto-del-231-nid28102026": "2026-10-28",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-en-la-rioja-nubes-rotas-el-pronostico-para-hoy-29-de-octubre": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
+      "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20755,7 +20794,21 @@
       "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises": "2026-10-28",
       "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe": "2026-10-28",
       "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable": "2026-10-28",
-      "el negocio de agro de ypf facturo us 344 millones y acumula us 826 millones en el ano un salto del 23 1": "2026-10-28"
+      "el negocio de agro de ypf facturo us 344 millones y acumula us 826 millones en el ano un salto del 23 1": "2026-10-28",
+      "dolar blue hoy a cuanto cotiza el 29 octubre 2026": "2026-10-29",
+      "clima hoy en mendoza el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en tucuman el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en corrientes el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en cordoba el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en salta el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en san luis el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en rosario el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima en la rioja nubes rotas el pronostico para hoy 29 de octubre": "2026-10-29",
+      "clima hoy en mar del plata el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en misiones el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en bahia blanca el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "clima hoy en buenos aires el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
+      "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21992,7 +22045,21 @@
       "c7f82118702e58d2": "2026-10-28",
       "f1098b504940a4e6": "2026-10-28",
       "16825b127393ef2c": "2026-10-28",
-      "a950ba75f2b89cdc": "2026-10-28"
+      "a950ba75f2b89cdc": "2026-10-28",
+      "056f38767355dd54": "2026-10-29",
+      "fc0369615738aac1": "2026-10-29",
+      "bb46957c621914a3": "2026-10-29",
+      "e5ce1e77ebf7adce": "2026-10-29",
+      "04e9fd499713b56d": "2026-10-29",
+      "3b074c43c9a585a5": "2026-10-29",
+      "4d632e7003ab719c": "2026-10-29",
+      "54fc609cdcb666a8": "2026-10-29",
+      "1b7ad5959e633454": "2026-10-29",
+      "d22335e21cf83607": "2026-10-29",
+      "754b6ec23948c451": "2026-10-29",
+      "c71ee053dc2fd974": "2026-10-29",
+      "20f19db18abe2128": "2026-10-29",
+      "a9dc3364e1e20da8": "2026-10-29"
     }
   },
   "elegidas": [
@@ -35394,9 +35461,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1a5b19ac3ada_portada.jpg"
+    },
+    {
+      "id": "ab86b38d11f4",
+      "cuando": "2026-10-29T07:01-03:00",
+      "titulo_original": "De la genética al bife: Juan Carlos de Bernardo maneja un centro de inseminación, exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
+      "descripcion": "La ganadería argentina empieza a cambiar su matriz productiva: los ganaderos retienen hembras, buscan aumentar sus rodeos y aprovechan la buena relación entre el costo del alimento y el precio de la carne para producir animales más pesados. Pero ese cambio también plantea un problema: conseguir cort",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado/",
+      "titular": "Juan Carlos Bernardo advierte sobre el sobreengrasamiento del asado",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "ganado bovino",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca un tema clave de la ganadería pampeana como el peso de faena y los cortes para exportación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "yhbgvhoHEiY",
+          "url": "https://youtube.com/shorts/yhbgvhoHEiY",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "b59ec981-1738-42f0-8265-2525ad730b25",
+          "slug": "el-dilema-del-asado-graso-por-que-la-ganaderia-argentina-debe-61ba5a",
+          "url": "https://www.diariolacampaña.com.ar/n/el-dilema-del-asado-graso-por-que-la-ganaderia-argentina-debe-61ba5a",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1112539668029884",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18015235814779310",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab86b38d11f4_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "50588ed9b668",
+      "rep": {
+        "id": "50588ed9b668",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026",
+        "titulo": "Millones en cheques rechazados: la fábrica de tractores Pauny enfrenta reclamos por deudas salariales y de aportes",
+        "titulo_norm": "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes",
+        "descripcion": "En la planta de Las Varillas, Córdoba, que tiene 450 empleados, hay un conflicto con la UOM",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/BCEL3RJPMZBUPO6G3E34CKOLAQ.jpeg?auth=7caefa6cf876cfae1b790c77f1b66910c86a285d1a240fbd48928896ae9c6446&smart=true",
+        "autor": "Gabriela Origlia",
+        "publicado": "2026-10-29T06:00-03:00",
+        "capturado": "2026-10-29T07:01-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a9dc3364e1e20da8"
+      },
+      "grupo": [
+        {
+          "id": "50588ed9b668",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026",
+          "titulo": "Millones en cheques rechazados: la fábrica de tractores Pauny enfrenta reclamos por deudas salariales y de aportes",
+          "titulo_norm": "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes",
+          "descripcion": "En la planta de Las Varillas, Córdoba, que tiene 450 empleados, hay un conflicto con la UOM",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/BCEL3RJPMZBUPO6G3E34CKOLAQ.jpeg?auth=7caefa6cf876cfae1b790c77f1b66910c86a285d1a240fbd48928896ae9c6446&smart=true",
+          "autor": "Gabriela Origlia",
+          "publicado": "2026-10-29T06:00-03:00",
+          "capturado": "2026-10-29T07:01-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a9dc3364e1e20da8"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 9,
+        "potencial_comercial": 4,
+        "ai_score": 63,
+        "commercial_score": 56,
+        "subtema": "maquinaria",
+        "tema": "pauny",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta a una terminal de tractores clave para la región pampeana y genera fuerte debate en el sector.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          63
+        ]
+      },
+      "cuando": "2026-10-29T07:01-03:00"
+    },
     {
       "id": "eac9dc8c2fbb",
       "rep": {
@@ -35723,69 +35918,6 @@
         ]
       },
       "cuando": "2026-10-28T18:20-03:00"
-    },
-    {
-      "id": "ab86b38d11f4",
-      "rep": {
-        "id": "ab86b38d11f4",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado/",
-        "canonical_url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado",
-        "titulo": "De la genética al bife: Juan Carlos de Bernardo maneja un centro de inseminación, exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
-        "titulo_norm": "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
-        "descripcion": "La ganadería argentina empieza a cambiar su matriz productiva: los ganaderos retienen hembras, buscan aumentar sus rodeos y aprovechan la buena relación entre el costo del alimento y el precio de la carne para producir animales más pesados. Pero ese cambio también plantea un problema: conseguir cortes premium para exportación sin que el asado que […]",
-        "imagen_url": "",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-28T16:48-03:00",
-        "capturado": "2026-10-28T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "341eba8827d2653e"
-      },
-      "grupo": [
-        {
-          "id": "ab86b38d11f4",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado/",
-          "canonical_url": "https://bichosdecampo.com/de-la-genetica-al-bife-juan-carlos-de-bernardo-maneja-un-centro-de-inseminacion-exporta-carne-y-explica-los-problemas-que-hay-con-el-sobreengrasamiento-del-asado",
-          "titulo": "De la genética al bife: Juan Carlos de Bernardo maneja un centro de inseminación, exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
-          "titulo_norm": "de la genetica al bife juan carlos de bernardo maneja un centro de inseminacion exporta carne y explica los problemas que hay con el sobreengrasamiento del asado",
-          "descripcion": "La ganadería argentina empieza a cambiar su matriz productiva: los ganaderos retienen hembras, buscan aumentar sus rodeos y aprovechan la buena relación entre el costo del alimento y el precio de la carne para producir animales más pesados. Pero ese cambio también plantea un problema: conseguir cortes premium para exportación sin que el asado que […]",
-          "imagen_url": "",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-28T16:48-03:00",
-          "capturado": "2026-10-28T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "341eba8827d2653e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 78,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "ganado bovino",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Toca un tema clave de la ganadería pampeana como el peso de faena y los cortes para exportación.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T17:00-03:00"
     },
     {
       "id": "6d0b5c675d09",
@@ -36436,207 +36568,10 @@
         ]
       },
       "cuando": "2026-10-27T19:02-03:00"
-    },
-    {
-      "id": "333114b4eb90",
-      "rep": {
-        "id": "333114b4eb90",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse/",
-        "canonical_url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse",
-        "titulo": "El frigorífico Tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40% de su producción, aseguró su titular, Martín Lacasse",
-        "titulo_norm": "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse",
-        "descripcion": "La industria frigorífica argentina tiene un desafío que va más allá de conseguir nuevos compradores: necesita adaptar sus plantas, mejorar la integración de la res y encontrar mercados que paguen mejor por cada corte. En ese camino está Tresnal, que llegó a la SIAL de París con el objetivo de ampliar su negocio exportador y […]",
-        "imagen_url": "",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-27T18:08-03:00",
-        "capturado": "2026-10-27T18:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "853551abefee4581"
-      },
-      "grupo": [
-        {
-          "id": "333114b4eb90",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse/",
-          "canonical_url": "https://bichosdecampo.com/el-frigorifico-tresnal-quiere-multiplicar-sus-exportaciones-de-carne-vacuna-y-apuesta-a-que-sean-el-40-de-su-produccion-aseguro-su-titular-martin-lacasse",
-          "titulo": "El frigorífico Tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40% de su producción, aseguró su titular, Martín Lacasse",
-          "titulo_norm": "el frigorifico tresnal quiere multiplicar sus exportaciones de carne vacuna y apuesta a que sean el 40 de su produccion aseguro su titular martin lacasse",
-          "descripcion": "La industria frigorífica argentina tiene un desafío que va más allá de conseguir nuevos compradores: necesita adaptar sus plantas, mejorar la integración de la res y encontrar mercados que paguen mejor por cada corte. En ese camino está Tresnal, que llegó a la SIAL de París con el objetivo de ampliar su negocio exportador y […]",
-          "imagen_url": "",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-27T18:08-03:00",
-          "capturado": "2026-10-27T18:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "853551abefee4581"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 9,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 7,
-        "ai_score": 62,
-        "commercial_score": 66,
-        "subtema": "ganaderia",
-        "tema": "exportacion carne",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muestra la estrategia exportadora de un frigorífico y tracciona interés en la cadena ganadera y comercialización de hacienda.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          58
-        ]
-      },
-      "cuando": "2026-10-27T18:20-03:00"
-    },
-    {
-      "id": "7a69d2220daa",
-      "rep": {
-        "id": "7a69d2220daa",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta/",
-        "canonical_url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta",
-        "titulo": "Reconversión industrial: Por la caída en la faena vacuna, los frigoríficos producen cada vez más carne de cerdo para sostener la actividad, según reconoce desde Córdoba Javier Peralta",
-        "titulo_norm": "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta",
-        "descripcion": "La caída del consumo de carne vacuna y las dificultades para cubrir los costos están empujando a los frigoríficos argentinos a cambiar su modelo de negocios. Cada vez más plantas que históricamente trabajaron con bovinos incorporan la faena porcina para diversificar sus ingresos y mejorar el aprovechamiento de sus estructuras industriales. “La gran mayoría de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Peralta-afic.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-10-27T16:42-03:00",
-        "capturado": "2026-10-27T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "83687cad0d9acf41"
-      },
-      "grupo": [
-        {
-          "id": "7a69d2220daa",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta/",
-          "canonical_url": "https://bichosdecampo.com/reconversion-industrial-por-la-caida-en-la-faena-vacuna-los-frigorificos-producen-cada-vez-mas-carne-de-cerdo-para-sostener-la-actividad-segun-reconoce-desde-cordoba-javier-peralta",
-          "titulo": "Reconversión industrial: Por la caída en la faena vacuna, los frigoríficos producen cada vez más carne de cerdo para sostener la actividad, según reconoce desde Córdoba Javier Peralta",
-          "titulo_norm": "reconversion industrial por la caida en la faena vacuna los frigorificos producen cada vez mas carne de cerdo para sostener la actividad segun reconoce desde cordoba javier peralta",
-          "descripcion": "La caída del consumo de carne vacuna y las dificultades para cubrir los costos están empujando a los frigoríficos argentinos a cambiar su modelo de negocios. Cada vez más plantas que históricamente trabajaron con bovinos incorporan la faena porcina para diversificar sus ingresos y mejorar el aprovechamiento de sus estructuras industriales. “La gran mayoría de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Peralta-afic.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-10-27T16:42-03:00",
-          "capturado": "2026-10-27T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "83687cad0d9acf41"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 73,
-        "commercial_score": 73,
-        "subtema": "ganaderia",
-        "tema": "carne porcina",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muestra un cambio estructural relevante en la industria frigorífica cordobesa y nacional que afecta la cadena de ganados y carnes.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-27T17:00-03:00"
-    },
-    {
-      "id": "96b2b21b9ed7",
-      "rep": {
-        "id": "96b2b21b9ed7",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora/",
-        "canonical_url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora",
-        "titulo": "Bunge anuncia el cierre de su planta en Campana y despide a unos 130 trabajadores: Apuntan contra la apertura importadora",
-        "titulo_norm": "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora",
-        "descripcion": "De manera sorpresiva, ayer por la tarde Bunge anunció el cierre definitivo de su planta de Campana. Con una notificación conjunta a todos sus trabajadores y la cúpula sindical, dispusieron el cese de actividades para el turno noche y aseguraron que despedirán a sus más de 130 operarios. En total, estiman desde el gremio, el […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/plabta-bunge-campana-e1793107778423.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-27T10:35-03:00",
-        "capturado": "2026-10-27T10:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5148c50a0293e333"
-      },
-      "grupo": [
-        {
-          "id": "96b2b21b9ed7",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora/",
-          "canonical_url": "https://bichosdecampo.com/bunge-anuncio-el-cierre-de-su-planta-en-campana-y-despide-a-unos-130-trabajadores-apuntan-contra-la-apertura-importadora",
-          "titulo": "Bunge anuncia el cierre de su planta en Campana y despide a unos 130 trabajadores: Apuntan contra la apertura importadora",
-          "titulo_norm": "bunge anuncia el cierre de su planta en campana y despide a unos 130 trabajadores apuntan contra la apertura importadora",
-          "descripcion": "De manera sorpresiva, ayer por la tarde Bunge anunció el cierre definitivo de su planta de Campana. Con una notificación conjunta a todos sus trabajadores y la cúpula sindical, dispusieron el cese de actividades para el turno noche y aseguraron que despedirán a sus más de 130 operarios. En total, estiman desde el gremio, el […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/plabta-bunge-campana-e1793107778423.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-27T10:35-03:00",
-          "capturado": "2026-10-27T10:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5148c50a0293e333"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 10,
-        "potencial_comercial": 4,
-        "ai_score": 67,
-        "commercial_score": 52,
-        "subtema": "empresas",
-        "tema": "cierre planta bunge",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Fuerte impacto industrial y laboral en la provincia de Buenos Aires por el cierre de una planta clave.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          65
-        ]
-      },
-      "cuando": "2026-10-27T10:40-03:00"
     }
   ],
-  "actualizado": "2026-10-29T07:01:55-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T07:04:50-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
