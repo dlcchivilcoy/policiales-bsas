@@ -18974,6 +18974,94 @@
         52,
         63
       ]
+    },
+    "fcaa1e57cc05a99a": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 8,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 63,
+      "commercial_score": 66,
+      "subtema": "agro",
+      "tema": "agroquímicos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Afecta el costo global de fitosanitarios que importan los productores argentinos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        62
+      ]
+    },
+    "2ea6cc010eaa91ee": {
+      "impacto_economico": 8,
+      "interes_productores": 5,
+      "innovacion": 2,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 5,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 30,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "política agrícola europea",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Interés lejano para la región núcleo, enfocado en las protestas de Europa.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "62e7c3fba0701a94": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "inundaciones litoral",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Fuerte impacto ganadero nacional con datos oficiales del Senasa sobre evacuación de hacienda.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "48b2e27cf8ff3f7e": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 7,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 25,
+      "commercial_score": 40,
+      "subtema": "agtech",
+      "tema": "cacao",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Nicho muy específico sobre sustitutos del cacao que no impacta en la producción de la región pampeana.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -20265,7 +20353,11 @@
       "https://croplife.com/management/crop-protection-inventory-cuts-could-leave-ag-retailers-exposed-in-2027": "2026-10-29",
       "https://bichosdecampo.com/alerta-en-el-negocio-porcino-a-pesar-del-plan-de-control-la-enfermedad-de-aujeszky-se-expande-y-avanza-sobre-las-granjas-mas-grandes": "2026-10-29",
       "https://intainforma.inta.gob.ar/mas-agua-mas-malezas-y-el-desafio-del-manejo-responsable": "2026-10-29",
-      "https://lanacion.com.ar/economia/campo/nuevo-presidente-ignacio-garciarena-quedo-al-frente-de-la-fundacion-barbechando-nid29102026": "2026-10-29"
+      "https://lanacion.com.ar/economia/campo/nuevo-presidente-ignacio-garciarena-quedo-al-frente-de-la-fundacion-barbechando-nid29102026": "2026-10-29",
+      "https://bichosdecampo.com/si-lo-dicen-los-asiaticos-china-e-india-se-disputan-el-negocio-mundial-de-los-agroquimicos-y-sus-empresarios-anticipan-que-vender-barato-ya-no-sera-suficiente": "2026-10-29",
+      "https://bichosdecampo.com/por-que-debemos-esperar-mas-tractorazos-en-europa-una-charla-con-nelson-illescas-para-entender-que-presiones-rigen-sobre-la-politica-agricola-comun-y-el-temor-de-los-productores": "2026-10-29",
+      "https://lanacion.com.ar/economia/campo/informe-oficial-ya-se-evacuaron-147500-bovinos-y-bufalos-de-las-zonas-inundadas-del-litoral-nid29102026": "2026-10-29",
+      "https://agfundernews.com/mark-golder-cacao-based-chocolate-will-become-increasingly-premium-and-for-everything-else-theres-win-win": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21555,7 +21647,11 @@
       "crop protection inventory cuts could leave ag retailers exposed in 2027": "2026-10-29",
       "alerta en el negocio porcino a pesar del plan de control la enfermedad de aujeszky se expande y avanza sobre las granjas mas grandes": "2026-10-29",
       "mas agua mas malezas y el desafio del manejo responsable": "2026-10-29",
-      "nuevo presidente ignacio garciarena quedo al frente de la fundacion barbechando": "2026-10-29"
+      "nuevo presidente ignacio garciarena quedo al frente de la fundacion barbechando": "2026-10-29",
+      "si lo dicen los asiaticos china e india se disputan el negocio mundial de los agroquimicos y sus empresarios anticipan que vender barato ya no sera suficiente": "2026-10-29",
+      "por que debemos esperar mas tractorazos en europa una charla con nelson illescas para entender que presiones rigen sobre la politica agricola comun y el temor de los productores": "2026-10-29",
+      "informe oficial ya se evacuaron 147 500 vacunos y bufalos de las zonas inundadas del litoral": "2026-10-29",
+      "mark golder cacao based chocolate will become increasingly premium and for everything else there s win win": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22845,7 +22941,11 @@
       "c202bf571936c143": "2026-10-29",
       "8f3485d916c3ba24": "2026-10-29",
       "10df13ab4231ba1d": "2026-10-29",
-      "1fa51e899fc679b6": "2026-10-29"
+      "1fa51e899fc679b6": "2026-10-29",
+      "fcaa1e57cc05a99a": "2026-10-29",
+      "2ea6cc010eaa91ee": "2026-10-29",
+      "62e7c3fba0701a94": "2026-10-29",
+      "48b2e27cf8ff3f7e": "2026-10-29"
     }
   },
   "elegidas": [
@@ -36994,9 +37094,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5886e0e0b222_portada.jpg"
+    },
+    {
+      "id": "4fcfe6cbc983",
+      "cuando": "2026-10-29T14:21-03:00",
+      "titulo_original": "Informe oficial: ya se evacuaron 147.500 vacunos y búfalos de las zonas inundadas del Litoral",
+      "descripcion": "Según el Senasa, la cantidad de animales trasladados desde agosto aumentó un 102% frente al mismo período de 2025; los productores buscan campos para reubicar la hacienda y afrontan gastos de transporte, alquiler y alimentación",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/informe-oficial-ya-se-evacuaron-147500-bovinos-y-bufalos-de-las-zonas-inundadas-del-litoral-nid29102026/",
+      "titular": "Evacuan 147.500 vacunos y búfalos del Litoral por crecidas de los ríos",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "inundaciones litoral",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Fuerte impacto ganadero nacional con datos oficiales del Senasa sobre evacuación de hacienda.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ffb47e4b-d839-4b86-8be0-6cb185f0b7a6",
+          "slug": "evacuan-147-500-vacunos-y-bufalos-en-el-litoral-por-la-crecida-f192cf",
+          "url": "https://www.diariolacampaña.com.ar/n/evacuan-147-500-vacunos-y-bufalos-en-el-litoral-por-la-crecida-f192cf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1137364719044964",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17932717923161971",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4fcfe6cbc983_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "48b3f0f30465",
+      "rep": {
+        "id": "48b3f0f30465",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/si-lo-dicen-los-asiaticos-china-e-india-se-disputan-el-negocio-mundial-de-los-agroquimicos-y-sus-empresarios-anticipan-que-vender-barato-ya-no-sera-suficiente/",
+        "canonical_url": "https://bichosdecampo.com/si-lo-dicen-los-asiaticos-china-e-india-se-disputan-el-negocio-mundial-de-los-agroquimicos-y-sus-empresarios-anticipan-que-vender-barato-ya-no-sera-suficiente",
+        "titulo": "Si lo dicen los asiáticos… China e India se disputan el negocio mundial de los agroquímicos y sus empresarios anticipan que vender barato ya no será suficiente",
+        "titulo_norm": "si lo dicen los asiaticos china e india se disputan el negocio mundial de los agroquimicos y sus empresarios anticipan que vender barato ya no sera suficiente",
+        "descripcion": "En medio de tensiones geopolíticas, exigencias ambientales y competencia global, en la industria de agroquímicos asiática se debate quiénes serán los que impondrán sus reglas durante las próximas décadas. El gran botín a dividirse es el resto del mundo, y el activo, un infaltable: los principales insumos que necesita la producción agropecuaria. China o India. […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/foro-agribusiness-global.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-29T14:20-03:00",
+        "capturado": "2026-10-29T14:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fcaa1e57cc05a99a"
+      },
+      "grupo": [
+        {
+          "id": "48b3f0f30465",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/si-lo-dicen-los-asiaticos-china-e-india-se-disputan-el-negocio-mundial-de-los-agroquimicos-y-sus-empresarios-anticipan-que-vender-barato-ya-no-sera-suficiente/",
+          "canonical_url": "https://bichosdecampo.com/si-lo-dicen-los-asiaticos-china-e-india-se-disputan-el-negocio-mundial-de-los-agroquimicos-y-sus-empresarios-anticipan-que-vender-barato-ya-no-sera-suficiente",
+          "titulo": "Si lo dicen los asiáticos… China e India se disputan el negocio mundial de los agroquímicos y sus empresarios anticipan que vender barato ya no será suficiente",
+          "titulo_norm": "si lo dicen los asiaticos china e india se disputan el negocio mundial de los agroquimicos y sus empresarios anticipan que vender barato ya no sera suficiente",
+          "descripcion": "En medio de tensiones geopolíticas, exigencias ambientales y competencia global, en la industria de agroquímicos asiática se debate quiénes serán los que impondrán sus reglas durante las próximas décadas. El gran botín a dividirse es el resto del mundo, y el activo, un infaltable: los principales insumos que necesita la producción agropecuaria. China o India. […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/foro-agribusiness-global.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-29T14:20-03:00",
+          "capturado": "2026-10-29T14:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fcaa1e57cc05a99a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 8,
+        "cercania_pba": 5,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 63,
+        "commercial_score": 66,
+        "subtema": "agro",
+        "tema": "agroquímicos",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Afecta el costo global de fitosanitarios que importan los productores argentinos.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          62
+        ]
+      },
+      "cuando": "2026-10-29T14:21-03:00"
+    },
     {
       "id": "bdbdee8f10f4",
       "rep": {
@@ -37912,8 +38133,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T14:03:49-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T14:23:52-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
