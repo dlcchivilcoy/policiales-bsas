@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-28T23:01:58.000Z",
+  "actualizado": "2026-10-29T22:31:42.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/31068/alberti-robaron-en-una-empresa-y-violentaron-la-caja-de-seguridad.html",
@@ -138,6 +138,30 @@
       "localidad": "Junín",
       "volanta": "Robos en Chacabuco",
       "categoria": "robo",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/10/una-persona-fue-hospitalizada-tras-un.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-29T22:31:42.000Z",
+      "titulo": "Una mujer de 31 años fue hospitalizada tras chocar en moto contra un auto",
+      "descripcion": "Una motociclista de 31 años terminó internada en el hospital municipal luego de impactar contra la parte trasera de un automóvil en la tarde de este martes.",
+      "texto_tiktok": "Una motociclista de 31 años fue hospitalizada esta tarde tras protagonizar un choque en la ciudad de Chacabuco.\n\nEl episodio se registró sobre la calle Deán Funes, entre San Juan y Alvear, cuando la conductora embistió la parte trasera de un auto que frenó de manera imprevista.\n\nTras el impacto, personal del SAME acudió al lugar y decidió su traslado en ambulancia al centro de salud debido a una lesión en una pierna.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #SiniestroVial #AccidenteDeTransito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-29_2132_02_chacabuco_una-mujer-de-31-a-os-fue-hospi.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-una-mujer-de-31-anos-fue-hospitalizada-tras-chocar-en-660ce7",
+      "youtube_url": "https://youtube.com/shorts/TLZh9rg71nw",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Siniestro vial en Chacabuco",
+      "categoria": "accidente_vial",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
