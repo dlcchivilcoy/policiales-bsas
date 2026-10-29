@@ -19292,6 +19292,52 @@
         69,
         69
       ]
+    },
+    "af7188ac6f40c163": {
+      "impacto_economico": 12,
+      "interes_productores": 11,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 69,
+      "subtema": "agro",
+      "tema": "nidera genética",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante mirada sobre el largo plazo y sustentabilidad en la agricultura local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        74
+      ]
+    },
+    "cfce0277ca0a9a8b": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 85,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "trigo fusarium",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente reporte de la BCR sobre rindes y alerta sanitaria crucial para la zona núcleo.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -20597,7 +20643,9 @@
       "https://lanacion.com.ar/economia/campo/llore-grite-y-me-frustre-los-perros-atacaron-su-campo-y-perdio-casi-todas-sus-ovejas-nid29102026": "2026-10-29",
       "https://agfundernews.com/agrifood-corporates-find-a-new-model-for-financing-regenerative-agriculture-via-soil-capital-partnership": "2026-10-29",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249103-seleccion-de-rrhh-en-el-agro-flexibilidad-desafios-y-proposito-mueven-a-los-jovenesy-a-muchos-grandes.html": "2026-10-29",
-      "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa": "2026-10-29"
+      "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa": "2026-10-29",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana": "2026-10-29",
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/trigo-las-500-espigas-aparicion-de": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21901,7 +21949,9 @@
       "los perros atacaron su campo y perdio casi todas sus ovejas": "2026-10-29",
       "agrifood corporates find a new model for financing regenerative agriculture via soil capital partnership": "2026-10-29",
       "seleccion de rr hh en el agro flexibilidad desafios y proposito mueven a los jovenes y a muchos grandes": "2026-10-29",
-      "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa": "2026-10-29"
+      "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa": "2026-10-29",
+      "los dilemas de la agronomia leandro ullrich que prueba para nidera las semillas que se venderan dentro de varios anos advierte que el suelo no se puede cuidar con contratos de una campana": "2026-10-29",
+      "trigo las 500 espigas aparicion de fusarium y margenes prometedores pero con los rusos asomando": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23205,7 +23255,9 @@
       "1486dc8a9462bc43": "2026-10-29",
       "7b7f50a7ea93fe46": "2026-10-29",
       "82ea30d241681e4e": "2026-10-29",
-      "fed41578a95f1d93": "2026-10-29"
+      "fed41578a95f1d93": "2026-10-29",
+      "af7188ac6f40c163": "2026-10-29",
+      "cfce0277ca0a9a8b": "2026-10-29"
     }
   },
   "elegidas": [
@@ -37581,9 +37633,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_239cd52e0c82_portada.jpg"
+    },
+    {
+      "id": "783c87edd4b6",
+      "cuando": "2026-10-29T17:00-03:00",
+      "titulo_original": "Trigo: Las “500 espigas”, aparición de fusarium y márgenes prometedores pero con los rusos asomando",
+      "descripcion": "Vuelven a aparecer recuentos muy importantes de espigas en la región, confirmando una rareza: por 2do año consecutivo habrá rindes superadores. Pero hay alerta: apareció fusarium. Avanzó un 12% la siembra de soja a pesar del frío.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/trigo-las-500-espigas-aparicion-de",
+      "titular": "Trigo en la región núcleo: 500 espigas por metro cuadrado y alerta",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 85,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "trigo fusarium",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente reporte de la BCR sobre rindes y alerta sanitaria crucial para la zona núcleo.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c591a959-85ae-4bfd-8c7f-777ca92d4243",
+          "slug": "trigo-en-la-region-nucleo-relevan-500-espigas-por-metro-4626de",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-la-region-nucleo-relevan-500-espigas-por-metro-4626de",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1613309439747092",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18424304260152789",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_783c87edd4b6_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e451b850b457",
+      "rep": {
+        "id": "e451b850b457",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana/",
+        "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana",
+        "titulo": "Los dilemas de la agronomía: Leandro Ullrich, que prueba para Nidera las semillas que se venderán dentro de varios años, advierte que el suelo no se puede cuidar con contratos de una campaña",
+        "titulo_norm": "los dilemas de la agronomia leandro ullrich que prueba para nidera las semillas que se venderan dentro de varios anos advierte que el suelo no se puede cuidar con contratos de una campana",
+        "descripcion": "Cuando algún amigo le pregunta de qué trabaja, Leandro Ullrich recurre a una comparación que permite salir por un rato del lenguaje de los semilleros. “Si vos te vas a comprar un auto, nosotros lo que hacemos es probar el auto que va a salir dentro de tres años”, explica a sus conocidos. Solo que […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/LEANDRO-ULLRICH.00_11_18_04.Still002.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-29T16:59-03:00",
+        "capturado": "2026-10-29T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "af7188ac6f40c163"
+      },
+      "grupo": [
+        {
+          "id": "e451b850b457",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana/",
+          "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana",
+          "titulo": "Los dilemas de la agronomía: Leandro Ullrich, que prueba para Nidera las semillas que se venderán dentro de varios años, advierte que el suelo no se puede cuidar con contratos de una campaña",
+          "titulo_norm": "los dilemas de la agronomia leandro ullrich que prueba para nidera las semillas que se venderan dentro de varios anos advierte que el suelo no se puede cuidar con contratos de una campana",
+          "descripcion": "Cuando algún amigo le pregunta de qué trabaja, Leandro Ullrich recurre a una comparación que permite salir por un rato del lenguaje de los semilleros. “Si vos te vas a comprar un auto, nosotros lo que hacemos es probar el auto que va a salir dentro de tres años”, explica a sus conocidos. Solo que […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/LEANDRO-ULLRICH.00_11_18_04.Still002.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-29T16:59-03:00",
+          "capturado": "2026-10-29T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "af7188ac6f40c163"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 11,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 71,
+        "commercial_score": 69,
+        "subtema": "agro",
+        "tema": "nidera genética",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante mirada sobre el largo plazo y sustentabilidad en la agricultura local.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          74
+        ]
+      },
+      "cuando": "2026-10-29T17:00-03:00"
+    },
     {
       "id": "8e3ea745340b",
       "rep": {
@@ -38637,8 +38810,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T16:42:52-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T17:03:03-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
