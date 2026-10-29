@@ -18238,6 +18238,27 @@
         69,
         67
       ]
+    },
+    "16825b127393ef2c": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 72,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "finanzas agropecuarias",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Apunta directo a la gestión financiera del productor pampeano en un tema muy sensible para el negocio.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19474,7 +19495,8 @@
       "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/por-septima-vez-reeligieron-a-diego-cifarelli-como-presidente-de-la-federacion-argentina-de-la-nid28102026": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026": "2026-10-28",
-      "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html": "2026-10-28"
+      "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html": "2026-10-28",
+      "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20709,7 +20731,8 @@
       "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles": "2026-10-28",
       "por septima vez reeligieron a diego cifarelli como presidente de la federacion argentina de la industria molinera": "2026-10-28",
       "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises": "2026-10-28",
-      "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe": "2026-10-28"
+      "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe": "2026-10-28",
+      "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21944,7 +21967,8 @@
       "cd726ca0032e2112": "2026-10-28",
       "c5d4ea72e19042af": "2026-10-28",
       "c7f82118702e58d2": "2026-10-28",
-      "f1098b504940a4e6": "2026-10-28"
+      "f1098b504940a4e6": "2026-10-28",
+      "16825b127393ef2c": "2026-10-28"
     }
   },
   "elegidas": [
@@ -35180,9 +35204,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7de24d5c7c19_portada.jpg"
+    },
+    {
+      "id": "c605cb22fcdc",
+      "cuando": "2026-10-28T21:20-03:00",
+      "titulo_original": "Te lo avisamos: el aceite de soja argentino sube a contramano de EE.UU. gracias al incentivo para elaborar biodiésel en lugar de importar gasoil a precios estratosféricos",
+      "descripcion": "El descalabro generado por el conflicto ruso-ucraniano, que promovió un aumento gigantesco del precio internacional del gasoil, mejoró de manera notable la competitividad del aceite de soja en el mercado argentino (tal como lo había advertido en su momento Bichos de Campo). En el presente mes de oct",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/te-lo-avisamos-el-aceite-de-soja-argentino-sube-a-contramano-de-ee-uu-gracias-al-incentivo-para-elaborar-biodiesel-en-lugar-de-importar-gasoil-a-precios-estratosfericos/",
+      "titular": "Aceite de soja argentino sube impulsado por el biodiésel local",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 74,
+        "subtema": "mercados",
+        "tema": "aceite de soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Relevante por la competitividad de la agroindustria aceitera nacional y precios.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T21:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c10427fe-7d78-404d-981c-d7fe9eb92803",
+          "slug": "el-aceite-de-soja-argentino-sube-impulsado-por-el-biodiesel-y-f246ad",
+          "url": "https://www.diariolacampaña.com.ar/n/el-aceite-de-soja-argentino-sube-impulsado-por-el-biodiesel-y-f246ad",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1428493639465310",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18370889005208664",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c605cb22fcdc_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "eac9dc8c2fbb",
+      "rep": {
+        "id": "eac9dc8c2fbb",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable/",
+        "canonical_url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable",
+        "titulo": "¡Cuidado! En la gestión de liquidez de corto plazo la “comodidad” está generando una pérdida considerable",
+        "titulo_norm": "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable",
+        "descripcion": "En la actual coyuntura, la “comodidad” al momento de gestionar la liquidez de corto plazo de una empresa agropecuaria se puede transformar en un perjuicio que, si bien puede llegar a resultar “invisible”, no implica que sea menos dañino. Actualmente, el rendimiento de un fondo común de inversión (FCI) “money market” de liquidez inmediata está […]",
+        "imagen_url": "",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-28T21:06-03:00",
+        "capturado": "2026-10-28T21:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "16825b127393ef2c"
+      },
+      "grupo": [
+        {
+          "id": "eac9dc8c2fbb",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable/",
+          "canonical_url": "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable",
+          "titulo": "¡Cuidado! En la gestión de liquidez de corto plazo la “comodidad” está generando una pérdida considerable",
+          "titulo_norm": "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable",
+          "descripcion": "En la actual coyuntura, la “comodidad” al momento de gestionar la liquidez de corto plazo de una empresa agropecuaria se puede transformar en un perjuicio que, si bien puede llegar a resultar “invisible”, no implica que sea menos dañino. Actualmente, el rendimiento de un fondo común de inversión (FCI) “money market” de liquidez inmediata está […]",
+          "imagen_url": "",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-28T21:06-03:00",
+          "capturado": "2026-10-28T21:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "16825b127393ef2c"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "finanzas agropecuarias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Apunta directo a la gestión financiera del productor pampeano en un tema muy sensible para el negocio.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-28T21:20-03:00"
+    },
     {
       "id": "036a0d1e4784",
       "rep": {
@@ -36161,69 +36302,6 @@
       "cuando": "2026-10-28T07:24-03:00"
     },
     {
-      "id": "c605cb22fcdc",
-      "rep": {
-        "id": "c605cb22fcdc",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/te-lo-avisamos-el-aceite-de-soja-argentino-sube-a-contramano-de-ee-uu-gracias-al-incentivo-para-elaborar-biodiesel-en-lugar-de-importar-gasoil-a-precios-estratosfericos/",
-        "canonical_url": "https://bichosdecampo.com/te-lo-avisamos-el-aceite-de-soja-argentino-sube-a-contramano-de-ee-uu-gracias-al-incentivo-para-elaborar-biodiesel-en-lugar-de-importar-gasoil-a-precios-estratosfericos",
-        "titulo": "Te lo avisamos: el aceite de soja argentino sube a contramano de EE.UU. gracias al incentivo para elaborar biodiésel en lugar de importar gasoil a precios estratosféricos",
-        "titulo_norm": "te lo avisamos el aceite de soja argentino sube a contramano de ee uu gracias al incentivo para elaborar biodiesel en lugar de importar gasoil a precios estratosfericos",
-        "descripcion": "El descalabro generado por el conflicto ruso-ucraniano, que promovió un aumento gigantesco del precio internacional del gasoil, mejoró de manera notable la competitividad del aceite de soja en el mercado argentino (tal como lo había advertido en su momento Bichos de Campo). En el presente mes de octubre, el valor de paridad de importación del […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ursea.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-27T22:58-03:00",
-        "capturado": "2026-10-28T07:04-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2a5c3176116e16ad"
-      },
-      "grupo": [
-        {
-          "id": "c605cb22fcdc",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/te-lo-avisamos-el-aceite-de-soja-argentino-sube-a-contramano-de-ee-uu-gracias-al-incentivo-para-elaborar-biodiesel-en-lugar-de-importar-gasoil-a-precios-estratosfericos/",
-          "canonical_url": "https://bichosdecampo.com/te-lo-avisamos-el-aceite-de-soja-argentino-sube-a-contramano-de-ee-uu-gracias-al-incentivo-para-elaborar-biodiesel-en-lugar-de-importar-gasoil-a-precios-estratosfericos",
-          "titulo": "Te lo avisamos: el aceite de soja argentino sube a contramano de EE.UU. gracias al incentivo para elaborar biodiésel en lugar de importar gasoil a precios estratosféricos",
-          "titulo_norm": "te lo avisamos el aceite de soja argentino sube a contramano de ee uu gracias al incentivo para elaborar biodiesel en lugar de importar gasoil a precios estratosfericos",
-          "descripcion": "El descalabro generado por el conflicto ruso-ucraniano, que promovió un aumento gigantesco del precio internacional del gasoil, mejoró de manera notable la competitividad del aceite de soja en el mercado argentino (tal como lo había advertido en su momento Bichos de Campo). En el presente mes de octubre, el valor de paridad de importación del […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ursea.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-27T22:58-03:00",
-          "capturado": "2026-10-28T07:04-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2a5c3176116e16ad"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 6,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 72,
-        "commercial_score": 74,
-        "subtema": "mercados",
-        "tema": "aceite de soja",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Relevante por la competitividad de la agroindustria aceitera nacional y precios.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T07:04-03:00"
-    },
-    {
       "id": "d5b8158a1992",
       "rep": {
         "id": "d5b8158a1992",
@@ -36555,8 +36633,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T21:04:05-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-28T21:23:12-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
