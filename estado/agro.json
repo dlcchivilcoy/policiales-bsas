@@ -18347,6 +18347,31 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a268d22f3ad8c16e": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 68,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "pronóstico",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El pronóstico de lluvias y cortes abruptos interesa directamente a los productores de la zona núcleo en plena campaña.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        67
+      ]
     }
   },
   "indice": {
@@ -19601,7 +19626,8 @@
       "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
       "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026": "2026-10-29",
       "https://agrositio.com.ar/noticia/249079-el-financiamiento-universitario-se-decide-en-el-presupuesto-libertad-y-progreso-pide-al-congreso-que-lo-resuelva-ahora-que-se-lo-esta-tratando.html": "2026-10-29",
-      "https://agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html": "2026-10-29"
+      "https://agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html": "2026-10-29",
+      "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20854,7 +20880,8 @@
       "clima hoy en buenos aires el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
       "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes": "2026-10-29",
       "el financiamiento universitario se decide en el presupuesto libertad y progreso pide al congreso que lo resuelva ahora que se lo esta tratando": "2026-10-29",
-      "inundaciones se facilita la gestion de movimientos para la evacuacion de hacienda por el fenomeno el nino": "2026-10-29"
+      "inundaciones se facilita la gestion de movimientos para la evacuacion de hacienda por el fenomeno el nino": "2026-10-29",
+      "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22107,7 +22134,8 @@
       "20f19db18abe2128": "2026-10-29",
       "a9dc3364e1e20da8": "2026-10-29",
       "093e39a8695af1e4": "2026-10-29",
-      "89909e763e556bd7": "2026-10-29"
+      "89909e763e556bd7": "2026-10-29",
+      "a268d22f3ad8c16e": "2026-10-29"
     }
   },
   "elegidas": [
@@ -35682,9 +35710,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_80f2eec46cc2_portada.jpg"
+    },
+    {
+      "id": "61771a35b1dc",
+      "cuando": "2026-10-29T08:01-03:00",
+      "titulo_original": "Una complicación para la carne bovina argentina: no llegaría a cumplir con la cuota exportadora a China",
+      "descripcion": "El Rosgan advierte que el nuevo esquema de cupos está modificando la estacionalidad de los negocios y la formación de precios. Aunque las exportaciones argentinas crecen 5% en 2026, los embarques a China caen 8% y el país podría no completar su cuota anual.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china/",
+      "titular": "Carne vacuna: Argentina peligra con completar su cuota exportadora a China",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "carne bovina",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta en la cadena ganadera y la formación de precios, aunque el enfoque en cupos y exportación es amplio.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T08:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7d7ac93a-f3b7-4c31-90e8-2b52c30e5139",
+          "slug": "carne-vacuna-argentina-advierten-que-peligra-el-cumplimiento-1b16e1",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-vacuna-argentina-advierten-que-peligra-el-cumplimiento-1b16e1",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1112424448037362",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17883222459651892",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_61771a35b1dc_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "a5ac7f55d852",
+      "rep": {
+        "id": "a5ac7f55d852",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias/",
+        "canonical_url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias",
+        "titulo": "Se vienen algunas tormentas intensas, pero luego el pronóstico muestra un corte abrupto de las lluvias",
+        "titulo_norm": "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias",
+        "descripcion": "Entre este jueves y el viernes se prevé que persista el mal tiempo en sectores del NOA, Misiones y la costa bonaerense, con probabilidad de chaparrones dispersos. Para el viernes podrían ocurrir algunas precipitaciones moderadas sobre la zona central de Entre Ríos. El ingreso de aire cálido promoverá que el frente de mal tiempo se […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/mapa1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-29T07:44-03:00",
+        "capturado": "2026-10-29T08:01-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a268d22f3ad8c16e"
+      },
+      "grupo": [
+        {
+          "id": "a5ac7f55d852",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias/",
+          "canonical_url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias",
+          "titulo": "Se vienen algunas tormentas intensas, pero luego el pronóstico muestra un corte abrupto de las lluvias",
+          "titulo_norm": "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias",
+          "descripcion": "Entre este jueves y el viernes se prevé que persista el mal tiempo en sectores del NOA, Misiones y la costa bonaerense, con probabilidad de chaparrones dispersos. Para el viernes podrían ocurrir algunas precipitaciones moderadas sobre la zona central de Entre Ríos. El ingreso de aire cálido promoverá que el frente de mal tiempo se […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/mapa1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-29T07:44-03:00",
+          "capturado": "2026-10-29T08:01-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a268d22f3ad8c16e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "pronóstico",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de lluvias y cortes abruptos interesa directamente a los productores de la zona núcleo en plena campaña.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          67
+        ]
+      },
+      "cuando": "2026-10-29T08:01-03:00"
+    },
     {
       "id": "eac9dc8c2fbb",
       "rep": {
@@ -36139,73 +36292,6 @@
       "cuando": "2026-10-28T14:01-03:00"
     },
     {
-      "id": "61771a35b1dc",
-      "rep": {
-        "id": "61771a35b1dc",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china/",
-        "canonical_url": "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china",
-        "titulo": "Una complicación para la carne bovina argentina: no llegaría a cumplir con la cuota exportadora a China",
-        "titulo_norm": "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china",
-        "descripcion": "El Rosgan advierte que el nuevo esquema de cupos está modificando la estacionalidad de los negocios y la formación de precios. Aunque las exportaciones argentinas crecen 5% en 2026, los embarques a China caen 8% y el país podría no completar su cuota anual.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-4.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-28T11:31-03:00",
-        "capturado": "2026-10-28T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "80566138790ac5d3"
-      },
-      "grupo": [
-        {
-          "id": "61771a35b1dc",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china/",
-          "canonical_url": "https://infocampo.com.ar/una-complicacion-para-la-carne-bovina-argentina-no-llegaria-a-cumplir-con-la-cuota-exportadora-a-china",
-          "titulo": "Una complicación para la carne bovina argentina: no llegaría a cumplir con la cuota exportadora a China",
-          "titulo_norm": "una complicacion para la carne bovina argentina no llegaria a cumplir con la cuota exportadora a china",
-          "descripcion": "El Rosgan advierte que el nuevo esquema de cupos está modificando la estacionalidad de los negocios y la formación de precios. Aunque las exportaciones argentinas crecen 5% en 2026, los embarques a China caen 8% y el país podría no completar su cuota anual.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/rosgan-4.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-28T11:31-03:00",
-          "capturado": "2026-10-28T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "80566138790ac5d3"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "carne bovina",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta en la cadena ganadera y la formación de precios, aunque el enfoque en cupos y exportación es amplio.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          68
-        ]
-      },
-      "cuando": "2026-10-28T13:40-03:00"
-    },
-    {
       "id": "a67578f52d41",
       "rep": {
         "id": "a67578f52d41",
@@ -36529,8 +36615,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T07:44:26-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T08:05:14-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
