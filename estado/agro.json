@@ -18259,6 +18259,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a950ba75f2b89cdc": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 9,
+      "ai_score": 77,
+      "commercial_score": 77,
+      "subtema": "empresas",
+      "tema": "ypf agro",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra un fuerte crecimiento en la facturación de insumos a nivel nacional, relevante para el mercado local.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19496,7 +19517,8 @@
       "https://lanacion.com.ar/economia/campo/por-septima-vez-reeligieron-a-diego-cifarelli-como-presidente-de-la-federacion-argentina-de-la-nid28102026": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026": "2026-10-28",
       "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html": "2026-10-28",
-      "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable": "2026-10-28"
+      "https://bichosdecampo.com/cuidado-en-la-gestion-de-liquidez-de-corto-plazo-la-comodidad-esta-generando-una-perdida-considerable": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/el-negocio-de-agro-de-ypf-facturo-us344-millones-y-acumula-us826-millones-en-el-ano-un-salto-del-231-nid28102026": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20732,7 +20754,8 @@
       "por septima vez reeligieron a diego cifarelli como presidente de la federacion argentina de la industria molinera": "2026-10-28",
       "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises": "2026-10-28",
       "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe": "2026-10-28",
-      "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable": "2026-10-28"
+      "cuidado en la gestion de liquidez de corto plazo la comodidad esta generando una perdida considerable": "2026-10-28",
+      "el negocio de agro de ypf facturo us 344 millones y acumula us 826 millones en el ano un salto del 23 1": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21968,7 +21991,8 @@
       "c5d4ea72e19042af": "2026-10-28",
       "c7f82118702e58d2": "2026-10-28",
       "f1098b504940a4e6": "2026-10-28",
-      "16825b127393ef2c": "2026-10-28"
+      "16825b127393ef2c": "2026-10-28",
+      "a950ba75f2b89cdc": "2026-10-28"
     }
   },
   "elegidas": [
@@ -35258,6 +35282,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c605cb22fcdc_portada.jpg"
+    },
+    {
+      "id": "c898ca5ce00b",
+      "cuando": "2026-10-28T21:40-03:00",
+      "titulo_original": "El negocio de agro de YPF facturó US$344 millones y acumula US$826 millones en el año, un salto del 23,1%",
+      "descripcion": "Según se desprende de la presentación de resultados de la petrolera, las ventas de productos al sector, excluyendo gasoil, subieron un 18,1% en el tercer trimestre de 2026",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-negocio-de-agro-de-ypf-facturo-us344-millones-y-acumula-us826-millones-en-el-ano-un-salto-del-231-nid28102026/",
+      "titular": "YPF Agro facturó US$ 344 millones en el tercer trimestre",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 9,
+        "ai_score": 77,
+        "commercial_score": 77,
+        "subtema": "empresas",
+        "tema": "ypf agro",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un fuerte crecimiento en la facturación de insumos a nivel nacional, relevante para el mercado local.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T21:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "de9626e5-3ea6-4f8f-bd92-d102ea3e5b27",
+          "slug": "ypf-agro-facturo-us-344-millones-en-el-tercer-trimestre-y-1fd937",
+          "url": "https://www.diariolacampaña.com.ar/n/ypf-agro-facturo-us-344-millones-en-el-tercer-trimestre-y-1fd937",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "944218528511681",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18112546112139543",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c898ca5ce00b_portada.jpg"
     }
   ],
   "pendientes": [
@@ -36633,8 +36711,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T21:23:12-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T21:43:09-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
