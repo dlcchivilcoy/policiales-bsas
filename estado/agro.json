@@ -19338,6 +19338,31 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "697fadc48bb2fa0c": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 72,
+      "subtema": "mercados",
+      "tema": "relación bilateral brasil",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente la macro del agro y genera gran debate regional por el impacto comercial en el Mercosur.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        72
+      ]
     }
   },
   "indice": {
@@ -20645,7 +20670,9 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249103-seleccion-de-rrhh-en-el-agro-flexibilidad-desafios-y-proposito-mueven-a-los-jovenesy-a-muchos-grandes.html": "2026-10-29",
       "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa": "2026-10-29",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana": "2026-10-29",
-      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/trigo-las-500-espigas-aparicion-de": "2026-10-29"
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/trigo-las-500-espigas-aparicion-de": "2026-10-29",
+      "https://agrositio.com.ar/noticia/249102-el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos.html": "2026-10-29",
+      "https://lanacion.com.ar/economia/campo/tension-lula-milei-advierten-riesgos-y-oportunidades-para-el-agro-argentino-nid29102026": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21951,7 +21978,9 @@
       "seleccion de rr hh en el agro flexibilidad desafios y proposito mueven a los jovenes y a muchos grandes": "2026-10-29",
       "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa": "2026-10-29",
       "los dilemas de la agronomia leandro ullrich que prueba para nidera las semillas que se venderan dentro de varios anos advierte que el suelo no se puede cuidar con contratos de una campana": "2026-10-29",
-      "trigo las 500 espigas aparicion de fusarium y margenes prometedores pero con los rusos asomando": "2026-10-29"
+      "trigo las 500 espigas aparicion de fusarium y margenes prometedores pero con los rusos asomando": "2026-10-29",
+      "el inta amplia el control del bienestar animal 36 mediciones para recria y 34 para engorde bovino": "2026-10-29",
+      "tension lula milei advierten riesgos y oportunidades para el agro argentino": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23257,7 +23286,9 @@
       "82ea30d241681e4e": "2026-10-29",
       "fed41578a95f1d93": "2026-10-29",
       "af7188ac6f40c163": "2026-10-29",
-      "cfce0277ca0a9a8b": "2026-10-29"
+      "cfce0277ca0a9a8b": "2026-10-29",
+      "1d0522726de8c573": "2026-10-29",
+      "697fadc48bb2fa0c": "2026-10-29"
     }
   },
   "elegidas": [
@@ -37687,6 +37718,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_783c87edd4b6_portada.jpg"
+    },
+    {
+      "id": "e6165f09fe72",
+      "cuando": "2026-10-29T17:20-03:00",
+      "titulo_original": "Tensión Lula-Milei: advierten riesgos y oportunidades para el agro argentino",
+      "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires y la Fundación INAI analizó las consecuencias de la reelección del presidente brasileño; anticipan una mayor competencia por los mercados internacionales, tensiones dentro del Mercosur y posibles beneficios comerciales con Estados Unidos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/tension-lula-milei-advierten-riesgos-y-oportunidades-para-el-agro-argentino-nid29102026/",
+      "titular": "Agro argentino: analizan riesgos y oportunidades tras la reelección de Lula",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "mercados",
+        "tema": "relación bilateral brasil",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente la macro del agro y genera gran debate regional por el impacto comercial en el Mercosur.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c134cbc7-ac4e-4a7f-aede-82e92ef922e4",
+          "slug": "reeleccion-de-lula-advierten-riesgos-y-oportunidades-para-el-682544",
+          "url": "https://www.diariolacampaña.com.ar/n/reeleccion-de-lula-advierten-riesgos-y-oportunidades-para-el-682544",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2009158666434615",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18011581556971091",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e6165f09fe72_portada.jpg"
     }
   ],
   "pendientes": [
@@ -38810,8 +38899,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T17:03:03-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T17:23:23-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
