@@ -18305,6 +18305,48 @@
         63,
         63
       ]
+    },
+    "093e39a8695af1e4": {
+      "impacto_economico": 2,
+      "interes_productores": 1,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 1,
+      "ai_score": 22,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "financiamiento universitario",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un tema político y presupuestario general sin vinculación directa con la producción agropecuaria de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "89909e763e556bd7": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "inundaciones hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente a los ganaderos de la región núcleo afectados por El Niño y facilita trámites sanitarios urgentes de SENASA.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -19557,7 +19599,9 @@
       "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
       "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
       "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-29-octubre-2026": "2026-10-29",
-      "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026": "2026-10-29"
+      "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026": "2026-10-29",
+      "https://agrositio.com.ar/noticia/249079-el-financiamiento-universitario-se-decide-en-el-presupuesto-libertad-y-progreso-pide-al-congreso-que-lo-resuelva-ahora-que-se-lo-esta-tratando.html": "2026-10-29",
+      "https://agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20808,7 +20852,9 @@
       "clima hoy en misiones el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
       "clima hoy en bahia blanca el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
       "clima hoy en buenos aires el pronostico del tiempo para este 29 octubre 2026": "2026-10-29",
-      "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes": "2026-10-29"
+      "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes": "2026-10-29",
+      "el financiamiento universitario se decide en el presupuesto libertad y progreso pide al congreso que lo resuelva ahora que se lo esta tratando": "2026-10-29",
+      "inundaciones se facilita la gestion de movimientos para la evacuacion de hacienda por el fenomeno el nino": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -22059,7 +22105,9 @@
       "754b6ec23948c451": "2026-10-29",
       "c71ee053dc2fd974": "2026-10-29",
       "20f19db18abe2128": "2026-10-29",
-      "a9dc3364e1e20da8": "2026-10-29"
+      "a9dc3364e1e20da8": "2026-10-29",
+      "093e39a8695af1e4": "2026-10-29",
+      "89909e763e556bd7": "2026-10-29"
     }
   },
   "elegidas": [
@@ -35522,76 +35570,63 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab86b38d11f4_portada.jpg"
+    },
+    {
+      "id": "182781d050a9",
+      "cuando": "2026-10-29T07:21-03:00",
+      "titulo_original": "Inundaciones: Se facilita la gestión de movimientos para la evacuación de hacienda por el fenómeno El Niño",
+      "descripcion": "Según registros del SENASA, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen...",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249073-inundaciones-se-facilita-la-gestion-de-movimientos-para-la-evacuacion-de-hacienda-por-el-fenomeno-el-nino.html",
+      "titular": "Trasladan 147.500 bovinos por inundaciones ante el avance de El Niño",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "inundaciones hacienda",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente a los ganaderos de la región núcleo afectados por El Niño y facilita trámites sanitarios urgentes de SENASA.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "dfd66130-d8b2-417b-a07d-3d95283f2bd0",
+          "slug": "evacuan-147-500-bovinos-por-inundaciones-y-el-senasa-simplifica-8d7ac1",
+          "url": "https://www.diariolacampaña.com.ar/n/evacuan-147-500-bovinos-por-inundaciones-y-el-senasa-simplifica-8d7ac1",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1341348971313745",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17914816656284186",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_182781d050a9_portada.jpg"
     }
   ],
   "pendientes": [
-    {
-      "id": "50588ed9b668",
-      "rep": {
-        "id": "50588ed9b668",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026",
-        "titulo": "Millones en cheques rechazados: la fábrica de tractores Pauny enfrenta reclamos por deudas salariales y de aportes",
-        "titulo_norm": "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes",
-        "descripcion": "En la planta de Las Varillas, Córdoba, que tiene 450 empleados, hay un conflicto con la UOM",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/BCEL3RJPMZBUPO6G3E34CKOLAQ.jpeg?auth=7caefa6cf876cfae1b790c77f1b66910c86a285d1a240fbd48928896ae9c6446&smart=true",
-        "autor": "Gabriela Origlia",
-        "publicado": "2026-10-29T06:00-03:00",
-        "capturado": "2026-10-29T07:01-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a9dc3364e1e20da8"
-      },
-      "grupo": [
-        {
-          "id": "50588ed9b668",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/millones-en-cheques-rechazados-la-fabrica-de-tractores-pauny-enfrenta-reclamos-por-deudas-salariales-nid29102026",
-          "titulo": "Millones en cheques rechazados: la fábrica de tractores Pauny enfrenta reclamos por deudas salariales y de aportes",
-          "titulo_norm": "millones en cheques rechazados la fabrica de tractores pauny enfrenta reclamos por deudas salariales y de aportes",
-          "descripcion": "En la planta de Las Varillas, Córdoba, que tiene 450 empleados, hay un conflicto con la UOM",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/BCEL3RJPMZBUPO6G3E34CKOLAQ.jpeg?auth=7caefa6cf876cfae1b790c77f1b66910c86a285d1a240fbd48928896ae9c6446&smart=true",
-          "autor": "Gabriela Origlia",
-          "publicado": "2026-10-29T06:00-03:00",
-          "capturado": "2026-10-29T07:01-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a9dc3364e1e20da8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 9,
-        "potencial_comercial": 4,
-        "ai_score": 63,
-        "commercial_score": 56,
-        "subtema": "maquinaria",
-        "tema": "pauny",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta a una terminal de tractores clave para la región pampeana y genera fuerte debate en el sector.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          63
-        ]
-      },
-      "cuando": "2026-10-29T07:01-03:00"
-    },
     {
       "id": "eac9dc8c2fbb",
       "rep": {
@@ -36501,77 +36536,10 @@
         ]
       },
       "cuando": "2026-10-28T07:24-03:00"
-    },
-    {
-      "id": "d5b8158a1992",
-      "rep": {
-        "id": "d5b8158a1992",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil/",
-        "canonical_url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil",
-        "titulo": "Ojo al piojo: Un estudio advierte que el “Súper Niño” puede liquidar casi un 10% de la cosecha prevista de soja en Brasil",
-        "titulo_norm": "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil",
-        "descripcion": "El fenómeno ENSO “El Niño” de alta intensidad (“Súper Niño”) podría reducir en un 9,7% la producción brasileña de soja de la presente campaña con respecto a la proyección vigente de 181,2 millones de toneladas. Se trata de una pérdida probable de 17,6 millones de toneladas en la cosecha 2026/27, según un estudio publicado este […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ENSO.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-27T18:44-03:00",
-        "capturado": "2026-10-27T19:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a32f83e598de18dc"
-      },
-      "grupo": [
-        {
-          "id": "d5b8158a1992",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil/",
-          "canonical_url": "https://bichosdecampo.com/ojo-al-piojo-un-estudio-advierte-que-el-super-nino-puede-liquidar-casi-un-10-de-la-cosecha-prevista-de-soja-en-brasil",
-          "titulo": "Ojo al piojo: Un estudio advierte que el “Súper Niño” puede liquidar casi un 10% de la cosecha prevista de soja en Brasil",
-          "titulo_norm": "ojo al piojo un estudio advierte que el super nino puede liquidar casi un 10 de la cosecha prevista de soja en brasil",
-          "descripcion": "El fenómeno ENSO “El Niño” de alta intensidad (“Súper Niño”) podría reducir en un 9,7% la producción brasileña de soja de la presente campaña con respecto a la proyección vigente de 181,2 millones de toneladas. Se trata de una pérdida probable de 17,6 millones de toneladas en la cosecha 2026/27, según un estudio publicado este […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/ENSO.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-27T18:44-03:00",
-          "capturado": "2026-10-27T19:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a32f83e598de18dc"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 7,
-        "cercania_pba": 3,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 62,
-        "commercial_score": 62,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Mueve el tablero mundial de precios de la soja por el impacto climático en el principal productor global.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          62,
-          63
-        ]
-      },
-      "cuando": "2026-10-27T19:02-03:00"
     }
   ],
-  "actualizado": "2026-10-29T07:04:50-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T07:24:30-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
