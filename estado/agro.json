@@ -19363,6 +19363,69 @@
         70,
         72
       ]
+    },
+    "75ea1bcb4561a240": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 84,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "desregulacion ia",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en la producción animal nacional por la revisión masiva de normativas históricas mediante inteligencia artificial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fc9434cd50f33414": {
+      "impacto_economico": 18,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 78,
+      "subtema": "mercados",
+      "tema": "visec soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Crucial para los exportadores y productores de soja de la zona núcleo debido a las exigencias de trazabilidad de la Unión Europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9c391cede8125b37": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 9,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 34,
+      "commercial_score": 40,
+      "subtema": "agtech",
+      "tema": "yara bioestimulantes",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Lanzamiento comercial de bioestimulantes limitado por ahora al mercado de Estados Unidos, con baja relevancia directa local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -20672,7 +20735,10 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-leandro-ullrich-que-prueba-para-nidera-las-semillas-que-se-venderan-dentro-de-varios-anos-advierte-que-el-suelo-no-se-puede-cuidar-con-contratos-de-una-campana": "2026-10-29",
       "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/trigo-las-500-espigas-aparicion-de": "2026-10-29",
       "https://agrositio.com.ar/noticia/249102-el-inta-amplia-la-evaluacion-del-bienestar-animal-en-bovinos.html": "2026-10-29",
-      "https://lanacion.com.ar/economia/campo/tension-lula-milei-advierten-riesgos-y-oportunidades-para-el-agro-argentino-nid29102026": "2026-10-29"
+      "https://lanacion.com.ar/economia/campo/tension-lula-milei-advierten-riesgos-y-oportunidades-para-el-agro-argentino-nid29102026": "2026-10-29",
+      "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias": "2026-10-29",
+      "https://bichosdecampo.com/mucho-o-poco-se-conocio-la-cantidad-de-empresas-agricolas-argentinas-que-se-sumaron-a-visec-soja": "2026-10-29",
+      "https://croplife.com/crop-inputs/biologicals/yaraamplix-procote-optimize-and-optitrac-biostimulants-now-commercially-available-in-the-u-s": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21980,7 +22046,10 @@
       "los dilemas de la agronomia leandro ullrich que prueba para nidera las semillas que se venderan dentro de varios anos advierte que el suelo no se puede cuidar con contratos de una campana": "2026-10-29",
       "trigo las 500 espigas aparicion de fusarium y margenes prometedores pero con los rusos asomando": "2026-10-29",
       "el inta amplia el control del bienestar animal 36 mediciones para recria y 34 para engorde bovino": "2026-10-29",
-      "tension lula milei advierten riesgos y oportunidades para el agro argentino": "2026-10-29"
+      "tension lula milei advierten riesgos y oportunidades para el agro argentino": "2026-10-29",
+      "nos gobierna la inteligencia artificial no sabemos bien pero mientras sturzenegger usa ese metodo para desregular importantes politicas agropecuarias": "2026-10-29",
+      "mucho o poco se conocio la cantidad de empresas agricolas argentinas que se sumaron a visec soja": "2026-10-29",
+      "yaraamplix procote optimize and optitrac biostimulants now commercially available in the u s": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23288,7 +23357,10 @@
       "af7188ac6f40c163": "2026-10-29",
       "cfce0277ca0a9a8b": "2026-10-29",
       "1d0522726de8c573": "2026-10-29",
-      "697fadc48bb2fa0c": "2026-10-29"
+      "697fadc48bb2fa0c": "2026-10-29",
+      "75ea1bcb4561a240": "2026-10-29",
+      "fc9434cd50f33414": "2026-10-29",
+      "9c391cede8125b37": "2026-10-29"
     }
   },
   "elegidas": [
@@ -37776,9 +37848,200 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e6165f09fe72_portada.jpg"
+    },
+    {
+      "id": "8e3ea745340b",
+      "cuando": "2026-10-29T18:00-03:00",
+      "titulo_original": "Por la alta demanda, el Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
+      "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) extendió hasta el viernes 6 de noviembre el plazo para que los productores agropecuarios actualicen sus datos en el Registro Nacional Sanitario de Productores Agropecuarios (Renspa). La decisión se tomó ante el elevado volumen de trá",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa/",
+      "titular": "Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 69,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "renspa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta a todos los productores del país que deben actualizar el trámite obligatorio de forma inminente.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "PkQmfvlcDi4",
+          "url": "https://youtube.com/shorts/PkQmfvlcDi4",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "4ee88aae-75aa-4605-b902-569364226698",
+          "slug": "el-senasa-extendio-hasta-el-6-de-noviembre-el-plazo-para-815602",
+          "url": "https://www.diariolacampaña.com.ar/n/el-senasa-extendio-hasta-el-6-de-noviembre-el-plazo-para-815602",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1437073367855681",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17872545864644333",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8e3ea745340b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "07cc9c239ba8",
+      "rep": {
+        "id": "07cc9c239ba8",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias/",
+        "canonical_url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias",
+        "titulo": "¿Nos gobierna la inteligencia artificial? No sabemos bien, pero mientras Sturzenegger usa ese método para desregular importantes políticas agropecuarias",
+        "titulo_norm": "nos gobierna la inteligencia artificial no sabemos bien pero mientras sturzenegger usa ese metodo para desregular importantes politicas agropecuarias",
+        "descripcion": "Un decreto firmado durante la dictadura de Juan Carlos Onganía, hace casi seis décadas, tiene unos 3.000 artículos y regula cuestiones centrales de la producción de alimentos de origen animal en la Argentina. Federico Sturzenegger contó recientemente que el Gobierno recurrió a tres agentes de inteligencia artificial para analizar semejante cuerpo normativo y avanzar con […]",
+        "imagen_url": "",
+        "autor": "Diego Mañas",
+        "publicado": "2026-10-29T17:59-03:00",
+        "capturado": "2026-10-29T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "75ea1bcb4561a240"
+      },
+      "grupo": [
+        {
+          "id": "07cc9c239ba8",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias/",
+          "canonical_url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias",
+          "titulo": "¿Nos gobierna la inteligencia artificial? No sabemos bien, pero mientras Sturzenegger usa ese método para desregular importantes políticas agropecuarias",
+          "titulo_norm": "nos gobierna la inteligencia artificial no sabemos bien pero mientras sturzenegger usa ese metodo para desregular importantes politicas agropecuarias",
+          "descripcion": "Un decreto firmado durante la dictadura de Juan Carlos Onganía, hace casi seis décadas, tiene unos 3.000 artículos y regula cuestiones centrales de la producción de alimentos de origen animal en la Argentina. Federico Sturzenegger contó recientemente que el Gobierno recurrió a tres agentes de inteligencia artificial para analizar semejante cuerpo normativo y avanzar con […]",
+          "imagen_url": "",
+          "autor": "Diego Mañas",
+          "publicado": "2026-10-29T17:59-03:00",
+          "capturado": "2026-10-29T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "75ea1bcb4561a240"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 84,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "desregulacion ia",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la producción animal nacional por la revisión masiva de normativas históricas mediante inteligencia artificial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-29T18:00-03:00"
+    },
+    {
+      "id": "8b0e6ca33af9",
+      "rep": {
+        "id": "8b0e6ca33af9",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/mucho-o-poco-se-conocio-la-cantidad-de-empresas-agricolas-argentinas-que-se-sumaron-a-visec-soja/",
+        "canonical_url": "https://bichosdecampo.com/mucho-o-poco-se-conocio-la-cantidad-de-empresas-agricolas-argentinas-que-se-sumaron-a-visec-soja",
+        "titulo": "¿Mucho o poco? Se conoció la cantidad de empresas agrícolas argentinas que se sumaron a Visec Soja",
+        "titulo_norm": "mucho o poco se conocio la cantidad de empresas agricolas argentinas que se sumaron a visec soja",
+        "descripcion": "La cantidad de productores de soja inscriptos en la plataforma Visec Soja, tal como adelantó Bichos de Campo a fines del mes pasado, ya cubre el volumen de soja que se necesita para moler y enviar harina a la Unión Europea en el marco de las exigencias determinadas por el reglamento 1115 (EUDR). Un informe […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/status.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-29T17:52-03:00",
+        "capturado": "2026-10-29T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fc9434cd50f33414"
+      },
+      "grupo": [
+        {
+          "id": "8b0e6ca33af9",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/mucho-o-poco-se-conocio-la-cantidad-de-empresas-agricolas-argentinas-que-se-sumaron-a-visec-soja/",
+          "canonical_url": "https://bichosdecampo.com/mucho-o-poco-se-conocio-la-cantidad-de-empresas-agricolas-argentinas-que-se-sumaron-a-visec-soja",
+          "titulo": "¿Mucho o poco? Se conoció la cantidad de empresas agrícolas argentinas que se sumaron a Visec Soja",
+          "titulo_norm": "mucho o poco se conocio la cantidad de empresas agricolas argentinas que se sumaron a visec soja",
+          "descripcion": "La cantidad de productores de soja inscriptos en la plataforma Visec Soja, tal como adelantó Bichos de Campo a fines del mes pasado, ya cubre el volumen de soja que se necesita para moler y enviar harina a la Unión Europea en el marco de las exigencias determinadas por el reglamento 1115 (EUDR). Un informe […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/status.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-29T17:52-03:00",
+          "capturado": "2026-10-29T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fc9434cd50f33414"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 78,
+        "subtema": "mercados",
+        "tema": "visec soja",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Crucial para los exportadores y productores de soja de la zona núcleo debido a las exigencias de trazabilidad de la Unión Europea.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-29T18:00-03:00"
+    },
     {
       "id": "e451b850b457",
       "rep": {
@@ -37845,73 +38108,6 @@
         ]
       },
       "cuando": "2026-10-29T17:00-03:00"
-    },
-    {
-      "id": "8e3ea745340b",
-      "rep": {
-        "id": "8e3ea745340b",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa/",
-        "canonical_url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa",
-        "titulo": "Por la alta demanda, el Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
-        "titulo_norm": "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa",
-        "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) extendió hasta el viernes 6 de noviembre el plazo para que los productores agropecuarios actualicen sus datos en el Registro Nacional Sanitario de Productores Agropecuarios (Renspa). La decisión se tomó ante el elevado volumen de trámites ingresados al sistema y el aumento de la demanda de […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-29T16:21-03:00",
-        "capturado": "2026-10-29T16:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fed41578a95f1d93"
-      },
-      "grupo": [
-        {
-          "id": "8e3ea745340b",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa/",
-          "canonical_url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa",
-          "titulo": "Por la alta demanda, el Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
-          "titulo_norm": "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa",
-          "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) extendió hasta el viernes 6 de noviembre el plazo para que los productores agropecuarios actualicen sus datos en el Registro Nacional Sanitario de Productores Agropecuarios (Renspa). La decisión se tomó ante el elevado volumen de trámites ingresados al sistema y el aumento de la demanda de […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-29T16:21-03:00",
-          "capturado": "2026-10-29T16:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fed41578a95f1d93"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 69,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "renspa",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta a todos los productores del país que deben actualizar el trámite obligatorio de forma inminente.",
-        "tema_doc": "reglas",
-        "urgente": true,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          69
-        ]
-      },
-      "cuando": "2026-10-29T16:40-03:00"
     },
     {
       "id": "1dc572a4b6a1",
@@ -38899,8 +39095,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T17:23:23-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-29T18:03:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
