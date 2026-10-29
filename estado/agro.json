@@ -18167,6 +18167,77 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c5d4ea72e19042af": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 46,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "molinería",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia institucional gremial de la industria molinera con bajo impacto directo para el productor de a pie.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c7f82118702e58d2": {
+      "impacto_economico": 13,
+      "interes_productores": 12,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 72,
+      "subtema": "agro",
+      "tema": "propiedad intelectual",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Declaran sobre retenciones y ley de semillas figuras de peso en la industria, generando debate clave en la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        74
+      ]
+    },
+    "f1098b504940a4e6": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 69,
+      "commercial_score": 66,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Datos de rindes de trigo y demoras en siembra de soja por lluvias en la región central interesan directamente al productor.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        67
+      ]
     }
   },
   "indice": {
@@ -19400,7 +19471,10 @@
       "https://bichosdecampo.com/reelecto-con-el-agro-en-contra-lula-tendra-que-cuidar-el-corazon-del-modelo-y-resolver-sus-nuevas-urgencias-las-deudas-el-credito-caro-y-los-problemas-de-logistica": "2026-10-28",
       "https://bichosdecampo.com/que-rico-esta-este-pollo-la-avicola-familiar-sigue-invirtiendo-para-acceder-a-mas-mercados-y-ahora-va-por-su-planta-de-procesamiento-de-subproductos": "2026-10-28",
       "https://lanacion.com.ar/economia/campo/don-pascual-de-82-anos-recupero-casi-60-chivas-extraviadas-gracias-a-un-dron-ahi-van-todas-nid28102026": "2026-10-28",
-      "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles": "2026-10-28"
+      "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/por-septima-vez-reeligieron-a-diego-cifarelli-como-presidente-de-la-federacion-argentina-de-la-nid28102026": "2026-10-28",
+      "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026": "2026-10-28",
+      "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html": "2026-10-28"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -20632,7 +20706,10 @@
       "reelecto con el agro en contra lula tendra que cuidar el corazon del modelo y resolver sus nuevas urgencias las deudas el credito caro y los problemas de logistica": "2026-10-28",
       "que rico esta este pollo la avicola familiar sigue invirtiendo para acceder a mas mercados y ahora va por su planta de procesamiento de subproductos": "2026-10-28",
       "don pascual de 82 anos recupero casi 60 chivas extraviadas gracias a un dron ahi van todas": "2026-10-28",
-      "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles": "2026-10-28"
+      "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles": "2026-10-28",
+      "por septima vez reeligieron a diego cifarelli como presidente de la federacion argentina de la industria molinera": "2026-10-28",
+      "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises": "2026-10-28",
+      "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe": "2026-10-28"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -21864,7 +21941,10 @@
       "2b4911cb8099b835": "2026-10-28",
       "7ccbb34c11f757b8": "2026-10-28",
       "e26946fec6989311": "2026-10-28",
-      "cd726ca0032e2112": "2026-10-28"
+      "cd726ca0032e2112": "2026-10-28",
+      "c5d4ea72e19042af": "2026-10-28",
+      "c7f82118702e58d2": "2026-10-28",
+      "f1098b504940a4e6": "2026-10-28"
     }
   },
   "elegidas": [
@@ -35039,9 +35119,204 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_13f6471d33ea_portada.jpg"
+    },
+    {
+      "id": "7de24d5c7c19",
+      "cuando": "2026-10-28T21:00-03:00",
+      "titulo_original": "El Clima con contrastes: trigo favorecido, suelos saturados y zonas que aún esperan lluvias - CCA/Agrositio",
+      "descripcion": "Octubre cierra con lluvias oportunas para el trigo, nubosidad persistente y desafíos en áreas saturadas. Se han observado mejoras sobre el oeste, aunque quedan sectores con alta demanda....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249068-octubre-cierra-con-lluvias-oportunas-para-el-trigo-nubosidad-persistente-y-desafios-en-areas-saturadas-ccaagrositio.html",
+      "titular": "Trigo: lluvias oportunas y suelos saturados marcan el cierre de octubre",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información clave sobre el estado hídrico del trigo y suelos en la región núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-28T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "PNi4ZlG0RkE",
+          "url": "https://youtube.com/shorts/PNi4ZlG0RkE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "97474ba1-d22c-4a74-a91e-a6e84fc83d96",
+          "slug": "trigo-lluvias-oportunas-suelos-saturados-y-menor-insolacion-d83ed2",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-lluvias-oportunas-suelos-saturados-y-menor-insolacion-d83ed2",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2402999053440430",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18169758385493753",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7de24d5c7c19_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "036a0d1e4784",
+      "rep": {
+        "id": "036a0d1e4784",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026",
+        "titulo": "Gerardo Bartolomé, de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos: “Tenemos dos países”",
+        "titulo_norm": "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises",
+        "descripcion": "Fundador de Don Mario, contó cómo una conversación en un semáforo lo llevó a impulsar un proyecto educativo en Tigre; en una disertación en el Rotary Club de Buenos Aires también cuestionó las retenciones y advirtió que la Argentina pierde inversiones por la falta de protección de la propiedad intelectual en semillas",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/K3OYGLJHXBDKBDYWJQQO24BBYY.jpeg?auth=23ae900be8a524cba6751124d276ee9c5be508f792a7366374f4620ac49a667f&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-10-28T19:27-03:00",
+        "capturado": "2026-10-28T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c7f82118702e58d2"
+      },
+      "grupo": [
+        {
+          "id": "036a0d1e4784",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/gerardo-bartolome-de-crear-un-gigante-en-el-negocio-de-la-soja-a-construir-una-escuela-para-225-nid28102026",
+          "titulo": "Gerardo Bartolomé, de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos: “Tenemos dos países”",
+          "titulo_norm": "gerardo bartolome de crear un gigante en el negocio de la soja a construir una escuela para 225 chicos tenemos dos paises",
+          "descripcion": "Fundador de Don Mario, contó cómo una conversación en un semáforo lo llevó a impulsar un proyecto educativo en Tigre; en una disertación en el Rotary Club de Buenos Aires también cuestionó las retenciones y advirtió que la Argentina pierde inversiones por la falta de protección de la propiedad intelectual en semillas",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/K3OYGLJHXBDKBDYWJQQO24BBYY.jpeg?auth=23ae900be8a524cba6751124d276ee9c5be508f792a7366374f4620ac49a667f&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-10-28T19:27-03:00",
+          "capturado": "2026-10-28T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c7f82118702e58d2"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 12,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "propiedad intelectual",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Declaran sobre retenciones y ley de semillas figuras de peso en la industria, generando debate clave en la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          74
+        ]
+      },
+      "cuando": "2026-10-28T21:00-03:00"
+    },
+    {
+      "id": "80f2eec46cc2",
+      "rep": {
+        "id": "80f2eec46cc2",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
+        "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
+        "titulo": "Las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de Santa Fe",
+        "titulo_norm": "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe",
+        "descripcion": "Los primeros lotes rindieron entre 30 y 32 quintales por hectárea. La humedad también interrumpió la siembra de soja de primera, según la Bolsa de Comercio de Santa Fe",
+        "imagen_url": "https://media.lacapital.com.ar/p/83018dfe3cb8577ed3ca561c9dc12275/adjuntos/203/imagenes/005/838/0005838095/1200x675/smart/revancha-la-ultima-cosecha-trigo-fue-muy-baja-ahora-se-recuperaria.jpg",
+        "autor": "",
+        "publicado": "2026-10-28T19:25-03:00",
+        "capturado": "2026-10-28T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f1098b504940a4e6"
+      },
+      "grupo": [
+        {
+          "id": "80f2eec46cc2",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
+          "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-frenaron-el-inicio-la-cosecha-trigo-el-centro-norte-santa-fe-n10289227.html",
+          "titulo": "Las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de Santa Fe",
+          "titulo_norm": "las lluvias frenaron el inicio de la cosecha de trigo en el centro norte de santa fe",
+          "descripcion": "Los primeros lotes rindieron entre 30 y 32 quintales por hectárea. La humedad también interrumpió la siembra de soja de primera, según la Bolsa de Comercio de Santa Fe",
+          "imagen_url": "https://media.lacapital.com.ar/p/83018dfe3cb8577ed3ca561c9dc12275/adjuntos/203/imagenes/005/838/0005838095/1200x675/smart/revancha-la-ultima-cosecha-trigo-fue-muy-baja-ahora-se-recuperaria.jpg",
+          "autor": "",
+          "publicado": "2026-10-28T19:25-03:00",
+          "capturado": "2026-10-28T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f1098b504940a4e6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 66,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Datos de rindes de trigo y demoras en siembra de soja por lluvias en la región central interesan directamente al productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          67
+        ]
+      },
+      "cuando": "2026-10-28T21:00-03:00"
+    },
     {
       "id": "aef83931a8af",
       "rep": {
@@ -35628,69 +35903,6 @@
         ]
       },
       "cuando": "2026-10-28T13:40-03:00"
-    },
-    {
-      "id": "7de24d5c7c19",
-      "rep": {
-        "id": "7de24d5c7c19",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249068-octubre-cierra-con-lluvias-oportunas-para-el-trigo-nubosidad-persistente-y-desafios-en-areas-saturadas-ccaagrositio.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249068-octubre-cierra-con-lluvias-oportunas-para-el-trigo-nubosidad-persistente-y-desafios-en-areas-saturadas-ccaagrositio.html",
-        "titulo": "El Clima con contrastes: trigo favorecido, suelos saturados y zonas que aún esperan lluvias - CCA/Agrositio",
-        "titulo_norm": "el clima con contrastes trigo favorecido suelos saturados y zonas que aun esperan lluvias cca agrositio",
-        "descripcion": "Octubre cierra con lluvias oportunas para el trigo, nubosidad persistente y desafíos en áreas saturadas. Se han observado mejoras sobre el oeste, aunque quedan sectores con alta demanda....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249068_42004447.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-28T12:14-03:00",
-        "capturado": "2026-10-28T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c4c1da1044a57cb5"
-      },
-      "grupo": [
-        {
-          "id": "7de24d5c7c19",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249068-octubre-cierra-con-lluvias-oportunas-para-el-trigo-nubosidad-persistente-y-desafios-en-areas-saturadas-ccaagrositio.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249068-octubre-cierra-con-lluvias-oportunas-para-el-trigo-nubosidad-persistente-y-desafios-en-areas-saturadas-ccaagrositio.html",
-          "titulo": "El Clima con contrastes: trigo favorecido, suelos saturados y zonas que aún esperan lluvias - CCA/Agrositio",
-          "titulo_norm": "el clima con contrastes trigo favorecido suelos saturados y zonas que aun esperan lluvias cca agrositio",
-          "descripcion": "Octubre cierra con lluvias oportunas para el trigo, nubosidad persistente y desafíos en áreas saturadas. Se han observado mejoras sobre el oeste, aunque quedan sectores con alta demanda....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249068_42004447.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-28T12:14-03:00",
-          "capturado": "2026-10-28T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c4c1da1044a57cb5"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 75,
-        "commercial_score": 78,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Información clave sobre el estado hídrico del trigo y suelos en la región núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T13:00-03:00"
     },
     {
       "id": "f418cb05db06",
@@ -36343,8 +36555,8 @@
       "cuando": "2026-10-27T10:00-03:00"
     }
   ],
-  "actualizado": "2026-10-28T19:24:57-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-28T21:04:05-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
