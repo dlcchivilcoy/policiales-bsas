@@ -19267,6 +19267,31 @@
         60,
         54
       ]
+    },
+    "fed41578a95f1d93": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 69,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "renspa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a todos los productores del país que deben actualizar el trámite obligatorio de forma inminente.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        69
+      ]
     }
   },
   "indice": {
@@ -20571,7 +20596,8 @@
       "https://bichosdecampo.com/pais-federal-en-septiembre-la-leche-y-el-asado-fueron-mas-caros-en-el-interior-que-en-la-capital-pero-no-asi-el-pan": "2026-10-29",
       "https://lanacion.com.ar/economia/campo/llore-grite-y-me-frustre-los-perros-atacaron-su-campo-y-perdio-casi-todas-sus-ovejas-nid29102026": "2026-10-29",
       "https://agfundernews.com/agrifood-corporates-find-a-new-model-for-financing-regenerative-agriculture-via-soil-capital-partnership": "2026-10-29",
-      "https://agrositio.com.ar/canal-agrositio/entrevistas/249103-seleccion-de-rrhh-en-el-agro-flexibilidad-desafios-y-proposito-mueven-a-los-jovenesy-a-muchos-grandes.html": "2026-10-29"
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249103-seleccion-de-rrhh-en-el-agro-flexibilidad-desafios-y-proposito-mueven-a-los-jovenesy-a-muchos-grandes.html": "2026-10-29",
+      "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa": "2026-10-29"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -21874,7 +21900,8 @@
       "pais federal en septiembre la leche y el asado fueron mas caros en el interior que en la capital pero no asi el pan": "2026-10-29",
       "los perros atacaron su campo y perdio casi todas sus ovejas": "2026-10-29",
       "agrifood corporates find a new model for financing regenerative agriculture via soil capital partnership": "2026-10-29",
-      "seleccion de rr hh en el agro flexibilidad desafios y proposito mueven a los jovenes y a muchos grandes": "2026-10-29"
+      "seleccion de rr hh en el agro flexibilidad desafios y proposito mueven a los jovenes y a muchos grandes": "2026-10-29",
+      "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa": "2026-10-29"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23177,7 +23204,8 @@
       "d8e3d652c6ff4ba3": "2026-10-29",
       "1486dc8a9462bc43": "2026-10-29",
       "7b7f50a7ea93fe46": "2026-10-29",
-      "82ea30d241681e4e": "2026-10-29"
+      "82ea30d241681e4e": "2026-10-29",
+      "fed41578a95f1d93": "2026-10-29"
     }
   },
   "elegidas": [
@@ -37495,49 +37523,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_eac9dc8c2fbb_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "239cd52e0c82",
-      "rep": {
-        "id": "239cd52e0c82",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/maquinaria-agricola-bolonia-la-siguiente-estacion-en-el-camino-para-ser-cada-vez-mas-internacional/",
-        "canonical_url": "https://infocampo.com.ar/maquinaria-agricola-bolonia-la-siguiente-estacion-en-el-camino-para-ser-cada-vez-mas-internacional",
-        "titulo": "Maquinaria agrícola: Bolonia, la siguiente estación en el camino para ser cada vez más internacional",
-        "titulo_norm": "maquinaria agricola bolonia la siguiente estacion en el camino para ser cada vez mas internacional",
-        "descripcion": "Del 10 al 14 de noviembre se desarrollará una nueva edición de EIMA 2026, una de las ferias de maquinaria agrícola más grandes de Europa, que tendrá amplia presencia de compañías argentinas, con Expoagro como articulador.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Descargar-imagen.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-10-29T15:51-03:00",
-        "capturado": "2026-10-29T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3615e12e7a94dacb"
-      },
-      "grupo": [
-        {
-          "id": "239cd52e0c82",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/maquinaria-agricola-bolonia-la-siguiente-estacion-en-el-camino-para-ser-cada-vez-mas-internacional/",
-          "canonical_url": "https://infocampo.com.ar/maquinaria-agricola-bolonia-la-siguiente-estacion-en-el-camino-para-ser-cada-vez-mas-internacional",
-          "titulo": "Maquinaria agrícola: Bolonia, la siguiente estación en el camino para ser cada vez más internacional",
-          "titulo_norm": "maquinaria agricola bolonia la siguiente estacion en el camino para ser cada vez mas internacional",
-          "descripcion": "Del 10 al 14 de noviembre se desarrollará una nueva edición de EIMA 2026, una de las ferias de maquinaria agrícola más grandes de Europa, que tendrá amplia presencia de compañías argentinas, con Expoagro como articulador.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Descargar-imagen.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-10-29T15:51-03:00",
-          "capturado": "2026-10-29T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3615e12e7a94dacb"
-        }
-      ],
+      "cuando": "2026-10-29T16:40-03:00",
+      "titulo_original": "Maquinaria agrícola: Bolonia, la siguiente estación en el camino para ser cada vez más internacional",
+      "descripcion": "Del 10 al 14 de noviembre se desarrollará una nueva edición de EIMA 2026, una de las ferias de maquinaria agrícola más grandes de Europa, que tendrá amplia presencia de compañías argentinas, con Expoagro como articulador.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/maquinaria-agricola-bolonia-la-siguiente-estacion-en-el-camino-para-ser-cada-vez-mas-internacional/",
+      "titular": "Seis marcas de maquinaria agrícola argentina llegan a EIMA 2026",
+      "volanta": "Maquinaria",
       "score": {
         "impacto_economico": 10,
         "interes_productores": 8,
@@ -37563,7 +37558,98 @@
           66
         ]
       },
-      "cuando": "2026-10-29T16:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-29T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b2d9df1e-e796-49ca-96a7-6fcb9917f8c9",
+          "slug": "maquinaria-agricola-argentina-se-prepara-para-desembarcar-en-la-2ec7e0",
+          "url": "https://www.diariolacampaña.com.ar/n/maquinaria-agricola-argentina-se-prepara-para-desembarcar-en-la-2ec7e0",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2997840033948308",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18103690646305354",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_239cd52e0c82_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "8e3ea745340b",
+      "rep": {
+        "id": "8e3ea745340b",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa/",
+        "canonical_url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa",
+        "titulo": "Por la alta demanda, el Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
+        "titulo_norm": "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa",
+        "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) extendió hasta el viernes 6 de noviembre el plazo para que los productores agropecuarios actualicen sus datos en el Registro Nacional Sanitario de Productores Agropecuarios (Renspa). La decisión se tomó ante el elevado volumen de trámites ingresados al sistema y el aumento de la demanda de […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-29T16:21-03:00",
+        "capturado": "2026-10-29T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fed41578a95f1d93"
+      },
+      "grupo": [
+        {
+          "id": "8e3ea745340b",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa/",
+          "canonical_url": "https://bichosdecampo.com/por-la-alta-demanda-el-senasa-prorrogo-hasta-el-6-de-noviembre-la-actualizacion-del-renspa",
+          "titulo": "Por la alta demanda, el Senasa prorrogó hasta el 6 de noviembre la actualización del Renspa",
+          "titulo_norm": "por la alta demanda el senasa prorrogo hasta el 6 de noviembre la actualizacion del renspa",
+          "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) extendió hasta el viernes 6 de noviembre el plazo para que los productores agropecuarios actualicen sus datos en el Registro Nacional Sanitario de Productores Agropecuarios (Renspa). La decisión se tomó ante el elevado volumen de trámites ingresados al sistema y el aumento de la demanda de […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-29T16:21-03:00",
+          "capturado": "2026-10-29T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fed41578a95f1d93"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 69,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "renspa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta a todos los productores del país que deben actualizar el trámite obligatorio de forma inminente.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "cuando": "2026-10-29T16:40-03:00"
     },
     {
       "id": "1dc572a4b6a1",
@@ -38551,8 +38637,8 @@
       "cuando": "2026-10-28T07:24-03:00"
     }
   ],
-  "actualizado": "2026-10-29T16:23:10-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-29T16:42:52-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
