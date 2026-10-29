@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-29T23:31:51.000Z",
+  "actualizado": "2026-10-29T23:31:53.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/10/28/choque-entre-una-camioneta-y-una-moto-en-avenida-garmendia-dos-jovenes-hospitalizadas/",
@@ -115,6 +115,54 @@
       "volanta": "Operativo policial en Junín",
       "categoria": "abuso_sexual",
       "distancia_km": 91.2,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/347286-cayo-un-sospechoso-de-robos-atraparon-a-un-profugo",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-29T23:31:53.000Z",
+      "titulo": "Cayó un sospechoso por robos, atraparon a un prófugo y hallaron un arma",
+      "descripcion": "Tres procedimientos policiales culminaron con la detención de un acusado de robar aberturas, la captura de un hombre requerido por la justicia y el secuestro de un arma de fuego sin numeración visible en la ciudad.",
+      "texto_tiktok": "Una serie de operativos policiales simultáneos permitieron esclarecer distintos hechos delictivos en la ciudad.\n\nEn primer lugar, arrestaron a un individuo acusado de sustraer aberturas y materiales de dos obras en construcción.\n\nAdemás, interceptaron a un transeúnte que tenía un pedido de captura vigente por una causa de protección animal.\n\nPor último, un allanamiento culminó con el secuestro de un revólver sin numeración visible y la aprehensión del morador.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Robo #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-29_2132_01_chacabuco_cay-un-sospechoso-por-robos-at.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-detuvieron-a-un-sospechoso-de-robos-a-un-profugo-y-1b082d",
+      "youtube_url": "https://youtube.com/shorts/VhID-hG78T0",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Operativos policiales en Chacabuco",
+      "categoria": "robo",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://laopinionline.ar/articulo/celeste-montarana-sigue-en-estado-critico-tras-el-ataque-policial-en-arrecifes-y-el-padre-exige-justicia",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-29T23:31:53.000Z",
+      "titulo": "Celeste Montarana sigue crítica tras la balacera policial y su padre exige justicia",
+      "descripcion": "Juan Montarana confirmó que su hija continúa internada en terapia intensiva en el Hospital San José de Pergamino tras recibir dos disparos durante un operativo policial. Reclamó la detención de los efectivos involucrados en la persecución.",
+      "texto_tiktok": "Celeste Montarana sigue internada en terapia intensiva en el Hospital San José de Pergamino con pronóstico reservado.\n\nSu padre, Juan Montarana, confirmó que la joven recibió dos disparos durante una persecución policial ocurrida en Arrecifes.\n\nEl hecho sucedió en la madrugada del domingo tras una persecución de seis kilómetros que comenzó en la zona urbana y llegó hasta la ruta nacional 8.\n\nEl padre de la víctima cuestionó el procedimiento policial y exigió que los efectivos involucrados en el ataque queden detenidos.\n\n📲 Más noticias de Arrecifes en www.diariolacampaña.com.ar\n\n#Arrecifes #Policiales #Justicia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-29_2132_03_pergamino_celeste-montarana-sigue-cr-tic.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/arrecifes-celeste-montarana-sigue-critica-tras-recibir-dos-1c7893",
+      "youtube_url": "https://youtube.com/shorts/FR4RRhgm0As",
+      "prioridad": 9,
+      "urgente": false,
+      "localidad": "Arrecifes",
+      "volanta": "Arrecifes",
+      "categoria": "otro_policial",
+      "distancia_km": 92.6,
       "radio_ok": true,
       "plataformas": [
         "x",
