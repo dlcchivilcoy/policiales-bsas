@@ -20488,6 +20488,27 @@
         53,
         62
       ]
+    },
+    "ad74623bfa12d823": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "mercados",
+      "tema": "granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad de los productores de la zona núcleo y mueve la economía regional.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21869,7 +21890,8 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-nueva-0": "2026-10-30",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103": "2026-10-30",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues": "2026-10-30",
-      "https://intainforma.inta.gob.ar/drones-una-herramienta-para-transformar-la-informacion-del-territorio-en-decisiones": "2026-10-30"
+      "https://intainforma.inta.gob.ar/drones-una-herramienta-para-transformar-la-informacion-del-territorio-en-decisiones": "2026-10-30",
+      "https://todoagro.com.ar/soja-en-maximos-maiz-bajo-presion-y-trigo-atento-al-mar-negro-las-claves-que-mueven-los-granos": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23249,7 +23271,8 @@
       "la nueva realidad del mercado internacional de harina de soja": "2026-10-30",
       "la actividad agropecuaria se modera tras alcanzar un record en agosto": "2026-10-30",
       "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad": "2026-10-30",
-      "drones una herramienta para transformar la informacion del territorio en decisiones": "2026-10-30"
+      "drones una herramienta para transformar la informacion del territorio en decisiones": "2026-10-30",
+      "soja en maximos maiz bajo presion y trigo atento al mar negro las claves que mueven los granos": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24629,7 +24652,8 @@
       "a657bb2d299a51ac": "2026-10-30",
       "cdaf6b9738740f1d": "2026-10-30",
       "e6a30012ff22a97e": "2026-10-30",
-      "d5ac69e378b9b6f0": "2026-10-30"
+      "d5ac69e378b9b6f0": "2026-10-30",
+      "ad74623bfa12d823": "2026-10-30"
     }
   },
   "elegidas": [
@@ -40192,49 +40216,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_becc85ca9dc3_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "73f344ab2aab",
-      "rep": {
-        "id": "73f344ab2aab",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026",
-        "titulo": "Inversiones: el Senado aprobó beneficios para la retención de terneras y la pesca que ahora deberá tratar Diputados",
-        "titulo_norm": "inversiones el senado aprobo beneficios para la retencion de terneras y la pesca que ahora debera tratar diputados",
-        "descripcion": "La iniciativa incorpora ambas actividades a un esquema de incentivos sin un monto mínimo de inversión y contempla la amortización acelerada en una cuota; los cambios fueron propuestos por Maximiliano Abad",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/MBRQFW2JAZAERO5I75EVRAARRE.jpeg?auth=33957d87669f7011a41fc64f6f2434372cfeed644442b71a2b66bdb1bd77e503&smart=true",
-        "autor": "Belkis Martínez",
-        "publicado": "2026-10-30T13:01-03:00",
-        "capturado": "2026-10-30T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "59bab98aecbfbcc7"
-      },
-      "grupo": [
-        {
-          "id": "73f344ab2aab",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026",
-          "titulo": "Inversiones: el Senado aprobó beneficios para la retención de terneras y la pesca que ahora deberá tratar Diputados",
-          "titulo_norm": "inversiones el senado aprobo beneficios para la retencion de terneras y la pesca que ahora debera tratar diputados",
-          "descripcion": "La iniciativa incorpora ambas actividades a un esquema de incentivos sin un monto mínimo de inversión y contempla la amortización acelerada en una cuota; los cambios fueron propuestos por Maximiliano Abad",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/MBRQFW2JAZAERO5I75EVRAARRE.jpeg?auth=33957d87669f7011a41fc64f6f2434372cfeed644442b71a2b66bdb1bd77e503&smart=true",
-          "autor": "Belkis Martínez",
-          "publicado": "2026-10-30T13:01-03:00",
-          "capturado": "2026-10-30T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "59bab98aecbfbcc7"
-        }
-      ],
+      "cuando": "2026-10-30T14:01-03:00",
+      "titulo_original": "Inversiones: el Senado aprobó beneficios para la retención de terneras y la pesca que ahora deberá tratar Diputados",
+      "descripcion": "La iniciativa incorpora ambas actividades a un esquema de incentivos sin un monto mínimo de inversión y contempla la amortización acelerada en una cuota; los cambios fueron propuestos por Maximiliano Abad",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026/",
+      "titular": "Senado aprobó beneficios fiscales para retención de terneras y pesca",
+      "volanta": "Ganadería y Pesca",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 13,
@@ -40260,7 +40251,94 @@
           72
         ]
       },
-      "cuando": "2026-10-30T13:20-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "db531fec-ddc4-4357-8ec0-c9c2c042a1db",
+          "slug": "el-senado-dio-media-sancion-a-beneficios-fiscales-para-la-a2d012",
+          "url": "https://www.diariolacampaña.com.ar/n/el-senado-dio-media-sancion-a-beneficios-fiscales-para-la-a2d012",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1148671470959694",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17988448731095634",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_73f344ab2aab_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "10d040419c65",
+      "rep": {
+        "id": "10d040419c65",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/soja-en-maximos-maiz-bajo-presion-y-trigo-atento-al-mar-negro-las-claves-que-mueven-los-granos/",
+        "canonical_url": "https://todoagro.com.ar/soja-en-maximos-maiz-bajo-presion-y-trigo-atento-al-mar-negro-las-claves-que-mueven-los-granos",
+        "titulo": "Soja en máximos, maíz bajo presión y trigo atento al Mar Negro: las claves que mueven los granos",
+        "titulo_norm": "soja en maximos maiz bajo presion y trigo atento al mar negro las claves que mueven los granos",
+        "descripcion": "El mercado internacional combina cosechas abundantes, cambios en la demanda y conflictos geopolíticos que condicionan los precios. Mientras la soja encuentra respaldo en las compras chinas y el trigo sigue pendiente de la guerra entre Rusia y Ucrania, el maíz pierde terreno en Chicago. ¿Qué panorama anticipa la Bolsa de Cereales de Córdoba para los principales cultivos? La entrada Soja en máximos, maíz bajo presión y trigo atento al Mar Negro: las claves que mueven los granos pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-10-30T13:55-03:00",
+        "capturado": "2026-10-30T14:01-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ad74623bfa12d823"
+      },
+      "grupo": [
+        {
+          "id": "10d040419c65",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/soja-en-maximos-maiz-bajo-presion-y-trigo-atento-al-mar-negro-las-claves-que-mueven-los-granos/",
+          "canonical_url": "https://todoagro.com.ar/soja-en-maximos-maiz-bajo-presion-y-trigo-atento-al-mar-negro-las-claves-que-mueven-los-granos",
+          "titulo": "Soja en máximos, maíz bajo presión y trigo atento al Mar Negro: las claves que mueven los granos",
+          "titulo_norm": "soja en maximos maiz bajo presion y trigo atento al mar negro las claves que mueven los granos",
+          "descripcion": "El mercado internacional combina cosechas abundantes, cambios en la demanda y conflictos geopolíticos que condicionan los precios. Mientras la soja encuentra respaldo en las compras chinas y el trigo sigue pendiente de la guerra entre Rusia y Ucrania, el maíz pierde terreno en Chicago. ¿Qué panorama anticipa la Bolsa de Cereales de Córdoba para los principales cultivos? La entrada Soja en máximos, maíz bajo presión y trigo atento al Mar Negro: las claves que mueven los granos pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-10-30T13:55-03:00",
+          "capturado": "2026-10-30T14:01-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ad74623bfa12d823"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "mercados",
+        "tema": "granos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad de los productores de la zona núcleo y mueve la economía regional.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T14:01-03:00"
     },
     {
       "id": "f0477d0daf06",
@@ -41315,8 +41393,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T14:01:07-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T14:04:43-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
