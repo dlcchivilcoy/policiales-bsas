@@ -20296,6 +20296,173 @@
         59,
         64
       ]
+    },
+    "05715f4ee179e9cb": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 1,
+      "cercania_argentina": 8,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 56,
+      "commercial_score": 61,
+      "subtema": "mercados",
+      "tema": "brasil lula",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis político y comercial regional relevante pero sin impacto directo urgente en la producción local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        61
+      ]
+    },
+    "59bab98aecbfbcc7": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 79,
+      "subtema": "ganaderia",
+      "tema": "retencion terneras",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Incentivos fiscales directos para ganaderos y recría que interesan mucho a los criadores bonaerenses.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        72
+      ]
+    },
+    "695fecd24678bb34": {
+      "impacto_economico": 18,
+      "interes_productores": 10,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 76,
+      "commercial_score": 86,
+      "subtema": "empresas",
+      "tema": "rigi inversiones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Monto multimillonario de inversiones aprobado que impacta en la macro y en grandes proyectos del sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ab36072c80e806f4": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "precios granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Caída fuerte de precios en Chicago y Brasil que afecta directamente el bolsillo del productor de zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a657bb2d299a51ac": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 3,
+      "cercania_argentina": 8,
+      "cercania_pba": 6,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 58,
+      "commercial_score": 64,
+      "subtema": "mercados",
+      "tema": "harina de soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Radiografía estructural de la agroindustria aceitera global con impacto en la principal exportación argentina.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        59
+      ]
+    },
+    "cdaf6b9738740f1d": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "actividad agropecuaria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Dato estadístico oficial sobre el nivel de actividad del sector agropecuario nacional.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        72
+      ]
+    },
+    "e6a30012ff22a97e": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 1,
+      "cercania_argentina": 9,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 5,
+      "ai_score": 60,
+      "commercial_score": 60,
+      "subtema": "mercados",
+      "tema": "competitividad brasil",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Análisis de tipo de cambio y riesgo en Brasil que altera la competitividad exportadora de Argentina.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        62
+      ]
     }
   },
   "indice": {
@@ -21669,7 +21836,14 @@
       "https://bichosdecampo.com/eudr-que-esta-haciendo-paraguay-para-cumplir-con-la-trazabilidad-de-la-comercializacion-de-soja-exigida-por-la-union-europea": "2026-10-30",
       "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/grupo-syngenta-cayeron-un-5-las-ventas-globales-y-la-empresa-advirtio-sobre-dificultades-del-agro-en-nid30102026": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026": "2026-10-30",
+      "https://bichosdecampo.com/al-agro-argentino-le-sobran-razones-para-celebrar-el-triunfo-lulista-brasil-seguira-comprando-europa-gana-un-aliado-y-la-pelea-con-estados-unidos-nos-abre-la-ventana": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026": "2026-10-30",
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/rigi-las": "2026-10-30",
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16": "2026-10-30",
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-nueva-0": "2026-10-30",
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103": "2026-10-30",
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23041,7 +23215,14 @@
       "eudr que esta haciendo paraguay para cumplir con la trazabilidad de la comercializacion de soja exigida por la union europea": "2026-10-30",
       "toto mira el pronostico con el super nino encima casi dos de cada tres obras hidricas estan frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en lecaps": "2026-10-30",
       "grupo syngenta cayeron un 5 las ventas globales y la empresa advirtio sobre dificultades del agro en america latina": "2026-10-30",
-      "a italia la maquinaria agricola argentina se prepara para eima 2026": "2026-10-30"
+      "a italia la maquinaria agricola argentina se prepara para eima 2026": "2026-10-30",
+      "al agro argentino le sobran razones para celebrar el triunfo lulista brasil seguira comprando europa gana un aliado y la pelea con estados unidos nos abre la ventana": "2026-10-30",
+      "inversiones el senado aprobo beneficios para la retencion de terneras y la pesca que ahora debera tratar diputados": "2026-10-30",
+      "rigi las inversiones aprobadas ya superan los us 76 000 millones": "2026-10-30",
+      "mercado de granos cierra uno de los meses mas bajistas del ano": "2026-10-30",
+      "la nueva realidad del mercado internacional de harina de soja": "2026-10-30",
+      "la actividad agropecuaria se modera tras alcanzar un record en agosto": "2026-10-30",
+      "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24413,7 +24594,14 @@
       "b5f317903617d2ed": "2026-10-30",
       "d65a0574fc63d9f2": "2026-10-30",
       "198daa53d21f8e17": "2026-10-30",
-      "a17c8a676da256b8": "2026-10-30"
+      "a17c8a676da256b8": "2026-10-30",
+      "05715f4ee179e9cb": "2026-10-30",
+      "59bab98aecbfbcc7": "2026-10-30",
+      "695fecd24678bb34": "2026-10-30",
+      "ab36072c80e806f4": "2026-10-30",
+      "a657bb2d299a51ac": "2026-10-30",
+      "cdaf6b9738740f1d": "2026-10-30",
+      "e6a30012ff22a97e": "2026-10-30"
     }
   },
   "elegidas": [
@@ -39828,9 +40016,394 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3201dba32980_portada.jpg"
+    },
+    {
+      "id": "1ef9823ff780",
+      "cuando": "2026-10-30T13:20-03:00",
+      "titulo_original": "¿Toto mira el pronóstico? Con el “Súper Niño” encima, casi dos de cada tres obras hídricas están frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en Lecaps",
+      "descripcion": "¿Qué noticias leerán en el ministerio de Economía? Porque el fenómeno del “Súper Niño” seguramente fue uno de los más anunciados de los últimos años, y aún así, parece que en la cartera que dirige Luis “Toto” Caputo no se enteraron. Y no es una apreciación, son datos: así lo muestra el balance del F",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le/",
+      "titular": "Obras hídricas frenadas y fondos en Lecaps frente al Súper Niño",
+      "volanta": "Infraestructura hídrica",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "obras hidricas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alerta por obras hídricas frenadas frente al fenómeno de El Niño, de alto impacto económico regional.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          70
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6b44d385-de08-4b11-a56d-349c84ca96df",
+          "slug": "frenan-obras-hidricas-clave-y-destinan-los-fondos-a-lecaps-ante-e0ff0d",
+          "url": "https://www.diariolacampaña.com.ar/n/frenan-obras-hidricas-clave-y-destinan-los-fondos-a-lecaps-ante-e0ff0d",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1184231027612146",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17954916138269856",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1ef9823ff780_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "73f344ab2aab",
+      "rep": {
+        "id": "73f344ab2aab",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026",
+        "titulo": "Inversiones: el Senado aprobó beneficios para la retención de terneras y la pesca que ahora deberá tratar Diputados",
+        "titulo_norm": "inversiones el senado aprobo beneficios para la retencion de terneras y la pesca que ahora debera tratar diputados",
+        "descripcion": "La iniciativa incorpora ambas actividades a un esquema de incentivos sin un monto mínimo de inversión y contempla la amortización acelerada en una cuota; los cambios fueron propuestos por Maximiliano Abad",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/MBRQFW2JAZAERO5I75EVRAARRE.jpeg?auth=33957d87669f7011a41fc64f6f2434372cfeed644442b71a2b66bdb1bd77e503&smart=true",
+        "autor": "Belkis Martínez",
+        "publicado": "2026-10-30T13:01-03:00",
+        "capturado": "2026-10-30T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "59bab98aecbfbcc7"
+      },
+      "grupo": [
+        {
+          "id": "73f344ab2aab",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/inversiones-el-senado-aprobo-beneficios-para-la-retencion-de-terneras-y-la-pesca-que-ahora-debera-nid30102026",
+          "titulo": "Inversiones: el Senado aprobó beneficios para la retención de terneras y la pesca que ahora deberá tratar Diputados",
+          "titulo_norm": "inversiones el senado aprobo beneficios para la retencion de terneras y la pesca que ahora debera tratar diputados",
+          "descripcion": "La iniciativa incorpora ambas actividades a un esquema de incentivos sin un monto mínimo de inversión y contempla la amortización acelerada en una cuota; los cambios fueron propuestos por Maximiliano Abad",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/MBRQFW2JAZAERO5I75EVRAARRE.jpeg?auth=33957d87669f7011a41fc64f6f2434372cfeed644442b71a2b66bdb1bd77e503&smart=true",
+          "autor": "Belkis Martínez",
+          "publicado": "2026-10-30T13:01-03:00",
+          "capturado": "2026-10-30T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "59bab98aecbfbcc7"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 71,
+        "commercial_score": 79,
+        "subtema": "ganaderia",
+        "tema": "retencion terneras",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Incentivos fiscales directos para ganaderos y recría que interesan mucho a los criadores bonaerenses.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          72
+        ]
+      },
+      "cuando": "2026-10-30T13:20-03:00"
+    },
+    {
+      "id": "f0477d0daf06",
+      "rep": {
+        "id": "f0477d0daf06",
+        "fuente": "Bolsa de Comercio de Rosario",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/rigi-las",
+        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/rigi-las",
+        "titulo": "RIGI: las inversiones aprobadas ya superan los US$ 76.000 millones",
+        "titulo_norm": "rigi las inversiones aprobadas ya superan los us 76 000 millones",
+        "descripcion": "Con 27 proyectos aprobados por US$ 76.173 millones, el Régimen de Incentivo para Grandes Inversiones (RIGI) continúa consolidándose y tiene un capítulo de especial importancia en Rosario.",
+        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/rigi_portada_1.png?itok=m3ysz41S",
+        "autor": "",
+        "publicado": "2026-10-29T09:00-03:00",
+        "capturado": "2026-10-30T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "695fecd24678bb34"
+      },
+      "grupo": [
+        {
+          "id": "f0477d0daf06",
+          "fuente": "Bolsa de Comercio de Rosario",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/rigi-las",
+          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/rigi-las",
+          "titulo": "RIGI: las inversiones aprobadas ya superan los US$ 76.000 millones",
+          "titulo_norm": "rigi las inversiones aprobadas ya superan los us 76 000 millones",
+          "descripcion": "Con 27 proyectos aprobados por US$ 76.173 millones, el Régimen de Incentivo para Grandes Inversiones (RIGI) continúa consolidándose y tiene un capítulo de especial importancia en Rosario.",
+          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/rigi_portada_1.png?itok=m3ysz41S",
+          "autor": "",
+          "publicado": "2026-10-29T09:00-03:00",
+          "capturado": "2026-10-30T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "695fecd24678bb34"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 10,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 76,
+        "commercial_score": 86,
+        "subtema": "empresas",
+        "tema": "rigi inversiones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Monto multimillonario de inversiones aprobado que impacta en la macro y en grandes proyectos del sector.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T13:20-03:00"
+    },
+    {
+      "id": "becc85ca9dc3",
+      "rep": {
+        "id": "becc85ca9dc3",
+        "fuente": "Bolsa de Comercio de Rosario",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
+        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
+        "titulo": "Mercado de granos: cierra uno de los meses más bajistas del año",
+        "titulo_norm": "mercado de granos cierra uno de los meses mas bajistas del ano",
+        "descripcion": "Tras las elecciones en Brasil, la caída del real abarató sus exportaciones y arrastró las cotizaciones. En Chicago, soja y maíz tocaron mínimos de dos meses ante el avance de la cosecha en EE. UU., mientras que el trigo marca récords de volumen en A3.",
+        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
+        "autor": "",
+        "publicado": "2026-10-29T09:00-03:00",
+        "capturado": "2026-10-30T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ab36072c80e806f4"
+      },
+      "grupo": [
+        {
+          "id": "becc85ca9dc3",
+          "fuente": "Bolsa de Comercio de Rosario",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
+          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
+          "titulo": "Mercado de granos: cierra uno de los meses más bajistas del año",
+          "titulo_norm": "mercado de granos cierra uno de los meses mas bajistas del ano",
+          "descripcion": "Tras las elecciones en Brasil, la caída del real abarató sus exportaciones y arrastró las cotizaciones. En Chicago, soja y maíz tocaron mínimos de dos meses ante el avance de la cosecha en EE. UU., mientras que el trigo marca récords de volumen en A3.",
+          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
+          "autor": "",
+          "publicado": "2026-10-29T09:00-03:00",
+          "capturado": "2026-10-30T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ab36072c80e806f4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "precios granos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Caída fuerte de precios en Chicago y Brasil que afecta directamente el bolsillo del productor de zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T13:20-03:00"
+    },
+    {
+      "id": "c46fb7a06f67",
+      "rep": {
+        "id": "c46fb7a06f67",
+        "fuente": "Bolsa de Comercio de Rosario",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
+        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
+        "titulo": "La actividad agropecuaria se modera tras alcanzar un récord en agosto",
+        "titulo_norm": "la actividad agropecuaria se modera tras alcanzar un record en agosto",
+        "descripcion": "El IACA-BCR retrocedió 2,5% mensual en septiembre por la incidencia de las labores agrícolas, aunque siete de las doce series que lo componen mostraron subas. En términos interanuales, el índice se ubicó 14,2% por encima de septiembre de 2025.",
+        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/iaca_portada_1.png?itok=1D44hiPJ",
+        "autor": "",
+        "publicado": "2026-10-29T09:00-03:00",
+        "capturado": "2026-10-30T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cdaf6b9738740f1d"
+      },
+      "grupo": [
+        {
+          "id": "c46fb7a06f67",
+          "fuente": "Bolsa de Comercio de Rosario",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
+          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
+          "titulo": "La actividad agropecuaria se modera tras alcanzar un récord en agosto",
+          "titulo_norm": "la actividad agropecuaria se modera tras alcanzar un record en agosto",
+          "descripcion": "El IACA-BCR retrocedió 2,5% mensual en septiembre por la incidencia de las labores agrícolas, aunque siete de las doce series que lo componen mostraron subas. En términos interanuales, el índice se ubicó 14,2% por encima de septiembre de 2025.",
+          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/iaca_portada_1.png?itok=1D44hiPJ",
+          "autor": "",
+          "publicado": "2026-10-29T09:00-03:00",
+          "capturado": "2026-10-30T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cdaf6b9738740f1d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "actividad agropecuaria",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Dato estadístico oficial sobre el nivel de actividad del sector agropecuario nacional.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          72
+        ]
+      },
+      "cuando": "2026-10-30T13:20-03:00"
+    },
+    {
+      "id": "cfaa4cce60ce",
+      "rep": {
+        "id": "cfaa4cce60ce",
+        "fuente": "Bolsa de Comercio de Rosario",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
+        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
+        "titulo": "Brasil después del balotaje: el mercado recalibra riesgo, tasas y competitividad",
+        "titulo_norm": "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad",
+        "descripcion": "El resultado electoral brasileño revirtió el rally observado entre ambas vueltas y provocó un fuerte ajuste en acciones, moneda y tasas de interés. El tipo de cambio real bilateral se ubica en mínimos desde mayo del 2025.",
+        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
+        "autor": "",
+        "publicado": "2026-10-29T09:00-03:00",
+        "capturado": "2026-10-30T13:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e6a30012ff22a97e"
+      },
+      "grupo": [
+        {
+          "id": "cfaa4cce60ce",
+          "fuente": "Bolsa de Comercio de Rosario",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
+          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
+          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
+          "titulo": "Brasil después del balotaje: el mercado recalibra riesgo, tasas y competitividad",
+          "titulo_norm": "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad",
+          "descripcion": "El resultado electoral brasileño revirtió el rally observado entre ambas vueltas y provocó un fuerte ajuste en acciones, moneda y tasas de interés. El tipo de cambio real bilateral se ubica en mínimos desde mayo del 2025.",
+          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
+          "autor": "",
+          "publicado": "2026-10-29T09:00-03:00",
+          "capturado": "2026-10-30T13:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e6a30012ff22a97e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 9,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 5,
+        "ai_score": 60,
+        "commercial_score": 60,
+        "subtema": "mercados",
+        "tema": "competitividad brasil",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Análisis de tipo de cambio y riesgo en Brasil que altera la competitividad exportadora de Argentina.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          57,
+          62
+        ]
+      },
+      "cuando": "2026-10-30T13:20-03:00"
+    },
     {
       "id": "53208f004804",
       "rep": {
@@ -39961,73 +40534,6 @@
         "dobles": [
           64,
           68
-        ]
-      },
-      "cuando": "2026-10-30T13:00-03:00"
-    },
-    {
-      "id": "1ef9823ff780",
-      "rep": {
-        "id": "1ef9823ff780",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le/",
-        "canonical_url": "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le",
-        "titulo": "¿Toto mira el pronóstico? Con el “Súper Niño” encima, casi dos de cada tres obras hídricas están frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en Lecaps",
-        "titulo_norm": "toto mira el pronostico con el super nino encima casi dos de cada tres obras hidricas estan frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en lecaps",
-        "descripcion": "¿Qué noticias leerán en el ministerio de Economía? Porque el fenómeno del “Súper Niño” seguramente fue uno de los más anunciados de los últimos años, y aún así, parece que en la cartera que dirige Luis “Toto” Caputo no se enteraron. Y no es una apreciación, son datos: así lo muestra el balance del Fondo […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/03/Cuenca-del-salado.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-30T11:04-03:00",
-        "capturado": "2026-10-30T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d65a0574fc63d9f2"
-      },
-      "grupo": [
-        {
-          "id": "1ef9823ff780",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le/",
-          "canonical_url": "https://bichosdecampo.com/toto-mira-el-pronostico-con-el-super-nino-encima-casi-dos-de-cada-tres-obras-hidricas-estan-frenadas-o-canceladas-y-el-fondo-para-prevenir-inundaciones-duerme-tranquilo-en-le",
-          "titulo": "¿Toto mira el pronóstico? Con el “Súper Niño” encima, casi dos de cada tres obras hídricas están frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en Lecaps",
-          "titulo_norm": "toto mira el pronostico con el super nino encima casi dos de cada tres obras hidricas estan frenadas o canceladas y el fondo para prevenir inundaciones duerme tranquilo en lecaps",
-          "descripcion": "¿Qué noticias leerán en el ministerio de Economía? Porque el fenómeno del “Súper Niño” seguramente fue uno de los más anunciados de los últimos años, y aún así, parece que en la cartera que dirige Luis “Toto” Caputo no se enteraron. Y no es una apreciación, son datos: así lo muestra el balance del Fondo […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/03/Cuenca-del-salado.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-30T11:04-03:00",
-          "capturado": "2026-10-30T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d65a0574fc63d9f2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 71,
-        "commercial_score": 68,
-        "subtema": "agro",
-        "tema": "obras hidricas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Alerta por obras hídricas frenadas frente al fenómeno de El Niño, de alto impacto económico regional.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          70
         ]
       },
       "cuando": "2026-10-30T13:00-03:00"
@@ -40947,8 +41453,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T13:03:35-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T13:24:42-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
