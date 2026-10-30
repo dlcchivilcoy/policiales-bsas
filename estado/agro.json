@@ -19878,6 +19878,52 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "448e15ed5609e9b6": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 58,
+      "subtema": "mercados",
+      "tema": "granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un panorama general de granos que interesa al productor para la toma de decisiones comerciales.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        61
+      ]
+    },
+    "b71bfb405249092f": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 71,
+      "commercial_score": 71,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta fuertemente a los ganaderos de la región con costos extraordinarios por inundación.",
+      "tema_doc": "ganaderia",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21224,7 +21270,10 @@
       "https://agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html": "2026-10-30",
       "https://bichosdecampo.com/para-sumar-valor-en-origen-rio-negro-lanzo-una-linea-de-financiacion-extraordinaria-de-hasta-500-millones-de-pesos-para-la-compra-de-equipamiento-industrial": "2026-10-30",
       "https://bichosdecampo.com/con-mas-de-1-300-hectareas-danadas-salta-declaro-la-emergencia-agropecuaria-por-heladas-en-los-valles-calchaquies-y-los-vinateros-ya-dudan-de-cuanto-podran-cosechar": "2026-10-30",
-      "https://bichosdecampo.com/agroexportados-lucas-vallejo-el-pibe-de-florencio-varela-que-se-crio-sin-haber-visto-nunca-una-oveja-aprendio-a-esquilar-y-conocio-el-mundo-gracias-a-ese-oficio": "2026-10-30"
+      "https://bichosdecampo.com/agroexportados-lucas-vallejo-el-pibe-de-florencio-varela-que-se-crio-sin-haber-visto-nunca-una-oveja-aprendio-a-esquilar-y-conocio-el-mundo-gracias-a-ese-oficio": "2026-10-30",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-30-octubre-2026": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249108-mercados-de-granos-factores-clave-para-la-soja-el-maiz-y-el-trigo.html": "2026-10-30",
+      "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -22569,7 +22618,10 @@
       "puede el maiz encontrar un piso en chicago o todavia falta lo peor": "2026-10-30",
       "para sumar valor en origen rio negro lanzo una linea de financiacion extraordinaria de hasta 500 millones de pesos para la compra de equipamiento industrial": "2026-10-30",
       "con mas de 1 300 hectareas danadas salta declaro la emergencia agropecuaria por heladas en los valles calchaquies y los vinateros ya dudan de cuanto podran cosechar": "2026-10-30",
-      "agroexportados lucas vallejo el pibe de florencio varela que se crio sin haber visto nunca una oveja aprendio a esquilar y conocio el mundo gracias al oficio": "2026-10-30"
+      "agroexportados lucas vallejo el pibe de florencio varela que se crio sin haber visto nunca una oveja aprendio a esquilar y conocio el mundo gracias al oficio": "2026-10-30",
+      "dolar blue a cuanto cotizan hoy en cordoba 30 octubre 2026": "2026-10-30",
+      "mercados de granos factores clave para la soja el maiz y el trigo": "2026-10-30",
+      "el costo oculto de la crecida en santa fe productores pagan hasta el doble de alquiler por campos para resguardar la hacienda mientras otros solo pueden conformarse con las banquinas": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23914,7 +23966,10 @@
       "d7c189172f2b7dec": "2026-10-30",
       "1685031e229e27b4": "2026-10-30",
       "92157889a62505de": "2026-10-30",
-      "7947a92d347131e1": "2026-10-30"
+      "7947a92d347131e1": "2026-10-30",
+      "dc8dfdb559cdf615": "2026-10-30",
+      "448e15ed5609e9b6": "2026-10-30",
+      "b71bfb405249092f": "2026-10-30"
     }
   },
   "elegidas": [
@@ -39106,9 +39161,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_07cc9c239ba8_portada.jpg"
+    },
+    {
+      "id": "82f7096a0b59",
+      "cuando": "2026-10-30T10:20-03:00",
+      "titulo_original": "Una propuesta de Martín Redrado: bajar retenciones y formalizar el empleo rural pueden ir de la mano",
+      "descripcion": "En un encuentro organizado por UATRE y VISEC, el ex presidente del Banco Central presentó un estudio que asegura que la formalización de los trabajadores rurales compensa el costo fiscal de eliminar las retenciones, que representa 0,7% del PIB.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano/",
+      "titular": "Redrado propone suprimir retenciones mediante empleo rural formal",
+      "volanta": "Economía",
+      "score": {
+        "impacto_economico": 20,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 81,
+        "commercial_score": 90,
+        "subtema": "mercados",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Propuesta de alto impacto político y económico sobre retenciones y empleo rural.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "19c5c684-4724-4bfa-b016-520159ebf965",
+          "slug": "martin-redrado-propuso-compensar-la-baja-de-retenciones-con-2d4cc4",
+          "url": "https://www.diariolacampaña.com.ar/n/martin-redrado-propuso-compensar-la-baja-de-retenciones-con-2d4cc4",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1638303334341530",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18137386039635114",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_82f7096a0b59_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7b01c3ba2920",
+      "rep": {
+        "id": "7b01c3ba2920",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas/",
+        "canonical_url": "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas",
+        "titulo": "El costo oculto de la crecida: En Santa Fe, productores pagan hasta el doble de alquiler por campos para resguardar la hacienda, mientras otros solo pueden conformarse con las banquinas",
+        "titulo_norm": "el costo oculto de la crecida en santa fe productores pagan hasta el doble de alquiler por campos para resguardar la hacienda mientras otros solo pueden conformarse con las banquinas",
+        "descripcion": "En el noreste de Santa Fe, la crecida del río Paraná ya obligó a los productores ganaderos a evacuar sus animales de las islas y buscar campos más altos para evitar que queden bajo el agua. Aunque la anticipación permitió que muchos trasladaran la hacienda a tiempo, los costos de conseguir campos se dispararon. Los […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-28-at-10.47.15-e1793359621306.jpeg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-10-30T10:18-03:00",
+        "capturado": "2026-10-30T10:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b71bfb405249092f"
+      },
+      "grupo": [
+        {
+          "id": "7b01c3ba2920",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas/",
+          "canonical_url": "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas",
+          "titulo": "El costo oculto de la crecida: En Santa Fe, productores pagan hasta el doble de alquiler por campos para resguardar la hacienda, mientras otros solo pueden conformarse con las banquinas",
+          "titulo_norm": "el costo oculto de la crecida en santa fe productores pagan hasta el doble de alquiler por campos para resguardar la hacienda mientras otros solo pueden conformarse con las banquinas",
+          "descripcion": "En el noreste de Santa Fe, la crecida del río Paraná ya obligó a los productores ganaderos a evacuar sus animales de las islas y buscar campos más altos para evitar que queden bajo el agua. Aunque la anticipación permitió que muchos trasladaran la hacienda a tiempo, los costos de conseguir campos se dispararon. Los […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-28-at-10.47.15-e1793359621306.jpeg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-10-30T10:18-03:00",
+          "capturado": "2026-10-30T10:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b71bfb405249092f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "ganaderia",
+        "tema": "hacienda",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta fuertemente a los ganaderos de la región con costos extraordinarios por inundación.",
+        "tema_doc": "ganaderia",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T10:20-03:00"
+    },
     {
       "id": "616a74dd2bb7",
       "rep": {
@@ -39168,69 +39340,6 @@
         "tema_doc": "campana",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T10:00-03:00"
-    },
-    {
-      "id": "82f7096a0b59",
-      "rep": {
-        "id": "82f7096a0b59",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano/",
-        "canonical_url": "https://infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano",
-        "titulo": "Una propuesta de Martín Redrado: bajar retenciones y formalizar el empleo rural pueden ir de la mano",
-        "titulo_norm": "una propuesta de martin redrado bajar retenciones y formalizar el empleo rural pueden ir de la mano",
-        "descripcion": "En un encuentro organizado por UATRE y VISEC, el ex presidente del Banco Central presentó un estudio que asegura que la formalización de los trabajadores rurales compensa el costo fiscal de eliminar las retenciones, que representa 0,7% del PIB.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-30-a-las-12.15.24-a.-m.png",
-        "autor": "Manuela Herzel",
-        "publicado": "2026-10-30T09:18-03:00",
-        "capturado": "2026-10-30T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fe8cbea70e1efb35"
-      },
-      "grupo": [
-        {
-          "id": "82f7096a0b59",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano/",
-          "canonical_url": "https://infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano",
-          "titulo": "Una propuesta de Martín Redrado: bajar retenciones y formalizar el empleo rural pueden ir de la mano",
-          "titulo_norm": "una propuesta de martin redrado bajar retenciones y formalizar el empleo rural pueden ir de la mano",
-          "descripcion": "En un encuentro organizado por UATRE y VISEC, el ex presidente del Banco Central presentó un estudio que asegura que la formalización de los trabajadores rurales compensa el costo fiscal de eliminar las retenciones, que representa 0,7% del PIB.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-30-a-las-12.15.24-a.-m.png",
-          "autor": "Manuela Herzel",
-          "publicado": "2026-10-30T09:18-03:00",
-          "capturado": "2026-10-30T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fe8cbea70e1efb35"
-        }
-      ],
-      "score": {
-        "impacto_economico": 20,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 10,
-        "potencial_comercial": 9,
-        "ai_score": 81,
-        "commercial_score": 90,
-        "subtema": "mercados",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Propuesta de alto impacto político y económico sobre retenciones y empleo rural.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T10:00-03:00"
@@ -39957,8 +40066,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T10:03:49-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T10:23:05-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
