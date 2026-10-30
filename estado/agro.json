@@ -19740,6 +19740,144 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "98a442bf840dd940": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy útil para planificar fechas de siembra y evitar pérdidas totales en la campaña.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fe8cbea70e1efb35": {
+      "impacto_economico": 20,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 9,
+      "ai_score": 81,
+      "commercial_score": 90,
+      "subtema": "mercados",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Propuesta de alto impacto político y económico sobre retenciones y empleo rural.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d7c189172f2b7dec": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 9,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 68,
+      "commercial_score": 76,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Relevante para definir comercialización y precios futuros del cereal.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        74
+      ]
+    },
+    "1685031e229e27b4": {
+      "impacto_economico": 11,
+      "interes_productores": 6,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 8,
+      "ai_score": 52,
+      "commercial_score": 66,
+      "subtema": "empresas",
+      "tema": "financiamiento",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Financiamiento provincial atractivo pero de alcance geográfico limitado fuera de la región.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        51
+      ]
+    },
+    "92157889a62505de": {
+      "impacto_economico": 11,
+      "interes_productores": 7,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 48,
+      "commercial_score": 58,
+      "subtema": "agro",
+      "tema": "heladas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacto fuerte en economías regionales específicas pero menor injerencia en zona núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        46
+      ]
+    },
+    "7947a92d347131e1": {
+      "impacto_economico": 4,
+      "interes_productores": 5,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 9,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 45,
+      "commercial_score": 55,
+      "subtema": "ganaderia",
+      "tema": "esquila",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Historia humana inspiradora y con excelente potencial para video corto, baja utilidad técnica.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21079,7 +21217,14 @@
       "https://agrositio.com.ar/noticia/249101-el-algodon-con-semilla-gensus-supero-en-longitud-y-resistencia-las-expectativas-de-la-industria-textil.html": "2026-10-30",
       "https://agrositio.com.ar/noticia/249098-ganaderia-neuquina-habra-regulaciones-para-diferenciar-perros-salvajes-de-domesticos.html": "2026-10-30",
       "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html": "2026-10-30",
-      "https://agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html": "2026-10-30"
+      "https://agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html": "2026-10-30",
+      "https://todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos": "2026-10-30",
+      "https://infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano": "2026-10-30",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-30-octubre-2026": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html": "2026-10-30",
+      "https://bichosdecampo.com/para-sumar-valor-en-origen-rio-negro-lanzo-una-linea-de-financiacion-extraordinaria-de-hasta-500-millones-de-pesos-para-la-compra-de-equipamiento-industrial": "2026-10-30",
+      "https://bichosdecampo.com/con-mas-de-1-300-hectareas-danadas-salta-declaro-la-emergencia-agropecuaria-por-heladas-en-los-valles-calchaquies-y-los-vinateros-ya-dudan-de-cuanto-podran-cosechar": "2026-10-30",
+      "https://bichosdecampo.com/agroexportados-lucas-vallejo-el-pibe-de-florencio-varela-que-se-crio-sin-haber-visto-nunca-una-oveja-aprendio-a-esquilar-y-conocio-el-mundo-gracias-a-ese-oficio": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -22417,7 +22562,14 @@
       "el algodon con semilla gensus supero en longitud y resistencia las expectativas de la industria textil": "2026-10-30",
       "ganaderia neuquina habra regulaciones para diferenciar perros salvajes de domesticos": "2026-10-30",
       "las exportaciones agroindustriales que argentina podria haber tenido": "2026-10-30",
-      "bull suma 140 tractores a su oferta y acelera la construccion de su planta de ensamblado en carmen de areco": "2026-10-30"
+      "bull suma 140 tractores a su oferta y acelera la construccion de su planta de ensamblado en carmen de areco": "2026-10-30",
+      "demuestran que las siembras tardias de girasol pueden disminuir hasta un 100 los rendimientos": "2026-10-30",
+      "una propuesta de martin redrado bajar retenciones y formalizar el empleo rural pueden ir de la mano": "2026-10-30",
+      "clima hoy en neuquen el pronostico del tiempo para este 30 octubre 2026": "2026-10-30",
+      "puede el maiz encontrar un piso en chicago o todavia falta lo peor": "2026-10-30",
+      "para sumar valor en origen rio negro lanzo una linea de financiacion extraordinaria de hasta 500 millones de pesos para la compra de equipamiento industrial": "2026-10-30",
+      "con mas de 1 300 hectareas danadas salta declaro la emergencia agropecuaria por heladas en los valles calchaquies y los vinateros ya dudan de cuanto podran cosechar": "2026-10-30",
+      "agroexportados lucas vallejo el pibe de florencio varela que se crio sin haber visto nunca una oveja aprendio a esquilar y conocio el mundo gracias al oficio": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23755,7 +23907,14 @@
       "96eee6f805c316e9": "2026-10-30",
       "a556d2646556782a": "2026-10-30",
       "d5a26226807d3644": "2026-10-30",
-      "d2129e6f63cb8209": "2026-10-30"
+      "d2129e6f63cb8209": "2026-10-30",
+      "98a442bf840dd940": "2026-10-30",
+      "fe8cbea70e1efb35": "2026-10-30",
+      "8c4e640f9cb21e9d": "2026-10-30",
+      "d7c189172f2b7dec": "2026-10-30",
+      "1685031e229e27b4": "2026-10-30",
+      "92157889a62505de": "2026-10-30",
+      "7947a92d347131e1": "2026-10-30"
     }
   },
   "elegidas": [
@@ -38886,9 +39045,263 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_77e00d4b3bee_portada.jpg"
+    },
+    {
+      "id": "07cc9c239ba8",
+      "cuando": "2026-10-30T10:00-03:00",
+      "titulo_original": "¿Nos gobierna la inteligencia artificial? No sabemos bien, pero mientras Sturzenegger usa ese método para desregular importantes políticas agropecuarias",
+      "descripcion": "Un decreto firmado durante la dictadura de Juan Carlos Onganía, hace casi seis décadas, tiene unos 3.000 artículos y regula cuestiones centrales de la producción de alimentos de origen animal en la Argentina. Federico Sturzenegger contó recientemente que el Gobierno recurrió a tres agentes de inteli",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias/",
+      "titular": "Uso de inteligencia artificial para simplificar el decreto cárnico de 1968",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 84,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "desregulacion ia",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la producción animal nacional por la revisión masiva de normativas históricas mediante inteligencia artificial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "D1WbpawYiG8",
+          "url": "https://youtube.com/shorts/D1WbpawYiG8",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "712bd0c5-fb2e-4cac-a7d4-dcf12850c4c6",
+          "slug": "el-gobierno-uso-inteligencia-artificial-para-simplificar-un-70380a",
+          "url": "https://www.diariolacampaña.com.ar/n/el-gobierno-uso-inteligencia-artificial-para-simplificar-un-70380a",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1618635353141531",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18092527706235984",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_07cc9c239ba8_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "616a74dd2bb7",
+      "rep": {
+        "id": "616a74dd2bb7",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos/",
+        "canonical_url": "https://todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos",
+        "titulo": "Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos",
+        "titulo_norm": "demuestran que las siembras tardias de girasol pueden disminuir hasta un 100 los rendimientos",
+        "descripcion": "Ensayos realizados por INTA mostraron que el rendimiento y el contenido de aceite de girasol varían según la fecha de siembra. Los rendimientos cayeron casi 100% si se comparan los extremos de períodos de siembra analizados. La entrada Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-10-30T09:57-03:00",
+        "capturado": "2026-10-30T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "98a442bf840dd940"
+      },
+      "grupo": [
+        {
+          "id": "616a74dd2bb7",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos/",
+          "canonical_url": "https://todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos",
+          "titulo": "Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos",
+          "titulo_norm": "demuestran que las siembras tardias de girasol pueden disminuir hasta un 100 los rendimientos",
+          "descripcion": "Ensayos realizados por INTA mostraron que el rendimiento y el contenido de aceite de girasol varían según la fecha de siembra. Los rendimientos cayeron casi 100% si se comparan los extremos de períodos de siembra analizados. La entrada Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-10-30T09:57-03:00",
+          "capturado": "2026-10-30T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "98a442bf840dd940"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "girasol",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para planificar fechas de siembra y evitar pérdidas totales en la campaña.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T10:00-03:00"
+    },
+    {
+      "id": "82f7096a0b59",
+      "rep": {
+        "id": "82f7096a0b59",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano/",
+        "canonical_url": "https://infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano",
+        "titulo": "Una propuesta de Martín Redrado: bajar retenciones y formalizar el empleo rural pueden ir de la mano",
+        "titulo_norm": "una propuesta de martin redrado bajar retenciones y formalizar el empleo rural pueden ir de la mano",
+        "descripcion": "En un encuentro organizado por UATRE y VISEC, el ex presidente del Banco Central presentó un estudio que asegura que la formalización de los trabajadores rurales compensa el costo fiscal de eliminar las retenciones, que representa 0,7% del PIB.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-30-a-las-12.15.24-a.-m.png",
+        "autor": "Manuela Herzel",
+        "publicado": "2026-10-30T09:18-03:00",
+        "capturado": "2026-10-30T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fe8cbea70e1efb35"
+      },
+      "grupo": [
+        {
+          "id": "82f7096a0b59",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano/",
+          "canonical_url": "https://infocampo.com.ar/una-propuesta-de-martin-redrado-bajar-retenciones-y-formalizar-el-empleo-rural-pueden-ir-de-la-mano",
+          "titulo": "Una propuesta de Martín Redrado: bajar retenciones y formalizar el empleo rural pueden ir de la mano",
+          "titulo_norm": "una propuesta de martin redrado bajar retenciones y formalizar el empleo rural pueden ir de la mano",
+          "descripcion": "En un encuentro organizado por UATRE y VISEC, el ex presidente del Banco Central presentó un estudio que asegura que la formalización de los trabajadores rurales compensa el costo fiscal de eliminar las retenciones, que representa 0,7% del PIB.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Captura-de-pantalla-2026-10-30-a-las-12.15.24-a.-m.png",
+          "autor": "Manuela Herzel",
+          "publicado": "2026-10-30T09:18-03:00",
+          "capturado": "2026-10-30T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fe8cbea70e1efb35"
+        }
+      ],
+      "score": {
+        "impacto_economico": 20,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 81,
+        "commercial_score": 90,
+        "subtema": "mercados",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Propuesta de alto impacto político y económico sobre retenciones y empleo rural.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T10:00-03:00"
+    },
+    {
+      "id": "f2caeba95f7b",
+      "rep": {
+        "id": "f2caeba95f7b",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html",
+        "titulo": "¿Puede el maíz encontrar un piso en Chicago o todavía falta lo peor?",
+        "titulo_norm": "puede el maiz encontrar un piso en chicago o todavia falta lo peor",
+        "descripcion": "El mercado enfrenta una contradicción: crecen las expectativas de posibles recortes en los rindes de Estados Unidos, pero la abundante oferta física sigue presionando los precios. Las bases se debilitan, los elevadores están colmados y las exportaciones no alcanzan el ritmo necesario para cumplir las proyecciones del USDA....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249107_51598828.jpg",
+        "autor": "info@agrositio.com (Esteban Moscariello)",
+        "publicado": "2026-10-30T09:14-03:00",
+        "capturado": "2026-10-30T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d7c189172f2b7dec"
+      },
+      "grupo": [
+        {
+          "id": "f2caeba95f7b",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249107-puede-el-maiz-encontrar-un-piso-en-chicago-o-todavia-falta-lo-peor.html",
+          "titulo": "¿Puede el maíz encontrar un piso en Chicago o todavía falta lo peor?",
+          "titulo_norm": "puede el maiz encontrar un piso en chicago o todavia falta lo peor",
+          "descripcion": "El mercado enfrenta una contradicción: crecen las expectativas de posibles recortes en los rindes de Estados Unidos, pero la abundante oferta física sigue presionando los precios. Las bases se debilitan, los elevadores están colmados y las exportaciones no alcanzan el ritmo necesario para cumplir las proyecciones del USDA....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249107_51598828.jpg",
+          "autor": "info@agrositio.com (Esteban Moscariello)",
+          "publicado": "2026-10-30T09:14-03:00",
+          "capturado": "2026-10-30T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d7c189172f2b7dec"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 9,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 68,
+        "commercial_score": 76,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Relevante para definir comercialización y precios futuros del cereal.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          74
+        ]
+      },
+      "cuando": "2026-10-30T10:00-03:00"
+    },
     {
       "id": "52d6d526094c",
       "rep": {
@@ -39081,69 +39494,6 @@
         ]
       },
       "cuando": "2026-10-30T07:02-03:00"
-    },
-    {
-      "id": "07cc9c239ba8",
-      "rep": {
-        "id": "07cc9c239ba8",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias/",
-        "canonical_url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias",
-        "titulo": "¿Nos gobierna la inteligencia artificial? No sabemos bien, pero mientras Sturzenegger usa ese método para desregular importantes políticas agropecuarias",
-        "titulo_norm": "nos gobierna la inteligencia artificial no sabemos bien pero mientras sturzenegger usa ese metodo para desregular importantes politicas agropecuarias",
-        "descripcion": "Un decreto firmado durante la dictadura de Juan Carlos Onganía, hace casi seis décadas, tiene unos 3.000 artículos y regula cuestiones centrales de la producción de alimentos de origen animal en la Argentina. Federico Sturzenegger contó recientemente que el Gobierno recurrió a tres agentes de inteligencia artificial para analizar semejante cuerpo normativo y avanzar con […]",
-        "imagen_url": "",
-        "autor": "Diego Mañas",
-        "publicado": "2026-10-29T17:59-03:00",
-        "capturado": "2026-10-29T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "75ea1bcb4561a240"
-      },
-      "grupo": [
-        {
-          "id": "07cc9c239ba8",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias/",
-          "canonical_url": "https://bichosdecampo.com/nos-gobierna-la-inteligencia-artificial-no-sabemos-bien-pero-mientras-sturze-usa-ese-metodo-para-desregular-importantes-politicas-agropecuarias",
-          "titulo": "¿Nos gobierna la inteligencia artificial? No sabemos bien, pero mientras Sturzenegger usa ese método para desregular importantes políticas agropecuarias",
-          "titulo_norm": "nos gobierna la inteligencia artificial no sabemos bien pero mientras sturzenegger usa ese metodo para desregular importantes politicas agropecuarias",
-          "descripcion": "Un decreto firmado durante la dictadura de Juan Carlos Onganía, hace casi seis décadas, tiene unos 3.000 artículos y regula cuestiones centrales de la producción de alimentos de origen animal en la Argentina. Federico Sturzenegger contó recientemente que el Gobierno recurrió a tres agentes de inteligencia artificial para analizar semejante cuerpo normativo y avanzar con […]",
-          "imagen_url": "",
-          "autor": "Diego Mañas",
-          "publicado": "2026-10-29T17:59-03:00",
-          "capturado": "2026-10-29T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "75ea1bcb4561a240"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 84,
-        "commercial_score": 75,
-        "subtema": "agtech",
-        "tema": "desregulacion ia",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta de lleno en la producción animal nacional por la revisión masiva de normativas históricas mediante inteligencia artificial.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-29T18:00-03:00"
     },
     {
       "id": "8b0e6ca33af9",
@@ -39607,8 +39957,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T08:22:55-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-30T10:03:49-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
