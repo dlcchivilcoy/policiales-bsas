@@ -940,6 +940,9 @@ def pasada(publicar: bool, cuantos: int = 0, solo_carrusel: bool = False, espera
             # v12 (25/10/2026, noche): 5 virales más, como Short + web, de la misma fila de virales.
             if modo == "web" and topes.get(AG.VIRALES_SHORT):
                 colas[AG.VIRALES_SHORT] = list(colas.get("virales") or [])
+            # v14 (30/10/2026): ANSES, jubilaciones y dólar, las primeras de la web, con firma al pie.
+            if modo == "web" and topes.get(AG.SERVICIOS):
+                colas[AG.SERVICIOS] = cola_servicios(generales, notas, ahora.timestamp())
             colas = {c: l for c, l in colas.items() if topes.get(c)}
             # «Mundo» (20/10/2026): solo internacionales con algo policial o de violencia/conflicto.
             if "internacionales" in colas and modo != "web":
@@ -1117,7 +1120,10 @@ def _registro(pieza: dict, res: dict, dia: str, turno: str) -> dict:
             **res}
 
 
-NOMBRE_CATEGORIA = {"": "generales", AG.VIRALES_SHORT: "virales con Short"}     # para el informe
+NOMBRE_CATEGORIA = {"": "generales", AG.VIRALES_SHORT: "virales con Short",
+                    AG.SERVICIOS: "servicio (ANSES, jubilaciones, dólar)"}     # para el informe
+
+
 def bloqueada_por_ia(e: Exception) -> bool:
     """¿Gemini se negó a redactar la nota (contenido bloqueado)? Eso es un descarte de la nota, no una falla
     de la corrida (26/10/2026: una sola así dejó en rojo la de las 4, que había subido 29 notas)."""
@@ -1135,11 +1141,52 @@ def _descartar_bloqueada(c: dict, mem: dict, publicar: bool, ahora: datetime, in
 INTENTOS_POR_NOTA = 3       # candidatas que se prueban, como mucho, por cada nota que se busca
 
 
+def cola_servicios(generales: list, notas: list, ahora_ts: float) -> list:
+    """Las candidatas de servicio (v14): las generales que hablan de ANSES, jubilaciones o dólar y, además,
+    las de Infobae que el filtro de Chivilcoy deja afuera por ser «de todos los días» («ANSES: quiénes cobran
+    hoy», «El dólar bajó en el mercado local»: medido el 30/10/2026, 3 candidatas contra 7 en bruto), que son
+    justo las que Google lleva a Discover. Una por tema; primero las de más puntos y después las más nuevas.
+    Nunca la sección policiales de Infobae."""
+    salida = [c for c in generales if AG.es_servicio(c)]
+    urls = {c["url"] for c in salida}
+    sueltas = [dict(n, puntos_base=0, nivel="nacional", motivos=["servicio"])
+               for n in notas or []
+               if AG.es_servicio(n) and n.get("url") not in urls and "/policiales/" not in (n.get("url") or "")
+               and ahora_ts - (n.get("fecha") or 0) <= F.HORAS_VENTANA * 3600]
+    for grupo in F.agrupar(sueltas):
+        mejor = max(grupo, key=lambda x: x.get("fecha") or 0)
+        salida.append(dict(mejor, puntos=0, cobertura=len(grupo), tema=sorted(F.palabras_tema(mejor)), otras=[]))
+    return sorted(salida, key=lambda c: (-(c.get("puntos") or 0), -(c.get("fecha") or 0)))
+
+
+FIRMANTES_SERVICIO = ("Matías Zucchi", "Eduardo Beltramo")
+
+
+def _firma_servicio(mem: dict, publicar: bool) -> str:
+    """El que firma la próxima nota de servicio: uno y otro, intercalados (v14, 30/10/2026). El último que
+    firmó queda en la memoria, así se alterna también de un día al otro."""
+    ultimo = mem.get("firma_servicio") or FIRMANTES_SERVICIO[-1]
+    i = FIRMANTES_SERVICIO.index(ultimo) if ultimo in FIRMANTES_SERVICIO else -1
+    siguiente = FIRMANTES_SERVICIO[(i + 1) % len(FIRMANTES_SERVICIO)]
+    if publicar:
+        mem["firma_servicio"] = siguiente
+    return siguiente
+
+
+def firmar(pieza: dict, nombre: str) -> None:
+    """La firma al pie del cuerpo de la web: «Por Matías Zucchi.». diario_web (src/lib/autores.js) la lee y
+    pone al autor arriba, con su página, en el NewsArticle y en la meta author."""
+    web = pieza.setdefault("web", {})
+    web["cuerpo"] = (web.get("cuerpo") or "").rstrip() + f"\n\nPor {nombre}."
+    pieza["firma"] = nombre
+
+
 def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: datetime, dia: str, redactar, leer,
-                   informe: dict, contadas: list, con_short: bool = False):
+                   informe: dict, contadas: list, con_short: bool = False, con_firma: bool = False):
     """Arma y publica (solo en la web) una candidata. Devuelve el registro, o None si no salió.
     con_short (v12): además, el Short de YouTube con su video (la nota de la web lo lleva adentro); sin video
-    no sale, y queda para las virales solo web."""
+    no sale, y queda para las virales solo web. con_firma (v14): la nota de servicio lleva la firma
+    intercalada de Matías Zucchi o Eduardo Beltramo."""
     try:
         pieza = armar(c, carpeta, redactar, leer, solo_web=not con_short)
     except Exception as e:                           # noqa: BLE001 — la IA: se sigue con otra
@@ -1155,12 +1202,16 @@ def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: dat
             mem["descartadas"][c["url"]] = {"motivo": pieza["guion"]["motivo"],
                                             "cuando": ahora.isoformat(timespec="seconds")}
         return None
+    if con_firma:
+        firmar(pieza, _firma_servicio(mem, publicar))
     if con_short:
         con_youtube = _shorts_hoy(mem, dia) < PUB.tope_youtube() if publicar else True
         res = publicar_pieza(pieza, False, publicar, con_youtube, instagram=False)
     else:
         res = publicar_solo_web(pieza, publicar)
     registro = _registro(pieza, res, dia, _ahora().strftime("%H:%M"))
+    if pieza.get("firma"):
+        registro["firma"] = pieza["firma"]
     informe["piezas"].append(registro)
     for red, r in res.items():
         if r.get("estado") == "fallo":
@@ -1184,7 +1235,9 @@ def corrida_web(colas: dict, topes: dict, mem: dict, publicar: bool, carpeta: Pa
             paginas[url] = dict((leer or CAT.leer_pagina)(url) or {})
         return paginas[url]
 
-    primero = (AG.VIRALES_SHORT,)                    # las virales con Short, antes que las solo web
+    # Las de servicio primero (v14: son las que Google lleva a Discover) y después las virales con Short,
+    # antes que las solo web.
+    primero = (AG.SERVICIOS, AG.VIRALES_SHORT)
     for cat in ([c for c in primero + tuple(AG.WEB) if c in topes]
                 + [c for c in topes if c not in AG.WEB and c not in primero]):
         hechas = intentos = 0
@@ -1195,7 +1248,7 @@ def corrida_web(colas: dict, topes: dict, mem: dict, publicar: bool, carpeta: Pa
                 continue
             intentos += 1
             if _una_pieza_web(c, mem, publicar, carpeta, ahora, dia, redactar, leer_una, informe, contadas,
-                              con_short=cat == AG.VIRALES_SHORT):
+                              con_short=cat == AG.VIRALES_SHORT, con_firma=cat == AG.SERVICIOS):
                 hechas += 1
         informe.setdefault("por_categoria", {})[cat] = hechas
 

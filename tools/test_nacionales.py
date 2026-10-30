@@ -875,7 +875,7 @@ os.environ["NAC_TODO_REEL"] = "1"
 _lun = lambda h, m=0: datetime(2026, 10, 19, h, m, tzinfo=AR)      # noqa: E731 — lunes
 _sab = lambda h, m=0: datetime(2026, 10, 24, h, m, tzinfo=AR)      # noqa: E731 — sábado
 _WEB = {"politica": 5, "economia": 5, "sociedad": 5, "espectaculos": 5, "cine_series": 5, "tecnologia_ia": 5,
-        "internacionales": 5, "virales": 5, "": 10, "virales_short": 5}
+        "internacionales": 5, "virales": 5, "": 10, "virales_short": 5, "servicios": 4}
 chequear("agenda v8: a las 4, 5 de cada categoría y las 10 generales del día para la web (también el sábado)",
          AGE.topes(_lun(4)) == AGE.topes(_sab(4)) == _WEB and AGE.modo(_lun(4)) == AGE.modo(_sab(4)) == "web")
 chequear("agenda v8: a las 22, el carrusel con las 10 generales del día (también el sábado)",
@@ -1156,6 +1156,61 @@ chequear("cercanía: peajes del Acceso Oeste, paro de SUTEBA y Cuenta DNI pasan 
          > _pt("Tensa negociación en el Senado por promesas incumplidas de la Casa Rosada", "politica") + 20)
 chequear("cercanía: lo de afuera sigue afuera aunque nombre un tema cercano",
          _pt("Paro de transporte en Brasil: protestas en San Pablo", "politica") == 0)
+
+# v14 (30/10/2026): notas de servicio (ANSES, jubilaciones, dólar) primeras en la web, con firma intercalada.
+for _t in ("ANSES: cuándo cobran los jubilados en noviembre", "Dólar hoy: a cuánto cotiza este jueves",
+           "Aguinaldo de diciembre: quiénes lo cobran", "Jubilados: el haber mínimo sube en noviembre",
+           "Plazo fijo: cuánto paga el banco por $1.000.000"):
+    chequear(f"servicio: «{_t}»", AGE.es_servicio({"titulo": _t}))
+for _t in ("Le robaron los dólares a un jubilado en Mercedes", "Milei habló en el Congreso",
+           "Boca ganó el clásico"):
+    chequear(f"no es servicio: «{_t}»", not AGE.es_servicio({"titulo": _t}))
+os.environ["NAC_WEB_SERVICIOS"] = "0"
+chequear("NAC_WEB_SERVICIOS=0 apaga la fila de servicio", "servicios" not in AGE.topes(_lun(4)))
+os.environ.pop("NAC_WEB_SERVICIOS")
+
+_m_f = {}
+_firmas = [PA._firma_servicio(_m_f, True) for _ in range(5)]
+chequear("firma intercalada: Matías, Eduardo, Matías…",
+         _firmas == ["Matías Zucchi", "Eduardo Beltramo", "Matías Zucchi", "Eduardo Beltramo", "Matías Zucchi"])
+_m_s = {"firma_servicio": "Matías Zucchi"}
+chequear("simulando no se gasta el turno de la firma",
+         PA._firma_servicio(_m_s, False) == "Eduardo Beltramo" and _m_s["firma_servicio"] == "Matías Zucchi")
+_pz = {"web": {"titulo": "ANSES: cuándo cobran", "cuerpo": "Primer párrafo.\n\nSegundo."}}
+PA.firmar(_pz, "Eduardo Beltramo")
+chequear("la firma va al pie del cuerpo de la web (la lee diario_web)",
+         _pz["web"]["cuerpo"].endswith("\n\nPor Eduardo Beltramo.") and _pz["firma"] == "Eduardo Beltramo")
+
+_vistas = []
+_orig_upw, _orig_elegir = PA._una_pieza_web, PA.elegir
+PA._una_pieza_web = lambda c, *a, **k: _vistas.append((c["titulo"], k.get("con_firma"), k.get("con_short"))) or {}
+PA.elegir = lambda *a, **k: True
+try:
+    PA.corrida_web({"servicios": [{"titulo": "ANSES paga", "url": "s1"}, {"titulo": "Dólar hoy", "url": "s2"}],
+                    "politica": [{"titulo": "Política", "url": "p1"}],
+                    "virales_short": [{"titulo": "Viral", "url": "v1"}]},
+                   {"servicios": 2, "politica": 1, "virales_short": 1}, {}, False, Path("."), _lun(4), "x",
+                   None, lambda u: {}, {})
+finally:
+    PA._una_pieza_web, PA.elegir = _orig_upw, _orig_elegir
+chequear("corrida web: las de servicio salen PRIMERAS y firmadas; las demás sin firma",
+         _vistas[:2] == [("ANSES paga", True, False), ("Dólar hoy", True, False)]
+         and all(not f for _t, f, _s in _vistas[2:]))
+_ts = _lun(4).timestamp()
+_cola_s = PA.cola_servicios(
+    [{"titulo": "Jubilaciones: cuánto cobran en noviembre", "url": "g1", "puntos": 90, "fecha": _ts - 3600},
+     {"titulo": "Milei viajó a Brasil", "url": "g2", "puntos": 99, "fecha": _ts - 3600}],
+    [{"titulo": "ANSES: quiénes cobran hoy, lunes 19 de octubre", "url": "https://www.infobae.com/economia/a/",
+      "fecha": _ts - 1800},
+     {"titulo": "Dólar hoy: a cuánto cotiza", "url": "https://www.infobae.com/economia/b/", "fecha": _ts - 600},
+     {"titulo": "Robaron dólares de una casa", "url": "https://www.infobae.com/sociedad/policiales/c/",
+      "fecha": _ts - 600},
+     {"titulo": "ANSES: quiénes cobran hoy, jueves 15 de octubre", "url": "https://www.infobae.com/economia/v/",
+      "fecha": _ts - 4 * 86400}], _ts)
+chequear("cola de servicio: las generales de servicio primero y las «de todos los días» de Infobae después "
+         "(sin policiales ni lo viejo)",
+         [c["url"] for c in _cola_s] == ["g1", "https://www.infobae.com/economia/b/",
+                                          "https://www.infobae.com/economia/a/"])
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

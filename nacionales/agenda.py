@@ -88,6 +88,12 @@ WEB_GENERALES = 10
 # solo web, así el Short se lleva las mejores con video y la web completa con las que siguen.
 VIRALES_SHORT = "virales_short"
 WEB_SHORTS = 5
+# 30/10/2026 (v14, informe de Google Noticias y Discover: 657 de las 994 visitas de Discover de octubre
+# vinieron de UNA nota de ANSES): «aumentá las notas de ANSES, jubilaciones y dólar, firmadas
+# intercaladamente por Matías Zucchi y Eduardo Beltramo». Van PRIMERAS en la web de las 4, de las generales
+# que hablan de eso (`es_servicio`), y cada una lleva la firma al pie (pasada._firma_servicio).
+SERVICIOS = "servicios"
+WEB_SERVICIOS = 4
 CARRUSEL_NOTAS = 10
 # Lo que NO es de alcance nacional (nacionales/filtro.py, «nivel»): lo local, la región y la provincia.
 NIVELES_NO_NACIONALES = {"Chivilcoy", "directa", "región", "provincia"}
@@ -149,6 +155,21 @@ def es_mundo(c: dict) -> bool:
     return bool(_MUNDO.search(texto))
 
 
+# Servicio (v14): lo que la gente busca para cobrar o cambiar plata. En el TÍTULO, que es lo que dice de
+# qué se trata la nota (una nota política que nombra de pasada a los jubilados no es de servicio).
+_SERVICIO = re.compile(
+    r"\b(anses|jubilaci[oó]n\w*|jubilad[oa]s?|haber(es)? m[ií]nimos?|aguinaldo|auh|asignaci[oó]n universal|"
+    r"asignaciones familiares|pami|pensi[oó]n\w*|pensionad[oa]s?|calendario de pagos?|fechas? de cobro|"
+    r"cu[aá]ndo cobr\w*|bono para jubilados|d[oó]lar\w*|cotizaci[oó]n\w*|plazo fijo)\b", re.I)
+
+
+def es_servicio(c: dict) -> bool:
+    """¿Una nota de servicio (ANSES, jubilaciones, dólar)? Nunca un policial («le robaron los dólares»)."""
+    titulo = str(c.get("titulo") or "")
+    return bool(_SERVICIO.search(titulo)) and not re.search(
+        r"\b(rob\w*|asalt\w*|estaf\w*|detenid\w*|polic[ií]\w*|crimen|muri[oó]|muert\w*)\b", titulo, re.I)
+
+
 def _entero(nombre: str, defecto: int) -> int:
     try:
         return max(0, int(os.environ.get(nombre) or defecto))
@@ -208,6 +229,9 @@ def topes(inicio: datetime) -> dict:
         n = _entero("NAC_SHORT_VIRALES", WEB_SHORTS)
         if n:
             salida[VIRALES_SHORT] = n
+        n = _entero("NAC_WEB_SERVICIOS", WEB_SERVICIOS)
+        if n:
+            salida[SERVICIOS] = n
         return salida
     if modo(inicio) == "carrusel":
         return {GENERALES: min(10, _entero("NAC_CARRUSEL_NOTAS", CARRUSEL_NOTAS))}
