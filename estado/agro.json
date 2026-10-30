@@ -20702,6 +20702,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "69490a99217522e9": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 67,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "infraestructura rural",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto para productores de la región núcleo por el destino de impuestos a caminos rurales, aunque Santa Fe queda fuera de PBA.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        67
+      ]
     }
   },
   "indice": {
@@ -22095,7 +22120,9 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-altibajos-en-el-mercado-agroganadero-de-canuelas-nid30102026": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/mercado-de-carbono-fuerte-expectativa-en-el-agro-luego-de-la-media-sancion-en-el-senado-a-una-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/mercado-de-carbono-fuerte-expectativa-en-el-agro-luego-de-la-media-sancion-en-el-senado-a-una-nid30102026": "2026-10-30",
+      "https://infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249120-exportaciones-de-carne-vacuna-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador.html": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23487,7 +23514,9 @@
       "los dilemas de la agronomia marcelo morris de bayer advierte que el mal uso de los agroquimicos acelera una perdida de la eficacia de dichas herramientas": "2026-10-30",
       "vacunos cierre de semana con altibajos en el mercado agroganadero de canuelas": "2026-10-30",
       "una violenta tormenta con granizo sorprendio en una region golpeada por otro fenomeno la falta de sol": "2026-10-30",
-      "mercado de carbono fuerte expectativa en el agro luego de la media sancion en el senado a una iniciativa que puede generar millones": "2026-10-30"
+      "mercado de carbono fuerte expectativa en el agro luego de la media sancion en el senado a una iniciativa que puede generar millones": "2026-10-30",
+      "infraestructura agropecuaria santa fe destinara el 100 del inmobiliario rural a obras para el campo": "2026-10-30",
+      "exportaciones de carne vacuna las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24879,7 +24908,9 @@
       "a0fd9b038e0b6304": "2026-10-30",
       "9dc84a8c34df06ae": "2026-10-30",
       "0959eea74c2a4fa6": "2026-10-30",
-      "6d2e5b7578e00789": "2026-10-30"
+      "6d2e5b7578e00789": "2026-10-30",
+      "69490a99217522e9": "2026-10-30",
+      "678f58fd257bb9ba": "2026-10-30"
     }
   },
   "elegidas": [
@@ -40655,9 +40686,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_13e9a8b4e7ff_portada.jpg"
+    },
+    {
+      "id": "f98f7d7aeac5",
+      "cuando": "2026-10-30T16:20-03:00",
+      "titulo_original": "Una violenta tormenta con granizo sorprendió en una región golpeada por otro fenómeno: la falta de sol",
+      "descripcion": "Hubo sectores afectados en Balcarce y en Lobería, una región del sudeste donde los trigos podrían registrar un menor rinde debido a la caída de la radiación solar",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026/",
+      "titular": "Trigo bonaerense sufre granizo y radiación solar baja",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 9,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 76,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la producción triguera bonaerense con daños por clima adverso.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "92f44ad2-516e-4311-8d10-2a2148ada9ed",
+          "slug": "trigo-en-buenos-aires-granizo-tormentas-y-una-baja-del-32-en-la-9f0cc2",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-buenos-aires-granizo-tormentas-y-una-baja-del-32-en-la-9f0cc2",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1876813060154344",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18417137341084779",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f98f7d7aeac5_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "1f8e12932530",
+      "rep": {
+        "id": "1f8e12932530",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo/",
+        "canonical_url": "https://infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo",
+        "titulo": "Infraestructura agropecuaria: Santa Fe destinará el 100% del Inmobiliario Rural a obras para el campo",
+        "titulo_norm": "infraestructura agropecuaria santa fe destinara el 100 del inmobiliario rural a obras para el campo",
+        "descripcion": "El Gobierno santafesino presentó su presupuesto 2027, en el que a anunció la creación del Fondo de Infraestructura Agropecuaria Santafesina (FIAS), que recibirá la totalidad de lo recaudado por ese impuesto para financiar caminos y obras productivas.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/olivares-1.jpeg",
+        "autor": "infocampo",
+        "publicado": "2026-10-30T16:04-03:00",
+        "capturado": "2026-10-30T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "69490a99217522e9"
+      },
+      "grupo": [
+        {
+          "id": "1f8e12932530",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo/",
+          "canonical_url": "https://infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo",
+          "titulo": "Infraestructura agropecuaria: Santa Fe destinará el 100% del Inmobiliario Rural a obras para el campo",
+          "titulo_norm": "infraestructura agropecuaria santa fe destinara el 100 del inmobiliario rural a obras para el campo",
+          "descripcion": "El Gobierno santafesino presentó su presupuesto 2027, en el que a anunció la creación del Fondo de Infraestructura Agropecuaria Santafesina (FIAS), que recibirá la totalidad de lo recaudado por ese impuesto para financiar caminos y obras productivas.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/olivares-1.jpeg",
+          "autor": "infocampo",
+          "publicado": "2026-10-30T16:04-03:00",
+          "capturado": "2026-10-30T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "69490a99217522e9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 67,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "infraestructura rural",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto para productores de la región núcleo por el destino de impuestos a caminos rurales, aunque Santa Fe queda fuera de PBA.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          67
+        ]
+      },
+      "cuando": "2026-10-30T16:20-03:00"
+    },
     {
       "id": "1e02b9a0a2d3",
       "rep": {
@@ -40780,69 +40932,6 @@
         "tema_doc": "sanidad",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T16:00-03:00"
-    },
-    {
-      "id": "f98f7d7aeac5",
-      "rep": {
-        "id": "f98f7d7aeac5",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026",
-        "titulo": "Una violenta tormenta con granizo sorprendió en una región golpeada por otro fenómeno: la falta de sol",
-        "titulo_norm": "una violenta tormenta con granizo sorprendio en una region golpeada por otro fenomeno la falta de sol",
-        "descripcion": "Hubo sectores afectados en Balcarce y en Lobería, una región del sudeste donde los trigos podrían registrar un menor rinde debido a la caída de la radiación solar",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/C6IDRBCQVBFXVJJTYU2EXHV4QU.png?auth=cf49da956ee476b94926074bfcd272e41ff78970d655521a32b962549bd16a44&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-10-30T15:46-03:00",
-        "capturado": "2026-10-30T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0959eea74c2a4fa6"
-      },
-      "grupo": [
-        {
-          "id": "f98f7d7aeac5",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026",
-          "titulo": "Una violenta tormenta con granizo sorprendió en una región golpeada por otro fenómeno: la falta de sol",
-          "titulo_norm": "una violenta tormenta con granizo sorprendio en una region golpeada por otro fenomeno la falta de sol",
-          "descripcion": "Hubo sectores afectados en Balcarce y en Lobería, una región del sudeste donde los trigos podrían registrar un menor rinde debido a la caída de la radiación solar",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/C6IDRBCQVBFXVJJTYU2EXHV4QU.png?auth=cf49da956ee476b94926074bfcd272e41ff78970d655521a32b962549bd16a44&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-10-30T15:46-03:00",
-          "capturado": "2026-10-30T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0959eea74c2a4fa6"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 13,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 9,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 76,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "clima",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente la producción triguera bonaerense con daños por clima adverso.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T16:00-03:00"
@@ -41959,8 +42048,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T16:03:39-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-30T16:23:43-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
