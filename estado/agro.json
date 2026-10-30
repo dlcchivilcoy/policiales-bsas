@@ -20463,6 +20463,31 @@
         57,
         62
       ]
+    },
+    "d5ac69e378b9b6f0": {
+      "impacto_economico": 8,
+      "interes_productores": 7,
+      "innovacion": 11,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 58,
+      "commercial_score": 58,
+      "subtema": "agtech",
+      "tema": "drones ganaderia",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena innovacion con drones pero poco impacto directo en la zona nucleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        62
+      ]
     }
   },
   "indice": {
@@ -21843,7 +21868,8 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16": "2026-10-30",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-nueva-0": "2026-10-30",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103": "2026-10-30",
-      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues": "2026-10-30"
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues": "2026-10-30",
+      "https://intainforma.inta.gob.ar/drones-una-herramienta-para-transformar-la-informacion-del-territorio-en-decisiones": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23222,7 +23248,8 @@
       "mercado de granos cierra uno de los meses mas bajistas del ano": "2026-10-30",
       "la nueva realidad del mercado internacional de harina de soja": "2026-10-30",
       "la actividad agropecuaria se modera tras alcanzar un record en agosto": "2026-10-30",
-      "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad": "2026-10-30"
+      "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad": "2026-10-30",
+      "drones una herramienta para transformar la informacion del territorio en decisiones": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24601,7 +24628,8 @@
       "ab36072c80e806f4": "2026-10-30",
       "a657bb2d299a51ac": "2026-10-30",
       "cdaf6b9738740f1d": "2026-10-30",
-      "e6a30012ff22a97e": "2026-10-30"
+      "e6a30012ff22a97e": "2026-10-30",
+      "d5ac69e378b9b6f0": "2026-10-30"
     }
   },
   "elegidas": [
@@ -40074,6 +40102,96 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1ef9823ff780_portada.jpg"
+    },
+    {
+      "id": "e93e6fb9f103",
+      "cuando": "2026-10-30T13:40-03:00",
+      "titulo_original": "Una “biofumigación” natural: investigan el potencial de la mostaza india para frenar malezas y hongos",
+      "descripcion": "Investigadores de la Facultad de Ciencias Agrarias de Lomas de Zamora evalúan a la mostaza india, tanto en mezclas de cultivos de servicios como en estrategias de control biológico. La casa de altos estudios articula ensayos con el INTA y la UNLP.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos/",
+      "titular": "Mostaza india: investigan su uso contra malezas y hongos",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agtech",
+        "tema": "mostaza india",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para asesores y productores de la región pampeana que buscan alternativas biológicas contra malezas y hongos.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T13:40:00-03:00"
+    },
+    {
+      "id": "becc85ca9dc3",
+      "cuando": "2026-10-30T13:40-03:00",
+      "titulo_original": "Mercado de granos: cierra uno de los meses más bajistas del año",
+      "descripcion": "Tras las elecciones en Brasil, la caída del real abarató sus exportaciones y arrastró las cotizaciones. En Chicago, soja y maíz tocaron mínimos de dos meses ante el avance de la cosecha en EE. UU., mientras que el trigo marca récords de volumen en A3.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
+      "titular": "Soja y maíz tocan mínimos en Chicago tras caída del real",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "precios granos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Caída fuerte de precios en Chicago y Brasil que afecta directamente el bolsillo del productor de zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "015a4811-f8be-4f66-a370-56bd95b59ec0",
+          "slug": "soja-y-maiz-caen-a-minimos-en-chicago-por-la-devaluacion-del-fb5eb3",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-y-maiz-caen-a-minimos-en-chicago-por-la-devaluacion-del-fb5eb3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1433292808868560",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18038884001903832",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_becc85ca9dc3_portada.jpg"
     }
   ],
   "pendientes": [
@@ -40201,69 +40319,6 @@
         "sensible": true,
         "explicacion": "Monto multimillonario de inversiones aprobado que impacta en la macro y en grandes proyectos del sector.",
         "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T13:20-03:00"
-    },
-    {
-      "id": "becc85ca9dc3",
-      "rep": {
-        "id": "becc85ca9dc3",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
-        "titulo": "Mercado de granos: cierra uno de los meses más bajistas del año",
-        "titulo_norm": "mercado de granos cierra uno de los meses mas bajistas del ano",
-        "descripcion": "Tras las elecciones en Brasil, la caída del real abarató sus exportaciones y arrastró las cotizaciones. En Chicago, soja y maíz tocaron mínimos de dos meses ante el avance de la cosecha en EE. UU., mientras que el trigo marca récords de volumen en A3.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
-        "autor": "",
-        "publicado": "2026-10-29T09:00-03:00",
-        "capturado": "2026-10-30T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ab36072c80e806f4"
-      },
-      "grupo": [
-        {
-          "id": "becc85ca9dc3",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercado-de-16",
-          "titulo": "Mercado de granos: cierra uno de los meses más bajistas del año",
-          "titulo_norm": "mercado de granos cierra uno de los meses mas bajistas del ano",
-          "descripcion": "Tras las elecciones en Brasil, la caída del real abarató sus exportaciones y arrastró las cotizaciones. En Chicago, soja y maíz tocaron mínimos de dos meses ante el avance de la cosecha en EE. UU., mientras que el trigo marca récords de volumen en A3.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/reporte_portada_14.jpg?itok=xxKPXs8w",
-          "autor": "",
-          "publicado": "2026-10-29T09:00-03:00",
-          "capturado": "2026-10-30T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ab36072c80e806f4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 75,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "precios granos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Caída fuerte de precios en Chicago y Brasil que afecta directamente el bolsillo del productor de zona núcleo.",
-        "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
@@ -40537,199 +40592,6 @@
         ]
       },
       "cuando": "2026-10-30T13:00-03:00"
-    },
-    {
-      "id": "c4d6618ce81b",
-      "rep": {
-        "id": "c4d6618ce81b",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026",
-        "titulo": "A Italia: la maquinaria agrícola argentina se prepara para EIMA 2026",
-        "titulo_norm": "a italia la maquinaria agricola argentina se prepara para eima 2026",
-        "descripcion": "La misión busca ampliar vínculos comerciales, detectar nuevas oportunidades y acercar a las empresas nacionales a las tendencias que están transformando la industria, con Expoagro como articulador",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/5DPZ5YVKDNC2RCYEXZXT2WNNZA.png?auth=357923ca518f3bf9c225a5d887f61c173a75e55197477541e96ebccf3b37da41&smart=true",
-        "autor": "",
-        "publicado": "2026-10-30T11:20-03:00",
-        "capturado": "2026-10-30T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a17c8a676da256b8"
-      },
-      "grupo": [
-        {
-          "id": "c4d6618ce81b",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/a-italia-la-maquinaria-agricola-argentina-se-prepara-para-eima-2026-nid30102026",
-          "titulo": "A Italia: la maquinaria agrícola argentina se prepara para EIMA 2026",
-          "titulo_norm": "a italia la maquinaria agricola argentina se prepara para eima 2026",
-          "descripcion": "La misión busca ampliar vínculos comerciales, detectar nuevas oportunidades y acercar a las empresas nacionales a las tendencias que están transformando la industria, con Expoagro como articulador",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/5DPZ5YVKDNC2RCYEXZXT2WNNZA.png?auth=357923ca518f3bf9c225a5d887f61c173a75e55197477541e96ebccf3b37da41&smart=true",
-          "autor": "",
-          "publicado": "2026-10-30T11:20-03:00",
-          "capturado": "2026-10-30T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a17c8a676da256b8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 8,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 6,
-        "conversacion": 6,
-        "potencial_comercial": 8,
-        "ai_score": 62,
-        "commercial_score": 70,
-        "subtema": "maquinaria",
-        "tema": "eima 2026",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesante para fabricantes y contratistas locales que miran la vidriera internacional, aunque de nicho para el productor de a pie.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          64
-        ]
-      },
-      "cuando": "2026-10-30T13:00-03:00"
-    },
-    {
-      "id": "e93e6fb9f103",
-      "rep": {
-        "id": "e93e6fb9f103",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos/",
-        "canonical_url": "https://infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos",
-        "titulo": "Una “biofumigación” natural: investigan el potencial de la mostaza india para frenar malezas y hongos",
-        "titulo_norm": "una biofumigacion natural investigan el potencial de la mostaza india para frenar malezas y hongos",
-        "descripcion": "Investigadores de la Facultad de Ciencias Agrarias de Lomas de Zamora evalúan a la mostaza india, tanto en mezclas de cultivos de servicios como en estrategias de control biológico. La casa de altos estudios articula ensayos con el INTA y la UNLP.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-29-at-10.25.17-AM.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-10-30T10:41-03:00",
-        "capturado": "2026-10-30T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c1f06b92d295a2a4"
-      },
-      "grupo": [
-        {
-          "id": "e93e6fb9f103",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos/",
-          "canonical_url": "https://infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos",
-          "titulo": "Una “biofumigación” natural: investigan el potencial de la mostaza india para frenar malezas y hongos",
-          "titulo_norm": "una biofumigacion natural investigan el potencial de la mostaza india para frenar malezas y hongos",
-          "descripcion": "Investigadores de la Facultad de Ciencias Agrarias de Lomas de Zamora evalúan a la mostaza india, tanto en mezclas de cultivos de servicios como en estrategias de control biológico. La casa de altos estudios articula ensayos con el INTA y la UNLP.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-29-at-10.25.17-AM.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-10-30T10:41-03:00",
-          "capturado": "2026-10-30T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c1f06b92d295a2a4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 12,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 78,
-        "commercial_score": 78,
-        "subtema": "agtech",
-        "tema": "mostaza india",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy relevante para asesores y productores de la región pampeana que buscan alternativas biológicas contra malezas y hongos.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T11:00-03:00"
-    },
-    {
-      "id": "be87d53f4699",
-      "rep": {
-        "id": "be87d53f4699",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/dos-meses-de-atraso-casi-la-mitad-del-rinde-un-ensayo-del-inta-mostro-cuanto-puede-perder-el-girasol-cuando-se-demora-la-siembra/",
-        "canonical_url": "https://bichosdecampo.com/dos-meses-de-atraso-casi-la-mitad-del-rinde-un-ensayo-del-inta-mostro-cuanto-puede-perder-el-girasol-cuando-se-demora-la-siembra",
-        "titulo": "Dos meses de atraso, casi la mitad del rinde: Un ensayo del INTA mostró cuánto puede perder el girasol cuando se demora la siembra",
-        "titulo_norm": "dos meses de atraso casi la mitad del rinde un ensayo del inta mostro cuanto puede perder el girasol cuando se demora la siembra",
-        "descripcion": "Sembrar girasol en octubre o hacerlo en diciembre puede marcar una diferencia importante al momento de la cosecha. Así lo demostró un ensayo realizado por técnicos del INTA en Chivilcoy, provincia de Buenos Aires, donde se evaluó el comportamiento de tres híbridos implantados en distintas fechas. Los resultados mostraron que, mientras las siembras de octubre […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/lluvias.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-30T10:31-03:00",
-        "capturado": "2026-10-30T10:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "24e193f20a15fc3f"
-      },
-      "grupo": [
-        {
-          "id": "be87d53f4699",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/dos-meses-de-atraso-casi-la-mitad-del-rinde-un-ensayo-del-inta-mostro-cuanto-puede-perder-el-girasol-cuando-se-demora-la-siembra/",
-          "canonical_url": "https://bichosdecampo.com/dos-meses-de-atraso-casi-la-mitad-del-rinde-un-ensayo-del-inta-mostro-cuanto-puede-perder-el-girasol-cuando-se-demora-la-siembra",
-          "titulo": "Dos meses de atraso, casi la mitad del rinde: Un ensayo del INTA mostró cuánto puede perder el girasol cuando se demora la siembra",
-          "titulo_norm": "dos meses de atraso casi la mitad del rinde un ensayo del inta mostro cuanto puede perder el girasol cuando se demora la siembra",
-          "descripcion": "Sembrar girasol en octubre o hacerlo en diciembre puede marcar una diferencia importante al momento de la cosecha. Así lo demostró un ensayo realizado por técnicos del INTA en Chivilcoy, provincia de Buenos Aires, donde se evaluó el comportamiento de tres híbridos implantados en distintas fechas. Los resultados mostraron que, mientras las siembras de octubre […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/lluvias.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-30T10:31-03:00",
-          "capturado": "2026-10-30T10:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "24e193f20a15fc3f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 83,
-        "commercial_score": 83,
-        "subtema": "agro",
-        "tema": "girasol",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Ensayo clave del INTA local en Chivilcoy sobre fecha de siembra de girasol, altísimo interés zonal y técnico.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T10:40-03:00"
     },
     {
       "id": "7b01c3ba2920",
@@ -41453,8 +41315,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T13:24:42-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-30T13:43:27-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
