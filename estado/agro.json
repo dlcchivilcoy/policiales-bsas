@@ -39401,7 +39401,7 @@
       "cuando": "2026-10-28T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-30T05:03:08-03:00",
+  "actualizado": "2026-10-30T07:02:08-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -42833,6 +42833,119 @@
           ]
         }
       }
+    },
+    "2026-10-30T07:00:00-03:00": {
+      "dia": "2026-10-30",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "alerta",
+          "clave": "alerta|Tormentas|amarilla|2026-10-30T09:17:50-03:00",
+          "publicado": {
+            "instagram": {
+              "id": "18217732399348522"
+            },
+            "facebook": {
+              "id": "2153472471912227"
+            }
+          }
+        },
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "18131703400693612"
+            },
+            "facebook": {
+              "id": "1662632788608325"
+            }
+          }
+        },
+        {
+          "tipo": "granos",
+          "clave": "granos",
+          "publicado": {
+            "instagram": {
+              "id": "17927296257203379"
+            },
+            "facebook": {
+              "id": "1491965179417009"
+            }
+          }
+        },
+        {
+          "tipo": "dolar",
+          "clave": "dolar",
+          "publicado": {
+            "instagram": {
+              "id": "18107864135364966"
+            },
+            "facebook": {
+              "id": "28744433518590625"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "id": "17964208236231880"
+            },
+            "facebook": {
+              "id": "1136592172217178"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18217732399348522"
+              },
+              "facebook": {
+                "id": "2153472471912227"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18131703400693612"
+              },
+              "facebook": {
+                "id": "1662632788608325"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17927296257203379"
+              },
+              "facebook": {
+                "id": "1491965179417009"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18107864135364966"
+              },
+              "facebook": {
+                "id": "28744433518590625"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17964208236231880"
+              },
+              "facebook": {
+                "id": "1136592172217178"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "mercado": {
@@ -43581,7 +43694,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 449.2
+        "usd_t": 448.5
       }
     },
     "chicago_maiz": {
@@ -43711,7 +43824,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 177.3
+        "usd_t": 177.0
       }
     },
     "chicago_trigo": {
@@ -43841,7 +43954,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 222.5
+        "usd_t": 222.8
       }
     }
   }
