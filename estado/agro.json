@@ -20878,6 +20878,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4be3d584e1000370": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 64,
+      "subtema": "ganaderia",
+      "tema": "porcinos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta fuerte en el sector porcino nacional y genera debate sobre costos y competencia con Brasil.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        66
+      ]
     }
   },
   "indice": {
@@ -22282,7 +22307,8 @@
       "https://agfundernews.com/agrifood-signals-doordash-to-buy-instacart-terradot-lands-34m-biosphere-wins-pentagon-contract": "2026-10-30",
       "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html": "2026-10-30",
       "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/anuncio-santa-fe-destinara-todo-el-dinero-de-un-impuesto-a-obras-para-el-campo-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/anuncio-santa-fe-destinara-todo-el-dinero-de-un-impuesto-a-obras-para-el-campo-nid30102026": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23685,7 +23711,8 @@
       "agrifood signals doordash to buy instacart terradot lands 34m biosphere wins pentagon contract": "2026-10-30",
       "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos": "2026-10-30",
       "el visec llego a los remates denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigorificos exportadores": "2026-10-30",
-      "anuncio santa fe destinara todo el dinero de un impuesto a obras para el campo": "2026-10-30"
+      "anuncio santa fe destinara todo el dinero de un impuesto a obras para el campo": "2026-10-30",
+      "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25088,7 +25115,8 @@
       "1c61e46d01313b8b": "2026-10-30",
       "9be79bfe3eee4543": "2026-10-30",
       "6746c696be05bc21": "2026-10-30",
-      "010f9f3160ba950e": "2026-10-30"
+      "010f9f3160ba950e": "2026-10-30",
+      "4be3d584e1000370": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41253,9 +41281,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_771d541f2d0b_portada.jpg"
+    },
+    {
+      "id": "c46fb7a06f67",
+      "cuando": "2026-10-30T19:02-03:00",
+      "titulo_original": "La actividad agropecuaria se modera tras alcanzar un récord en agosto",
+      "descripcion": "El IACA-BCR retrocedió 2,5% mensual en septiembre por la incidencia de las labores agrícolas, aunque siete de las doce series que lo componen mostraron subas. En términos interanuales, el índice se ubicó 14,2% por encima de septiembre de 2025.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
+      "titular": "El IACA-BCR cayó 2,5% en septiembre tras cuatro meses de subas",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "actividad agropecuaria",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Dato estadístico oficial sobre el nivel de actividad del sector agropecuario nacional.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d6fed9ca-a367-4b26-9378-9e786803629e",
+          "slug": "el-iaca-bcr-cayo-2-5-en-septiembre-pero-se-mantiene-14-2-arriba-0958e3",
+          "url": "https://www.diariolacampaña.com.ar/n/el-iaca-bcr-cayo-2-5-en-septiembre-pero-se-mantiene-14-2-arriba-0958e3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1160668423204108",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18128035651857785",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c46fb7a06f67_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "63d48c5158aa",
+      "rep": {
+        "id": "63d48c5158aa",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026",
+        "titulo": "“Basta de inversiones”: un frigorífico no renovó 80 contratados, su gerente lo lamentó y habló de las importaciones desde Brasil",
+        "titulo_norm": "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil",
+        "descripcion": "Tutto Porky’s, de Reconquista, Santa Fe, eliminó el turno de despostada de la tarde en carne de cerdo y frenó un proyecto de expansión; según la empresa, los valores de venta no cubren los costos en un escenario de competencia con el vecino país y dificultades para exportar",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/JNO6Y5RJL5AMLIT5AFWXA67Y5A.JPG?auth=866669e2cb62cc41b184bf3be75cdf3156d4643a3d8da049b7c1516c1717f06a&smart=true",
+        "autor": "Belkis Martínez",
+        "publicado": "2026-10-30T18:46-03:00",
+        "capturado": "2026-10-30T19:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "4be3d584e1000370"
+      },
+      "grupo": [
+        {
+          "id": "63d48c5158aa",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026",
+          "titulo": "“Basta de inversiones”: un frigorífico no renovó 80 contratados, su gerente lo lamentó y habló de las importaciones desde Brasil",
+          "titulo_norm": "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil",
+          "descripcion": "Tutto Porky’s, de Reconquista, Santa Fe, eliminó el turno de despostada de la tarde en carne de cerdo y frenó un proyecto de expansión; según la empresa, los valores de venta no cubren los costos en un escenario de competencia con el vecino país y dificultades para exportar",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/JNO6Y5RJL5AMLIT5AFWXA67Y5A.JPG?auth=866669e2cb62cc41b184bf3be75cdf3156d4643a3d8da049b7c1516c1717f06a&smart=true",
+          "autor": "Belkis Martínez",
+          "publicado": "2026-10-30T18:46-03:00",
+          "capturado": "2026-10-30T19:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "4be3d584e1000370"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 64,
+        "subtema": "ganaderia",
+        "tema": "porcinos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta fuerte en el sector porcino nacional y genera debate sobre costos y competencia con Brasil.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          66
+        ]
+      },
+      "cuando": "2026-10-30T19:02-03:00"
+    },
     {
       "id": "3f821f5a8e5a",
       "rep": {
@@ -41578,73 +41731,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T16:00-03:00"
-    },
-    {
-      "id": "c46fb7a06f67",
-      "rep": {
-        "id": "c46fb7a06f67",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
-        "titulo": "La actividad agropecuaria se modera tras alcanzar un récord en agosto",
-        "titulo_norm": "la actividad agropecuaria se modera tras alcanzar un record en agosto",
-        "descripcion": "El IACA-BCR retrocedió 2,5% mensual en septiembre por la incidencia de las labores agrícolas, aunque siete de las doce series que lo componen mostraron subas. En términos interanuales, el índice se ubicó 14,2% por encima de septiembre de 2025.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/iaca_portada_1.png?itok=1D44hiPJ",
-        "autor": "",
-        "publicado": "2026-10-29T09:00-03:00",
-        "capturado": "2026-10-30T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cdaf6b9738740f1d"
-      },
-      "grupo": [
-        {
-          "id": "c46fb7a06f67",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/la-103",
-          "titulo": "La actividad agropecuaria se modera tras alcanzar un récord en agosto",
-          "titulo_norm": "la actividad agropecuaria se modera tras alcanzar un record en agosto",
-          "descripcion": "El IACA-BCR retrocedió 2,5% mensual en septiembre por la incidencia de las labores agrícolas, aunque siete de las doce series que lo componen mostraron subas. En términos interanuales, el índice se ubicó 14,2% por encima de septiembre de 2025.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/iaca_portada_1.png?itok=1D44hiPJ",
-          "autor": "",
-          "publicado": "2026-10-29T09:00-03:00",
-          "capturado": "2026-10-30T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cdaf6b9738740f1d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 68,
-        "subtema": "agro",
-        "tema": "actividad agropecuaria",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Dato estadístico oficial sobre el nivel de actividad del sector agropecuario nacional.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          72
-        ]
-      },
-      "cuando": "2026-10-30T13:20-03:00"
     },
     {
       "id": "cfaa4cce60ce",
@@ -42305,8 +42391,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T19:02:29-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T19:05:21-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
