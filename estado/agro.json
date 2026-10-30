@@ -19719,6 +19719,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d2129e6f63cb8209": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 80,
+      "commercial_score": 85,
+      "subtema": "maquinaria",
+      "tema": "tractores bull",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran impacto regional en PBA por la nueva planta y la llegada de maquinaria esperada por los productores.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21057,7 +21078,8 @@
       "https://futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying": "2026-10-30",
       "https://agrositio.com.ar/noticia/249101-el-algodon-con-semilla-gensus-supero-en-longitud-y-resistencia-las-expectativas-de-la-industria-textil.html": "2026-10-30",
       "https://agrositio.com.ar/noticia/249098-ganaderia-neuquina-habra-regulaciones-para-diferenciar-perros-salvajes-de-domesticos.html": "2026-10-30",
-      "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html": "2026-10-30"
+      "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -22394,7 +22416,8 @@
       "ecorobotix adds potato model and targets yellow nutsedge with ai spot spraying": "2026-10-30",
       "el algodon con semilla gensus supero en longitud y resistencia las expectativas de la industria textil": "2026-10-30",
       "ganaderia neuquina habra regulaciones para diferenciar perros salvajes de domesticos": "2026-10-30",
-      "las exportaciones agroindustriales que argentina podria haber tenido": "2026-10-30"
+      "las exportaciones agroindustriales que argentina podria haber tenido": "2026-10-30",
+      "bull suma 140 tractores a su oferta y acelera la construccion de su planta de ensamblado en carmen de areco": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23731,7 +23754,8 @@
       "119d288a3d0a5356": "2026-10-30",
       "96eee6f805c316e9": "2026-10-30",
       "a556d2646556782a": "2026-10-30",
-      "d5a26226807d3644": "2026-10-30"
+      "d5a26226807d3644": "2026-10-30",
+      "d2129e6f63cb8209": "2026-10-30"
     }
   },
   "elegidas": [
@@ -38866,6 +38890,69 @@
   ],
   "pendientes": [
     {
+      "id": "52d6d526094c",
+      "rep": {
+        "id": "52d6d526094c",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html",
+        "titulo": "Bull suma 140 tractores a su oferta y acelera la construcción de su planta de ensamblado en Carmen de Areco",
+        "titulo_norm": "bull suma 140 tractores a su oferta y acelera la construccion de su planta de ensamblado en carmen de areco",
+        "descripcion": "La marca del Grupo GR ampliará sus importaciones para responder a la demanda del mercado argentino. Los primeros 70 equipos llegarán en noviembre y otros 70 en enero de 2027. En paralelo, avanza la construcción de dos naves industriales, una destinada al ensamblado local de tractores Bull.",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249106_37144331.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-30T08:11-03:00",
+        "capturado": "2026-10-30T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d2129e6f63cb8209"
+      },
+      "grupo": [
+        {
+          "id": "52d6d526094c",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249106-bull-suma-140-tractores-a-su-oferta-y-acelera-la-construccion-de-su-planta-de-ensamblado-en-carmen-de-areco.html",
+          "titulo": "Bull suma 140 tractores a su oferta y acelera la construcción de su planta de ensamblado en Carmen de Areco",
+          "titulo_norm": "bull suma 140 tractores a su oferta y acelera la construccion de su planta de ensamblado en carmen de areco",
+          "descripcion": "La marca del Grupo GR ampliará sus importaciones para responder a la demanda del mercado argentino. Los primeros 70 equipos llegarán en noviembre y otros 70 en enero de 2027. En paralelo, avanza la construcción de dos naves industriales, una destinada al ensamblado local de tractores Bull.",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249106_37144331.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-30T08:11-03:00",
+          "capturado": "2026-10-30T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d2129e6f63cb8209"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 80,
+        "commercial_score": 85,
+        "subtema": "maquinaria",
+        "tema": "tractores bull",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran impacto regional en PBA por la nueva planta y la llegada de maquinaria esperada por los productores.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T08:22-03:00"
+    },
+    {
       "id": "293a4c2eace1",
       "rep": {
         "id": "293a4c2eace1",
@@ -39520,7 +39607,7 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T08:06:39-03:00",
+  "actualizado": "2026-10-30T08:22:55-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
