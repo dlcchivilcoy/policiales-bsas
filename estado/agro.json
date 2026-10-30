@@ -19652,6 +19652,73 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "96eee6f805c316e9": {
+      "impacto_economico": 12,
+      "interes_productores": 6,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 56,
+      "commercial_score": 56,
+      "subtema": "agro",
+      "tema": "algodón",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena mejora genética y de calidad en algodón, pero de bajo impacto directo en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        51
+      ]
+    },
+    "a556d2646556782a": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 2,
+      "ai_score": 25,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "ganadería neuquina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tema muy localizado en Neuquén, sin relevancia práctica para el productor de la región pampeana.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d5a26226807d3644": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "exportaciones agroindustriales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto macroeconómico y debate sobre competitividad que interesa a todo el arco agropecuario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -20987,7 +21054,10 @@
       "https://bichosdecampo.com/patriotismo-cambiario-gracias-a-los-biocombustibles-ypf-ya-no-tiene-que-usar-divisas-para-importar-nafta-o-gasoil": "2026-10-30",
       "https://bichosdecampo.com/proyecto-de-biocombustibles-las-empresas-no-integradas-aceptan-la-competencia-pero-solo-con-ellas-mismas-y-sin-perder-una-sola-tonelada-del-cupo-destinado-al-mercado-interno": "2026-10-30",
       "https://lacapital.com.ar/agro/las-dos-estatuas-que-coronan-un-rascacielos-rosarino-y-esconden-una-historia-ligada-al-campo-n10289036.html": "2026-10-30",
-      "https://futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying": "2026-10-30"
+      "https://futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249101-el-algodon-con-semilla-gensus-supero-en-longitud-y-resistencia-las-expectativas-de-la-industria-textil.html": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249098-ganaderia-neuquina-habra-regulaciones-para-diferenciar-perros-salvajes-de-domesticos.html": "2026-10-30",
+      "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -22321,7 +22391,10 @@
       "patriotismo cambiario gracias a los biocombustibles ypf ya no tiene que usar divisas para importar nafta o gasoil": "2026-10-30",
       "proyecto de biocombustibles las empresas no integradas aceptan la competencia pero solo con ellas mismas y sin perder una sola tonelada del cupo destinado al mercado interno": "2026-10-30",
       "las dos estatuas que coronan un rascacielos rosarino y esconden una historia ligada al campo": "2026-10-30",
-      "ecorobotix adds potato model and targets yellow nutsedge with ai spot spraying": "2026-10-30"
+      "ecorobotix adds potato model and targets yellow nutsedge with ai spot spraying": "2026-10-30",
+      "el algodon con semilla gensus supero en longitud y resistencia las expectativas de la industria textil": "2026-10-30",
+      "ganaderia neuquina habra regulaciones para diferenciar perros salvajes de domesticos": "2026-10-30",
+      "las exportaciones agroindustriales que argentina podria haber tenido": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -23655,7 +23728,10 @@
       "aa8e3074fefcd700": "2026-10-30",
       "67f8a0b948c266fa": "2026-10-30",
       "57590d63370ef1db": "2026-10-30",
-      "119d288a3d0a5356": "2026-10-30"
+      "119d288a3d0a5356": "2026-10-30",
+      "96eee6f805c316e9": "2026-10-30",
+      "a556d2646556782a": "2026-10-30",
+      "d5a26226807d3644": "2026-10-30"
     }
   },
   "elegidas": [
@@ -38620,9 +38696,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bdbdee8f10f4_portada.jpg"
+    },
+    {
+      "id": "c6b3da0127f0",
+      "cuando": "2026-10-30T07:22-03:00",
+      "titulo_original": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying",
+      "descripcion": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying Swiss manufacturer",
+      "fuente": "Future Farming",
+      "url": "https://www.futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying/",
+      "titular": "Pulverizadoras ARA suman modelos con IA desde March 2027",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 13,
+        "innovacion": 15,
+        "cercania_argentina": 5,
+        "cercania_pba": 6,
+        "potencial_reel": 9,
+        "conversacion": 7,
+        "potencial_comercial": 9,
+        "ai_score": 74,
+        "commercial_score": 82,
+        "subtema": "agtech",
+        "tema": "inteligencia artificial",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Gran novedad en pulverización selectiva con IA aplicada a papas y malezas difíciles, ideal para productores tech.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0c85add4-5dba-4b02-831e-159230caf900",
+          "slug": "ecorobotix-anuncia-nuevos-modelos-de-ia-para-pulverizadoras-ara-013f0e",
+          "url": "https://www.diariolacampaña.com.ar/n/ecorobotix-anuncia-nuevos-modelos-de-ia-para-pulverizadoras-ara-013f0e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2182409652653927",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18112930982272171",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c6b3da0127f0_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "722223d56ca9",
+      "rep": {
+        "id": "722223d56ca9",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html",
+        "titulo": "Las exportaciones agroindustriales que Argentina podría haber tenido",
+        "titulo_norm": "las exportaciones agroindustriales que argentina podria haber tenido",
+        "descripcion": "En los últimos treinta años, el comercio mundial ofreció muchas oportunidades para expandir las exportaciones agroindustriales. Brasil, Paraguay y Uruguay las aprovecharon: aumentaron sus ventas externas y ganaron participación en el mercado global. Argentina también exportó más, pero a un ritmo considerablemente menor. Esta edición de Estudios Económicos estima cuánto habría exportado el país si hubiera acompañado a sus vecinos y analiza qué condiciones internas limitaron ese crecimiento....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249097_45029603.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-29T14:59-03:00",
+        "capturado": "2026-10-30T07:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d5a26226807d3644"
+      },
+      "grupo": [
+        {
+          "id": "722223d56ca9",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249097-las-exportaciones-agroindustriales-que-argentina-podria-haber-tenido.html",
+          "titulo": "Las exportaciones agroindustriales que Argentina podría haber tenido",
+          "titulo_norm": "las exportaciones agroindustriales que argentina podria haber tenido",
+          "descripcion": "En los últimos treinta años, el comercio mundial ofreció muchas oportunidades para expandir las exportaciones agroindustriales. Brasil, Paraguay y Uruguay las aprovecharon: aumentaron sus ventas externas y ganaron participación en el mercado global. Argentina también exportó más, pero a un ritmo considerablemente menor. Esta edición de Estudios Económicos estima cuánto habría exportado el país si hubiera acompañado a sus vecinos y analiza qué condiciones internas limitaron ese crecimiento....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249097_45029603.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-29T14:59-03:00",
+          "capturado": "2026-10-30T07:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d5a26226807d3644"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "exportaciones agroindustriales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto macroeconómico y debate sobre competitividad que interesa a todo el arco agropecuario.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T07:22-03:00"
+    },
     {
       "id": "293a4c2eace1",
       "rep": {
@@ -38750,69 +38943,6 @@
           66,
           68
         ]
-      },
-      "cuando": "2026-10-30T07:02-03:00"
-    },
-    {
-      "id": "c6b3da0127f0",
-      "rep": {
-        "id": "c6b3da0127f0",
-        "fuente": "Future Farming",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.futurefarming.com/rss/",
-        "url": "https://www.futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying/",
-        "canonical_url": "https://futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying",
-        "titulo": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying",
-        "titulo_norm": "ecorobotix adds potato model and targets yellow nutsedge with ai spot spraying",
-        "descripcion": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying Swiss manufacturer",
-        "imagen_url": "https%3A%2F%2Fwww.futurefarming.com%2Fapp%2Fuploads%2F2026%2F10%2Fimage_processing20261029-9-y9j95m-resize-2000.jpeg",
-        "autor": "Geert Hekkert",
-        "publicado": "2026-10-30T05:00-03:00",
-        "capturado": "2026-10-30T07:02-03:00",
-        "idioma": "en",
-        "pais": "INT",
-        "hash": "119d288a3d0a5356"
-      },
-      "grupo": [
-        {
-          "id": "c6b3da0127f0",
-          "fuente": "Future Farming",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.futurefarming.com/rss/",
-          "url": "https://www.futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying/",
-          "canonical_url": "https://futurefarming.com/smart-farming/ecorobotix-adds-potato-model-and-targets-yellow-nutsedge-with-ai-spot-spraying",
-          "titulo": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying",
-          "titulo_norm": "ecorobotix adds potato model and targets yellow nutsedge with ai spot spraying",
-          "descripcion": "Ecorobotix adds potato model and targets yellow nutsedge with AI spot spraying Swiss manufacturer",
-          "imagen_url": "https%3A%2F%2Fwww.futurefarming.com%2Fapp%2Fuploads%2F2026%2F10%2Fimage_processing20261029-9-y9j95m-resize-2000.jpeg",
-          "autor": "Geert Hekkert",
-          "publicado": "2026-10-30T05:00-03:00",
-          "capturado": "2026-10-30T07:02-03:00",
-          "idioma": "en",
-          "pais": "INT",
-          "hash": "119d288a3d0a5356"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 13,
-        "innovacion": 15,
-        "cercania_argentina": 5,
-        "cercania_pba": 6,
-        "potencial_reel": 9,
-        "conversacion": 7,
-        "potencial_comercial": 9,
-        "ai_score": 74,
-        "commercial_score": 82,
-        "subtema": "agtech",
-        "tema": "inteligencia artificial",
-        "ambito": "internacional",
-        "sensible": false,
-        "explicacion": "Gran novedad en pulverización selectiva con IA aplicada a papas y malezas difíciles, ideal para productores tech.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T07:02-03:00"
     },
@@ -39406,73 +39536,10 @@
         ]
       },
       "cuando": "2026-10-29T08:01-03:00"
-    },
-    {
-      "id": "aef83931a8af",
-      "rep": {
-        "id": "aef83931a8af",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles/",
-        "canonical_url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles",
-        "titulo": "Amigos son los amigos: Kirchnerismo, PRO y UCR se unieron para frenar el proyecto de biocombustibles",
-        "titulo_norm": "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles",
-        "descripcion": "Este miércoles se suponía que el proyecto de biocombustibles, que cuenta con media sanción del Senado, tendría dictamen favorable en la reunión plenaria de las comisiones de Energía, Presupuesto y Agricultura de la Cámara de Diputados. Pero eso no sucedió. Mientras que en el Senado la iniciativa promovida por el oficialismo (La Libertad Avanza) y […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/posteo-2.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-28T19:16-03:00",
-        "capturado": "2026-10-28T19:21-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cd726ca0032e2112"
-      },
-      "grupo": [
-        {
-          "id": "aef83931a8af",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles/",
-          "canonical_url": "https://bichosdecampo.com/amigos-son-los-amigos-kirchnerismo-pro-y-ucr-se-unieron-para-frenar-el-proyecto-de-biocombustibles",
-          "titulo": "Amigos son los amigos: Kirchnerismo, PRO y UCR se unieron para frenar el proyecto de biocombustibles",
-          "titulo_norm": "amigos son los amigos kirchnerismo pro y ucr se unieron para frenar el proyecto de biocombustibles",
-          "descripcion": "Este miércoles se suponía que el proyecto de biocombustibles, que cuenta con media sanción del Senado, tendría dictamen favorable en la reunión plenaria de las comisiones de Energía, Presupuesto y Agricultura de la Cámara de Diputados. Pero eso no sucedió. Mientras que en el Senado la iniciativa promovida por el oficialismo (La Libertad Avanza) y […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/posteo-2.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-28T19:16-03:00",
-          "capturado": "2026-10-28T19:21-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cd726ca0032e2112"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 71,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "biocombustibles",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta de lleno a la agroindustria y genera fuerte debate político en el sector.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-28T19:21-03:00"
     }
   ],
-  "actualizado": "2026-10-30T07:05:02-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T07:24:41-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
