@@ -20727,6 +20727,27 @@
         67,
         67
       ]
+    },
+    "18ad3a5b5e15df32": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "exportaciones carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve cifras millonarias del sector cárnico nacional, generando gran interés en ganaderos de la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22122,7 +22143,8 @@
       "https://lanacion.com.ar/economia/campo/una-violenta-tormenta-con-granizo-sorprendio-en-una-region-golpeada-por-otro-fenomeno-la-falta-de-nid30102026": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/mercado-de-carbono-fuerte-expectativa-en-el-agro-luego-de-la-media-sancion-en-el-senado-a-una-nid30102026": "2026-10-30",
       "https://infocampo.com.ar/infraestructura-agropecuaria-santa-fe-destinara-el-100-del-inmobiliario-rural-a-obras-para-el-campo": "2026-10-30",
-      "https://agrositio.com.ar/noticia/249120-exportaciones-de-carne-vacuna-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador.html": "2026-10-30"
+      "https://agrositio.com.ar/noticia/249120-exportaciones-de-carne-vacuna-las-cuotas-llegaron-para-cambiar-el-ritmo-del-negocio-exportador.html": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23516,7 +23538,8 @@
       "una violenta tormenta con granizo sorprendio en una region golpeada por otro fenomeno la falta de sol": "2026-10-30",
       "mercado de carbono fuerte expectativa en el agro luego de la media sancion en el senado a una iniciativa que puede generar millones": "2026-10-30",
       "infraestructura agropecuaria santa fe destinara el 100 del inmobiliario rural a obras para el campo": "2026-10-30",
-      "exportaciones de carne vacuna las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-30"
+      "exportaciones de carne vacuna las cuotas llegaron para cambiar el ritmo del negocio exportador": "2026-10-30",
+      "us 3791 millones vuelan en dolares las exportaciones de carne vacuna y van camino a marcar otro record": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24910,7 +24933,8 @@
       "0959eea74c2a4fa6": "2026-10-30",
       "6d2e5b7578e00789": "2026-10-30",
       "69490a99217522e9": "2026-10-30",
-      "678f58fd257bb9ba": "2026-10-30"
+      "678f58fd257bb9ba": "2026-10-30",
+      "18ad3a5b5e15df32": "2026-10-30"
     }
   },
   "elegidas": [
@@ -40848,9 +40872,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f0477d0daf06_portada.jpg"
+    },
+    {
+      "id": "53208f004804",
+      "cuando": "2026-10-30T17:20-03:00",
+      "titulo_original": "El mercado de carbono elude las grietas: logró media sanción en el Senado, con apoyo casi unánime",
+      "descripcion": "El proyecto de ley que impulsa un marco regulatorio para el mercado de carbono en Argentina fue votado por abrumadora mayoría y ahora pasa a Diputados. “Es alentador ver que se pueden generar consensos políticos”, valoró el ministro Federico Sturzenegger.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/el-mercado-de-carbono-elude-las-grietas-logro-media-sancion-en-el-senado-con-apoyo-casi-unanime/",
+      "titular": "Senado aprueba ley de carbono con apoyo casi unánime",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 10,
+        "innovacion": 7,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 69,
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "mercado de carbono",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Aprobación legislativa clave con impacto futuro en inversiones y sustentabilidad agropecuaria.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "705195cc-25e3-4357-91bb-a3302076d09e",
+          "slug": "el-senado-dio-media-sancion-a-la-ley-que-regula-el-mercado-de-6f4f35",
+          "url": "https://www.diariolacampaña.com.ar/n/el-senado-dio-media-sancion-a-la-ley-que-regula-el-mercado-de-6f4f35",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1642079604365594",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18107925194213847",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_53208f004804_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "771d541f2d0b",
+      "rep": {
+        "id": "771d541f2d0b",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026",
+        "titulo": "US$3791 millones: vuelan en dólares las exportaciones de carne vacuna y van camino a marcar otro récord",
+        "titulo_norm": "us 3791 millones vuelan en dolares las exportaciones de carne vacuna y van camino a marcar otro record",
+        "descripcion": "Con un mejor precio por tonelada vendida, según el Consorcio de Exportadores de Carnes Argentinas (ABC) entre enero y septiembre los embarques de carne bovina refrigerada y congelada aumentaron en divisas un 36,9%",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CU7LEE7ODRF2TO4AIFPVMCKXTU.jpg?auth=70983e77b02ce658566256f34ca6cd4e07c01762efe7d1f68088035b9d2b62dd&smart=true",
+        "autor": "",
+        "publicado": "2026-10-30T17:03-03:00",
+        "capturado": "2026-10-30T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "18ad3a5b5e15df32"
+      },
+      "grupo": [
+        {
+          "id": "771d541f2d0b",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026",
+          "titulo": "US$3791 millones: vuelan en dólares las exportaciones de carne vacuna y van camino a marcar otro récord",
+          "titulo_norm": "us 3791 millones vuelan en dolares las exportaciones de carne vacuna y van camino a marcar otro record",
+          "descripcion": "Con un mejor precio por tonelada vendida, según el Consorcio de Exportadores de Carnes Argentinas (ABC) entre enero y septiembre los embarques de carne bovina refrigerada y congelada aumentaron en divisas un 36,9%",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CU7LEE7ODRF2TO4AIFPVMCKXTU.jpg?auth=70983e77b02ce658566256f34ca6cd4e07c01762efe7d1f68088035b9d2b62dd&smart=true",
+          "autor": "",
+          "publicado": "2026-10-30T17:03-03:00",
+          "capturado": "2026-10-30T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "18ad3a5b5e15df32"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "exportaciones carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve cifras millonarias del sector cárnico nacional, generando gran interés en ganaderos de la zona núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T17:20-03:00"
+    },
     {
       "id": "1f8e12932530",
       "rep": {
@@ -41240,73 +41385,6 @@
         ]
       },
       "cuando": "2026-10-30T13:20-03:00"
-    },
-    {
-      "id": "53208f004804",
-      "rep": {
-        "id": "53208f004804",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/el-mercado-de-carbono-elude-las-grietas-logro-media-sancion-en-el-senado-con-apoyo-casi-unanime/",
-        "canonical_url": "https://infocampo.com.ar/el-mercado-de-carbono-elude-las-grietas-logro-media-sancion-en-el-senado-con-apoyo-casi-unanime",
-        "titulo": "El mercado de carbono elude las grietas: logró media sanción en el Senado, con apoyo casi unánime",
-        "titulo_norm": "el mercado de carbono elude las grietas logro media sancion en el senado con apoyo casi unanime",
-        "descripcion": "El proyecto de ley que impulsa un marco regulatorio para el mercado de carbono en Argentina fue votado por abrumadora mayoría y ahora pasa a Diputados. “Es alentador ver que se pueden generar consensos políticos”, valoró el ministro Federico Sturzenegger.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-10-30T11:34-03:00",
-        "capturado": "2026-10-30T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "823cb38a9c8e1ca9"
-      },
-      "grupo": [
-        {
-          "id": "53208f004804",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/el-mercado-de-carbono-elude-las-grietas-logro-media-sancion-en-el-senado-con-apoyo-casi-unanime/",
-          "canonical_url": "https://infocampo.com.ar/el-mercado-de-carbono-elude-las-grietas-logro-media-sancion-en-el-senado-con-apoyo-casi-unanime",
-          "titulo": "El mercado de carbono elude las grietas: logró media sanción en el Senado, con apoyo casi unánime",
-          "titulo_norm": "el mercado de carbono elude las grietas logro media sancion en el senado con apoyo casi unanime",
-          "descripcion": "El proyecto de ley que impulsa un marco regulatorio para el mercado de carbono en Argentina fue votado por abrumadora mayoría y ahora pasa a Diputados. “Es alentador ver que se pueden generar consensos políticos”, valoró el ministro Federico Sturzenegger.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-10-30T11:34-03:00",
-          "capturado": "2026-10-30T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "823cb38a9c8e1ca9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 10,
-        "innovacion": 7,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 69,
-        "commercial_score": 72,
-        "subtema": "agro",
-        "tema": "mercado de carbono",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Aprobación legislativa clave con impacto futuro en inversiones y sustentabilidad agropecuaria.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          68
-        ]
-      },
-      "cuando": "2026-10-30T13:00-03:00"
     },
     {
       "id": "c4c2250812ea",
@@ -42030,8 +42108,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T17:03:22-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T17:23:01-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
