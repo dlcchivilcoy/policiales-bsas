@@ -20857,6 +20857,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6746c696be05bc21": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 73,
+      "commercial_score": 73,
+      "subtema": "ganaderia",
+      "tema": "visec carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directo al bolsillo del ganadero y genera fuerte debate por exigencias de exportación.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22259,7 +22280,9 @@
       "https://lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026": "2026-10-30",
       "https://agfundernews.com/guest-article-executive-impersonation-threats-are-everywhere-in-agriculture-this-is-how-to-respond-to-them": "2026-10-30",
       "https://agfundernews.com/agrifood-signals-doordash-to-buy-instacart-terradot-lands-34m-biosphere-wins-pentagon-contract": "2026-10-30",
-      "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html": "2026-10-30"
+      "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html": "2026-10-30",
+      "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/anuncio-santa-fe-destinara-todo-el-dinero-de-un-impuesto-a-obras-para-el-campo-nid30102026": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23660,7 +23683,9 @@
       "seguridad el gobierno y la sociedad rural argentina impulsan una mesa nacional para combatir los delitos en el campo": "2026-10-30",
       "guest article executive impersonation threats are everywhere in agriculture this is how to respond": "2026-10-30",
       "agrifood signals doordash to buy instacart terradot lands 34m biosphere wins pentagon contract": "2026-10-30",
-      "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos": "2026-10-30"
+      "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos": "2026-10-30",
+      "el visec llego a los remates denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigorificos exportadores": "2026-10-30",
+      "anuncio santa fe destinara todo el dinero de un impuesto a obras para el campo": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25061,7 +25086,9 @@
       "f49d5df196b8531e": "2026-10-30",
       "f3641a0856b1e2c8": "2026-10-30",
       "1c61e46d01313b8b": "2026-10-30",
-      "9be79bfe3eee4543": "2026-10-30"
+      "9be79bfe3eee4543": "2026-10-30",
+      "6746c696be05bc21": "2026-10-30",
+      "010f9f3160ba950e": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41172,9 +41199,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1e02b9a0a2d3_portada.jpg"
+    },
+    {
+      "id": "771d541f2d0b",
+      "cuando": "2026-10-30T18:40-03:00",
+      "titulo_original": "US$3791 millones: vuelan en dólares las exportaciones de carne vacuna y van camino a marcar otro récord",
+      "descripcion": "Con un mejor precio por tonelada vendida, según el Consorcio de Exportadores de Carnes Argentinas (ABC) entre enero y septiembre los embarques de carne bovina refrigerada y congelada aumentaron en divisas un 36,9%",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026/",
+      "titular": "Exportaciones de carne vacuna alcanzan los US$3791 millones y van hacia",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "exportaciones carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve cifras millonarias del sector cárnico nacional, generando gran interés en ganaderos de la zona núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "db9d88e6-a372-4cb0-9e1b-4fe3cd19503f",
+          "slug": "exportaciones-de-carne-vacuna-suman-us-3791-millones-y-van-1ee7b3",
+          "url": "https://www.diariolacampaña.com.ar/n/exportaciones-de-carne-vacuna-suman-us-3791-millones-y-van-1ee7b3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1498955329109594",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18177991138448749",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_771d541f2d0b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "3f821f5a8e5a",
+      "rep": {
+        "id": "3f821f5a8e5a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores/",
+        "canonical_url": "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores",
+        "titulo": "El Visec llegó a los remates: Denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigoríficos exportadores",
+        "titulo_norm": "el visec llego a los remates denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigorificos exportadores",
+        "descripcion": "La polémica por el sistema de trazabilidad ambiental VISEC Carne sumó un nuevo capítulo en La Pampa. El productor Carlos “Caico” Montoya denunció que, antes de un remate organizado por Hugo Fuentes en la localidad de General Acha, varios ganaderos fueron advertidos de que podrían recibir un precio menor por sus animales si no cuentan […]",
+        "imagen_url": "",
+        "autor": "Diego Mañas",
+        "publicado": "2026-10-30T18:26-03:00",
+        "capturado": "2026-10-30T18:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "6746c696be05bc21"
+      },
+      "grupo": [
+        {
+          "id": "3f821f5a8e5a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores/",
+          "canonical_url": "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores",
+          "titulo": "El Visec llegó a los remates: Denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigoríficos exportadores",
+          "titulo_norm": "el visec llego a los remates denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigorificos exportadores",
+          "descripcion": "La polémica por el sistema de trazabilidad ambiental VISEC Carne sumó un nuevo capítulo en La Pampa. El productor Carlos “Caico” Montoya denunció que, antes de un remate organizado por Hugo Fuentes en la localidad de General Acha, varios ganaderos fueron advertidos de que podrían recibir un precio menor por sus animales si no cuentan […]",
+          "imagen_url": "",
+          "autor": "Diego Mañas",
+          "publicado": "2026-10-30T18:26-03:00",
+          "capturado": "2026-10-30T18:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "6746c696be05bc21"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 73,
+        "commercial_score": 73,
+        "subtema": "ganaderia",
+        "tema": "visec carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directo al bolsillo del ganadero y genera fuerte debate por exigencias de exportación.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T18:40-03:00"
+    },
     {
       "id": "f59607a09b2e",
       "rep": {
@@ -41304,69 +41448,6 @@
         ]
       },
       "cuando": "2026-10-30T18:00-03:00"
-    },
-    {
-      "id": "771d541f2d0b",
-      "rep": {
-        "id": "771d541f2d0b",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026",
-        "titulo": "US$3791 millones: vuelan en dólares las exportaciones de carne vacuna y van camino a marcar otro récord",
-        "titulo_norm": "us 3791 millones vuelan en dolares las exportaciones de carne vacuna y van camino a marcar otro record",
-        "descripcion": "Con un mejor precio por tonelada vendida, según el Consorcio de Exportadores de Carnes Argentinas (ABC) entre enero y septiembre los embarques de carne bovina refrigerada y congelada aumentaron en divisas un 36,9%",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CU7LEE7ODRF2TO4AIFPVMCKXTU.jpg?auth=70983e77b02ce658566256f34ca6cd4e07c01762efe7d1f68088035b9d2b62dd&smart=true",
-        "autor": "",
-        "publicado": "2026-10-30T17:03-03:00",
-        "capturado": "2026-10-30T17:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "18ad3a5b5e15df32"
-      },
-      "grupo": [
-        {
-          "id": "771d541f2d0b",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/us3791-millones-vuelan-en-dolares-las-exportaciones-de-carne-vacuna-y-van-camino-a-marcar-otro-nid30102026",
-          "titulo": "US$3791 millones: vuelan en dólares las exportaciones de carne vacuna y van camino a marcar otro récord",
-          "titulo_norm": "us 3791 millones vuelan en dolares las exportaciones de carne vacuna y van camino a marcar otro record",
-          "descripcion": "Con un mejor precio por tonelada vendida, según el Consorcio de Exportadores de Carnes Argentinas (ABC) entre enero y septiembre los embarques de carne bovina refrigerada y congelada aumentaron en divisas un 36,9%",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CU7LEE7ODRF2TO4AIFPVMCKXTU.jpg?auth=70983e77b02ce658566256f34ca6cd4e07c01762efe7d1f68088035b9d2b62dd&smart=true",
-          "autor": "",
-          "publicado": "2026-10-30T17:03-03:00",
-          "capturado": "2026-10-30T17:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "18ad3a5b5e15df32"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 72,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "exportaciones carne",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Mueve cifras millonarias del sector cárnico nacional, generando gran interés en ganaderos de la zona núcleo.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T17:20-03:00"
     },
     {
       "id": "1f8e12932530",
@@ -42224,8 +42305,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T18:24:16-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-30T18:43:08-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
