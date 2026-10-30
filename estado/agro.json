@@ -19970,6 +19970,48 @@
         53,
         46
       ]
+    },
+    "4d5015cad0be8e88": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 3,
+      "ai_score": 36,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "frutihorticultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un reclamo generalista sobre economías regionales sin datos duros ni propuestas concretas para la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c1f06b92d295a2a4": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 78,
+      "commercial_score": 78,
+      "subtema": "agtech",
+      "tema": "mostaza india",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy relevante para asesores y productores de la región pampeana que buscan alternativas biológicas contra malezas y hongos.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21321,7 +21363,10 @@
       "https://agrositio.com.ar/noticia/249108-mercados-de-granos-factores-clave-para-la-soja-el-maiz-y-el-trigo.html": "2026-10-30",
       "https://bichosdecampo.com/el-costo-oculto-de-la-crecida-en-santa-fe-productores-pagan-hasta-el-doble-de-alquiler-por-campos-para-resguardar-la-hacienda-mientras-otros-solo-pueden-conformarse-con-las-banquinas": "2026-10-30",
       "https://bichosdecampo.com/dos-meses-de-atraso-casi-la-mitad-del-rinde-un-ensayo-del-inta-mostro-cuanto-puede-perder-el-girasol-cuando-se-demora-la-siembra": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/agricultura/super-nino-mas-de-500-milimetros-ya-ponen-bajo-presion-a-la-yerba-y-no-descartan-una-suba-de-precios-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/agricultura/super-nino-mas-de-500-milimetros-ya-ponen-bajo-presion-a-la-yerba-y-no-descartan-una-suba-de-precios-nid30102026": "2026-10-30",
+      "https://todoagro.com.ar/el-huerto-y-los-frutales-son-nobles-pero-reclaman-politicas-de-aliento": "2026-10-30",
+      "https://infocampo.com.ar/riesgo-pais-hoy-30-10-2026": "2026-10-30",
+      "https://infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -22671,7 +22716,10 @@
       "mercados de granos factores clave para la soja el maiz y el trigo": "2026-10-30",
       "el costo oculto de la crecida en santa fe productores pagan hasta el doble de alquiler por campos para resguardar la hacienda mientras otros solo pueden conformarse con las banquinas": "2026-10-30",
       "dos meses de atraso casi la mitad del rinde un ensayo del inta mostro cuanto puede perder el girasol cuando se demora la siembra": "2026-10-30",
-      "super nino mas de 500 milimetros ya ponen bajo presion a la yerba y no descartan una suba de precios si el fenomeno se agrava": "2026-10-30"
+      "super nino mas de 500 milimetros ya ponen bajo presion a la yerba y no descartan una suba de precios si el fenomeno se agrava": "2026-10-30",
+      "el huerto y los frutales son nobles pero reclaman politicas de aliento": "2026-10-30",
+      "riesgo pais hoy 30 de octubre de 2026": "2026-10-30",
+      "una biofumigacion natural investigan el potencial de la mostaza india para frenar malezas y hongos": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -24021,7 +24069,10 @@
       "448e15ed5609e9b6": "2026-10-30",
       "b71bfb405249092f": "2026-10-30",
       "24e193f20a15fc3f": "2026-10-30",
-      "e21ceb6462ef3d26": "2026-10-30"
+      "e21ceb6462ef3d26": "2026-10-30",
+      "4d5015cad0be8e88": "2026-10-30",
+      "21688c6db7ea07f3": "2026-10-30",
+      "c1f06b92d295a2a4": "2026-10-30"
     }
   },
   "elegidas": [
@@ -39321,9 +39372,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_52d6d526094c_portada.jpg"
+    },
+    {
+      "id": "616a74dd2bb7",
+      "cuando": "2026-10-30T11:00-03:00",
+      "titulo_original": "Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos",
+      "descripcion": "Ensayos realizados por INTA mostraron que el rendimiento y el contenido de aceite de girasol varían según la fecha de siembra. Los rendimientos cayeron casi 100% si se comparan los extremos de períodos de siembra analizados. La entrada Demuestran que las siembras tardías de girasol pueden disminuir ",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos/",
+      "titular": "Girasol: las siembras tardías hunden los rendimientos hasta 50 por ciento",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "girasol",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para planificar fechas de siembra y evitar pérdidas totales en la campaña.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4b3facb8-f95e-41d1-94db-baab7804b3c5",
+          "slug": "girasol-ensayos-del-inta-demuestran-el-impacto-negativo-de-las-15b60b",
+          "url": "https://www.diariolacampaña.com.ar/n/girasol-ensayos-del-inta-demuestran-el-impacto-negativo-de-las-15b60b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1683247160030454",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17964753270213233",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_616a74dd2bb7_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e93e6fb9f103",
+      "rep": {
+        "id": "e93e6fb9f103",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos/",
+        "canonical_url": "https://infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos",
+        "titulo": "Una “biofumigación” natural: investigan el potencial de la mostaza india para frenar malezas y hongos",
+        "titulo_norm": "una biofumigacion natural investigan el potencial de la mostaza india para frenar malezas y hongos",
+        "descripcion": "Investigadores de la Facultad de Ciencias Agrarias de Lomas de Zamora evalúan a la mostaza india, tanto en mezclas de cultivos de servicios como en estrategias de control biológico. La casa de altos estudios articula ensayos con el INTA y la UNLP.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-29-at-10.25.17-AM.jpeg",
+        "autor": "infocampo",
+        "publicado": "2026-10-30T10:41-03:00",
+        "capturado": "2026-10-30T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c1f06b92d295a2a4"
+      },
+      "grupo": [
+        {
+          "id": "e93e6fb9f103",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos/",
+          "canonical_url": "https://infocampo.com.ar/una-biofumigacion-natural-investigan-el-potencial-de-la-mostaza-india-para-frenar-malezas-y-hongos",
+          "titulo": "Una “biofumigación” natural: investigan el potencial de la mostaza india para frenar malezas y hongos",
+          "titulo_norm": "una biofumigacion natural investigan el potencial de la mostaza india para frenar malezas y hongos",
+          "descripcion": "Investigadores de la Facultad de Ciencias Agrarias de Lomas de Zamora evalúan a la mostaza india, tanto en mezclas de cultivos de servicios como en estrategias de control biológico. La casa de altos estudios articula ensayos con el INTA y la UNLP.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-29-at-10.25.17-AM.jpeg",
+          "autor": "infocampo",
+          "publicado": "2026-10-30T10:41-03:00",
+          "capturado": "2026-10-30T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c1f06b92d295a2a4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agtech",
+        "tema": "mostaza india",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy relevante para asesores y productores de la región pampeana que buscan alternativas biológicas contra malezas y hongos.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T11:00-03:00"
+    },
     {
       "id": "be87d53f4699",
       "rep": {
@@ -39449,69 +39617,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T10:20-03:00"
-    },
-    {
-      "id": "616a74dd2bb7",
-      "rep": {
-        "id": "616a74dd2bb7",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos/",
-        "canonical_url": "https://todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos",
-        "titulo": "Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos",
-        "titulo_norm": "demuestran que las siembras tardias de girasol pueden disminuir hasta un 100 los rendimientos",
-        "descripcion": "Ensayos realizados por INTA mostraron que el rendimiento y el contenido de aceite de girasol varían según la fecha de siembra. Los rendimientos cayeron casi 100% si se comparan los extremos de períodos de siembra analizados. La entrada Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-10-30T09:57-03:00",
-        "capturado": "2026-10-30T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "98a442bf840dd940"
-      },
-      "grupo": [
-        {
-          "id": "616a74dd2bb7",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos/",
-          "canonical_url": "https://todoagro.com.ar/demuestran-que-las-siembras-tardias-de-girasol-pueden-disminuir-hasta-un-100-los-rendimientos",
-          "titulo": "Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos",
-          "titulo_norm": "demuestran que las siembras tardias de girasol pueden disminuir hasta un 100 los rendimientos",
-          "descripcion": "Ensayos realizados por INTA mostraron que el rendimiento y el contenido de aceite de girasol varían según la fecha de siembra. Los rendimientos cayeron casi 100% si se comparan los extremos de períodos de siembra analizados. La entrada Demuestran que las siembras tardías de girasol pueden disminuir hasta un 100% los rendimientos pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-10-30T09:57-03:00",
-          "capturado": "2026-10-30T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "98a442bf840dd940"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 13,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 75,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "girasol",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy útil para planificar fechas de siembra y evitar pérdidas totales en la campaña.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T10:00-03:00"
     },
     {
       "id": "f2caeba95f7b",
@@ -40172,8 +40277,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T10:44:30-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T11:03:29-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
