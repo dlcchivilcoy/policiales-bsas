@@ -20836,6 +20836,27 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9be79bfe3eee4543": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 72,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "angus",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente entrevista a referente ganadero con fuerte arraigo en PBA y la raza Angus que interesa a la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22237,7 +22258,8 @@
       "https://bichosdecampo.com/santa-fe-prometio-destinar-todo-lo-que-recaude-a-traves-del-inmobiliario-rural-a-obras-para-el-campo": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026": "2026-10-30",
       "https://agfundernews.com/guest-article-executive-impersonation-threats-are-everywhere-in-agriculture-this-is-how-to-respond-to-them": "2026-10-30",
-      "https://agfundernews.com/agrifood-signals-doordash-to-buy-instacart-terradot-lands-34m-biosphere-wins-pentagon-contract": "2026-10-30"
+      "https://agfundernews.com/agrifood-signals-doordash-to-buy-instacart-terradot-lands-34m-biosphere-wins-pentagon-contract": "2026-10-30",
+      "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23637,7 +23659,8 @@
       "santa fe prometio destinar todo lo que recaude a traves del inmobiliario rural a obras para el campo": "2026-10-30",
       "seguridad el gobierno y la sociedad rural argentina impulsan una mesa nacional para combatir los delitos en el campo": "2026-10-30",
       "guest article executive impersonation threats are everywhere in agriculture this is how to respond": "2026-10-30",
-      "agrifood signals doordash to buy instacart terradot lands 34m biosphere wins pentagon contract": "2026-10-30"
+      "agrifood signals doordash to buy instacart terradot lands 34m biosphere wins pentagon contract": "2026-10-30",
+      "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25037,7 +25060,8 @@
       "d952ea9abadb97b9": "2026-10-30",
       "f49d5df196b8531e": "2026-10-30",
       "f3641a0856b1e2c8": "2026-10-30",
-      "1c61e46d01313b8b": "2026-10-30"
+      "1c61e46d01313b8b": "2026-10-30",
+      "9be79bfe3eee4543": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41094,9 +41118,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7b01c3ba2920_portada.jpg"
+    },
+    {
+      "id": "1e02b9a0a2d3",
+      "cuando": "2026-10-30T18:20-03:00",
+      "titulo_original": "No todos los 2,4-D son iguales",
+      "descripcion": "Corteva destaca el desarrollo de nuevas formulaciones, como Enlist Colex-D®, diseñadas para mejorar la precisión de aplicación y reducir riesgos de deriva y volatilidad.",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249096-no-todos-los-24-d-son-iguales.html",
+      "titular": "Herbicidas: nuevas formulaciones de 2,4-D mejoran la precisión de aplicación",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 9,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "empresas",
+        "tema": "corteva",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interés directo por el manejo de fitosanitarios y alto atractivo comercial para sponsors de insumos.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ff838f7d-674f-4f4d-ab8a-ee88d91f9b73",
+          "slug": "nuevas-formulaciones-de-2-4-d-buscan-reducir-la-deriva-y-72cc79",
+          "url": "https://www.diariolacampaña.com.ar/n/nuevas-formulaciones-de-2-4-d-buscan-reducir-la-deriva-y-72cc79",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4050407968596354",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18120963685902667",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1e02b9a0a2d3_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f59607a09b2e",
+      "rep": {
+        "id": "f59607a09b2e",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
+        "titulo": "Amadeo Derito y la \"pasión Ganadera\": de la empresa familiar industrial, a la compra y gestión de 12 de campos",
+        "titulo_norm": "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos",
+        "descripcion": "Historias que motivan y muestran como cuando los sueños y los propósitos están claros, las cosas suceden. Un -Mano a Mano- con Amadeo Derito, empresario industrial, ganadero, cabañero, y Pte. de ANGUS. Nos comparte cómo su formación y experiencia en la empresa familiar, lo llevaron a comprar y gestionar una red de 12 campos en distintas provincias, combinando agricultura y ganadería con un enfoque estratégico y pasión por la raza Angus. Su Padre y la crianza con el foco en el trabajo. Las decisiones de reinversión que lo llevaron a comprar campos en PBA, La Pampa, y San Luis. Los modelos productivos, el conocimiento aplicado, y los Colaboradores que...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/WR3FnVZ5OtY.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-10-30T18:06-03:00",
+        "capturado": "2026-10-30T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9be79bfe3eee4543"
+      },
+      "grupo": [
+        {
+          "id": "f59607a09b2e",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
+          "titulo": "Amadeo Derito y la \"pasión Ganadera\": de la empresa familiar industrial, a la compra y gestión de 12 de campos",
+          "titulo_norm": "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos",
+          "descripcion": "Historias que motivan y muestran como cuando los sueños y los propósitos están claros, las cosas suceden. Un -Mano a Mano- con Amadeo Derito, empresario industrial, ganadero, cabañero, y Pte. de ANGUS. Nos comparte cómo su formación y experiencia en la empresa familiar, lo llevaron a comprar y gestionar una red de 12 campos en distintas provincias, combinando agricultura y ganadería con un enfoque estratégico y pasión por la raza Angus. Su Padre y la crianza con el foco en el trabajo. Las decisiones de reinversión que lo llevaron a comprar campos en PBA, La Pampa, y San Luis. Los modelos productivos, el conocimiento aplicado, y los Colaboradores que...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/WR3FnVZ5OtY.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-10-30T18:06-03:00",
+          "capturado": "2026-10-30T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9be79bfe3eee4543"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "angus",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente entrevista a referente ganadero con fuerte arraigo en PBA y la raza Angus que interesa a la zona núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-30T18:20-03:00"
+    },
     {
       "id": "f1d8acbf0acf",
       "rep": {
@@ -41293,69 +41434,6 @@
         ]
       },
       "cuando": "2026-10-30T16:20-03:00"
-    },
-    {
-      "id": "1e02b9a0a2d3",
-      "rep": {
-        "id": "1e02b9a0a2d3",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249096-no-todos-los-24-d-son-iguales.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249096-no-todos-los-24-d-son-iguales.html",
-        "titulo": "No todos los 2,4-D son iguales",
-        "titulo_norm": "no todos los 2 4 d son iguales",
-        "descripcion": "Corteva destaca el desarrollo de nuevas formulaciones, como Enlist Colex-D®, diseñadas para mejorar la precisión de aplicación y reducir riesgos de deriva y volatilidad.",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249096_45975210.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-29T14:31-03:00",
-        "capturado": "2026-10-30T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9e6a4f064ddcd3b8"
-      },
-      "grupo": [
-        {
-          "id": "1e02b9a0a2d3",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249096-no-todos-los-24-d-son-iguales.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249096-no-todos-los-24-d-son-iguales.html",
-          "titulo": "No todos los 2,4-D son iguales",
-          "titulo_norm": "no todos los 2 4 d son iguales",
-          "descripcion": "Corteva destaca el desarrollo de nuevas formulaciones, como Enlist Colex-D®, diseñadas para mejorar la precisión de aplicación y reducir riesgos de deriva y volatilidad.",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249096_45975210.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-29T14:31-03:00",
-          "capturado": "2026-10-30T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9e6a4f064ddcd3b8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 6,
-        "potencial_comercial": 9,
-        "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "empresas",
-        "tema": "corteva",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interés directo por el manejo de fitosanitarios y alto atractivo comercial para sponsors de insumos.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T16:00-03:00"
     },
     {
       "id": "6d3fd76662ac",
@@ -42146,8 +42224,8 @@
       "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T18:03:26-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T18:24:16-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
