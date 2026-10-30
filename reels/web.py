@@ -200,6 +200,22 @@ def _con_reintentos(llamar, ya_salio=None, dormir=None):
     return r
 
 
+ESPERAS_FOTO_WIX = (10, 30)
+
+
+def dormir_wix(segundos: float) -> None:
+    import time
+    time.sleep(segundos)
+
+
+def _foto_no_esta(r) -> bool:
+    """¿Wix rechazó el borrador porque la foto importada todavía no está en el Media Manager?"""
+    if r is None or r.status_code != 400:
+        return False
+    texto = getattr(r, "text", "") or ""
+    return "Media image" in texto and "not found" in texto
+
+
 def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="", categorias=None) -> dict:
     """Crea y publica la nota. Devuelve {id, slug, url}. `pedir(metodo, url, **kw)` es el
     cliente HTTP del publicador (el mismo que se reemplaza en las pruebas). `foto_respaldo`
@@ -220,6 +236,19 @@ def publicar(pedir, pieza: dict, youtube_id: str = "", foto_respaldo="", categor
         file_id = _importar_foto(pedir, url, titulo)
     cuerpo = armar_borrador(pieza, file_id, youtube_id, categorias=categorias)
     r = _con_reintentos(lambda: pedir("POST", DRAFT_POSTS_URL, headers=_headers(), json=cuerpo, timeout=30))
+    # 27/10/2026 (agro, «Alfalfa: el INTA…»): Wix contestó 400 «Media image with provided … id not found»
+    # con una foto que ÉL MISMO acababa de importar: la importación es asíncrona y la foto todavía no
+    # estaba. Se espera y se vuelve a pedir; si sigue sin aparecer, la nota sale sin foto antes que perderla
+    # (la corrida quedaba en rojo por una sola nota).
+    for espera in ESPERAS_FOTO_WIX + (None,):
+        if not (file_id and _foto_no_esta(r)):
+            break
+        if espera is None:
+            file_id = ""
+        else:
+            dormir_wix(espera)
+        cuerpo = armar_borrador(pieza, file_id, youtube_id, categorias=categorias)
+        r = _con_reintentos(lambda: pedir("POST", DRAFT_POSTS_URL, headers=_headers(), json=cuerpo, timeout=30))
     draft_id = (_json(r, "crear borrador").get("draftPost") or {}).get("id")
     if not draft_id:
         raise FalloWeb("Wix (crear borrador): no devolvió el id")

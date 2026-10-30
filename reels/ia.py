@@ -197,12 +197,24 @@ def redactar(system: str, material: str, preferir: str = "", max_tokens: int = 0
 
 
 def _parsear(texto: str) -> dict:
-    """Saca el JSON, tolerando ```json y texto colgado a los costados."""
+    """Saca el JSON, tolerando ```json y texto colgado a los costados.
+
+    30/10/2026: `strict=False` acepta saltos de línea y tabulaciones crudos dentro de las cadenas
+    («Invalid control character», la nota del paro docente del 29/10), y una coma colgada antes de
+    `]` o `}` se saca. Si igual no parsea, el error lleva el pedazo donde se rompió, para poder ver qué
+    mandó Gemini."""
     limpio = re.sub(r"^```(?:json)?\s*|\s*```$", "", (texto or "").strip())
-    try:
-        return json.loads(limpio)
-    except json.JSONDecodeError:
-        m = re.search(r"\{.*\}", limpio, re.DOTALL)
-        if not m:
-            raise
-        return json.loads(m.group(0))
+    candidatos = [limpio]
+    m = re.search(r"\{.*\}", limpio, re.DOTALL)
+    if m and m.group(0) != limpio:
+        candidatos.append(m.group(0))
+    primero = None
+    for c in candidatos:
+        for variante in (c, re.sub(r",\s*([\]}])", r"\1", c)):
+            try:
+                return json.loads(variante, strict=False)
+            except json.JSONDecodeError as e:
+                primero = primero or e
+    pos = primero.pos
+    raise json.JSONDecodeError(f"{primero.msg} · cerca de «{limpio[max(0, pos - 60):pos + 40]}»",
+                               primero.doc, pos)

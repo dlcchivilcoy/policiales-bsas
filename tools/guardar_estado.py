@@ -19,13 +19,20 @@ Uso (en el workflow, después de que la pasada escribió estado/):
     python tools/guardar_estado.py
 """
 import json
+import random
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 RAMA = "main"
-INTENTOS = 4
+# 30/10/2026: la corrida de agro de las 10 no pudo guardar y quedó en rojo con los 4 intentos en el MISMO
+# segundo (14:21:22) y sin ningún otro commit en la rama: no era un choque con otra pasada sino un rechazo
+# de GitHub que se reintentaba al instante y sin decir cuál. Ahora espera cada vez más entre intentos y
+# muestra lo que contestó git.
+INTENTOS = 6
+ESPERAS = (5, 15, 30, 60, 120)
 EXITO = ("ok", "sin_confirmar")
 
 
@@ -223,7 +230,13 @@ def _remoto(nombre: str, raiz=RAIZ):
         return None
 
 
-def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
+def _motivo(r: subprocess.CompletedProcess) -> str:
+    """Lo que dijo git, en una línea y sin nada que parezca una credencial."""
+    texto = " ".join((r.stderr or r.stdout or "").split())
+    return " ".join(p for p in texto.split() if "@" not in p and "token" not in p.lower())[:300]
+
+
+def guardar(mensaje: str, raiz: Path = RAIZ, solo=None, dormir=time.sleep) -> str:
     """`solo`: los archivos de estado/ que escribió este trabajo (el de nacionales guarda solo
     nacionales.json: el resto de su copia es la vieja del arranque)."""
     estado = raiz / "estado"
@@ -240,6 +253,8 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
         return "estado/ vacío: nada que guardar."
 
     for intento in range(1, INTENTOS + 1):
+        if intento > 1:
+            dormir(ESPERAS[min(intento - 2, len(ESPERAS) - 1)] + random.uniform(0, 3))
         g("fetch", "--quiet", "origin", RAMA)
         g("reset", "--quiet", "--hard", f"origin/{RAMA}")     # la punta actual de la rama
         for nombre, mio in nuestros.items():
@@ -253,9 +268,10 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None) -> str:
         if not g("status", "--porcelain", "estado/").stdout.strip():
             return "La memoria ya estaba al día: nada que commitear."
         g("commit", "--quiet", "-m", mensaje)
-        if g("push", "--quiet", "origin", f"HEAD:{RAMA}", chequear=False).returncode == 0:
+        push = g("push", "--quiet", "origin", f"HEAD:{RAMA}", chequear=False)
+        if push.returncode == 0:
             return f"Memoria guardada (intento {intento})."
-        print(f"El push no entró (otra pasada subió algo); intento {intento} de {INTENTOS}...")
+        print(f"El push no entró (intento {intento} de {INTENTOS}): {_motivo(push) or 'git no dijo por qué'}")
     raise RuntimeError("No se pudo guardar la memoria después de varios intentos.")
 
 
