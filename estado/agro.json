@@ -21510,6 +21510,27 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5521c20a1489a3aa": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "ética profesional",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reflexión interesante pero de bajo impacto económico directo y sin datos duros para el productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22963,7 +22984,10 @@
       "https://infocampo.com.ar/precio-del-trigo-hoy-31-octubre-2026": "2026-10-31",
       "https://infocampo.com.ar/precio-del-girasol-hoy-31-octubre-2026": "2026-10-31",
       "https://infocampo.com.ar/precio-de-la-soja-hoy-31-octubre-2026": "2026-10-31",
-      "https://infocampo.com.ar/precio-del-sorgo-hoy-31-octubre-2026": "2026-10-31"
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-31-octubre-2026": "2026-10-31",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-31-octubre-2026": "2026-10-31",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-31-octubre-2026": "2026-10-31",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-el-gran-beto-quiroga-toma-distancia-de-los-negocios-en-torno-al-suelo-y-recuerda-que-para-poder-defender-la-etica-profesional-tenes-que-comer-guiso-de-lentejas": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24415,7 +24439,10 @@
       "precio del trigo en rosario hoy 31 octubre 2026": "2026-10-31",
       "precio del girasol en rosario hoy 31 octubre 2026": "2026-10-31",
       "precio de la soja en rosario hoy 31 octubre 2026": "2026-10-31",
-      "precio del sorgo en rosario hoy 31 octubre 2026": "2026-10-31"
+      "precio del sorgo en rosario hoy 31 octubre 2026": "2026-10-31",
+      "dolar blue a cuanto cotizan hoy en mendoza 31 octubre 2026": "2026-10-31",
+      "euro blue hoy precio y cotizacion de este 31 octubre 2026": "2026-10-31",
+      "los dilemas de la agronomia el gran beto quiroga toma distancia de los negocios en torno al suelo y recuerda que para poder defender la etica profesional tenes que comer guiso de lentejas": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25867,7 +25894,10 @@
       "10e2f5f46cd486f4": "2026-10-31",
       "66a9cea851ee9047": "2026-10-31",
       "dbbf5add4bc530b4": "2026-10-31",
-      "bbf0a2d7333eaaf0": "2026-10-31"
+      "bbf0a2d7333eaaf0": "2026-10-31",
+      "a12bf9193b35dfb9": "2026-10-31",
+      "3af54d13a513768f": "2026-10-31",
+      "5521c20a1489a3aa": "2026-10-31"
     }
   },
   "elegidas": [
@@ -42883,6 +42913,67 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cf61bc881f37_portada.jpg"
+    },
+    {
+      "id": "b6c819dc0945",
+      "cuando": "2026-10-31T13:00-03:00",
+      "titulo_original": "El Niño no tendrá un desarrollo parejo en todo el territorio",
+      "descripcion": "Mientras en el Litoral muestra una fuerte presencia, en la región central el impacto del fenómeno climático todavía no es relevante",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026/",
+      "titular": "El Niño avanza con lluvias dispares y proyectan riesgos en la cuenca",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 77,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pronósticos climáticos y regionalización de lluvias que impactan de lleno en la campaña.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "CbQEIrybX2w",
+          "url": "https://youtube.com/shorts/CbQEIrybX2w",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "e008ec5d-f0c1-4622-ae73-1f00cd230195",
+          "slug": "el-nino-avanza-con-lluvias-irregulares-y-advierten-por-riesgos-7e1bdf",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-avanza-con-lluvias-irregulares-y-advierten-por-riesgos-7e1bdf",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1422033200063638",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17945359185388224",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b6c819dc0945_portada.jpg"
     }
   ],
   "pendientes": [
@@ -43142,69 +43233,6 @@
         "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-31T07:02-03:00"
-    },
-    {
-      "id": "b6c819dc0945",
-      "rep": {
-        "id": "b6c819dc0945",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026",
-        "titulo": "El Niño no tendrá un desarrollo parejo en todo el territorio",
-        "titulo_norm": "el nino no tendra un desarrollo parejo en todo el territorio",
-        "descripcion": "Mientras en el Litoral muestra una fuerte presencia, en la región central el impacto del fenómeno climático todavía no es relevante",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/DZGVW3EHEJEIHDG7B6WQLRY6QI.png?auth=5b0303e1f852ebf5d3e92da7824d67db864a2ca8112d576195c4c2cdedaec514&smart=true",
-        "autor": "Carlos Marin Moreno",
-        "publicado": "2026-10-31T06:02-03:00",
-        "capturado": "2026-10-31T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ce000dd519e279da"
-      },
-      "grupo": [
-        {
-          "id": "b6c819dc0945",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026",
-          "titulo": "El Niño no tendrá un desarrollo parejo en todo el territorio",
-          "titulo_norm": "el nino no tendra un desarrollo parejo en todo el territorio",
-          "descripcion": "Mientras en el Litoral muestra una fuerte presencia, en la región central el impacto del fenómeno climático todavía no es relevante",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/DZGVW3EHEJEIHDG7B6WQLRY6QI.png?auth=5b0303e1f852ebf5d3e92da7824d67db864a2ca8112d576195c4c2cdedaec514&smart=true",
-          "autor": "Carlos Marin Moreno",
-          "publicado": "2026-10-31T06:02-03:00",
-          "capturado": "2026-10-31T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ce000dd519e279da"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 77,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "el niño",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Pronósticos climáticos y regionalización de lluvias que impactan de lleno en la campaña.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-31T07:02-03:00"
@@ -43675,8 +43703,8 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T11:21:29-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-31T13:04:20-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
