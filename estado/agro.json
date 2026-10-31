@@ -21464,6 +21464,52 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a9f14da4b428f969": {
+      "impacto_economico": 11,
+      "interes_productores": 8,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "economías regionales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante para diversificación productiva pero de nicho limitado en la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        65
+      ]
+    },
+    "66a12891d1ee8627": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 6,
+      "cercania_argentina": 9,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 77,
+      "commercial_score": 85,
+      "subtema": "mercados",
+      "tema": "fertilizantes",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Altamente relevante para calcular costos de campaña y estratégico para sponsors de insumos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22910,7 +22956,9 @@
       "https://bichosdecampo.com/de-raiz-en-casa-foa-2026-el-paisajismo-le-peleo-el-espacio-a-la-decoracion-y-la-arquitectura": "2026-10-31",
       "https://bichosdecampo.com/conmovedor-testimonio-del-amansador-de-caballos-oscar-scarpati-a-8-meses-de-la-caida-que-lo-dejo-con-severas-lesiones-aca-estoy-domando-tal-vez-el-potro-mas-dificil-de-mi-vida": "2026-10-31",
       "https://lanacion.com.ar/economia/campo/agricultura/chicharrita-y-cogollero-monitorear-en-el-lote-para-no-decidir-desde-el-miedo-nid31102026": "2026-10-31",
-      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-31-octubre-2026": "2026-10-31"
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-31-octubre-2026": "2026-10-31",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249128-winograd-sobre-la-bioeconomia-en-el-plato-frutas-y-hortalizas-y-las-claves-de-la-alimentacion-actual.html": "2026-10-31",
+      "https://bichosdecampo.com/doble-comando-en-el-mercado-mundial-de-fertilizantes-costos-en-alza-en-europa-con-valores-decrecientes-en-las-americas": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24355,7 +24403,9 @@
       "de raiz en casa foa 2026 el paisajismo le peleo el espacio a la decoracion y la arquitectura": "2026-10-31",
       "conmovedor testimonio del amansador de caballos oscar scarpati a 8 meses de la caida que lo dejo con severas lesiones aca estoy domando tal vez el potro mas dificil de mi vida": "2026-10-31",
       "chicharrita y cogollero monitorear en el lote para no decidir desde el miedo": "2026-10-31",
-      "dolar blue a cuanto cotizan hoy en cordoba 31 octubre 2026": "2026-10-31"
+      "dolar blue a cuanto cotizan hoy en cordoba 31 octubre 2026": "2026-10-31",
+      "de la palta al pistacho y la pitaya nuevos alimentos que transformaran las economias regionales con m winograd agronomo": "2026-10-31",
+      "doble comando en el mercado mundial de fertilizantes costos en alza en europa con valores decrecientes en las americas": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25800,7 +25850,9 @@
       "b60df14ef6b2cc8e": "2026-10-31",
       "80b4e01a46d106b5": "2026-10-31",
       "ed2f22708dcac007": "2026-10-31",
-      "9d19fb927b402c24": "2026-10-31"
+      "9d19fb927b402c24": "2026-10-31",
+      "a9f14da4b428f969": "2026-10-31",
+      "66a12891d1ee8627": "2026-10-31"
     }
   },
   "elegidas": [
@@ -42758,49 +42810,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cd177c5e0d5b_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "cf61bc881f37",
-      "rep": {
-        "id": "cf61bc881f37",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
-        "titulo": "La inflación de octubre se desaceleró al 1,8%, según Libertad y Progreso",
-        "titulo_norm": "la inflacion de octubre se desacelero al 1 8 segun libertad y progreso",
-        "descripcion": "En octubre el IPC de Libertad y Progreso subió a un ritmo de 1,8% mensual, marcando una desaceleración de 0,1 puntos porcentuales respecto del dato de septiembre del INDEC, que cerró en 1,9%. Con este resultado, la inflación acumulada en el año alcanzaría el 25,9%, mientras que la variación interanual se ubicaría en 32,7%, 0,7 p.p. por debajo del 33,4% registrado en septiembre....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249125_22056080.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-10-30T17:53-03:00",
-        "capturado": "2026-10-31T07:42-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8eff764de774032f"
-      },
-      "grupo": [
-        {
-          "id": "cf61bc881f37",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
-          "titulo": "La inflación de octubre se desaceleró al 1,8%, según Libertad y Progreso",
-          "titulo_norm": "la inflacion de octubre se desacelero al 1 8 segun libertad y progreso",
-          "descripcion": "En octubre el IPC de Libertad y Progreso subió a un ritmo de 1,8% mensual, marcando una desaceleración de 0,1 puntos porcentuales respecto del dato de septiembre del INDEC, que cerró en 1,9%. Con este resultado, la inflación acumulada en el año alcanzaría el 25,9%, mientras que la variación interanual se ubicaría en 32,7%, 0,7 p.p. por debajo del 33,4% registrado en septiembre....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249125_22056080.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-10-30T17:53-03:00",
-          "capturado": "2026-10-31T07:42-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8eff764de774032f"
-        }
-      ],
+      "cuando": "2026-10-31T11:00-03:00",
+      "titulo_original": "La inflación de octubre se desaceleró al 1,8%, según Libertad y Progreso",
+      "descripcion": "En octubre el IPC de Libertad y Progreso subió a un ritmo de 1,8% mensual, marcando una desaceleración de 0,1 puntos porcentuales respecto del dato de septiembre del INDEC, que cerró en 1,9%. Con este resultado, la inflación acumulada en el año alcanzaría el 25,9%, mientras que la variación interanu",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
+      "titular": "La inflación de octubre marcó un 1,8% mensual según Libertad y Progreso",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 11,
@@ -42826,7 +42845,161 @@
           64
         ]
       },
-      "cuando": "2026-10-31T07:42-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f004d7d9-ff7f-466c-aee4-11bf0d0f09b0",
+          "slug": "la-inflacion-de-octubre-se-ubico-en-el-1-8-segun-un-informe-4cf719",
+          "url": "https://www.diariolacampaña.com.ar/n/la-inflacion-de-octubre-se-ubico-en-el-1-8-segun-un-informe-4cf719",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2643021759456942",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18190496929409413",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cf61bc881f37_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "d3a35f1e65cc",
+      "rep": {
+        "id": "d3a35f1e65cc",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249128-winograd-sobre-la-bioeconomia-en-el-plato-frutas-y-hortalizas-y-las-claves-de-la-alimentacion-actual.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249128-winograd-sobre-la-bioeconomia-en-el-plato-frutas-y-hortalizas-y-las-claves-de-la-alimentacion-actual.html",
+        "titulo": "De la palta al pistacho y la pitaya: \"nuevos alimentos\" que transformarán las economías regionales; con M. Winograd - agrónomo",
+        "titulo_norm": "de la palta al pistacho y la pitaya nuevos alimentos que transformaran las economias regionales con m winograd agronomo",
+        "descripcion": "Los cambios en la alimentación actual. La nueva pirámide nutricional, y las oportunidades para productores y economías regionales. Una charla con el Ing. Agr. Mariano Winograd, especialista en frutihorticultura analizando la creciente demanda de frutas y hortalizas en Argentina. Destacando palta, pistacho, pecán, bananas, pitaya, kiwi, frutos, aceite de oliva, entre otros. ¿Cómo invierten los que apuestan a estas tendencias alimenticias? Un listado de productos con gran potencial y alta demanda interna y externa. Además, explica cómo los cambios culturales y climáticos influyen en el sector y en la alimentación de los argentinos...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/Mhr7Jk6iU-c.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-10-31T10:41-03:00",
+        "capturado": "2026-10-31T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a9f14da4b428f969"
+      },
+      "grupo": [
+        {
+          "id": "d3a35f1e65cc",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249128-winograd-sobre-la-bioeconomia-en-el-plato-frutas-y-hortalizas-y-las-claves-de-la-alimentacion-actual.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249128-winograd-sobre-la-bioeconomia-en-el-plato-frutas-y-hortalizas-y-las-claves-de-la-alimentacion-actual.html",
+          "titulo": "De la palta al pistacho y la pitaya: \"nuevos alimentos\" que transformarán las economías regionales; con M. Winograd - agrónomo",
+          "titulo_norm": "de la palta al pistacho y la pitaya nuevos alimentos que transformaran las economias regionales con m winograd agronomo",
+          "descripcion": "Los cambios en la alimentación actual. La nueva pirámide nutricional, y las oportunidades para productores y economías regionales. Una charla con el Ing. Agr. Mariano Winograd, especialista en frutihorticultura analizando la creciente demanda de frutas y hortalizas en Argentina. Destacando palta, pistacho, pecán, bananas, pitaya, kiwi, frutos, aceite de oliva, entre otros. ¿Cómo invierten los que apuestan a estas tendencias alimenticias? Un listado de productos con gran potencial y alta demanda interna y externa. Además, explica cómo los cambios culturales y climáticos influyen en el sector y en la alimentación de los argentinos...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/Mhr7Jk6iU-c.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-10-31T10:41-03:00",
+          "capturado": "2026-10-31T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a9f14da4b428f969"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 8,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "economías regionales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante para diversificación productiva pero de nicho limitado en la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          58,
+          65
+        ]
+      },
+      "cuando": "2026-10-31T11:00-03:00"
+    },
+    {
+      "id": "9d4c250284bb",
+      "rep": {
+        "id": "9d4c250284bb",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/doble-comando-en-el-mercado-mundial-de-fertilizantes-costos-en-alza-en-europa-con-valores-decrecientes-en-las-americas/",
+        "canonical_url": "https://bichosdecampo.com/doble-comando-en-el-mercado-mundial-de-fertilizantes-costos-en-alza-en-europa-con-valores-decrecientes-en-las-americas",
+        "titulo": "Doble comando en el mercado mundial de fertilizantes: Costos en alza en Europa con valores decrecientes en las Américas",
+        "titulo_norm": "doble comando en el mercado mundial de fertilizantes costos en alza en europa con valores decrecientes en las americas",
+        "descripcion": "Esta semana el mercado internacional de fertilizantes nitrogenados mostró un comportamiento desacoplado geográficamente. Mientras que el aumento del precio del gas natural en Europa aumenta los costos de producción de manera considerable, en las Américas el valor de ese activo energético viene descendiendo junto con una demanda que no tiene “resto” para convalidar aumentos de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/gas.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-31T10:52-03:00",
+        "capturado": "2026-10-31T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "66a12891d1ee8627"
+      },
+      "grupo": [
+        {
+          "id": "9d4c250284bb",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/doble-comando-en-el-mercado-mundial-de-fertilizantes-costos-en-alza-en-europa-con-valores-decrecientes-en-las-americas/",
+          "canonical_url": "https://bichosdecampo.com/doble-comando-en-el-mercado-mundial-de-fertilizantes-costos-en-alza-en-europa-con-valores-decrecientes-en-las-americas",
+          "titulo": "Doble comando en el mercado mundial de fertilizantes: Costos en alza en Europa con valores decrecientes en las Américas",
+          "titulo_norm": "doble comando en el mercado mundial de fertilizantes costos en alza en europa con valores decrecientes en las americas",
+          "descripcion": "Esta semana el mercado internacional de fertilizantes nitrogenados mostró un comportamiento desacoplado geográficamente. Mientras que el aumento del precio del gas natural en Europa aumenta los costos de producción de manera considerable, en las Américas el valor de ese activo energético viene descendiendo junto con una demanda que no tiene “resto” para convalidar aumentos de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/gas.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-31T10:52-03:00",
+          "capturado": "2026-10-31T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "66a12891d1ee8627"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 6,
+        "cercania_argentina": 9,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 77,
+        "commercial_score": 85,
+        "subtema": "mercados",
+        "tema": "fertilizantes",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Altamente relevante para calcular costos de campaña y estratégico para sponsors de insumos.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-31T11:00-03:00"
     },
     {
       "id": "17a84ebda870",
@@ -43487,8 +43660,8 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T10:43:47-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-31T11:03:13-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
