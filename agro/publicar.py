@@ -31,6 +31,9 @@ from pathlib import Path
 
 DIARIO_IDS = {"1456376377985890", "17841405971293744"}   # página e IG de @diarioyradio
 CAMPO_ID = "0b4eafce-3bb8-44df-96dd-43e53fa24a9c"         # sección «Agro» de la web (ex «Campo», 14/10/2026)
+# Categoría INTERNA «Agro automáticas» (31/10/2026): la web la usa para dejar estas notas fuera de la portada
+# (pedido del editor: «las scrappeadas van a su categoría pero no en portada»). Siguen en la sección Agro.
+AGRO_AUTO_ID = "1a32fc33-5c95-473a-9d63-3461c2841bb8"
 REDES = ("youtube", "web", "facebook", "instagram")
 _CLAVES = ("INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")
 
@@ -79,7 +82,10 @@ def pieza_publicador(pieza: dict) -> dict:
     from agro import guion as GU
     g = pieza["guion"]
     return {"descripcion_tiktok": GU.texto_red(g, "instagram"),
-            "video": {"alto": (pieza.get("reel") or {}).get("alto") or 1350},     # 4:5 → FB en 9:16
+            # 4:5 → FB en 9:16. La duración: un reel de más de 90 s (con el video de la fuente) va a Facebook
+            # como video de la página (reels/publicador.publicar_facebook).
+            "video": {"alto": (pieza.get("reel") or {}).get("alto") or 1350,
+                      "duracion": (pieza.get("reel") or {}).get("duracion") or 0},
             "guion": {"titular": g["titular"], "bajada": g["bajada"]},
             "placa": pieza.get("portada"),
             "web": {"titulo": g.get("titulo_web") or g["titular"], "cuerpo": g.get("nota_web", "")},
@@ -204,7 +210,7 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_
         try:
             respaldo = (lambda: PB.subir_a_release(Path(imagen), f"agro_{pieza['id']}.jpg")) if imagen else ""
             salida["web"] = W.publicar(lambda m, u, **kw: PB._pedir(m, u, "", **kw), pp, youtube_id=yt_id or "",
-                                       foto_respaldo=respaldo, categorias=[CAMPO_ID])
+                                       foto_respaldo=respaldo, categorias=[CAMPO_ID, AGRO_AUTO_ID])
             log(f"   Web: {salida['web'].get('url')}")
         except Exception as e:                             # noqa: BLE001
             salida["web"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
@@ -292,7 +298,7 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
             def respaldo():
                 return PB.subir_a_release(Path(imagen), f"agro_{pieza['id']}.jpg")
             salida["web"] = W.publicar(lambda m, u, **kw: PB._pedir(m, u, "", **kw), pp, youtube_id="",
-                                       foto_respaldo=respaldo, categorias=[CAMPO_ID])
+                                       foto_respaldo=respaldo, categorias=[CAMPO_ID, AGRO_AUTO_ID])
             log(f"   Web: {salida['web'].get('url')}")
         except Exception as e:                             # noqa: BLE001
             salida["web"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}

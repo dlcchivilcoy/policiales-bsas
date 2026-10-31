@@ -13,7 +13,9 @@ En el bloque el texto cambia por tramos, con un fundido corto:
     14,5-19   POR QUÉ IMPORTA
     19-22     CIERRE: el logo, DIARIO Y RADIO AGRO, @diarioyradioagro
 
-Sin voz (la locución queda para más adelante). Los cuadros se dibujan con PIL y van por un caño a
+Sin voz (la locución queda para más adelante). CON VIDEO de la fuente (31/10/2026, pedido del editor: «poner
+videos en reels, de máximo 1 minuto y medio»): el reel dura lo que el video —entero y CON su sonido—; el
+último texto (POR QUÉ IMPORTA) queda hasta que termina y después va el cierre. Los cuadros se dibujan con PIL y van por un caño a
 ffmpeg (el de imageio-ffmpeg, el mismo que usa policiales).
 """
 import subprocess
@@ -124,36 +126,62 @@ def _cuadros_video(clip, w: int, h: int, total: float):
         yield ultimo
 
 
+def _medir(clip) -> tuple:
+    """(duración en segundos, ¿tiene sonido?) del video de la fuente."""
+    try:
+        from reels import reel_bot as R
+        m = R.motor()
+        return float(m.duration_seconds(clip) or 0), bool(m.has_audio(clip))
+    except Exception:                                  # noqa: BLE001 — sin medirlo, va como antes
+        return 0.0, False
+
+
+def tramos_para(dur_video: float = 0) -> tuple:
+    """Los tramos del reel. Con un video más largo que los textos, el último texto se estira hasta que el
+    video termina (el video va entero)."""
+    textos = sum(d for n, d in TRAMOS if n != "cierre")
+    if dur_video <= textos:
+        return TRAMOS
+    extra = dur_video - textos
+    return tuple((n, d + extra) if n == "por_que_importa" else (n, d) for n, d in TRAMOS)
+
+
 def armar(guion: dict, imagen, salida: Path, origen: str = "ia", credito: str = "", clip=None,
           tema: str = "blanco") -> dict:
     """El .mp4 4:5 y un .jpg del primer tramo al lado (la portada). `origen`: el de la imagen
     («fuente», «recreada», «ia», «video») para la leyenda. Lanza si ffmpeg falla."""
     salida = Path(salida)
     salida.parent.mkdir(parents=True, exist_ok=True)
-    total = sum(s for _, s in TRAMOS)
+    dur_video, con_sonido = _medir(clip) if clip else (0.0, False)
+    tramos = tramos_para(dur_video)
+    total = sum(s for _, s in tramos)
     cuadros = round(total * FPS)
     plan = D.plan_bloque(guion.get("volanta"), D.texto_portada(guion), tema, round(D.W / PROPORCION),
                          tope=D.PORTADA)
     hm = plan["alto_imagen"]
     base = D.base_bloque(plan)
     leyenda = D.texto_leyenda("video" if clip else origen, credito)
-    capas = {nombre: _capa_tramo(plan, guion, nombre) for nombre, _ in TRAMOS if nombre != "cierre"}
+    capas = {nombre: _capa_tramo(plan, guion, nombre) for nombre, _ in tramos if nombre != "cierre"}
     placa = cierre(tema, (guion.get("reel") or {}).get("cierre", "")).convert("RGB")
     foto = Image.open(imagen).convert("RGB") if (imagen and not clip) else None
     video = _cuadros_video(clip, D.W, hm, total) if clip else None
+    # El sonido: el del video de la fuente (y silencio en el cierre) o, sin video, silencio.
+    sonido = (["-i", str(clip), "-map", "0:v", "-map", "1:a:0", "-af", "apad", "-t", f"{total:.2f}"]
+              if con_sonido else
+              ["-f", "lavfi", "-t", str(total), "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+               "-shortest"])
     cmd = [_ffmpeg(), "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-           "-s", f"{D.W}x{D.H45}", "-r", str(FPS), "-i", "-",
-           "-f", "lavfi", "-t", str(total), "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
-           "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "24",
-           "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", str(salida)]
+           "-s", f"{D.W}x{D.H45}", "-r", str(FPS), "-i", "-", *sonido,
+           "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "24",
+           "-c:a", "aac", "-b:a", "96k" if con_sonido else "64k", "-movflags", "+faststart", str(salida)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     vista = ultimo_rgb = None
-    seg_imagen = total - TRAMOS[-1][1]
+    seg_imagen = total - tramos[-1][1]
     try:
         for k in range(cuadros):
             seg = k / FPS
-            acum, tramo, t = 0.0, TRAMOS[-1][0], 0.0
-            for nombre, dur in TRAMOS:
+            acum, tramo, t = 0.0, tramos[-1][0], 0.0
+            for nombre, dur in tramos:
                 if seg < acum + dur:
                     tramo, t = nombre, seg - acum
                     break
@@ -198,4 +226,4 @@ def armar(guion: dict, imagen, salida: Path, origen: str = "ia", credito: str = 
         vista.save(jpg, "JPEG", quality=90)
     return {"archivo": str(salida), "duracion": total, "peso_kb": round(salida.stat().st_size / 1024),
             "ancho": D.W, "alto": D.H45, "vista": str(jpg) if jpg.exists() else None, "tema": tema,
-            "con_video": bool(clip)}
+            "con_video": bool(clip), "con_sonido": con_sonido}

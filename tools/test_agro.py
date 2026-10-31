@@ -410,6 +410,20 @@ with tempfile.TemporaryDirectory() as tmp:
                 chequear(f"reel 4:5 ({tema}) armado, con su portada 1080x1350",
                          Path(rr["archivo"]).stat().st_size > 1000 and abs(rr["duracion"] - 1.25) < 0.01
                          and im.size == (1080, 1350) and rr["tema"] == tema)
+        # Con el video de la fuente (31/10/2026): el reel dura lo que el video + el cierre, y lleva su sonido.
+        import subprocess as _sp
+        _clip = Path(tmp) / "clip.mp4"
+        _sp.run([REEL._ffmpeg(), "-y", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc=size=640x360:rate=24",
+                 "-f", "lavfi", "-i", "sine=frequency=440", "-t", "3", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                 "-c:a", "aac", str(_clip)], check=True)
+        rv = REEL.armar(g, foto, Path(tmp) / "reel_video.mp4", origen="video", clip=_clip)
+        from reels import reel_bot as _RB
+        _dur = _RB.motor().duration_seconds(rv["archivo"])
+        chequear("reel con video: dura el video entero + el cierre, con el sonido del video",
+                 abs(rv["duracion"] - 3.25) < 0.01 and abs(_dur - 3.25) < 0.2 and rv["con_sonido"]
+                 and _RB.motor().has_audio(rv["archivo"]))
+        chequear("reel con video: el último texto se estira hasta que termina el video",
+                 dict(REEL.tramos_para(3))["por_que_importa"] == 2.25 and REEL.tramos_para(0.5) == REEL.TRAMOS)
     finally:
         REEL.TRAMOS = tramos
 
@@ -1391,6 +1405,43 @@ except _PBh.SinConfirmar:
     _dup = len(_cont_h) == 1
 chequear("historia IG: sin confirmar NO se repite (podría haber salido)", _dup)
 _PBh._contenedor_listo, _PBh._publicar_contenedor, _PBh._dormir = _orig_h
+
+
+# --- priorizar notas con video corto (31/10/2026) ---------------------------------------------------
+_s = {"ai_score": 70, "subtema": "agro", "commercial_score": 1}
+chequear("video: el bono suma a la prioridad del reel (no al carrusel)",
+         SE.prioridad(dict(_s, con_video=True))[1] == SE.prioridad(_s)[1] + SE.bono_video()
+         and SE.prioridad(dict(_s, con_video=True), "carrusel") == SE.prioridad(_s, "carrusel"))
+_cands = [{"id": f"c{i}", "rep": {"url": f"u{i}"}, "score": dict(_s, ai_score=80 - i)} for i in range(4)]
+_cands.append({"id": "baja", "rep": {"url": "ub"}, "score": dict(_s, ai_score=10)})
+_vistas = []
+
+
+def _completar_f(rep):
+    _vistas.append(rep["url"])
+    return {"ok": True, "cuerpo": "x", "video": "https://v/1.mp4" if rep["url"] in ("u1", "u2") else ""}
+
+
+_bajados = []
+
+
+def _bajar_f(rep, completo, base):
+    _bajados.append(rep["url"])
+    return base.with_suffix(".mp4") if rep["url"] == "u1" else None        # u2: video de más de 90 s
+
+
+with tempfile.TemporaryDirectory() as _tv:
+    os.environ["AGRO_VIDEO_REVISAR"] = "3"
+    _n = PA.marcar_videos(_cands, Path(_tv), log=lambda *a: None, completar=_completar_f, bajar=_bajar_f)
+    os.environ.pop("AGRO_VIDEO_REVISAR")
+chequear("video: abre solo las mejores (AGRO_VIDEO_REVISAR) y nunca las de puntaje bajo",
+         _vistas == ["u0", "u1", "u2"])
+chequear("video: baja solo las que traen video y marca la que sirve (con el clip y la nota leída)",
+         _n == 1 and _bajados == ["u1", "u2"] and _cands[1]["score"].get("con_video") and _cands[1]["clip"]
+         and _cands[1]["completo"]["cuerpo"] == "x" and not _cands[2]["score"].get("con_video"))
+_eleg, _ = SE.elegir([dict(c) for c in _cands[:3]], [], cupo_dia=10)
+chequear("video: con el bono, la de video pasa adelante de una de más puntaje", _eleg[0]["id"] == "c1")
+chequear("video: máximo 1 minuto y medio (AGRO_VIDEO_MAX_SEG)", PA.video_max_seg() == 90)
 
 
 print(f"\n{total - len(fallas)}/{total} bien")

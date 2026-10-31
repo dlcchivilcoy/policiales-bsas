@@ -72,11 +72,20 @@ EMPUJE_TEMA = {"clima": 6, "precios": 5, "dolar": 5, "internacional": 4, "campan
 URGENTE_TOLERANCIA = 10     # una urgente entra aunque le falten hasta 10 puntos para el mínimo
 
 
+def bono_video() -> int:
+    """Puntos de prioridad para la nota que trae un video corto propio (31/10/2026, pedido del editor:
+    «priorizar notas con videos y poner videos en reels»). AGRO_BONO_VIDEO; 0 lo apaga."""
+    return _entero("AGRO_BONO_VIDEO", 15)
+
+
 def prioridad(s: dict, formato: str = "reel") -> tuple:
-    """La clave de orden de una candidata: (urgente, puntaje + empuje del tema [+ carrusel], comercial)."""
+    """La clave de orden de una candidata: (urgente, puntaje + empuje del tema [+ carrusel] [+ video], comercial).
+    El bono del video ordena, no salva: el mínimo de puntaje se sigue mirando sobre ai_score."""
     valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0)
     if formato == "carrusel":
         valor += 2 * (s.get("potencial_carrusel", 5) - 5)
+    elif s.get("con_video"):
+        valor += bono_video()
     return (bool(s.get("urgente")), valor, s.get("commercial_score", 0))
 
 

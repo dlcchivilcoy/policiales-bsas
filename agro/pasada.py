@@ -387,6 +387,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     # esta corrida esperan a la siguiente (siguen pendientes, no se descartan).
     usadas = sitios_de_la_corrida(mem, horario) if un_sitio_por_corrida() else set()
     elegibles = [c for c in candidatos if c["rep"].get("fuente") not in usadas]
+    if formato == "reel" and con_reel:
+        marcar_videos(elegibles, carpeta, log)
     if usadas:
         log(f"   ya salieron en esta corrida: {', '.join(sorted(usadas))}")
     hoy = ahora.strftime("%Y-%m-%d")
@@ -440,7 +442,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         rep, s = c["rep"], c["score"]
         otras = [n for n in c["grupo"] if n["id"] != rep["id"]]
         log(f"6) [{k + 1}/{k + 1 + len(cola)}] {s['ai_score']} · {s['subtema']} · {rep['titulo'][:70]}")
-        completo = CA.completar(rep)
+        completo = c.get("completo") or CA.completar(rep)
         base_previa = carpeta / f"{k + 1:02d}_previa"
         imagen_previa = None
         if not IMG.ia_activa():
@@ -492,7 +494,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                                                  base.with_name(base.name + "_portada.jpg"),
                                                  credito=credito, origen=origen, tema=tema))
                 if con_reel:
-                    clip = _clip_de_la_fuente(rep, completo, base)
+                    clip = (Path(c["clip"]) if c.get("clip") and Path(c["clip"]).is_file()
+                            else _clip_de_la_fuente(rep, completo, base))
                     try:
                         t0 = time.time()
                         pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"), origen,
@@ -578,22 +581,80 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     return ruta
 
 
+def video_max_seg() -> float:
+    """El video más largo que entra en un reel de agro: 90 s (31/10/2026, pedido del editor: «videos cortos
+    de máximo 1 minuto y medio»). AGRO_VIDEO_MAX_SEG."""
+    try:
+        return float(os.environ.get("AGRO_VIDEO_MAX_SEG") or 90)
+    except ValueError:
+        return 90.0
+
+
 def _clip_de_la_fuente(rep: dict, completo: dict, base: Path):
-    """El video de la nota, SOLO si la fuente es oficial o de prensa (INTA, Secretaría, BCR): el de un
-    medio no se usa (no se puede recrear con IA y Meta detecta los videos de otros). None si no hay."""
+    """El video PROPIO de la nota (el que el medio aloja en su página; los de YouTube no se pueden bajar),
+    de 4 s a video_max_seg(). None si no hay o no sirve. Hasta el 31/10/2026 solo se usaban los de fuentes
+    oficiales o de prensa; el editor pidió usar los de todos los medios."""
     url = completo.get("video") or ""
-    if not url or rep.get("tipo_fuente") not in ("oficial", "prensa"):
+    if not url:
         return None
     try:
         from reels.flujo import _bajar_video
         clip = _bajar_video(url, base.with_name(base.name + "_clip.mp4"))
     except Exception:                                  # noqa: BLE001
         return None
+    if not clip:
+        return None
     try:
         from reels import reel_bot as R
-        return clip if clip and R.motor().duration_seconds(clip) >= 4 else None
+        dur = float(R.motor().duration_seconds(clip) or 0)
     except Exception:                                  # noqa: BLE001
-        return None
+        dur = 0
+    if 4 <= dur <= video_max_seg():
+        return clip
+    Path(clip).unlink(missing_ok=True)
+    return None
+
+
+def videos_a_revisar() -> int:
+    """Cuántas candidatas (las mejores) se abren antes de elegir para ver si traen video. AGRO_VIDEO_REVISAR."""
+    try:
+        return max(0, int(os.environ.get("AGRO_VIDEO_REVISAR") or 8))
+    except ValueError:
+        return 8
+
+
+def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, bajar=None) -> int:
+    """PRIORIZAR LAS NOTAS CON VIDEO (31/10/2026). Antes de la selección se abren las mejores candidatas (por
+    prioridad, con puntaje suficiente) y se baja el video de las que lo traen: la que tiene uno de hasta
+    video_max_seg() queda marcada (score «con_video», que suma AGRO_BONO_VIDEO al ordenar) y guarda el clip
+    y la nota leída para no volver a bajarlos. Devuelve cuántas quedaron con video."""
+    completar = completar or CA.completar
+    bajar = bajar or _clip_de_la_fuente
+    minimo = SE.score_min()
+    orden = sorted((c for c in candidatos if c["score"].get("ai_score", 0) >= minimo),
+                   key=lambda c: SE.prioridad(c["score"]), reverse=True)[:videos_a_revisar()]
+    con = 0
+    for c in orden:
+        try:
+            completo = completar(c["rep"])
+        except Exception:                              # noqa: BLE001 — se vuelve a leer al armarla
+            continue
+        if not completo.get("ok", True):
+            continue
+        c["completo"] = completo
+        clip = None
+        if completo.get("video"):
+            carpeta.mkdir(parents=True, exist_ok=True)
+            clip = bajar(c["rep"], completo, carpeta / f"video_{c['id']}")
+        if clip:
+            c["clip"] = str(clip)
+            c["score"] = dict(c["score"], con_video=True)
+            con += 1
+        elif c["score"].get("con_video"):
+            c["score"] = {k: v for k, v in c["score"].items() if k != "con_video"}
+    if orden:
+        log(f"   videos: {con} de las {len(orden)} mejores traen uno de hasta {video_max_seg():.0f} s")
+    return con
 
 
 def GU_reel(g, imagen, salida, origen="ia", credito="", clip=None, tema="blanco"):
