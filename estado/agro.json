@@ -21531,6 +21531,31 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8c1884e2758f83c3": {
+      "impacto_economico": 7,
+      "interes_productores": 8,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 55,
+      "subtema": "agtech",
+      "tema": "emprendedores jóvenes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia inspiradora de jóvenes AgTech en Córdoba, atractiva para la región pampeana aunque de bajo impacto económico directo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        68
+      ]
     }
   },
   "indice": {
@@ -22987,7 +23012,8 @@
       "https://infocampo.com.ar/precio-del-sorgo-hoy-31-octubre-2026": "2026-10-31",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-31-octubre-2026": "2026-10-31",
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-31-octubre-2026": "2026-10-31",
-      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-el-gran-beto-quiroga-toma-distancia-de-los-negocios-en-torno-al-suelo-y-recuerda-que-para-poder-defender-la-etica-profesional-tenes-que-comer-guiso-de-lentejas": "2026-10-31"
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-el-gran-beto-quiroga-toma-distancia-de-los-negocios-en-torno-al-suelo-y-recuerda-que-para-poder-defender-la-etica-profesional-tenes-que-comer-guiso-de-lentejas": "2026-10-31",
+      "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24442,7 +24468,8 @@
       "precio del sorgo en rosario hoy 31 octubre 2026": "2026-10-31",
       "dolar blue a cuanto cotizan hoy en mendoza 31 octubre 2026": "2026-10-31",
       "euro blue hoy precio y cotizacion de este 31 octubre 2026": "2026-10-31",
-      "los dilemas de la agronomia el gran beto quiroga toma distancia de los negocios en torno al suelo y recuerda que para poder defender la etica profesional tenes que comer guiso de lentejas": "2026-10-31"
+      "los dilemas de la agronomia el gran beto quiroga toma distancia de los negocios en torno al suelo y recuerda que para poder defender la etica profesional tenes que comer guiso de lentejas": "2026-10-31",
+      "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25897,7 +25924,8 @@
       "bbf0a2d7333eaaf0": "2026-10-31",
       "a12bf9193b35dfb9": "2026-10-31",
       "3af54d13a513768f": "2026-10-31",
-      "5521c20a1489a3aa": "2026-10-31"
+      "5521c20a1489a3aa": "2026-10-31",
+      "8c1884e2758f83c3": "2026-10-31"
     }
   },
   "elegidas": [
@@ -43086,9 +43114,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d3a35f1e65cc_portada.jpg"
+    },
+    {
+      "id": "5a387ed5841c",
+      "cuando": "2026-10-31T16:00-03:00",
+      "titulo_original": "La Argentina se divorcia de la tendencia bajista de Chicago",
+      "descripcion": "La principal plaza granaria global exhibió una fuerte caída de las cotizaciones de la soja y el maíz que no fue replicada en los mismos términos en el mercado local",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026/",
+      "titular": "Soja y maíz: precios locales resisten la fuerte baja de Chicago",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 78,
+        "subtema": "mercados",
+        "tema": "precios granos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informa sobre la divergencia de precios locales frente a Chicago, de altísimo interés comercial.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "l0QcUugebsk",
+          "url": "https://youtube.com/shorts/l0QcUugebsk",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "163b0d36-4a0f-4899-bb77-bf2f6d4b57fc",
+          "slug": "soja-y-maiz-los-precios-locales-se-desacoplan-de-la-fuerte-baja-db4f98",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-y-maiz-los-precios-locales-se-desacoplan-de-la-fuerte-baja-db4f98",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2425468468261547",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17915268693541421",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5a387ed5841c_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "b67c2d504222",
+      "rep": {
+        "id": "b67c2d504222",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani/",
+        "canonical_url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani",
+        "titulo": "“Pensar el agro como se piensa la industria es un gran desafío”, dicen Alejo y Agustín, dos veinteañeros que apuestan a las nuevas tecnologías: Para hacer CaFra ya los ayuda un hermanito de 14",
+        "titulo_norm": "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14",
+        "descripcion": "Hace más de un año, dos jóvenes de Marull (Córdoba) vieron todo lo que los unía de su pasado: el vínculo estrecho de sus familias, las infancias compartidas en las calles del pueblo, sus padres y hermanos que, al igual que ellos, profesan el culto por la amistad. Pero también, desde hace un tiempo, vislumbraron […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Alejo-y-agustin-1.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-31T15:42-03:00",
+        "capturado": "2026-10-31T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8c1884e2758f83c3"
+      },
+      "grupo": [
+        {
+          "id": "b67c2d504222",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani/",
+          "canonical_url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani",
+          "titulo": "“Pensar el agro como se piensa la industria es un gran desafío”, dicen Alejo y Agustín, dos veinteañeros que apuestan a las nuevas tecnologías: Para hacer CaFra ya los ayuda un hermanito de 14",
+          "titulo_norm": "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14",
+          "descripcion": "Hace más de un año, dos jóvenes de Marull (Córdoba) vieron todo lo que los unía de su pasado: el vínculo estrecho de sus familias, las infancias compartidas en las calles del pueblo, sus padres y hermanos que, al igual que ellos, profesan el culto por la amistad. Pero también, desde hace un tiempo, vislumbraron […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Alejo-y-agustin-1.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-31T15:42-03:00",
+          "capturado": "2026-10-31T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8c1884e2758f83c3"
+        }
+      ],
+      "score": {
+        "impacto_economico": 7,
+        "interes_productores": 8,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 55,
+        "subtema": "agtech",
+        "tema": "emprendedores jóvenes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una historia inspiradora de jóvenes AgTech en Córdoba, atractiva para la región pampeana aunque de bajo impacto económico directo.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          68
+        ]
+      },
+      "cuando": "2026-10-31T16:00-03:00"
+    },
     {
       "id": "17a84ebda870",
       "rep": {
@@ -43153,69 +43309,6 @@
           60,
           69
         ]
-      },
-      "cuando": "2026-10-31T07:02-03:00"
-    },
-    {
-      "id": "5a387ed5841c",
-      "rep": {
-        "id": "5a387ed5841c",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026",
-        "titulo": "La Argentina se divorcia de la tendencia bajista de Chicago",
-        "titulo_norm": "la argentina se divorcia de la tendencia bajista de chicago",
-        "descripcion": "La principal plaza granaria global exhibió una fuerte caída de las cotizaciones de la soja y el maíz que no fue replicada en los mismos términos en el mercado local",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/JVDACKWJQRG2FH6DTFPT5LRL6Q.jpg?auth=768a635819cd7f8cec123630315bfacc43a74b360d5aa57bcf5200718e6e15dc&smart=true",
-        "autor": "Pablo Adreani",
-        "publicado": "2026-10-31T06:45-03:00",
-        "capturado": "2026-10-31T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "16100f2ca39cf856"
-      },
-      "grupo": [
-        {
-          "id": "5a387ed5841c",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026",
-          "titulo": "La Argentina se divorcia de la tendencia bajista de Chicago",
-          "titulo_norm": "la argentina se divorcia de la tendencia bajista de chicago",
-          "descripcion": "La principal plaza granaria global exhibió una fuerte caída de las cotizaciones de la soja y el maíz que no fue replicada en los mismos términos en el mercado local",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/JVDACKWJQRG2FH6DTFPT5LRL6Q.jpg?auth=768a635819cd7f8cec123630315bfacc43a74b360d5aa57bcf5200718e6e15dc&smart=true",
-          "autor": "Pablo Adreani",
-          "publicado": "2026-10-31T06:45-03:00",
-          "capturado": "2026-10-31T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "16100f2ca39cf856"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 15,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 77,
-        "commercial_score": 78,
-        "subtema": "mercados",
-        "tema": "precios granos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Informa sobre la divergencia de precios locales frente a Chicago, de altísimo interés comercial.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-31T07:02-03:00"
     },
@@ -43685,8 +43778,8 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T14:22:26-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-31T16:03:20-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
