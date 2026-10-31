@@ -20995,6 +20995,31 @@
         57,
         57
       ]
+    },
+    "a9956a6e3cbab051": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 61,
+      "commercial_score": 62,
+      "subtema": "empresas",
+      "tema": "maizar",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Movimiento institucional relevante para la cadena maicera en la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        56
+      ]
     }
   },
   "indice": {
@@ -22404,7 +22429,8 @@
       "https://infocampo.com.ar/plantium-no-cierra-pero-si-recurre-a-un-fuerte-achique-somos-una-pyme-y-no-te-ayuda-nadie": "2026-10-30",
       "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/no-puedo-mas-una-reconocida-empresa-de-innovacion-del-agro-despidio-a-casi-100-empleados-y-se-achica-nid30102026": "2026-10-30",
-      "https://infocampo.com.ar/declaran-la-emergencia-agropecuaria-por-granizo-en-el-cinturon-verde-de-cordoba": "2026-10-30"
+      "https://infocampo.com.ar/declaran-la-emergencia-agropecuaria-por-granizo-en-el-cinturon-verde-de-cordoba": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/cambio-en-maizar-un-exfuncionario-de-macri-asumio-la-presidencia-y-pidio-reglas-para-invertir-nid30102026": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23812,7 +23838,8 @@
       "plantium no cierra pero si recurre a un fuerte achique somos una pyme y no te ayuda nadie": "2026-10-30",
       "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal": "2026-10-30",
       "no puedo mas una reconocida empresa de innovacion del agro despidio a casi 100 empleados y se achica": "2026-10-30",
-      "declaran la emergencia agropecuaria por granizo en el cinturon verde de cordoba": "2026-10-30"
+      "declaran la emergencia agropecuaria por granizo en el cinturon verde de cordoba": "2026-10-30",
+      "cambio en maizar un exfuncionario de macri asumio la presidencia y pidio reglas para invertir": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25220,7 +25247,8 @@
       "0e5427f721304dc9": "2026-10-30",
       "496eae98bd59d056": "2026-10-30",
       "b2170c9808baa3e1": "2026-10-30",
-      "d5c24a7284cb7172": "2026-10-30"
+      "d5c24a7284cb7172": "2026-10-30",
+      "a9956a6e3cbab051": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41728,9 +41756,130 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cfaa4cce60ce_portada.jpg"
+    },
+    {
+      "id": "f59607a09b2e",
+      "cuando": "2026-10-30T22:20-03:00",
+      "titulo_original": "Amadeo Derito y la \"pasión Ganadera\": de la empresa familiar industrial, a la compra y gestión de 12 de campos",
+      "descripcion": "Historias que motivan y muestran como cuando los sueños y los propósitos están claros, las cosas suceden. Un -Mano a Mano- con Amadeo Derito, empresario industrial, ganadero, cabañero, y Pte. de ANGUS. Nos comparte cómo su formación y experiencia en la empresa familiar, lo llevaron a comprar y gesti",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
+      "titular": "Amadeo Derito gestiona 12 campos y lidera la ganadería Angus",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 72,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "angus",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente entrevista a referente ganadero con fuerte arraigo en PBA y la raza Angus que interesa a la zona núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T22:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e99207b7-1df1-46ba-aeba-2eec262caa8f",
+          "slug": "amadeo-derito-de-la-empresa-industrial-a-gestionar-12-campos-y-026657",
+          "url": "https://www.diariolacampaña.com.ar/n/amadeo-derito-de-la-empresa-industrial-a-gestionar-12-campos-y-026657",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1564325698712200",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18146642086579571",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f59607a09b2e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f6c3a58c8c14",
+      "rep": {
+        "id": "f6c3a58c8c14",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/cambio-en-maizar-un-exfuncionario-de-macri-asumio-la-presidencia-y-pidio-reglas-para-invertir-nid30102026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/cambio-en-maizar-un-exfuncionario-de-macri-asumio-la-presidencia-y-pidio-reglas-para-invertir-nid30102026",
+        "titulo": "Cambio en Maizar: un exfuncionario de Macri asumió la presidencia y pidió reglas para invertir",
+        "titulo_norm": "cambio en maizar un exfuncionario de macri asumio la presidencia y pidio reglas para invertir",
+        "descripcion": "Luis María Urriza, que fue subsecretario de Agricultura entre 2015 y 2019, reemplazó a Federico Zerboni al frente de la entidad",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/OKED6BPP3VH23G2GIYDIE72UX4.jpeg?auth=793e92bee3ee5f561fe360e4dca1f0c700a2b2463102cef0c8a22ddff286d263&smart=true",
+        "autor": "",
+        "publicado": "2026-10-30T21:57-03:00",
+        "capturado": "2026-10-30T22:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a9956a6e3cbab051"
+      },
+      "grupo": [
+        {
+          "id": "f6c3a58c8c14",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/cambio-en-maizar-un-exfuncionario-de-macri-asumio-la-presidencia-y-pidio-reglas-para-invertir-nid30102026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/cambio-en-maizar-un-exfuncionario-de-macri-asumio-la-presidencia-y-pidio-reglas-para-invertir-nid30102026",
+          "titulo": "Cambio en Maizar: un exfuncionario de Macri asumió la presidencia y pidió reglas para invertir",
+          "titulo_norm": "cambio en maizar un exfuncionario de macri asumio la presidencia y pidio reglas para invertir",
+          "descripcion": "Luis María Urriza, que fue subsecretario de Agricultura entre 2015 y 2019, reemplazó a Federico Zerboni al frente de la entidad",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/OKED6BPP3VH23G2GIYDIE72UX4.jpeg?auth=793e92bee3ee5f561fe360e4dca1f0c700a2b2463102cef0c8a22ddff286d263&smart=true",
+          "autor": "",
+          "publicado": "2026-10-30T21:57-03:00",
+          "capturado": "2026-10-30T22:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a9956a6e3cbab051"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 3,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 61,
+        "commercial_score": 62,
+        "subtema": "empresas",
+        "tema": "maizar",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Movimiento institucional relevante para la cadena maicera en la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          56
+        ]
+      },
+      "cuando": "2026-10-30T22:20-03:00"
+    },
     {
       "id": "4f36f7ce5adb",
       "rep": {
@@ -41927,69 +42076,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T18:40-03:00"
-    },
-    {
-      "id": "f59607a09b2e",
-      "rep": {
-        "id": "f59607a09b2e",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
-        "titulo": "Amadeo Derito y la \"pasión Ganadera\": de la empresa familiar industrial, a la compra y gestión de 12 de campos",
-        "titulo_norm": "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos",
-        "descripcion": "Historias que motivan y muestran como cuando los sueños y los propósitos están claros, las cosas suceden. Un -Mano a Mano- con Amadeo Derito, empresario industrial, ganadero, cabañero, y Pte. de ANGUS. Nos comparte cómo su formación y experiencia en la empresa familiar, lo llevaron a comprar y gestionar una red de 12 campos en distintas provincias, combinando agricultura y ganadería con un enfoque estratégico y pasión por la raza Angus. Su Padre y la crianza con el foco en el trabajo. Las decisiones de reinversión que lo llevaron a comprar campos en PBA, La Pampa, y San Luis. Los modelos productivos, el conocimiento aplicado, y los Colaboradores que...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/WR3FnVZ5OtY.jpg",
-        "autor": "info@agrositio.com (Ricardo Bindi)",
-        "publicado": "2026-10-30T18:06-03:00",
-        "capturado": "2026-10-30T18:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9be79bfe3eee4543"
-      },
-      "grupo": [
-        {
-          "id": "f59607a09b2e",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html",
-          "titulo": "Amadeo Derito y la \"pasión Ganadera\": de la empresa familiar industrial, a la compra y gestión de 12 de campos",
-          "titulo_norm": "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos",
-          "descripcion": "Historias que motivan y muestran como cuando los sueños y los propósitos están claros, las cosas suceden. Un -Mano a Mano- con Amadeo Derito, empresario industrial, ganadero, cabañero, y Pte. de ANGUS. Nos comparte cómo su formación y experiencia en la empresa familiar, lo llevaron a comprar y gestionar una red de 12 campos en distintas provincias, combinando agricultura y ganadería con un enfoque estratégico y pasión por la raza Angus. Su Padre y la crianza con el foco en el trabajo. Las decisiones de reinversión que lo llevaron a comprar campos en PBA, La Pampa, y San Luis. Los modelos productivos, el conocimiento aplicado, y los Colaboradores que...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/WR3FnVZ5OtY.jpg",
-          "autor": "info@agrositio.com (Ricardo Bindi)",
-          "publicado": "2026-10-30T18:06-03:00",
-          "capturado": "2026-10-30T18:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9be79bfe3eee4543"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 7,
-        "ai_score": 72,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "angus",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente entrevista a referente ganadero con fuerte arraigo en PBA y la raza Angus que interesa a la zona núcleo.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T18:20-03:00"
     },
     {
       "id": "f1d8acbf0acf",
@@ -42516,8 +42602,8 @@
       "cuando": "2026-10-29T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-30T22:04:22-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T22:23:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
