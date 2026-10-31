@@ -595,7 +595,7 @@ def _clip_de_la_fuente(rep: dict, completo: dict, base: Path):
     de 4 s a video_max_seg(). None si no hay o no sirve. Hasta el 31/10/2026 solo se usaban los de fuentes
     oficiales o de prensa; el editor pidió usar los de todos los medios."""
     url = completo.get("video") or ""
-    if not url:
+    if not url or float(completo.get("video_seg") or 0) > video_max_seg():   # el medio dice que es largo
         return None
     try:
         from reels.flujo import _bajar_video

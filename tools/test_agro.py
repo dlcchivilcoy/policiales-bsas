@@ -1442,6 +1442,13 @@ chequear("video: baja solo las que traen video y marca la que sirve (con el clip
 _eleg, _ = SE.elegir([dict(c) for c in _cands[:3]], [], cupo_dia=10)
 chequear("video: con el bono, la de video pasa adelante de una de más puntaje", _eleg[0]["id"] == "c1")
 chequear("video: máximo 1 minuto y medio (AGRO_VIDEO_MAX_SEG)", PA.video_max_seg() == 90)
+_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject",'
+       '"name":"Granizo","embedUrl":"https://cdn.jwplayer.com/videos/abc-x.mp4","duration":"PT0M46S"}</script>')
+chequear("video: el VideoObject del JSON-LD (LA NACION) da el .mp4 y su duración",
+         CA.video_de_jsonld(_ld) == ("https://cdn.jwplayer.com/videos/abc-x.mp4", 46.0)
+         and CA.video_de_jsonld("<html>sin video</html>") == ("", 0.0) and CA._segundos_iso("PT1M30S") == 90)
+chequear("video: si el medio dice que dura más de 90 s, ni se baja",
+         PA._clip_de_la_fuente({}, {"video": "https://x/v.mp4", "video_seg": 300}, Path("x")) is None)
 
 
 print(f"\n{total - len(fallas)}/{total} bien")

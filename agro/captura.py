@@ -222,6 +222,40 @@ def cuerpo_por_parrafos(html: str) -> str:
     return " ".join(" ".join(p.get_text(" ", strip=True) for p in mejor.find_all("p", recursive=False)).split())
 
 
+def _segundos_iso(texto: str) -> float:
+    """«PT1M30S» → 90. 0 si no se entiende."""
+    m = re.fullmatch(r"P(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?", (texto or "").strip(), re.I)
+    if not m or not any(m.groups()):
+        return 0.0
+    h, mi, se = m.groups()
+    return int(h or 0) * 3600 + int(mi or 0) * 60 + float(se or 0)
+
+
+def video_de_jsonld(html: str) -> tuple:
+    """(url del .mp4, segundos) del VideoObject que el medio declara en el JSON-LD de la nota, o ("", 0).
+    Así declaran sus videos LA NACION Campo (embedUrl de JW Player) y Agrositio (contentUrl): el detector
+    general (og:video, <video>) no los ve. Medido el 31/10/2026: 0 de 110 notas con el detector general,
+    6 con este."""
+    import json
+    from bs4 import BeautifulSoup
+    if '"VideoObject"' not in (html or ""):
+        return "", 0.0
+    for s in BeautifulSoup(html, "html.parser").find_all("script", type="application/ld+json"):
+        try:
+            d = json.loads(s.string or "")
+        except ValueError:
+            continue
+        objs = d if isinstance(d, list) else (d.get("@graph") or [d]) if isinstance(d, dict) else []
+        for o in objs:
+            if not isinstance(o, dict) or o.get("@type") != "VideoObject":
+                continue
+            for campo in ("contentUrl", "embedUrl"):
+                url = o.get(campo) or ""
+                if isinstance(url, str) and re.search(r"\.mp4(\?|$)", url, re.I):
+                    return url, _segundos_iso(o.get("duration") or "")
+    return "", 0.0
+
+
 def completar(nota: dict, detalle=None, get=None) -> dict:
     """El texto completo de UNA nota (solo de las elegidas). Respeta robots.txt."""
     detalle = detalle or FE.detalle
@@ -231,13 +265,19 @@ def completar(nota: dict, detalle=None, get=None) -> dict:
     if not d.get("ok"):
         return {"ok": False, "motivo": "la nota no se pudo leer"}
     cuerpo = " ".join((d.get("cuerpo") or "").split())
-    if len(cuerpo) < CUERPO_CORTO:
+    video, video_seg = d.get("video") or "", 0.0
+    html = None
+    if len(cuerpo) < CUERPO_CORTO or not video:
         try:
             r = (get or FE.get)(nota["url"])
-            otro = cuerpo_por_parrafos(r.text) if r.status_code == 200 else ""
-            if len(otro) > len(cuerpo):
-                cuerpo = otro
-        except Exception:                                  # noqa: BLE001 — queda el que había
-            pass
+            html = r.text if r.status_code == 200 else ""
+        except Exception:                                  # noqa: BLE001 — queda lo que había
+            html = ""
+    if html and len(cuerpo) < CUERPO_CORTO:
+        otro = cuerpo_por_parrafos(html)
+        if len(otro) > len(cuerpo):
+            cuerpo = otro
+    if html and not video:
+        video, video_seg = video_de_jsonld(html)
     return {"ok": True, "cuerpo": cuerpo, "imagen": d.get("imagen") or nota.get("imagen_url") or "",
-            "video": d.get("video") or ""}
+            "video": video, "video_seg": video_seg}
