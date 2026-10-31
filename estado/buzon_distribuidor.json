@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-31T23:01:42.000Z",
+  "actualizado": "2026-10-31T23:30:55.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.junindigital.com/policiales/2026-10-29-13-59-0-causa-por-abuso-sexual-y-amenazas-un-aprehendido-y-secuestro-de-un-revolver-en-junin",
@@ -259,6 +259,30 @@
       "volanta": "Siniestro vial en Bragado",
       "categoria": "accidente_vial",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.latrochadigital.com.ar/2026/10/31/allanamientos-en-la-ciudad-con-secuestro-de-ropa-y-calzado-deportivo/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-31T23:30:55.000Z",
+      "titulo": "Allanaron dos viviendas y secuestraron ropa y calzado deportivo trucho",
+      "descripcion": "Dos domicilios ubicados sobre las calles Mendoza y Cavalliari fueron intervenidos por las fuerzas de seguridad en una causa vinculada a la venta ilegal de indumentaria falsificada.",
+      "texto_tiktok": "La Policía Federal llevó a cabo dos procedimientos simultáneos en viviendas locales durante la mañana del viernes.\n\nLos agentes incautaron gran cantidad de camisetas de fútbol y zapatillas comercializadas sin habilitación legal.\n\nLa causa se tramita bajo la órbita de la Justicia Federal de Mercedes tras una denuncia inicial.\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #Operativo #Policia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-31_2134_06_9-de-julio_allanaron-dos-viviendas-y-secu.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/9-de-julio-allanaron-dos-inmuebles-y-secuestraron-ropa-y-374574",
+      "youtube_url": "https://youtube.com/shorts/NHsHYaQOMq8",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "Operativo en 9 de Julio",
+      "categoria": "operativo_policial",
+      "distancia_km": 99.4,
       "radio_ok": true,
       "plataformas": [
         "x",
