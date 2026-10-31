@@ -42089,49 +42089,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5a48c325195d_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "0172e6920514",
-      "rep": {
-        "id": "0172e6920514",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/cultivos-de-servicio-doble-proposito-ademas-de-su-rol-agricola-ganan-relevancia-como-sosten-ganadero/",
-        "canonical_url": "https://infocampo.com.ar/cultivos-de-servicio-doble-proposito-ademas-de-su-rol-agricola-ganan-relevancia-como-sosten-ganadero",
-        "titulo": "Cultivos de servicio “doble propósito”: además de su rol agrícola, ganan relevancia como sostén ganadero",
-        "titulo_norm": "cultivos de servicio doble proposito ademas de su rol agricola ganan relevancia como sosten ganadero",
-        "descripcion": "Los cultivos de servicio están ampliando su rol y comienzan a integrarse cada vez más con la producción ganadera, ocupando nuevas ventanas en la rotación. Las claves de Pemán Semillas, de la mano del ingeniero agrónomo Francisco Soria Raimondetto.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/3-2.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-10-31T01:56-03:00",
-        "capturado": "2026-10-31T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "27cfebd82495a4d4"
-      },
-      "grupo": [
-        {
-          "id": "0172e6920514",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/cultivos-de-servicio-doble-proposito-ademas-de-su-rol-agricola-ganan-relevancia-como-sosten-ganadero/",
-          "canonical_url": "https://infocampo.com.ar/cultivos-de-servicio-doble-proposito-ademas-de-su-rol-agricola-ganan-relevancia-como-sosten-ganadero",
-          "titulo": "Cultivos de servicio “doble propósito”: además de su rol agrícola, ganan relevancia como sostén ganadero",
-          "titulo_norm": "cultivos de servicio doble proposito ademas de su rol agricola ganan relevancia como sosten ganadero",
-          "descripcion": "Los cultivos de servicio están ampliando su rol y comienzan a integrarse cada vez más con la producción ganadera, ocupando nuevas ventanas en la rotación. Las claves de Pemán Semillas, de la mano del ingeniero agrónomo Francisco Soria Raimondetto.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/3-2.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-10-31T01:56-03:00",
-          "capturado": "2026-10-31T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "27cfebd82495a4d4"
-        }
-      ],
+      "cuando": "2026-10-31T07:22-03:00",
+      "titulo_original": "Cultivos de servicio “doble propósito”: además de su rol agrícola, ganan relevancia como sostén ganadero",
+      "descripcion": "Los cultivos de servicio están ampliando su rol y comienzan a integrarse cada vez más con la producción ganadera, ocupando nuevas ventanas en la rotación. Las claves de Pemán Semillas, de la mano del ingeniero agrónomo Francisco Soria Raimondetto.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/cultivos-de-servicio-doble-proposito-ademas-de-su-rol-agricola-ganan-relevancia-como-sosten-ganadero/",
+      "titular": "Cultivos de servicio doble propósito suman pastoreo y carne al sistema",
+      "volanta": "Ganadería y Agricultura",
       "score": {
         "impacto_economico": 12,
         "interes_productores": 12,
@@ -42153,8 +42120,32 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-10-31T07:02-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8062a5dc-8b56-4c4b-9d85-b696b4437c4e",
+          "slug": "cultivos-de-servicio-doble-proposito-como-suman-pastoreo-y-0c5c7a",
+          "url": "https://www.diariolacampaña.com.ar/n/cultivos-de-servicio-doble-proposito-como-suman-pastoreo-y-0c5c7a",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1749322186158471",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18059385374800601",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0172e6920514_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "17a84ebda870",
       "rep": {
@@ -42940,8 +42931,8 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T07:06:11-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-31T07:25:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
