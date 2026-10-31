@@ -20970,6 +20970,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d5c24a7284cb7172": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 57,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "emergencia agropecuaria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a productores frutihortícolas de Córdoba, relevante por el impacto local y los beneficios fiscales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        57
+      ]
     }
   },
   "indice": {
@@ -22378,7 +22403,8 @@
       "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026": "2026-10-30",
       "https://infocampo.com.ar/plantium-no-cierra-pero-si-recurre-a-un-fuerte-achique-somos-una-pyme-y-no-te-ayuda-nadie": "2026-10-30",
       "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/no-puedo-mas-una-reconocida-empresa-de-innovacion-del-agro-despidio-a-casi-100-empleados-y-se-achica-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/no-puedo-mas-una-reconocida-empresa-de-innovacion-del-agro-despidio-a-casi-100-empleados-y-se-achica-nid30102026": "2026-10-30",
+      "https://infocampo.com.ar/declaran-la-emergencia-agropecuaria-por-granizo-en-el-cinturon-verde-de-cordoba": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23785,7 +23811,8 @@
       "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil": "2026-10-30",
       "plantium no cierra pero si recurre a un fuerte achique somos una pyme y no te ayuda nadie": "2026-10-30",
       "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal": "2026-10-30",
-      "no puedo mas una reconocida empresa de innovacion del agro despidio a casi 100 empleados y se achica": "2026-10-30"
+      "no puedo mas una reconocida empresa de innovacion del agro despidio a casi 100 empleados y se achica": "2026-10-30",
+      "declaran la emergencia agropecuaria por granizo en el cinturon verde de cordoba": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25192,7 +25219,8 @@
       "4be3d584e1000370": "2026-10-30",
       "0e5427f721304dc9": "2026-10-30",
       "496eae98bd59d056": "2026-10-30",
-      "b2170c9808baa3e1": "2026-10-30"
+      "b2170c9808baa3e1": "2026-10-30",
+      "d5c24a7284cb7172": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41642,6 +41670,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2b850722b496_portada.jpg"
+    },
+    {
+      "id": "cfaa4cce60ce",
+      "cuando": "2026-10-30T22:00-03:00",
+      "titulo_original": "Brasil después del balotaje: el mercado recalibra riesgo, tasas y competitividad",
+      "descripcion": "El resultado electoral brasileño revirtió el rally observado entre ambas vueltas y provocó un fuerte ajuste en acciones, moneda y tasas de interés. El tipo de cambio real bilateral se ubica en mínimos desde mayo del 2025.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
+      "titular": "El balotaje en Brasil golpea la competitividad argentina y el tipo",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 9,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 5,
+        "ai_score": 60,
+        "commercial_score": 60,
+        "subtema": "mercados",
+        "tema": "competitividad brasil",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Análisis de tipo de cambio y riesgo en Brasil que altera la competitividad exportadora de Argentina.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          57,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T22:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "81c17681-957e-46ab-b411-bcf76946a83b",
+          "slug": "el-balotaje-en-brasil-derrumba-el-tipo-de-cambio-bilateral-y-041c54",
+          "url": "https://www.diariolacampaña.com.ar/n/el-balotaje-en-brasil-derrumba-el-tipo-de-cambio-bilateral-y-041c54",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1856142792045671",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18110356574186909",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cfaa4cce60ce_portada.jpg"
     }
   ],
   "pendientes": [
@@ -42034,73 +42120,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-30T16:00-03:00"
-    },
-    {
-      "id": "cfaa4cce60ce",
-      "rep": {
-        "id": "cfaa4cce60ce",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
-        "titulo": "Brasil después del balotaje: el mercado recalibra riesgo, tasas y competitividad",
-        "titulo_norm": "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad",
-        "descripcion": "El resultado electoral brasileño revirtió el rally observado entre ambas vueltas y provocó un fuerte ajuste en acciones, moneda y tasas de interés. El tipo de cambio real bilateral se ubica en mínimos desde mayo del 2025.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
-        "autor": "",
-        "publicado": "2026-10-29T09:00-03:00",
-        "capturado": "2026-10-30T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e6a30012ff22a97e"
-      },
-      "grupo": [
-        {
-          "id": "cfaa4cce60ce",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/brasil-despues",
-          "titulo": "Brasil después del balotaje: el mercado recalibra riesgo, tasas y competitividad",
-          "titulo_norm": "brasil despues del balotaje el mercado recalibra riesgo tasas y competitividad",
-          "descripcion": "El resultado electoral brasileño revirtió el rally observado entre ambas vueltas y provocó un fuerte ajuste en acciones, moneda y tasas de interés. El tipo de cambio real bilateral se ubica en mínimos desde mayo del 2025.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/mercadodecapitales_portada_0.jpg?itok=QxStgdIK",
-          "autor": "",
-          "publicado": "2026-10-29T09:00-03:00",
-          "capturado": "2026-10-30T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e6a30012ff22a97e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 9,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 7,
-        "potencial_comercial": 5,
-        "ai_score": 60,
-        "commercial_score": 60,
-        "subtema": "mercados",
-        "tema": "competitividad brasil",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Análisis de tipo de cambio y riesgo en Brasil que altera la competitividad exportadora de Argentina.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          57,
-          62
-        ]
-      },
-      "cuando": "2026-10-30T13:20-03:00"
     },
     {
       "id": "293a4c2eace1",
@@ -42497,8 +42516,8 @@
       "cuando": "2026-10-29T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-30T21:43:58-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-30T22:04:22-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
