@@ -21317,6 +21317,48 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fb0baea56b1e7573": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 71,
+      "commercial_score": 71,
+      "subtema": "agro",
+      "tema": "normas laborales ue",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente la exportacion de soja y carne con nuevas exigencias burocraticas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bdef9c3f126347a3": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 79,
+      "subtema": "agro",
+      "tema": "mani zona nucleo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran relevancia regional para productores bonaerenses que buscan alternativas rentables.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22755,7 +22797,9 @@
       "https://agrositio.com.ar/noticia/249116-agrarias-unlz-investiga-el-potencial-de-la-mostaza-india-para-una-agricultura-mas-sostenible.html": "2026-10-31",
       "https://agrositio.com.ar/noticia/249115-posibles-implicancias-de-la-victoria-de-lula-da-silva-en-la-agroindustria-argentina.html": "2026-10-31",
       "https://agrositio.com.ar/noticia/249111-perros-protectores-una-herramienta-para-rescatar-la-ganaderia-de-patagonia.html": "2026-10-31",
-      "https://agrositio.com.ar/noticia/249110-la-fauba-y-benito-roggio-ambiental-fortalecen-su-vinculo-para-impulsar-la-investigacion-y-la-innovacion-ambiental.html": "2026-10-31"
+      "https://agrositio.com.ar/noticia/249110-la-fauba-y-benito-roggio-ambiental-fortalecen-su-vinculo-para-impulsar-la-investigacion-y-la-innovacion-ambiental.html": "2026-10-31",
+      "https://infocampo.com.ar/no-es-solo-deforestacion-europa-tambien-exige-cumplir-normas-laborales-y-la-uatre-presento-como-lo-certificara": "2026-10-31",
+      "https://infocampo.com.ar/transforma-la-matriz-productiva-el-mani-atrae-a-inversores-y-conquista-la-zona-nucleo": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24192,7 +24236,9 @@
       "agrarias unlz investiga el potencial de la mostaza india para una agricultura mas sostenible": "2026-10-31",
       "posibles implicancias de la victoria de lula da silva en la agroindustria argentina": "2026-10-31",
       "perros protectores una herramienta para rescatar la ganaderia de patagonia": "2026-10-31",
-      "la fauba y benito roggio ambiental fortalecen su vinculo para impulsar la investigacion y la innovacion ambiental": "2026-10-31"
+      "la fauba y benito roggio ambiental fortalecen su vinculo para impulsar la investigacion y la innovacion ambiental": "2026-10-31",
+      "no es solo deforestacion europa tambien exige cumplir normas laborales y la uatre presento como lo certificara": "2026-10-31",
+      "transforma la matriz productiva el mani atrae inversores y conquista la zona nucleo": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25629,7 +25675,9 @@
       "0412a57fb03acd48": "2026-10-31",
       "83ca1363c7fb3d5d": "2026-10-31",
       "2ceabe68600c64c7": "2026-10-31",
-      "f978ce15a1d2b2ac": "2026-10-31"
+      "f978ce15a1d2b2ac": "2026-10-31",
+      "fb0baea56b1e7573": "2026-10-31",
+      "bdef9c3f126347a3": "2026-10-31"
     }
   },
   "elegidas": [
@@ -42422,6 +42470,132 @@
   ],
   "pendientes": [
     {
+      "id": "b10871189623",
+      "rep": {
+        "id": "b10871189623",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/no-es-solo-deforestacion-europa-tambien-exige-cumplir-normas-laborales-y-la-uatre-presento-como-lo-certificara/",
+        "canonical_url": "https://infocampo.com.ar/no-es-solo-deforestacion-europa-tambien-exige-cumplir-normas-laborales-y-la-uatre-presento-como-lo-certificara",
+        "titulo": "No es solo deforestación: Europa también exige cumplir normas laborales y la UATRE presentó cómo lo certificará",
+        "titulo_norm": "no es solo deforestacion europa tambien exige cumplir normas laborales y la uatre presento como lo certificara",
+        "descripcion": "La UATRE junto a la asociación civil CRISOL presentaron una herramienta que validará el cumplimiento laboral y de derechos humanos de los productores de soja y carne bovina que exportan a la UE, como complemento de la trazabilidad ambiental que garantiza VISEC.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Nicolas-Pino-y-Jose-Voytenco.jpeg",
+        "autor": "Manuela Herzel",
+        "publicado": "2026-10-31T07:57-03:00",
+        "capturado": "2026-10-31T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fb0baea56b1e7573"
+      },
+      "grupo": [
+        {
+          "id": "b10871189623",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/no-es-solo-deforestacion-europa-tambien-exige-cumplir-normas-laborales-y-la-uatre-presento-como-lo-certificara/",
+          "canonical_url": "https://infocampo.com.ar/no-es-solo-deforestacion-europa-tambien-exige-cumplir-normas-laborales-y-la-uatre-presento-como-lo-certificara",
+          "titulo": "No es solo deforestación: Europa también exige cumplir normas laborales y la UATRE presentó cómo lo certificará",
+          "titulo_norm": "no es solo deforestacion europa tambien exige cumplir normas laborales y la uatre presento como lo certificara",
+          "descripcion": "La UATRE junto a la asociación civil CRISOL presentaron una herramienta que validará el cumplimiento laboral y de derechos humanos de los productores de soja y carne bovina que exportan a la UE, como complemento de la trazabilidad ambiental que garantiza VISEC.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/Nicolas-Pino-y-Jose-Voytenco.jpeg",
+          "autor": "Manuela Herzel",
+          "publicado": "2026-10-31T07:57-03:00",
+          "capturado": "2026-10-31T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fb0baea56b1e7573"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "agro",
+        "tema": "normas laborales ue",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la exportacion de soja y carne con nuevas exigencias burocraticas.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-31T08:22-03:00"
+    },
+    {
+      "id": "cd177c5e0d5b",
+      "rep": {
+        "id": "cd177c5e0d5b",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/transforma-la-matriz-productiva-el-mani-atrae-a-inversores-y-conquista-la-zona-nucleo/",
+        "canonical_url": "https://infocampo.com.ar/transforma-la-matriz-productiva-el-mani-atrae-a-inversores-y-conquista-la-zona-nucleo",
+        "titulo": "“Transforma la matriz productiva”: el maní atrae inversores y conquista la zona núcleo",
+        "titulo_norm": "transforma la matriz productiva el mani atrae inversores y conquista la zona nucleo",
+        "descripcion": "El maní avanza hacia el sur de Santa Fe y el norte bonaerense, con Rufino como polo industrial y nichos productivos que combinan rentabilidad, manejo agronómico y doble cultivo. Dos agrónomos resumen las claves de su expansión.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-05-at-8.33.54-AM.jpeg",
+        "autor": "Lucas Mich",
+        "publicado": "2026-10-31T06:27-03:00",
+        "capturado": "2026-10-31T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "bdef9c3f126347a3"
+      },
+      "grupo": [
+        {
+          "id": "cd177c5e0d5b",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/transforma-la-matriz-productiva-el-mani-atrae-a-inversores-y-conquista-la-zona-nucleo/",
+          "canonical_url": "https://infocampo.com.ar/transforma-la-matriz-productiva-el-mani-atrae-a-inversores-y-conquista-la-zona-nucleo",
+          "titulo": "“Transforma la matriz productiva”: el maní atrae inversores y conquista la zona núcleo",
+          "titulo_norm": "transforma la matriz productiva el mani atrae inversores y conquista la zona nucleo",
+          "descripcion": "El maní avanza hacia el sur de Santa Fe y el norte bonaerense, con Rufino como polo industrial y nichos productivos que combinan rentabilidad, manejo agronómico y doble cultivo. Dos agrónomos resumen las claves de su expansión.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-05-at-8.33.54-AM.jpeg",
+          "autor": "Lucas Mich",
+          "publicado": "2026-10-31T06:27-03:00",
+          "capturado": "2026-10-31T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "bdef9c3f126347a3"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 9,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "agro",
+        "tema": "mani zona nucleo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran relevancia regional para productores bonaerenses que buscan alternativas rentables.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-31T08:22-03:00"
+    },
+    {
       "id": "cf61bc881f37",
       "rep": {
         "id": "cf61bc881f37",
@@ -43210,7 +43384,7 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T08:06:14-03:00",
+  "actualizado": "2026-10-31T08:24:25-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
