@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-31T22:01:10.000Z",
+  "actualizado": "2026-10-31T22:31:18.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/10/una-persona-fue-hospitalizada-tras-un.html",
@@ -234,6 +234,30 @@
       "localidad": "Bragado",
       "volanta": "Investigación en Bragado",
       "categoria": "robo",
+      "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/10/31/26703-una-camioneta-se-incendio-durante-la-madrugada-en-la-via-publica",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-31T22:31:18.000Z",
+      "titulo": "Una camioneta se prendió fuego de madrugada en la vía pública",
+      "descripcion": "Una camioneta Volkswagen Amarok propiedad de una mujer de 65 años se incendió durante la madrugada en la intersección de las calles Jaime Coll y Necochea. Bomberos Voluntarios controlaron las llamas y no se reportaron personas heridas.",
+      "texto_tiktok": "Una camioneta Volkswagen Amarok sufrió un incendio durante la madrugada en la vía pública de Bragado.\n\nLas llamas se desataron alrededor de las 3 de la mañana en la esquina de Jaime Coll y Necochea.\n\nUna dotación de Bomberos Voluntarios trabajó en el lugar y logró controlar la situación sin que se registraran heridos.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Incendio #Bomberos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-31_2134_04_bragado_una-camioneta-se-prendi-fuego-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-una-camioneta-se-incendio-de-madrugada-en-jaime-coll-y-0d4e1d",
+      "youtube_url": "https://youtube.com/shorts/KLZJZRb0BiY",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Bragado",
+      "categoria": "incendio",
       "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
