@@ -21175,6 +21175,148 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8eff764de774032f": {
+      "impacto_economico": 15,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 63,
+      "commercial_score": 70,
+      "subtema": "mercados",
+      "tema": "inflación",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mide datos de inflación que impactan en costos y finanzas del productor, requiriendo fuente oficial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        64
+      ]
+    },
+    "70cc4e237e248ff0": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 2,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 26,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "madera",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota conceptual sobre la madera y cambio climático, de bajo interés directo para el productor de zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f269cddf3fbd80af": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 65,
+      "commercial_score": 72,
+      "subtema": "ganaderia",
+      "tema": "carne bovina",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cifras oficiales de exportación de carne y precios, de alta relevancia para ganaderos y frigoríficos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        59
+      ]
+    },
+    "83ca1363c7fb3d5d": {
+      "impacto_economico": 13,
+      "interes_productores": 9,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 52,
+      "commercial_score": 60,
+      "subtema": "mercados",
+      "tema": "brasil",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Análisis geopolítico y comercial sobre el impacto de Brasil en la agroindustria nacional.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        49
+      ]
+    },
+    "2ceabe68600c64c7": {
+      "impacto_economico": 6,
+      "interes_productores": 6,
+      "innovacion": 3,
+      "cercania_argentina": 9,
+      "cercania_pba": 1,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 3,
+      "ai_score": 41,
+      "commercial_score": 42,
+      "subtema": "ganaderia",
+      "tema": "perros protectores",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Herramienta práctica y novedosa para control de predadores, con gran atractivo visual para redes.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        30
+      ]
+    },
+    "f978ce15a1d2b2ac": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 7,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 46,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "fauba",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Acuerdo institucional entre academia y empresa para innovación ambiental, de impacto limitado para el día a día.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22606,7 +22748,14 @@
       "https://lanacion.com.ar/economia/campo/la-argentina-se-divorcia-de-la-tendencia-bajista-de-chicago-nid31102026": "2026-10-31",
       "https://lanacion.com.ar/economia/campo/el-nino-no-tendra-un-desarrollo-parejo-en-todo-el-territorio-nid31102026": "2026-10-31",
       "https://lanacion.com.ar/economia/campo/vandalismo-rural-un-paso-adelante-del-congreso-en-la-agenda-agropecuaria-nid31102026": "2026-10-31",
-      "https://lanacion.com.ar/economia/campo/santos-vega-el-mitico-payador-admirado-por-escritores-y-gauchos-que-enfrento-al-diablo-nid31102026": "2026-10-31"
+      "https://lanacion.com.ar/economia/campo/santos-vega-el-mitico-payador-admirado-por-escritores-y-gauchos-que-enfrento-al-diablo-nid31102026": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249123-desde-un-mueble-al-lugar-que-habitamos-como-la-madera-puede-contribuir-a-combatir-el-cambio-climatico.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249121-las-exportaciones-del-mes-de-septiembre-alcanzaron-un-volumen-cercano-a-las-719-mil-toneladas-de-carne-bovina.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249116-agrarias-unlz-investiga-el-potencial-de-la-mostaza-india-para-una-agricultura-mas-sostenible.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249115-posibles-implicancias-de-la-victoria-de-lula-da-silva-en-la-agroindustria-argentina.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249111-perros-protectores-una-herramienta-para-rescatar-la-ganaderia-de-patagonia.html": "2026-10-31",
+      "https://agrositio.com.ar/noticia/249110-la-fauba-y-benito-roggio-ambiental-fortalecen-su-vinculo-para-impulsar-la-investigacion-y-la-innovacion-ambiental.html": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24036,7 +24185,14 @@
       "la argentina se divorcia de la tendencia bajista de chicago": "2026-10-31",
       "el nino no tendra un desarrollo parejo en todo el territorio": "2026-10-31",
       "vandalismo rural un paso adelante del congreso en la agenda agropecuaria": "2026-10-31",
-      "santos vega el mitico payador admirado por escritores y gauchos que enfrento al diablo": "2026-10-31"
+      "santos vega el mitico payador admirado por escritores y gauchos que enfrento al diablo": "2026-10-31",
+      "la inflacion de octubre se desacelero al 1 8 segun libertad y progreso": "2026-10-31",
+      "desde un mueble al lugar que habitamos como la madera puede contribuir a combatir el cambio climatico": "2026-10-31",
+      "las exportaciones del mes de septiembre alcanzaron un volumen cercano a las 71 9 mil toneladas de carne bovina": "2026-10-31",
+      "agrarias unlz investiga el potencial de la mostaza india para una agricultura mas sostenible": "2026-10-31",
+      "posibles implicancias de la victoria de lula da silva en la agroindustria argentina": "2026-10-31",
+      "perros protectores una herramienta para rescatar la ganaderia de patagonia": "2026-10-31",
+      "la fauba y benito roggio ambiental fortalecen su vinculo para impulsar la investigacion y la innovacion ambiental": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25466,7 +25622,14 @@
       "16100f2ca39cf856": "2026-10-31",
       "ce000dd519e279da": "2026-10-31",
       "ab3c9153391d1092": "2026-10-31",
-      "5e552443536c7ab7": "2026-10-31"
+      "5e552443536c7ab7": "2026-10-31",
+      "8eff764de774032f": "2026-10-31",
+      "70cc4e237e248ff0": "2026-10-31",
+      "f269cddf3fbd80af": "2026-10-31",
+      "0412a57fb03acd48": "2026-10-31",
+      "83ca1363c7fb3d5d": "2026-10-31",
+      "2ceabe68600c64c7": "2026-10-31",
+      "f978ce15a1d2b2ac": "2026-10-31"
     }
   },
   "elegidas": [
@@ -42143,9 +42306,197 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0172e6920514_portada.jpg"
+    },
+    {
+      "id": "6d3fd76662ac",
+      "cuando": "2026-10-31T07:42-03:00",
+      "titulo_original": "Los dilemas de la agronomía: Marcelo Morris, de Bayer, advierte que el mal uso de los agroquímicos acelera una pérdida de la eficacia de dichas herramientas",
+      "descripcion": "¿Los agroquímicos van a desaparecer? Para Marcelo Morris, la respuesta es bastante sencilla: no. Pero eso no significa que la agricultura pueda seguir utilizándolos de cualquier manera, ni que las herramientas químicas que hoy funcionan tengan asegurada una vida útil eterna. Morris trabaja en Bayer,",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas/",
+      "titular": "Bayer advierte que el mal uso acelera la pérdida de eficacia",
+      "volanta": "Agroinsumos",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "agroquímicos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Tema central para asesores y productores sobre sustentabilidad y eficacia de productos.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T07:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "fab5f0bb-1897-4e96-8a77-83e3938544d5",
+          "slug": "bayer-advierte-que-el-mal-uso-de-agroquimicos-acelera-la-2924f3",
+          "url": "https://www.diariolacampaña.com.ar/n/bayer-advierte-que-el-mal-uso-de-agroquimicos-acelera-la-2924f3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2204310617027579",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18041126018897626",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6d3fd76662ac_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "cf61bc881f37",
+      "rep": {
+        "id": "cf61bc881f37",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
+        "titulo": "La inflación de octubre se desaceleró al 1,8%, según Libertad y Progreso",
+        "titulo_norm": "la inflacion de octubre se desacelero al 1 8 segun libertad y progreso",
+        "descripcion": "En octubre el IPC de Libertad y Progreso subió a un ritmo de 1,8% mensual, marcando una desaceleración de 0,1 puntos porcentuales respecto del dato de septiembre del INDEC, que cerró en 1,9%. Con este resultado, la inflación acumulada en el año alcanzaría el 25,9%, mientras que la variación interanual se ubicaría en 32,7%, 0,7 p.p. por debajo del 33,4% registrado en septiembre....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249125_22056080.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-30T17:53-03:00",
+        "capturado": "2026-10-31T07:42-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8eff764de774032f"
+      },
+      "grupo": [
+        {
+          "id": "cf61bc881f37",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249125-el-ipc-lyp-de-octubre-rondaria-18-.html",
+          "titulo": "La inflación de octubre se desaceleró al 1,8%, según Libertad y Progreso",
+          "titulo_norm": "la inflacion de octubre se desacelero al 1 8 segun libertad y progreso",
+          "descripcion": "En octubre el IPC de Libertad y Progreso subió a un ritmo de 1,8% mensual, marcando una desaceleración de 0,1 puntos porcentuales respecto del dato de septiembre del INDEC, que cerró en 1,9%. Con este resultado, la inflación acumulada en el año alcanzaría el 25,9%, mientras que la variación interanual se ubicaría en 32,7%, 0,7 p.p. por debajo del 33,4% registrado en septiembre....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249125_22056080.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-30T17:53-03:00",
+          "capturado": "2026-10-31T07:42-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8eff764de774032f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "inflación",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mide datos de inflación que impactan en costos y finanzas del productor, requiriendo fuente oficial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          64
+        ]
+      },
+      "cuando": "2026-10-31T07:42-03:00"
+    },
+    {
+      "id": "37ba3a030177",
+      "rep": {
+        "id": "37ba3a030177",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249121-las-exportaciones-del-mes-de-septiembre-alcanzaron-un-volumen-cercano-a-las-719-mil-toneladas-de-carne-bovina.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249121-las-exportaciones-del-mes-de-septiembre-alcanzaron-un-volumen-cercano-a-las-719-mil-toneladas-de-carne-bovina.html",
+        "titulo": "Las exportaciones del mes de septiembre alcanzaron un volumen cercano a las 71,9 mil toneladas de carne bovina",
+        "titulo_norm": "las exportaciones del mes de septiembre alcanzaron un volumen cercano a las 71 9 mil toneladas de carne bovina",
+        "descripcion": "Exportaciones: 71,9 mil toneladas peso producto de carne bovina refrigerada y congelada (-2,7%) – 492,7 millones de dólares (-6,3%) vs. agosto 2026. Con relación al mes de septiembre de 2025, los volúmenes exportados resultan similares; mientras que el valor obtenido ha sido un (+18,7%) superior. China representó el 68,0% de los volúmenes exportados en septiembre de 2026....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249121_24946071.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-10-30T16:26-03:00",
+        "capturado": "2026-10-31T07:42-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f269cddf3fbd80af"
+      },
+      "grupo": [
+        {
+          "id": "37ba3a030177",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249121-las-exportaciones-del-mes-de-septiembre-alcanzaron-un-volumen-cercano-a-las-719-mil-toneladas-de-carne-bovina.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249121-las-exportaciones-del-mes-de-septiembre-alcanzaron-un-volumen-cercano-a-las-719-mil-toneladas-de-carne-bovina.html",
+          "titulo": "Las exportaciones del mes de septiembre alcanzaron un volumen cercano a las 71,9 mil toneladas de carne bovina",
+          "titulo_norm": "las exportaciones del mes de septiembre alcanzaron un volumen cercano a las 71 9 mil toneladas de carne bovina",
+          "descripcion": "Exportaciones: 71,9 mil toneladas peso producto de carne bovina refrigerada y congelada (-2,7%) – 492,7 millones de dólares (-6,3%) vs. agosto 2026. Con relación al mes de septiembre de 2025, los volúmenes exportados resultan similares; mientras que el valor obtenido ha sido un (+18,7%) superior. China representó el 68,0% de los volúmenes exportados en septiembre de 2026....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249121_24946071.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-10-30T16:26-03:00",
+          "capturado": "2026-10-31T07:42-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f269cddf3fbd80af"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 65,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "carne bovina",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cifras oficiales de exportación de carne y precios, de alta relevancia para ganaderos y frigoríficos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          59
+        ]
+      },
+      "cuando": "2026-10-31T07:42-03:00"
+    },
     {
       "id": "17a84ebda870",
       "rep": {
@@ -42738,69 +43089,6 @@
       "cuando": "2026-10-30T18:00-03:00"
     },
     {
-      "id": "6d3fd76662ac",
-      "rep": {
-        "id": "6d3fd76662ac",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas/",
-        "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas",
-        "titulo": "Los dilemas de la agronomía: Marcelo Morris, de Bayer, advierte que el mal uso de los agroquímicos acelera una pérdida de la eficacia de dichas herramientas",
-        "titulo_norm": "los dilemas de la agronomia marcelo morris de bayer advierte que el mal uso de los agroquimicos acelera una perdida de la eficacia de dichas herramientas",
-        "descripcion": "¿Los agroquímicos van a desaparecer? Para Marcelo Morris, la respuesta es bastante sencilla: no. Pero eso no significa que la agricultura pueda seguir utilizándolos de cualquier manera, ni que las herramientas químicas que hoy funcionan tengan asegurada una vida útil eterna. Morris trabaja en Bayer, una de las principales proveedoras de insumos agrícolas de todo […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/07/malezas-resistentes.webp",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-30T14:28-03:00",
-        "capturado": "2026-10-30T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a0fd9b038e0b6304"
-      },
-      "grupo": [
-        {
-          "id": "6d3fd76662ac",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas/",
-          "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcelo-morris-de-bayer-advierte-que-el-mal-uso-de-los-agroquimicos-acelera-una-perdida-de-la-eficacia-de-dichas-herramientas",
-          "titulo": "Los dilemas de la agronomía: Marcelo Morris, de Bayer, advierte que el mal uso de los agroquímicos acelera una pérdida de la eficacia de dichas herramientas",
-          "titulo_norm": "los dilemas de la agronomia marcelo morris de bayer advierte que el mal uso de los agroquimicos acelera una perdida de la eficacia de dichas herramientas",
-          "descripcion": "¿Los agroquímicos van a desaparecer? Para Marcelo Morris, la respuesta es bastante sencilla: no. Pero eso no significa que la agricultura pueda seguir utilizándolos de cualquier manera, ni que las herramientas químicas que hoy funcionan tengan asegurada una vida útil eterna. Morris trabaja en Bayer, una de las principales proveedoras de insumos agrícolas de todo […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/07/malezas-resistentes.webp",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-30T14:28-03:00",
-          "capturado": "2026-10-30T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a0fd9b038e0b6304"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 12,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "agroquímicos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Tema central para asesores y productores sobre sustentabilidad y eficacia de productos.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-30T16:00-03:00"
-    },
-    {
       "id": "293a4c2eace1",
       "rep": {
         "id": "293a4c2eace1",
@@ -42931,8 +43219,8 @@
       "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T07:25:04-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-31T07:45:19-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
