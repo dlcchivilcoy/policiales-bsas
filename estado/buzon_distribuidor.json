@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-31T00:02:15.000Z",
+  "actualizado": "2026-10-31T22:01:10.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/10/una-persona-fue-hospitalizada-tras-un.html",
@@ -210,6 +210,30 @@
       "localidad": "Bragado",
       "volanta": "Incendio en Bragado",
       "categoria": "incendio",
+      "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/10/31/26730-aprehendieron-a-un-hombre-acusado-de-cometer-dos-robos-utilizando-inhibidores-de-senal",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-10-31T22:01:10.000Z",
+      "titulo": "Aprehendieron a un hombre de 54 años por robos con inhibidores de señal",
+      "descripcion": "Cayó un sospechoso de 54 años tras un allanamiento en la calle Necochea al 1400. Le secuestraron prendas de vestir y lo investigan por sustraer un millón y medio de pesos de una camioneta en la calle Lavalle.",
+      "texto_tiktok": "Un hombre de 54 años fue aprehendido en Bragado tras un allanamiento en una vivienda de la calle Necochea al 1400.\n\nLa investigación se originó luego de que le sustrajeran un millón quinientos mil pesos a una mujer que dejó su camioneta estacionada sobre la calle Lavalle, entre Francia y Benito de Miguel.\n\nLos investigadores vincularon al sospechoso con otro hecho similar registrado el pasado 24 de octubre mediante el análisis de cámaras de seguridad.\n\nEfectivos de la DDI secuestraron prendas de vestir que habrían sido utilizadas durante los ilícitos por disposición de la UFIJ N.º 1.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Robo #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-10-31_2134_02_bragado_aprehendieron-a-un-hombre-de-5.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-detuvieron-a-un-hombre-de-54-anos-acusado-de-robar-con-ae74cd",
+      "youtube_url": "https://youtube.com/shorts/UivdyfZj1Gk",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Investigación en Bragado",
+      "categoria": "robo",
       "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
