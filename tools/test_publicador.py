@@ -1604,7 +1604,10 @@ chequear("policiales: con un solo lugar, entra el reel con video aunque el otro 
 import tempfile as _tfc  # noqa: E402
 from reels import flujo as _FL  # noqa: E402
 os.environ.pop("POL_FORMATO", None)
-chequear("carrusel: de fábrica policiales va en carrusel (POL_FORMATO=reel vuelve al reel)", _FL.formato_redes() == "carrusel")
+chequear("de fábrica policiales va en REEL (31/10/2026; POL_FORMATO=carrusel vuelve al carrusel)", _FL.formato_redes() == "reel")
+os.environ["POL_FORMATO"] = "carrusel"
+chequear("POL_FORMATO=carrusel vuelve al carrusel", _FL.formato_redes() == "carrusel")
+os.environ.pop("POL_FORMATO", None)
 _gc = {"volanta": "Chacabuco", "titular": "Detuvieron a dos jóvenes tras un allanamiento en Chacabuco",
        "bajada": "La policía secuestró droga y un arma en una vivienda del barrio Los Pinos.",
        "nota_web": "Párrafo uno de la nota con lo que pasó, a quién, dónde y cuándo ocurrió el hecho.\n\n"

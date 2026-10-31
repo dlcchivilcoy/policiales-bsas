@@ -59,11 +59,13 @@ PESO_GRAVEDAD = {"fatal": 40, "grave": 25, "media": 10, "leve": 0}
 # carrusel estilo deslizá y leé»): la portada con la foto real del hecho y 3 a 5 láminas de texto (las mismas
 # placas del carrusel explicativo de nacionales). El reel se sigue armando: va a YouTube como Short y a la
 # nota de la web. POL_FORMATO=reel vuelve al reel en las redes.
+# 31/10/2026, pedido del editor: «transformar los policiales scrappeados como reels». De fábrica vuelve el REEL
+# en Instagram y Facebook; POL_FORMATO=carrusel vuelve al carrusel.
 TITULOS_RESPALDO = ("Qué pasó", "Los detalles", "La investigación", "Cómo sigue", "Lo que se sabe")
 
 
 def formato_redes() -> str:
-    return "reel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "reel" else "carrusel"
+    return "carrusel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "carrusel" else "reel"
 
 
 def laminas_de(g: dict) -> list:
