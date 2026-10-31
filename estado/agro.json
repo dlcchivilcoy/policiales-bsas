@@ -21556,6 +21556,48 @@
         59,
         68
       ]
+    },
+    "e2c732879f19476a": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 82,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "clima el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la campaña gruesa de la zona núcleo, movilizando decisiones clave de siembra y manejo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "47556d03653152ed": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 78,
+      "subtema": "ganaderia",
+      "tema": "silo maíz almidón",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy útil para tamberos y ganaderos de la región pampeana que buscan optimizar costos en reservas forrajeras.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23013,7 +23055,9 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-31-octubre-2026": "2026-10-31",
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-31-octubre-2026": "2026-10-31",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-el-gran-beto-quiroga-toma-distancia-de-los-negocios-en-torno-al-suelo-y-recuerda-que-para-poder-defender-la-etica-profesional-tenes-que-comer-guiso-de-lentejas": "2026-10-31",
-      "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani": "2026-10-31"
+      "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani": "2026-10-31",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249129-como-afectara-el-nino-en-zona-nucleo-y-litoral-durante-la-primavera-y-el-verano-con-j-l-stella-climatologo.html": "2026-10-31",
+      "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24469,7 +24513,9 @@
       "dolar blue a cuanto cotizan hoy en mendoza 31 octubre 2026": "2026-10-31",
       "euro blue hoy precio y cotizacion de este 31 octubre 2026": "2026-10-31",
       "los dilemas de la agronomia el gran beto quiroga toma distancia de los negocios en torno al suelo y recuerda que para poder defender la etica profesional tenes que comer guiso de lentejas": "2026-10-31",
-      "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14": "2026-10-31"
+      "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14": "2026-10-31",
+      "como afectara el nino en zona nucleo y litoral durante la primavera y el verano con j l stella climatologo": "2026-10-31",
+      "un silo de maiz puede salir caro dos veces geronimo minutti explica por que el almidon define buena parte de la energia de una reserva forrajera y tambien de su costo": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25925,7 +25971,9 @@
       "a12bf9193b35dfb9": "2026-10-31",
       "3af54d13a513768f": "2026-10-31",
       "5521c20a1489a3aa": "2026-10-31",
-      "8c1884e2758f83c3": "2026-10-31"
+      "8c1884e2758f83c3": "2026-10-31",
+      "e2c732879f19476a": "2026-10-31",
+      "47556d03653152ed": "2026-10-31"
     }
   },
   "elegidas": [
@@ -43352,9 +43400,126 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_63d48c5158aa_portada.jpg"
+    },
+    {
+      "id": "c0f13a124e69",
+      "cuando": "2026-10-31T19:21-03:00",
+      "titulo_original": "¿Cómo afectará el Niño en zona núcleo y litoral durante la primavera y el verano?; con J. L. Stella - climatólogo",
+      "descripcion": "El climatólogo José Luis Sstela, investigador del Serv. Met.Nacional analiza la tardía llegada de la primavera 2026 en Argentina. Se viene un fenómeno Niño fuerte que afecta las lluvias y temperaturas en distintas regiones. ¿Cuales son las regiones agronómicas con mayor y menor caudal de precipitaci",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249129-como-afectara-el-nino-en-zona-nucleo-y-litoral-durante-la-primavera-y-el-verano-con-j-l-stella-climatologo.html",
+      "titular": "Clima: pronostican lluvias y fuerte impacto de El Niño en zona núcleo",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 82,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "clima el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la campaña gruesa de la zona núcleo, movilizando decisiones clave de siembra y manejo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T19:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7b86433f-95aa-4eba-929d-74b8e8ed429f",
+          "slug": "clima-advierten-fuerte-impacto-de-el-nino-y-lluvias-en-zona-e3f83e",
+          "url": "https://www.diariolacampaña.com.ar/n/clima-advierten-fuerte-impacto-de-el-nino-y-lluvias-en-zona-e3f83e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2019150935442139",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18151536622480759",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c0f13a124e69_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d151c94b0e59",
+      "rep": {
+        "id": "d151c94b0e59",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo/",
+        "canonical_url": "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo",
+        "titulo": "¿Un silo de maíz puede salir caro dos veces? Gerónimo Minutti explica por qué el almidón define buena parte de la energía de una reserva forrajera y también de su costo",
+        "titulo_norm": "un silo de maiz puede salir caro dos veces geronimo minutti explica por que el almidon define buena parte de la energia de una reserva forrajera y tambien de su costo",
+        "descripcion": "Un silo de maíz puede verse bien, estar correctamente confeccionado y, sin embargo, obligar al productor a gastar más dinero después. Una de las razones para eso está en el almidón, que constituye una de las principales fuentes de energía de esta reserva forrajera y cuyo contenido puede variar bastante según cómo venga el cultivo […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/02/silobolsa.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-10-31T19:14-03:00",
+        "capturado": "2026-10-31T19:21-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "47556d03653152ed"
+      },
+      "grupo": [
+        {
+          "id": "d151c94b0e59",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo/",
+          "canonical_url": "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo",
+          "titulo": "¿Un silo de maíz puede salir caro dos veces? Gerónimo Minutti explica por qué el almidón define buena parte de la energía de una reserva forrajera y también de su costo",
+          "titulo_norm": "un silo de maiz puede salir caro dos veces geronimo minutti explica por que el almidon define buena parte de la energia de una reserva forrajera y tambien de su costo",
+          "descripcion": "Un silo de maíz puede verse bien, estar correctamente confeccionado y, sin embargo, obligar al productor a gastar más dinero después. Una de las razones para eso está en el almidón, que constituye una de las principales fuentes de energía de esta reserva forrajera y cuyo contenido puede variar bastante según cómo venga el cultivo […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/02/silobolsa.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-10-31T19:14-03:00",
+          "capturado": "2026-10-31T19:21-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "47556d03653152ed"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 78,
+        "subtema": "ganaderia",
+        "tema": "silo maíz almidón",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para tamberos y ganaderos de la región pampeana que buscan optimizar costos en reservas forrajeras.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-31T19:21-03:00"
+    },
     {
       "id": "b67c2d504222",
       "rep": {
@@ -43622,77 +43787,10 @@
         ]
       },
       "cuando": "2026-10-30T18:00-03:00"
-    },
-    {
-      "id": "48a82cd7881e",
-      "rep": {
-        "id": "48a82cd7881e",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/proyecto-de-biocombustibles-las-empresas-no-integradas-aceptan-la-competencia-pero-solo-con-ellas-mismas-y-sin-perder-una-sola-tonelada-del-cupo-destinado-al-mercado-interno/",
-        "canonical_url": "https://bichosdecampo.com/proyecto-de-biocombustibles-las-empresas-no-integradas-aceptan-la-competencia-pero-solo-con-ellas-mismas-y-sin-perder-una-sola-tonelada-del-cupo-destinado-al-mercado-interno",
-        "titulo": "Proyecto de Biocombustibles: Las empresas no integradas aceptan la competencia, pero solo con ellas mismas y sin perder una sola tonelada del cupo destinado al mercado interno",
-        "titulo_norm": "proyecto de biocombustibles las empresas no integradas aceptan la competencia pero solo con ellas mismas y sin perder una sola tonelada del cupo destinado al mercado interno",
-        "descripcion": "Esta semana la Cámara de Empresas Pymes Regionales Elaboradoras de Biocombustibles (Cepreb) logró unificar al bloque kirchnerista (Unión por la Patria) con el PRO y la UCR, los cuales se negaron en conjunto a validar el proyecto de biocombustibles que cuenta con media sanción del Senado porque consideran que el capítulo referido a biodiésel debe […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-29T23:18-03:00",
-        "capturado": "2026-10-30T07:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "67f8a0b948c266fa"
-      },
-      "grupo": [
-        {
-          "id": "48a82cd7881e",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/proyecto-de-biocombustibles-las-empresas-no-integradas-aceptan-la-competencia-pero-solo-con-ellas-mismas-y-sin-perder-una-sola-tonelada-del-cupo-destinado-al-mercado-interno/",
-          "canonical_url": "https://bichosdecampo.com/proyecto-de-biocombustibles-las-empresas-no-integradas-aceptan-la-competencia-pero-solo-con-ellas-mismas-y-sin-perder-una-sola-tonelada-del-cupo-destinado-al-mercado-interno",
-          "titulo": "Proyecto de Biocombustibles: Las empresas no integradas aceptan la competencia, pero solo con ellas mismas y sin perder una sola tonelada del cupo destinado al mercado interno",
-          "titulo_norm": "proyecto de biocombustibles las empresas no integradas aceptan la competencia pero solo con ellas mismas y sin perder una sola tonelada del cupo destinado al mercado interno",
-          "descripcion": "Esta semana la Cámara de Empresas Pymes Regionales Elaboradoras de Biocombustibles (Cepreb) logró unificar al bloque kirchnerista (Unión por la Patria) con el PRO y la UCR, los cuales se negaron en conjunto a validar el proyecto de biocombustibles que cuenta con media sanción del Senado porque consideran que el capítulo referido a biodiésel debe […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-29T23:18-03:00",
-          "capturado": "2026-10-30T07:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "67f8a0b948c266fa"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 68,
-        "subtema": "empresas",
-        "tema": "biocombustibles",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Trata sobre la tensión legislativa y los cupos en el mercado de biocombustibles, clave para las pymes del sector.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          68
-        ]
-      },
-      "cuando": "2026-10-30T07:02-03:00"
     }
   ],
-  "actualizado": "2026-10-31T19:02:37-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-31T19:25:11-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
