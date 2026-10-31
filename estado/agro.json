@@ -20949,6 +20949,27 @@
         67,
         60
       ]
+    },
+    "b2170c9808baa3e1": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 70,
+      "subtema": "agtech",
+      "tema": "gentec",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta fuertemente en el ecosistema AgTech nacional y genera gran conversación en el sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22356,7 +22377,8 @@
       "https://lanacion.com.ar/economia/campo/anuncio-santa-fe-destinara-todo-el-dinero-de-un-impuesto-a-obras-para-el-campo-nid30102026": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026": "2026-10-30",
       "https://infocampo.com.ar/plantium-no-cierra-pero-si-recurre-a-un-fuerte-achique-somos-una-pyme-y-no-te-ayuda-nadie": "2026-10-30",
-      "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal": "2026-10-30"
+      "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal": "2026-10-30",
+      "https://lanacion.com.ar/economia/campo/no-puedo-mas-una-reconocida-empresa-de-innovacion-del-agro-despidio-a-casi-100-empleados-y-se-achica-nid30102026": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23762,7 +23784,8 @@
       "anuncio santa fe destinara todo el dinero de un impuesto a obras para el campo": "2026-10-30",
       "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil": "2026-10-30",
       "plantium no cierra pero si recurre a un fuerte achique somos una pyme y no te ayuda nadie": "2026-10-30",
-      "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal": "2026-10-30"
+      "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal": "2026-10-30",
+      "no puedo mas una reconocida empresa de innovacion del agro despidio a casi 100 empleados y se achica": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25168,7 +25191,8 @@
       "010f9f3160ba950e": "2026-10-30",
       "4be3d584e1000370": "2026-10-30",
       "0e5427f721304dc9": "2026-10-30",
-      "496eae98bd59d056": "2026-10-30"
+      "496eae98bd59d056": "2026-10-30",
+      "b2170c9808baa3e1": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41564,6 +41588,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8b0e6ca33af9_portada.jpg"
+    },
+    {
+      "id": "2b850722b496",
+      "cuando": "2026-10-30T21:40-03:00",
+      "titulo_original": "“No puedo más”: una reconocida empresa de innovación del agro despidió a casi 100 empleados y se achica",
+      "descripcion": "Se trata de Gentec, que junto a Plantium está vinculada a la provisión de tecnología de última generación para el sector",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/no-puedo-mas-una-reconocida-empresa-de-innovacion-del-agro-despidio-a-casi-100-empleados-y-se-achica-nid30102026/",
+      "titular": "La firma Gentec despidió a 100 empleados tras una fuerte crisis",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 70,
+        "subtema": "agtech",
+        "tema": "gentec",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta fuertemente en el ecosistema AgTech nacional y genera gran conversación en el sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T21:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e591df69-3831-402c-ab2f-625fb0a87b6d",
+          "slug": "crisis-agtech-gentec-despidio-a-100-empleados-y-se-achica-por-fce8b3",
+          "url": "https://www.diariolacampaña.com.ar/n/crisis-agtech-gentec-despidio-a-100-empleados-y-se-achica-por-fce8b3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1690852819362671",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17882007045546216",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2b850722b496_portada.jpg"
     }
   ],
   "pendientes": [
@@ -42419,8 +42497,8 @@
       "cuando": "2026-10-29T13:00-03:00"
     }
   ],
-  "actualizado": "2026-10-30T21:23:06-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T21:43:58-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
