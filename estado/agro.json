@@ -20903,6 +20903,52 @@
         66,
         66
       ]
+    },
+    "0e5427f721304dc9": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 82,
+      "commercial_score": 75,
+      "subtema": "empresas",
+      "tema": "plantium",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a un referente nacional de AgTech y genera fuerte debate en la industria sobre la crisis del sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "496eae98bd59d056": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 1,
+      "cercania_argentina": 8,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 65,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad del cereal y preocupa a toda la zona núcleo local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        60
+      ]
     }
   },
   "indice": {
@@ -22308,7 +22354,9 @@
       "https://agrositio.com.ar/canal-agrositio/manoamano/249126-amadeo-derito-y-la-pasion-ganadera-de-la-empresa-familiar-industrial-a-la-compra-y-gestion-de-12-de-campos.html": "2026-10-30",
       "https://bichosdecampo.com/el-visec-llego-a-los-remates-denuncian-que-ya-hay-rebajas-de-precios-en-la-hacienda-a-pedido-de-los-frigorificos-exportadores": "2026-10-30",
       "https://lanacion.com.ar/economia/campo/anuncio-santa-fe-destinara-todo-el-dinero-de-un-impuesto-a-obras-para-el-campo-nid30102026": "2026-10-30",
-      "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026": "2026-10-30"
+      "https://lanacion.com.ar/economia/campo/basta-de-inversiones-un-frigorifico-no-renovo-80-contratados-su-gerente-lo-lamento-y-hablo-de-las-nid30102026": "2026-10-30",
+      "https://infocampo.com.ar/plantium-no-cierra-pero-si-recurre-a-un-fuerte-achique-somos-una-pyme-y-no-te-ayuda-nadie": "2026-10-30",
+      "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal": "2026-10-30"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -23712,7 +23760,9 @@
       "amadeo derito y la pasion ganadera de la empresa familiar industrial a la compra y gestion de 12 de campos": "2026-10-30",
       "el visec llego a los remates denuncian que ya hay rebajas de precios en la hacienda a pedido de los frigorificos exportadores": "2026-10-30",
       "anuncio santa fe destinara todo el dinero de un impuesto a obras para el campo": "2026-10-30",
-      "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil": "2026-10-30"
+      "basta de inversiones un frigorifico no renovo 80 contratados su gerente lo lamento y hablo de las importaciones desde brasil": "2026-10-30",
+      "plantium no cierra pero si recurre a un fuerte achique somos una pyme y no te ayuda nadie": "2026-10-30",
+      "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal": "2026-10-30"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25116,7 +25166,9 @@
       "9be79bfe3eee4543": "2026-10-30",
       "6746c696be05bc21": "2026-10-30",
       "010f9f3160ba950e": "2026-10-30",
-      "4be3d584e1000370": "2026-10-30"
+      "4be3d584e1000370": "2026-10-30",
+      "0e5427f721304dc9": "2026-10-30",
+      "496eae98bd59d056": "2026-10-30"
     }
   },
   "elegidas": [
@@ -41397,9 +41449,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1f8e12932530_portada.jpg"
+    },
+    {
+      "id": "df666f443067",
+      "cuando": "2026-10-30T21:00-03:00",
+      "titulo_original": "Plantium no cierra, pero sí recurre a un fuerte achique: “Somos una pyme y no te ayuda nadie”",
+      "descripcion": "En un extenso diálogo con Infocampo, Jorge Gentili, presidente de Plantium, habló sobre la crisis que atraviesa la empresa. Confirmó que tuvo que cesantear a unas 100 personas, pero aseguró que no cierra. “Hace tres años que el campo no funciona”, afirmó.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/plantium-no-cierra-pero-si-recurre-a-un-fuerte-achique-somos-una-pyme-y-no-te-ayuda-nadie/",
+      "titular": "Plantium no cierra pero aplica fuerte achique y despide 100 personas",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 82,
+        "commercial_score": 75,
+        "subtema": "empresas",
+        "tema": "plantium",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta a un referente nacional de AgTech y genera fuerte debate en la industria sobre la crisis del sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-30T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "QE5Phig_pzk",
+          "url": "https://youtube.com/shorts/QE5Phig_pzk",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "cab15e63-88d4-4e60-a0f3-7358f3ec1974",
+          "slug": "plantium-no-cierra-pero-despide-a-100-personas-por-una-fuerte-cae0d1",
+          "url": "https://www.diariolacampaña.com.ar/n/plantium-no-cierra-pero-despide-a-100-personas-por-una-fuerte-cae0d1",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1805006834174142",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18070702247785720",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_df666f443067_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "4f36f7ce5adb",
+      "rep": {
+        "id": "4f36f7ce5adb",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal/",
+        "canonical_url": "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal",
+        "titulo": "Ensañamiento: Los fondos agrícolas ya no solo liquidan posiciones en maíz, sino que construyen nuevas “apuestas” bajistas contra el cereal",
+        "titulo_norm": "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal",
+        "descripcion": "Los operadores de fondos agrícolas que gestionan activos en el CME Group (“Chicago”) esta semana siguieron liquidando posiciones de maíz de manera “salvaje”, además de construir adicionalmente apuestas “cortas” bajistas en el cereal. Ese “combo” fatídico es lo que explica que los valores del maíz en Chicago se sigan derrumbando a pesar de que los […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/fondos-2.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-10-30T19:55-03:00",
+        "capturado": "2026-10-30T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "496eae98bd59d056"
+      },
+      "grupo": [
+        {
+          "id": "4f36f7ce5adb",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal/",
+          "canonical_url": "https://bichosdecampo.com/ensanamiento-los-fondos-agricolas-ya-no-solo-liquidan-posiciones-en-maiz-sino-que-construyen-nuevas-apuestas-bajistas-contra-el-cereal",
+          "titulo": "Ensañamiento: Los fondos agrícolas ya no solo liquidan posiciones en maíz, sino que construyen nuevas “apuestas” bajistas contra el cereal",
+          "titulo_norm": "ensanamiento los fondos agricolas ya no solo liquidan posiciones en maiz sino que construyen nuevas apuestas bajistas contra el cereal",
+          "descripcion": "Los operadores de fondos agrícolas que gestionan activos en el CME Group (“Chicago”) esta semana siguieron liquidando posiciones de maíz de manera “salvaje”, además de construir adicionalmente apuestas “cortas” bajistas en el cereal. Ese “combo” fatídico es lo que explica que los valores del maíz en Chicago se sigan derrumbando a pesar de que los […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/fondos-2.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-10-30T19:55-03:00",
+          "capturado": "2026-10-30T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "496eae98bd59d056"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 1,
+        "cercania_argentina": 8,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 65,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad del cereal y preocupa a toda la zona núcleo local.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          60
+        ]
+      },
+      "cuando": "2026-10-30T21:00-03:00"
+    },
     {
       "id": "63d48c5158aa",
       "rep": {
@@ -42246,144 +42426,10 @@
         ]
       },
       "cuando": "2026-10-29T13:00-03:00"
-    },
-    {
-      "id": "6719c69e7d5a",
-      "rep": {
-        "id": "6719c69e7d5a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto/",
-        "canonical_url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto",
-        "titulo": "El Niño ya inundó las islas del norte santafesino y crece la preocupación por el futuro de la hacienda y la falta de pasto",
-        "titulo_norm": "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto",
-        "descripcion": "El fenómeno de El Niño ya comienza a sentirse en el norte de Santa Fe, donde la crecida del río Paraná inundó los bajos y el valle de inundación del humedal Jaaukanigás. En esa región, ubicada en el noreste del departamento General Obligado, los productores ganaderos debieron anticiparse al avance del agua y retirar la […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-8.jpeg",
-        "autor": "Diego Mañas",
-        "publicado": "2026-10-29T08:02-03:00",
-        "capturado": "2026-10-29T08:21-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6e2f0fd77280f87b"
-      },
-      "grupo": [
-        {
-          "id": "6719c69e7d5a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto/",
-          "canonical_url": "https://bichosdecampo.com/el-nino-ya-inundo-las-islas-del-norte-santafesino-y-crece-la-preocupacion-por-el-futuro-de-la-hacienda-y-la-falta-de-pasto",
-          "titulo": "El Niño ya inundó las islas del norte santafesino y crece la preocupación por el futuro de la hacienda y la falta de pasto",
-          "titulo_norm": "el nino ya inundo las islas del norte santafesino y crece la preocupacion por el futuro de la hacienda y la falta de pasto",
-          "descripcion": "El fenómeno de El Niño ya comienza a sentirse en el norte de Santa Fe, donde la crecida del río Paraná inundó los bajos y el valle de inundación del humedal Jaaukanigás. En esa región, ubicada en el noreste del departamento General Obligado, los productores ganaderos debieron anticiparse al avance del agua y retirar la […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-8.jpeg",
-          "autor": "Diego Mañas",
-          "publicado": "2026-10-29T08:02-03:00",
-          "capturado": "2026-10-29T08:21-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6e2f0fd77280f87b"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 7,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 5,
-        "ai_score": 65,
-        "commercial_score": 58,
-        "subtema": "ganaderia",
-        "tema": "crecida paraná",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente al sector ganadero del Litoral por el impacto del clima en la hacienda.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          67
-        ]
-      },
-      "cuando": "2026-10-29T08:21-03:00"
-    },
-    {
-      "id": "a5ac7f55d852",
-      "rep": {
-        "id": "a5ac7f55d852",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias/",
-        "canonical_url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias",
-        "titulo": "Se vienen algunas tormentas intensas, pero luego el pronóstico muestra un corte abrupto de las lluvias",
-        "titulo_norm": "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias",
-        "descripcion": "Entre este jueves y el viernes se prevé que persista el mal tiempo en sectores del NOA, Misiones y la costa bonaerense, con probabilidad de chaparrones dispersos. Para el viernes podrían ocurrir algunas precipitaciones moderadas sobre la zona central de Entre Ríos. El ingreso de aire cálido promoverá que el frente de mal tiempo se […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/mapa1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-29T07:44-03:00",
-        "capturado": "2026-10-29T08:01-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a268d22f3ad8c16e"
-      },
-      "grupo": [
-        {
-          "id": "a5ac7f55d852",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias/",
-          "canonical_url": "https://bichosdecampo.com/se-vienen-algunas-tormentas-intensas-pero-luego-el-pronostico-muestra-un-corte-abrupto-de-las-lluvias",
-          "titulo": "Se vienen algunas tormentas intensas, pero luego el pronóstico muestra un corte abrupto de las lluvias",
-          "titulo_norm": "se vienen algunas tormentas intensas pero luego el pronostico muestra un corte abrupto de las lluvias",
-          "descripcion": "Entre este jueves y el viernes se prevé que persista el mal tiempo en sectores del NOA, Misiones y la costa bonaerense, con probabilidad de chaparrones dispersos. Para el viernes podrían ocurrir algunas precipitaciones moderadas sobre la zona central de Entre Ríos. El ingreso de aire cálido promoverá que el frente de mal tiempo se […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/mapa1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-29T07:44-03:00",
-          "capturado": "2026-10-29T08:01-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a268d22f3ad8c16e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 68,
-        "commercial_score": 64,
-        "subtema": "agro",
-        "tema": "pronóstico",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El pronóstico de lluvias y cortes abruptos interesa directamente a los productores de la zona núcleo en plena campaña.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          67
-        ]
-      },
-      "cuando": "2026-10-29T08:01-03:00"
     }
   ],
-  "actualizado": "2026-10-30T19:25:20-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-10-30T21:03:35-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -46701,16 +46747,16 @@
       },
       "2026-10-30": {
         "fuente": "Banco Nación",
-        "hora": "09:55",
+        "hora": "17:00",
         "billete": {
           "fecha": "2026-10-30",
           "compra": 1510.0,
           "venta": 1560.0
         },
         "divisa": {
-          "fecha": "2026-10-29",
-          "compra": 1530.0,
-          "venta": 1539.0
+          "fecha": "2026-10-30",
+          "compra": 1525.0,
+          "venta": 1534.0
         }
       }
     },
@@ -46919,7 +46965,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 449.8
+        "usd_t": 448.8
       }
     },
     "chicago_maiz": {
@@ -47049,7 +47095,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 176.8
+        "usd_t": 176.2
       }
     },
     "chicago_trigo": {
@@ -47179,7 +47225,7 @@
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 222.4
+        "usd_t": 221.7
       }
     }
   }
