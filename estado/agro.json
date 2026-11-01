@@ -21757,6 +21757,52 @@
         51,
         50
       ]
+    },
+    "a201c7ec6865254f": {
+      "impacto_economico": 11,
+      "interes_productores": 10,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 64,
+      "subtema": "agro",
+      "tema": "cultivos alternativos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante para diversificar rotaciones en la región, aunque su impacto económico aún es menor frente a los principales granos.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        70
+      ]
+    },
+    "48c33bd70389b6bd": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 15,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 9,
+      "conversacion": 10,
+      "potencial_comercial": 7,
+      "ai_score": 80,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "siembra de nubes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran atractivo tecnológico y de conversación por la modificación climática, a pesar de estar probándose fuera de la zona núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23231,7 +23277,9 @@
       "https://lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/thiago-tiene-14-anos-construyo-un-tractor-y-ahora-quiere-automatizarlo-lo-hice-con-chatarra-nid01112026": "2026-11-01",
       "https://lacapital.com.ar/agro/cronicas-campana-los-trigueros-se-entusiasman-las-500-espigas-n10289811.html": "2026-11-01",
-      "https://infocampo.com.ar/hoja-misionera-con-hongos-cuyanos-la-yerba-mate-antiestres-que-innova-y-gana-mercado-desde-mendoza": "2026-11-01"
+      "https://infocampo.com.ar/hoja-misionera-con-hongos-cuyanos-la-yerba-mate-antiestres-que-innova-y-gana-mercado-desde-mendoza": "2026-11-01",
+      "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta": "2026-11-01",
+      "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24704,7 +24752,9 @@
       "opinion perdimos un 36 del rodeo vacuno y nadie se hace cargo": "2026-11-01",
       "thiago tiene 14 anos construyo un tractor y ahora quiere automatizarlo lo hice con chatarra": "2026-11-01",
       "cronicas de campana los trigueros se entusiasman con las 500 espigas": "2026-11-01",
-      "hoja misionera con hongos cuyanos la yerba mate antiestres que innova y gana mercado desde mendoza": "2026-11-01"
+      "hoja misionera con hongos cuyanos la yerba mate antiestres que innova y gana mercado desde mendoza": "2026-11-01",
+      "no se olviden de nosotros un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta": "2026-11-01",
+      "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26177,7 +26227,9 @@
       "a43a83511d7641db": "2026-11-01",
       "c182fe29c84e8bf4": "2026-11-01",
       "53de1b16f8bb0c32": "2026-11-01",
-      "f5421becd3e8dc91": "2026-11-01"
+      "f5421becd3e8dc91": "2026-11-01",
+      "a201c7ec6865254f": "2026-11-01",
+      "48c33bd70389b6bd": "2026-11-01"
     }
   },
   "elegidas": [
@@ -43955,6 +44007,136 @@
   ],
   "pendientes": [
     {
+      "id": "c990962491f8",
+      "rep": {
+        "id": "c990962491f8",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta/",
+        "canonical_url": "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta",
+        "titulo": "No se olviden de nosotros: Un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta",
+        "titulo_norm": "no se olviden de nosotros un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta",
+        "descripcion": "En los últimos años el panorama agrícola de la Argentina fue sumando nuevas opciones de cultivos, siempre a la sombra de la soja, el maíz y el trigo. Buscando abastecer distintas demandas industriales o exportadoras, comenzaron a ganar terreno distintas opciones que compiten en área con los tradicionales. Apalancadas por los nuevos biocombustibles para aviones, […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/1746014076966.jpg",
+        "autor": "Diego Mañas",
+        "publicado": "2026-11-01T08:10-03:00",
+        "capturado": "2026-11-01T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a201c7ec6865254f"
+      },
+      "grupo": [
+        {
+          "id": "c990962491f8",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta/",
+          "canonical_url": "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta",
+          "titulo": "No se olviden de nosotros: Un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta",
+          "titulo_norm": "no se olviden de nosotros un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta",
+          "descripcion": "En los últimos años el panorama agrícola de la Argentina fue sumando nuevas opciones de cultivos, siempre a la sombra de la soja, el maíz y el trigo. Buscando abastecer distintas demandas industriales o exportadoras, comenzaron a ganar terreno distintas opciones que compiten en área con los tradicionales. Apalancadas por los nuevos biocombustibles para aviones, […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/1746014076966.jpg",
+          "autor": "Diego Mañas",
+          "publicado": "2026-11-01T08:10-03:00",
+          "capturado": "2026-11-01T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a201c7ec6865254f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 64,
+        "subtema": "agro",
+        "tema": "cultivos alternativos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante para diversificar rotaciones en la región, aunque su impacto económico aún es menor frente a los principales granos.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          70
+        ]
+      },
+      "cuando": "2026-11-01T08:22-03:00"
+    },
+    {
+      "id": "e7a890fae6c8",
+      "rep": {
+        "id": "e7a890fae6c8",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas/",
+        "canonical_url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas",
+        "titulo": "En la provincia de Chaco, una empresa chilena ya estudia cómo “sembrar nubes” para que llueva hasta 18% más",
+        "titulo_norm": "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas",
+        "descripcion": "La información circulaba en las redes sociales, y por eso era necesario chequearla. Pero era cierto: una empresa chilena que ofrece “Ingeniería Especializada en Modificación del Clima” está trabajando en la Argentina, por ahora a nivel de ensayos, para ver si puede “sembrar nubes” en el Chaco, para tratar de mejorar la oferta de lluvias […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/chile.png",
+        "autor": "Matias Longoni",
+        "publicado": "2026-11-01T08:08-03:00",
+        "capturado": "2026-11-01T08:22-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "48c33bd70389b6bd"
+      },
+      "grupo": [
+        {
+          "id": "e7a890fae6c8",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas/",
+          "canonical_url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas",
+          "titulo": "En la provincia de Chaco, una empresa chilena ya estudia cómo “sembrar nubes” para que llueva hasta 18% más",
+          "titulo_norm": "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas",
+          "descripcion": "La información circulaba en las redes sociales, y por eso era necesario chequearla. Pero era cierto: una empresa chilena que ofrece “Ingeniería Especializada en Modificación del Clima” está trabajando en la Argentina, por ahora a nivel de ensayos, para ver si puede “sembrar nubes” en el Chaco, para tratar de mejorar la oferta de lluvias […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/chile.png",
+          "autor": "Matias Longoni",
+          "publicado": "2026-11-01T08:08-03:00",
+          "capturado": "2026-11-01T08:22-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "48c33bd70389b6bd"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 15,
+        "cercania_argentina": 10,
+        "cercania_pba": 2,
+        "potencial_reel": 9,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "siembra de nubes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran atractivo tecnológico y de conversación por la modificación climática, a pesar de estar probándose fuera de la zona núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-01T08:22-03:00"
+    },
+    {
       "id": "69bd45dca10f",
       "rep": {
         "id": "69bd45dca10f",
@@ -44152,7 +44334,7 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T08:02:52-03:00",
+  "actualizado": "2026-11-01T08:22:53-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
