@@ -21686,6 +21686,52 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a43a83511d7641db": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 62,
+      "commercial_score": 54,
+      "subtema": "ganaderia",
+      "tema": "stock vacuno",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca una fibra muy sensible de la ganadería bonaerense aunque sea una columna de opinión.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        66
+      ]
+    },
+    "c182fe29c84e8bf4": {
+      "impacto_economico": 6,
+      "interes_productores": 12,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 10,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "maquinaria",
+      "tema": "tractor artesanal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente historia de innovación local con un enorme potencial para redes sociales y reels.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23149,7 +23195,17 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249130-como-enfrenta-joaquin-benegas-lynch-los-desafios-del-congreso-para-apoyar-al-campo.html": "2026-10-31",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html": "2026-10-31",
       "https://bichosdecampo.com/quien-es-camil-alimentos-nacida-en-el-sur-de-brasil-esta-corporacion-vende-22-millones-de-toneladas-de-alimentos-e-hizo-del-arroz-un-negocio-millonario": "2026-10-31",
-      "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad": "2026-10-31"
+      "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad": "2026-10-31",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-en-la-rioja-cielo-despejado-el-pronostico-para-hoy-1-de-noviembre": "2026-11-01",
+      "https://lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026": "2026-11-01",
+      "https://lanacion.com.ar/economia/campo/thiago-tiene-14-anos-construyo-un-tractor-y-ahora-quiere-automatizarlo-lo-hice-con-chatarra-nid01112026": "2026-11-01",
+      "https://lacapital.com.ar/agro/cronicas-campana-los-trigueros-se-entusiasman-las-500-espigas-n10289811.html": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24611,7 +24667,17 @@
       "joaquin benegas lynch que leyes prepara el senado para impulsar al campo y atraer inversiones": "2026-10-31",
       "cuanto nitrogeno necesita tu maiz la ing agr fernanda gonzalez detalla el calculo para optimizar la fertilizacion": "2026-10-31",
       "quien es camil alimentos nacida en el sur de brasil esta corporacion vende 2 2 millones de toneladas de alimentos e hizo del arroz un negocio millonario": "2026-10-31",
-      "argentina va camino a exportar otra vez un gran volumen de trigo pero el cereal aun no experimento la hora de la verdad": "2026-10-31"
+      "argentina va camino a exportar otra vez un gran volumen de trigo pero el cereal aun no experimento la hora de la verdad": "2026-10-31",
+      "dolar blue hoy a cuanto cotiza el 1 noviembre 2026": "2026-11-01",
+      "clima hoy en corrientes el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima hoy en cordoba el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima hoy en salta el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima hoy en san luis el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima hoy en rosario el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima en la rioja cielo despejado el pronostico para hoy 1 de noviembre": "2026-11-01",
+      "opinion perdimos un 36 del rodeo vacuno y nadie se hace cargo": "2026-11-01",
+      "thiago tiene 14 anos construyo un tractor y ahora quiere automatizarlo lo hice con chatarra": "2026-11-01",
+      "cronicas de campana los trigueros se entusiasman con las 500 espigas": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26073,7 +26139,17 @@
       "8b7d2749f41753eb": "2026-10-31",
       "3268f039e0ab892d": "2026-10-31",
       "5c9c58a46c642106": "2026-10-31",
-      "d8c76cc0529d288c": "2026-10-31"
+      "d8c76cc0529d288c": "2026-10-31",
+      "16fd291ab97674d7": "2026-11-01",
+      "062ca1298e19ba24": "2026-11-01",
+      "ad514b29f546df5d": "2026-11-01",
+      "e03c0ed121e4fd9c": "2026-11-01",
+      "0d89e1982e8da148": "2026-11-01",
+      "5946cc5efc655495": "2026-11-01",
+      "efe9499219ea171a": "2026-11-01",
+      "a43a83511d7641db": "2026-11-01",
+      "c182fe29c84e8bf4": "2026-11-01",
+      "53de1b16f8bb0c32": "2026-11-01"
     }
   },
   "elegidas": [
@@ -43731,9 +43807,138 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f6c3a58c8c14_portada.jpg"
+    },
+    {
+      "id": "5e03627e0827",
+      "cuando": "2026-11-01T07:02-03:00",
+      "titulo_original": "Thiago tiene 14 años, construyó un tractor y ahora quiere automatizarlo: “Lo hice con chatarra”",
+      "descripcion": "El adolescente vive en la zona rural de San Ambrosio, cerca de Río Cuarto; después de presentar su “tractoneta” en exposiciones, visitó la planta de CNH en Córdoba para conocer cómo se fabrican las máquinas agrícolas",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/thiago-tiene-14-anos-construyo-un-tractor-y-ahora-quiere-automatizarlo-lo-hice-con-chatarra-nid01112026/",
+      "titular": "Adolescente cordobés fabricó un tractor artesanal y visitó planta industrial",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 6,
+        "interes_productores": 12,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 10,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "maquinaria",
+        "tema": "tractor artesanal",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente historia de innovación local con un enorme potencial para redes sociales y reels.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "con_video": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "929pPc2g6n4",
+          "url": "https://youtube.com/shorts/929pPc2g6n4",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "5dbaa542-e70f-4b69-aa1a-386c73b05e0b",
+          "slug": "joven-cordobes-armo-un-tractor-con-chatarra-y-visito-una-planta-d53ee2",
+          "url": "https://www.diariolacampaña.com.ar/n/joven-cordobes-armo-un-tractor-con-chatarra-y-visito-una-planta-d53ee2",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1139757285130928",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17953549335300811",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5e03627e0827_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "69bd45dca10f",
+      "rep": {
+        "id": "69bd45dca10f",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026",
+        "titulo": "Opinión: perdimos un 36% del rodeo vacuno y nadie se hace cargo",
+        "titulo_norm": "opinion perdimos un 36 del rodeo vacuno y nadie se hace cargo",
+        "descripcion": "En Carlos Tejedor, en los últimos 20 años el stock tuvo una merma que se vinculó con diversos factores, entre ellos decisiones políticas tomadas en el país",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/POVVLVLEKFDHZBMR6XYLKG3WVA.jpg?auth=49bce89410620989efbbf1876d34ef86ea762b3e1bc89a0084f983b1e7308c4e&smart=true",
+        "autor": "Dante Garciandía",
+        "publicado": "2026-11-01T06:30-03:00",
+        "capturado": "2026-11-01T07:02-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a43a83511d7641db"
+      },
+      "grupo": [
+        {
+          "id": "69bd45dca10f",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026",
+          "titulo": "Opinión: perdimos un 36% del rodeo vacuno y nadie se hace cargo",
+          "titulo_norm": "opinion perdimos un 36 del rodeo vacuno y nadie se hace cargo",
+          "descripcion": "En Carlos Tejedor, en los últimos 20 años el stock tuvo una merma que se vinculó con diversos factores, entre ellos decisiones políticas tomadas en el país",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/POVVLVLEKFDHZBMR6XYLKG3WVA.jpg?auth=49bce89410620989efbbf1876d34ef86ea762b3e1bc89a0084f983b1e7308c4e&smart=true",
+          "autor": "Dante Garciandía",
+          "publicado": "2026-11-01T06:30-03:00",
+          "capturado": "2026-11-01T07:02-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a43a83511d7641db"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 11,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 62,
+        "commercial_score": 54,
+        "subtema": "ganaderia",
+        "tema": "stock vacuno",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca una fibra muy sensible de la ganadería bonaerense aunque sea una columna de opinión.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          58,
+          66
+        ]
+      },
+      "cuando": "2026-11-01T07:02-03:00"
+    },
     {
       "id": "d918589e9c0f",
       "rep": {
@@ -43926,77 +44131,10 @@
         ]
       },
       "cuando": "2026-10-31T07:02-03:00"
-    },
-    {
-      "id": "f1d8acbf0acf",
-      "rep": {
-        "id": "f1d8acbf0acf",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026",
-        "titulo": "Seguridad: el Gobierno y la Sociedad Rural Argentina impulsan una mesa nacional para combatir los delitos en el campo",
-        "titulo_norm": "seguridad el gobierno y la sociedad rural argentina impulsan una mesa nacional para combatir los delitos en el campo",
-        "descripcion": "La propuesta surgió durante una reunión entre Nicolás Pino y la ministra Alejandra Monteoliva; buscan reunir a referentes agropecuarios de distintas provincias para tratar el robo de ganado, el contrabando de granos y otros hechos",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/ZBJ3T53QNBEMBCAPYG2QEHIGEU.png?auth=b332cca724222b52cd4680d47f3f2636808d0bbdb238c315d7f77bf61248eced&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-10-30T17:22-03:00",
-        "capturado": "2026-10-30T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f49d5df196b8531e"
-      },
-      "grupo": [
-        {
-          "id": "f1d8acbf0acf",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/seguridad-el-gobierno-y-la-sociedad-rural-argentina-impulsan-una-mesa-nacional-para-combatir-los-nid30102026",
-          "titulo": "Seguridad: el Gobierno y la Sociedad Rural Argentina impulsan una mesa nacional para combatir los delitos en el campo",
-          "titulo_norm": "seguridad el gobierno y la sociedad rural argentina impulsan una mesa nacional para combatir los delitos en el campo",
-          "descripcion": "La propuesta surgió durante una reunión entre Nicolás Pino y la ministra Alejandra Monteoliva; buscan reunir a referentes agropecuarios de distintas provincias para tratar el robo de ganado, el contrabando de granos y otros hechos",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/ZBJ3T53QNBEMBCAPYG2QEHIGEU.png?auth=b332cca724222b52cd4680d47f3f2636808d0bbdb238c315d7f77bf61248eced&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-10-30T17:22-03:00",
-          "capturado": "2026-10-30T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f49d5df196b8531e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 65,
-        "commercial_score": 58,
-        "subtema": "agro",
-        "tema": "inseguridad rural",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "La seguridad rural es un tema de alta sensibilidad y conversación constante para los productores de la región pampeana.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          68
-        ]
-      },
-      "cuando": "2026-10-30T18:00-03:00"
     }
   ],
-  "actualizado": "2026-11-01T07:02:08-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-01T07:05:35-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
