@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-01T22:01:21.000Z",
+  "actualizado": "2026-11-01T22:31:26.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/10/30/bragado-un-detenido-por-droga-intento-arrebatar-el-arma-a-un-policia/",
@@ -258,6 +258,30 @@
       "localidad": "Chacabuco",
       "volanta": "Chacabuco",
       "categoria": "robo",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/la-semana-comienza-con-una-nueva-alerta.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-01T22:31:26.000Z",
+      "titulo": "Emiten una alerta meteorológica amarilla por tormentas para Chacabuco y la zona",
+      "descripcion": "El Servicio Meteorológico Nacional emitió una alerta amarilla por tormentas prevista para la tarde del martes en Chacabuco y varios distritos de la región.",
+      "texto_tiktok": "El partido de Chacabuco se prepara para la llegada de nuevas precipitaciones.\n\nEl Servicio Meteorológico Nacional anunció una alerta amarilla por tormentas.\n\nEl fenómeno climático se registrará durante la tarde del martes.\n\nLa medida alcanza también a otros distritos de la región.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #AlertaMeteorologica #Clima #Tormentas #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-01_2135_02_chacabuco_emiten-una-alerta-meteorol-gic.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-emiten-una-alerta-meteorologica-amarilla-por-1fd2e8",
+      "youtube_url": "https://youtube.com/shorts/YvZAS1cAA24",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Alerta meteorológica en Chacabuco",
+      "categoria": "alerta_meteorologica",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
