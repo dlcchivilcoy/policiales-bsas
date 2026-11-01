@@ -21929,6 +21929,27 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "76964d9ee2019b5d": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 9,
+      "ai_score": 87,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "maíz tardío",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Altamente relevante para la zona núcleo en plena planificación de siembra.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23421,7 +23442,8 @@
       "https://bichosdecampo.com/detras-de-lacteos-las-tres-hay-una-bella-historia-de-familia-y-arraigo-en-villa-maria-preferimos-seguir-haciendo-un-queso-autentico-hacemos-lo-basico-y-bien": "2026-11-01",
       "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado": "2026-11-01",
       "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano": "2026-11-01",
-      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01"
+      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01",
+      "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24912,7 +24934,8 @@
       "detras de lacteos las tres hay una bella historia de familia y arraigo en villa maria preferimos seguir haciendo un queso autentico hacemos lo basico y bien": "2026-11-01",
       "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado": "2026-11-01",
       "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano": "2026-11-01",
-      "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01"
+      "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01",
+      "como planificar el maiz tardio con el nino en camino": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26403,7 +26426,8 @@
       "066c9ffa4283e7e9": "2026-11-01",
       "20e97e5a8210a381": "2026-11-01",
       "f28aaa43b6dc9e8e": "2026-11-01",
-      "67526b4cff1b7995": "2026-11-01"
+      "67526b4cff1b7995": "2026-11-01",
+      "76964d9ee2019b5d": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44427,6 +44451,69 @@
   ],
   "pendientes": [
     {
+      "id": "7bd7c15183e6",
+      "rep": {
+        "id": "7bd7c15183e6",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026",
+        "titulo": "Cómo planificar el maíz tardío con El Niño en camino",
+        "titulo_norm": "como planificar el maiz tardio con el nino en camino",
+        "descripcion": "A los factores clásicos como fecha de siembra, nutrición y elección del híbrido apropiado se suma la probabilidad de mayores lluvias",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WDDAD7PKXFF6BHIDYX44V4TINU.png?auth=63a190626df92be03f8cf17d2c5be3e104933510bf102f8714ec1d89f12e0fea&smart=true",
+        "autor": "Octavio Caviglia",
+        "publicado": "2026-11-01T13:26-03:00",
+        "capturado": "2026-11-01T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "76964d9ee2019b5d"
+      },
+      "grupo": [
+        {
+          "id": "7bd7c15183e6",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026",
+          "titulo": "Cómo planificar el maíz tardío con El Niño en camino",
+          "titulo_norm": "como planificar el maiz tardio con el nino en camino",
+          "descripcion": "A los factores clásicos como fecha de siembra, nutrición y elección del híbrido apropiado se suma la probabilidad de mayores lluvias",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WDDAD7PKXFF6BHIDYX44V4TINU.png?auth=63a190626df92be03f8cf17d2c5be3e104933510bf102f8714ec1d89f12e0fea&smart=true",
+          "autor": "Octavio Caviglia",
+          "publicado": "2026-11-01T13:26-03:00",
+          "capturado": "2026-11-01T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "76964d9ee2019b5d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 87,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para la zona núcleo en plena planificación de siembra.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-01T13:40-03:00"
+    },
+    {
       "id": "f7298cd492e5",
       "rep": {
         "id": "f7298cd492e5",
@@ -44687,7 +44774,7 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T13:24:05-03:00",
+  "actualizado": "2026-11-01T13:41:28-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
