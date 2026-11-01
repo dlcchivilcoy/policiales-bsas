@@ -21950,6 +21950,27 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f3ee6b97c5e5764e": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 7,
+      "ai_score": 80,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Alerta meteorológica roja para zona núcleo en plena etapa crítica del trigo, generando gran preocupación en productores.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23443,7 +23464,8 @@
       "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado": "2026-11-01",
       "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01",
-      "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026": "2026-11-01"
+      "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026": "2026-11-01",
+      "https://bichosdecampo.com/alerta-trigo-se-vienen-tormentas-intensas-cuando-el-cultivo-menos-lo-necesita": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24935,7 +24957,8 @@
       "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado": "2026-11-01",
       "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano": "2026-11-01",
       "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01",
-      "como planificar el maiz tardio con el nino en camino": "2026-11-01"
+      "como planificar el maiz tardio con el nino en camino": "2026-11-01",
+      "alerta trigo se vienen tormentas intensas cuando el cultivo menos lo necesita": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26427,7 +26450,8 @@
       "20e97e5a8210a381": "2026-11-01",
       "f28aaa43b6dc9e8e": "2026-11-01",
       "67526b4cff1b7995": "2026-11-01",
-      "76964d9ee2019b5d": "2026-11-01"
+      "76964d9ee2019b5d": "2026-11-01",
+      "f3ee6b97c5e5764e": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44447,6 +44471,73 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d151c94b0e59_portada.jpg"
+    },
+    {
+      "id": "105eb23d88a4",
+      "cuando": "2026-11-01T16:00-03:00",
+      "titulo_original": "Alerta trigo: Se vienen tormentas intensas cuando el cultivo menos lo necesita",
+      "descripcion": "El Servicio Meteorológico Nacional (SMN) emitió una alaerta naranja por tormentas severas para este domingo en la zona núcleo pampeana, el oeste de Buenos Aires, el norte de La Pampa y el sur de Córdoba. La alerta naranja (definida como fenómenos meteorológicos peligrosos para la sociedad, la vida, ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/alerta-trigo-se-vienen-tormentas-intensas-cuando-el-cultivo-menos-lo-necesita/",
+      "titular": "Trigo: alerta naranja por tormentas severas en la región pampeana",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alerta meteorológica roja para zona núcleo en plena etapa crítica del trigo, generando gran preocupación en productores.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "IqhssO2lxXk",
+          "url": "https://youtube.com/shorts/IqhssO2lxXk",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "949801a5-f49b-47eb-918c-3226f352ddbe",
+          "slug": "alerta-naranja-por-tormentas-severas-el-impacto-del-clima-en-el-b7cc0a",
+          "url": "https://www.diariolacampaña.com.ar/n/alerta-naranja-por-tormentas-severas-el-impacto-del-clima-en-el-b7cc0a",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2651310755330079",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17885708082625722",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17974546917158701"
+        },
+        "historia_facebook": {
+          "id": "1146221341592508"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_105eb23d88a4_portada.jpg"
     }
   ],
   "pendientes": [
@@ -44774,8 +44865,8 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T14:21:31-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-01T16:03:59-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
