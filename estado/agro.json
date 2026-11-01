@@ -21996,6 +21996,73 @@
         63,
         70
       ]
+    },
+    "713bf1428ed1bf89": {
+      "impacto_economico": 2,
+      "interes_productores": 1,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 1,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 1,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "carne de burro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una curiosidad marginal sin relevancia económica real para la región núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7922de090ba3658e": {
+      "impacto_economico": 13,
+      "interes_productores": 11,
+      "innovacion": 10,
+      "cercania_argentina": 5,
+      "cercania_pba": 4,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 62,
+      "subtema": "agro",
+      "tema": "malezas resistentes",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Interesante manejo de resistencia de malezas para la próxima generación de soja, aunque el enfoque sea externo.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        58
+      ]
+    },
+    "4fcb3b3ea7c85499": {
+      "impacto_economico": 10,
+      "interes_productores": 5,
+      "innovacion": 4,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 40,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "syngenta",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Reporte financiero global de una multinacional de insumos con impacto indirecto en el mercado local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23491,7 +23558,10 @@
       "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026": "2026-11-01",
       "https://bichosdecampo.com/alerta-trigo-se-vienen-tormentas-intensas-cuando-el-cultivo-menos-lo-necesita": "2026-11-01",
-      "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres": "2026-11-01"
+      "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres": "2026-11-01",
+      "https://bichosdecampo.com/tanto-va-el-burro-al-trigo-que-al-final-en-un-congreso-de-catamarca-se-debatio-como-comenzar-a-producir-carne-de-ese-animal-e-incluso-aparecieron-frigorificos-interesados": "2026-11-01",
+      "https://croplife.com/crop-inputs/seed-biotech/clock-ticking-on-waterhemp-seedbanks-ahead-of-next-generation-soybean-traits": "2026-11-01",
+      "https://croplife.com/crop-inputs/syngenta-group-reports-9m-2026-results-with-higher-profitability": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24985,7 +25055,10 @@
       "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01",
       "como planificar el maiz tardio con el nino en camino": "2026-11-01",
       "alerta trigo se vienen tormentas intensas cuando el cultivo menos lo necesita": "2026-11-01",
-      "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres": "2026-11-01"
+      "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres": "2026-11-01",
+      "tanto va el burro al trigo que al final en un congreso de catamarca se debatio como comenzar a producir carne de ese animal e incluso aparecieron frigorificos interesados": "2026-11-01",
+      "clock ticking on waterhemp seedbanks ahead of next generation soybean traits": "2026-11-01",
+      "syngenta group reports 9m 2026 results with higher profitability": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26479,7 +26552,10 @@
       "67526b4cff1b7995": "2026-11-01",
       "76964d9ee2019b5d": "2026-11-01",
       "f3ee6b97c5e5764e": "2026-11-01",
-      "3947be9a26ef2765": "2026-11-01"
+      "3947be9a26ef2765": "2026-11-01",
+      "713bf1428ed1bf89": "2026-11-01",
+      "7922de090ba3658e": "2026-11-01",
+      "4fcb3b3ea7c85499": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44630,6 +44706,73 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b80c2191c072_portada.jpg"
+    },
+    {
+      "id": "7bd7c15183e6",
+      "cuando": "2026-11-01T18:00-03:00",
+      "titulo_original": "Cómo planificar el maíz tardío con El Niño en camino",
+      "descripcion": "A los factores clásicos como fecha de siembra, nutrición y elección del híbrido apropiado se suma la probabilidad de mayores lluvias",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026/",
+      "titular": "Maíz tardío frente a El Niño: planificación y rindes estables",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 87,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para la zona núcleo en plena planificación de siembra.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "SGY3Zn_ldgE",
+          "url": "https://youtube.com/shorts/SGY3Zn_ldgE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "d7089559-c23b-4b4b-8c98-906f0f604e3a",
+          "slug": "como-planificar-el-maiz-tardio-frente-a-el-nino-y-asegurar-f87d37",
+          "url": "https://www.diariolacampaña.com.ar/n/como-planificar-el-maiz-tardio-frente-a-el-nino-y-asegurar-f87d37",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1275950648039637",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18184869259426605",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18108505709262345"
+        },
+        "historia_facebook": {
+          "id": "1115984121222155"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7bd7c15183e6_portada.jpg"
     }
   ],
   "pendientes": [
@@ -44699,69 +44842,6 @@
         ]
       },
       "cuando": "2026-11-01T17:00-03:00"
-    },
-    {
-      "id": "7bd7c15183e6",
-      "rep": {
-        "id": "7bd7c15183e6",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026",
-        "titulo": "Cómo planificar el maíz tardío con El Niño en camino",
-        "titulo_norm": "como planificar el maiz tardio con el nino en camino",
-        "descripcion": "A los factores clásicos como fecha de siembra, nutrición y elección del híbrido apropiado se suma la probabilidad de mayores lluvias",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WDDAD7PKXFF6BHIDYX44V4TINU.png?auth=63a190626df92be03f8cf17d2c5be3e104933510bf102f8714ec1d89f12e0fea&smart=true",
-        "autor": "Octavio Caviglia",
-        "publicado": "2026-11-01T13:26-03:00",
-        "capturado": "2026-11-01T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "76964d9ee2019b5d"
-      },
-      "grupo": [
-        {
-          "id": "7bd7c15183e6",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026",
-          "titulo": "Cómo planificar el maíz tardío con El Niño en camino",
-          "titulo_norm": "como planificar el maiz tardio con el nino en camino",
-          "descripcion": "A los factores clásicos como fecha de siembra, nutrición y elección del híbrido apropiado se suma la probabilidad de mayores lluvias",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WDDAD7PKXFF6BHIDYX44V4TINU.png?auth=63a190626df92be03f8cf17d2c5be3e104933510bf102f8714ec1d89f12e0fea&smart=true",
-          "autor": "Octavio Caviglia",
-          "publicado": "2026-11-01T13:26-03:00",
-          "capturado": "2026-11-01T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "76964d9ee2019b5d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 87,
-        "commercial_score": 85,
-        "subtema": "agro",
-        "tema": "maíz tardío",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Altamente relevante para la zona núcleo en plena planificación de siembra.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-01T13:40-03:00"
     },
     {
       "id": "f7298cd492e5",
@@ -44957,8 +45037,8 @@
       "cuando": "2026-11-01T08:22-03:00"
     }
   ],
-  "actualizado": "2026-11-01T17:21:09-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-01T18:05:20-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
