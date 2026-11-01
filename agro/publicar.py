@@ -233,7 +233,105 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_
             except Exception as e:                         # noqa: BLE001
                 salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Instagram FALLÓ: {salida['instagram']['error']}")
+        if historias_de_reels():
+            _reel_a_historias(pieza, mp4, salida, redes, hecho, log)
     return salida
+
+
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# El reel también como HISTORIA (01/11/2026, pedido del editor: «para @diarioyradioagro sacá las historias
+# que venías cargando y cargá como historia los reels que subís»). Cada reel que sale en Instagram o en
+# Facebook sale además como historia en esa misma red, con el mismo video llevado a 9:16 (bandas grafito,
+# audio a 48 kHz: Facebook lo pide). Meta acepta historias de video de 3 a 60 s: un reel más largo (los que
+# llevan el video del medio entero) no va a historia, como en el diario. Una historia que falla no pinta la
+# corrida de rojo («fallo», no «error») ni se reintenta: lo que salió queda anotado y no se duplica.
+# AGRO_REEL_HISTORIA=0 la apaga.
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+HISTORIA_SEG = (3.0, 60.0)
+
+
+def historias_de_reels() -> bool:
+    return (os.environ.get("AGRO_REEL_HISTORIA") or "1").strip() != "0"
+
+
+def _video_historia(mp4: Path) -> Path:
+    """Copia 1080x1920 del reel (4:5 → bandas grafito arriba y abajo) con el audio en AAC 48 kHz."""
+    import subprocess
+    from reels import reel_bot as R
+    destino = mp4.with_name(mp4.stem + "_historia.mp4")
+    subprocess.run([R.motor()._ffmpeg(), "-y", "-v", "error", "-i", str(mp4), "-map", "0:v:0", "-map", "0:a?",
+                    "-vf", "scale=1080:-2,pad=1080:1920:0:(oh-ih)/2:color=0x202226,setsar=1",
+                    "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "128k", "-movflags", "+faststart",
+                    str(destino)], check=True, capture_output=True, timeout=600)
+    return destino
+
+
+def _historia_video_instagram(url: str) -> dict:
+    from reels import publicador as PB
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    cid = PB._contenedor_listo(uid, tok, {"media_type": "STORIES", "video_url": url})
+    return {"id": PB._publicar_contenedor(uid, tok, cid, "") or None}
+
+
+def _historia_video_facebook(mp4: Path) -> dict:
+    """/{página}/video_stories en tres pasos: start → el archivo → finish (PUBLISHED)."""
+    from reels import publicador as PB
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    base = f"{PB.GRAPH}/{pid}/video_stories"
+    r = PB._pedir("POST", base, tok, data={"upload_phase": "start"})
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (historia: empezar)"))
+    d = r.json() or {}
+    datos = Path(mp4).read_bytes()
+    r = PB._pedir("POST", d["upload_url"], "", content=datos, timeout=300,
+                  headers={"Authorization": f"OAuth {tok}", "offset": "0", "file_size": str(len(datos))})
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (historia: subir el video)"))
+    r = PB._pedir("POST", base, tok, data={"upload_phase": "finish", "video_id": d["video_id"],
+                                            "video_state": "PUBLISHED"})
+    if r.status_code >= 400:
+        raise PB.FalloRed(PB._error(r, "Facebook (historia: publicar)"))
+    return {"id": str((r.json() or {}).get("post_id") or d["video_id"])}
+
+
+def _reel_a_historias(pieza: dict, mp4: Path, salida: dict, redes, hecho, log=print) -> None:
+    """Las historias del reel en las redes donde el reel ya salió y la historia todavía no."""
+    from reels import publicador as PB
+    from reels import reel_bot as R
+    faltan = [red for red in ("instagram", "facebook")
+              if red in redes and hecho(red) and f"historia_{red}" not in salida]
+    if not faltan:
+        return
+    try:
+        dur = float(R.motor().duration_seconds(mp4) or 0)
+    except Exception:                                      # noqa: BLE001
+        dur = 0.0
+    if not HISTORIA_SEG[0] <= dur <= HISTORIA_SEG[1]:
+        for red in faltan:
+            salida[f"historia_{red}"] = {"omitido": f"el reel dura {dur:.0f} s (la historia admite de 3 a 60 s)"}
+        log(f"   Historia: no va (el reel dura {dur:.0f} s; Meta admite de 3 a 60 s)")
+        return
+    try:
+        video = _video_historia(mp4)
+    except Exception as e:                                 # noqa: BLE001
+        for red in faltan:
+            salida[f"historia_{red}"] = {"fallo": f"no se pudo pasar a 9:16: {type(e).__name__}: {str(e)[:150]}"}
+        log(f"   Historia: no se pudo pasar a 9:16 ({type(e).__name__})")
+        return
+    for red in faltan:
+        try:
+            if red == "instagram":
+                url = PB.subir_a_release(video, f"agro_{pieza['id']}_historia.mp4")
+                salida["historia_instagram"] = _historia_video_instagram(url)
+            else:
+                salida["historia_facebook"] = _historia_video_facebook(video)
+            log(f"   Historia {red}: {salida[f'historia_{red}'].get('id')}")
+        except Exception as e:                             # noqa: BLE001
+            salida[f"historia_{red}"] = {"fallo": f"{type(e).__name__}: {str(e)[:200]}"}
+            log(f"   Historia {red} FALLÓ: {salida[f'historia_{red}']['fallo']}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────────────────────

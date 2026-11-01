@@ -41,6 +41,14 @@ import os
 from datetime import datetime, timedelta
 
 HISTORIAS_DEFECTO = ((7, 0), (14, 0), (19, 0))
+# 01/11/2026 («sacá las historias que venías cargando y cargá como historia los reels que subís»): las tandas
+# de historias de DATOS (granos, dólar, clima…) quedan APAGADAS; cada reel sale como historia
+# (agro/publicar.py, AGRO_REEL_HISTORIA). AGRO_HISTORIAS_DATOS=1 las vuelve a la agenda.
+
+
+def historias_datos() -> bool:
+    return (os.environ.get("AGRO_HISTORIAS_DATOS") or "0").strip() == "1"
+
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
 POR_CORRIDA = 5              # reels por corrida (20/10/2026)
 INTERVALO_MIN = 20           # entre un reel y el siguiente de la misma corrida
@@ -73,7 +81,7 @@ def agenda_texto_defecto() -> str:
     """Por cada corrida, por_corrida() reels cada intervalo_min(), sin pasarse de la corrida siguiente;
     más las historias de siempre."""
     inicios = [h * 60 + m for h, m in corridas_noticias()]
-    partes = [f"{h:02d}:{m:02d} historias" for h, m in HISTORIAS_DEFECTO]
+    partes = [f"{h:02d}:{m:02d} historias" for h, m in HISTORIAS_DEFECTO] if historias_datos() else []
     datos = hora_reel_datos()
     if datos:
         partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")

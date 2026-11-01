@@ -7,6 +7,9 @@ import os
 # Las pruebas de siempre corren con las imágenes IA prendidas; la regla del 18/10/2026 (sin IA, sin foto
 # real no sale) se prueba al final con AGRO_IMAGEN_IA=0.
 os.environ["AGRO_IMAGEN_IA"] = "1"
+# Las tandas de historias de datos están apagadas desde el 01/11/2026; la mecánica se sigue probando con ellas
+# prendidas (el valor de fábrica se prueba al final).
+os.environ["AGRO_HISTORIAS_DATOS"] = "1"
 import sys
 # Las pruebas de selección fijan el mínimo viejo (75): prueban la mecánica, no el valor (desde el
 # 20/10/2026 el de fábrica es 60; se prueba más abajo).
@@ -1461,6 +1464,56 @@ chequear("video: el VideoObject del JSON-LD (LA NACION) da el .mp4 y su duració
 chequear("video: si el medio dice que dura más de 90 s, ni se baja",
          PA._clip_de_la_fuente({}, {"video": "https://x/v.mp4", "video_seg": 300}, Path("x")) is None)
 
+
+# --- 01/11/2026: sin historias de datos; cada reel sale también como historia ---------------------------
+os.environ.pop("AGRO_HISTORIAS_DATOS")
+chequear("agenda de fábrica: sin tandas de historias de datos (y los 30 reels igual)",
+         AG.cuantos("historias") == 0 and AG.cuantos("reel") == 30)
+os.environ["AGRO_HISTORIAS_DATOS"] = "1"
+from agro import publicar as _PH  # noqa: E402
+from reels import publicador as _PBH  # noqa: E402
+_hist = []
+_o3 = (_PH._video_historia, _PH._historia_video_instagram, _PH._historia_video_facebook, _PBH.subir_a_release)
+_PH._video_historia = lambda mp4: _hist.append(("9x16", Path(mp4).name)) or Path(mp4)
+_PH._historia_video_instagram = lambda url: _hist.append(("ig", url)) or {"id": "hi1"}
+_PH._historia_video_facebook = lambda mp4: _hist.append(("fb", Path(mp4).name)) or {"id": "hf1"}
+_PBH.subir_a_release = lambda ruta, nombre: f"https://gh/{nombre}"
+with tempfile.TemporaryDirectory() as _th:
+    import subprocess as _sph
+    from reels import reel_bot as _RBH
+    _corto, _largo = Path(_th) / "corto.mp4", Path(_th) / "largo.mp4"
+    for _f, _seg in ((_corto, 5), (_largo, 65)):
+        _sph.run([_RBH.motor()._ffmpeg(), "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=gray:s=320x400:r=10",
+                  "-t", str(_seg), "-c:v", "libx264", "-pix_fmt", "yuv420p", str(_f)], check=True)
+    try:
+        _sal = {"instagram": {"id": "r1"}, "facebook": {"id": "f1"}}
+        _PH._reel_a_historias({"id": "p1"}, _corto, _sal, _PH.REDES, lambda r: r in ("instagram", "facebook"),
+                              log=lambda m: None)
+        chequear("reel → historia: en Instagram y en Facebook, con la copia 9:16",
+                 _sal["historia_instagram"]["id"] == "hi1" and _sal["historia_facebook"]["id"] == "hf1"
+                 and _hist[0][0] == "9x16" and ("ig", "https://gh/agro_p1_historia.mp4") in _hist)
+        _n = len(_hist)
+        _PH._reel_a_historias({"id": "p1"}, _corto, _sal, _PH.REDES, lambda r: True, log=lambda m: None)
+        chequear("reel → historia: un reintento no la duplica", len(_hist) == _n)
+        _sal = {"instagram": {"error": "x"}, "facebook": {"id": "f1"}}
+        _PH._reel_a_historias({"id": "p2"}, _corto, _sal, _PH.REDES, lambda r: r == "facebook", log=lambda m: None)
+        chequear("reel → historia: solo en la red donde salió el reel",
+                 "historia_instagram" not in _sal and _sal["historia_facebook"]["id"] == "hf1")
+        _sal = {"instagram": {"id": "r3"}, "facebook": {"id": "f3"}}
+        _PH._reel_a_historias({"id": "p3"}, _largo, _sal, _PH.REDES, lambda r: True, log=lambda m: None)
+        chequear("reel → historia: uno de más de 60 s no va (omitido, no es falla)",
+                 "omitido" in _sal["historia_instagram"] and "error" not in _sal["historia_facebook"])
+        _PH._historia_video_facebook = lambda mp4: (_ for _ in ()).throw(RuntimeError("caído"))
+        _sal = {"instagram": {"id": "r4"}, "facebook": {"id": "f4"}}
+        _PH._reel_a_historias({"id": "p4"}, _corto, _sal, _PH.REDES, lambda r: True, log=lambda m: None)
+        chequear("reel → historia: si una red falla queda «fallo» (no pinta la corrida de rojo) y la otra sale",
+                 "fallo" in _sal["historia_facebook"] and "error" not in _sal["historia_facebook"]
+                 and _sal["historia_instagram"]["id"] == "hi1")
+        _PH._video_historia = _o3[0]
+        _v = _PH._video_historia(_corto)
+        chequear("la copia para la historia es 1080x1920", tuple(_RBH.dimensiones(_v)[:2]) == (1080, 1920))
+    finally:
+        _PH._video_historia, _PH._historia_video_instagram, _PH._historia_video_facebook, _PBH.subir_a_release = _o3
 
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)
