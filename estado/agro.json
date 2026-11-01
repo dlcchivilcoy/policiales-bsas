@@ -22063,6 +22063,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "49f48bf8deb7cd7f": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 85,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "márgenes agrícolas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Alta relevancia local por proyectar márgenes de maíz y soja en zona núcleo para la campaña.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23561,7 +23582,8 @@
       "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres": "2026-11-01",
       "https://bichosdecampo.com/tanto-va-el-burro-al-trigo-que-al-final-en-un-congreso-de-catamarca-se-debatio-como-comenzar-a-producir-carne-de-ese-animal-e-incluso-aparecieron-frigorificos-interesados": "2026-11-01",
       "https://croplife.com/crop-inputs/seed-biotech/clock-ticking-on-waterhemp-seedbanks-ahead-of-next-generation-soybean-traits": "2026-11-01",
-      "https://croplife.com/crop-inputs/syngenta-group-reports-9m-2026-results-with-higher-profitability": "2026-11-01"
+      "https://croplife.com/crop-inputs/syngenta-group-reports-9m-2026-results-with-higher-profitability": "2026-11-01",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249132-c-marin-moreno-aumento-del-41-en-margenes-de-maiz-27-en-soja-y-el-boom-del-girasol.html": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25058,7 +25080,8 @@
       "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres": "2026-11-01",
       "tanto va el burro al trigo que al final en un congreso de catamarca se debatio como comenzar a producir carne de ese animal e incluso aparecieron frigorificos interesados": "2026-11-01",
       "clock ticking on waterhemp seedbanks ahead of next generation soybean traits": "2026-11-01",
-      "syngenta group reports 9m 2026 results with higher profitability": "2026-11-01"
+      "syngenta group reports 9m 2026 results with higher profitability": "2026-11-01",
+      "c marin moreno aumento del 41 en margenes de maiz 27 en soja y el boom del girasol": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26555,7 +26578,8 @@
       "3947be9a26ef2765": "2026-11-01",
       "713bf1428ed1bf89": "2026-11-01",
       "7922de090ba3658e": "2026-11-01",
-      "4fcb3b3ea7c85499": "2026-11-01"
+      "4fcb3b3ea7c85499": "2026-11-01",
+      "49f48bf8deb7cd7f": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44773,9 +44797,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7bd7c15183e6_portada.jpg"
+    },
+    {
+      "id": "f7298cd492e5",
+      "cuando": "2026-11-01T18:20-03:00",
+      "titulo_original": "Si no fuera por las camionetas fabricadas acá, las que compran los productores, la industria automotriz ya sería un “festival de lo importado”",
+      "descripcion": "La Asociación de Concesionarios de Automotores de la República Argentina (ACARA) reveló que en octubre se patentaron 45.965 unidades, lo que representa una baja del 12% interanual. Si la comparación es contra septiembre, se observa una baja del 8,4% ya que en ese pasado mes se habían registrado 50.2",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado/",
+      "titular": "Camionetas fabricadas en el país sostienen las ventas de la industria automotriz",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "maquinaria",
+        "tema": "camionetas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve un volumen enorme de plata y las pick-ups interesan directamente al productor y a las terminales automotrices.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "379755cc-3304-4b47-aa07-628c36f9da17",
+          "slug": "las-camionetas-fabricadas-en-el-pais-sostienen-a-la-industria-be49d6",
+          "url": "https://www.diariolacampaña.com.ar/n/las-camionetas-fabricadas-en-el-pais-sostienen-a-la-industria-be49d6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1698754274926941",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18117912674468416",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18149946886571034"
+        },
+        "historia_facebook": {
+          "id": "2066161820711650"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f7298cd492e5_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "6f57c0af7c48",
+      "rep": {
+        "id": "6f57c0af7c48",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249132-c-marin-moreno-aumento-del-41-en-margenes-de-maiz-27-en-soja-y-el-boom-del-girasol.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249132-c-marin-moreno-aumento-del-41-en-margenes-de-maiz-27-en-soja-y-el-boom-del-girasol.html",
+        "titulo": "C. Marín Moreno: aumento del 41% en márgenes de Maíz, 27% en Soja y el Boom del Girasol",
+        "titulo_norm": "c marin moreno aumento del 41 en margenes de maiz 27 en soja y el boom del girasol",
+        "descripcion": "¿Cómo dan los números del campo?, ¿a quien le dan mejor, a los que rotan y siembran más cultivos?, ¿podemos optimizar los resultados / Ha para esta Campana 2026/27? Una charla con el Ing. P. Agr. Carlos Marín Moreno, ex CREA y comunicador del agro, que analiza los márgenes proyectados para maíz y soja. ¿Se acercan y aumentan respecto al año pasado?. Eval;úa precios, costo de los insumos, y destaca la importancia de la tecnología y la rotación para enfrentar desafíos climáticos y sanitarios...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/12N0lUpdQz8.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-11-01T18:17-03:00",
+        "capturado": "2026-11-01T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "49f48bf8deb7cd7f"
+      },
+      "grupo": [
+        {
+          "id": "6f57c0af7c48",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249132-c-marin-moreno-aumento-del-41-en-margenes-de-maiz-27-en-soja-y-el-boom-del-girasol.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249132-c-marin-moreno-aumento-del-41-en-margenes-de-maiz-27-en-soja-y-el-boom-del-girasol.html",
+          "titulo": "C. Marín Moreno: aumento del 41% en márgenes de Maíz, 27% en Soja y el Boom del Girasol",
+          "titulo_norm": "c marin moreno aumento del 41 en margenes de maiz 27 en soja y el boom del girasol",
+          "descripcion": "¿Cómo dan los números del campo?, ¿a quien le dan mejor, a los que rotan y siembran más cultivos?, ¿podemos optimizar los resultados / Ha para esta Campana 2026/27? Una charla con el Ing. P. Agr. Carlos Marín Moreno, ex CREA y comunicador del agro, que analiza los márgenes proyectados para maíz y soja. ¿Se acercan y aumentan respecto al año pasado?. Eval;úa precios, costo de los insumos, y destaca la importancia de la tecnología y la rotación para enfrentar desafíos climáticos y sanitarios...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/12N0lUpdQz8.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-11-01T18:17-03:00",
+          "capturado": "2026-11-01T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "49f48bf8deb7cd7f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 85,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "márgenes agrícolas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alta relevancia local por proyectar márgenes de maíz y soja en zona núcleo para la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-01T18:20-03:00"
+    },
     {
       "id": "4d484a6f38fa",
       "rep": {
@@ -44842,69 +44989,6 @@
         ]
       },
       "cuando": "2026-11-01T17:00-03:00"
-    },
-    {
-      "id": "f7298cd492e5",
-      "rep": {
-        "id": "f7298cd492e5",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado/",
-        "canonical_url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado",
-        "titulo": "Si no fuera por las camionetas fabricadas acá, las que compran los productores, la industria automotriz ya sería un “festival de lo importado”",
-        "titulo_norm": "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado",
-        "descripcion": "La Asociación de Concesionarios de Automotores de la República Argentina (ACARA) reveló que en octubre se patentaron 45.965 unidades, lo que representa una baja del 12% interanual. Si la comparación es contra septiembre, se observa una baja del 8,4% ya que en ese pasado mes se habían registrado 50.207 unidades. No es una buena fotografía para […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/09/VW-Amarok.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-01T12:13-03:00",
-        "capturado": "2026-11-01T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "20e97e5a8210a381"
-      },
-      "grupo": [
-        {
-          "id": "f7298cd492e5",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado/",
-          "canonical_url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado",
-          "titulo": "Si no fuera por las camionetas fabricadas acá, las que compran los productores, la industria automotriz ya sería un “festival de lo importado”",
-          "titulo_norm": "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado",
-          "descripcion": "La Asociación de Concesionarios de Automotores de la República Argentina (ACARA) reveló que en octubre se patentaron 45.965 unidades, lo que representa una baja del 12% interanual. Si la comparación es contra septiembre, se observa una baja del 8,4% ya que en ese pasado mes se habían registrado 50.207 unidades. No es una buena fotografía para […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/09/VW-Amarok.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-01T12:13-03:00",
-          "capturado": "2026-11-01T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "20e97e5a8210a381"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 71,
-        "commercial_score": 75,
-        "subtema": "maquinaria",
-        "tema": "camionetas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Mueve un volumen enorme de plata y las pick-ups interesan directamente al productor y a las terminales automotrices.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-01T13:00-03:00"
     },
     {
       "id": "e1e4c432f4af",
@@ -45037,8 +45121,8 @@
       "cuando": "2026-11-01T08:22-03:00"
     }
   ],
-  "actualizado": "2026-11-01T18:05:20-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-01T18:24:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
