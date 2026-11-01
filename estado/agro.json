@@ -21732,6 +21732,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f5421becd3e8dc91": {
+      "impacto_economico": 5,
+      "interes_productores": 5,
+      "innovacion": 11,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 50,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Innovación interesante en producto pero de nicho y lejos de la zona núcleo pampeana.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        50
+      ]
     }
   },
   "indice": {
@@ -23205,7 +23230,8 @@
       "https://infocampo.com.ar/clima-en-la-rioja-cielo-despejado-el-pronostico-para-hoy-1-de-noviembre": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/opinion-perdimos-un-36-del-rodeo-vacuno-y-nadie-se-hace-cargo-nid01112026": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/thiago-tiene-14-anos-construyo-un-tractor-y-ahora-quiere-automatizarlo-lo-hice-con-chatarra-nid01112026": "2026-11-01",
-      "https://lacapital.com.ar/agro/cronicas-campana-los-trigueros-se-entusiasman-las-500-espigas-n10289811.html": "2026-11-01"
+      "https://lacapital.com.ar/agro/cronicas-campana-los-trigueros-se-entusiasman-las-500-espigas-n10289811.html": "2026-11-01",
+      "https://infocampo.com.ar/hoja-misionera-con-hongos-cuyanos-la-yerba-mate-antiestres-que-innova-y-gana-mercado-desde-mendoza": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24677,7 +24703,8 @@
       "clima en la rioja cielo despejado el pronostico para hoy 1 de noviembre": "2026-11-01",
       "opinion perdimos un 36 del rodeo vacuno y nadie se hace cargo": "2026-11-01",
       "thiago tiene 14 anos construyo un tractor y ahora quiere automatizarlo lo hice con chatarra": "2026-11-01",
-      "cronicas de campana los trigueros se entusiasman con las 500 espigas": "2026-11-01"
+      "cronicas de campana los trigueros se entusiasman con las 500 espigas": "2026-11-01",
+      "hoja misionera con hongos cuyanos la yerba mate antiestres que innova y gana mercado desde mendoza": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26149,7 +26176,8 @@
       "efe9499219ea171a": "2026-11-01",
       "a43a83511d7641db": "2026-11-01",
       "c182fe29c84e8bf4": "2026-11-01",
-      "53de1b16f8bb0c32": "2026-11-01"
+      "53de1b16f8bb0c32": "2026-11-01",
+      "f5421becd3e8dc91": "2026-11-01"
     }
   },
   "elegidas": [
@@ -43869,6 +43897,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5e03627e0827_portada.jpg"
+    },
+    {
+      "id": "d918589e9c0f",
+      "cuando": "2026-11-01T07:22-03:00",
+      "titulo_original": "Argentina va camino a exportar (otra vez) un gran volumen de trigo, pero el cereal aún no experimentó la “hora de la verdad”",
+      "descripcion": "Argentina va camino a exportar nuevamente en 2026/27 un gran volumen de trigo para compensar en parte el “bache” de oferta generado por el “apagón” logístico del mar Negro. En la nueva campaña la Bolsa de Comercio de Rosario prevé una oferta exportable de 17,1 millones de toneladas versus 18,5 millo",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad/",
+      "titular": "Trigo argentino apunta a exportaciones millonarias con precios bajos",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 88,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Alta relevancia local y económica por el volumen de exportación y la campaña de trigo en la región núcleo.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ce15d50d-e161-4a5c-ab13-e96e18917653",
+          "slug": "proyectan-gran-volumen-de-exportacion-de-trigo-argentino-para-15ecfe",
+          "url": "https://www.diariolacampaña.com.ar/n/proyectan-gran-volumen-de-exportacion-de-trigo-argentino-para-15ecfe",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1654308186368916",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18131248013502199",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d918589e9c0f_portada.jpg"
     }
   ],
   "pendientes": [
@@ -43938,69 +44020,6 @@
         ]
       },
       "cuando": "2026-11-01T07:02-03:00"
-    },
-    {
-      "id": "d918589e9c0f",
-      "rep": {
-        "id": "d918589e9c0f",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad/",
-        "canonical_url": "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad",
-        "titulo": "Argentina va camino a exportar (otra vez) un gran volumen de trigo, pero el cereal aún no experimentó la “hora de la verdad”",
-        "titulo_norm": "argentina va camino a exportar otra vez un gran volumen de trigo pero el cereal aun no experimento la hora de la verdad",
-        "descripcion": "Argentina va camino a exportar nuevamente en 2026/27 un gran volumen de trigo para compensar en parte el “bache” de oferta generado por el “apagón” logístico del mar Negro. En la nueva campaña la Bolsa de Comercio de Rosario prevé una oferta exportable de 17,1 millones de toneladas versus 18,5 millones en el ciclo 2025/26 […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-8.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-10-31T21:01-03:00",
-        "capturado": "2026-10-31T21:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d8c76cc0529d288c"
-      },
-      "grupo": [
-        {
-          "id": "d918589e9c0f",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad/",
-          "canonical_url": "https://bichosdecampo.com/argentina-va-camino-a-exportar-otra-vez-un-gran-volumen-de-trigo-pero-el-cereal-aun-no-experimento-la-hora-de-la-verdad",
-          "titulo": "Argentina va camino a exportar (otra vez) un gran volumen de trigo, pero el cereal aún no experimentó la “hora de la verdad”",
-          "titulo_norm": "argentina va camino a exportar otra vez un gran volumen de trigo pero el cereal aun no experimento la hora de la verdad",
-          "descripcion": "Argentina va camino a exportar nuevamente en 2026/27 un gran volumen de trigo para compensar en parte el “bache” de oferta generado por el “apagón” logístico del mar Negro. En la nueva campaña la Bolsa de Comercio de Rosario prevé una oferta exportable de 17,1 millones de toneladas versus 18,5 millones en el ciclo 2025/26 […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/cuadro-8.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-10-31T21:01-03:00",
-          "capturado": "2026-10-31T21:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d8c76cc0529d288c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 78,
-        "commercial_score": 88,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Alta relevancia local y económica por el volumen de exportación y la campaña de trigo en la región núcleo.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-10-31T21:20-03:00"
     },
     {
       "id": "d151c94b0e59",
@@ -44133,8 +44152,8 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T07:05:35-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-01T07:24:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
