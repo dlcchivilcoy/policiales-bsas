@@ -21803,6 +21803,27 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "857832440941bf01": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "inseguridad rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un problema grave para el sector pero geográficamente lejano a la zona núcleo y sin novedades técnicas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23279,7 +23300,10 @@
       "https://lacapital.com.ar/agro/cronicas-campana-los-trigueros-se-entusiasman-las-500-espigas-n10289811.html": "2026-11-01",
       "https://infocampo.com.ar/hoja-misionera-con-hongos-cuyanos-la-yerba-mate-antiestres-que-innova-y-gana-mercado-desde-mendoza": "2026-11-01",
       "https://bichosdecampo.com/no-se-olviden-de-nosotros-un-experto-avisa-que-la-colza-quiere-ampliar-sus-fronteras-y-el-sorgo-sacarse-de-encima-una-vieja-etiqueta": "2026-11-01",
-      "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas": "2026-11-01"
+      "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas": "2026-11-01",
+      "https://infocampo.com.ar/abigeato-incendios-y-usurpaciones-el-vandalismo-rural-tambien-crece-y-preocupa-en-la-patagonia": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24754,7 +24778,10 @@
       "cronicas de campana los trigueros se entusiasman con las 500 espigas": "2026-11-01",
       "hoja misionera con hongos cuyanos la yerba mate antiestres que innova y gana mercado desde mendoza": "2026-11-01",
       "no se olviden de nosotros un experto avisa que la colza quiere ampliar sus fronteras y el sorgo sacarse de encima una vieja etiqueta": "2026-11-01",
-      "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas": "2026-11-01"
+      "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas": "2026-11-01",
+      "abigeato incendios y usurpaciones el vandalismo rural tambien crece y preocupa en la patagonia": "2026-11-01",
+      "clima hoy en mendoza el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
+      "clima hoy en tucuman el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26229,7 +26256,10 @@
       "53de1b16f8bb0c32": "2026-11-01",
       "f5421becd3e8dc91": "2026-11-01",
       "a201c7ec6865254f": "2026-11-01",
-      "48c33bd70389b6bd": "2026-11-01"
+      "48c33bd70389b6bd": "2026-11-01",
+      "857832440941bf01": "2026-11-01",
+      "f6fceba1e7f5a085": "2026-11-01",
+      "d74e1401c372767b": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44003,6 +44033,67 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d918589e9c0f_portada.jpg"
+    },
+    {
+      "id": "e7a890fae6c8",
+      "cuando": "2026-11-01T10:00-03:00",
+      "titulo_original": "En la provincia de Chaco, una empresa chilena ya estudia cómo “sembrar nubes” para que llueva hasta 18% más",
+      "descripcion": "La información circulaba en las redes sociales, y por eso era necesario chequearla. Pero era cierto: una empresa chilena que ofrece “Ingeniería Especializada en Modificación del Clima” está trabajando en la Argentina, por ahora a nivel de ensayos, para ver si puede “sembrar nubes” en el Chaco, para ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas/",
+      "titular": "Empresa chilena realiza ensayos para sembrar nubes en Chaco",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 15,
+        "cercania_argentina": 10,
+        "cercania_pba": 2,
+        "potencial_reel": 9,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "siembra de nubes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran atractivo tecnológico y de conversación por la modificación climática, a pesar de estar probándose fuera de la zona núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "dbaBf7j6Pbo",
+          "url": "https://youtube.com/shorts/dbaBf7j6Pbo",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "8512678b-8b12-43d6-b3bf-9eae0c300411",
+          "slug": "una-empresa-chilena-realiza-ensayos-para-sembrar-nubes-y-03fb8e",
+          "url": "https://www.diariolacampaña.com.ar/n/una-empresa-chilena-realiza-ensayos-para-sembrar-nubes-y-03fb8e",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1113754561257987",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17938488456388112",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e7a890fae6c8_portada.jpg"
     }
   ],
   "pendientes": [
@@ -44070,69 +44161,6 @@
           63,
           70
         ]
-      },
-      "cuando": "2026-11-01T08:22-03:00"
-    },
-    {
-      "id": "e7a890fae6c8",
-      "rep": {
-        "id": "e7a890fae6c8",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas/",
-        "canonical_url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas",
-        "titulo": "En la provincia de Chaco, una empresa chilena ya estudia cómo “sembrar nubes” para que llueva hasta 18% más",
-        "titulo_norm": "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas",
-        "descripcion": "La información circulaba en las redes sociales, y por eso era necesario chequearla. Pero era cierto: una empresa chilena que ofrece “Ingeniería Especializada en Modificación del Clima” está trabajando en la Argentina, por ahora a nivel de ensayos, para ver si puede “sembrar nubes” en el Chaco, para tratar de mejorar la oferta de lluvias […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/chile.png",
-        "autor": "Matias Longoni",
-        "publicado": "2026-11-01T08:08-03:00",
-        "capturado": "2026-11-01T08:22-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "48c33bd70389b6bd"
-      },
-      "grupo": [
-        {
-          "id": "e7a890fae6c8",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas/",
-          "canonical_url": "https://bichosdecampo.com/en-la-provincia-de-chaco-una-empresa-chilena-ya-estudia-como-sembrar-nubes-para-que-llueva-hasta-18-mas",
-          "titulo": "En la provincia de Chaco, una empresa chilena ya estudia cómo “sembrar nubes” para que llueva hasta 18% más",
-          "titulo_norm": "en la provincia de chaco una empresa chilena ya estudia como sembrar nubes para que llueva hasta 18 mas",
-          "descripcion": "La información circulaba en las redes sociales, y por eso era necesario chequearla. Pero era cierto: una empresa chilena que ofrece “Ingeniería Especializada en Modificación del Clima” está trabajando en la Argentina, por ahora a nivel de ensayos, para ver si puede “sembrar nubes” en el Chaco, para tratar de mejorar la oferta de lluvias […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/chile.png",
-          "autor": "Matias Longoni",
-          "publicado": "2026-11-01T08:08-03:00",
-          "capturado": "2026-11-01T08:22-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "48c33bd70389b6bd"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 15,
-        "cercania_argentina": 10,
-        "cercania_pba": 2,
-        "potencial_reel": 9,
-        "conversacion": 10,
-        "potencial_comercial": 7,
-        "ai_score": 80,
-        "commercial_score": 75,
-        "subtema": "agtech",
-        "tema": "siembra de nubes",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Gran atractivo tecnológico y de conversación por la modificación climática, a pesar de estar probándose fuera de la zona núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-01T08:22-03:00"
     },
@@ -44334,8 +44362,8 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T08:22:53-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-01T10:03:27-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
