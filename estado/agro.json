@@ -43995,7 +43995,7 @@
       "cuando": "2026-10-30T18:00-03:00"
     }
   ],
-  "actualizado": "2026-11-01T05:03:15-03:00",
+  "actualizado": "2026-11-01T07:02:08-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -48020,6 +48020,119 @@
               },
               "facebook": {
                 "id": "2135622097044681"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-01T07:00:00-03:00": {
+      "dia": "2026-11-01",
+      "bloque": "manana",
+      "items": [
+        {
+          "tipo": "alerta",
+          "clave": "alerta|Tormentas|naranja|2026-11-01T15:00:00-03:00",
+          "publicado": {
+            "instagram": {
+              "id": "17916298044517904"
+            },
+            "facebook": {
+              "id": "1162595573099454"
+            }
+          }
+        },
+        {
+          "tipo": "alerta",
+          "clave": "alerta|Tormentas|amarilla|2026-11-01T15:00:00-03:00",
+          "publicado": {
+            "instagram": {
+              "id": "17927648535201334"
+            },
+            "facebook": {
+              "id": "1089847103684143"
+            }
+          }
+        },
+        {
+          "tipo": "clima",
+          "clave": "clima",
+          "publicado": {
+            "instagram": {
+              "id": "18170727595482511"
+            },
+            "facebook": {
+              "id": "30103000689300423"
+            }
+          }
+        },
+        {
+          "tipo": "mapa",
+          "clave": "mapa",
+          "publicado": {
+            "instagram": {
+              "id": "18159594817444721"
+            },
+            "facebook": {
+              "id": "977855178215201"
+            }
+          }
+        },
+        {
+          "tipo": "titulares",
+          "clave": "titulares",
+          "publicado": {
+            "instagram": {
+              "id": "18115960523140368"
+            },
+            "facebook": {
+              "id": "1094451083402626"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17916298044517904"
+              },
+              "facebook": {
+                "id": "1162595573099454"
+              }
+            },
+            {
+              "instagram": {
+                "id": "17927648535201334"
+              },
+              "facebook": {
+                "id": "1089847103684143"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18170727595482511"
+              },
+              "facebook": {
+                "id": "30103000689300423"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18159594817444721"
+              },
+              "facebook": {
+                "id": "977855178215201"
+              }
+            },
+            {
+              "instagram": {
+                "id": "18115960523140368"
+              },
+              "facebook": {
+                "id": "1094451083402626"
               }
             }
           ]
