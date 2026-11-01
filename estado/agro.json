@@ -21845,6 +21845,90 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "066c9ffa4283e7e9": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 2,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "lácteos las tres",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de arraigo familiar lechera muy linda pero de bajo impacto comercial y técnico para nuestra región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "20e97e5a8210a381": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "maquinaria",
+      "tema": "camionetas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mueve un volumen enorme de plata y las pick-ups interesan directamente al productor y a las terminales automotrices.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f28aaa43b6dc9e8e": {
+      "impacto_economico": 14,
+      "interes_productores": 14,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 72,
+      "commercial_score": 76,
+      "subtema": "ganaderia",
+      "tema": "toros",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los precios de reproductores bovinos y datos oficiales mueven la aguja de la ganadería pampeana y generan debate.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "67526b4cff1b7995": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 7,
+      "ai_score": 83,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Pronóstico de lluvias intensas y alertas en la región pampeana impactan de lleno en la campaña y la decisión de todo productor.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23331,7 +23415,13 @@
       "https://infocampo.com.ar/precio-del-girasol-hoy-1-noviembre-2026": "2026-11-01",
       "https://infocampo.com.ar/precio-de-la-soja-hoy-1-noviembre-2026": "2026-11-01",
       "https://infocampo.com.ar/precio-del-sorgo-hoy-1-noviembre-2026": "2026-11-01",
-      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-roberto-tino-de-rossi-aprendio-a-dudar-de-todo-y-ahora-se-pregunta-si-seis-anos-de-carrera-no-espanta-a-los-jovenes-de-la-profesion": "2026-11-01"
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-roberto-tino-de-rossi-aprendio-a-dudar-de-todo-y-ahora-se-pregunta-si-seis-anos-de-carrera-no-espanta-a-los-jovenes-de-la-profesion": "2026-11-01",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-1-noviembre-2026": "2026-11-01",
+      "https://bichosdecampo.com/detras-de-lacteos-las-tres-hay-una-bella-historia-de-familia-y-arraigo-en-villa-maria-preferimos-seguir-haciendo-un-queso-autentico-hacemos-lo-basico-y-bien": "2026-11-01",
+      "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado": "2026-11-01",
+      "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano": "2026-11-01",
+      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24816,7 +24906,13 @@
       "precio del girasol en rosario hoy 1 noviembre 2026": "2026-11-01",
       "precio de la soja en rosario hoy 1 noviembre 2026": "2026-11-01",
       "precio del sorgo en rosario hoy 1 noviembre 2026": "2026-11-01",
-      "los dilemas de la agronomia roberto tino de rossi aprendio a dudar de todo y ahora se pregunta si seis anos de carrera no espanta a los jovenes de la profesion": "2026-11-01"
+      "los dilemas de la agronomia roberto tino de rossi aprendio a dudar de todo y ahora se pregunta si seis anos de carrera no espanta a los jovenes de la profesion": "2026-11-01",
+      "dolar blue a cuanto cotizan hoy en mendoza 1 noviembre 2026": "2026-11-01",
+      "euro blue hoy precio y cotizacion de este 1 noviembre 2026": "2026-11-01",
+      "detras de lacteos las tres hay una bella historia de familia y arraigo en villa maria preferimos seguir haciendo un queso autentico hacemos lo basico y bien": "2026-11-01",
+      "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado": "2026-11-01",
+      "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano": "2026-11-01",
+      "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26301,7 +26397,13 @@
       "85e55c910751fec6": "2026-11-01",
       "72695954b76bd895": "2026-11-01",
       "03c459705363cd44": "2026-11-01",
-      "9ac4d0270f6d0456": "2026-11-01"
+      "9ac4d0270f6d0456": "2026-11-01",
+      "864ff0c0823584d8": "2026-11-01",
+      "4a075147feb50698": "2026-11-01",
+      "066c9ffa4283e7e9": "2026-11-01",
+      "20e97e5a8210a381": "2026-11-01",
+      "f28aaa43b6dc9e8e": "2026-11-01",
+      "67526b4cff1b7995": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44194,9 +44296,202 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_69bd45dca10f_portada.jpg"
+    },
+    {
+      "id": "a3951a76a734",
+      "cuando": "2026-11-01T13:00-03:00",
+      "titulo_original": "El Niño: anticipan focos de 200 milímetros en una región del país",
+      "descripcion": "La Bolsa de Cereales de Buenos Aires se refirió a dos semanas de inestabilidad en buena parte de la región pampeana; en el norte del país se esperan temperaturas superiores a los 40 grados y tormentas importantes en Corrientes",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026/",
+      "titular": "Lluvias y calor anticipan dos semanas de inestabilidad climática en la región",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 83,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Pronóstico de lluvias intensas y alertas en la región pampeana impactan de lleno en la campaña y la decisión de todo productor.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-01T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "ET9qxfBeaRc",
+          "url": "https://youtube.com/shorts/ET9qxfBeaRc",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "d517b4ea-6ce1-4186-88de-c45a2517eef5",
+          "slug": "pronostican-lluvias-irregulares-y-altibajos-termicos-en-la-372c23",
+          "url": "https://www.diariolacampaña.com.ar/n/pronostican-lluvias-irregulares-y-altibajos-termicos-en-la-372c23",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1677729420524518",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18100098593548127",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18118059140108920"
+        },
+        "historia_facebook": {
+          "id": "4210549072570347"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a3951a76a734_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f7298cd492e5",
+      "rep": {
+        "id": "f7298cd492e5",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado/",
+        "canonical_url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado",
+        "titulo": "Si no fuera por las camionetas fabricadas acá, las que compran los productores, la industria automotriz ya sería un “festival de lo importado”",
+        "titulo_norm": "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado",
+        "descripcion": "La Asociación de Concesionarios de Automotores de la República Argentina (ACARA) reveló que en octubre se patentaron 45.965 unidades, lo que representa una baja del 12% interanual. Si la comparación es contra septiembre, se observa una baja del 8,4% ya que en ese pasado mes se habían registrado 50.207 unidades. No es una buena fotografía para […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/09/VW-Amarok.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-01T12:13-03:00",
+        "capturado": "2026-11-01T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "20e97e5a8210a381"
+      },
+      "grupo": [
+        {
+          "id": "f7298cd492e5",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado/",
+          "canonical_url": "https://bichosdecampo.com/si-no-fuera-por-las-camionetas-fabricadas-aca-las-que-compran-los-productores-la-industria-automotriz-ya-seria-un-festival-de-lo-importado",
+          "titulo": "Si no fuera por las camionetas fabricadas acá, las que compran los productores, la industria automotriz ya sería un “festival de lo importado”",
+          "titulo_norm": "si no fuera por las camionetas fabricadas aca las que compran los productores la industria automotriz ya seria un festival de lo importado",
+          "descripcion": "La Asociación de Concesionarios de Automotores de la República Argentina (ACARA) reveló que en octubre se patentaron 45.965 unidades, lo que representa una baja del 12% interanual. Si la comparación es contra septiembre, se observa una baja del 8,4% ya que en ese pasado mes se habían registrado 50.207 unidades. No es una buena fotografía para […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/09/VW-Amarok.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-01T12:13-03:00",
+          "capturado": "2026-11-01T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "20e97e5a8210a381"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "maquinaria",
+        "tema": "camionetas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mueve un volumen enorme de plata y las pick-ups interesan directamente al productor y a las terminales automotrices.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-01T13:00-03:00"
+    },
+    {
+      "id": "e1e4c432f4af",
+      "rep": {
+        "id": "e1e4c432f4af",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano/",
+        "canonical_url": "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano",
+        "titulo": "¿Cuánta plata se necesita para comprar un toro? Según la Secretaría de Agricultura, el precio promedio subió al doble de la inflación en los remates de este año",
+        "titulo_norm": "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano",
+        "descripcion": "En los remates de reproductores bovinos de esta temporada 2026, la Secretaría de Agricultura de la Nación llevó el registro de las operaciones pactadas por 15.500 toros. Según esta medición, que corresponde al período de los remates realizados por las cabañas entre agosto y octubre, el precio promedio de los machos fue de 9.770.983 pesos […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/precio-de-los-toros.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-01T11:50-03:00",
+        "capturado": "2026-11-01T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f28aaa43b6dc9e8e"
+      },
+      "grupo": [
+        {
+          "id": "e1e4c432f4af",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano/",
+          "canonical_url": "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano",
+          "titulo": "¿Cuánta plata se necesita para comprar un toro? Según la Secretaría de Agricultura, el precio promedio subió al doble de la inflación en los remates de este año",
+          "titulo_norm": "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano",
+          "descripcion": "En los remates de reproductores bovinos de esta temporada 2026, la Secretaría de Agricultura de la Nación llevó el registro de las operaciones pactadas por 15.500 toros. Según esta medición, que corresponde al período de los remates realizados por las cabañas entre agosto y octubre, el precio promedio de los machos fue de 9.770.983 pesos […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/precio-de-los-toros.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-01T11:50-03:00",
+          "capturado": "2026-11-01T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f28aaa43b6dc9e8e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 72,
+        "commercial_score": 76,
+        "subtema": "ganaderia",
+        "tema": "toros",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Los precios de reproductores bovinos y datos oficiales mueven la aguja de la ganadería pampeana y generan debate.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-01T13:00-03:00"
+    },
     {
       "id": "c990962491f8",
       "rep": {
@@ -44395,8 +44690,8 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T11:21:20-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-01T13:04:27-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
