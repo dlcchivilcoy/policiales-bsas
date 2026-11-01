@@ -21598,6 +21598,52 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8b7d2749f41753eb": {
+      "impacto_economico": 14,
+      "interes_productores": 11,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 59,
+      "commercial_score": 58,
+      "subtema": "empresas",
+      "tema": "leyes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa al productor por el debate de leyes e inversiones, aunque predomina la mirada política.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        62
+      ]
+    },
+    "3268f039e0ab892d": {
+      "impacto_economico": 16,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 84,
+      "commercial_score": 82,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Altamente útil para la campaña de maíz en la zona núcleo con un enfoque técnico y económico clave.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23057,7 +23103,9 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-el-gran-beto-quiroga-toma-distancia-de-los-negocios-en-torno-al-suelo-y-recuerda-que-para-poder-defender-la-etica-profesional-tenes-que-comer-guiso-de-lentejas": "2026-10-31",
       "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani": "2026-10-31",
       "https://agrositio.com.ar/canal-agrositio/30-online/249129-como-afectara-el-nino-en-zona-nucleo-y-litoral-durante-la-primavera-y-el-verano-con-j-l-stella-climatologo.html": "2026-10-31",
-      "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo": "2026-10-31"
+      "https://bichosdecampo.com/un-silo-de-maiz-puede-salir-caro-dos-veces-geronimo-minutti-explica-por-que-el-almidon-define-buena-parte-de-la-energia-de-una-reserva-forrajera-y-tambien-de-su-costo": "2026-10-31",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249130-como-enfrenta-joaquin-benegas-lynch-los-desafios-del-congreso-para-apoyar-al-campo.html": "2026-10-31",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html": "2026-10-31"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24515,7 +24563,9 @@
       "los dilemas de la agronomia el gran beto quiroga toma distancia de los negocios en torno al suelo y recuerda que para poder defender la etica profesional tenes que comer guiso de lentejas": "2026-10-31",
       "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14": "2026-10-31",
       "como afectara el nino en zona nucleo y litoral durante la primavera y el verano con j l stella climatologo": "2026-10-31",
-      "un silo de maiz puede salir caro dos veces geronimo minutti explica por que el almidon define buena parte de la energia de una reserva forrajera y tambien de su costo": "2026-10-31"
+      "un silo de maiz puede salir caro dos veces geronimo minutti explica por que el almidon define buena parte de la energia de una reserva forrajera y tambien de su costo": "2026-10-31",
+      "joaquin benegas lynch que leyes prepara el senado para impulsar al campo y atraer inversiones": "2026-10-31",
+      "cuanto nitrogeno necesita tu maiz la ing agr fernanda gonzalez detalla el calculo para optimizar la fertilizacion": "2026-10-31"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -25973,7 +26023,9 @@
       "5521c20a1489a3aa": "2026-10-31",
       "8c1884e2758f83c3": "2026-10-31",
       "e2c732879f19476a": "2026-10-31",
-      "47556d03653152ed": "2026-10-31"
+      "47556d03653152ed": "2026-10-31",
+      "8b7d2749f41753eb": "2026-10-31",
+      "3268f039e0ab892d": "2026-10-31"
     }
   },
   "elegidas": [
@@ -43454,9 +43506,137 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c0f13a124e69_portada.jpg"
+    },
+    {
+      "id": "b67c2d504222",
+      "cuando": "2026-10-31T21:00-03:00",
+      "titulo_original": "“Pensar el agro como se piensa la industria es un gran desafío”, dicen Alejo y Agustín, dos veinteañeros que apuestan a las nuevas tecnologías: Para hacer CaFra ya los ayuda un hermanito de 14",
+      "descripcion": "Hace más de un año, dos jóvenes de Marull (Córdoba) vieron todo lo que los unía de su pasado: el vínculo estrecho de sus familias, las infancias compartidas en las calles del pueblo, sus padres y hermanos que, al igual que ellos, profesan el culto por la amistad. Pero también, desde hace un tiempo, ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani/",
+      "titular": "Jóvenes de Córdoba crean CaFra para modernizar la gestión agropecuaria",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 7,
+        "interes_productores": 8,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 55,
+        "subtema": "agtech",
+        "tema": "emprendedores jóvenes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una historia inspiradora de jóvenes AgTech en Córdoba, atractiva para la región pampeana aunque de bajo impacto económico directo.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-10-31T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "FkVxy-qbON0",
+          "url": "https://youtube.com/shorts/FkVxy-qbON0",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "9f6b7446-5d08-4813-9486-49f3d85e508b",
+          "slug": "jovenes-de-cordoba-crearon-cafra-una-agtech-para-cad469",
+          "url": "https://www.diariolacampaña.com.ar/n/jovenes-de-cordoba-crearon-cafra-una-agtech-para-cad469",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "922973837420236",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18104810375380039",
+          "portada": "propia"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b67c2d504222_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "c80d2badff1e",
+      "rep": {
+        "id": "c80d2badff1e",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html",
+        "titulo": "¿Cuánto nitrógeno necesita tu Maíz? La Ing. Agr. Fernanda González detalla el cálculo para optimizar la fertilización",
+        "titulo_norm": "cuanto nitrogeno necesita tu maiz la ing agr fernanda gonzalez detalla el calculo para optimizar la fertilizacion",
+        "descripcion": "La alta respuesta del cultivo de Maíz a una correcta fertilización. El \"apalancamiento ecoonómico - productivo\" a partir del costo de la urea. Una nota con la Ing. Agr. Fernanda González San Juan, Dir. ejec. de FERTILIZAR y experta en nutrición de cultivos, detalla cómo la \"matemática biológica\" y económica ayudn a calcular la fertilización necesaria para el maíz. Destaca la importancia del análisis de suelo para ajustar dosis y evitar costos innecesarios...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/1AwvqS6S1JQ.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-10-31T19:58-03:00",
+        "capturado": "2026-10-31T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3268f039e0ab892d"
+      },
+      "grupo": [
+        {
+          "id": "c80d2badff1e",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249131-cuanto-nitrogeno-necesita-tu-maiz-la-ing-agr-fernanda-gonzalez-detalla-el-calculo-para-optimizar-la-fertilizacion.html",
+          "titulo": "¿Cuánto nitrógeno necesita tu Maíz? La Ing. Agr. Fernanda González detalla el cálculo para optimizar la fertilización",
+          "titulo_norm": "cuanto nitrogeno necesita tu maiz la ing agr fernanda gonzalez detalla el calculo para optimizar la fertilizacion",
+          "descripcion": "La alta respuesta del cultivo de Maíz a una correcta fertilización. El \"apalancamiento ecoonómico - productivo\" a partir del costo de la urea. Una nota con la Ing. Agr. Fernanda González San Juan, Dir. ejec. de FERTILIZAR y experta en nutrición de cultivos, detalla cómo la \"matemática biológica\" y económica ayudn a calcular la fertilización necesaria para el maíz. Destaca la importancia del análisis de suelo para ajustar dosis y evitar costos innecesarios...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/1AwvqS6S1JQ.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-10-31T19:58-03:00",
+          "capturado": "2026-10-31T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3268f039e0ab892d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 84,
+        "commercial_score": 82,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente útil para la campaña de maíz en la zona núcleo con un enfoque técnico y económico clave.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-10-31T21:00-03:00"
+    },
     {
       "id": "d151c94b0e59",
       "rep": {
@@ -43519,73 +43699,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-10-31T19:21-03:00"
-    },
-    {
-      "id": "b67c2d504222",
-      "rep": {
-        "id": "b67c2d504222",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani/",
-        "canonical_url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani",
-        "titulo": "“Pensar el agro como se piensa la industria es un gran desafío”, dicen Alejo y Agustín, dos veinteañeros que apuestan a las nuevas tecnologías: Para hacer CaFra ya los ayuda un hermanito de 14",
-        "titulo_norm": "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14",
-        "descripcion": "Hace más de un año, dos jóvenes de Marull (Córdoba) vieron todo lo que los unía de su pasado: el vínculo estrecho de sus familias, las infancias compartidas en las calles del pueblo, sus padres y hermanos que, al igual que ellos, profesan el culto por la amistad. Pero también, desde hace un tiempo, vislumbraron […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Alejo-y-agustin-1.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-10-31T15:42-03:00",
-        "capturado": "2026-10-31T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8c1884e2758f83c3"
-      },
-      "grupo": [
-        {
-          "id": "b67c2d504222",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani/",
-          "canonical_url": "https://bichosdecampo.com/pensar-el-agro-como-se-piensa-la-industria-es-un-gran-desafio-dicen-alejo-y-agustin-dos-veinteaneros-que-apuestan-a-las-nuevas-tecnologias-para-hacer-cafra-ya-los-ayuda-un-hermani",
-          "titulo": "“Pensar el agro como se piensa la industria es un gran desafío”, dicen Alejo y Agustín, dos veinteañeros que apuestan a las nuevas tecnologías: Para hacer CaFra ya los ayuda un hermanito de 14",
-          "titulo_norm": "pensar el agro como se piensa la industria es un gran desafio dicen alejo y agustin dos veinteaneros que apuestan a las nuevas tecnologias para hacer cafra ya los ayuda un hermanito de 14",
-          "descripcion": "Hace más de un año, dos jóvenes de Marull (Córdoba) vieron todo lo que los unía de su pasado: el vínculo estrecho de sus familias, las infancias compartidas en las calles del pueblo, sus padres y hermanos que, al igual que ellos, profesan el culto por la amistad. Pero también, desde hace un tiempo, vislumbraron […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/Alejo-y-agustin-1.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-10-31T15:42-03:00",
-          "capturado": "2026-10-31T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8c1884e2758f83c3"
-        }
-      ],
-      "score": {
-        "impacto_economico": 7,
-        "interes_productores": 8,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 7,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 55,
-        "subtema": "agtech",
-        "tema": "emprendedores jóvenes",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es una historia inspiradora de jóvenes AgTech en Córdoba, atractiva para la región pampeana aunque de bajo impacto económico directo.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          68
-        ]
-      },
-      "cuando": "2026-10-31T16:00-03:00"
     },
     {
       "id": "b80c2191c072",
@@ -43789,8 +43902,8 @@
       "cuando": "2026-10-30T18:00-03:00"
     }
   ],
-  "actualizado": "2026-10-31T19:25:11-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-10-31T21:03:43-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
