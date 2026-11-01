@@ -21971,6 +21971,31 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3947be9a26ef2765": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 4,
+      "ai_score": 67,
+      "commercial_score": 70,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra un fuerte movimiento en el mercado de futuros de trigo local, clave para la zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        70
+      ]
     }
   },
   "indice": {
@@ -23465,7 +23490,8 @@
       "https://bichosdecampo.com/cuanta-plata-se-necesita-para-comprar-un-toro-segun-la-secretaria-de-agricultura-el-precio-promedio-subio-al-doble-de-la-inflacion-en-los-remates-de-este-ano": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/el-nino-anticipan-focos-de-200-milimetros-en-una-region-del-pais-nid01112026": "2026-11-01",
       "https://lanacion.com.ar/economia/campo/como-planificar-el-maiz-tardio-con-el-nino-en-camino-nid01112026": "2026-11-01",
-      "https://bichosdecampo.com/alerta-trigo-se-vienen-tormentas-intensas-cuando-el-cultivo-menos-lo-necesita": "2026-11-01"
+      "https://bichosdecampo.com/alerta-trigo-se-vienen-tormentas-intensas-cuando-el-cultivo-menos-lo-necesita": "2026-11-01",
+      "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24958,7 +24984,8 @@
       "cuanta plata se necesita para comprar un toro segun la secretaria de agricultura el precio promedio subio al doble de la inflacion en los remates de este ano": "2026-11-01",
       "el nino anticipan focos de 200 milimetros en una region del pais": "2026-11-01",
       "como planificar el maiz tardio con el nino en camino": "2026-11-01",
-      "alerta trigo se vienen tormentas intensas cuando el cultivo menos lo necesita": "2026-11-01"
+      "alerta trigo se vienen tormentas intensas cuando el cultivo menos lo necesita": "2026-11-01",
+      "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26451,7 +26478,8 @@
       "f28aaa43b6dc9e8e": "2026-11-01",
       "67526b4cff1b7995": "2026-11-01",
       "76964d9ee2019b5d": "2026-11-01",
-      "f3ee6b97c5e5764e": "2026-11-01"
+      "f3ee6b97c5e5764e": "2026-11-01",
+      "3947be9a26ef2765": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44606,6 +44634,73 @@
   ],
   "pendientes": [
     {
+      "id": "4d484a6f38fa",
+      "rep": {
+        "id": "4d484a6f38fa",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres/",
+        "canonical_url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres",
+        "titulo": "Justo a tiempo: En octubre el volumen operado con futuros de trigo se multiplicó por tres",
+        "titulo_norm": "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres",
+        "descripcion": "En octubre pasado se negociaron en A3 Mercados contratos agrícolas por 11,871 millones de toneladas, una cifra 43% superior a la registrada en el mismo mes de 2025. El gran protagonista el mes pasado fue el trigo, que acumuló operaciones por 3,102 millones de toneladas de la mano del alza de precios registrada por el […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/A3.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-01T16:54-03:00",
+        "capturado": "2026-11-01T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3947be9a26ef2765"
+      },
+      "grupo": [
+        {
+          "id": "4d484a6f38fa",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres/",
+          "canonical_url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres",
+          "titulo": "Justo a tiempo: En octubre el volumen operado con futuros de trigo se multiplicó por tres",
+          "titulo_norm": "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres",
+          "descripcion": "En octubre pasado se negociaron en A3 Mercados contratos agrícolas por 11,871 millones de toneladas, una cifra 43% superior a la registrada en el mismo mes de 2025. El gran protagonista el mes pasado fue el trigo, que acumuló operaciones por 3,102 millones de toneladas de la mano del alza de precios registrada por el […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/A3.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-01T16:54-03:00",
+          "capturado": "2026-11-01T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3947be9a26ef2765"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 4,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un fuerte movimiento en el mercado de futuros de trigo local, clave para la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          70
+        ]
+      },
+      "cuando": "2026-11-01T17:00-03:00"
+    },
+    {
       "id": "7bd7c15183e6",
       "rep": {
         "id": "7bd7c15183e6",
@@ -44862,7 +44957,7 @@
       "cuando": "2026-11-01T08:22-03:00"
     }
   ],
-  "actualizado": "2026-11-01T16:41:13-03:00",
+  "actualizado": "2026-11-01T17:01:28-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
