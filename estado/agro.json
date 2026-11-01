@@ -21824,6 +21824,27 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9ac4d0270f6d0456": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 45,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "educación agronómica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota de perfil e interés general sobre la profesión agronómica, con baja utilidad directa para el manejo diario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23304,7 +23325,13 @@
       "https://infocampo.com.ar/abigeato-incendios-y-usurpaciones-el-vandalismo-rural-tambien-crece-y-preocupa-en-la-patagonia": "2026-11-01",
       "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
       "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-1-noviembre-2026": "2026-11-01",
-      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-1-noviembre-2026": "2026-11-01"
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-1-noviembre-2026": "2026-11-01",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-1-noviembre-2026": "2026-11-01",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-roberto-tino-de-rossi-aprendio-a-dudar-de-todo-y-ahora-se-pregunta-si-seis-anos-de-carrera-no-espanta-a-los-jovenes-de-la-profesion": "2026-11-01"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -24783,7 +24810,13 @@
       "abigeato incendios y usurpaciones el vandalismo rural tambien crece y preocupa en la patagonia": "2026-11-01",
       "clima hoy en mendoza el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
       "clima hoy en tucuman el pronostico del tiempo para este 1 noviembre 2026": "2026-11-01",
-      "dolar blue a cuanto cotizan hoy en cordoba 1 noviembre 2026": "2026-11-01"
+      "dolar blue a cuanto cotizan hoy en cordoba 1 noviembre 2026": "2026-11-01",
+      "precio del maiz en rosario hoy 1 noviembre 2026": "2026-11-01",
+      "precio del trigo en rosario hoy 1 noviembre 2026": "2026-11-01",
+      "precio del girasol en rosario hoy 1 noviembre 2026": "2026-11-01",
+      "precio de la soja en rosario hoy 1 noviembre 2026": "2026-11-01",
+      "precio del sorgo en rosario hoy 1 noviembre 2026": "2026-11-01",
+      "los dilemas de la agronomia roberto tino de rossi aprendio a dudar de todo y ahora se pregunta si seis anos de carrera no espanta a los jovenes de la profesion": "2026-11-01"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26262,7 +26295,13 @@
       "857832440941bf01": "2026-11-01",
       "f6fceba1e7f5a085": "2026-11-01",
       "d74e1401c372767b": "2026-11-01",
-      "cacb7b41eaeef27b": "2026-11-01"
+      "cacb7b41eaeef27b": "2026-11-01",
+      "95d994f7421c57bd": "2026-11-01",
+      "c277896e1a45c543": "2026-11-01",
+      "85e55c910751fec6": "2026-11-01",
+      "72695954b76bd895": "2026-11-01",
+      "03c459705363cd44": "2026-11-01",
+      "9ac4d0270f6d0456": "2026-11-01"
     }
   },
   "elegidas": [
@@ -44356,7 +44395,7 @@
       "cuando": "2026-10-31T07:02-03:00"
     }
   ],
-  "actualizado": "2026-11-01T11:01:35-03:00",
+  "actualizado": "2026-11-01T11:21:20-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
