@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-01T00:01:16.000Z",
+  "actualizado": "2026-11-01T22:01:21.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/10/30/bragado-un-detenido-por-droga-intento-arrebatar-el-arma-a-un-policia/",
@@ -235,6 +235,30 @@
       "volanta": "Choque de motos en Bragado",
       "categoria": "accidente_vial",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/347450-detuvieron-al-autor-del-robo-ocurrido-en-el-edific",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-01T22:01:21.000Z",
+      "titulo": "Cayó en un hotel céntrico el ladrón que se llevó una bicicleta en Chacabuco",
+      "descripcion": "Un sospechoso de 36 años, oriundo de Lobos, fue arrestado en un hotel de Chacabuco tras robar una bicicleta Venzo de un medio local. La Policía recuperó el rodado.",
+      "texto_tiktok": "Un sujeto de 36 años fue arrestado en un hospedaje céntrico de Chacabuco tras robar una bicicleta.\n\nEl rodado sustraído pertenece a un trabajador del diario ubicado sobre la calle Rivadavia al 400.\n\nLos efectivos policiales analizaron las cámaras de seguridad públicas y privadas para dar con el sospechoso.\n\nLa causa quedó en manos de la UFI N° 1 del Departamento Judicial Junín.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Detenido #Seguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-01_2135_01_chacabuco_cay-en-un-hotel-c-ntrico-el-la.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-detuvieron-a-un-hombre-de-36-anos-y-recuperaron-una-3ba5d0",
+      "youtube_url": "https://youtube.com/shorts/LFU40SymsTU",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Chacabuco",
+      "categoria": "robo",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
