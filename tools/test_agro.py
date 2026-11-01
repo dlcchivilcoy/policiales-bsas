@@ -814,7 +814,8 @@ chequear("texto del reel de datos: qué trae, sin links",
 chequear("a @diarioyradio van solo las de datos (clima, alertas, granos, dólar, Chicago), no las noticias",
          {"clima", "alerta", "granos", "dolar", "chicago"} <= _PUBd.TIPOS_AL_DIARIO
          and not {"titulares", "novedad", "mapa", "resumen"} & _PUBd.TIPOS_AL_DIARIO)
-_env0 = {k: os.environ.get(k) for k in ("INSTAGRAM_USER_ID", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")}
+_env0 = {k: os.environ.get(k) for k in ("INSTAGRAM_USER_ID", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN",
+                                        "AGRO_DATOS_COLAB", "AGRO_REEL_DATOS_FB_DIARIO")}
 os.environ.update(INSTAGRAM_USER_ID="17841427698320458", FACEBOOK_PAGE_ID="101271341650483", FACEBOOK_PAGE_ACCESS_TOKEN="t")
 try:
     _PUBd.credenciales_diario()
@@ -976,6 +977,12 @@ with tempfile.TemporaryDirectory() as _tmpm:
     os.environ.update(INSTAGRAM_USER_ID="17841405971293744", FACEBOOK_PAGE_ID="1456376377985890",
                       FACEBOOK_PAGE_ACCESS_TOKEN="t", INSTAGRAM_ACCESS_TOKEN="t")
     try:
+        # De fábrica (01/11/2026): solo en agro, sin colab ni álbum en el diario.
+        os.environ.pop("AGRO_DATOS_COLAB", None)
+        os.environ.pop("AGRO_REEL_DATOS_FB_DIARIO", None)
+        _solo = RD.publicar_carrusel([x["archivo"] for x in _lista], _cap, log=lambda m: None)
+        _llam_solo, _llam[:] = list(_llam), []
+        os.environ.update(AGRO_DATOS_COLAB="1", AGRO_REEL_DATOS_FB_DIARIO="1")
         _res = RD.publicar_carrusel([x["archivo"] for x in _lista], _cap, log=lambda m: None)
     finally:
         (_PBd._contenedor_listo, _PBd._publicar_contenedor, _PBd.subir_a_release, _PBd._pedir, _PUBd.aceptar_colab,
@@ -985,8 +992,12 @@ with tempfile.TemporaryDirectory() as _tmpm:
                 os.environ.pop(_k, None)
             else:
                 os.environ[_k] = _v0
+    chequear("publicar (de fábrica): solo en @diarioyradioagro, sin colab ni álbum en la página del diario",
+             not any(x[2] for x in _llam_solo if x[0] == "ig") and _solo["instagram"]["colab"] == "no"
+             and "colab" not in _solo and "facebook_diario" not in _solo
+             and sum(1 for x in _llam_solo if x == ("fb", "feed")) == 1)
     _padre = [x for x in _llam if x[0] == "ig" and x[1] == "CAROUSEL"]
-    chequear("publicar: un carrusel de Instagram con @diarioyradio de colaborador, y la colab aceptada",
+    chequear("publicar (AGRO_DATOS_COLAB=1): con @diarioyradio de colaborador, y la colab aceptada",
              len(_padre) == 1 and '"diarioyradio"' in (_padre[0][2] or "")
              and sum(1 for x in _llam if x[0] == "ig" and x[1] == "hijo") == len(_lista)
              and _res["instagram"]["colab"] == "@diarioyradio" and _res["colab"]["estado"] == "aceptada")

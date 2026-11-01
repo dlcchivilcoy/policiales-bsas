@@ -98,7 +98,7 @@ ORDEN = ("youtube", "web", "facebook", "fb_youtube", "instagram")
 # Antes: del 27/09 al 10/10, reels de PRUEBA, 1 o 2 por pasada según el horario (9 por día),
 # los más nuevos; los de prueba tenían un tope propio de ~10 por día.
 # La variable del repo IG_POR_PASADA (o la vieja IG_PRUEBA_POR_PASADA) pisa el 5.
-IG_POR_PASADA_DEFAULT = 5
+IG_POR_PASADA_DEFAULT = 6       # 01/11/2026: los 6 de la corrida de la noche (antes 5)
 HORAS_INSTAGRAM_RECIENTE = 72
 # Un reel con el VIDEO del medio retiene mucho más que una foto quieta: suma 4 puntos al
 # elegir para Facebook e Instagram (pedido del editor, 27/09). 4 = lo que vale una hora de
@@ -115,7 +115,9 @@ BONO_VIDEO = 4
 # con 2, así que 5 adelantaba los reels a la mañana sin sumar al día.) El resto de los Shorts
 # va a Facebook como publicación con el enlace (ver FB_YOUTUBE), que no cuenta para ese tope.
 FB_TOPE_REELS = 30
-FB_POR_PASADA_DEFAULT = 2
+# 01/11/2026: una sola corrida por día con 6 reels → los 6 también en Facebook (6 + ~17 del bot < 30; el
+# freno de FB_TOPE_REELS - FB_MARGEN_BOT sigue). Antes 2.
+FB_POR_PASADA_DEFAULT = 6
 FB_MARGEN_BOT = 4
 
 # TikTok APAGADO por decision del editor (26/09/2026), hasta que TikTok apruebe la
@@ -1672,7 +1674,8 @@ MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la p
 # siguiente» era el día siguiente: el 24/10 la corrida publicó los 5 de 19 a 21 y se quedó esperando el
 # intercalado hasta que GitHub la cortó a las 5 h («timed out after 300 minutes»). Ahora cierra a las
 # 18:30 + 3 h = 21:30 (el último turno es a las 21:00). Con pasadas cada 3 h o menos no cambia nada.
-VENTANA_PASADA_MIN = 180
+# 01/11/2026: con 6 reels el último va a las 21:30 → la pasada cierra a las 22:00 (18:30 + 3 h 30).
+VENTANA_PASADA_MIN = 210
 
 
 def cierre_de_la_pasada(ahora_ar: datetime = None) -> datetime:
@@ -1700,24 +1703,74 @@ def _falta(p: dict, ledger: dict) -> bool:
                for r in ("instagram", "facebook", "youtube"))
 
 
+# 01/11/2026 («priorizá los que tengan videos hasta 1 minuto y medio»): el reel con el video del medio de
+# hasta VIDEO_CORTO_SEG pasa adelante de uno con video más largo, y ese, de uno con foto.
+VIDEO_CORTO_SEG = 90
+
+
+def video_corto_seg() -> float:
+    try:
+        return float(os.environ.get("POL_VIDEO_CORTO_SEG") or VIDEO_CORTO_SEG)
+    except ValueError:
+        return VIDEO_CORTO_SEG
+
+
+def nivel_video(p: dict) -> int:
+    """2 = video del medio de hasta 1 minuto y medio (o declaración con audio), 1 = video más largo (o
+    de duración desconocida, lotes de antes del 01/11), 0 = foto."""
+    if p.get("declaracion"):
+        return 2
+    if not p.get("tenia_video"):
+        return 0
+    seg = float(p.get("video_seg") or 0)
+    return 2 if 0 < seg <= video_corto_seg() else 1
+
+
+def localidad_de(p: dict) -> str:
+    """La localidad del HECHO, para repartir: la de la geografía, si no la que dijo la IA, si no la del medio."""
+    return ((p.get("geo") or {}).get("nombre") or p.get("localidad_hecho") or p.get("localidad") or "").strip().lower()
+
+
 def solo_las_que_entran(listas: list, ledger: dict, n: int, preferidas: set,
                         reservadas: frozenset = frozenset()) -> tuple:
-    """(las `n` piezas de la pasada, salteadas). Primero las elegidas para Instagram o Facebook
-    (las de más potencial), después las que traen VIDEO (24/10/2026: «priorizando reel con video»), las de
-    más viral y, a igual viral, la más cercana a Chivilcoy;
-    las que entran salen en el orden de la pasada (la más nueva primero). Una pieza que ya salió en
-    todas sus redes no ocupa lugar, y una que esta misma pasada ya había reservado (corrida
-    repetida) entra sin ocupar uno nuevo."""
+    """(las `n` piezas de la pasada, salteadas).
+
+    01/11/2026 (pedido del editor: «una sola corrida, 6 reels cada media hora, priorizá los que tengan videos
+    hasta 1 minuto y medio y siempre tiene que ser el mejor de cada localidad cercana a Chivilcoy; si en
+    alguna localidad no hay, podés repetir de otra pero que sea otra noticia»):
+    - el orden de calidad: las `preferidas` (si alguien las pasa), el VIDEO corto (`nivel_video`), el viral
+      de la IA y, a igual viral, la más cercana a Chivilcoy;
+    - primera vuelta: la MEJOR de cada localidad, de a una por localidad;
+    - segunda vuelta, solo si sobran lugares: la siguiente mejor de una localidad ya usada (otra noticia: el
+      mismo hecho contado dos veces ya lo frenaron el relevamiento y la memoria).
+    Las que entran salen en el orden de la pasada (la más nueva primero). Una pieza que ya salió en todas
+    sus redes no ocupa lugar, y una que esta misma pasada ya había reservado (corrida repetida) entra sin
+    ocupar uno nuevo y cuenta su localidad como usada."""
     def falta(p):
         return _falta(p, ledger)
     ya = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) in reservadas]
     pendientes = [(i, p) for i, (p, _m) in enumerate(listas) if falta(p) and _clave(p) not in reservadas]
     rango = sorted(pendientes, key=lambda x: (_clave(x[1]) in preferidas,
-                                              bool(x[1].get("tenia_video") or x[1].get("declaracion")),
+                                              nivel_video(x[1]),
                                               x[1].get("viral") or 5,
                                               (x[1].get("geo") or {}).get("proximidad") or 0,
                                               -x[0]), reverse=True)
-    entran = {i for i, _p in ya} | {i for i, _p in rango[:max(0, n)]}
+    usadas = {localidad_de(p) for _i, p in ya}
+    elegidas = []
+    for i, p in rango:                                     # primera vuelta: una por localidad
+        if len(elegidas) >= max(0, n):
+            break
+        loc = localidad_de(p)
+        if loc and loc in usadas:
+            continue
+        usadas.add(loc)
+        elegidas.append(i)
+    for i, _p in rango:                                    # segunda vuelta: completar con otra noticia
+        if len(elegidas) >= max(0, n):
+            break
+        if i not in elegidas:
+            elegidas.append(i)
+    entran = {i for i, _p in ya} | set(elegidas)
     quedan, salteadas = [], []
     for i, (p, m) in enumerate(listas):
         if i in entran or not falta(p):
@@ -1984,17 +2037,6 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     fb_link_on = fb_youtube_activo() and "facebook" in redes and "youtube" in redes
     if fb_link_on:
         informe["redes"].append("fb_youtube")
-    ig_elegidas, ig_motivos = set(), {}
-    if "instagram" in redes:
-        ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
-        print(f"  Instagram: {len(ig_elegidas)} pieza(s) de esta pasada, "
-              f"las más virales (tope {ig_por_pasada()} por pasada)")
-    fb_elegidas, fb_motivos = set(), {}
-    if "facebook" in redes:
-        fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
-        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
-              f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
-              f"por día por la API y los comparte con el bot)")
     # Un reel cada 30 minutos en cada red (13/10/2026): entra lo que cabe hasta la pasada siguiente.
     # Y como mucho 3 hechos por pasada entre TODAS las redes (reels/cupo.py, 17/10/2026). La pasada es
     # el horario: una corrida repetida (respaldo, a mano) comparte los lugares que ya se reservaron.
@@ -2008,8 +2050,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         remota = publicar and os.environ.get("GITHUB_ACTIONS") == "true"
         fila_turnos = TURNOS.Fila(pid, token=None if remota else "")
         lugares = min(CUPO.libres(pid), len(TURNOS.plan_policiales(fila_turnos, CUPO.maximo(), _hora_ar())))
-    listas, no_entran = solo_las_que_entran(listas, ledger, lugares, ig_elegidas | fb_elegidas,
-                                            frozenset(reservadas))
+    # 01/11/2026: primero se eligen las que entran en la pasada (la mejor de cada localidad, las de video
+    # corto adelante) y DESPUÉS Instagram y Facebook eligen entre esas. Antes Instagram y Facebook elegían
+    # primero las más virales de todo el lote y eso pasaba por encima del reparto por localidad.
+    listas, no_entran = solo_las_que_entran(listas, ledger, lugares, frozenset(), frozenset(reservadas))
     nuevas = [p for p, _ in listas if _falta(p, ledger) and _clave(p) not in reservadas]
     if publicar:
         reservadas = set(CUPO.reservar(pid, nuevas, _clave))
@@ -2017,6 +2061,17 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         _clave(p) for p in nuevas})}
     salteadas += no_entran
     informe["salteadas"] = salteadas
+    ig_elegidas, ig_motivos = set(), {}
+    if "instagram" in redes:
+        ig_elegidas, ig_motivos = elegir_instagram(listas, ledger, publicar)
+        print(f"  Instagram: {len(ig_elegidas)} pieza(s) de esta pasada, "
+              f"las más virales (tope {ig_por_pasada()} por pasada)")
+    fb_elegidas, fb_motivos = set(), {}
+    if "facebook" in redes:
+        fb_elegidas, fb_motivos = elegir_facebook(listas, ledger, publicar)
+        print(f"  Facebook: {len(fb_elegidas)} pieza(s) de esta pasada, las más virales "
+              f"(tope {fb_por_pasada()} por pasada; la página admite {FB_TOPE_REELS} reels "
+              f"por día por la API y los comparte con el bot)")
     for s_ in no_entran:
         print(f"  salteada #{s_['orden']}: {s_['motivo']}")
     print(f"  Pasada {pid}: {informe['pasada']['reservadas']} de {CUPO.maximo()} hechos policiales "

@@ -36,6 +36,10 @@ with tempfile.TemporaryDirectory() as d:
     chequear("después del blanco va el grafito", R.proximo_tema(estado) == "grafito")
     R.anotar_tema("", estado)
     chequear("un reel 9:16 (tema vacío) no mueve la alternancia", R.proximo_tema(estado) == "grafito")
+    R.anotar_tema("grafito", estado)
+    chequear("después del grafito va el naranja (01/11/2026)", R.proximo_tema(estado) == "naranja")
+    R.anotar_tema("naranja", estado)
+    chequear("después del naranja vuelve el blanco", R.proximo_tema(estado) == "blanco")
     viejo = {"ultimo": "blanco", "cuando": 10}
     nuevo = {"ultimo": "grafito", "cuando": 20}
     chequear("al combinar dos pasadas gana el más nuevo",
@@ -48,7 +52,7 @@ with tempfile.TemporaryDirectory() as d:
         dib.line((k, 0, k - 900, 900), fill=(90 + k % 80, 130, 170 - k % 60), width=25)
     im.save(foto, quality=90)
     m = R.motor()
-    for tema in ("blanco", "grafito"):
+    for tema in ("blanco", "grafito", "naranja"):
         info = R.armar(GUION, tmp / f"reel_{tema}.mp4", foto=foto, tema=tema)
         chequear(f"foto apaisada → 4:5 con el bloque {tema}",
                  (info["ancho"], info["alto"]) == (1080, 1350) and info["tema"] == tema)
@@ -57,13 +61,16 @@ with tempfile.TemporaryDirectory() as d:
         px = cuadro.getpixel((1040, 1320))           # abajo a la derecha: el bloque, sin texto
         chequear(f"el bloque {tema} es del color del tema ({px})",
                  all(abs(a - b) < 18 for a, b in zip(px, fondo)))
+        chequear("la imagen ocupa más que el bloque (en y 700 todavía es foto)",
+                 not all(abs(a - b) < 18 for a, b in zip(cuadro.getpixel((540, 700)), fondo)))
         arriba = cuadro.getpixel((540, 20))
         chequear(f"la imagen arranca arriba de todo ({arriba})",
                  not all(abs(a - b) < 18 for a, b in zip(arriba, fondo)))
     vertical = tmp / "vertical.jpg"
     im.rotate(90, expand=True).save(vertical, quality=90)
     info = R.armar(GUION, tmp / "reel_v.mp4", foto=vertical, tema="blanco")
-    chequear("foto vertical → 9:16, sin tema que anotar", info["alto"] == 1920 and info["tema"] == "")
+    # Desde el 17/10/2026 lo vertical también lleva el bloque abajo: tiene tema y mueve la alternancia.
+    chequear("foto vertical → 9:16 con el bloque del tema", info["alto"] == 1920 and info["tema"] == "blanco")
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

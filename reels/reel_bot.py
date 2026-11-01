@@ -348,7 +348,7 @@ def portada(guion: dict, salida: Path, foto=None, clip=None, tema: str = "") -> 
         if not imagen:
             return None
         return str(POR.armar(imagen, guion.get("volanta") or "", POR.texto(guion), destino,
-                             "blanco" if tema == "blanco" else "grafito"))
+                             tema if tema in POR.TEMAS else "grafito"))
     except Exception as e:                         # noqa: BLE001
         print(f"  (portada del reel: no se pudo armar: {type(e).__name__}: {e})")
         return None

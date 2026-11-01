@@ -26,6 +26,9 @@ TEMAS = {
     "grafito": {"fondo": P.GRAFITO, "titulo": P.BLANCO, "volanta": P.NARANJA, "marca": P.BLANCO},
     "blanco": {"fondo": (255, 255, 255), "titulo": (18, 19, 22), "volanta": (222, 112, 26),
                "marca": (18, 19, 22)},
+    # 01/11/2026: el tercer color de los reels, el naranja del isologo con la letra blanca.
+    "naranja": {"fondo": (253, 133, 17), "titulo": P.BLANCO, "volanta": P.BLANCO, "marca": P.BLANCO,
+                "linea": P.BLANCO, "filete": (255, 196, 140), "iso_blanco": True},
 }
 
 
@@ -34,12 +37,16 @@ def texto(guion: dict) -> str:
     return " ".join(((guion or {}).get("portada") or (guion or {}).get("titular") or "").split())
 
 
-def _marca(img: Image.Image, x: int, y: int, alto: int, color):
-    """Isotipo naranja + «DIARIO LA CAMPAÑA» en el color del tema."""
+def _marca(img: Image.Image, x: int, y: int, alto: int, color, iso_blanco: bool = False):
+    """Isotipo naranja (blanco sobre el fondo naranja) + «DIARIO LA CAMPAÑA» en el color del tema."""
     try:
         iso = Image.open(P.ISO_NARANJA).convert("RGBA")
         ancho = round(iso.width * alto / iso.height)
         iso = iso.resize((ancho, alto), Image.LANCZOS)
+        if iso_blanco:
+            blanco = Image.new("RGBA", iso.size, (255, 255, 255, 255))
+            blanco.putalpha(iso.getchannel("A"))
+            iso = blanco
         img.paste(iso, (x, y), iso)
         x += ancho + round(alto * 0.3)
     except OSError:
@@ -57,9 +64,9 @@ def armar(imagen, volanta: str, titulo: str, destino: Path, tema: str = "grafito
     img = Image.new("RGB", (W, H), t["fondo"])
     img.paste(P._foto_arriba(imagen, W, ALTO_FOTO), (0, 0))
     d = ImageDraw.Draw(img)
-    d.rectangle((0, ALTO_FOTO, W, ALTO_FOTO + LINEA), fill=P.NARANJA)
+    d.rectangle((0, ALTO_FOTO, W, ALTO_FOTO + LINEA), fill=t.get("linea", P.NARANJA))
     y = ALTO_FOTO + LINEA + 44
-    _marca(img, M, y, 50, t["marca"])
+    _marca(img, M, y, 50, t["marca"], t.get("iso_blanco", False))
     y += 50 + 40
     vol = (volanta or "").strip().upper()
     if vol:
@@ -71,7 +78,8 @@ def armar(imagen, volanta: str, titulo: str, destino: Path, tema: str = "grafito
         d.text((M, y), ln, font=ft, fill=t["titulo"])
         y += lh
     # Abajo, fuera de la grilla pero a la vista en la pestaña de reels: el sitio.
-    d.line((M, 1745, W - M, 1745), fill=(64, 66, 74) if tema != "blanco" else (220, 221, 226), width=2)
+    d.line((M, 1745, W - M, 1745), fill=t.get("filete") or ((64, 66, 74) if tema != "blanco" else (220, 221, 226)),
+           width=2)
     d.text((M, 1810), "www.diariolacampaña.com.ar", font=P.fuente(34, 600), fill=t["volanta"], anchor="lm")
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)

@@ -167,7 +167,8 @@ MINUTOS_ENTRE_POSTEOS = 30
 
 # Cuántas notas se ARMAN por pasada cuando no se pide un número (--cuantos 0): el tope de reels
 # de la pasada (3) más margen para las que se caen al armar. Variable POLICIALES_ARMAR_POR_PASADA.
-ARMAR_POR_PASADA_DEFAULT = 8
+# 01/11/2026: 10 (antes 8) para que con 6 lugares sobre de dónde elegir una por localidad.
+ARMAR_POR_PASADA_DEFAULT = 10
 
 
 def armar_por_pasada() -> int:
@@ -383,6 +384,17 @@ def max_video_seg() -> float:
         return float(os.environ.get("REEL_VIDEO_MAX_SEG") or MAX_VIDEO_SEG)
     except ValueError:
         return MAX_VIDEO_SEG
+
+
+def _duracion(video) -> float:
+    """Segundos del video (0 si no hay o no se pudo medir)."""
+    if not video:
+        return 0.0
+    try:
+        from reels import reel_bot as R
+        return round(float(R.motor().duration_seconds(Path(video)) or 0), 1)
+    except Exception:                                  # noqa: BLE001 — sin poder medirlo, cuenta como largo
+        return 0.0
 
 
 def _dura_demasiado(video: Path) -> bool:
@@ -671,6 +683,8 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "titulo_medio": nota.get("titulo") or "",
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
+        # Cuánto dura el video del medio (01/11/2026): el publicador pone primero los de hasta 1 min 30 s.
+        "video_seg": _duracion(clip),
         "tenia_audio": bool(nota.get("audio")),
         "declaracion": ({k: decl.get(k) for k in ("nombre", "cargo", "frases", "tramo", "url_audio",
                                                   "duracion_audio", "transcripcion")} if decl else None),

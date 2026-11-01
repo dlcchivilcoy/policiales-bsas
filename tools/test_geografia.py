@@ -137,12 +137,12 @@ tmp = Path(tempfile.mkdtemp(prefix="cupo_")) / "cupo.json"
 CUPO.ARCHIVO = tmp
 clave = lambda p: p["url_original"]
 piezas = [{"url_original": f"https://m.test/{i}", "guion": {"titular": f"T{i}"}} for i in range(10)]
-chequear("5 por defecto (desde el 24/10/2026)", CUPO.maximo() == 5 and CUPO.libres("P1") == 5)
+chequear("6 por defecto (desde el 01/11/2026; antes 5)", CUPO.maximo() == 6 and CUPO.libres("P1") == 6)
 r = CUPO.reservar("P1", piezas, clave)
-chequear("10 candidatas → se reservan 5, nunca más", len(r) == 5 and CUPO.libres("P1") == 0)
+chequear("10 candidatas → se reservan 6, nunca más", len(r) == 6 and CUPO.libres("P1") == 0)
 r = CUPO.reservar("P1", piezas[:2] + piezas[5:], clave)
-chequear("reintento de la misma pasada: no crece", len(r) == 5)
-chequear("otra pasada tiene sus 5", CUPO.libres("P2") == 5)
+chequear("reintento de la misma pasada: no crece", len(r) == 6)
+chequear("otra pasada tiene sus 6", CUPO.libres("P2") == 6)
 a = {"pasadas": {"P1": {"reservas": [{"clave": "x"}, {"clave": "y"}]}}, "actualizado": "1"}
 b = {"pasadas": {"P1": {"reservas": [{"clave": "y"}]}, "P0": {"reservas": [{"clave": "z"}]}}, "actualizado": "2"}
 c = CUPO.combinar(a, b)

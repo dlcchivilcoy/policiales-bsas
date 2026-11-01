@@ -358,8 +358,15 @@ def _album_facebook(jpgs: list, mensaje: str) -> dict:
     return {"id": str((r.json() or {}).get("id") or ""), "fotos": len(ids)}
 
 
+# 01/11/2026 («sacar reel colaborativo de agro de la mañana en la cuenta de @diarioyradio»): el posteo de
+# datos sale SOLO en @diarioyradioagro, sin colab y sin el álbum en la página del diario. AGRO_DATOS_COLAB=1 y
+# AGRO_REEL_DATOS_FB_DIARIO=1 vuelven a lo de antes.
 def fb_diario() -> bool:
-    return (os.environ.get("AGRO_REEL_DATOS_FB_DIARIO") or "1").strip() != "0"
+    return (os.environ.get("AGRO_REEL_DATOS_FB_DIARIO") or "0").strip() == "1"
+
+
+def colab_diario() -> bool:
+    return (os.environ.get("AGRO_DATOS_COLAB") or "0").strip() == "1"
 
 
 def _colab_y_diario(salida: dict, publicar_fb_diario, log) -> dict:
@@ -388,6 +395,8 @@ def _contenedor_colab(uid: str, tok: str, params: dict, log) -> tuple:
     toma, sin colab."""
     from agro import publicar as PUB
     from reels import publicador as PB
+    if not colab_diario():
+        return PB._contenedor_listo(uid, tok, params), False
     colab = PUB.usuario_diario()
     try:
         return PB._contenedor_listo(uid, tok, dict(params, collaborators=json.dumps([colab]))), True

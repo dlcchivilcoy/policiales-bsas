@@ -701,15 +701,15 @@ def preparar_virales(virales, meta=None, titulares=None):
 
 
 os.environ.pop("IG_POR_PASADA")
-chequear("Instagram: 5 reels por pasada por defecto (10/10)", PUB.ig_por_pasada() == 5)
+chequear("Instagram: 6 reels por pasada por defecto (01/11/2026; antes 5)", PUB.ig_por_pasada() == 6)
 PUB._hora_ar = lambda: datetime(2026, 9, 26, 9, 10, tzinfo=_AR)
-chequear("...a cualquier hora (ya no depende del horario)", PUB.ig_por_pasada() == 5)
+chequear("...a cualquier hora (ya no depende del horario)", PUB.ig_por_pasada() == 6)
 os.environ["IG_PRUEBA_POR_PASADA"] = "3"
 chequear("la variable vieja IG_PRUEBA_POR_PASADA sigue pisando el tope", PUB.ig_por_pasada() == 3)
 del os.environ["IG_PRUEBA_POR_PASADA"]
 os.environ["IG_POR_PASADA"] = "4"
 chequear("la variable IG_POR_PASADA pisa el tope", PUB.ig_por_pasada() == 4)
-os.environ.pop("IG_POR_PASADA")
+os.environ["IG_POR_PASADA"] = "5"                 # la elección de las más virales, con un tope menor que los lugares
 base, carpeta, reloj, meta = preparar_virales([3, 1, 2, 8, 5, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, ("instagram",), publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
@@ -774,7 +774,9 @@ shutil.rmtree(base)
 
 # --- 18. Facebook: 30 reels por día POR PÁGINA, compartidos con el bot (27/09) ----------
 os.environ.pop("FB_POR_PASADA")
-chequear("Facebook: 2 por pasada por defecto (03/10: se probó 5 y se volvió a 2)", PUB.fb_por_pasada() == 2)
+chequear("Facebook: 6 por pasada por defecto (01/11/2026: una sola corrida por día; antes 2)",
+         PUB.fb_por_pasada() == 6)
+os.environ["FB_POR_PASADA"] = "2"                 # la elección de las más virales, con el tope de antes
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7, 5, 6, 8])
 inf = silencio(PUB.publicar_lote, carpeta, ("facebook", "youtube"), publicar=True)
 fb = [f["facebook"]["estado"] for f in inf["piezas"]]
@@ -1590,14 +1592,43 @@ import importlib.util as _ilu  # noqa: E402
 _spec = _ilu.spec_from_file_location("_cupo_real", Path(_CUPO.__file__))
 _cupo_real = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_cupo_real)
-chequear("policiales: UNA corrida a las 18:30 todos los días, máximo 5 (19:00 a 21:00, 24/10/2026 noche)",
+chequear("policiales: UNA corrida a las 18:30 todos los días, máximo 6 (19:00 a 21:30, 01/11/2026)",
          _cupo_real.PASADAS_AR == ((18, 30),) and _cupo_real.PASADAS_FINDE == ()
-         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((18, 30),) and _cupo_real.MAX_DEFAULT == 5)
+         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((18, 30),) and _cupo_real.MAX_DEFAULT == 6)
 _sin_video = {"url_original": "https://a/1", "viral": 9, "orden": 1, "guion": {"titular": "Sin video"}}
 _con_video = {"url_original": "https://a/2", "viral": 6, "orden": 2, "tenia_video": True, "guion": {"titular": "Con video"}}
 _entran, _fuera = PUB.solo_las_que_entran([(_sin_video, "a.mp4"), (_con_video, "b.mp4")], {}, 1, set())
 chequear("policiales: con un solo lugar, entra el reel con video aunque el otro sea más viral",
          [p["url_original"] for p, _m in _entran] == ["https://a/2"] and _fuera[0]["titular"] == "Sin video")
+
+# --- 01/11/2026: la mejor de cada localidad, primero el video de hasta 1 min 30 s ---
+def _pz_loc(n, loc, viral, seg=None):
+    p = {"url_original": f"https://a/l{n}", "viral": viral, "orden": n, "guion": {"titular": f"Nota {n}"},
+         "geo": {"nombre": loc}}
+    if seg is not None:
+        p.update(tenia_video=True, video_seg=seg)
+    return p
+
+
+chequear("policiales: el video de hasta 90 s pasa adelante del largo, y el largo de la foto",
+         PUB.nivel_video(_pz_loc(1, "Bragado", 5, 60)) == 2 and PUB.nivel_video(_pz_loc(1, "Bragado", 5, 150)) == 1
+         and PUB.nivel_video(_pz_loc(1, "Bragado", 5)) == 0
+         and PUB.nivel_video({"tenia_video": True}) == 1 and PUB.nivel_video({"declaracion": {"nombre": "x"}}) == 2)
+_lote = [_pz_loc(1, "Bragado", 9), _pz_loc(2, "Bragado", 6, 70), _pz_loc(3, "Bragado", 8, 160),
+         _pz_loc(4, "Alberti", 4), _pz_loc(5, "Suipacha", 7), _pz_loc(6, "Mercedes", 5, 40)]
+_entran, _fuera = PUB.solo_las_que_entran([(p, f"{p['orden']}.mp4") for p in _lote], {}, 4, set())
+chequear("policiales: con 4 lugares, la MEJOR de cada localidad (Bragado: la del video de 70 s)",
+         sorted(p["orden"] for p, _m in _entran) == [2, 4, 5, 6] and len(_fuera) == 2)
+_entran, _fuera = PUB.solo_las_que_entran([(p, f"{p['orden']}.mp4") for p in _lote], {}, 6, set())
+chequear("policiales: con más lugares que localidades, se repite localidad con OTRA noticia",
+         sorted(p["orden"] for p, _m in _entran) == [1, 2, 3, 4, 5, 6] and not _fuera)
+_entran, _fuera = PUB.solo_las_que_entran([(p, f"{p['orden']}.mp4") for p in _lote], {}, 5, set())
+chequear("policiales: la segunda de Bragado que entra es la de video (aunque más largo) antes que la de foto",
+         sorted(p["orden"] for p, _m in _entran) == [2, 3, 4, 5, 6])
+_entran, _fuera = PUB.solo_las_que_entran([(p, f"{p['orden']}.mp4") for p in _lote], {}, 3, set(),
+                                          frozenset({PUB._clave(_lote[5])}))
+chequear("policiales: una ya reservada (corrida repetida) cuenta su localidad como usada",
+         sorted(p["orden"] for p, _m in _entran) == [2, 4, 5, 6])
 
 
 # --- 24/10/2026 (noche): policiales en CARRUSEL «deslizá y leé» en Instagram y Facebook ---
@@ -1661,11 +1692,11 @@ PUB.PASADAS_AR = ((18, 30),)
 _CUPO.PASADAS_AR = ((18, 30),)
 try:
     _c = PUB.cierre_de_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz))
-    chequear("policiales: la pasada de las 18:30 cierra a las 21:30, no al día siguiente",
-             (_c.day, _c.hour, _c.minute) == (24, 21, 30))
+    chequear("policiales: la pasada de las 18:30 cierra a las 22:00 (01/11/2026), no al día siguiente",
+             (_c.day, _c.hour, _c.minute) == (24, 22, 0))
     _max0 = os.environ.get("MAX_POLICE_REELS_PER_PASS")
-    os.environ["MAX_POLICE_REELS_PER_PASS"] = "5"
-    chequear("policiales: entran los 5 (19:00 a 21:00)", PUB.lugares_en_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz)) == 5)
+    os.environ.pop("MAX_POLICE_REELS_PER_PASS", None)
+    chequear("policiales: entran los 6 (19:00 a 21:30)", PUB.lugares_en_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz)) == 6)
     if _max0 is None:
         os.environ.pop("MAX_POLICE_REELS_PER_PASS")
     else:

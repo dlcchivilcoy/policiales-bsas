@@ -20,7 +20,8 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 ARCHIVO = RAIZ / "estado" / "cupo_pasadas.json"
-MAX_DEFAULT = 5                # 24/10/2026: 5 por corrida (19:00 a 21:00, uno cada 30 minutos)
+# 01/11/2026 («una sola corrida, 6 reels cada media hora»): 6, de 19:00 a 21:30. Antes 5 (19:00 a 21:00).
+MAX_DEFAULT = 6
 # Las pasadas de policiales, en hora argentina (cron-job.org, ver .github/workflows/reels.yml). Si
 # cambian los horarios de cron-job.org, se cambian acá.
 # 19/10/2026: el editor sacó las de las 09:05, 12:05, 15:05 y 21:05.
