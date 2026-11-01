@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-01T22:31:26.000Z",
+  "actualizado": "2026-11-01T23:01:18.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/10/30/bragado-un-detenido-por-droga-intento-arrebatar-el-arma-a-un-policia/",
@@ -283,6 +283,30 @@
       "volanta": "Alerta meteorológica en Chacabuco",
       "categoria": "alerta_meteorologica",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://9dejulio.diariotiempodigital.com/sociedad/ciudad/95518_robo-en-la-terminal-de-omnibus",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-01T23:01:18.000Z",
+      "titulo": "Robo en la Terminal de Ómnibus de 9 de Julio",
+      "descripcion": "Solicitan colaboración a la comunidad para identificar a los responsables de un ilícito registrado en la Terminal de Ómnibus de la ciudad. Investigan las circunstancias del hecho.",
+      "texto_tiktok": "Se solicita colaboración a la comunidad para identificar a los responsables de un robo cometido en las instalaciones de la Terminal de Ómnibus de 9 de Julio.\n\nDesde el medio local difundieron el pedido para dar con los autores del ilícito que es materia de investigación.\n\nCualquier información útil puede ser aportada a las autoridades policiales para esclarecer lo sucedido en el predio.\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #Robo #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-01_2135_05_9-de-julio_robo-en-la-terminal-de-mnibus-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/9-de-julio-piden-colaboracion-para-identificar-a-los-autores-de-9ca5b0",
+      "youtube_url": "https://youtube.com/shorts/nDNWk0FHbKk",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "Robo en 9 de Julio",
+      "categoria": "robo",
+      "distancia_km": 99.4,
       "radio_ok": true,
       "plataformas": [
         "x",
