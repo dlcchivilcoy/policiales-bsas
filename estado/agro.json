@@ -22578,6 +22578,27 @@
         60,
         62
       ]
+    },
+    "d3ca75c35b8aa223": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "inundaciones bovinos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto productivo y sanitario en zonas ganaderas por emergencia climática.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24103,7 +24124,13 @@
       "https://todoagro.com.ar/la-genetica-bovina-registro-una-suba-del-61": "2026-11-02",
       "https://bichosdecampo.com/el-smn-anticipa-un-verano-lluvioso-con-temporales-intensos-y-bajas-temperaturas-en-la-zona-central-argentina-pero-seco-y-caluoroso-en-el-noa": "2026-11-02",
       "https://bichosdecampo.com/el-peronista-menos-pensado-para-asegurar-el-voto-de-los-estados-rurales-trump-prometio-15-mil-millones-de-dolares-para-compensar-la-suba-del-combustible-y-los-fertilizantes": "2026-11-02",
-      "https://futurefarming.com/tech-in-focus/field-robots/26futweb-agbot-equus": "2026-11-02"
+      "https://futurefarming.com/tech-in-focus/field-robots/26futweb-agbot-equus": "2026-11-02",
+      "https://todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos": "2026-11-02",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-2-noviembre-2026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25627,7 +25654,13 @@
       "la genetica bovina registro una suba del 61": "2026-11-02",
       "el smn anticipa un verano lluvioso con temporales intensos y bajas temperaturas en la zona central argentina pero seco y caluoroso en el noa": "2026-11-02",
       "el peronista menos pensado para asegurar el voto de los estados rurales trump prometio 15 mil millones de dolares para compensar la suba del combustible y los fertilizantes": "2026-11-02",
-      "field robot or autonomous tractor dutch grower puts both to the test": "2026-11-02"
+      "field robot or autonomous tractor dutch grower puts both to the test": "2026-11-02",
+      "inundaciones ya evacuaron 147 500 bovinos y bubalinos": "2026-11-02",
+      "precio del maiz en rosario hoy 2 noviembre 2026": "2026-11-02",
+      "precio del trigo en rosario hoy 2 noviembre 2026": "2026-11-02",
+      "precio del girasol en rosario hoy 2 noviembre 2026": "2026-11-02",
+      "precio de la soja en rosario hoy 2 noviembre 2026": "2026-11-02",
+      "precio del sorgo en rosario hoy 2 noviembre 2026": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27151,7 +27184,13 @@
       "c9dd198690bab76d": "2026-11-02",
       "612acfee01ecb87a": "2026-11-02",
       "00fb06b9980c52f2": "2026-11-02",
-      "c66a0b1e83b330b7": "2026-11-02"
+      "c66a0b1e83b330b7": "2026-11-02",
+      "d3ca75c35b8aa223": "2026-11-02",
+      "05dbe75e7d365fd9": "2026-11-02",
+      "e4166000e5277e06": "2026-11-02",
+      "3cc31a82a327da2f": "2026-11-02",
+      "3b24b5ccc8ba95b0": "2026-11-02",
+      "f2b62571c86fafb9": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46038,9 +46077,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_87cb428fe626_portada.jpg"
+    },
+    {
+      "id": "3a1914c97df1",
+      "cuando": "2026-11-02T11:20-03:00",
+      "titulo_original": "La soja enfrenta el riesgo de una mayor oferta en Estados Unidos mientras el mercado espera el informe del USDA",
+      "descripcion": "La expectativa de rindes superiores a los estimados por el USDA y la posibilidad de un aumento de los stocks finales estadounidenses condicionan las perspectivas de la soja en Chicago....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249134-la-soja-enfrenta-el-riesgo-de-una-mayor-oferta-en-estados-unidos-mientras-el-mercado-espera-el-informe-del-usda.html",
+      "titular": "La soja en Chicago aguarda el informe del USDA con temor",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 64,
+        "commercial_score": 69,
+        "subtema": "mercados",
+        "tema": "soja usda",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Informe clave del USDA y stocks de soja que mueven los precios internacionales y locales.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T11:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "38645cd1-a5be-4883-9c9f-f72b5902f4b6",
+          "slug": "soja-en-chicago-rindes-record-en-estados-unidos-y-la-8f67d2",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-en-chicago-rindes-record-en-estados-unidos-y-la-8f67d2",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2338465046906611",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17895471519436773",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18037322378663187"
+        },
+        "historia_facebook": {
+          "id": "1777636470017287"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3a1914c97df1_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "52199538d44e",
+      "rep": {
+        "id": "52199538d44e",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos/",
+        "canonical_url": "https://todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos",
+        "titulo": "Inundaciones: ya evacuaron 147.500 bovinos y bubalinos",
+        "titulo_norm": "inundaciones ya evacuaron 147 500 bovinos y bubalinos",
+        "descripcion": "Según registros del Senasa, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen. La entrada Inundaciones: ya evacuaron 147.500 bovinos y bubalinos pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-11-02T11:03-03:00",
+        "capturado": "2026-11-02T11:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d3ca75c35b8aa223"
+      },
+      "grupo": [
+        {
+          "id": "52199538d44e",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos/",
+          "canonical_url": "https://todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos",
+          "titulo": "Inundaciones: ya evacuaron 147.500 bovinos y bubalinos",
+          "titulo_norm": "inundaciones ya evacuaron 147 500 bovinos y bubalinos",
+          "descripcion": "Según registros del Senasa, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen. La entrada Inundaciones: ya evacuaron 147.500 bovinos y bubalinos pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-11-02T11:03-03:00",
+          "capturado": "2026-11-02T11:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d3ca75c35b8aa223"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "inundaciones bovinos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto productivo y sanitario en zonas ganaderas por emergencia climática.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-02T11:20-03:00"
+    },
     {
       "id": "328a61088908",
       "rep": {
@@ -46176,73 +46342,6 @@
       "cuando": "2026-11-02T10:00-03:00"
     },
     {
-      "id": "3a1914c97df1",
-      "rep": {
-        "id": "3a1914c97df1",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249134-la-soja-enfrenta-el-riesgo-de-una-mayor-oferta-en-estados-unidos-mientras-el-mercado-espera-el-informe-del-usda.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249134-la-soja-enfrenta-el-riesgo-de-una-mayor-oferta-en-estados-unidos-mientras-el-mercado-espera-el-informe-del-usda.html",
-        "titulo": "La soja enfrenta el riesgo de una mayor oferta en Estados Unidos mientras el mercado espera el informe del USDA",
-        "titulo_norm": "la soja enfrenta el riesgo de una mayor oferta en estados unidos mientras el mercado espera el informe del usda",
-        "descripcion": "La expectativa de rindes superiores a los estimados por el USDA y la posibilidad de un aumento de los stocks finales estadounidenses condicionan las perspectivas de la soja en Chicago....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249134_26649470.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-11-02T09:16-03:00",
-        "capturado": "2026-11-02T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "54c1dcf02c9030de"
-      },
-      "grupo": [
-        {
-          "id": "3a1914c97df1",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249134-la-soja-enfrenta-el-riesgo-de-una-mayor-oferta-en-estados-unidos-mientras-el-mercado-espera-el-informe-del-usda.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249134-la-soja-enfrenta-el-riesgo-de-una-mayor-oferta-en-estados-unidos-mientras-el-mercado-espera-el-informe-del-usda.html",
-          "titulo": "La soja enfrenta el riesgo de una mayor oferta en Estados Unidos mientras el mercado espera el informe del USDA",
-          "titulo_norm": "la soja enfrenta el riesgo de una mayor oferta en estados unidos mientras el mercado espera el informe del usda",
-          "descripcion": "La expectativa de rindes superiores a los estimados por el USDA y la posibilidad de un aumento de los stocks finales estadounidenses condicionan las perspectivas de la soja en Chicago....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249134_26649470.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-11-02T09:16-03:00",
-          "capturado": "2026-11-02T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "54c1dcf02c9030de"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 64,
-        "commercial_score": 69,
-        "subtema": "mercados",
-        "tema": "soja usda",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Informe clave del USDA y stocks de soja que mueven los precios internacionales y locales.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          62
-        ]
-      },
-      "cuando": "2026-11-02T10:00-03:00"
-    },
-    {
       "id": "6b669c7f82b3",
       "rep": {
         "id": "6b669c7f82b3",
@@ -46373,8 +46472,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T11:04:51-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-02T11:23:37-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
