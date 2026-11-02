@@ -22599,6 +22599,165 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d412bcf16954ecb9": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 5,
+      "conversacion": 4,
+      "potencial_comercial": 4,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "ovinos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es útil para productores ovinos, pero la ganadería lanar tiene poco peso en la zona núcleo.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1e7fd3432b9625ec": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "empresas",
+      "tema": "vaca muerta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tema energético y socioeconómico de Neuquén, ajeno al día a día del productor agropecuario pampeano.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0c6b826eac786c9c": {
+      "impacto_economico": 8,
+      "interes_productores": 9,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 3,
+      "ai_score": 46,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "rutas nacionales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El estado de rutas y el destino del impuesto a los combustibles interesa mucho al transportista y productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9acebe1f8e623843": {
+      "impacto_economico": 10,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 64,
+      "commercial_score": 66,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente columna de debate agronómico sobre nutrición de suelos y sustentabilidad muy afín a la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        58
+      ]
+    },
+    "c0afc98ff10029d4": {
+      "impacto_economico": 14,
+      "interes_productores": 9,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 60,
+      "commercial_score": 58,
+      "subtema": "agro",
+      "tema": "crecida paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El comportamiento del caudal del Paraná afecta logística y producción del Litoral, con impacto indirecto en la región.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        62
+      ]
+    },
+    "391920c97bc71a77": {
+      "impacto_economico": 16,
+      "interes_productores": 13,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 85,
+      "subtema": "ganaderia",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Altamente relevante para ganaderos exportadores por los costos y exigencias de trazabilidad de la Unión Europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cbc26383676c2865": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 67,
+      "subtema": "mercados",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe oficial de comercio exterior sobre el liderazgo mundial de productos agroindustriales argentinos.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        64
+      ]
     }
   },
   "indice": {
@@ -24130,7 +24289,17 @@
       "https://infocampo.com.ar/precio-del-trigo-hoy-2-noviembre-2026": "2026-11-02",
       "https://infocampo.com.ar/precio-del-girasol-hoy-2-noviembre-2026": "2026-11-02",
       "https://infocampo.com.ar/precio-de-la-soja-hoy-2-noviembre-2026": "2026-11-02",
-      "https://infocampo.com.ar/precio-del-sorgo-hoy-2-noviembre-2026": "2026-11-02"
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/los-ovinos-del-litoral-y-el-nino-las-claves-para-proteger-las-majadas-y-evitar-problemas-sanitarios": "2026-11-02",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-2-noviembre-2026": "2026-11-02",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-2-noviembre-2026": "2026-11-02",
+      "https://agrositio.com.ar/noticia/249148-le-llega-vaca-muerta-a-las-familias.html": "2026-11-02",
+      "https://bichosdecampo.com/bajo-la-lupa-caputo-debera-explicar-a-la-justicia-que-paso-con-los-fondos-destinados-a-las-rutas-nacionales-de-entre-rios": "2026-11-02",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos": "2026-11-02",
+      "https://bichosdecampo.com/__trashed-11": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026": "2026-11-02",
+      "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25660,7 +25829,17 @@
       "precio del trigo en rosario hoy 2 noviembre 2026": "2026-11-02",
       "precio del girasol en rosario hoy 2 noviembre 2026": "2026-11-02",
       "precio de la soja en rosario hoy 2 noviembre 2026": "2026-11-02",
-      "precio del sorgo en rosario hoy 2 noviembre 2026": "2026-11-02"
+      "precio del sorgo en rosario hoy 2 noviembre 2026": "2026-11-02",
+      "clima hoy en neuquen el pronostico del tiempo para este 2 noviembre 2026": "2026-11-02",
+      "los ovinos del litoral y el nino las claves para proteger las majadas y evitar problemas sanitarios": "2026-11-02",
+      "dolar blue a cuanto cotizan hoy en mendoza 2 noviembre 2026": "2026-11-02",
+      "euro blue hoy precio y cotizacion de este 2 noviembre 2026": "2026-11-02",
+      "le llega vaca muerta a las familias": "2026-11-02",
+      "bajo la lupa caputo debera explicar a la justicia que paso con los fondos destinados a las rutas nacionales de entre rios": "2026-11-02",
+      "los dilemas de la agronomia fernanda gonzalez sanjuan se pregunta por que hay que producir cada vez mas y con recursos limitados si despues esa comida no llega parejo a todos": "2026-11-02",
+      "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas": "2026-11-02",
+      "visec cuestionan las condiciones del sistema de trazabilidad para exportar a europa y alertan sobre descuentos del 10 a ganaderos": "2026-11-02",
+      "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27190,7 +27369,17 @@
       "e4166000e5277e06": "2026-11-02",
       "3cc31a82a327da2f": "2026-11-02",
       "3b24b5ccc8ba95b0": "2026-11-02",
-      "f2b62571c86fafb9": "2026-11-02"
+      "f2b62571c86fafb9": "2026-11-02",
+      "f8cc9547a926d347": "2026-11-02",
+      "d412bcf16954ecb9": "2026-11-02",
+      "318fa1286f0c6874": "2026-11-02",
+      "455d6268e58aa62b": "2026-11-02",
+      "1e7fd3432b9625ec": "2026-11-02",
+      "0c6b826eac786c9c": "2026-11-02",
+      "9acebe1f8e623843": "2026-11-02",
+      "c0afc98ff10029d4": "2026-11-02",
+      "391920c97bc71a77": "2026-11-02",
+      "cbc26383676c2865": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46141,49 +46330,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3a1914c97df1_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "52199538d44e",
-      "rep": {
-        "id": "52199538d44e",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos/",
-        "canonical_url": "https://todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos",
-        "titulo": "Inundaciones: ya evacuaron 147.500 bovinos y bubalinos",
-        "titulo_norm": "inundaciones ya evacuaron 147 500 bovinos y bubalinos",
-        "descripcion": "Según registros del Senasa, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen. La entrada Inundaciones: ya evacuaron 147.500 bovinos y bubalinos pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-02T11:03-03:00",
-        "capturado": "2026-11-02T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d3ca75c35b8aa223"
-      },
-      "grupo": [
-        {
-          "id": "52199538d44e",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos/",
-          "canonical_url": "https://todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos",
-          "titulo": "Inundaciones: ya evacuaron 147.500 bovinos y bubalinos",
-          "titulo_norm": "inundaciones ya evacuaron 147 500 bovinos y bubalinos",
-          "descripcion": "Según registros del Senasa, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen. La entrada Inundaciones: ya evacuaron 147.500 bovinos y bubalinos pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-02T11:03-03:00",
-          "capturado": "2026-11-02T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d3ca75c35b8aa223"
-        }
-      ],
+      "cuando": "2026-11-02T13:00-03:00",
+      "titulo_original": "Inundaciones: ya evacuaron 147.500 bovinos y bubalinos",
+      "descripcion": "Según registros del Senasa, desde agosto se han trasladado 147.500 bovinos y bubalinos desde las regiones afectadas. Se espera que los egresos continúen. La entrada Inundaciones: ya evacuaron 147.500 bovinos y bubalinos pertenece a Todo Agro.",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/inundaciones-ya-evacuaron-147-500-bovinos-y-bubalinos/",
+      "titular": "Evacuaron 147.500 bovinos y bubalinos por las inundaciones",
+      "volanta": "Ganadería",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -46205,7 +46361,308 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-02T11:20-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T13:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "r6qB4S8k5Ls",
+          "url": "https://youtube.com/shorts/r6qB4S8k5Ls",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "4527ed66-59e9-4348-8845-11e932f747fe",
+          "slug": "inundaciones-en-el-litoral-ya-evacuaron-147-500-bovinos-y-361945",
+          "url": "https://www.diariolacampaña.com.ar/n/inundaciones-en-el-litoral-ya-evacuaron-147-500-bovinos-y-361945",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1744941159950856",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18131538980486607",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17989609571878249"
+        },
+        "historia_facebook": {
+          "id": "1380786413907262"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_52199538d44e_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "bd0e46001df2",
+      "rep": {
+        "id": "bd0e46001df2",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos/",
+        "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos",
+        "titulo": "Los dilemas de la agronomía: Fernanda González Sanjuán se pregunta por qué hay que producir cada vez más, y con recursos limitados, si después esa comida no llega parejo a todos",
+        "titulo_norm": "los dilemas de la agronomia fernanda gonzalez sanjuan se pregunta por que hay que producir cada vez mas y con recursos limitados si despues esa comida no llega parejo a todos",
+        "descripcion": "A Fernanda González Sanjuán se la suele escuchar hablando de nutrientes, de fertilidad de los suelos y de cómo mejorar los rendimientos. Es ingeniera agrónoma, se especializó en esos asuntos y trabaja desde hace mucho tiempo en la asociación civil Fertilizar, que promueve justamente una reposición correcta de los nutrientes. -¿Alcanza con producir más?- le […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/FERNANDA-GONZALEZ-SANJUAN.00_10_14_20.Still003.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-02T12:05-03:00",
+        "capturado": "2026-11-02T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9acebe1f8e623843"
+      },
+      "grupo": [
+        {
+          "id": "bd0e46001df2",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos/",
+          "canonical_url": "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos",
+          "titulo": "Los dilemas de la agronomía: Fernanda González Sanjuán se pregunta por qué hay que producir cada vez más, y con recursos limitados, si después esa comida no llega parejo a todos",
+          "titulo_norm": "los dilemas de la agronomia fernanda gonzalez sanjuan se pregunta por que hay que producir cada vez mas y con recursos limitados si despues esa comida no llega parejo a todos",
+          "descripcion": "A Fernanda González Sanjuán se la suele escuchar hablando de nutrientes, de fertilidad de los suelos y de cómo mejorar los rendimientos. Es ingeniera agrónoma, se especializó en esos asuntos y trabaja desde hace mucho tiempo en la asociación civil Fertilizar, que promueve justamente una reposición correcta de los nutrientes. -¿Alcanza con producir más?- le […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/FERNANDA-GONZALEZ-SANJUAN.00_10_14_20.Still003.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-02T12:05-03:00",
+          "capturado": "2026-11-02T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9acebe1f8e623843"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 66,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente columna de debate agronómico sobre nutrición de suelos y sustentabilidad muy afín a la zona núcleo.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          58
+        ]
+      },
+      "cuando": "2026-11-02T13:00-03:00"
+    },
+    {
+      "id": "5cfbb8f5167d",
+      "rep": {
+        "id": "5cfbb8f5167d",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/__trashed-11/",
+        "canonical_url": "https://bichosdecampo.com/__trashed-11",
+        "titulo": "El Paraná afloja arriba y aprieta abajo: La baja de Yacyretá da apenas un respiro, pero el Litoral se prepara para nuevas crecidas",
+        "titulo_norm": "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas",
+        "descripcion": "Los días pasados, la Entidad Binacional Yacyretá (EBY), la central hidroeléctrica ubicada en la frontera entre Argentina y Paraguay, pronosticaba un leve descenso del caudal, que prácticamente duplica los niveles promedio durante esta época del año. Desde unos 35.000 metros cúbicos por segundo, en Yacyretá proyectaban una leve retracción hacia los 29.000 para este domingo […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-10.jpeg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-02T11:22-03:00",
+        "capturado": "2026-11-02T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c0afc98ff10029d4"
+      },
+      "grupo": [
+        {
+          "id": "5cfbb8f5167d",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/__trashed-11/",
+          "canonical_url": "https://bichosdecampo.com/__trashed-11",
+          "titulo": "El Paraná afloja arriba y aprieta abajo: La baja de Yacyretá da apenas un respiro, pero el Litoral se prepara para nuevas crecidas",
+          "titulo_norm": "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas",
+          "descripcion": "Los días pasados, la Entidad Binacional Yacyretá (EBY), la central hidroeléctrica ubicada en la frontera entre Argentina y Paraguay, pronosticaba un leve descenso del caudal, que prácticamente duplica los niveles promedio durante esta época del año. Desde unos 35.000 metros cúbicos por segundo, en Yacyretá proyectaban una leve retracción hacia los 29.000 para este domingo […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-10.jpeg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-02T11:22-03:00",
+          "capturado": "2026-11-02T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c0afc98ff10029d4"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 9,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 60,
+        "commercial_score": 58,
+        "subtema": "agro",
+        "tema": "crecida paraná",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El comportamiento del caudal del Paraná afecta logística y producción del Litoral, con impacto indirecto en la región.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          58,
+          62
+        ]
+      },
+      "cuando": "2026-11-02T13:00-03:00"
+    },
+    {
+      "id": "2ea1e0189b3a",
+      "rep": {
+        "id": "2ea1e0189b3a",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026",
+        "titulo": "Visec: cuestionan las condiciones del sistema de trazabilidad para exportar a Europa y alertan sobre descuentos del 10% a ganaderos",
+        "titulo_norm": "visec cuestionan las condiciones del sistema de trazabilidad para exportar a europa y alertan sobre descuentos del 10 a ganaderos",
+        "descripcion": "En la Exposición Rural de El Zapallar, CRA planteó sus objeciones a las exigencias vinculadas con la libre deforestación del bloque europeo; destacó que no establece que una única certificadora deba encargarse de validar el cumplimiento de los requisitos",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CTN4KTYMGNAZLLSXVKAX2N4AOM.jpeg?auth=a36767e6ec99ccbaab68856c47c403564bc86b1e93b6c91ba14c374e347b56b2&smart=true",
+        "autor": "",
+        "publicado": "2026-11-02T12:45-03:00",
+        "capturado": "2026-11-02T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "391920c97bc71a77"
+      },
+      "grupo": [
+        {
+          "id": "2ea1e0189b3a",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026",
+          "titulo": "Visec: cuestionan las condiciones del sistema de trazabilidad para exportar a Europa y alertan sobre descuentos del 10% a ganaderos",
+          "titulo_norm": "visec cuestionan las condiciones del sistema de trazabilidad para exportar a europa y alertan sobre descuentos del 10 a ganaderos",
+          "descripcion": "En la Exposición Rural de El Zapallar, CRA planteó sus objeciones a las exigencias vinculadas con la libre deforestación del bloque europeo; destacó que no establece que una única certificadora deba encargarse de validar el cumplimiento de los requisitos",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CTN4KTYMGNAZLLSXVKAX2N4AOM.jpeg?auth=a36767e6ec99ccbaab68856c47c403564bc86b1e93b6c91ba14c374e347b56b2&smart=true",
+          "autor": "",
+          "publicado": "2026-11-02T12:45-03:00",
+          "capturado": "2026-11-02T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "391920c97bc71a77"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 13,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 85,
+        "subtema": "ganaderia",
+        "tema": "visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Altamente relevante para ganaderos exportadores por los costos y exigencias de trazabilidad de la Unión Europea.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-02T13:00-03:00"
+    },
+    {
+      "id": "abcecdbb674b",
+      "rep": {
+        "id": "abcecdbb674b",
+        "fuente": "Secretaría de Agricultura",
+        "tipo_fuente": "oficial",
+        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+        "url": "https://www.argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
+        "canonical_url": "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
+        "titulo": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
+        "titulo_norm": "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
+        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que luego del análisis de los datos de comercio exterior internacionales correspondientes al cierre de 2025, publicados recientemente por COMETRADE (base de datos internacional de las Naciones Unidas), los productos agroindustriales argentinos mejoraron su performance en el comercio mundial. La base del ranking se elaboró sobre las principales posiciones arancelarias exportadas por el país. El récord de exportaciones logrado en 2025 evidenció la mejora en el posicionamiento mundial de los productos argentinos. Entre los primeros 5 puestos se encuentran 26 productos agroindustriales argentinos liderando las exportaciones mundiales; mientras que hasta el puesto 20 se encuentran 52 productos de todas las regiones del país. De esta forma, Argentina pasó a ocupar el primer puesto como exportador mu",
+        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/mani.png",
+        "autor": "pconsiglio",
+        "publicado": "2026-11-02T11:23-03:00",
+        "capturado": "2026-11-02T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cbc26383676c2865"
+      },
+      "grupo": [
+        {
+          "id": "abcecdbb674b",
+          "fuente": "Secretaría de Agricultura",
+          "tipo_fuente": "oficial",
+          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
+          "url": "https://www.argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
+          "canonical_url": "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
+          "titulo": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
+          "titulo_norm": "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
+          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que luego del análisis de los datos de comercio exterior internacionales correspondientes al cierre de 2025, publicados recientemente por COMETRADE (base de datos internacional de las Naciones Unidas), los productos agroindustriales argentinos mejoraron su performance en el comercio mundial. La base del ranking se elaboró sobre las principales posiciones arancelarias exportadas por el país. El récord de exportaciones logrado en 2025 evidenció la mejora en el posicionamiento mundial de los productos argentinos. Entre los primeros 5 puestos se encuentran 26 productos agroindustriales argentinos liderando las exportaciones mundiales; mientras que hasta el puesto 20 se encuentran 52 productos de todas las regiones del país. De esta forma, Argentina pasó a ocupar el primer puesto como exportador mu",
+          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/mani.png",
+          "autor": "pconsiglio",
+          "publicado": "2026-11-02T11:23-03:00",
+          "capturado": "2026-11-02T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cbc26383676c2865"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 67,
+        "subtema": "mercados",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe oficial de comercio exterior sobre el liderazgo mundial de productos agroindustriales argentinos.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          64
+        ]
+      },
+      "cuando": "2026-11-02T13:00-03:00"
     },
     {
       "id": "328a61088908",
@@ -46472,8 +46929,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T11:23:37-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T13:05:10-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
