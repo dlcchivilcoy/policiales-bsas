@@ -22959,6 +22959,31 @@
         67,
         69
       ]
+    },
+    "a579fd5d437664c8": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 3,
+      "ai_score": 58,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a una terminal de tractores emblemática de la región, generando gran preocupación en el sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        56
+      ]
     }
   },
   "indice": {
@@ -24510,7 +24535,9 @@
       "https://agrositio.com.ar/noticia/249157-lluvias-variables-y-un-enfriamiento-inoportuno-ccaagrositio.html": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/llovieron-170-mm-golpe-al-ajo-en-la-principal-zona-productora-en-un-momento-muy-critico-precios-nid02112026": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/fernando-ortiz-invirtio-us40000-para-hacer-harina-de-banana-sortear-un-problema-y-lo-logro-nos-nid02112026": "2026-11-02",
-      "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f": "2026-11-02"
+      "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f": "2026-11-02",
+      "https://bichosdecampo.com/pauny-se-agrava-la-situacion-social-en-las-varillas-luego-del-fracaso-en-una-audiencia-entre-los-trabajadores-y-los-duenos-en-busca-de-saldar-deudas-salariales": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/tension-en-pauny-el-gremio-se-movilizo-y-advierte-sobre-mas-protestas-en-la-principal-fabrica-nid02112026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26060,7 +26087,9 @@
       "lluvias variables y un enfriamiento inoportuno cca agrositio": "2026-11-02",
       "llovieron 170 mm golpe al ajo en la principal zona del pais precios por el piso y un costo millonario": "2026-11-02",
       "fernando ortiz invirtio us 40 000 para hacer harina de banana evitar un problema y sorprendio nos estamos reconvirtiendo": "2026-11-02",
-      "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto": "2026-11-02"
+      "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto": "2026-11-02",
+      "pauny se agrava la situacion social en las varillas luego del fracaso en una audiencia entre los trabajadores y los duenos en busca de saldar deudas salariales": "2026-11-02",
+      "tiene 450 empleados la uom se movilizo y advierte sobre mas protestas en pauny la principal fabrica nacional de tractores": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27610,7 +27639,9 @@
       "aac3911317575073": "2026-11-02",
       "189f17b980533203": "2026-11-02",
       "acfb47cd4dbc6ff7": "2026-11-02",
-      "93bb6fcdee11205e": "2026-11-02"
+      "93bb6fcdee11205e": "2026-11-02",
+      "a579fd5d437664c8": "2026-11-02",
+      "530bd584105e4f25": "2026-11-02"
     }
   },
   "elegidas": [
@@ -47378,7 +47409,7 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T17:01:42-03:00",
+  "actualizado": "2026-11-02T17:21:27-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
