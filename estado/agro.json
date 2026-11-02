@@ -22779,6 +22779,69 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f6c3be039355b35c": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "ley de semillas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Abarca temas regulatorios y climáticos cruciales para toda la región núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f37ec2fdbe6bda55": {
+      "impacto_economico": 2,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 23,
+      "commercial_score": 25,
+      "subtema": "empresas",
+      "tema": "artesanía textil",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia cultural interesante pero de nula utilidad productiva o económica para el agro.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0f6bcbd1cbb1cd90": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 82,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad ganadera de la zona núcleo y genera debate en el sector.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24321,7 +24384,10 @@
       "https://bichosdecampo.com/__trashed-11": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026": "2026-11-02",
       "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales": "2026-11-02",
-      "https://agfundernews.com/fooditive-in-advanced-talks-to-commercialize-low-cal-rare-sugar-5-kdf": "2026-11-02"
+      "https://agfundernews.com/fooditive-in-advanced-talks-to-commercialize-low-cal-rare-sugar-5-kdf": "2026-11-02",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html": "2026-11-02",
+      "https://bichosdecampo.com/antes-de-llegar-a-los-hombros-de-la-sole-para-despedir-a-messi-el-poncho-argentino-paso-por-las-manos-de-graciela-y-su-familia-que-lleva-cinco-generaciones-con-ese-oficio-en-belen": "2026-11-02",
+      "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25862,7 +25928,10 @@
       "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas": "2026-11-02",
       "visec cuestionan las condiciones del sistema de trazabilidad para exportar a europa y alertan sobre descuentos del 10 a ganaderos": "2026-11-02",
       "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales": "2026-11-02",
-      "fooditive in advanced talks to commercialize low cal rare sugar 5 kdf": "2026-11-02"
+      "fooditive in advanced talks to commercialize low cal rare sugar 5 kdf": "2026-11-02",
+      "los temas calientes del campo con el subs manuel chiappe upov 91 nino inundaciones visec y mas": "2026-11-02",
+      "antes de llegar a los hombros de la sole para despedir a messi el poncho argentino paso por las manos de graciela y su familia que lleva cinco generaciones con ese oficio en belen": "2026-11-02",
+      "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27403,7 +27472,10 @@
       "c0afc98ff10029d4": "2026-11-02",
       "391920c97bc71a77": "2026-11-02",
       "cbc26383676c2865": "2026-11-02",
-      "8a8df26d28cb0f90": "2026-11-02"
+      "8a8df26d28cb0f90": "2026-11-02",
+      "f6c3be039355b35c": "2026-11-02",
+      "f37ec2fdbe6bda55": "2026-11-02",
+      "0f6bcbd1cbb1cd90": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46649,9 +46721,199 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bd0e46001df2_portada.jpg"
+    },
+    {
+      "id": "abcecdbb674b",
+      "cuando": "2026-11-02T14:20-03:00",
+      "titulo_original": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
+      "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que luego del análisis de los datos de comercio exterior internacionales correspondientes al cierre de 2025, publicados recientemente por COMETRADE (base de datos internacional de las Naciones Unidas), lo",
+      "fuente": "Secretaría de Agricultura",
+      "url": "https://www.argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
+      "titular": "Argentina lidera el comercio mundial con 52 productos agroindustriales",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 67,
+        "subtema": "mercados",
+        "tema": "exportaciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe oficial de comercio exterior sobre el liderazgo mundial de productos agroindustriales argentinos.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          64
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "eb28755b-6e06-4473-9bc7-766339db754e",
+          "slug": "la-agroindustria-nacional-posiciona-a-la-argentina-entre-los-ded371",
+          "url": "https://www.diariolacampaña.com.ar/n/la-agroindustria-nacional-posiciona-a-la-argentina-entre-los-ded371",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1451671723579452",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17963562945238455",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17929841331184510"
+        },
+        "historia_facebook": {
+          "id": "1481289597191457"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_abcecdbb674b_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "3d285ae44838",
+      "rep": {
+        "id": "3d285ae44838",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html",
+        "titulo": "Los temas \"calientes del Campo\" con el Subs. Manuel Chiappe: UPOV 91, Niño, inundaciones, Visec, y más",
+        "titulo_norm": "los temas calientes del campo con el subs manuel chiappe upov 91 nino inundaciones visec y mas",
+        "descripcion": "Los grandes temas del cam,po que pasan por la macroeconomía y por las polítcas agropecuarias y agroindustriales. Una charla con el Ing. Manuel Chiappe, subsecretario de Agricultura de la Nación, destacando la coordinación con la Agencia Federal de Emergencias ante el fenómeno del Niño. Subraya la importancia de la estabilidad macroeconómica para el crecimiento del sector agropecuario. Chiappe nos habla sobre UPOV 91 y la Ley de semillas engtre otros temas que impactan en los productores...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/rYZgiBqjyts.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-11-02T14:03-03:00",
+        "capturado": "2026-11-02T14:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f6c3be039355b35c"
+      },
+      "grupo": [
+        {
+          "id": "3d285ae44838",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html",
+          "titulo": "Los temas \"calientes del Campo\" con el Subs. Manuel Chiappe: UPOV 91, Niño, inundaciones, Visec, y más",
+          "titulo_norm": "los temas calientes del campo con el subs manuel chiappe upov 91 nino inundaciones visec y mas",
+          "descripcion": "Los grandes temas del cam,po que pasan por la macroeconomía y por las polítcas agropecuarias y agroindustriales. Una charla con el Ing. Manuel Chiappe, subsecretario de Agricultura de la Nación, destacando la coordinación con la Agencia Federal de Emergencias ante el fenómeno del Niño. Subraya la importancia de la estabilidad macroeconómica para el crecimiento del sector agropecuario. Chiappe nos habla sobre UPOV 91 y la Ley de semillas engtre otros temas que impactan en los productores...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/rYZgiBqjyts.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-11-02T14:03-03:00",
+          "capturado": "2026-11-02T14:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f6c3be039355b35c"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Abarca temas regulatorios y climáticos cruciales para toda la región núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-02T14:20-03:00"
+    },
+    {
+      "id": "94c071189ca9",
+      "rep": {
+        "id": "94c071189ca9",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada/",
+        "canonical_url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada",
+        "titulo": "Siete meses en baja y sin señales de piso: Caen los precios de la hacienda para faena y también de la invernada",
+        "titulo_norm": "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada",
+        "descripcion": "Las cotizaciones ganaderas siguen en baja. En marzo de este año se alcanzaron los máximos históricos, pero desde entonces se impuso en el negocio la realidad macroeconómica y social, y sus efectos se reflejaron en los valores de la hacienda, que comenzaron a retroceder de forma continua y marcada. En octubre, el novillo en el […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-11-02T14:01-03:00",
+        "capturado": "2026-11-02T14:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "0f6bcbd1cbb1cd90"
+      },
+      "grupo": [
+        {
+          "id": "94c071189ca9",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada/",
+          "canonical_url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada",
+          "titulo": "Siete meses en baja y sin señales de piso: Caen los precios de la hacienda para faena y también de la invernada",
+          "titulo_norm": "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada",
+          "descripcion": "Las cotizaciones ganaderas siguen en baja. En marzo de este año se alcanzaron los máximos históricos, pero desde entonces se impuso en el negocio la realidad macroeconómica y social, y sus efectos se reflejaron en los valores de la hacienda, que comenzaron a retroceder de forma continua y marcada. En octubre, el novillo en el […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-11-02T14:01-03:00",
+          "capturado": "2026-11-02T14:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "0f6bcbd1cbb1cd90"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 82,
+        "subtema": "ganaderia",
+        "tema": "hacienda",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad ganadera de la zona núcleo y genera debate en el sector.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-02T14:20-03:00"
+    },
     {
       "id": "5cfbb8f5167d",
       "rep": {
@@ -46715,73 +46977,6 @@
         "dobles": [
           58,
           62
-        ]
-      },
-      "cuando": "2026-11-02T13:00-03:00"
-    },
-    {
-      "id": "abcecdbb674b",
-      "rep": {
-        "id": "abcecdbb674b",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
-        "canonical_url": "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
-        "titulo": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
-        "titulo_norm": "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que luego del análisis de los datos de comercio exterior internacionales correspondientes al cierre de 2025, publicados recientemente por COMETRADE (base de datos internacional de las Naciones Unidas), los productos agroindustriales argentinos mejoraron su performance en el comercio mundial. La base del ranking se elaboró sobre las principales posiciones arancelarias exportadas por el país. El récord de exportaciones logrado en 2025 evidenció la mejora en el posicionamiento mundial de los productos argentinos. Entre los primeros 5 puestos se encuentran 26 productos agroindustriales argentinos liderando las exportaciones mundiales; mientras que hasta el puesto 20 se encuentran 52 productos de todas las regiones del país. De esta forma, Argentina pasó a ocupar el primer puesto como exportador mu",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/mani.png",
-        "autor": "pconsiglio",
-        "publicado": "2026-11-02T11:23-03:00",
-        "capturado": "2026-11-02T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cbc26383676c2865"
-      },
-      "grupo": [
-        {
-          "id": "abcecdbb674b",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
-          "canonical_url": "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales",
-          "titulo": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
-          "titulo_norm": "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación informa que luego del análisis de los datos de comercio exterior internacionales correspondientes al cierre de 2025, publicados recientemente por COMETRADE (base de datos internacional de las Naciones Unidas), los productos agroindustriales argentinos mejoraron su performance en el comercio mundial. La base del ranking se elaboró sobre las principales posiciones arancelarias exportadas por el país. El récord de exportaciones logrado en 2025 evidenció la mejora en el posicionamiento mundial de los productos argentinos. Entre los primeros 5 puestos se encuentran 26 productos agroindustriales argentinos liderando las exportaciones mundiales; mientras que hasta el puesto 20 se encuentran 52 productos de todas las regiones del país. De esta forma, Argentina pasó a ocupar el primer puesto como exportador mu",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/mani.png",
-          "autor": "pconsiglio",
-          "publicado": "2026-11-02T11:23-03:00",
-          "capturado": "2026-11-02T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cbc26383676c2865"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 10,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 62,
-        "commercial_score": 67,
-        "subtema": "mercados",
-        "tema": "exportaciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Informe oficial de comercio exterior sobre el liderazgo mundial de productos agroindustriales argentinos.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          62,
-          64
         ]
       },
       "cuando": "2026-11-02T13:00-03:00"
@@ -46917,8 +47112,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T14:05:12-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T14:25:07-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
