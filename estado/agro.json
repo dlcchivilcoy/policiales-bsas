@@ -22842,6 +22842,98 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "280a4750d2464a6b": {
+      "impacto_economico": 11,
+      "interes_productores": 11,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 55,
+      "commercial_score": 56,
+      "subtema": "empresas",
+      "tema": "renatre",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es de interés para empleadores rurales por costos laborales, aunque tiene bajo gancho comercial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        54
+      ]
+    },
+    "aac3911317575073": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "lluvias",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la campaña y la toma de decisiones de siembra en la región núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "189f17b980533203": {
+      "impacto_economico": 12,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 6,
+      "conversacion": 5,
+      "potencial_comercial": 3,
+      "ai_score": 44,
+      "commercial_score": 48,
+      "subtema": "agro",
+      "tema": "ajo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a economías regionales específicas y alejadas de la zona núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "acfb47cd4dbc6ff7": {
+      "impacto_economico": 6,
+      "interes_productores": 7,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 55,
+      "commercial_score": 57,
+      "subtema": "empresas",
+      "tema": "harina de banana",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente caso de agregado de valor y reconversión con gran potencial para redes y carrusel.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        43
+      ]
     }
   },
   "indice": {
@@ -24387,7 +24479,12 @@
       "https://agfundernews.com/fooditive-in-advanced-talks-to-commercialize-low-cal-rare-sugar-5-kdf": "2026-11-02",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249156-conversando-los-temas-calientes-del-campo-con-el-subs-manuel-chiape-upov-91-nino-inundaciones-visec-y-mas.html": "2026-11-02",
       "https://bichosdecampo.com/antes-de-llegar-a-los-hombros-de-la-sole-para-despedir-a-messi-el-poncho-argentino-paso-por-las-manos-de-graciela-y-su-familia-que-lleva-cinco-generaciones-con-ese-oficio-en-belen": "2026-11-02",
-      "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada": "2026-11-02"
+      "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada": "2026-11-02",
+      "https://infocampo.com.ar/liquidacion-de-divisas-del-agro-una-ventana-de-oportunidad-trajo-el-mejor-octubre-de-la-historia": "2026-11-02",
+      "https://infocampo.com.ar/prestacion-por-desempleo-para-trabajadores-rurales-sube-otro-5-y-llega-a-420-000": "2026-11-02",
+      "https://agrositio.com.ar/noticia/249157-lluvias-variables-y-un-enfriamiento-inoportuno-ccaagrositio.html": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/llovieron-170-mm-golpe-al-ajo-en-la-principal-zona-productora-en-un-momento-muy-critico-precios-nid02112026": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/fernando-ortiz-invirtio-us40000-para-hacer-harina-de-banana-sortear-un-problema-y-lo-logro-nos-nid02112026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25931,7 +26028,12 @@
       "fooditive in advanced talks to commercialize low cal rare sugar 5 kdf": "2026-11-02",
       "los temas calientes del campo con el subs manuel chiappe upov 91 nino inundaciones visec y mas": "2026-11-02",
       "antes de llegar a los hombros de la sole para despedir a messi el poncho argentino paso por las manos de graciela y su familia que lleva cinco generaciones con ese oficio en belen": "2026-11-02",
-      "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada": "2026-11-02"
+      "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada": "2026-11-02",
+      "liquidacion de divisas del agro una ventana de oportunidad trajo el mejor octubre de la historia": "2026-11-02",
+      "prestacion por desempleo para trabajadores rurales sube otro 5 y llega a 420 000": "2026-11-02",
+      "lluvias variables y un enfriamiento inoportuno cca agrositio": "2026-11-02",
+      "llovieron 170 mm golpe al ajo en la principal zona del pais precios por el piso y un costo millonario": "2026-11-02",
+      "fernando ortiz invirtio us 40 000 para hacer harina de banana evitar un problema y sorprendio nos estamos reconvirtiendo": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27475,7 +27577,12 @@
       "8a8df26d28cb0f90": "2026-11-02",
       "f6c3be039355b35c": "2026-11-02",
       "f37ec2fdbe6bda55": "2026-11-02",
-      "0f6bcbd1cbb1cd90": "2026-11-02"
+      "0f6bcbd1cbb1cd90": "2026-11-02",
+      "918e38e403169f68": "2026-11-02",
+      "280a4750d2464a6b": "2026-11-02",
+      "aac3911317575073": "2026-11-02",
+      "189f17b980533203": "2026-11-02",
+      "acfb47cd4dbc6ff7": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46785,6 +46892,73 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_abcecdbb674b_portada.jpg"
+    },
+    {
+      "id": "fef43706ee90",
+      "cuando": "2026-11-02T16:00-03:00",
+      "titulo_original": "Lluvias variables y un enfriamiento inoportuno – CCA/Agrositio",
+      "descripcion": "Se mantiene el diferencial de reservas entre el este y el oeste, aunque las mejoras en el centro sur de SF, este de CB y LP, son suficientes como para avanzar con las siembras. De todas maneras, es claro que la demanda del oeste es significativamente mayor que la del este....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249157-lluvias-variables-y-un-enfriamiento-inoportuno-ccaagrositio.html",
+      "titular": "Lluvias variables y riesgo de heladas débiles en la región pampeana",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la campaña y la toma de decisiones de siembra en la región núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "JgYY-thfPk4",
+          "url": "https://youtube.com/shorts/JgYY-thfPk4",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "bd25da4f-258b-4467-93e7-d7143245d328",
+          "slug": "pronostico-climatico-lluvias-variables-y-alerta-por-heladas-f266e9",
+          "url": "https://www.diariolacampaña.com.ar/n/pronostico-climatico-lluvias-variables-y-alerta-por-heladas-f266e9",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2679795762474231",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18077417321742817",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18110127152462378"
+        },
+        "historia_facebook": {
+          "id": "29619634294307470"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fef43706ee90_portada.jpg"
     }
   ],
   "pendientes": [
@@ -47112,8 +47286,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T14:25:07-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-02T16:04:56-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
