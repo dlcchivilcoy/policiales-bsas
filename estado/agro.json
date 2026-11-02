@@ -22210,6 +22210,27 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "de5761ac7512b806": {
+      "impacto_economico": 8,
+      "interes_productores": 4,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 3,
+      "ai_score": 46,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "guanacos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una propuesta innovadora para la Patagonia pero de baja relevancia práctica para el productor de la zona núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23716,7 +23737,8 @@
       "https://lanacion.com.ar/economia/campo/aduana-interior-cuando-una-provincia-cobra-antes-de-que-se-venda-un-producto-nid02112026": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026": "2026-11-02",
       "https://lacapital.com.ar/agro/santa-fe-propone-crear-un-fondo-infraestructura-agropecuaria-n10289816.html": "2026-11-02",
-      "https://intainforma.inta.gob.ar/recomendaciones-para-el-cuidado-de-las-majadas-frente-al-exceso-hidrico": "2026-11-02"
+      "https://intainforma.inta.gob.ar/recomendaciones-para-el-cuidado-de-las-majadas-frente-al-exceso-hidrico": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/manejan-una-estancia-de-33000-hectareas-trabajan-con-guanacos-y-venden-al-mundo-una-codiciada-fibra-nid02112026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25221,7 +25243,8 @@
       "aduana interior cuando una provincia cobra antes de que se venda un producto": "2026-11-02",
       "el poderio chino que abre oportunidades para la argentina en un sector estrategico": "2026-11-02",
       "santa fe propone crear un fondo de infraestructura agropecuaria": "2026-11-02",
-      "recomendaciones para el cuidado de las majadas frente al exceso hidrico": "2026-11-02"
+      "recomendaciones para el cuidado de las majadas frente al exceso hidrico": "2026-11-02",
+      "manejan una estancia de 33 000 hectareas trabajan con guanacos y venden al mundo una codiciada fibra tiene que ser revolucionario": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -26726,7 +26749,8 @@
       "22bcff393bf27cb0": "2026-11-02",
       "52661e838b0b97cc": "2026-11-02",
       "5869f7d79e73714d": "2026-11-02",
-      "366519b4ddb2da8b": "2026-11-02"
+      "366519b4ddb2da8b": "2026-11-02",
+      "de5761ac7512b806": "2026-11-02"
     }
   },
   "elegidas": [
@@ -45262,49 +45286,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a6fa7118d53d_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "a39532a9d80d",
-      "rep": {
-        "id": "a39532a9d80d",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026",
-        "titulo": "El poderío chino que abre oportunidades para la Argentina en un sector estratégico",
-        "titulo_norm": "el poderio chino que abre oportunidades para la argentina en un sector estrategico",
-        "descripcion": "Inteligencia artificial, robótica, maquinaria autónoma y conectividad marcaron la exposición CIAME 2026 en Tianjin; el desafío argentino es transformar estos avances en inversiones, productividad y alianzas industriales",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/G6DRT4IXL5F5FMD25KHCFQMGOY.jpg?auth=0cb742f5c491f88c55bcf8aa91e2e1d71dd08452ca77004f1a7e380b4e4acddf&smart=true",
-        "autor": "Maximiliano Postigo",
-        "publicado": "2026-11-02T03:00-03:00",
-        "capturado": "2026-11-02T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "52661e838b0b97cc"
-      },
-      "grupo": [
-        {
-          "id": "a39532a9d80d",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026",
-          "titulo": "El poderío chino que abre oportunidades para la Argentina en un sector estratégico",
-          "titulo_norm": "el poderio chino que abre oportunidades para la argentina en un sector estrategico",
-          "descripcion": "Inteligencia artificial, robótica, maquinaria autónoma y conectividad marcaron la exposición CIAME 2026 en Tianjin; el desafío argentino es transformar estos avances en inversiones, productividad y alianzas industriales",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/G6DRT4IXL5F5FMD25KHCFQMGOY.jpg?auth=0cb742f5c491f88c55bcf8aa91e2e1d71dd08452ca77004f1a7e380b4e4acddf&smart=true",
-          "autor": "Maximiliano Postigo",
-          "publicado": "2026-11-02T03:00-03:00",
-          "capturado": "2026-11-02T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "52661e838b0b97cc"
-        }
-      ],
+      "cuando": "2026-11-02T07:20-03:00",
+      "titulo_original": "El poderío chino que abre oportunidades para la Argentina en un sector estratégico",
+      "descripcion": "Inteligencia artificial, robótica, maquinaria autónoma y conectividad marcaron la exposición CIAME 2026 en Tianjin; el desafío argentino es transformar estos avances en inversiones, productividad y alianzas industriales",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-poderio-chino-que-abre-oportunidades-para-la-argentina-en-un-sector-estrategico-nid02112026/",
+      "titular": "La feria CIAME 2026 expone el avance global en maquinaria agrícola autónoma",
+      "volanta": "Maquinaria",
       "score": {
         "impacto_economico": 12,
         "interes_productores": 10,
@@ -45326,8 +45317,38 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-02T07:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "43b65c2c-f61a-45b0-935b-685b30696e8c",
+          "slug": "maquinaria-agricola-que-dejo-la-feria-ciame-2026-en-tianjin-y-e62505",
+          "url": "https://www.diariolacampaña.com.ar/n/maquinaria-agricola-que-dejo-la-feria-ciame-2026-en-tianjin-y-e62505",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "941136912194873",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18103748114058609",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18121228666748207"
+        },
+        "historia_facebook": {
+          "id": "1110518178633730"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a39532a9d80d_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "4d484a6f38fa",
       "rep": {
@@ -45459,8 +45480,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T07:05:59-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T07:24:17-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
