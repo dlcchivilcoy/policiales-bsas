@@ -22553,6 +22553,31 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c66a0b1e83b330b7": {
+      "impacto_economico": 10,
+      "interes_productores": 10,
+      "innovacion": 14,
+      "cercania_argentina": 4,
+      "cercania_pba": 2,
+      "potencial_reel": 8,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 61,
+      "commercial_score": 61,
+      "subtema": "agtech",
+      "tema": "tractores autonomos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Muestra una comparativa tecnológica de vanguardia entre robots de campo y tractores autónomos que interesa a productores innovadores.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        62
+      ]
     }
   },
   "indice": {
@@ -24077,7 +24102,8 @@
       "https://lanacion.com.ar/economia/campo/record-la-agroexportacion-registro-el-mejor-octubre-de-los-ultimos-25-anos-con-us2880-millones-nid02112026": "2026-11-02",
       "https://todoagro.com.ar/la-genetica-bovina-registro-una-suba-del-61": "2026-11-02",
       "https://bichosdecampo.com/el-smn-anticipa-un-verano-lluvioso-con-temporales-intensos-y-bajas-temperaturas-en-la-zona-central-argentina-pero-seco-y-caluoroso-en-el-noa": "2026-11-02",
-      "https://bichosdecampo.com/el-peronista-menos-pensado-para-asegurar-el-voto-de-los-estados-rurales-trump-prometio-15-mil-millones-de-dolares-para-compensar-la-suba-del-combustible-y-los-fertilizantes": "2026-11-02"
+      "https://bichosdecampo.com/el-peronista-menos-pensado-para-asegurar-el-voto-de-los-estados-rurales-trump-prometio-15-mil-millones-de-dolares-para-compensar-la-suba-del-combustible-y-los-fertilizantes": "2026-11-02",
+      "https://futurefarming.com/tech-in-focus/field-robots/26futweb-agbot-equus": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25600,7 +25626,8 @@
       "record la agroexportacion registro el mejor octubre de los ultimos 25 anos con us 2880 millones": "2026-11-02",
       "la genetica bovina registro una suba del 61": "2026-11-02",
       "el smn anticipa un verano lluvioso con temporales intensos y bajas temperaturas en la zona central argentina pero seco y caluoroso en el noa": "2026-11-02",
-      "el peronista menos pensado para asegurar el voto de los estados rurales trump prometio 15 mil millones de dolares para compensar la suba del combustible y los fertilizantes": "2026-11-02"
+      "el peronista menos pensado para asegurar el voto de los estados rurales trump prometio 15 mil millones de dolares para compensar la suba del combustible y los fertilizantes": "2026-11-02",
+      "field robot or autonomous tractor dutch grower puts both to the test": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27123,7 +27150,8 @@
       "446c0772264dcb3d": "2026-11-02",
       "c9dd198690bab76d": "2026-11-02",
       "612acfee01ecb87a": "2026-11-02",
-      "00fb06b9980c52f2": "2026-11-02"
+      "00fb06b9980c52f2": "2026-11-02",
+      "c66a0b1e83b330b7": "2026-11-02"
     }
   },
   "elegidas": [
@@ -45946,6 +45974,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4d484a6f38fa_portada.jpg"
+    },
+    {
+      "id": "87cb428fe626",
+      "cuando": "2026-11-02T11:00-03:00",
+      "titulo_original": "Field robot or autonomous tractor? Dutch grower puts both to the test",
+      "descripcion": "Field robot or autonomous tractor? Dutch grower puts both to the test Which makes more sense on an",
+      "fuente": "Future Farming",
+      "url": "https://www.futurefarming.com/tech-in-focus/field-robots/26futweb-agbot-equus/",
+      "titular": "Robots agrícolas y tractores autónomos: un productor neerlandés compara ambas tecnologías",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 10,
+        "innovacion": 14,
+        "cercania_argentina": 4,
+        "cercania_pba": 2,
+        "potencial_reel": 8,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 61,
+        "commercial_score": 61,
+        "subtema": "agtech",
+        "tema": "tractores autonomos",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Muestra una comparativa tecnológica de vanguardia entre robots de campo y tractores autónomos que interesa a productores innovadores.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          62
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f80eff70-f0c6-408d-afcb-1f18dfbf0d28",
+          "slug": "robot-agricola-o-tractor-autonomo-un-productor-compara-ambas-d1cfc8",
+          "url": "https://www.diariolacampaña.com.ar/n/robot-agricola-o-tractor-autonomo-un-productor-compara-ambas-d1cfc8",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1554868959993685",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18138286957645770",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18132097654750738"
+        },
+        "historia_facebook": {
+          "id": "1453197623417595"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_87cb428fe626_portada.jpg"
     }
   ],
   "pendientes": [
@@ -46281,8 +46373,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T10:45:57-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T11:04:51-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
