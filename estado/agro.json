@@ -23005,6 +23005,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3bbec57f9971546c": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad del productor de la región núcleo en plena siembra.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24560,7 +24581,9 @@
       "https://bichosdecampo.com/pauny-se-agrava-la-situacion-social-en-las-varillas-luego-del-fracaso-en-una-audiencia-entre-los-trabajadores-y-los-duenos-en-busca-de-saldar-deudas-salariales": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/tension-en-pauny-el-gremio-se-movilizo-y-advierte-sobre-mas-protestas-en-la-principal-fabrica-nid02112026": "2026-11-02",
       "https://infocampo.com.ar/la-operacion-rural-del-ano-las-900-000-hectareas-de-benetton-pasaron-a-manos-de-socios-de-adecoagro": "2026-11-02",
-      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html": "2026-11-02"
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html": "2026-11-02",
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/dolares-pese-al-record-de-octubre-en-2026-las-cerealeras-ingresarian-con-us28200-millones-un-10-nid02112026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26114,7 +26137,9 @@
       "pauny se agrava la situacion social en las varillas luego del fracaso en una audiencia entre los trabajadores y los duenos en busca de saldar deudas salariales": "2026-11-02",
       "tiene 450 empleados la uom se movilizo y advierte sobre mas protestas en pauny la principal fabrica nacional de tractores": "2026-11-02",
       "la operacion rural del ano las 900 000 hectareas de benetton pasaron a manos de socios de adecoagro": "2026-11-02",
-      "bajas en el trigo la cosecha arranca con precios a la baja y la peor racha global en casi tres decadas con clara treachi clinica de granos": "2026-11-02"
+      "bajas en el trigo la cosecha arranca con precios a la baja y la peor racha global en casi tres decadas con clara treachi clinica de granos": "2026-11-02",
+      "maiz bajo presion caidas en el mercado local y quinta semana en baja en chicago con clara treachi clinica de granos": "2026-11-02",
+      "dolares pese al record de octubre en 2026 las cerealeras ingresaran con us 28 200 millones un 10 menos que el ano pasado": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27668,7 +27693,9 @@
       "a579fd5d437664c8": "2026-11-02",
       "530bd584105e4f25": "2026-11-02",
       "9b4d3ab047265faa": "2026-11-02",
-      "47ec8824253c2663": "2026-11-02"
+      "47ec8824253c2663": "2026-11-02",
+      "3bbec57f9971546c": "2026-11-02",
+      "6428924bf39c9bcf": "2026-11-02"
     }
   },
   "elegidas": [
@@ -47172,9 +47199,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3d285ae44838_portada.jpg"
+    },
+    {
+      "id": "41dd633fd95f",
+      "cuando": "2026-11-02T18:20-03:00",
+      "titulo_original": "Huited color of Benetton: Los hermanos italianos ya no son los mayores terratenientes de la Argentina, pues cedieron todos sus campos (casi 1 millón de hectáreas) al grupo que vendió Adecoagro a un fondo crypto",
+      "descripcion": "Durante al menos tres décadas, los hermanos italianos Benetton, dedicados a la moda y la industria textil, fueron calificados como los mayores terratenientes de la Argentina pues efectivamente lo eran: poseían grandes estancias distribuidas entre Rio Negro, Chubut, Buenos Aires y Santa Cruz que, tod",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f/",
+      "titular": "Benetton vende sus campos y deja de ser el mayor terrateniente",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 66,
+        "subtema": "empresas",
+        "tema": "benetton",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran impacto por la magnitud de tierras y el cambio de manos histórico en el agronegocio argentino.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          69
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cc0b1377-ac07-426b-965b-7ce120c2444c",
+          "slug": "benetton-vendio-sus-campos-y-dejo-de-ser-el-mayor-terrateniente-0b7974",
+          "url": "https://www.diariolacampaña.com.ar/n/benetton-vendio-sus-campos-y-dejo-de-ser-el-mayor-terrateniente-0b7974",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1085262501230967",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18135379300781268",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17903391027378017"
+        },
+        "historia_facebook": {
+          "id": "2896745520698515"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_41dd633fd95f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "0348e93e1f88",
+      "rep": {
+        "id": "0348e93e1f88",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
+        "titulo": "Maíz bajo presión: caídas en el mercado local y quinta semana en baja en Chicago; con Clara Treachi - Clínica de Granos",
+        "titulo_norm": "maiz bajo presion caidas en el mercado local y quinta semana en baja en chicago con clara treachi clinica de granos",
+        "descripcion": "El mercado del maíz profundizó su tendencia bajista tanto en el plano local como internacional. La siembra temprana ya cubre el 47,3% del área prevista. En tanto, Chicago acumuló su quinta semana consecutiva con pérdidas, presionado por el ingreso de la segunda mayor cosecha histórica estadounidense y la pérdida de competitividad exportadora frente a Brasil, factores que opacaron la menor producción reportada por la Unión Europea...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/1H5GCa36k1o.jpg",
+        "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
+        "publicado": "2026-11-02T18:13-03:00",
+        "capturado": "2026-11-02T18:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3bbec57f9971546c"
+      },
+      "grupo": [
+        {
+          "id": "0348e93e1f88",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
+          "titulo": "Maíz bajo presión: caídas en el mercado local y quinta semana en baja en Chicago; con Clara Treachi - Clínica de Granos",
+          "titulo_norm": "maiz bajo presion caidas en el mercado local y quinta semana en baja en chicago con clara treachi clinica de granos",
+          "descripcion": "El mercado del maíz profundizó su tendencia bajista tanto en el plano local como internacional. La siembra temprana ya cubre el 47,3% del área prevista. En tanto, Chicago acumuló su quinta semana consecutiva con pérdidas, presionado por el ingreso de la segunda mayor cosecha histórica estadounidense y la pérdida de competitividad exportadora frente a Brasil, factores que opacaron la menor producción reportada por la Unión Europea...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/1H5GCa36k1o.jpg",
+          "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
+          "publicado": "2026-11-02T18:13-03:00",
+          "capturado": "2026-11-02T18:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3bbec57f9971546c"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad del productor de la región núcleo en plena siembra.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-02T18:20-03:00"
+    },
     {
       "id": "d39a32eb0d38",
       "rep": {
@@ -47237,73 +47391,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-02T18:00-03:00"
-    },
-    {
-      "id": "41dd633fd95f",
-      "rep": {
-        "id": "41dd633fd95f",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f/",
-        "canonical_url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f",
-        "titulo": "Huited color of Benetton: Los hermanos italianos ya no son los mayores terratenientes de la Argentina, pues cedieron todos sus campos (casi 1 millón de hectáreas) al grupo que vendió Adecoagro a un fondo crypto",
-        "titulo_norm": "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto",
-        "descripcion": "Durante al menos tres décadas, los hermanos italianos Benetton, dedicados a la moda y la industria textil, fueron calificados como los mayores terratenientes de la Argentina pues efectivamente lo eran: poseían grandes estancias distribuidas entre Rio Negro, Chubut, Buenos Aires y Santa Cruz que, todas juntas, superaban las 920 mil hectáreas. Pero eso se acabó, […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/20251203_163221-scaled-1.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-02T16:02-03:00",
-        "capturado": "2026-11-02T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "93bb6fcdee11205e"
-      },
-      "grupo": [
-        {
-          "id": "41dd633fd95f",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f/",
-          "canonical_url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f",
-          "titulo": "Huited color of Benetton: Los hermanos italianos ya no son los mayores terratenientes de la Argentina, pues cedieron todos sus campos (casi 1 millón de hectáreas) al grupo que vendió Adecoagro a un fondo crypto",
-          "titulo_norm": "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto",
-          "descripcion": "Durante al menos tres décadas, los hermanos italianos Benetton, dedicados a la moda y la industria textil, fueron calificados como los mayores terratenientes de la Argentina pues efectivamente lo eran: poseían grandes estancias distribuidas entre Rio Negro, Chubut, Buenos Aires y Santa Cruz que, todas juntas, superaban las 920 mil hectáreas. Pero eso se acabó, […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/20251203_163221-scaled-1.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-02T16:02-03:00",
-          "capturado": "2026-11-02T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "93bb6fcdee11205e"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 5,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 68,
-        "commercial_score": 66,
-        "subtema": "empresas",
-        "tema": "benetton",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Gran impacto por la magnitud de tierras y el cambio de manos histórico en el agronegocio argentino.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          69
-        ]
-      },
-      "cuando": "2026-11-02T16:20-03:00"
     },
     {
       "id": "5cfbb8f5167d",
@@ -47503,8 +47590,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T18:04:11-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T18:24:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
