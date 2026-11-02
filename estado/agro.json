@@ -22934,6 +22934,31 @@
         67,
         43
       ]
+    },
+    "93bb6fcdee11205e": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 68,
+      "commercial_score": 66,
+      "subtema": "empresas",
+      "tema": "benetton",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran impacto por la magnitud de tierras y el cambio de manos histórico en el agronegocio argentino.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        69
+      ]
     }
   },
   "indice": {
@@ -24484,7 +24509,8 @@
       "https://infocampo.com.ar/prestacion-por-desempleo-para-trabajadores-rurales-sube-otro-5-y-llega-a-420-000": "2026-11-02",
       "https://agrositio.com.ar/noticia/249157-lluvias-variables-y-un-enfriamiento-inoportuno-ccaagrositio.html": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/llovieron-170-mm-golpe-al-ajo-en-la-principal-zona-productora-en-un-momento-muy-critico-precios-nid02112026": "2026-11-02",
-      "https://lanacion.com.ar/economia/campo/fernando-ortiz-invirtio-us40000-para-hacer-harina-de-banana-sortear-un-problema-y-lo-logro-nos-nid02112026": "2026-11-02"
+      "https://lanacion.com.ar/economia/campo/fernando-ortiz-invirtio-us40000-para-hacer-harina-de-banana-sortear-un-problema-y-lo-logro-nos-nid02112026": "2026-11-02",
+      "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26033,7 +26059,8 @@
       "prestacion por desempleo para trabajadores rurales sube otro 5 y llega a 420 000": "2026-11-02",
       "lluvias variables y un enfriamiento inoportuno cca agrositio": "2026-11-02",
       "llovieron 170 mm golpe al ajo en la principal zona del pais precios por el piso y un costo millonario": "2026-11-02",
-      "fernando ortiz invirtio us 40 000 para hacer harina de banana evitar un problema y sorprendio nos estamos reconvirtiendo": "2026-11-02"
+      "fernando ortiz invirtio us 40 000 para hacer harina de banana evitar un problema y sorprendio nos estamos reconvirtiendo": "2026-11-02",
+      "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27582,7 +27609,8 @@
       "280a4750d2464a6b": "2026-11-02",
       "aac3911317575073": "2026-11-02",
       "189f17b980533203": "2026-11-02",
-      "acfb47cd4dbc6ff7": "2026-11-02"
+      "acfb47cd4dbc6ff7": "2026-11-02",
+      "93bb6fcdee11205e": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46959,9 +46987,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fef43706ee90_portada.jpg"
+    },
+    {
+      "id": "94c071189ca9",
+      "cuando": "2026-11-02T16:20-03:00",
+      "titulo_original": "Siete meses en baja y sin señales de piso: Caen los precios de la hacienda para faena y también de la invernada",
+      "descripcion": "Las cotizaciones ganaderas siguen en baja. En marzo de este año se alcanzaron los máximos históricos, pero desde entonces se impuso en el negocio la realidad macroeconómica y social, y sus efectos se reflejaron en los valores de la hacienda, que comenzaron a retroceder de forma continua y marcada. E",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada/",
+      "titular": "Caen los precios de la hacienda y la invernada en el mercado",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 82,
+        "subtema": "ganaderia",
+        "tema": "hacienda",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad ganadera de la zona núcleo y genera debate en el sector.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a847ae02-92db-494c-a741-41961b991851",
+          "slug": "caen-los-precios-de-la-hacienda-y-la-invernada-tras-siete-meses-2a156e",
+          "url": "https://www.diariolacampaña.com.ar/n/caen-los-precios-de-la-hacienda-y-la-invernada-tras-siete-meses-2a156e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2251002382510112",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18044631302837746",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18169644577467138"
+        },
+        "historia_facebook": {
+          "id": "2197584704976704"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_94c071189ca9_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "41dd633fd95f",
+      "rep": {
+        "id": "41dd633fd95f",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f/",
+        "canonical_url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f",
+        "titulo": "Huited color of Benetton: Los hermanos italianos ya no son los mayores terratenientes de la Argentina, pues cedieron todos sus campos (casi 1 millón de hectáreas) al grupo que vendió Adecoagro a un fondo crypto",
+        "titulo_norm": "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto",
+        "descripcion": "Durante al menos tres décadas, los hermanos italianos Benetton, dedicados a la moda y la industria textil, fueron calificados como los mayores terratenientes de la Argentina pues efectivamente lo eran: poseían grandes estancias distribuidas entre Rio Negro, Chubut, Buenos Aires y Santa Cruz que, todas juntas, superaban las 920 mil hectáreas. Pero eso se acabó, […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/20251203_163221-scaled-1.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-02T16:02-03:00",
+        "capturado": "2026-11-02T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "93bb6fcdee11205e"
+      },
+      "grupo": [
+        {
+          "id": "41dd633fd95f",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f/",
+          "canonical_url": "https://bichosdecampo.com/huited-color-of-benetton-los-hermanos-italianos-ya-no-son-los-mayores-terratenientes-de-la-argentina-pues-cedieron-todos-sus-campos-casi-1-millon-de-hectareas-al-grupo-que-vendio-adecoagro-a-un-f",
+          "titulo": "Huited color of Benetton: Los hermanos italianos ya no son los mayores terratenientes de la Argentina, pues cedieron todos sus campos (casi 1 millón de hectáreas) al grupo que vendió Adecoagro a un fondo crypto",
+          "titulo_norm": "huited color of benetton los hermanos italianos ya no son los mayores terratenientes de la argentina pues cedieron todos sus campos casi 1 millon de hectareas al grupo que vendio adecoagro a un fondo crypto",
+          "descripcion": "Durante al menos tres décadas, los hermanos italianos Benetton, dedicados a la moda y la industria textil, fueron calificados como los mayores terratenientes de la Argentina pues efectivamente lo eran: poseían grandes estancias distribuidas entre Rio Negro, Chubut, Buenos Aires y Santa Cruz que, todas juntas, superaban las 920 mil hectáreas. Pero eso se acabó, […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/20251203_163221-scaled-1.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-02T16:02-03:00",
+          "capturado": "2026-11-02T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "93bb6fcdee11205e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 66,
+        "subtema": "empresas",
+        "tema": "benetton",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran impacto por la magnitud de tierras y el cambio de manos histórico en el agronegocio argentino.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          69
+        ]
+      },
+      "cuando": "2026-11-02T16:20-03:00"
+    },
     {
       "id": "3d285ae44838",
       "rep": {
@@ -47021,69 +47176,6 @@
         "tema_doc": "reglas",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-02T14:20-03:00"
-    },
-    {
-      "id": "94c071189ca9",
-      "rep": {
-        "id": "94c071189ca9",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada/",
-        "canonical_url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada",
-        "titulo": "Siete meses en baja y sin señales de piso: Caen los precios de la hacienda para faena y también de la invernada",
-        "titulo_norm": "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada",
-        "descripcion": "Las cotizaciones ganaderas siguen en baja. En marzo de este año se alcanzaron los máximos históricos, pero desde entonces se impuso en el negocio la realidad macroeconómica y social, y sus efectos se reflejaron en los valores de la hacienda, que comenzaron a retroceder de forma continua y marcada. En octubre, el novillo en el […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-02T14:01-03:00",
-        "capturado": "2026-11-02T14:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0f6bcbd1cbb1cd90"
-      },
-      "grupo": [
-        {
-          "id": "94c071189ca9",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada/",
-          "canonical_url": "https://bichosdecampo.com/siete-meses-en-baja-y-sin-senales-de-piso-caen-los-precios-de-la-hacienda-para-faena-y-tambien-de-la-invernada",
-          "titulo": "Siete meses en baja y sin señales de piso: Caen los precios de la hacienda para faena y también de la invernada",
-          "titulo_norm": "siete meses en baja y sin senales de piso caen los precios de la hacienda para faena y tambien de la invernada",
-          "descripcion": "Las cotizaciones ganaderas siguen en baja. En marzo de este año se alcanzaron los máximos históricos, pero desde entonces se impuso en el negocio la realidad macroeconómica y social, y sus efectos se reflejaron en los valores de la hacienda, que comenzaron a retroceder de forma continua y marcada. En octubre, el novillo en el […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/01/carne.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-02T14:01-03:00",
-          "capturado": "2026-11-02T14:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0f6bcbd1cbb1cd90"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 77,
-        "commercial_score": 82,
-        "subtema": "ganaderia",
-        "tema": "hacienda",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta directamente en la rentabilidad ganadera de la zona núcleo y genera debate en el sector.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-02T14:20-03:00"
@@ -47286,8 +47378,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T16:04:56-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T16:24:10-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
