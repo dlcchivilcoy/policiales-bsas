@@ -65,7 +65,9 @@ TITULOS_RESPALDO = ("Qué pasó", "Los detalles", "La investigación", "Cómo si
 
 
 def formato_redes() -> str:
-    return "carrusel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "carrusel" else "reel"
+    """02/11/2026 («volver carrusel los reels de policiales»): de fábrica CARRUSEL «deslizá y leé» en Instagram y
+    Facebook (como del 24/10 al 31/10); POL_FORMATO=reel vuelve al reel."""
+    return "reel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "reel" else "carrusel"
 
 
 def laminas_de(g: dict) -> list:
