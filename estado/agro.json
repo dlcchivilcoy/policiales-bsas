@@ -22511,6 +22511,48 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "612acfee01ecb87a": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 79,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "clima",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente la campaña gruesa en la zona núcleo de Buenos Aires con un pronóstico clave.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "00fb06b9980c52f2": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 0,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 23,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "subsidios eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una medida de política interna de Estados Unidos con nulo impacto operativo directo en la región núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24033,7 +24075,9 @@
       "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas": "2026-11-02",
       "https://bichosdecampo.com/el-ultimo-empujoncito-la-prestacion-por-desempleo-aumenta-5-y-un-peon-rural-que-se-quede-sin-trabajo-cobrara-hasta-420-mil-pesos": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/record-la-agroexportacion-registro-el-mejor-octubre-de-los-ultimos-25-anos-con-us2880-millones-nid02112026": "2026-11-02",
-      "https://todoagro.com.ar/la-genetica-bovina-registro-una-suba-del-61": "2026-11-02"
+      "https://todoagro.com.ar/la-genetica-bovina-registro-una-suba-del-61": "2026-11-02",
+      "https://bichosdecampo.com/el-smn-anticipa-un-verano-lluvioso-con-temporales-intensos-y-bajas-temperaturas-en-la-zona-central-argentina-pero-seco-y-caluoroso-en-el-noa": "2026-11-02",
+      "https://bichosdecampo.com/el-peronista-menos-pensado-para-asegurar-el-voto-de-los-estados-rurales-trump-prometio-15-mil-millones-de-dolares-para-compensar-la-suba-del-combustible-y-los-fertilizantes": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25554,7 +25598,9 @@
       "un ano despues del prestamo de las cerealeras a milei para que ganara las elecciones todavia se siente la factura en el ingreso de divisas": "2026-11-02",
       "el ultimo empujoncito la prestacion por desempleo aumenta 5 y un peon rural que se quede sin trabajo cobrara hasta 420 mil pesos": "2026-11-02",
       "record la agroexportacion registro el mejor octubre de los ultimos 25 anos con us 2880 millones": "2026-11-02",
-      "la genetica bovina registro una suba del 61": "2026-11-02"
+      "la genetica bovina registro una suba del 61": "2026-11-02",
+      "el smn anticipa un verano lluvioso con temporales intensos y bajas temperaturas en la zona central argentina pero seco y caluoroso en el noa": "2026-11-02",
+      "el peronista menos pensado para asegurar el voto de los estados rurales trump prometio 15 mil millones de dolares para compensar la suba del combustible y los fertilizantes": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27075,7 +27121,9 @@
       "1d4bb7a111171890": "2026-11-02",
       "c62e09c2d0c12faa": "2026-11-02",
       "446c0772264dcb3d": "2026-11-02",
-      "c9dd198690bab76d": "2026-11-02"
+      "c9dd198690bab76d": "2026-11-02",
+      "612acfee01ecb87a": "2026-11-02",
+      "00fb06b9980c52f2": "2026-11-02"
     }
   },
   "elegidas": [
@@ -45798,6 +45846,106 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_33abda44b4a2_portada.jpg"
+    },
+    {
+      "id": "8bc85b2f1420",
+      "cuando": "2026-11-02T10:40-03:00",
+      "titulo_original": "El SMN anticipa un verano lluvioso con temporales intensos y bajas temperaturas en la zona central argentina, pero seco y caluoroso en el NOA",
+      "descripcion": "Para el próximo trimestre se prevén lluvias abundantes sobre gran parte del centro y norte del territorio argentino ante la influencia de un evento ENSO “El Niño” muy fuerte (“Súper Niño”), pero en sectores del NOA el pronóstico no sigue ese patrón. El Servicio Meteorológico Nacional (SMN) proyectó ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-smn-anticipa-un-verano-lluvioso-con-temporales-intensos-y-bajas-temperaturas-en-la-zona-central-argentina-pero-seco-y-caluoroso-en-el-noa/",
+      "titular": "El SMN anuncia verano lluvioso y fresco en la región central",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 79,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la campaña gruesa en la zona núcleo de Buenos Aires con un pronóstico clave.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T10:40:00-03:00"
+    },
+    {
+      "id": "4d484a6f38fa",
+      "cuando": "2026-11-02T10:40-03:00",
+      "titulo_original": "Justo a tiempo: En octubre el volumen operado con futuros de trigo se multiplicó por tres",
+      "descripcion": "En octubre pasado se negociaron en A3 Mercados contratos agrícolas por 11,871 millones de toneladas, una cifra 43% superior a la registrada en el mismo mes de 2025. El gran protagonista el mes pasado fue el trigo, que acumuló operaciones por 3,102 millones de toneladas de la mano del alza de precios",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres/",
+      "titular": "Trigo: el volumen operado en futuros se triplicó durante octubre",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 4,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un fuerte movimiento en el mercado de futuros de trigo local, clave para la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          70
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4da0c427-45bb-4d75-94fb-6d40e85de174",
+          "slug": "trigo-se-triplico-el-volumen-operado-en-futuros-durante-octubre-457e6b",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-se-triplico-el-volumen-operado-en-futuros-durante-octubre-457e6b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1794725635185323",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18037758350908303",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18112863932522436"
+        },
+        "historia_facebook": {
+          "id": "1840423267141638"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4d484a6f38fa_portada.jpg"
     }
   ],
   "pendientes": [
@@ -46070,73 +46218,6 @@
       "cuando": "2026-11-02T10:00-03:00"
     },
     {
-      "id": "4d484a6f38fa",
-      "rep": {
-        "id": "4d484a6f38fa",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres/",
-        "canonical_url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres",
-        "titulo": "Justo a tiempo: En octubre el volumen operado con futuros de trigo se multiplicó por tres",
-        "titulo_norm": "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres",
-        "descripcion": "En octubre pasado se negociaron en A3 Mercados contratos agrícolas por 11,871 millones de toneladas, una cifra 43% superior a la registrada en el mismo mes de 2025. El gran protagonista el mes pasado fue el trigo, que acumuló operaciones por 3,102 millones de toneladas de la mano del alza de precios registrada por el […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/A3.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-01T16:54-03:00",
-        "capturado": "2026-11-01T17:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3947be9a26ef2765"
-      },
-      "grupo": [
-        {
-          "id": "4d484a6f38fa",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres/",
-          "canonical_url": "https://bichosdecampo.com/justo-a-tiempo-en-octubre-el-volumen-operado-con-futuros-de-trigo-se-multiplico-por-tres",
-          "titulo": "Justo a tiempo: En octubre el volumen operado con futuros de trigo se multiplicó por tres",
-          "titulo_norm": "justo a tiempo en octubre el volumen operado con futuros de trigo se multiplico por tres",
-          "descripcion": "En octubre pasado se negociaron en A3 Mercados contratos agrícolas por 11,871 millones de toneladas, una cifra 43% superior a la registrada en el mismo mes de 2025. El gran protagonista el mes pasado fue el trigo, que acumuló operaciones por 3,102 millones de toneladas de la mano del alza de precios registrada por el […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/A3.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-01T16:54-03:00",
-          "capturado": "2026-11-01T17:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3947be9a26ef2765"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 7,
-        "potencial_comercial": 4,
-        "ai_score": 67,
-        "commercial_score": 70,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Muestra un fuerte movimiento en el mercado de futuros de trigo local, clave para la zona núcleo.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          70
-        ]
-      },
-      "cuando": "2026-11-01T17:00-03:00"
-    },
-    {
       "id": "e1e4c432f4af",
       "rep": {
         "id": "e1e4c432f4af",
@@ -46200,8 +46281,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T10:23:53-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-02T10:45:57-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
