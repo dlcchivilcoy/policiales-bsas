@@ -22758,6 +22758,27 @@
         62,
         64
       ]
+    },
+    "8a8df26d28cb0f90": {
+      "impacto_economico": 5,
+      "interes_productores": 2,
+      "innovacion": 10,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 2,
+      "potencial_comercial": 4,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "azucar 5-kdf",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una innovación biotecnológica interesante a nivel global, pero tiene nula incidencia directa para el productor de la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24299,7 +24320,8 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-fernanda-gonzalez-sanjuan-se-pregunta-por-que-hay-que-producir-cada-vez-mas-y-con-recursos-limitados-si-despues-esa-comida-no-llega-parejo-a-todos": "2026-11-02",
       "https://bichosdecampo.com/__trashed-11": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/visec-cra-cuestiono-las-condiciones-del-sistema-de-trazabilidad-para-exportar-a-europa-y-alerto-nid02112026": "2026-11-02",
-      "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales": "2026-11-02"
+      "https://argentina.gob.ar/noticias/mas-de-50-productos-argentinos-ocupan-los-primeros-puestos-como-exportadores-mundiales": "2026-11-02",
+      "https://agfundernews.com/fooditive-in-advanced-talks-to-commercialize-low-cal-rare-sugar-5-kdf": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -25839,7 +25861,8 @@
       "los dilemas de la agronomia fernanda gonzalez sanjuan se pregunta por que hay que producir cada vez mas y con recursos limitados si despues esa comida no llega parejo a todos": "2026-11-02",
       "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas": "2026-11-02",
       "visec cuestionan las condiciones del sistema de trazabilidad para exportar a europa y alertan sobre descuentos del 10 a ganaderos": "2026-11-02",
-      "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales": "2026-11-02"
+      "mas de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales": "2026-11-02",
+      "fooditive in advanced talks to commercialize low cal rare sugar 5 kdf": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27379,7 +27402,8 @@
       "9acebe1f8e623843": "2026-11-02",
       "c0afc98ff10029d4": "2026-11-02",
       "391920c97bc71a77": "2026-11-02",
-      "cbc26383676c2865": "2026-11-02"
+      "cbc26383676c2865": "2026-11-02",
+      "8a8df26d28cb0f90": "2026-11-02"
     }
   },
   "elegidas": [
@@ -46397,6 +46421,110 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_52199538d44e_portada.jpg"
+    },
+    {
+      "id": "6b669c7f82b3",
+      "cuando": "2026-11-02T13:20-03:00",
+      "titulo_original": "Un año después del “préstamo” de las cerealeras a Milei para que ganara las elecciones, todavía se siente la factura en el ingreso de divisas",
+      "descripcion": "Casi con vergüenza, la Cámara de la Industria Aceitera y el Centro de Exportadores de Cereales (Ciara-CEC) presentó en la última línea de su informe mensual sobre la liquidación de divisas del sector, el dato más importante: la variación de esa inyección de dólares a la economía, comparada contra oc",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas/",
+      "titular": "Ciara-Cec reporta una baja interanual en la liquidación de divisas",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 10,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 64,
+        "commercial_score": 68,
+        "subtema": "mercados",
+        "tema": "liquidación de divisas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Análisis del impacto cambiario y comercial de las cerealeras, de alto interés macroeconómico para el sector.",
+        "tema_doc": "dolar",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          56
+        ]
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T13:20:00-03:00"
+    },
+    {
+      "id": "618692cb0506",
+      "cuando": "2026-11-02T13:20-03:00",
+      "titulo_original": "Chicago busca estabilizarse, pero los fondos siguen reduciendo posiciones",
+      "descripcion": "La liquidación financiera continúa presionando a los granos, aunque la soja encuentra respaldo en el regreso de China al mercado. Las ventas externas acumuladas de Estados Unidos superan en un 80% las del mismo período del año pasado....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249137-chicago-busca-estabilizarse-pero-los-fondos-siguen-reduciendo-posiciones.html",
+      "titular": "Chicago busca estabilizarse mientras los fondos reducen posiciones en granos",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 64,
+        "subtema": "mercados",
+        "tema": "chicago",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Los movimientos de Chicago impactan directamente en los precios locales y la comercialización de granos.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          60
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "66b2fd50-ffb0-4255-bd26-9457baf607b2",
+          "slug": "chicago-busca-estabilizarse-pero-los-fondos-reducen-posiciones-61fd4a",
+          "url": "https://www.diariolacampaña.com.ar/n/chicago-busca-estabilizarse-pero-los-fondos-reducen-posiciones-61fd4a",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1867416701276399",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18120994597990158",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18229618585329924"
+        },
+        "historia_facebook": {
+          "id": "1786012635984936"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_618692cb0506_portada.jpg"
     }
   ],
   "pendientes": [
@@ -46732,140 +46860,6 @@
       "cuando": "2026-11-02T10:00-03:00"
     },
     {
-      "id": "618692cb0506",
-      "rep": {
-        "id": "618692cb0506",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249137-chicago-busca-estabilizarse-pero-los-fondos-siguen-reduciendo-posiciones.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249137-chicago-busca-estabilizarse-pero-los-fondos-siguen-reduciendo-posiciones.html",
-        "titulo": "Chicago busca estabilizarse, pero los fondos siguen reduciendo posiciones",
-        "titulo_norm": "chicago busca estabilizarse pero los fondos siguen reduciendo posiciones",
-        "descripcion": "La liquidación financiera continúa presionando a los granos, aunque la soja encuentra respaldo en el regreso de China al mercado. Las ventas externas acumuladas de Estados Unidos superan en un 80% las del mismo período del año pasado....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249137_96792214.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-11-02T09:41-03:00",
-        "capturado": "2026-11-02T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "24216eddefc23565"
-      },
-      "grupo": [
-        {
-          "id": "618692cb0506",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249137-chicago-busca-estabilizarse-pero-los-fondos-siguen-reduciendo-posiciones.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249137-chicago-busca-estabilizarse-pero-los-fondos-siguen-reduciendo-posiciones.html",
-          "titulo": "Chicago busca estabilizarse, pero los fondos siguen reduciendo posiciones",
-          "titulo_norm": "chicago busca estabilizarse pero los fondos siguen reduciendo posiciones",
-          "descripcion": "La liquidación financiera continúa presionando a los granos, aunque la soja encuentra respaldo en el regreso de China al mercado. Las ventas externas acumuladas de Estados Unidos superan en un 80% las del mismo período del año pasado....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249137_96792214.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-11-02T09:41-03:00",
-          "capturado": "2026-11-02T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "24216eddefc23565"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 64,
-        "subtema": "mercados",
-        "tema": "chicago",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Los movimientos de Chicago impactan directamente en los precios locales y la comercialización de granos.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          60
-        ]
-      },
-      "cuando": "2026-11-02T10:00-03:00"
-    },
-    {
-      "id": "6b669c7f82b3",
-      "rep": {
-        "id": "6b669c7f82b3",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas/",
-        "canonical_url": "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas",
-        "titulo": "Un año después del “préstamo” de las cerealeras a Milei para que ganara las elecciones, todavía se siente la factura en el ingreso de divisas",
-        "titulo_norm": "un ano despues del prestamo de las cerealeras a milei para que ganara las elecciones todavia se siente la factura en el ingreso de divisas",
-        "descripcion": "Casi con vergüenza, la Cámara de la Industria Aceitera y el Centro de Exportadores de Cereales (Ciara-CEC) presentó en la última línea de su informe mensual sobre la liquidación de divisas del sector, el dato más importante: la variación de esa inyección de dólares a la economía, comparada contra octubre del año anterior. “El mes […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-02T09:06-03:00",
-        "capturado": "2026-11-02T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1d4bb7a111171890"
-      },
-      "grupo": [
-        {
-          "id": "6b669c7f82b3",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas/",
-          "canonical_url": "https://bichosdecampo.com/un-ano-despues-del-prestamo-de-las-cerealeras-a-milei-para-que-ganara-las-elecciones-todavia-se-siente-la-factura-en-el-ingreso-de-divisas",
-          "titulo": "Un año después del “préstamo” de las cerealeras a Milei para que ganara las elecciones, todavía se siente la factura en el ingreso de divisas",
-          "titulo_norm": "un ano despues del prestamo de las cerealeras a milei para que ganara las elecciones todavia se siente la factura en el ingreso de divisas",
-          "descripcion": "Casi con vergüenza, la Cámara de la Industria Aceitera y el Centro de Exportadores de Cereales (Ciara-CEC) presentó en la última línea de su informe mensual sobre la liquidación de divisas del sector, el dato más importante: la variación de esa inyección de dólares a la economía, comparada contra octubre del año anterior. “El mes […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-02T09:06-03:00",
-          "capturado": "2026-11-02T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1d4bb7a111171890"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 10,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 64,
-        "commercial_score": 68,
-        "subtema": "mercados",
-        "tema": "liquidación de divisas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Análisis del impacto cambiario y comercial de las cerealeras, de alto interés macroeconómico para el sector.",
-        "tema_doc": "dolar",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          56
-        ]
-      },
-      "cuando": "2026-11-02T10:00-03:00"
-    },
-    {
       "id": "e1e4c432f4af",
       "rep": {
         "id": "e1e4c432f4af",
@@ -46929,8 +46923,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T13:05:10-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-02T13:24:49-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
