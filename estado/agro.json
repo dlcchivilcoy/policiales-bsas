@@ -23126,6 +23126,27 @@
         62,
         69
       ]
+    },
+    "219330511841a5a0": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en los acopiadores y productores de la región núcleo que deben cumplir con la trazabilidad para exportar a la UE.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24688,7 +24709,8 @@
       "https://agrositio.com.ar/noticia/249163-acorralada-por-el-petroleo-y-la-oferta-presente-y-futura-la-soja-cae-abruptamente-por-manuel-alvarado-ledesma.html": "2026-11-02",
       "https://lanacion.com.ar/economia/campo/esta-en-rosario-molinos-rio-de-la-plata-concreto-la-venta-de-parte-de-un-historico-complejo-nid02112026": "2026-11-02",
       "https://infocampo.com.ar/la-visita-del-papa-tendra-presencia-del-campo-la-mesa-de-enlace-estara-en-una-reunion-con-leon-xiv": "2026-11-02",
-      "https://bichosdecampo.com/si-no-robar-es-un-mandamiento-y-las-retenciones-son-un-robo-podra-la-mesa-de-enlace-lograr-que-el-papa-rece-por-el-final-de-ese-tributo": "2026-11-02"
+      "https://bichosdecampo.com/si-no-robar-es-un-mandamiento-y-las-retenciones-son-un-robo-podra-la-mesa-de-enlace-lograr-que-el-papa-rece-por-el-final-de-ese-tributo": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/visec-tras-un-reclamo-los-acopiadores-podran-habilitar-sin-cargo-sus-plantas-para-operar-con-el-nid02112026": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26249,7 +26271,8 @@
       "acorralada por el petroleo y la oferta presente y futura la soja cae abruptamente por manuel alvarado ledesma": "2026-11-02",
       "esta en rosario molinos rio de la plata concreto la venta de parte de un historico complejo industrial": "2026-11-02",
       "la visita del papa tendra presencia del campo la mesa de enlace estara en una reunion con leon xiv": "2026-11-02",
-      "si no robar es un mandamiento y las retenciones son un robo podra la mesa de enlace lograr que el papa rece por el final de ese tributo": "2026-11-02"
+      "si no robar es un mandamiento y las retenciones son un robo podra la mesa de enlace lograr que el papa rece por el final de ese tributo": "2026-11-02",
+      "visec tras un reclamo los acopiadores podran habilitar sin cargo sus plantas para operar con el sistema de trazabilidad": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27810,7 +27833,8 @@
       "b3f56234cbe9da17": "2026-11-02",
       "3379e92832362d71": "2026-11-02",
       "4208f62230dc90f9": "2026-11-02",
-      "ebaead55463177f4": "2026-11-02"
+      "ebaead55463177f4": "2026-11-02",
+      "219330511841a5a0": "2026-11-02"
     }
   },
   "elegidas": [
@@ -47442,6 +47466,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3840739e908a_portada.jpg"
+    },
+    {
+      "id": "0f37c793dbde",
+      "cuando": "2026-11-02T19:20-03:00",
+      "titulo_original": "Visec: tras un reclamo, los acopiadores podrán habilitar sin cargo sus plantas para operar con el sistema de trazabilidad",
+      "descripcion": "Un acuerdo alcanza a las empresas registradas en Incagro y evita el costo de la validación externa inicial; busca facilitar el proceso ante las nuevas exigencias de la Unión Europea",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/visec-tras-un-reclamo-los-acopiadores-podran-habilitar-sin-cargo-sus-plantas-para-operar-con-el-nid02112026/",
+      "titular": "Acopiadores logran habilitación sin cargo en Visec para soja",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en los acopiadores y productores de la región núcleo que deben cumplir con la trazabilidad para exportar a la UE.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T19:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "754346e8-0af9-4355-b011-066391cab047",
+          "slug": "acopiadores-sin-cargo-en-visec-logran-habilitar-plantas-de-soja-ec7691",
+          "url": "https://www.diariolacampaña.com.ar/n/acopiadores-sin-cargo-en-visec-logran-habilitar-plantas-de-soja-ec7691",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "29603586205912786",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18129592243804473",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18116955026153452"
+        },
+        "historia_facebook": {
+          "id": "1704534057682987"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0f37c793dbde_portada.jpg"
     }
   ],
   "pendientes": [
@@ -47921,8 +48005,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T19:01:27-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-02T19:24:01-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
