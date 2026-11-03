@@ -24179,6 +24179,69 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e60d1c376e61d00f": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 2,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "mujeres rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca una realidad social bonaerense importante pero tiene bajo impacto económico directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "eb5c0dd42f96e3aa": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 80,
+      "commercial_score": 85,
+      "subtema": "mercados",
+      "tema": "alquiler de tierras",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra un cambio estructural clave en el negocio agrícola de la región núcleo que afecta a todos los productores.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "216370040998cf16": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 84,
+      "commercial_score": 88,
+      "subtema": "agtech",
+      "tema": "digitalización",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Conecta directo con la necesidad de bajar costos mediante AgTech, ideal para nuestra audiencia técnica.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25817,7 +25880,10 @@
       "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos": "2026-11-03",
       "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron": "2026-11-03",
       "https://intainforma.inta.gob.ar/cooperacion-tecnologica-internacional-para-el-desarrollo-del-biogas": "2026-11-03",
-      "https://agrositio.com.ar/noticia/249181-maiz-tardio-el-panorama-es-muy-promisorio-las-zonas-endemicas-siguen-con-escasas-chicharritas.html": "2026-11-03"
+      "https://agrositio.com.ar/noticia/249181-maiz-tardio-el-panorama-es-muy-promisorio-las-zonas-endemicas-siguen-con-escasas-chicharritas.html": "2026-11-03",
+      "https://bichosdecampo.com/la-docente-gisela-patrocinio-recuerda-que-encuesto-a-63-mujeres-rurales-y-solo-cuatro-tenian-aportes-anos-despues-ayudo-a-fundar-una-asociacion-para-visibilizar-estas-injusticias": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026": "2026-11-03",
+      "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27454,7 +27520,10 @@
       "estiman cuanto pasto hay disponible en los campos ganaderos": "2026-11-03",
       "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron": "2026-11-03",
       "cooperacion tecnologica internacional para el desarrollo del biogas": "2026-11-03",
-      "maiz tardio el panorama es muy promisorio las zonas endemicas siguen con escasas chicharritas": "2026-11-03"
+      "maiz tardio el panorama es muy promisorio las zonas endemicas siguen con escasas chicharritas": "2026-11-03",
+      "la docente gisela patrocinio recuerda que encuesto a 63 mujeres rurales y solo cuatro tenian aportes anos despues ayudo a fundar una asociacion para visibilizar estas injusticias": "2026-11-03",
+      "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31": "2026-11-03",
+      "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29091,7 +29160,10 @@
       "b55d4b0183e640f8": "2026-11-03",
       "90501d7048dd806d": "2026-11-03",
       "67ed2924ac3622a6": "2026-11-03",
-      "770af0b24f34da04": "2026-11-03"
+      "770af0b24f34da04": "2026-11-03",
+      "e60d1c376e61d00f": "2026-11-03",
+      "eb5c0dd42f96e3aa": "2026-11-03",
+      "216370040998cf16": "2026-11-03"
     }
   },
   "elegidas": [
@@ -49926,9 +49998,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d807444a7086_portada.jpg"
+    },
+    {
+      "id": "af5b280da484",
+      "cuando": "2026-11-03T16:20-03:00",
+      "titulo_original": "El campo se digitaliza para bajar costos y busca quién lo ayude a interpretar los datos",
+      "descripcion": "El 82% de los productores que utilizan herramientas digitales reconoce mejoras medibles, según una encuesta de la Universidad Austral. Con márgenes agropecuarios ajustados, crece el peso del asesor independiente en el campo y la capacitación aparece como un desafío",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html",
+      "titular": "El 82% de productores halla mejoras digitales con recortes en costos",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 84,
+        "commercial_score": 88,
+        "subtema": "agtech",
+        "tema": "digitalización",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Conecta directo con la necesidad de bajar costos mediante AgTech, ideal para nuestra audiencia técnica.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e6c89792-7193-40ea-a4be-9ac736639b1f",
+          "slug": "el-82-de-productores-halla-mejoras-digitales-y-baja-de-costos-6ef9f7",
+          "url": "https://www.diariolacampaña.com.ar/n/el-82-de-productores-halla-mejoras-digitales-y-baja-de-costos-6ef9f7",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1524662936140245",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17919110643527470",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18656292418051456"
+        },
+        "historia_facebook": {
+          "id": "2174334826790688"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_af5b280da484_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e910b7932889",
+      "rep": {
+        "id": "e910b7932889",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026",
+        "titulo": "Rotundo giro: cada vez menos productores salen a “pelear” por alquilar tierras y los más grandes proyectan crecer un 31%",
+        "titulo_norm": "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31",
+        "descripcion": "Una encuesta de la Universidad Austral a 842 productores reveló que la proporción de quienes arriendan campos cayó del 80% al 57% desde 2009; los establecimientos más chicos prefieren invertir en sus propias explotaciones y también cambian las estrategias agrícolas y ganaderas",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BXH74JGZBC45O37AT6LL7IORE.jpg?auth=c161e3ed6d2c6a48bd844139bf358c7ebc84036727669d1bc5e88cf9bb0b7d0a&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-11-03T16:04-03:00",
+        "capturado": "2026-11-03T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "eb5c0dd42f96e3aa"
+      },
+      "grupo": [
+        {
+          "id": "e910b7932889",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026",
+          "titulo": "Rotundo giro: cada vez menos productores salen a “pelear” por alquilar tierras y los más grandes proyectan crecer un 31%",
+          "titulo_norm": "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31",
+          "descripcion": "Una encuesta de la Universidad Austral a 842 productores reveló que la proporción de quienes arriendan campos cayó del 80% al 57% desde 2009; los establecimientos más chicos prefieren invertir en sus propias explotaciones y también cambian las estrategias agrícolas y ganaderas",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BXH74JGZBC45O37AT6LL7IORE.jpg?auth=c161e3ed6d2c6a48bd844139bf358c7ebc84036727669d1bc5e88cf9bb0b7d0a&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-11-03T16:04-03:00",
+          "capturado": "2026-11-03T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "eb5c0dd42f96e3aa"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 85,
+        "subtema": "mercados",
+        "tema": "alquiler de tierras",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un cambio estructural clave en el negocio agrícola de la región núcleo que afecta a todos los productores.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-03T16:20-03:00"
+    },
     {
       "id": "7aaedf305984",
       "rep": {
@@ -50860,8 +51055,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T16:05:12-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T16:24:48-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
