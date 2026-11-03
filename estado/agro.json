@@ -23477,6 +23477,52 @@
         70,
         73
       ]
+    },
+    "8ac36805078168e3": {
+      "impacto_economico": 10,
+      "interes_productores": 4,
+      "innovacion": 3,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 29,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "china",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un análisis de mediano plazo sobre China, lejano para el día a día del productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "58b8bf274c382410": {
+      "impacto_economico": 12,
+      "interes_productores": 7,
+      "innovacion": 7,
+      "cercania_argentina": 9,
+      "cercania_pba": 2,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 54,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "forestal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente caso de reconversión productiva en el país, aunque geográficamente alejado de la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        56
+      ]
     }
   },
   "indice": {
@@ -25068,7 +25114,10 @@
       "https://infocampo.com.ar/la-polemica-por-el-visec-no-cede-cra-insiste-en-que-se-esta-castigando-al-productor": "2026-11-03",
       "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-3-noviembre-2026": "2026-11-03",
       "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-3-noviembre-2026": "2026-11-03",
-      "https://infocampo.com.ar/la-crisis-de-pauny-sin-un-plan-propio-de-salvataje-la-unica-salida-estaria-en-un-inversor-externo": "2026-11-03"
+      "https://infocampo.com.ar/la-crisis-de-pauny-sin-un-plan-propio-de-salvataje-la-unica-salida-estaria-en-un-inversor-externo": "2026-11-03",
+      "https://todoagro.com.ar/el-trigo-cordobes-abrio-la-campana-comercial-con-un-remate-de-607-000-por-tonelada": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249164-la-nueva-etapa-del-sector-agroalimentario-de-china-apunta-a-los-mercados-internacionales.html": "2026-11-03",
+      "https://bichosdecampo.com/hablame-de-reconversion-bosques-del-plata-implanto-casi-60-mil-hectareas-con-pinos-para-una-pastera-que-nunca-llego-modifico-su-manejo-forestal-y-hoy-abastece-a-mas-de-30-industrias-madereras": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26658,7 +26707,10 @@
       "la polemica por el visec no cede cra insiste en que se esta castigando al productor": "2026-11-03",
       "clima hoy en mendoza el pronostico del tiempo para este 3 noviembre 2026": "2026-11-03",
       "clima hoy en tucuman el pronostico del tiempo para este 3 noviembre 2026": "2026-11-03",
-      "la crisis de pauny sin un plan propio de salvataje la unica salida estaria en un inversor externo": "2026-11-03"
+      "la crisis de pauny sin un plan propio de salvataje la unica salida estaria en un inversor externo": "2026-11-03",
+      "el trigo cordobes abrio la campana comercial con un remate de 607 000 por tonelada": "2026-11-03",
+      "la nueva etapa del sector agroalimentario de china apunta a los mercados internacionales": "2026-11-03",
+      "hablame de reconversion bosques del plata implanto casi 60 mil hectareas con pinos para una pastera que nunca llego modifico su manejo forestal y hoy abastece a mas de 30 industrias madereras": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28248,7 +28300,10 @@
       "749cc07e6df88f1f": "2026-11-03",
       "69c0cacb3a8d1049": "2026-11-03",
       "487850e663f6ef47": "2026-11-03",
-      "5b4a50e3a9fb26d0": "2026-11-03"
+      "5b4a50e3a9fb26d0": "2026-11-03",
+      "8c60ea7305873e15": "2026-11-03",
+      "8ac36805078168e3": "2026-11-03",
+      "58b8bf274c382410": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48322,49 +48377,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e21870eea8de_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "2fa31d23b940",
-      "rep": {
-        "id": "2fa31d23b940",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/teo-zorraquin-consultor-sobre-el-momento-del-agro-se-necesita-financiamiento-y-se-toma-pero-pateando-nid03112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/teo-zorraquin-consultor-sobre-el-momento-del-agro-se-necesita-financiamiento-y-se-toma-pero-pateando-nid03112026",
-        "titulo": "Teo Zorraquín, consultor, sobre el momento del agro: “Se necesita financiamiento y se toma, pero pateando compras, postergando gastos o inversiones”",
-        "titulo_norm": "teo zorraquin consultor sobre el momento del agro se necesita financiamiento y se toma pero pateando compras postergando gastos o inversiones",
-        "descripcion": "El experto se refirió ante LA NACION a la situación del sector y los productores en el contexto de la campaña 2026/2027",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/A35Y35CCL5C25O2QAFV4ZJQ2YE.jpeg?auth=e1866da8e2fdb7fc0ecfae427bf40b6b7e5ba0b4c75e6ac7d8362618f842f16f&smart=true",
-        "autor": "Fernando Bertello",
-        "publicado": "2026-11-03T06:30-03:00",
-        "capturado": "2026-11-03T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2661a921f7cfd70a"
-      },
-      "grupo": [
-        {
-          "id": "2fa31d23b940",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/teo-zorraquin-consultor-sobre-el-momento-del-agro-se-necesita-financiamiento-y-se-toma-pero-pateando-nid03112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/teo-zorraquin-consultor-sobre-el-momento-del-agro-se-necesita-financiamiento-y-se-toma-pero-pateando-nid03112026",
-          "titulo": "Teo Zorraquín, consultor, sobre el momento del agro: “Se necesita financiamiento y se toma, pero pateando compras, postergando gastos o inversiones”",
-          "titulo_norm": "teo zorraquin consultor sobre el momento del agro se necesita financiamiento y se toma pero pateando compras postergando gastos o inversiones",
-          "descripcion": "El experto se refirió ante LA NACION a la situación del sector y los productores en el contexto de la campaña 2026/2027",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/A35Y35CCL5C25O2QAFV4ZJQ2YE.jpeg?auth=e1866da8e2fdb7fc0ecfae427bf40b6b7e5ba0b4c75e6ac7d8362618f842f16f&smart=true",
-          "autor": "Fernando Bertello",
-          "publicado": "2026-11-03T06:30-03:00",
-          "capturado": "2026-11-03T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2661a921f7cfd70a"
-        }
-      ],
+      "cuando": "2026-11-03T08:20-03:00",
+      "titulo_original": "Teo Zorraquín, consultor, sobre el momento del agro: “Se necesita financiamiento y se toma, pero pateando compras, postergando gastos o inversiones”",
+      "descripcion": "El experto se refirió ante LA NACION a la situación del sector y los productores en el contexto de la campaña 2026/2027",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/teo-zorraquin-consultor-sobre-el-momento-del-agro-se-necesita-financiamiento-y-se-toma-pero-pateando-nid03112026/",
+      "titular": "Campaña 2026/2027: financiamiento y decisiones parciales ante la volatilidad",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 14,
         "interes_productores": 15,
@@ -48386,8 +48408,38 @@
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-03T07:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "13d74cac-5e82-4335-b55b-4ff00c33981f",
+          "slug": "campana-2026-2027-financiamiento-precios-volatiles-y-decisiones-131d14",
+          "url": "https://www.diariolacampaña.com.ar/n/campana-2026-2027-financiamiento-precios-volatiles-y-decisiones-131d14",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1387369519884367",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18120346913049474",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18223995640356614"
+        },
+        "historia_facebook": {
+          "id": "2169225767330352"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2fa31d23b940_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "7c3e8312875a",
       "rep": {
@@ -48854,8 +48906,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T08:04:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T08:24:07-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
