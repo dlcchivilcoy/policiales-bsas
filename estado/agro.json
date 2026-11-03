@@ -23523,6 +23523,148 @@
         53,
         56
       ]
+    },
+    "69be38a54d1bced6": {
+      "impacto_economico": 13,
+      "interes_productores": 10,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 60,
+      "commercial_score": 62,
+      "subtema": "ganaderia",
+      "tema": "porcinos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe técnico relevante sobre márgenes de la producción porcina nacional con datos útiles para el sector.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        58
+      ]
+    },
+    "526299e69e6d451a": {
+      "impacto_economico": 4,
+      "interes_productores": 5,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 37,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "agroecología",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de perfil cultural y filosófico sobre agroecología en Patagonia, poco aplicable a la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d57b879c1aaa84c8": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 63,
+      "commercial_score": 64,
+      "subtema": "empresas",
+      "tema": "lácteos verónica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Noticia de gran impacto en la industria lechera santafesina y pampeana por la situación de una planta histórica.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        61
+      ]
+    },
+    "7d8501699047f666": {
+      "impacto_economico": 10,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 65,
+      "commercial_score": 69,
+      "subtema": "ganaderia",
+      "tema": "ovinos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muy útil para productores ganaderos frente a excesos hídricos, con fuerte enfoque en manejo sanitario.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        64
+      ]
+    },
+    "4ab11c66b4e226df": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 51,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "emergencia agropecuaria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Información oficial sobre emergencia por granizo en Córdoba, relevante para horticultores de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        41
+      ]
+    },
+    "02f224f76dbf2813": {
+      "impacto_economico": 6,
+      "interes_productores": 4,
+      "innovacion": 8,
+      "cercania_argentina": 4,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 36,
+      "commercial_score": 45,
+      "subtema": "agtech",
+      "tema": "startups",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis de negocios para startups AgTech globales, de escaso interés práctico para el productor de la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25117,7 +25259,14 @@
       "https://infocampo.com.ar/la-crisis-de-pauny-sin-un-plan-propio-de-salvataje-la-unica-salida-estaria-en-un-inversor-externo": "2026-11-03",
       "https://todoagro.com.ar/el-trigo-cordobes-abrio-la-campana-comercial-con-un-remate-de-607-000-por-tonelada": "2026-11-03",
       "https://agrositio.com.ar/noticia/249164-la-nueva-etapa-del-sector-agroalimentario-de-china-apunta-a-los-mercados-internacionales.html": "2026-11-03",
-      "https://bichosdecampo.com/hablame-de-reconversion-bosques-del-plata-implanto-casi-60-mil-hectareas-con-pinos-para-una-pastera-que-nunca-llego-modifico-su-manejo-forestal-y-hoy-abastece-a-mas-de-30-industrias-madereras": "2026-11-03"
+      "https://bichosdecampo.com/hablame-de-reconversion-bosques-del-plata-implanto-casi-60-mil-hectareas-con-pinos-para-una-pastera-que-nunca-llego-modifico-su-manejo-forestal-y-hoy-abastece-a-mas-de-30-industrias-madereras": "2026-11-03",
+      "https://todoagro.com.ar/las-tierras-de-benetton-cambian-de-dueno-el-negocio-que-mueve-una-de-las-mayores-superficies-rurales-del-pais": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249165-el-olivo-que-existe-benasayag-y-la-agroecologia-patagonica.html": "2026-11-03",
+      "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina": "2026-11-03",
+      "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones": "2026-11-03",
+      "https://bichosdecampo.com/afectada-por-el-granizo-fue-declarada-la-emergencia-agropecuaria-para-la-produccion-horticola-cordobesa-y-habra-alivio-fiscal-para-los-casos-mas-graves": "2026-11-03",
+      "https://agfundernews.com/beware-pilots-to-nowhere-aleph-eins-capital-on-avoiding-corporate-agtech-traps": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26710,7 +26859,14 @@
       "la crisis de pauny sin un plan propio de salvataje la unica salida estaria en un inversor externo": "2026-11-03",
       "el trigo cordobes abrio la campana comercial con un remate de 607 000 por tonelada": "2026-11-03",
       "la nueva etapa del sector agroalimentario de china apunta a los mercados internacionales": "2026-11-03",
-      "hablame de reconversion bosques del plata implanto casi 60 mil hectareas con pinos para una pastera que nunca llego modifico su manejo forestal y hoy abastece a mas de 30 industrias madereras": "2026-11-03"
+      "hablame de reconversion bosques del plata implanto casi 60 mil hectareas con pinos para una pastera que nunca llego modifico su manejo forestal y hoy abastece a mas de 30 industrias madereras": "2026-11-03",
+      "las tierras de benetton cambian de dueno el negocio que mueve una de las mayores superficies rurales del pais": "2026-11-03",
+      "luces y sombras del sector porcino al tercer trimestre 2026": "2026-11-03",
+      "el olivo que existe benasayag y la agroecologia patagonica": "2026-11-03",
+      "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina": "2026-11-03",
+      "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones": "2026-11-03",
+      "afectada por el granizo fue declarada la emergencia agropecuaria para la produccion horticola cordobesa y habra alivio fiscal para los casos mas graves": "2026-11-03",
+      "beware pilots to nowhere aleph eins capital on avoiding corporate agtech traps": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28303,7 +28459,14 @@
       "5b4a50e3a9fb26d0": "2026-11-03",
       "8c60ea7305873e15": "2026-11-03",
       "8ac36805078168e3": "2026-11-03",
-      "58b8bf274c382410": "2026-11-03"
+      "58b8bf274c382410": "2026-11-03",
+      "aa22072b3440982f": "2026-11-03",
+      "69be38a54d1bced6": "2026-11-03",
+      "526299e69e6d451a": "2026-11-03",
+      "d57b879c1aaa84c8": "2026-11-03",
+      "7d8501699047f666": "2026-11-03",
+      "4ab11c66b4e226df": "2026-11-03",
+      "02f224f76dbf2813": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48437,9 +48600,277 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2fa31d23b940_portada.jpg"
+    },
+    {
+      "id": "d39a32eb0d38",
+      "cuando": "2026-11-03T10:00-03:00",
+      "titulo_original": "Bajas en el trigo: la cosecha arranca con precios a la baja y la peor racha global en casi tres décadas; con Clara Treachi - Clínica de Granos",
+      "descripcion": "El trigo profundizó su tendencia bajista tanto en el plano local como internacional. En Argentina, el inicio de la cosecha coincidió con retrocesos de hasta diez dólares por tonelada en el disponible y caídas en A3. En el exterior, Chicago completó nueve semanas consecutivas en baja —la peor desde 1",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html",
+      "titular": "Trigo: arranca la cosecha local con bajas de US$ 10 por tonelada",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente la rentabilidad del trigo en plena cosecha bonaerense.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T10:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "GqhvlXzL9no",
+          "url": "https://youtube.com/shorts/GqhvlXzL9no",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "0bb22134-9088-4d84-bd1e-2bfd9c2edcb0",
+          "slug": "trigo-arranca-la-cosecha-con-bajas-de-hasta-us-10-y-chicago-fce5b8",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-arranca-la-cosecha-con-bajas-de-hasta-us-10-y-chicago-fce5b8",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2352826065484299",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18362296471301747",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18120322277055572"
+        },
+        "historia_facebook": {
+          "id": "2190348968180217"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d39a32eb0d38_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "ce5c7ebc9a89",
+      "rep": {
+        "id": "ce5c7ebc9a89",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
+        "titulo": "Luces y sombras del sector porcino al tercer trimestre 2026",
+        "titulo_norm": "luces y sombras del sector porcino al tercer trimestre 2026",
+        "descripcion": "Desde hace varios años, el IERAL realiza un seguimiento periódico de los resultados económicos de la producción porcina intensiva mediante la estimación de márgenes netos en modelos de granjas representativas. Esta edición actualiza las estimaciones hasta septiembre de 2026 y amplía el análisis del contexto sectorial, necesario para interpretar la evolución reciente del precio del capón y de la rentabilidad de las granjas....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249166_39893801.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-03T08:47-03:00",
+        "capturado": "2026-11-03T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "69be38a54d1bced6"
+      },
+      "grupo": [
+        {
+          "id": "ce5c7ebc9a89",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
+          "titulo": "Luces y sombras del sector porcino al tercer trimestre 2026",
+          "titulo_norm": "luces y sombras del sector porcino al tercer trimestre 2026",
+          "descripcion": "Desde hace varios años, el IERAL realiza un seguimiento periódico de los resultados económicos de la producción porcina intensiva mediante la estimación de márgenes netos en modelos de granjas representativas. Esta edición actualiza las estimaciones hasta septiembre de 2026 y amplía el análisis del contexto sectorial, necesario para interpretar la evolución reciente del precio del capón y de la rentabilidad de las granjas....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249166_39893801.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-03T08:47-03:00",
+          "capturado": "2026-11-03T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "69be38a54d1bced6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 10,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 60,
+        "commercial_score": 62,
+        "subtema": "ganaderia",
+        "tema": "porcinos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe técnico relevante sobre márgenes de la producción porcina nacional con datos útiles para el sector.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          58
+        ]
+      },
+      "cuando": "2026-11-03T10:00-03:00"
+    },
+    {
+      "id": "3a0f0a64567d",
+      "rep": {
+        "id": "3a0f0a64567d",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina/",
+        "canonical_url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina",
+        "titulo": "Lácteos Verónica: Presentan ante la Justicia una propuesta para recuperar dos plantas de la histórica industria santafesina",
+        "titulo_norm": "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina",
+        "descripcion": "​En el marco del concurso preventivo de acreedores que atraviesa la empresa Verónica S.A., se dio a conocer un comunicado oficial emitido por la Asociación de Trabajadores de la Industria Lechera de la República Argentina (ATILRA) —firmado por su secretario general, Héctor Luis Ponce— donde se detalla una nueva alternativa para la reactivación productiva de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-18.17.31.jpeg",
+        "autor": "Elida Thiery",
+        "publicado": "2026-11-03T09:55-03:00",
+        "capturado": "2026-11-03T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d57b879c1aaa84c8"
+      },
+      "grupo": [
+        {
+          "id": "3a0f0a64567d",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina/",
+          "canonical_url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina",
+          "titulo": "Lácteos Verónica: Presentan ante la Justicia una propuesta para recuperar dos plantas de la histórica industria santafesina",
+          "titulo_norm": "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina",
+          "descripcion": "​En el marco del concurso preventivo de acreedores que atraviesa la empresa Verónica S.A., se dio a conocer un comunicado oficial emitido por la Asociación de Trabajadores de la Industria Lechera de la República Argentina (ATILRA) —firmado por su secretario general, Héctor Luis Ponce— donde se detalla una nueva alternativa para la reactivación productiva de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-18.17.31.jpeg",
+          "autor": "Elida Thiery",
+          "publicado": "2026-11-03T09:55-03:00",
+          "capturado": "2026-11-03T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d57b879c1aaa84c8"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 64,
+        "subtema": "empresas",
+        "tema": "lácteos verónica",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Noticia de gran impacto en la industria lechera santafesina y pampeana por la situación de una planta histórica.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          61
+        ]
+      },
+      "cuando": "2026-11-03T10:00-03:00"
+    },
+    {
+      "id": "c484ec2b3fb4",
+      "rep": {
+        "id": "c484ec2b3fb4",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones/",
+        "canonical_url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones",
+        "titulo": "Bicheras, pietín y parásitos: Cómo proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
+        "titulo_norm": "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
+        "descripcion": "Las lluvias abundantes y los excesos hídricos no solo complican el manejo de los establecimientos ganaderos, sino que también pueden poner en riesgo la sanidad de las majadas ovinas. La humedad persistente, el barro y las condiciones de encierro favorecen la aparición de parásitos, lesiones en las patas y problemas asociados a la proliferación de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/majada-corrientes-2-1024x685-1.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-03T09:15-03:00",
+        "capturado": "2026-11-03T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7d8501699047f666"
+      },
+      "grupo": [
+        {
+          "id": "c484ec2b3fb4",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones/",
+          "canonical_url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones",
+          "titulo": "Bicheras, pietín y parásitos: Cómo proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
+          "titulo_norm": "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
+          "descripcion": "Las lluvias abundantes y los excesos hídricos no solo complican el manejo de los establecimientos ganaderos, sino que también pueden poner en riesgo la sanidad de las majadas ovinas. La humedad persistente, el barro y las condiciones de encierro favorecen la aparición de parásitos, lesiones en las patas y problemas asociados a la proliferación de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/majada-corrientes-2-1024x685-1.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-03T09:15-03:00",
+          "capturado": "2026-11-03T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7d8501699047f666"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 65,
+        "commercial_score": 69,
+        "subtema": "ganaderia",
+        "tema": "ovinos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para productores ganaderos frente a excesos hídricos, con fuerte enfoque en manejo sanitario.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          64
+        ]
+      },
+      "cuando": "2026-11-03T10:00-03:00"
+    },
     {
       "id": "7c3e8312875a",
       "rep": {
@@ -48709,69 +49140,6 @@
       "cuando": "2026-11-02T18:40-03:00"
     },
     {
-      "id": "d39a32eb0d38",
-      "rep": {
-        "id": "d39a32eb0d38",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html",
-        "titulo": "Bajas en el trigo: la cosecha arranca con precios a la baja y la peor racha global en casi tres décadas; con Clara Treachi - Clínica de Granos",
-        "titulo_norm": "bajas en el trigo la cosecha arranca con precios a la baja y la peor racha global en casi tres decadas con clara treachi clinica de granos",
-        "descripcion": "El trigo profundizó su tendencia bajista tanto en el plano local como internacional. En Argentina, el inicio de la cosecha coincidió con retrocesos de hasta diez dólares por tonelada en el disponible y caídas en A3. En el exterior, Chicago completó nueve semanas consecutivas en baja —la peor desde 1997— arrastrado por ventas de fondos especulativos, exportaciones estadounidenses por debajo de lo esperado y la reapertura de envíos rusos vía el Mar de Azov. En este video analizamos el impacto en los precios FOB, el avance de las labores en el norte argentino y los factores que marcan el rumbo del mercado....",
-        "imagen_url": "https://agrotv.agrositio.com/placas/gA2p06eR1Ao.jpg",
-        "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
-        "publicado": "2026-11-02T17:53-03:00",
-        "capturado": "2026-11-02T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "47ec8824253c2663"
-      },
-      "grupo": [
-        {
-          "id": "d39a32eb0d38",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249161-bajas-en-el-trigo-la-cosecha-arranca-con-precios-a-la-baja-y-la-peor-racha-global-en-casi-tres-decadas-con-clara-treachi-clinica-de-granos.html",
-          "titulo": "Bajas en el trigo: la cosecha arranca con precios a la baja y la peor racha global en casi tres décadas; con Clara Treachi - Clínica de Granos",
-          "titulo_norm": "bajas en el trigo la cosecha arranca con precios a la baja y la peor racha global en casi tres decadas con clara treachi clinica de granos",
-          "descripcion": "El trigo profundizó su tendencia bajista tanto en el plano local como internacional. En Argentina, el inicio de la cosecha coincidió con retrocesos de hasta diez dólares por tonelada en el disponible y caídas en A3. En el exterior, Chicago completó nueve semanas consecutivas en baja —la peor desde 1997— arrastrado por ventas de fondos especulativos, exportaciones estadounidenses por debajo de lo esperado y la reapertura de envíos rusos vía el Mar de Azov. En este video analizamos el impacto en los precios FOB, el avance de las labores en el norte argentino y los factores que marcan el rumbo del mercado....",
-          "imagen_url": "https://agrotv.agrositio.com/placas/gA2p06eR1Ao.jpg",
-          "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
-          "publicado": "2026-11-02T17:53-03:00",
-          "capturado": "2026-11-02T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "47ec8824253c2663"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 71,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta directamente la rentabilidad del trigo en plena cosecha bonaerense.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-02T18:00-03:00"
-    },
-    {
       "id": "5cfbb8f5167d",
       "rep": {
         "id": "5cfbb8f5167d",
@@ -48906,8 +49274,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T08:24:07-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T10:04:38-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
