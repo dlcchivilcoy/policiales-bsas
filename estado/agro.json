@@ -23452,6 +23452,31 @@
         69,
         66
       ]
+    },
+    "5b4a50e3a9fb26d0": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 72,
+      "commercial_score": 68,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta fuerte en el sector de maquinaria nacional y genera alta conversación entre productores y proveedores.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        73
+      ]
     }
   },
   "indice": {
@@ -25042,7 +25067,8 @@
       "https://lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html": "2026-11-03",
       "https://infocampo.com.ar/la-polemica-por-el-visec-no-cede-cra-insiste-en-que-se-esta-castigando-al-productor": "2026-11-03",
       "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-3-noviembre-2026": "2026-11-03",
-      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-3-noviembre-2026": "2026-11-03"
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/la-crisis-de-pauny-sin-un-plan-propio-de-salvataje-la-unica-salida-estaria-en-un-inversor-externo": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26631,7 +26657,8 @@
       "ganaderia las cuotas le cambian el ritmo al negocio exportador": "2026-11-03",
       "la polemica por el visec no cede cra insiste en que se esta castigando al productor": "2026-11-03",
       "clima hoy en mendoza el pronostico del tiempo para este 3 noviembre 2026": "2026-11-03",
-      "clima hoy en tucuman el pronostico del tiempo para este 3 noviembre 2026": "2026-11-03"
+      "clima hoy en tucuman el pronostico del tiempo para este 3 noviembre 2026": "2026-11-03",
+      "la crisis de pauny sin un plan propio de salvataje la unica salida estaria en un inversor externo": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28220,7 +28247,8 @@
       "a913153b8aa966ed": "2026-11-03",
       "749cc07e6df88f1f": "2026-11-03",
       "69c0cacb3a8d1049": "2026-11-03",
-      "487850e663f6ef47": "2026-11-03"
+      "487850e663f6ef47": "2026-11-03",
+      "5b4a50e3a9fb26d0": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48230,6 +48258,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9414381e8c2b_portada.jpg"
+    },
+    {
+      "id": "e21870eea8de",
+      "cuando": "2026-11-03T08:00-03:00",
+      "titulo_original": "La crisis de Pauny: sin un plan propio de salvataje, la única salida estaría en un inversor externo",
+      "descripcion": "En los últimos días hubo dos audiencias en la Secretaría de Trabajo, sin avances: la empresa no tiene un plan siquiera para cubrir la deuda salarial. Mientras tanto, día a día se suman cheques rechazados, que ya suman un pasivo de más de $ 1.200 millones.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/la-crisis-de-pauny-sin-un-plan-propio-de-salvataje-la-unica-salida-estaria-en-un-inversor-externo/",
+      "titular": "Crisis en Pauny: suman $ 1.237,9 millones en cheques rechazados",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 72,
+        "commercial_score": 68,
+        "subtema": "maquinaria",
+        "tema": "pauny",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta fuerte en el sector de maquinaria nacional y genera alta conversación entre productores y proveedores.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          73
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T08:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3f3a12d5-dcf4-4aa5-ad08-e6faffc3f9c3",
+          "slug": "crisis-en-pauny-450-empleados-afectados-y-una-deuda-millonaria-50cb0b",
+          "url": "https://www.diariolacampaña.com.ar/n/crisis-en-pauny-450-empleados-afectados-y-una-deuda-millonaria-50cb0b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1635399548062946",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18223673410342632",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18387597157231091"
+        },
+        "historia_facebook": {
+          "id": "2213787283345230"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e21870eea8de_portada.jpg"
     }
   ],
   "pendientes": [
@@ -48762,8 +48854,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T07:44:23-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T08:04:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
