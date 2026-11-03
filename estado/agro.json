@@ -24108,6 +24108,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "90501d7048dd806d": {
+      "impacto_economico": 10,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 69,
+      "commercial_score": 50,
+      "subtema": "agtech",
+      "tema": "seguridad rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra una iniciativa tecnológica aplicada a la seguridad rural que genera fuerte debate y empatía en el sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        69
+      ]
     }
   },
   "indice": {
@@ -25743,7 +25768,8 @@
       "https://bichosdecampo.com/acorralado-por-las-deudas-metalfor-pidio-el-concurso-preventivo-y-se-completa-el-panorama-negativo-para-la-industria-nacional-de-maquinaria-agricola": "2026-11-03",
       "https://lanacion.com.ar/economia/campo/algodonera-en-quiebra-hay-cinco-interesados-en-comprar-la-empresa-que-debe-millones-y-le-estan-por-nid03112026": "2026-11-03",
       "https://agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html": "2026-11-03",
-      "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos": "2026-11-03"
+      "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos": "2026-11-03",
+      "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27377,7 +27403,8 @@
       "acorralada por las deudas metalfor pidio el concurso preventivo y se completa el panorama negativo para la industria nacional de maquinaria agricola": "2026-11-03",
       "algodonera en quiebra hay cinco interesados en los activos de la empresa que debe millones y le estan por cortar la luz": "2026-11-03",
       "octubre las precipitaciones acumuladas en cordoba presentaron una distribucion heterogenea": "2026-11-03",
-      "estiman cuanto pasto hay disponible en los campos ganaderos": "2026-11-03"
+      "estiman cuanto pasto hay disponible en los campos ganaderos": "2026-11-03",
+      "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29011,7 +29038,8 @@
       "853ea8bc3e00b16d": "2026-11-03",
       "5326647d88c2b105": "2026-11-03",
       "a61a5d64f8258bab": "2026-11-03",
-      "b55d4b0183e640f8": "2026-11-03"
+      "b55d4b0183e640f8": "2026-11-03",
+      "90501d7048dd806d": "2026-11-03"
     }
   },
   "elegidas": [
@@ -49595,9 +49623,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_35672a089000_portada.jpg"
+    },
+    {
+      "id": "e8fcccff8c27",
+      "cuando": "2026-11-03T13:40-03:00",
+      "titulo_original": "La letra chica bien explicada: El mito de “gastar para no pagar Ganancias”, o por qué el fisco se ríe de tu tractor nuevo y la vaca puede llegar a salvarte",
+      "descripcion": "Por Pablo María Larcade, contador especializado del Estudio Tailhade – Bouquet – Ovejero Hay una escena que se repite todos los años en el mostrador de las concesionarias de maquinaria agrícola cuando se acerca el cierre de balance: productores desesperados firmando cheques para llevarse un tractor,",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-letra-chica-bien-explicada-el-mito-de-gastar-para-no-pagar-ganancias-o-por-que-el-fisco-se-rie-de-tu-tractor-nuevo-y-la-vaca-puede-llegar-a-salvarte/",
+      "titular": "Comprar maquinaria para no pagar Ganancias es una trampa fiscal",
+      "volanta": "Impuestos",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 9,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 81,
+        "commercial_score": 90,
+        "subtema": "empresas",
+        "tema": "ganancias",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Nota contable muy consultada por productores en época de balances y compra de maquinaria.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 10,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "c8c3cccf-c677-4a27-a427-3a0c07091742",
+          "slug": "el-mito-de-gastar-para-no-pagar-ganancias-por-que-comprar-0131e3",
+          "url": "https://www.diariolacampaña.com.ar/n/el-mito-de-gastar-para-no-pagar-ganancias-por-que-comprar-0131e3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1158642779974827",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18118641707087111",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18111467138352776"
+        },
+        "historia_facebook": {
+          "id": "4736970643190535"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e8fcccff8c27_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7aaedf305984",
+      "rep": {
+        "id": "7aaedf305984",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron/",
+        "canonical_url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron",
+        "titulo": "Crónicas Robadas: Antes era gasoil para el patrullero, pero ahora los productores de Río Cuarto decidieron donarle a la policía directamente un dron",
+        "titulo_norm": "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron",
+        "descripcion": "El sitio Valor Agregado Agro, que dirige el colega cordobés Germán Tinari, relató una curiosa situación sucedida en Río Cuarto, donde productores y empresarios de esa región se pusieron de acuerdo para donar un dron a la Patrulla Rural, que obviamente estará destinado a combatir la inseguridad en el campo. Esta es la crónica, que […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/dron.png",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-03T13:24-03:00",
+        "capturado": "2026-11-03T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "90501d7048dd806d"
+      },
+      "grupo": [
+        {
+          "id": "7aaedf305984",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron/",
+          "canonical_url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron",
+          "titulo": "Crónicas Robadas: Antes era gasoil para el patrullero, pero ahora los productores de Río Cuarto decidieron donarle a la policía directamente un dron",
+          "titulo_norm": "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron",
+          "descripcion": "El sitio Valor Agregado Agro, que dirige el colega cordobés Germán Tinari, relató una curiosa situación sucedida en Río Cuarto, donde productores y empresarios de esa región se pusieron de acuerdo para donar un dron a la Patrulla Rural, que obviamente estará destinado a combatir la inseguridad en el campo. Esta es la crónica, que […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/dron.png",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-03T13:24-03:00",
+          "capturado": "2026-11-03T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "90501d7048dd806d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 50,
+        "subtema": "agtech",
+        "tema": "seguridad rural",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra una iniciativa tecnológica aplicada a la seguridad rural que genera fuerte debate y empatía en el sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "cuando": "2026-11-03T13:40-03:00"
+    },
     {
       "id": "bcad702816b8",
       "rep": {
@@ -49918,69 +50073,6 @@
           69,
           67
         ]
-      },
-      "cuando": "2026-11-03T13:00-03:00"
-    },
-    {
-      "id": "e8fcccff8c27",
-      "rep": {
-        "id": "e8fcccff8c27",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-letra-chica-bien-explicada-el-mito-de-gastar-para-no-pagar-ganancias-o-por-que-el-fisco-se-rie-de-tu-tractor-nuevo-y-la-vaca-puede-llegar-a-salvarte/",
-        "canonical_url": "https://bichosdecampo.com/la-letra-chica-bien-explicada-el-mito-de-gastar-para-no-pagar-ganancias-o-por-que-el-fisco-se-rie-de-tu-tractor-nuevo-y-la-vaca-puede-llegar-a-salvarte",
-        "titulo": "La letra chica bien explicada: El mito de “gastar para no pagar Ganancias”, o por qué el fisco se ríe de tu tractor nuevo y la vaca puede llegar a salvarte",
-        "titulo_norm": "la letra chica bien explicada el mito de gastar para no pagar ganancias o por que el fisco se rie de tu tractor nuevo y la vaca puede llegar a salvarte",
-        "descripcion": "Por Pablo María Larcade, contador especializado del Estudio Tailhade – Bouquet – Ovejero Hay una escena que se repite todos los años en el mostrador de las concesionarias de maquinaria agrícola cuando se acerca el cierre de balance: productores desesperados firmando cheques para llevarse un tractor, una sembradora o una tolva con el único objetivo […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/07/Foto-apaisada-Pablo-M-Larcade-scaled-e1790693775375.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-03T12:18-03:00",
-        "capturado": "2026-11-03T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7ed011a3491c2489"
-      },
-      "grupo": [
-        {
-          "id": "e8fcccff8c27",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-letra-chica-bien-explicada-el-mito-de-gastar-para-no-pagar-ganancias-o-por-que-el-fisco-se-rie-de-tu-tractor-nuevo-y-la-vaca-puede-llegar-a-salvarte/",
-          "canonical_url": "https://bichosdecampo.com/la-letra-chica-bien-explicada-el-mito-de-gastar-para-no-pagar-ganancias-o-por-que-el-fisco-se-rie-de-tu-tractor-nuevo-y-la-vaca-puede-llegar-a-salvarte",
-          "titulo": "La letra chica bien explicada: El mito de “gastar para no pagar Ganancias”, o por qué el fisco se ríe de tu tractor nuevo y la vaca puede llegar a salvarte",
-          "titulo_norm": "la letra chica bien explicada el mito de gastar para no pagar ganancias o por que el fisco se rie de tu tractor nuevo y la vaca puede llegar a salvarte",
-          "descripcion": "Por Pablo María Larcade, contador especializado del Estudio Tailhade – Bouquet – Ovejero Hay una escena que se repite todos los años en el mostrador de las concesionarias de maquinaria agrícola cuando se acerca el cierre de balance: productores desesperados firmando cheques para llevarse un tractor, una sembradora o una tolva con el único objetivo […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/07/Foto-apaisada-Pablo-M-Larcade-scaled-e1790693775375.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-03T12:18-03:00",
-          "capturado": "2026-11-03T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7ed011a3491c2489"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 9,
-        "conversacion": 10,
-        "potencial_comercial": 9,
-        "ai_score": 81,
-        "commercial_score": 90,
-        "subtema": "empresas",
-        "tema": "ganancias",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Nota contable muy consultada por productores en época de balances y compra de maquinaria.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 10,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-03T13:00-03:00"
     },
@@ -50655,8 +50747,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T13:24:44-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T13:46:23-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
