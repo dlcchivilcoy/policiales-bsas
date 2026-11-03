@@ -24242,6 +24242,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "73f2922ea4157aaa": {
+      "impacto_economico": 20,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 7,
+      "ai_score": 80,
+      "commercial_score": 80,
+      "subtema": "mercados",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad de todo el agro argentino y genera fuerte debate.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25883,7 +25904,8 @@
       "https://agrositio.com.ar/noticia/249181-maiz-tardio-el-panorama-es-muy-promisorio-las-zonas-endemicas-siguen-con-escasas-chicharritas.html": "2026-11-03",
       "https://bichosdecampo.com/la-docente-gisela-patrocinio-recuerda-que-encuesto-a-63-mujeres-rurales-y-solo-cuatro-tenian-aportes-anos-despues-ayudo-a-fundar-una-asociacion-para-visibilizar-estas-injusticias": "2026-11-03",
       "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026": "2026-11-03",
-      "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03"
+      "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03",
+      "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27523,7 +27545,8 @@
       "maiz tardio el panorama es muy promisorio las zonas endemicas siguen con escasas chicharritas": "2026-11-03",
       "la docente gisela patrocinio recuerda que encuesto a 63 mujeres rurales y solo cuatro tenian aportes anos despues ayudo a fundar una asociacion para visibilizar estas injusticias": "2026-11-03",
       "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31": "2026-11-03",
-      "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03"
+      "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03",
+      "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29163,7 +29186,8 @@
       "770af0b24f34da04": "2026-11-03",
       "e60d1c376e61d00f": "2026-11-03",
       "eb5c0dd42f96e3aa": "2026-11-03",
-      "216370040998cf16": "2026-11-03"
+      "216370040998cf16": "2026-11-03",
+      "73f2922ea4157aaa": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50058,49 +50082,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_af5b280da484_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "e910b7932889",
-      "rep": {
-        "id": "e910b7932889",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026",
-        "titulo": "Rotundo giro: cada vez menos productores salen a “pelear” por alquilar tierras y los más grandes proyectan crecer un 31%",
-        "titulo_norm": "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31",
-        "descripcion": "Una encuesta de la Universidad Austral a 842 productores reveló que la proporción de quienes arriendan campos cayó del 80% al 57% desde 2009; los establecimientos más chicos prefieren invertir en sus propias explotaciones y también cambian las estrategias agrícolas y ganaderas",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BXH74JGZBC45O37AT6LL7IORE.jpg?auth=c161e3ed6d2c6a48bd844139bf358c7ebc84036727669d1bc5e88cf9bb0b7d0a&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-11-03T16:04-03:00",
-        "capturado": "2026-11-03T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "eb5c0dd42f96e3aa"
-      },
-      "grupo": [
-        {
-          "id": "e910b7932889",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026",
-          "titulo": "Rotundo giro: cada vez menos productores salen a “pelear” por alquilar tierras y los más grandes proyectan crecer un 31%",
-          "titulo_norm": "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31",
-          "descripcion": "Una encuesta de la Universidad Austral a 842 productores reveló que la proporción de quienes arriendan campos cayó del 80% al 57% desde 2009; los establecimientos más chicos prefieren invertir en sus propias explotaciones y también cambian las estrategias agrícolas y ganaderas",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BXH74JGZBC45O37AT6LL7IORE.jpg?auth=c161e3ed6d2c6a48bd844139bf358c7ebc84036727669d1bc5e88cf9bb0b7d0a&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-11-03T16:04-03:00",
-          "capturado": "2026-11-03T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "eb5c0dd42f96e3aa"
-        }
-      ],
+      "cuando": "2026-11-03T16:40-03:00",
+      "titulo_original": "Rotundo giro: cada vez menos productores salen a “pelear” por alquilar tierras y los más grandes proyectan crecer un 31%",
+      "descripcion": "Una encuesta de la Universidad Austral a 842 productores reveló que la proporción de quienes arriendan campos cayó del 80% al 57% desde 2009; los establecimientos más chicos prefieren invertir en sus propias explotaciones y también cambian las estrategias agrícolas y ganaderas",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026/",
+      "titular": "Menos alquileres de campos y fuerte apuesta de megaproductores",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 14,
@@ -50122,7 +50113,100 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-03T16:20-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "000b046e-655b-48a7-94c3-2ae945e4260e",
+          "slug": "caen-los-alquileres-de-campos-y-los-megaproductores-proyectan-31e27a",
+          "url": "https://www.diariolacampaña.com.ar/n/caen-los-alquileres-de-campos-y-los-megaproductores-proyectan-31e27a",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1476784214346805",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18100006565420810",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18098507000110169"
+        },
+        "historia_facebook": {
+          "id": "1489157963031443"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e910b7932889_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "8befa1b2edf7",
+      "rep": {
+        "id": "8befa1b2edf7",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado/",
+        "canonical_url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado",
+        "titulo": "Tristeza: Argentina lidera el ranking mundial de extracción de recursos al sector agropecuario por parte del Estado",
+        "titulo_norm": "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado",
+        "descripcion": "El indicador de referencia global –elaborado por la OCDE– para medir el monto de subsidios agropecuarios sobre el ingreso rural total (Producer Support Estimate o por sus siglas PSE) fue en la Argentina del -13,5% en promedio en el período comprendido entre 2023 y 2025. Con esa cifra, la Argentina lidera el ranking de países […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-03T16:38-03:00",
+        "capturado": "2026-11-03T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "73f2922ea4157aaa"
+      },
+      "grupo": [
+        {
+          "id": "8befa1b2edf7",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado/",
+          "canonical_url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado",
+          "titulo": "Tristeza: Argentina lidera el ranking mundial de extracción de recursos al sector agropecuario por parte del Estado",
+          "titulo_norm": "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado",
+          "descripcion": "El indicador de referencia global –elaborado por la OCDE– para medir el monto de subsidios agropecuarios sobre el ingreso rural total (Producer Support Estimate o por sus siglas PSE) fue en la Argentina del -13,5% en promedio en el período comprendido entre 2023 y 2025. Con esa cifra, la Argentina lidera el ranking de países […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-03T16:38-03:00",
+          "capturado": "2026-11-03T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "73f2922ea4157aaa"
+        }
+      ],
+      "score": {
+        "impacto_economico": 20,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 80,
+        "subtema": "mercados",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad de todo el agro argentino y genera fuerte debate.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-03T16:40-03:00"
     },
     {
       "id": "7aaedf305984",
@@ -51055,8 +51139,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T16:24:48-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T16:44:31-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
