@@ -49771,6 +49771,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e0543424b8c9_portada.jpg"
+    },
+    {
+      "id": "7c3e8312875a",
+      "cuando": "2026-11-03T14:20-03:00",
+      "titulo_original": "Momento complejo: la producción porcina argentina registra una fuerte baja de la rentabilidad",
+      "descripcion": "En dólares los costos se encarecieron, hay mayor oferta de carne y más importaciones",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/retroceso-la-produccion-porcina-argentina-registra-una-fuerte-baja-de-la-rentabilidad-nid03112026/",
+      "titular": "La producción porcina nacional sufre una fuerte caída en su rentabilidad",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 67,
+        "commercial_score": 71,
+        "subtema": "ganaderia",
+        "tema": "porcinos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Problema sectorial grave de rentabilidad que afecta a productores de cerdos regionales.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          69
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5fe82a32-7bbd-4ff4-a13e-3abdbfa91e17",
+          "slug": "la-produccion-porcina-nacional-registra-una-fuerte-baja-en-su-fd75ce",
+          "url": "https://www.diariolacampaña.com.ar/n/la-produccion-porcina-nacional-registra-una-fuerte-baja-en-su-fd75ce",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1369876638365012",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18233604220325514",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18114313838133301"
+        },
+        "historia_facebook": {
+          "id": "2419385148801841"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c3e8312875a_portada.jpg"
     }
   ],
   "pendientes": [
@@ -50504,73 +50568,6 @@
       "cuando": "2026-11-03T10:00-03:00"
     },
     {
-      "id": "7c3e8312875a",
-      "rep": {
-        "id": "7c3e8312875a",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/retroceso-la-produccion-porcina-argentina-registra-una-fuerte-baja-de-la-rentabilidad-nid03112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/retroceso-la-produccion-porcina-argentina-registra-una-fuerte-baja-de-la-rentabilidad-nid03112026",
-        "titulo": "Momento complejo: la producción porcina argentina registra una fuerte baja de la rentabilidad",
-        "titulo_norm": "momento complejo la produccion porcina argentina registra una fuerte baja de la rentabilidad",
-        "descripcion": "En dólares los costos se encarecieron, hay mayor oferta de carne y más importaciones",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/MZQBLIBSTFFIZDJ6OABD6Z2PGA.jpeg?auth=e3c8a87ff47e165f8cb090ed7182fbaebeb58b4a811ded78c8af0ec44aade6b5&smart=true",
-        "autor": "Gabriela Origlia",
-        "publicado": "2026-11-03T06:30-03:00",
-        "capturado": "2026-11-03T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fdcb25b1fba3283f"
-      },
-      "grupo": [
-        {
-          "id": "7c3e8312875a",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/retroceso-la-produccion-porcina-argentina-registra-una-fuerte-baja-de-la-rentabilidad-nid03112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/retroceso-la-produccion-porcina-argentina-registra-una-fuerte-baja-de-la-rentabilidad-nid03112026",
-          "titulo": "Momento complejo: la producción porcina argentina registra una fuerte baja de la rentabilidad",
-          "titulo_norm": "momento complejo la produccion porcina argentina registra una fuerte baja de la rentabilidad",
-          "descripcion": "En dólares los costos se encarecieron, hay mayor oferta de carne y más importaciones",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/MZQBLIBSTFFIZDJ6OABD6Z2PGA.jpeg?auth=e3c8a87ff47e165f8cb090ed7182fbaebeb58b4a811ded78c8af0ec44aade6b5&smart=true",
-          "autor": "Gabriela Origlia",
-          "publicado": "2026-11-03T06:30-03:00",
-          "capturado": "2026-11-03T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fdcb25b1fba3283f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 67,
-        "commercial_score": 71,
-        "subtema": "ganaderia",
-        "tema": "porcinos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Problema sectorial grave de rentabilidad que afecta a productores de cerdos regionales.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          69
-        ]
-      },
-      "cuando": "2026-11-03T07:00-03:00"
-    },
-    {
       "id": "ef87b8d9729e",
       "rep": {
         "id": "ef87b8d9729e",
@@ -50772,8 +50769,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T14:04:59-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T14:24:48-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
