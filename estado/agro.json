@@ -23665,6 +23665,102 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "806414e50837525d": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 70,
+      "subtema": "ganaderia",
+      "tema": "cerdos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta de lleno a los productores porcinos bonaerenses por la pinza entre mayores costos y menores márgenes.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        69,
+        69
+      ]
+    },
+    "731e202499dff132": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 6,
+      "cercania_pba": 4,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 49,
+      "commercial_score": 52,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la formación de precios locales de la oleaginosa y en la macroeconomía.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        31
+      ]
+    },
+    "77b8755b86d6c0c7": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 6,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 58,
+      "commercial_score": 57,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Relevante para seguir la pizarra internacional, aunque es un reporte clásico de mercado de Chicago.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        54
+      ]
+    },
+    "cce701f70f8df877": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 3,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "bosques",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema ambiental y normativo importante a nivel país, pero con menor llegada directa al día a día del productor pampeano.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25266,7 +25362,13 @@
       "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina": "2026-11-03",
       "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones": "2026-11-03",
       "https://bichosdecampo.com/afectada-por-el-granizo-fue-declarada-la-emergencia-agropecuaria-para-la-produccion-horticola-cordobesa-y-habra-alivio-fiscal-para-los-casos-mas-graves": "2026-11-03",
-      "https://agfundernews.com/beware-pilots-to-nowhere-aleph-eins-capital-on-avoiding-corporate-agtech-traps": "2026-11-03"
+      "https://agfundernews.com/beware-pilots-to-nowhere-aleph-eins-capital-on-avoiding-corporate-agtech-traps": "2026-11-03",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249169-las-elecciones-en-ee-uu-y-la-caida-del-petroleo-condicionan-a-la-soja-mientras-los-cereales-buscan-estabilizarse.html": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249168-soja-en-minimos-de-6-meses-la-caida-del-petroleo-y-el-avance-de-la-cosecha-marcan-la-tendencia.html": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249167-soja-chicago-busca-recuperarse-pero-la-oferta-limita-las-subas.html": "2026-11-03",
+      "https://bichosdecampo.com/pito-catalan-a-la-conservacion-de-bosques-un-estudio-mostro-que-argentina-pierde-unas-200-mil-hectareas-al-ano-la-misma-superficie-que-le-prometio-a-la-onu-restaurar-en-una-decada": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26866,7 +26968,13 @@
       "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina": "2026-11-03",
       "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones": "2026-11-03",
       "afectada por el granizo fue declarada la emergencia agropecuaria para la produccion horticola cordobesa y habra alivio fiscal para los casos mas graves": "2026-11-03",
-      "beware pilots to nowhere aleph eins capital on avoiding corporate agtech traps": "2026-11-03"
+      "beware pilots to nowhere aleph eins capital on avoiding corporate agtech traps": "2026-11-03",
+      "dolar blue a cuanto cotizan hoy en cordoba 3 noviembre 2026": "2026-11-03",
+      "las dos caras del cerdo mientras consumo y produccion celebran records las granjas empiezan a sufrir": "2026-11-03",
+      "las elecciones en ee uu y la caida del petroleo condicionan a la soja mientras los cereales buscan estabilizarse": "2026-11-03",
+      "soja en minimos de 6 meses la caida del petroleo y el avance de la cosecha marcan la tendencia": "2026-11-03",
+      "soja chicago busca recuperarse pero la oferta limita las subas": "2026-11-03",
+      "pito catalan a la conservacion de bosques un estudio mostro que argentina pierde unas 200 mil hectareas al ano la misma superficie que le prometio a la onu restaurar en una decada": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28466,7 +28574,13 @@
       "d57b879c1aaa84c8": "2026-11-03",
       "7d8501699047f666": "2026-11-03",
       "4ab11c66b4e226df": "2026-11-03",
-      "02f224f76dbf2813": "2026-11-03"
+      "02f224f76dbf2813": "2026-11-03",
+      "215a6a856fb1332b": "2026-11-03",
+      "806414e50837525d": "2026-11-03",
+      "fbeb958ad6c2f464": "2026-11-03",
+      "731e202499dff132": "2026-11-03",
+      "77b8755b86d6c0c7": "2026-11-03",
+      "cce701f70f8df877": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48667,9 +48781,140 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d39a32eb0d38_portada.jpg"
+    },
+    {
+      "id": "162a41218d39",
+      "cuando": "2026-11-03T10:20-03:00",
+      "titulo_original": "Ganadería: las cuotas le cambian el ritmo al negocio exportador",
+      "descripcion": "Las exportaciones argentinas de carne vacuna registraron un nivel elevado en septiembre. El sistema de cupos de China cambia los tiempos del mercado internacional y obliga a analizar nuevas variables. Un análisis del Rosgan",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html",
+      "titular": "Carne vacuna: cupos chinos y exportaciones bajo la lupa",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 13,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Datos clave de exportación cárnica y cuotas que impactan en toda la cadena ganadera.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          66
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9fed7804-a9f5-4bb8-9029-be9445994ae1",
+          "slug": "ganaderia-vacuna-como-impactan-los-cupos-de-china-en-las-48d243",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-vacuna-como-impactan-los-cupos-de-china-en-las-48d243",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1082239668239492",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18650657542037912",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17970678491963690"
+        },
+        "historia_facebook": {
+          "id": "1463514559035886"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_162a41218d39_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "24c48cce6e3c",
+      "rep": {
+        "id": "24c48cce6e3c",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir/",
+        "canonical_url": "https://infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir",
+        "titulo": "Las dos caras del cerdo: mientras consumo y producción celebran récords, las granjas empiezan a sufrir",
+        "titulo_norm": "las dos caras del cerdo mientras consumo y produccion celebran records las granjas empiezan a sufrir",
+        "descripcion": "La producción de cerdos continúa creciendo a tasas elevadas y el consumo interno también alcanzó niveles récord. Sin embargo, la mayor disponibilidad de carne, el incremento de las importaciones y los costos en dólares presionan sobre la rentabilidad de las granjas.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2025/12/cerdos.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-11-03T10:08-03:00",
+        "capturado": "2026-11-03T10:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "806414e50837525d"
+      },
+      "grupo": [
+        {
+          "id": "24c48cce6e3c",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir/",
+          "canonical_url": "https://infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir",
+          "titulo": "Las dos caras del cerdo: mientras consumo y producción celebran récords, las granjas empiezan a sufrir",
+          "titulo_norm": "las dos caras del cerdo mientras consumo y produccion celebran records las granjas empiezan a sufrir",
+          "descripcion": "La producción de cerdos continúa creciendo a tasas elevadas y el consumo interno también alcanzó niveles récord. Sin embargo, la mayor disponibilidad de carne, el incremento de las importaciones y los costos en dólares presionan sobre la rentabilidad de las granjas.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2025/12/cerdos.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-11-03T10:08-03:00",
+          "capturado": "2026-11-03T10:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "806414e50837525d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "cerdos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta de lleno a los productores porcinos bonaerenses por la pinza entre mayores costos y menores márgenes.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "cuando": "2026-11-03T10:20-03:00"
+    },
     {
       "id": "ce5c7ebc9a89",
       "rep": {
@@ -48934,73 +49179,6 @@
         "dobles": [
           67,
           69
-        ]
-      },
-      "cuando": "2026-11-03T07:00-03:00"
-    },
-    {
-      "id": "162a41218d39",
-      "rep": {
-        "id": "162a41218d39",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html",
-        "canonical_url": "https://lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html",
-        "titulo": "Ganadería: las cuotas le cambian el ritmo al negocio exportador",
-        "titulo_norm": "ganaderia las cuotas le cambian el ritmo al negocio exportador",
-        "descripcion": "Las exportaciones argentinas de carne vacuna registraron un nivel elevado en septiembre. El sistema de cupos de China cambia los tiempos del mercado internacional y obliga a analizar nuevas variables. Un análisis del Rosgan",
-        "imagen_url": "https://media.lacapital.com.ar/p/1b6eff409f9bba430bde51494bb2b4cc/adjuntos/203/imagenes/027/675/0027675180/1200x675/smart/14_celina-mutti-lovera_74413551__04-12-2019__200x800jpg.jpg",
-        "autor": "",
-        "publicado": "2026-11-03T06:05-03:00",
-        "capturado": "2026-11-03T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a913153b8aa966ed"
-      },
-      "grupo": [
-        {
-          "id": "162a41218d39",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html",
-          "canonical_url": "https://lacapital.com.ar/agro/ganaderia-las-cuotas-le-cambian-el-ritmo-al-negocio-exportador-n10289821.html",
-          "titulo": "Ganadería: las cuotas le cambian el ritmo al negocio exportador",
-          "titulo_norm": "ganaderia las cuotas le cambian el ritmo al negocio exportador",
-          "descripcion": "Las exportaciones argentinas de carne vacuna registraron un nivel elevado en septiembre. El sistema de cupos de China cambia los tiempos del mercado internacional y obliga a analizar nuevas variables. Un análisis del Rosgan",
-          "imagen_url": "https://media.lacapital.com.ar/p/1b6eff409f9bba430bde51494bb2b4cc/adjuntos/203/imagenes/027/675/0027675180/1200x675/smart/14_celina-mutti-lovera_74413551__04-12-2019__200x800jpg.jpg",
-          "autor": "",
-          "publicado": "2026-11-03T06:05-03:00",
-          "capturado": "2026-11-03T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a913153b8aa966ed"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 13,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 68,
-        "commercial_score": 72,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Datos clave de exportación cárnica y cuotas que impactan en toda la cadena ganadera.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          66
         ]
       },
       "cuando": "2026-11-03T07:00-03:00"
@@ -49274,8 +49452,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T10:04:38-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T10:25:13-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
