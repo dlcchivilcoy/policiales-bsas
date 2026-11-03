@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-03T00:32:28.000Z",
+  "actualizado": "2026-11-03T22:01:33.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.diariodemocracia.com/policiales/347450-detuvieron-al-autor-del-robo-ocurrido-en-el-edific",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-01T22:01:21.000Z",
-      "titulo": "Cayó en un hotel céntrico el ladrón que se llevó una bicicleta en Chacabuco",
-      "descripcion": "Un sospechoso de 36 años, oriundo de Lobos, fue arrestado en un hotel de Chacabuco tras robar una bicicleta Venzo de un medio local. La Policía recuperó el rodado.",
-      "texto_tiktok": "Un sujeto de 36 años fue arrestado en un hospedaje céntrico de Chacabuco tras robar una bicicleta.\n\nEl rodado sustraído pertenece a un trabajador del diario ubicado sobre la calle Rivadavia al 400.\n\nLos efectivos policiales analizaron las cámaras de seguridad públicas y privadas para dar con el sospechoso.\n\nLa causa quedó en manos de la UFI N° 1 del Departamento Judicial Junín.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Detenido #Seguridad #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-01_2135_01_chacabuco_cay-en-un-hotel-c-ntrico-el-la.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-detuvieron-a-un-hombre-de-36-anos-y-recuperaron-una-3ba5d0",
-      "youtube_url": "https://youtube.com/shorts/LFU40SymsTU",
-      "prioridad": 6,
-      "urgente": false,
-      "localidad": "Chacabuco",
-      "volanta": "Chacabuco",
-      "categoria": "robo",
-      "distancia_km": 50.1,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/la-semana-comienza-con-una-nueva-alerta.html",
       "origen": "policiales",
@@ -259,6 +235,30 @@
       "volanta": "Temporal en Chacabuco",
       "categoria": "alerta_meteorologica",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31116/volco-una-camioneta-en-ruta-5-entre-bragado-y-9-de-julio.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-03T22:01:33.000Z",
+      "titulo": "Volcó una camioneta en la Ruta 5 bajo la lluvia y el chofer fue hospitalizado",
+      "descripcion": "Sebastián Reyes, de 45 años y oriundo de Temperley, protagonizó un vuelco con su Toyota Hilux en el kilómetro 256 de la Ruta Nacional 5. Fue derivado al Hospital Julio de Vedia para controles preventivos.",
+      "texto_tiktok": "Un automovilista protagonizó un despiste y vuelco en la Ruta Nacional 5, a la altura del kilómetro 256, mientras se registraban precipitaciones en la zona.\n\nEl rodado involucrado fue una camioneta Toyota Hilux que se desplazaba en dirección ascendente hacia 9 de Julio, cuyo único ocupante fue identificado como Sebastián Reyes, de 45 años.\n\nEl conductor logró abandonar el habitáculo por sus propios medios tras el siniestro y posteriormente fue llevado en una ambulancia hacia el Hospital Zonal Julio de Vedia para recibir atención médica preventiva.\n\nEn el operativo desplegado en el sitio trabajaron agentes de la Policía Vial junto a efectivos del Destacamento Patricios y personal de la concesionaria Pentavía.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-03_2135_01_bragado_volc-una-camioneta-en-la-ruta-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-volco-una-camioneta-en-la-ruta-5-y-el-conductor-debio-7a75dc",
+      "youtube_url": "https://youtube.com/shorts/NZlPillJOaE",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Siniestro vial en Bragado",
+      "categoria": "otro_policial",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
