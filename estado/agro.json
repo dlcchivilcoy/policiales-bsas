@@ -24309,6 +24309,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "077c81f10bf65541": {
+      "impacto_economico": 14,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 46,
+      "commercial_score": 48,
+      "subtema": "agro",
+      "tema": "fruticultura",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran volumen económico y alerta de costos en una economía regional, pero con baja cercanía a la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25953,7 +25974,12 @@
       "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03",
       "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado": "2026-11-03",
       "https://lanacion.com.ar/economia/campo/belen-veterinaria-produce-en-cordoba-y-eligio-un-tractor-rosa-para-un-homenaje-vamos-a-hacer-algo-nid03112026": "2026-11-03",
-      "https://todoagro.com.ar/se-estan-actualizando-los-modelos-para-costear-la-produccion-de-leche-en-argentina": "2026-11-03"
+      "https://todoagro.com.ar/se-estan-actualizando-los-modelos-para-costear-la-produccion-de-leche-en-argentina": "2026-11-03",
+      "https://todoagro.com.ar/metalfor-pidio-el-concurso-preventivo-y-crece-la-preocupacion-por-la-crisis-de-la-maquinaria-agricola-argentina": "2026-11-03",
+      "https://infocampo.com.ar/maiz-tardio-las-chicharritas-siguen-ausentes-y-el-panorama-para-la-siembra-es-muy-promisorio": "2026-11-03",
+      "https://infocampo.com.ar/es-un-orgullo-ver-hasta-donde-llegan-nuestros-animales-la-carne-argentina-sigue-expandiendose-en-china": "2026-11-03",
+      "https://bichosdecampo.com/la-fruticultura-del-alto-valle-genera-730-millones-de-dolares-al-ano-pero-las-peras-dejan-perdidas-por-52-millones": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/fabrica-tomada-escala-el-conflicto-en-la-fabrica-pauny-y-los-trabajadores-se-quedan-en-la-planta-nid03112026": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27596,7 +27622,12 @@
       "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03",
       "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado": "2026-11-03",
       "belen veterinaria produce en cordoba y eligio un tractor rosa para un homenaje vamos a hacer algo distinto y muy disruptivo": "2026-11-03",
-      "se estan actualizando los modelos para costear la produccion de leche en argentina": "2026-11-03"
+      "se estan actualizando los modelos para costear la produccion de leche en argentina": "2026-11-03",
+      "metalfor pidio el concurso preventivo y crece la preocupacion por la crisis de la maquinaria agricola argentina": "2026-11-03",
+      "maiz tardio las chicharritas siguen ausentes y el panorama para la siembra es muy promisorio": "2026-11-03",
+      "es un orgullo ver hasta donde llegan nuestros animales la carne argentina sigue expandiendose en china": "2026-11-03",
+      "la fruticultura del alto valle genera 730 millones de dolares al ano pero las peras dejan perdidas por 52 millones": "2026-11-03",
+      "fabrica tomada escala el conflicto en pauny y los trabajadores se quedan en la planta": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29239,7 +29270,12 @@
       "216370040998cf16": "2026-11-03",
       "73f2922ea4157aaa": "2026-11-03",
       "6758ce51e57a7c9d": "2026-11-03",
-      "37300d56a420036f": "2026-11-03"
+      "37300d56a420036f": "2026-11-03",
+      "1c6e1778db7d8df9": "2026-11-03",
+      "0139176b348b2d93": "2026-11-03",
+      "886d0eab0fbc544d": "2026-11-03",
+      "077c81f10bf65541": "2026-11-03",
+      "94de091d4856826f": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50318,49 +50354,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_455342a660f4_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "8befa1b2edf7",
-      "rep": {
-        "id": "8befa1b2edf7",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado/",
-        "canonical_url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado",
-        "titulo": "Tristeza: Argentina lidera el ranking mundial de extracción de recursos al sector agropecuario por parte del Estado",
-        "titulo_norm": "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado",
-        "descripcion": "El indicador de referencia global –elaborado por la OCDE– para medir el monto de subsidios agropecuarios sobre el ingreso rural total (Producer Support Estimate o por sus siglas PSE) fue en la Argentina del -13,5% en promedio en el período comprendido entre 2023 y 2025. Con esa cifra, la Argentina lidera el ranking de países […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-03T16:38-03:00",
-        "capturado": "2026-11-03T16:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "73f2922ea4157aaa"
-      },
-      "grupo": [
-        {
-          "id": "8befa1b2edf7",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado/",
-          "canonical_url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado",
-          "titulo": "Tristeza: Argentina lidera el ranking mundial de extracción de recursos al sector agropecuario por parte del Estado",
-          "titulo_norm": "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado",
-          "descripcion": "El indicador de referencia global –elaborado por la OCDE– para medir el monto de subsidios agropecuarios sobre el ingreso rural total (Producer Support Estimate o por sus siglas PSE) fue en la Argentina del -13,5% en promedio en el período comprendido entre 2023 y 2025. Con esa cifra, la Argentina lidera el ranking de países […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-03T16:38-03:00",
-          "capturado": "2026-11-03T16:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "73f2922ea4157aaa"
-        }
-      ],
+      "cuando": "2026-11-03T18:00-03:00",
+      "titulo_original": "Tristeza: Argentina lidera el ranking mundial de extracción de recursos al sector agropecuario por parte del Estado",
+      "descripcion": "El indicador de referencia global –elaborado por la OCDE– para medir el monto de subsidios agropecuarios sobre el ingreso rural total (Producer Support Estimate o por sus siglas PSE) fue en la Argentina del -13,5% en promedio en el período comprendido entre 2023 y 2025. Con esa cifra, la Argentina l",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado/",
+      "titular": "Argentina lidera el ranking mundial de extracción estatal al agro",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 20,
         "interes_productores": 15,
@@ -50382,8 +50385,45 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-03T16:40-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "obmYFEJsBSE",
+          "url": "https://youtube.com/shorts/obmYFEJsBSE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "1071bc6b-afdd-4ab3-a6c9-cd0ffb03d554",
+          "slug": "argentina-lidera-el-ranking-mundial-de-la-ocde-en-extraccion-de-ba84aa",
+          "url": "https://www.diariolacampaña.com.ar/n/argentina-lidera-el-ranking-mundial-de-la-ocde-en-extraccion-de-ba84aa",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2620940245093115",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18127795190478950",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18112931342240898"
+        },
+        "historia_facebook": {
+          "id": "1144561684726408"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8befa1b2edf7_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "bcad702816b8",
       "rep": {
@@ -51248,8 +51288,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T17:25:09-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T18:03:52-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
