@@ -24158,6 +24158,27 @@
         53,
         54
       ]
+    },
+    "770af0b24f34da04": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 83,
+      "subtema": "agro",
+      "tema": "maíz tardío",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacto altísimo para la zona núcleo por el fantasma de la chicharrita y la decisión de siembra del maíz tardío.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25795,7 +25816,8 @@
       "https://agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html": "2026-11-03",
       "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos": "2026-11-03",
       "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron": "2026-11-03",
-      "https://intainforma.inta.gob.ar/cooperacion-tecnologica-internacional-para-el-desarrollo-del-biogas": "2026-11-03"
+      "https://intainforma.inta.gob.ar/cooperacion-tecnologica-internacional-para-el-desarrollo-del-biogas": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249181-maiz-tardio-el-panorama-es-muy-promisorio-las-zonas-endemicas-siguen-con-escasas-chicharritas.html": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27431,7 +27453,8 @@
       "octubre las precipitaciones acumuladas en cordoba presentaron una distribucion heterogenea": "2026-11-03",
       "estiman cuanto pasto hay disponible en los campos ganaderos": "2026-11-03",
       "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron": "2026-11-03",
-      "cooperacion tecnologica internacional para el desarrollo del biogas": "2026-11-03"
+      "cooperacion tecnologica internacional para el desarrollo del biogas": "2026-11-03",
+      "maiz tardio el panorama es muy promisorio las zonas endemicas siguen con escasas chicharritas": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29067,7 +29090,8 @@
       "a61a5d64f8258bab": "2026-11-03",
       "b55d4b0183e640f8": "2026-11-03",
       "90501d7048dd806d": "2026-11-03",
-      "67ed2924ac3622a6": "2026-11-03"
+      "67ed2924ac3622a6": "2026-11-03",
+      "770af0b24f34da04": "2026-11-03"
     }
   },
   "elegidas": [
@@ -49835,6 +49859,73 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c3e8312875a_portada.jpg"
+    },
+    {
+      "id": "d807444a7086",
+      "cuando": "2026-11-03T16:00-03:00",
+      "titulo_original": "Maíz tardío, el panorama es muy promisorio: las zonas endémicas siguen con escasas chicharritas",
+      "descripcion": "El 53º informe de la Red Nacional de Monitoreo de Dalbulus maidis presenta una situación promisoria a partir de los datos recolectados en la segunda mitad de octubre: las regiones del Litoral, Centro Norte y Centro Sur presentan niveles de presencia de chicharritas por debajo de la campaña pasada, m",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249181-maiz-tardio-el-panorama-es-muy-promisorio-las-zonas-endemicas-siguen-con-escasas-chicharritas.html",
+      "titular": "Maíz tardío: bajan las poblaciones de chicharrita frente al año pasado",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 83,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacto altísimo para la zona núcleo por el fantasma de la chicharrita y la decisión de siembra del maíz tardío.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T16:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "PsZfybGEqIk",
+          "url": "https://youtube.com/shorts/PsZfybGEqIk",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "fd4d9be0-abf0-483e-9921-0411a3391328",
+          "slug": "maiz-tardio-monitoreo-oficial-confirma-menor-presencia-de-4d3fbb",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-tardio-monitoreo-oficial-confirma-menor-presencia-de-4d3fbb",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1446935440106213",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18102711353364449",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17961262026239793"
+        },
+        "historia_facebook": {
+          "id": "1723034305428146"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d807444a7086_portada.jpg"
     }
   ],
   "pendientes": [
@@ -50769,8 +50860,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T14:24:48-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T16:05:12-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
