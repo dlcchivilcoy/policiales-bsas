@@ -23832,6 +23832,77 @@
         63,
         63
       ]
+    },
+    "bb0a09adde2c0273": {
+      "impacto_economico": 6,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 40,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "trabajadores rurales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa al productor por costos y obligaciones laborales, pero tiene bajo impacto comercial directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cf4e5f2e129bffbe": {
+      "impacto_economico": 11,
+      "interes_productores": 10,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 69,
+      "commercial_score": 72,
+      "subtema": "agtech",
+      "tema": "alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Destaca la genética nacional en forrajeras clave para ganadería, con gran atractivo técnico y comercial.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        71
+      ]
+    },
+    "b2e1150aed5392e9": {
+      "impacto_economico": 17,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 70,
+      "commercial_score": 76,
+      "subtema": "empresas",
+      "tema": "impuestos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cambios clave en la penal tributaria que afectan directamente la operatoria legal y fiscal de productores y empresas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        74
+      ]
     }
   },
   "indice": {
@@ -25446,7 +25517,15 @@
       "https://infocampo.com.ar/riesgo-pais-hoy-03-11-2026": "2026-11-03",
       "https://infocampo.com.ar/la-crisis-de-pauny-sin-respuestas-por-parte-de-los-duenos-trabajadores-tomaron-la-fabrica": "2026-11-03",
       "https://agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html": "2026-11-03",
-      "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas": "2026-11-03"
+      "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas": "2026-11-03",
+      "https://todoagro.com.ar/el-renatre-elevo-la-prestacion-por-desempleo-cuanto-cobraran-los-trabajadores-rurales-desde-noviembre": "2026-11-03",
+      "https://todoagro.com.ar/el-inta-manfredi-expuso-en-china-sus-avances-en-mejoramiento-genetico-de-alfalfa": "2026-11-03",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-3-noviembre-2026": "2026-11-03",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-3-noviembre-2026": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27059,7 +27138,15 @@
       "riesgo pais hoy 03 de noviembre de 2026": "2026-11-03",
       "la crisis de pauny sin respuestas por parte de los duenos trabajadores tomaron la fabrica": "2026-11-03",
       "se extiende hasta el viernes 6 de noviembre la actualizacion de datos en el renspa": "2026-11-03",
-      "volver al 2001 los trabajadores de pauny tomaron la fabrica y la historia de zanello vuelve a sobrevolar las varillas": "2026-11-03"
+      "volver al 2001 los trabajadores de pauny tomaron la fabrica y la historia de zanello vuelve a sobrevolar las varillas": "2026-11-03",
+      "el renatre elevo la prestacion por desempleo cuanto cobraran los trabajadores rurales desde noviembre": "2026-11-03",
+      "el inta manfredi expuso en china sus avances en mejoramiento genetico de alfalfa": "2026-11-03",
+      "precio del maiz en rosario hoy 3 noviembre 2026": "2026-11-03",
+      "precio del trigo en rosario hoy 3 noviembre 2026": "2026-11-03",
+      "precio del girasol en rosario hoy 3 noviembre 2026": "2026-11-03",
+      "precio de la soja en rosario hoy 3 noviembre 2026": "2026-11-03",
+      "precio del sorgo en rosario hoy 3 noviembre 2026": "2026-11-03",
+      "reforma penal tributaria que cambia que se persigue y que queda fuera del delito": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28672,7 +28759,15 @@
       "678bc4497242205a": "2026-11-03",
       "56f87d7589b7c740": "2026-11-03",
       "2e63a36b5ed9e232": "2026-11-03",
-      "6ce79869aa4ecae4": "2026-11-03"
+      "6ce79869aa4ecae4": "2026-11-03",
+      "bb0a09adde2c0273": "2026-11-03",
+      "cf4e5f2e129bffbe": "2026-11-03",
+      "da890bf280c6c44a": "2026-11-03",
+      "ad2db981518a986a": "2026-11-03",
+      "38ad937e47782e65": "2026-11-03",
+      "a064414ead21e932": "2026-11-03",
+      "d6aecb675683dbc3": "2026-11-03",
+      "b2e1150aed5392e9": "2026-11-03"
     }
   },
   "elegidas": [
@@ -49061,9 +49156,140 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cee76445bee3_portada.jpg"
+    },
+    {
+      "id": "0806e8c17d54",
+      "cuando": "2026-11-03T11:20-03:00",
+      "titulo_original": "El INTA Manfredi expuso en China sus avances en mejoramiento genético de alfalfa",
+      "descripcion": "Ariel Odorizzi presentó en una conferencia internacional cómo el programa combina mejoramiento convencional, edición génica y enviromics para lograr variedades más resilientes. La entrada El INTA Manfredi expuso en China sus avances en mejoramiento genético de alfalfa pertenece a Todo Agro.",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/el-inta-manfredi-expuso-en-china-sus-avances-en-mejoramiento-genetico-de-alfalfa/",
+      "titular": "El INTA Manfredi expuso en China sobre mejoramiento genético de alfalfa",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 6,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 72,
+        "subtema": "agtech",
+        "tema": "alfalfa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Destaca la genética nacional en forrajeras clave para ganadería, con gran atractivo técnico y comercial.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          71
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T11:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a9f45eac-b9ae-4369-8bd2-1688f8ff5448",
+          "slug": "el-inta-manfredi-presento-en-china-sus-avances-en-mejoramiento-59ec71",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-manfredi-presento-en-china-sus-avances-en-mejoramiento-59ec71",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "3155851741474032",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17964928479226859",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18123309385820106"
+        },
+        "historia_facebook": {
+          "id": "1088475294191986"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0806e8c17d54_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "6b2f4dd7dda2",
+      "rep": {
+        "id": "6b2f4dd7dda2",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
+        "titulo": "Reforma penal tributaria: qué cambia, qué se persigue y qué queda fuera del delito",
+        "titulo_norm": "reforma penal tributaria que cambia que se persigue y que queda fuera del delito",
+        "descripcion": "La actualización sustancial de los montos mínimos y la clara distinción entre el ardid deliberado y el error operativo redefinen el límite entre la discusión con el fisco y la causa penal....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249174_67881852.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-03T10:59-03:00",
+        "capturado": "2026-11-03T11:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b2e1150aed5392e9"
+      },
+      "grupo": [
+        {
+          "id": "6b2f4dd7dda2",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
+          "titulo": "Reforma penal tributaria: qué cambia, qué se persigue y qué queda fuera del delito",
+          "titulo_norm": "reforma penal tributaria que cambia que se persigue y que queda fuera del delito",
+          "descripcion": "La actualización sustancial de los montos mínimos y la clara distinción entre el ardid deliberado y el error operativo redefinen el límite entre la discusión con el fisco y la causa penal....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249174_67881852.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-03T10:59-03:00",
+          "capturado": "2026-11-03T11:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b2e1150aed5392e9"
+        }
+      ],
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 70,
+        "commercial_score": 76,
+        "subtema": "empresas",
+        "tema": "impuestos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Cambios clave en la penal tributaria que afectan directamente la operatoria legal y fiscal de productores y empresas.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          74
+        ]
+      },
+      "cuando": "2026-11-03T11:20-03:00"
+    },
     {
       "id": "62311f182994",
       "rep": {
@@ -49735,8 +49961,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T11:04:30-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T11:24:36-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
