@@ -23761,6 +23761,52 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7980c241f89b7441": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 4,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 65,
+      "commercial_score": 68,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Gran impacto en precios internacionales y competencia regional, altamente comentado por productores.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        70
+      ]
+    },
+    "ff5b936f49f70b61": {
+      "impacto_economico": 19,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 7,
+      "conversacion": 10,
+      "potencial_comercial": 4,
+      "ai_score": 79,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "metalfor",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Noticia de alto impacto en el sector de maquinaria agrícola nacional que genera gran preocupación y debate.",
+      "tema_doc": "costos",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25368,7 +25414,10 @@
       "https://agrositio.com.ar/noticia/249169-las-elecciones-en-ee-uu-y-la-caida-del-petroleo-condicionan-a-la-soja-mientras-los-cereales-buscan-estabilizarse.html": "2026-11-03",
       "https://agrositio.com.ar/noticia/249168-soja-en-minimos-de-6-meses-la-caida-del-petroleo-y-el-avance-de-la-cosecha-marcan-la-tendencia.html": "2026-11-03",
       "https://agrositio.com.ar/noticia/249167-soja-chicago-busca-recuperarse-pero-la-oferta-limita-las-subas.html": "2026-11-03",
-      "https://bichosdecampo.com/pito-catalan-a-la-conservacion-de-bosques-un-estudio-mostro-que-argentina-pierde-unas-200-mil-hectareas-al-ano-la-misma-superficie-que-le-prometio-a-la-onu-restaurar-en-una-decada": "2026-11-03"
+      "https://bichosdecampo.com/pito-catalan-a-la-conservacion-de-bosques-un-estudio-mostro-que-argentina-pierde-unas-200-mil-hectareas-al-ano-la-misma-superficie-que-le-prometio-a-la-onu-restaurar-en-una-decada": "2026-11-03",
+      "https://bichosdecampo.com/apurate-jose-ya-sacaron-mas-de-129-000-vacunos-de-las-islas-de-entre-rios-por-la-crecida-del-parana-uno-de-cada-cuatro-animales-que-habia-en-la-zona": "2026-11-03",
+      "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/metalfor-una-de-las-empresas-mas-relevantes-del-agro-pidio-su-concurso-de-acreedores-nid03112026": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26974,7 +27023,10 @@
       "las elecciones en ee uu y la caida del petroleo condicionan a la soja mientras los cereales buscan estabilizarse": "2026-11-03",
       "soja en minimos de 6 meses la caida del petroleo y el avance de la cosecha marcan la tendencia": "2026-11-03",
       "soja chicago busca recuperarse pero la oferta limita las subas": "2026-11-03",
-      "pito catalan a la conservacion de bosques un estudio mostro que argentina pierde unas 200 mil hectareas al ano la misma superficie que le prometio a la onu restaurar en una decada": "2026-11-03"
+      "pito catalan a la conservacion de bosques un estudio mostro que argentina pierde unas 200 mil hectareas al ano la misma superficie que le prometio a la onu restaurar en una decada": "2026-11-03",
+      "apurate jose ya sacaron mas de 129 000 vacunos de las islas de entre rios por la crecida del parana uno de cada cuatro animales que habia en la zona": "2026-11-03",
+      "soja disponible a 485 u s tonelada lo mejor que le pudo haber pasado a los productores brasilenos es que ganara lula": "2026-11-03",
+      "metalfor una de las empresas mas relevantes del agro pidio su concurso de acreedores": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28580,7 +28632,10 @@
       "fbeb958ad6c2f464": "2026-11-03",
       "731e202499dff132": "2026-11-03",
       "77b8755b86d6c0c7": "2026-11-03",
-      "cce701f70f8df877": "2026-11-03"
+      "cce701f70f8df877": "2026-11-03",
+      "00dd46eed0b85331": "2026-11-03",
+      "7980c241f89b7441": "2026-11-03",
+      "ff5b936f49f70b61": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48845,9 +48900,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_162a41218d39_portada.jpg"
+    },
+    {
+      "id": "078364a9d015",
+      "cuando": "2026-11-03T10:40-03:00",
+      "titulo_original": "Metalfor, una de las empresas más relevantes del agro, pidió su concurso de acreedores",
+      "descripcion": "La firma, que en el último tiempo atravesó dificultades, recurrió a este recurso ante la Justicia cordobesa",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/metalfor-una-de-las-empresas-mas-relevantes-del-agro-pidio-su-concurso-de-acreedores-nid03112026/",
+      "titular": "Metalfor solicitó su concurso preventivo de acreedores en Córdoba",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 19,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 7,
+        "conversacion": 10,
+        "potencial_comercial": 4,
+        "ai_score": 79,
+        "commercial_score": 50,
+        "subtema": "empresas",
+        "tema": "metalfor",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Noticia de alto impacto en el sector de maquinaria agrícola nacional que genera gran preocupación y debate.",
+        "tema_doc": "costos",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9c0ef3e9-32ac-4862-8b06-5efa64cacf67",
+          "slug": "metalfor-solicito-el-concurso-preventivo-de-acreedores-en-53b4f3",
+          "url": "https://www.diariolacampaña.com.ar/n/metalfor-solicito-el-concurso-preventivo-de-acreedores-en-53b4f3",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1128278726419653",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18133460113775955",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18100037831411906"
+        },
+        "historia_facebook": {
+          "id": "1680109267016728"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_078364a9d015_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "3949e8ec4eed",
+      "rep": {
+        "id": "3949e8ec4eed",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula/",
+        "canonical_url": "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula",
+        "titulo": "¡Soja disponible a 485 u$s/tonelada! Lo mejor que le pudo haber pasado a los productores brasileños es que ganara Lula",
+        "titulo_norm": "soja disponible a 485 u s tonelada lo mejor que le pudo haber pasado a los productores brasilenos es que ganara lula",
+        "descripcion": "La victoria electoral del presidente Luiz Inácio Lula da Silva, tal como había adelantado Bichos de Campo, promovió la competitividad de los sectores exportadores y favoreció la rentabilidad de las empresas agrícolas. “La fuerte valorización del dólar frente al real durante la última semana aumentó la competitividad de la soja brasileña en el mercado internacional, […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/cepea.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-03T10:26-03:00",
+        "capturado": "2026-11-03T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7980c241f89b7441"
+      },
+      "grupo": [
+        {
+          "id": "3949e8ec4eed",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula/",
+          "canonical_url": "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula",
+          "titulo": "¡Soja disponible a 485 u$s/tonelada! Lo mejor que le pudo haber pasado a los productores brasileños es que ganara Lula",
+          "titulo_norm": "soja disponible a 485 u s tonelada lo mejor que le pudo haber pasado a los productores brasilenos es que ganara lula",
+          "descripcion": "La victoria electoral del presidente Luiz Inácio Lula da Silva, tal como había adelantado Bichos de Campo, promovió la competitividad de los sectores exportadores y favoreció la rentabilidad de las empresas agrícolas. “La fuerte valorización del dólar frente al real durante la última semana aumentó la competitividad de la soja brasileña en el mercado internacional, […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/cepea.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-03T10:26-03:00",
+          "capturado": "2026-11-03T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7980c241f89b7441"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 8,
+        "cercania_pba": 4,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 68,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Gran impacto en precios internacionales y competencia regional, altamente comentado por productores.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          70
+        ]
+      },
+      "cuando": "2026-11-03T10:40-03:00"
+    },
     {
       "id": "24c48cce6e3c",
       "rep": {
@@ -49452,8 +49634,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T10:25:13-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T10:45:11-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
