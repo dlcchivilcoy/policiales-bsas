@@ -23147,6 +23147,102 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0c223d489a3a1a63": {
+      "impacto_economico": 12,
+      "interes_productores": 11,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 57,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "comercialización de granos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reflexión útil sobre la gestión comercial del productor, aunque sin datos duros inmediatos.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        62
+      ]
+    },
+    "5f1ed51466179949": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 68,
+      "commercial_score": 55,
+      "subtema": "mercados",
+      "tema": "soja chicago",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la formación de precios locales de la oleaginosa por la liquidación de fondos.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        68
+      ]
+    },
+    "05aa56b868d825d5": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 5,
+      "ai_score": 54,
+      "commercial_score": 48,
+      "subtema": "ganaderia",
+      "tema": "certificación laboral",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relevante para empresas exportadoras de carne, pero de interés acotado para el productor promedio de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        55
+      ]
+    },
+    "f1af808c3cccd650": {
+      "impacto_economico": 8,
+      "interes_productores": 0,
+      "innovacion": 12,
+      "cercania_argentina": 3,
+      "cercania_pba": 2,
+      "potencial_reel": 7,
+      "conversacion": 5,
+      "potencial_comercial": 6,
+      "ai_score": 43,
+      "commercial_score": 55,
+      "subtema": "agtech",
+      "tema": "drones agrícolas",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Novedad tecnológica en EE.UU. sobre drones pulverizadores con baja incidencia directa actual en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -24710,7 +24806,12 @@
       "https://lanacion.com.ar/economia/campo/esta-en-rosario-molinos-rio-de-la-plata-concreto-la-venta-de-parte-de-un-historico-complejo-nid02112026": "2026-11-02",
       "https://infocampo.com.ar/la-visita-del-papa-tendra-presencia-del-campo-la-mesa-de-enlace-estara-en-una-reunion-con-leon-xiv": "2026-11-02",
       "https://bichosdecampo.com/si-no-robar-es-un-mandamiento-y-las-retenciones-son-un-robo-podra-la-mesa-de-enlace-lograr-que-el-papa-rece-por-el-final-de-ese-tributo": "2026-11-02",
-      "https://lanacion.com.ar/economia/campo/visec-tras-un-reclamo-los-acopiadores-podran-habilitar-sin-cargo-sus-plantas-para-operar-con-el-nid02112026": "2026-11-02"
+      "https://lanacion.com.ar/economia/campo/visec-tras-un-reclamo-los-acopiadores-podran-habilitar-sin-cargo-sus-plantas-para-operar-con-el-nid02112026": "2026-11-02",
+      "https://bichosdecampo.com/mariano-galindez-es-uno-de-los-periodistas-que-mejor-entiende-el-mercado-argentino-de-granos-y-sus-actores-por-eso-puede-afirmar-que-el-productor-tiene-que-seguir-madurando-comercialmente-para-prot": "2026-11-02",
+      "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/el-renatre-ya-certifico-a-17-empresas-por-sus-practicas-laborales-y-otras-15-buscan-obtener-el-sello-nid02112026": "2026-11-02",
+      "https://lanacion.com.ar/economia/campo/la-mesa-de-enlace-participara-de-un-encuentro-con-leon-xiv-junto-a-sindicalistas-y-empresarios-nid02112026": "2026-11-02",
+      "https://agfundernews.com/exedy-drones-opens-reservations-amid-us-spray-drone-shakeup": "2026-11-02"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -26272,7 +26373,12 @@
       "esta en rosario molinos rio de la plata concreto la venta de parte de un historico complejo industrial": "2026-11-02",
       "la visita del papa tendra presencia del campo la mesa de enlace estara en una reunion con leon xiv": "2026-11-02",
       "si no robar es un mandamiento y las retenciones son un robo podra la mesa de enlace lograr que el papa rece por el final de ese tributo": "2026-11-02",
-      "visec tras un reclamo los acopiadores podran habilitar sin cargo sus plantas para operar con el sistema de trazabilidad": "2026-11-02"
+      "visec tras un reclamo los acopiadores podran habilitar sin cargo sus plantas para operar con el sistema de trazabilidad": "2026-11-02",
+      "mariano galindez es uno de los periodistas que mejor entiende el mercado argentino de granos y sus actores por eso puede afirmar que el productor tiene que seguir madurando comercialmente para protegerse": "2026-11-02",
+      "los fondos agricolas en chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja": "2026-11-02",
+      "el renatre ya certifico a 17 empresas por sus practicas laborales y otras 15 buscan obtener el sello": "2026-11-02",
+      "la mesa de enlace participara de un encuentro con leon xiv junto a sindicalistas y empresarios": "2026-11-02",
+      "exedy drones opens reservations amid us spray drone shakeup": "2026-11-02"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -27834,7 +27940,12 @@
       "3379e92832362d71": "2026-11-02",
       "4208f62230dc90f9": "2026-11-02",
       "ebaead55463177f4": "2026-11-02",
-      "219330511841a5a0": "2026-11-02"
+      "219330511841a5a0": "2026-11-02",
+      "0c223d489a3a1a63": "2026-11-02",
+      "5f1ed51466179949": "2026-11-02",
+      "05aa56b868d825d5": "2026-11-02",
+      "087782415ee7f407": "2026-11-02",
+      "f1af808c3cccd650": "2026-11-02"
     }
   },
   "elegidas": [
@@ -47526,9 +47637,143 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0f37c793dbde_portada.jpg"
+    },
+    {
+      "id": "0348e93e1f88",
+      "cuando": "2026-11-02T21:00-03:00",
+      "titulo_original": "Maíz bajo presión: caídas en el mercado local y quinta semana en baja en Chicago; con Clara Treachi - Clínica de Granos",
+      "descripcion": "El mercado del maíz profundizó su tendencia bajista tanto en el plano local como internacional. La siembra temprana ya cubre el 47,3% del área prevista. En tanto, Chicago acumuló su quinta semana consecutiva con pérdidas, presionado por el ingreso de la segunda mayor cosecha histórica estadounidense",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
+      "titular": "Maíz: cotizaciones a la baja en el plano local y en Chicago",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad del productor de la región núcleo en plena siembra.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-02T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "22SbGnCuNuE",
+          "url": "https://youtube.com/shorts/22SbGnCuNuE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "1b8c7f4e-54af-4b10-9749-8d924f63af05",
+          "slug": "el-maiz-profundiza-su-caida-a-nivel-local-y-acumula-cinco-120b5e",
+          "url": "https://www.diariolacampaña.com.ar/n/el-maiz-profundiza-su-caida-a-nivel-local-y-acumula-cinco-120b5e",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "951031784462382",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18097576193452677",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18119337973790075"
+        },
+        "historia_facebook": {
+          "id": "1378135050878479"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0348e93e1f88_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "cee76445bee3",
+      "rep": {
+        "id": "cee76445bee3",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja/",
+        "canonical_url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja",
+        "titulo": "Los fondos agrícolas en Chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
+        "titulo_norm": "los fondos agricolas en chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
+        "descripcion": "Los precios de la soja en el CME Group (“Chicago”) comenzaron la semana con fuertes caídas de la mano de una liquidación importante de posiciones por parte de los fondos de inversión agrícolas. Si bien no existe en medios oficiales iraníes referencia alguna a negociaciones avanzadas con EE.UU. para lograr un acuerdo de paz, el […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Chicago.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-02T20:17-03:00",
+        "capturado": "2026-11-02T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "5f1ed51466179949"
+      },
+      "grupo": [
+        {
+          "id": "cee76445bee3",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja/",
+          "canonical_url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja",
+          "titulo": "Los fondos agrícolas en Chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
+          "titulo_norm": "los fondos agricolas en chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
+          "descripcion": "Los precios de la soja en el CME Group (“Chicago”) comenzaron la semana con fuertes caídas de la mano de una liquidación importante de posiciones por parte de los fondos de inversión agrícolas. Si bien no existe en medios oficiales iraníes referencia alguna a negociaciones avanzadas con EE.UU. para lograr un acuerdo de paz, el […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Chicago.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-02T20:17-03:00",
+          "capturado": "2026-11-02T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5f1ed51466179949"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 68,
+        "commercial_score": 55,
+        "subtema": "mercados",
+        "tema": "soja chicago",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la formación de precios locales de la oleaginosa por la liquidación de fondos.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          68
+        ]
+      },
+      "cuando": "2026-11-02T21:00-03:00"
+    },
     {
       "id": "c0878da5e3a8",
       "rep": {
@@ -47680,69 +47925,6 @@
         ]
       },
       "cuando": "2026-11-02T18:40-03:00"
-    },
-    {
-      "id": "0348e93e1f88",
-      "rep": {
-        "id": "0348e93e1f88",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
-        "titulo": "Maíz bajo presión: caídas en el mercado local y quinta semana en baja en Chicago; con Clara Treachi - Clínica de Granos",
-        "titulo_norm": "maiz bajo presion caidas en el mercado local y quinta semana en baja en chicago con clara treachi clinica de granos",
-        "descripcion": "El mercado del maíz profundizó su tendencia bajista tanto en el plano local como internacional. La siembra temprana ya cubre el 47,3% del área prevista. En tanto, Chicago acumuló su quinta semana consecutiva con pérdidas, presionado por el ingreso de la segunda mayor cosecha histórica estadounidense y la pérdida de competitividad exportadora frente a Brasil, factores que opacaron la menor producción reportada por la Unión Europea...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/1H5GCa36k1o.jpg",
-        "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
-        "publicado": "2026-11-02T18:13-03:00",
-        "capturado": "2026-11-02T18:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3bbec57f9971546c"
-      },
-      "grupo": [
-        {
-          "id": "0348e93e1f88",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249162-maiz-bajo-presion-caidas-en-el-mercado-local-y-quinta-semana-en-baja-en-chicago-con-clara-treachi-clinica-de-granos.html",
-          "titulo": "Maíz bajo presión: caídas en el mercado local y quinta semana en baja en Chicago; con Clara Treachi - Clínica de Granos",
-          "titulo_norm": "maiz bajo presion caidas en el mercado local y quinta semana en baja en chicago con clara treachi clinica de granos",
-          "descripcion": "El mercado del maíz profundizó su tendencia bajista tanto en el plano local como internacional. La siembra temprana ya cubre el 47,3% del área prevista. En tanto, Chicago acumuló su quinta semana consecutiva con pérdidas, presionado por el ingreso de la segunda mayor cosecha histórica estadounidense y la pérdida de competitividad exportadora frente a Brasil, factores que opacaron la menor producción reportada por la Unión Europea...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/1H5GCa36k1o.jpg",
-          "autor": "info@agrositio.com (Clara Treachi (AZ Group))",
-          "publicado": "2026-11-02T18:13-03:00",
-          "capturado": "2026-11-02T18:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3bbec57f9971546c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 74,
-        "commercial_score": 74,
-        "subtema": "mercados",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta directamente en la rentabilidad del productor de la región núcleo en plena siembra.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-02T18:20-03:00"
     },
     {
       "id": "d39a32eb0d38",
@@ -48005,8 +48187,8 @@
       "cuando": "2026-11-01T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-02T19:24:01-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-02T21:05:34-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
