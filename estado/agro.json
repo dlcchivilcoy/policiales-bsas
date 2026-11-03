@@ -24263,6 +24263,31 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6758ce51e57a7c9d": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 9,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 56,
+      "commercial_score": 58,
+      "subtema": "maquinaria",
+      "tema": "tractor rosa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de fuerte impacto visual y emocional ideal para redes, aunque con bajo contenido técnico.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        57
+      ]
     }
   },
   "indice": {
@@ -25905,7 +25930,8 @@
       "https://bichosdecampo.com/la-docente-gisela-patrocinio-recuerda-que-encuesto-a-63-mujeres-rurales-y-solo-cuatro-tenian-aportes-anos-despues-ayudo-a-fundar-una-asociacion-para-visibilizar-estas-injusticias": "2026-11-03",
       "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026": "2026-11-03",
       "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03",
-      "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado": "2026-11-03"
+      "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/belen-veterinaria-produce-en-cordoba-y-eligio-un-tractor-rosa-para-un-homenaje-vamos-a-hacer-algo-nid03112026": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27546,7 +27572,8 @@
       "la docente gisela patrocinio recuerda que encuesto a 63 mujeres rurales y solo cuatro tenian aportes anos despues ayudo a fundar una asociacion para visibilizar estas injusticias": "2026-11-03",
       "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31": "2026-11-03",
       "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03",
-      "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado": "2026-11-03"
+      "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado": "2026-11-03",
+      "belen veterinaria produce en cordoba y eligio un tractor rosa para un homenaje vamos a hacer algo distinto y muy disruptivo": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29187,7 +29214,8 @@
       "e60d1c376e61d00f": "2026-11-03",
       "eb5c0dd42f96e3aa": "2026-11-03",
       "216370040998cf16": "2026-11-03",
-      "73f2922ea4157aaa": "2026-11-03"
+      "73f2922ea4157aaa": "2026-11-03",
+      "6758ce51e57a7c9d": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50142,6 +50170,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e910b7932889_portada.jpg"
+    },
+    {
+      "id": "7aaedf305984",
+      "cuando": "2026-11-03T17:00-03:00",
+      "titulo_original": "Crónicas Robadas: Antes era gasoil para el patrullero, pero ahora los productores de Río Cuarto decidieron donarle a la policía directamente un dron",
+      "descripcion": "El sitio Valor Agregado Agro, que dirige el colega cordobés Germán Tinari, relató una curiosa situación sucedida en Río Cuarto, donde productores y empresarios de esa región se pusieron de acuerdo para donar un dron a la Patrulla Rural, que obviamente estará destinado a combatir la inseguridad en el",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron/",
+      "titular": "Productores de Río Cuarto donan un dron a la Patrulla Rural",
+      "volanta": "Seguridad Rural",
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 69,
+        "commercial_score": 50,
+        "subtema": "agtech",
+        "tema": "seguridad rural",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra una iniciativa tecnológica aplicada a la seguridad rural que genera fuerte debate y empatía en el sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3f2f6efd-af29-4ce9-87bf-b6a0e8006c1f",
+          "slug": "productores-de-rio-cuarto-donan-un-dron-a-la-patrulla-rural-288f1e",
+          "url": "https://www.diariolacampaña.com.ar/n/productores-de-rio-cuarto-donan-un-dron-a-la-patrulla-rural-288f1e",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1895257328509277",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18111826187580806",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18180165037378014"
+        },
+        "historia_facebook": {
+          "id": "1118378837556321"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7aaedf305984_portada.jpg"
     }
   ],
   "pendientes": [
@@ -50207,73 +50299,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-03T16:40-03:00"
-    },
-    {
-      "id": "7aaedf305984",
-      "rep": {
-        "id": "7aaedf305984",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron/",
-        "canonical_url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron",
-        "titulo": "Crónicas Robadas: Antes era gasoil para el patrullero, pero ahora los productores de Río Cuarto decidieron donarle a la policía directamente un dron",
-        "titulo_norm": "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron",
-        "descripcion": "El sitio Valor Agregado Agro, que dirige el colega cordobés Germán Tinari, relató una curiosa situación sucedida en Río Cuarto, donde productores y empresarios de esa región se pusieron de acuerdo para donar un dron a la Patrulla Rural, que obviamente estará destinado a combatir la inseguridad en el campo. Esta es la crónica, que […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/dron.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-03T13:24-03:00",
-        "capturado": "2026-11-03T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "90501d7048dd806d"
-      },
-      "grupo": [
-        {
-          "id": "7aaedf305984",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron/",
-          "canonical_url": "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron",
-          "titulo": "Crónicas Robadas: Antes era gasoil para el patrullero, pero ahora los productores de Río Cuarto decidieron donarle a la policía directamente un dron",
-          "titulo_norm": "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron",
-          "descripcion": "El sitio Valor Agregado Agro, que dirige el colega cordobés Germán Tinari, relató una curiosa situación sucedida en Río Cuarto, donde productores y empresarios de esa región se pusieron de acuerdo para donar un dron a la Patrulla Rural, que obviamente estará destinado a combatir la inseguridad en el campo. Esta es la crónica, que […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/dron.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-03T13:24-03:00",
-          "capturado": "2026-11-03T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "90501d7048dd806d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 5,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 69,
-        "commercial_score": 50,
-        "subtema": "agtech",
-        "tema": "seguridad rural",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muestra una iniciativa tecnológica aplicada a la seguridad rural que genera fuerte debate y empatía en el sector.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          69
-        ]
-      },
-      "cuando": "2026-11-03T13:40-03:00"
     },
     {
       "id": "bcad702816b8",
@@ -51139,8 +51164,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T16:44:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T17:05:17-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
