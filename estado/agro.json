@@ -23807,6 +23807,31 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2e63a36b5ed9e232": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 63,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "renspa senasa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un trámite sanitario obligatorio que afecta a todos los productores ganaderos de la región y requiere aviso inmediato.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        63
+      ]
     }
   },
   "indice": {
@@ -25417,7 +25442,11 @@
       "https://bichosdecampo.com/pito-catalan-a-la-conservacion-de-bosques-un-estudio-mostro-que-argentina-pierde-unas-200-mil-hectareas-al-ano-la-misma-superficie-que-le-prometio-a-la-onu-restaurar-en-una-decada": "2026-11-03",
       "https://bichosdecampo.com/apurate-jose-ya-sacaron-mas-de-129-000-vacunos-de-las-islas-de-entre-rios-por-la-crecida-del-parana-uno-de-cada-cuatro-animales-que-habia-en-la-zona": "2026-11-03",
       "https://bichosdecampo.com/soja-disponible-a-485-us-tonelada-lo-mejor-que-le-pudo-haber-pasado-a-los-productores-brasilenos-es-que-ganara-lula": "2026-11-03",
-      "https://lanacion.com.ar/economia/campo/metalfor-una-de-las-empresas-mas-relevantes-del-agro-pidio-su-concurso-de-acreedores-nid03112026": "2026-11-03"
+      "https://lanacion.com.ar/economia/campo/metalfor-una-de-las-empresas-mas-relevantes-del-agro-pidio-su-concurso-de-acreedores-nid03112026": "2026-11-03",
+      "https://infocampo.com.ar/riesgo-pais-hoy-03-11-2026": "2026-11-03",
+      "https://infocampo.com.ar/la-crisis-de-pauny-sin-respuestas-por-parte-de-los-duenos-trabajadores-tomaron-la-fabrica": "2026-11-03",
+      "https://agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html": "2026-11-03",
+      "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27026,7 +27055,11 @@
       "pito catalan a la conservacion de bosques un estudio mostro que argentina pierde unas 200 mil hectareas al ano la misma superficie que le prometio a la onu restaurar en una decada": "2026-11-03",
       "apurate jose ya sacaron mas de 129 000 vacunos de las islas de entre rios por la crecida del parana uno de cada cuatro animales que habia en la zona": "2026-11-03",
       "soja disponible a 485 u s tonelada lo mejor que le pudo haber pasado a los productores brasilenos es que ganara lula": "2026-11-03",
-      "metalfor una de las empresas mas relevantes del agro pidio su concurso de acreedores": "2026-11-03"
+      "metalfor una de las empresas mas relevantes del agro pidio su concurso de acreedores": "2026-11-03",
+      "riesgo pais hoy 03 de noviembre de 2026": "2026-11-03",
+      "la crisis de pauny sin respuestas por parte de los duenos trabajadores tomaron la fabrica": "2026-11-03",
+      "se extiende hasta el viernes 6 de noviembre la actualizacion de datos en el renspa": "2026-11-03",
+      "volver al 2001 los trabajadores de pauny tomaron la fabrica y la historia de zanello vuelve a sobrevolar las varillas": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -28635,7 +28668,11 @@
       "cce701f70f8df877": "2026-11-03",
       "00dd46eed0b85331": "2026-11-03",
       "7980c241f89b7441": "2026-11-03",
-      "ff5b936f49f70b61": "2026-11-03"
+      "ff5b936f49f70b61": "2026-11-03",
+      "678bc4497242205a": "2026-11-03",
+      "56f87d7589b7c740": "2026-11-03",
+      "2e63a36b5ed9e232": "2026-11-03",
+      "6ce79869aa4ecae4": "2026-11-03"
     }
   },
   "elegidas": [
@@ -48960,9 +48997,140 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_078364a9d015_portada.jpg"
+    },
+    {
+      "id": "cee76445bee3",
+      "cuando": "2026-11-03T11:00-03:00",
+      "titulo_original": "Los fondos agrícolas en Chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
+      "descripcion": "Los precios de la soja en el CME Group (“Chicago”) comenzaron la semana con fuertes caídas de la mano de una liquidación importante de posiciones por parte de los fondos de inversión agrícolas. Si bien no existe en medios oficiales iraníes referencia alguna a negociaciones avanzadas con EE.UU. para ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja/",
+      "titular": "Soja: fondos especulativos desatan fuerte venta masiva en Chicago",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 68,
+        "commercial_score": 55,
+        "subtema": "mercados",
+        "tema": "soja chicago",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la formación de precios locales de la oleaginosa por la liquidación de fondos.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a0839008-45e3-4e11-bf2d-0a1145b975a2",
+          "slug": "soja-en-chicago-fuerte-liquidacion-de-fondos-desploma-los-3e8ae2",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-en-chicago-fuerte-liquidacion-de-fondos-desploma-los-3e8ae2",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2328288031269923",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18090285467285487",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17873538864647904"
+        },
+        "historia_facebook": {
+          "id": "4040948972719017"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cee76445bee3_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "62311f182994",
+      "rep": {
+        "id": "62311f182994",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html",
+        "titulo": "Se extiende hasta el viernes 6 de noviembre la actualización de datos en el Renspa",
+        "titulo_norm": "se extiende hasta el viernes 6 de noviembre la actualizacion de datos en el renspa",
+        "descripcion": "El SENASA facilita a los titulares del Registro Nacional Sanitario de Productores Agropecuarios, la gestión dispuesta en la Resolución 679/2026....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249173_22771080.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-03T10:44-03:00",
+        "capturado": "2026-11-03T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2e63a36b5ed9e232"
+      },
+      "grupo": [
+        {
+          "id": "62311f182994",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249173-se-extiende-hasta-el-viernes-6-de-noviembre-la-actualizacion-de-datos-en-el-renspa.html",
+          "titulo": "Se extiende hasta el viernes 6 de noviembre la actualización de datos en el Renspa",
+          "titulo_norm": "se extiende hasta el viernes 6 de noviembre la actualizacion de datos en el renspa",
+          "descripcion": "El SENASA facilita a los titulares del Registro Nacional Sanitario de Productores Agropecuarios, la gestión dispuesta en la Resolución 679/2026....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249173_22771080.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-03T10:44-03:00",
+          "capturado": "2026-11-03T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2e63a36b5ed9e232"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 3,
+        "conversacion": 6,
+        "potencial_comercial": 4,
+        "ai_score": 63,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "renspa senasa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Es un trámite sanitario obligatorio que afecta a todos los productores ganaderos de la región y requiere aviso inmediato.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          63
+        ]
+      },
+      "cuando": "2026-11-03T11:00-03:00"
+    },
     {
       "id": "3949e8ec4eed",
       "rep": {
@@ -49366,73 +49534,6 @@
       "cuando": "2026-11-03T07:00-03:00"
     },
     {
-      "id": "cee76445bee3",
-      "rep": {
-        "id": "cee76445bee3",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja/",
-        "canonical_url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja",
-        "titulo": "Los fondos agrícolas en Chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
-        "titulo_norm": "los fondos agricolas en chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
-        "descripcion": "Los precios de la soja en el CME Group (“Chicago”) comenzaron la semana con fuertes caídas de la mano de una liquidación importante de posiciones por parte de los fondos de inversión agrícolas. Si bien no existe en medios oficiales iraníes referencia alguna a negociaciones avanzadas con EE.UU. para lograr un acuerdo de paz, el […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Chicago.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-02T20:17-03:00",
-        "capturado": "2026-11-02T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5f1ed51466179949"
-      },
-      "grupo": [
-        {
-          "id": "cee76445bee3",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja/",
-          "canonical_url": "https://bichosdecampo.com/los-fondos-agricolas-en-chicago-se-cansaron-de-esperar-y-comenzaron-a-liquidar-fuerte-contratos-de-soja",
-          "titulo": "Los fondos agrícolas en Chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
-          "titulo_norm": "los fondos agricolas en chicago se cansaron de esperar y comenzaron a liquidar fuerte contratos de soja",
-          "descripcion": "Los precios de la soja en el CME Group (“Chicago”) comenzaron la semana con fuertes caídas de la mano de una liquidación importante de posiciones por parte de los fondos de inversión agrícolas. Si bien no existe en medios oficiales iraníes referencia alguna a negociaciones avanzadas con EE.UU. para lograr un acuerdo de paz, el […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Chicago.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-02T20:17-03:00",
-          "capturado": "2026-11-02T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5f1ed51466179949"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 14,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 5,
-        "ai_score": 68,
-        "commercial_score": 55,
-        "subtema": "mercados",
-        "tema": "soja chicago",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "Impacta directamente en la formación de precios locales de la oleaginosa por la liquidación de fondos.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          68
-        ]
-      },
-      "cuando": "2026-11-02T21:00-03:00"
-    },
-    {
       "id": "ef87b8d9729e",
       "rep": {
         "id": "ef87b8d9729e",
@@ -49634,8 +49735,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T10:45:11-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T11:04:30-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
