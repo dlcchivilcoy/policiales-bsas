@@ -24288,6 +24288,27 @@
         55,
         57
       ]
+    },
+    "37300d56a420036f": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "costos lecheria",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente la rentabilidad tambera de la cuenca y la región.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -25931,7 +25952,8 @@
       "https://lanacion.com.ar/economia/campo/rotundo-giro-cada-vez-menos-productores-salen-a-pelear-por-alquilar-tierras-y-los-mas-grandes-nid03112026": "2026-11-03",
       "https://lacapital.com.ar/agro/el-campo-se-digitaliza-bajar-costos-y-busca-quien-lo-ayude-interpretar-los-datos-n10290254.html": "2026-11-03",
       "https://bichosdecampo.com/tristeza-argentina-lidera-el-ranking-mundial-de-extraccion-de-recursos-al-sector-agropecuario-por-parte-del-estado": "2026-11-03",
-      "https://lanacion.com.ar/economia/campo/belen-veterinaria-produce-en-cordoba-y-eligio-un-tractor-rosa-para-un-homenaje-vamos-a-hacer-algo-nid03112026": "2026-11-03"
+      "https://lanacion.com.ar/economia/campo/belen-veterinaria-produce-en-cordoba-y-eligio-un-tractor-rosa-para-un-homenaje-vamos-a-hacer-algo-nid03112026": "2026-11-03",
+      "https://todoagro.com.ar/se-estan-actualizando-los-modelos-para-costear-la-produccion-de-leche-en-argentina": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27573,7 +27595,8 @@
       "rotundo giro cada vez menos productores salen a pelear por alquilar tierras y los mas grandes proyectan crecer un 31": "2026-11-03",
       "el campo se digitaliza para bajar costos y busca quien lo ayude a interpretar los datos": "2026-11-03",
       "tristeza argentina lidera el ranking mundial de extraccion de recursos al sector agropecuario por parte del estado": "2026-11-03",
-      "belen veterinaria produce en cordoba y eligio un tractor rosa para un homenaje vamos a hacer algo distinto y muy disruptivo": "2026-11-03"
+      "belen veterinaria produce en cordoba y eligio un tractor rosa para un homenaje vamos a hacer algo distinto y muy disruptivo": "2026-11-03",
+      "se estan actualizando los modelos para costear la produccion de leche en argentina": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29215,7 +29238,8 @@
       "eb5c0dd42f96e3aa": "2026-11-03",
       "216370040998cf16": "2026-11-03",
       "73f2922ea4157aaa": "2026-11-03",
-      "6758ce51e57a7c9d": "2026-11-03"
+      "6758ce51e57a7c9d": "2026-11-03",
+      "37300d56a420036f": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50234,6 +50258,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7aaedf305984_portada.jpg"
+    },
+    {
+      "id": "455342a660f4",
+      "cuando": "2026-11-03T17:20-03:00",
+      "titulo_original": "Se están actualizando los modelos para costear la producción de leche en Argentina",
+      "descripcion": "A tres años de la última revisión, el INTA y FunPEL impulsan talleres en distintas cuencas lecheras del país para actualizar 60 modelos de producción. El trabajo reúne a técnicos, productores, asesores e industrias y busca generar referencias más precisas y objetivas sobre los costos de producir lec",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/se-estan-actualizando-los-modelos-para-costear-la-produccion-de-leche-en-argentina/",
+      "titular": "Actualizan sesenta modelos de costos en tambos tras tres años",
+      "volanta": "Lechería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "costos lecheria",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la rentabilidad tambera de la cuenca y la región.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8bb13a72-73a6-400d-aebd-959893d4ca58",
+          "slug": "actualizan-sesenta-modelos-de-costos-en-tambos-tras-tres-anos-18d543",
+          "url": "https://www.diariolacampaña.com.ar/n/actualizan-sesenta-modelos-de-costos-en-tambos-tras-tres-anos-18d543",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1105777205608302",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17953320672312262",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18069292883520169"
+        },
+        "historia_facebook": {
+          "id": "1496679062331225"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_455342a660f4_portada.jpg"
     }
   ],
   "pendientes": [
@@ -51164,8 +51248,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T17:05:17-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T17:25:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
