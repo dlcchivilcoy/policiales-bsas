@@ -24330,6 +24330,31 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "78259daa4a7fee41": {
+      "impacto_economico": 14,
+      "interes_productores": 9,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 59,
+      "commercial_score": 58,
+      "subtema": "agro",
+      "tema": "ley de cabotaje",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta los costos logísticos del agro, aunque el debate legislativo suele tener impacto lento y abstracto para el productor.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        62
+      ]
     }
   },
   "indice": {
@@ -25979,7 +26004,9 @@
       "https://infocampo.com.ar/maiz-tardio-las-chicharritas-siguen-ausentes-y-el-panorama-para-la-siembra-es-muy-promisorio": "2026-11-03",
       "https://infocampo.com.ar/es-un-orgullo-ver-hasta-donde-llegan-nuestros-animales-la-carne-argentina-sigue-expandiendose-en-china": "2026-11-03",
       "https://bichosdecampo.com/la-fruticultura-del-alto-valle-genera-730-millones-de-dolares-al-ano-pero-las-peras-dejan-perdidas-por-52-millones": "2026-11-03",
-      "https://lanacion.com.ar/economia/campo/fabrica-tomada-escala-el-conflicto-en-la-fabrica-pauny-y-los-trabajadores-se-quedan-en-la-planta-nid03112026": "2026-11-03"
+      "https://lanacion.com.ar/economia/campo/fabrica-tomada-escala-el-conflicto-en-la-fabrica-pauny-y-los-trabajadores-se-quedan-en-la-planta-nid03112026": "2026-11-03",
+      "https://infocampo.com.ar/resurge-el-debate-por-la-ley-de-cabotaje-una-oportunidad-para-reducir-costos-y-mejorar-la-competitividad": "2026-11-03",
+      "https://bichosdecampo.com/vade-retro-dalbulus-la-chicharrita-retrocede-en-buena-parte-del-pais-y-el-maiz-se-encamina-hacia-la-siembra-tardia-con-un-escenario-mas-favorable": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27627,7 +27654,9 @@
       "maiz tardio las chicharritas siguen ausentes y el panorama para la siembra es muy promisorio": "2026-11-03",
       "es un orgullo ver hasta donde llegan nuestros animales la carne argentina sigue expandiendose en china": "2026-11-03",
       "la fruticultura del alto valle genera 730 millones de dolares al ano pero las peras dejan perdidas por 52 millones": "2026-11-03",
-      "fabrica tomada escala el conflicto en pauny y los trabajadores se quedan en la planta": "2026-11-03"
+      "fabrica tomada escala el conflicto en pauny y los trabajadores se quedan en la planta": "2026-11-03",
+      "resurge el debate por la ley de cabotaje una oportunidad para reducir costos y mejorar la competitividad": "2026-11-03",
+      "vade retro dalbulus la chicharrita retrocede en buena parte del pais y el maiz se encamina hacia la siembra tardia con un escenario mas favorable": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29275,7 +29304,9 @@
       "0139176b348b2d93": "2026-11-03",
       "886d0eab0fbc544d": "2026-11-03",
       "077c81f10bf65541": "2026-11-03",
-      "94de091d4856826f": "2026-11-03"
+      "94de091d4856826f": "2026-11-03",
+      "78259daa4a7fee41": "2026-11-03",
+      "1878d1e45c666b43": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50481,6 +50512,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_22bc79458684_portada.jpg"
+    },
+    {
+      "id": "24c48cce6e3c",
+      "cuando": "2026-11-03T18:40-03:00",
+      "titulo_original": "Las dos caras del cerdo: mientras consumo y producción celebran récords, las granjas empiezan a sufrir",
+      "descripcion": "La producción de cerdos continúa creciendo a tasas elevadas y el consumo interno también alcanzó niveles récord. Sin embargo, la mayor disponibilidad de carne, el incremento de las importaciones y los costos en dólares presionan sobre la rentabilidad de las granjas.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir/",
+      "titular": "La producción de cerdos y el consumo alcanzan récords pero caen márgenes",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "cerdos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta de lleno a los productores porcinos bonaerenses por la pinza entre mayores costos y menores márgenes.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          69
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d4822a19-d373-40f8-94f5-49552a03c069",
+          "slug": "cerdos-en-alerta-record-de-produccion-y-consumo-pero-caen-los-67d50c",
+          "url": "https://www.diariolacampaña.com.ar/n/cerdos-en-alerta-record-de-produccion-y-consumo-pero-caen-los-67d50c",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1921637658814591",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17959555314274501",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17913000018564722"
+        },
+        "historia_facebook": {
+          "id": "1049022454913811"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_24c48cce6e3c_portada.jpg"
     }
   ],
   "pendientes": [
@@ -50814,73 +50909,6 @@
         ]
       },
       "cuando": "2026-11-03T10:40-03:00"
-    },
-    {
-      "id": "24c48cce6e3c",
-      "rep": {
-        "id": "24c48cce6e3c",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir/",
-        "canonical_url": "https://infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir",
-        "titulo": "Las dos caras del cerdo: mientras consumo y producción celebran récords, las granjas empiezan a sufrir",
-        "titulo_norm": "las dos caras del cerdo mientras consumo y produccion celebran records las granjas empiezan a sufrir",
-        "descripcion": "La producción de cerdos continúa creciendo a tasas elevadas y el consumo interno también alcanzó niveles récord. Sin embargo, la mayor disponibilidad de carne, el incremento de las importaciones y los costos en dólares presionan sobre la rentabilidad de las granjas.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2025/12/cerdos.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-11-03T10:08-03:00",
-        "capturado": "2026-11-03T10:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "806414e50837525d"
-      },
-      "grupo": [
-        {
-          "id": "24c48cce6e3c",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir/",
-          "canonical_url": "https://infocampo.com.ar/las-dos-caras-del-cerdo-mientras-consumo-y-produccion-celebran-records-las-granjas-empiezan-a-sufrir",
-          "titulo": "Las dos caras del cerdo: mientras consumo y producción celebran récords, las granjas empiezan a sufrir",
-          "titulo_norm": "las dos caras del cerdo mientras consumo y produccion celebran records las granjas empiezan a sufrir",
-          "descripcion": "La producción de cerdos continúa creciendo a tasas elevadas y el consumo interno también alcanzó niveles récord. Sin embargo, la mayor disponibilidad de carne, el incremento de las importaciones y los costos en dólares presionan sobre la rentabilidad de las granjas.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2025/12/cerdos.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-11-03T10:08-03:00",
-          "capturado": "2026-11-03T10:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "806414e50837525d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 70,
-        "subtema": "ganaderia",
-        "tema": "cerdos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta de lleno a los productores porcinos bonaerenses por la pinza entre mayores costos y menores márgenes.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          69
-        ]
-      },
-      "cuando": "2026-11-03T10:20-03:00"
     },
     {
       "id": "ce5c7ebc9a89",
@@ -51285,8 +51313,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T18:23:36-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-03T18:44:51-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
