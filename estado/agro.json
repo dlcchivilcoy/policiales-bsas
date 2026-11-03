@@ -24133,6 +24133,31 @@
         69,
         69
       ]
+    },
+    "67ed2924ac3622a6": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 5,
+      "potencial_comercial": 6,
+      "ai_score": 54,
+      "commercial_score": 54,
+      "subtema": "agtech",
+      "tema": "biogás",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un avance institucional importante en bioenergía, pero con impacto local acotado a corto plazo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        54
+      ]
     }
   },
   "indice": {
@@ -25769,7 +25794,8 @@
       "https://lanacion.com.ar/economia/campo/algodonera-en-quiebra-hay-cinco-interesados-en-comprar-la-empresa-que-debe-millones-y-le-estan-por-nid03112026": "2026-11-03",
       "https://agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html": "2026-11-03",
       "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos": "2026-11-03",
-      "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron": "2026-11-03"
+      "https://bichosdecampo.com/cronicas-robadas-antes-era-gasoil-para-el-patrullero-pero-ahora-los-productores-de-rio-cuarto-decidieron-donarle-a-la-policia-directamente-un-dron": "2026-11-03",
+      "https://intainforma.inta.gob.ar/cooperacion-tecnologica-internacional-para-el-desarrollo-del-biogas": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27404,7 +27430,8 @@
       "algodonera en quiebra hay cinco interesados en los activos de la empresa que debe millones y le estan por cortar la luz": "2026-11-03",
       "octubre las precipitaciones acumuladas en cordoba presentaron una distribucion heterogenea": "2026-11-03",
       "estiman cuanto pasto hay disponible en los campos ganaderos": "2026-11-03",
-      "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron": "2026-11-03"
+      "cronicas robadas antes era gasoil para el patrullero pero ahora los productores de rio cuarto decidieron donarle a la policia directamente un dron": "2026-11-03",
+      "cooperacion tecnologica internacional para el desarrollo del biogas": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29039,7 +29066,8 @@
       "5326647d88c2b105": "2026-11-03",
       "a61a5d64f8258bab": "2026-11-03",
       "b55d4b0183e640f8": "2026-11-03",
-      "90501d7048dd806d": "2026-11-03"
+      "90501d7048dd806d": "2026-11-03",
+      "67ed2924ac3622a6": "2026-11-03"
     }
   },
   "elegidas": [
@@ -49683,6 +49711,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e8fcccff8c27_portada.jpg"
+    },
+    {
+      "id": "e0543424b8c9",
+      "cuando": "2026-11-03T14:00-03:00",
+      "titulo_original": "Estiman cuánto pasto hay disponible en los campos ganaderos",
+      "descripcion": "Un trabajo del INTA Concepción del Uruguay evalúa una metodología que combina imágenes Sentinel-2 con mediciones estratégicas a campo para estimar la biomasa disponible y simplificar los relevamientos. Los avances se presentarán en la Caravana Pampa 2026, una iniciativa regional que recorrerá establ",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos/",
+      "titular": "Estiman biomasa en campos ganaderos mediante satélites y campo",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 13,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "biomasa pasto",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente combinación de imágenes satelitales y manejo ganadero muy útil para asesores y productores.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "168007d6-b5fe-4ae2-a244-82d278d21dc3",
+          "slug": "miden-la-disponibilidad-de-pasto-en-campos-ganaderos-con-656d67",
+          "url": "https://www.diariolacampaña.com.ar/n/miden-la-disponibilidad-de-pasto-en-campos-ganaderos-con-656d67",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1508115291379475",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17882245683627657",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18019710146953119"
+        },
+        "historia_facebook": {
+          "id": "2314067502723636"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e0543424b8c9_portada.jpg"
     }
   ],
   "pendientes": [
@@ -49817,69 +49905,6 @@
           58,
           62
         ]
-      },
-      "cuando": "2026-11-03T13:20-03:00"
-    },
-    {
-      "id": "e0543424b8c9",
-      "rep": {
-        "id": "e0543424b8c9",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos/",
-        "canonical_url": "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos",
-        "titulo": "Estiman cuánto pasto hay disponible en los campos ganaderos",
-        "titulo_norm": "estiman cuanto pasto hay disponible en los campos ganaderos",
-        "descripcion": "Un trabajo del INTA Concepción del Uruguay evalúa una metodología que combina imágenes Sentinel-2 con mediciones estratégicas a campo para estimar la biomasa disponible y simplificar los relevamientos. Los avances se presentarán en la Caravana Pampa 2026, una iniciativa regional que recorrerá establecimientos de Brasil, Uruguay y Argentina para promover el intercambio entre ciencia y producción en campo natural. La entrada Estiman cuánto pasto hay disponible en los campos ganaderos se publicó primero en INTA Informa.",
-        "imagen_url": "",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-11-03T13:12-03:00",
-        "capturado": "2026-11-03T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b55d4b0183e640f8"
-      },
-      "grupo": [
-        {
-          "id": "e0543424b8c9",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos/",
-          "canonical_url": "https://intainforma.inta.gob.ar/imagenes-satelitales-para-estimar-cuanto-pasto-hay-disponible-en-los-campos-ganaderos",
-          "titulo": "Estiman cuánto pasto hay disponible en los campos ganaderos",
-          "titulo_norm": "estiman cuanto pasto hay disponible en los campos ganaderos",
-          "descripcion": "Un trabajo del INTA Concepción del Uruguay evalúa una metodología que combina imágenes Sentinel-2 con mediciones estratégicas a campo para estimar la biomasa disponible y simplificar los relevamientos. Los avances se presentarán en la Caravana Pampa 2026, una iniciativa regional que recorrerá establecimientos de Brasil, Uruguay y Argentina para promover el intercambio entre ciencia y producción en campo natural. La entrada Estiman cuánto pasto hay disponible en los campos ganaderos se publicó primero en INTA Informa.",
-          "imagen_url": "",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-11-03T13:12-03:00",
-          "capturado": "2026-11-03T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b55d4b0183e640f8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 14,
-        "innovacion": 12,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 7,
-        "ai_score": 77,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "biomasa pasto",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente combinación de imágenes satelitales y manejo ganadero muy útil para asesores y productores.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-03T13:20-03:00"
     },
@@ -50747,8 +50772,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T13:46:23-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T14:04:59-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
