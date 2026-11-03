@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-03T22:01:33.000Z",
+  "actualizado": "2026-11-03T22:31:48.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/la-semana-comienza-con-una-nueva-alerta.html",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-01T22:31:26.000Z",
-      "titulo": "Emiten una alerta meteorológica amarilla por tormentas para Chacabuco y la zona",
-      "descripcion": "El Servicio Meteorológico Nacional emitió una alerta amarilla por tormentas prevista para la tarde del martes en Chacabuco y varios distritos de la región.",
-      "texto_tiktok": "El partido de Chacabuco se prepara para la llegada de nuevas precipitaciones.\n\nEl Servicio Meteorológico Nacional anunció una alerta amarilla por tormentas.\n\nEl fenómeno climático se registrará durante la tarde del martes.\n\nLa medida alcanza también a otros distritos de la región.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #AlertaMeteorologica #Clima #Tormentas #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-01_2135_02_chacabuco_emiten-una-alerta-meteorol-gic.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-emiten-una-alerta-meteorologica-amarilla-por-1fd2e8",
-      "youtube_url": "https://youtube.com/shorts/YvZAS1cAA24",
-      "prioridad": 8,
-      "urgente": false,
-      "localidad": "Chacabuco",
-      "volanta": "Alerta meteorológica en Chacabuco",
-      "categoria": "alerta_meteorologica",
-      "distancia_km": 50.1,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://9dejulio.diariotiempodigital.com/sociedad/ciudad/95518_robo-en-la-terminal-de-omnibus",
       "origen": "policiales",
@@ -259,6 +235,30 @@
       "volanta": "Siniestro vial en Bragado",
       "categoria": "otro_policial",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diarioelsalado.com.ar/2026/11/un-choque-en-albizzatti-e-yrigoyen-termino-con-una-camioneta-volcada/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-03T22:31:48.000Z",
+      "titulo": "Una camioneta volcó tras un choque en la esquina de Albizzatti e Yrigoyen",
+      "descripcion": "Dos vehículos colisionaron en la intersección de Albizzatti e Yrigoyen. Una Renault Kangoo terminó volcada sobre su lateral. Los conductores resultaron ilesos y solo se registraron daños materiales según informaron fuentes policiales.",
+      "texto_tiktok": "Un violento choque entre dos vehículos terminó con el vuelco de una camioneta en la tarde de ayer en la ciudad de Alberti.\n\nEl siniestro vial ocurrió en la intersección de las calles Albizzatti e Yrigoyen.\n\nLos rodados involucrados fueron una Renault Suran guiada por Marcelo Petinari y una Renault Kangoo al mando de Juan Pablo Rondín, de 40 años y oriundo de 25 de Mayo.\n\nComo consecuencia del impacto, la Kangoo volcó y quedó sobre uno de sus laterales.\n\nPersonal de la Estación de Policía Comunal intervino en el lugar y constató que ambos conductores resultaron ilesos, registrándose únicamente daños materiales.\n\nLos vehículos permanecieron varias horas a la espera de pericias.\n\n📲 Más noticias de Alberti en www.diariolacampaña.com.ar\n\n#Alberti #SiniestroVial #Transito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-03_2135_03_alberti_una-camioneta-volc-tras-un-cho.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/alberti-una-camioneta-volco-tras-chocar-contra-un-auto-en-2c6a09",
+      "youtube_url": "https://youtube.com/shorts/cMtKVOE71Vg",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Alberti",
+      "volanta": "Choque y vuelco en Alberti",
+      "categoria": "accidente_vial",
+      "distancia_km": 28.1,
       "radio_ok": true,
       "plataformas": [
         "x",
