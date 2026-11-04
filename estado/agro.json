@@ -24946,6 +24946,56 @@
         61,
         61
       ]
+    },
+    "d083cfebaf937328": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "ley de semillas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en el negocio agrícola nacional y en la provisión de insumos para la campaña.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        71
+      ]
+    },
+    "b89b5da02eebdc2b": {
+      "impacto_economico": 13,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 55,
+      "commercial_score": 56,
+      "subtema": "empresas",
+      "tema": "coninagro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reúne reclamos institucionales del sector agropecuario ante el poder legislativo, de interés gremial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        54
+      ]
     }
   },
   "indice": {
@@ -26644,7 +26694,14 @@
       "https://bichosdecampo.com/la-tecnologia-ayuda-pero-hay-que-saber-usarla-un-estudio-mostro-que-el-82-de-los-productores-digitalizados-ve-mejoras-aunque-la-mitad-senala-falta-de-conocimientos-para-adoptarla": "2026-11-04",
       "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos": "2026-11-04",
       "https://infocampo.com.ar/riesgo-pais-hoy-04-11-2026": "2026-11-04",
-      "https://infocampo.com.ar/otra-polemica-en-torno-al-visec-el-ruralismo-advierte-por-las-visitas-sindicales-que-podria-hacer-uatre": "2026-11-04"
+      "https://infocampo.com.ar/otra-polemica-en-torno-al-visec-el-ruralismo-advierte-por-las-visitas-sindicales-que-podria-hacer-uatre": "2026-11-04",
+      "https://infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo": "2026-11-04",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-4-noviembre-2026": "2026-11-04",
+      "https://agrositio.com.ar/noticia/249189-coninagro-hay-preocupacion-por-leyes-que-todavia-no-han-salido.html": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28341,7 +28398,14 @@
       "la tecnologia ayuda pero hay que saber usarla un estudio mostro que el 82 de los productores digitalizados ve mejoras aunque la mitad senala falta de conocimientos para adoptarla": "2026-11-04",
       "shell cambia de operador en argentina quien manejara sus activos": "2026-11-04",
       "riesgo pais hoy 04 de noviembre de 2026": "2026-11-04",
-      "otra polemica en torno al visec el ruralismo advierte por las visitas sindicales que podria hacer uatre": "2026-11-04"
+      "otra polemica en torno al visec el ruralismo advierte por las visitas sindicales que podria hacer uatre": "2026-11-04",
+      "por una ley de semillas viable multiplicadores piden ser parte del debate para actualizar el marco normativo": "2026-11-04",
+      "precio del maiz en rosario hoy 4 noviembre 2026": "2026-11-04",
+      "precio del trigo en rosario hoy 4 noviembre 2026": "2026-11-04",
+      "precio del girasol en rosario hoy 4 noviembre 2026": "2026-11-04",
+      "precio de la soja en rosario hoy 4 noviembre 2026": "2026-11-04",
+      "precio del sorgo en rosario hoy 4 noviembre 2026": "2026-11-04",
+      "coninagro hay preocupacion por leyes que todavia no han salido": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30038,7 +30102,14 @@
       "6790f8377f6c10dd": "2026-11-04",
       "9fe51e3717b3318d": "2026-11-04",
       "82ccb602a0368b9a": "2026-11-04",
-      "f7f8deeea65bffc3": "2026-11-04"
+      "f7f8deeea65bffc3": "2026-11-04",
+      "d083cfebaf937328": "2026-11-04",
+      "94c89923727f9eca": "2026-11-04",
+      "67b1199315ee2cd5": "2026-11-04",
+      "ab475d335fb1373e": "2026-11-04",
+      "39bed072b46a611e": "2026-11-04",
+      "4c2952b18362ee42": "2026-11-04",
+      "b89b5da02eebdc2b": "2026-11-04"
     }
   },
   "elegidas": [
@@ -52065,6 +52136,73 @@
   ],
   "pendientes": [
     {
+      "id": "ede6507e6d79",
+      "rep": {
+        "id": "ede6507e6d79",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo/",
+        "canonical_url": "https://infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo",
+        "titulo": "“Por una ley de semillas viable”: multiplicadores piden ser parte del debate para actualizar el marco normativo",
+        "titulo_norm": "por una ley de semillas viable multiplicadores piden ser parte del debate para actualizar el marco normativo",
+        "descripcion": "\"Somos la conexión entre los obtentores y el productor. Y hoy no estamos siendo parte de la discusión”, reclamaron desde la Federación de Distribuidores de Insumos Agropecuarios, que puso en marcha una campaña para promover el uso de semillas fiscalizadas.",
+        "imagen_url": "",
+        "autor": "infocampo",
+        "publicado": "2026-11-04T11:15-03:00",
+        "capturado": "2026-11-04T11:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d083cfebaf937328"
+      },
+      "grupo": [
+        {
+          "id": "ede6507e6d79",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo/",
+          "canonical_url": "https://infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo",
+          "titulo": "“Por una ley de semillas viable”: multiplicadores piden ser parte del debate para actualizar el marco normativo",
+          "titulo_norm": "por una ley de semillas viable multiplicadores piden ser parte del debate para actualizar el marco normativo",
+          "descripcion": "\"Somos la conexión entre los obtentores y el productor. Y hoy no estamos siendo parte de la discusión”, reclamaron desde la Federación de Distribuidores de Insumos Agropecuarios, que puso en marcha una campaña para promover el uso de semillas fiscalizadas.",
+          "imagen_url": "",
+          "autor": "infocampo",
+          "publicado": "2026-11-04T11:15-03:00",
+          "capturado": "2026-11-04T11:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d083cfebaf937328"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en el negocio agrícola nacional y en la provisión de insumos para la campaña.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          71
+        ]
+      },
+      "cuando": "2026-11-04T11:20-03:00"
+    },
+    {
       "id": "1c2fbeb8dba0",
       "rep": {
         "id": "1c2fbeb8dba0",
@@ -52731,7 +52869,7 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T11:04:50-03:00",
+  "actualizado": "2026-11-04T11:21:34-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
