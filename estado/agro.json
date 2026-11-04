@@ -24682,6 +24682,48 @@
       "urgente": true,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2eed79c2f752f456": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 81,
+      "commercial_score": 85,
+      "subtema": "maquinaria",
+      "tema": "maquinaria usada",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta fuerte en el mercado de maquinaria y en la sanidad regional por el riesgo fitosanitario en puertos de Buenos Aires.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "56be1b5b449e141b": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 45,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "exportación frutihortícola",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un caso inspirador de exportación regional, pero queda lejos de la zona núcleo y del productor pampeano promedio.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -26362,7 +26404,9 @@
       "https://agrositio.com.ar/noticia/249180-coyuntura-noa-consumo-en-baja-menos-autos-y-fuerte-crecimiento-de-las-motos.html": "2026-11-04",
       "https://agrositio.com.ar/noticia/249170-aujeszky-ante-nuevos-brotes-recomiendan-reforzar-la-bioseguridad-en-las-granjas-porcinas.html": "2026-11-04",
       "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
-      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04"
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas": "2026-11-04",
+      "https://bichosdecampo.com/el-messi-de-la-sandia-lo-volvio-a-hacer-luego-del-hit-en-uruguay-gestiono-la-exportacion-de-zapallo-a-chile-con-un-proyecto-que-busca-desplazar-a-peru-como-prove": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28041,7 +28085,9 @@
       "coyuntura noa consumo en baja menos autos y fuerte crecimiento de las motos": "2026-11-04",
       "aujeszky ante nuevos brotes recomiendan reforzar la bioseguridad en las granjas porcinas": "2026-11-04",
       "clima hoy en tucuman el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
-      "clima hoy en mendoza el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04"
+      "clima hoy en mendoza el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "importaciones de maquinaria agricola usada crecen 250 y disparan otro riesgo el ingreso de plagas": "2026-11-04",
+      "el messi de la sandia lo volvio a hacer luego del hit en uruguay gestiono la exportacion de zapallo a chile con un proyecto que busca desplazar a peru como proveedor": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29720,7 +29766,9 @@
       "6f1f72dfcaae2b62": "2026-11-04",
       "f585dc10bece286a": "2026-11-04",
       "873af2c9cde6d7a9": "2026-11-04",
-      "cca9f307daa18278": "2026-11-04"
+      "cca9f307daa18278": "2026-11-04",
+      "2eed79c2f752f456": "2026-11-04",
+      "56be1b5b449e141b": "2026-11-04"
     }
   },
   "elegidas": [
@@ -51500,6 +51548,69 @@
   ],
   "pendientes": [
     {
+      "id": "d90e0d698ca4",
+      "rep": {
+        "id": "d90e0d698ca4",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas/",
+        "canonical_url": "https://infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas",
+        "titulo": "Importaciones de maquinaria agrícola usada crecen 250% y disparan otro riesgo: el ingreso de plagas",
+        "titulo_norm": "importaciones de maquinaria agricola usada crecen 250 y disparan otro riesgo el ingreso de plagas",
+        "descripcion": "En lo que va de 2026, ingresaron más del triple de máquinas que en 2025. Por eso, Senasa tuvo que aumentar las inspecciones y los controles fitosanitarios en el puerto de Zárate.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/cosechadora-usada-importada-senasa.png",
+        "autor": "infocampo",
+        "publicado": "2026-11-04T08:18-03:00",
+        "capturado": "2026-11-04T08:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2eed79c2f752f456"
+      },
+      "grupo": [
+        {
+          "id": "d90e0d698ca4",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas/",
+          "canonical_url": "https://infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas",
+          "titulo": "Importaciones de maquinaria agrícola usada crecen 250% y disparan otro riesgo: el ingreso de plagas",
+          "titulo_norm": "importaciones de maquinaria agricola usada crecen 250 y disparan otro riesgo el ingreso de plagas",
+          "descripcion": "En lo que va de 2026, ingresaron más del triple de máquinas que en 2025. Por eso, Senasa tuvo que aumentar las inspecciones y los controles fitosanitarios en el puerto de Zárate.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/cosechadora-usada-importada-senasa.png",
+          "autor": "infocampo",
+          "publicado": "2026-11-04T08:18-03:00",
+          "capturado": "2026-11-04T08:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2eed79c2f752f456"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 81,
+        "commercial_score": 85,
+        "subtema": "maquinaria",
+        "tema": "maquinaria usada",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta fuerte en el mercado de maquinaria y en la sanidad regional por el riesgo fitosanitario en puertos de Buenos Aires.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T08:20-03:00"
+    },
+    {
       "id": "cfb03ca7f41e",
       "rep": {
         "id": "cfb03ca7f41e",
@@ -52095,7 +52206,7 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T08:04:03-03:00",
+  "actualizado": "2026-11-04T08:21:19-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
