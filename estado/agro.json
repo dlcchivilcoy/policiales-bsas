@@ -53282,72 +53282,69 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2d10b5fe4f2a_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
-      "id": "5cc86c9b2ec6",
-      "rep": {
-        "id": "5cc86c9b2ec6",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada/",
-        "canonical_url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada",
-        "titulo": "Llegó el día: El novillo “apto Visec” para exportación cotizó $200 más en Cañuelas y hubo brechas de precios también en la invernada",
-        "titulo_norm": "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada",
-        "descripcion": "En la mañana de hoy se realizó el habitual remate con hacienda de exportación en el Mercado Agroganadero de Cañuelas. Cada primer miércoles de mes los consignatarios de ese mercado reúnen tropas de novillos que se venden de forma televisada y con la modalidad a levantar del campo. En esta oportunidad pesó como nunca antes […]",
-        "imagen_url": "",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-04T16:23-03:00",
-        "capturado": "2026-11-04T16:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "10dc24c698ef954a"
-      },
-      "grupo": [
-        {
-          "id": "5cc86c9b2ec6",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada/",
-          "canonical_url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada",
-          "titulo": "Llegó el día: El novillo “apto Visec” para exportación cotizó $200 más en Cañuelas y hubo brechas de precios también en la invernada",
-          "titulo_norm": "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada",
-          "descripcion": "En la mañana de hoy se realizó el habitual remate con hacienda de exportación en el Mercado Agroganadero de Cañuelas. Cada primer miércoles de mes los consignatarios de ese mercado reúnen tropas de novillos que se venden de forma televisada y con la modalidad a levantar del campo. En esta oportunidad pesó como nunca antes […]",
-          "imagen_url": "",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-04T16:23-03:00",
-          "capturado": "2026-11-04T16:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "10dc24c698ef954a"
-        }
-      ],
+      "id": "2fe4d31afaba",
+      "cuando": "2026-11-04T17:00-03:00",
+      "titulo_original": "El INTA Manfredi evaluó el suelo después de 12 años de uso",
+      "descripcion": "Un estudio pionero en agricultura extensiva analizó los efectos del riego enterrado sobre las propiedades químicas del suelo. Recomiendan monitorear periódicamente el perfil, incluir muestras a mayor profundidad y evaluar estrategias de lavado de sales o enmiendas con asesoramiento profesional, segú",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/el-inta-manfredi-evaluo-el-suelo-despues-de-12-anos-de-uso/",
+      "titular": "INTA Manfredi evaluó suelos tras doce años de riego enterrado",
+      "volanta": "AgTech",
       "score": {
-        "impacto_economico": 15,
+        "impacto_economico": 12,
         "interes_productores": 13,
-        "innovacion": 4,
+        "innovacion": 10,
         "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 7,
+        "potencial_comercial": 8,
         "ai_score": 73,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "novillo visec",
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "riego suelos",
         "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Gran impacto local en Cañuelas y zona núcleo con un nuevo estándar de precios para la exportación.",
-        "tema_doc": "ganaderia",
+        "sensible": false,
+        "explicacion": "Estudio a largo plazo de alto valor técnico para asesores y productores bajo riego.",
+        "tema_doc": "tecnologia",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-04T16:40-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "965550cc-9759-4451-b771-b6e777b3d252",
+          "slug": "el-inta-manfredi-midio-el-impacto-del-riego-por-goteo-enterrado-3bb4bf",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-manfredi-midio-el-impacto-del-riego-por-goteo-enterrado-3bb4bf",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2213468175868872",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17884276956534144",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18115222526581312"
+        },
+        "historia_facebook": {
+          "id": "1147289481109788"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2fe4d31afaba_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "b68ca7d2e612",
       "rep": {
@@ -53536,69 +53533,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-04T16:00-03:00"
-    },
-    {
-      "id": "2fe4d31afaba",
-      "rep": {
-        "id": "2fe4d31afaba",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/el-inta-manfredi-evaluo-el-suelo-despues-de-12-anos-de-uso/",
-        "canonical_url": "https://intainforma.inta.gob.ar/el-inta-manfredi-evaluo-el-suelo-despues-de-12-anos-de-uso",
-        "titulo": "El INTA Manfredi evaluó el suelo después de 12 años de uso",
-        "titulo_norm": "el inta manfredi evaluo el suelo despues de 12 anos de uso",
-        "descripcion": "Un estudio pionero en agricultura extensiva analizó los efectos del riego enterrado sobre las propiedades químicas del suelo. Recomiendan monitorear periódicamente el perfil, incluir muestras a mayor profundidad y evaluar estrategias de lavado de sales o enmiendas con asesoramiento profesional, según las condiciones de cada campo. La entrada El INTA Manfredi evaluó el suelo después de 12 años de uso se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/Riego-por-goteo.jpg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-11-04T14:02-03:00",
-        "capturado": "2026-11-04T14:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2f5d3eec7f3264c0"
-      },
-      "grupo": [
-        {
-          "id": "2fe4d31afaba",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/el-inta-manfredi-evaluo-el-suelo-despues-de-12-anos-de-uso/",
-          "canonical_url": "https://intainforma.inta.gob.ar/el-inta-manfredi-evaluo-el-suelo-despues-de-12-anos-de-uso",
-          "titulo": "El INTA Manfredi evaluó el suelo después de 12 años de uso",
-          "titulo_norm": "el inta manfredi evaluo el suelo despues de 12 anos de uso",
-          "descripcion": "Un estudio pionero en agricultura extensiva analizó los efectos del riego enterrado sobre las propiedades químicas del suelo. Recomiendan monitorear periódicamente el perfil, incluir muestras a mayor profundidad y evaluar estrategias de lavado de sales o enmiendas con asesoramiento profesional, según las condiciones de cada campo. La entrada El INTA Manfredi evaluó el suelo después de 12 años de uso se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/Riego-por-goteo.jpg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-11-04T14:02-03:00",
-          "capturado": "2026-11-04T14:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2f5d3eec7f3264c0"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 13,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 7,
-        "potencial_comercial": 8,
-        "ai_score": 73,
-        "commercial_score": 72,
-        "subtema": "agro",
-        "tema": "riego suelos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Estudio a largo plazo de alto valor técnico para asesores y productores bajo riego.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T14:20-03:00"
     },
     {
       "id": "25c801ba30ed",
@@ -54472,8 +54406,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T16:44:35-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T17:05:08-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
