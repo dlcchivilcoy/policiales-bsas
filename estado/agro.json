@@ -24921,6 +24921,31 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9fe51e3717b3318d": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 61,
+      "commercial_score": 62,
+      "subtema": "empresas",
+      "tema": "shell",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta el mercado de combustibles y la logística del agro por el cambio de manos en la red de estaciones y refinería.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        61
+      ]
     }
   },
   "indice": {
@@ -26616,7 +26641,10 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-4-noviembre-2026": "2026-11-04",
       "https://agrositio.com.ar/noticia/249188-cra-advierte-a-los-productores-agropecuarios-sobre-el-acuerdo-uatre-visec.html": "2026-11-04",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcos-blanda-eligio-la-funcion-publica-en-cordoba-porque-cree-que-hay-que-participar-para-poder-modificar-la-realidad-del-sector-agropecuario": "2026-11-04",
-      "https://bichosdecampo.com/la-tecnologia-ayuda-pero-hay-que-saber-usarla-un-estudio-mostro-que-el-82-de-los-productores-digitalizados-ve-mejoras-aunque-la-mitad-senala-falta-de-conocimientos-para-adoptarla": "2026-11-04"
+      "https://bichosdecampo.com/la-tecnologia-ayuda-pero-hay-que-saber-usarla-un-estudio-mostro-que-el-82-de-los-productores-digitalizados-ve-mejoras-aunque-la-mitad-senala-falta-de-conocimientos-para-adoptarla": "2026-11-04",
+      "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos": "2026-11-04",
+      "https://infocampo.com.ar/riesgo-pais-hoy-04-11-2026": "2026-11-04",
+      "https://infocampo.com.ar/otra-polemica-en-torno-al-visec-el-ruralismo-advierte-por-las-visitas-sindicales-que-podria-hacer-uatre": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28310,7 +28338,10 @@
       "dolar blue a cuanto cotizan hoy en cordoba 4 noviembre 2026": "2026-11-04",
       "cra advierte a los productores agropecuarios sobre el acuerdo uatre visec": "2026-11-04",
       "los dilemas de la agronomia marcos blanda eligio la funcion publica en cordoba porque cree que hay que participar para poder modificar la realidad del sector agropecuario": "2026-11-04",
-      "la tecnologia ayuda pero hay que saber usarla un estudio mostro que el 82 de los productores digitalizados ve mejoras aunque la mitad senala falta de conocimientos para adoptarla": "2026-11-04"
+      "la tecnologia ayuda pero hay que saber usarla un estudio mostro que el 82 de los productores digitalizados ve mejoras aunque la mitad senala falta de conocimientos para adoptarla": "2026-11-04",
+      "shell cambia de operador en argentina quien manejara sus activos": "2026-11-04",
+      "riesgo pais hoy 04 de noviembre de 2026": "2026-11-04",
+      "otra polemica en torno al visec el ruralismo advierte por las visitas sindicales que podria hacer uatre": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30004,7 +30035,10 @@
       "e177153fdb6a7d56": "2026-11-04",
       "9d40f2f8911c4bda": "2026-11-04",
       "b731c276b13a1ec2": "2026-11-04",
-      "6790f8377f6c10dd": "2026-11-04"
+      "6790f8377f6c10dd": "2026-11-04",
+      "9fe51e3717b3318d": "2026-11-04",
+      "82ccb602a0368b9a": "2026-11-04",
+      "f7f8deeea65bffc3": "2026-11-04"
     }
   },
   "elegidas": [
@@ -51967,9 +52001,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b2d436fe4b1d_portada.jpg"
+    },
+    {
+      "id": "d90e0d698ca4",
+      "cuando": "2026-11-04T11:00-03:00",
+      "titulo_original": "Importaciones de maquinaria agrícola usada crecen 250% y disparan otro riesgo: el ingreso de plagas",
+      "descripcion": "En lo que va de 2026, ingresaron más del triple de máquinas que en 2025. Por eso, Senasa tuvo que aumentar las inspecciones y los controles fitosanitarios en el puerto de Zárate.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas/",
+      "titular": "Importaciones de maquinaria agrícola usada crecen 250% y suman controles",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 81,
+        "commercial_score": 85,
+        "subtema": "maquinaria",
+        "tema": "maquinaria usada",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta fuerte en el mercado de maquinaria y en la sanidad regional por el riesgo fitosanitario en puertos de Buenos Aires.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6dfe2a06-e492-4328-a823-e58f78ab1897",
+          "slug": "maquinaria-agricola-usada-importaciones-trepan-250-y-refuerzan-a29e53",
+          "url": "https://www.diariolacampaña.com.ar/n/maquinaria-agricola-usada-importaciones-trepan-250-y-refuerzan-a29e53",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1876103893809004",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18164527438504688",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18077323235572283"
+        },
+        "historia_facebook": {
+          "id": "1143248671530733"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d90e0d698ca4_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "1c2fbeb8dba0",
+      "rep": {
+        "id": "1c2fbeb8dba0",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos/",
+        "canonical_url": "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos",
+        "titulo": "Shell cambia de operador en Argentina: quién manejará sus activos",
+        "titulo_norm": "shell cambia de operador en argentina quien manejara sus activos",
+        "descripcion": "Signar Energy operará 892 estaciones Shell y la refinería de Dock Sud tras la compra de los activos de Raízen por US$ 1.420 millones. Mercuria será controlante y sumará socios locales. La entrada Shell cambia de operador en Argentina: quién manejará sus activos pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-11-04T10:49-03:00",
+        "capturado": "2026-11-04T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9fe51e3717b3318d"
+      },
+      "grupo": [
+        {
+          "id": "1c2fbeb8dba0",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos/",
+          "canonical_url": "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos",
+          "titulo": "Shell cambia de operador en Argentina: quién manejará sus activos",
+          "titulo_norm": "shell cambia de operador en argentina quien manejara sus activos",
+          "descripcion": "Signar Energy operará 892 estaciones Shell y la refinería de Dock Sud tras la compra de los activos de Raízen por US$ 1.420 millones. Mercuria será controlante y sumará socios locales. La entrada Shell cambia de operador en Argentina: quién manejará sus activos pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-11-04T10:49-03:00",
+          "capturado": "2026-11-04T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9fe51e3717b3318d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 3,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 61,
+        "commercial_score": 62,
+        "subtema": "empresas",
+        "tema": "shell",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta el mercado de combustibles y la logística del agro por el cambio de manos en la red de estaciones y refinería.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          61
+        ]
+      },
+      "cuando": "2026-11-04T11:00-03:00"
+    },
     {
       "id": "ed360cdbda9a",
       "rep": {
@@ -52036,69 +52197,6 @@
         ]
       },
       "cuando": "2026-11-04T10:00-03:00"
-    },
-    {
-      "id": "d90e0d698ca4",
-      "rep": {
-        "id": "d90e0d698ca4",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas/",
-        "canonical_url": "https://infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas",
-        "titulo": "Importaciones de maquinaria agrícola usada crecen 250% y disparan otro riesgo: el ingreso de plagas",
-        "titulo_norm": "importaciones de maquinaria agricola usada crecen 250 y disparan otro riesgo el ingreso de plagas",
-        "descripcion": "En lo que va de 2026, ingresaron más del triple de máquinas que en 2025. Por eso, Senasa tuvo que aumentar las inspecciones y los controles fitosanitarios en el puerto de Zárate.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/cosechadora-usada-importada-senasa.png",
-        "autor": "infocampo",
-        "publicado": "2026-11-04T08:18-03:00",
-        "capturado": "2026-11-04T08:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2eed79c2f752f456"
-      },
-      "grupo": [
-        {
-          "id": "d90e0d698ca4",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas/",
-          "canonical_url": "https://infocampo.com.ar/importaciones-de-maquinaria-agricola-usada-crecen-250-y-disparan-otro-riesgo-el-ingreso-de-plagas",
-          "titulo": "Importaciones de maquinaria agrícola usada crecen 250% y disparan otro riesgo: el ingreso de plagas",
-          "titulo_norm": "importaciones de maquinaria agricola usada crecen 250 y disparan otro riesgo el ingreso de plagas",
-          "descripcion": "En lo que va de 2026, ingresaron más del triple de máquinas que en 2025. Por eso, Senasa tuvo que aumentar las inspecciones y los controles fitosanitarios en el puerto de Zárate.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/cosechadora-usada-importada-senasa.png",
-          "autor": "infocampo",
-          "publicado": "2026-11-04T08:18-03:00",
-          "capturado": "2026-11-04T08:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2eed79c2f752f456"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 81,
-        "commercial_score": 85,
-        "subtema": "maquinaria",
-        "tema": "maquinaria usada",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta fuerte en el mercado de maquinaria y en la sanidad regional por el riesgo fitosanitario en puertos de Buenos Aires.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T08:20-03:00"
     },
     {
       "id": "cfb03ca7f41e",
@@ -52633,8 +52731,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T10:46:13-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T11:04:50-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
