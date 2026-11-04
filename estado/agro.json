@@ -24355,6 +24355,94 @@
         55,
         62
       ]
+    },
+    "45369e01d5a192fe": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 3,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 78,
+      "commercial_score": 78,
+      "subtema": "agro",
+      "tema": "costos agrícolas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Apunta directo al corazón del productor de la zona núcleo que hoy hace números finos para la campaña.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "df17e014320f5aba": {
+      "impacto_economico": 19,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 77,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "tipo de cambio",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El dólar y la competencia con Brasil condicionan toda la macroeconomía y la rentabilidad del campo.",
+      "tema_doc": "dolar",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "782fd25461a06441": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 76,
+      "commercial_score": 70,
+      "subtema": "maquinaria",
+      "tema": "maquinaria usada",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca una fibra sensible de la industria metalmecánica local y genera fuerte debate en el sector.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cfdc3f8510b5bff2": {
+      "impacto_economico": 12,
+      "interes_productores": 9,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 65,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "sebo bovino",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena apertura de mercado exportador para la cadena cárnica con impacto directo en la industria frigorífica.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        62
+      ]
     }
   },
   "indice": {
@@ -26008,7 +26096,12 @@
       "https://infocampo.com.ar/resurge-el-debate-por-la-ley-de-cabotaje-una-oportunidad-para-reducir-costos-y-mejorar-la-competitividad": "2026-11-03",
       "https://bichosdecampo.com/vade-retro-dalbulus-la-chicharrita-retrocede-en-buena-parte-del-pais-y-el-maiz-se-encamina-hacia-la-siembra-tardia-con-un-escenario-mas-favorable": "2026-11-03",
       "https://lanacion.com.ar/economia/campo/se-queda-corto-came-respaldo-la-suspension-de-embargos-a-las-pymes-en-el-agro-y-mas-alivio-para-nid03112026": "2026-11-03",
-      "https://bichosdecampo.com/el-gobierno-nacional-suspende-embargos-a-pymes-y-amplia-facilidades-de-pago-para-deudas-impositivas-came-dice-que-se-quedo-corto": "2026-11-03"
+      "https://bichosdecampo.com/el-gobierno-nacional-suspende-embargos-a-pymes-y-amplia-facilidades-de-pago-para-deudas-impositivas-came-dice-que-se-quedo-corto": "2026-11-03",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html": "2026-11-03",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249185-la-intervencion-cambiaria-busca-evitar-un-salto-brusco-del-dolar-y-si-lo-sueltan-con-a-semadeni-economista.html": "2026-11-03",
+      "https://bichosdecampo.com/puro-tacto-en-medio-de-una-crisis-sin-precedentes-de-la-industria-de-la-maquinaria-local-el-gobierno-salio-a-festejar-el-incremento-de-fierros-usados-desde-el-exterior": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/un-supermercado-podra-exportar-a-europa-un-subproducto-que-sirve-para-fabricar-combustible-de-nid03112026": "2026-11-03",
+      "https://lanacion.com.ar/economia/campo/encuesta-ocho-de-cada-diez-productores-agropecuarios-que-incorporaron-tecnologia-digital-registraron-nid03112026": "2026-11-03"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27660,7 +27753,12 @@
       "resurge el debate por la ley de cabotaje una oportunidad para reducir costos y mejorar la competitividad": "2026-11-03",
       "vade retro dalbulus la chicharrita retrocede en buena parte del pais y el maiz se encamina hacia la siembra tardia con un escenario mas favorable": "2026-11-03",
       "se queda corto came respaldo la suspension de embargos a las pymes en el agro y pidio mas alivio para pagar deudas": "2026-11-03",
-      "el gobierno nacional suspende embargos a pymes y amplia facilidades de pago para deudas impositivas came dice que se quedo corto": "2026-11-03"
+      "el gobierno nacional suspende embargos a pymes y amplia facilidades de pago para deudas impositivas came dice que se quedo corto": "2026-11-03",
+      "la guerra de los costos agricolas urea gasoil fletes y arrendamientos las variables que mira el productor con j battistoni az group": "2026-11-03",
+      "que pasa si el gobierno deja de intervenir y suelta el dolar antonella semadeni lo analiza": "2026-11-03",
+      "puro tacto en medio de una crisis sin precedentes de la industria de la maquinaria local el gobierno salio a festejar el incremento de fierros usados desde el exterior": "2026-11-03",
+      "un supermercado podra exportar a europa un subproducto bovino que sirve para fabricar un combustible para los aviones": "2026-11-03",
+      "encuesta ocho de cada diez productores agropecuarios que incorporaron tecnologia digital registraron mejoras medibles": "2026-11-03"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29312,7 +29410,12 @@
       "78259daa4a7fee41": "2026-11-03",
       "1878d1e45c666b43": "2026-11-03",
       "8f890b45d36473b9": "2026-11-03",
-      "6dbde056a9d25be1": "2026-11-03"
+      "6dbde056a9d25be1": "2026-11-03",
+      "45369e01d5a192fe": "2026-11-03",
+      "df17e014320f5aba": "2026-11-03",
+      "782fd25461a06441": "2026-11-03",
+      "cfdc3f8510b5bff2": "2026-11-03",
+      "b29b7dc790ccc70e": "2026-11-03"
     }
   },
   "elegidas": [
@@ -50582,9 +50685,269 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_24c48cce6e3c_portada.jpg"
+    },
+    {
+      "id": "6a119c92b307",
+      "cuando": "2026-11-03T21:00-03:00",
+      "titulo_original": "¿Qué pasa si el Gobierno deja de intervenir y suelta el dólar? Antonella Semadeni lo analiza",
+      "descripcion": "Una nota con la Lic. Antonella Semadeni, economista Jefe de la Fundación FADA para evaluar la marcha del programa económico del Gobierno. El Banco Central vendió dólares para evitar un salto abrupto del tipo de cambio ante la devaluación del real y la llegada de Lula a Brasil. ¿Es parte del programa",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249185-la-intervencion-cambiaria-busca-evitar-un-salto-brusco-del-dolar-y-si-lo-sueltan-con-a-semadeni-economista.html",
+      "titular": "Dólar y cepo: FADA analiza el impacto de la intervención oficial",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 19,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "tipo de cambio",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El dólar y la competencia con Brasil condicionan toda la macroeconomía y la rentabilidad del campo.",
+        "tema_doc": "dolar",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-03T21:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "fnoo9jwNIeU",
+          "url": "https://youtube.com/shorts/fnoo9jwNIeU",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "955556b6-8e63-455b-be11-de0325cd99ac",
+          "slug": "dolar-y-mercado-fada-analiza-la-intervencion-oficial-y-su-f671b1",
+          "url": "https://www.diariolacampaña.com.ar/n/dolar-y-mercado-fada-analiza-la-intervencion-oficial-y-su-f671b1",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "4563294937254272",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18642619543015482",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18645207385044569"
+        },
+        "historia_facebook": {
+          "id": "1766772157737887"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6a119c92b307_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "04f2b8a00ea1",
+      "rep": {
+        "id": "04f2b8a00ea1",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
+        "titulo": "La \"guerra de los costos agrícolas\": urea, gasoil, fletes y arrendamientos, las variables que mira el productor; con J. Battistoni - AZ Group",
+        "titulo_norm": "la guerra de los costos agricolas urea gasoil fletes y arrendamientos las variables que mira el productor con j battistoni az group",
+        "descripcion": "Insumos, logística, estructura, arrendamientos, gasoil, labores, y una visión más amplia de los costos de producción. Una charla con el Lic. Jeremías Battistoni, analista de mercados einsumos de AZ Group, detallando el impacto de los insumos, la logística y las externalidades globales en los márgenes agrícolas. Destaca la influencia del precio de la urea en los cereales, la estabilidad en agroquímicos y semillas, y el efecto de la volatilidad en las decisiones de compra...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/kJ1GE4CiMJo.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-11-03T19:40-03:00",
+        "capturado": "2026-11-03T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "45369e01d5a192fe"
+      },
+      "grupo": [
+        {
+          "id": "04f2b8a00ea1",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
+          "titulo": "La \"guerra de los costos agrícolas\": urea, gasoil, fletes y arrendamientos, las variables que mira el productor; con J. Battistoni - AZ Group",
+          "titulo_norm": "la guerra de los costos agricolas urea gasoil fletes y arrendamientos las variables que mira el productor con j battistoni az group",
+          "descripcion": "Insumos, logística, estructura, arrendamientos, gasoil, labores, y una visión más amplia de los costos de producción. Una charla con el Lic. Jeremías Battistoni, analista de mercados einsumos de AZ Group, detallando el impacto de los insumos, la logística y las externalidades globales en los márgenes agrícolas. Destaca la influencia del precio de la urea en los cereales, la estabilidad en agroquímicos y semillas, y el efecto de la volatilidad en las decisiones de compra...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/kJ1GE4CiMJo.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-11-03T19:40-03:00",
+          "capturado": "2026-11-03T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "45369e01d5a192fe"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "costos agrícolas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Apunta directo al corazón del productor de la zona núcleo que hoy hace números finos para la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-03T21:00-03:00"
+    },
+    {
+      "id": "c952d749f1fd",
+      "rep": {
+        "id": "c952d749f1fd",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/puro-tacto-en-medio-de-una-crisis-sin-precedentes-de-la-industria-de-la-maquinaria-local-el-gobierno-salio-a-festejar-el-incremento-de-fierros-usados-desde-el-exterior/",
+        "canonical_url": "https://bichosdecampo.com/puro-tacto-en-medio-de-una-crisis-sin-precedentes-de-la-industria-de-la-maquinaria-local-el-gobierno-salio-a-festejar-el-incremento-de-fierros-usados-desde-el-exterior",
+        "titulo": "Puro tacto: En medio de una crisis sin precedentes de la industria de la maquinaria local, el gobierno salió a festejar el incremento de fierros usados desde el exterior",
+        "titulo_norm": "puro tacto en medio de una crisis sin precedentes de la industria de la maquinaria local el gobierno salio a festejar el incremento de fierros usados desde el exterior",
+        "descripcion": "Como si el sector de la maquinaria agrícola nacional estuviese de parabienes, el gobierno nacional salió a festejar con un comunicado de prensa el incremento grandioso que tuvo durante el último año la importación de equipos usados desde el exterior. Si bien se trata de un número menor, el comunicado brilla por su oportunismo, pues […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-03-192216.jpg",
+        "autor": "Diego Mañas",
+        "publicado": "2026-11-03T19:26-03:00",
+        "capturado": "2026-11-03T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "782fd25461a06441"
+      },
+      "grupo": [
+        {
+          "id": "c952d749f1fd",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/puro-tacto-en-medio-de-una-crisis-sin-precedentes-de-la-industria-de-la-maquinaria-local-el-gobierno-salio-a-festejar-el-incremento-de-fierros-usados-desde-el-exterior/",
+          "canonical_url": "https://bichosdecampo.com/puro-tacto-en-medio-de-una-crisis-sin-precedentes-de-la-industria-de-la-maquinaria-local-el-gobierno-salio-a-festejar-el-incremento-de-fierros-usados-desde-el-exterior",
+          "titulo": "Puro tacto: En medio de una crisis sin precedentes de la industria de la maquinaria local, el gobierno salió a festejar el incremento de fierros usados desde el exterior",
+          "titulo_norm": "puro tacto en medio de una crisis sin precedentes de la industria de la maquinaria local el gobierno salio a festejar el incremento de fierros usados desde el exterior",
+          "descripcion": "Como si el sector de la maquinaria agrícola nacional estuviese de parabienes, el gobierno nacional salió a festejar con un comunicado de prensa el incremento grandioso que tuvo durante el último año la importación de equipos usados desde el exterior. Si bien se trata de un número menor, el comunicado brilla por su oportunismo, pues […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-03-192216.jpg",
+          "autor": "Diego Mañas",
+          "publicado": "2026-11-03T19:26-03:00",
+          "capturado": "2026-11-03T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "782fd25461a06441"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 76,
+        "commercial_score": 70,
+        "subtema": "maquinaria",
+        "tema": "maquinaria usada",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca una fibra sensible de la industria metalmecánica local y genera fuerte debate en el sector.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-03T21:00-03:00"
+    },
+    {
+      "id": "d3c8750d6078",
+      "rep": {
+        "id": "d3c8750d6078",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/un-supermercado-podra-exportar-a-europa-un-subproducto-que-sirve-para-fabricar-combustible-de-nid03112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/un-supermercado-podra-exportar-a-europa-un-subproducto-que-sirve-para-fabricar-combustible-de-nid03112026",
+        "titulo": "Un supermercado podrá exportar a Europa un subproducto bovino que sirve para fabricar un combustible para los aviones",
+        "titulo_norm": "un supermercado podra exportar a europa un subproducto bovino que sirve para fabricar un combustible para los aviones",
+        "descripcion": "El Senasa autorizó a Coto a enviar sebo incomestible a la Unión Europea, un destino sin embarques argentinos desde noviembre de 2023; otras plantas están en proceso de auditoría para recuperar el acceso",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/JAKDYYGO2VBUTCYPHA6OI4WWBY.png?auth=3baeca62e3fb1f504659ac46a0a620de21ee3bf61066d5f4819223ed4e7af230&smart=true",
+        "autor": "",
+        "publicado": "2026-11-03T20:27-03:00",
+        "capturado": "2026-11-03T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cfdc3f8510b5bff2"
+      },
+      "grupo": [
+        {
+          "id": "d3c8750d6078",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/un-supermercado-podra-exportar-a-europa-un-subproducto-que-sirve-para-fabricar-combustible-de-nid03112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/un-supermercado-podra-exportar-a-europa-un-subproducto-que-sirve-para-fabricar-combustible-de-nid03112026",
+          "titulo": "Un supermercado podrá exportar a Europa un subproducto bovino que sirve para fabricar un combustible para los aviones",
+          "titulo_norm": "un supermercado podra exportar a europa un subproducto bovino que sirve para fabricar un combustible para los aviones",
+          "descripcion": "El Senasa autorizó a Coto a enviar sebo incomestible a la Unión Europea, un destino sin embarques argentinos desde noviembre de 2023; otras plantas están en proceso de auditoría para recuperar el acceso",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/JAKDYYGO2VBUTCYPHA6OI4WWBY.png?auth=3baeca62e3fb1f504659ac46a0a620de21ee3bf61066d5f4819223ed4e7af230&smart=true",
+          "autor": "",
+          "publicado": "2026-11-03T20:27-03:00",
+          "capturado": "2026-11-03T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cfdc3f8510b5bff2"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 9,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 65,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "sebo bovino",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Buena apertura de mercado exportador para la cadena cárnica con impacto directo en la industria frigorífica.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          62
+        ]
+      },
+      "cuando": "2026-11-03T21:00-03:00"
+    },
     {
       "id": "bcad702816b8",
       "rep": {
@@ -51319,8 +51682,8 @@
       "cuando": "2026-11-02T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T19:21:19-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-03T21:04:14-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
