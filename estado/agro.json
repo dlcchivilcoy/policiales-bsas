@@ -24573,6 +24573,48 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bb3ed830af51fcd2": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 7,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 77,
+      "commercial_score": 77,
+      "subtema": "agtech",
+      "tema": "startups agrifoodtech",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Destaca talento nacional en AgTech e IA con alto atractivo comercial y para productores.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a1b225e91d4849c9": {
+      "impacto_economico": 10,
+      "interes_productores": 4,
+      "innovacion": 3,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 28,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "ranking agro brasil",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un ranking corporativo de Brasil, con baja relevancia directa para el productor de la zona núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -26237,7 +26279,18 @@
       "https://croplife.com/management/sustainability/field-to-market-awarded-usda-nrcs-conservation-innovation-grant-to-bring-field-level-water-quality-estimates-to-farmers": "2026-11-03",
       "https://croplife.com/management/is-your-ag-retail-business-waiting-too-long-to-start-selling-next-season": "2026-11-03",
       "https://croplife.com/management/can-ai-help-ag-retailers-stop-guessing-on-inventory": "2026-11-03",
-      "https://croplife.com/croplife-top-100/brandts-family-driven-edge-a-culture-built-for-change": "2026-11-03"
+      "https://croplife.com/croplife-top-100/brandts-family-driven-edge-a-culture-built-for-change": "2026-11-03",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/innovacion-las-7-startups-argentinas-agrifoodtech-que-seran-aceleradas-en-un-programa-del-bid": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-4-noviembre-2026": "2026-11-04",
+      "https://infocampo.com.ar/clima-en-la-rioja-cielo-despejado-el-pronostico-para-hoy-4-de-noviembre": "2026-11-04",
+      "https://lacapital.com.ar/agro/maquinaria-agricola-usada-crecio-mas-250-el-ingreso-equipos-importados-n10290339.html": "2026-11-04",
+      "https://lacapital.com.ar/agro/cuales-son-las-10-empresas-que-mas-facturaron-el-agro-brasileno-2025-n10290110.html": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -27900,7 +27953,18 @@
       "field to market awarded usda nrcs conservation innovation grant to bring field level water quality estimates to farmers": "2026-11-03",
       "is your ag retail business waiting too long to start selling next season": "2026-11-03",
       "can ai help ag retailers stop guessing on inventory": "2026-11-03",
-      "brandt s family driven edge a culture built for change": "2026-11-03"
+      "brandt s family driven edge a culture built for change": "2026-11-03",
+      "dolar blue hoy a cuanto cotiza el 4 noviembre 2026": "2026-11-04",
+      "innovacion las 7 startups argentinas agrifoodtech que seran aceleradas en un programa del bid": "2026-11-04",
+      "clima hoy en corrientes el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima hoy en cordoba el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima hoy en salta el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima hoy en rosario el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima hoy en san luis el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima hoy en neuquen el pronostico del tiempo para este 4 noviembre 2026": "2026-11-04",
+      "clima en la rioja cielo despejado el pronostico para hoy 4 de noviembre": "2026-11-04",
+      "maquinaria agricola usada crecio mas de 250 el ingreso de equipos importados": "2026-11-04",
+      "cuales son las 10 empresas que mas facturaron en el agro brasileno en 2025": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29563,7 +29627,18 @@
       "40fcbaa4e36cbc43": "2026-11-03",
       "b9483d651d04f2c9": "2026-11-03",
       "a81c4e7e69a0645d": "2026-11-03",
-      "8118601f098a9255": "2026-11-03"
+      "8118601f098a9255": "2026-11-03",
+      "da658ce4e13c9f32": "2026-11-04",
+      "bb3ed830af51fcd2": "2026-11-04",
+      "fac0272162a9e5ee": "2026-11-04",
+      "6abab223dce41b69": "2026-11-04",
+      "4935b10287673a7a": "2026-11-04",
+      "18828eff6c0c1689": "2026-11-04",
+      "2754b13c5d077e5b": "2026-11-04",
+      "92e49ad433853b18": "2026-11-04",
+      "cdd4e08890b96902": "2026-11-04",
+      "f60c3c8349d8551d": "2026-11-04",
+      "a1b225e91d4849c9": "2026-11-04"
     }
   },
   "elegidas": [
@@ -51088,9 +51163,139 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d3c8750d6078_portada.jpg"
+    },
+    {
+      "id": "04f2b8a00ea1",
+      "cuando": "2026-11-04T07:00-03:00",
+      "titulo_original": "La \"guerra de los costos agrícolas\": urea, gasoil, fletes y arrendamientos, las variables que mira el productor; con J. Battistoni - AZ Group",
+      "descripcion": "Insumos, logística, estructura, arrendamientos, gasoil, labores, y una visión más amplia de los costos de producción. Una charla con el Lic. Jeremías Battistoni, analista de mercados einsumos de AZ Group, detallando el impacto de los insumos, la logística y las externalidades globales en los márgene",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
+      "titular": "Costos agrícolas: urea, fletes y alquileres presionan los márgenes del productor",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "costos agrícolas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Apunta directo al corazón del productor de la zona núcleo que hoy hace números finos para la campaña.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "4RxCKyAjKlE",
+          "url": "https://youtube.com/shorts/4RxCKyAjKlE",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "9317ffa4-f289-4ed7-837a-32974f84d0fa",
+          "slug": "costos-agricolas-urea-fletes-y-arrendamientos-condicionan-los-e9521a",
+          "url": "https://www.diariolacampaña.com.ar/n/costos-agricolas-urea-fletes-y-arrendamientos-condicionan-los-e9521a",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "4591765061077117",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17889060345688914",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18028644008919313"
+        },
+        "historia_facebook": {
+          "id": "1668143791347436"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_04f2b8a00ea1_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "d75afda083de",
+      "rep": {
+        "id": "d75afda083de",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/innovacion-las-7-startups-argentinas-agrifoodtech-que-seran-aceleradas-en-un-programa-del-bid/",
+        "canonical_url": "https://infocampo.com.ar/innovacion-las-7-startups-argentinas-agrifoodtech-que-seran-aceleradas-en-un-programa-del-bid",
+        "titulo": "Innovación: las 7 startups argentinas “agrifoodtech” que serán aceleradas en un programa del BID",
+        "titulo_norm": "innovacion las 7 startups argentinas agrifoodtech que seran aceleradas en un programa del bid",
+        "descripcion": "Trabajan en soluciones que abarcan desde la reducción del uso de agroquímicos y la aplicación de inteligencia artificial al diseño de proteínas hasta el desarrollo de nuevos ingredientes alimentarios, alternativas para la salud animal y tecnologías para una ganadería más eficiente y sostenible.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/Foodrise08.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-11-04T06:53-03:00",
+        "capturado": "2026-11-04T07:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "bb3ed830af51fcd2"
+      },
+      "grupo": [
+        {
+          "id": "d75afda083de",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/innovacion-las-7-startups-argentinas-agrifoodtech-que-seran-aceleradas-en-un-programa-del-bid/",
+          "canonical_url": "https://infocampo.com.ar/innovacion-las-7-startups-argentinas-agrifoodtech-que-seran-aceleradas-en-un-programa-del-bid",
+          "titulo": "Innovación: las 7 startups argentinas “agrifoodtech” que serán aceleradas en un programa del BID",
+          "titulo_norm": "innovacion las 7 startups argentinas agrifoodtech que seran aceleradas en un programa del bid",
+          "descripcion": "Trabajan en soluciones que abarcan desde la reducción del uso de agroquímicos y la aplicación de inteligencia artificial al diseño de proteínas hasta el desarrollo de nuevos ingredientes alimentarios, alternativas para la salud animal y tecnologías para una ganadería más eficiente y sostenible.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/Foodrise08.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-11-04T06:53-03:00",
+          "capturado": "2026-11-04T07:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "bb3ed830af51fcd2"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 7,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 77,
+        "commercial_score": 77,
+        "subtema": "agtech",
+        "tema": "startups agrifoodtech",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Destaca talento nacional en AgTech e IA con alto atractivo comercial y para productores.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T07:00-03:00"
+    },
     {
       "id": "d8ba0d8e1055",
       "rep": {
@@ -51153,69 +51358,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-03T21:40-03:00"
-    },
-    {
-      "id": "04f2b8a00ea1",
-      "rep": {
-        "id": "04f2b8a00ea1",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
-        "titulo": "La \"guerra de los costos agrícolas\": urea, gasoil, fletes y arrendamientos, las variables que mira el productor; con J. Battistoni - AZ Group",
-        "titulo_norm": "la guerra de los costos agricolas urea gasoil fletes y arrendamientos las variables que mira el productor con j battistoni az group",
-        "descripcion": "Insumos, logística, estructura, arrendamientos, gasoil, labores, y una visión más amplia de los costos de producción. Una charla con el Lic. Jeremías Battistoni, analista de mercados einsumos de AZ Group, detallando el impacto de los insumos, la logística y las externalidades globales en los márgenes agrícolas. Destaca la influencia del precio de la urea en los cereales, la estabilidad en agroquímicos y semillas, y el efecto de la volatilidad en las decisiones de compra...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/kJ1GE4CiMJo.jpg",
-        "autor": "info@agrositio.com (Ricardo Bindi)",
-        "publicado": "2026-11-03T19:40-03:00",
-        "capturado": "2026-11-03T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "45369e01d5a192fe"
-      },
-      "grupo": [
-        {
-          "id": "04f2b8a00ea1",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249184-como-afectan-insumos-y-logistica-en-la-guerra-de-los-costos-de-produccion-agricola-con-j-battistoni-az-group.html",
-          "titulo": "La \"guerra de los costos agrícolas\": urea, gasoil, fletes y arrendamientos, las variables que mira el productor; con J. Battistoni - AZ Group",
-          "titulo_norm": "la guerra de los costos agricolas urea gasoil fletes y arrendamientos las variables que mira el productor con j battistoni az group",
-          "descripcion": "Insumos, logística, estructura, arrendamientos, gasoil, labores, y una visión más amplia de los costos de producción. Una charla con el Lic. Jeremías Battistoni, analista de mercados einsumos de AZ Group, detallando el impacto de los insumos, la logística y las externalidades globales en los márgenes agrícolas. Destaca la influencia del precio de la urea en los cereales, la estabilidad en agroquímicos y semillas, y el efecto de la volatilidad en las decisiones de compra...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/kJ1GE4CiMJo.jpg",
-          "autor": "info@agrositio.com (Ricardo Bindi)",
-          "publicado": "2026-11-03T19:40-03:00",
-          "capturado": "2026-11-03T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "45369e01d5a192fe"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 78,
-        "commercial_score": 78,
-        "subtema": "agro",
-        "tema": "costos agrícolas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Apunta directo al corazón del productor de la zona núcleo que hoy hace números finos para la campaña.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-03T21:00-03:00"
     },
     {
       "id": "bcad702816b8",
@@ -51748,144 +51890,10 @@
         ]
       },
       "cuando": "2026-11-03T10:00-03:00"
-    },
-    {
-      "id": "ef87b8d9729e",
-      "rep": {
-        "id": "ef87b8d9729e",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249163-acorralada-por-el-petroleo-y-la-oferta-presente-y-futura-la-soja-cae-abruptamente-por-manuel-alvarado-ledesma.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249163-acorralada-por-el-petroleo-y-la-oferta-presente-y-futura-la-soja-cae-abruptamente-por-manuel-alvarado-ledesma.html",
-        "titulo": "Acorralada por el petróleo y la oferta presente y futura, la soja cae abruptamente, por Manuel Alvarado Ledesma",
-        "titulo_norm": "acorralada por el petroleo y la oferta presente y futura la soja cae abruptamente por manuel alvarado ledesma",
-        "descripcion": "¿Cambio de escenario en el mundo? Una tregua geopolítica en Oriente Próximo más el ritmo acelerado de la siembra....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249163_96446062.jpg",
-        "autor": "info@agrositio.com (Manuel Alvarado Ledesma)",
-        "publicado": "2026-11-02T18:34-03:00",
-        "capturado": "2026-11-02T18:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b3f56234cbe9da17"
-      },
-      "grupo": [
-        {
-          "id": "ef87b8d9729e",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249163-acorralada-por-el-petroleo-y-la-oferta-presente-y-futura-la-soja-cae-abruptamente-por-manuel-alvarado-ledesma.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249163-acorralada-por-el-petroleo-y-la-oferta-presente-y-futura-la-soja-cae-abruptamente-por-manuel-alvarado-ledesma.html",
-          "titulo": "Acorralada por el petróleo y la oferta presente y futura, la soja cae abruptamente, por Manuel Alvarado Ledesma",
-          "titulo_norm": "acorralada por el petroleo y la oferta presente y futura la soja cae abruptamente por manuel alvarado ledesma",
-          "descripcion": "¿Cambio de escenario en el mundo? Una tregua geopolítica en Oriente Próximo más el ritmo acelerado de la siembra....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249163_96446062.jpg",
-          "autor": "info@agrositio.com (Manuel Alvarado Ledesma)",
-          "publicado": "2026-11-02T18:34-03:00",
-          "capturado": "2026-11-02T18:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b3f56234cbe9da17"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 2,
-        "cercania_argentina": 9,
-        "cercania_pba": 6,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 64,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "La caída de precios de la soja afecta directamente el bolsillo del productor pampeano.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          64
-        ]
-      },
-      "cuando": "2026-11-02T18:40-03:00"
-    },
-    {
-      "id": "5cfbb8f5167d",
-      "rep": {
-        "id": "5cfbb8f5167d",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/__trashed-11/",
-        "canonical_url": "https://bichosdecampo.com/__trashed-11",
-        "titulo": "El Paraná afloja arriba y aprieta abajo: La baja de Yacyretá da apenas un respiro, pero el Litoral se prepara para nuevas crecidas",
-        "titulo_norm": "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas",
-        "descripcion": "Los días pasados, la Entidad Binacional Yacyretá (EBY), la central hidroeléctrica ubicada en la frontera entre Argentina y Paraguay, pronosticaba un leve descenso del caudal, que prácticamente duplica los niveles promedio durante esta época del año. Desde unos 35.000 metros cúbicos por segundo, en Yacyretá proyectaban una leve retracción hacia los 29.000 para este domingo […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-10.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-02T11:22-03:00",
-        "capturado": "2026-11-02T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c0afc98ff10029d4"
-      },
-      "grupo": [
-        {
-          "id": "5cfbb8f5167d",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/__trashed-11/",
-          "canonical_url": "https://bichosdecampo.com/__trashed-11",
-          "titulo": "El Paraná afloja arriba y aprieta abajo: La baja de Yacyretá da apenas un respiro, pero el Litoral se prepara para nuevas crecidas",
-          "titulo_norm": "el parana afloja arriba y aprieta abajo la baja de yacyreta da apenas un respiro pero el litoral se prepara para nuevas crecidas",
-          "descripcion": "Los días pasados, la Entidad Binacional Yacyretá (EBY), la central hidroeléctrica ubicada en la frontera entre Argentina y Paraguay, pronosticaba un leve descenso del caudal, que prácticamente duplica los niveles promedio durante esta época del año. Desde unos 35.000 metros cúbicos por segundo, en Yacyretá proyectaban una leve retracción hacia los 29.000 para este domingo […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/10/crecida-del-parana-en-el-jaaukanigas-villa-Ocampo-10.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-02T11:22-03:00",
-          "capturado": "2026-11-02T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c0afc98ff10029d4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 9,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 6,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 4,
-        "ai_score": 60,
-        "commercial_score": 58,
-        "subtema": "agro",
-        "tema": "crecida paraná",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El comportamiento del caudal del Paraná afecta logística y producción del Litoral, con impacto indirecto en la región.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          58,
-          62
-        ]
-      },
-      "cuando": "2026-11-02T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T05:02:25-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T07:05:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
