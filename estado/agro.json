@@ -25239,6 +25239,27 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "43b7661721d91206": {
+      "impacto_economico": 15,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 4,
+      "ai_score": 72,
+      "commercial_score": 72,
+      "subtema": "agro",
+      "tema": "tormentas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la producción local y genera alerta inmediata en la región.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -26961,7 +26982,8 @@
       "https://agfundernews.com/miyokos-comeback-off-to-rocky-start-amid-recalls-recipe-changes-problems-are-temporary-says-new-owner": "2026-11-04",
       "https://futurefarming.com/uncategorized/ai-in-greenhouse-horticulture-making-smart-use-of-data": "2026-11-04",
       "https://futurefarming.com/tech-in-focus/field-robots/earth-rover-sells-first-10-light-weeding-robots": "2026-11-04",
-      "https://intainforma.inta.gob.ar/mendoza-se-prepara-para-la-cosecha-temprana-de-cerezas": "2026-11-04"
+      "https://intainforma.inta.gob.ar/mendoza-se-prepara-para-la-cosecha-temprana-de-cerezas": "2026-11-04",
+      "https://lacapital.com.ar/agro/tormentas-intensas-la-region-agricola-registros-116-milimetros-y-rafagas-100-kmh-n10290418.html": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28682,7 +28704,8 @@
       "miyoko s comeback off to rocky start amid recalls recipe changes problems are temporary says new owner": "2026-11-04",
       "ai in greenhouse horticulture making smart use of data": "2026-11-04",
       "earth rover sells first 10 light weeding robots": "2026-11-04",
-      "mendoza se prepara para la cosecha temprana de cerezas": "2026-11-04"
+      "mendoza se prepara para la cosecha temprana de cerezas": "2026-11-04",
+      "tormentas intensas en la region agricola registros de hasta 116 milimetros y rafagas de 100 km h": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30403,7 +30426,8 @@
       "9a78e83f676cbe21": "2026-11-04",
       "984351e4d48d5fc9": "2026-11-04",
       "80eb6c995343d207": "2026-11-04",
-      "799909d119086b63": "2026-11-04"
+      "799909d119086b63": "2026-11-04",
+      "43b7661721d91206": "2026-11-04"
     }
   },
   "elegidas": [
@@ -52493,6 +52517,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a7046894ac8e_portada.jpg"
+    },
+    {
+      "id": "fc05225a4616",
+      "cuando": "2026-11-04T13:20-03:00",
+      "titulo_original": "Tormentas intensas en la región agrícola: registros de hasta 116 milímetros y ráfagas de 100 km/h",
+      "descripcion": "La tormenta de ayer dejó registros de hasta 116 milímetros y ráfagas de viento que superaron los 100 kilómetros por hora en la región agrícola, con granizo y daños localizados.",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/tormentas-intensas-la-region-agricola-registros-116-milimetros-y-rafagas-100-kmh-n10290418.html",
+      "titular": "Tormentas con registros de hasta 116 milímetros y ráfagas de 101 km/h",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 4,
+        "ai_score": 72,
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "tormentas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la producción local y genera alerta inmediata en la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "74fc0fb2-6f92-44d7-bb0c-24ebdbfa1571",
+          "slug": "fuertes-tormentas-en-la-region-agricola-con-registros-de-hasta-03bb34",
+          "url": "https://www.diariolacampaña.com.ar/n/fuertes-tormentas-en-la-region-agricola-con-registros-de-hasta-03bb34",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2161104464789232",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18355173013222903",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18082358399374120"
+        },
+        "historia_facebook": {
+          "id": "1436929751271457"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fc05225a4616_portada.jpg"
     }
   ],
   "pendientes": [
@@ -53494,8 +53578,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T13:04:58-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T13:23:52-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
