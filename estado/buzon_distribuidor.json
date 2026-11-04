@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T00:32:31.000Z",
+  "actualizado": "2026-11-04T22:01:39.000Z",
   "eventos": [
     {
       "id": "policiales:https://infociudad.com.ar/actualidad/intento-robar-una-moto-de-un-deposito-y-termino-detenido/",
@@ -283,6 +283,30 @@
       "volanta": "Robo en Chacabuco",
       "categoria": "robo",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.junindigital.com/policiales/2026-11-4-9-51-0-violento-choque-entre-un-camion-y-un-auto-cerca-de-chivilcoy-dos-conductores-hospitalizados",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-04T22:01:39.000Z",
+      "titulo": "Dos heridos tras un choque entre un camión y un auto en Chivilcoy",
+      "descripcion": "Un camión y un auto protagonizaron un violento choque en la Ruta Provincial 30, a la altura del kilómetro 485. Los dos conductores terminaron hospitalizados.",
+      "texto_tiktok": "Un camión Volkswagen 13180 y un automóvil Fiat Cronos protagonizaron un fuerte choque este martes cerca de las 22 en la Ruta Provincial 30, a la altura del kilómetro 485, en Chivilcoy.\n\nTras la colisión frente al puente ferroviario, el transporte de carga volcó sobre uno de sus laterales y quedó apoyado parcialmente sobre el auto contra el guardarraíl.\n\nLos conductores de ambos rodados, identificados como Leanddo Duarte de 48 años y Matías Gularte de 22, salieron por sus propios medios y fueron trasladados conscientes al Hospital Municipal por el SAME.\n\nTrabajaron en el lugar tres dotaciones de bomberos, policías viales y personal de la Comisaría Primera, mientras la ruta permaneció totalmente cortada para realizar las pericias judiciales.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #SiniestroVial #Transito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-04_2135_04_junin_dos-heridos-tras-un-choque-ent.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chivilcoy-dos-heridos-tras-un-choque-y-vuelco-de-un-camion-en-b47fcc",
+      "youtube_url": "https://youtube.com/shorts/f1IfIHMy8es",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Siniestro vial en Chivilcoy",
+      "categoria": "accidente_vial",
+      "distancia_km": 0.0,
       "radio_ok": true,
       "plataformas": [
         "x",
