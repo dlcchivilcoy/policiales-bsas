@@ -51884,7 +51884,7 @@
       "cuando": "2026-11-02T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-03T22:20:41-03:00",
+  "actualizado": "2026-11-04T05:02:25-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -56510,6 +56510,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-02": {
+        "fecha": "2026-11-02",
+        "productos": {
+          "trigo": {
+            "ars": 314980.0,
+            "usd": 205.0,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 275000.0,
+            "usd": 178.98,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "girasol": {
+            "ars": 799000.0,
+            "usd": 520.01,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 542000.0,
+            "usd": 352.75,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "sorgo": {
+            "ars": 284250.0,
+            "usd": 185.0,
+            "estimado": true,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1536.5,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -56680,6 +56720,20 @@
           "compra": 1536.5,
           "venta": 1545.5
         }
+      },
+      "2026-11-03": {
+        "fuente": "Banco Nación",
+        "hora": "17:00",
+        "billete": {
+          "fecha": "2026-11-03",
+          "compra": 1520.0,
+          "venta": 1570.0
+        },
+        "divisa": {
+          "fecha": "2026-11-03",
+          "compra": 1542.0,
+          "venta": 1551.0
+        }
       }
     },
     "a3500": {
@@ -56762,6 +56816,10 @@
       "2026-11-02": {
         "fecha": "2026-11-02",
         "valor": 1544.6507
+      },
+      "2026-11-03": {
+        "fecha": "2026-11-03",
+        "valor": 1549.7194
       }
     },
     "chicago_soja": {
@@ -56896,6 +56954,10 @@
       "2026-11-02": {
         "fecha": "2026-11-02",
         "usd_t": 442.7
+      },
+      "2026-11-03": {
+        "fecha": "2026-11-03",
+        "usd_t": 442.0
       }
     },
     "chicago_maiz": {
@@ -57033,7 +57095,11 @@
       },
       "2026-11-03": {
         "fecha": "2026-11-03",
-        "usd_t": 176.0
+        "usd_t": 174.2
+      },
+      "2026-11-04": {
+        "fecha": "2026-11-04",
+        "usd_t": 173.4
       }
     },
     "chicago_trigo": {
@@ -57171,7 +57237,11 @@
       },
       "2026-11-03": {
         "fecha": "2026-11-03",
-        "usd_t": 222.9
+        "usd_t": 220.4
+      },
+      "2026-11-04": {
+        "fecha": "2026-11-04",
+        "usd_t": 218.9
       }
     }
   }
