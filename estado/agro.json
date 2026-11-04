@@ -25528,6 +25528,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "10dc24c698ef954a": {
+      "impacto_economico": 15,
+      "interes_productores": 13,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 73,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "novillo visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto local en Cañuelas y zona núcleo con un nuevo estándar de precios para la exportación.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27265,7 +27286,8 @@
       "https://lanacion.com.ar/economia/campo/invirtio-us40000-para-transformar-bananas-en-harina-y-hoy-vende-un-producto-con-demanda-creciente-nid04112026": "2026-11-04",
       "https://agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html": "2026-11-04",
       "https://bichosdecampo.com/efecto-trump-que-podria-llegar-a-cambiar-en-el-agro-local-luego-de-las-elecciones-de-medio-termino-en-estados-unidos": "2026-11-04",
-      "https://lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html": "2026-11-04"
+      "https://lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html": "2026-11-04",
+      "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29001,7 +29023,8 @@
       "invirtio us 40 000 para transformar bananas en harina y hoy vende un producto con demanda creciente esto nos dio un plus": "2026-11-04",
       "el gusano cogollero avanza en maices tempranos y tardios desde nea hasta entre rios por eso es clave monitorear y actuar a tiempo para evitar danos mayores": "2026-11-04",
       "efecto trump que podria llegar a cambiar en el agro local luego de las elecciones de medio termino en estados unidos": "2026-11-04",
-      "impulsan el uso de semilla fiscalizada y piden ampliar la discusion de una nueva ley": "2026-11-04"
+      "impulsan el uso de semilla fiscalizada y piden ampliar la discusion de una nueva ley": "2026-11-04",
+      "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30737,7 +30760,8 @@
       "b26bd5ce9fd5d246": "2026-11-04",
       "ac8d3a120ec5a40a": "2026-11-04",
       "eaaff78d976b9cf1": "2026-11-04",
-      "e9a305ddc0b9b73c": "2026-11-04"
+      "e9a305ddc0b9b73c": "2026-11-04",
+      "10dc24c698ef954a": "2026-11-04"
     }
   },
   "elegidas": [
@@ -53198,9 +53222,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4b589aa42859_portada.jpg"
+    },
+    {
+      "id": "2d10b5fe4f2a",
+      "cuando": "2026-11-04T16:40-03:00",
+      "titulo_original": "Más kilos y mejor calidad de la carne: ¿qué animal necesita producir la ganadería argentina?",
+      "descripcion": "En la previa del 5° Congreso Federal Ganadero organizado por Rosgan, el especialista Julián Soriano adelanta su propuesta de avanzar hacia animales más pesados y con mayor grasa intramuscular para producir carne de mayor valor.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/mas-kilos-y-mejor-calidad-de-la-carne-que-animal-necesita-producir-la-ganaderia-argentina/",
+      "titular": "Novillos pesados para exportar: la clave para liderar el mercado mundial",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa al criador y feedlotero de la región pampeana por el cambio hacia animales más pesados.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T16:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8212dcd9-e368-4c62-8376-65107b64b068",
+          "slug": "ganaderia-argentina-por-que-exportar-novillos-pesados-con-fd76a0",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-argentina-por-que-exportar-novillos-pesados-con-fd76a0",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1631105895221351",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17996007837052216",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17978657387928949"
+        },
+        "historia_facebook": {
+          "id": "1446240834263141"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2d10b5fe4f2a_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "5cc86c9b2ec6",
+      "rep": {
+        "id": "5cc86c9b2ec6",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada/",
+        "canonical_url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada",
+        "titulo": "Llegó el día: El novillo “apto Visec” para exportación cotizó $200 más en Cañuelas y hubo brechas de precios también en la invernada",
+        "titulo_norm": "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada",
+        "descripcion": "En la mañana de hoy se realizó el habitual remate con hacienda de exportación en el Mercado Agroganadero de Cañuelas. Cada primer miércoles de mes los consignatarios de ese mercado reúnen tropas de novillos que se venden de forma televisada y con la modalidad a levantar del campo. En esta oportunidad pesó como nunca antes […]",
+        "imagen_url": "",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-11-04T16:23-03:00",
+        "capturado": "2026-11-04T16:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "10dc24c698ef954a"
+      },
+      "grupo": [
+        {
+          "id": "5cc86c9b2ec6",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada/",
+          "canonical_url": "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada",
+          "titulo": "Llegó el día: El novillo “apto Visec” para exportación cotizó $200 más en Cañuelas y hubo brechas de precios también en la invernada",
+          "titulo_norm": "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada",
+          "descripcion": "En la mañana de hoy se realizó el habitual remate con hacienda de exportación en el Mercado Agroganadero de Cañuelas. Cada primer miércoles de mes los consignatarios de ese mercado reúnen tropas de novillos que se venden de forma televisada y con la modalidad a levantar del campo. En esta oportunidad pesó como nunca antes […]",
+          "imagen_url": "",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-11-04T16:23-03:00",
+          "capturado": "2026-11-04T16:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "10dc24c698ef954a"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "novillo visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto local en Cañuelas y zona núcleo con un nuevo estándar de precios para la exportación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T16:40-03:00"
+    },
     {
       "id": "b68ca7d2e612",
       "rep": {
@@ -53326,69 +53473,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-04T16:20-03:00"
-    },
-    {
-      "id": "2d10b5fe4f2a",
-      "rep": {
-        "id": "2d10b5fe4f2a",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/mas-kilos-y-mejor-calidad-de-la-carne-que-animal-necesita-producir-la-ganaderia-argentina/",
-        "canonical_url": "https://infocampo.com.ar/mas-kilos-y-mejor-calidad-de-la-carne-que-animal-necesita-producir-la-ganaderia-argentina",
-        "titulo": "Más kilos y mejor calidad de la carne: ¿qué animal necesita producir la ganadería argentina?",
-        "titulo_norm": "mas kilos y mejor calidad de la carne que animal necesita producir la ganaderia argentina",
-        "descripcion": "En la previa del 5° Congreso Federal Ganadero organizado por Rosgan, el especialista Julián Soriano adelanta su propuesta de avanzar hacia animales más pesados y con mayor grasa intramuscular para producir carne de mayor valor.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/soriano-rosgan.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-11-04T15:23-03:00",
-        "capturado": "2026-11-04T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ba0d3e829ea101ae"
-      },
-      "grupo": [
-        {
-          "id": "2d10b5fe4f2a",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/mas-kilos-y-mejor-calidad-de-la-carne-que-animal-necesita-producir-la-ganaderia-argentina/",
-          "canonical_url": "https://infocampo.com.ar/mas-kilos-y-mejor-calidad-de-la-carne-que-animal-necesita-producir-la-ganaderia-argentina",
-          "titulo": "Más kilos y mejor calidad de la carne: ¿qué animal necesita producir la ganadería argentina?",
-          "titulo_norm": "mas kilos y mejor calidad de la carne que animal necesita producir la ganaderia argentina",
-          "descripcion": "En la previa del 5° Congreso Federal Ganadero organizado por Rosgan, el especialista Julián Soriano adelanta su propuesta de avanzar hacia animales más pesados y con mayor grasa intramuscular para producir carne de mayor valor.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/soriano-rosgan.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-11-04T15:23-03:00",
-          "capturado": "2026-11-04T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ba0d3e829ea101ae"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 75,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "carne vacuna",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesa al criador y feedlotero de la región pampeana por el cambio hacia animales más pesados.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T16:00-03:00"
     },
     {
       "id": "25b8d017827d",
@@ -54388,8 +54472,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T16:24:10-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T16:44:35-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
