@@ -25285,6 +25285,27 @@
         56,
         56
       ]
+    },
+    "b571a78ba576b033": {
+      "impacto_economico": 18,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 83,
+      "commercial_score": 88,
+      "subtema": "empresas",
+      "tema": "adecoagro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran impacto por las inversiones de un gigante agropecuario en la provincia y el sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27009,7 +27030,8 @@
       "https://futurefarming.com/tech-in-focus/field-robots/earth-rover-sells-first-10-light-weeding-robots": "2026-11-04",
       "https://intainforma.inta.gob.ar/mendoza-se-prepara-para-la-cosecha-temprana-de-cerezas": "2026-11-04",
       "https://lacapital.com.ar/agro/tormentas-intensas-la-region-agricola-registros-116-milimetros-y-rafagas-100-kmh-n10290418.html": "2026-11-04",
-      "https://bichosdecampo.com/ya-desespera-la-situacion-de-sancor-que-no-registra-avances-concretos-con-una-produccion-esporadica-no-hay-indicios-de-venta-para-la-lactea-declarada-en-quiebra": "2026-11-04"
+      "https://bichosdecampo.com/ya-desespera-la-situacion-de-sancor-que-no-registra-avances-concretos-con-una-produccion-esporadica-no-hay-indicios-de-venta-para-la-lactea-declarada-en-quiebra": "2026-11-04",
+      "https://bichosdecampo.com/hacia-adonde-apunta-ahora-la-gigante-adecoagro-alejandro-lopez-moriena-anticipo-que-piensan-duplicar-la-produccion-de-profertil-y-analizan-mas-inversiones-en-lecheria-arroz-y-mani": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28732,7 +28754,8 @@
       "earth rover sells first 10 light weeding robots": "2026-11-04",
       "mendoza se prepara para la cosecha temprana de cerezas": "2026-11-04",
       "tormentas intensas en la region agricola registros de hasta 116 milimetros y rafagas de 100 km h": "2026-11-04",
-      "ya desespera la situacion de sancor que no registra avances concretos con una produccion esporadica no hay indicios de venta para la lactea declarada en quiebra": "2026-11-04"
+      "ya desespera la situacion de sancor que no registra avances concretos con una produccion esporadica no hay indicios de venta para la lactea declarada en quiebra": "2026-11-04",
+      "hacia adonde apunta ahora la gigante adecoagro alejandro lopez moriena anticipo que piensan duplicar la produccion de profertil y analizan mas inversiones en lecheria arroz y mani": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30455,7 +30478,8 @@
       "80eb6c995343d207": "2026-11-04",
       "799909d119086b63": "2026-11-04",
       "43b7661721d91206": "2026-11-04",
-      "ae7c901e173a65a7": "2026-11-04"
+      "ae7c901e173a65a7": "2026-11-04",
+      "b571a78ba576b033": "2026-11-04"
     }
   },
   "elegidas": [
@@ -52665,9 +52689,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_140c9efff634_portada.jpg"
+    },
+    {
+      "id": "ede6507e6d79",
+      "cuando": "2026-11-04T14:00-03:00",
+      "titulo_original": "“Por una ley de semillas viable”: multiplicadores piden ser parte del debate para actualizar el marco normativo",
+      "descripcion": "\"Somos la conexión entre los obtentores y el productor. Y hoy no estamos siendo parte de la discusión”, reclamaron desde la Federación de Distribuidores de Insumos Agropecuarios, que puso en marcha una campaña para promover el uso de semillas fiscalizadas.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo/",
+      "titular": "Semillas: multiplicadores exigen participar en el debate de la ley",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en el negocio agrícola nacional y en la provisión de insumos para la campaña.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          71
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "270a1c73-01ca-4f15-92db-4f47cb3acd9c",
+          "slug": "semillas-multiplicadores-reclaman-un-lugar-en-el-debate-de-la-6b5dc7",
+          "url": "https://www.diariolacampaña.com.ar/n/semillas-multiplicadores-reclaman-un-lugar-en-el-debate-de-la-6b5dc7",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1812465863232999",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17975692635176659",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17915563695285800"
+        },
+        "historia_facebook": {
+          "id": "1424988426501417"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ede6507e6d79_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "4b589aa42859",
+      "rep": {
+        "id": "4b589aa42859",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/hacia-adonde-apunta-ahora-la-gigante-adecoagro-alejandro-lopez-moriena-anticipo-que-piensan-duplicar-la-produccion-de-profertil-y-analizan-mas-inversiones-en-lecheria-arroz-y-mani/",
+        "canonical_url": "https://bichosdecampo.com/hacia-adonde-apunta-ahora-la-gigante-adecoagro-alejandro-lopez-moriena-anticipo-que-piensan-duplicar-la-produccion-de-profertil-y-analizan-mas-inversiones-en-lecheria-arroz-y-mani",
+        "titulo": "¿Hacia adónde apunta ahora la gigante Adecoagro? Alejandro López Moriena anticipó que piensan duplicar la producción de Profértil y analizan más inversiones en lechería, arroz y maní",
+        "titulo_norm": "hacia adonde apunta ahora la gigante adecoagro alejandro lopez moriena anticipo que piensan duplicar la produccion de profertil y analizan mas inversiones en lecheria arroz y mani",
+        "descripcion": "Adecoagro se ha convertido en la mayor empresa agropecuaria argentina, y no parece querer dejar de crecer. En el futuro inmediato, quiere aprovechar el potencial productivo argentino con una estrategia que combina inversiones industriales, integración de cadenas y exportaciones. Desde la posibilidad de duplicar la capacidad de Profertil en Bahía Blanca hasta el desarrollo de sus […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/agroeducacion-2026-30-scaled-e1793797259301.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-11-04T13:43-03:00",
+        "capturado": "2026-11-04T14:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b571a78ba576b033"
+      },
+      "grupo": [
+        {
+          "id": "4b589aa42859",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/hacia-adonde-apunta-ahora-la-gigante-adecoagro-alejandro-lopez-moriena-anticipo-que-piensan-duplicar-la-produccion-de-profertil-y-analizan-mas-inversiones-en-lecheria-arroz-y-mani/",
+          "canonical_url": "https://bichosdecampo.com/hacia-adonde-apunta-ahora-la-gigante-adecoagro-alejandro-lopez-moriena-anticipo-que-piensan-duplicar-la-produccion-de-profertil-y-analizan-mas-inversiones-en-lecheria-arroz-y-mani",
+          "titulo": "¿Hacia adónde apunta ahora la gigante Adecoagro? Alejandro López Moriena anticipó que piensan duplicar la producción de Profértil y analizan más inversiones en lechería, arroz y maní",
+          "titulo_norm": "hacia adonde apunta ahora la gigante adecoagro alejandro lopez moriena anticipo que piensan duplicar la produccion de profertil y analizan mas inversiones en lecheria arroz y mani",
+          "descripcion": "Adecoagro se ha convertido en la mayor empresa agropecuaria argentina, y no parece querer dejar de crecer. En el futuro inmediato, quiere aprovechar el potencial productivo argentino con una estrategia que combina inversiones industriales, integración de cadenas y exportaciones. Desde la posibilidad de duplicar la capacidad de Profertil en Bahía Blanca hasta el desarrollo de sus […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/agroeducacion-2026-30-scaled-e1793797259301.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-11-04T13:43-03:00",
+          "capturado": "2026-11-04T14:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b571a78ba576b033"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 88,
+        "subtema": "empresas",
+        "tema": "adecoagro",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran impacto por las inversiones de un gigante agropecuario en la provincia y el sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T14:00-03:00"
+    },
     {
       "id": "452f669227bc",
       "rep": {
@@ -52931,73 +53082,6 @@
         ]
       },
       "cuando": "2026-11-04T13:00-03:00"
-    },
-    {
-      "id": "ede6507e6d79",
-      "rep": {
-        "id": "ede6507e6d79",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo/",
-        "canonical_url": "https://infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo",
-        "titulo": "“Por una ley de semillas viable”: multiplicadores piden ser parte del debate para actualizar el marco normativo",
-        "titulo_norm": "por una ley de semillas viable multiplicadores piden ser parte del debate para actualizar el marco normativo",
-        "descripcion": "\"Somos la conexión entre los obtentores y el productor. Y hoy no estamos siendo parte de la discusión”, reclamaron desde la Federación de Distribuidores de Insumos Agropecuarios, que puso en marcha una campaña para promover el uso de semillas fiscalizadas.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-11-04T11:15-03:00",
-        "capturado": "2026-11-04T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d083cfebaf937328"
-      },
-      "grupo": [
-        {
-          "id": "ede6507e6d79",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo/",
-          "canonical_url": "https://infocampo.com.ar/por-una-ley-de-semillas-viable-multiplicadores-piden-ser-parte-del-debate-para-actualizar-el-marco-normativo",
-          "titulo": "“Por una ley de semillas viable”: multiplicadores piden ser parte del debate para actualizar el marco normativo",
-          "titulo_norm": "por una ley de semillas viable multiplicadores piden ser parte del debate para actualizar el marco normativo",
-          "descripcion": "\"Somos la conexión entre los obtentores y el productor. Y hoy no estamos siendo parte de la discusión”, reclamaron desde la Federación de Distribuidores de Insumos Agropecuarios, que puso en marcha una campaña para promover el uso de semillas fiscalizadas.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-11-04T11:15-03:00",
-          "capturado": "2026-11-04T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d083cfebaf937328"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 68,
-        "subtema": "agro",
-        "tema": "ley de semillas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta de lleno en el negocio agrícola nacional y en la provisión de insumos para la campaña.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          71
-        ]
-      },
-      "cuando": "2026-11-04T11:20-03:00"
     },
     {
       "id": "1c2fbeb8dba0",
@@ -53603,8 +53687,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T13:44:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T14:05:00-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
