@@ -25637,6 +25637,77 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c9284f96d443092e": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 57,
+      "commercial_score": 60,
+      "subtema": "mercados",
+      "tema": "elecciones eeuu",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta el comercio exterior y los precios internacionales, clave para la agroindustria.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        53
+      ]
+    },
+    "ab7f58b7012bdb0a": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 6,
+      "ai_score": 66,
+      "commercial_score": 69,
+      "subtema": "ganaderia",
+      "tema": "ganado en pie",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Novedoso hito exportador ganadero con repercusión directa en regulaciones y mercados.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        66
+      ]
+    },
+    "d518249c48570a75": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 10,
+      "cercania_argentina": 4,
+      "cercania_pba": 3,
+      "potencial_reel": 3,
+      "conversacion": 4,
+      "potencial_comercial": 5,
+      "ai_score": 43,
+      "commercial_score": 50,
+      "subtema": "agtech",
+      "tema": "insumos biológicos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Análisis global de mercado de biológicos, de interés para empresas e innovación pero poco directo para el productor zonal.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27379,7 +27450,11 @@
       "https://infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos": "2026-11-04",
       "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026": "2026-11-04",
-      "https://bichosdecampo.com/rio-negro-los-fruteros-de-allen-lograron-frenar-un-cambio-que-sumaba-400-hectareas-de-zona-rural-irrigada-al-area-urbana": "2026-11-04"
+      "https://bichosdecampo.com/rio-negro-los-fruteros-de-allen-lograron-frenar-un-cambio-que-sumaba-400-hectareas-de-zona-rural-irrigada-al-area-urbana": "2026-11-04",
+      "https://todoagro.com.ar/chicharrita-destacan-que-el-escenario-de-siembra-tardia-para-el-maiz-es-auspicioso": "2026-11-04",
+      "https://infocampo.com.ar/trump-perdio-en-las-elecciones-de-medio-termino-puede-influir-en-la-agroindustria-argentina": "2026-11-04",
+      "https://lanacion.com.ar/economia/campo/finalizo-una-prohibicion-de-mas-de-50-anos-sturzenegger-celebro-una-exportacion-de-ganado-en-pie-por-nid04112026": "2026-11-04",
+      "https://agfundernews.com/guest-article-the-ag-biologicals-market-is-at-a-crossroads-here-are-four-possible-futures-to-explore": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29120,7 +29195,11 @@
       "semillas y propiedad intelectual mientras brasil tiene 15 programas de mejoramiento en soja argentina solo dos": "2026-11-04",
       "el hampa del campo esta a la moda denuncian el robo de drones agricolas de un concesionario de alta gracia": "2026-11-04",
       "demanda tranquila y precios en baja en el mercado agroganadero de canuelas": "2026-11-04",
-      "rio negro los fruteros de allen lograron frenar un cambio que sumaba 400 hectareas de zona rural irrigada al area urbana": "2026-11-04"
+      "rio negro los fruteros de allen lograron frenar un cambio que sumaba 400 hectareas de zona rural irrigada al area urbana": "2026-11-04",
+      "chicharrita destacan que el escenario de siembra tardia para el maiz es auspicioso": "2026-11-04",
+      "trump perdio en las elecciones de medio termino puede influir en la agroindustria argentina": "2026-11-04",
+      "fin a una prohibicion de mas de 50 anos sturzenegger celebro una exportacion de ganado en pie por avion": "2026-11-04",
+      "guest article the ag biologicals market is at a crossroads here are four possible futures to explore": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30861,7 +30940,11 @@
       "7d7f1912e3be4fd1": "2026-11-04",
       "3566226d010ad41f": "2026-11-04",
       "ad1fcc64f20ce74d": "2026-11-04",
-      "be35d933a6e4d5d4": "2026-11-04"
+      "be35d933a6e4d5d4": "2026-11-04",
+      "8a578359f2f8c969": "2026-11-04",
+      "c9284f96d443092e": "2026-11-04",
+      "ab7f58b7012bdb0a": "2026-11-04",
+      "d518249c48570a75": "2026-11-04"
     }
   },
   "elegidas": [
@@ -53573,6 +53656,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b68ca7d2e612_portada.jpg"
+    },
+    {
+      "id": "b82ff80a47d8",
+      "cuando": "2026-11-04T18:20-03:00",
+      "titulo_original": "Fin a una prohibición de más de 50 años: Sturzenegger celebró una exportación de ganado en pie por avión",
+      "descripcion": "El ministro compartió un video de un veterinario que contó cómo se envían animales vivos al exterior; los exportadores aseguran que hay interés de nuevos mercados, pero reclaman cambios en los requisitos sanitarios para poder vender grandes cantidades de hacienda",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/finalizo-una-prohibicion-de-mas-de-50-anos-sturzenegger-celebro-una-exportacion-de-ganado-en-pie-por-nid04112026/",
+      "titular": "Hacienda: celebran exportación de ganado en pie por avión tras medio siglo",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 10,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 66,
+        "commercial_score": 69,
+        "subtema": "ganaderia",
+        "tema": "ganado en pie",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Novedoso hito exportador ganadero con repercusión directa en regulaciones y mercados.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          66
+        ],
+        "con_video": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T18:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0744700d-2026-433d-938b-ea64fc62c1e6",
+          "slug": "ganaderia-celebran-exportacion-de-ganado-en-pie-por-avion-tras-390e97",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-celebran-exportacion-de-ganado-en-pie-por-avion-tras-390e97",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2604477593310854",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17933115951163154",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18116488475161351"
+        },
+        "historia_facebook": {
+          "id": "1159588393076623"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b82ff80a47d8_portada.jpg"
     }
   ],
   "pendientes": [
@@ -54700,8 +54848,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T18:04:24-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T18:24:30-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
