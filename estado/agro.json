@@ -25260,6 +25260,31 @@
       "urgente": true,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ae7c901e173a65a7": {
+      "impacto_economico": 12,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 56,
+      "commercial_score": 56,
+      "subtema": "empresas",
+      "tema": "sancor",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta en la cadena láctea nacional aunque el foco regional pampeano es menor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        56
+      ]
     }
   },
   "indice": {
@@ -26983,7 +27008,8 @@
       "https://futurefarming.com/uncategorized/ai-in-greenhouse-horticulture-making-smart-use-of-data": "2026-11-04",
       "https://futurefarming.com/tech-in-focus/field-robots/earth-rover-sells-first-10-light-weeding-robots": "2026-11-04",
       "https://intainforma.inta.gob.ar/mendoza-se-prepara-para-la-cosecha-temprana-de-cerezas": "2026-11-04",
-      "https://lacapital.com.ar/agro/tormentas-intensas-la-region-agricola-registros-116-milimetros-y-rafagas-100-kmh-n10290418.html": "2026-11-04"
+      "https://lacapital.com.ar/agro/tormentas-intensas-la-region-agricola-registros-116-milimetros-y-rafagas-100-kmh-n10290418.html": "2026-11-04",
+      "https://bichosdecampo.com/ya-desespera-la-situacion-de-sancor-que-no-registra-avances-concretos-con-una-produccion-esporadica-no-hay-indicios-de-venta-para-la-lactea-declarada-en-quiebra": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28705,7 +28731,8 @@
       "ai in greenhouse horticulture making smart use of data": "2026-11-04",
       "earth rover sells first 10 light weeding robots": "2026-11-04",
       "mendoza se prepara para la cosecha temprana de cerezas": "2026-11-04",
-      "tormentas intensas en la region agricola registros de hasta 116 milimetros y rafagas de 100 km h": "2026-11-04"
+      "tormentas intensas en la region agricola registros de hasta 116 milimetros y rafagas de 100 km h": "2026-11-04",
+      "ya desespera la situacion de sancor que no registra avances concretos con una produccion esporadica no hay indicios de venta para la lactea declarada en quiebra": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30427,7 +30454,8 @@
       "984351e4d48d5fc9": "2026-11-04",
       "80eb6c995343d207": "2026-11-04",
       "799909d119086b63": "2026-11-04",
-      "43b7661721d91206": "2026-11-04"
+      "43b7661721d91206": "2026-11-04",
+      "ae7c901e173a65a7": "2026-11-04"
     }
   },
   "elegidas": [
@@ -52577,6 +52605,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fc05225a4616_portada.jpg"
+    },
+    {
+      "id": "140c9efff634",
+      "cuando": "2026-11-04T13:40-03:00",
+      "titulo_original": "El Gobierno suspenderá los embargos de ARCA a las pymes hasta mayo de 2027 y anunció nuevas medidas para las empresas",
+      "descripcion": "El ministro de Economía, Luis Caputo, presentó un paquete de cuatro iniciativas durante la Conferencia Industrial de la UIA. Incluye la suspensión de embargos, la ampliación de los planes de pago en 18 cuotas, la utilización de saldos a favor para cancelar deudas aduaneras y créditos del Banco Nació",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249178-el-gobierno-suspendera-los-embargos-de-arca-a-las-pymes-hasta-mayo-de-2027-y-anuncio-nuevas-medidas-para-las-empresas.html",
+      "titular": "El Gobierno suspende embargos de ARCA a pymes hasta mayo de 2027",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 80,
+        "subtema": "empresas",
+        "tema": "impuestos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Medidas impositivas y financieras de gran impacto para pymes y empresas del sector.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "86f7d261-4b3c-47cb-8993-7d12bad82eef",
+          "slug": "el-gobierno-suspende-los-embargos-de-arca-a-pymes-y-lanza-796f7b",
+          "url": "https://www.diariolacampaña.com.ar/n/el-gobierno-suspende-los-embargos-de-arca-a-pymes-y-lanza-796f7b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1146435261201064",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17941750428389646",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17926479990435679"
+        },
+        "historia_facebook": {
+          "id": "1702229248088269"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_140c9efff634_portada.jpg"
     }
   ],
   "pendientes": [
@@ -53180,69 +53268,6 @@
       "cuando": "2026-11-03T13:20-03:00"
     },
     {
-      "id": "140c9efff634",
-      "rep": {
-        "id": "140c9efff634",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249178-el-gobierno-suspendera-los-embargos-de-arca-a-las-pymes-hasta-mayo-de-2027-y-anuncio-nuevas-medidas-para-las-empresas.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249178-el-gobierno-suspendera-los-embargos-de-arca-a-las-pymes-hasta-mayo-de-2027-y-anuncio-nuevas-medidas-para-las-empresas.html",
-        "titulo": "El Gobierno suspenderá los embargos de ARCA a las pymes hasta mayo de 2027 y anunció nuevas medidas para las empresas",
-        "titulo_norm": "el gobierno suspendera los embargos de arca a las pymes hasta mayo de 2027 y anuncio nuevas medidas para las empresas",
-        "descripcion": "El ministro de Economía, Luis Caputo, presentó un paquete de cuatro iniciativas durante la Conferencia Industrial de la UIA. Incluye la suspensión de embargos, la ampliación de los planes de pago en 18 cuotas, la utilización de saldos a favor para cancelar deudas aduaneras y créditos del Banco Nación para la industria automotriz con una tasa fija cercana al 20% anual.",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249178_40960423.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-03T12:56-03:00",
-        "capturado": "2026-11-03T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ad637f747c6cb3a9"
-      },
-      "grupo": [
-        {
-          "id": "140c9efff634",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249178-el-gobierno-suspendera-los-embargos-de-arca-a-las-pymes-hasta-mayo-de-2027-y-anuncio-nuevas-medidas-para-las-empresas.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249178-el-gobierno-suspendera-los-embargos-de-arca-a-las-pymes-hasta-mayo-de-2027-y-anuncio-nuevas-medidas-para-las-empresas.html",
-          "titulo": "El Gobierno suspenderá los embargos de ARCA a las pymes hasta mayo de 2027 y anunció nuevas medidas para las empresas",
-          "titulo_norm": "el gobierno suspendera los embargos de arca a las pymes hasta mayo de 2027 y anuncio nuevas medidas para las empresas",
-          "descripcion": "El ministro de Economía, Luis Caputo, presentó un paquete de cuatro iniciativas durante la Conferencia Industrial de la UIA. Incluye la suspensión de embargos, la ampliación de los planes de pago en 18 cuotas, la utilización de saldos a favor para cancelar deudas aduaneras y créditos del Banco Nación para la industria automotriz con una tasa fija cercana al 20% anual.",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249178_40960423.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-03T12:56-03:00",
-          "capturado": "2026-11-03T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ad637f747c6cb3a9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 8,
-        "ai_score": 73,
-        "commercial_score": 80,
-        "subtema": "empresas",
-        "tema": "impuestos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Medidas impositivas y financieras de gran impacto para pymes y empresas del sector.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-03T13:00-03:00"
-    },
-    {
       "id": "a39e81ce880b",
       "rep": {
         "id": "a39e81ce880b",
@@ -53578,8 +53603,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T13:23:52-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T13:44:17-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
