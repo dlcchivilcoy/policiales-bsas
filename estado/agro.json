@@ -25549,6 +25549,73 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7d7f1912e3be4fd1": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 8,
+      "ai_score": 85,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "ley de semillas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en la competitividad de la agricultura nacional y genera fuerte debate sectorial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3566226d010ad41f": {
+      "impacto_economico": 10,
+      "interes_productores": 12,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 8,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "drones agrícolas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca un tema de alta sensibilidad para el productor innovador: la seguridad y el valor de la tecnología aplicada.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ad1fcc64f20ce74d": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 63,
+      "commercial_score": 68,
+      "subtema": "ganaderia",
+      "tema": "mercado de liniers",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe diario de precios y remates de Cañuelas, vital para los ganaderos de la región núcleo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        65
+      ]
     }
   },
   "indice": {
@@ -27287,7 +27354,10 @@
       "https://agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html": "2026-11-04",
       "https://bichosdecampo.com/efecto-trump-que-podria-llegar-a-cambiar-en-el-agro-local-luego-de-las-elecciones-de-medio-termino-en-estados-unidos": "2026-11-04",
       "https://lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html": "2026-11-04",
-      "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada": "2026-11-04"
+      "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada": "2026-11-04",
+      "https://infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos": "2026-11-04",
+      "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia": "2026-11-04",
+      "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29024,7 +29094,10 @@
       "el gusano cogollero avanza en maices tempranos y tardios desde nea hasta entre rios por eso es clave monitorear y actuar a tiempo para evitar danos mayores": "2026-11-04",
       "efecto trump que podria llegar a cambiar en el agro local luego de las elecciones de medio termino en estados unidos": "2026-11-04",
       "impulsan el uso de semilla fiscalizada y piden ampliar la discusion de una nueva ley": "2026-11-04",
-      "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada": "2026-11-04"
+      "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada": "2026-11-04",
+      "semillas y propiedad intelectual mientras brasil tiene 15 programas de mejoramiento en soja argentina solo dos": "2026-11-04",
+      "el hampa del campo esta a la moda denuncian el robo de drones agricolas de un concesionario de alta gracia": "2026-11-04",
+      "demanda tranquila y precios en baja en el mercado agroganadero de canuelas": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30761,7 +30834,10 @@
       "ac8d3a120ec5a40a": "2026-11-04",
       "eaaff78d976b9cf1": "2026-11-04",
       "e9a305ddc0b9b73c": "2026-11-04",
-      "10dc24c698ef954a": "2026-11-04"
+      "10dc24c698ef954a": "2026-11-04",
+      "7d7f1912e3be4fd1": "2026-11-04",
+      "3566226d010ad41f": "2026-11-04",
+      "ad1fcc64f20ce74d": "2026-11-04"
     }
   },
   "elegidas": [
@@ -53342,9 +53418,266 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2fe4d31afaba_portada.jpg"
+    },
+    {
+      "id": "719c3405192c",
+      "cuando": "2026-11-04T17:20-03:00",
+      "titulo_original": "Patricia Bullrich reconoció los reclamos del campo por las retenciones y las leyes pendientes",
+      "descripcion": "Durante una reunión con Coninagro, la senadora nacional recibió planteos por la presión impositiva, la falta de infraestructura y las dificultades para acceder al crédito; se comprometió a revisar los proyectos legislativos que todavía no fueron aprobados",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/patricia-bullrich-reconocio-los-reclamos-del-campo-por-las-retenciones-y-las-leyes-pendientes-nid04112026/",
+      "titular": "Patricia Bullrich evaluó reclamos de Coninagro sobre retenciones y leyes",
+      "volanta": "Instituciones",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 68,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Reúne reclamos gremiales e impositivos clave para el sector, aunque es una gacetilla de reunión política.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          74
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T17:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "633e53d7-c761-46c7-b1ae-4684c28b0cb3",
+          "slug": "patricia-bullrich-analizo-con-coninagro-retenciones-26142d",
+          "url": "https://www.diariolacampaña.com.ar/n/patricia-bullrich-analizo-con-coninagro-retenciones-26142d",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4776505292577974",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18097292024404788",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17890547442477178"
+        },
+        "historia_facebook": {
+          "id": "4546402498931117"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_719c3405192c_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7b0240b89cc7",
+      "rep": {
+        "id": "7b0240b89cc7",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos/",
+        "canonical_url": "https://infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos",
+        "titulo": "Semillas y propiedad intelectual: “Mientras Brasil tiene 15 programas de mejoramiento en soja, Argentina solo dos”",
+        "titulo_norm": "semillas y propiedad intelectual mientras brasil tiene 15 programas de mejoramiento en soja argentina solo dos",
+        "descripcion": "En el marco de una nueva edición de AGROMGMT, uno de los paneles abordó uno de los temas del año para el campo: el debate por la ley de semillas. Representantes de la industria, la producción y del INASE compartieron su visión.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/AgroMgmt_72-1.jpg",
+        "autor": "Favio Re",
+        "publicado": "2026-11-04T17:12-03:00",
+        "capturado": "2026-11-04T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "7d7f1912e3be4fd1"
+      },
+      "grupo": [
+        {
+          "id": "7b0240b89cc7",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos/",
+          "canonical_url": "https://infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos",
+          "titulo": "Semillas y propiedad intelectual: “Mientras Brasil tiene 15 programas de mejoramiento en soja, Argentina solo dos”",
+          "titulo_norm": "semillas y propiedad intelectual mientras brasil tiene 15 programas de mejoramiento en soja argentina solo dos",
+          "descripcion": "En el marco de una nueva edición de AGROMGMT, uno de los paneles abordó uno de los temas del año para el campo: el debate por la ley de semillas. Representantes de la industria, la producción y del INASE compartieron su visión.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/AgroMgmt_72-1.jpg",
+          "autor": "Favio Re",
+          "publicado": "2026-11-04T17:12-03:00",
+          "capturado": "2026-11-04T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "7d7f1912e3be4fd1"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 8,
+        "ai_score": 85,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "ley de semillas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la competitividad de la agricultura nacional y genera fuerte debate sectorial.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T17:20-03:00"
+    },
+    {
+      "id": "ade1ac170885",
+      "rep": {
+        "id": "ade1ac170885",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia/",
+        "canonical_url": "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia",
+        "titulo": "El hampa del campo está a la moda: Denuncian el robo de drones agrícolas de un concesionario de Alta Gracia",
+        "titulo_norm": "el hampa del campo esta a la moda denuncian el robo de drones agricolas de un concesionario de alta gracia",
+        "descripcion": "“Esta es la noticia que no queríamos dar, pero necesitamos contarte esto”, comienza diciendo un comunicado en la cuenta de Instagram de Tekron, que se posteó en colaboración con Lombardi Maquinarias. La primera marca es el representante principal de la marca china de drones DJI. La segunda, un concesionario de maquinaria agrícola que vende equipos […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-04T17:16-03:00",
+        "capturado": "2026-11-04T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3566226d010ad41f"
+      },
+      "grupo": [
+        {
+          "id": "ade1ac170885",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia/",
+          "canonical_url": "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia",
+          "titulo": "El hampa del campo está a la moda: Denuncian el robo de drones agrícolas de un concesionario de Alta Gracia",
+          "titulo_norm": "el hampa del campo esta a la moda denuncian el robo de drones agricolas de un concesionario de alta gracia",
+          "descripcion": "“Esta es la noticia que no queríamos dar, pero necesitamos contarte esto”, comienza diciendo un comunicado en la cuenta de Instagram de Tekron, que se posteó en colaboración con Lombardi Maquinarias. La primera marca es el representante principal de la marca china de drones DJI. La segunda, un concesionario de maquinaria agrícola que vende equipos […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-04T17:16-03:00",
+          "capturado": "2026-11-04T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3566226d010ad41f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 12,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "drones agrícolas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca un tema de alta sensibilidad para el productor innovador: la seguridad y el valor de la tecnología aplicada.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T17:20-03:00"
+    },
+    {
+      "id": "35336d7c0a60",
+      "rep": {
+        "id": "35336d7c0a60",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026",
+        "titulo": "Demanda tranquila y precios en baja en el Mercado Agroganadero de Cañuelas",
+        "titulo_norm": "demanda tranquila y precios en baja en el mercado agroganadero de canuelas",
+        "descripcion": "Con una entrada de 7028 cabezas, se pagó $4590 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3945,861",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3MQJ5QXAHVBKROHZCXN75CDW24.JPG?auth=07b45140c6cdd3f9a26112ba71b37d7adbf599d7ce902537ef20ad9b12ec3342&smart=true",
+        "autor": "",
+        "publicado": "2026-11-04T17:09-03:00",
+        "capturado": "2026-11-04T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ad1fcc64f20ce74d"
+      },
+      "grupo": [
+        {
+          "id": "35336d7c0a60",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026",
+          "titulo": "Demanda tranquila y precios en baja en el Mercado Agroganadero de Cañuelas",
+          "titulo_norm": "demanda tranquila y precios en baja en el mercado agroganadero de canuelas",
+          "descripcion": "Con una entrada de 7028 cabezas, se pagó $4590 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3945,861",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3MQJ5QXAHVBKROHZCXN75CDW24.JPG?auth=07b45140c6cdd3f9a26112ba71b37d7adbf599d7ce902537ef20ad9b12ec3342&smart=true",
+          "autor": "",
+          "publicado": "2026-11-04T17:09-03:00",
+          "capturado": "2026-11-04T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ad1fcc64f20ce74d"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "mercado de liniers",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe diario de precios y remates de Cañuelas, vital para los ganaderos de la región núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          65
+        ]
+      },
+      "cuando": "2026-11-04T17:20-03:00"
+    },
     {
       "id": "b68ca7d2e612",
       "rep": {
@@ -53664,73 +53997,6 @@
         "dobles": [
           67,
           63
-        ]
-      },
-      "cuando": "2026-11-04T13:00-03:00"
-    },
-    {
-      "id": "719c3405192c",
-      "rep": {
-        "id": "719c3405192c",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/patricia-bullrich-reconocio-los-reclamos-del-campo-por-las-retenciones-y-las-leyes-pendientes-nid04112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/patricia-bullrich-reconocio-los-reclamos-del-campo-por-las-retenciones-y-las-leyes-pendientes-nid04112026",
-        "titulo": "Patricia Bullrich reconoció los reclamos del campo por las retenciones y las leyes pendientes",
-        "titulo_norm": "patricia bullrich reconocio los reclamos del campo por las retenciones y las leyes pendientes",
-        "descripcion": "Durante una reunión con Coninagro, la senadora nacional recibió planteos por la presión impositiva, la falta de infraestructura y las dificultades para acceder al crédito; se comprometió a revisar los proyectos legislativos que todavía no fueron aprobados",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CZAG4JHMMBFQFH4OTGURGU3PKQ.jpg?auth=020d49843189cfbd99db9c0038f4ae98c31da11128e375f1e054e3be92ffd978&smart=true",
-        "autor": "",
-        "publicado": "2026-11-04T12:04-03:00",
-        "capturado": "2026-11-04T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "aaec9d80b8546202"
-      },
-      "grupo": [
-        {
-          "id": "719c3405192c",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/patricia-bullrich-reconocio-los-reclamos-del-campo-por-las-retenciones-y-las-leyes-pendientes-nid04112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/patricia-bullrich-reconocio-los-reclamos-del-campo-por-las-retenciones-y-las-leyes-pendientes-nid04112026",
-          "titulo": "Patricia Bullrich reconoció los reclamos del campo por las retenciones y las leyes pendientes",
-          "titulo_norm": "patricia bullrich reconocio los reclamos del campo por las retenciones y las leyes pendientes",
-          "descripcion": "Durante una reunión con Coninagro, la senadora nacional recibió planteos por la presión impositiva, la falta de infraestructura y las dificultades para acceder al crédito; se comprometió a revisar los proyectos legislativos que todavía no fueron aprobados",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CZAG4JHMMBFQFH4OTGURGU3PKQ.jpg?auth=020d49843189cfbd99db9c0038f4ae98c31da11128e375f1e054e3be92ffd978&smart=true",
-          "autor": "",
-          "publicado": "2026-11-04T12:04-03:00",
-          "capturado": "2026-11-04T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "aaec9d80b8546202"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 68,
-        "commercial_score": 70,
-        "subtema": "empresas",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Reúne reclamos gremiales e impositivos clave para el sector, aunque es una gacetilla de reunión política.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          74
         ]
       },
       "cuando": "2026-11-04T13:00-03:00"
@@ -54406,8 +54672,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T17:05:08-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T17:24:45-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
