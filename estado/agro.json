@@ -24900,6 +24900,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b731c276b13a1ec2": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 35,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "funcion publica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una entrevista de perfil político-institucional que aporta poco valor práctico directo al productor de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -26591,7 +26612,10 @@
       "https://bichosdecampo.com/tomate-triturado-con-mas-piel-y-semillas-y-yogur-sin-bacterias-vivas-el-gobierno-introdujo-cambios-en-el-codigo-alimentario-a-pedido-de-la-industria": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/javier-alvarez-bento-denuncia-la-perdida-de-mas-de-5000-hectareas-por-un-basural-a-cielo-abierto-nid04112026": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/excelencia-agropecuaria-estos-son-los-ternados-de-2026-para-el-premio-a-los-mejores-del-campo-nid04112026": "2026-11-04",
-      "https://agfundernews.com/breaking-david-protein-maker-prevails-in-antitrust-lawsuit-over-alt-fat-epg": "2026-11-04"
+      "https://agfundernews.com/breaking-david-protein-maker-prevails-in-antitrust-lawsuit-over-alt-fat-epg": "2026-11-04",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-4-noviembre-2026": "2026-11-04",
+      "https://agrositio.com.ar/noticia/249188-cra-advierte-a-los-productores-agropecuarios-sobre-el-acuerdo-uatre-visec.html": "2026-11-04",
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-marcos-blanda-eligio-la-funcion-publica-en-cordoba-porque-cree-que-hay-que-participar-para-poder-modificar-la-realidad-del-sector-agropecuario": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -28281,7 +28305,10 @@
       "tomate triturado con mas piel y semillas y yogur sin bacterias vivas el gobierno introdujo cambios en el codigo alimentario a pedido de la industria": "2026-11-04",
       "javier alvarez bento denuncia la perdida de mas de 5000 hectareas por un basural a cielo abierto tiran a camionadas": "2026-11-04",
       "excelencia agropecuaria estos son los ternados de 2026 para el premio a los mejores del campo": "2026-11-04",
-      "breaking david protein maker prevails in antitrust lawsuit over alt fat epg": "2026-11-04"
+      "breaking david protein maker prevails in antitrust lawsuit over alt fat epg": "2026-11-04",
+      "dolar blue a cuanto cotizan hoy en cordoba 4 noviembre 2026": "2026-11-04",
+      "cra advierte a los productores agropecuarios sobre el acuerdo uatre visec": "2026-11-04",
+      "los dilemas de la agronomia marcos blanda eligio la funcion publica en cordoba porque cree que hay que participar para poder modificar la realidad del sector agropecuario": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -29971,7 +29998,10 @@
       "5bdf03cee72f95df": "2026-11-04",
       "f4635c56dc7863ed": "2026-11-04",
       "4b40b65c6b01e2a7": "2026-11-04",
-      "7031d6fe755b6c3a": "2026-11-04"
+      "7031d6fe755b6c3a": "2026-11-04",
+      "e177153fdb6a7d56": "2026-11-04",
+      "9d40f2f8911c4bda": "2026-11-04",
+      "b731c276b13a1ec2": "2026-11-04"
     }
   },
   "elegidas": [
@@ -51814,6 +51844,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_504e7b704e42_portada.jpg"
+    },
+    {
+      "id": "1ec3dcae499d",
+      "cuando": "2026-11-04T10:20-03:00",
+      "titulo_original": "“Si no sale la ley, el proyecto es inviable”: AFA espera la decisión del Congreso para invertir 160 millones de dólares en una nueva planta de bioetanol",
+      "descripcion": "Agricultores Federados Argentinos (AFA) tiene prácticamente todo listo para avanzar con una inversión de 160 millones de dólares en una planta de bioetanol, pero hay una condición que todavía no puede resolver: que el Congreso apruebe la nueva ley de biocombustibles. “Tenemos todo el proyecto armado",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/si-no-sale-la-ley-el-proyecto-es-inviable-afa-espera-la-decision-del-congreso-para-invertir-160-millones-de-dolares-en-una-nueva-planta-de-bioetanol/",
+      "titular": "AFA frena inversión millonaria en bioetanol por la ley",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 85,
+        "subtema": "empresas",
+        "tema": "bioetanol afa",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Una inversión millonaria de una gran cooperativa atada a una ley genera alto debate comercial y político.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a0b8b2da-ed02-446e-b050-fc66abf40cac",
+          "slug": "afa-condiciona-una-planta-de-bioetanol-por-160-millones-de-306e4f",
+          "url": "https://www.diariolacampaña.com.ar/n/afa-condiciona-una-planta-de-bioetanol-por-160-millones-de-306e4f",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "28924687550519385",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18115324940275199",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18120764806766045"
+        },
+        "historia_facebook": {
+          "id": "3709986465822697"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1ec3dcae499d_portada.jpg"
     }
   ],
   "pendientes": [
@@ -51874,69 +51964,6 @@
         "sensible": false,
         "explicacion": "Impacta de lleno en la campaña agrícola de la zona núcleo con pronóstico clave para los productores.",
         "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T10:00-03:00"
-    },
-    {
-      "id": "1ec3dcae499d",
-      "rep": {
-        "id": "1ec3dcae499d",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/si-no-sale-la-ley-el-proyecto-es-inviable-afa-espera-la-decision-del-congreso-para-invertir-160-millones-de-dolares-en-una-nueva-planta-de-bioetanol/",
-        "canonical_url": "https://bichosdecampo.com/si-no-sale-la-ley-el-proyecto-es-inviable-afa-espera-la-decision-del-congreso-para-invertir-160-millones-de-dolares-en-una-nueva-planta-de-bioetanol",
-        "titulo": "“Si no sale la ley, el proyecto es inviable”: AFA espera la decisión del Congreso para invertir 160 millones de dólares en una nueva planta de bioetanol",
-        "titulo_norm": "si no sale la ley el proyecto es inviable afa espera la decision del congreso para invertir 160 millones de dolares en una nueva planta de bioetanol",
-        "descripcion": "Agricultores Federados Argentinos (AFA) tiene prácticamente todo listo para avanzar con una inversión de 160 millones de dólares en una planta de bioetanol, pero hay una condición que todavía no puede resolver: que el Congreso apruebe la nueva ley de biocombustibles. “Tenemos todo el proyecto armado, tenemos el financiamiento acordado, nos faltaría únicamente determinar la […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/agroeducacion-18.jpg-e1793796104762.jpeg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-04T09:43-03:00",
-        "capturado": "2026-11-04T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1894910fd5a08f26"
-      },
-      "grupo": [
-        {
-          "id": "1ec3dcae499d",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/si-no-sale-la-ley-el-proyecto-es-inviable-afa-espera-la-decision-del-congreso-para-invertir-160-millones-de-dolares-en-una-nueva-planta-de-bioetanol/",
-          "canonical_url": "https://bichosdecampo.com/si-no-sale-la-ley-el-proyecto-es-inviable-afa-espera-la-decision-del-congreso-para-invertir-160-millones-de-dolares-en-una-nueva-planta-de-bioetanol",
-          "titulo": "“Si no sale la ley, el proyecto es inviable”: AFA espera la decisión del Congreso para invertir 160 millones de dólares en una nueva planta de bioetanol",
-          "titulo_norm": "si no sale la ley el proyecto es inviable afa espera la decision del congreso para invertir 160 millones de dolares en una nueva planta de bioetanol",
-          "descripcion": "Agricultores Federados Argentinos (AFA) tiene prácticamente todo listo para avanzar con una inversión de 160 millones de dólares en una planta de bioetanol, pero hay una condición que todavía no puede resolver: que el Congreso apruebe la nueva ley de biocombustibles. “Tenemos todo el proyecto armado, tenemos el financiamiento acordado, nos faltaría únicamente determinar la […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/agroeducacion-18.jpg-e1793796104762.jpeg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-04T09:43-03:00",
-          "capturado": "2026-11-04T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1894910fd5a08f26"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 12,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 9,
-        "ai_score": 83,
-        "commercial_score": 85,
-        "subtema": "empresas",
-        "tema": "bioetanol afa",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Una inversión millonaria de una gran cooperativa atada a una ley genera alto debate comercial y político.",
-        "tema_doc": "reglas",
         "urgente": false,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
@@ -52606,8 +52633,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T10:05:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T10:25:09-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
