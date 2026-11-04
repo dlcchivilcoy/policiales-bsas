@@ -25708,6 +25708,31 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f8c848f79817e050": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 67,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "inta presupuesto",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el funcionamiento del INTA y la investigación tecnológica clave para la región pampeana.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        66
+      ]
     }
   },
   "indice": {
@@ -27454,7 +27479,9 @@
       "https://todoagro.com.ar/chicharrita-destacan-que-el-escenario-de-siembra-tardia-para-el-maiz-es-auspicioso": "2026-11-04",
       "https://infocampo.com.ar/trump-perdio-en-las-elecciones-de-medio-termino-puede-influir-en-la-agroindustria-argentina": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/finalizo-una-prohibicion-de-mas-de-50-anos-sturzenegger-celebro-una-exportacion-de-ganado-en-pie-por-nid04112026": "2026-11-04",
-      "https://agfundernews.com/guest-article-the-ag-biologicals-market-is-at-a-crossroads-here-are-four-possible-futures-to-explore": "2026-11-04"
+      "https://agfundernews.com/guest-article-the-ag-biologicals-market-is-at-a-crossroads-here-are-four-possible-futures-to-explore": "2026-11-04",
+      "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen": "2026-11-04",
+      "https://lanacion.com.ar/economia/campo/coctel-bajista-la-soja-cayo-a-su-menor-precio-en-casi-tres-meses-en-el-mercado-internacional-y-hay-nid04112026": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29199,7 +29226,9 @@
       "chicharrita destacan que el escenario de siembra tardia para el maiz es auspicioso": "2026-11-04",
       "trump perdio en las elecciones de medio termino puede influir en la agroindustria argentina": "2026-11-04",
       "fin a una prohibicion de mas de 50 anos sturzenegger celebro una exportacion de ganado en pie por avion": "2026-11-04",
-      "guest article the ag biologicals market is at a crossroads here are four possible futures to explore": "2026-11-04"
+      "guest article the ag biologicals market is at a crossroads here are four possible futures to explore": "2026-11-04",
+      "en serio no les preocupa las unicas que no parecen alarmadas por la baja del presupuesto 2027 para el inta son las entidades tradicionales del agro que ademas lo conducen": "2026-11-04",
+      "coctel bajista la soja cayo a su menor precio en casi tres meses en el mercado internacional y hay alerta por el impacto en el pais": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30944,7 +30973,9 @@
       "8a578359f2f8c969": "2026-11-04",
       "c9284f96d443092e": "2026-11-04",
       "ab7f58b7012bdb0a": "2026-11-04",
-      "d518249c48570a75": "2026-11-04"
+      "d518249c48570a75": "2026-11-04",
+      "f8c848f79817e050": "2026-11-04",
+      "fbedc61dc4a6710b": "2026-11-04"
     }
   },
   "elegidas": [
@@ -53781,9 +53812,140 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7b0240b89cc7_portada.jpg"
+    },
+    {
+      "id": "cfb745e9a3f0",
+      "cuando": "2026-11-04T19:00-03:00",
+      "titulo_original": "La molienda de trigo alcanzó un récord para las últimas 12 campañas",
+      "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Agricultura de la Nación informa que la molienda total de trigo correspondiente a la campaña 2025/26 registró, entre diciembre de 2025 y septiembre de 2026, un acumulado de 5.633.125 toneladas, el mayor volumen para igual período de l",
+      "fuente": "Secretaría de Agricultura",
+      "url": "https://www.argentina.gob.ar/noticias/la-molienda-de-trigo-alcanzo-un-record-para-las-ultimas-12-campanas",
+      "titular": "Trigo: la molienda local marca récord en doce campañas",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 11,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 64,
+        "commercial_score": 64,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Dato oficial de récord en molienda de trigo, de relevancia estadística pero requiere contextualización local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "33a37510-bdb2-443e-b788-fa51453247aa",
+          "slug": "trigo-la-molienda-alcanza-un-record-historico-en-las-ultimas-dcb10a",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-la-molienda-alcanza-un-record-historico-en-las-ultimas-dcb10a",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1651273970127695",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18106384283369880",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18127518325906689"
+        },
+        "historia_facebook": {
+          "id": "28950990914593201"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cfb745e9a3f0_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "095b0c32484e",
+      "rep": {
+        "id": "095b0c32484e",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen/",
+        "canonical_url": "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen",
+        "titulo": "¿En serio no les preocupa? Las únicas que no parecen alarmadas por la baja del presupuesto 2027 para el INTA son las entidades tradicionales del agro, que además lo conducen",
+        "titulo_norm": "en serio no les preocupa las unicas que no parecen alarmadas por la baja del presupuesto 2027 para el inta son las entidades tradicionales del agro que ademas lo conducen",
+        "descripcion": "La Comisión de Economías y Desarrollo Regional de la Cámara de Diputados habilitó ayer un largo espacio para debatir sobre las preocupaciones en torno al recorte del presupuesto previsto para el Instituto Nacional de Tecnología Agropecuaria (INTA) para 2027, y en especial la eliminación de una tasa a las importaciones que constituye su principal fuente […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Comision-de-Economias-y-Desarrollo-Regional-INTA.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-04T18:57-03:00",
+        "capturado": "2026-11-04T19:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f8c848f79817e050"
+      },
+      "grupo": [
+        {
+          "id": "095b0c32484e",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen/",
+          "canonical_url": "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen",
+          "titulo": "¿En serio no les preocupa? Las únicas que no parecen alarmadas por la baja del presupuesto 2027 para el INTA son las entidades tradicionales del agro, que además lo conducen",
+          "titulo_norm": "en serio no les preocupa las unicas que no parecen alarmadas por la baja del presupuesto 2027 para el inta son las entidades tradicionales del agro que ademas lo conducen",
+          "descripcion": "La Comisión de Economías y Desarrollo Regional de la Cámara de Diputados habilitó ayer un largo espacio para debatir sobre las preocupaciones en torno al recorte del presupuesto previsto para el Instituto Nacional de Tecnología Agropecuaria (INTA) para 2027, y en especial la eliminación de una tasa a las importaciones que constituye su principal fuente […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Comision-de-Economias-y-Desarrollo-Regional-INTA.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-04T18:57-03:00",
+          "capturado": "2026-11-04T19:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f8c848f79817e050"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 4,
+        "ai_score": 67,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "inta presupuesto",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente el funcionamiento del INTA y la investigación tecnológica clave para la región pampeana.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          66
+        ]
+      },
+      "cuando": "2026-11-04T19:00-03:00"
+    },
     {
       "id": "ade1ac170885",
       "rep": {
@@ -54170,73 +54332,6 @@
         "dobles": [
           67,
           63
-        ]
-      },
-      "cuando": "2026-11-04T13:00-03:00"
-    },
-    {
-      "id": "cfb745e9a3f0",
-      "rep": {
-        "id": "cfb745e9a3f0",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/la-molienda-de-trigo-alcanzo-un-record-para-las-ultimas-12-campanas",
-        "canonical_url": "https://argentina.gob.ar/noticias/la-molienda-de-trigo-alcanzo-un-record-para-las-ultimas-12-campanas",
-        "titulo": "La molienda de trigo alcanzó un récord para las últimas 12 campañas",
-        "titulo_norm": "la molienda de trigo alcanzo un record para las ultimas 12 campanas",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Agricultura de la Nación informa que la molienda total de trigo correspondiente a la campaña 2025/26 registró, entre diciembre de 2025 y septiembre de 2026, un acumulado de 5.633.125 toneladas, el mayor volumen para igual período de las últimas 12 campañas. Este resultado representa un incremento del 2,8% respecto de las 5.476.463 toneladas procesadas en el mismo período de la campaña anterior y se ubica un 8,2% por encima del promedio de los últimos 10 años. El desempeño se da en el marco de una campaña triguera 2025/26 que finalizó con una producción récord de 27,9 millones de toneladas, sobre una superficie sembrada de 6,97 millones de hectáreas. Para la campaña 2026/27, se estima una superficie sembrada de 6,6 millones de hectáreas. En materia de exportaciones, durante la campaña 2025/26 los embarques de trigo también ",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/trigo_22.jpg",
-        "autor": "pconsiglio",
-        "publicado": "2026-11-04T11:10-03:00",
-        "capturado": "2026-11-04T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cafddd4b8bdb2e04"
-      },
-      "grupo": [
-        {
-          "id": "cfb745e9a3f0",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/la-molienda-de-trigo-alcanzo-un-record-para-las-ultimas-12-campanas",
-          "canonical_url": "https://argentina.gob.ar/noticias/la-molienda-de-trigo-alcanzo-un-record-para-las-ultimas-12-campanas",
-          "titulo": "La molienda de trigo alcanzó un récord para las últimas 12 campañas",
-          "titulo_norm": "la molienda de trigo alcanzo un record para las ultimas 12 campanas",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Agricultura de la Nación informa que la molienda total de trigo correspondiente a la campaña 2025/26 registró, entre diciembre de 2025 y septiembre de 2026, un acumulado de 5.633.125 toneladas, el mayor volumen para igual período de las últimas 12 campañas. Este resultado representa un incremento del 2,8% respecto de las 5.476.463 toneladas procesadas en el mismo período de la campaña anterior y se ubica un 8,2% por encima del promedio de los últimos 10 años. El desempeño se da en el marco de una campaña triguera 2025/26 que finalizó con una producción récord de 27,9 millones de toneladas, sobre una superficie sembrada de 6,97 millones de hectáreas. Para la campaña 2026/27, se estima una superficie sembrada de 6,6 millones de hectáreas. En materia de exportaciones, durante la campaña 2025/26 los embarques de trigo también ",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/trigo_22.jpg",
-          "autor": "pconsiglio",
-          "publicado": "2026-11-04T11:10-03:00",
-          "capturado": "2026-11-04T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cafddd4b8bdb2e04"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 11,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 64,
-        "commercial_score": 64,
-        "subtema": "mercados",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Dato oficial de récord en molienda de trigo, de relevancia estadística pero requiere contextualización local.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          65
         ]
       },
       "cuando": "2026-11-04T13:00-03:00"
@@ -54845,8 +54940,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T18:44:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T19:04:35-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
