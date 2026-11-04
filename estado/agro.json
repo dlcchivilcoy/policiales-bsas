@@ -25616,6 +25616,27 @@
         63,
         65
       ]
+    },
+    "be35d933a6e4d5d4": {
+      "impacto_economico": 6,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 2,
+      "ai_score": 27,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "fruticultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un conflicto local de Río Negro que no afecta directamente a la zona núcleo ni moviliza a nuestros lectores.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27357,7 +27378,8 @@
       "https://bichosdecampo.com/llego-el-dia-el-novillo-apto-visec-para-exportacion-cotizo-200-mas-en-canuelas-y-hubo-brechas-de-precios-tambien-en-la-invernada": "2026-11-04",
       "https://infocampo.com.ar/semillas-y-propiedad-intelectual-mientras-brasil-tiene-15-programas-de-mejoramiento-en-soja-argentina-solo-dos": "2026-11-04",
       "https://bichosdecampo.com/el-hampa-del-campo-esta-a-la-moda-denuncian-el-robo-de-drones-agricolas-de-un-concesionario-de-alta-gracia": "2026-11-04",
-      "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026": "2026-11-04"
+      "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026": "2026-11-04",
+      "https://bichosdecampo.com/rio-negro-los-fruteros-de-allen-lograron-frenar-un-cambio-que-sumaba-400-hectareas-de-zona-rural-irrigada-al-area-urbana": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29097,7 +29119,8 @@
       "llego el dia el novillo apto visec para exportacion cotizo 200 mas en canuelas y hubo brechas de precios tambien en la invernada": "2026-11-04",
       "semillas y propiedad intelectual mientras brasil tiene 15 programas de mejoramiento en soja argentina solo dos": "2026-11-04",
       "el hampa del campo esta a la moda denuncian el robo de drones agricolas de un concesionario de alta gracia": "2026-11-04",
-      "demanda tranquila y precios en baja en el mercado agroganadero de canuelas": "2026-11-04"
+      "demanda tranquila y precios en baja en el mercado agroganadero de canuelas": "2026-11-04",
+      "rio negro los fruteros de allen lograron frenar un cambio que sumaba 400 hectareas de zona rural irrigada al area urbana": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -30837,7 +30860,8 @@
       "10dc24c698ef954a": "2026-11-04",
       "7d7f1912e3be4fd1": "2026-11-04",
       "3566226d010ad41f": "2026-11-04",
-      "ad1fcc64f20ce74d": "2026-11-04"
+      "ad1fcc64f20ce74d": "2026-11-04",
+      "be35d933a6e4d5d4": "2026-11-04"
     }
   },
   "elegidas": [
@@ -53482,6 +53506,73 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_719c3405192c_portada.jpg"
+    },
+    {
+      "id": "b68ca7d2e612",
+      "cuando": "2026-11-04T18:00-03:00",
+      "titulo_original": "El gusano cogollero avanza en maíces tempranos y tardíos desde NEA hasta Entre Ríos, por eso es clave monitorear y actuar a tiempo para evitar daños mayores.",
+      "descripcion": "El gusano cogollero vuelve a concentrar la atención en los lotes de maíz. Frente a este escenario, Gabriel Zipeto, consultor de I+D en Insecticidas y Tratamiento de Semillas - LASE de BASF Soluciones para la Agricultura, destaca la importancia de anticiparse, monitorear el cultivo desde sus primeros",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html",
+      "titular": "Maíz: el avance del gusano cogollero obliga a intensificar el monitoreo desde",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 85,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta clave sobre plagas en maíz con gran interés zonal y comercial para marcas de agroquímicos.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "tb6UTRw2dOo",
+          "url": "https://youtube.com/shorts/tb6UTRw2dOo",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "1d40d396-f210-42e2-be36-edfb3152db2e",
+          "slug": "maiz-el-avance-del-gusano-cogollero-exige-monitoreo-temprano-y-b5e5b1",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-el-avance-del-gusano-cogollero-exige-monitoreo-temprano-y-b5e5b1",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1594943805215448",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18119450903048126",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18099339566415967"
+        },
+        "historia_facebook": {
+          "id": "1127845189654886"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b68ca7d2e612_portada.jpg"
     }
   ],
   "pendientes": [
@@ -53677,69 +53768,6 @@
         ]
       },
       "cuando": "2026-11-04T17:20-03:00"
-    },
-    {
-      "id": "b68ca7d2e612",
-      "rep": {
-        "id": "b68ca7d2e612",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html",
-        "titulo": "El gusano cogollero avanza en maíces tempranos y tardíos desde NEA hasta Entre Ríos, por eso es clave monitorear y actuar a tiempo para evitar daños mayores.",
-        "titulo_norm": "el gusano cogollero avanza en maices tempranos y tardios desde nea hasta entre rios por eso es clave monitorear y actuar a tiempo para evitar danos mayores",
-        "descripcion": "El gusano cogollero vuelve a concentrar la atención en los lotes de maíz. Frente a este escenario, Gabriel Zipeto, consultor de I+D en Insecticidas y Tratamiento de Semillas - LASE de BASF Soluciones para la Agricultura, destaca la importancia de anticiparse, monitorear el cultivo desde sus primeros estadios y contar con herramientas que permitan intervenir de manera oportuna.",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249193_50385436.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-04T16:07-03:00",
-        "capturado": "2026-11-04T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ac8d3a120ec5a40a"
-      },
-      "grupo": [
-        {
-          "id": "b68ca7d2e612",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249193-gusano-cogollero-en-maiz-claves-para-anticiparse-y-actuar-a-tiempo.html",
-          "titulo": "El gusano cogollero avanza en maíces tempranos y tardíos desde NEA hasta Entre Ríos, por eso es clave monitorear y actuar a tiempo para evitar daños mayores.",
-          "titulo_norm": "el gusano cogollero avanza en maices tempranos y tardios desde nea hasta entre rios por eso es clave monitorear y actuar a tiempo para evitar danos mayores",
-          "descripcion": "El gusano cogollero vuelve a concentrar la atención en los lotes de maíz. Frente a este escenario, Gabriel Zipeto, consultor de I+D en Insecticidas y Tratamiento de Semillas - LASE de BASF Soluciones para la Agricultura, destaca la importancia de anticiparse, monitorear el cultivo desde sus primeros estadios y contar con herramientas que permitan intervenir de manera oportuna.",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249193_50385436.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-04T16:07-03:00",
-          "capturado": "2026-11-04T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ac8d3a120ec5a40a"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 15,
-        "innovacion": 10,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 8,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 85,
-        "commercial_score": 85,
-        "subtema": "agro",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Alerta clave sobre plagas en maíz con gran interés zonal y comercial para marcas de agroquímicos.",
-        "tema_doc": "sanidad",
-        "urgente": true,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T16:20-03:00"
     },
     {
       "id": "f4cfcdacd8dd",
@@ -54672,8 +54700,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T17:24:45-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T18:04:24-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
