@@ -27048,6 +27048,52 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "04b2a2c355b69141": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 80,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "siembra gruesa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la campaña gruesa de la zona núcleo, vital para los productores locales.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "86ef23c80c1d8a35": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 69,
+      "subtema": "ganaderia",
+      "tema": "hacienda cañuelas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra valores de referencia de hacienda en la provincia de Buenos Aires que interesan al ganadero.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        68
+      ]
     }
   },
   "indice": {
@@ -28881,7 +28927,10 @@
       "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026": "2026-11-05",
       "https://infocampo.com.ar/lo-que-faltaba-con-el-visec-abrio-una-grieta-entre-dos-entidades-de-la-mesa-de-enlace": "2026-11-05",
       "https://bichosdecampo.com/se-fractura-la-mesa-carlos-castagnani-cruzo-duramente-a-la-sociedad-rural-y-exigio-respuestas-publicas-de-pino-luego-de-declaraciones-de-un-director-que-consideraron-agraviantes": "2026-11-05",
-      "https://argentina.gob.ar/noticias/las-exportaciones-equinas-crecieron-14-interanualmente-en-los-primeros-9-meses-del-ano": "2026-11-05"
+      "https://argentina.gob.ar/noticias/las-exportaciones-equinas-crecieron-14-interanualmente-en-los-primeros-9-meses-del-ano": "2026-11-05",
+      "https://bichosdecampo.com/a-mirar-para-arriba-el-inta-prueba-una-tecnologia-satelital-para-calcular-cuanto-pasto-tienen-disponible-los-campos-ganaderos": "2026-11-05",
+      "https://bichosdecampo.com/la-siembra-gruesa-avanza-con-buenas-reservas-de-humedad-aunque-las-lluvias-empiezan-a-complicar-algunos-lotes": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30713,7 +30762,10 @@
       "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas": "2026-11-05",
       "lo que faltaba con el visec abrio una grieta entre dos entidades de la mesa de enlace": "2026-11-05",
       "se fractura la mesa carlos castagnani cruzo duramente a la sociedad rural y exigio respuestas publicas de pino luego de declaraciones de un director que consideraron agraviantes": "2026-11-05",
-      "las exportaciones equinas crecieron 14 interanualmente en los primeros 9 meses del ano": "2026-11-05"
+      "las exportaciones equinas crecieron 14 interanualmente en los primeros 9 meses del ano": "2026-11-05",
+      "a mirar para arriba el inta prueba una tecnologia satelital para calcular cuanto pasto tienen disponible los campos ganaderos": "2026-11-05",
+      "la siembra gruesa avanza con buenas reservas de humedad aunque las lluvias empiezan a complicar algunos lotes": "2026-11-05",
+      "tramite agil y buenos valores en un remate especial en canuelas": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32545,7 +32597,10 @@
       "b2ae936ebad77e1f": "2026-11-05",
       "b0b2eab199399705": "2026-11-05",
       "61701d9328a854bd": "2026-11-05",
-      "ac720497c3a306b1": "2026-11-05"
+      "ac720497c3a306b1": "2026-11-05",
+      "5779bfd2a7bd55b2": "2026-11-05",
+      "04b2a2c355b69141": "2026-11-05",
+      "86ef23c80c1d8a35": "2026-11-05"
     }
   },
   "elegidas": [
@@ -57200,9 +57255,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3fe74f1d537e_portada.jpg"
+    },
+    {
+      "id": "abaf20ecdefd",
+      "cuando": "2026-11-05T18:40-03:00",
+      "titulo_original": "La siembra gruesa avanza con buenas reservas de humedad, aunque las lluvias empiezan a complicar algunos lotes",
+      "descripcion": "La implantación de los principales cultivos de siembra gruesa tomó impulso en buena parte del área agrícola argentina, favorecida por una disponibilidad de humedad que permite avanzar con las sembradoras y acompañar las primeras etapas de los cultivos. Según el último relevamiento de la Bolsa de Cer",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-siembra-gruesa-avanza-con-buenas-reservas-de-humedad-aunque-las-lluvias-empiezan-a-complicar-algunos-lotes/",
+      "titular": "Soja, maíz y girasol avanzan pero el exceso hídrico preocupa",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 80,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "siembra gruesa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la campaña gruesa de la zona núcleo, vital para los productores locales.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3c1fb2cf-cdd9-447b-9d7f-0bd41bca0288",
+          "slug": "avanza-la-siembra-gruesa-en-argentina-pero-el-exceso-de-agua-3df885",
+          "url": "https://www.diariolacampaña.com.ar/n/avanza-la-siembra-gruesa-en-argentina-pero-el-exceso-de-agua-3df885",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1136229825562280",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18248239183313127",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18129706186852182"
+        },
+        "historia_facebook": {
+          "id": "2033166054737942"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_abaf20ecdefd_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "ce0661867e3c",
+      "rep": {
+        "id": "ce0661867e3c",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026",
+        "titulo": "Trámite ágil y buenos valores en un remate especial en Cañuelas",
+        "titulo_norm": "tramite agil y buenos valores en un remate especial en canuelas",
+        "descripcion": "Fue en la 22º Exposición Nacional de Haciendas de Consumo 5 Estrellas de la firma Sáenz Valiente, Bullrich y Cía. SA.; el Índice Novillo del Mercado Agroganadero quedó en $4352,108",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/FNWVW6R6XRGVHCBHAZBXFEN54Y.JPG?auth=b53f83eb37ee115ab5b958bf145ec3b154422fa6f6f7c0898c4c6f2785868911&smart=true",
+        "autor": "",
+        "publicado": "2026-11-05T18:29-03:00",
+        "capturado": "2026-11-05T18:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "86ef23c80c1d8a35"
+      },
+      "grupo": [
+        {
+          "id": "ce0661867e3c",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026",
+          "titulo": "Trámite ágil y buenos valores en un remate especial en Cañuelas",
+          "titulo_norm": "tramite agil y buenos valores en un remate especial en canuelas",
+          "descripcion": "Fue en la 22º Exposición Nacional de Haciendas de Consumo 5 Estrellas de la firma Sáenz Valiente, Bullrich y Cía. SA.; el Índice Novillo del Mercado Agroganadero quedó en $4352,108",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FNWVW6R6XRGVHCBHAZBXFEN54Y.JPG?auth=b53f83eb37ee115ab5b958bf145ec3b154422fa6f6f7c0898c4c6f2785868911&smart=true",
+          "autor": "",
+          "publicado": "2026-11-05T18:29-03:00",
+          "capturado": "2026-11-05T18:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "86ef23c80c1d8a35"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 69,
+        "subtema": "ganaderia",
+        "tema": "hacienda cañuelas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra valores de referencia de hacienda en la provincia de Buenos Aires que interesan al ganadero.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          68
+        ]
+      },
+      "cuando": "2026-11-05T18:40-03:00"
+    },
     {
       "id": "8326136bc071",
       "rep": {
@@ -57791,8 +57973,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T18:25:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T18:44:15-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
