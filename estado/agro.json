@@ -26713,6 +26713,52 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1d117a033570af6a": {
+      "impacto_economico": 5,
+      "interes_productores": 12,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 57,
+      "commercial_score": 48,
+      "subtema": "agro",
+      "tema": "envases agroquímicos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Trata sobre gestión de bidones y multa en la provincia de Buenos Aires, tocando un tema de fuerte interés local y comunitario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        57
+      ]
+    },
+    "3b924050d37a4804": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 8,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 2,
+      "potencial_comercial": 3,
+      "ai_score": 25,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "ciberseguridad",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un enfoque muy corporativo e internacional sobre ciberseguridad en proteína animal, de baja relevancia práctica para el productor zonal.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28528,7 +28574,9 @@
       "https://agfundernews.com/better-meat-co-targets-large-scale-production-in-india-in-q2-2027-amid-brutal-mycoprotein-shakeout": "2026-11-05",
       "https://intainforma.inta.gob.ar/trigo-argentino-el-mejoramiento-genetico-permitio-aumentar-cerca-de-1-por-ano-el-rendimiento": "2026-11-05",
       "https://intainforma.inta.gob.ar/la-innovacion-tecnologica-redefine-el-futuro-del-agro": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/maiz-tardio-genetica-para-sostener-los-pisos-y-empujar-los-techos-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/maiz-tardio-genetica-para-sostener-los-pisos-y-empujar-los-techos-nid05112026": "2026-11-05",
+      "https://bichosdecampo.com/una-buena-leccion-para-los-pibes-en-salto-multaron-a-una-empresa-por-tirar-bidones-de-agroquimicos-y-usaran-el-dinero-para-hacer-mejoras-en-una-escuela-agropecuaria": "2026-11-05",
+      "https://agfundernews.com/a-cybersecurity-checklist-for-the-animal-protein-industry": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30342,7 +30390,9 @@
       "better meat co targets large scale production in india in q2 2027 amid brutal mycoprotein shakeout": "2026-11-05",
       "trigo argentino el mejoramiento genetico permitio aumentar cerca de 1 por ano el rendimiento": "2026-11-05",
       "la innovacion tecnologica redefine el futuro del agro": "2026-11-05",
-      "maiz tardio genetica para sostener los pisos y empujar los techos": "2026-11-05"
+      "maiz tardio genetica para sostener los pisos y empujar los techos": "2026-11-05",
+      "una buena leccion para los pibes en salto multaron a una empresa por tirar bidones de agroquimicos y usaran el dinero para hacer mejoras en una escuela agropecuaria": "2026-11-05",
+      "a cybersecurity checklist for the animal protein industry": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32156,7 +32206,9 @@
       "4b1d423da78b7bdf": "2026-11-05",
       "d5a085878c665453": "2026-11-05",
       "ac336ab5a0fa10bd": "2026-11-05",
-      "9ee2eb3adda0eaa9": "2026-11-05"
+      "9ee2eb3adda0eaa9": "2026-11-05",
+      "1d117a033570af6a": "2026-11-05",
+      "3b924050d37a4804": "2026-11-05"
     }
   },
   "elegidas": [
@@ -56397,6 +56449,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_708bbc8a5e16_portada.jpg"
+    },
+    {
+      "id": "1c2fbeb8dba0",
+      "cuando": "2026-11-05T14:20-03:00",
+      "titulo_original": "Shell cambia de operador en Argentina: quién manejará sus activos",
+      "descripcion": "Signar Energy operará 892 estaciones Shell y la refinería de Dock Sud tras la compra de los activos de Raízen por US$ 1.420 millones. Mercuria será controlante y sumará socios locales. La entrada Shell cambia de operador en Argentina: quién manejará sus activos pertenece a Todo Agro.",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos/",
+      "titular": "Signar Energy operará las estaciones Shell y la refinería de Dock Sud",
+      "volanta": "Empresas",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 3,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 61,
+        "commercial_score": 62,
+        "subtema": "empresas",
+        "tema": "shell",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta el mercado de combustibles y la logística del agro por el cambio de manos en la red de estaciones y refinería.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          61
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T14:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "bd1007f9-82b7-4951-b1fd-596ca477f5af",
+          "slug": "signar-energy-manejara-las-estaciones-shell-y-la-refineria-de-93ba1b",
+          "url": "https://www.diariolacampaña.com.ar/n/signar-energy-manejara-las-estaciones-shell-y-la-refineria-de-93ba1b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "3270264009836954",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17953813800300832",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18129267121921849"
+        },
+        "historia_facebook": {
+          "id": "1627487548310197"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1c2fbeb8dba0_portada.jpg"
     }
   ],
   "pendientes": [
@@ -56787,73 +56903,6 @@
       "cuando": "2026-11-04T19:00-03:00"
     },
     {
-      "id": "1c2fbeb8dba0",
-      "rep": {
-        "id": "1c2fbeb8dba0",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos/",
-        "canonical_url": "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos",
-        "titulo": "Shell cambia de operador en Argentina: quién manejará sus activos",
-        "titulo_norm": "shell cambia de operador en argentina quien manejara sus activos",
-        "descripcion": "Signar Energy operará 892 estaciones Shell y la refinería de Dock Sud tras la compra de los activos de Raízen por US$ 1.420 millones. Mercuria será controlante y sumará socios locales. La entrada Shell cambia de operador en Argentina: quién manejará sus activos pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-04T10:49-03:00",
-        "capturado": "2026-11-04T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9fe51e3717b3318d"
-      },
-      "grupo": [
-        {
-          "id": "1c2fbeb8dba0",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos/",
-          "canonical_url": "https://todoagro.com.ar/shell-cambia-de-operador-en-argentina-quien-manejara-sus-activos",
-          "titulo": "Shell cambia de operador en Argentina: quién manejará sus activos",
-          "titulo_norm": "shell cambia de operador en argentina quien manejara sus activos",
-          "descripcion": "Signar Energy operará 892 estaciones Shell y la refinería de Dock Sud tras la compra de los activos de Raízen por US$ 1.420 millones. Mercuria será controlante y sumará socios locales. La entrada Shell cambia de operador en Argentina: quién manejará sus activos pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-04T10:49-03:00",
-          "capturado": "2026-11-04T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9fe51e3717b3318d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 10,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 3,
-        "conversacion": 6,
-        "potencial_comercial": 7,
-        "ai_score": 61,
-        "commercial_score": 62,
-        "subtema": "empresas",
-        "tema": "shell",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta el mercado de combustibles y la logística del agro por el cambio de manos en la red de estaciones y refinería.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          61
-        ]
-      },
-      "cuando": "2026-11-04T11:00-03:00"
-    },
-    {
       "id": "cfb03ca7f41e",
       "rep": {
         "id": "cfb03ca7f41e",
@@ -56921,8 +56970,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T14:04:23-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T14:24:35-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
