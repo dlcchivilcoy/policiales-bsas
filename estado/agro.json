@@ -26939,6 +26939,27 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e1c59ff008b8d73c": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 3,
+      "ai_score": 30,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "reunión política",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una gacetilla puramente política sin anuncios concretos para el productor de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28765,7 +28786,9 @@
       "https://bichosdecampo.com/si-siguen-asi-en-cordoba-no-quedaran-aplicadores-clausuraron-otras-cuatro-pulverizadoras-y-tambien-secuestraron-300-productos-veterinarios": "2026-11-05",
       "https://bichosdecampo.com/elena-berchtold-aprendio-a-criar-los-terneros-recien-nacidos-en-el-tambo-y-le-pone-tanto-amor-a-esa-tarea-que-con-su-hermana-crearon-una-caravana-sanitaria-para-que-no-sufran": "2026-11-05",
       "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html": "2026-11-05",
-      "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html": "2026-11-05"
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html": "2026-11-05",
+      "https://bichosdecampo.com/de-aca-nos-sacan-con-los-pies-para-adelante-escala-la-tension-en-pauny-luego-del-fracaso-de-una-audiencia-y-los-trabajadores-mantienen-la-planta-tomada": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/el-precandidato-presidencial-sergio-unac-se-reunio-con-referentes-de-la-agroindustria-nid05112026": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30590,7 +30613,9 @@
       "si siguen asi en cordoba no quedaran aplicadores clausuraron otras cuatro pulverizadoras y tambien secuestraron 300 productos veterinarios": "2026-11-05",
       "elena berchtold aprendio a criar los terneros recien nacidos en el tambo y le pone tanto amor a esa tarea que con su hermana crearon una caravana sanitaria para que no sufran": "2026-11-05",
       "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe": "2026-11-05",
-      "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices": "2026-11-05"
+      "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices": "2026-11-05",
+      "de aca nos sacan con los pies para adelante escala la tension en pauny luego del fracaso de una audiencia y los trabajadores mantienen la planta tomada": "2026-11-05",
+      "el precandidato presidencial sergio unac se reunio con referentes de la agroindustria": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32415,7 +32440,9 @@
       "86c9ee6e94c8c1ac": "2026-11-05",
       "8c68c322b4c9c5f5": "2026-11-05",
       "b981de217fdf62fb": "2026-11-05",
-      "15d17181280aa98e": "2026-11-05"
+      "15d17181280aa98e": "2026-11-05",
+      "792b56c9fcc1dd4d": "2026-11-05",
+      "e1c59ff008b8d73c": "2026-11-05"
     }
   },
   "elegidas": [
@@ -56907,6 +56934,42 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cba2d7efe9b2_portada.jpg"
+    },
+    {
+      "id": "bb446ca8fe11",
+      "cuando": "2026-11-05T17:00-03:00",
+      "titulo_original": "Los novillos también rompen la estacionalidad ganadera: “copan” la faena y ceden en precios",
+      "descripcion": "La oferta de novillos creció 7% interanual en octubre, en contraste con la caída general de los envíos a faena. El mayor encierre en feedlots, la salida de hacienda de las islas y la competencia de Brasil configuran un escenario desafiante para los valores.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/los-novillos-tambien-rompen-la-estacionalidad-ganadera-copan-la-faena-y-ceden-en-precios/",
+      "titular": "Sube 7% la faena de novillos en octubre y bajan sus precios",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "novillos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directo en la economía ganadera de la región por la caída de precios y mayor oferta.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T17:00:00-03:00"
     }
   ],
   "pendientes": [
@@ -56972,69 +57035,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-05T16:20-03:00"
-    },
-    {
-      "id": "bb446ca8fe11",
-      "rep": {
-        "id": "bb446ca8fe11",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/los-novillos-tambien-rompen-la-estacionalidad-ganadera-copan-la-faena-y-ceden-en-precios/",
-        "canonical_url": "https://infocampo.com.ar/los-novillos-tambien-rompen-la-estacionalidad-ganadera-copan-la-faena-y-ceden-en-precios",
-        "titulo": "Los novillos también rompen la estacionalidad ganadera: “copan” la faena y ceden en precios",
-        "titulo_norm": "los novillos tambien rompen la estacionalidad ganadera copan la faena y ceden en precios",
-        "descripcion": "La oferta de novillos creció 7% interanual en octubre, en contraste con la caída general de los envíos a faena. El mayor encierre en feedlots, la salida de hacienda de las islas y la competencia de Brasil configuran un escenario desafiante para los valores.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/rosgan.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-11-05T15:50-03:00",
-        "capturado": "2026-11-05T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "dac436a3956d7fdb"
-      },
-      "grupo": [
-        {
-          "id": "bb446ca8fe11",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/los-novillos-tambien-rompen-la-estacionalidad-ganadera-copan-la-faena-y-ceden-en-precios/",
-          "canonical_url": "https://infocampo.com.ar/los-novillos-tambien-rompen-la-estacionalidad-ganadera-copan-la-faena-y-ceden-en-precios",
-          "titulo": "Los novillos también rompen la estacionalidad ganadera: “copan” la faena y ceden en precios",
-          "titulo_norm": "los novillos tambien rompen la estacionalidad ganadera copan la faena y ceden en precios",
-          "descripcion": "La oferta de novillos creció 7% interanual en octubre, en contraste con la caída general de los envíos a faena. El mayor encierre en feedlots, la salida de hacienda de las islas y la competencia de Brasil configuran un escenario desafiante para los valores.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/rosgan.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-11-05T15:50-03:00",
-          "capturado": "2026-11-05T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "dac436a3956d7fdb"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 71,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "novillos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta directo en la economía ganadera de la región por la caída de precios y mayor oferta.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-05T16:00-03:00"
     },
     {
       "id": "8e63f3f210d2",
@@ -57561,7 +57561,7 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T16:44:40-03:00",
+  "actualizado": "2026-11-05T17:01:56-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
