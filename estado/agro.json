@@ -26453,6 +26453,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "08505f0a48dda2bb": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 1,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 35,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "cooperativa lehmann",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia institucional de interés local para Santa Fe pero de baja relevancia para el productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28245,7 +28266,15 @@
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-experto-en-plagas-e-insectos-martin-galli-afirma-que-al-campo-le-viene-muy-bien-que-la-sociedad-lo-interpele-de-modo-constante": "2026-11-05",
       "https://bichosdecampo.com/la-produccion-misionera-bajo-la-linea-de-hielo-el-granizo-no-perdona-al-tabaco-y-la-yerba-mate-y-en-el-nea-encienden-las-alarmas-por-las-perdidas-economicas": "2026-11-05",
       "https://todoagro.com.ar/la-escuela-granja-de-la-unl-inaugura-un-sistema-de-riego-tecnificado": "2026-11-05",
-      "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos": "2026-11-05"
+      "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos": "2026-11-05",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/riesgo-pais-hoy-05-11-2026": "2026-11-05",
+      "https://infocampo.com.ar/coninagro-se-reunio-con-patricia-bullrich-y-le-pidio-por-tres-leyes-semillas-biocombustibles-y-jugos-naturales": "2026-11-05",
+      "https://agrositio.com.ar/noticia/249206-ruben-tomasini-es-el-nuevo-presidente-de-la-cooperativa-lehmann.html": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30036,7 +30065,15 @@
       "los dilemas de la agronomia experto en plagas e insectos martin galli afirma que al campo le viene muy bien que la sociedad lo interpele de modo constante": "2026-11-05",
       "la produccion misionera bajo la linea de hielo el granizo no perdona al tabaco y la yerba mate y en el nea encienden las alarmas por las perdidas economicas": "2026-11-05",
       "la escuela granja de la unl inaugura un sistema de riego tecnificado": "2026-11-05",
-      "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos": "2026-11-05"
+      "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos": "2026-11-05",
+      "precio del maiz en rosario hoy 5 noviembre 2026": "2026-11-05",
+      "precio del trigo en rosario hoy 5 noviembre 2026": "2026-11-05",
+      "precio del girasol en rosario hoy 5 noviembre 2026": "2026-11-05",
+      "precio de la soja en rosario hoy 5 noviembre 2026": "2026-11-05",
+      "precio del sorgo en rosario hoy 5 noviembre 2026": "2026-11-05",
+      "riesgo pais hoy 05 de noviembre de 2026": "2026-11-05",
+      "coninagro se reunio con patricia bullrich y le pidio por tres leyes semillas biocombustibles y jugos naturales": "2026-11-05",
+      "ruben tomasini es el nuevo presidente de la cooperativa lehmann": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31827,7 +31864,15 @@
       "b33422accb65ca59": "2026-11-05",
       "aa803ad24bc13192": "2026-11-05",
       "8c8d5957fbe79e0d": "2026-11-05",
-      "91b0833ef1168e14": "2026-11-05"
+      "91b0833ef1168e14": "2026-11-05",
+      "5343a9b5485323dc": "2026-11-05",
+      "f3a77c1a7210bf67": "2026-11-05",
+      "27dfbeccb16c795b": "2026-11-05",
+      "c2db282e152da5b8": "2026-11-05",
+      "a9f6a5cd01518d7b": "2026-11-05",
+      "b2a6fb75bdc8d856": "2026-11-05",
+      "34d64229d461590c": "2026-11-05",
+      "08505f0a48dda2bb": "2026-11-05"
     }
   },
   "elegidas": [
@@ -55753,49 +55798,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_35336d7c0a60_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "6bf4cb17f192",
-      "rep": {
-        "id": "6bf4cb17f192",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos/",
-        "canonical_url": "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos",
-        "titulo": "Con el saldo récord, el trigo atiende todos los frentes: exportaciones y la mayor molienda en 12 años",
-        "titulo_norm": "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos",
-        "descripcion": "Un informe del Gobierno muestra los excelentes resultados que logran todos los eslabones de la cadena del trigo. Lejos de los temores de que no hubiera cereal para el mercado interno, la molienda crece a paso firme.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-11-05T10:51-03:00",
-        "capturado": "2026-11-05T11:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "91b0833ef1168e14"
-      },
-      "grupo": [
-        {
-          "id": "6bf4cb17f192",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos/",
-          "canonical_url": "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos",
-          "titulo": "Con el saldo récord, el trigo atiende todos los frentes: exportaciones y la mayor molienda en 12 años",
-          "titulo_norm": "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos",
-          "descripcion": "Un informe del Gobierno muestra los excelentes resultados que logran todos los eslabones de la cadena del trigo. Lejos de los temores de que no hubiera cereal para el mercado interno, la molienda crece a paso firme.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-11-05T10:51-03:00",
-          "capturado": "2026-11-05T11:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "91b0833ef1168e14"
-        }
-      ],
+      "cuando": "2026-11-05T11:20-03:00",
+      "titulo_original": "Con el saldo récord, el trigo atiende todos los frentes: exportaciones y la mayor molienda en 12 años",
+      "descripcion": "Un informe del Gobierno muestra los excelentes resultados que logran todos los eslabones de la cadena del trigo. Lejos de los temores de que no hubiera cereal para el mercado interno, la molienda crece a paso firme.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos/",
+      "titular": "Trigo: molienda récord en 12 años y exportaciones al alza",
+      "volanta": "Agricultura",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 14,
@@ -55817,8 +55829,38 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-05T11:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T11:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e1d2a4ae-05a6-4ae6-9f6c-1f05163ab1b8",
+          "slug": "trigo-la-molienda-alcanza-un-record-de-12-anos-y-crecen-las-775694",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-la-molienda-alcanza-un-record-de-12-anos-y-crecen-las-775694",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4570829443236974",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17924558562222370",
+          "portada": "la que elige Instagram (rechazó la propia)"
+        },
+        "historia_instagram": {
+          "fallo": "FalloRed: Instagram: el contenedor quedo en ERROR — Error: Media upload has failed with error code 2207077"
+        },
+        "historia_facebook": {
+          "id": "1694013858995555"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6bf4cb17f192_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "708bbc8a5e16",
       "rep": {
@@ -56218,8 +56260,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T11:05:04-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-05T11:30:54-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
