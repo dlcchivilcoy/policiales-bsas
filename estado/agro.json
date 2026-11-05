@@ -25846,6 +25846,27 @@
         70,
         61
       ]
+    },
+    "70656807890575f1": {
+      "impacto_economico": 15,
+      "interes_productores": 10,
+      "innovacion": 12,
+      "cercania_argentina": 8,
+      "cercania_pba": 7,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "maquinaria",
+      "tema": "john deere",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Mueve el mercado regional de maquinaria y afecta la estrategia industrial de un gigante del sector.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27599,7 +27620,8 @@
       "https://lanacion.com.ar/economia/campo/volatilidad-en-los-granos-habia-que-blindarse-para-navegar-la-incertidumbre-nid04112026": "2026-11-04",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249201-la-ia-aumenta-la-productividad-del-campo-sin-reemplazar-al-productor.html": "2026-11-04",
       "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026": "2026-11-04",
-      "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026": "2026-11-04"
+      "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026": "2026-11-04",
+      "https://bichosdecampo.com/primera-consecuencia-de-la-derrota-de-trump-john-deere-anuncio-que-trasladara-la-fabrica-de-cosechadoras-de-cana-de-azucar-a-brasil-y-cerrara-dos-plantas-en-estados-unidos": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29351,7 +29373,8 @@
       "volatilidad en los granos habia que blindarse para navegar la incertidumbre": "2026-11-04",
       "la ia llega al campo mas productividad y mejores decisiones sin reemplazar al productor": "2026-11-04",
       "cuatro jovenes y sus ideas para ayudar con tecnologia a los productores agropecuarios que dejo de novedoso el acceleration week 2026": "2026-11-04",
-      "monopolio comunal fuerte malestar en una provincia por el costo de una tasa": "2026-11-04"
+      "monopolio comunal fuerte malestar en una provincia por el costo de una tasa": "2026-11-04",
+      "primera consecuencia de la derrota de trump john deere anuncio que trasladara la fabrica de cosechadoras de cana de azucar a brasil y cerrara dos plantas en estados unidos": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31103,7 +31126,8 @@
       "7c05bd5f90e2d15a": "2026-11-04",
       "06dac7cce3a46258": "2026-11-04",
       "c3701f06fe323640": "2026-11-04",
-      "8600a9114375e551": "2026-11-04"
+      "8600a9114375e551": "2026-11-04",
+      "70656807890575f1": "2026-11-04"
     }
   },
   "elegidas": [
@@ -54235,6 +54259,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6ae224a05281_portada.jpg"
+    },
+    {
+      "id": "ab67dd503a44",
+      "cuando": "2026-11-04T21:40-03:00",
+      "titulo_original": "¿Primera consecuencia de la derrota de Trump? John Deere anunció que trasladará la fábrica de cosechadoras de caña de azúcar a Brasil y cerrará dos plantas en Estados Unidos",
+      "descripcion": "Es muy sugestivo que el anuncio se conociera a pocas horas de que el conteo de los votos en las elecciones legislativas de los Estados Unidos diera por ganador a la oposición demócrata y como gran perdedor al presidente Donald Trump. Este política había promovido con intensidad que las grandes marca",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/primera-consecuencia-de-la-derrota-de-trump-john-deere-anuncio-que-trasladara-la-fabrica-de-cosechadoras-de-cana-de-azucar-a-brasil-y-cerrara-dos-plantas-en-estados-unidos/",
+      "titular": "John Deere traslada a Brasil su fábrica de cosechadoras de caña",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 10,
+        "innovacion": 12,
+        "cercania_argentina": 8,
+        "cercania_pba": 7,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "maquinaria",
+        "tema": "john deere",
+        "ambito": "internacional",
+        "sensible": false,
+        "explicacion": "Mueve el mercado regional de maquinaria y afecta la estrategia industrial de un gigante del sector.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T21:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "50e34b5a-553e-4ab0-9c55-85f3ae2c42f5",
+          "slug": "john-deere-traslada-la-produccion-de-cosechadoras-de-cana-a-70cd78",
+          "url": "https://www.diariolacampaña.com.ar/n/john-deere-traslada-la-produccion-de-cosechadoras-de-cana-a-70cd78",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1084843421252381",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17997063927102169",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18133547944806932"
+        },
+        "historia_facebook": {
+          "id": "1149943050889732"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab67dd503a44_portada.jpg"
     }
   ],
   "pendientes": [
@@ -55362,8 +55446,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T21:24:25-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-04T21:44:15-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
