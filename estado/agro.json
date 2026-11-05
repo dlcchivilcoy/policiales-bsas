@@ -26918,6 +26918,27 @@
         70,
         67
       ]
+    },
+    "15d17181280aa98e": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 71,
+      "subtema": "mercados",
+      "tema": "exportación y trazabilidad",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Apunta directo a las nuevas exigencias de exportación y trazabilidad que afectan al productor de la región núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28743,7 +28764,8 @@
       "https://bichosdecampo.com/duras-de-controlar-la-sintonia-fina-que-exigen-las-malezas-resistentes-para-no-transformar-el-barbecho-en-un-problema-mayor": "2026-11-05",
       "https://bichosdecampo.com/si-siguen-asi-en-cordoba-no-quedaran-aplicadores-clausuraron-otras-cuatro-pulverizadoras-y-tambien-secuestraron-300-productos-veterinarios": "2026-11-05",
       "https://bichosdecampo.com/elena-berchtold-aprendio-a-criar-los-terneros-recien-nacidos-en-el-tambo-y-le-pone-tanto-amor-a-esa-tarea-que-con-su-hermana-crearon-una-caravana-sanitaria-para-que-no-sufran": "2026-11-05",
-      "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html": "2026-11-05"
+      "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html": "2026-11-05",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30567,7 +30589,8 @@
       "duras de controlar la sintonia fina que exigen las malezas resistentes para no transformar el barbecho en un problema mayor": "2026-11-05",
       "si siguen asi en cordoba no quedaran aplicadores clausuraron otras cuatro pulverizadoras y tambien secuestraron 300 productos veterinarios": "2026-11-05",
       "elena berchtold aprendio a criar los terneros recien nacidos en el tambo y le pone tanto amor a esa tarea que con su hermana crearon una caravana sanitaria para que no sufran": "2026-11-05",
-      "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe": "2026-11-05"
+      "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe": "2026-11-05",
+      "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32391,7 +32414,8 @@
       "fa0d29d4494946b2": "2026-11-05",
       "86c9ee6e94c8c1ac": "2026-11-05",
       "8c68c322b4c9c5f5": "2026-11-05",
-      "b981de217fdf62fb": "2026-11-05"
+      "b981de217fdf62fb": "2026-11-05",
+      "15d17181280aa98e": "2026-11-05"
     }
   },
   "elegidas": [
@@ -56763,9 +56787,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3a8aa9209ab2_portada.jpg"
+    },
+    {
+      "id": "7b6b4dfad7bf",
+      "cuando": "2026-11-05T16:20-03:00",
+      "titulo_original": "“Pasaporte digital de la vaca”: una revolucionaria tecnología ayuda a estimar la grasa de la carne desde el celular y registrar datos clave",
+      "descripcion": "Sebastián Victorica, cofundador y director de UBI Meat, hablará en el 5º Congreso Federal Ganadero de Rosgan sobre la necesidad de reunir la información que se genera desde el campo hasta el frigorífico para que todos los eslabones puedan conocer y acreditar las características del producto final",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/pasaporte-digital-de-la-vaca-una-revolucionaria-tecnologia-ayuda-a-estimar-la-grasa-de-la-carne-nid05112026/",
+      "titular": "Crean un pasaporte digital para estimar grasa en carne desde el celular",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 13,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 9,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 82,
+        "commercial_score": 80,
+        "subtema": "agtech",
+        "tema": "ganado",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente innovación AgTech aplicada a la ganadería con gran potencial visual para redes sociales.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8618cebb-4f81-4086-a716-4de0b278ee56",
+          "slug": "desarrollan-un-pasaporte-digital-bovino-para-medir-calidad-de-f77297",
+          "url": "https://www.diariolacampaña.com.ar/n/desarrollan-un-pasaporte-digital-bovino-para-medir-calidad-de-f77297",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1096554139862960",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17988139961889167",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18127525456877062"
+        },
+        "historia_facebook": {
+          "id": "1438675404909998"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7b6b4dfad7bf_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8326136bc071",
+      "rep": {
+        "id": "8326136bc071",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html",
+        "titulo": "Martín Spino de COFCO y la exportación frente a EUDR, EPA, certificaciones agrícolas, y \"premium prices\"",
+        "titulo_norm": "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices",
+        "descripcion": "Una mesa de debate única. Los 7 grandes exportadores frente a 320 miembros de cooperativas analizando los grandes temas de la originación a campo, logística, costos, trazabilidad de granos, mercados exportadores, etc. Una charla con Martín Spino, Dir. de originación de COFCO, analizando los mercados agrícolas. Destacó la necesidad de un cambio de mentalidad en el agro argentino para adaptarse a las nuevas reglas de juego, y aprovechar el crecimiento del mercado internacional. Señaló el rol fundamental de las cooperativas y la importancia de la fijación de precios en soja para mejorar la cadena comercial...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/nAwACFqaT3Q.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-11-05T16:17-03:00",
+        "capturado": "2026-11-05T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "15d17181280aa98e"
+      },
+      "grupo": [
+        {
+          "id": "8326136bc071",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html",
+          "titulo": "Martín Spino de COFCO y la exportación frente a EUDR, EPA, certificaciones agrícolas, y \"premium prices\"",
+          "titulo_norm": "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices",
+          "descripcion": "Una mesa de debate única. Los 7 grandes exportadores frente a 320 miembros de cooperativas analizando los grandes temas de la originación a campo, logística, costos, trazabilidad de granos, mercados exportadores, etc. Una charla con Martín Spino, Dir. de originación de COFCO, analizando los mercados agrícolas. Destacó la necesidad de un cambio de mentalidad en el agro argentino para adaptarse a las nuevas reglas de juego, y aprovechar el crecimiento del mercado internacional. Señaló el rol fundamental de las cooperativas y la importancia de la fijación de precios en soja para mejorar la cadena comercial...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/nAwACFqaT3Q.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-11-05T16:17-03:00",
+          "capturado": "2026-11-05T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "15d17181280aa98e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "mercados",
+        "tema": "exportación y trazabilidad",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Apunta directo a las nuevas exigencias de exportación y trazabilidad que afectan al productor de la región núcleo.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T16:20-03:00"
+    },
     {
       "id": "bb446ca8fe11",
       "rep": {
@@ -57083,69 +57230,6 @@
         "sensible": true,
         "explicacion": "Impacto económico masivo y central para todo productor argentino, genera debate y conversación obligada.",
         "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-05T13:00-03:00"
-    },
-    {
-      "id": "7b6b4dfad7bf",
-      "rep": {
-        "id": "7b6b4dfad7bf",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/pasaporte-digital-de-la-vaca-una-revolucionaria-tecnologia-ayuda-a-estimar-la-grasa-de-la-carne-nid05112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/pasaporte-digital-de-la-vaca-una-revolucionaria-tecnologia-ayuda-a-estimar-la-grasa-de-la-carne-nid05112026",
-        "titulo": "“Pasaporte digital de la vaca”: una revolucionaria tecnología ayuda a estimar la grasa de la carne desde el celular y registrar datos clave",
-        "titulo_norm": "pasaporte digital de la vaca una revolucionaria tecnologia ayuda a estimar la grasa de la carne desde el celular y registrar datos clave",
-        "descripcion": "Sebastián Victorica, cofundador y director de UBI Meat, hablará en el 5º Congreso Federal Ganadero de Rosgan sobre la necesidad de reunir la información que se genera desde el campo hasta el frigorífico para que todos los eslabones puedan conocer y acreditar las características del producto final",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/KMK7FMAR5BFRRPCEI4M7VUID4E.jpeg?auth=e21705788dce0bf5de33cf5cb4025ab7a69a4408259f59e5d5e03a4071e4ad2a&smart=true",
-        "autor": "",
-        "publicado": "2026-11-05T12:18-03:00",
-        "capturado": "2026-11-05T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "deb5f31d9cb01cd4"
-      },
-      "grupo": [
-        {
-          "id": "7b6b4dfad7bf",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/pasaporte-digital-de-la-vaca-una-revolucionaria-tecnologia-ayuda-a-estimar-la-grasa-de-la-carne-nid05112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/pasaporte-digital-de-la-vaca-una-revolucionaria-tecnologia-ayuda-a-estimar-la-grasa-de-la-carne-nid05112026",
-          "titulo": "“Pasaporte digital de la vaca”: una revolucionaria tecnología ayuda a estimar la grasa de la carne desde el celular y registrar datos clave",
-          "titulo_norm": "pasaporte digital de la vaca una revolucionaria tecnologia ayuda a estimar la grasa de la carne desde el celular y registrar datos clave",
-          "descripcion": "Sebastián Victorica, cofundador y director de UBI Meat, hablará en el 5º Congreso Federal Ganadero de Rosgan sobre la necesidad de reunir la información que se genera desde el campo hasta el frigorífico para que todos los eslabones puedan conocer y acreditar las características del producto final",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/KMK7FMAR5BFRRPCEI4M7VUID4E.jpeg?auth=e21705788dce0bf5de33cf5cb4025ab7a69a4408259f59e5d5e03a4071e4ad2a&smart=true",
-          "autor": "",
-          "publicado": "2026-11-05T12:18-03:00",
-          "capturado": "2026-11-05T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "deb5f31d9cb01cd4"
-        }
-      ],
-      "score": {
-        "impacto_economico": 12,
-        "interes_productores": 12,
-        "innovacion": 13,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 9,
-        "conversacion": 8,
-        "potencial_comercial": 8,
-        "ai_score": 82,
-        "commercial_score": 80,
-        "subtema": "agtech",
-        "tema": "ganado",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente innovación AgTech aplicada a la ganadería con gran potencial visual para redes sociales.",
-        "tema_doc": "tecnologia",
         "urgente": false,
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
@@ -57480,8 +57564,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T16:04:46-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T16:24:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
