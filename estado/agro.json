@@ -25984,6 +25984,27 @@
         62,
         47
       ]
+    },
+    "66844d3fc87b93b8": {
+      "impacto_economico": 15,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Apunta directo al negocio del productor en plena cosecha con herramientas financieras clave para la zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27753,7 +27774,8 @@
       "https://lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html": "2026-11-05",
       "https://intainforma.inta.gob.ar/claves-para-la-mecanizacion-y-conservacion-de-suelos-en-yerbales": "2026-11-05",
       "https://agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/pablo-della-lucia-productor-de-ajo-del-valle-de-uco-sobre-la-crisis-cultivar-cuesta-entre-us8000-y-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/pablo-della-lucia-productor-de-ajo-del-valle-de-uco-sobre-la-crisis-cultivar-cuesta-entre-us8000-y-nid05112026": "2026-11-05",
+      "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29521,7 +29543,8 @@
       "mejoramiento genetico de alfalfa innovaciones clave para sistemas productivos": "2026-11-05",
       "claves para la mecanizacion y conservacion de suelos en yerbales": "2026-11-05",
       "el mag realizo su noveno remate de exportacion y consolida un nuevo espacio de comercializacion para la ganaderia": "2026-11-05",
-      "pablo della lucia productor de ajo del valle de uco sobre la crisis cultivar cuesta entre us 8000 y us 11 000 la hectarea y se paga 300 el kilo": "2026-11-05"
+      "pablo della lucia productor de ajo del valle de uco sobre la crisis cultivar cuesta entre us 8000 y us 11 000 la hectarea y se paga 300 el kilo": "2026-11-05",
+      "preocupado por el derrumbe del precio del trigo igual se puede ganar mucho dinero con el cereal con una gestion financiera y logistica adecuada": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31289,7 +31312,8 @@
       "5b4a701b5d0f01eb": "2026-11-05",
       "748de67c3afb6e4f": "2026-11-05",
       "f287419a000fce19": "2026-11-05",
-      "523a87b493c5105f": "2026-11-05"
+      "523a87b493c5105f": "2026-11-05",
+      "66844d3fc87b93b8": "2026-11-05"
     }
   },
   "elegidas": [
@@ -54772,9 +54796,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25b8d017827d_portada.jpg"
+    },
+    {
+      "id": "122f716bc788",
+      "cuando": "2026-11-05T07:40-03:00",
+      "titulo_original": "“Monopolio comunal”: fuerte malestar en una provincia por el costo de una tasa",
+      "descripcion": "La Sociedad Rural de Rosario alertó sobre el valor impuesto por municipios y comunas en Santa Fe y reclamó cambios",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026/",
+      "titular": "Rural de Rosario rechaza tasas viales municipales indexadas a gasoil",
+      "volanta": "Impuestos",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 66,
+        "commercial_score": 60,
+        "subtema": "empresas",
+        "tema": "tasas municipales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Genera gran debate y preocupación impositiva directa para los productores de la región pampeana.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          61
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T07:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0a2b0bf0-88e2-44fc-9e4b-7351f5ac7f1b",
+          "slug": "rechazo-en-santa-fe-por-el-alto-costo-de-las-tasas-viales-ac0451",
+          "url": "https://www.diariolacampaña.com.ar/n/rechazo-en-santa-fe-por-el-alto-costo-de-las-tasas-viales-ac0451",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2125556358161241",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18154572235541901",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18131975950695956"
+        },
+        "historia_facebook": {
+          "id": "1513606750759010"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_122f716bc788_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "87018f0157cf",
+      "rep": {
+        "id": "87018f0157cf",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada/",
+        "canonical_url": "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada",
+        "titulo": "¿Preocupado por el derrumbe del precio del trigo? Igual se puede ganar mucho dinero con el cereal (con una gestión financiera y logística adecuada)",
+        "titulo_norm": "preocupado por el derrumbe del precio del trigo igual se puede ganar mucho dinero con el cereal con una gestion financiera y logistica adecuada",
+        "descripcion": "Los precios del trigo se derrumbaron en plena cosecha argentina (lo que puede sorprender a nadie), pero eso no implica que no puedan realizarse buenos negocios con el cereal. El “pase” del Trigo Rosario Diciembre 2026 (210,0 u$s/tonelada el cierre de ayer miércoles) versus el contrato Trigo Rosario Marzo 2027 (222,.5 u$s/tonelada) se encuentra en […]",
+        "imagen_url": "",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-05T07:29-03:00",
+        "capturado": "2026-11-05T07:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "66844d3fc87b93b8"
+      },
+      "grupo": [
+        {
+          "id": "87018f0157cf",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada/",
+          "canonical_url": "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada",
+          "titulo": "¿Preocupado por el derrumbe del precio del trigo? Igual se puede ganar mucho dinero con el cereal (con una gestión financiera y logística adecuada)",
+          "titulo_norm": "preocupado por el derrumbe del precio del trigo igual se puede ganar mucho dinero con el cereal con una gestion financiera y logistica adecuada",
+          "descripcion": "Los precios del trigo se derrumbaron en plena cosecha argentina (lo que puede sorprender a nadie), pero eso no implica que no puedan realizarse buenos negocios con el cereal. El “pase” del Trigo Rosario Diciembre 2026 (210,0 u$s/tonelada el cierre de ayer miércoles) versus el contrato Trigo Rosario Marzo 2027 (222,.5 u$s/tonelada) se encuentra en […]",
+          "imagen_url": "",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-05T07:29-03:00",
+          "capturado": "2026-11-05T07:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "66844d3fc87b93b8"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Apunta directo al negocio del productor en plena cosecha con herramientas financieras clave para la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T07:40-03:00"
+    },
     {
       "id": "491bd1be0d63",
       "rep": {
@@ -54969,73 +55120,6 @@
         "urgente": false,
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T21:20-03:00"
-    },
-    {
-      "id": "122f716bc788",
-      "rep": {
-        "id": "122f716bc788",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026",
-        "titulo": "“Monopolio comunal”: fuerte malestar en una provincia por el costo de una tasa",
-        "titulo_norm": "monopolio comunal fuerte malestar en una provincia por el costo de una tasa",
-        "descripcion": "La Sociedad Rural de Rosario alertó sobre el valor impuesto por municipios y comunas en Santa Fe y reclamó cambios",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/AW6KZ76YAFC3NNK6VXBCK35R2M.jpg?auth=edfa6fadf27f09ad9be5fa3f4661664717322574c25b0cafa431ec16ec37bd28&smart=true",
-        "autor": "",
-        "publicado": "2026-11-04T21:07-03:00",
-        "capturado": "2026-11-04T21:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8600a9114375e551"
-      },
-      "grupo": [
-        {
-          "id": "122f716bc788",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026",
-          "titulo": "“Monopolio comunal”: fuerte malestar en una provincia por el costo de una tasa",
-          "titulo_norm": "monopolio comunal fuerte malestar en una provincia por el costo de una tasa",
-          "descripcion": "La Sociedad Rural de Rosario alertó sobre el valor impuesto por municipios y comunas en Santa Fe y reclamó cambios",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AW6KZ76YAFC3NNK6VXBCK35R2M.jpg?auth=edfa6fadf27f09ad9be5fa3f4661664717322574c25b0cafa431ec16ec37bd28&smart=true",
-          "autor": "",
-          "publicado": "2026-11-04T21:07-03:00",
-          "capturado": "2026-11-04T21:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8600a9114375e551"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 13,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 5,
-        "ai_score": 66,
-        "commercial_score": 60,
-        "subtema": "empresas",
-        "tema": "tasas municipales",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Genera gran debate y preocupación impositiva directa para los productores de la región pampeana.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          61
-        ]
       },
       "cuando": "2026-11-04T21:20-03:00"
     },
@@ -55371,8 +55455,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T07:23:51-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T07:44:44-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
