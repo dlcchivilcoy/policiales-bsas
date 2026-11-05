@@ -56333,6 +56333,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d0a3db8144e6_portada.jpg"
+    },
+    {
+      "id": "708bbc8a5e16",
+      "cuando": "2026-11-05T14:00-03:00",
+      "titulo_original": "Mercado de granos: rebote técnico del maíz, presión en la soja y alta competencia en trigo",
+      "descripcion": "Los precios del maíz comenzaron la sesión de ayer con nuevas bajas en Chicago, pero lograron recuperarse y finalizar con una leve suba. La corrección de las últimas semanas llevó al contrato diciembre a probar niveles de soporte técnico que no se observaban desde principios de julio, favoreciendo al",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249203-mercado-de-granos-rebote-tecnico-del-maiz-presion-en-la-soja-y-alta-competencia-en-trigo.html",
+      "titular": "Maíz repunta en Chicago y soja cae bajo presión internacional",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 6,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Movimientos de Chicago en granos claves que definen la rentabilidad de la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          67
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T14:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8b37c998-3354-4057-ab5e-dde40c02ef3b",
+          "slug": "maiz-repunta-en-chicago-y-soja-cae-bajo-presion-mientras-brasil-4ec1d6",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-repunta-en-chicago-y-soja-cae-bajo-presion-mientras-brasil-4ec1d6",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1121598073917243",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18125761069716100",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17948491611360576"
+        },
+        "historia_facebook": {
+          "id": "1477853674204970"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_708bbc8a5e16_portada.jpg"
     }
   ],
   "pendientes": [
@@ -56524,73 +56588,6 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-05T13:00-03:00"
-    },
-    {
-      "id": "708bbc8a5e16",
-      "rep": {
-        "id": "708bbc8a5e16",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249203-mercado-de-granos-rebote-tecnico-del-maiz-presion-en-la-soja-y-alta-competencia-en-trigo.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249203-mercado-de-granos-rebote-tecnico-del-maiz-presion-en-la-soja-y-alta-competencia-en-trigo.html",
-        "titulo": "Mercado de granos: rebote técnico del maíz, presión en la soja y alta competencia en trigo",
-        "titulo_norm": "mercado de granos rebote tecnico del maiz presion en la soja y alta competencia en trigo",
-        "descripcion": "Los precios del maíz comenzaron la sesión de ayer con nuevas bajas en Chicago, pero lograron recuperarse y finalizar con una leve suba. La corrección de las últimas semanas llevó al contrato diciembre a probar niveles de soporte técnico que no se observaban desde principios de julio, favoreciendo algunas compras de oportunidad....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249203_72440494.jpg",
-        "autor": "info@agrositio.com (Esteban Moscariello)",
-        "publicado": "2026-11-05T09:26-03:00",
-        "capturado": "2026-11-05T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2702ab8eadbae8d1"
-      },
-      "grupo": [
-        {
-          "id": "708bbc8a5e16",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249203-mercado-de-granos-rebote-tecnico-del-maiz-presion-en-la-soja-y-alta-competencia-en-trigo.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249203-mercado-de-granos-rebote-tecnico-del-maiz-presion-en-la-soja-y-alta-competencia-en-trigo.html",
-          "titulo": "Mercado de granos: rebote técnico del maíz, presión en la soja y alta competencia en trigo",
-          "titulo_norm": "mercado de granos rebote tecnico del maiz presion en la soja y alta competencia en trigo",
-          "descripcion": "Los precios del maíz comenzaron la sesión de ayer con nuevas bajas en Chicago, pero lograron recuperarse y finalizar con una leve suba. La corrección de las últimas semanas llevó al contrato diciembre a probar niveles de soporte técnico que no se observaban desde principios de julio, favoreciendo algunas compras de oportunidad....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249203_72440494.jpg",
-          "autor": "info@agrositio.com (Esteban Moscariello)",
-          "publicado": "2026-11-05T09:26-03:00",
-          "capturado": "2026-11-05T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2702ab8eadbae8d1"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 6,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 75,
-        "subtema": "mercados",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Movimientos de Chicago en granos claves que definen la rentabilidad de la zona núcleo.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          67
-        ]
-      },
-      "cuando": "2026-11-05T10:00-03:00"
     },
     {
       "id": "491bd1be0d63",
@@ -56924,8 +56921,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T13:45:48-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-05T14:04:23-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
