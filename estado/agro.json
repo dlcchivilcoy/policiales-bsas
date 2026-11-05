@@ -27002,6 +27002,52 @@
       "urgente": true,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "61701d9328a854bd": {
+      "impacto_economico": 9,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 54,
+      "commercial_score": 48,
+      "subtema": "empresas",
+      "tema": "mesa de enlace",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Genera debate gremial y político en el sector, aunque no impacta directo en la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        57
+      ]
+    },
+    "ac720497c3a306b1": {
+      "impacto_economico": 5,
+      "interes_productores": 3,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 2,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 31,
+      "commercial_score": 35,
+      "subtema": "ganaderia",
+      "tema": "exportaciones equinas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos oficiales positivos pero de nicho muy acotado para el productor promedio de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28832,7 +28878,10 @@
       "https://bichosdecampo.com/de-aca-nos-sacan-con-los-pies-para-adelante-escala-la-tension-en-pauny-luego-del-fracaso-de-una-audiencia-y-los-trabajadores-mantienen-la-planta-tomada": "2026-11-05",
       "https://lanacion.com.ar/economia/campo/el-precandidato-presidencial-sergio-unac-se-reunio-con-referentes-de-la-agroindustria-nid05112026": "2026-11-05",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026": "2026-11-05",
+      "https://infocampo.com.ar/lo-que-faltaba-con-el-visec-abrio-una-grieta-entre-dos-entidades-de-la-mesa-de-enlace": "2026-11-05",
+      "https://bichosdecampo.com/se-fractura-la-mesa-carlos-castagnani-cruzo-duramente-a-la-sociedad-rural-y-exigio-respuestas-publicas-de-pino-luego-de-declaraciones-de-un-director-que-consideraron-agraviantes": "2026-11-05",
+      "https://argentina.gob.ar/noticias/las-exportaciones-equinas-crecieron-14-interanualmente-en-los-primeros-9-meses-del-ano": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30661,7 +30710,10 @@
       "de aca nos sacan con los pies para adelante escala la tension en pauny luego del fracaso de una audiencia y los trabajadores mantienen la planta tomada": "2026-11-05",
       "el precandidato presidencial sergio unac se reunio con referentes de la agroindustria": "2026-11-05",
       "fullist la micromulsion que combina glufosinato y 2 4 d para control de malezas dificiles en soja y maiz con c riguero agronomo": "2026-11-05",
-      "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas": "2026-11-05"
+      "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas": "2026-11-05",
+      "lo que faltaba con el visec abrio una grieta entre dos entidades de la mesa de enlace": "2026-11-05",
+      "se fractura la mesa carlos castagnani cruzo duramente a la sociedad rural y exigio respuestas publicas de pino luego de declaraciones de un director que consideraron agraviantes": "2026-11-05",
+      "las exportaciones equinas crecieron 14 interanualmente en los primeros 9 meses del ano": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32490,7 +32542,10 @@
       "792b56c9fcc1dd4d": "2026-11-05",
       "e1c59ff008b8d73c": "2026-11-05",
       "a41913faf97b3aa0": "2026-11-05",
-      "b2ae936ebad77e1f": "2026-11-05"
+      "b2ae936ebad77e1f": "2026-11-05",
+      "b0b2eab199399705": "2026-11-05",
+      "61701d9328a854bd": "2026-11-05",
+      "ac720497c3a306b1": "2026-11-05"
     }
   },
   "elegidas": [
@@ -57018,6 +57073,73 @@
       "fuera_de_cupo": false,
       "formato": "reel",
       "turno": "2026-11-05T17:00:00-03:00"
+    },
+    {
+      "id": "b9dcfa389539",
+      "cuando": "2026-11-05T18:00-03:00",
+      "titulo_original": "El Niño: anticipan temperaturas de más de 40 grados, riesgo de heladas y tormentas intensas",
+      "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé lluvias escasas en gran parte del área agrícola durante los próximos días, pero hacia mediados de mes se esperan tormentas con acumulados superiores a los 100 milímetros en algunas regiones",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026/",
+      "titular": "Alerta por calor de 40 grados, heladas y tormentas",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 5,
+        "ai_score": 78,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "clima y tormentas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información climática crítica de la Bolsa de Cereales que afecta de inmediato las decisiones de siembra en la región núcleo.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "I2xH8QUMpbs",
+          "url": "https://youtube.com/shorts/I2xH8QUMpbs",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "780d3b5e-ae6b-4795-8a44-69859debb8b1",
+          "slug": "anticipan-calor-de-40-grados-riesgo-de-heladas-y-tormentas-de-c83ea2",
+          "url": "https://www.diariolacampaña.com.ar/n/anticipan-calor-de-40-grados-riesgo-de-heladas-y-tormentas-de-c83ea2",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1107200552128411",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18107925074345134",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18028895996875936"
+        },
+        "historia_facebook": {
+          "id": "1801835907601915"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b9dcfa389539_portada.jpg"
     }
   ],
   "pendientes": [
@@ -57079,69 +57201,6 @@
         "explicacion": "Alta relevancia zonal para productores que manejan malezas difíciles en soja y maíz con nueva tecnología de formulación.",
         "tema_doc": "sanidad",
         "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-05T17:20-03:00"
-    },
-    {
-      "id": "b9dcfa389539",
-      "rep": {
-        "id": "b9dcfa389539",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026",
-        "titulo": "El Niño: anticipan temperaturas de más de 40 grados, riesgo de heladas y tormentas intensas",
-        "titulo_norm": "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas",
-        "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé lluvias escasas en gran parte del área agrícola durante los próximos días, pero hacia mediados de mes se esperan tormentas con acumulados superiores a los 100 milímetros en algunas regiones",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/HGVHDFMETNA6JOAKEQFUMGASZI.png?auth=d36d1e96cc7cc32bebe7487119a18596dffd79dccba4dfc6cdce182a17b020bb&smart=true",
-        "autor": "",
-        "publicado": "2026-11-05T17:19-03:00",
-        "capturado": "2026-11-05T17:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b2ae936ebad77e1f"
-      },
-      "grupo": [
-        {
-          "id": "b9dcfa389539",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026",
-          "titulo": "El Niño: anticipan temperaturas de más de 40 grados, riesgo de heladas y tormentas intensas",
-          "titulo_norm": "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas",
-          "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé lluvias escasas en gran parte del área agrícola durante los próximos días, pero hacia mediados de mes se esperan tormentas con acumulados superiores a los 100 milímetros en algunas regiones",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/HGVHDFMETNA6JOAKEQFUMGASZI.png?auth=d36d1e96cc7cc32bebe7487119a18596dffd79dccba4dfc6cdce182a17b020bb&smart=true",
-          "autor": "",
-          "publicado": "2026-11-05T17:19-03:00",
-          "capturado": "2026-11-05T17:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b2ae936ebad77e1f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 5,
-        "ai_score": 78,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "clima y tormentas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Información climática crítica de la Bolsa de Cereales que afecta de inmediato las decisiones de siembra en la región núcleo.",
-        "tema_doc": "clima",
-        "urgente": true,
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
@@ -57735,8 +57794,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T17:21:25-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T18:04:35-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
