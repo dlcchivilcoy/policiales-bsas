@@ -25934,6 +25934,56 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f287419a000fce19": {
+      "impacto_economico": 12,
+      "interes_productores": 9,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 62,
+      "commercial_score": 66,
+      "subtema": "ganaderia",
+      "tema": "remates exportacion",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante para ganaderos por la consolidación de precios de referencia para exportación en el MAG.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        58
+      ]
+    },
+    "523a87b493c5105f": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 3,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 54,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "ajo mendoza",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Fuerte impacto por la crisis de costos y precios en economías regionales, aunque geográfica y productivamente alejado de la zona núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        47
+      ]
     }
   },
   "indice": {
@@ -27701,7 +27751,9 @@
       "https://infocampo.com.ar/clima-en-la-rioja-cielo-despejado-el-pronostico-para-hoy-5-de-noviembre": "2026-11-05",
       "https://bichosdecampo.com/a-rezar-apenas-unas-60-millones-de-toneladas-de-soja-2026-27-tienen-precio-hecho": "2026-11-05",
       "https://lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html": "2026-11-05",
-      "https://intainforma.inta.gob.ar/claves-para-la-mecanizacion-y-conservacion-de-suelos-en-yerbales": "2026-11-05"
+      "https://intainforma.inta.gob.ar/claves-para-la-mecanizacion-y-conservacion-de-suelos-en-yerbales": "2026-11-05",
+      "https://agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/pablo-della-lucia-productor-de-ajo-del-valle-de-uco-sobre-la-crisis-cultivar-cuesta-entre-us8000-y-nid05112026": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29467,7 +29519,9 @@
       "clima en la rioja cielo despejado el pronostico para hoy 5 de noviembre": "2026-11-05",
       "a rezar apenas unas 6 0 millones de toneladas de soja 2026 27 tienen precio hecho": "2026-11-05",
       "mejoramiento genetico de alfalfa innovaciones clave para sistemas productivos": "2026-11-05",
-      "claves para la mecanizacion y conservacion de suelos en yerbales": "2026-11-05"
+      "claves para la mecanizacion y conservacion de suelos en yerbales": "2026-11-05",
+      "el mag realizo su noveno remate de exportacion y consolida un nuevo espacio de comercializacion para la ganaderia": "2026-11-05",
+      "pablo della lucia productor de ajo del valle de uco sobre la crisis cultivar cuesta entre us 8000 y us 11 000 la hectarea y se paga 300 el kilo": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31233,7 +31287,9 @@
       "f6bf60c5393dc8a8": "2026-11-05",
       "4f053a46f7a2016f": "2026-11-05",
       "5b4a701b5d0f01eb": "2026-11-05",
-      "748de67c3afb6e4f": "2026-11-05"
+      "748de67c3afb6e4f": "2026-11-05",
+      "f287419a000fce19": "2026-11-05",
+      "523a87b493c5105f": "2026-11-05"
     }
   },
   "elegidas": [
@@ -54656,9 +54712,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_32213173df8d_portada.jpg"
+    },
+    {
+      "id": "25b8d017827d",
+      "cuando": "2026-11-05T07:20-03:00",
+      "titulo_original": "Precipitaciones escasas en la mayor parte del área agrícola, salvo una franja con aportes abundantes sobre el norte",
+      "descripcion": "Dicho pronostico de la Bolsa de Cereales de Buenos Aires establece que será acompañado por una marcada oscilación térmica....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249192-precipitaciones-escasas-en-la-mayor-parte-del-area-agricola-salvo-una-franja-con-aportes-abundantes-sobre-el-norte.html",
+      "titular": "Lluvias escasas y riesgo de heladas en gran parte del agro",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 75,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico y el estado de reservas hídricas son clave diaria para el productor núcleo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "02e33097-78e0-4dca-a28e-42eda2e124b4",
+          "slug": "clima-pronostican-lluvias-escasas-y-heladas-en-varias-regiones-108a82",
+          "url": "https://www.diariolacampaña.com.ar/n/clima-pronostican-lluvias-escasas-y-heladas-en-varias-regiones-108a82",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4676326639278434",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18441285238176063",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17901427209673293"
+        },
+        "historia_facebook": {
+          "id": "2360009294759815"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25b8d017827d_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "491bd1be0d63",
+      "rep": {
+        "id": "491bd1be0d63",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html",
+        "titulo": "El MAG realizó su noveno remate de exportación y consolida un nuevo espacio de comercialización para la ganadería",
+        "titulo_norm": "el mag realizo su noveno remate de exportacion y consolida un nuevo espacio de comercializacion para la ganaderia",
+        "descripcion": "La novena edición contó con una oferta de aproximadamente 1500 cabezas y la participación de seis casas consignatarias. Desde su lanzamiento en marzo, esta modalidad busca fortalecer la comercialización de hacienda destinada a los mercados internacionales y generar precios de referencia para las distintas categorías exportables.....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249194_46088931.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-04T17:00-03:00",
+        "capturado": "2026-11-05T07:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f287419a000fce19"
+      },
+      "grupo": [
+        {
+          "id": "491bd1be0d63",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html",
+          "titulo": "El MAG realizó su noveno remate de exportación y consolida un nuevo espacio de comercialización para la ganadería",
+          "titulo_norm": "el mag realizo su noveno remate de exportacion y consolida un nuevo espacio de comercializacion para la ganaderia",
+          "descripcion": "La novena edición contó con una oferta de aproximadamente 1500 cabezas y la participación de seis casas consignatarias. Desde su lanzamiento en marzo, esta modalidad busca fortalecer la comercialización de hacienda destinada a los mercados internacionales y generar precios de referencia para las distintas categorías exportables.....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249194_46088931.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-04T17:00-03:00",
+          "capturado": "2026-11-05T07:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f287419a000fce19"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 9,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 62,
+        "commercial_score": 66,
+        "subtema": "ganaderia",
+        "tema": "remates exportacion",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante para ganaderos por la consolidación de precios de referencia para exportación en el MAG.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          58
+        ]
+      },
+      "cuando": "2026-11-05T07:20-03:00"
+    },
     {
       "id": "be52c3236675",
       "rep": {
@@ -55054,69 +55237,6 @@
       "cuando": "2026-11-04T17:20-03:00"
     },
     {
-      "id": "25b8d017827d",
-      "rep": {
-        "id": "25b8d017827d",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249192-precipitaciones-escasas-en-la-mayor-parte-del-area-agricola-salvo-una-franja-con-aportes-abundantes-sobre-el-norte.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249192-precipitaciones-escasas-en-la-mayor-parte-del-area-agricola-salvo-una-franja-con-aportes-abundantes-sobre-el-norte.html",
-        "titulo": "Precipitaciones escasas en la mayor parte del área agrícola, salvo una franja con aportes abundantes sobre el norte",
-        "titulo_norm": "precipitaciones escasas en la mayor parte del area agricola salvo una franja con aportes abundantes sobre el norte",
-        "descripcion": "Dicho pronostico de la Bolsa de Cereales de Buenos Aires establece que será acompañado por una marcada oscilación térmica....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249192_72390397.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-04T15:56-03:00",
-        "capturado": "2026-11-04T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b011159bdc1c63fa"
-      },
-      "grupo": [
-        {
-          "id": "25b8d017827d",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249192-precipitaciones-escasas-en-la-mayor-parte-del-area-agricola-salvo-una-franja-con-aportes-abundantes-sobre-el-norte.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249192-precipitaciones-escasas-en-la-mayor-parte-del-area-agricola-salvo-una-franja-con-aportes-abundantes-sobre-el-norte.html",
-          "titulo": "Precipitaciones escasas en la mayor parte del área agrícola, salvo una franja con aportes abundantes sobre el norte",
-          "titulo_norm": "precipitaciones escasas en la mayor parte del area agricola salvo una franja con aportes abundantes sobre el norte",
-          "descripcion": "Dicho pronostico de la Bolsa de Cereales de Buenos Aires establece que será acompañado por una marcada oscilación térmica....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249192_72390397.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-04T15:56-03:00",
-          "capturado": "2026-11-04T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b011159bdc1c63fa"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 75,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "lluvias",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El pronóstico y el estado de reservas hídricas son clave diaria para el productor núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T16:00-03:00"
-    },
-    {
       "id": "1c2fbeb8dba0",
       "rep": {
         "id": "1c2fbeb8dba0",
@@ -55251,8 +55371,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T07:06:09-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-05T07:23:51-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
