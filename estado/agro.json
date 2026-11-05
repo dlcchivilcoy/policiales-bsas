@@ -26386,6 +26386,27 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aa803ad24bc13192": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 6,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 48,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "granizo misiones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta severamente las economías regionales del NEA pero tiene baja cercanía directa con la zona núcleo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28175,7 +28196,8 @@
       "https://croplife.com/crop-inputs/seed-biotech/seed-industry-restructuring-shifts-the-landscape-for-ag-retailers-and-growers": "2026-11-05",
       "https://croplife.com/crop-inputs/herbicides/the-current-state-of-weed-control-some-wins-but-key-challenges-remain": "2026-11-05",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-5-noviembre-2026": "2026-11-05",
-      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-experto-en-plagas-e-insectos-martin-galli-afirma-que-al-campo-le-viene-muy-bien-que-la-sociedad-lo-interpele-de-modo-constante": "2026-11-05"
+      "https://bichosdecampo.com/los-dilemas-de-la-agronomia-experto-en-plagas-e-insectos-martin-galli-afirma-que-al-campo-le-viene-muy-bien-que-la-sociedad-lo-interpele-de-modo-constante": "2026-11-05",
+      "https://bichosdecampo.com/la-produccion-misionera-bajo-la-linea-de-hielo-el-granizo-no-perdona-al-tabaco-y-la-yerba-mate-y-en-el-nea-encienden-las-alarmas-por-las-perdidas-economicas": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29963,7 +29985,8 @@
       "seed industry restructuring shifts the landscape for ag retailers and growers": "2026-11-05",
       "the current state of weed control some wins but key challenges remain": "2026-11-05",
       "dolar blue a cuanto cotizan hoy en cordoba 5 noviembre 2026": "2026-11-05",
-      "los dilemas de la agronomia experto en plagas e insectos martin galli afirma que al campo le viene muy bien que la sociedad lo interpele de modo constante": "2026-11-05"
+      "los dilemas de la agronomia experto en plagas e insectos martin galli afirma que al campo le viene muy bien que la sociedad lo interpele de modo constante": "2026-11-05",
+      "la produccion misionera bajo la linea de hielo el granizo no perdona al tabaco y la yerba mate y en el nea encienden las alarmas por las perdidas economicas": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31751,7 +31774,8 @@
       "cbcb5b21240f6d3d": "2026-11-05",
       "c6476de0a0c49396": "2026-11-05",
       "b1ff2d1aee776a51": "2026-11-05",
-      "b33422accb65ca59": "2026-11-05"
+      "b33422accb65ca59": "2026-11-05",
+      "aa803ad24bc13192": "2026-11-05"
     }
   },
   "elegidas": [
@@ -55549,49 +55573,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_48cfa810438a_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "291b477e96dc",
-      "rep": {
-        "id": "291b477e96dc",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-argentina-ingresa-con-arancel-cero/",
-        "canonical_url": "https://todoagro.com.ar/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-argentina-ingresa-con-arancel-cero",
-        "titulo": "Acuerdo Mercosur-UE: el 70% de la oferta agrícola argentina ingresa con arancel cero",
-        "titulo_norm": "acuerdo mercosur ue el 70 de la oferta agricola argentina ingresa con arancel cero",
-        "descripcion": "Agustín Tejeda, Subsecretario de Mercados Agroalimentarios e Inserción Internacional, destacó las perspectivas que genera la aplicación provisional del acuerdo entre ambos bloques y explicó los diferentes plazos de desgravación arancelaria para los productos argentinos. La entrada Acuerdo Mercosur-UE: el 70% de la oferta agrícola argentina ingresa con arancel cero pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-05T09:50-03:00",
-        "capturado": "2026-11-05T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f2f64fa43ca8dfdc"
-      },
-      "grupo": [
-        {
-          "id": "291b477e96dc",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-argentina-ingresa-con-arancel-cero/",
-          "canonical_url": "https://todoagro.com.ar/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-argentina-ingresa-con-arancel-cero",
-          "titulo": "Acuerdo Mercosur-UE: el 70% de la oferta agrícola argentina ingresa con arancel cero",
-          "titulo_norm": "acuerdo mercosur ue el 70 de la oferta agricola argentina ingresa con arancel cero",
-          "descripcion": "Agustín Tejeda, Subsecretario de Mercados Agroalimentarios e Inserción Internacional, destacó las perspectivas que genera la aplicación provisional del acuerdo entre ambos bloques y explicó los diferentes plazos de desgravación arancelaria para los productos argentinos. La entrada Acuerdo Mercosur-UE: el 70% de la oferta agrícola argentina ingresa con arancel cero pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-05T09:50-03:00",
-          "capturado": "2026-11-05T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f2f64fa43ca8dfdc"
-        }
-      ],
+      "cuando": "2026-11-05T10:40-03:00",
+      "titulo_original": "Acuerdo Mercosur-UE: el 70% de la oferta agrícola argentina ingresa con arancel cero",
+      "descripcion": "Agustín Tejeda, Subsecretario de Mercados Agroalimentarios e Inserción Internacional, destacó las perspectivas que genera la aplicación provisional del acuerdo entre ambos bloques y explicó los diferentes plazos de desgravación arancelaria para los productos argentinos. La entrada Acuerdo Mercosur-U",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-argentina-ingresa-con-arancel-cero/",
+      "titular": "Acuerdo Mercosur-UE: el 70% agrícola ingresa con arancel cero",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 7,
@@ -55617,8 +55608,38 @@
           75
         ]
       },
-      "cuando": "2026-11-05T10:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "61bf8bca-678a-40ae-b2bc-a8689b1de90f",
+          "slug": "acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-entra-con-6d2e1d",
+          "url": "https://www.diariolacampaña.com.ar/n/acuerdo-mercosur-ue-el-70-de-la-oferta-agricola-entra-con-6d2e1d",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1107642145509668",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18151854076560993",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18220244629354914"
+        },
+        "historia_facebook": {
+          "id": "1070850922651973"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_291b477e96dc_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "708bbc8a5e16",
       "rep": {
@@ -56085,8 +56106,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T10:24:19-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-05T10:45:10-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
