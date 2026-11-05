@@ -25867,6 +25867,73 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4f053a46f7a2016f": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 76,
+      "commercial_score": 75,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta clave sobre comercialización de soja que afecta directamente la rentabilidad de los productores de la zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5b4a701b5d0f01eb": {
+      "impacto_economico": 12,
+      "interes_productores": 12,
+      "innovacion": 9,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 70,
+      "commercial_score": 72,
+      "subtema": "agro",
+      "tema": "alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relevante para planteos mixtos y ganaderos de la región pampeana por el valor de la mejora genética en pasturas.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        79
+      ]
+    },
+    "748de67c3afb6e4f": {
+      "impacto_economico": 4,
+      "interes_productores": 5,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 3,
+      "potencial_comercial": 4,
+      "ai_score": 35,
+      "commercial_score": 40,
+      "subtema": "maquinaria",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tecnología de suelos y mecanización específica para economías regionales del NEA, con baja incidencia en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27621,7 +27688,20 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249201-la-ia-aumenta-la-productividad-del-campo-sin-reemplazar-al-productor.html": "2026-11-04",
       "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026": "2026-11-04",
-      "https://bichosdecampo.com/primera-consecuencia-de-la-derrota-de-trump-john-deere-anuncio-que-trasladara-la-fabrica-de-cosechadoras-de-cana-de-azucar-a-brasil-y-cerrara-dos-plantas-en-estados-unidos": "2026-11-04"
+      "https://bichosdecampo.com/primera-consecuencia-de-la-derrota-de-trump-john-deere-anuncio-que-trasladara-la-fabrica-de-cosechadoras-de-cana-de-azucar-a-brasil-y-cerrara-dos-plantas-en-estados-unidos": "2026-11-04",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-5-noviembre-2026": "2026-11-05",
+      "https://infocampo.com.ar/clima-en-la-rioja-cielo-despejado-el-pronostico-para-hoy-5-de-noviembre": "2026-11-05",
+      "https://bichosdecampo.com/a-rezar-apenas-unas-60-millones-de-toneladas-de-soja-2026-27-tienen-precio-hecho": "2026-11-05",
+      "https://lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html": "2026-11-05",
+      "https://intainforma.inta.gob.ar/claves-para-la-mecanizacion-y-conservacion-de-suelos-en-yerbales": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29374,7 +29454,20 @@
       "la ia llega al campo mas productividad y mejores decisiones sin reemplazar al productor": "2026-11-04",
       "cuatro jovenes y sus ideas para ayudar con tecnologia a los productores agropecuarios que dejo de novedoso el acceleration week 2026": "2026-11-04",
       "monopolio comunal fuerte malestar en una provincia por el costo de una tasa": "2026-11-04",
-      "primera consecuencia de la derrota de trump john deere anuncio que trasladara la fabrica de cosechadoras de cana de azucar a brasil y cerrara dos plantas en estados unidos": "2026-11-04"
+      "primera consecuencia de la derrota de trump john deere anuncio que trasladara la fabrica de cosechadoras de cana de azucar a brasil y cerrara dos plantas en estados unidos": "2026-11-04",
+      "dolar blue hoy a cuanto cotiza el 5 noviembre 2026": "2026-11-05",
+      "clima hoy en mendoza el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en tucuman el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en corrientes el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en cordoba el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en salta el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en rosario el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en san luis el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima hoy en neuquen el pronostico del tiempo para este 5 noviembre 2026": "2026-11-05",
+      "clima en la rioja cielo despejado el pronostico para hoy 5 de noviembre": "2026-11-05",
+      "a rezar apenas unas 6 0 millones de toneladas de soja 2026 27 tienen precio hecho": "2026-11-05",
+      "mejoramiento genetico de alfalfa innovaciones clave para sistemas productivos": "2026-11-05",
+      "claves para la mecanizacion y conservacion de suelos en yerbales": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31127,7 +31220,20 @@
       "06dac7cce3a46258": "2026-11-04",
       "c3701f06fe323640": "2026-11-04",
       "8600a9114375e551": "2026-11-04",
-      "70656807890575f1": "2026-11-04"
+      "70656807890575f1": "2026-11-04",
+      "f34f28f5ec2a21a9": "2026-11-05",
+      "929f2092839bd5c7": "2026-11-05",
+      "0556da23f2f9c5af": "2026-11-05",
+      "71699103136f7b22": "2026-11-05",
+      "6f76ffa7964e70ad": "2026-11-05",
+      "a816171585e7ba24": "2026-11-05",
+      "e91a4513c2cf3ecf": "2026-11-05",
+      "4b5eff3eb77599b9": "2026-11-05",
+      "7554e945622449f6": "2026-11-05",
+      "f6bf60c5393dc8a8": "2026-11-05",
+      "4f053a46f7a2016f": "2026-11-05",
+      "5b4a701b5d0f01eb": "2026-11-05",
+      "748de67c3afb6e4f": "2026-11-05"
     }
   },
   "elegidas": [
@@ -54483,9 +54589,143 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_25c801ba30ed_portada.jpg"
+    },
+    {
+      "id": "32213173df8d",
+      "cuando": "2026-11-05T07:00-03:00",
+      "titulo_original": "A rezar: Apenas unas 6,0 millones de toneladas de soja 2026/27 tienen precio hecho",
+      "descripcion": "El cambio abrupto de tendencia de precios de la soja en el ámbito internacional encuentra a la mayor parte de los productores argentinos descubiertos, lo que representa un riesgo importante no solo para ellos, sino para toda la cadena comercial granaria. A la fecha la soja 2026/27 con precio hecho s",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/a-rezar-apenas-unas-60-millones-de-toneladas-de-soja-2026-27-tienen-precio-hecho/",
+      "titular": "Soja 2026/27: solo 6 millones de toneladas tienen precio fijado",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 76,
+        "commercial_score": 75,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta clave sobre comercialización de soja que afecta directamente la rentabilidad de los productores de la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "O-TnXkvYs78",
+          "url": "https://youtube.com/shorts/O-TnXkvYs78",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "79abf964-d312-44a5-be7e-e81cdf71feff",
+          "slug": "soja-2026-27-apenas-6-millones-de-toneladas-tienen-precio-5b0d5b",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-2026-27-apenas-6-millones-de-toneladas-tienen-precio-5b0d5b",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2210595459523113",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17914733988513329",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17877204564588216"
+        },
+        "historia_facebook": {
+          "id": "1140139581888111"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_32213173df8d_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "be52c3236675",
+      "rep": {
+        "id": "be52c3236675",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html",
+        "canonical_url": "https://lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html",
+        "titulo": "Mejoramiento genético de alfalfa: innovaciones clave para sistemas productivos",
+        "titulo_norm": "mejoramiento genetico de alfalfa innovaciones clave para sistemas productivos",
+        "descripcion": "Más allá de su rol forrajero, la especie aporta a la salud del suelo, la biodiversidad y la fijación de nitrógeno. La experiencia del Inta Manfredi",
+        "imagen_url": "https://media.lacapital.com.ar/p/d79c7e899fa0241be2de62b6fb7bdbdd/adjuntos/305/imagenes/030/781/0030781462/1200x675/smart/alfalfa-alta-scaledjpg.jpg",
+        "autor": "",
+        "publicado": "2026-11-05T06:10-03:00",
+        "capturado": "2026-11-05T07:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "5b4a701b5d0f01eb"
+      },
+      "grupo": [
+        {
+          "id": "be52c3236675",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html",
+          "canonical_url": "https://lacapital.com.ar/agro/mejoramiento-genetico-alfalfa-innovaciones-clave-sistemas-productivos-n10289033.html",
+          "titulo": "Mejoramiento genético de alfalfa: innovaciones clave para sistemas productivos",
+          "titulo_norm": "mejoramiento genetico de alfalfa innovaciones clave para sistemas productivos",
+          "descripcion": "Más allá de su rol forrajero, la especie aporta a la salud del suelo, la biodiversidad y la fijación de nitrógeno. La experiencia del Inta Manfredi",
+          "imagen_url": "https://media.lacapital.com.ar/p/d79c7e899fa0241be2de62b6fb7bdbdd/adjuntos/305/imagenes/030/781/0030781462/1200x675/smart/alfalfa-alta-scaledjpg.jpg",
+          "autor": "",
+          "publicado": "2026-11-05T06:10-03:00",
+          "capturado": "2026-11-05T07:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "5b4a701b5d0f01eb"
+        }
+      ],
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 12,
+        "innovacion": 9,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 70,
+        "commercial_score": 72,
+        "subtema": "agro",
+        "tema": "alfalfa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Relevante para planteos mixtos y ganaderos de la región pampeana por el valor de la mejora genética en pasturas.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          79
+        ]
+      },
+      "cuando": "2026-11-05T07:00-03:00"
+    },
     {
       "id": "eaec072e54bf",
       "rep": {
@@ -55009,144 +55249,10 @@
         ]
       },
       "cuando": "2026-11-04T07:20-03:00"
-    },
-    {
-      "id": "bcad702816b8",
-      "rep": {
-        "id": "bcad702816b8",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html",
-        "titulo": "Octubre: Las precipitaciones acumuladas en Córdoba presentaron una distribución heterogénea",
-        "titulo_norm": "octubre las precipitaciones acumuladas en cordoba presentaron una distribucion heterogenea",
-        "descripcion": "Durante octubre de 2026 según informa la Bolsa de Cereales de Córdoba, se presentaron diferencias importantes entre localidades y departamentos. Los mayores registros puntuales se concentraron principalmente en el sur y sudeste provincial, aunque también se observaron acumulados destacados en sectores del centro. En comparación con el promedio histórico 2007–2025, el comportamiento fue variable, con departamentos que registraron excesos de precipitación y otros que finalizaron el mes con déficits....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249179_26046186.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-03T13:05-03:00",
-        "capturado": "2026-11-03T13:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a61a5d64f8258bab"
-      },
-      "grupo": [
-        {
-          "id": "bcad702816b8",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249179-octubre-las-precipitaciones-acumuladas-en-cordoba-presentaron-una-distribucion-heterogenea.html",
-          "titulo": "Octubre: Las precipitaciones acumuladas en Córdoba presentaron una distribución heterogénea",
-          "titulo_norm": "octubre las precipitaciones acumuladas en cordoba presentaron una distribucion heterogenea",
-          "descripcion": "Durante octubre de 2026 según informa la Bolsa de Cereales de Córdoba, se presentaron diferencias importantes entre localidades y departamentos. Los mayores registros puntuales se concentraron principalmente en el sur y sudeste provincial, aunque también se observaron acumulados destacados en sectores del centro. En comparación con el promedio histórico 2007–2025, el comportamiento fue variable, con departamentos que registraron excesos de precipitación y otros que finalizaron el mes con déficits....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249179_26046186.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-03T13:05-03:00",
-          "capturado": "2026-11-03T13:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a61a5d64f8258bab"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 5,
-        "ai_score": 60,
-        "commercial_score": 54,
-        "subtema": "agro",
-        "tema": "lluvias córdoba",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Importante balance hídrico regional pero con impacto acotado geográficamente fuera de la zona núcleo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          58,
-          62
-        ]
-      },
-      "cuando": "2026-11-03T13:20-03:00"
-    },
-    {
-      "id": "6b2f4dd7dda2",
-      "rep": {
-        "id": "6b2f4dd7dda2",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
-        "titulo": "Reforma penal tributaria: qué cambia, qué se persigue y qué queda fuera del delito",
-        "titulo_norm": "reforma penal tributaria que cambia que se persigue y que queda fuera del delito",
-        "descripcion": "La actualización sustancial de los montos mínimos y la clara distinción entre el ardid deliberado y el error operativo redefinen el límite entre la discusión con el fisco y la causa penal....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249174_67881852.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-03T10:59-03:00",
-        "capturado": "2026-11-03T11:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b2e1150aed5392e9"
-      },
-      "grupo": [
-        {
-          "id": "6b2f4dd7dda2",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249174-reforma-penal-tributaria-que-cambia-que-se-persigue-y-que-queda-fuera-del-delito.html",
-          "titulo": "Reforma penal tributaria: qué cambia, qué se persigue y qué queda fuera del delito",
-          "titulo_norm": "reforma penal tributaria que cambia que se persigue y que queda fuera del delito",
-          "descripcion": "La actualización sustancial de los montos mínimos y la clara distinción entre el ardid deliberado y el error operativo redefinen el límite entre la discusión con el fisco y la causa penal....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249174_67881852.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-03T10:59-03:00",
-          "capturado": "2026-11-03T11:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b2e1150aed5392e9"
-        }
-      ],
-      "score": {
-        "impacto_economico": 17,
-        "interes_productores": 14,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 70,
-        "commercial_score": 76,
-        "subtema": "empresas",
-        "tema": "impuestos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Cambios clave en la penal tributaria que afectan directamente la operatoria legal y fiscal de productores y empresas.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 9,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          74
-        ]
-      },
-      "cuando": "2026-11-03T11:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T05:03:27-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T07:06:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
