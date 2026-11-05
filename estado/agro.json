@@ -26407,6 +26407,52 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8c8d5957fbe79e0d": {
+      "impacto_economico": 8,
+      "interes_productores": 9,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 6,
+      "ai_score": 58,
+      "commercial_score": 57,
+      "subtema": "agtech",
+      "tema": "riego tecnificado",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante prueba piloto de riego en tambos, útil para la región aunque limitada por ser escala institucional.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        54
+      ]
+    },
+    "91b0833ef1168e14": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 79,
+      "commercial_score": 82,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto en la zona núcleo por el récord de molienda y exportaciones del cereal, con datos oficiales clave.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28197,7 +28243,9 @@
       "https://croplife.com/crop-inputs/herbicides/the-current-state-of-weed-control-some-wins-but-key-challenges-remain": "2026-11-05",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-5-noviembre-2026": "2026-11-05",
       "https://bichosdecampo.com/los-dilemas-de-la-agronomia-experto-en-plagas-e-insectos-martin-galli-afirma-que-al-campo-le-viene-muy-bien-que-la-sociedad-lo-interpele-de-modo-constante": "2026-11-05",
-      "https://bichosdecampo.com/la-produccion-misionera-bajo-la-linea-de-hielo-el-granizo-no-perdona-al-tabaco-y-la-yerba-mate-y-en-el-nea-encienden-las-alarmas-por-las-perdidas-economicas": "2026-11-05"
+      "https://bichosdecampo.com/la-produccion-misionera-bajo-la-linea-de-hielo-el-granizo-no-perdona-al-tabaco-y-la-yerba-mate-y-en-el-nea-encienden-las-alarmas-por-las-perdidas-economicas": "2026-11-05",
+      "https://todoagro.com.ar/la-escuela-granja-de-la-unl-inaugura-un-sistema-de-riego-tecnificado": "2026-11-05",
+      "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29986,7 +30034,9 @@
       "the current state of weed control some wins but key challenges remain": "2026-11-05",
       "dolar blue a cuanto cotizan hoy en cordoba 5 noviembre 2026": "2026-11-05",
       "los dilemas de la agronomia experto en plagas e insectos martin galli afirma que al campo le viene muy bien que la sociedad lo interpele de modo constante": "2026-11-05",
-      "la produccion misionera bajo la linea de hielo el granizo no perdona al tabaco y la yerba mate y en el nea encienden las alarmas por las perdidas economicas": "2026-11-05"
+      "la produccion misionera bajo la linea de hielo el granizo no perdona al tabaco y la yerba mate y en el nea encienden las alarmas por las perdidas economicas": "2026-11-05",
+      "la escuela granja de la unl inaugura un sistema de riego tecnificado": "2026-11-05",
+      "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31775,7 +31825,9 @@
       "c6476de0a0c49396": "2026-11-05",
       "b1ff2d1aee776a51": "2026-11-05",
       "b33422accb65ca59": "2026-11-05",
-      "aa803ad24bc13192": "2026-11-05"
+      "aa803ad24bc13192": "2026-11-05",
+      "8c8d5957fbe79e0d": "2026-11-05",
+      "91b0833ef1168e14": "2026-11-05"
     }
   },
   "elegidas": [
@@ -55637,9 +55689,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_291b477e96dc_portada.jpg"
+    },
+    {
+      "id": "35336d7c0a60",
+      "cuando": "2026-11-05T11:00-03:00",
+      "titulo_original": "Demanda tranquila y precios en baja en el Mercado Agroganadero de Cañuelas",
+      "descripcion": "Con una entrada de 7028 cabezas, se pagó $4590 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3945,861",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026/",
+      "titular": "Cañuelas operó con menor demanda y cotizaciones a la baja",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 6,
+        "ai_score": 63,
+        "commercial_score": 68,
+        "subtema": "ganaderia",
+        "tema": "mercado de liniers",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informe diario de precios y remates de Cañuelas, vital para los ganaderos de la región núcleo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          63,
+          65
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T11:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cf0340da-926e-4ae1-9361-efa6c2ecbe4e",
+          "slug": "canuelas-ingresaron-7028-vacunos-y-los-precios-sufrieron-bajas-6e8dd1",
+          "url": "https://www.diariolacampaña.com.ar/n/canuelas-ingresaron-7028-vacunos-y-los-precios-sufrieron-bajas-6e8dd1",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2191874358400396",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18196080190396946",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17972011754962367"
+        },
+        "historia_facebook": {
+          "id": "28933414802934799"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_35336d7c0a60_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "6bf4cb17f192",
+      "rep": {
+        "id": "6bf4cb17f192",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos/",
+        "canonical_url": "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos",
+        "titulo": "Con el saldo récord, el trigo atiende todos los frentes: exportaciones y la mayor molienda en 12 años",
+        "titulo_norm": "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos",
+        "descripcion": "Un informe del Gobierno muestra los excelentes resultados que logran todos los eslabones de la cadena del trigo. Lejos de los temores de que no hubiera cereal para el mercado interno, la molienda crece a paso firme.",
+        "imagen_url": "",
+        "autor": "infocampo",
+        "publicado": "2026-11-05T10:51-03:00",
+        "capturado": "2026-11-05T11:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "91b0833ef1168e14"
+      },
+      "grupo": [
+        {
+          "id": "6bf4cb17f192",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos/",
+          "canonical_url": "https://infocampo.com.ar/con-el-saldo-record-el-trigo-atiende-todos-los-frentes-exportaciones-y-la-mayor-molienda-en-12-anos",
+          "titulo": "Con el saldo récord, el trigo atiende todos los frentes: exportaciones y la mayor molienda en 12 años",
+          "titulo_norm": "con el saldo record el trigo atiende todos los frentes exportaciones y la mayor molienda en 12 anos",
+          "descripcion": "Un informe del Gobierno muestra los excelentes resultados que logran todos los eslabones de la cadena del trigo. Lejos de los temores de que no hubiera cereal para el mercado interno, la molienda crece a paso firme.",
+          "imagen_url": "",
+          "autor": "infocampo",
+          "publicado": "2026-11-05T10:51-03:00",
+          "capturado": "2026-11-05T11:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "91b0833ef1168e14"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 79,
+        "commercial_score": 82,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto en la zona núcleo por el récord de molienda y exportaciones del cereal, con datos oficiales clave.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T11:00-03:00"
+    },
     {
       "id": "708bbc8a5e16",
       "rep": {
@@ -55905,73 +56084,6 @@
       "cuando": "2026-11-04T19:00-03:00"
     },
     {
-      "id": "35336d7c0a60",
-      "rep": {
-        "id": "35336d7c0a60",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026",
-        "titulo": "Demanda tranquila y precios en baja en el Mercado Agroganadero de Cañuelas",
-        "titulo_norm": "demanda tranquila y precios en baja en el mercado agroganadero de canuelas",
-        "descripcion": "Con una entrada de 7028 cabezas, se pagó $4590 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3945,861",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/3MQJ5QXAHVBKROHZCXN75CDW24.JPG?auth=07b45140c6cdd3f9a26112ba71b37d7adbf599d7ce902537ef20ad9b12ec3342&smart=true",
-        "autor": "",
-        "publicado": "2026-11-04T17:09-03:00",
-        "capturado": "2026-11-04T17:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ad1fcc64f20ce74d"
-      },
-      "grupo": [
-        {
-          "id": "35336d7c0a60",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/demanda-tranquila-y-precios-en-baja-en-el-mercado-agroganadero-de-canuelas-nid04112026",
-          "titulo": "Demanda tranquila y precios en baja en el Mercado Agroganadero de Cañuelas",
-          "titulo_norm": "demanda tranquila y precios en baja en el mercado agroganadero de canuelas",
-          "descripcion": "Con una entrada de 7028 cabezas, se pagó $4590 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3945,861",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/3MQJ5QXAHVBKROHZCXN75CDW24.JPG?auth=07b45140c6cdd3f9a26112ba71b37d7adbf599d7ce902537ef20ad9b12ec3342&smart=true",
-          "autor": "",
-          "publicado": "2026-11-04T17:09-03:00",
-          "capturado": "2026-11-04T17:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ad1fcc64f20ce74d"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 12,
-        "innovacion": 0,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 68,
-        "subtema": "ganaderia",
-        "tema": "mercado de liniers",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Informe diario de precios y remates de Cañuelas, vital para los ganaderos de la región núcleo.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          63,
-          65
-        ]
-      },
-      "cuando": "2026-11-04T17:20-03:00"
-    },
-    {
       "id": "1c2fbeb8dba0",
       "rep": {
         "id": "1c2fbeb8dba0",
@@ -56106,8 +56218,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T10:45:10-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T11:05:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
