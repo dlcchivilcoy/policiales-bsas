@@ -25779,6 +25779,73 @@
         67,
         70
       ]
+    },
+    "06dac7cce3a46258": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 14,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 83,
+      "subtema": "agtech",
+      "tema": "inteligencia artificial",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente adopción de IA y satélites aplicable directamente en la zona núcleo.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c3701f06fe323640": {
+      "impacto_economico": 10,
+      "interes_productores": 11,
+      "innovacion": 13,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 8,
+      "ai_score": 73,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "startups",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Muestra nuevas herramientas y talento joven con impacto directo en el ecosistema AgTech nacional.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8600a9114375e551": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 5,
+      "ai_score": 66,
+      "commercial_score": 60,
+      "subtema": "empresas",
+      "tema": "tasas municipales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Genera gran debate y preocupación impositiva directa para los productores de la región pampeana.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        61
+      ]
     }
   },
   "indice": {
@@ -27529,7 +27596,10 @@
       "https://bichosdecampo.com/en-serio-no-les-preocupa-las-unicas-que-no-parecen-alarmadas-por-la-baja-del-presupuesto-2027-para-el-inta-son-las-entidades-tradicionales-del-agro-que-ademas-lo-conducen": "2026-11-04",
       "https://lanacion.com.ar/economia/campo/coctel-bajista-la-soja-cayo-a-su-menor-precio-en-casi-tres-meses-en-el-mercado-internacional-y-hay-nid04112026": "2026-11-04",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249200-adecoagro-y-la-formula-para-invertir-en-una-argentina-en-crisis-crecer-25-anos-y-seguir-apostando.html": "2026-11-04",
-      "https://lanacion.com.ar/economia/campo/volatilidad-en-los-granos-habia-que-blindarse-para-navegar-la-incertidumbre-nid04112026": "2026-11-04"
+      "https://lanacion.com.ar/economia/campo/volatilidad-en-los-granos-habia-que-blindarse-para-navegar-la-incertidumbre-nid04112026": "2026-11-04",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249201-la-ia-aumenta-la-productividad-del-campo-sin-reemplazar-al-productor.html": "2026-11-04",
+      "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026": "2026-11-04",
+      "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026": "2026-11-04"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29278,7 +29348,10 @@
       "en serio no les preocupa las unicas que no parecen alarmadas por la baja del presupuesto 2027 para el inta son las entidades tradicionales del agro que ademas lo conducen": "2026-11-04",
       "coctel bajista la soja cayo a su menor precio en casi tres meses en el mercado internacional y hay alerta por el impacto en el pais": "2026-11-04",
       "adecoagro y la formula para invertir en una argentina en crisis crecer 25 anos y seguir apostando": "2026-11-04",
-      "volatilidad en los granos habia que blindarse para navegar la incertidumbre": "2026-11-04"
+      "volatilidad en los granos habia que blindarse para navegar la incertidumbre": "2026-11-04",
+      "la ia llega al campo mas productividad y mejores decisiones sin reemplazar al productor": "2026-11-04",
+      "cuatro jovenes y sus ideas para ayudar con tecnologia a los productores agropecuarios que dejo de novedoso el acceleration week 2026": "2026-11-04",
+      "monopolio comunal fuerte malestar en una provincia por el costo de una tasa": "2026-11-04"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31027,7 +31100,10 @@
       "f8c848f79817e050": "2026-11-04",
       "fbedc61dc4a6710b": "2026-11-04",
       "559d627f1ac80514": "2026-11-04",
-      "7c05bd5f90e2d15a": "2026-11-04"
+      "7c05bd5f90e2d15a": "2026-11-04",
+      "06dac7cce3a46258": "2026-11-04",
+      "c3701f06fe323640": "2026-11-04",
+      "8600a9114375e551": "2026-11-04"
     }
   },
   "elegidas": [
@@ -54099,9 +54175,199 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_24836ad50a9d_portada.jpg"
+    },
+    {
+      "id": "6ae224a05281",
+      "cuando": "2026-11-04T21:20-03:00",
+      "titulo_original": "La IA llega al campo: más productividad y mejores decisiones, sin reemplazar al Productor",
+      "descripcion": "La inteligencia artificial potencia la agricultura con datos satelitales, de los campos, y ciencia. El Lic. Federico Bayle, Gerente de operaciones de Dymaxion Labs, explica cómo la IA y la ciencia de datos transforman la información satelital y técnica en decisiones confiables para el agro. Destaca ",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249201-la-ia-aumenta-la-productividad-del-campo-sin-reemplazar-al-productor.html",
+      "titular": "La IA no reemplaza al productor y potencia la productividad",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 14,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 83,
+        "subtema": "agtech",
+        "tema": "inteligencia artificial",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente adopción de IA y satélites aplicable directamente en la zona núcleo.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T21:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5689856d-a7c9-4c1f-9747-418077502978",
+          "slug": "la-inteligencia-artificial-potencia-el-agro-y-mejora-las-02f20d",
+          "url": "https://www.diariolacampaña.com.ar/n/la-inteligencia-artificial-potencia-el-agro-y-mejora-las-02f20d",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "2113188926740431",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17880334671651768",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "17944687338367402"
+        },
+        "historia_facebook": {
+          "id": "1135596208981152"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6ae224a05281_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "eaec072e54bf",
+      "rep": {
+        "id": "eaec072e54bf",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026/",
+        "canonical_url": "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026",
+        "titulo": "Cuatro jóvenes y sus ideas para ayudar con tecnología a los productores agropecuarios: ¿Qué dejó de novedoso el Acceleration Week 2026?",
+        "titulo_norm": "cuatro jovenes y sus ideas para ayudar con tecnologia a los productores agropecuarios que dejo de novedoso el acceleration week 2026",
+        "descripcion": "Hace unos días, en el Parque de Innovación de la Ciudad de Buenos Aires, se llevó a cabo la “Acceleration Week” de “FoodRise”, una iniciativa impulsada por el fondo Adventures y BID Lab que busca apoyar a proyectos tecnológicos vinculados a la producción de alimentos y el campo. La actividad dentro de esa convocatoria de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/FOOD-RISE-EVENTO-2-106-scaled.jpg",
+        "autor": "Roderick Mac Lean",
+        "publicado": "2026-11-04T21:16-03:00",
+        "capturado": "2026-11-04T21:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c3701f06fe323640"
+      },
+      "grupo": [
+        {
+          "id": "eaec072e54bf",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026/",
+          "canonical_url": "https://bichosdecampo.com/cuatro-jovenes-y-sus-ideas-para-ayudar-con-tecnologia-a-los-productores-agropecuarios-que-dejo-de-novedoso-el-acceleration-week-2026",
+          "titulo": "Cuatro jóvenes y sus ideas para ayudar con tecnología a los productores agropecuarios: ¿Qué dejó de novedoso el Acceleration Week 2026?",
+          "titulo_norm": "cuatro jovenes y sus ideas para ayudar con tecnologia a los productores agropecuarios que dejo de novedoso el acceleration week 2026",
+          "descripcion": "Hace unos días, en el Parque de Innovación de la Ciudad de Buenos Aires, se llevó a cabo la “Acceleration Week” de “FoodRise”, una iniciativa impulsada por el fondo Adventures y BID Lab que busca apoyar a proyectos tecnológicos vinculados a la producción de alimentos y el campo. La actividad dentro de esa convocatoria de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/FOOD-RISE-EVENTO-2-106-scaled.jpg",
+          "autor": "Roderick Mac Lean",
+          "publicado": "2026-11-04T21:16-03:00",
+          "capturado": "2026-11-04T21:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c3701f06fe323640"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 11,
+        "innovacion": 13,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "startups",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra nuevas herramientas y talento joven con impacto directo en el ecosistema AgTech nacional.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-04T21:20-03:00"
+    },
+    {
+      "id": "122f716bc788",
+      "rep": {
+        "id": "122f716bc788",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026",
+        "titulo": "“Monopolio comunal”: fuerte malestar en una provincia por el costo de una tasa",
+        "titulo_norm": "monopolio comunal fuerte malestar en una provincia por el costo de una tasa",
+        "descripcion": "La Sociedad Rural de Rosario alertó sobre el valor impuesto por municipios y comunas en Santa Fe y reclamó cambios",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/AW6KZ76YAFC3NNK6VXBCK35R2M.jpg?auth=edfa6fadf27f09ad9be5fa3f4661664717322574c25b0cafa431ec16ec37bd28&smart=true",
+        "autor": "",
+        "publicado": "2026-11-04T21:07-03:00",
+        "capturado": "2026-11-04T21:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "8600a9114375e551"
+      },
+      "grupo": [
+        {
+          "id": "122f716bc788",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/monopolio-comunal-fuerte-malestar-en-una-provincia-por-el-costo-de-una-tasa-nid04112026",
+          "titulo": "“Monopolio comunal”: fuerte malestar en una provincia por el costo de una tasa",
+          "titulo_norm": "monopolio comunal fuerte malestar en una provincia por el costo de una tasa",
+          "descripcion": "La Sociedad Rural de Rosario alertó sobre el valor impuesto por municipios y comunas en Santa Fe y reclamó cambios",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AW6KZ76YAFC3NNK6VXBCK35R2M.jpg?auth=edfa6fadf27f09ad9be5fa3f4661664717322574c25b0cafa431ec16ec37bd28&smart=true",
+          "autor": "",
+          "publicado": "2026-11-04T21:07-03:00",
+          "capturado": "2026-11-04T21:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "8600a9114375e551"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 5,
+        "ai_score": 66,
+        "commercial_score": 60,
+        "subtema": "empresas",
+        "tema": "tasas municipales",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Genera gran debate y preocupación impositiva directa para los productores de la región pampeana.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          61
+        ]
+      },
+      "cuando": "2026-11-04T21:20-03:00"
+    },
     {
       "id": "48cfa810438a",
       "rep": {
@@ -55096,8 +55362,8 @@
       "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T21:05:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T21:24:25-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
