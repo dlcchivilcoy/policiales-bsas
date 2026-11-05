@@ -26692,6 +26692,27 @@
         65,
         71
       ]
+    },
+    "9ee2eb3adda0eaa9": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 89,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "maíz tardío",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en el núcleo de la producción maicera de la región pampeana con alto interés comercial.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28506,7 +28527,8 @@
       "https://agfundernews.com/inside-iowas-advantage-for-ag-food-and-bioscience-innovation": "2026-11-05",
       "https://agfundernews.com/better-meat-co-targets-large-scale-production-in-india-in-q2-2027-amid-brutal-mycoprotein-shakeout": "2026-11-05",
       "https://intainforma.inta.gob.ar/trigo-argentino-el-mejoramiento-genetico-permitio-aumentar-cerca-de-1-por-ano-el-rendimiento": "2026-11-05",
-      "https://intainforma.inta.gob.ar/la-innovacion-tecnologica-redefine-el-futuro-del-agro": "2026-11-05"
+      "https://intainforma.inta.gob.ar/la-innovacion-tecnologica-redefine-el-futuro-del-agro": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/maiz-tardio-genetica-para-sostener-los-pisos-y-empujar-los-techos-nid05112026": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30319,7 +30341,8 @@
       "inside iowa s advantage for ag food and bioscience innovation": "2026-11-05",
       "better meat co targets large scale production in india in q2 2027 amid brutal mycoprotein shakeout": "2026-11-05",
       "trigo argentino el mejoramiento genetico permitio aumentar cerca de 1 por ano el rendimiento": "2026-11-05",
-      "la innovacion tecnologica redefine el futuro del agro": "2026-11-05"
+      "la innovacion tecnologica redefine el futuro del agro": "2026-11-05",
+      "maiz tardio genetica para sostener los pisos y empujar los techos": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32132,7 +32155,8 @@
       "fb3675e1d4d6e97f": "2026-11-05",
       "4b1d423da78b7bdf": "2026-11-05",
       "d5a085878c665453": "2026-11-05",
-      "ac336ab5a0fa10bd": "2026-11-05"
+      "ac336ab5a0fa10bd": "2026-11-05",
+      "9ee2eb3adda0eaa9": "2026-11-05"
     }
   },
   "elegidas": [
@@ -56185,76 +56209,69 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9705200ebf10_portada.jpg"
+    },
+    {
+      "id": "777a665379f7",
+      "cuando": "2026-11-05T13:20-03:00",
+      "titulo_original": "Maíz tardío: genética para sostener los pisos y empujar los techos",
+      "descripcion": "Con más de la mitad del área maicera argentina, el cultivo exige híbridos de adaptación amplia, sanidad robusta y biotecnología de punta; conocer a fondo cada material es la clave para cerrar las brechas de rendimiento",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/maiz-tardio-genetica-para-sostener-los-pisos-y-empujar-los-techos-nid05112026/",
+      "titular": "Maíz tardío: claves genéticas para sostener pisos y elevar rindes",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 89,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en el núcleo de la producción maicera de la región pampeana con alto interés comercial.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T13:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2cace4e2-652b-48f1-a389-e73d833e655d",
+          "slug": "maiz-tardio-en-argentina-que-genetica-y-sanidad-elegir-para-30d769",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-tardio-en-argentina-que-genetica-y-sanidad-elegir-para-30d769",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "4486986838219105",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18031951796856082",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18101171525098709"
+        },
+        "historia_facebook": {
+          "id": "972556712591237"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_777a665379f7_portada.jpg"
     }
   ],
   "pendientes": [
-    {
-      "id": "353f6191dda4",
-      "rep": {
-        "id": "353f6191dda4",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-investigador-gerardo-leotta-defendio-visec-carne-y-respondio-a-las-criticas-de-los-productores-no-es-una-certificadora-y-la-informacion-que-se-usa-es-publica/",
-        "canonical_url": "https://bichosdecampo.com/el-investigador-gerardo-leotta-defendio-visec-carne-y-respondio-a-las-criticas-de-los-productores-no-es-una-certificadora-y-la-informacion-que-se-usa-es-publica",
-        "titulo": "El investigador Gerardo Leotta defendió Visec Carne y respondió a las críticas de los productores: “No es una certificadora y la información que se usa es pública”",
-        "titulo_norm": "el investigador gerardo leotta defendio visec carne y respondio a las criticas de los productores no es una certificadora y la informacion que se usa es publica",
-        "descripcion": "El reglamento antideforestación de la Unión Europea genera dudas y resistencia entre productores ganaderos argentinos. Hay quienes advierten sobre una intromisión europea en la legislación nacional, otros temen que se utilice información fiscal y productiva para controlar sus establecimientos y también están los que reclaman una reacción más firme del Gobierno argentino. Frente a esos […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/carne-1.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-05T11:28-03:00",
-        "capturado": "2026-11-05T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8ac67a171ecba178"
-      },
-      "grupo": [
-        {
-          "id": "353f6191dda4",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-investigador-gerardo-leotta-defendio-visec-carne-y-respondio-a-las-criticas-de-los-productores-no-es-una-certificadora-y-la-informacion-que-se-usa-es-publica/",
-          "canonical_url": "https://bichosdecampo.com/el-investigador-gerardo-leotta-defendio-visec-carne-y-respondio-a-las-criticas-de-los-productores-no-es-una-certificadora-y-la-informacion-que-se-usa-es-publica",
-          "titulo": "El investigador Gerardo Leotta defendió Visec Carne y respondió a las críticas de los productores: “No es una certificadora y la información que se usa es pública”",
-          "titulo_norm": "el investigador gerardo leotta defendio visec carne y respondio a las criticas de los productores no es una certificadora y la informacion que se usa es publica",
-          "descripcion": "El reglamento antideforestación de la Unión Europea genera dudas y resistencia entre productores ganaderos argentinos. Hay quienes advierten sobre una intromisión europea en la legislación nacional, otros temen que se utilice información fiscal y productiva para controlar sus establecimientos y también están los que reclaman una reacción más firme del Gobierno argentino. Frente a esos […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/08/carne-1.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-05T11:28-03:00",
-          "capturado": "2026-11-05T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8ac67a171ecba178"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 6,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 6,
-        "ai_score": 73,
-        "commercial_score": 66,
-        "subtema": "ganaderia",
-        "tema": "visec",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Alta repercusión comercial y polémica entre ganaderos por las exigencias de trazabilidad para exportación.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          75
-        ]
-      },
-      "cuando": "2026-11-05T13:00-03:00"
-    },
     {
       "id": "e0878cdc7503",
       "rep": {
@@ -56910,8 +56927,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T13:07:04-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-05T13:25:27-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
