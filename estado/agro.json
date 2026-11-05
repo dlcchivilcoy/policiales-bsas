@@ -54319,6 +54319,106 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ab67dd503a44_portada.jpg"
+    },
+    {
+      "id": "f4cfcdacd8dd",
+      "cuando": "2026-11-04T22:00-03:00",
+      "titulo_original": "Impulsan el uso de semilla fiscalizada y piden ampliar la discusión de una nueva ley",
+      "descripcion": "Fedia pidió que todos los eslabones de la cadena participen de la discusión. La entidad lanzó una campaña para promover el uso de semilla fiscalizada y destacar su aporte a la producción",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html",
+      "titular": "Impulsan semilla fiscalizada y reclaman debate por la nueva ley",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 73,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "semilla fiscalizada",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Tema central para la cadena agrícola y semilleras, con fuerte debate institucional.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T22:00:00-03:00"
+    },
+    {
+      "id": "452f669227bc",
+      "cuando": "2026-11-04T22:00-03:00",
+      "titulo_original": "Novillos: Una oferta atípica en un mercado que pierde firmeza",
+      "descripcion": "Los últimos datos de traslado de animales a faena dan cuenta de una mayor oferta relativa de novillos. Mientras el resto de las categorías continúa mostrando menores niveles de remisión que los registrados el año pasado, los novillos —sorprendentemente para esta época del año— muestran una oferta su",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza/",
+      "titular": "Novillos: oferta atípica y suba del 7% en la faena",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 1,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 64,
+        "subtema": "ganaderia",
+        "tema": "novillos",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Muestra un cambio importante en la oferta ganadera que afecta directamente a los criadores y invernadores de la región.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          63
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-04T22:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "00f17986-716b-44f4-900d-03cc7f047e68",
+          "slug": "novillos-detectan-oferta-atipica-suba-del-7-en-faena-y-record-d53172",
+          "url": "https://www.diariolacampaña.com.ar/n/novillos-detectan-oferta-atipica-suba-del-7-en-faena-y-record-d53172",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1476243411044670",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17903794008672349",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18450593053135549"
+        },
+        "historia_facebook": {
+          "id": "1118951740941285"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_452f669227bc_portada.jpg"
     }
   ],
   "pendientes": [
@@ -54650,69 +54750,6 @@
       "cuando": "2026-11-04T17:20-03:00"
     },
     {
-      "id": "f4cfcdacd8dd",
-      "rep": {
-        "id": "f4cfcdacd8dd",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html",
-        "canonical_url": "https://lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html",
-        "titulo": "Impulsan el uso de semilla fiscalizada y piden ampliar la discusión de una nueva ley",
-        "titulo_norm": "impulsan el uso de semilla fiscalizada y piden ampliar la discusion de una nueva ley",
-        "descripcion": "Fedia pidió que todos los eslabones de la cadena participen de la discusión. La entidad lanzó una campaña para promover el uso de semilla fiscalizada y destacar su aporte a la producción",
-        "imagen_url": "https://media.lacapital.com.ar/p/e8134f1fc390a33fa4cf3056168655c4/adjuntos/305/imagenes/101/561/0101561345/1200x675/smart/semilla-inasejpg.jpg",
-        "autor": "",
-        "publicado": "2026-11-04T16:02-03:00",
-        "capturado": "2026-11-04T16:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e9a305ddc0b9b73c"
-      },
-      "grupo": [
-        {
-          "id": "f4cfcdacd8dd",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html",
-          "canonical_url": "https://lacapital.com.ar/agro/impulsan-el-uso-semilla-fiscalizada-y-piden-ampliar-la-discusion-una-nueva-ley-n10290471.html",
-          "titulo": "Impulsan el uso de semilla fiscalizada y piden ampliar la discusión de una nueva ley",
-          "titulo_norm": "impulsan el uso de semilla fiscalizada y piden ampliar la discusion de una nueva ley",
-          "descripcion": "Fedia pidió que todos los eslabones de la cadena participen de la discusión. La entidad lanzó una campaña para promover el uso de semilla fiscalizada y destacar su aporte a la producción",
-          "imagen_url": "https://media.lacapital.com.ar/p/e8134f1fc390a33fa4cf3056168655c4/adjuntos/305/imagenes/101/561/0101561345/1200x675/smart/semilla-inasejpg.jpg",
-          "autor": "",
-          "publicado": "2026-11-04T16:02-03:00",
-          "capturado": "2026-11-04T16:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e9a305ddc0b9b73c"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 5,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 9,
-        "ai_score": 73,
-        "commercial_score": 80,
-        "subtema": "agro",
-        "tema": "semilla fiscalizada",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Tema central para la cadena agrícola y semilleras, con fuerte debate institucional.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-04T16:20-03:00"
-    },
-    {
       "id": "25b8d017827d",
       "rep": {
         "id": "25b8d017827d",
@@ -54841,73 +54878,6 @@
         ]
       },
       "cuando": "2026-11-04T14:20-03:00"
-    },
-    {
-      "id": "452f669227bc",
-      "rep": {
-        "id": "452f669227bc",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza/",
-        "canonical_url": "https://todoagro.com.ar/novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza",
-        "titulo": "Novillos: Una oferta atípica en un mercado que pierde firmeza",
-        "titulo_norm": "novillos una oferta atipica en un mercado que pierde firmeza",
-        "descripcion": "Los últimos datos de traslado de animales a faena dan cuenta de una mayor oferta relativa de novillos. Mientras el resto de las categorías continúa mostrando menores niveles de remisión que los registrados el año pasado, los novillos —sorprendentemente para esta época del año— muestran una oferta superior a la de igual mes de 2025. La entrada Novillos: Una oferta atípica en un mercado que pierde firmeza pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-04T11:31-03:00",
-        "capturado": "2026-11-04T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0070fd08d9c18876"
-      },
-      "grupo": [
-        {
-          "id": "452f669227bc",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza/",
-          "canonical_url": "https://todoagro.com.ar/novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza",
-          "titulo": "Novillos: Una oferta atípica en un mercado que pierde firmeza",
-          "titulo_norm": "novillos una oferta atipica en un mercado que pierde firmeza",
-          "descripcion": "Los últimos datos de traslado de animales a faena dan cuenta de una mayor oferta relativa de novillos. Mientras el resto de las categorías continúa mostrando menores niveles de remisión que los registrados el año pasado, los novillos —sorprendentemente para esta época del año— muestran una oferta superior a la de igual mes de 2025. La entrada Novillos: Una oferta atípica en un mercado que pierde firmeza pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-04T11:31-03:00",
-          "capturado": "2026-11-04T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0070fd08d9c18876"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 1,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 64,
-        "subtema": "ganaderia",
-        "tema": "novillos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Muestra un cambio importante en la oferta ganadera que afecta directamente a los criadores y invernadores de la región.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          63
-        ]
-      },
-      "cuando": "2026-11-04T13:00-03:00"
     },
     {
       "id": "1c2fbeb8dba0",
@@ -55243,211 +55213,10 @@
         ]
       },
       "cuando": "2026-11-03T11:20-03:00"
-    },
-    {
-      "id": "ce5c7ebc9a89",
-      "rep": {
-        "id": "ce5c7ebc9a89",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
-        "titulo": "Luces y sombras del sector porcino al tercer trimestre 2026",
-        "titulo_norm": "luces y sombras del sector porcino al tercer trimestre 2026",
-        "descripcion": "Desde hace varios años, el IERAL realiza un seguimiento periódico de los resultados económicos de la producción porcina intensiva mediante la estimación de márgenes netos en modelos de granjas representativas. Esta edición actualiza las estimaciones hasta septiembre de 2026 y amplía el análisis del contexto sectorial, necesario para interpretar la evolución reciente del precio del capón y de la rentabilidad de las granjas....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249166_39893801.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-03T08:47-03:00",
-        "capturado": "2026-11-03T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "69be38a54d1bced6"
-      },
-      "grupo": [
-        {
-          "id": "ce5c7ebc9a89",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249166-luces-y-sombras-del-sector-porcino-al-tercer-trimestre-2026.html",
-          "titulo": "Luces y sombras del sector porcino al tercer trimestre 2026",
-          "titulo_norm": "luces y sombras del sector porcino al tercer trimestre 2026",
-          "descripcion": "Desde hace varios años, el IERAL realiza un seguimiento periódico de los resultados económicos de la producción porcina intensiva mediante la estimación de márgenes netos en modelos de granjas representativas. Esta edición actualiza las estimaciones hasta septiembre de 2026 y amplía el análisis del contexto sectorial, necesario para interpretar la evolución reciente del precio del capón y de la rentabilidad de las granjas....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249166_39893801.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-03T08:47-03:00",
-          "capturado": "2026-11-03T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "69be38a54d1bced6"
-        }
-      ],
-      "score": {
-        "impacto_economico": 13,
-        "interes_productores": 10,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 4,
-        "conversacion": 6,
-        "potencial_comercial": 6,
-        "ai_score": 60,
-        "commercial_score": 62,
-        "subtema": "ganaderia",
-        "tema": "porcinos",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Informe técnico relevante sobre márgenes de la producción porcina nacional con datos útiles para el sector.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          62,
-          58
-        ]
-      },
-      "cuando": "2026-11-03T10:00-03:00"
-    },
-    {
-      "id": "3a0f0a64567d",
-      "rep": {
-        "id": "3a0f0a64567d",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina/",
-        "canonical_url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina",
-        "titulo": "Lácteos Verónica: Presentan ante la Justicia una propuesta para recuperar dos plantas de la histórica industria santafesina",
-        "titulo_norm": "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina",
-        "descripcion": "​En el marco del concurso preventivo de acreedores que atraviesa la empresa Verónica S.A., se dio a conocer un comunicado oficial emitido por la Asociación de Trabajadores de la Industria Lechera de la República Argentina (ATILRA) —firmado por su secretario general, Héctor Luis Ponce— donde se detalla una nueva alternativa para la reactivación productiva de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-18.17.31.jpeg",
-        "autor": "Elida Thiery",
-        "publicado": "2026-11-03T09:55-03:00",
-        "capturado": "2026-11-03T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d57b879c1aaa84c8"
-      },
-      "grupo": [
-        {
-          "id": "3a0f0a64567d",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina/",
-          "canonical_url": "https://bichosdecampo.com/lacteos-veronica-presentan-ante-la-justicia-una-propuesta-para-recuperar-dos-plantas-de-la-historica-industria-santafesina",
-          "titulo": "Lácteos Verónica: Presentan ante la Justicia una propuesta para recuperar dos plantas de la histórica industria santafesina",
-          "titulo_norm": "lacteos veronica presentan ante la justicia una propuesta para recuperar dos plantas de la historica industria santafesina",
-          "descripcion": "​En el marco del concurso preventivo de acreedores que atraviesa la empresa Verónica S.A., se dio a conocer un comunicado oficial emitido por la Asociación de Trabajadores de la Industria Lechera de la República Argentina (ATILRA) —firmado por su secretario general, Héctor Luis Ponce— donde se detalla una nueva alternativa para la reactivación productiva de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-18.17.31.jpeg",
-          "autor": "Elida Thiery",
-          "publicado": "2026-11-03T09:55-03:00",
-          "capturado": "2026-11-03T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d57b879c1aaa84c8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 10,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 9,
-        "potencial_reel": 4,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 63,
-        "commercial_score": 64,
-        "subtema": "empresas",
-        "tema": "lácteos verónica",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Noticia de gran impacto en la industria lechera santafesina y pampeana por la situación de una planta histórica.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          61
-        ]
-      },
-      "cuando": "2026-11-03T10:00-03:00"
-    },
-    {
-      "id": "c484ec2b3fb4",
-      "rep": {
-        "id": "c484ec2b3fb4",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones/",
-        "canonical_url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones",
-        "titulo": "Bicheras, pietín y parásitos: Cómo proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
-        "titulo_norm": "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
-        "descripcion": "Las lluvias abundantes y los excesos hídricos no solo complican el manejo de los establecimientos ganaderos, sino que también pueden poner en riesgo la sanidad de las majadas ovinas. La humedad persistente, el barro y las condiciones de encierro favorecen la aparición de parásitos, lesiones en las patas y problemas asociados a la proliferación de […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/majada-corrientes-2-1024x685-1.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-03T09:15-03:00",
-        "capturado": "2026-11-03T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7d8501699047f666"
-      },
-      "grupo": [
-        {
-          "id": "c484ec2b3fb4",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones/",
-          "canonical_url": "https://bichosdecampo.com/bicheras-pietin-y-parasitos-como-proteger-a-las-majadas-de-los-riesgos-que-llegan-con-las-lluvias-y-las-inundaciones",
-          "titulo": "Bicheras, pietín y parásitos: Cómo proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
-          "titulo_norm": "bicheras pietin y parasitos como proteger a las majadas de los riesgos que llegan con las lluvias y las inundaciones",
-          "descripcion": "Las lluvias abundantes y los excesos hídricos no solo complican el manejo de los establecimientos ganaderos, sino que también pueden poner en riesgo la sanidad de las majadas ovinas. La humedad persistente, el barro y las condiciones de encierro favorecen la aparición de parásitos, lesiones en las patas y problemas asociados a la proliferación de […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/majada-corrientes-2-1024x685-1.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-03T09:15-03:00",
-          "capturado": "2026-11-03T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7d8501699047f666"
-        }
-      ],
-      "score": {
-        "impacto_economico": 10,
-        "interes_productores": 12,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 7,
-        "ai_score": 65,
-        "commercial_score": 69,
-        "subtema": "ganaderia",
-        "tema": "ovinos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy útil para productores ganaderos frente a excesos hídricos, con fuerte enfoque en manejo sanitario.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          67,
-          64
-        ]
-      },
-      "cuando": "2026-11-03T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-04T21:44:15-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-04T22:04:46-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
