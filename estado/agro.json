@@ -26960,6 +26960,48 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a41913faf97b3aa0": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 86,
+      "commercial_score": 85,
+      "subtema": "agtech",
+      "tema": "herbicida fullist",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alta relevancia zonal para productores que manejan malezas difíciles en soja y maíz con nueva tecnología de formulación.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b2ae936ebad77e1f": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 9,
+      "potencial_comercial": 5,
+      "ai_score": 78,
+      "commercial_score": 70,
+      "subtema": "agro",
+      "tema": "clima y tormentas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Información climática crítica de la Bolsa de Cereales que afecta de inmediato las decisiones de siembra en la región núcleo.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28788,7 +28830,9 @@
       "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html": "2026-11-05",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249220-martin-spino-de-cofco-y-la-exportacion-frente-a-eudr-epa-certificaciones-agricolas-y-premium-prices.html": "2026-11-05",
       "https://bichosdecampo.com/de-aca-nos-sacan-con-los-pies-para-adelante-escala-la-tension-en-pauny-luego-del-fracaso-de-una-audiencia-y-los-trabajadores-mantienen-la-planta-tomada": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/el-precandidato-presidencial-sergio-unac-se-reunio-con-referentes-de-la-agroindustria-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/el-precandidato-presidencial-sergio-unac-se-reunio-con-referentes-de-la-agroindustria-nid05112026": "2026-11-05",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30615,7 +30659,9 @@
       "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe": "2026-11-05",
       "martin spino de cofco y la exportacion frente a eudr epa certificaciones agricolas y premium prices": "2026-11-05",
       "de aca nos sacan con los pies para adelante escala la tension en pauny luego del fracaso de una audiencia y los trabajadores mantienen la planta tomada": "2026-11-05",
-      "el precandidato presidencial sergio unac se reunio con referentes de la agroindustria": "2026-11-05"
+      "el precandidato presidencial sergio unac se reunio con referentes de la agroindustria": "2026-11-05",
+      "fullist la micromulsion que combina glufosinato y 2 4 d para control de malezas dificiles en soja y maiz con c riguero agronomo": "2026-11-05",
+      "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32442,7 +32488,9 @@
       "b981de217fdf62fb": "2026-11-05",
       "15d17181280aa98e": "2026-11-05",
       "792b56c9fcc1dd4d": "2026-11-05",
-      "e1c59ff008b8d73c": "2026-11-05"
+      "e1c59ff008b8d73c": "2026-11-05",
+      "a41913faf97b3aa0": "2026-11-05",
+      "b2ae936ebad77e1f": "2026-11-05"
     }
   },
   "elegidas": [
@@ -56974,6 +57022,132 @@
   ],
   "pendientes": [
     {
+      "id": "3fe74f1d537e",
+      "rep": {
+        "id": "3fe74f1d537e",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html",
+        "titulo": "Fullist: la micromulsión que combina glufosinato y 2,4-D para control de malezas difíciles en Soja y Maíz; con C Riguero - agrónomo",
+        "titulo_norm": "fullist la micromulsion que combina glufosinato y 2 4 d para control de malezas dificiles en soja y maiz con c riguero agronomo",
+        "descripcion": "¿Por qué Fullist es la solución para el manejo de malezas resistentes en soja y maíz?. El Ing. Agr. Cristian Riguero, desarrollador de producto FULLIST de la empresa Insuagro, detalla las ventajas de este herbicida post emergente formulado en micromulsión. Combina glufosinato amonio y 2,4-D para controlar malezas difíciles en soja y maíz en lis. Esta innovación responde al creciente uso de variedades resistentes y al cambio en el manejo de malezas en Argentina...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/-a4F4AN_BaM.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-11-05T17:13-03:00",
+        "capturado": "2026-11-05T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a41913faf97b3aa0"
+      },
+      "grupo": [
+        {
+          "id": "3fe74f1d537e",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249221-fullist-la-micromulsion-que-combina-glufosinato-y-24-d-para-control-de-malezas-dificiles-en-soja-y-maiz-con-c-riguero-agronomo.html",
+          "titulo": "Fullist: la micromulsión que combina glufosinato y 2,4-D para control de malezas difíciles en Soja y Maíz; con C Riguero - agrónomo",
+          "titulo_norm": "fullist la micromulsion que combina glufosinato y 2 4 d para control de malezas dificiles en soja y maiz con c riguero agronomo",
+          "descripcion": "¿Por qué Fullist es la solución para el manejo de malezas resistentes en soja y maíz?. El Ing. Agr. Cristian Riguero, desarrollador de producto FULLIST de la empresa Insuagro, detalla las ventajas de este herbicida post emergente formulado en micromulsión. Combina glufosinato amonio y 2,4-D para controlar malezas difíciles en soja y maíz en lis. Esta innovación responde al creciente uso de variedades resistentes y al cambio en el manejo de malezas en Argentina...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/-a4F4AN_BaM.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-11-05T17:13-03:00",
+          "capturado": "2026-11-05T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a41913faf97b3aa0"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 85,
+        "subtema": "agtech",
+        "tema": "herbicida fullist",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alta relevancia zonal para productores que manejan malezas difíciles en soja y maíz con nueva tecnología de formulación.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T17:20-03:00"
+    },
+    {
+      "id": "b9dcfa389539",
+      "rep": {
+        "id": "b9dcfa389539",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026",
+        "titulo": "El Niño: anticipan temperaturas de más de 40 grados, riesgo de heladas y tormentas intensas",
+        "titulo_norm": "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas",
+        "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé lluvias escasas en gran parte del área agrícola durante los próximos días, pero hacia mediados de mes se esperan tormentas con acumulados superiores a los 100 milímetros en algunas regiones",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/HGVHDFMETNA6JOAKEQFUMGASZI.png?auth=d36d1e96cc7cc32bebe7487119a18596dffd79dccba4dfc6cdce182a17b020bb&smart=true",
+        "autor": "",
+        "publicado": "2026-11-05T17:19-03:00",
+        "capturado": "2026-11-05T17:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b2ae936ebad77e1f"
+      },
+      "grupo": [
+        {
+          "id": "b9dcfa389539",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-mas-de-40-grados-riesgo-de-heladas-y-tormentas-intensas-nid05112026",
+          "titulo": "El Niño: anticipan temperaturas de más de 40 grados, riesgo de heladas y tormentas intensas",
+          "titulo_norm": "el nino anticipan temperaturas de mas de 40 grados riesgo de heladas y tormentas intensas",
+          "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé lluvias escasas en gran parte del área agrícola durante los próximos días, pero hacia mediados de mes se esperan tormentas con acumulados superiores a los 100 milímetros en algunas regiones",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/HGVHDFMETNA6JOAKEQFUMGASZI.png?auth=d36d1e96cc7cc32bebe7487119a18596dffd79dccba4dfc6cdce182a17b020bb&smart=true",
+          "autor": "",
+          "publicado": "2026-11-05T17:19-03:00",
+          "capturado": "2026-11-05T17:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b2ae936ebad77e1f"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 5,
+        "ai_score": 78,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "clima y tormentas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Información climática crítica de la Bolsa de Cereales que afecta de inmediato las decisiones de siembra en la región núcleo.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T17:20-03:00"
+    },
+    {
       "id": "8326136bc071",
       "rep": {
         "id": "8326136bc071",
@@ -57561,7 +57735,7 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T17:01:56-03:00",
+  "actualizado": "2026-11-05T17:21:25-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
