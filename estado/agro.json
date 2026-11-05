@@ -26005,6 +26005,48 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d91593179ee5247a": {
+      "impacto_economico": 14,
+      "interes_productores": 10,
+      "innovacion": 0,
+      "cercania_argentina": 6,
+      "cercania_pba": 2,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 45,
+      "commercial_score": 45,
+      "subtema": "mercados",
+      "tema": "trigo maíz usda",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta el mercado global de granos y la formación de precios internacionales que repercuten en Argentina.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ac5cb7036e26ab43": {
+      "impacto_economico": 12,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "roya negra girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sanitaria relevante para productores de la región pampeana con necesidad urgente de monitoreo y aplicación.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -27775,7 +27817,9 @@
       "https://intainforma.inta.gob.ar/claves-para-la-mecanizacion-y-conservacion-de-suelos-en-yerbales": "2026-11-05",
       "https://agrositio.com.ar/noticia/249194-el-mag-realizo-su-noveno-remate-de-exportacion-y-consolida-un-nuevo-espacio-de-comercializacion-para-la-ganaderia.html": "2026-11-05",
       "https://lanacion.com.ar/economia/campo/pablo-della-lucia-productor-de-ajo-del-valle-de-uco-sobre-la-crisis-cultivar-cuesta-entre-us8000-y-nid05112026": "2026-11-05",
-      "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada": "2026-11-05"
+      "https://bichosdecampo.com/preocupado-por-el-derrumbe-del-precio-del-trigo-igual-se-puede-ganar-mucho-dinero-con-el-cereal-con-una-gestion-financiera-y-logistica-adecuada": "2026-11-05",
+      "https://bichosdecampo.com/insolito-un-informe-del-usda-dice-que-las-proyecciones-del-usda-sobre-exportaciones-ucranianas-de-trigo-y-maiz-son-un-disparate": "2026-11-05",
+      "https://intainforma.inta.gob.ar/detectan-roya-negra-en-girasol-y-recomiendan-intensificar-los-monitoreos": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -29544,7 +29588,9 @@
       "claves para la mecanizacion y conservacion de suelos en yerbales": "2026-11-05",
       "el mag realizo su noveno remate de exportacion y consolida un nuevo espacio de comercializacion para la ganaderia": "2026-11-05",
       "pablo della lucia productor de ajo del valle de uco sobre la crisis cultivar cuesta entre us 8000 y us 11 000 la hectarea y se paga 300 el kilo": "2026-11-05",
-      "preocupado por el derrumbe del precio del trigo igual se puede ganar mucho dinero con el cereal con una gestion financiera y logistica adecuada": "2026-11-05"
+      "preocupado por el derrumbe del precio del trigo igual se puede ganar mucho dinero con el cereal con una gestion financiera y logistica adecuada": "2026-11-05",
+      "insolito un informe del usda dice que las proyecciones del usda sobre exportaciones ucranianas de trigo y maiz son un disparate": "2026-11-05",
+      "detectan roya negra en girasol y recomiendan intensificar los monitoreos": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -31313,7 +31359,9 @@
       "748de67c3afb6e4f": "2026-11-05",
       "f287419a000fce19": "2026-11-05",
       "523a87b493c5105f": "2026-11-05",
-      "66844d3fc87b93b8": "2026-11-05"
+      "66844d3fc87b93b8": "2026-11-05",
+      "d91593179ee5247a": "2026-11-05",
+      "ac5cb7036e26ab43": "2026-11-05"
     }
   },
   "elegidas": [
@@ -54924,6 +54972,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_be52c3236675_portada.jpg"
+    },
+    {
+      "id": "e36c163222b4",
+      "cuando": "2026-11-05T08:20-03:00",
+      "titulo_original": "Detectan roya negra en girasol y recomiendan intensificar los monitoreos",
+      "descripcion": "Técnicos del INTA Ceres registraron la presencia de la enfermedad en un cultivo de girasol en estado reproductivo inicial del centro-norte de Santa Fe. Frente a este escenario, es importante realizar un seguimiento de los lotes, el estado fenológico y la severidad de los síntomas para evaluar la nec",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/detectan-roya-negra-en-girasol-y-recomiendan-intensificar-los-monitoreos/",
+      "titular": "Girasol: detectan roya negra en Santa Fe y piden monitorear lotes",
+      "volanta": "Sanidad",
+      "score": {
+        "impacto_economico": 12,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "roya negra girasol",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sanitaria relevante para productores de la región pampeana con necesidad urgente de monitoreo y aplicación.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2a92ae2f-de9f-46d2-97ae-b9b457068e62",
+          "slug": "detectan-roya-negra-en-girasol-en-santa-fe-y-recomiendan-63ef5b",
+          "url": "https://www.diariolacampaña.com.ar/n/detectan-roya-negra-en-girasol-en-santa-fe-y-recomiendan-63ef5b",
+          "foto": true,
+          "video": false
+        },
+        "facebook": {
+          "id": "1147702780934828",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18137359207709748",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18172010479491637"
+        },
+        "historia_facebook": {
+          "id": "1413721237410731"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e36c163222b4_portada.jpg"
     }
   ],
   "pendientes": [
@@ -55452,8 +55560,8 @@
       "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T08:04:12-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-05T08:24:08-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
