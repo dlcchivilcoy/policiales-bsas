@@ -27094,6 +27094,48 @@
         66,
         68
       ]
+    },
+    "0a8a4c1c6a7420b0": {
+      "impacto_economico": 5,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 2,
+      "conversacion": 7,
+      "potencial_comercial": 1,
+      "ai_score": 36,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "gremiales agropecuarias",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Genera debate político interno pero no aporta valor productivo directo al productor de la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fa67581a3e019ec5": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 78,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "clima y granizo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacto directo en zona núcleo y pampeana, con datos clave sobre lluvias, daños de granizo y estado de cultivos.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28930,7 +28972,9 @@
       "https://argentina.gob.ar/noticias/las-exportaciones-equinas-crecieron-14-interanualmente-en-los-primeros-9-meses-del-ano": "2026-11-05",
       "https://bichosdecampo.com/a-mirar-para-arriba-el-inta-prueba-una-tecnologia-satelital-para-calcular-cuanto-pasto-tienen-disponible-los-campos-ganaderos": "2026-11-05",
       "https://bichosdecampo.com/la-siembra-gruesa-avanza-con-buenas-reservas-de-humedad-aunque-las-lluvias-empiezan-a-complicar-algunos-lotes": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026": "2026-11-05",
+      "https://lanacion.com.ar/economia/campo/quieren-volver-a-la-125-estallo-un-conflicto-entre-cra-y-la-sociedad-rural-argentina-dos-de-las-mas-nid05112026": "2026-11-05",
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/lluvias-de-mas-de-100-mm-en-el-se": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30765,7 +30809,9 @@
       "las exportaciones equinas crecieron 14 interanualmente en los primeros 9 meses del ano": "2026-11-05",
       "a mirar para arriba el inta prueba una tecnologia satelital para calcular cuanto pasto tienen disponible los campos ganaderos": "2026-11-05",
       "la siembra gruesa avanza con buenas reservas de humedad aunque las lluvias empiezan a complicar algunos lotes": "2026-11-05",
-      "tramite agil y buenos valores en un remate especial en canuelas": "2026-11-05"
+      "tramite agil y buenos valores en un remate especial en canuelas": "2026-11-05",
+      "quieren volver a la 125 estallo un fuerte conflicto entre cra y la sociedad rural argentina dos de las mas importantes entidades del campo": "2026-11-05",
+      "lluvias de mas de 100 mm en el se cordobes y 16 000 hectareas con posibles danos de granizo en la region": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32600,7 +32646,9 @@
       "ac720497c3a306b1": "2026-11-05",
       "5779bfd2a7bd55b2": "2026-11-05",
       "04b2a2c355b69141": "2026-11-05",
-      "86ef23c80c1d8a35": "2026-11-05"
+      "86ef23c80c1d8a35": "2026-11-05",
+      "0a8a4c1c6a7420b0": "2026-11-05",
+      "fa67581a3e019ec5": "2026-11-05"
     }
   },
   "elegidas": [
@@ -57315,6 +57363,42 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_abaf20ecdefd_portada.jpg"
+    },
+    {
+      "id": "15c821d1fe58",
+      "cuando": "2026-11-05T19:20-03:00",
+      "titulo_original": "Lluvias de más de 100 mm en el SE cordobés y 16.000 hectáreas con posibles daños de granizo en la región",
+      "descripcion": "El trigo entusiasma, pero las heladas, el fusarium y el granizo dejarán sus marcas en los rindes. En soja, las lluvias de esta semana generan preocupación por el efecto de “planchazo” sobre la última tanda de siembra.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/lluvias-de-mas-de-100-mm-en-el-se",
+      "titular": "Granizo y más de 100 mm golpean cultivos en Córdoba y Santa",
+      "volanta": "Clima y Cultivos",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "clima y granizo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacto directo en zona núcleo y pampeana, con datos clave sobre lluvias, daños de granizo y estado de cultivos.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-05T19:20:00-03:00"
     }
   ],
   "pendientes": [
@@ -57904,76 +57988,9 @@
         ]
       },
       "cuando": "2026-11-04T19:00-03:00"
-    },
-    {
-      "id": "cfb03ca7f41e",
-      "rep": {
-        "id": "cfb03ca7f41e",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249182-las-cosas-como-son-estamos-comiendo-cada-vez-mas-carne-menos-vaca-aunque-seguimos-siendo-lideres-en-ese-consumo.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249182-las-cosas-como-son-estamos-comiendo-cada-vez-mas-carne-menos-vaca-aunque-seguimos-siendo-lideres-en-ese-consumo.html",
-        "titulo": "Las cosas como son: estamos comiendo cada vez más carne (menos vaca, aunque seguimos siendo líderes en ese consumo)",
-        "titulo_norm": "las cosas como son estamos comiendo cada vez mas carne menos vaca aunque seguimos siendo lideres en ese consumo",
-        "descripcion": "La producción aviar se multiplicó por 64 desde 1961 y el cerdo también ganó terreno. En 2023, los argentinos consumieron 122,7 kilos de carne por habitante, pero la vacuna perdió protagonismo frente al pollo y al cerdo....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249182_22457293.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-03T16:59-03:00",
-        "capturado": "2026-11-04T07:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "244e4601a37a42cc"
-      },
-      "grupo": [
-        {
-          "id": "cfb03ca7f41e",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249182-las-cosas-como-son-estamos-comiendo-cada-vez-mas-carne-menos-vaca-aunque-seguimos-siendo-lideres-en-ese-consumo.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249182-las-cosas-como-son-estamos-comiendo-cada-vez-mas-carne-menos-vaca-aunque-seguimos-siendo-lideres-en-ese-consumo.html",
-          "titulo": "Las cosas como son: estamos comiendo cada vez más carne (menos vaca, aunque seguimos siendo líderes en ese consumo)",
-          "titulo_norm": "las cosas como son estamos comiendo cada vez mas carne menos vaca aunque seguimos siendo lideres en ese consumo",
-          "descripcion": "La producción aviar se multiplicó por 64 desde 1961 y el cerdo también ganó terreno. En 2023, los argentinos consumieron 122,7 kilos de carne por habitante, pero la vacuna perdió protagonismo frente al pollo y al cerdo....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249182_22457293.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-03T16:59-03:00",
-          "capturado": "2026-11-04T07:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "244e4601a37a42cc"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 11,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 7,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 66,
-        "commercial_score": 66,
-        "subtema": "ganaderia",
-        "tema": "consumo de carne",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesante radiografía del consumo cárnico nacional con gran potencial para gráficos comparativos.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          68
-        ]
-      },
-      "cuando": "2026-11-04T07:20-03:00"
     }
   ],
-  "actualizado": "2026-11-05T19:01:33-03:00",
+  "actualizado": "2026-11-05T19:21:49-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
