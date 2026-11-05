@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04T23:31:58.000Z",
+  "actualizado": "2026-11-05T00:31:44.000Z",
   "eventos": [
     {
       "id": "policiales:https://junin24.com/policiales/esclarecieron-el-robo-de-una-bicicleta-en-el-diario-democracia-y-aprehendieron-a-un-sujeto-por-violencia-de-genero",
@@ -259,6 +259,30 @@
       "volanta": "Operativo en 9 de Julio",
       "categoria": "narcotrafico",
       "distancia_km": 99.4,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.latrochadigital.com.ar/2026/11/04/millonario-robo-en-un-corralon-de-chacabuco-un-empleado-imputado/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-05T00:31:44.000Z",
+      "titulo": "Imputaron a un empleado por un millonario robo en un corralón de Chacabuco",
+      "descripcion": "Un trabajador de 28 años fue detenido sospechado de encubrir el asalto a un comercio de materiales. Los ladrones usaron soplete para abrir la caja fuerte tras romper una abertura.",
+      "texto_tiktok": "Un empleado de 28 años fue detenido en Chacabuco tras ser vinculado con un millonario robo en un corralón de materiales.\n\nEl episodio ocurrió el 29 de octubre en un comercio situado sobre la avenida Miguel Gil al 23, donde los ladrones destrozaron una ventana para entrar.\n\nLos delincuentes utilizaron un equipo autógeno y una soldadora para forzar la caja fuerte y llevarse una gran cantidad de dinero en efectivo.\n\nLa pesquisa estuvo a cargo del Grupo Operativo Chacabuco de la DDI Junín, que logró identificar al sospechoso mediante el análisis de filmaciones.\n\nDurante un operativo de allanamiento, los efectivos policiales incautaron un teléfono celular y la suma de 1.200.000 pesos.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Robo #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-04_2135_09_9-de-julio_imputaron-a-un-empleado-por-un.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-imputaron-a-un-empleado-de-28-anos-por-un-millonario-3eca52",
+      "youtube_url": "",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo millonario en Chacabuco",
+      "categoria": "robo",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
