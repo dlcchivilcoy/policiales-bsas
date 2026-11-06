@@ -27316,6 +27316,115 @@
         62,
         65
       ]
+    },
+    "84c22ad5ecbef224": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 62,
+      "commercial_score": 58,
+      "subtema": "ganaderia",
+      "tema": "faena vacuna",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Mide datos oficiales clave de ganadería y oferta cárnica, de gran interés para el productor ganadero de la región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        61
+      ]
+    },
+    "9fae808d52b23ac3": {
+      "impacto_economico": 4,
+      "interes_productores": 2,
+      "innovacion": 0,
+      "cercania_argentina": 3,
+      "cercania_pba": 0,
+      "potencial_reel": 0,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 14,
+      "commercial_score": 15,
+      "subtema": "mercados",
+      "tema": "elecciones brasil",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es análisis político general de un país vecino, sin impacto directo ni técnico para el productor agropecuario pampeano.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2584afdfbbaf10dd": {
+      "impacto_economico": 10,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 45,
+      "commercial_score": 45,
+      "subtema": "mercados",
+      "tema": "riesgo país",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta la macroeconomía y el financiamiento del agro, pero excede la temática estrictamente productiva o técnica.",
+      "tema_doc": "dolar",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3f90cdf2e81856e6": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 9,
+      "potencial_comercial": 9,
+      "ai_score": 86,
+      "commercial_score": 85,
+      "subtema": "agro",
+      "tema": "maíz tardío",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Altamente relevante para la zona núcleo en plena campaña de maíz tardío bajo escenario climático Niña/Niño.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5c5d25a74f6f630a": {
+      "impacto_economico": 8,
+      "interes_productores": 5,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 4,
+      "ai_score": 39,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "contexto macroeconómico",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una columna de opinión general sobre economía e incertidumbre política, sin datos duros ni manejo agronómico.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29173,7 +29282,12 @@
       "https://lanacion.com.ar/economia/campo/vino-como-presbitero-recorrio-las-pampas-y-a-los-pocos-anos-fue-nombrado-papa-nid06112026": "2026-11-06",
       "https://lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html": "2026-11-06",
       "https://lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html": "2026-11-06",
-      "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/sabanto-links-autonomy-to-precision-planting-s-20-20-for-unmanned-planting": "2026-11-06"
+      "https://futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/sabanto-links-autonomy-to-precision-planting-s-20-20-for-unmanned-planting": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249224-la-faena-de-octubre-se-ubico-en-1064-millones-de-cabezas-de-ganado-bovino.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249223-la-matematica-del-triunfo-de-lula-y-los-interrogantes-de-un-brasil-polarizado.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249222-la-suba-del-riesgo-pais-una-cuna-para-recuperar-nivel-de-actividad-y-ganar-reservas.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249216-nubes-en-el-horizonte.html": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31029,7 +31143,12 @@
       "vino como presbitero recorrio las pampas y a los pocos anos fue nombrado papa": "2026-11-06",
       "el nino la alerta por excesos hidricos se modera en la region pampeana": "2026-11-06",
       "cronicas de campana entre el alivio de la lluvia el dano del granizo y la pausa en la siembra": "2026-11-06",
-      "sabanto links autonomy to precision planting s 20 20 for unmanned planting": "2026-11-06"
+      "sabanto links autonomy to precision planting s 20 20 for unmanned planting": "2026-11-06",
+      "la faena de octubre se ubico en 1 064 millones de cabezas de ganado bovino": "2026-11-06",
+      "la matematica del triunfo de lula y los interrogantes de un brasil polarizado": "2026-11-06",
+      "la suba del riesgo pais una cuna para recuperar nivel de actividad y ganar reservas": "2026-11-06",
+      "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque": "2026-11-06",
+      "nubes en el horizonte": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32885,7 +33004,12 @@
       "9a013dc23ba8520d": "2026-11-06",
       "fe15f97a0c9043c2": "2026-11-06",
       "63afefc18804e4be": "2026-11-06",
-      "a7b90513155b42a0": "2026-11-06"
+      "a7b90513155b42a0": "2026-11-06",
+      "84c22ad5ecbef224": "2026-11-06",
+      "9fae808d52b23ac3": "2026-11-06",
+      "2584afdfbbaf10dd": "2026-11-06",
+      "3f90cdf2e81856e6": "2026-11-06",
+      "5c5d25a74f6f630a": "2026-11-06"
     }
   },
   "elegidas": [
@@ -57883,49 +58007,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_730c1f15428e_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "5f7493f44900",
-      "rep": {
-        "id": "5f7493f44900",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/ahora-la-consigna-es-manejar-los-tiempos-del-mercado-nid06112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/ahora-la-consigna-es-manejar-los-tiempos-del-mercado-nid06112026",
-        "titulo": "Ahora la consigna es manejar los “tiempos del mercado”",
-        "titulo_norm": "ahora la consigna es manejar los tiempos del mercado",
-        "descripcion": "Frente a la volatilidad y la estrategia de los fondos, conviene esperar nuevas oportunidades para capturar precios",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/EQJS7O6L3FH3DAOLC5LFOANC34.jpg?auth=646ee1ec5376cf55c52002a44cc27e3b56a75328ce9f43b801164aae76984425&smart=true",
-        "autor": "Enrique Erize",
-        "publicado": "2026-11-06T06:00-03:00",
-        "capturado": "2026-11-06T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3751304bca977f6d"
-      },
-      "grupo": [
-        {
-          "id": "5f7493f44900",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/ahora-la-consigna-es-manejar-los-tiempos-del-mercado-nid06112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/ahora-la-consigna-es-manejar-los-tiempos-del-mercado-nid06112026",
-          "titulo": "Ahora la consigna es manejar los “tiempos del mercado”",
-          "titulo_norm": "ahora la consigna es manejar los tiempos del mercado",
-          "descripcion": "Frente a la volatilidad y la estrategia de los fondos, conviene esperar nuevas oportunidades para capturar precios",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/EQJS7O6L3FH3DAOLC5LFOANC34.jpg?auth=646ee1ec5376cf55c52002a44cc27e3b56a75328ce9f43b801164aae76984425&smart=true",
-          "autor": "Enrique Erize",
-          "publicado": "2026-11-06T06:00-03:00",
-          "capturado": "2026-11-06T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3751304bca977f6d"
-        }
-      ],
+      "cuando": "2026-11-06T07:20-03:00",
+      "titulo_original": "Ahora la consigna es manejar los “tiempos del mercado”",
+      "descripcion": "Frente a la volatilidad y la estrategia de los fondos, conviene esperar nuevas oportunidades para capturar precios",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/ahora-la-consigna-es-manejar-los-tiempos-del-mercado-nid06112026/",
+      "titular": "Maíz: la producción de EE.UU. trepa a 407 MMT y golpea precios",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 15,
         "interes_productores": 14,
@@ -57951,7 +58042,167 @@
           73
         ]
       },
-      "cuando": "2026-11-06T07:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T07:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b89afb20-718f-4d0f-bb34-aaecf16a4fe2",
+          "slug": "maiz-la-produccion-de-ee-uu-llega-a-407-mmt-y-el-mercado-evalua-eac8f5",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-la-produccion-de-ee-uu-llega-a-407-mmt-y-el-mercado-evalua-eac8f5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18505417141101283",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1749623597168637",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18127097585490064"
+        },
+        "historia_facebook": {
+          "id": "984256494203936"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5f7493f44900_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "2c583607dc88",
+      "rep": {
+        "id": "2c583607dc88",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249224-la-faena-de-octubre-se-ubico-en-1064-millones-de-cabezas-de-ganado-bovino.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249224-la-faena-de-octubre-se-ubico-en-1064-millones-de-cabezas-de-ganado-bovino.html",
+        "titulo": "La faena de Octubre se ubicó en 1,064 millones de cabezas de ganado bovino",
+        "titulo_norm": "la faena de octubre se ubico en 1 064 millones de cabezas de ganado bovino",
+        "descripcion": "Esto implica una suba leve a moderada, con respecto a septiembre, del (+1,7%), que equivale a unos 17,9 mil animales; y una significativa baja, de un (-11,6%) con respecto al mes de octubre de 2025, que equivale a cerca de 139,2 mil cabezas....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249224_52936407.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-05T18:10-03:00",
+        "capturado": "2026-11-06T07:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "84c22ad5ecbef224"
+      },
+      "grupo": [
+        {
+          "id": "2c583607dc88",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249224-la-faena-de-octubre-se-ubico-en-1064-millones-de-cabezas-de-ganado-bovino.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249224-la-faena-de-octubre-se-ubico-en-1064-millones-de-cabezas-de-ganado-bovino.html",
+          "titulo": "La faena de Octubre se ubicó en 1,064 millones de cabezas de ganado bovino",
+          "titulo_norm": "la faena de octubre se ubico en 1 064 millones de cabezas de ganado bovino",
+          "descripcion": "Esto implica una suba leve a moderada, con respecto a septiembre, del (+1,7%), que equivale a unos 17,9 mil animales; y una significativa baja, de un (-11,6%) con respecto al mes de octubre de 2025, que equivale a cerca de 139,2 mil cabezas....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249224_52936407.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-05T18:10-03:00",
+          "capturado": "2026-11-06T07:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "84c22ad5ecbef224"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 4,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 62,
+        "commercial_score": 58,
+        "subtema": "ganaderia",
+        "tema": "faena vacuna",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Mide datos oficiales clave de ganadería y oferta cárnica, de gran interés para el productor ganadero de la región.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          61
+        ]
+      },
+      "cuando": "2026-11-06T07:20-03:00"
+    },
+    {
+      "id": "2ac66882f0b2",
+      "rep": {
+        "id": "2ac66882f0b2",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html",
+        "titulo": "Maíz tardío: ante un escenario Niño, el rendimiento empieza a construirse desde el arranque",
+        "titulo_norm": "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque",
+        "descripcion": "Las perspectivas de un escenario climático influenciado por El Niño vuelven a poner al maíz tardío en el centro de las decisiones productivas. Frente a condiciones que pueden ofrecer una mayor disponibilidad hídrica, el desafío no pasa solamente por contar con agua, sino por generar las condiciones para que el cultivo pueda aprovechar ese ambiente....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249218_59286583.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-05T15:01-03:00",
+        "capturado": "2026-11-06T07:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3f90cdf2e81856e6"
+      },
+      "grupo": [
+        {
+          "id": "2ac66882f0b2",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html",
+          "titulo": "Maíz tardío: ante un escenario Niño, el rendimiento empieza a construirse desde el arranque",
+          "titulo_norm": "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque",
+          "descripcion": "Las perspectivas de un escenario climático influenciado por El Niño vuelven a poner al maíz tardío en el centro de las decisiones productivas. Frente a condiciones que pueden ofrecer una mayor disponibilidad hídrica, el desafío no pasa solamente por contar con agua, sino por generar las condiciones para que el cultivo pueda aprovechar ese ambiente....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249218_59286583.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-05T15:01-03:00",
+          "capturado": "2026-11-06T07:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3f90cdf2e81856e6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 85,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para la zona núcleo en plena campaña de maíz tardío bajo escenario climático Niña/Niño.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T07:20-03:00"
     },
     {
       "id": "526134cccdc5",
@@ -58541,8 +58792,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T07:03:07-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T07:23:04-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
