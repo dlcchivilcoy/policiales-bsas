@@ -27961,6 +27961,48 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6a4b3342331baf96": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 12,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 86,
+      "commercial_score": 86,
+      "subtema": "agro",
+      "tema": "cultivos transgénicos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Mide el impacto histórico de la biotecnología en el país con cifras contundentes que interesan a toda la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c2f265967e4a3618": {
+      "impacto_economico": 20,
+      "interes_productores": 15,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 9,
+      "ai_score": 82,
+      "commercial_score": 92,
+      "subtema": "mercados",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca el tema más sensible para el productor pampeano, generando alto debate y directa relación con la rentabilidad.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29862,7 +29904,9 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/buenas-8": "2026-11-06",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y": "2026-11-06",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el": "2026-11-06",
-      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-de-1": "2026-11-06"
+      "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-de-1": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/los-cultivos-transgenicos-generaron-en-el-pais-beneficios-brutos-por-unos-us197500-millones-en-30-nid06112026": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31762,7 +31806,9 @@
       "buenas perspectivas para la exportacion de trigo argentino ante la caida de la cosecha brasilena": "2026-11-06",
       "agricultura y ganaderia en santa fe como cambio el mapa productivo en la ultima decada": "2026-11-06",
       "china en el comercio mundial de soja evolucion y perspectivas hacia adelante": "2026-11-06",
-      "mercados de capitales expectativas electorales en estados unidos y desafios regionales": "2026-11-06"
+      "mercados de capitales expectativas electorales en estados unidos y desafios regionales": "2026-11-06",
+      "los cultivos transgenicos generaron en el pais beneficios brutos por unos us 197 500 millones en 30 anos": "2026-11-06",
+      "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33662,7 +33708,9 @@
       "0a8ac36e63e8c494": "2026-11-06",
       "394e16b8be215305": "2026-11-06",
       "9c6b54edd0094522": "2026-11-06",
-      "cbcad65c91df1421": "2026-11-06"
+      "cbcad65c91df1421": "2026-11-06",
+      "6a4b3342331baf96": "2026-11-06",
+      "c2f265967e4a3618": "2026-11-06"
     }
   },
   "elegidas": [
@@ -59328,9 +59376,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e18db15a33fe_portada.jpg"
+    },
+    {
+      "id": "f689020e1baa",
+      "cuando": "2026-11-06T13:40-03:00",
+      "titulo_original": "Los cultivos transgénicos generaron en el país beneficios brutos por unos US$197.500 millones en 30 años",
+      "descripcion": "El Grupo CEO estimó el impacto acumulado entre 1996 y 2025; el trabajo se presentó en el 35° aniversario de la Conabia y propone una agenda que abarca desde la propiedad intelectual sobre semillas hasta la armonización regulatoria con los mercados de destino",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/los-cultivos-transgenicos-generaron-en-el-pais-beneficios-brutos-por-unos-us197500-millones-en-30-nid06112026/",
+      "titular": "Cultivos transgénicos aportaron US$197.500 millones en treinta años al país",
+      "volanta": "AgTech",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 12,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 86,
+        "commercial_score": 86,
+        "subtema": "agro",
+        "tema": "cultivos transgénicos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Mide el impacto histórico de la biotecnología en el país con cifras contundentes que interesan a toda la zona núcleo.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T13:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8f774c79-c53f-46f4-9eaa-b4364d562f44",
+          "slug": "cultivos-transgenicos-aportaron-197-500-millones-de-dolares-en-ea5f62",
+          "url": "https://www.diariolacampaña.com.ar/n/cultivos-transgenicos-aportaron-197-500-millones-de-dolares-en-ea5f62",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17939354280395665",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1750010700463260",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18057803147801773"
+        },
+        "historia_facebook": {
+          "id": "1879103993265497"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f689020e1baa_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "debeba1c1c27",
+      "rep": {
+        "id": "debeba1c1c27",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026",
+        "titulo": "Milei destacó la baja de retenciones en su Gobierno y dijo que desaparecerán en el largo plazo",
+        "titulo_norm": "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo",
+        "descripcion": "En la Rural, dijo: “Si hay un sector que fue injustamente castigado fueron ustedes”. Y remarcó sobre los derechos de exportación: “Nuestro plan de largo es que desaparezcan”",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/AFJR2DD4O5HZFN2VVBPO5ILOJY.jpg?auth=ed4f829da6f9a5227cf3be2399379b4d68ed6cdb6064e902e94a799dda2266a2&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-11-06T13:22-03:00",
+        "capturado": "2026-11-06T13:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c2f265967e4a3618"
+      },
+      "grupo": [
+        {
+          "id": "debeba1c1c27",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026",
+          "titulo": "Milei destacó la baja de retenciones en su Gobierno y dijo que desaparecerán en el largo plazo",
+          "titulo_norm": "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo",
+          "descripcion": "En la Rural, dijo: “Si hay un sector que fue injustamente castigado fueron ustedes”. Y remarcó sobre los derechos de exportación: “Nuestro plan de largo es que desaparezcan”",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AFJR2DD4O5HZFN2VVBPO5ILOJY.jpg?auth=ed4f829da6f9a5227cf3be2399379b4d68ed6cdb6064e902e94a799dda2266a2&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-11-06T13:22-03:00",
+          "capturado": "2026-11-06T13:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c2f265967e4a3618"
+        }
+      ],
+      "score": {
+        "impacto_economico": 20,
+        "interes_productores": 15,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 82,
+        "commercial_score": 92,
+        "subtema": "mercados",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca el tema más sensible para el productor pampeano, generando alto debate y directa relación con la rentabilidad.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T13:40-03:00"
+    },
     {
       "id": "06f69a3267fb",
       "rep": {
@@ -60268,73 +60439,6 @@
       "cuando": "2026-11-05T22:00-03:00"
     },
     {
-      "id": "ce0661867e3c",
-      "rep": {
-        "id": "ce0661867e3c",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026",
-        "titulo": "Trámite ágil y buenos valores en un remate especial en Cañuelas",
-        "titulo_norm": "tramite agil y buenos valores en un remate especial en canuelas",
-        "descripcion": "Fue en la 22º Exposición Nacional de Haciendas de Consumo 5 Estrellas de la firma Sáenz Valiente, Bullrich y Cía. SA.; el Índice Novillo del Mercado Agroganadero quedó en $4352,108",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/FNWVW6R6XRGVHCBHAZBXFEN54Y.JPG?auth=b53f83eb37ee115ab5b958bf145ec3b154422fa6f6f7c0898c4c6f2785868911&smart=true",
-        "autor": "",
-        "publicado": "2026-11-05T18:29-03:00",
-        "capturado": "2026-11-05T18:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "86ef23c80c1d8a35"
-      },
-      "grupo": [
-        {
-          "id": "ce0661867e3c",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026",
-          "titulo": "Trámite ágil y buenos valores en un remate especial en Cañuelas",
-          "titulo_norm": "tramite agil y buenos valores en un remate especial en canuelas",
-          "descripcion": "Fue en la 22º Exposición Nacional de Haciendas de Consumo 5 Estrellas de la firma Sáenz Valiente, Bullrich y Cía. SA.; el Índice Novillo del Mercado Agroganadero quedó en $4352,108",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FNWVW6R6XRGVHCBHAZBXFEN54Y.JPG?auth=b53f83eb37ee115ab5b958bf145ec3b154422fa6f6f7c0898c4c6f2785868911&smart=true",
-          "autor": "",
-          "publicado": "2026-11-05T18:29-03:00",
-          "capturado": "2026-11-05T18:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "86ef23c80c1d8a35"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 67,
-        "commercial_score": 69,
-        "subtema": "ganaderia",
-        "tema": "hacienda cañuelas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Muestra valores de referencia de hacienda en la provincia de Buenos Aires que interesan al ganadero.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          68
-        ]
-      },
-      "cuando": "2026-11-05T18:40-03:00"
-    },
-    {
       "id": "8e63f3f210d2",
       "rep": {
         "id": "8e63f3f210d2",
@@ -60400,77 +60504,10 @@
         ]
       },
       "cuando": "2026-11-05T16:00-03:00"
-    },
-    {
-      "id": "5cccfb8fe45b",
-      "rep": {
-        "id": "5cccfb8fe45b",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html",
-        "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html",
-        "titulo": "Las lluvias pusieron otra pausa a la cosecha de trigo en Santa Fe",
-        "titulo_norm": "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe",
-        "descripcion": "En el centro norte santafesino, los promedios se ubicaron entre 32 y 35 quintales por hectárea. Las precipitaciones también interrumpieron la siembra de los cultivos de verano",
-        "imagen_url": "https://media.lacapital.com.ar/p/0e06db0100d51f5c27911ef2cd9ab18f/adjuntos/203/imagenes/018/253/0018253847/1200x675/smart/trigo-cosecha.jpg",
-        "autor": "",
-        "publicado": "2026-11-05T14:39-03:00",
-        "capturado": "2026-11-05T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b981de217fdf62fb"
-      },
-      "grupo": [
-        {
-          "id": "5cccfb8fe45b",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html",
-          "canonical_url": "https://lacapital.com.ar/agro/las-lluvias-pusieron-otra-pausa-la-cosecha-trigo-santa-fe-n10290645.html",
-          "titulo": "Las lluvias pusieron otra pausa a la cosecha de trigo en Santa Fe",
-          "titulo_norm": "las lluvias pusieron otra pausa a la cosecha de trigo en santa fe",
-          "descripcion": "En el centro norte santafesino, los promedios se ubicaron entre 32 y 35 quintales por hectárea. Las precipitaciones también interrumpieron la siembra de los cultivos de verano",
-          "imagen_url": "https://media.lacapital.com.ar/p/0e06db0100d51f5c27911ef2cd9ab18f/adjuntos/203/imagenes/018/253/0018253847/1200x675/smart/trigo-cosecha.jpg",
-          "autor": "",
-          "publicado": "2026-11-05T14:39-03:00",
-          "capturado": "2026-11-05T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b981de217fdf62fb"
-        }
-      ],
-      "score": {
-        "impacto_economico": 14,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 69,
-        "commercial_score": 68,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesa por el impacto de las lluvias en plena cosecha fina en la región pampeana.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          67
-        ]
-      },
-      "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T13:23:16-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T13:43:21-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
