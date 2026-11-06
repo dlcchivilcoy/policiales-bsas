@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T23:31:52.000Z",
+  "actualizado": "2026-11-06T00:31:24.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/11/03/ruta-5-fuerte-operativo-y-dos-detenidos/",
@@ -283,6 +283,30 @@
       "volanta": "Robo calificado en Solís",
       "categoria": "robo",
       "distancia_km": 92.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/05/26853-detuvieron-a-un-joven-de-18-anos-acusado-de-robarle-a-una-mujer-de-77",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-06T00:31:24.000Z",
+      "titulo": "Detuvieron a un joven de 18 años por robar 500 mil pesos a una mujer de 77",
+      "descripcion": "Un sospechoso de 18 años fue arrestado este miércoles 05/11/2026 en Bragado, acusado de sustraer medio millón de pesos y lesionar a una vecina de 77 años en una finca de calle Catamarca.",
+      "texto_tiktok": "Un joven de 18 años resultó arrestado este miércoles 05/11/2026 en Bragado, luego de una pesquisa por un robo millonario.\n\nEl episodio tuvo lugar en un domicilio de la calle Catamarca, donde una jubilada de 77 años cayó al suelo y sufrió lesiones durante un forcejeo.\n\nLos investigadores comprobaron que faltaban 500.000 pesos del interior del inmueble tras la visita del sospechoso junto a otro familiar.\n\nLa captura se concretó mediante un operativo en la vía pública y el imputado deberá declarar este viernes ante la Justicia en Mercedes.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Policiales #Inseguridad #Detenido #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-05_2135_10_bragado_detuvieron-a-un-joven-de-18-a-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-detuvieron-a-un-joven-de-18-anos-acusado-de-robar-500-44af1a",
+      "youtube_url": "https://youtube.com/shorts/PUnZ-d4h9ig",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Bragado",
+      "categoria": "operativo_policial",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
