@@ -27425,6 +27425,27 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "154d2e9f5e45650a": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 77,
+      "commercial_score": 77,
+      "subtema": "empresas",
+      "tema": "rimi iva",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en las inversiones medianas del sector y en la carga impositiva, generando gran interés en productores y empresas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29287,7 +29308,8 @@
       "https://agrositio.com.ar/noticia/249223-la-matematica-del-triunfo-de-lula-y-los-interrogantes-de-un-brasil-polarizado.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249222-la-suba-del-riesgo-pais-una-cuna-para-recuperar-nivel-de-actividad-y-ganar-reservas.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html": "2026-11-06",
-      "https://agrositio.com.ar/noticia/249216-nubes-en-el-horizonte.html": "2026-11-06"
+      "https://agrositio.com.ar/noticia/249216-nubes-en-el-horizonte.html": "2026-11-06",
+      "https://bichosdecampo.com/ahora-si-arca-fijo-nuevas-reglas-para-recuperar-el-iva-de-las-inversiones-productivas-que-se-realicen-en-el-marco-del-rimi": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31148,7 +31170,8 @@
       "la matematica del triunfo de lula y los interrogantes de un brasil polarizado": "2026-11-06",
       "la suba del riesgo pais una cuna para recuperar nivel de actividad y ganar reservas": "2026-11-06",
       "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque": "2026-11-06",
-      "nubes en el horizonte": "2026-11-06"
+      "nubes en el horizonte": "2026-11-06",
+      "ahora si arca fijo nuevas reglas para recuperar el iva de las inversiones productivas que se realicen en el marco del rimi": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33009,7 +33032,8 @@
       "9fae808d52b23ac3": "2026-11-06",
       "2584afdfbbaf10dd": "2026-11-06",
       "3f90cdf2e81856e6": "2026-11-06",
-      "5c5d25a74f6f630a": "2026-11-06"
+      "5c5d25a74f6f630a": "2026-11-06",
+      "154d2e9f5e45650a": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58131,6 +58155,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2ac66882f0b2_portada.jpg"
+    },
+    {
+      "id": "03149138323c",
+      "cuando": "2026-11-06T08:00-03:00",
+      "titulo_original": "¿Ahora sí? ARCA fijó nuevas reglas para recuperar el IVA de las inversiones productivas que se realicen en el marco del RIMI",
+      "descripcion": "El Gobierno avanzó con una nueva reglamentación del Régimen de Incentivo para Medianas Inversiones (RIMI), cuya implementación había generado algunos cuestionamientos entre especialistas tributarios. A través de la Resolución General 5922/2026, publicada este viernes en el Boletín Oficial, la Agenci",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/ahora-si-arca-fijo-nuevas-reglas-para-recuperar-el-iva-de-las-inversiones-productivas-que-se-realicen-en-el-marco-del-rimi/",
+      "titular": "ARCA fijó nuevas reglas para recuperar el IVA de inversiones productivas",
+      "volanta": "Impuestos",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 77,
+        "commercial_score": 77,
+        "subtema": "empresas",
+        "tema": "rimi iva",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en las inversiones medianas del sector y en la carga impositiva, generando gran interés en productores y empresas.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T08:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1ea9ac39-5139-43d9-ac44-a85626d67e02",
+          "slug": "arca-fijo-las-reglas-para-recuperar-el-iva-de-las-inversiones-aa8162",
+          "url": "https://www.diariolacampaña.com.ar/n/arca-fijo-las-reglas-para-recuperar-el-iva-de-las-inversiones-aa8162",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18106843826254545",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1749658320498498",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18024433997933576"
+        },
+        "historia_facebook": {
+          "id": "2359914681503939"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_03149138323c_portada.jpg"
     }
   ],
   "pendientes": [
@@ -58789,8 +58873,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T07:42:54-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T08:02:53-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
