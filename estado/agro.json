@@ -27601,6 +27601,52 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "597f8d4390f50ff8": {
+      "impacto_economico": 18,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 9,
+      "ai_score": 83,
+      "commercial_score": 83,
+      "subtema": "maquinaria",
+      "tema": "maquinaria agrícola",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta de lleno en la industria de la maquinaria y la rentabilidad del sector en la región núcleo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e4a9463cd77015bb": {
+      "impacto_economico": 16,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 4,
+      "conversacion": 10,
+      "potencial_comercial": 6,
+      "ai_score": 67,
+      "commercial_score": 70,
+      "subtema": "empresas",
+      "tema": "riesgo país",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Genera gran debate político y económico entre productores y empresarios del campo de la provincia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        68
+      ]
     }
   },
   "indice": {
@@ -29473,7 +29519,10 @@
       "https://agrositio.com.ar/noticia/249226-una-mision-de-india-visitara-jacobacci-para-avanzar-en-la-compra-de-lana-y-mohair.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249225-caida-generalizada-en-chicago-soja-y-maiz-ceden-ante-la-oferta-y-el-contexto-global.html": "2026-11-06",
       "https://bichosdecampo.com/final-abierto-para-el-trigo-las-lluvias-el-granizo-y-el-fusarium-ponen-en-duda-los-rindes-de-la-region-nucleo": "2026-11-06",
-      "https://bichosdecampo.com/senasa-elimino-un-arancel-fijo-para-importar-alimentos-de-uso-industrial-y-ahora-las-empresas-pagaran-segun-el-valor-de-la-mercaderia": "2026-11-06"
+      "https://bichosdecampo.com/senasa-elimino-un-arancel-fijo-para-importar-alimentos-de-uso-industrial-y-ahora-las-empresas-pagaran-segun-el-valor-de-la-mercaderia": "2026-11-06",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-6-noviembre-2026": "2026-11-06",
+      "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31344,7 +31393,10 @@
       "una mision de india visitara jacobacci para avanzar en la compra de lana y mohair": "2026-11-06",
       "caida generalizada en chicago soja y maiz ceden ante la oferta y el contexto global": "2026-11-06",
       "final abierto para el trigo las lluvias el granizo y el fusarium ponen en duda los rindes de la region nucleo": "2026-11-06",
-      "senasa elimino un arancel fijo para importar alimentos de uso industrial y ahora las empresas pagaran segun el valor de la mercaderia": "2026-11-06"
+      "senasa elimino un arancel fijo para importar alimentos de uso industrial y ahora las empresas pagaran segun el valor de la mercaderia": "2026-11-06",
+      "dolar blue a cuanto cotizan hoy en cordoba 6 noviembre 2026": "2026-11-06",
+      "mismos precios el doble de impuestos la maquinaria agricola argentina compara su carga con brasil y mexico y advierte que la baja rentabilidad puede traer anos de desinversion": "2026-11-06",
+      "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33215,7 +33267,10 @@
       "7c88663b3ff449c1": "2026-11-06",
       "2ba5045dfef6c3ec": "2026-11-06",
       "46d664f9c125d382": "2026-11-06",
-      "e096b9e9cd984238": "2026-11-06"
+      "e096b9e9cd984238": "2026-11-06",
+      "f78e27984028f3ab": "2026-11-06",
+      "597f8d4390f50ff8": "2026-11-06",
+      "e4a9463cd77015bb": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58517,9 +58572,199 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_17b264140a39_portada.jpg"
+    },
+    {
+      "id": "e5cdd377b1c3",
+      "cuando": "2026-11-06T10:20-03:00",
+      "titulo_original": "Otra audiencia fallida por Pauny: armar algunos tractores para conseguir dinero, la única propuesta de la empresa",
+      "descripcion": "La crisis en la fábrica de tractores cordobesa, tomada por los trabajadores, es cada vez más pronunciada. La empresa no tiene un plan de pagos para la deuda salarial y los operarios exigen algo de dinero para retomar tareas.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa/",
+      "titular": "Fracasa nueva audiencia por Pauny y sigue la toma en la planta",
+      "volanta": "Maquinaria",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 70,
+        "subtema": "maquinaria",
+        "tema": "pauny crisis",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directo al mercado de maquinaria nacional y preocupa a toda la cadena por la falta de repuestos y tractores.",
+        "tema_doc": "costos",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T10:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8d316887-72ee-4acb-83ef-4612d1e078ba",
+          "slug": "fracasa-nueva-audiencia-por-pauny-y-sigue-la-toma-de-la-planta-28c327",
+          "url": "https://www.diariolacampaña.com.ar/n/fracasa-nueva-audiencia-por-pauny-y-sigue-la-toma-de-la-planta-28c327",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18220911184350797",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1749799850484345",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18097392002453905"
+        },
+        "historia_facebook": {
+          "id": "1756176242113960"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e5cdd377b1c3_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "aab7f50d8493",
+      "rep": {
+        "id": "aab7f50d8493",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion/",
+        "canonical_url": "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion",
+        "titulo": "Mismos precios, el doble de impuestos: La maquinaria agrícola argentina compara su carga con Brasil y México y advierte que la baja rentabilidad puede traer años de desinversión",
+        "titulo_norm": "mismos precios el doble de impuestos la maquinaria agricola argentina compara su carga con brasil y mexico y advierte que la baja rentabilidad puede traer anos de desinversion",
+        "descripcion": "La industria de la maquinaria agrícola local muestra una doble faceta: con serias dificultades para sostener la rentabilidad puertas adentro, en un mercado interno que se ha acotado de manera considerable, impulsa cada vez más la búsqueda de oportunidades cautivas afuera con intensas misiones comerciales. Los ejemplos más claros son el trabajo realizado en Europa […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/10/maquinaria-agricola-bichos-de-campo.webp",
+        "autor": "Lucas Torsiglieri",
+        "publicado": "2026-11-06T10:08-03:00",
+        "capturado": "2026-11-06T10:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "597f8d4390f50ff8"
+      },
+      "grupo": [
+        {
+          "id": "aab7f50d8493",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion/",
+          "canonical_url": "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion",
+          "titulo": "Mismos precios, el doble de impuestos: La maquinaria agrícola argentina compara su carga con Brasil y México y advierte que la baja rentabilidad puede traer años de desinversión",
+          "titulo_norm": "mismos precios el doble de impuestos la maquinaria agricola argentina compara su carga con brasil y mexico y advierte que la baja rentabilidad puede traer anos de desinversion",
+          "descripcion": "La industria de la maquinaria agrícola local muestra una doble faceta: con serias dificultades para sostener la rentabilidad puertas adentro, en un mercado interno que se ha acotado de manera considerable, impulsa cada vez más la búsqueda de oportunidades cautivas afuera con intensas misiones comerciales. Los ejemplos más claros son el trabajo realizado en Europa […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/10/maquinaria-agricola-bichos-de-campo.webp",
+          "autor": "Lucas Torsiglieri",
+          "publicado": "2026-11-06T10:08-03:00",
+          "capturado": "2026-11-06T10:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "597f8d4390f50ff8"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 9,
+        "ai_score": 83,
+        "commercial_score": 83,
+        "subtema": "maquinaria",
+        "tema": "maquinaria agrícola",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la industria de la maquinaria y la rentabilidad del sector en la región núcleo.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T10:20-03:00"
+    },
+    {
+      "id": "435685e95559",
+      "rep": {
+        "id": "435685e95559",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026",
+        "titulo": "“Tienen miedo que no esté Milei”: Caputo vinculó la suba del riesgo país al temor de los inversores a un cambio de gobierno en 2027",
+        "titulo_norm": "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027",
+        "descripcion": "Para el ministro de Economía, esa es una de las razones por las que el riesgo país sigue elevado, más allá de los factores externos que también mencionó durante una exposición en la Sociedad Rural Argentina",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/LOKAQZDPM5F35L6JZ7SR2PCAMI.jpeg?auth=7dd856006b4834a3e21df765ce27c13ae9c66359bdebaa613d0d086d2767bd70&smart=true",
+        "autor": "Pilar Vazquez",
+        "publicado": "2026-11-06T10:10-03:00",
+        "capturado": "2026-11-06T10:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e4a9463cd77015bb"
+      },
+      "grupo": [
+        {
+          "id": "435685e95559",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026",
+          "titulo": "“Tienen miedo que no esté Milei”: Caputo vinculó la suba del riesgo país al temor de los inversores a un cambio de gobierno en 2027",
+          "titulo_norm": "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027",
+          "descripcion": "Para el ministro de Economía, esa es una de las razones por las que el riesgo país sigue elevado, más allá de los factores externos que también mencionó durante una exposición en la Sociedad Rural Argentina",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/LOKAQZDPM5F35L6JZ7SR2PCAMI.jpeg?auth=7dd856006b4834a3e21df765ce27c13ae9c66359bdebaa613d0d086d2767bd70&smart=true",
+          "autor": "Pilar Vazquez",
+          "publicado": "2026-11-06T10:10-03:00",
+          "capturado": "2026-11-06T10:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e4a9463cd77015bb"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 12,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 4,
+        "conversacion": 10,
+        "potencial_comercial": 6,
+        "ai_score": 67,
+        "commercial_score": 70,
+        "subtema": "empresas",
+        "tema": "riesgo país",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Genera gran debate político y económico entre productores y empresarios del campo de la provincia.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          68
+        ]
+      },
+      "cuando": "2026-11-06T10:20-03:00"
+    },
     {
       "id": "eeb9f9e639a0",
       "rep": {
@@ -58584,69 +58829,6 @@
           66,
           76
         ]
-      },
-      "cuando": "2026-11-06T10:00-03:00"
-    },
-    {
-      "id": "e5cdd377b1c3",
-      "rep": {
-        "id": "e5cdd377b1c3",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa/",
-        "canonical_url": "https://infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa",
-        "titulo": "Otra audiencia fallida por Pauny: armar algunos tractores para conseguir dinero, la única propuesta de la empresa",
-        "titulo_norm": "otra audiencia fallida por pauny armar algunos tractores para conseguir dinero la unica propuesta de la empresa",
-        "descripcion": "La crisis en la fábrica de tractores cordobesa, tomada por los trabajadores, es cada vez más pronunciada. La empresa no tiene un plan de pagos para la deuda salarial y los operarios exigen algo de dinero para retomar tareas.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/toma-pauny-otra.jpg",
-        "autor": "Favio Re",
-        "publicado": "2026-11-06T09:08-03:00",
-        "capturado": "2026-11-06T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0f0da1850d1c53ea"
-      },
-      "grupo": [
-        {
-          "id": "e5cdd377b1c3",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa/",
-          "canonical_url": "https://infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa",
-          "titulo": "Otra audiencia fallida por Pauny: armar algunos tractores para conseguir dinero, la única propuesta de la empresa",
-          "titulo_norm": "otra audiencia fallida por pauny armar algunos tractores para conseguir dinero la unica propuesta de la empresa",
-          "descripcion": "La crisis en la fábrica de tractores cordobesa, tomada por los trabajadores, es cada vez más pronunciada. La empresa no tiene un plan de pagos para la deuda salarial y los operarios exigen algo de dinero para retomar tareas.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/toma-pauny-otra.jpg",
-          "autor": "Favio Re",
-          "publicado": "2026-11-06T09:08-03:00",
-          "capturado": "2026-11-06T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0f0da1850d1c53ea"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 14,
-        "innovacion": 8,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 5,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 77,
-        "commercial_score": 70,
-        "subtema": "maquinaria",
-        "tema": "pauny crisis",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta directo al mercado de maquinaria nacional y preocupa a toda la cadena por la falta de repuestos y tractores.",
-        "tema_doc": "costos",
-        "urgente": true,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-06T10:00-03:00"
     },
@@ -59309,8 +59491,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T10:04:08-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T10:23:58-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
