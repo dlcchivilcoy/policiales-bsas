@@ -27157,6 +27157,27 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "48d83eb8794db227": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 83,
+      "commercial_score": 83,
+      "subtema": "agro",
+      "tema": "cebada",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran orgullo local con fuerte impacto en la producción bonaerense de cebada y alta tracción para la audiencia.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -28996,7 +29017,8 @@
       "https://lanacion.com.ar/economia/campo/tramite-agil-y-buenos-valores-en-un-remate-especial-en-canuelas-nid05112026": "2026-11-05",
       "https://lanacion.com.ar/economia/campo/quieren-volver-a-la-125-estallo-un-conflicto-entre-cra-y-la-sociedad-rural-argentina-dos-de-las-mas-nid05112026": "2026-11-05",
       "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/lluvias-de-mas-de-100-mm-en-el-se": "2026-11-05",
-      "https://lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026": "2026-11-05"
+      "https://lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026": "2026-11-05",
+      "https://bichosdecampo.com/lo-sabias-uno-de-cada-cuatro-litros-de-cerveza-que-elabora-el-gigante-ab-inbev-en-el-mundo-se-genera-con-cebada-bonaerense": "2026-11-05"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -30834,7 +30856,8 @@
       "tramite agil y buenos valores en un remate especial en canuelas": "2026-11-05",
       "quieren volver a la 125 estallo un fuerte conflicto entre cra y la sociedad rural argentina dos de las mas importantes entidades del campo": "2026-11-05",
       "lluvias de mas de 100 mm en el se cordobes y 16 000 hectareas con posibles danos de granizo en la region": "2026-11-05",
-      "el nino las lluvias no dan tregua y en el sur bonaerense hay hasta 20 dias de atraso en la siembra vamos lerdo": "2026-11-05"
+      "el nino las lluvias no dan tregua y en el sur bonaerense hay hasta 20 dias de atraso en la siembra vamos lerdo": "2026-11-05",
+      "lo sabias uno de cada cuatro litros de cerveza que elabora el gigante ab inbev en el mundo se genera con cebada bonaerense": "2026-11-05"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -32672,7 +32695,8 @@
       "86ef23c80c1d8a35": "2026-11-05",
       "0a8a4c1c6a7420b0": "2026-11-05",
       "fa67581a3e019ec5": "2026-11-05",
-      "a5710d07fe12986f": "2026-11-05"
+      "a5710d07fe12986f": "2026-11-05",
+      "48d83eb8794db227": "2026-11-05"
     }
   },
   "elegidas": [
@@ -57614,6 +57638,69 @@
   ],
   "pendientes": [
     {
+      "id": "5129afe9f691",
+      "rep": {
+        "id": "5129afe9f691",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/lo-sabias-uno-de-cada-cuatro-litros-de-cerveza-que-elabora-el-gigante-ab-inbev-en-el-mundo-se-genera-con-cebada-bonaerense/",
+        "canonical_url": "https://bichosdecampo.com/lo-sabias-uno-de-cada-cuatro-litros-de-cerveza-que-elabora-el-gigante-ab-inbev-en-el-mundo-se-genera-con-cebada-bonaerense",
+        "titulo": "¿Lo sabías? Uno de cada cuatro litros de cerveza que elabora el gigante AB InBev en el mundo se genera con cebada bonaerense",
+        "titulo_norm": "lo sabias uno de cada cuatro litros de cerveza que elabora el gigante ab inbev en el mundo se genera con cebada bonaerense",
+        "descripcion": "El 25% de las cervezas que AB InBev, la compañía cervecera más grande del mundo, produce a nivel mundial se origina en la Argentina y más precisamente en la provincia de Buenos Aires. Asi lo indicó hoy Diego Caponi, gerente de Agronegocio de Maltería y Cervecería Quilmes (propiedad de AB InBev), durante una jornada de […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/IMG_20261105_165817.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-05T21:53-03:00",
+        "capturado": "2026-11-05T22:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "48d83eb8794db227"
+      },
+      "grupo": [
+        {
+          "id": "5129afe9f691",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/lo-sabias-uno-de-cada-cuatro-litros-de-cerveza-que-elabora-el-gigante-ab-inbev-en-el-mundo-se-genera-con-cebada-bonaerense/",
+          "canonical_url": "https://bichosdecampo.com/lo-sabias-uno-de-cada-cuatro-litros-de-cerveza-que-elabora-el-gigante-ab-inbev-en-el-mundo-se-genera-con-cebada-bonaerense",
+          "titulo": "¿Lo sabías? Uno de cada cuatro litros de cerveza que elabora el gigante AB InBev en el mundo se genera con cebada bonaerense",
+          "titulo_norm": "lo sabias uno de cada cuatro litros de cerveza que elabora el gigante ab inbev en el mundo se genera con cebada bonaerense",
+          "descripcion": "El 25% de las cervezas que AB InBev, la compañía cervecera más grande del mundo, produce a nivel mundial se origina en la Argentina y más precisamente en la provincia de Buenos Aires. Asi lo indicó hoy Diego Caponi, gerente de Agronegocio de Maltería y Cervecería Quilmes (propiedad de AB InBev), durante una jornada de […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/IMG_20261105_165817.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-05T21:53-03:00",
+          "capturado": "2026-11-05T22:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "48d83eb8794db227"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 83,
+        "commercial_score": 83,
+        "subtema": "agro",
+        "tema": "cebada",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran orgullo local con fuerte impacto en la producción bonaerense de cebada y alta tracción para la audiencia.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-05T22:00-03:00"
+    },
+    {
       "id": "0b93882e22c9",
       "rep": {
         "id": "0b93882e22c9",
@@ -58008,7 +58095,7 @@
       "cuando": "2026-11-04T19:00-03:00"
     }
   ],
-  "actualizado": "2026-11-05T21:45:07-03:00",
+  "actualizado": "2026-11-05T22:02:27-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
