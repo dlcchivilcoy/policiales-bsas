@@ -28003,6 +28003,69 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8c2fcf2e92aa4d54": {
+      "impacto_economico": 8,
+      "interes_productores": 4,
+      "innovacion": 2,
+      "cercania_argentina": 10,
+      "cercania_pba": 6,
+      "potencial_reel": 5,
+      "conversacion": 4,
+      "potencial_comercial": 4,
+      "ai_score": 43,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "equinos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interés de nicho pero con datos oficiales de exportación que suman valor estadístico.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "417124d63849101e": {
+      "impacto_economico": 18,
+      "interes_productores": 15,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 9,
+      "potencial_comercial": 9,
+      "ai_score": 89,
+      "commercial_score": 90,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Altamente relevante para la zona núcleo por el manejo de nutrientes en la campaña gruesa y su impacto directo en márgenes.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7789838f3bec05cf": {
+      "impacto_economico": 6,
+      "interes_productores": 5,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 2,
+      "potencial_reel": 4,
+      "conversacion": 3,
+      "potencial_comercial": 5,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "produccion animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Evento técnico importante a nivel nacional pero con baja injerencia directa en la región pampeana.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29907,7 +29970,13 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/mercados-de-1": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/los-cultivos-transgenicos-generaron-en-el-pais-beneficios-brutos-por-unos-us197500-millones-en-30-nid06112026": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026": "2026-11-06",
-      "https://bichosdecampo.com/quirno-cargo-contra-el-neoproteccionismo-ambiental-europeo-y-cuestiono-el-reglamento-antideforestacion-pero-defendio-el-desarrollo-de-herramientas-de-trazabilidad": "2026-11-06"
+      "https://bichosdecampo.com/quirno-cargo-contra-el-neoproteccionismo-ambiental-europeo-y-cuestiono-el-reglamento-antideforestacion-pero-defendio-el-desarrollo-de-herramientas-de-trazabilidad": "2026-11-06",
+      "https://infocampo.com.ar/el-boom-exportador-tambien-anda-a-caballo-las-exportaciones-equinas-crecen-14-en-2026": "2026-11-06",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249238-milei-en-la-rural-trabajamos-sin-descanso-para-poder-eliminar-para-siempre-el-invento-nefasto-de-las-retenciones.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249232-quirno-el-mundo-necesita-lo-que-ustedes-producen-y-lo-vamos-a-hacer-valer-en-cada-negociacion.html": "2026-11-06",
+      "https://bichosdecampo.com/en-plena-interna-de-gremiales-del-campo-cra-se-reunio-con-sturzenegger-y-le-llevo-su-reclamo-sobre-la-adhesion-al-visec": "2026-11-06",
+      "https://intainforma.inta.gob.ar/innovacion-y-produccion-ganadera-en-la-patagonia": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31810,7 +31879,13 @@
       "mercados de capitales expectativas electorales en estados unidos y desafios regionales": "2026-11-06",
       "los cultivos transgenicos generaron en el pais beneficios brutos por unos us 197 500 millones en 30 anos": "2026-11-06",
       "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo": "2026-11-06",
-      "quirno cargo contra el neoproteccionismo ambiental europeo y cuestiono el reglamento antideforestacion pero defendio el desarrollo de herramientas de trazabilidad": "2026-11-06"
+      "quirno cargo contra el neoproteccionismo ambiental europeo y cuestiono el reglamento antideforestacion pero defendio el desarrollo de herramientas de trazabilidad": "2026-11-06",
+      "el boom exportador tambien anda a caballo las exportaciones equinas crecen 14 en 2026": "2026-11-06",
+      "como afectan las dosis de nitrogeno y fosforo a los margenes agricolas con f cordoba fertilizar": "2026-11-06",
+      "milei en la rural trabajamos sin descanso para poder eliminar para siempre el invento nefasto de las retenciones": "2026-11-06",
+      "quirno el mundo necesita lo que ustedes producen y lo vamos a hacer valer en cada negociacion": "2026-11-06",
+      "en plena interna de gremiales del campo cra se reunio con sturzenegger y le llevo su reclamo sobre la adhesion al visec": "2026-11-06",
+      "innovacion y produccion ganadera en la patagonia": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33713,7 +33788,13 @@
       "cbcad65c91df1421": "2026-11-06",
       "6a4b3342331baf96": "2026-11-06",
       "c2f265967e4a3618": "2026-11-06",
-      "eeaed067e10904a5": "2026-11-06"
+      "eeaed067e10904a5": "2026-11-06",
+      "8c2fcf2e92aa4d54": "2026-11-06",
+      "417124d63849101e": "2026-11-06",
+      "15ffb8d6072a70e8": "2026-11-06",
+      "67d91689860e0c1b": "2026-11-06",
+      "024bfcad4d5e2600": "2026-11-06",
+      "7789838f3bec05cf": "2026-11-06"
     }
   },
   "elegidas": [
@@ -59603,49 +59684,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_06f69a3267fb_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "debeba1c1c27",
-      "rep": {
-        "id": "debeba1c1c27",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026",
-        "titulo": "Milei destacó la baja de retenciones en su Gobierno y dijo que desaparecerán en el largo plazo",
-        "titulo_norm": "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo",
-        "descripcion": "En la Rural, dijo: “Si hay un sector que fue injustamente castigado fueron ustedes”. Y remarcó sobre los derechos de exportación: “Nuestro plan de largo es que desaparezcan”",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/AFJR2DD4O5HZFN2VVBPO5ILOJY.jpg?auth=ed4f829da6f9a5227cf3be2399379b4d68ed6cdb6064e902e94a799dda2266a2&smart=true",
-        "autor": "Pilar Vazquez",
-        "publicado": "2026-11-06T13:22-03:00",
-        "capturado": "2026-11-06T13:40-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c2f265967e4a3618"
-      },
-      "grupo": [
-        {
-          "id": "debeba1c1c27",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026",
-          "titulo": "Milei destacó la baja de retenciones en su Gobierno y dijo que desaparecerán en el largo plazo",
-          "titulo_norm": "milei destaco la baja de retenciones en su gobierno y dijo que desapareceran en el largo plazo",
-          "descripcion": "En la Rural, dijo: “Si hay un sector que fue injustamente castigado fueron ustedes”. Y remarcó sobre los derechos de exportación: “Nuestro plan de largo es que desaparezcan”",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AFJR2DD4O5HZFN2VVBPO5ILOJY.jpg?auth=ed4f829da6f9a5227cf3be2399379b4d68ed6cdb6064e902e94a799dda2266a2&smart=true",
-          "autor": "Pilar Vazquez",
-          "publicado": "2026-11-06T13:22-03:00",
-          "capturado": "2026-11-06T13:40-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c2f265967e4a3618"
-        }
-      ],
+      "cuando": "2026-11-06T16:00-03:00",
+      "titulo_original": "Milei destacó la baja de retenciones en su Gobierno y dijo que desaparecerán en el largo plazo",
+      "descripcion": "En la Rural, dijo: “Si hay un sector que fue injustamente castigado fueron ustedes”. Y remarcó sobre los derechos de exportación: “Nuestro plan de largo es que desaparezcan”",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/milei-destaco-la-baja-de-retenciones-en-su-gobierno-y-dijo-que-desapareceran-en-el-largo-plazo-nid06112026/",
+      "titular": "Milei prometió la eliminación de retenciones en la Sociedad Rural",
+      "volanta": "Mercados",
       "score": {
         "impacto_economico": 20,
         "interes_productores": 15,
@@ -59667,7 +59715,100 @@
         "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-06T13:40-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5132117c-d1a9-4cca-99ac-b1d75366e28e",
+          "slug": "javier-milei-prometio-en-la-sociedad-rural-que-las-retenciones-da3a32",
+          "url": "https://www.diariolacampaña.com.ar/n/javier-milei-prometio-en-la-sociedad-rural-que-las-retenciones-da3a32",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18037586570894449",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1750130563784607",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17923155525449698"
+        },
+        "historia_facebook": {
+          "id": "1744179443887271"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_debeba1c1c27_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "34a90cc079e6",
+      "rep": {
+        "id": "34a90cc079e6",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
+        "titulo": "¿Cómo afectan las dosis de nitrógeno y fósforo a los márgenes agrícolas?; con F. Córdoba - Fertilizar",
+        "titulo_norm": "como afectan las dosis de nitrogeno y fosforo a los margenes agricolas con f cordoba fertilizar",
+        "descripcion": "Una charla conectando los números de la fertilización, su impacto en las dósis óptimas, y los márgenes del productor. El fenómeno El Niño y las siembras de Noviembre y Diciembre. Con Franco Córdoba, responsable de Mercados de Fertilizar, explicando cómo aumentar las dosis de nitrógeno y fósforo en maíz y soja mejora los rindes y los márgenes agrícolas, especialmente en zonas con buena disponibilidad hídrica...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/iUKEUBoL7pE.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-11-06T14:56-03:00",
+        "capturado": "2026-11-06T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "417124d63849101e"
+      },
+      "grupo": [
+        {
+          "id": "34a90cc079e6",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
+          "titulo": "¿Cómo afectan las dosis de nitrógeno y fósforo a los márgenes agrícolas?; con F. Córdoba - Fertilizar",
+          "titulo_norm": "como afectan las dosis de nitrogeno y fosforo a los margenes agricolas con f cordoba fertilizar",
+          "descripcion": "Una charla conectando los números de la fertilización, su impacto en las dósis óptimas, y los márgenes del productor. El fenómeno El Niño y las siembras de Noviembre y Diciembre. Con Franco Córdoba, responsable de Mercados de Fertilizar, explicando cómo aumentar las dosis de nitrógeno y fósforo en maíz y soja mejora los rindes y los márgenes agrícolas, especialmente en zonas con buena disponibilidad hídrica...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/iUKEUBoL7pE.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-11-06T14:56-03:00",
+          "capturado": "2026-11-06T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "417124d63849101e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 9,
+        "potencial_comercial": 9,
+        "ai_score": 89,
+        "commercial_score": 90,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Altamente relevante para la zona núcleo por el manejo de nutrientes en la campaña gruesa y su impacto directo en márgenes.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T16:00-03:00"
     },
     {
       "id": "86a2c7cfe499",
@@ -60458,8 +60599,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T14:23:01-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T16:04:02-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
