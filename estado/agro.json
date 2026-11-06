@@ -28150,6 +28150,27 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ec9b4ea986a45232": {
+      "impacto_economico": 18,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 6,
+      "conversacion": 7,
+      "potencial_comercial": 8,
+      "ai_score": 79,
+      "commercial_score": 79,
+      "subtema": "agro",
+      "tema": "cebada",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Gran volumen de exportación y negocio triguero-cebadero clave para la región pampeana.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -30064,7 +30085,9 @@
       "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha": "2026-11-06",
       "https://croplife.com/management/croplife-retail-week-dealing-with-grower-decision-paralysis-2027-fertilizer-sale-strategies-and-making-data-work-for-you": "2026-11-06",
       "https://croplife.com/management/employees/oaba-2027-industry-conference-to-spotlight-innovation-industry-insights-and-connections": "2026-11-06",
-      "https://croplife.com/iron/john-deere-reaffirms-commitment-to-u-s-manufacturing-and-long-term-competitiveness": "2026-11-06"
+      "https://croplife.com/iron/john-deere-reaffirms-commitment-to-u-s-manufacturing-and-long-term-competitiveness": "2026-11-06",
+      "https://bichosdecampo.com/milei-volvio-a-prometer-la-eliminacion-de-las-retenciones-y-proyecto-una-devolucion-de-500-mil-millones-de-dolares-si-es-reelegido": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31977,7 +32000,9 @@
       "arveja el inta advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha": "2026-11-06",
       "croplife retail week dealing with grower decision paralysis 2027 fertilizer sale strategies and making data work for you": "2026-11-06",
       "oaba 2027 industry conference to spotlight innovation industry insights and connections": "2026-11-06",
-      "john deere reaffirms commitment to u s manufacturing and long term competitiveness": "2026-11-06"
+      "john deere reaffirms commitment to u s manufacturing and long term competitiveness": "2026-11-06",
+      "milei volvio a prometer la eliminacion de las retenciones y proyecto una devolucion de 500 mil millones de dolares si es reelegido": "2026-11-06",
+      "quilmes acelera una apuesta exporto cebada y malta por us 370 millones y busca crecer en india": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33890,7 +33915,9 @@
       "afbb73b075b10823": "2026-11-06",
       "0ae6be264f68117d": "2026-11-06",
       "90370ad89aefcb6c": "2026-11-06",
-      "ecd4fcd4d0dac122": "2026-11-06"
+      "ecd4fcd4d0dac122": "2026-11-06",
+      "91349596deffe073": "2026-11-06",
+      "ec9b4ea986a45232": "2026-11-06"
     }
   },
   "elegidas": [
@@ -59960,9 +59987,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_55dfe45bf75c_portada.jpg"
+    },
+    {
+      "id": "01a403db7714",
+      "cuando": "2026-11-06T17:00-03:00",
+      "titulo_original": "Agricultura y ganadería en Santa Fe: cómo cambió el mapa productivo en la última década",
+      "descripcion": "La superficie sembrada con cultivos de verano creció 15%, mientras el stock bovino se redujo 6%. Se observa un comportamiento divergente entre el norte y el sur de la provincia.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y",
+      "titular": "Santa Fe: la agricultura creció 15% y la ganadería cayó 6%",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 13,
+        "innovacion": 3,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 6,
+        "ai_score": 70,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "mapa productivo santa fe",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Radiografía clave sobre cómo se desplazó la ganadería frente a la agricultura en la región.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          73
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T17:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "091d599a-c18a-4d4a-aaab-d6bb6e7410e5",
+          "slug": "santa-fe-la-agricultura-crecio-15-y-la-ganaderia-bajo-6-en-la-66dc08",
+          "url": "https://www.diariolacampaña.com.ar/n/santa-fe-la-agricultura-crecio-15-y-la-ganaderia-bajo-6-en-la-66dc08",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17908437867597974",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1750189507112046",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18124610842730829"
+        },
+        "historia_facebook": {
+          "id": "1654097063054140"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_01a403db7714_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "9a24f7aeb321",
+      "rep": {
+        "id": "9a24f7aeb321",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026",
+        "titulo": "Quilmes acelera una apuesta: exportó cebada y malta por US$370 millones y busca crecer en India",
+        "titulo_norm": "quilmes acelera una apuesta exporto cebada y malta por us 370 millones y busca crecer en india",
+        "descripcion": "La compañía, que apunta a ampliar sus negocios, avanza además en innovaciones industriales y nuevas categorías de consumo",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/7CWOIFHZKNBDZEEY26J6AQ74LU.jpg?auth=6f5509d1676701a30a8320ea8a452c3e2db8d85f9425bf2e3ecc2f92815b9726&smart=true",
+        "autor": "Belkis Martínez",
+        "publicado": "2026-11-06T16:45-03:00",
+        "capturado": "2026-11-06T17:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "ec9b4ea986a45232"
+      },
+      "grupo": [
+        {
+          "id": "9a24f7aeb321",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026",
+          "titulo": "Quilmes acelera una apuesta: exportó cebada y malta por US$370 millones y busca crecer en India",
+          "titulo_norm": "quilmes acelera una apuesta exporto cebada y malta por us 370 millones y busca crecer en india",
+          "descripcion": "La compañía, que apunta a ampliar sus negocios, avanza además en innovaciones industriales y nuevas categorías de consumo",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/7CWOIFHZKNBDZEEY26J6AQ74LU.jpg?auth=6f5509d1676701a30a8320ea8a452c3e2db8d85f9425bf2e3ecc2f92815b9726&smart=true",
+          "autor": "Belkis Martínez",
+          "publicado": "2026-11-06T16:45-03:00",
+          "capturado": "2026-11-06T17:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "ec9b4ea986a45232"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 7,
+        "potencial_comercial": 8,
+        "ai_score": 79,
+        "commercial_score": 79,
+        "subtema": "agro",
+        "tema": "cebada",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Gran volumen de exportación y negocio triguero-cebadero clave para la región pampeana.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T17:00-03:00"
+    },
     {
       "id": "1f72cb0e454f",
       "rep": {
@@ -60219,73 +60373,6 @@
         "dobles": [
           70,
           71
-        ]
-      },
-      "cuando": "2026-11-06T13:00-03:00"
-    },
-    {
-      "id": "01a403db7714",
-      "rep": {
-        "id": "01a403db7714",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y",
-        "titulo": "Agricultura y ganadería en Santa Fe: cómo cambió el mapa productivo en la última década",
-        "titulo_norm": "agricultura y ganaderia en santa fe como cambio el mapa productivo en la ultima decada",
-        "descripcion": "La superficie sembrada con cultivos de verano creció 15%, mientras el stock bovino se redujo 6%. Se observa un comportamiento divergente entre el norte y el sur de la provincia.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/areasantafe_portada.png?itok=9glJRQuw",
-        "autor": "",
-        "publicado": "2026-11-06T09:00-03:00",
-        "capturado": "2026-11-06T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "394e16b8be215305"
-      },
-      "grupo": [
-        {
-          "id": "01a403db7714",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/agricultura-y",
-          "titulo": "Agricultura y ganadería en Santa Fe: cómo cambió el mapa productivo en la última década",
-          "titulo_norm": "agricultura y ganaderia en santa fe como cambio el mapa productivo en la ultima decada",
-          "descripcion": "La superficie sembrada con cultivos de verano creció 15%, mientras el stock bovino se redujo 6%. Se observa un comportamiento divergente entre el norte y el sur de la provincia.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/areasantafe_portada.png?itok=9glJRQuw",
-          "autor": "",
-          "publicado": "2026-11-06T09:00-03:00",
-          "capturado": "2026-11-06T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "394e16b8be215305"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 13,
-        "innovacion": 3,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 7,
-        "potencial_comercial": 6,
-        "ai_score": 70,
-        "commercial_score": 72,
-        "subtema": "ganaderia",
-        "tema": "mapa productivo santa fe",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Radiografía clave sobre cómo se desplazó la ganadería frente a la agricultura en la región.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          73
         ]
       },
       "cuando": "2026-11-06T13:00-03:00"
@@ -60752,8 +60839,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T16:43:03-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T17:03:41-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
