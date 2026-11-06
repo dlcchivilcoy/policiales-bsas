@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-06T00:31:24.000Z",
+  "actualizado": "2026-11-06T00:31:25.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/11/03/ruta-5-fuerte-operativo-y-dos-detenidos/",
@@ -306,6 +306,30 @@
       "localidad": "Bragado",
       "volanta": "Bragado",
       "categoria": "operativo_policial",
+      "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/05/26856-recuperaron-un-celular-robado-en-una-vivienda-y-aprehendieron-a-un-joven-de-18-anos",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-06T00:31:25.000Z",
+      "titulo": "Aprehendieron a un joven de 18 años tras esclarecer un hurto domiciliario",
+      "descripcion": "Un joven de 18 años fue detenido en Bragado tras una investigación por el hurto de un teléfono celular cometido en una vivienda de la calle Rivadavia al 398. La policía recuperó el aparato y el sospechoso recuperó la libertad por orden judicial.",
+      "texto_tiktok": "Un joven de 18 años fue arrestado en Bragado luego de una investigación por el robo de un teléfono celular en una vivienda.\n\nEl hecho se había producido el pasado 21 de octubre en un domicilio situado en la calle Rivadavia al 398.\n\nPersonal policial analizó registros de cámaras de seguridad y reunió diversos testimonios para dar con el presunto autor del ilícito.\n\nEl operativo de captura se concretó este miércoles en el cruce de Hermanos Islas y 12 de Octubre, donde además se recuperó el aparato sustraído.\n\nTras cumplimentar los recaudos legales de rigor, el magistrado interviniente ordenó que el sospechoso recupere la libertad.\n\nEn el expediente judicial interviene la Unidad Funcional de Instrucción N° 4 del Departamento Judicial de Mercedes.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Robo #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-05_2135_09_bragado_aprehendieron-a-un-joven-de-18.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-recuperaron-un-celular-robado-y-aprehendieron-a-un-225524",
+      "youtube_url": "https://youtube.com/shorts/7q-zoi4n0No",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Bragado",
+      "categoria": "robo",
       "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
