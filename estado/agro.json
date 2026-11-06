@@ -27668,6 +27668,48 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "74538f9f1240e7bd": {
+      "impacto_economico": 12,
+      "interes_productores": 8,
+      "innovacion": 0,
+      "cercania_argentina": 7,
+      "cercania_pba": 2,
+      "potencial_reel": 2,
+      "conversacion": 6,
+      "potencial_comercial": 4,
+      "ai_score": 41,
+      "commercial_score": 41,
+      "subtema": "mercados",
+      "tema": "elecciones eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Afecta el comercio global de commodities pero queda lejos del día a día del productor bonaerense.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a999bc978d2f33a2": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 73,
+      "commercial_score": 81,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gran impacto en los precios y la posición exportadora del maíz argentino en la zona núcleo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29544,7 +29586,16 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-6-noviembre-2026": "2026-11-06",
       "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026": "2026-11-06",
-      "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles": "2026-11-06"
+      "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles": "2026-11-06",
+      "https://todoagro.com.ar/el-granizo-amenaza-con-recortar-los-rindes-del-trigo-estiman-casi-16-000-hectareas-expuestas-en-la-region-nucleo": "2026-11-06",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-6-noviembre-2026": "2026-11-06",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-6-noviembre-2026": "2026-11-06",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-6-noviembre-2026": "2026-11-06",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-6-noviembre-2026": "2026-11-06",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-6-noviembre-2026": "2026-11-06",
+      "https://infocampo.com.ar/riesgo-pais-hoy-06-11-2026": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249229-elecciones-de-medio-termino-en-eeuu-potenciales-implicancias-para-la-agroindustria-argentina.html": "2026-11-06",
+      "https://bichosdecampo.com/en-este-campeonato-vamos-juntos-brasil-y-la-argentina-toman-la-posta-en-el-mercado-mundial-de-maiz-con-ucrania-fuera-de-juego": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31419,7 +31470,16 @@
       "dolar blue a cuanto cotizan hoy en cordoba 6 noviembre 2026": "2026-11-06",
       "mismos precios el doble de impuestos la maquinaria agricola argentina compara su carga con brasil y mexico y advierte que la baja rentabilidad puede traer anos de desinversion": "2026-11-06",
       "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027": "2026-11-06",
-      "panorama promisorio para el comercio mundial de carne el analista ignacio iriarte destaco que los precios actuales ya superan los de 2022 considerados irrepetibles": "2026-11-06"
+      "panorama promisorio para el comercio mundial de carne el analista ignacio iriarte destaco que los precios actuales ya superan los de 2022 considerados irrepetibles": "2026-11-06",
+      "el granizo amenaza con recortar los rindes del trigo estiman casi 16 000 hectareas expuestas en la region nucleo": "2026-11-06",
+      "precio del maiz en rosario hoy 6 noviembre 2026": "2026-11-06",
+      "precio del trigo en rosario hoy 6 noviembre 2026": "2026-11-06",
+      "precio del girasol en rosario hoy 6 noviembre 2026": "2026-11-06",
+      "precio de la soja en rosario hoy 6 noviembre 2026": "2026-11-06",
+      "precio del sorgo en rosario hoy 6 noviembre 2026": "2026-11-06",
+      "riesgo pais hoy 06 de noviembre de 2026": "2026-11-06",
+      "elecciones de medio termino en ee uu potenciales implicancias para la agroindustria argentina": "2026-11-06",
+      "en este campeonato vamos juntos brasil y la argentina toman la posta en el mercado mundial de maiz con ucrania fuera de juego": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33294,7 +33354,16 @@
       "f78e27984028f3ab": "2026-11-06",
       "597f8d4390f50ff8": "2026-11-06",
       "e4a9463cd77015bb": "2026-11-06",
-      "d68ff069b2f7aced": "2026-11-06"
+      "d68ff069b2f7aced": "2026-11-06",
+      "0f5affc08910fce7": "2026-11-06",
+      "b32c3b625b85db83": "2026-11-06",
+      "a851dd715b66abd6": "2026-11-06",
+      "999b2c6a939bdd16": "2026-11-06",
+      "8914cc069d8c2338": "2026-11-06",
+      "b841e701546130a9": "2026-11-06",
+      "e33649282b2f5223": "2026-11-06",
+      "74538f9f1240e7bd": "2026-11-06",
+      "a999bc978d2f33a2": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58780,9 +58849,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6a025ec2a091_portada.jpg"
+    },
+    {
+      "id": "c4dcb37720bd",
+      "cuando": "2026-11-06T11:20-03:00",
+      "titulo_original": "Crónicas de campaña: entre el alivio de la lluvia, el daño del granizo y la pausa en la siembra",
+      "descripcion": "Mientras que en Teodelina las lluvias trajeron alivio al trigo, en Monte Buey el granizo causó pérdidas de hasta 90% y en Rosario la siembra de soja espera ganar ritmo. Qué dicen los grupos Crea de cada zona",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html",
+      "titular": "Trigo y soja: lluvias, granizo y demoras en la región núcleo",
+      "volanta": "Clima y Campaña",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 76,
+        "subtema": "agro",
+        "tema": "campaña",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Describe el estado real de la campaña en la zona núcleo, con gran interés local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T11:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d8d775a1-4766-43c7-8ad6-64d0272ad7f9",
+          "slug": "trigo-y-soja-en-la-region-nucleo-alivio-por-lluvias-granizo-y-e40521",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-y-soja-en-la-region-nucleo-alivio-por-lluvias-granizo-y-e40521",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18130566175871973",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1749861690478161",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18186201442447262"
+        },
+        "historia_facebook": {
+          "id": "1847666436235808"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c4dcb37720bd_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "55dfe45bf75c",
+      "rep": {
+        "id": "55dfe45bf75c",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/en-este-campeonato-vamos-juntos-brasil-y-la-argentina-toman-la-posta-en-el-mercado-mundial-de-maiz-con-ucrania-fuera-de-juego/",
+        "canonical_url": "https://bichosdecampo.com/en-este-campeonato-vamos-juntos-brasil-y-la-argentina-toman-la-posta-en-el-mercado-mundial-de-maiz-con-ucrania-fuera-de-juego",
+        "titulo": "En este campeonato vamos juntos: Brasil y la Argentina toman la posta en el mercado mundial de maíz con Ucrania fuera de juego",
+        "titulo_norm": "en este campeonato vamos juntos brasil y la argentina toman la posta en el mercado mundial de maiz con ucrania fuera de juego",
+        "descripcion": "Con Ucrania fuera de juego debido al “apagón logístico” del mar Negro, el Mercosur, con Brasil y Argentina a la cabeza, tomó la posta en la provisión mundial de maíz. En el presente mes de noviembre, los embarques brasileños de maíz deberían sumar 6,01 millones de toneladas, una cifra apenas superior a la registrada en […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/anec.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-06T11:13-03:00",
+        "capturado": "2026-11-06T11:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "a999bc978d2f33a2"
+      },
+      "grupo": [
+        {
+          "id": "55dfe45bf75c",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/en-este-campeonato-vamos-juntos-brasil-y-la-argentina-toman-la-posta-en-el-mercado-mundial-de-maiz-con-ucrania-fuera-de-juego/",
+          "canonical_url": "https://bichosdecampo.com/en-este-campeonato-vamos-juntos-brasil-y-la-argentina-toman-la-posta-en-el-mercado-mundial-de-maiz-con-ucrania-fuera-de-juego",
+          "titulo": "En este campeonato vamos juntos: Brasil y la Argentina toman la posta en el mercado mundial de maíz con Ucrania fuera de juego",
+          "titulo_norm": "en este campeonato vamos juntos brasil y la argentina toman la posta en el mercado mundial de maiz con ucrania fuera de juego",
+          "descripcion": "Con Ucrania fuera de juego debido al “apagón logístico” del mar Negro, el Mercosur, con Brasil y Argentina a la cabeza, tomó la posta en la provisión mundial de maíz. En el presente mes de noviembre, los embarques brasileños de maíz deberían sumar 6,01 millones de toneladas, una cifra apenas superior a la registrada en […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/anec.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-06T11:13-03:00",
+          "capturado": "2026-11-06T11:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "a999bc978d2f33a2"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 0,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 73,
+        "commercial_score": 81,
+        "subtema": "mercados",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran impacto en los precios y la posición exportadora del maíz argentino en la zona núcleo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T11:20-03:00"
+    },
     {
       "id": "2157de3a61dc",
       "rep": {
@@ -59245,69 +59437,6 @@
       "cuando": "2026-11-06T07:00-03:00"
     },
     {
-      "id": "c4dcb37720bd",
-      "rep": {
-        "id": "c4dcb37720bd",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html",
-        "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html",
-        "titulo": "Crónicas de campaña: entre el alivio de la lluvia, el daño del granizo y la pausa en la siembra",
-        "titulo_norm": "cronicas de campana entre el alivio de la lluvia el dano del granizo y la pausa en la siembra",
-        "descripcion": "Mientras que en Teodelina las lluvias trajeron alivio al trigo, en Monte Buey el granizo causó pérdidas de hasta 90% y en Rosario la siembra de soja espera ganar ritmo. Qué dicen los grupos Crea de cada zona",
-        "imagen_url": "https://media.lacapital.com.ar/p/8ed4beb9ea8e6efedc170ddb6325f4ed/adjuntos/203/imagenes/103/514/0103514265/1200x675/smart/andres-elizalde-crea-rosario.jpeg",
-        "autor": "",
-        "publicado": "2026-11-06T06:10-03:00",
-        "capturado": "2026-11-06T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "63afefc18804e4be"
-      },
-      "grupo": [
-        {
-          "id": "c4dcb37720bd",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html",
-          "canonical_url": "https://lacapital.com.ar/agro/cronicas-campana-el-alivio-la-lluvia-el-dano-del-granizo-y-la-pausa-la-siembra-n10290687.html",
-          "titulo": "Crónicas de campaña: entre el alivio de la lluvia, el daño del granizo y la pausa en la siembra",
-          "titulo_norm": "cronicas de campana entre el alivio de la lluvia el dano del granizo y la pausa en la siembra",
-          "descripcion": "Mientras que en Teodelina las lluvias trajeron alivio al trigo, en Monte Buey el granizo causó pérdidas de hasta 90% y en Rosario la siembra de soja espera ganar ritmo. Qué dicen los grupos Crea de cada zona",
-          "imagen_url": "https://media.lacapital.com.ar/p/8ed4beb9ea8e6efedc170ddb6325f4ed/adjuntos/203/imagenes/103/514/0103514265/1200x675/smart/andres-elizalde-crea-rosario.jpeg",
-          "autor": "",
-          "publicado": "2026-11-06T06:10-03:00",
-          "capturado": "2026-11-06T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "63afefc18804e4be"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 74,
-        "commercial_score": 76,
-        "subtema": "agro",
-        "tema": "campaña",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Describe el estado real de la campaña en la zona núcleo, con gran interés local.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-06T07:00-03:00"
-    },
-    {
       "id": "5129afe9f691",
       "rep": {
         "id": "5129afe9f691",
@@ -59572,8 +59701,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T11:04:04-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T11:23:33-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
