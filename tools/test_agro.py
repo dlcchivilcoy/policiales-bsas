@@ -1236,6 +1236,33 @@ with tempfile.TemporaryDirectory() as tmp:
     chequear("carrusel: tapa + 3 diapositivas + cierre, todas 4:5",
              len(_arch) == 5 and all(Image.open(a).size == (1080, 1350) for a in _arch))
     chequear("el texto del carrusel invita a deslizar", "Deslizá e informate" in CAR.caption(_g))
+    # 6/11/2026: sin video, carrusel; con video, reel; el diseño nuevo con la marca de agro.
+    os.environ.pop("AGRO_FORMATO", None)
+    chequear("turno de reel: sin video sale carrusel, con video sale reel",
+             PA.formato_segun_video("reel", None) == "carrusel" and PA.formato_segun_video("reel", "c.mp4") == "reel")
+    chequear("un turno de carrusel sigue siendo carrusel", PA.formato_segun_video("carrusel", "c.mp4") == "carrusel")
+    os.environ["AGRO_FORMATO"] = "reel"
+    chequear("AGRO_FORMATO=reel vuelve al reel para todas", PA.formato_segun_video("reel", None) == "reel")
+    os.environ.pop("AGRO_FORMATO", None)
+    chequear("lámina: una cifra que el texto no dice va adelante",
+             CAR.texto_lamina({"texto": "Hay lotes aplastados.", "dato": "16.000 hectáreas", "dato_rotulo": "superficie dañada"})
+             == "Superficie dañada: 16.000 hectáreas. Hay lotes aplastados.")
+    chequear("lámina: un dato que no es una cifra no va",
+             CAR.texto_lamina({"texto": "Suelos saturados.", "dato": "excesos hídricos", "dato_rotulo": "situación"})
+             == "Suelos saturados.")
+    chequear("lámina: una cifra que el texto ya dice no se repite",
+             CAR.texto_lamina({"texto": "Cayeron 100 mm.", "dato": "100 mm", "dato_rotulo": "lluvia"}) == "Cayeron 100 mm.")
+    _si = CAR._motor()
+    _antes = _si._lockup_marca, _si._iso, _si.NOMBRE_MARCA
+    with CAR._con_marca_agro():
+        chequear("placas de agro: con su nombre mientras dibuja", _si.NOMBRE_MARCA == "DIARIO Y RADIO AGRO")
+    chequear("placas de agro: la marca del diario vuelve al terminar",
+             (_si._lockup_marca, _si._iso, _si.NOMBRE_MARCA) == _antes and _si.NOMBRE_MARCA == "DIARIO LA CAMPAÑA")
+    _vert = Path(tmp) / "vertical.jpg"
+    Image.new("RGB", (900, 1600), (70, 110, 60)).save(_vert)
+    _tv = CAR.tapa(str(_vert), _g, "Soja: cae el precio", "blanco", "Foto: INTA", Path(tmp) / "tapa_v.jpg", 1, 4)
+    chequear("tapa con foto vertical: 4:5 con la foto a la izquierda y la columna blanca a la derecha",
+             Image.open(_tv).size == (1080, 1350) and Image.open(_tv).convert("RGB").getpixel((1060, 700)) == (255, 255, 255))
     _msem = {"mercado": {"pizarra": {"2026-10-09": {"productos": {"soja": {"ars": 540000}}},
                                      "2026-10-16": {"productos": {"soja": {"ars": 560000}}}},
                          "a3500": {"2026-10-09": {"valor": 1500.0}, "2026-10-16": {"valor": 1514.0}},

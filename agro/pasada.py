@@ -468,6 +468,15 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         pieza = {"id": rep["id"], "rep": rep, "grupo": c["grupo"], "score": s, "guion": g, "formato": formato,
                  "youtube": con_youtube(horario)}
         tema = tema_siguiente(mem)
+        clip = None
+        carrusel_pieza = carrusel
+        if g["apta"] and con_reel and not carrusel:
+            clip = (Path(c["clip"]) if c.get("clip") and Path(c["clip"]).is_file()
+                    else _clip_de_la_fuente(rep, completo, base))
+            carrusel_pieza = formato_segun_video(formato, clip) == "carrusel"
+            pieza["formato"] = "carrusel" if carrusel_pieza else "reel"
+            if clip:
+                pieza["youtube"] = True                # los reels con video son pocos: entran en el cupo
         if g["apta"]:
             pieza["imagen"] = imagen_previa or IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
                                                           base.with_name(base.name + "_imagen.jpg"),
@@ -475,7 +484,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
             origen = pieza["imagen"]["origen"]
             credito = pieza["imagen"].get("credito", "")
             leyenda = DIS.texto_leyenda(origen, credito)
-            if carrusel:
+            if carrusel_pieza:
                 from agro import carrusel as CAR
                 try:
                     cont = CAR.contenido(g, rep, completo.get("cuerpo", ""), log=log)
@@ -494,8 +503,6 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                                                  base.with_name(base.name + "_portada.jpg"),
                                                  credito=credito, origen=origen, tema=tema))
                 if con_reel:
-                    clip = (Path(c["clip"]) if c.get("clip") and Path(c["clip"]).is_file()
-                            else _clip_de_la_fuente(rep, completo, base))
                     try:
                         t0 = time.time()
                         pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"), origen,
@@ -509,7 +516,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                             reponer("el reel falló")
         slug = WEB.slugify(g.get("titulo_web") or g["titular"], 70)
         url_web = f"https://{WEB.SITIO}/n/{slug}"
-        if carrusel:
+        if carrusel_pieza:
             from agro import carrusel as CAR
             pieza["textos"] = {"Instagram (carrusel)": CAR.caption(g),
                                "Facebook (fotos + link)": GU.texto_red(g, "facebook", url_web),
@@ -519,11 +526,12 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                                "Facebook (reel)": GU.texto_red(g, "facebook", url_web),
                                "YouTube Shorts": f"{g['titular']}\n\n{GU.texto_red(g, 'youtube', url_web)}",
                                f"Web: {g.get('titulo_web')}": g.get("nota_web", "")}
-        listo = bool((pieza.get("carrusel") or {}).get("archivos")) if carrusel else bool((pieza.get("reel") or {}).get("archivo"))
+        listo = (bool((pieza.get("carrusel") or {}).get("archivos")) if carrusel_pieza
+                 else bool((pieza.get("reel") or {}).get("archivo")))
         if g["requires_review"] or not g["apta"]:
             estado = "RETENIDA para revisión" if g["requires_review"] else "NO APTA"
             pieza["plan"] = {"Estado": estado, "Motivo": g.get("motivo_revision") or g.get("motivo")}
-        elif carrusel:
+        elif carrusel_pieza:
             pieza["plan"] = {"Hora": f"{horario:%d/%m %H:%M}", "Web (sección Agro)": url_web,
                              "Instagram @diarioyradioagro": f"carrusel de {len((pieza.get('carrusel') or {}).get('archivos') or [])} diapositivas + texto + hashtags",
                              "Facebook @diarioyradioagro": "las diapositivas como fotos + texto + link a la nota",
@@ -538,7 +546,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
             "id": rep["id"], "cuando": ahora.isoformat(timespec="minutes"), "titulo_original": rep["titulo"],
             "descripcion": rep.get("descripcion", "")[:300], "fuente": rep["fuente"], "url": rep["url"],
             "titular": g["titular"], "volanta": g.get("volanta", ""), "score": s, "apta": g["apta"],
-            "revision": g["requires_review"], "fuera_de_cupo": fuera_de_cupo, "formato": formato,
+            "revision": g["requires_review"], "fuera_de_cupo": fuera_de_cupo, "formato": pieza["formato"],
             "turno": horario.isoformat() if publicar else ""}
         mem.setdefault("elegidas", []).append(anotada)
         if "Hora" in pieza["plan"] and listo:
@@ -579,6 +587,15 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     ruta = INF.escribir(inf, carpeta)
     log(f"Listo: {ruta}")
     return ruta
+
+
+def formato_segun_video(formato: str, clip) -> str:
+    """6/11/2026 (pedido del editor: «cambiar los reels a carrusel y mantener el reel solo si hay video»):
+    en un turno de reel, la nota sin video propio sale en carrusel. AGRO_FORMATO=reel vuelve a hacer reel
+    con todas."""
+    if formato != "reel" or clip or (os.environ.get("AGRO_FORMATO") or "").strip().lower() == "reel":
+        return formato
+    return "carrusel"
 
 
 def video_max_seg() -> float:

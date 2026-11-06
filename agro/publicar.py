@@ -425,7 +425,38 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
             except Exception as e:                         # noqa: BLE001
                 salida["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Facebook FALLÓ: {salida['facebook']['error']}")
+        if not pieza.get("datos") and historias_de_reels():
+            _carrusel_a_historia(pieza, marca, salida, hecho, log)
     return salida
+
+
+def _carrusel_a_historia(pieza: dict, marca: str, salida: dict, hecho, log=print) -> None:
+    """La portada como historia donde el carrusel ya salió (6/11/2026: los reels sin video pasaron a
+    carrusel y sin esto casi no quedaban historias; ver _reel_a_historias). AGRO_REEL_HISTORIA=0 apaga."""
+    from datetime import date
+
+    from agro import historias as H
+    from reels import publicador as PB
+    faltan = [red for red in ("instagram", "facebook") if hecho(red) and f"historia_{red}" not in salida]
+    if not faltan:
+        return
+    try:
+        placa = H.placa_novedad({"portada": pieza.get("portada"), "formato": "carrusel"},
+                                Path(pieza["portada"]).with_name(f"{marca}_historia.jpg"), date.today(),
+                                pieza["guion"].get("volanta") or "Agro")
+        url = PB.subir_a_release(placa, f"agro_{marca}_historia.jpg")
+    except Exception as e:                                 # noqa: BLE001
+        for red in faltan:
+            salida[f"historia_{red}"] = {"fallo": f"no se pudo armar: {type(e).__name__}: {str(e)[:150]}"}
+        log(f"   Historia: no se pudo armar ({type(e).__name__})")
+        return
+    for red in faltan:
+        try:
+            salida[f"historia_{red}"] = (_historia_instagram(url) if red == "instagram" else _historia_facebook(url))
+            log(f"   Historia {red}: {salida[f'historia_{red}'].get('id')}")
+        except Exception as e:                             # noqa: BLE001
+            salida[f"historia_{red}"] = {"fallo": f"{type(e).__name__}: {str(e)[:200]}"}
+            log(f"   Historia {red} FALLÓ: {salida[f'historia_{red}']['fallo']}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────────────────────

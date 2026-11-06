@@ -2,12 +2,12 @@
 """Los CARRUSELES explicativos de @diarioyradioagro: «deslizá e informate» (pedido del editor,
 17/10/2026; documento «ideas agro»: «carruseles para explicar»).
 
-Una noticia por carrusel, 4:5 (1080x1350), con la estética de los reels (agro/diseno.py):
+Una noticia por carrusel, 4:5 (1080x1350), con las placas de los carruseles del diario (ver «Dibujo»):
 
-    1. TAPA: la imagen arriba y el bloque con la volanta y el GANCHO, más «DESLIZÁ E INFORMATE»
-    2-6. UNA IDEA POR DIAPOSITIVA: qué pasó, los números, por qué pasa, qué cambia para el productor,
-         qué viene. Un dato grande cuando hay uno (con lo que mide).
-    7. CIERRE: una pregunta para comentar, «guardalo y compartilo» y la marca.
+    1. TAPA: la foto y el título con la palabra clave primero
+    2-6. UNA IDEA POR LÁMINA, solo texto: qué pasó, los números, por qué pasa, qué cambia para el
+         productor, qué viene.
+    7. CIERRE: una pregunta para comentar, «guardalo y compartilo» y la cuenta.
 
 El texto parte de la pieza ya redactada y controlada (agro/guion.py: copia, datos, revisión) y la IA lo
 ordena en diapositivas. Controles propios: ninguna cifra que no esté en el material (si aparece una,
@@ -18,10 +18,12 @@ Los sábados a la mañana el carrusel es «LOS NÚMEROS DE LA SEMANA» (granos, 
 armado con los datos de agro/mercado.py, sin IA.
 """
 import re
+import shutil
+from contextlib import contextmanager
 from datetime import date, timedelta
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 from agro import diseno as D
 from agro import mercado as M
@@ -130,117 +132,98 @@ def contenido(g: dict, rep: dict, cuerpo: str, redactar=None, log=None) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # Dibujo
 # ─────────────────────────────────────────────────────────────────────────────────────────────
-def _pildora_deslizar(im: Image.Image, y_base: int):
-    d = ImageDraw.Draw(im)
-    f = D.fuente("bold", 30)
-    t = "DESLIZÁ E INFORMATE"
-    w = d.textlength(t, font=f)
-    x0, y0 = D.X - 20, y_base - 92
-    d.rounded_rectangle((x0, y0, x0 + w + 110, y0 + 62), radius=31, fill=D.NARANJA_CAJA)
-    d.text((x0 + 26, y0 + 13), t, font=f, fill=D.BLANCO)
-    ax = x0 + w + 50
-    d.polygon([(ax, y0 + 18), (ax + 26, y0 + 31), (ax, y0 + 44)], fill=D.BLANCO)
+# 6/11/2026 (pedido del editor: «adoptar el formato nuevo del bot y policiales»): las mismas placas de los
+# carruseles del diario (estetica_bot/story_image.py), con la marca de agro: foto vertical a la izquierda
+# con el texto en una columna, foto horizontal de borde a borde con el texto abajo, títulos parejos y las
+# láminas solo texto.
+TEMAS_PLACA = {"blanco": "claro", "grafito": "grafito"}
+NOMBRE_MARCA = "DIARIO Y RADIO AGRO"
 
 
-def tapa(imagen, volanta: str, gancho: str, tema: str, leyenda: str, destino: Path) -> Path:
-    im = D.cuadro_bloque(imagen, volanta, gancho, tema, "", tope=D.PORTADA)
-    plan = D.plan_bloque(volanta, gancho, tema, round(D.W * 3 / 4), tope=D.PORTADA)
-    _pildora_deslizar(im, plan["alto_imagen"])
-    D.leyenda(im, leyenda, plan["alto_imagen"])
-    return _guardar(im, destino)
+def _motor():
+    from nacionales import placa as P
+    return P._story_image()
 
 
-def _cabeza(im, d, tema: str, i: int, n: int):
-    t = D.TEMAS[tema]
-    d.rectangle((0, 0, D.W, 10), fill=D.NARANJA)
-    im.alpha_composite(D.lockup(tema, 56), (D.X, 58))
-    f = D.fuente("medium", 30)
-    c = f"{i}/{n}"
-    d.text((D.W - D.X - d.textlength(c, font=f), 70), c, font=f, fill=t["tenue"])
+def _sitio() -> str:
+    from reels import web as W
+    return W.SITIO
 
 
-def _pie_deslizar(d, tema: str, ultimo: bool = False):
-    t = D.TEMAS[tema]
-    y = D.H45 - 110
-    d.line((D.X, y, D.W - D.X, y), fill=t["linea"], width=2)
-    d.text((D.X, y + 30), D.USUARIO, font=D.fuente("bold", 30), fill=t["verde"])
-    if not ultimo:
-        f = D.fuente("bold", 30)
-        txt = "Deslizá y seguí leyendo"           # 19/10/2026: avisa que el carrusel sigue
-        x = D.W - D.X - 40 - d.textlength(txt, font=f)
-        d.text((x, y + 30), txt, font=f, fill=t["volanta"])
-        ax = D.W - D.X - 26
-        d.polygon([(ax, y + 36), (ax + 22, y + 48), (ax, y + 60)], fill=t["volanta"])
+@contextmanager
+def _con_marca_agro():
+    """El motor con el logo y el nombre de agro solo mientras dibuja: nunca le queda al diario."""
+    si = _motor()
+    antes = si._lockup_marca, si._iso, si.NOMBRE_MARCA
+
+    def lockup(ancho: int) -> Image.Image:
+        # Solo el nombre: el isologo ya va en la otra punta, como en las placas del diario.
+        lg = D.lockup("grafito", 76)
+        lg = lg.crop((D.isologo(76).width + 18, 0, lg.width, lg.height))
+        ancho = round(ancho * 0.78)                        # más alto que el logo del diario: mismo peso
+        return lg.resize((ancho, round(lg.height * ancho / lg.width)), Image.LANCZOS)
+
+    si._lockup_marca, si._iso, si.NOMBRE_MARCA = lockup, lambda orange=True: D.isologo(160), NOMBRE_MARCA
+    try:
+        yield si
+    finally:
+        si._lockup_marca, si._iso, si.NOMBRE_MARCA = antes
 
 
-def diapositiva(x: dict, i: int, n: int, tema: str, destino: Path) -> Path:
-    t = D.TEMAS[tema]
-    im = Image.new("RGBA", (D.W, D.H45), t["fondo"] + (255,))
-    d = ImageDraw.Draw(im)
-    _cabeza(im, d, tema, i, n)
-    y = 230
-    d.text((D.X, y), f"{i - 1:02d}", font=D.fuente("negra", 120), fill=t["volanta"])
-    y += 165
-    ft, rt = D.ajustar(d, x["titulo"], "bold", 82, 50, D.ANCHO + 40, 2)
-    y = D.escribir(d, D.X, y, rt, ft, t["titular"]) + 34
-    tope = D.H45 - 150
-    if x.get("dato"):
-        fd, rd = D.ajustar(d, x["dato"], "negra", 150, 70, D.ANCHO + 40, 2, salto=1.0)
-        y = D.escribir(d, D.X, y, rd, fd, t["verde"], 1.0) + 8
-        if x.get("dato_rotulo"):
-            fr, rr = D.ajustar(d, x["dato_rotulo"], "medium", 40, 30, D.ANCHO + 40, 2)
-            y = D.escribir(d, D.X, y, rr, fr, t["tenue"], 1.2) + 28
-    if x.get("puntos"):
-        for p in x["puntos"]:
-            fp, rp = D.ajustar(d, p, "medium", 52, 34, D.ANCHO - 10, 3, salto=1.22)
-            d.ellipse((D.X, y + fp.size * 0.35, D.X + 18, y + fp.size * 0.35 + 18), fill=t["verde"])
-            y = D.escribir(d, D.X + 40, y, rp, fp, t["titular"], 1.22) + 26
-    elif x.get("texto"):
-        fx, rx = D.ajustar(d, x["texto"], "regular", 58, 36, D.ANCHO + 40, 9, alto_max=tope - y, salto=1.3)
-        D.escribir(d, D.X, y, rx, fx, t["texto"], 1.3)
-    _pie_deslizar(d, tema)
-    return _guardar(im, destino)
-
-
-def cierre(pregunta: str, n: int, tema: str, destino: Path, extra: str = "") -> Path:
-    t = D.TEMAS[tema]
-    im = Image.new("RGBA", (D.W, D.H45), t["fondo"] + (255,))
-    d = ImageDraw.Draw(im)
-    _cabeza(im, d, tema, n, n)
-    y = 230
-    if pregunta:
-        fq, rq = D.ajustar(d, pregunta, "bold", 84, 50, D.ANCHO + 40, 4)
-        y = D.escribir(d, D.X, y, rq, fq, t["titular"]) + 24
-        d.text((D.X, y), "Contanos en los comentarios.", font=D.fuente("regular", 38), fill=t["tenue"])
-        y += 110
-    for texto, color in (("Guardalo y compartilo con quien lo necesite.", t["texto"]),
-                         (extra or "La nota completa, en diariolacampaña.com.ar, sección Agro.", t["texto"])):
-        fx, rx = D.ajustar(d, texto, "medium", 46, 32, D.ANCHO + 40, 2, salto=1.25)
-        y = D.escribir(d, D.X, y, rx, fx, color, 1.25) + 30
-    lg = D.lockup(tema, 120)
-    im.alpha_composite(lg, (D.X, D.H45 - 330))
-    d.text((D.X, D.H45 - 180), f"Seguí a {D.USUARIO}", font=D.fuente("bold", 40), fill=t["verde"])
-    _pie_deslizar(d, tema, ultimo=True)
-    return _guardar(im, destino)
-
-
-def _guardar(im, destino) -> Path:
+def _guardar(hecho, destino) -> Path:
+    """El motor nombra el archivo por el título: se mueve enseguida para que dos placas no se pisen."""
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)
-    im.convert("RGB").save(destino, "JPEG", quality=92)
+    shutil.move(str(hecho), str(destino))
     return destino
 
 
+def texto_tapa(g: dict, c: dict = None) -> str:
+    """La tapa es la MINIATURA en la grilla: el texto SEO, con la palabra clave primero."""
+    return D.texto_portada(g) if g.get("portada_seo") else ((c or {}).get("gancho") or g.get("titular", ""))
+
+
+def tapa(imagen, g: dict, titulo: str, tema: str, leyenda: str, destino: Path, idx: int = None,
+         total: int = None) -> Path:
+    """La placa con la foto. El comienzo en color es lo que va antes de los dos puntos del título; si
+    no los tiene, la volanta."""
+    volanta = "" if ":" in titulo else (g.get("volanta") or "")
+    with _con_marca_agro() as si:
+        return _guardar(si.compose_carrusel_slide(imagen, volanta, titulo, g.get("bajada") or "", _sitio(), idx, total,
+                                                  tema=TEMAS_PLACA.get(tema, "claro"), leyenda=leyenda), destino)
+
+
+def texto_lamina(x: dict) -> str:
+    """El texto de una lámina: los puntos o el texto de la diapositiva, con el dato adelante si es una cifra
+    que el texto no dice («Superficie con posibles daños: 16.000 hectáreas.»). La IA a veces pone de dato
+    una frase («excesos hídricos»): esa no va."""
+    cuerpo = (" ".join(p if p.rstrip()[-1:] in ".!?" else f"{p}." for p in x["puntos"]) if x.get("puntos")
+              else x.get("texto") or "")
+    dato, rotulo = (x.get("dato") or "").strip(), (x.get("dato_rotulo") or "").strip()
+    if not rotulo or not re.search(r"\d", dato) or set(_numeros(dato)) <= set(_numeros(cuerpo)):
+        return cuerpo
+    return f"{rotulo[0].upper()}{rotulo[1:].rstrip('.:')}: {dato}. {cuerpo}".strip()
+
+
+def lamina(volanta: str, titulo: str, texto: str, i: int, n: int, tema: str, destino: Path) -> Path:
+    with _con_marca_agro() as si:
+        return _guardar(si.compose_lamina_carrusel(None, volanta, titulo, texto, _sitio(), i, n,
+                                                   tema=TEMAS_PLACA.get(tema, "claro")), destino)
+
+
 def armar(g: dict, c: dict, imagen, carpeta: Path, base: str, tema: str = "blanco", leyenda: str = "") -> list:
-    """Los .jpg del carrusel, en orden: tapa, diapositivas, cierre."""
+    """Los .jpg del carrusel, en orden: tapa con la foto, láminas de texto y cierre."""
     carpeta = Path(carpeta)
     n = len(c["diapositivas"]) + 2
-    # La tapa es la MINIATURA del carrusel en la grilla: el texto SEO (palabra clave primero).
-    archivos = [tapa(imagen, g.get("volanta"), D.texto_portada(g) if g.get("portada_seo") else
-                     (c.get("gancho") or g.get("titular", "")), tema, leyenda, carpeta / f"{base}_c01.jpg")]
+    volanta = g.get("volanta") or ""
+    archivos = [tapa(imagen, g, texto_tapa(g, c), tema, leyenda, carpeta / f"{base}_c01.jpg", 1, n)]
     for i, x in enumerate(c["diapositivas"], 2):
-        archivos.append(diapositiva(x, i, n, tema, carpeta / f"{base}_c{i:02d}.jpg"))
-    archivos.append(cierre(c.get("pregunta", ""), n, tema, carpeta / f"{base}_c{n:02d}.jpg"))
+        archivos.append(lamina(volanta, x["titulo"], texto_lamina(x), i, n, tema, carpeta / f"{base}_c{i:02d}.jpg"))
+    pregunta = c.get("pregunta") or ""
+    cierre = (("Contanos en los comentarios. " if pregunta else "") + "Guardalo y compartilo con quien lo necesite. "
+              f"La nota completa, en la sección Agro de nuestra web. Seguí a {D.USUARIO}.")
+    archivos.append(lamina(volanta, pregunta or "Guardalo y compartilo", cierre, n, n, tema,
+                           carpeta / f"{base}_c{n:02d}.jpg"))
     return [str(a) for a in archivos]
 
 

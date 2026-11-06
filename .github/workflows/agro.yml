@@ -116,6 +116,7 @@ jobs:
           WIX_MEMBER_ID: ${{ secrets.WIX_MEMBER_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AGRO_MAX_DIA: ${{ vars.AGRO_MAX_DIA }}
+          AGRO_FORMATO: ${{ vars.AGRO_FORMATO }}
           AGRO_POR_PASADA: ${{ vars.AGRO_POR_PASADA }}
           AGRO_AGENDA: ${{ vars.AGRO_AGENDA }}
           AGRO_CORRIDAS: ${{ vars.AGRO_CORRIDAS }}
