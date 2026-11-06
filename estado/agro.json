@@ -28267,6 +28267,31 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "32f338e0bfde6211": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 0,
+      "cercania_argentina": 7,
+      "cercania_pba": 5,
+      "potencial_reel": 4,
+      "conversacion": 7,
+      "potencial_comercial": 6,
+      "ai_score": 56,
+      "commercial_score": 56,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Afecta directamente la formación de precios del maíz en el mercado de exportación local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        55
+      ]
     }
   },
   "indice": {
@@ -30189,7 +30214,8 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/cierre-de-semana-con-altibajos-en-el-mercado-agroganadero-de-canuelas-nid06112026": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/como-amigos-vamos-a-hablarlo-en-privado-nicolas-pino-dijo-que-hablara-con-carlos-castagnani-por-una-nid06112026": "2026-11-06",
-      "https://bichosdecampo.com/gran-noticia-los-embarques-argentinos-de-trigo-2025-26-ya-superaron-todas-las-proyecciones-tanto-publicas-como-privadas": "2026-11-06"
+      "https://bichosdecampo.com/gran-noticia-los-embarques-argentinos-de-trigo-2025-26-ya-superaron-todas-las-proyecciones-tanto-publicas-como-privadas": "2026-11-06",
+      "https://bichosdecampo.com/barajar-y-dar-de-nuevo-los-fondos-agricolas-en-chicago-terminaron-de-liquidar-las-posiciones-compradas-en-contratos-de-maiz": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -32110,7 +32136,8 @@
       "el sorgo gana espacio en modelos agricolas ganaderos y advanta plantea como aumentar su rinde con b simonetti": "2026-11-06",
       "cierre de semana con altibajos en el mercado agroganadero de canuelas": "2026-11-06",
       "como amigos vamos a hablarlo en privado nicolas pino dijo que conversara con carlos castagnani por una polemica abierta entre la rural y cra": "2026-11-06",
-      "gran noticia los embarques argentinos de trigo 2025 26 ya superaron todas las proyecciones tanto publicas como privadas": "2026-11-06"
+      "gran noticia los embarques argentinos de trigo 2025 26 ya superaron todas las proyecciones tanto publicas como privadas": "2026-11-06",
+      "barajar y dar de nuevo los fondos agricolas en chicago terminaron de liquidar las posiciones compradas en contratos de maiz": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -34031,7 +34058,8 @@
       "fdbc8adcddb58d94": "2026-11-06",
       "6be5075334a07f5c": "2026-11-06",
       "584200f674e209ef": "2026-11-06",
-      "f83618721545fdfa": "2026-11-06"
+      "f83618721545fdfa": "2026-11-06",
+      "32f338e0bfde6211": "2026-11-06"
     }
   },
   "elegidas": [
@@ -60353,6 +60381,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5129afe9f691_portada.jpg"
+    },
+    {
+      "id": "659e18789141",
+      "cuando": "2026-11-06T18:40-03:00",
+      "titulo_original": "“Libremente y en igualdad”: CRA le planteó a Sturzenegger un reclamo por Visec",
+      "descripcion": "Según informó, en un encuentro con el ministro expresó “la necesidad de que todas las plataformas reconocidas puedan operar libremente y en igualdad de condiciones y que sea el productor quien tenga la libertad de elegir cuál utilizar”",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/libremente-y-en-igualdad-cra-le-planteo-a-sturzenegger-un-reclamo-por-visec-nid06112026/",
+      "titular": "CRA reclamó ante Sturzenegger mayor libertad para elegir plataformas de trazabilidad",
+      "volanta": "Ganadería y Agricultura",
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 14,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 72,
+        "subtema": "agtech",
+        "tema": "visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Las plataformas de trazabilidad obligatorias generan fuerte debate comercial y político.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          71
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T18:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "50db4bb5-ad24-4cb5-8724-3065a5ab8983",
+          "slug": "cra-le-pidio-a-sturzenegger-libertad-de-eleccion-en-las-d4b39a",
+          "url": "https://www.diariolacampaña.com.ar/n/cra-le-pidio-a-sturzenegger-libertad-de-eleccion-en-las-d4b39a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17977370219940199",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1750269933770670",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18155976901502591"
+        },
+        "historia_facebook": {
+          "id": "1653497373098596"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_659e18789141_portada.jpg"
     }
   ],
   "pendientes": [
@@ -60743,73 +60835,6 @@
       "cuando": "2026-11-06T13:00-03:00"
     },
     {
-      "id": "659e18789141",
-      "rep": {
-        "id": "659e18789141",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/libremente-y-en-igualdad-cra-le-planteo-a-sturzenegger-un-reclamo-por-visec-nid06112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/libremente-y-en-igualdad-cra-le-planteo-a-sturzenegger-un-reclamo-por-visec-nid06112026",
-        "titulo": "“Libremente y en igualdad”: CRA le planteó a Sturzenegger un reclamo por Visec",
-        "titulo_norm": "libremente y en igualdad cra le planteo a sturzenegger un reclamo por visec",
-        "descripcion": "Según informó, en un encuentro con el ministro expresó “la necesidad de que todas las plataformas reconocidas puedan operar libremente y en igualdad de condiciones y que sea el productor quien tenga la libertad de elegir cuál utilizar”",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/NNLUGBQZ7ZAF7N3EIN5JJBWAB4.jpg?auth=8e41afa6eea723a7a636cd00c5c8e7730c920a1e421c5fa58c35c3b0ef21815c&smart=true",
-        "autor": "",
-        "publicado": "2026-11-06T12:10-03:00",
-        "capturado": "2026-11-06T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "00c3383b51d2a8a8"
-      },
-      "grupo": [
-        {
-          "id": "659e18789141",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/libremente-y-en-igualdad-cra-le-planteo-a-sturzenegger-un-reclamo-por-visec-nid06112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/libremente-y-en-igualdad-cra-le-planteo-a-sturzenegger-un-reclamo-por-visec-nid06112026",
-          "titulo": "“Libremente y en igualdad”: CRA le planteó a Sturzenegger un reclamo por Visec",
-          "titulo_norm": "libremente y en igualdad cra le planteo a sturzenegger un reclamo por visec",
-          "descripcion": "Según informó, en un encuentro con el ministro expresó “la necesidad de que todas las plataformas reconocidas puedan operar libremente y en igualdad de condiciones y que sea el productor quien tenga la libertad de elegir cuál utilizar”",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/NNLUGBQZ7ZAF7N3EIN5JJBWAB4.jpg?auth=8e41afa6eea723a7a636cd00c5c8e7730c920a1e421c5fa58c35c3b0ef21815c&smart=true",
-          "autor": "",
-          "publicado": "2026-11-06T12:10-03:00",
-          "capturado": "2026-11-06T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "00c3383b51d2a8a8"
-        }
-      ],
-      "score": {
-        "impacto_economico": 15,
-        "interes_productores": 14,
-        "innovacion": 4,
-        "cercania_argentina": 10,
-        "cercania_pba": 8,
-        "potencial_reel": 6,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 71,
-        "commercial_score": 72,
-        "subtema": "agtech",
-        "tema": "visec",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Las plataformas de trazabilidad obligatorias generan fuerte debate comercial y político.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          71
-        ]
-      },
-      "cuando": "2026-11-06T13:00-03:00"
-    },
-    {
       "id": "9d25a22c76ed",
       "rep": {
         "id": "9d25a22c76ed",
@@ -61141,8 +61166,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T18:23:43-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T18:43:53-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
