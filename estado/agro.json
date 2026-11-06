@@ -27446,6 +27446,31 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cb2715afc11fe6d6": {
+      "impacto_economico": 10,
+      "interes_productores": 11,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 71,
+      "subtema": "agro",
+      "tema": "envases vacíos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Excelente historia de impacto ambiental y gestión en Campana, muy relevante para productores locales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        72
+      ]
     }
   },
   "indice": {
@@ -29309,7 +29334,8 @@
       "https://agrositio.com.ar/noticia/249222-la-suba-del-riesgo-pais-una-cuna-para-recuperar-nivel-de-actividad-y-ganar-reservas.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249216-nubes-en-el-horizonte.html": "2026-11-06",
-      "https://bichosdecampo.com/ahora-si-arca-fijo-nuevas-reglas-para-recuperar-el-iva-de-las-inversiones-productivas-que-se-realicen-en-el-marco-del-rimi": "2026-11-06"
+      "https://bichosdecampo.com/ahora-si-arca-fijo-nuevas-reglas-para-recuperar-el-iva-de-las-inversiones-productivas-que-se-realicen-en-el-marco-del-rimi": "2026-11-06",
+      "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31171,7 +31197,8 @@
       "la suba del riesgo pais una cuna para recuperar nivel de actividad y ganar reservas": "2026-11-06",
       "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque": "2026-11-06",
       "nubes en el horizonte": "2026-11-06",
-      "ahora si arca fijo nuevas reglas para recuperar el iva de las inversiones productivas que se realicen en el marco del rimi": "2026-11-06"
+      "ahora si arca fijo nuevas reglas para recuperar el iva de las inversiones productivas que se realicen en el marco del rimi": "2026-11-06",
+      "de reciclar bolsas de alimento a gestionar envases vacios de agroquimicos la historia de eco pioneras una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitacion": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33033,7 +33060,8 @@
       "2584afdfbbaf10dd": "2026-11-06",
       "3f90cdf2e81856e6": "2026-11-06",
       "5c5d25a74f6f630a": "2026-11-06",
-      "154d2e9f5e45650a": "2026-11-06"
+      "154d2e9f5e45650a": "2026-11-06",
+      "cb2715afc11fe6d6": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58215,9 +58243,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_03149138323c_portada.jpg"
+    },
+    {
+      "id": "627606d0f4e0",
+      "cuando": "2026-11-06T08:20-03:00",
+      "titulo_original": "El Niño: la alerta por excesos hídricos se modera en la región pampeana",
+      "descripcion": "Desde la BCR advirtieron que se esperan lluvias superiores a las habituales, aunque menores a las proyectadas inicialmente",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html",
+      "titular": "El Niño modera su alerta por excesos hídricos en la región pampeana",
+      "volanta": "Clima",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 6,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 75,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta de lleno en la zona núcleo y es de máxima atención para toda la región pampeana.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T08:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "81070cd1-9ee4-44b6-b352-66ed077d87c6",
+          "slug": "el-nino-modera-la-alerta-por-excesos-hidricos-y-bajan-las-568ca5",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-modera-la-alerta-por-excesos-hidricos-y-bajan-las-568ca5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17965887744238259",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1749679227163074",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18115198961141340"
+        },
+        "historia_facebook": {
+          "id": "2994473166539762"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_627606d0f4e0_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "8ca223f8406a",
+      "rep": {
+        "id": "8ca223f8406a",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion/",
+        "canonical_url": "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion",
+        "titulo": "De reciclar bolsas de alimento a gestionar envases vacíos de agroquímicos: La historia de Eco Pioneras, una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitación",
+        "titulo_norm": "de reciclar bolsas de alimento a gestionar envases vacios de agroquimicos la historia de eco pioneras una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitacion",
+        "descripcion": "Cuando explica el trabajo que realizan las más de diez mujeres que integran la cooperativa de Campana Eco Pioneras, su coordinadora y fundadora, Cristina Romero, no puede evitar sonreír. Es que todavía se sorprende del crecimiento que logró un proyecto que, en menos de diez años, ya emplea a 14 personas, la mayoría de ellas […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-05-at-9.27.14-PM.jpeg",
+        "autor": "Sofia Selasco",
+        "publicado": "2026-11-06T08:12-03:00",
+        "capturado": "2026-11-06T08:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cb2715afc11fe6d6"
+      },
+      "grupo": [
+        {
+          "id": "8ca223f8406a",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion/",
+          "canonical_url": "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion",
+          "titulo": "De reciclar bolsas de alimento a gestionar envases vacíos de agroquímicos: La historia de Eco Pioneras, una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitación",
+          "titulo_norm": "de reciclar bolsas de alimento a gestionar envases vacios de agroquimicos la historia de eco pioneras una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitacion",
+          "descripcion": "Cuando explica el trabajo que realizan las más de diez mujeres que integran la cooperativa de Campana Eco Pioneras, su coordinadora y fundadora, Cristina Romero, no puede evitar sonreír. Es que todavía se sorprende del crecimiento que logró un proyecto que, en menos de diez años, ya emplea a 14 personas, la mayoría de ellas […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-05-at-9.27.14-PM.jpeg",
+          "autor": "Sofia Selasco",
+          "publicado": "2026-11-06T08:12-03:00",
+          "capturado": "2026-11-06T08:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cb2715afc11fe6d6"
+        }
+      ],
+      "score": {
+        "impacto_economico": 10,
+        "interes_productores": 11,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 71,
+        "subtema": "agro",
+        "tema": "envases vacíos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente historia de impacto ambiental y gestión en Campana, muy relevante para productores locales.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          72
+        ]
+      },
+      "cuando": "2026-11-06T08:20-03:00"
+    },
     {
       "id": "2c583607dc88",
       "rep": {
@@ -58349,69 +58504,6 @@
           60,
           72
         ]
-      },
-      "cuando": "2026-11-06T07:00-03:00"
-    },
-    {
-      "id": "627606d0f4e0",
-      "rep": {
-        "id": "627606d0f4e0",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html",
-        "canonical_url": "https://lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html",
-        "titulo": "El Niño: la alerta por excesos hídricos se modera en la región pampeana",
-        "titulo_norm": "el nino la alerta por excesos hidricos se modera en la region pampeana",
-        "descripcion": "Desde la BCR advirtieron que se esperan lluvias superiores a las habituales, aunque menores a las proyectadas inicialmente",
-        "imagen_url": "https://media.lacapital.com.ar/p/68ed65196f4b07f592382406b1802b0a/adjuntos/305/imagenes/029/786/0029786795/1200x675/704x247:724x267/lluvia-campo.jpg",
-        "autor": "",
-        "publicado": "2026-11-06T06:05-03:00",
-        "capturado": "2026-11-06T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fe15f97a0c9043c2"
-      },
-      "grupo": [
-        {
-          "id": "627606d0f4e0",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html",
-          "canonical_url": "https://lacapital.com.ar/agro/el-nino-la-alerta-excesos-hidricos-se-modera-la-region-pampeana-n10290692.html",
-          "titulo": "El Niño: la alerta por excesos hídricos se modera en la región pampeana",
-          "titulo_norm": "el nino la alerta por excesos hidricos se modera en la region pampeana",
-          "descripcion": "Desde la BCR advirtieron que se esperan lluvias superiores a las habituales, aunque menores a las proyectadas inicialmente",
-          "imagen_url": "https://media.lacapital.com.ar/p/68ed65196f4b07f592382406b1802b0a/adjuntos/305/imagenes/029/786/0029786795/1200x675/704x247:724x267/lluvia-campo.jpg",
-          "autor": "",
-          "publicado": "2026-11-06T06:05-03:00",
-          "capturado": "2026-11-06T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fe15f97a0c9043c2"
-        }
-      ],
-      "score": {
-        "impacto_economico": 16,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 6,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 75,
-        "commercial_score": 78,
-        "subtema": "agro",
-        "tema": "clima",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Impacta de lleno en la zona núcleo y es de máxima atención para toda la región pampeana.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
       "cuando": "2026-11-06T07:00-03:00"
     },
@@ -58873,8 +58965,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T08:02:53-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T08:22:50-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
