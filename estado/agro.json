@@ -28171,6 +28171,81 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3d8de26eb9119943": {
+      "impacto_economico": 16,
+      "interes_productores": 11,
+      "innovacion": 4,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 8,
+      "ai_score": 71,
+      "commercial_score": 76,
+      "subtema": "ganaderia",
+      "tema": "unión europea",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directo a la cadena ganadera exportadora por las nuevas exigencias de trazabilidad europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        72
+      ]
+    },
+    "fdbc8adcddb58d94": {
+      "impacto_economico": 11,
+      "interes_productores": 10,
+      "innovacion": 6,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 5,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 60,
+      "commercial_score": 68,
+      "subtema": "agro",
+      "tema": "sorgo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante para productores mixtos, aunque el foco del evento es en Chaco y norte del país.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        64
+      ]
+    },
+    "584200f674e209ef": {
+      "impacto_economico": 8,
+      "interes_productores": 6,
+      "innovacion": 0,
+      "cercania_argentina": 10,
+      "cercania_pba": 4,
+      "potencial_reel": 4,
+      "conversacion": 8,
+      "potencial_comercial": 4,
+      "ai_score": 44,
+      "commercial_score": 42,
+      "subtema": "empresas",
+      "tema": "sra y cra",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Genera mucha conversación gremial y política entre productores por la tensión institucional.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        31
+      ]
     }
   },
   "indice": {
@@ -30087,7 +30162,12 @@
       "https://croplife.com/management/employees/oaba-2027-industry-conference-to-spotlight-innovation-industry-insights-and-connections": "2026-11-06",
       "https://croplife.com/iron/john-deere-reaffirms-commitment-to-u-s-manufacturing-and-long-term-competitiveness": "2026-11-06",
       "https://bichosdecampo.com/milei-volvio-a-prometer-la-eliminacion-de-las-retenciones-y-proyecto-una-devolucion-de-500-mil-millones-de-dolares-si-es-reelegido": "2026-11-06",
-      "https://lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026": "2026-11-06"
+      "https://lanacion.com.ar/economia/campo/quilmes-acelera-una-apuesta-exporto-cebada-y-malta-por-us370-millones-y-busca-crecer-en-india-nid06112026": "2026-11-06",
+      "https://todoagro.com.ar/deforestacion-abc-advierte-que-los-novillos-que-no-cumplan-perderan-acceso-al-mercado-europeo": "2026-11-06",
+      "https://infocampo.com.ar/milei-trabajamos-sin-descanso-para-eliminar-para-siempre-el-invento-nefasto-de-las-retenciones": "2026-11-06",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/cierre-de-semana-con-altibajos-en-el-mercado-agroganadero-de-canuelas-nid06112026": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/como-amigos-vamos-a-hablarlo-en-privado-nicolas-pino-dijo-que-hablara-con-carlos-castagnani-por-una-nid06112026": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -32002,7 +32082,12 @@
       "oaba 2027 industry conference to spotlight innovation industry insights and connections": "2026-11-06",
       "john deere reaffirms commitment to u s manufacturing and long term competitiveness": "2026-11-06",
       "milei volvio a prometer la eliminacion de las retenciones y proyecto una devolucion de 500 mil millones de dolares si es reelegido": "2026-11-06",
-      "quilmes acelera una apuesta exporto cebada y malta por us 370 millones y busca crecer en india": "2026-11-06"
+      "quilmes acelera una apuesta exporto cebada y malta por us 370 millones y busca crecer en india": "2026-11-06",
+      "deforestacion abc advierte que los novillos que no cumplan perderan acceso al mercado europeo": "2026-11-06",
+      "milei trabajamos sin descanso para eliminar para siempre el invento nefasto de las retenciones": "2026-11-06",
+      "el sorgo gana espacio en modelos agricolas ganaderos y advanta plantea como aumentar su rinde con b simonetti": "2026-11-06",
+      "cierre de semana con altibajos en el mercado agroganadero de canuelas": "2026-11-06",
+      "como amigos vamos a hablarlo en privado nicolas pino dijo que conversara con carlos castagnani por una polemica abierta entre la rural y cra": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33917,7 +34002,12 @@
       "90370ad89aefcb6c": "2026-11-06",
       "ecd4fcd4d0dac122": "2026-11-06",
       "91349596deffe073": "2026-11-06",
-      "ec9b4ea986a45232": "2026-11-06"
+      "ec9b4ea986a45232": "2026-11-06",
+      "3d8de26eb9119943": "2026-11-06",
+      "a4fa85260c712541": "2026-11-06",
+      "fdbc8adcddb58d94": "2026-11-06",
+      "6be5075334a07f5c": "2026-11-06",
+      "584200f674e209ef": "2026-11-06"
     }
   },
   "elegidas": [
@@ -60115,9 +60205,140 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_eeb9f9e639a0_portada.jpg"
+    },
+    {
+      "id": "245d092edc90",
+      "cuando": "2026-11-06T18:00-03:00",
+      "titulo_original": "Deforestación: ABC advierte que los novillos que no cumplan perderán acceso al mercado europeo",
+      "descripcion": "Mario Ravettino, presidente del Consorcio de Exportadores de Carnes Argentinas (ABC), destacó la fuerte presencia institucional del sector frigorífico argentino en SIAL París, al tiempo que advirtió sobre los desafíos que plantea la entrada en vigencia del Reglamento 1115 de la Unión Europea. La ent",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/deforestacion-abc-advierte-que-los-novillos-que-no-cumplan-perderan-acceso-al-mercado-europeo/",
+      "titular": "Hacienda sin deforestación: alertan que falta trazabilidad para exportar a Europa",
+      "volanta": "Ganadería",
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 11,
+        "innovacion": 4,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 8,
+        "ai_score": 71,
+        "commercial_score": 76,
+        "subtema": "ganaderia",
+        "tema": "unión europea",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directo a la cadena ganadera exportadora por las nuevas exigencias de trazabilidad europea.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          72
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "23ef463d-8a03-49f4-a344-4a75bfa77209",
+          "slug": "europa-exigira-carne-libre-de-deforestacion-y-advierten-falta-7fade7",
+          "url": "https://www.diariolacampaña.com.ar/n/europa-exigira-carne-libre-de-deforestacion-y-advierten-falta-7fade7",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18084977777375211",
+          "diapositivas": 7
+        },
+        "facebook": {
+          "id": "101271341650483_1750238050440525",
+          "fotos": 7
+        },
+        "historia_instagram": {
+          "id": "18188760757411752"
+        },
+        "historia_facebook": {
+          "id": "1833705521102663"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_245d092edc90_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "a328019ef5b7",
+      "rep": {
+        "id": "a328019ef5b7",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html",
+        "titulo": "El Sorgo gana espacio en modelos agrícolas - ganaderos y Advanta plantea como aumentar su rinde; con B. Simonetti",
+        "titulo_norm": "el sorgo gana espacio en modelos agricolas ganaderos y advanta plantea como aumentar su rinde con b simonetti",
+        "descripcion": "El área de sorgo se consolida en muchas geografías agrícolas del país. Sus multiples roles y usos se consolidan en quienes producen granos para consumos y exportación, en modelos mixtos, ganaderos y tamberos. Para poner foco en los grandes tópicos del cultivo, Advanta organiza una jornada sobre sorgo en Charata, Chaco. Se abordarán aspectos técnicos, comerciales y de mercado. En esta nota con el Lic. Bruno Simonetti, Gte. de Advanta, se destaca el crecimiento del cultivo en el norte argentino y su oportunidad en la exportación a China. También el programa de la Jornada del día 18 de Nov. con temas integrales para ganar en rinde con más...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/Vfv9Oi3U5jI.jpg",
+        "autor": "info@agrositio.com (Ricardo Bindi)",
+        "publicado": "2026-11-06T17:28-03:00",
+        "capturado": "2026-11-06T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fdbc8adcddb58d94"
+      },
+      "grupo": [
+        {
+          "id": "a328019ef5b7",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249240-el-sorgo-gana-espacio-en-modelos-agricolas-ganaderos-y-advanta-plantea-como-aumentar-su-rinde-con-b-simonetti.html",
+          "titulo": "El Sorgo gana espacio en modelos agrícolas - ganaderos y Advanta plantea como aumentar su rinde; con B. Simonetti",
+          "titulo_norm": "el sorgo gana espacio en modelos agricolas ganaderos y advanta plantea como aumentar su rinde con b simonetti",
+          "descripcion": "El área de sorgo se consolida en muchas geografías agrícolas del país. Sus multiples roles y usos se consolidan en quienes producen granos para consumos y exportación, en modelos mixtos, ganaderos y tamberos. Para poner foco en los grandes tópicos del cultivo, Advanta organiza una jornada sobre sorgo en Charata, Chaco. Se abordarán aspectos técnicos, comerciales y de mercado. En esta nota con el Lic. Bruno Simonetti, Gte. de Advanta, se destaca el crecimiento del cultivo en el norte argentino y su oportunidad en la exportación a China. También el programa de la Jornada del día 18 de Nov. con temas integrales para ganar en rinde con más...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/Vfv9Oi3U5jI.jpg",
+          "autor": "info@agrositio.com (Ricardo Bindi)",
+          "publicado": "2026-11-06T17:28-03:00",
+          "capturado": "2026-11-06T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fdbc8adcddb58d94"
+        }
+      ],
+      "score": {
+        "impacto_economico": 11,
+        "interes_productores": 10,
+        "innovacion": 6,
+        "cercania_argentina": 10,
+        "cercania_pba": 5,
+        "potencial_reel": 5,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 60,
+        "commercial_score": 68,
+        "subtema": "agro",
+        "tema": "sorgo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesante para productores mixtos, aunque el foco del evento es en Chaco y norte del país.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          55,
+          64
+        ]
+      },
+      "cuando": "2026-11-06T18:00-03:00"
+    },
     {
       "id": "9a24f7aeb321",
       "rep": {
@@ -60836,8 +61057,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T17:22:57-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T18:04:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
