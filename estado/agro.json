@@ -28292,6 +28292,27 @@
         56,
         55
       ]
+    },
+    "88a039d70066a021": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 6,
+      "potencial_comercial": 7,
+      "ai_score": 74,
+      "commercial_score": 74,
+      "subtema": "agro",
+      "tema": "envases agroquímicos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Impacta directamente en la gestión ambiental obligatoria de los productores de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -30215,7 +30236,8 @@
       "https://lanacion.com.ar/economia/campo/cierre-de-semana-con-altibajos-en-el-mercado-agroganadero-de-canuelas-nid06112026": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/como-amigos-vamos-a-hablarlo-en-privado-nicolas-pino-dijo-que-hablara-con-carlos-castagnani-por-una-nid06112026": "2026-11-06",
       "https://bichosdecampo.com/gran-noticia-los-embarques-argentinos-de-trigo-2025-26-ya-superaron-todas-las-proyecciones-tanto-publicas-como-privadas": "2026-11-06",
-      "https://bichosdecampo.com/barajar-y-dar-de-nuevo-los-fondos-agricolas-en-chicago-terminaron-de-liquidar-las-posiciones-compradas-en-contratos-de-maiz": "2026-11-06"
+      "https://bichosdecampo.com/barajar-y-dar-de-nuevo-los-fondos-agricolas-en-chicago-terminaron-de-liquidar-las-posiciones-compradas-en-contratos-de-maiz": "2026-11-06",
+      "https://lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -32137,7 +32159,8 @@
       "cierre de semana con altibajos en el mercado agroganadero de canuelas": "2026-11-06",
       "como amigos vamos a hablarlo en privado nicolas pino dijo que conversara con carlos castagnani por una polemica abierta entre la rural y cra": "2026-11-06",
       "gran noticia los embarques argentinos de trigo 2025 26 ya superaron todas las proyecciones tanto publicas como privadas": "2026-11-06",
-      "barajar y dar de nuevo los fondos agricolas en chicago terminaron de liquidar las posiciones compradas en contratos de maiz": "2026-11-06"
+      "barajar y dar de nuevo los fondos agricolas en chicago terminaron de liquidar las posiciones compradas en contratos de maiz": "2026-11-06",
+      "envases vacios de agroquimicos el 44 del plastico recuperado se usa para fabricar canos de fibra optica": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -34059,7 +34082,8 @@
       "6be5075334a07f5c": "2026-11-06",
       "584200f674e209ef": "2026-11-06",
       "f83618721545fdfa": "2026-11-06",
-      "32f338e0bfde6211": "2026-11-06"
+      "32f338e0bfde6211": "2026-11-06",
+      "88a039d70066a021": "2026-11-06"
     }
   },
   "elegidas": [
@@ -60445,9 +60469,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_659e18789141_portada.jpg"
+    },
+    {
+      "id": "9d25a22c76ed",
+      "cuando": "2026-11-06T19:00-03:00",
+      "titulo_original": "China en el comercio mundial de soja: evolución y perspectivas hacia adelante",
+      "descripcion": "En 30 años, China pasó de exportar soja a concentrar cerca del 60% de las compras mundiales. Analizamos los factores detrás de ese cambio, el rol de Brasil y EE.UU., y las señales de una demanda que podría crecer a un ritmo más moderado hacia delante.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el",
+      "titular": "China concentra el 60% de las importaciones mundiales de soja",
+      "volanta": "Mercados",
+      "score": {
+        "impacto_economico": 17,
+        "interes_productores": 12,
+        "innovacion": 2,
+        "cercania_argentina": 9,
+        "cercania_pba": 6,
+        "potencial_reel": 5,
+        "conversacion": 8,
+        "potencial_comercial": 6,
+        "ai_score": 65,
+        "commercial_score": 70,
+        "subtema": "mercados",
+        "tema": "soja",
+        "ambito": "internacional",
+        "sensible": true,
+        "explicacion": "El rol de China y la demanda global marcan el rumbo de los precios de la principal oleaginosa.",
+        "tema_doc": "internacional",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          68
+        ]
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T19:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "04171709-f036-46c1-be7c-4cd497e43c3e",
+          "slug": "soja-global-china-concentra-el-60-por-ciento-de-las-f87a14",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-global-china-concentra-el-60-por-ciento-de-las-f87a14",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18136120858708305",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1750282523769411",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18139765663728133"
+        },
+        "historia_facebook": {
+          "id": "4471183073132950"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9d25a22c76ed_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "31c88e776eca",
+      "rep": {
+        "id": "31c88e776eca",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026",
+        "titulo": "Envases vacíos de agroquímicos: el 44% del plástico recuperado se usa para fabricar caños de fibra óptica",
+        "titulo_norm": "envases vacios de agroquimicos el 44 del plastico recuperado se usa para fabricar canos de fibra optica",
+        "descripcion": "CampoLimpio recuperó más de 28 millones de kilos de envases vacíos desde 2019; la industria invirtió más de US$100 millones en una red que llega a 22 provincias; parte del plástico vuelve a convertirse en bidones o, como se mencionó, se usa para fabricar caños para fibra óptica",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/JVWQJKZJTJCWNDOQQ4SA4YIJBA.jpg?auth=41f2258b80e101e567d33a30fd3fd7d7ceb10f55c70a6adb2c157fd1c4671f6c&smart=true",
+        "autor": "",
+        "publicado": "2026-11-06T18:46-03:00",
+        "capturado": "2026-11-06T19:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "88a039d70066a021"
+      },
+      "grupo": [
+        {
+          "id": "31c88e776eca",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026",
+          "titulo": "Envases vacíos de agroquímicos: el 44% del plástico recuperado se usa para fabricar caños de fibra óptica",
+          "titulo_norm": "envases vacios de agroquimicos el 44 del plastico recuperado se usa para fabricar canos de fibra optica",
+          "descripcion": "CampoLimpio recuperó más de 28 millones de kilos de envases vacíos desde 2019; la industria invirtió más de US$100 millones en una red que llega a 22 provincias; parte del plástico vuelve a convertirse en bidones o, como se mencionó, se usa para fabricar caños para fibra óptica",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/JVWQJKZJTJCWNDOQQ4SA4YIJBA.jpg?auth=41f2258b80e101e567d33a30fd3fd7d7ceb10f55c70a6adb2c157fd1c4671f6c&smart=true",
+          "autor": "",
+          "publicado": "2026-11-06T18:46-03:00",
+          "capturado": "2026-11-06T19:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "88a039d70066a021"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 6,
+        "potencial_comercial": 7,
+        "ai_score": 74,
+        "commercial_score": 74,
+        "subtema": "agro",
+        "tema": "envases agroquímicos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Impacta directamente en la gestión ambiental obligatoria de los productores de la zona núcleo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T19:00-03:00"
+    },
     {
       "id": "b1158ee678b2",
       "rep": {
@@ -60835,73 +60986,6 @@
       "cuando": "2026-11-06T13:00-03:00"
     },
     {
-      "id": "9d25a22c76ed",
-      "rep": {
-        "id": "9d25a22c76ed",
-        "fuente": "Bolsa de Comercio de Rosario",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-        "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el",
-        "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el",
-        "titulo": "China en el comercio mundial de soja: evolución y perspectivas hacia adelante",
-        "titulo_norm": "china en el comercio mundial de soja evolucion y perspectivas hacia adelante",
-        "descripcion": "En 30 años, China pasó de exportar soja a concentrar cerca del 60% de las compras mundiales. Analizamos los factores detrás de ese cambio, el rol de Brasil y EE.UU., y las señales de una demanda que podría crecer a un ritmo más moderado hacia delante.",
-        "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/china_portada-600px.png?itok=CZmaaotw",
-        "autor": "",
-        "publicado": "2026-11-06T09:00-03:00",
-        "capturado": "2026-11-06T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9c6b54edd0094522"
-      },
-      "grupo": [
-        {
-          "id": "9d25a22c76ed",
-          "fuente": "Bolsa de Comercio de Rosario",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal",
-          "url": "https://www.bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el",
-          "canonical_url": "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/china-en-el",
-          "titulo": "China en el comercio mundial de soja: evolución y perspectivas hacia adelante",
-          "titulo_norm": "china en el comercio mundial de soja evolucion y perspectivas hacia adelante",
-          "descripcion": "En 30 años, China pasó de exportar soja a concentrar cerca del 60% de las compras mundiales. Analizamos los factores detrás de ese cambio, el rol de Brasil y EE.UU., y las señales de una demanda que podría crecer a un ritmo más moderado hacia delante.",
-          "imagen_url": "https://www.bcr.com.ar/sites/default/files/styles/cover_open_graph/public/china_portada-600px.png?itok=CZmaaotw",
-          "autor": "",
-          "publicado": "2026-11-06T09:00-03:00",
-          "capturado": "2026-11-06T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9c6b54edd0094522"
-        }
-      ],
-      "score": {
-        "impacto_economico": 17,
-        "interes_productores": 12,
-        "innovacion": 2,
-        "cercania_argentina": 9,
-        "cercania_pba": 6,
-        "potencial_reel": 5,
-        "conversacion": 8,
-        "potencial_comercial": 6,
-        "ai_score": 65,
-        "commercial_score": 70,
-        "subtema": "mercados",
-        "tema": "soja",
-        "ambito": "internacional",
-        "sensible": true,
-        "explicacion": "El rol de China y la demanda global marcan el rumbo de los precios de la principal oleaginosa.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          68
-        ]
-      },
-      "cuando": "2026-11-06T13:00-03:00"
-    },
-    {
       "id": "2157de3a61dc",
       "rep": {
         "id": "2157de3a61dc",
@@ -61166,8 +61250,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T18:43:53-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T19:03:37-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
