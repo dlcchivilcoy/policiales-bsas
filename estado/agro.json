@@ -27471,6 +27471,136 @@
         70,
         72
       ]
+    },
+    "a5df497da74f180e": {
+      "impacto_economico": 5,
+      "interes_productores": 4,
+      "innovacion": 0,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 3,
+      "conversacion": 3,
+      "potencial_comercial": 2,
+      "ai_score": 18,
+      "commercial_score": 25,
+      "subtema": "ganaderia",
+      "tema": "tambo nueva zelanda",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una historia de vida en el exterior, poco aplicable a la diaria del productor de la región núcleo.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cc6c1c8c8abdfc55": {
+      "impacto_economico": 15,
+      "interes_productores": 12,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 9,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 6,
+      "ai_score": 71,
+      "commercial_score": 65,
+      "subtema": "agro",
+      "tema": "visec trazabilidad",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Genera fuerte debate gremial y comercial por las exigencias de exportación a Europa.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        76
+      ]
+    },
+    "0f0da1850d1c53ea": {
+      "impacto_economico": 16,
+      "interes_productores": 14,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 8,
+      "potencial_reel": 5,
+      "conversacion": 9,
+      "potencial_comercial": 7,
+      "ai_score": 77,
+      "commercial_score": 70,
+      "subtema": "maquinaria",
+      "tema": "pauny crisis",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directo al mercado de maquinaria nacional y preocupa a toda la cadena por la falta de repuestos y tractores.",
+      "tema_doc": "costos",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7c88663b3ff449c1": {
+      "impacto_economico": 8,
+      "interes_productores": 5,
+      "innovacion": 0,
+      "cercania_argentina": 8,
+      "cercania_pba": 1,
+      "potencial_reel": 2,
+      "conversacion": 4,
+      "potencial_comercial": 4,
+      "ai_score": 32,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "lana mohair",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es de interés regional patagónico, con bajo impacto directo para la provincia de Buenos Aires.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "46d664f9c125d382": {
+      "impacto_economico": 19,
+      "interes_productores": 15,
+      "innovacion": 5,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 8,
+      "conversacion": 10,
+      "potencial_comercial": 9,
+      "ai_score": 86,
+      "commercial_score": 90,
+      "subtema": "agro",
+      "tema": "trigo región núcleo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca de lleno al cultivo clave de la campaña actual en la zona núcleo, con impacto en rindes y precios.",
+      "tema_doc": "campana",
+      "urgente": true,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e096b9e9cd984238": {
+      "impacto_economico": 10,
+      "interes_productores": 8,
+      "innovacion": 1,
+      "cercania_argentina": 10,
+      "cercania_pba": 5,
+      "potencial_reel": 3,
+      "conversacion": 6,
+      "potencial_comercial": 5,
+      "ai_score": 48,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "senasa aranceles",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cambios regulatorios oficiales que interesan principalmente a la industria importadora y alimenticia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29335,7 +29465,15 @@
       "https://agrositio.com.ar/noticia/249218-maiz-tardio-ante-un-escenario-nino-el-rendimiento-empieza-a-construirse-desde-el-arranque.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249216-nubes-en-el-horizonte.html": "2026-11-06",
       "https://bichosdecampo.com/ahora-si-arca-fijo-nuevas-reglas-para-recuperar-el-iva-de-las-inversiones-productivas-que-se-realicen-en-el-marco-del-rimi": "2026-11-06",
-      "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion": "2026-11-06"
+      "https://bichosdecampo.com/de-reciclar-bolsas-de-alimento-a-gestionar-envases-vacios-de-agroquimicos-la-historia-de-eco-pioneras-una-cooperativa-de-mujeres-que-hizo-del-recupero-una-fuente-de-trabajo-y-capacitacion": "2026-11-06",
+      "https://todoagro.com.ar/se-fue-de-uruguay-hace-17-anos-encontro-su-lugar-en-tierras-maories-y-ahora-trabaja-para-cumplir-el-sueno-del-tambo-propio": "2026-11-06",
+      "https://infocampo.com.ar/el-visec-bajo-fuego-cruzado-una-mirada-profunda-al-sistema-que-genera-internas-y-polemicas-en-el-agro": "2026-11-06",
+      "https://infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249227-los-fondos-profundizan-las-ventas-en-chicago-la-soja-lidera-las-bajas-y-el-trigo-encuentra-sosten-en-las-exportaciones.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249226-una-mision-de-india-visitara-jacobacci-para-avanzar-en-la-compra-de-lana-y-mohair.html": "2026-11-06",
+      "https://agrositio.com.ar/noticia/249225-caida-generalizada-en-chicago-soja-y-maiz-ceden-ante-la-oferta-y-el-contexto-global.html": "2026-11-06",
+      "https://bichosdecampo.com/final-abierto-para-el-trigo-las-lluvias-el-granizo-y-el-fusarium-ponen-en-duda-los-rindes-de-la-region-nucleo": "2026-11-06",
+      "https://bichosdecampo.com/senasa-elimino-un-arancel-fijo-para-importar-alimentos-de-uso-industrial-y-ahora-las-empresas-pagaran-segun-el-valor-de-la-mercaderia": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31198,7 +31336,15 @@
       "maiz tardio ante un escenario nino el rendimiento empieza a construirse desde el arranque": "2026-11-06",
       "nubes en el horizonte": "2026-11-06",
       "ahora si arca fijo nuevas reglas para recuperar el iva de las inversiones productivas que se realicen en el marco del rimi": "2026-11-06",
-      "de reciclar bolsas de alimento a gestionar envases vacios de agroquimicos la historia de eco pioneras una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitacion": "2026-11-06"
+      "de reciclar bolsas de alimento a gestionar envases vacios de agroquimicos la historia de eco pioneras una cooperativa de mujeres que hizo del recupero una fuente de trabajo y capacitacion": "2026-11-06",
+      "se fue de uruguay hace 17 anos encontro su lugar en tierras maories y ahora trabaja para cumplir el sueno del tambo propio": "2026-11-06",
+      "el visec bajo fuego cruzado una mirada profunda al sistema que genera internas y polemicas en el agro": "2026-11-06",
+      "otra audiencia fallida por pauny armar algunos tractores para conseguir dinero la unica propuesta de la empresa": "2026-11-06",
+      "los fondos profundizan las ventas en chicago la soja lidera las bajas y el trigo encuentra sosten en las exportaciones": "2026-11-06",
+      "una mision de india visitara jacobacci para avanzar en la compra de lana y mohair": "2026-11-06",
+      "caida generalizada en chicago soja y maiz ceden ante la oferta y el contexto global": "2026-11-06",
+      "final abierto para el trigo las lluvias el granizo y el fusarium ponen en duda los rindes de la region nucleo": "2026-11-06",
+      "senasa elimino un arancel fijo para importar alimentos de uso industrial y ahora las empresas pagaran segun el valor de la mercaderia": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33061,7 +33207,15 @@
       "3f90cdf2e81856e6": "2026-11-06",
       "5c5d25a74f6f630a": "2026-11-06",
       "154d2e9f5e45650a": "2026-11-06",
-      "cb2715afc11fe6d6": "2026-11-06"
+      "cb2715afc11fe6d6": "2026-11-06",
+      "a5df497da74f180e": "2026-11-06",
+      "cc6c1c8c8abdfc55": "2026-11-06",
+      "0f0da1850d1c53ea": "2026-11-06",
+      "b9b4274a356bfa7c": "2026-11-06",
+      "7c88663b3ff449c1": "2026-11-06",
+      "2ba5045dfef6c3ec": "2026-11-06",
+      "46d664f9c125d382": "2026-11-06",
+      "e096b9e9cd984238": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58303,9 +58457,199 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_627606d0f4e0_portada.jpg"
+    },
+    {
+      "id": "17b264140a39",
+      "cuando": "2026-11-06T10:00-03:00",
+      "titulo_original": "Final abierto para el trigo: Las lluvias, el granizo y el fusarium ponen en duda los rindes de la región núcleo",
+      "descripcion": "Lo que se perfilaba como una muy buena campaña triguera en la región núcleo comenzó a sumar interrogantes en su tramo final. A las heladas que dejaron daños en distintos lotes se agregaron ahora copiosas lluvias, caída de granizo y aparición de enfermedades fúngicas como el fusarium, que podrían enc",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/final-abierto-para-el-trigo-las-lluvias-el-granizo-y-el-fusarium-ponen-en-duda-los-rindes-de-la-region-nucleo/",
+      "titular": "Trigo en duda: granizo, lluvias y fusarium amenazan rindes",
+      "volanta": "Agricultura",
+      "score": {
+        "impacto_economico": 19,
+        "interes_productores": 15,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 8,
+        "conversacion": 10,
+        "potencial_comercial": 9,
+        "ai_score": 86,
+        "commercial_score": 90,
+        "subtema": "agro",
+        "tema": "trigo región núcleo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca de lleno al cultivo clave de la campaña actual en la zona núcleo, con impacto en rindes y precios.",
+        "tema_doc": "campana",
+        "urgente": true,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "6f3fbcc2-7cd7-45d9-bad8-e0bd6612ef22",
+          "slug": "trigo-en-la-region-nucleo-granizo-lluvias-y-fusarium-ponen-en-62c4b1",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-la-region-nucleo-granizo-lluvias-y-fusarium-ponen-en-62c4b1",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17987126001002949",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1749782150486115",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18376590223212324"
+        },
+        "historia_facebook": {
+          "id": "2295472037914186"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_17b264140a39_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "eeb9f9e639a0",
+      "rep": {
+        "id": "eeb9f9e639a0",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/el-visec-bajo-fuego-cruzado-una-mirada-profunda-al-sistema-que-genera-internas-y-polemicas-en-el-agro/",
+        "canonical_url": "https://infocampo.com.ar/el-visec-bajo-fuego-cruzado-una-mirada-profunda-al-sistema-que-genera-internas-y-polemicas-en-el-agro",
+        "titulo": "El VISEC, bajo fuego cruzado: una mirada profunda al sistema que genera internas y polémicas en el agro",
+        "titulo_norm": "el visec bajo fuego cruzado una mirada profunda al sistema que genera internas y polemicas en el agro",
+        "descripcion": "El 7° programa de Infocampo Estudio aborda de modo amplio el debate sobre la plataforma VISEC, que ha abierto incluso una grieta dentro del ruralismo. Las voces a favor y en contra, cómo impacta en el mercado de granos y la visión de productores europeos.",
+        "imagen_url": "https://www.youtube.com/embed/u8vVYoMhb6I",
+        "autor": "infocampo",
+        "publicado": "2026-11-06T09:48-03:00",
+        "capturado": "2026-11-06T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cc6c1c8c8abdfc55"
+      },
+      "grupo": [
+        {
+          "id": "eeb9f9e639a0",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-visec-bajo-fuego-cruzado-una-mirada-profunda-al-sistema-que-genera-internas-y-polemicas-en-el-agro/",
+          "canonical_url": "https://infocampo.com.ar/el-visec-bajo-fuego-cruzado-una-mirada-profunda-al-sistema-que-genera-internas-y-polemicas-en-el-agro",
+          "titulo": "El VISEC, bajo fuego cruzado: una mirada profunda al sistema que genera internas y polémicas en el agro",
+          "titulo_norm": "el visec bajo fuego cruzado una mirada profunda al sistema que genera internas y polemicas en el agro",
+          "descripcion": "El 7° programa de Infocampo Estudio aborda de modo amplio el debate sobre la plataforma VISEC, que ha abierto incluso una grieta dentro del ruralismo. Las voces a favor y en contra, cómo impacta en el mercado de granos y la visión de productores europeos.",
+          "imagen_url": "https://www.youtube.com/embed/u8vVYoMhb6I",
+          "autor": "infocampo",
+          "publicado": "2026-11-06T09:48-03:00",
+          "capturado": "2026-11-06T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cc6c1c8c8abdfc55"
+        }
+      ],
+      "score": {
+        "impacto_economico": 15,
+        "interes_productores": 12,
+        "innovacion": 5,
+        "cercania_argentina": 10,
+        "cercania_pba": 9,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 6,
+        "ai_score": 71,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "visec trazabilidad",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Genera fuerte debate gremial y comercial por las exigencias de exportación a Europa.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          76
+        ]
+      },
+      "cuando": "2026-11-06T10:00-03:00"
+    },
+    {
+      "id": "e5cdd377b1c3",
+      "rep": {
+        "id": "e5cdd377b1c3",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa/",
+        "canonical_url": "https://infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa",
+        "titulo": "Otra audiencia fallida por Pauny: armar algunos tractores para conseguir dinero, la única propuesta de la empresa",
+        "titulo_norm": "otra audiencia fallida por pauny armar algunos tractores para conseguir dinero la unica propuesta de la empresa",
+        "descripcion": "La crisis en la fábrica de tractores cordobesa, tomada por los trabajadores, es cada vez más pronunciada. La empresa no tiene un plan de pagos para la deuda salarial y los operarios exigen algo de dinero para retomar tareas.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/toma-pauny-otra.jpg",
+        "autor": "Favio Re",
+        "publicado": "2026-11-06T09:08-03:00",
+        "capturado": "2026-11-06T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "0f0da1850d1c53ea"
+      },
+      "grupo": [
+        {
+          "id": "e5cdd377b1c3",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa/",
+          "canonical_url": "https://infocampo.com.ar/otra-audiencia-fallida-por-pauny-armar-algunos-tractores-para-conseguir-dinero-la-unica-propuesta-de-la-empresa",
+          "titulo": "Otra audiencia fallida por Pauny: armar algunos tractores para conseguir dinero, la única propuesta de la empresa",
+          "titulo_norm": "otra audiencia fallida por pauny armar algunos tractores para conseguir dinero la unica propuesta de la empresa",
+          "descripcion": "La crisis en la fábrica de tractores cordobesa, tomada por los trabajadores, es cada vez más pronunciada. La empresa no tiene un plan de pagos para la deuda salarial y los operarios exigen algo de dinero para retomar tareas.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/toma-pauny-otra.jpg",
+          "autor": "Favio Re",
+          "publicado": "2026-11-06T09:08-03:00",
+          "capturado": "2026-11-06T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "0f0da1850d1c53ea"
+        }
+      ],
+      "score": {
+        "impacto_economico": 16,
+        "interes_productores": 14,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 8,
+        "potencial_reel": 5,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 70,
+        "subtema": "maquinaria",
+        "tema": "pauny crisis",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directo al mercado de maquinaria nacional y preocupa a toda la cadena por la falta de repuestos y tractores.",
+        "tema_doc": "costos",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T10:00-03:00"
+    },
     {
       "id": "8ca223f8406a",
       "rep": {
@@ -58965,8 +59309,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T08:22:50-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T10:04:08-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
