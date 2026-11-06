@@ -27647,6 +27647,27 @@
         66,
         68
       ]
+    },
+    "d68ff069b2f7aced": {
+      "impacto_economico": 18,
+      "interes_productores": 14,
+      "innovacion": 2,
+      "cercania_argentina": 8,
+      "cercania_pba": 8,
+      "potencial_reel": 6,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 71,
+      "commercial_score": 75,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directamente en la rentabilidad ganadera de la región con precios internacionales firmes.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29522,7 +29543,8 @@
       "https://bichosdecampo.com/senasa-elimino-un-arancel-fijo-para-importar-alimentos-de-uso-industrial-y-ahora-las-empresas-pagaran-segun-el-valor-de-la-mercaderia": "2026-11-06",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-6-noviembre-2026": "2026-11-06",
       "https://bichosdecampo.com/mismos-precios-el-doble-de-impuestos-la-maquinaria-agricola-argentina-compara-su-carga-con-brasil-y-mexico-y-advierte-que-la-baja-rentabilidad-puede-traer-anos-de-desinversion": "2026-11-06",
-      "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026": "2026-11-06"
+      "https://lanacion.com.ar/economia/campo/tienen-miedo-que-no-este-milei-caputo-vinculo-la-suba-del-riesgo-pais-al-temor-de-los-inversores-a-nid06112026": "2026-11-06",
+      "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31396,7 +31418,8 @@
       "senasa elimino un arancel fijo para importar alimentos de uso industrial y ahora las empresas pagaran segun el valor de la mercaderia": "2026-11-06",
       "dolar blue a cuanto cotizan hoy en cordoba 6 noviembre 2026": "2026-11-06",
       "mismos precios el doble de impuestos la maquinaria agricola argentina compara su carga con brasil y mexico y advierte que la baja rentabilidad puede traer anos de desinversion": "2026-11-06",
-      "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027": "2026-11-06"
+      "tienen miedo que no este milei caputo vinculo la suba del riesgo pais al temor de los inversores a un cambio de gobierno en 2027": "2026-11-06",
+      "panorama promisorio para el comercio mundial de carne el analista ignacio iriarte destaco que los precios actuales ya superan los de 2022 considerados irrepetibles": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33270,7 +33293,8 @@
       "e096b9e9cd984238": "2026-11-06",
       "f78e27984028f3ab": "2026-11-06",
       "597f8d4390f50ff8": "2026-11-06",
-      "e4a9463cd77015bb": "2026-11-06"
+      "e4a9463cd77015bb": "2026-11-06",
+      "d68ff069b2f7aced": "2026-11-06"
     }
   },
   "elegidas": [
@@ -58632,9 +58656,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e5cdd377b1c3_portada.jpg"
+    },
+    {
+      "id": "0b93882e22c9",
+      "cuando": "2026-11-06T10:40-03:00",
+      "titulo_original": "El Niño. Las lluvias no dan tregua y en el sur bonaerense hay hasta 20 días de atraso en la siembra: “Vamos lerdo”",
+      "descripcion": "En el sur y el oeste provincial, el exceso de humedad, las bajas temperaturas y la falta de sol complican la implantación de maíz y girasol; advierten que algunos productores podrían no completar la superficie prevista",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026/",
+      "titular": "Exceso de humedad y frío retrasan la siembra en Buenos Aires",
+      "volanta": "Clima y Agricultura",
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 15,
+        "innovacion": 2,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 9,
+        "potencial_comercial": 7,
+        "ai_score": 78,
+        "commercial_score": 78,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente la campaña gruesa en Buenos Aires con demoras que preocupan al productor local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T10:40:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5e511ec0-6226-455d-b5c1-6b263d52ae0e",
+          "slug": "lluvias-frio-y-falta-de-sol-generan-fuertes-retrasos-en-la-a2fba0",
+          "url": "https://www.diariolacampaña.com.ar/n/lluvias-frio-y-falta-de-sol-generan-fuertes-retrasos-en-la-a2fba0",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17918870094264093",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1749819903815673",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17970974468963414"
+        },
+        "historia_facebook": {
+          "id": "997848513381837"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0b93882e22c9_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "2157de3a61dc",
+      "rep": {
+        "id": "2157de3a61dc",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles/",
+        "canonical_url": "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles",
+        "titulo": "“Panorama promisorio” para el comercio mundial de carne: El analista Ignacio Iriarte destacó que los precios actuales ya superan los de 2022, considerados “irrepetibles”",
+        "titulo_norm": "panorama promisorio para el comercio mundial de carne el analista ignacio iriarte destaco que los precios actuales ya superan los de 2022 considerados irrepetibles",
+        "descripcion": "La alta demanda mundial de carne vacuna, que vino creciendo fuerte en los últimos años, está sosteniendo en niveles altos los precios del ganado. En su último informe sobre las proyecciones para 2027, el Departamento de Agricultura de los Estados Unidos (USDA) indicó que ese crecimiento se frenaría el año que viene, pero, a juzgar por […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/03/novillos.jpg",
+        "autor": "Nicolas Razzetti",
+        "publicado": "2026-11-06T10:29-03:00",
+        "capturado": "2026-11-06T10:40-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d68ff069b2f7aced"
+      },
+      "grupo": [
+        {
+          "id": "2157de3a61dc",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles/",
+          "canonical_url": "https://bichosdecampo.com/panorama-promisorio-para-el-comercio-mundial-de-carne-el-analista-ignacio-iriarte-destaco-que-los-precios-actuales-ya-superan-los-de-2022-considerados-irrepetibles",
+          "titulo": "“Panorama promisorio” para el comercio mundial de carne: El analista Ignacio Iriarte destacó que los precios actuales ya superan los de 2022, considerados “irrepetibles”",
+          "titulo_norm": "panorama promisorio para el comercio mundial de carne el analista ignacio iriarte destaco que los precios actuales ya superan los de 2022 considerados irrepetibles",
+          "descripcion": "La alta demanda mundial de carne vacuna, que vino creciendo fuerte en los últimos años, está sosteniendo en niveles altos los precios del ganado. En su último informe sobre las proyecciones para 2027, el Departamento de Agricultura de los Estados Unidos (USDA) indicó que ese crecimiento se frenaría el año que viene, pero, a juzgar por […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/03/novillos.jpg",
+          "autor": "Nicolas Razzetti",
+          "publicado": "2026-11-06T10:29-03:00",
+          "capturado": "2026-11-06T10:40-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d68ff069b2f7aced"
+        }
+      ],
+      "score": {
+        "impacto_economico": 18,
+        "interes_productores": 14,
+        "innovacion": 2,
+        "cercania_argentina": 8,
+        "cercania_pba": 8,
+        "potencial_reel": 6,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 71,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "carne vacuna",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Impacta directamente en la rentabilidad ganadera de la región con precios internacionales firmes.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T10:40-03:00"
+    },
     {
       "id": "aab7f50d8493",
       "rep": {
@@ -59227,69 +59374,6 @@
       "cuando": "2026-11-05T22:00-03:00"
     },
     {
-      "id": "0b93882e22c9",
-      "rep": {
-        "id": "0b93882e22c9",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026",
-        "titulo": "El Niño. Las lluvias no dan tregua y en el sur bonaerense hay hasta 20 días de atraso en la siembra: “Vamos lerdo”",
-        "titulo_norm": "el nino las lluvias no dan tregua y en el sur bonaerense hay hasta 20 dias de atraso en la siembra vamos lerdo",
-        "descripcion": "En el sur y el oeste provincial, el exceso de humedad, las bajas temperaturas y la falta de sol complican la implantación de maíz y girasol; advierten que algunos productores podrían no completar la superficie prevista",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/CK3PVREFZFDNFFP5VRQ7U3BMJI.jpg?auth=3a72f368fb3c0268525ce3fa123b1f2c0da5d5d69ab7f6cfe10755de28299ed2&smart=true",
-        "autor": "",
-        "publicado": "2026-11-05T20:55-03:00",
-        "capturado": "2026-11-05T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a5710d07fe12986f"
-      },
-      "grupo": [
-        {
-          "id": "0b93882e22c9",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-las-lluvias-no-dan-tregua-y-en-el-sur-bonaerense-hay-hasta-20-dias-de-atraso-en-la-siembra-nid05112026",
-          "titulo": "El Niño. Las lluvias no dan tregua y en el sur bonaerense hay hasta 20 días de atraso en la siembra: “Vamos lerdo”",
-          "titulo_norm": "el nino las lluvias no dan tregua y en el sur bonaerense hay hasta 20 dias de atraso en la siembra vamos lerdo",
-          "descripcion": "En el sur y el oeste provincial, el exceso de humedad, las bajas temperaturas y la falta de sol complican la implantación de maíz y girasol; advierten que algunos productores podrían no completar la superficie prevista",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/CK3PVREFZFDNFFP5VRQ7U3BMJI.jpg?auth=3a72f368fb3c0268525ce3fa123b1f2c0da5d5d69ab7f6cfe10755de28299ed2&smart=true",
-          "autor": "",
-          "publicado": "2026-11-05T20:55-03:00",
-          "capturado": "2026-11-05T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a5710d07fe12986f"
-        }
-      ],
-      "score": {
-        "impacto_economico": 18,
-        "interes_productores": 15,
-        "innovacion": 2,
-        "cercania_argentina": 10,
-        "cercania_pba": 10,
-        "potencial_reel": 7,
-        "conversacion": 9,
-        "potencial_comercial": 7,
-        "ai_score": 78,
-        "commercial_score": 78,
-        "subtema": "agro",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Afecta directamente la campaña gruesa en Buenos Aires con demoras que preocupan al productor local.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
-      },
-      "cuando": "2026-11-05T21:00-03:00"
-    },
-    {
       "id": "ce0661867e3c",
       "rep": {
         "id": "ce0661867e3c",
@@ -59491,8 +59575,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T10:23:58-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T10:45:10-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
