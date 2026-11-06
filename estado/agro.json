@@ -28066,6 +28066,90 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "afbb73b075b10823": {
+      "impacto_economico": 14,
+      "interes_productores": 13,
+      "innovacion": 8,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 7,
+      "conversacion": 8,
+      "potencial_comercial": 7,
+      "ai_score": 77,
+      "commercial_score": 77,
+      "subtema": "agro",
+      "tema": "arveja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta clave del INTA sobre manejo de cosecha y residuos en legumbres para la región.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 9,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0ae6be264f68117d": {
+      "impacto_economico": 4,
+      "interes_productores": 3,
+      "innovacion": 4,
+      "cercania_argentina": 2,
+      "cercania_pba": 0,
+      "potencial_reel": 2,
+      "conversacion": 1,
+      "potencial_comercial": 3,
+      "ai_score": 19,
+      "commercial_score": 24,
+      "subtema": "empresas",
+      "tema": "insumos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Enfoque muy local del mercado estadounidense de distribuidores con poca relevancia directa local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "90370ad89aefcb6c": {
+      "impacto_economico": 2,
+      "interes_productores": 2,
+      "innovacion": 3,
+      "cercania_argentina": 1,
+      "cercania_pba": 0,
+      "potencial_reel": 1,
+      "conversacion": 1,
+      "potencial_comercial": 2,
+      "ai_score": 12,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "eventos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Conferencia gremial regional en Ohio sin impacto ni interés para el productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ecd4fcd4d0dac122": {
+      "impacto_economico": 6,
+      "interes_productores": 6,
+      "innovacion": 6,
+      "cercania_argentina": 4,
+      "cercania_pba": 3,
+      "potencial_reel": 5,
+      "conversacion": 4,
+      "potencial_comercial": 7,
+      "ai_score": 41,
+      "commercial_score": 51,
+      "subtema": "maquinaria",
+      "tema": "john deere",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Reestructuración industrial de John Deere en EE.UU. con interés moderado para el sector de maquinaria.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -29976,7 +30060,11 @@
       "https://agrositio.com.ar/noticia/249238-milei-en-la-rural-trabajamos-sin-descanso-para-poder-eliminar-para-siempre-el-invento-nefasto-de-las-retenciones.html": "2026-11-06",
       "https://agrositio.com.ar/noticia/249232-quirno-el-mundo-necesita-lo-que-ustedes-producen-y-lo-vamos-a-hacer-valer-en-cada-negociacion.html": "2026-11-06",
       "https://bichosdecampo.com/en-plena-interna-de-gremiales-del-campo-cra-se-reunio-con-sturzenegger-y-le-llevo-su-reclamo-sobre-la-adhesion-al-visec": "2026-11-06",
-      "https://intainforma.inta.gob.ar/innovacion-y-produccion-ganadera-en-la-patagonia": "2026-11-06"
+      "https://intainforma.inta.gob.ar/innovacion-y-produccion-ganadera-en-la-patagonia": "2026-11-06",
+      "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha": "2026-11-06",
+      "https://croplife.com/management/croplife-retail-week-dealing-with-grower-decision-paralysis-2027-fertilizer-sale-strategies-and-making-data-work-for-you": "2026-11-06",
+      "https://croplife.com/management/employees/oaba-2027-industry-conference-to-spotlight-innovation-industry-insights-and-connections": "2026-11-06",
+      "https://croplife.com/iron/john-deere-reaffirms-commitment-to-u-s-manufacturing-and-long-term-competitiveness": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -31885,7 +31973,11 @@
       "milei en la rural trabajamos sin descanso para poder eliminar para siempre el invento nefasto de las retenciones": "2026-11-06",
       "quirno el mundo necesita lo que ustedes producen y lo vamos a hacer valer en cada negociacion": "2026-11-06",
       "en plena interna de gremiales del campo cra se reunio con sturzenegger y le llevo su reclamo sobre la adhesion al visec": "2026-11-06",
-      "innovacion y produccion ganadera en la patagonia": "2026-11-06"
+      "innovacion y produccion ganadera en la patagonia": "2026-11-06",
+      "arveja el inta advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha": "2026-11-06",
+      "croplife retail week dealing with grower decision paralysis 2027 fertilizer sale strategies and making data work for you": "2026-11-06",
+      "oaba 2027 industry conference to spotlight innovation industry insights and connections": "2026-11-06",
+      "john deere reaffirms commitment to u s manufacturing and long term competitiveness": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -33794,7 +33886,11 @@
       "15ffb8d6072a70e8": "2026-11-06",
       "67d91689860e0c1b": "2026-11-06",
       "024bfcad4d5e2600": "2026-11-06",
-      "7789838f3bec05cf": "2026-11-06"
+      "7789838f3bec05cf": "2026-11-06",
+      "afbb73b075b10823": "2026-11-06",
+      "0ae6be264f68117d": "2026-11-06",
+      "90370ad89aefcb6c": "2026-11-06",
+      "ecd4fcd4d0dac122": "2026-11-06"
     }
   },
   "elegidas": [
@@ -59744,49 +59840,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_debeba1c1c27_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "34a90cc079e6",
-      "rep": {
-        "id": "34a90cc079e6",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
-        "titulo": "¿Cómo afectan las dosis de nitrógeno y fósforo a los márgenes agrícolas?; con F. Córdoba - Fertilizar",
-        "titulo_norm": "como afectan las dosis de nitrogeno y fosforo a los margenes agricolas con f cordoba fertilizar",
-        "descripcion": "Una charla conectando los números de la fertilización, su impacto en las dósis óptimas, y los márgenes del productor. El fenómeno El Niño y las siembras de Noviembre y Diciembre. Con Franco Córdoba, responsable de Mercados de Fertilizar, explicando cómo aumentar las dosis de nitrógeno y fósforo en maíz y soja mejora los rindes y los márgenes agrícolas, especialmente en zonas con buena disponibilidad hídrica...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/iUKEUBoL7pE.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-11-06T14:56-03:00",
-        "capturado": "2026-11-06T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "417124d63849101e"
-      },
-      "grupo": [
-        {
-          "id": "34a90cc079e6",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
-          "titulo": "¿Cómo afectan las dosis de nitrógeno y fósforo a los márgenes agrícolas?; con F. Córdoba - Fertilizar",
-          "titulo_norm": "como afectan las dosis de nitrogeno y fosforo a los margenes agricolas con f cordoba fertilizar",
-          "descripcion": "Una charla conectando los números de la fertilización, su impacto en las dósis óptimas, y los márgenes del productor. El fenómeno El Niño y las siembras de Noviembre y Diciembre. Con Franco Córdoba, responsable de Mercados de Fertilizar, explicando cómo aumentar las dosis de nitrógeno y fósforo en maíz y soja mejora los rindes y los márgenes agrícolas, especialmente en zonas con buena disponibilidad hídrica...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/iUKEUBoL7pE.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-11-06T14:56-03:00",
-          "capturado": "2026-11-06T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "417124d63849101e"
-        }
-      ],
+      "cuando": "2026-11-06T16:20-03:00",
+      "titulo_original": "¿Cómo afectan las dosis de nitrógeno y fósforo a los márgenes agrícolas?; con F. Córdoba - Fertilizar",
+      "descripcion": "Una charla conectando los números de la fertilización, su impacto en las dósis óptimas, y los márgenes del productor. El fenómeno El Niño y las siembras de Noviembre y Diciembre. Con Franco Córdoba, responsable de Mercados de Fertilizar, explicando cómo aumentar las dosis de nitrógeno y fósforo en m",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249236-como-afectan-las-dosis-de-nitrogeno-y-fosforo-a-los-margenes-agricolas-con-f-cordoba-fertilizar.html",
+      "titular": "Nitrógeno y fósforo elevan rinde y margen en maíz y soja",
+      "volanta": "Fertilización",
       "score": {
         "impacto_economico": 18,
         "interes_productores": 15,
@@ -59808,7 +59871,100 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-06T16:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T16:20:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "bd0d1c69-4978-4ee8-ad2e-dfe4ceab7c53",
+          "slug": "como-impactan-el-nitrogeno-y-el-fosforo-en-los-margenes-de-maiz-5e46e5",
+          "url": "https://www.diariolacampaña.com.ar/n/como-impactan-el-nitrogeno-y-el-fosforo-en-los-margenes-de-maiz-5e46e5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18043818869840030",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1750157680448562",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "17895433089618159"
+        },
+        "historia_facebook": {
+          "id": "1159921559742922"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_34a90cc079e6_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "1f72cb0e454f",
+      "rep": {
+        "id": "1f72cb0e454f",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha/",
+        "canonical_url": "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha",
+        "titulo": "Arveja: El INTA advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha",
+        "titulo_norm": "arveja el inta advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha",
+        "descripcion": "Con la cosecha de las legumbres invernales cada vez más cerca, el INTA Oliveros puso el foco en una práctica habitual en los lotes de arveja. Se trata de la aplicación de herbicidas desecantes para uniformar la maduración del cultivo y adelantar la recolección, una decisión que puede tener consecuencias sobre los residuos detectados en […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-06T16:14-03:00",
+        "capturado": "2026-11-06T16:20-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "afbb73b075b10823"
+      },
+      "grupo": [
+        {
+          "id": "1f72cb0e454f",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha/",
+          "canonical_url": "https://bichosdecampo.com/arveja-el-inta-advierte-sobre-los-residuos-que-pueden-dejar-los-herbicidas-utilizados-para-acelerar-el-secado-antes-de-la-cosecha",
+          "titulo": "Arveja: El INTA advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha",
+          "titulo_norm": "arveja el inta advierte sobre los residuos que pueden dejar los herbicidas utilizados para acelerar el secado antes de la cosecha",
+          "descripcion": "Con la cosecha de las legumbres invernales cada vez más cerca, el INTA Oliveros puso el foco en una práctica habitual en los lotes de arveja. Se trata de la aplicación de herbicidas desecantes para uniformar la maduración del cultivo y adelantar la recolección, una decisión que puede tener consecuencias sobre los residuos detectados en […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-06T16:14-03:00",
+          "capturado": "2026-11-06T16:20-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "afbb73b075b10823"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 13,
+        "innovacion": 8,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 7,
+        "conversacion": 8,
+        "potencial_comercial": 7,
+        "ai_score": 77,
+        "commercial_score": 77,
+        "subtema": "agro",
+        "tema": "arveja",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta clave del INTA sobre manejo de cosecha y residuos en legumbres para la región.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 9,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T16:20-03:00"
     },
     {
       "id": "86a2c7cfe499",
@@ -60599,8 +60755,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T16:04:02-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-06T16:23:09-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
