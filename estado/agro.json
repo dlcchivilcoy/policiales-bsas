@@ -29208,6 +29208,26 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f8447d4f2c4be6ac": {
+      "conversacion": 2,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 1,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 11,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Pasa en Paraguay y no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31205,7 +31225,8 @@
       "https://bichosdecampo.com/de-raiz-plaza-de-mayo-se-llena-de-flores-para-recibir-al-papa-entre-petunias-blancas-euryops-amarillos-y-un-ramo-especial-para-leon-xiv": "2026-11-07",
       "https://bichosdecampo.com/con-otros-dos-planteos-de-apelacion-resueltos-y-una-propuesta-de-trabajo-a-fason-parece-que-sancor-intentara-finalmente-conseguir-un-nuevo-dueno": "2026-11-07",
       "https://lanacion.com.ar/economia/campo/super-nino-miles-de-hectareas-fueron-alcanzadas-por-violentas-tormentas-y-hay-cultivos-barridos-por-nid07112026": "2026-11-07",
-      "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista": "2026-11-07"
+      "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista": "2026-11-07",
+      "https://bichosdecampo.com/que-ueno-el-sector-agroexportador-de-paraguay-recibio-un-impulso-de-competitividad-proveniente-del-frente-cambiario": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33201,7 +33222,8 @@
       "de raiz plaza de mayo se llena de flores para recibir al papa entre petunias blancas euryops amarillos y un ramo especial para leon xiv": "2026-11-07",
       "con otros dos planteos de apelacion resueltos y una propuesta de trabajo a fason parece que sancor intentara finalmente conseguir un nuevo dueno": "2026-11-07",
       "super nino miles de hectareas fueron alcanzadas por violentas tormentas y hay cultivos barridos por completo": "2026-11-07",
-      "siembra de gruesa el maiz supero la mitad del area prevista": "2026-11-07"
+      "siembra de gruesa el maiz supero la mitad del area prevista": "2026-11-07",
+      "que ueno el sector agroexportador de paraguay recibio un impulso de competitividad proveniente del frente cambiario": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35197,7 +35219,8 @@
       "47f8bce786aa2bf0": "2026-11-07",
       "d171f53a50cae0f2": "2026-11-07",
       "0ef6b7c0e8e689cb": "2026-11-07",
-      "e1d7a3befa86a64e": "2026-11-07"
+      "e1d7a3befa86a64e": "2026-11-07",
+      "f8447d4f2c4be6ac": "2026-11-07"
     }
   },
   "elegidas": [
@@ -62307,51 +62330,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1e9bde591ba1_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "15d53511174d",
-      "rep": {
-        "id": "15d53511174d",
-        "fuente": "Chacabuco Noticias",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.chacabuconoticias.com.ar/feed/",
-        "url": "https://www.chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista/",
-        "canonical_url": "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista",
-        "titulo": "Siembra de gruesa: el maíz superó la mitad del área prevista",
-        "titulo_norm": "siembra de gruesa el maiz supero la mitad del area prevista",
-        "descripcion": "La siembra de maíz con destino a grano comercial alcanzó el 50,5% de las 8.400.000 hectáreas previstas, informó el Panorama Agrícola Semanal de",
-        "imagen_url": "",
-        "autor": "Mates y Noticias",
-        "publicado": "2026-11-07T14:53-03:00",
-        "capturado": "2026-11-07T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e1d7a3befa86a64e",
-        "localidad_medio": "Chacabuco"
-      },
-      "grupo": [
-        {
-          "id": "15d53511174d",
-          "fuente": "Chacabuco Noticias",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.chacabuconoticias.com.ar/feed/",
-          "url": "https://www.chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista/",
-          "canonical_url": "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista",
-          "titulo": "Siembra de gruesa: el maíz superó la mitad del área prevista",
-          "titulo_norm": "siembra de gruesa el maiz supero la mitad del area prevista",
-          "descripcion": "La siembra de maíz con destino a grano comercial alcanzó el 50,5% de las 8.400.000 hectáreas previstas, informó el Panorama Agrícola Semanal de",
-          "imagen_url": "",
-          "autor": "Mates y Noticias",
-          "publicado": "2026-11-07T14:53-03:00",
-          "capturado": "2026-11-07T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e1d7a3befa86a64e",
-          "localidad_medio": "Chacabuco"
-        }
-      ],
+      "cuando": "2026-11-07T18:00-03:00",
+      "titulo_original": "Siembra de gruesa: el maíz superó la mitad del área prevista",
+      "descripcion": "La siembra de maíz con destino a grano comercial alcanzó el 50,5% de las 8.400.000 hectáreas previstas, informó el Panorama Agrícola Semanal de",
+      "fuente": "Chacabuco Noticias",
+      "url": "https://www.chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista/",
+      "titular": "Maíz: la siembra superó la mitad del área estimada",
+      "volanta": "Agricultura",
       "score": {
         "conversacion": 12,
         "historia_concreta": 10,
@@ -62373,8 +62361,38 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-07T16:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7a36985c-9823-44aa-a913-92191b430635",
+          "slug": "maiz-y-soja-en-marcha-la-siembra-de-maiz-supero-la-mitad-del-df2ec9",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-y-soja-en-marcha-la-siembra-de-maiz-supero-la-mitad-del-df2ec9",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17967358095219409",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1751449866986010",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17940948429392281"
+        },
+        "historia_facebook": {
+          "id": "1638928181032568"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_15d53511174d_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "28b7940488dc",
       "rep": {
@@ -62717,8 +62735,8 @@
       "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T16:05:48-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-07T18:06:47-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
