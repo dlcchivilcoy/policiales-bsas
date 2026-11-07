@@ -1,68 +1,69 @@
 # Panel editorial — Diario y Radio
-Actualizado: 06/11/2026 21:32 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 07/11/2026 20:33 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-11-06)
+## Hoy (2026-11-07)
 
-### 18:30 — 6 de 6 hechos policiales
-Notas policiales leídas: 62 · fuera del radio: 25 · ubicación pendiente: 0 · repetidas: 0 · armadas: 8
+### 18:30 — 4 de 6 hechos policiales
+Notas policiales leídas: 44 · fuera del radio: 20 · ubicación pendiente: 0 · repetidas: 0 · armadas: 9
 
 | Hecho | Lugar | YouTube | Web | Facebook | Instagram |
 |---|---|---|---|---|---|
-| Detuvieron a un joven con cocaína y un arma blanca en Junín | Junín (91.2 km) | ✅ | ✅ | ✅ | ✅ |
-| Beba internada por abuso y denuncia contra el padre en Chivilcoy | Junín (0.0 km) | ✅ | ✅ | ✅ | ✅ |
-| Una mujer herida tras un choque entre un auto y una moto en Chacabuco | Chacabuco (50.1 km) | ✅ | ✅ | ✅ | ✅ |
-| Aprehenden a un motociclista de 29 años por circular con un rodado rob | Bragado (0.0 km) | ✅ | ✅ | ✅ | ✅ |
-| Un joven de 19 años en terapia intensiva tras caer del techo de la UNL | 9 de Julio (0.0 km) | ✅ | ✅ | ✅ | ✅ |
-| Rige un alerta amarilla por tormentas fuertes para este viernes en 9 d | 9 de Julio (99.4 km) | ✅ | ✅ | ✅ | ✅ |
+| Junín: cayó un joven de 25 años tras una denuncia por usurpación en un | Chacabuco (91.2 km) | ✅ | ✅ | ✅ | ✅ |
+| Sufrió un robo en su vivienda de Chacabuco | Chacabuco (50.1 km) | ✅ | ✅ | ✅ | ✅ |
+| Denunció a su propio hijo tras hallar objetos sospechosos en su vivien | Chacabuco (50.1 km) | ✅ | ✅ | ✅ | ✅ |
+| Persecución, incidentes y un choque en la madrugada de Chacabuco | Chacabuco (50.1 km) | ✅ | ✅ | ✅ | ✅ |
 
 **No salieron en esta pasada:**
-- Investigan estafa de $11,7 millones vinculada a dos reclusos de la Unidad 13 — no apta: El nota_web copia 16 palabras seguidas de la nota original («luego de que los autores obtuvieran acceso ilegitimo a la cuenta de whatsapp de la damnifi»), aun después de pedir que lo reescriba.
-- Dos hombres detenidos por venta de drogas tras allanamientos en Chacabuco — no apta: El nota_web copia 18 palabras seguidas de la nota original («a partir de denuncias anonimas recibidas tanto en la dependencia policial como en la secre»), aun después de pedir que lo reescriba.
+- Secuestros de tránsito durante la tarde del sábado en Chacabuco — no apta: No es del temario de policiales (según la IA): operativo de tránsito de rutina y secuestro de vehículos
+- Vecino agredido en las afueras de Chacabuco — no apta: No es del temario de policiales (según la IA): La nota no contiene detalles de un hecho policial concreto, sino un título confuso que mezcla temas inconexos sin información relevante.
+- Cayó en Vedia con una moto robada en Junín a un estudiante — no apta: El nota_web copia 17 palabras seguidas de la nota original («imputado por el delito de robo agravado por tratarse de un vehiculo dejado en la via publi»), aun después de pedir que lo reescriba.
+- Accidente en el mediodía de Chacabuco — no apta: No es del temario de policiales (según la IA): No se proporcionan datos concretos sobre un hecho policial en el texto, ya que el contenido está vacío.
+- Postergan sesión para definir reemplazo de concejal detenido — no apta: No es del temario de policiales (según la IA): Trata sobre la postergación de una sesión del Concejo Deliberante para definir el reemplazo de un concejal detenido por drogas.
 
 **Fuera del radio de 100 km:**
-- Cañuelas (115.9 km) ×7 · San Carlos de Bolívar (178.3 km) ×5 · Pergamino (122.9 km) ×5 · Pehuajó (198.5 km) ×4 · Lincoln (137.8 km) ×1 · General Villegas (273.4 km) ×1 · Las Flores (149.6 km) ×1 · Rojas (101.6 km) ×1
+- Cañuelas (115.9 km) ×10 · Pergamino (122.9 km) ×3 · General Villegas (273.4 km) ×2 · Pehuajó (198.5 km) ×2 · San Carlos de Bolívar (178.3 km) ×1 · Carlos Tejedor (225.1 km) ×1 · Las Flores (149.6 km) ×1
 
 ## Últimos 7 días: volumen por destino
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
 |---|---:|---:|---:|---:|---:|
-| Policiales | 32 | 35 | 35 | 0 | 35 |
-| Nacionales | 22 | 348 | 0 | 0 | 0 |
+| Policiales | 32 | 34 | 34 | 0 | 34 |
+| Nacionales | 22 | 344 | 0 | 0 | 0 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 48 piezas · mediana vistas 26.5 · mediana likes 0
+### YouTube — 48 piezas · mediana vistas 26 · mediana likes 0
 
-- **Por categoría:** policiales: 31, vistas 12, likes 0 · virales: 17, vistas 143, likes 1
-- **Por franja:** madrugada (0-6): 17, vistas 143, likes 1 · noche (18-24): 31, vistas 12, likes 0
-- **Por día:** domingo: 6, vistas 18, likes 0 · jueves: 8, vistas 26.5, likes 0 · lunes: 8, vistas 39, likes 0.5 · martes: 9, vistas 9, likes 0 · miércoles: 7, vistas 17, likes 0 · sábado: 10, vistas 42, likes 0
-- **Por distancia:** 50 a 100 km: 18, vistas 14.5, likes 0 · Chivilcoy: 1, vistas 5, likes 0 ⚠️muestra chica · hasta 50 km: 12, vistas 9, likes 0
+- **Por categoría:** policiales: 31, vistas 16, likes 0 · virales: 17, vistas 143, likes 1
+- **Por franja:** madrugada (0-6): 17, vistas 143, likes 1 · noche (18-24): 31, vistas 16, likes 0
+- **Por día:** domingo: 6, vistas 18, likes 0 · jueves: 8, vistas 26.5, likes 0 · lunes: 8, vistas 39, likes 0.5 · martes: 9, vistas 9, likes 0 · miércoles: 7, vistas 17, likes 0 · sábado: 1, vistas 936, likes 4 ⚠️muestra chica · viernes: 9, vistas 28, likes 1
+- **Por distancia:** 50 a 100 km: 19, vistas 13, likes 0 · Chivilcoy: 3, vistas 18, likes 0 ⚠️muestra chica · hasta 50 km: 9, vistas 17, likes 0
 
-### Facebook — 7 piezas · mediana vistas 369 · mediana likes 1
+### Facebook — 5 piezas · mediana vistas 917 · mediana likes 4
 
-- **Por categoría:** policiales: 7, vistas 369, likes 1
-- **Por franja:** noche (18-24): 7, vistas 369, likes 1
-- **Por día:** domingo: 5, vistas 917, likes 4 · sábado: 2, vistas 255.5, likes 0.5 ⚠️muestra chica
-- **Por distancia:** 50 a 100 km: 5, vistas 917, likes 4 · hasta 50 km: 2, vistas 255.5, likes 0.5 ⚠️muestra chica
+- **Por categoría:** policiales: 5, vistas 917, likes 4
+- **Por franja:** noche (18-24): 5, vistas 917, likes 4
+- **Por día:** domingo: 5, vistas 917, likes 4
+- **Por distancia:** 50 a 100 km: 5, vistas 917, likes 4
 
-### Instagram — 32 piezas · mediana vistas s/d · mediana likes 5
+### Instagram — 31 piezas · mediana vistas s/d · mediana likes 5
 
-- **Por categoría:** policiales: 32, likes 5
-- **Por franja:** noche (18-24): 32, likes 5
-- **Por día:** domingo: 5, likes 6 · jueves: 6, likes 5 · lunes: 5, likes 2 · martes: 5, likes 11 · miércoles: 6, likes 6 · sábado: 5, likes 6
-- **Por distancia:** 50 a 100 km: 19, likes 4 · Chivilcoy: 1, likes 7 ⚠️muestra chica · hasta 50 km: 12, likes 6
+- **Por categoría:** policiales: 31, likes 5
+- **Por franja:** noche (18-24): 31, likes 5
+- **Por día:** domingo: 5, likes 6 · jueves: 6, likes 5 · lunes: 5, likes 2 · martes: 5, likes 11 · miércoles: 6, likes 6 · sábado: 1, likes 6 ⚠️muestra chica · viernes: 3, likes 6 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 20, likes 4 · Chivilcoy: 2, likes 9.5 ⚠️muestra chica · hasta 50 km: 9, likes 6
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-procesado: 174 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 11
+procesado: 181 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 9
 
 ## Controles (sin tocar código)
 
