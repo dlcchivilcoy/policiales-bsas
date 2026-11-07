@@ -29100,6 +29100,54 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "425e629525ecd3b1": {
+      "conversacion": 11,
+      "historia_concreta": 8,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 56,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un panorama de costos e insumos que afecta al bolsillo del productor, aunque sin un caso puntual.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        58
+      ]
+    },
+    "cb20488d3ee7ed2e": {
+      "conversacion": 15,
+      "historia_concreta": 16,
+      "cercania_pba": 18,
+      "interes_productores": 4,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 64,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "incendio en mercedes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia policial/urbana de un pueblo vecino (Mercedes) que no hace al campo ni a la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        63
+      ]
     }
   },
   "indice": {
@@ -31090,7 +31138,10 @@
       "https://agrositio.com.ar/noticia/249243-novillos-una-oferta-atipica-en-un-mercado-que-pierde-firmeza.html": "2026-11-07",
       "https://bichosdecampo.com/listo-el-pollo-calisa-invirtio-45-millones-de-dolares-en-una-nueva-planta-y-apunta-a-cuadruplicar-su-produccion-avicola": "2026-11-07",
       "https://bichosdecampo.com/el-establecimiento-los-alamos-se-ubica-cerca-de-trevelin-como-una-historia-familiar-sirvio-de-abono-para-un-proyecto-de-vida-en-el-campo": "2026-11-07",
-      "https://lamanana.com.ar/milei-prometio-retenciones-cero-en-el-encuentro-de-fin-de-ano-de-la-sociedad-rural": "2026-11-07"
+      "https://lamanana.com.ar/milei-prometio-retenciones-cero-en-el-encuentro-de-fin-de-ano-de-la-sociedad-rural": "2026-11-07",
+      "https://bichosdecampo.com/la-demanda-argentina-de-fertilizantes-sigue-apagada-con-compras-realizadas-sobre-la-hora-advierten-que-la-estacionalidad-dejo-de-operar-como-guia": "2026-11-07",
+      "https://lanacion.com.ar/economia/campo/super-nino-pronostican-mas-de-40-grados-y-tormentas-intensas-en-una-region-nid07112026": "2026-11-07",
+      "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33079,7 +33130,10 @@
       "por que caen los precios del novillo mas oferta feedlots cargados y presion de brasil": "2026-11-07",
       "listo el pollo calisa invirtio 45 millones de dolares en una nueva planta y apunta a cuadruplicar su produccion avicola": "2026-11-07",
       "el establecimiento los alamos se ubica cerca de trevelin como una historia familiar sirvio de abono para un proyecto de vida en el campo": "2026-11-07",
-      "milei prometio retenciones cero en el encuentro de fin de ano de la sociedad rural": "2026-11-07"
+      "milei prometio retenciones cero en el encuentro de fin de ano de la sociedad rural": "2026-11-07",
+      "la demanda argentina de fertilizantes sigue apagada con compras realizadas sobre la hora advierten que la estacionalidad dejo de operar como guia": "2026-11-07",
+      "super nino pronostican mas de 40 grados y tormentas intensas en una region": "2026-11-07",
+      "voraz incendio destruye locales comerciales": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35068,7 +35122,10 @@
       "8b8e02ce1b0aa184": "2026-11-07",
       "06d78c1878f7e981": "2026-11-07",
       "086ecb2813f80f66": "2026-11-07",
-      "378ff7f56e3c5bef": "2026-11-07"
+      "378ff7f56e3c5bef": "2026-11-07",
+      "425e629525ecd3b1": "2026-11-07",
+      "63e80767c8b68320": "2026-11-07",
+      "cb20488d3ee7ed2e": "2026-11-07"
     }
   },
   "elegidas": [
@@ -62054,9 +62111,142 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_31f81916af71_portada.jpg"
+    },
+    {
+      "id": "32f57b05526e",
+      "cuando": "2026-11-07T14:30-03:00",
+      "titulo_original": "Bomberos de Bolívar colaboran en el operativo por el incendio en una planta aceitera de Daireaux",
+      "descripcion": "El fuego se inició el lunes en una celda de acopio que contenía 700 toneladas de cáscaras de girasol. Desde entonces, bomberos de distintos cuarteles de la Regional 6 realizan guardias preventivas para minimizar riesgos ante un eventual cambio en la dirección del viento.",
+      "fuente": "Presente Noticias",
+      "url": "https://www.presentenoticias.com/noticias/2026/11/06/23037-bomberos-de-bolivar-colaboran-en-el-operativo-por-el-incendio-en-una-planta-aceitera-de-daireaux",
+      "titular": "Bomberos combaten incendio en celda con cáscaras de girasol en Daireaux",
+      "volanta": "Empresas",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 9,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 75,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "incendio planta",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Hecho puntual de alto impacto local, aunque en un partido vecino de la región.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 2,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          78
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "53904606-756a-40ba-9ac1-0585fe55c1d1",
+          "slug": "bomberos-combaten-incendio-en-celda-con-700-toneladas-de-d23c17",
+          "url": "https://www.diariolacampaña.com.ar/n/bomberos-combaten-incendio-en-celda-con-700-toneladas-de-d23c17",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18153374779516316",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1751267030337627",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18179632558453439"
+        },
+        "historia_facebook": {
+          "id": "1644932993282895"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_32f57b05526e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "28b7940488dc",
+      "rep": {
+        "id": "28b7940488dc",
+        "fuente": "El Nuevo Cronista",
+        "tipo_fuente": "medio",
+        "source_url": "https://elnuevocronista.com/feed/",
+        "url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales/",
+        "canonical_url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales",
+        "titulo": "Voraz incendio destruye locales comerciales",
+        "titulo_norm": "voraz incendio destruye locales comerciales",
+        "descripcion": "Tras un arduo operativo conjunto que se extendió hasta la madrugada, lograron sofocar el fuego en una pinturería y una forrajería. Estuvo todo el equipo de Bomberos Voluntarios a cargo de Mario Quaglia, protección civil con Agustina Loré, y una red de instancias de asistencia ante la emergencia El siniestro, de grandes dimensiones, destruyó por […] La entrada Voraz incendio destruye locales comerciales se publicó primero en El Nuevo Cronista.",
+        "imagen_url": "",
+        "autor": "redaccion",
+        "publicado": "2026-11-07T14:19-03:00",
+        "capturado": "2026-11-07T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "cb20488d3ee7ed2e",
+        "localidad_medio": "Mercedes"
+      },
+      "grupo": [
+        {
+          "id": "28b7940488dc",
+          "fuente": "El Nuevo Cronista",
+          "tipo_fuente": "medio",
+          "source_url": "https://elnuevocronista.com/feed/",
+          "url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales/",
+          "canonical_url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales",
+          "titulo": "Voraz incendio destruye locales comerciales",
+          "titulo_norm": "voraz incendio destruye locales comerciales",
+          "descripcion": "Tras un arduo operativo conjunto que se extendió hasta la madrugada, lograron sofocar el fuego en una pinturería y una forrajería. Estuvo todo el equipo de Bomberos Voluntarios a cargo de Mario Quaglia, protección civil con Agustina Loré, y una red de instancias de asistencia ante la emergencia El siniestro, de grandes dimensiones, destruyó por […] La entrada Voraz incendio destruye locales comerciales se publicó primero en El Nuevo Cronista.",
+          "imagen_url": "",
+          "autor": "redaccion",
+          "publicado": "2026-11-07T14:19-03:00",
+          "capturado": "2026-11-07T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "cb20488d3ee7ed2e",
+          "localidad_medio": "Mercedes"
+        }
+      ],
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 16,
+        "cercania_pba": 18,
+        "interes_productores": 4,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 25,
+        "subtema": "agro",
+        "tema": "incendio en mercedes",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una noticia policial/urbana de un pueblo vecino (Mercedes) que no hace al campo ni a la producción.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 1,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          63
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-07T14:30-03:00"
+    },
     {
       "id": "e33c5c14b416",
       "rep": {
@@ -62326,75 +62516,6 @@
       "cuando": "2026-11-07T07:00-03:00"
     },
     {
-      "id": "32f57b05526e",
-      "rep": {
-        "id": "32f57b05526e",
-        "fuente": "Presente Noticias",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.presentenoticias.com/rss/noticias",
-        "url": "https://www.presentenoticias.com/noticias/2026/11/06/23037-bomberos-de-bolivar-colaboran-en-el-operativo-por-el-incendio-en-una-planta-aceitera-de-daireaux",
-        "canonical_url": "https://presentenoticias.com/noticias/2026/11/06/23037-bomberos-de-bolivar-colaboran-en-el-operativo-por-el-incendio-en-una-planta-aceitera-de-daireaux",
-        "titulo": "Bomberos de Bolívar colaboran en el operativo por el incendio en una planta aceitera de Daireaux",
-        "titulo_norm": "bomberos de bolivar colaboran en el operativo por el incendio en una planta aceitera de daireaux",
-        "descripcion": "El fuego se inició el lunes en una celda de acopio que contenía 700 toneladas de cáscaras de girasol. Desde entonces, bomberos de distintos cuarteles de la Regional 6 realizan guardias preventivas para minimizar riesgos ante un eventual cambio en la dirección del viento.",
-        "imagen_url": "https://presentenoticias-s3.cdn.net.ar/s3i233/2026/11/presentenoticias/images/02/84/93/2849360_578efd5f64876c3bd0e4073ebfbf74519457fc28ceb408103e13533e4a5b6bd1/md.webp",
-        "autor": "",
-        "publicado": "2026-11-06T20:19-03:00",
-        "capturado": "2026-11-07T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "aa29c33eacc6b838",
-        "localidad_medio": "Bolivar"
-      },
-      "grupo": [
-        {
-          "id": "32f57b05526e",
-          "fuente": "Presente Noticias",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.presentenoticias.com/rss/noticias",
-          "url": "https://www.presentenoticias.com/noticias/2026/11/06/23037-bomberos-de-bolivar-colaboran-en-el-operativo-por-el-incendio-en-una-planta-aceitera-de-daireaux",
-          "canonical_url": "https://presentenoticias.com/noticias/2026/11/06/23037-bomberos-de-bolivar-colaboran-en-el-operativo-por-el-incendio-en-una-planta-aceitera-de-daireaux",
-          "titulo": "Bomberos de Bolívar colaboran en el operativo por el incendio en una planta aceitera de Daireaux",
-          "titulo_norm": "bomberos de bolivar colaboran en el operativo por el incendio en una planta aceitera de daireaux",
-          "descripcion": "El fuego se inició el lunes en una celda de acopio que contenía 700 toneladas de cáscaras de girasol. Desde entonces, bomberos de distintos cuarteles de la Regional 6 realizan guardias preventivas para minimizar riesgos ante un eventual cambio en la dirección del viento.",
-          "imagen_url": "https://presentenoticias-s3.cdn.net.ar/s3i233/2026/11/presentenoticias/images/02/84/93/2849360_578efd5f64876c3bd0e4073ebfbf74519457fc28ceb408103e13533e4a5b6bd1/md.webp",
-          "autor": "",
-          "publicado": "2026-11-06T20:19-03:00",
-          "capturado": "2026-11-07T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "aa29c33eacc6b838",
-          "localidad_medio": "Bolivar"
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 9,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 75,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "incendio planta",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Hecho puntual de alto impacto local, aunque en un partido vecino de la región.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 2,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          78
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T07:00-03:00"
-    },
-    {
       "id": "fd5417de5fbd",
       "rep": {
         "id": "fd5417de5fbd",
@@ -62464,8 +62585,8 @@
       "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T14:00:27-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-07T14:35:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
