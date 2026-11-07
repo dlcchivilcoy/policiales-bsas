@@ -12,6 +12,9 @@ cómo se escribe cada nombre, en vez de repetirlo suelto por cada archivo.
 
 # clave interna (sin tildes) -> cómo se escribe de verdad
 NOMBRES = {
+    # No tiene medios en el padrón (el diario es de ahí), pero es el pueblo que más importa: sin esta
+    # línea, un hecho de Chivilcoy contado por un medio de Junín salía como de Junín (6/11/2026).
+    "chivilcoy": "Chivilcoy",
     "suipacha": "Suipacha",
     "mercedes": "Mercedes",
     "lujan": "Luján",

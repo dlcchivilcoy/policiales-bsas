@@ -24,7 +24,8 @@ import os
 import re
 import unicodedata
 
-from scraper.localidades import nombre as nombre_localidad
+from reels import geografia as GEO
+from scraper.localidades import NOMBRES, nombre as nombre_localidad
 
 MODELO = "claude-haiku-4-5-20251001"
 MAX_TITULAR = 90
@@ -133,8 +134,13 @@ robo en Chacabuco, el lugar es Chacabuco.
   que viene en el material); "desconocida" si no se puede saber. NUNCA inventes un lugar.
 
 VOLANTA (el antetítulo naranja):
-- Tiene que decir DÓNDE pasó: es lo primero que busca el lector de un pueblo al ver el
-  reel. Usá la localidad que viene en el material, tal cual está escrita.
+- Tiene que decir DÓNDE OCURRIÓ EL HECHO: el mismo lugar que ponés en lugar_del_hecho. Es lo
+  primero que busca el lector de un pueblo al ver el reel.
+- La «Localidad» del material es solo una pista: suele ser la ciudad del medio que publicó la
+  nota. Si la nota dice que pasó en otro lado, manda la nota: un medio de Junín que cuenta un
+  choque en Chivilcoy va con "Choque en Chivilcoy", nunca "en Junín".
+- Un pueblo dentro del nombre de una institución no es el lugar: lo que pasa en la sede de
+  Chivilcoy de la Universidad Nacional de Luján es de Chivilcoy, no de Luján.
 - Ej.: "Siniestro vial en Bolívar", "Operativo policial en Chacabuco".
 - La única excepción es que el TITULAR ya nombre la localidad; ahí no la repitas.
 
@@ -522,7 +528,8 @@ def guion_ia(nota: dict, preferir: str = "") -> dict:
     if completo and _norm_frase(completo[:200]) == _norm_frase(texto[:200]):
         texto, completo = completo, ""           # el «resumen» ya era el texto entero
     material = (
-        f"Localidad: {nombre_localidad(nota.get('localidad') or nota.get('localidad_medio')) or 's/d'}\n"
+        f"Localidad (pista, puede ser la del medio; si la nota dice otra, manda la nota): "
+        f"{nombre_localidad(nota.get('localidad') or nota.get('localidad_medio')) or 's/d'}\n"
         f"Tipo de hecho: {nota.get('tipo') or inferir_tipo(nota)}\n"
         f"Gravedad: {nota.get('gravedad', 's/d')}\n"
         f"Titular original: {titular_original}\n"
@@ -815,19 +822,37 @@ def _norm_frase(t: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", _sin_tildes((t or "").lower())).strip()
 
 
+def _pueblos_planos() -> dict:
+    """{nombre sin tildes en minúscula: nombre bien escrito} de todos los pueblos conocidos."""
+    return {_sin_tildes(bonito.lower()): bonito for bonito in NOMBRES.values()}
+
+
+def _nombra(pueblo_plano: str, texto_plano: str) -> bool:
+    """Palabra entera: «asalto» no nombra a Salto (un asalto en Solís salió como de Salto, 5/11)."""
+    return re.search(rf"\b{re.escape(pueblo_plano)}\b", texto_plano) is not None
+
+
+# Un pueblo en el nombre de una institución no dice dónde pasó el hecho: la sede de Chivilcoy de la
+# Universidad Nacional de Luján salió como de Luján (6/11), y la DDI de Junín o la fiscalía de
+# Mercedes investigan hechos de otros pueblos.
+_INSTITUCION = (r"\b(?:universidad(?: nacional)?|basilica|rio|fiscalia|juzgado|tribunal(?:es)?|"
+                r"departamento judicial|ddi)(?: de| del)? ")
+
+
+def _sin_instituciones(plano: str) -> str:
+    """El texto (ya sin tildes y en minúscula) sin los pueblos que son parte de una institución."""
+    pueblos = "|".join(re.escape(x) for x in sorted(_pueblos_planos(), key=len, reverse=True))
+    return re.sub(rf"{_INSTITUCION}(?:{pueblos})\b", " ", plano)
+
+
 def _localidad_nombrada(texto: str, distinta_de: str = "") -> str:
     """La localidad del padron que nombra el texto, si nombra UNA SOLA.
 
     Con dos o mas no se puede decidir —«Robaron en Chacabuco y cayeron en Junin»
     habla de las dos— y ahi se prefiere no tocar nada. Con ninguna, tampoco.
     """
-    from scraper.medios import LOCALIDADES
-    plano = _sin_tildes((texto or "").lower())
-    nombradas = []
-    for loc in LOCALIDADES:
-        bonito = nombre_localidad(loc)
-        if _sin_tildes(bonito.lower()) in plano and bonito not in nombradas:
-            nombradas.append(bonito)
+    plano = _sin_instituciones(_sin_tildes((texto or "").lower()))
+    nombradas = [bonito for clave, bonito in _pueblos_planos().items() if _nombra(clave, plano)]
     if len(nombradas) == 1 and nombradas[0] != distinta_de:
         return nombradas[0]
     return ""
@@ -994,17 +1019,63 @@ def _asegurar_localidad(g: dict, localidad: str) -> dict:
     return g
 
 
+def _lugar_leido(g: dict, nota: dict) -> str:
+    """El pueblo donde ocurrió el hecho según la IA, que leyó la nota entera; "" si no es seguro.
+
+    Solo si dijo que la nota lo nombra («explicita»), si de verdad aparece en el texto y si es un
+    lugar real. Con «inferida» la IA no leyó un lugar: repitió la pista que se le dio."""
+    lugar = g.get("lugar_del_hecho")
+    if not isinstance(lugar, dict) or not GEO._plano(str(lugar.get("certeza") or "")).startswith("explicit"):
+        return ""
+    loc = " ".join(str(lugar.get("localidad") or "").split())
+    material = " ".join(str(nota.get(k) or "") for k in ("titulo", "resumen", "copete", "cuerpo", "texto_completo"))
+    if not loc or GEO._plano(loc) not in GEO._plano(material):
+        return ""
+    if GEO.lugar_de_la_ia(lugar, material).get("estado") not in ("ok", "ambigua", "otra_provincia"):
+        return ""
+    return _pueblos_planos().get(_sin_tildes(loc.lower())) or (loc.title() if loc.isupper() else loc)
+
+
+def _volanta_con_lugar(volanta: str, lugar: str, previa: str = "") -> str:
+    """La volanta nombrando el lugar del hecho: si dice otro pueblo, se cambia ese pueblo y nada más.
+
+    Solo un nombre con mayúscula: «Luces rojas» o «Ataque de lobos» no hablan de Rojas ni de Lobos.
+    Si no nombra ningún pueblo (o el titular ya lo dice) se deja, de eso se ocupa _asegurar_localidad."""
+    volanta = unicodedata.normalize("NFC", volanta or "")
+    plano = _sin_tildes(volanta.lower())
+    limpio = _sin_instituciones(plano)
+    objetivo = _sin_tildes(lugar.lower())
+    if _nombra(objetivo, limpio) or len(plano) != len(volanta):
+        return volanta
+    otros = set(_pueblos_planos()) | {_sin_tildes(previa.lower())}
+    for otro in sorted((x for x in otros if x and x != objetivo), key=len, reverse=True):
+        if not _nombra(otro, limpio):
+            continue
+        m = re.search(rf"\b{re.escape(otro)}\b", plano)
+        if m and volanta[m.start()].isupper():
+            return volanta[:m.start()] + lugar + volanta[m.end():]
+    return volanta
+
+
 def generar(nota: dict, usar_ia: bool = True, preferir: str = "", sitio: str = "") -> dict:
     """Guion completo + descripción lista para publicar.
 
-    Lo PRIMERO es resolver de qué localidad es el hecho, porque de eso dependen la
-    volanta de la placa, lo que lee el modelo y el hashtag del posteo. Resolverlo
-    después alcanzaba solo a la descripción y dejaba la placa mintiendo.
+    Antes de redactar se resuelve de qué localidad parece ser el hecho, porque eso lee el modelo.
+    Pero la última palabra la tiene lo que la IA leyó en la nota entera (pedido del editor, 6/11/2026:
+    hechos de Chivilcoy salieron con la volanta de Junín y de Luján, la ciudad del medio o la de la
+    universidad): de ahí salen la volanta, la etiqueta, el hashtag y el «Más noticias de».
     """
     loc, aviso = localidad_de_la_nota(nota)
     nota = dict(nota, localidad=loc)
 
     g = guion_ia(nota, preferir) if usar_ia else guion_simple(nota)
+    leido = _lugar_leido(g, nota)
+    if leido:
+        g["volanta"] = _volanta_con_lugar(g.get("volanta") or "", leido, loc)
+        if _sin_tildes(leido.lower()) != _sin_tildes(loc.lower()):
+            aviso = f"El hecho es de {leido}, no de {loc}: la pieza se arma como de {leido}."
+            loc = leido
+            nota = dict(nota, localidad=loc)
     g = _asegurar_localidad(g, loc)
     g["descripcion_final"] = descripcion_tiktok(g, nota, sitio)
     g["localidad_hecho"] = loc
