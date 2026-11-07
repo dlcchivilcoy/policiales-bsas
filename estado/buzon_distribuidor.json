@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T00:01:46.000Z",
+  "actualizado": "2026-11-07T00:30:59.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/11/04/millonario-robo-en-un-corralon-de-chacabuco-un-empleado-imputado/",
@@ -331,6 +331,30 @@
       "volanta": "Luján",
       "categoria": "otro_policial",
       "distancia_km": 0.0,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.latrochadigital.com.ar/2026/11/06/viernes-bajo-alerta-amarilla-por-tormentas-fuertes-en-9-de-julio-y-la-zona/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-07T00:30:59.000Z",
+      "titulo": "Rige un alerta amarilla por tormentas fuertes para este viernes en 9 de Julio",
+      "descripcion": "El Servicio Meteorológico Nacional anunció un aviso por precipitaciones intensas, ráfagas y posible caída de granizo. Se esperan acumulados de hasta 40 milímetros.",
+      "texto_tiktok": "El Servicio Meteorológico Nacional emitió un alerta amarilla por tormentas fuertes para este viernes en la región.\n\nSe prevén lluvias intensas, ráfagas de viento, actividad eléctrica y ocasional caída de granizo.\n\nLos acumulados estimados rondarán entre los 20 y 40 milímetros, con una temperatura máxima de 24 grados.\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #AlertaMeteorologica #Tormentas #ServicioMeteorologico #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-06_2134_10_9-de-julio_rige-un-alerta-amarilla-por-to.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/9-de-julio-rige-un-alerta-amarilla-por-tormentas-fuertes-para-1e32dc",
+      "youtube_url": "https://youtube.com/shorts/yQ5ufvJAirU",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "Alerta meteorológica en 9 de Julio",
+      "categoria": "alerta_meteorologica",
+      "distancia_km": 99.4,
       "radio_ok": true,
       "plataformas": [
         "x",
