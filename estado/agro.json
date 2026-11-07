@@ -61718,7 +61718,7 @@
       "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T07:06:22-03:00",
+  "actualizado": "2026-11-07T08:02:38-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -66464,6 +66464,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-05": {
+        "fecha": "2026-11-05",
+        "productos": {
+          "trigo": {
+            "ars": 316519.0,
+            "usd": 206.0,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 275000.0,
+            "usd": 178.98,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 775932.0,
+            "usd": 505.0,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 535000.0,
+            "usd": 348.19,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "sorgo": {
+            "ars": 276570.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "baja"
+          }
+        },
+        "tc": 1536.5,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -66916,6 +66956,10 @@
       "2026-11-05": {
         "fecha": "2026-11-05",
         "usd_t": 433.9
+      },
+      "2026-11-06": {
+        "fecha": "2026-11-06",
+        "usd_t": 436.9
       }
     },
     "chicago_maiz": {
@@ -67065,7 +67109,7 @@
       },
       "2026-11-06": {
         "fecha": "2026-11-06",
-        "usd_t": 173.9
+        "usd_t": 173.8
       }
     },
     "chicago_trigo": {
@@ -67215,7 +67259,34 @@
       },
       "2026-11-06": {
         "fecha": "2026-11-06",
-        "usd_t": 219.3
+        "usd_t": 217.2
+      }
+    }
+  },
+  "reel_datos": {
+    "2026-11-07T08:00:00-03:00": {
+      "dia": "2026-11-07",
+      "placas": [
+        "portada",
+        "mapa",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Lo que tenés que saber del campo hoy",
+      "publicado": {
+        "instagram": {
+          "id": "18101608046555795",
+          "colab": "no",
+          "diapositivas": 7
+        },
+        "facebook": {
+          "id": "101271341650483_1750906380373692",
+          "fotos": 7
+        }
       }
     }
   }
