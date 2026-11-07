@@ -342,7 +342,9 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     # cuenta lo mismo, ya está representada y espera su turno.
     lim_pend = (ahora - timedelta(hours=PENDIENTE_HORAS)).isoformat()
     ya_elegidas = {p["id"] for p in mem.get("elegidas", [])}
-    pendientes = [p for p in mem.get("pendientes", []) if p.get("cuando", "") >= lim_pend and p["id"] not in ya_elegidas]
+    # Sin «historia_concreta» es una pendiente puntuada con los pesos de antes del 06/11/2026: no compite.
+    pendientes = [p for p in mem.get("pendientes", []) if p.get("cuando", "") >= lim_pend and p["id"] not in ya_elegidas
+                  and "historia_concreta" in (p.get("score") or {})]
     if pendientes and previas:
         # Una pendiente pudo quedar afuera de su grupo cuando se capturó: se la vuelve a comparar con lo
         # elegido estos días (17/10/2026: casi sale dos veces la noticia de los chips del Senasa).

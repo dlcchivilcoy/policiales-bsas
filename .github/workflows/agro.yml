@@ -1,5 +1,8 @@
 name: Agro (@diarioyradioagro)
 
+# 06/11/2026: 9 noticias por día, más el posteo de datos de las 05: 07:00 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 ·
+# 18:00 y 19:30 · 21:00 (agro/agenda.py). AGRO_POR_CORRIDA=5 + AGRO_INTERVALO_MIN=20 vuelve a lo de abajo.
+#
 # 23/10/2026: a las 05:00, el REEL DE DATOS (agro/reel_datos.py): las placas de clima, alertas, granos, dólar
 # y Chicago en 4:5, 5 s cada una, en @diarioyradioagro con @diarioyradio de colaborador (y en las dos
 # páginas de Facebook). Las historias de datos también se copian en @diarioyradio.

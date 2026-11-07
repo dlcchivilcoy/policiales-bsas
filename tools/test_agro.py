@@ -103,11 +103,18 @@ chequear("representante: oficial antes que medio",
          DD.representante([a, dict(b, tipo_fuente="oficial")])["id"] == b["id"])
 
 # --- puntaje ---------------------------------------------------------------------------------
-s = SC.limpiar({"impacto_economico": 99, "interes_productores": "12", "innovacion": -4, "cercania_argentina": 10,
-                "cercania_pba": 10, "potencial_reel": 7.6, "conversacion": None, "potencial_comercial": 10,
+s = SC.limpiar({"impacto_economico": 99, "interes_productores": "12", "historia_concreta": -4, "cercania_argentina": 10,
+                "cercania_pba": 10, "potencial_reel": 3.6, "conversacion": None, "innovacion": 15, "potencial_comercial": 10,
                 "commercial_score": 140, "subtema": "Ganadería", "sensible": "sí", "ambito": "Internacional"})
-chequear("limpiar aplica los topes y suma", s["impacto_economico"] == 20 and s["innovacion"] == 0
-         and s["potencial_reel"] == 8 and s["ai_score"] == 20 + 12 + 0 + 10 + 10 + 8 + 0 + 10)
+chequear("limpiar aplica los topes y suma", s["impacto_economico"] == 10 and s["historia_concreta"] == 0
+         and s["potencial_reel"] == 4 and s["ai_score"] == 10 + 12 + 0 + 5 + 10 + 4 + 0)
+chequear("los criterios suman 100", sum(SC.CRITERIOS.values()) == 100)
+chequear("innovación y potencial comercial ya no suman (6/11/2026)", "innovacion" not in s and "potencial_comercial" not in s)
+_viejo = {"ai_score": 88, "impacto_economico": 20, "subtema": "agro"}
+_mem_v = {a["hash"]: _viejo}
+_pv = SC.puntuar([a], _mem_v, redactar=lambda sy, ma, **k: ({"notas": [{"n": 1, "conversacion": 10, "subtema": "agro"}]}, "falsa"),
+                 log=lambda m: None, margen=0)
+chequear("un puntaje con los pesos de antes del 6/11 se vuelve a puntuar", _pv[a["id"]]["ai_score"] == 10)
 chequear("limpiar: commercial ≤ 100, subtema sin tilde, sensible y ámbito",
          s["commercial_score"] == 100 and s["subtema"] == "ganaderia" and s["sensible"]
          and s["ambito"] == "internacional")
@@ -193,8 +200,10 @@ def cand(i, score, sub, tema="", com=0):
 
 
 os.environ.pop("AGRO_MEZCLA", None)
-chequear("topes de la mezcla del documento con 10 por día",
-         SE.topes(10) == {"agro": 3, "mercados": 2, "agtech": 2, "maquinaria": 1, "ganaderia": 1, "empresas": 1})
+chequear("topes de la mezcla con 10 por día (6/11/2026: más campo y ganadería, menos mercados y AgTech)",
+         SE.topes(10) == {"agro": 4, "ganaderia": 3, "mercados": 1, "agtech": 1, "maquinaria": 1, "empresas": 1})
+chequear("clima adelante y precios sin empuje (6/11/2026: 248 contra 64 vistas)",
+         SE.EMPUJE_TEMA["clima"] > SE.EMPUJE_TEMA["ganaderia"] > SE.EMPUJE_TEMA["precios"] == 0)
 os.environ["AGRO_MEZCLA"] = "agro:50,mercados:50"
 chequear("AGRO_MEZCLA se puede editar", SE.topes(4) == {"agro": 2, "mercados": 2})
 os.environ.pop("AGRO_MEZCLA")
@@ -698,16 +707,18 @@ for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_),
              and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
              and c_["pendientes"] == [{"id": "p-nuevo"}])
 
-# --- agenda (20/10/2026): 6 corridas de 5 reels, uno cada 20 min, cada uno de un sitio distinto ----
+# --- agenda (6/11/2026): 9 noticias repartidas en las mismas 6 corridas ----------------------------
 from agro import agenda as AG  # noqa: E402
 
-for _k in ("AGRO_AGENDA", "AGRO_CORRIDAS", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN"):
+for _k in ("AGRO_AGENDA", "AGRO_CORRIDAS", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN", "AGRO_HISTORIAS_DATOS"):
     os.environ.pop(_k, None)
 _ag = AG.agenda()
-chequear("agenda: 30 reels, sin carruseles, y 3 tandas de historias",
-         AG.cuantos("reel") == 30 and AG.cuantos("carrusel") == 0 and AG.cuantos("historias") == 3)
+chequear("agenda: 9 noticias y el posteo de datos, 10 por día",
+         AG.cuantos("reel") == 9 and AG.cuantos("reel_datos") == 1 and AG.cuantos("carrusel") == 0 and len(_ag) == 10)
+chequear("agenda: los horarios de las noticias", [f"{h:02d}:{m:02d}" for h, m, t in _ag if t == "reel"]
+         == ["07:00", "10:00", "11:30", "13:00", "14:30", "16:00", "18:00", "19:30", "21:00"])
 _feed = [h * 60 + m for h, m, t in _ag if t != "historias"]
-chequear("agenda: al menos 20 minutos entre un reel y el siguiente", all(b - a >= 20 for a, b in zip(_feed, _feed[1:])))
+chequear("agenda: al menos 90 minutos entre un posteo y el siguiente", all(b - a >= 90 for a, b in zip(_feed, _feed[1:])))
 chequear("corridas: la del reel de datos (05) y las de noticias 7, 10, 13, 16, 18 y 21",
          AG.corridas() == [(5, 0), (7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)]
          and AG.corridas_noticias() == [(7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0)])
@@ -728,15 +739,14 @@ def _reels(*horas):
 
 
 _c = AG.corrida(_t(7, 3))
-chequear("la corrida de las 07: historias y 5 reels (07:00 a 08:20)",
-         _c[:2] == (_t(7, 0), True)
-         and _hm(_c[2]) == [("07:00", "historias")] + _reels("07:00", "07:20", "07:40", "08:00", "08:20"))
-chequear("la de las 13: a las 14:00 primero las historias del mediodía y después el reel",
-         _hm(AG.corrida(_t(13, 0))[2]) == _reels("13:00", "13:20", "13:40") + [("14:00", "historias")]
-         + _reels("14:00", "14:20"))
-chequear("la de las 16: 16:00 a 17:20 (no se mete en la de las 18)",
-         _hm(AG.corrida(_t(16, 10))[2]) == _reels("16:00", "16:20", "16:40", "17:00", "17:20"))
-chequear("la de las 21: 21:00 a 22:20", _hm(AG.corrida(_t(21, 39))[2]) == _reels("21:00", "21:20", "21:40", "22:00", "22:20"))
+chequear("la corrida de las 07: un solo posteo", _c[:2] == (_t(7, 0), True) and _hm(_c[2]) == _reels("07:00"))
+chequear("la de las 13: dos posteos, a las 13:00 y a las 14:30", _hm(AG.corrida(_t(13, 0))[2]) == _reels("13:00", "14:30"))
+chequear("la de las 16: uno solo", _hm(AG.corrida(_t(16, 10))[2]) == _reels("16:00"))
+chequear("la de las 18: 18:00 y 19:30", _hm(AG.corrida(_t(18, 5))[2]) == _reels("18:00", "19:30"))
+chequear("la de las 21: una sola", _hm(AG.corrida(_t(21, 39))[2]) == _reels("21:00"))
+os.environ["AGRO_HISTORIAS_DATOS"] = "1"
+chequear("con AGRO_HISTORIAS_DATOS=1: a las 07:00 primero las historias y después el posteo",
+         _hm(AG.corrida(_t(7, 3))[2]) == [("07:00", "historias")] + _reels("07:00") and AG.cuantos("historias") == 3)
 chequear("a las 10:45 ya no (40 min de tolerancia): la próxima es la de las 13",
          AG.corrida(_t(10, 45))[:2] == (_t(13, 0), False))
 chequear("a las 23:00: la próxima es mañana a las 05 (el reel de datos)", AG.corrida(_t(23, 0))[:2] == (_t(5, 0, 17), False))
@@ -761,17 +771,18 @@ os.environ["AGRO_REEL_DATOS"] = "04:30"
 chequear("AGRO_REEL_DATOS cambia la hora", (4, 30) in AG.corridas())
 os.environ.pop("AGRO_REEL_DATOS")
 os.environ["AGRO_CORRIDAS"] = "16:00, 17:00"
-chequear("los reels de una corrida no se pasan a la siguiente",
+os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"] = "5", "20"
+chequear("AGRO_POR_CORRIDA=5 y AGRO_INTERVALO_MIN=20 vuelven a lo anterior; una corrida no se pasa a la siguiente",
          [(h, m) for h, m, t in AG.agenda() if t == "reel"] == [(16, 0), (16, 20), (16, 40), (17, 0), (17, 20), (17, 40),
                                                                 (18, 0), (18, 20)])
-os.environ.pop("AGRO_CORRIDAS")
+os.environ.pop("AGRO_CORRIDAS"), os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"] = "3", "30"
 chequear("AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN: 3 reels cada 30 min",
          _hm(AG.corrida(_t(10, 0))[2]) == _reels("10:00", "10:30", "11:00") and AG.cuantos("reel") == 18)
 os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 _smin = os.environ.pop("AGRO_SCORE_MIN")
-chequear("de fábrica: hasta 36 por día (30 y margen), mínimo 60, una por horario",
-         SE.max_dia() == 36 and SE.score_min() == 60 and SE.por_pasada() == 1)
+chequear("de fábrica: hasta 12 por día (9 y margen), mínimo 60, una por horario",
+         SE.max_dia() == 12 and SE.score_min() == 60 and SE.por_pasada() == 1)
 os.environ["AGRO_SCORE_MIN"] = _smin
 
 # --- un sitio distinto por reel dentro de la corrida; el Short, solo del primero -------------------
@@ -1033,6 +1044,8 @@ def _dormir_falso(seg):
 
 with tempfile.TemporaryDirectory() as _tmpc:
     _o = (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar, PA._guardar_en_la_nube)
+    # La mecánica de esperar turnos se prueba con 5 por corrida cada 20 minutos.
+    os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"] = "5", "20"
     try:
         PA.MEMORIA_REAL, PA.SALIDA = Path(_tmpc) / "agro.json", Path(_tmpc) / "salida"
         PA._un_turno, PA._ahora, PA._dormir = _turno_falso, lambda: _reloj["t"], _dormir_falso
@@ -1070,6 +1083,7 @@ with tempfile.TemporaryDirectory() as _tmpc:
     finally:
         (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar,
          PA._guardar_en_la_nube) = _o
+        os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 
 # --- prioridades del documento «ideas agro» -------------------------------------------------------
 _s = SC.limpiar({"tema_doc": "Clima", "urgente": "sí", "potencial_carrusel": 14})
@@ -1094,10 +1108,18 @@ _hoy6 = [{"score": dict(SC.limpiar({"subtema": s_}), tema=f"t{i_}")} for i_, s_ 
 _pend = [_cand("g", "ganaderia", 77), _cand("m", "mercados", 76)]
 chequear("13:00 del 17/10: con solo ganadería y mercados pendientes y su tope lleno, el horario no queda vacío",
          SE.elegir(_pend, _hoy6, cupo_dia=6)[0] == [] and SE.elegir(_pend, _hoy6, cupo_dia=6, relajar=True)[0][0]["id"] == "g")
-chequear("topes de la mezcla hacia arriba (6 por día: 2 de mercados)", SE.topes(6)["mercados"] == 2)
-_hoy_tema = [{"score": dict(SC.limpiar({"subtema": "ganaderia"}), tema="trazabilidad bovina")}]
+chequear("topes de la mezcla hacia arriba (6 por día: 2 de ganadería)", SE.topes(6)["ganaderia"] == 2)
+_cli = [_cand(f"c{i}", "agro", 90 - i, tema_doc="clima", tema=f"t{i}") for i in range(5)]
+_el_cli = SE.elegir(_cli, [], cupo_dia=20)[0]
+chequear("clima: hasta 3 por día, aunque haya más", len(_el_cli) == 3)
+_hoy_cli = [{"score": {"subtema": "agro", "tema_doc": "clima", "tema": f"h{i}"}} for i in range(3)]
+chequear("clima: con 3 ya publicadas hoy, una más no entra",
+         SE.elegir([_cand("n", "agro", 88, tema_doc="clima", tema="n")], _hoy_cli, cupo_dia=20)[0] == [])
+chequear("clima: una alerta urgente entra igual",
+         len(SE.elegir([_cand("u", "agro", 88, tema_doc="clima", tema="u", urgente=True)], _hoy_cli, cupo_dia=20)[0]) == 1)
+_hoy_tema = [{"score": dict(SC.limpiar({"subtema": "mercados"}), tema="trazabilidad bovina")}]
 chequear("relajado, nunca entra otra del mismo tema que algo de hoy",
-         SE.elegir([dict(_cand("t", "ganaderia", 80), score=dict(_cand("t", "ganaderia", 80)["score"], tema="trazabilidad bovina"))],
+         SE.elegir([dict(_cand("t", "mercados", 80), score=dict(_cand("t", "mercados", 80)["score"], tema="trazabilidad bovina"))],
                    _hoy_tema, cupo_dia=6, relajar=True)[0] == [])
 
 # --- datos: granos, dólar, Chicago, clima y alertas (sin red) -------------------------------------
@@ -1494,8 +1516,8 @@ chequear("video: si el medio dice que dura más de 90 s, ni se baja",
 
 # --- 01/11/2026: sin historias de datos; cada reel sale también como historia ---------------------------
 os.environ.pop("AGRO_HISTORIAS_DATOS")
-chequear("agenda de fábrica: sin tandas de historias de datos (y los 30 reels igual)",
-         AG.cuantos("historias") == 0 and AG.cuantos("reel") == 30)
+chequear("agenda de fábrica: sin tandas de historias de datos (y las 9 noticias igual)",
+         AG.cuantos("historias") == 0 and AG.cuantos("reel") == 9)
 os.environ["AGRO_HISTORIAS_DATOS"] = "1"
 from agro import publicar as _PH  # noqa: E402
 from reels import publicador as _PBH  # noqa: E402

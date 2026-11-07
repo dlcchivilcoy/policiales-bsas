@@ -29,6 +29,14 @@ POR_CORRIDA reels (5), uno cada INTERVALO_MIN (20), sin carruseles; las historia
 = 30 reels + 3 tandas de historias. Cada reel de la corrida viene de un sitio distinto (agro/pasada.py).
 AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN los cambian; AGRO_AGENDA sigue pisando todo.
 
+06/11/2026 (propuesta aceptada por el editor tras mirar las métricas): de 30 a 9 noticias por día, más el
+posteo de datos de las 05 = 10. Con 25 posteos diarios, el reel típico llegaba a 76 personas y en 6 de 6
+corridas lo de la segunda hora rendía menos. Mismas 6 corridas, así que cron-job.org no cambia:
+
+    07:00 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 · 18:00 y 19:30 · 21:00
+
+AGRO_POR_CORRIDA=5 + AGRO_INTERVALO_MIN=20 vuelve a lo anterior.
+
 Cada corrida es UNA corrida en la nube (cron-job.org a la hora exacta, con un respaldo 20 min después)
 que publica lo suyo y espera hasta el horario siguiente (agro/pasada.py, correr_corrida). Entre dos
 posteos del feed de la misma corrida hay siempre intervalo_min(): si el primero salió tarde, el segundo
@@ -50,8 +58,8 @@ def historias_datos() -> bool:
     return (os.environ.get("AGRO_HISTORIAS_DATOS") or "0").strip() == "1"
 
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
-POR_CORRIDA = 5              # reels por corrida (20/10/2026)
-INTERVALO_MIN = 20           # entre un reel y el siguiente de la misma corrida
+CON_DOS_POSTEOS = ((10, 0), (13, 0), (18, 0))     # las demás corridas publican uno (06/11/2026)
+INTERVALO_MIN = 90           # entre un posteo y el siguiente de la misma corrida
 TIPOS = ("reel", "carrusel", "historias", "reel_datos")
 # 23/10/2026: el REEL DE DATOS de cada mañana (agro/reel_datos.py), con su propia corrida. AGRO_REEL_DATOS
 # cambia la hora; "0" lo apaga.
@@ -68,8 +76,9 @@ def _entero(nombre: str, defecto: int) -> int:
         return defecto
 
 
-def por_corrida() -> int:
-    return _entero("AGRO_POR_CORRIDA", POR_CORRIDA)
+def por_corrida(inicio: tuple = None) -> int:
+    """Cuántos posteos publica la corrida que arranca en `inicio` (hora, minuto). AGRO_POR_CORRIDA vale para todas."""
+    return _entero("AGRO_POR_CORRIDA", 2 if inicio in CON_DOS_POSTEOS else 1)
 
 
 def intervalo_min() -> int:
@@ -88,7 +97,7 @@ def agenda_texto_defecto() -> str:
     for i, ini in enumerate(inicios):
         fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
         partes += [f"{t // 60:02d}:{t % 60:02d} reel"
-                   for t in (ini + k * intervalo_min() for k in range(por_corrida())) if t < fin]
+                   for t in (ini + k * intervalo_min() for k in range(por_corrida((ini // 60, ini % 60)))) if t < fin]
     return ", ".join(partes)
 
 

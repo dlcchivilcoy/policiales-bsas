@@ -9,8 +9,8 @@ from pathlib import Path
 from agro import scoring as SC
 
 ROTULOS = {"impacto_economico": "Impacto económico", "interes_productores": "Interés productores",
-           "innovacion": "Innovación", "cercania_argentina": "Cercanía Argentina", "cercania_pba": "Cercanía PBA",
-           "potencial_reel": "Potencial reel", "conversacion": "Conversación", "potencial_comercial": "Comercial"}
+           "historia_concreta": "Historia concreta", "cercania_argentina": "Cercanía Argentina",
+           "cercania_pba": "Cercanía a la zona", "potencial_reel": "Potencial reel", "conversacion": "Conversación"}
 
 CSS = """
 :root{--bg:#f5f6f8;--card:#fff;--tx:#16181d;--sub:#5b616b;--borde:#e3e6ea;--nar:#ff7000;--ver:#5e9e2c;--alerta:#b54708;--fondo-alerta:#fff4e5}

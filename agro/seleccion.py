@@ -22,13 +22,18 @@ carrusel pesa además si la noticia se puede EXPLICAR (potencial_carrusel).
 20/10/2026: 6 corridas con 5 reels cada una, cada reel de un sitio distinto → AGRO_MAX_DIA = 36 (30 y
 margen para las que fallan al publicar) y AGRO_SCORE_MIN = 60: con 75 había corridas sin ninguna y la
 mejor de cada sitio rara vez llega.
+
+06/11/2026: 9 noticias por día → AGRO_MAX_DIA = 12 (9 y margen). La mezcla y el empuje siguen lo que se vio en
+397 posteos (mediana de vistas): clima 248, sanidad 144, ganadería 114, contra precios 64 y campaña 56; por
+subtema, ganadería 134 y mercados 71.
 """
 import math
 import os
 
-MEZCLA_DEFECTO = {"agro": 30, "mercados": 20, "agtech": 20, "maquinaria": 10, "ganaderia": 10, "empresas": 10}
+MEZCLA_DEFECTO = {"agro": 35, "ganaderia": 25, "maquinaria": 10, "mercados": 10, "agtech": 10, "empresas": 10}
 REFUERZO = 10
 MAX_MISMO_TEMA = 2          # por día: el mismo cultivo, empresa o tema
+MAX_CLIMA = 3               # por día, salvo una urgente: rinde más que el resto, pero 5 de 9 cansan (06/11/2026)
 
 
 def _entero(nombre: str, defecto: int) -> int:
@@ -43,7 +48,7 @@ def score_min() -> int:
 
 
 def max_dia() -> int:
-    return _entero("AGRO_MAX_DIA", 36)
+    return _entero("AGRO_MAX_DIA", 12)
 
 
 def por_pasada() -> int:
@@ -66,9 +71,9 @@ def pasadas() -> list:
     return sorted(set(salida)) or [(7, 0), (12, 30), (20, 30)]
 
 
-# Lo que suma cada tema fundamental al ORDEN (no al puntaje): clima 6 … reglas 1.
-EMPUJE_TEMA = {"clima": 6, "precios": 5, "dolar": 5, "internacional": 4, "campana": 4, "costos": 3,
-               "tecnologia": 2, "sanidad": 2, "ganaderia": 1, "reglas": 1}
+# Lo que suma cada tema fundamental al ORDEN (no al puntaje), según las vistas reales (06/11/2026).
+EMPUJE_TEMA = {"clima": 10, "sanidad": 5, "ganaderia": 4, "tecnologia": 3, "costos": 3, "reglas": 2, "dolar": 1,
+               "internacional": 0, "precios": 0, "campana": 0}
 URGENTE_TOLERANCIA = 10     # una urgente entra aunque le falten hasta 10 puntos para el mínimo
 
 
@@ -123,9 +128,11 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
     tope = topes(cupo_dia)
     usados = {}
     temas = {}
+    clima = 0
     for p in de_hoy:
         s = p.get("score") or {}
         usados[s.get("subtema")] = usados.get(s.get("subtema"), 0) + 1
+        clima += s.get("tema_doc") == "clima"
         if s.get("tema"):
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     lugar = cupo_dia - len(de_hoy)
@@ -139,6 +146,9 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         if s.get("tema") and temas.get(s["tema"], 0) >= MAX_MISMO_TEMA:
             descartados.append((c, f"ya hay {MAX_MISMO_TEMA} del tema «{s['tema']}» hoy"))
             continue
+        if s.get("tema_doc") == "clima" and clima >= MAX_CLIMA and not s.get("urgente"):
+            descartados.append((c, f"ya hay {MAX_CLIMA} de clima hoy"))
+            continue
         if lugar <= 0:
             descartados.append((c, f"cupo del día lleno ({cupo_dia})"))
             continue
@@ -148,6 +158,7 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         elegidos.append(c)
         lugar -= 1
         usados[s["subtema"]] = usados.get(s["subtema"], 0) + 1
+        clima += s.get("tema_doc") == "clima"
         if s.get("tema"):
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     for c in reserva:
