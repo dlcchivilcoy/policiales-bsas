@@ -29148,6 +29148,66 @@
         65,
         63
       ]
+    },
+    "47f8bce786aa2bf0": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 32,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "flores",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una curiosidad colorida en Capital Federal que no le cambia nada al productor de Chivilcoy y la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d171f53a50cae0f2": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 47,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "sancor",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa por la histórica marca láctea pero es un tema judicial y empresario lejano al día a día zonal.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e1d7a3befa86a64e": {
+      "conversacion": 12,
+      "historia_concreta": 10,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 72,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informa el avance de siembra de maíz a nivel nacional, dato clave que miran todos los productores locales.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31141,7 +31201,11 @@
       "https://lamanana.com.ar/milei-prometio-retenciones-cero-en-el-encuentro-de-fin-de-ano-de-la-sociedad-rural": "2026-11-07",
       "https://bichosdecampo.com/la-demanda-argentina-de-fertilizantes-sigue-apagada-con-compras-realizadas-sobre-la-hora-advierten-que-la-estacionalidad-dejo-de-operar-como-guia": "2026-11-07",
       "https://lanacion.com.ar/economia/campo/super-nino-pronostican-mas-de-40-grados-y-tormentas-intensas-en-una-region-nid07112026": "2026-11-07",
-      "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales": "2026-11-07"
+      "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales": "2026-11-07",
+      "https://bichosdecampo.com/de-raiz-plaza-de-mayo-se-llena-de-flores-para-recibir-al-papa-entre-petunias-blancas-euryops-amarillos-y-un-ramo-especial-para-leon-xiv": "2026-11-07",
+      "https://bichosdecampo.com/con-otros-dos-planteos-de-apelacion-resueltos-y-una-propuesta-de-trabajo-a-fason-parece-que-sancor-intentara-finalmente-conseguir-un-nuevo-dueno": "2026-11-07",
+      "https://lanacion.com.ar/economia/campo/super-nino-miles-de-hectareas-fueron-alcanzadas-por-violentas-tormentas-y-hay-cultivos-barridos-por-nid07112026": "2026-11-07",
+      "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33133,7 +33197,11 @@
       "milei prometio retenciones cero en el encuentro de fin de ano de la sociedad rural": "2026-11-07",
       "la demanda argentina de fertilizantes sigue apagada con compras realizadas sobre la hora advierten que la estacionalidad dejo de operar como guia": "2026-11-07",
       "super nino pronostican mas de 40 grados y tormentas intensas en una region": "2026-11-07",
-      "voraz incendio destruye locales comerciales": "2026-11-07"
+      "voraz incendio destruye locales comerciales": "2026-11-07",
+      "de raiz plaza de mayo se llena de flores para recibir al papa entre petunias blancas euryops amarillos y un ramo especial para leon xiv": "2026-11-07",
+      "con otros dos planteos de apelacion resueltos y una propuesta de trabajo a fason parece que sancor intentara finalmente conseguir un nuevo dueno": "2026-11-07",
+      "super nino miles de hectareas fueron alcanzadas por violentas tormentas y hay cultivos barridos por completo": "2026-11-07",
+      "siembra de gruesa el maiz supero la mitad del area prevista": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35125,7 +35193,11 @@
       "378ff7f56e3c5bef": "2026-11-07",
       "425e629525ecd3b1": "2026-11-07",
       "63e80767c8b68320": "2026-11-07",
-      "cb20488d3ee7ed2e": "2026-11-07"
+      "cb20488d3ee7ed2e": "2026-11-07",
+      "47f8bce786aa2bf0": "2026-11-07",
+      "d171f53a50cae0f2": "2026-11-07",
+      "0ef6b7c0e8e689cb": "2026-11-07",
+      "e1d7a3befa86a64e": "2026-11-07"
     }
   },
   "elegidas": [
@@ -62175,9 +62247,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_32f57b05526e_portada.jpg"
+    },
+    {
+      "id": "1e9bde591ba1",
+      "cuando": "2026-11-07T16:00-03:00",
+      "titulo_original": "Jorge Healy se cansó de correr detrás de las ovejas y encontró la solución en los perros Border Collie: Ahora los entrena y hasta los vende a Brasil",
+      "descripcion": "Para elegir un cordero de los que crecían en esa estancia bonaerense que pudiera servir en el almuerzo para los turistas, Jorge Healy tenía que organizar prácticamente una expedición. Las ovejas andaban dispersas por el campo, los alambrados estaban preparados para los caballos y juntar la majada er",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/jorge-healy-se-canso-de-correr-detras-de-las-ovejas-y-encontro-la-solucion-en-los-perros-border-collie-ahora-los-entrena-y-hasta-los-vende-a-brasil/",
+      "titular": "Perros Border Collie revolucionan el manejo de ovejas en Las Heras",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 20,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 85,
+        "commercial_score": 85,
+        "subtema": "ganaderia",
+        "tema": "perros border collie",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Excelente historia humana y de campo bonaerense, ideal para que la compartan y miren el video.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7251cd9d-c7c4-41e1-b068-408ab2fe8321",
+          "slug": "como-el-entrenamiento-de-perros-border-collie-transformo-el-8646c5",
+          "url": "https://www.diariolacampaña.com.ar/n/como-el-entrenamiento-de-perros-border-collie-transformo-el-8646c5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18391313389232968",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1751346350329695",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17940911220391594"
+        },
+        "historia_facebook": {
+          "id": "2840301423018335"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1e9bde591ba1_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "15d53511174d",
+      "rep": {
+        "id": "15d53511174d",
+        "fuente": "Chacabuco Noticias",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.chacabuconoticias.com.ar/feed/",
+        "url": "https://www.chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista/",
+        "canonical_url": "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista",
+        "titulo": "Siembra de gruesa: el maíz superó la mitad del área prevista",
+        "titulo_norm": "siembra de gruesa el maiz supero la mitad del area prevista",
+        "descripcion": "La siembra de maíz con destino a grano comercial alcanzó el 50,5% de las 8.400.000 hectáreas previstas, informó el Panorama Agrícola Semanal de",
+        "imagen_url": "",
+        "autor": "Mates y Noticias",
+        "publicado": "2026-11-07T14:53-03:00",
+        "capturado": "2026-11-07T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "e1d7a3befa86a64e",
+        "localidad_medio": "Chacabuco"
+      },
+      "grupo": [
+        {
+          "id": "15d53511174d",
+          "fuente": "Chacabuco Noticias",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.chacabuconoticias.com.ar/feed/",
+          "url": "https://www.chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista/",
+          "canonical_url": "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista",
+          "titulo": "Siembra de gruesa: el maíz superó la mitad del área prevista",
+          "titulo_norm": "siembra de gruesa el maiz supero la mitad del area prevista",
+          "descripcion": "La siembra de maíz con destino a grano comercial alcanzó el 50,5% de las 8.400.000 hectáreas previstas, informó el Panorama Agrícola Semanal de",
+          "imagen_url": "",
+          "autor": "Mates y Noticias",
+          "publicado": "2026-11-07T14:53-03:00",
+          "capturado": "2026-11-07T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "e1d7a3befa86a64e",
+          "localidad_medio": "Chacabuco"
+        }
+      ],
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 10,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 72,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Informa el avance de siembra de maíz a nivel nacional, dato clave que miran todos los productores locales.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-07T16:00-03:00"
+    },
     {
       "id": "28b7940488dc",
       "rep": {
@@ -62311,71 +62508,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-07T13:00-03:00"
-    },
-    {
-      "id": "1e9bde591ba1",
-      "rep": {
-        "id": "1e9bde591ba1",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/jorge-healy-se-canso-de-correr-detras-de-las-ovejas-y-encontro-la-solucion-en-los-perros-border-collie-ahora-los-entrena-y-hasta-los-vende-a-brasil/",
-        "canonical_url": "https://bichosdecampo.com/jorge-healy-se-canso-de-correr-detras-de-las-ovejas-y-encontro-la-solucion-en-los-perros-border-collie-ahora-los-entrena-y-hasta-los-vende-a-brasil",
-        "titulo": "Jorge Healy se cansó de correr detrás de las ovejas y encontró la solución en los perros Border Collie: Ahora los entrena y hasta los vende a Brasil",
-        "titulo_norm": "jorge healy se canso de correr detras de las ovejas y encontro la solucion en los perros border collie ahora los entrena y hasta los vende a brasil",
-        "descripcion": "Para elegir un cordero de los que crecían en esa estancia bonaerense que pudiera servir en el almuerzo para los turistas, Jorge Healy tenía que organizar prácticamente una expedición. Las ovejas andaban dispersas por el campo, los alambrados estaban preparados para los caballos y juntar la majada era una tarea que podía demandar varias personas […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/perro-1.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-07T09:58-03:00",
-        "capturado": "2026-11-07T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7ec187fd454b4f01",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "1e9bde591ba1",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/jorge-healy-se-canso-de-correr-detras-de-las-ovejas-y-encontro-la-solucion-en-los-perros-border-collie-ahora-los-entrena-y-hasta-los-vende-a-brasil/",
-          "canonical_url": "https://bichosdecampo.com/jorge-healy-se-canso-de-correr-detras-de-las-ovejas-y-encontro-la-solucion-en-los-perros-border-collie-ahora-los-entrena-y-hasta-los-vende-a-brasil",
-          "titulo": "Jorge Healy se cansó de correr detrás de las ovejas y encontró la solución en los perros Border Collie: Ahora los entrena y hasta los vende a Brasil",
-          "titulo_norm": "jorge healy se canso de correr detras de las ovejas y encontro la solucion en los perros border collie ahora los entrena y hasta los vende a brasil",
-          "descripcion": "Para elegir un cordero de los que crecían en esa estancia bonaerense que pudiera servir en el almuerzo para los turistas, Jorge Healy tenía que organizar prácticamente una expedición. Las ovejas andaban dispersas por el campo, los alambrados estaban preparados para los caballos y juntar la majada era una tarea que podía demandar varias personas […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/perro-1.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-07T09:58-03:00",
-          "capturado": "2026-11-07T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7ec187fd454b4f01",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 22,
-        "historia_concreta": 20,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 5,
-        "ai_score": 85,
-        "commercial_score": 85,
-        "subtema": "ganaderia",
-        "tema": "perros border collie",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Excelente historia humana y de campo bonaerense, ideal para que la compartan y miren el video.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T10:00-03:00"
     },
     {
       "id": "a06e530611c9",
@@ -62585,8 +62717,8 @@
       "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T14:35:22-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-07T16:05:48-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
