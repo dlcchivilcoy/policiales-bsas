@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T23:31:17.000Z",
+  "actualizado": "2026-11-07T23:31:19.000Z",
   "eventos": [
     {
       "id": "policiales:https://noticiasgilenses.com.ar/violento-robo-en-el-candil-recuperan-el-vehiculo-sustraido/",
@@ -281,6 +281,30 @@
       "urgente": false,
       "localidad": "Chacabuco",
       "volanta": "Chacabuco",
+      "categoria": "otro_policial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/calle07112026.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-07T23:31:19.000Z",
+      "titulo": "Denunció a su propio hijo tras hallar objetos sospechosos en su vivienda",
+      "descripcion": "Una vecina alertó a los efectivos de seguridad luego de descubrir que su descendiente había ingresado elementos de dudosa procedencia al domicilio familiar ubicado en Chacabuco.",
+      "texto_tiktok": "Un llamado al servicio de emergencias encendió las alertas en un domicilio de Chacabuco en las últimas horas.\n\nUna vecina se comunicó con las autoridades policiales para reportar la situación protagonizada por su propio hijo en la vivienda.\n\nEl operativo se desencadenó luego de que la mujer descubriera diversos elementos extraños que el joven había llevado al lugar.\n\nLas actuaciones continúan a cargo de la dependencia local para esclarecer el origen de los objetos secuestrados.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Seguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-07_2134_07_chacabuco_denunci-a-su-propio-hijo-tras-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-una-vecina-llamo-a-la-policia-tras-el-accionar-939af9",
+      "youtube_url": "https://youtube.com/shorts/kW31PNyttho",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Operativo policial en Chacabuco",
       "categoria": "otro_policial",
       "distancia_km": 50.1,
       "radio_ok": true,
