@@ -172,7 +172,7 @@ def con_youtube(horario: datetime) -> bool:
 def ya_publicado(mem: dict, horario: datetime, tipo: str):
     """Lo que ya salió (o está saliendo) en ese horario, o None."""
     iso = horario.isoformat()
-    if tipo == "historias":
+    if tipo in AG.FUERA_DEL_FEED:
         h = (mem.get("historias") or {}).get(iso)
         return h if h and h.get("publicado") else None
     if tipo == "reel_datos":
@@ -231,16 +231,16 @@ def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_pieza
         if ya:
             que = ya.get("titular") or f"{len(ya.get('items') or [])} historias"
             log(f"{horario:%H:%M} {tipo}: ya publicó ({que})")
-            if tipo != "historias":
+            if tipo not in AG.FUERA_DEL_FEED:
                 ultimo_feed = horario
             continue
         objetivo = horario
-        if tipo != "historias" and ultimo_feed:
+        if tipo not in AG.FUERA_DEL_FEED and ultimo_feed:
             # El intervalo entre posteo y posteo del feed (20 min), aunque el primero haya salido tarde.
             objetivo = max(objetivo, ultimo_feed + timedelta(minutes=AG.intervalo_min()))
         _esperar(objetivo, log)
         momento = _ahora()
-        if tipo != "historias":
+        if tipo not in AG.FUERA_DEL_FEED:
             ultimo_feed = momento
         carpeta = SALIDA / f"{momento:%Y-%m-%d_%H%M}_{tipo}"
         carpeta.mkdir(parents=True, exist_ok=True)
@@ -272,6 +272,10 @@ def _un_turno(publicar: bool, tipo: str, horario: datetime, ahora: datetime, car
     if tipo == "reel_datos":
         from agro import reel_datos as RD
         return RD.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), publicador=publicador,
+                         carpeta=carpeta, ahora=ahora)
+    if tipo == "participa":
+        from agro import participa as PT
+        return PT.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), publicador=publicador,
                          carpeta=carpeta, ahora=ahora)
     if tipo == "numeros" or (tipo == "carrusel" and AG.es_primer_carrusel_del_sabado(horario) and not max_piezas):
         return pasada_numeros(publicar=publicar, horario=horario, log=log, publicador=publicador,
@@ -378,7 +382,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                 mem["indice"]["titulo"].pop(n["titulo_norm"], None)
                 mem["indice"]["hash"].pop(n["hash"], None)
             continue
-        candidatos.append({"id": r["id"], "rep": r, "grupo": g, "score": s, "cuando": ahora.isoformat(timespec="minutes")})
+        candidatos.append({"id": r["id"], "rep": r, "grupo": g, "score": dict(s, de_zona=FU.nombra_la_zona(f"{r['titulo']}. {r.get('descripcion') or ''}")),
+                           "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
     candidatos += [dict(p, pendiente=True) for p in pendientes]
     conteos["Pendientes de corridas anteriores"] = len(pendientes)

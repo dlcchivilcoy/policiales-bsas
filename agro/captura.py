@@ -14,6 +14,7 @@ import urllib.robotparser
 from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 
+from agro import fuentes as FU
 from scraper import fetch as FE
 
 TZ_AR = timezone(timedelta(hours=-3))
@@ -88,6 +89,7 @@ def normalizar(cruda: dict, fuente: dict, feed: str, ahora: datetime) -> dict:
         "publicado": pub.astimezone(TZ_AR).isoformat(timespec="minutes") if pub else "",
         "capturado": ahora.isoformat(timespec="minutes"),
         "idioma": fuente.get("idioma", "es"), "pais": fuente.get("pais", "AR"), "hash": huella(titulo, desc),
+        "localidad_medio": fuente.get("localidad", ""),
     }
 
 
@@ -186,6 +188,8 @@ def capturar(fuentes: list, ahora: datetime = None, horas_max: int = 48, listar=
             for c in crudas:
                 n = normalizar(c, f, feed, ahora)
                 fila["leidas"] += 1
+                if f.get("solo_campo") and not FU.es_del_campo(f"{n['titulo']}. {n['descripcion']}"):
+                    continue                               # un diario local también publica de todo lo demás
                 if n["canonical_url"] in vistas:
                     continue                               # la misma nota en dos secciones del sitio
                 vistas.add(n["canonical_url"])

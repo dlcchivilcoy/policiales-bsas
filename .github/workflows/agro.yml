@@ -1,7 +1,8 @@
 name: Agro (@diarioyradioagro)
 
-# 06/11/2026: 9 noticias por día, más el posteo de datos de las 05: 07:00 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 ·
-# 18:00 y 19:30 · 21:00 (agro/agenda.py). AGRO_POR_CORRIDA=5 + AGRO_INTERVALO_MIN=20 vuelve a lo de abajo.
+# 06/11/2026: 9 noticias por día: 07:00 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 · 18:00 y 19:30 · 21:00; el posteo de
+# datos a las 08:00 y la historia para participar a las 19:00 (agro/agenda.py). AGRO_POR_CORRIDA=5 +
+# AGRO_INTERVALO_MIN=20 vuelve a lo de abajo.
 #
 # 23/10/2026: a las 05:00, el REEL DE DATOS (agro/reel_datos.py): las placas de clima, alertas, granos, dólar
 # y Chicago en 4:5, 5 s cada una, en @diarioyradioagro con @diarioyradio de colaborador (y en las dos
@@ -40,8 +41,8 @@ name: Agro (@diarioyradioagro)
 # armando y simula; las piezas quedan como artefacto de la corrida).
 on:
   schedule:                 # UTC; Argentina es UTC-3 todo el año. Respaldo 20 min después de cada corrida.
-    - cron: "20 8 * * *"    # 05:20 (el reel de datos, 23/10/2026)
     - cron: "20 10 * * *"   # 07:20
+    - cron: "20 11 * * *"   # 08:20 (el posteo de datos, a las 8 desde el 07/11/2026; cron-job.org 8709629)
     - cron: "20 13 * * *"   # 10:20
     - cron: "20 16 * * *"   # 13:20
     - cron: "20 19 * * *"   # 16:20
@@ -56,7 +57,7 @@ on:
         description: "quién la dispara (cron = cron-job.org)"
         default: "manual"
       tipo:
-        description: '"reel", "carrusel", "historias" o "numeros" (Los números de la semana): para simular, o para publicar fuera de horario (vacío = lo que toca a esta hora)'
+        description: '"reel", "carrusel", "historias", "participa" o "numeros" (Los números de la semana): para simular, o para publicar fuera de horario (vacío = lo que toca a esta hora)'
         default: ""
       fuera_de_cupo:
         description: '"si" + publicar "si" + tipo: publica YA, fuera de la agenda (recuperar un horario que no salió)'
@@ -111,6 +112,8 @@ jobs:
           IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
           AGRO_HISTORIAS_DIARIO: ${{ vars.AGRO_HISTORIAS_DIARIO }}
           AGRO_REEL_DATOS: ${{ vars.AGRO_REEL_DATOS }}
+          AGRO_PARTICIPA: ${{ vars.AGRO_PARTICIPA }}
+          AGRO_MEDIOS_ZONA: ${{ vars.AGRO_MEDIOS_ZONA }}
           AGRO_REEL_DATOS_FB_DIARIO: ${{ vars.AGRO_REEL_DATOS_FB_DIARIO }}
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
           YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}

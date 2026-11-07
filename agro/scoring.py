@@ -41,7 +41,11 @@ Lo que más interesa: hechos que le pasaron a alguien (robos rurales, un pibe qu
 productor que perdió todo), clima que ya pega o está por pegar (tormentas, granizo, inundaciones, lluvias) y
 lo que pasa en un lugar con nombre y apellido. Lo que no interesa aunque suene importante: premios y
 reconocimientos, reclamos de cámaras, «el ecosistema AgTech», lanzamientos de empresas, balances
-macroeconómicos y frases generales sobre «el sector».
+macroeconómicos y frases generales sobre «el sector». Valen mucho los remates, las sociedades y asociaciones
+rurales, las escuelas agrarias y los productores de la zona con nombre y apellido. Algunas notas vienen de
+diarios locales, que publican de todo: si una no tiene que ver con el campo o la producción, ponele 0 en todo.
+La cercanía se mide por DÓNDE PASA el hecho, nunca por dónde está el diario: un diario de la zona también levanta
+noticias nacionales, y esas son nacionales.
 
 Por cada nota devolvés:
 - conversacion (0-25): si alguien se la mandaría a un conocido o la comentaría. Alto si indigna, sorprende,
@@ -115,7 +119,9 @@ def limpiar(d: dict) -> dict:
 def _tanda(tanda: list, redactar, log) -> dict:
     """{índice en `tanda`: puntaje} de UNA llamada a la IA. {} si no contestó."""
     material = "\n\n".join(
-        f"[{i + 1}] Fuente: {n['fuente']} · {n.get('publicado') or 's/f'}\n"
+        f"[{i + 1}] Fuente: {n['fuente']}"
+        + (f" (diario local de {n['localidad_medio']})" if n.get("localidad_medio") else "")
+        + f" · {n.get('publicado') or 's/f'}\n"
         f"Título: {n['titulo']}\nResumen: {(n.get('descripcion') or '-')[:600]}"
         for i, n in enumerate(tanda))
     t0 = time.time()

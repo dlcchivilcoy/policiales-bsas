@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""EL POSTEO DE DATOS de cada mañana, a las 5, en colab entre @diarioyradioagro y @diarioyradio.
+"""EL POSTEO DE DATOS de cada mañana, a las 8 desde el 07/11/2026: a las 5 casi no había gente conectada y aun así
+era lo que más alcance tenía. También suma la lluvia pueblo por pueblo y cierra con «compartilo con otro productor».
+La colab con @diarioyradio se sacó el 01/11/2026 (más abajo). La historia del posteo:
 
 23/10/2026 (pedido del editor: «hacer un reel con todas las placas de las historias en 4:5, que vayan pasando
 cada 5 segundos, y que salga la publicación como colab todos los días a las 5 am»): un reel.
@@ -281,8 +283,8 @@ def cierre(destino: Path, momento: datetime) -> Path:
     im.alpha_composite(marca, ((W - marca.width) // 2, 160))
     y = 160 + marca.height + 60
     for texto, peso, tam, color in (
-            ("Todos los días a las 5, los datos del campo antes de arrancar", "negra", 58, D.BLANCO),
-            ("Guardá este posteo y compartilo con quien trabaja en el campo", "medium", 36, (225, 228, 233))):
+            ("Todas las mañanas, los datos del campo de Chivilcoy y la zona", "negra", 58, D.BLANCO),
+            ("Compartilo con otro productor y guardalo para tenerlo a mano", "medium", 36, (225, 228, 233))):
         f, r = D.ajustar(d, texto, peso, tam, 30, W - 2 * D.X, 3)
         for renglon in r:
             d.text(((W - d.textlength(renglon, font=f)) / 2, y), renglon, font=f, fill=color)
@@ -329,9 +331,9 @@ def caption_carrusel(momento: datetime, datos: dict, tab: list) -> str:
         lineas.append(f"{icono} {t['nombre']}: {t['valor']}{nota}{var}")
     if cierres(tab):
         lineas.append(f"🗓️ {cierres(tab)}")
-    lineas += ["", "👉 Deslizá: el mapa de dónde va a llover (con Chivilcoy en el centro), la pizarra de Rosario, "
-                   "el dólar y Chicago.",
-               "📌 Guardalo para tenerlo a mano y compartilo con quien trabaja en el campo.", "",
+    lineas += ["", "👉 Deslizá: el mapa de dónde va a llover (con Chivilcoy en el centro), la lluvia pueblo por pueblo, "
+                   "la pizarra de Rosario, el dólar y Chicago.",
+               "📲 Compartilo con otro productor y guardalo para tenerlo a mano.", "",
                "Portada ilustrada con una imagen generada con IA. Datos: SMN, MET Norway, Cámara Arbitral de "
                "Cereales de Rosario, BCRA, Banco Nación y CME Group.", "", HASHTAGS_CARRUSEL]
     return "\n".join(lineas)[:2200]
@@ -485,6 +487,9 @@ def armar_carrusel(datos: dict, mem: dict, carpeta: Path, momento: datetime, llu
         r = ML.placa(lluvia, carpeta / "dato_mapa.jpg", momento.date())
         if r:
             lista.append({"tipo": "mapa", "archivo": str(HI.ruta_45(r))})
+        r = ML.placa_pueblos(lluvia, carpeta / "dato_pueblos.jpg", momento.date())
+        if r:
+            lista.append({"tipo": "pueblos", "archivo": str(HI.ruta_45(r))})
     lista += placas(datos, mem, carpeta, momento)
     lista.append({"tipo": "cierre", "archivo": str(cierre(carpeta / "dato_cierre.jpg", momento))})
     lista = lista[:9] + lista[-1:] if len(lista) > 10 else lista       # el tope de Instagram, con el cierre

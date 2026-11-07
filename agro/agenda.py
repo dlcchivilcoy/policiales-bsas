@@ -60,10 +60,15 @@ def historias_datos() -> bool:
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
 CON_DOS_POSTEOS = ((10, 0), (13, 0), (18, 0))     # las demás corridas publican uno (06/11/2026)
 INTERVALO_MIN = 90           # entre un posteo y el siguiente de la misma corrida
-TIPOS = ("reel", "carrusel", "historias", "reel_datos")
+TIPOS = ("reel", "carrusel", "historias", "reel_datos", "participa")
 # 23/10/2026: el REEL DE DATOS de cada mañana (agro/reel_datos.py), con su propia corrida. AGRO_REEL_DATOS
 # cambia la hora; "0" lo apaga.
-REEL_DATOS_DEFECTO = "05:00"
+# 06/11/2026: a las 08:00 (a las 5 casi no hay nadie conectado). Hay que mover también la tarea 8709629 de cron-job.org.
+REEL_DATOS_DEFECTO = "08:00"
+# Lo que no va al feed: no cuenta para los 90 minutos entre posteos.
+FUERA_DEL_FEED = ("historias", "participa")
+# 06/11/2026: la historia que invita a participar (agro/participa.py). AGRO_PARTICIPA: otra hora, o "0" la apaga.
+PARTICIPA_DEFECTO = "19:00"
 TOLERANCIA_MIN = 40          # una corrida que arranca hasta 40 min tarde es la de ese horario
 ANTES_MIN = 5                # y hasta 5 min antes (el reloj de cron-job.org y el de GitHub)
 BLOQUES = ("manana", "mediodia", "cierre")
@@ -94,6 +99,9 @@ def agenda_texto_defecto() -> str:
     datos = hora_reel_datos()
     if datos:
         partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
+    participa = (os.environ.get("AGRO_PARTICIPA") or PARTICIPA_DEFECTO).strip()
+    if participa.lower() not in ("0", "no", "off"):
+        partes.append(f"{participa} participa")
     for i, ini in enumerate(inicios):
         fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
         partes += [f"{t // 60:02d}:{t % 60:02d} reel"
@@ -137,7 +145,7 @@ def hora_reel_datos():
             return int(h), int(m or 0)
     except ValueError:
         pass
-    return 5, 0
+    return 8, 0
 
 
 def corridas() -> list:
@@ -169,7 +177,7 @@ def inicio_corrida(horario: datetime):
 def _orden(item):
     """Mismo horario: primero las historias (no son del feed), después el reel o el carrusel."""
     t, tipo = item
-    return t, tipo != "historias"
+    return t, tipo not in FUERA_DEL_FEED
 
 
 def corrida(ahora: datetime):

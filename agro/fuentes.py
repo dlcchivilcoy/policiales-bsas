@@ -49,7 +49,11 @@ Sumada el 13/10/2026 (medio): Agroclave ahora publica DENTRO de La Capital de Ro
   `foto`: False = su imagen no se usa aunque sea oficial (la Bolsa: placas de 500 px con texto).
   `horas`: ventana propia de una fuente semanal (la Bolsa: 7 días, hasta el número siguiente; el resto, la de la pasada).
   Campos para un sitio sin RSS: `portadas` (páginas a leer) + `patron` (qué links son notas).
+  `solo_campo` + `localidad`: un diario local que publica de todo; solo entra lo que habla del campo.
 """
+import os
+import re
+import unicodedata
 
 FUENTES = [
     {"nombre": "TodoAgro", "base": "https://www.todoagro.com.ar",
@@ -88,9 +92,59 @@ FUENTES = [
 ]
 
 
+# MEDIOS DE LA ZONA (06/11/2026, pedido del editor: que sea la cuenta del campo de Chivilcoy y la zona; el 63 % de
+# los seguidores es de Chivilcoy). Los diarios locales del padrón de policiales con RSS que funciona, SOLO lo que
+# habla del campo (publican de todo). Traen poco pero es lo que ningún medio nacional cuenta: el pedido de
+# emergencia agropecuaria de Lincoln, la Sociedad Rural de Roque Pérez. AGRO_MEDIOS_ZONA=0 los apaga.
+ZONA = ("25 de Mayo", "9 de Julio", "Alberti", "Bolivar", "Bragado", "Carlos Casares", "Carmen de Areco", "Chacabuco",
+        "General Arenales", "General Viamonte", "Junin", "Las Flores", "Lincoln", "Lobos", "Mercedes", "Navarro",
+        "Pehuajo", "Rojas", "Roque Perez", "Saladillo", "Salto", "San Andres de Giles", "Suipacha")
+# Además de las palabras firmes del campo de reels/colab_agro.py. «hacienda» no: también es la Secretaría de Hacienda.
+MAS_CAMPO = ("granizo", "ganado", "novillo-", "ternero-", "productores rurales", "productor rural", "cuatrerismo")
+
+
+def medios_zona_activos() -> bool:
+    return (os.environ.get("AGRO_MEDIOS_ZONA") or "1").strip() != "0"
+
+
+def de_la_zona() -> list:
+    from scraper.medios import MEDIOS
+    salida, vistos = [], set()
+    for m in MEDIOS:
+        if m["localidad"] not in ZONA or m.get("navegador") or not m.get("rss") or m["dominio"] in vistos:
+            continue
+        vistos.add(m["dominio"])
+        salida.append({"nombre": m["nombre"], "base": m["base"], "rss": [m["rss"]], "tipo": "medio",
+                       "localidad": m["localidad"], "solo_campo": True, "activa": True})
+    return salida
+
+
+def es_del_campo(texto: str) -> bool:
+    from reels import colab_agro as CO
+    t = CO._norm(texto)
+    return bool(CO._hay(t, CO.FIRMES) or CO._hay(t, MAS_CAMPO))
+
+
+PUEBLOS_ZONA = ("Chivilcoy", "Moquehuá", "Gobernador Ugarte", "Mechita", "Gorostiaga", "Ramón Biaus", "Emilio Ayarza",
+                "Palemón Huergo", "Indacochea", "Benítez", "San Sebastián", "25 de Mayo", "9 de Julio", "Alberti", "Bragado",
+                "Carlos Casares", "Carmen de Areco", "Chacabuco", "Junín", "Lobos", "Mercedes", "Navarro", "Rojas",
+                "Roque Pérez", "Saladillo", "Salto", "San Andrés de Giles", "Suipacha")
+
+
+def _sin_tildes(texto: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", texto or "") if unicodedata.category(c) != "Mn")
+
+
+def nombra_la_zona(texto: str) -> bool:
+    """¿La nota nombra un pueblo de la zona? No alcanza con que la publique un diario de acá: los diarios locales
+    también levantan noticias nacionales. Distingue mayúsculas: «salto» o «lobos» en minúscula no son el pueblo."""
+    t = _sin_tildes(texto)
+    return any(re.search(rf"(?<!\w){re.escape(_sin_tildes(p))}(?!\w)", t) for p in PUEBLOS_ZONA)
+
+
 def activas() -> list:
-    return [f for f in FUENTES if f.get("activa", True)]
+    return [f for f in FUENTES if f.get("activa", True)] + (de_la_zona() if medios_zona_activos() else [])
 
 
 def por_nombre(nombre: str) -> dict:
-    return next((f for f in FUENTES if f["nombre"] == nombre), {})
+    return next((f for f in FUENTES + de_la_zona() if f["nombre"] == nombre), {})

@@ -75,6 +75,7 @@ def pasadas() -> list:
 EMPUJE_TEMA = {"clima": 10, "sanidad": 5, "ganaderia": 4, "tecnologia": 3, "costos": 3, "reglas": 2, "dolar": 1,
                "internacional": 0, "precios": 0, "campana": 0}
 URGENTE_TOLERANCIA = 10     # una urgente entra aunque le falten hasta 10 puntos para el mínimo
+BONO_ZONA = 8               # una nota de un diario de la zona sale antes (ordena; el mínimo se mira igual)
 
 
 def bono_video() -> int:
@@ -87,6 +88,8 @@ def prioridad(s: dict, formato: str = "reel") -> tuple:
     """La clave de orden de una candidata: (urgente, puntaje + empuje del tema [+ carrusel] [+ video], comercial).
     El bono del video ordena, no salva: el mínimo de puntaje se sigue mirando sobre ai_score."""
     valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0)
+    if s.get("de_zona"):
+        valor += BONO_ZONA
     if formato == "carrusel":
         valor += 2 * (s.get("potencial_carrusel", 5) - 5)
     elif s.get("con_video"):
@@ -146,8 +149,9 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         if s.get("tema") and temas.get(s["tema"], 0) >= MAX_MISMO_TEMA:
             descartados.append((c, f"ya hay {MAX_MISMO_TEMA} del tema «{s['tema']}» hoy"))
             continue
-        if s.get("tema_doc") == "clima" and clima >= MAX_CLIMA and not s.get("urgente"):
-            descartados.append((c, f"ya hay {MAX_CLIMA} de clima hoy"))
+        # Una urgente puede pasarse por una: la IA marca como urgente más de lo que es.
+        if s.get("tema_doc") == "clima" and clima >= MAX_CLIMA + bool(s.get("urgente")):
+            descartados.append((c, f"ya hay {clima} de clima hoy"))
             continue
         if lugar <= 0:
             descartados.append((c, f"cupo del día lleno ({cupo_dia})"))

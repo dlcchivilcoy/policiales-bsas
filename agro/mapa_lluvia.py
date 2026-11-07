@@ -209,6 +209,59 @@ def capa_lluvia(grilla: list, lado: int = LADO) -> Image.Image:
     return Image.fromarray(rgba, "RGBA").filter(ImageFilter.GaussianBlur(3))
 
 
+# LA LLUVIA PUEBLO POR PUEBLO (06/11/2026): los pueblos donde están los seguidores. Para Mechita y Gobernador Ugarte
+# alcanza con la coordenada aproximada: la grilla tiene puntos cada ~22 km.
+PUEBLOS = (("Alberti", -35.032, -60.280), ("Moquehuá", -35.092, -59.776), ("Gobernador Ugarte", -35.163, -60.081),
+           ("Gorostiaga", -34.839, -59.866), ("Bragado", -35.116, -60.490), ("Mechita", -35.067, -60.403),
+           ("Suipacha", -34.769, -59.687), ("Chacabuco", -34.642, -60.471), ("25 de Mayo", -35.434, -60.173))
+
+
+def lluvia_por_pueblo(datos: dict) -> list:
+    """[(pueblo, mm previstos)]: Chivilcoy primero y después los pueblos, de más a menos lluvia."""
+    if not datos or not datos.get("grilla"):
+        return []
+    campo = _campo(datos["grilla"])
+    filas = []
+    for nombre, lat, lon in PUEBLOS:
+        x, y = _xy(lon, lat)
+        if 0 <= x < LADO and 0 <= y < LADO:
+            filas.append((nombre, float(campo[int(y), int(x)])))
+    filas.sort(key=lambda f: -f[1])
+    total = datos.get("chivilcoy_total")
+    if total is None:
+        x, y = _xy(CENTRO[1], CENTRO[0])
+        total = float(campo[int(y), int(x)])
+    return [("Chivilcoy", float(total))] + filas
+
+
+def placa_pueblos(datos: dict, destino: Path, hoy: date, seccion: str = "EL CAMPO HOY") -> Path | None:
+    """La lista pueblo por pueblo (9:16 y 4:5). Es PRONÓSTICO: nunca dice cuánto llovió."""
+    filas = lluvia_por_pueblo(datos)
+    if not filas or max(mm for _, mm in filas) < 2:      # una lista de ceros no le dice nada a nadie
+        return None
+    from agro import historias as HI
+    im, d = HI.lienzo()
+    y = HI.encabezado(im, d, seccion, "La lluvia, pueblo por pueblo",
+                      f"Milímetros previstos para las próximas {datos.get('horas', HORAS)} horas")
+    alto = 80
+    tope = max(max(mm for _, mm in filas), 20.0)         # 1 mm no puede verse como una barra llena
+    for nombre, mm in filas:
+        HI.tarjeta(d, y, alto - 10)
+        chivilcoy = nombre == "Chivilcoy"
+        d.text((D.X + 6, y + 14), nombre, font=D.fuente("bold", 36), fill=D.NARANJA if chivilcoy else D.BLANCO)
+        texto = f"{mm:.0f} mm" if mm >= 1 else "0 mm"
+        f = D.fuente("negra", 40)
+        d.text((HI.W - D.X - d.textlength(texto, font=f), y + 11), texto, font=f,
+               fill=(120, 180, 255) if mm >= 1 else HI.IGUAL)
+        if mm >= 1:
+            largo = round(250 * mm / tope)
+            d.rounded_rectangle((520, y + 26, 520 + max(10, largo), y + 44), radius=8, fill=(64, 140, 245))
+        y += alto
+    HI.pie(d, f"MET Norway, pronóstico por modelo (ECMWF), CC BY 4.0 · {HI.M.fecha_corta(hoy.isoformat())}",
+           "Es un pronóstico, no una medición: puede cambiar y cada pueblo puede recibir distinto.")
+    return HI.guardar(im, destino)
+
+
 def _rotulo(d, x, y, texto, f, color=(232, 235, 240)):
     d.text((x, y), texto, font=f, fill=color, stroke_width=4, stroke_fill=(24, 26, 30))
 
