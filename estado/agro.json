@@ -29228,6 +29228,26 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cdfc333b6e5d9b94": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 12,
+      "impacto_economico": 5,
+      "cercania_argentina": 0,
+      "potencial_reel": 2,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "malezas",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un consejo técnico útil sobre mezclas de tanque, pero viene de un medio internacional y no nombra un caso local.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31226,7 +31246,8 @@
       "https://bichosdecampo.com/con-otros-dos-planteos-de-apelacion-resueltos-y-una-propuesta-de-trabajo-a-fason-parece-que-sancor-intentara-finalmente-conseguir-un-nuevo-dueno": "2026-11-07",
       "https://lanacion.com.ar/economia/campo/super-nino-miles-de-hectareas-fueron-alcanzadas-por-violentas-tormentas-y-hay-cultivos-barridos-por-nid07112026": "2026-11-07",
       "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista": "2026-11-07",
-      "https://bichosdecampo.com/que-ueno-el-sector-agroexportador-de-paraguay-recibio-un-impulso-de-competitividad-proveniente-del-frente-cambiario": "2026-11-07"
+      "https://bichosdecampo.com/que-ueno-el-sector-agroexportador-de-paraguay-recibio-un-impulso-de-competitividad-proveniente-del-frente-cambiario": "2026-11-07",
+      "https://croplife.com/crop-inputs/herbicides/think-through-your-tank-mix-how-to-avoid-herbicide-antagonism": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33223,7 +33244,8 @@
       "con otros dos planteos de apelacion resueltos y una propuesta de trabajo a fason parece que sancor intentara finalmente conseguir un nuevo dueno": "2026-11-07",
       "super nino miles de hectareas fueron alcanzadas por violentas tormentas y hay cultivos barridos por completo": "2026-11-07",
       "siembra de gruesa el maiz supero la mitad del area prevista": "2026-11-07",
-      "que ueno el sector agroexportador de paraguay recibio un impulso de competitividad proveniente del frente cambiario": "2026-11-07"
+      "que ueno el sector agroexportador de paraguay recibio un impulso de competitividad proveniente del frente cambiario": "2026-11-07",
+      "think through your tank mix how to avoid herbicide antagonism": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35220,7 +35242,8 @@
       "d171f53a50cae0f2": "2026-11-07",
       "0ef6b7c0e8e689cb": "2026-11-07",
       "e1d7a3befa86a64e": "2026-11-07",
-      "f8447d4f2c4be6ac": "2026-11-07"
+      "f8447d4f2c4be6ac": "2026-11-07",
+      "cdfc333b6e5d9b94": "2026-11-07"
     }
   },
   "elegidas": [
@@ -62390,6 +62413,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_15d53511174d_portada.jpg"
+    },
+    {
+      "id": "fd5417de5fbd",
+      "cuando": "2026-11-07T19:30-03:00",
+      "titulo_original": "Llega la Fiesta de la Tradición en Bolívar: dos jornadas de jineteada, pruebas de rienda y un gran baile",
+      "descripcion": "La Sociedad Rural de Bolívar será escenario de la 3º Fiesta de la Tradición, que se desarrollará el sábado 7 y domingo 8 de noviembre. El encuentro organizado por Roque Gallo contará con pruebas de rienda, jineteadas con $18 millones en premios, remate de caballos, montas especiales y un baile famil",
+      "fuente": "Presente Noticias",
+      "url": "https://www.presentenoticias.com/noticias/2026/11/05/22998-llega-la-fiesta-de-la-tradicion-en-bolivar-dos-jornadas-de-jineteada-pruebas-de-rienda-y-un-gran-baile",
+      "titular": "Bolívar organiza la tercera Fiesta de la Tradición con millonarios premios",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 10,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 70,
+        "commercial_score": 72,
+        "subtema": "ganaderia",
+        "tema": "fiesta tradición",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Evento tradicional de la Sociedad Rural local, convoca a toda la comunidad rural.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          75
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "68696498-c0a6-492d-810d-0300ada94fef",
+          "slug": "bolivar-palpita-la-fiesta-de-la-tradicion-con-jineteadas-y-18-def919",
+          "url": "https://www.diariolacampaña.com.ar/n/bolivar-palpita-la-fiesta-de-la-tradicion-con-jineteadas-y-18-def919",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18014794235970643",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1751511390313191",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "17923232175450494"
+        },
+        "historia_facebook": {
+          "id": "2432426140622874"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fd5417de5fbd_portada.jpg"
     }
   ],
   "pendientes": [
@@ -62664,79 +62751,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-07T07:00-03:00"
-    },
-    {
-      "id": "fd5417de5fbd",
-      "rep": {
-        "id": "fd5417de5fbd",
-        "fuente": "Presente Noticias",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.presentenoticias.com/rss/noticias",
-        "url": "https://www.presentenoticias.com/noticias/2026/11/05/22998-llega-la-fiesta-de-la-tradicion-en-bolivar-dos-jornadas-de-jineteada-pruebas-de-rienda-y-un-gran-baile",
-        "canonical_url": "https://presentenoticias.com/noticias/2026/11/05/22998-llega-la-fiesta-de-la-tradicion-en-bolivar-dos-jornadas-de-jineteada-pruebas-de-rienda-y-un-gran-baile",
-        "titulo": "Llega la Fiesta de la Tradición en Bolívar: dos jornadas de jineteada, pruebas de rienda y un gran baile",
-        "titulo_norm": "llega la fiesta de la tradicion en bolivar dos jornadas de jineteada pruebas de rienda y un gran baile",
-        "descripcion": "La Sociedad Rural de Bolívar será escenario de la 3º Fiesta de la Tradición, que se desarrollará el sábado 7 y domingo 8 de noviembre. El encuentro organizado por Roque Gallo contará con pruebas de rienda, jineteadas con $18 millones en premios, remate de caballos, montas especiales y un baile familiar con entrada libre y gratuita.",
-        "imagen_url": "https://presentenoticias-s3.cdn.net.ar/s3i233/2023/09/presentenoticias/images/21/60/216021_939a9036cbb754e7836ab9981664a953e18455e21cdc9ba50c301e0bc99b56e7/md.webp",
-        "autor": "",
-        "publicado": "2026-11-06T12:40-03:00",
-        "capturado": "2026-11-07T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f6f02dcae1c35783",
-        "localidad_medio": "Bolivar"
-      },
-      "grupo": [
-        {
-          "id": "fd5417de5fbd",
-          "fuente": "Presente Noticias",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.presentenoticias.com/rss/noticias",
-          "url": "https://www.presentenoticias.com/noticias/2026/11/05/22998-llega-la-fiesta-de-la-tradicion-en-bolivar-dos-jornadas-de-jineteada-pruebas-de-rienda-y-un-gran-baile",
-          "canonical_url": "https://presentenoticias.com/noticias/2026/11/05/22998-llega-la-fiesta-de-la-tradicion-en-bolivar-dos-jornadas-de-jineteada-pruebas-de-rienda-y-un-gran-baile",
-          "titulo": "Llega la Fiesta de la Tradición en Bolívar: dos jornadas de jineteada, pruebas de rienda y un gran baile",
-          "titulo_norm": "llega la fiesta de la tradicion en bolivar dos jornadas de jineteada pruebas de rienda y un gran baile",
-          "descripcion": "La Sociedad Rural de Bolívar será escenario de la 3º Fiesta de la Tradición, que se desarrollará el sábado 7 y domingo 8 de noviembre. El encuentro organizado por Roque Gallo contará con pruebas de rienda, jineteadas con $18 millones en premios, remate de caballos, montas especiales y un baile familiar con entrada libre y gratuita.",
-          "imagen_url": "https://presentenoticias-s3.cdn.net.ar/s3i233/2023/09/presentenoticias/images/21/60/216021_939a9036cbb754e7836ab9981664a953e18455e21cdc9ba50c301e0bc99b56e7/md.webp",
-          "autor": "",
-          "publicado": "2026-11-06T12:40-03:00",
-          "capturado": "2026-11-07T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f6f02dcae1c35783",
-          "localidad_medio": "Bolivar"
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 10,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 70,
-        "commercial_score": 72,
-        "subtema": "ganaderia",
-        "tema": "fiesta tradición",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Evento tradicional de la Sociedad Rural local, convoca a toda la comunidad rural.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          75
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T19:00:29-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-07T19:35:13-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
