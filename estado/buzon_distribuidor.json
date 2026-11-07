@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-07T00:30:59.000Z",
+  "actualizado": "2026-11-07T00:31:01.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.latrochadigital.com.ar/2026/11/04/millonario-robo-en-un-corralon-de-chacabuco-un-empleado-imputado/",
@@ -355,6 +355,30 @@
       "volanta": "Alerta meteorológica en 9 de Julio",
       "categoria": "alerta_meteorologica",
       "distancia_km": 99.4,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/choque-una-persona-lesionada-en.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-07T00:31:01.000Z",
+      "titulo": "Una mujer herida tras un choque entre un auto y una moto en Chacabuco",
+      "descripcion": "Una motociclista de 36 años debió ser trasladada en ambulancia al hospital tras colisionar contra un automóvil en la intersección del acceso Hipólito Yrigoyen y la calle Carlos Gardel.",
+      "texto_tiktok": "Una motociclista de 36 años resultó herida este mediodía tras protagonizar un choque contra un automóvil en la ciudad de Chacabuco.\n\nEl siniestro vial ocurrió en la intersección del acceso Hipólito Yrigoyen y la calle Carlos Gardel, donde colisionaron una moto Yamaha YBR y un Fiat Palio.\n\nEl rodado menor era conducido por una mujer de apellido Márquez, de 36 años, quien sufrió una lesión en una pierna y fue trasladada en ambulancia al hospital local.\n\nEn tanto, el automóvil era guiado por una mujer de apellido Bustos, de 70 años.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #SiniestroVial #Transito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-06_2134_05_chacabuco_una-mujer-herida-tras-un-choqu.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-una-mujer-de-36-anos-herida-tras-un-choque-entre-moto-daf543",
+      "youtube_url": "https://youtube.com/shorts/PH5I_eW6H98",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Choque en Chacabuco",
+      "categoria": "accidente_vial",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
