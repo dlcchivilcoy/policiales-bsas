@@ -28359,6 +28359,27 @@
       "urgente": false,
       "potencial_carrusel": 9,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "411d7e267bdd935e": {
+      "impacto_economico": 14,
+      "interes_productores": 12,
+      "innovacion": 10,
+      "cercania_argentina": 10,
+      "cercania_pba": 10,
+      "potencial_reel": 4,
+      "conversacion": 6,
+      "potencial_comercial": 9,
+      "ai_score": 75,
+      "commercial_score": 75,
+      "subtema": "agtech",
+      "tema": "billetera digital",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Moviliza el ecosistema cooperativo de la región núcleo con servicios financieros digitales de alta adopción.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -30285,7 +30306,9 @@
       "https://bichosdecampo.com/barajar-y-dar-de-nuevo-los-fondos-agricolas-en-chicago-terminaron-de-liquidar-las-posiciones-compradas-en-contratos-de-maiz": "2026-11-06",
       "https://lanacion.com.ar/economia/campo/envases-vacios-de-agroquimicos-el-44-del-plastico-recuperado-se-usa-para-fabricar-canos-de-fibra-nid06112026": "2026-11-06",
       "https://todoagro.com.ar/sial-paris-peman-semillas-pone-el-foco-en-la-calidad-para-ganar-mercados-internacionales": "2026-11-06",
-      "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas": "2026-11-06"
+      "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas": "2026-11-06",
+      "https://infocampo.com.ar/reunion-con-sturzenegger-la-polemica-por-el-visec-no-cesa-y-ahora-cra-le-llevo-su-reclamo-al-gobierno": "2026-11-06",
+      "https://lacapital.com.ar/agro/afa-amplia-los-servicios-su-billetera-y-tendra-tarjeta-n10290928.html": "2026-11-06"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -32210,7 +32233,9 @@
       "barajar y dar de nuevo los fondos agricolas en chicago terminaron de liquidar las posiciones compradas en contratos de maiz": "2026-11-06",
       "envases vacios de agroquimicos el 44 del plastico recuperado se usa para fabricar canos de fibra optica": "2026-11-06",
       "sial paris peman semillas pone el foco en la calidad para ganar mercados internacionales": "2026-11-06",
-      "verde esperanza una escuela granja del litoral llevo el riego por goteo subterraneo a un tambo y hara pruebas para producir mas pasto y depender menos de las reservas": "2026-11-06"
+      "verde esperanza una escuela granja del litoral llevo el riego por goteo subterraneo a un tambo y hara pruebas para producir mas pasto y depender menos de las reservas": "2026-11-06",
+      "reunion con sturzenegger la polemica por el visec no cesa y ahora cra le llevo su reclamo al gobierno": "2026-11-06",
+      "afa amplia los servicios de su billetera y tendra tarjeta": "2026-11-06"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -34135,7 +34160,9 @@
       "32f338e0bfde6211": "2026-11-06",
       "88a039d70066a021": "2026-11-06",
       "2edd04a5b2a6a357": "2026-11-06",
-      "3c10e2f82a337281": "2026-11-06"
+      "3c10e2f82a337281": "2026-11-06",
+      "dcea3a3dde5faa81": "2026-11-06",
+      "411d7e267bdd935e": "2026-11-06"
     }
   },
   "elegidas": [
@@ -60649,49 +60676,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a328019ef5b7_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "17989455ee86",
-      "rep": {
-        "id": "17989455ee86",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas/",
-        "canonical_url": "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas",
-        "titulo": "Verde Esperanza: Una escuela granja del litoral llevó el riego por goteo subterráneo a un tambo y hará pruebas para producir más pasto y depender menos de las reservas",
-        "titulo_norm": "verde esperanza una escuela granja del litoral llevo el riego por goteo subterraneo a un tambo y hara pruebas para producir mas pasto y depender menos de las reservas",
-        "descripcion": "En Esperanza, Santa Fe, la Escuela de Agricultura, Ganadería y Granja de la Universidad Nacional del Litoral (UNL) instaló un sistema de riego por goteo subterráneo en cinco hectáreas destinadas a la producción forrajera de su tambo. La experiencia busca comprobar hasta qué punto esta tecnología, mucho más asociada a los cultivos agrícolas intensivos, puede […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/riego-EAGG-5_vga.jpg",
-        "autor": "Diego Mañas",
-        "publicado": "2026-11-06T19:10-03:00",
-        "capturado": "2026-11-06T19:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3c10e2f82a337281"
-      },
-      "grupo": [
-        {
-          "id": "17989455ee86",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas/",
-          "canonical_url": "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas",
-          "titulo": "Verde Esperanza: Una escuela granja del litoral llevó el riego por goteo subterráneo a un tambo y hará pruebas para producir más pasto y depender menos de las reservas",
-          "titulo_norm": "verde esperanza una escuela granja del litoral llevo el riego por goteo subterraneo a un tambo y hara pruebas para producir mas pasto y depender menos de las reservas",
-          "descripcion": "En Esperanza, Santa Fe, la Escuela de Agricultura, Ganadería y Granja de la Universidad Nacional del Litoral (UNL) instaló un sistema de riego por goteo subterráneo en cinco hectáreas destinadas a la producción forrajera de su tambo. La experiencia busca comprobar hasta qué punto esta tecnología, mucho más asociada a los cultivos agrícolas intensivos, puede […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/riego-EAGG-5_vga.jpg",
-          "autor": "Diego Mañas",
-          "publicado": "2026-11-06T19:10-03:00",
-          "capturado": "2026-11-06T19:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3c10e2f82a337281"
-        }
-      ],
+      "cuando": "2026-11-06T21:00-03:00",
+      "titulo_original": "Verde Esperanza: Una escuela granja del litoral llevó el riego por goteo subterráneo a un tambo y hará pruebas para producir más pasto y depender menos de las reservas",
+      "descripcion": "En Esperanza, Santa Fe, la Escuela de Agricultura, Ganadería y Granja de la Universidad Nacional del Litoral (UNL) instaló un sistema de riego por goteo subterráneo en cinco hectáreas destinadas a la producción forrajera de su tambo. La experiencia busca comprobar hasta qué punto esta tecnología, mu",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/verde-esperanza-una-escuela-granja-del-litoral-llevo-el-riego-por-goteo-subterraneo-a-un-tambo-y-hara-pruebas-para-producir-mas-pasto-y-depender-menos-de-las-reservas/",
+      "titular": "Instalan riego por goteo subterráneo en un tambo santafesino para producir más",
+      "volanta": "AgTech",
       "score": {
         "impacto_economico": 11,
         "interes_productores": 13,
@@ -60713,7 +60707,100 @@
         "potencial_carrusel": 9,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
       },
-      "cuando": "2026-11-06T19:20-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-06T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "87b879c5-7c1f-4a48-bf75-3e0df3251bbf",
+          "slug": "instalan-riego-por-goteo-subterraneo-en-un-tambo-de-la-unl-para-0fd556",
+          "url": "https://www.diariolacampaña.com.ar/n/instalan-riego-por-goteo-subterraneo-en-un-tambo-de-la-unl-para-0fd556",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18150436429487783",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1750367800427550",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18160172107508732"
+        },
+        "historia_facebook": {
+          "id": "2579456562576433"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_17989455ee86_portada.jpg"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "5af9b6a68b0a",
+      "rep": {
+        "id": "5af9b6a68b0a",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/afa-amplia-los-servicios-su-billetera-y-tendra-tarjeta-n10290928.html",
+        "canonical_url": "https://lacapital.com.ar/agro/afa-amplia-los-servicios-su-billetera-y-tendra-tarjeta-n10290928.html",
+        "titulo": "AFA amplía los servicios de su billetera y tendrá tarjeta",
+        "titulo_norm": "afa amplia los servicios de su billetera y tendra tarjeta",
+        "descripcion": "La cooperativa suma funciones a la herramienta digital que lanzó para asociados y usuarios en junio de este año, y prevé incorporar una tarjeta Visa",
+        "imagen_url": "https://media.lacapital.com.ar/p/5b1d7a211201c1c4552a21010cdab0a3/adjuntos/203/imagenes/103/516/0103516173/1200x675/smart/telefono-espigas-doradas.png",
+        "autor": "",
+        "publicado": "2026-11-06T16:35-03:00",
+        "capturado": "2026-11-06T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "411d7e267bdd935e"
+      },
+      "grupo": [
+        {
+          "id": "5af9b6a68b0a",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/afa-amplia-los-servicios-su-billetera-y-tendra-tarjeta-n10290928.html",
+          "canonical_url": "https://lacapital.com.ar/agro/afa-amplia-los-servicios-su-billetera-y-tendra-tarjeta-n10290928.html",
+          "titulo": "AFA amplía los servicios de su billetera y tendrá tarjeta",
+          "titulo_norm": "afa amplia los servicios de su billetera y tendra tarjeta",
+          "descripcion": "La cooperativa suma funciones a la herramienta digital que lanzó para asociados y usuarios en junio de este año, y prevé incorporar una tarjeta Visa",
+          "imagen_url": "https://media.lacapital.com.ar/p/5b1d7a211201c1c4552a21010cdab0a3/adjuntos/203/imagenes/103/516/0103516173/1200x675/smart/telefono-espigas-doradas.png",
+          "autor": "",
+          "publicado": "2026-11-06T16:35-03:00",
+          "capturado": "2026-11-06T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "411d7e267bdd935e"
+        }
+      ],
+      "score": {
+        "impacto_economico": 14,
+        "interes_productores": 12,
+        "innovacion": 10,
+        "cercania_argentina": 10,
+        "cercania_pba": 10,
+        "potencial_reel": 4,
+        "conversacion": 6,
+        "potencial_comercial": 9,
+        "ai_score": 75,
+        "commercial_score": 75,
+        "subtema": "agtech",
+        "tema": "billetera digital",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Moviliza el ecosistema cooperativo de la región núcleo con servicios financieros digitales de alta adopción.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+      },
+      "cuando": "2026-11-06T21:00-03:00"
     },
     {
       "id": "31c88e776eca",
@@ -60774,7 +60861,8 @@
         "tema_doc": "reglas",
         "urgente": false,
         "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "con_video": true
       },
       "cuando": "2026-11-06T19:00-03:00"
     },
@@ -61362,8 +61450,8 @@
       "cuando": "2026-11-05T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-06T19:23:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-06T21:03:46-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
