@@ -707,6 +707,13 @@ for nombre, (mio, remoto) in {"policiales con la copia vieja": (viejo_, nuevo_),
              and set(c_["indice"]["url"]) == {"u1", "u2"} and set(c_["scores"]) == {"h1", "h2"}
              and c_["pendientes"] == [{"id": "p-nuevo"}])
 
+_cd = GE.COMBINAR["agro.json"]({"reel_datos": {"2026-11-07T08:00": {"publicado": {"instagram": {"id": "1"}}}}},
+                               {"reel_datos": {"2026-11-06T08:00": {"publicado": {"instagram": {"id": "0"}}},
+                                               "2026-11-07T08:00": {"publicado": {"estado": "publicando"}}}})
+chequear("combinar agro.json: el posteo de datos no se pierde y gana el que tiene resultado",
+         set(_cd["reel_datos"]) == {"2026-11-06T08:00", "2026-11-07T08:00"}
+         and _cd["reel_datos"]["2026-11-07T08:00"]["publicado"]["instagram"]["id"] == "1")
+
 # --- agenda (6/11/2026): 9 noticias repartidas en las mismas 6 corridas ----------------------------
 from agro import agenda as AG  # noqa: E402
 

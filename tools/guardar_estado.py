@@ -187,6 +187,13 @@ def combinar_agro(nuestro: dict, remoto: dict) -> dict:
             hist[k] = v
     if hist:
         out["historias"] = hist
+    # 07/11/2026: el posteo de datos tampoco se puede perder: sin esto, el respaldo no sabía que ya había salido.
+    datos = dict(remoto.get("reel_datos") or {})
+    for k, v in (nuestro.get("reel_datos") or {}).items():
+        if k not in datos or peso(v) >= peso(datos[k]):
+            datos[k] = v
+    if datos:
+        out["reel_datos"] = datos
     merc = {k: dict(v) for k, v in (remoto.get("mercado") or {}).items()}
     for k, v in (nuestro.get("mercado") or {}).items():
         merc.setdefault(k, {}).update(v)
