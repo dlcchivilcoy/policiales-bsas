@@ -720,9 +720,10 @@ from agro import agenda as AG  # noqa: E402
 for _k in ("AGRO_AGENDA", "AGRO_CORRIDAS", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN", "AGRO_HISTORIAS_DATOS"):
     os.environ.pop(_k, None)
 _ag = AG.agenda()
-chequear("agenda: 9 noticias, el posteo de datos a las 8 y la historia para participar a las 19",
-         AG.cuantos("reel") == 9 and AG.cuantos("carrusel") == 0 and len(_ag) == 11
-         and (8, 0, "reel_datos") in _ag and (19, 0, "participa") in _ag)
+chequear("agenda: 9 noticias, el posteo de datos a las 8 y 4 historias para participar",
+         AG.cuantos("reel") == 9 and AG.cuantos("carrusel") == 0 and len(_ag) == 14
+         and (8, 0, "reel_datos") in _ag
+         and [(h, m) for h, m, t in _ag if t == "participa"] == [(11, 0), (14, 0), (19, 0), (21, 30)])
 chequear("agenda: los horarios de las noticias", [f"{h:02d}:{m:02d}" for h, m, t in _ag if t == "reel"]
          == ["07:00", "10:00", "11:30", "13:00", "14:30", "16:00", "18:00", "19:30", "21:00"])
 _feed = [h * 60 + m for h, m, t in _ag if t == "reel"]
@@ -735,8 +736,16 @@ chequear("la corrida de las 08: solo el posteo de datos", AG.corrida(datetime(20
 chequear("la corrida de las 18: la historia para participar entre las dos noticias",
          [(f"{t:%H:%M}", k) for t, k in AG.corrida(datetime(2026, 10, 16, 18, 5, tzinfo=CA.TZ_AR))[2]]
          == [("18:00", "reel"), ("19:00", "participa"), ("19:30", "reel")])
+chequear("la corrida de las 10: la historia entre las dos noticias",
+         [(f"{t:%H:%M}", k) for t, k in AG.corrida(datetime(2026, 10, 16, 10, 5, tzinfo=CA.TZ_AR))[2]]
+         == [("10:00", "reel"), ("11:00", "participa"), ("11:30", "reel")])
+chequear("la corrida de las 21: la noticia y media hora después la historia",
+         [(f"{t:%H:%M}", k) for t, k in AG.corrida(datetime(2026, 10, 16, 21, 5, tzinfo=CA.TZ_AR))[2]]
+         == [("21:00", "reel"), ("21:30", "participa")])
 os.environ["AGRO_PARTICIPA"] = "0"
-chequear("AGRO_PARTICIPA=0 la apaga", AG.cuantos("participa") == 0)
+chequear("AGRO_PARTICIPA=0 las apaga", AG.cuantos("participa") == 0)
+os.environ["AGRO_PARTICIPA"] = "12:00, 20:15"
+chequear("AGRO_PARTICIPA cambia las horas", AG.horas_participa() == [(12, 0), (20, 15)])
 os.environ.pop("AGRO_PARTICIPA")
 
 
@@ -754,9 +763,10 @@ def _reels(*horas):
 
 _c = AG.corrida(_t(7, 3))
 chequear("la corrida de las 07: un solo posteo", _c[:2] == (_t(7, 0), True) and _hm(_c[2]) == _reels("07:00"))
-chequear("la de las 13: dos posteos, a las 13:00 y a las 14:30", _hm(AG.corrida(_t(13, 0))[2]) == _reels("13:00", "14:30"))
+chequear("la de las 13: dos posteos, a las 13:00 y a las 14:30, con la historia en el medio",
+         _hm(AG.corrida(_t(13, 0))[2]) == [("13:00", "reel"), ("14:00", "participa"), ("14:30", "reel")])
 chequear("la de las 16: uno solo", _hm(AG.corrida(_t(16, 10))[2]) == _reels("16:00"))
-chequear("la de las 21: una sola", _hm(AG.corrida(_t(21, 39))[2]) == _reels("21:00"))
+chequear("la de las 21: una sola noticia y la historia", _hm(AG.corrida(_t(21, 39))[2]) == [("21:00", "reel"), ("21:30", "participa")])
 os.environ["AGRO_HISTORIAS_DATOS"] = "1"
 chequear("con AGRO_HISTORIAS_DATOS=1: a las 07:00 primero las historias y después el posteo",
          _hm(AG.corrida(_t(7, 3))[2]) == [("07:00", "historias")] + _reels("07:00") and AG.cuantos("historias") == 3)
@@ -792,7 +802,7 @@ chequear("AGRO_POR_CORRIDA=5 y AGRO_INTERVALO_MIN=20 vuelven a lo anterior; una 
 os.environ.pop("AGRO_CORRIDAS"), os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"] = "3", "30"
 chequear("AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN: 3 reels cada 30 min",
-         _hm(AG.corrida(_t(10, 0))[2]) == _reels("10:00", "10:30", "11:00") and AG.cuantos("reel") == 18)
+         [x for x in _hm(AG.corrida(_t(10, 0))[2]) if x[1] == "reel"] == _reels("10:00", "10:30", "11:00") and AG.cuantos("reel") == 18)
 os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 _smin = os.environ.pop("AGRO_SCORE_MIN")
 chequear("de fábrica: hasta 12 por día (9 y margen), mínimo 60, una por horario",
@@ -1060,6 +1070,7 @@ with tempfile.TemporaryDirectory() as _tmpc:
     _o = (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar, PA._guardar_en_la_nube)
     # La mecánica de esperar turnos se prueba con 5 por corrida cada 20 minutos.
     os.environ["AGRO_POR_CORRIDA"], os.environ["AGRO_INTERVALO_MIN"], os.environ["AGRO_REEL_DATOS"] = "5", "20", "0"
+    os.environ["AGRO_PARTICIPA"] = "0"
     try:
         PA.MEMORIA_REAL, PA.SALIDA = Path(_tmpc) / "agro.json", Path(_tmpc) / "salida"
         PA._un_turno, PA._ahora, PA._dormir = _turno_falso, lambda: _reloj["t"], _dormir_falso
@@ -1098,6 +1109,7 @@ with tempfile.TemporaryDirectory() as _tmpc:
         (PA.MEMORIA_REAL, PA.SALIDA, PA._un_turno, PA._ahora, PA._dormir, PA.entorno.cargar,
          PA._guardar_en_la_nube) = _o
         os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN"), os.environ.pop("AGRO_REEL_DATOS")
+        os.environ.pop("AGRO_PARTICIPA")
 
 # --- prioridades del documento «ideas agro» -------------------------------------------------------
 _s = SC.limpiar({"tema_doc": "Clima", "urgente": "sí", "potencial_carrusel": 14})
@@ -1177,9 +1189,38 @@ def _ia_caida_pt(s, m, **k):
 
 _r = _PT.pregunta_del_dia(_mom, [], 12, _ia_caida_pt, lambda m: None)
 chequear("participa: sin IA, con lluvia prevista, pregunta por la lluvia", _r["pregunta"] == "¿Cuánto llovió en tu campo?" and _r["via"] == "lista")
-_todas = [o["pregunta"] for o in _PT.RESPALDO]
+_todas = [o["pregunta"] for o in _PT.PUBLICOS["agricultura"]["respaldo"]]
 chequear("participa: la lista no repite mientras queden otras", _PT.respaldo(_todas[:-1], _mom)["pregunta"] == _todas[-1])
-chequear("participa: las preguntas de la lista son válidas", all(_PT.texto_valido(o) for o in _PT.RESPALDO))
+_listas = [o for p in _PT.PUBLICOS.values() for o in p["respaldo"]]
+chequear("participa: las preguntas de la lista son válidas y distintas",
+         all(_PT.texto_valido(o) for o in _listas) and len({o["pregunta"] for o in _listas}) == len(_listas))
+chequear("participa: las opciones de la lista son válidas",
+         all(_PT.limpiar_opciones(o["opciones"]) == list(o["opciones"]) for o in _listas if o.get("opciones")))
+chequear("oficios: todos los de la rotación existen y todos salen en la vuelta",
+         set(_PT.ROTACION) == set(_PT.PUBLICOS))
+for _k in ("maquinistas", "lacteos", "contratistas", "inmobiliarias"):
+    chequear(f"oficios: {_k}, pedido por el editor, está", _k in _PT.PUBLICOS)
+_dias = [[_PT.publico_de(datetime(2026, 11, 7 + d, h, m, tzinfo=CA.TZ_AR)) for h, m in AG.horas_participa()] for d in range(4)]
+chequear("oficios: en 4 días sale cada uno, sin repetir dentro del día",
+         {p for d in _dias for p in d} == set(_PT.PUBLICOS) and all(len(set(d)) == 4 for d in _dias))
+chequear("oficios: todos los días una es para productores",
+         all(d[0] in ("agricultura", "ganaderia") for d in _dias))
+chequear("oficios: el respaldo de las :20 elige el mismo oficio",
+         _PT.publico_de(_mom) == _PT.publico_de(_mom.replace(second=30)))
+_vistos = {}
+_r = _PT.pregunta_del_dia(_mom, [], 12, lambda s, m, **k: _vistos.update(m=m) or ({"pregunta": "¿Qué queso sale más?", "escena": "cheese", "opciones": ["Cremoso", "Barra"]}, "falsa"),
+                          lambda m: None, "lacteos")
+chequear("oficios: la IA recibe el oficio y al quesero no le habla de la lluvia",
+         "usinas lácteas" in _vistos["m"] and "Lluvia" not in _vistos["m"] and _r["publico"] == "lacteos" and _r["opciones"] == ["Cremoso", "Barra"])
+_r = _PT.pregunta_del_dia(_mom, [], 12, _ia_caida_pt, lambda m: None, "contratistas")
+chequear("oficios: sin IA, una pregunta de su lista",
+         _r["via"] == "lista" and _r["pregunta"] in [o["pregunta"] for o in _PT.PUBLICOS["contratistas"]["respaldo"]])
+chequear("opciones: largas, con cifras, una sola o de más, se descartan",
+         _PT.limpiar_opciones(["Bien", "Mal"]) == ["Bien", "Mal"] and _PT.limpiar_opciones(["Bien"]) == []
+         and _PT.limpiar_opciones(["a", "b", "c", "d"]) == [] and _PT.limpiar_opciones(["Más de 40", "Menos"]) == []
+         and _PT.limpiar_opciones(["x" * 30, "y"]) == [] and _PT.limpiar_opciones("Bien, Mal") == [] and _PT.limpiar_opciones(None) == [])
+chequear("opciones: la placa pide contestar con una palabra",
+         "BIEN · MAL" in _PT.invitacion(["Bien", "Mal"]) and _PT.invitacion([]) == _PT.INVITACION)
 with tempfile.TemporaryDirectory() as _tpt:
     _o_pt = (PA.MEMORIA, PA.MEMORIA_REAL, PA.SALIDA)
     PA.MEMORIA, PA.MEMORIA_REAL, PA.SALIDA = Path(_tpt) / "s.json", Path(_tpt) / "r.json", Path(_tpt) / "salida"

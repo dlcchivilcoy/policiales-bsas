@@ -67,8 +67,10 @@ TIPOS = ("reel", "carrusel", "historias", "reel_datos", "participa")
 REEL_DATOS_DEFECTO = "08:00"
 # Lo que no va al feed: no cuenta para los 90 minutos entre posteos.
 FUERA_DEL_FEED = ("historias", "participa")
-# 06/11/2026: la historia que invita a participar (agro/participa.py). AGRO_PARTICIPA: otra hora, o "0" la apaga.
-PARTICIPA_DEFECTO = "19:00"
+# 06/11/2026: la historia que invita a participar (agro/participa.py). AGRO_PARTICIPA: otras horas, o "0" la apaga.
+# 07/11/2026 («más historias interactivas por día»): 4, cada una para un oficio. Todas caen en una corrida que ya
+# está esperando su segundo posteo, salvo la de las 21:30, que estira media hora la de las 21.
+PARTICIPA_DEFECTO = "11:00,14:00,19:00,21:30"
 TOLERANCIA_MIN = 40          # una corrida que arranca hasta 40 min tarde es la de ese horario
 ANTES_MIN = 5                # y hasta 5 min antes (el reloj de cron-job.org y el de GitHub)
 BLOQUES = ("manana", "mediodia", "cierre")
@@ -91,6 +93,22 @@ def intervalo_min() -> int:
     return _entero("AGRO_INTERVALO_MIN", INTERVALO_MIN)
 
 
+def horas_participa() -> list:
+    """[(hora, minuto), …] de las historias para participar, ordenadas. AGRO_PARTICIPA="0" las apaga."""
+    crudo = (os.environ.get("AGRO_PARTICIPA") or PARTICIPA_DEFECTO).strip()
+    if crudo.lower() in ("0", "no", "off"):
+        return []
+    salida = []
+    for parte in crudo.split(","):
+        h, _, m = parte.strip().partition(":")
+        try:
+            if 0 <= int(h) < 24 and 0 <= int(m or 0) < 60:
+                salida.append((int(h), int(m or 0)))
+        except ValueError:
+            continue
+    return sorted(set(salida))
+
+
 def agenda_texto_defecto() -> str:
     """Por cada corrida, por_corrida() reels cada intervalo_min(), sin pasarse de la corrida siguiente;
     más las historias de siempre."""
@@ -99,9 +117,7 @@ def agenda_texto_defecto() -> str:
     datos = hora_reel_datos()
     if datos:
         partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
-    participa = (os.environ.get("AGRO_PARTICIPA") or PARTICIPA_DEFECTO).strip()
-    if participa.lower() not in ("0", "no", "off"):
-        partes.append(f"{participa} participa")
+    partes += [f"{h:02d}:{m:02d} participa" for h, m in horas_participa()]
     for i, ini in enumerate(inicios):
         fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
         partes += [f"{t // 60:02d}:{t % 60:02d} reel"
