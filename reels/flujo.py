@@ -66,7 +66,8 @@ TITULOS_RESPALDO = ("Qué pasó", "Los detalles", "La investigación", "Cómo si
 
 def formato_redes() -> str:
     """02/11/2026 («volver carrusel los reels de policiales»): de fábrica CARRUSEL «deslizá y leé» en Instagram y
-    Facebook (como del 24/10 al 31/10); POL_FORMATO=reel vuelve al reel."""
+    Facebook (como del 24/10 al 31/10); POL_FORMATO=reel vuelve al reel. Desde el 06/11/2026, en Facebook el
+    carrusel sale como link a la nota (reels/publicador.py, publicar_nota_facebook)."""
     return "reel" if (os.environ.get("POL_FORMATO") or "").strip().lower() == "reel" else "carrusel"
 
 

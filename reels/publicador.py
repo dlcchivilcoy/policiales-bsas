@@ -45,6 +45,7 @@ import tempfile
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 import httpx
 
@@ -716,6 +717,94 @@ def publicar_link_youtube(pieza: dict, url_youtube: str, url_web: str = "") -> d
     if r.status_code >= 400:
         raise FalloRed(_error(r, "Facebook (enlace del Short)"))
     return {"id": str((r.json() or {}).get("id") or ""), "link": url_youtube}
+
+
+# EL POLICIAL EN FACEBOOK COMO LINK A LA NOTA (pedido del editor, 06/11/2026: «los carruseles de policiales en
+# facebook reemplazarlos por link con nota web, pero en ig dejalo como esta»). Instagram sigue con el carrusel.
+# Facebook arma la tarjeta leyendo la nota, y en agosto de 2026 los links del bot salieron todos con la misma
+# foto. Por eso antes de publicar se le pide que la lea y se compara su foto con la de la nota: si no coincide,
+# o la nota salió sin foto, ese posteo sale como carrusel con el link en el texto. POL_FB_LINK=0 vuelve al carrusel.
+ESPERAS_TARJETA = (20, 60)              # una nota recién publicada puede tardar en dejarse leer
+UA_FACEBOOK = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
+
+
+def fb_con_link() -> bool:
+    return (os.environ.get("POL_FB_LINK") or "1").strip() != "0"
+
+
+def va_como_link(pieza: dict, mp4: Path, url_web: str) -> bool:
+    """Lo que iba como carrusel y tiene su nota. Un reel sigue siendo reel y, sin nota, no hay a dónde enlazar."""
+    return bool(fb_con_link() and url_web and slides_de(pieza, Path(mp4).parent))
+
+
+def link_para_facebook(url_web: str) -> str:
+    """El link con el dominio en punycode: consultado con la Ñ, Facebook no encontraba la nota (06/11/2026)."""
+    partes = urlsplit(url_web)
+    return urlunsplit(partes._replace(netloc=partes.netloc.encode("idna").decode("ascii")))
+
+
+def texto_link_nota(pieza: dict) -> str:
+    """El primer párrafo del posteo: la foto, el título y el link ya están en la tarjeta."""
+    parrafos = [p.strip() for p in texto_del_posteo(pieza, "facebook").split("\n\n")]
+    primero = next((p for p in parrafos if p and not p.startswith(("📲", "👉", "#"))), "")
+    return primero or " ".join(((pieza.get("guion") or {}).get("titular") or "").split())
+
+
+def _nombre_de_foto(url: str) -> str:
+    return (url or "").split("?")[0].rsplit("/", 1)[-1]
+
+
+def _problema_de_tarjeta(link: str) -> str:
+    """"" si Facebook lee la nota con su foto; si no, el motivo."""
+    try:
+        pagina = _pedir("GET", link, headers={"User-Agent": UA_FACEBOOK}, follow_redirects=True)
+        if pagina.status_code != 200:
+            return f"la nota contesta HTTP {pagina.status_code}"
+        foto = re.search(r'property="og:image"\s+content="([^"]+)"', pagina.text)
+        if not foto:
+            return "la nota salió sin foto"
+        r = _pedir("POST", f"{GRAPH}/", os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", ""),
+                   data={"id": link, "scrape": "true"})
+    except _Cortado as e:
+        return f"no se pudo leer la nota: {e}"
+    if r.status_code >= 400:
+        return _error(r, "Facebook no pudo leer la nota")
+    try:
+        vista = ((r.json() or {}).get("image") or [{}])[0].get("url") or ""
+    except (ValueError, AttributeError):
+        vista = ""
+    if _nombre_de_foto(vista) != _nombre_de_foto(foto.group(1)):
+        return "Facebook no ve la foto de la nota"
+    return ""
+
+
+def problema_de_tarjeta(link: str) -> str:
+    motivo = _problema_de_tarjeta(link)
+    for espera in ESPERAS_TARJETA:
+        if not motivo:
+            break
+        _dormir(espera)
+        motivo = _problema_de_tarjeta(link)
+    return motivo
+
+
+def publicar_nota_facebook(pieza: dict, mp4: Path, url_web: str) -> dict:
+    """/{page}/feed con `link` = la nota. Si no se puede, el carrusel de siempre: el hecho no se pierde."""
+    link = link_para_facebook(url_web)
+    motivo = problema_de_tarjeta(link)
+    if not motivo:
+        try:
+            r = _pedir("POST", f"{GRAPH}/{os.environ.get('FACEBOOK_PAGE_ID', '')}/feed",
+                       os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", ""),
+                       data={"link": link, "message": texto_link_nota(pieza)})
+        except _Cortado as e:
+            raise SinConfirmar(f"Facebook (link de la nota): {e}")     # pudo haber salido: no se reintenta
+        if r.status_code < 400:
+            return {"id": str((r.json() or {}).get("id") or ""), "formato": "link", "link": link}
+        motivo = _error(r, "Facebook (link de la nota)")
+    res = publicar_album_facebook(pieza, slides_de(pieza, Path(mp4).parent), url_web)
+    res["sin_link"] = motivo
+    return res
 
 
 # Los reels de Facebook por la API duran de 3 a 90 s. Desde el 18/10/2026 el video del medio va entero
@@ -1851,6 +1940,8 @@ def _publicar_red(red: str, pieza: dict, mp4: Path, carpeta: Path, url_web: str)
             _ig_sin_prueba = True
             res = {"estado": "cupo", "detalle": "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
         return res
+    if va_como_link(pieza, mp4, url_web):
+        return _intentar(publicar_nota_facebook, pieza, mp4, url_web)
     return _intentar(publicar_facebook, pieza, mp4, url_web)
 
 
@@ -1980,6 +2071,8 @@ def _simular(red: str, pieza: dict, mp4: Path, url_web: str = "") -> dict:
     """Todo lo que se puede verificar sin publicar."""
     texto = texto_del_posteo(pieza, red, url_web)
     info = {"estado": "simulado", "kb": round(mp4.stat().st_size / 1024), "caracteres": len(texto)}
+    if red == "facebook" and va_como_link(pieza, mp4, url_web):
+        info.update(formato="link", link=link_para_facebook(url_web), texto=texto_link_nota(pieza))
     if red == "instagram":
         params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto)
         info["prueba"] = json.loads(params.get("trial_params") or "null")
@@ -2352,7 +2445,7 @@ def _mostrar(red: str, res: dict):
         if red == "instagram":
             extra = f" · reel de PRUEBA {res.get('prueba')}"
         elif red == "facebook":
-            extra = " · reel NORMAL"
+            extra = f" · link a la nota {res['link']}" if res.get("formato") == "link" else " · reel NORMAL"
         else:
             extra = f" · Short publico en Radio del Centro: «{res.get('titulo')}»"
         print(f"  {nombre:<9} saldria{extra} · {res['kb']} KB · texto de {res['caracteres']} caracteres")
@@ -2364,6 +2457,8 @@ def _mostrar(red: str, res: dict):
             aviso += f" · miniatura: {res['miniatura']}"
         elif res.get("miniatura"):
             aviso += " · con la portada como miniatura"
+        if res.get("sin_link"):
+            aviso += f" · salió como carrusel, sin link: {res['sin_link']}"
         print(f"  {nombre:<9} OK (id {res.get('id') or 'sin leer'}){aviso}")
     elif est in ("cupo", "omitida"):
         print(f"  {nombre:<9} no va: {res.get('detalle')}")
