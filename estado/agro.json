@@ -28972,6 +28972,74 @@
         56,
         47
       ]
+    },
+    "ba8ff1972aeaad53": {
+      "conversacion": 9,
+      "historia_concreta": 15,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 50,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "vitivinicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una curiosidad productiva en la provincia, pero queda lejos del partido de Chivilcoy y la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        50
+      ]
+    },
+    "70685223407c9567": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 1,
+      "cercania_argentina": 1,
+      "potencial_reel": 1,
+      "ai_score": 16,
+      "commercial_score": 10,
+      "subtema": "ganaderia",
+      "tema": "ganado en eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un debate académico sobre el futuro de los terneros en Estados Unidos, sin impacto real para el criador de nuestra zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a8eb952ead3bf653": {
+      "conversacion": 6,
+      "historia_concreta": 4,
+      "cercania_pba": 15,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 47,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "granos y precios",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informa sobre la baja de los granos que golpea directo al bolsillo del productor local de Chacabuco y la región.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        35
+      ]
     }
   },
   "indice": {
@@ -30946,7 +31014,16 @@
       "https://lanacion.com.ar/economia/campo/a-fondo-el-avance-de-la-labranza-bajo-un-analisis-critico-de-cinco-expertos-desde-bahia-blanca-a-nid07112026": "2026-11-07",
       "https://latrochadigital.com.ar/2026/11/07/milei-volvio-a-prometer-retenciones-cero-para-el-campo": "2026-11-07",
       "https://casaresonline.com.ar/de-tener-que-mirar-el-reloj-a-ganar-tiempo-para-vivir-y-producir-mas-el-cambio-que-trajeron-tres-robots-a-un-tambo-cordobes": "2026-11-07",
-      "https://elregionaldigital.com.ar/gruesa-26-27-el-girasol-se-afianza-en-su-siembra-con-mas-del-70-implantado": "2026-11-07"
+      "https://elregionaldigital.com.ar/gruesa-26-27-el-girasol-se-afianza-en-su-siembra-con-mas-del-70-implantado": "2026-11-07",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-7-noviembre-2026": "2026-11-07",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-7-noviembre-2026": "2026-11-07",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-7-noviembre-2026": "2026-11-07",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-7-noviembre-2026": "2026-11-07",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-7-noviembre-2026": "2026-11-07",
+      "https://infocampo.com.ar/en-el-valle-del-rio-colorado-un-vinedo-experimental-del-sur-bonaerense-presento-sus-primeros-vinos": "2026-11-07",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-7-noviembre-2026": "2026-11-07",
+      "https://lanacion.com.ar/economia/campo/alfredo-di-costanzo-de-la-universidad-de-minnesota-y-una-pregunta-incomoda-en-eeuu-quien-producira-nid07112026": "2026-11-07",
+      "https://chacabucoenred.com/granos-rigi-y-rimi": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -32919,7 +32996,16 @@
       "a fondo el avance de la labranza bajo un analisis critico de cinco expertos desde bahia blanca a chaco": "2026-11-07",
       "milei volvio a prometer retenciones cero para el campo": "2026-11-07",
       "de tener que mirar el reloj a ganar tiempo para vivir y producir mas el cambio que trajeron tres robots a un tambo cordobes": "2026-11-07",
-      "gruesa 26 27 el girasol se afianza en su siembra con mas del 70 implantado": "2026-11-07"
+      "gruesa 26 27 el girasol se afianza en su siembra con mas del 70 implantado": "2026-11-07",
+      "precio del maiz en rosario hoy 7 noviembre 2026": "2026-11-07",
+      "precio del trigo en rosario hoy 7 noviembre 2026": "2026-11-07",
+      "precio del girasol en rosario hoy 7 noviembre 2026": "2026-11-07",
+      "precio de la soja en rosario hoy 7 noviembre 2026": "2026-11-07",
+      "precio del sorgo en rosario hoy 7 noviembre 2026": "2026-11-07",
+      "en el valle del rio colorado un vinedo experimental del sur bonaerense presento sus primeros vinos": "2026-11-07",
+      "dolar blue a cuanto cotizan hoy en cordoba 7 noviembre 2026": "2026-11-07",
+      "alfredo di costanzo de la universidad de minnesota y una pregunta incomoda en ee uu quien producira los terneros en el futuro": "2026-11-07",
+      "granos rigi y rimi": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -34892,7 +34978,16 @@
       "22465a5a0b810cc1": "2026-11-07",
       "ba24e067f62eecc6": "2026-11-07",
       "5242231c4ecfb1cc": "2026-11-07",
-      "ac7334ab2dd2ad6b": "2026-11-07"
+      "ac7334ab2dd2ad6b": "2026-11-07",
+      "93344010513b62db": "2026-11-07",
+      "33edd10ee826d3d9": "2026-11-07",
+      "b8e05aa964df44eb": "2026-11-07",
+      "096250bda0719a2b": "2026-11-07",
+      "2b92582957c27854": "2026-11-07",
+      "ba8ff1972aeaad53": "2026-11-07",
+      "45ee1c5441c385d1": "2026-11-07",
+      "70685223407c9567": "2026-11-07",
+      "a8eb952ead3bf653": "2026-11-07"
     }
   },
   "elegidas": [
@@ -61754,6 +61849,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f81e6274a63e_portada.jpg"
+    },
+    {
+      "id": "0520ee448ea5",
+      "cuando": "2026-11-07T11:30-03:00",
+      "titulo_original": "Lincoln pidió declarar la emergencia agropecuaria por las inundaciones",
+      "descripcion": "La Municipalidad de Lincoln elevó al Ministerio de Desarrollo Agrario de la provincia de Buenos Aires el pedido para declarar la Emergencia y/o Desastre Agropecuario en la zona sureste del … La entrada Lincoln pidió declarar la emergencia agropecuaria por las inundaciones se publicó primero en La Ma",
+      "fuente": "La Marca de Lincoln",
+      "url": "https://lamarcadelincoln.com.ar/lincoln-pidio-declarar-la-emergencia-agropecuaria-por-las-inundaciones/",
+      "titular": "Lincoln solicita emergencia agropecuaria por inundaciones en 175.000 hectáreas",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 20,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 81,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "emergencia hídrica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Pedido de emergencia agropecuaria por inundaciones en partido de la zona.",
+        "tema_doc": "reglas",
+        "urgente": true,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8111e777-36e4-43de-bc4b-5ec880bb18b6",
+          "slug": "lincoln-pide-declarar-la-emergencia-agropecuaria-por-bbf03a",
+          "url": "https://www.diariolacampaña.com.ar/n/lincoln-pide-declarar-la-emergencia-agropecuaria-por-bbf03a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17959437453269248",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1751091753688488",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18081851297392817"
+        },
+        "historia_facebook": {
+          "id": "1481023523890883"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0520ee448ea5_portada.jpg"
     }
   ],
   "pendientes": [
@@ -62166,75 +62321,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-07T07:00-03:00"
-    },
-    {
-      "id": "0520ee448ea5",
-      "rep": {
-        "id": "0520ee448ea5",
-        "fuente": "La Marca de Lincoln",
-        "tipo_fuente": "medio",
-        "source_url": "https://lamarcadelincoln.com.ar/feed/",
-        "url": "https://lamarcadelincoln.com.ar/lincoln-pidio-declarar-la-emergencia-agropecuaria-por-las-inundaciones/",
-        "canonical_url": "https://lamarcadelincoln.com.ar/lincoln-pidio-declarar-la-emergencia-agropecuaria-por-las-inundaciones",
-        "titulo": "Lincoln pidió declarar la emergencia agropecuaria por las inundaciones",
-        "titulo_norm": "lincoln pidio declarar la emergencia agropecuaria por las inundaciones",
-        "descripcion": "La Municipalidad de Lincoln elevó al Ministerio de Desarrollo Agrario de la provincia de Buenos Aires el pedido para declarar la Emergencia y/o Desastre Agropecuario en la zona sureste del … La entrada Lincoln pidió declarar la emergencia agropecuaria por las inundaciones se publicó primero en La Marca de Lincoln.",
-        "imagen_url": "",
-        "autor": "Redacción",
-        "publicado": "2026-11-06T21:35-03:00",
-        "capturado": "2026-11-07T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "340f219cabe31bd5",
-        "localidad_medio": "Lincoln"
-      },
-      "grupo": [
-        {
-          "id": "0520ee448ea5",
-          "fuente": "La Marca de Lincoln",
-          "tipo_fuente": "medio",
-          "source_url": "https://lamarcadelincoln.com.ar/feed/",
-          "url": "https://lamarcadelincoln.com.ar/lincoln-pidio-declarar-la-emergencia-agropecuaria-por-las-inundaciones/",
-          "canonical_url": "https://lamarcadelincoln.com.ar/lincoln-pidio-declarar-la-emergencia-agropecuaria-por-las-inundaciones",
-          "titulo": "Lincoln pidió declarar la emergencia agropecuaria por las inundaciones",
-          "titulo_norm": "lincoln pidio declarar la emergencia agropecuaria por las inundaciones",
-          "descripcion": "La Municipalidad de Lincoln elevó al Ministerio de Desarrollo Agrario de la provincia de Buenos Aires el pedido para declarar la Emergencia y/o Desastre Agropecuario en la zona sureste del … La entrada Lincoln pidió declarar la emergencia agropecuaria por las inundaciones se publicó primero en La Marca de Lincoln.",
-          "imagen_url": "",
-          "autor": "Redacción",
-          "publicado": "2026-11-06T21:35-03:00",
-          "capturado": "2026-11-07T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "340f219cabe31bd5",
-          "localidad_medio": "Lincoln"
-        }
-      ],
-      "score": {
-        "conversacion": 20,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 9,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 81,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "emergencia hídrica",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Pedido de emergencia agropecuaria por inundaciones en partido de la zona.",
-        "tema_doc": "reglas",
-        "urgente": true,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T10:06:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-07T11:36:53-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
