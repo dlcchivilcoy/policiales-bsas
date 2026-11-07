@@ -533,6 +533,14 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
     nota = material(nota)
     g = G.generar(nota, usar_ia=usar_ia, preferir=preferir, sitio=SITIO)
 
+    # ¿El guion cuenta el hecho de ESTA nota? La foto y el enlace son de ella: si la IA leyó otra
+    # noticia de la página, no sale. Antes de gastar en el resto.
+    otro_hecho = "" if g.get("fuera_de_temario") else G.guion_de_otro_hecho(g, nota)
+    if otro_hecho:
+        return {"orden": idx, "descartada": True, "por_que_no": otro_hecho,
+                "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                "titulo": nota.get("titulo"), "url_original": nota.get("url")}
+
     # Radio de 100 km desde Chivilcoy (17/10/2026, reels/geografia.py). Cuenta dónde OCURRIÓ el
     # hecho, que lo lee la IA de la nota entera; antes de gastar en el video.
     lugar, geo = lugar_del_hecho(g, nota)

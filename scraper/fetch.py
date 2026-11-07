@@ -645,6 +645,59 @@ def _audio_del_cuerpo(nodo, base):
     return None
 
 
+# Menos texto que esto en párrafos no alcanza para decir que ahí está la nota: un pie de copyright
+# de 150 letras no le puede ganar a nada.
+_MINIMO_PARRAFOS = 200
+
+
+def _texto_en_parrafos(nodo):
+    return sum(len(p.get_text(" ", strip=True)) for p in nodo.find_all("p", recursive=False))
+
+
+def _nodo_del_cuerpo(soup):
+    """Dónde está el texto de LA nota.
+
+    El primer <article> no siempre es la nota: en Semanario de Junín y en junin24 es la tarjetita
+    de otra noticia de la columna del costado (11 y 12 <article> por página, 6/11/2026), y la IA
+    terminaba leyendo 90 letras de otro hecho. La nota es el bloque con más texto en párrafos: si
+    queda afuera del elegido y tiene más texto que él, gana ese bloque."""
+    nodo = soup.find(class_=_CUERPO_RE) or soup.find("article")
+    mejor, largo = None, 0
+    for candidato in soup.find_all(["div", "section", "main", "article"]):
+        t = _texto_en_parrafos(candidato)
+        if t > largo:
+            mejor, largo = candidato, t
+    if mejor is None or largo < _MINIMO_PARRAFOS:
+        return nodo
+    if nodo is None:
+        return mejor
+    if nodo is not mejor and nodo not in mejor.parents and largo > len(nodo.get_text(" ", strip=True)):
+        return mejor
+    return nodo
+
+
+def _raices(texto):
+    """Las palabras con contenido, cortadas: «internada» e «internaron» cuentan como la misma."""
+    return {w[:5] for w in re.findall(r"[a-z0-9]{4,}", _sin_tildes((texto or "").lower()))}
+
+
+def _titulos_de_la_pagina(soup):
+    """Cómo se llama la nota según la página. Antes de desarmarla: el <h1> suele vivir en el <header>."""
+    h1 = soup.find("h1")
+    meta = soup.find("meta", attrs={"property": "og:title"})
+    return [t for t in (limpiar(h1.get_text(" ")) if h1 else "",
+                        limpiar(meta["content"]) if (meta and meta.get("content")) else "",
+                        limpiar(soup.title.get_text(" ")) if soup.title else "") if t]
+
+
+def _habla_de_la_nota(texto, titulos):
+    """¿El texto comparte palabras con el título de la página? Con un título de menos de 3 palabras
+    con contenido (el nombre del sitio, «Más leídas») no se puede saber y se da por bueno."""
+    plano = _raices(texto)
+    medibles = [r for r in (_raices(t) for t in titulos) if len(r) >= 3]
+    return not medibles or any(len(r & plano) >= max(1, round(len(r) * 0.25)) for r in medibles)
+
+
 def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
     """Baja la nota una sola vez y devuelve cuerpo + fecha + imagen.
     `ok` False significa que la URL murio (404/error): esa nota no se guarda."""
@@ -661,11 +714,12 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         # og:video vive en el head y mas abajo se desarma todo para sacar el cuerpo.
         video = _video_del_html(soup, url)
         audio = _audio_og(soup, url)
+        titulos = _titulos_de_la_pagina(soup)
 
         for tag in soup.find_all(["script", "style", "nav", "header", "footer", "aside", "form"]):
             tag.decompose()
 
-        nodo = soup.find(class_=_CUERPO_RE) or soup.find("article")
+        nodo = _nodo_del_cuerpo(soup)
         audio = audio or _audio_del_cuerpo(nodo, url)
         cuerpo = limpiar(nodo.get_text(" ")) if nodo else ""
 
@@ -677,7 +731,12 @@ def detalle(url, timeout=TIMEOUT, permitir_navegador=False):
         meta = (soup.find("meta", attrs={"property": "og:description"})
                 or soup.find("meta", attrs={"name": "description"}))
         descripcion = limpiar(meta["content"]) if (meta and meta.get("content")) else ""
-        if not cuerpo:
+        # El Civismo manda la plantilla sin completar: «{{(desc_pagina)?desc_pagina:'Todas las…».
+        if "{{" in descripcion:
+            descripcion = ""
+        # Un texto que no tiene nada que ver con el título de la página es de otra nota, por más
+        # que el bloque parezca el bueno: mejor el resumen corto del medio que otro hecho.
+        if not cuerpo or not _habla_de_la_nota(cuerpo, titulos):
             cuerpo = descripcion
         return {"ok": True, "cuerpo": cuerpo, "descripcion": descripcion,
                 "publicado": publicado, "imagen": imagen, "video": video, "audio": audio}

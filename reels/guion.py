@@ -1057,6 +1057,41 @@ def _volanta_con_lugar(volanta: str, lugar: str, previa: str = "") -> str:
     return volanta
 
 
+_SYSTEM_MISMO_HECHO = """Te paso el titular original de una nota policial y el guion que se escribió a partir de ella.
+El guion está reescrito con otras palabras y puede tener más datos que el titular: eso está bien.
+Decidí si los dos cuentan EL MISMO HECHO, o si el guion habla de otro hecho distinto.
+Devolvé SOLO este JSON: {"mismo_hecho": true, "motivo": "en pocas palabras"}"""
+
+
+def guion_de_otro_hecho(g: dict, nota: dict) -> str:
+    """El motivo si el guion cuenta otro hecho que el de la nota; "" si está bien.
+
+    Pasó en una prueba del 6/11/2026: la nota de una DDI que esclareció hurtos dio un guion sobre
+    unos bicipolicías, porque la IA leyó la noticia del costado. La foto y el enlace serían de una
+    nota y el texto de otra. Comparar palabras no alcanza para decidirlo: de 194 notas bien hechas,
+    18 compartían una palabra o ninguna con el titular («Cayeron más borrachines en Chacabuco» dio
+    «Secuestraron ocho autos y dos motos por alcoholemia positiva»). Así que las palabras solo dicen
+    a quién preguntarle, y decide la IA. Si la IA no contesta, solo se frena lo que no comparte nada."""
+    from reels import ia
+    from reels.relevamiento import raices
+
+    titular = limpiar_titular(nota.get("titulo") or "")
+    if not titular or not str(g.get("via") or "").startswith(("claude", "gemini")):
+        return ""
+    del_medio = raices(titular)
+    comunes = del_medio & raices(" ".join(str(g.get(k) or "") for k in ("titular", "bajada", "descripcion")))
+    if len(del_medio) < 3 or len(comunes) >= 2:
+        return ""
+    material = f"Titular original: {titular}\nGuion: {g.get('titular')}. {g.get('bajada')}"
+    try:
+        datos, _ = ia.redactar(_SYSTEM_MISMO_HECHO, material)
+        if datos.get("mismo_hecho") is False:
+            return f"el guion cuenta otro hecho que la nota ({' '.join(str(datos.get('motivo') or '').split())[:120]})"
+        return ""
+    except Exception:
+        return "" if comunes else "el guion no comparte nada con el titular y la IA no pudo confirmarlo"
+
+
 def generar(nota: dict, usar_ia: bool = True, preferir: str = "", sitio: str = "") -> dict:
     """Guion completo + descripción lista para publicar.
 
