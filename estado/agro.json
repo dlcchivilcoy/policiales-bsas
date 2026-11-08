@@ -29572,6 +29572,26 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "23aac09f088b6357": {
+      "conversacion": 18,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 14,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 72,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "clima y campaña",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca el clima y el estado de los cultivos de la región, algo que le importa y preocupa a todo productor.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31605,7 +31625,10 @@
       "https://infocampo.com.ar/precio-del-sorgo-hoy-8-noviembre-2026": "2026-11-08",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-8-noviembre-2026": "2026-11-08",
       "https://infocampo.com.ar/innovacion-productiva-y-gastronomica-en-coronda-dos-emprendedores-crearon-un-chorizo-con-frutilla": "2026-11-08",
-      "https://bichosdecampo.com/luis-contigiani-es-uno-de-los-hombres-detras-de-la-estrategia-de-expansion-de-la-cooperativa-afa-pero-no-olvida-para-que-lo-hacen-el-sentido-ultimo-no-es-otro-que-el-chacarero-su-familia": "2026-11-08"
+      "https://bichosdecampo.com/luis-contigiani-es-uno-de-los-hombres-detras-de-la-estrategia-de-expansion-de-la-cooperativa-afa-pero-no-olvida-para-que-lo-hacen-el-sentido-ultimo-no-es-otro-que-el-chacarero-su-familia": "2026-11-08",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-8-noviembre-2026": "2026-11-08",
+      "https://lacapital.com.ar/agro/cronicas-campana-el-viento-se-pone-frente-n10290921.html": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33637,7 +33660,10 @@
       "precio del sorgo en rosario hoy 8 noviembre 2026": "2026-11-08",
       "dolar blue a cuanto cotizan hoy en cordoba 8 noviembre 2026": "2026-11-08",
       "innovacion productiva y gastronomica en coronda dos emprendedores crearon un chorizo con frutilla": "2026-11-08",
-      "luis contigiani es uno de los hombres detras de la estrategia de expansion de la cooperativa afa pero no olvida para que lo hacen el sentido ultimo no es otro que el chacarero su familia los pueblitos": "2026-11-08"
+      "luis contigiani es uno de los hombres detras de la estrategia de expansion de la cooperativa afa pero no olvida para que lo hacen el sentido ultimo no es otro que el chacarero su familia los pueblitos": "2026-11-08",
+      "dolar blue a cuanto cotizan hoy en mendoza 8 noviembre 2026": "2026-11-08",
+      "euro blue hoy precio y cotizacion de este 8 noviembre 2026": "2026-11-08",
+      "cronicas de campana el viento se pone de frente": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35669,7 +35695,10 @@
       "589e5f1242a42141": "2026-11-08",
       "6fa42297dc9a6270": "2026-11-08",
       "0efea31e92c10e27": "2026-11-08",
-      "9026380aa905dfdb": "2026-11-08"
+      "9026380aa905dfdb": "2026-11-08",
+      "9182790bef64c2b7": "2026-11-08",
+      "f64c0d77735037d5": "2026-11-08",
+      "23aac09f088b6357": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63139,6 +63168,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a06e530611c9_portada.jpg"
+    },
+    {
+      "id": "90b6ec833e4b",
+      "cuando": "2026-11-08T13:00-03:00",
+      "titulo_original": "Crónicas de campaña: el viento se pone de frente",
+      "descripcion": "Tormentas más violentas y un Niño que entra en su etapa más intensa dominan el escenario productivo. El trigo sintió las heladas y el fusarium dice presente. La siembra de soja avanza con algunas dudas.",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/cronicas-campana-el-viento-se-pone-frente-n10290921.html",
+      "titular": "Trigo y soja sufren temporales heladas y avance de fusarium",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 72,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "clima y campaña",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca el clima y el estado de los cultivos de la región, algo que le importa y preocupa a todo productor.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f45a5419-6bb6-4eb4-821b-269028e18a6c",
+          "slug": "tormentas-severas-heladas-y-fusarium-desafian-la-campana-de-756dc0",
+          "url": "https://www.diariolacampaña.com.ar/n/tormentas-severas-heladas-y-fusarium-desafian-la-campana-de-756dc0",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18121846496059438",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1752425310221799",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18102404207431928"
+        },
+        "historia_facebook": {
+          "id": "3265058897026189"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_90b6ec833e4b_portada.jpg"
     }
   ],
   "pendientes": [
@@ -63212,8 +63301,8 @@
       "cuando": "2026-11-07T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-08T11:36:53-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-08T13:07:01-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
