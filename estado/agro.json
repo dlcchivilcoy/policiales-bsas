@@ -29532,6 +29532,46 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0efea31e92c10e27": {
+      "conversacion": 10,
+      "historia_concreta": 15,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 36,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "chorizo con frutilla",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una curiosidad gastronómica de Santa Fe que no afecta ni le cambia nada al productor de nuestra zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9026380aa905dfdb": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 31,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "cooperativa afa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota institucional sobre la estrategia de una gran cooperativa, sin impacto local directo ni urgencia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31557,7 +31597,15 @@
       "https://bichosdecampo.com/cuando-el-aserradero-vende-menos-el-productor-deja-de-plantar-hoy-lo-que-se-debe-cosechar-en-15-20-anos-el-dilema-forestal-que-hoy-atraviesan-corrientes-y-misiones": "2026-11-08",
       "https://lanacion.com.ar/economia/campo/agricultura/esta-en-riesgo-el-maiz-en-el-norte-argentino-el-comportamiento-de-la-soja-puede-tener-una-respuesta-nid08112026": "2026-11-08",
       "https://elregionaldigital.com.ar/mas-kilos-y-mejor-calidad-que-animal-necesita-producir-la-ganaderia-argentina": "2026-11-08",
-      "https://elregionaldigital.com.ar/fiesta-nacional-arrocera-donde-castagnani-y-pino-se-vieron-las-caras-luego-de-una-semana-de-chisporroteo-entre-entidades": "2026-11-08"
+      "https://elregionaldigital.com.ar/fiesta-nacional-arrocera-donde-castagnani-y-pino-se-vieron-las-caras-luego-de-una-semana-de-chisporroteo-entre-entidades": "2026-11-08",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/innovacion-productiva-y-gastronomica-en-coronda-dos-emprendedores-crearon-un-chorizo-con-frutilla": "2026-11-08",
+      "https://bichosdecampo.com/luis-contigiani-es-uno-de-los-hombres-detras-de-la-estrategia-de-expansion-de-la-cooperativa-afa-pero-no-olvida-para-que-lo-hacen-el-sentido-ultimo-no-es-otro-que-el-chacarero-su-familia": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33581,7 +33629,15 @@
       "cuando el aserradero vende menos el productor deja de plantar hoy lo que se debe cosechar en 15 20 anos el dilema forestal que hoy atraviesan corrientes y misiones": "2026-11-08",
       "esta en riesgo el maiz en el norte argentino el comportamiento de la soja puede tener una respuesta": "2026-11-08",
       "mas kilos y mejor calidad que animal necesita producir la ganaderia argentina": "2026-11-08",
-      "fiesta nacional arrocera donde castagnani y pino se vieron las caras luego de una semana de chisporroteo entre entidades": "2026-11-08"
+      "fiesta nacional arrocera donde castagnani y pino se vieron las caras luego de una semana de chisporroteo entre entidades": "2026-11-08",
+      "precio del maiz en rosario hoy 8 noviembre 2026": "2026-11-08",
+      "precio del trigo en rosario hoy 8 noviembre 2026": "2026-11-08",
+      "precio del girasol en rosario hoy 8 noviembre 2026": "2026-11-08",
+      "precio de la soja en rosario hoy 8 noviembre 2026": "2026-11-08",
+      "precio del sorgo en rosario hoy 8 noviembre 2026": "2026-11-08",
+      "dolar blue a cuanto cotizan hoy en cordoba 8 noviembre 2026": "2026-11-08",
+      "innovacion productiva y gastronomica en coronda dos emprendedores crearon un chorizo con frutilla": "2026-11-08",
+      "luis contigiani es uno de los hombres detras de la estrategia de expansion de la cooperativa afa pero no olvida para que lo hacen el sentido ultimo no es otro que el chacarero su familia los pueblitos": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35605,7 +35661,15 @@
       "341f0cc26efdf649": "2026-11-08",
       "a32684c88d6ff3cb": "2026-11-08",
       "2e61d5fbefeca418": "2026-11-08",
-      "533fa8b62baa479d": "2026-11-08"
+      "533fa8b62baa479d": "2026-11-08",
+      "da143f6c475c0978": "2026-11-08",
+      "080c740071a9c0ff": "2026-11-08",
+      "6ea7422723c5511f": "2026-11-08",
+      "47a4d86cb1c43438": "2026-11-08",
+      "589e5f1242a42141": "2026-11-08",
+      "6fa42297dc9a6270": "2026-11-08",
+      "0efea31e92c10e27": "2026-11-08",
+      "9026380aa905dfdb": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63011,6 +63075,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_277ac0dc3a2a_portada.jpg"
+    },
+    {
+      "id": "a06e530611c9",
+      "cuando": "2026-11-08T11:30-03:00",
+      "titulo_original": "El productor Horacio Volpe tiene algo que decir sobre “el impuesto que pagamos todos y no vuelve en rutas”",
+      "descripcion": "Horacio Omar Volpe, médico veterinario y productor agropecuario de General Pinto, también es integrante de la Mesa Agropecuaria de la Fundación Alem, históricamente ligada al radicalismo. Envió estas líneas Bichos de Campo pidiendo su publicación. Cree que servirán para entender qué es lo que está s",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-productor-horacio-volpe-tiene-algo-que-decir-sobre-el-impuesto-que-pagamos-todos-y-no-vuelve-en-rutas/",
+      "titular": "Impuesto a los combustibles recauda 4,44 billones al año sin arreglar rutas",
+      "volanta": "Infraestructura",
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 11,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 48,
+        "subtema": "agro",
+        "tema": "impuestos rutas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Opinión de un productor de General Pinto sobre las tasas viales y los impuestos que indigna y genera charla.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          60
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d1aaef80-e574-40fa-8ba8-ea29b9e91f7f",
+          "slug": "advierten-que-el-impuesto-a-los-combustibles-recauda-4-44-08e48f",
+          "url": "https://www.diariolacampaña.com.ar/n/advierten-que-el-impuesto-a-los-combustibles-recauda-4-44-08e48f",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17912792931587889",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1752322493565414",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18021012371959250"
+        },
+        "historia_facebook": {
+          "id": "1107383375381280"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a06e530611c9_portada.jpg"
     }
   ],
   "pendientes": [
@@ -63082,79 +63210,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-07T14:30-03:00"
-    },
-    {
-      "id": "a06e530611c9",
-      "rep": {
-        "id": "a06e530611c9",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-productor-horacio-volpe-tiene-algo-que-decir-sobre-el-impuesto-que-pagamos-todos-y-no-vuelve-en-rutas/",
-        "canonical_url": "https://bichosdecampo.com/el-productor-horacio-volpe-tiene-algo-que-decir-sobre-el-impuesto-que-pagamos-todos-y-no-vuelve-en-rutas",
-        "titulo": "El productor Horacio Volpe tiene algo que decir sobre “el impuesto que pagamos todos y no vuelve en rutas”",
-        "titulo_norm": "el productor horacio volpe tiene algo que decir sobre el impuesto que pagamos todos y no vuelve en rutas",
-        "descripcion": "Horacio Omar Volpe, médico veterinario y productor agropecuario de General Pinto, también es integrante de la Mesa Agropecuaria de la Fundación Alem, históricamente ligada al radicalismo. Envió estas líneas Bichos de Campo pidiendo su publicación. Cree que servirán para entender qué es lo que está sucediendo realmente con los recursos que recauda el Estado Nacional […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-05-at-8.47.30-PM.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-07T09:11-03:00",
-        "capturado": "2026-11-07T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fdb6c70e42c3c569",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "a06e530611c9",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-productor-horacio-volpe-tiene-algo-que-decir-sobre-el-impuesto-que-pagamos-todos-y-no-vuelve-en-rutas/",
-          "canonical_url": "https://bichosdecampo.com/el-productor-horacio-volpe-tiene-algo-que-decir-sobre-el-impuesto-que-pagamos-todos-y-no-vuelve-en-rutas",
-          "titulo": "El productor Horacio Volpe tiene algo que decir sobre “el impuesto que pagamos todos y no vuelve en rutas”",
-          "titulo_norm": "el productor horacio volpe tiene algo que decir sobre el impuesto que pagamos todos y no vuelve en rutas",
-          "descripcion": "Horacio Omar Volpe, médico veterinario y productor agropecuario de General Pinto, también es integrante de la Mesa Agropecuaria de la Fundación Alem, históricamente ligada al radicalismo. Envió estas líneas Bichos de Campo pidiendo su publicación. Cree que servirán para entender qué es lo que está sucediendo realmente con los recursos que recauda el Estado Nacional […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-05-at-8.47.30-PM.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-07T09:11-03:00",
-          "capturado": "2026-11-07T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fdb6c70e42c3c569",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 11,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 64,
-        "commercial_score": 48,
-        "subtema": "agro",
-        "tema": "impuestos rutas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Opinión de un productor de General Pinto sobre las tasas viales y los impuestos que indigna y genera charla.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          60
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-08T11:00:25-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-08T11:36:53-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
