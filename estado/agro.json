@@ -29632,6 +29632,110 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aa4c0afa8fb1c629": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "biodiésel",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una discusión política y legislativa sobre leyes de biocombustibles que no le cambia el día a día al productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fb6950859f59eb20": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 9,
+      "commercial_score": 10,
+      "subtema": "mercados",
+      "tema": "subsidios eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Habla de los subsidios en Estados Unidos; es un análisis internacional lejano para los productores de Chivilcoy y la región.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f9f4ae1aeded9506": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 84,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "tiempo y siembra",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El pronóstico de buen tiempo para avanzar con la siembra y cosecha interesa de forma directa a todos los productores y contratistas locales.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "932a0af3d1faaaae": {
+      "conversacion": 6,
+      "historia_concreta": 11,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 45,
+      "commercial_score": 35,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de empresa familiar ganadera en Entre Ríos; linda para leer pero queda lejos geográficamente de nuestra zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        42
+      ]
+    },
+    "d95d04510224a9d6": {
+      "conversacion": 4,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 31,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "escuela agraria",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota de color sobre un vino hecho en una escuela de Mendoza que va a Córdoba; no tiene arraigo local ni impacto productivo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31670,7 +31774,12 @@
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-8-noviembre-2026": "2026-11-08",
       "https://lacapital.com.ar/agro/cronicas-campana-el-viento-se-pone-frente-n10290921.html": "2026-11-08",
       "https://bichosdecampo.com/nacio-con-tecnologia-cubana-y-es-una-empresa-estatal-pero-20-anos-despues-la-biofabrica-de-misiones-rompe-prejuicios-y-confirma-que-muchas-veces-lo-publico-tambien-sirve": "2026-11-08",
-      "https://lanacion.com.ar/economia/campo/leon-xiv-quien-es-ramona-casas-elegida-para-hacer-quesillos-para-el-papa-nid08112026": "2026-11-08"
+      "https://lanacion.com.ar/economia/campo/leon-xiv-quien-es-ramona-casas-elegida-para-hacer-quesillos-para-el-papa-nid08112026": "2026-11-08",
+      "https://bichosdecampo.com/las-pymes-del-biodiesel-un-relato-epico-que-no-se-corresponde-con-la-realidad-de-los-hechos": "2026-11-08",
+      "https://bichosdecampo.com/un-solo-grafico-para-entender-por-que-la-mayor-parte-de-los-productores-estadounidenses-desaparecerian-sin-los-subsidios-estatales": "2026-11-08",
+      "https://bichosdecampo.com/se-vienen-varios-dias-con-tiempo-ideal-para-avanzar-con-las-labores-agricolas-en-la-region-central-argentina": "2026-11-08",
+      "https://lanacion.com.ar/economia/campo/sebastian-castillo-ceo-de-abuelo-julio-que-exporta-carne-potenciamos-el-negocio-familiar-de-mas-de-nid08112026": "2026-11-08",
+      "https://lacapital.com.ar/agro/el-vino-que-nacio-las-aulas-y-llegara-al-altar-leon-xiv-n10291137.html": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33707,7 +33816,12 @@
       "euro blue hoy precio y cotizacion de este 8 noviembre 2026": "2026-11-08",
       "cronicas de campana el viento se pone de frente": "2026-11-08",
       "nacio con tecnologia cubana y es una empresa estatal pero 20 anos despues la biofabrica de misiones rompe prejuicios y confirma que muchas veces lo publico tambien sirve": "2026-11-08",
-      "leon xiv quien es ramona casas elegida para hacer quesillos para el papa": "2026-11-08"
+      "leon xiv quien es ramona casas elegida para hacer quesillos para el papa": "2026-11-08",
+      "las pymes del biodiesel un relato epico que no se corresponde con la realidad de los hechos": "2026-11-08",
+      "un solo grafico para entender por que la mayor parte de los productores estadounidenses desaparecerian sin los subsidios estatales": "2026-11-08",
+      "se vienen varios dias con tiempo ideal para avanzar con las labores agricolas en la region central argentina": "2026-11-08",
+      "sebastian castillo ceo de abuelo julio que exporta carne potenciamos el negocio familiar de mas de cuatro generaciones": "2026-11-08",
+      "el vino que nacio en las aulas y llegara al altar de leon xiv": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35744,7 +35858,12 @@
       "f64c0d77735037d5": "2026-11-08",
       "23aac09f088b6357": "2026-11-08",
       "096900ac737a910c": "2026-11-08",
-      "94504112e961e984": "2026-11-08"
+      "94504112e961e984": "2026-11-08",
+      "aa4c0afa8fb1c629": "2026-11-08",
+      "fb6950859f59eb20": "2026-11-08",
+      "f9f4ae1aeded9506": "2026-11-08",
+      "932a0af3d1faaaae": "2026-11-08",
+      "d95d04510224a9d6": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63338,11 +63457,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_28b7940488dc_portada.jpg"
+    },
+    {
+      "id": "fd9044566097",
+      "cuando": "2026-11-08T18:00-03:00",
+      "titulo_original": "Se vienen varios días con tiempo ideal para avanzar con las labores agrícolas en la región central argentina",
+      "descripcion": "Durante la próxima semana se prevé un progresivo ascenso de las temperaturas, con tiempo sin tormentas ni precipitaciones abundantes en la mayor parte de las zonas agrícolas, lo que permitiría avanzar con las labores de siembra de granos gruesos y cosecha de los cereales de invierno. El modelo del S",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/se-vienen-varios-dias-con-tiempo-ideal-para-avanzar-con-las-labores-agricolas-en-la-region-central-argentina/",
+      "titular": "Pronostican días estables para acelerar la siembra y cosecha",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 84,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "tiempo y siembra",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de buen tiempo para avanzar con la siembra y cosecha interesa de forma directa a todos los productores y contratistas locales.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b05666d4-2a40-454e-8ba1-a90519dcd183",
+          "slug": "el-clima-da-tregua-anticipan-dias-ideales-para-avanzar-con-la-29f9af",
+          "url": "https://www.diariolacampaña.com.ar/n/el-clima-da-tregua-anticipan-dias-ideales-para-avanzar-con-la-29f9af",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17880491202633227",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1752704963527167",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17882685984547685"
+        },
+        "historia_facebook": {
+          "id": "2176582796542568"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fd9044566097_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-08T16:04:13-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-08T18:05:40-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
