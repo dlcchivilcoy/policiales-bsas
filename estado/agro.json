@@ -63301,7 +63301,7 @@
       "cuando": "2026-11-07T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-08T13:07:01-03:00",
+  "actualizado": "2026-11-08T14:00:28-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -67595,6 +67595,43 @@
               },
               "facebook": {
                 "id": "1496946199023444"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-08T14:00:00-03:00": {
+      "dia": "2026-11-08",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Por qué partido andan dándole a la máquina?",
+          "opciones": [],
+          "publico": "contratistas",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18022954907730991"
+            },
+            "facebook": {
+              "id": "2875528602840817"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18022954907730991"
+              },
+              "facebook": {
+                "id": "2875528602840817"
               }
             }
           ]
