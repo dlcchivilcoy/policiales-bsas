@@ -409,6 +409,7 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
         urls = [PB.subir_a_release(Path(j), f"agro_{marca}_c{i:02d}.jpg") for i, j in enumerate(jpgs)]
     except Exception as e:                                 # noqa: BLE001
         error = {"error": f"no se pudieron subir las diapositivas: {type(e).__name__}: {str(e)[:160]}"}
+        log(f"   Carrusel FALLÓ: {error['error']}")
         return dict(salida, **{red: error for red in ("instagram", "facebook") if not hecho(red)})
     with credenciales_agro():
         if not hecho("instagram"):

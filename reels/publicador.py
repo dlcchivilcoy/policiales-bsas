@@ -136,7 +136,7 @@ TAG_RELEASE = "reels-policiales"          # el mismo que barre limpieza.limpiar_
 REPO = "dlcchivilcoy/policiales-bsas"     # PUBLICO: por eso Instagram puede bajar el .mp4
 
 ESPERA_PROCESO = 300                      # s que se espera a que IG/FB procesen el video
-ESPERAS_CONTENEDOR = (20, 60)             # contenedor de IG en ERROR: hasta 3 en total
+ESPERAS_CONTENEDOR = (20, 60, 120)        # contenedor de IG en ERROR o sin poder bajar el archivo: hasta 4
 ESPERAS_PUBLICAR = (10, 30, 60)           # media_publish con error transitorio
 _HTTP_TRANSITORIO = (429, 500, 502, 503, 504)
 
@@ -274,8 +274,11 @@ def _transitorio(r: httpx.Response) -> bool:
     # 9007 / 2207027 = «El contenido multimedia no está listo para publicarse. Espera un momento.»: el
     # contenedor dice FINISHED pero media_publish todavía no lo toma. Pasaba casi todos los días con las
     # historias de agro (la corrida entera quedaba en rojo, 24-25/10/2026): se espera y se reintenta.
-    return (bool(err.get("is_transient")) or err.get("code") in (1, 2, 4, 17, 32, 341, 9007)
-            or err.get("error_subcode") == 2207027)
+    # 9004 / 2207052 = «No se pudo recuperar el contenido multimedia de este URI»: Instagram fue a buscar la
+    # foto al Release de GitHub y GitHub no se la dio a tiempo (8/11/2026: dos corridas de agro en rojo, con
+    # la misma foto que Facebook bajó bien segundos después). Crear el contenedor de nuevo es inocuo.
+    return (bool(err.get("is_transient")) or err.get("code") in (1, 2, 4, 17, 32, 341, 9004, 9007)
+            or err.get("error_subcode") in (2207027, 2207052))
 
 
 # =============================================================================
@@ -299,7 +302,9 @@ def _token_github() -> str:
     return _token_gh
 
 
-ESPERAS_URL_PUBLICA = (3, 8, 15, 30)    # segundos entre miradas a la URL recién subida
+# Segundos entre miradas a la URL recién subida. 8/11/2026: GitHub contestó 504 durante más de un minuto
+# y el carrusel de agro de las 7 se perdió entero; ahora se le dan hasta ~4 minutos.
+ESPERAS_URL_PUBLICA = (3, 8, 15, 30, 60, 120)
 
 
 def subir_a_release(mp4: Path, nombre: str) -> str:

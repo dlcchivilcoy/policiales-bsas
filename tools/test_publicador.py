@@ -1711,6 +1711,11 @@ os.environ["INTERCALADO"] = "0"
 _r9007 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
     "code": 9007, "error_subcode": 2207027, "message": "El contenido multimedia no está listo para publicarse."}}})()
 chequear("Instagram «no está listo para publicarse» (9007) se reintenta", PUB._transitorio(_r9007))
+_r9004 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
+    "code": 9004, "error_subcode": 2207052, "message": "No se pudo recuperar el contenido multimedia de este URI"}}})()
+chequear("Instagram «no se pudo recuperar el contenido» (9004) se reintenta", PUB._transitorio(_r9004))
+_r100 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {"code": 100, "message": "x"}}})()
+chequear("un error de parámetros (100) NO se reintenta", not PUB._transitorio(_r100))
 from reels import web as _WEB  # noqa: E402
 _resp = [503, 504, 200]
 _hechas = []
