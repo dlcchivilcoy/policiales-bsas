@@ -62797,7 +62797,7 @@
       "cuando": "2026-11-07T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T21:07:37-03:00",
+  "actualizado": "2026-11-07T21:30:27-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -67013,6 +67013,43 @@
               },
               "facebook": {
                 "id": "1821637188885485"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-07T21:30:00-03:00": {
+      "dia": "2026-11-07",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué insumo es el que más te están pidiendo?",
+          "opciones": [],
+          "publico": "acopios",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "17870827284660317"
+            },
+            "facebook": {
+              "id": "1135946338818382"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17870827284660317"
+              },
+              "facebook": {
+                "id": "1135946338818382"
               }
             }
           ]
