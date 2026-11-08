@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T22:32:15.000Z",
+  "actualizado": "2026-11-08T23:01:25.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/06/26895-aprehendieron-a-un-hombre-que-circulaba-en-una-moto-con-pedido-de-secuestro-en-bragado",
@@ -235,6 +235,30 @@
       "volanta": "Choque en Bragado",
       "categoria": "otro_policial",
       "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.junindigital.com/policiales/2026-11-8-10-1-0-una-estafa-de-11-7-millones-por-whatsapp-termino-con-allanamientos-y-el-dinero-llego-a-presos-de-junin",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-08T23:01:25.000Z",
+      "titulo": "Estafa virtual de $11,7 millones llegó a presos alojados en una cárcel de Junín",
+      "descripcion": "Una investigación por un fraude informático mediante WhatsApp a una mujer de Buenos Aires reveló que parte del dinero fue recibido por dos reclusos en una unidad penal de Junín. La pesquisa derivó en dos procedimientos en Pergamino.",
+      "texto_tiktok": "Una defraudación informática por 11,7 millones de pesos concretada mediante el hackeo de WhatsApp a una damnificada de Buenos Aires derivó en una pesquisa que conectó a la maniobra con la cárcel de Junín.\n\nLa investigación se originó tras una presentación judicial de la Nación y quedó a cargo del fiscal Nelson Mastorchio junto al Departamento de Cibercrimen de Pergamino.\n\nLos rastreos informáticos condujeron a dos procedimientos ejecutados este sábado en territorio pergaminense, donde incautaron dispositivos tecnológicos para peritar.\n\nLa causa se encuentra caratulada en forma provisoria como defraudación informática mientras avanzan las diligencias.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #EstafaVirtual #Cibercrimen #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-08_2134_05_junin_estafa-virtual-de-11-7-millone.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/estafa-virtual-de-11-7-millones-con-ramificaciones-en-la-carcel-5a0105",
+      "youtube_url": "https://youtube.com/shorts/dg25T0_FchA",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Operativo en Pergamino y Junín",
+      "categoria": "estafa",
+      "distancia_km": 91.2,
       "radio_ok": true,
       "plataformas": [
         "x",
