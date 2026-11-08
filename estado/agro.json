@@ -29388,6 +29388,150 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4144a89aad5af34d": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 47,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "crucíferas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una recomendación técnica general sobre cosecha, útil pero sin la fuerza local o el gancho para generar charla.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "47a57cd94b18e91c": {
+      "conversacion": 0,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 14,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "inta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un acuerdo institucional entre organismos y Brasil que no le cambia nada al productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9a3c935dc6e3a711": {
+      "conversacion": 15,
+      "historia_concreta": 20,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 59,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "cabritos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Una gran historia humana y rural en Córdoba, con nombre, apellido y esfuerzo diario que da gusto leer y compartir.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        50
+      ]
+    },
+    "341f0cc26efdf649": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 27,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "forestal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tema forestal de Corrientes y Misiones; queda muy lejos de la realidad productiva de Chivilcoy y la zona.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a32684c88d6ff3cb": {
+      "conversacion": 5,
+      "historia_concreta": 6,
+      "cercania_pba": 0,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "maíz norte",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Análisis agronómico enfocado netamente en el norte argentino, poco relevante para el oeste y norte bonaerense.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2e61d5fbefeca418": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "congreso ganadero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es la previa de una charla en un congreso sobre ganadería; le falta el hecho concreto o la bajada práctica.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "533fa8b62baa479d": {
+      "conversacion": 10,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 45,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "mesa de enlace",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reunión política de dirigencia gremial en Entre Ríos; a pesar de nombrar a los líderes, no toca el día a día local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31404,7 +31548,16 @@
       "https://infocampo.com.ar/en-medio-de-los-desencuentros-por-el-visec-la-mesa-de-enlace-busco-mostrarse-unida-en-entre-rios": "2026-11-08",
       "https://bichosdecampo.com/quien-es-suzano-otro-gigante-brasileno-que-maneja-29-millones-de-hectareas-y-lidera-la-produccion-mundial-de-pasta-de-celulosa": "2026-11-08",
       "https://bichosdecampo.com/a-veces-el-arroz-se-pega-los-lideres-de-la-mesa-de-enlace-volvieron-a-mostrarse-unidos-en-san-salvador-capital-nacional-de-ese-cultivo": "2026-11-08",
-      "https://lanacion.com.ar/economia/campo/lanzamiento-una-plataforma-publica-permitira-hacer-un-mapeo-del-campo-nid08112026": "2026-11-08"
+      "https://lanacion.com.ar/economia/campo/lanzamiento-una-plataforma-publica-permitira-hacer-un-mapeo-del-campo-nid08112026": "2026-11-08",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-8-noviembre-2026": "2026-11-08",
+      "https://infocampo.com.ar/cosecha-de-cruciferas-las-claves-para-no-regalar-rinde-a-ultimo-momento": "2026-11-08",
+      "https://infocampo.com.ar/de-agromanagement-a-la-patagonia-argentina-y-brasil-fortalecen-su-cooperacion-en-investigacion-agropecuaria": "2026-11-08",
+      "https://bichosdecampo.com/cambio-un-chancho-por-tres-chivas-y-asi-empezo-a-producir-los-famosos-cabritos-de-quilino-en-medio-del-monte-cordobes-rodrigo-vergara-usa-el-gps-para-seguir-a-sus-cabras-y-el-esfuerzo-para-cuidar-de": "2026-11-08",
+      "https://bichosdecampo.com/cuando-el-aserradero-vende-menos-el-productor-deja-de-plantar-hoy-lo-que-se-debe-cosechar-en-15-20-anos-el-dilema-forestal-que-hoy-atraviesan-corrientes-y-misiones": "2026-11-08",
+      "https://lanacion.com.ar/economia/campo/agricultura/esta-en-riesgo-el-maiz-en-el-norte-argentino-el-comportamiento-de-la-soja-puede-tener-una-respuesta-nid08112026": "2026-11-08",
+      "https://elregionaldigital.com.ar/mas-kilos-y-mejor-calidad-que-animal-necesita-producir-la-ganaderia-argentina": "2026-11-08",
+      "https://elregionaldigital.com.ar/fiesta-nacional-arrocera-donde-castagnani-y-pino-se-vieron-las-caras-luego-de-una-semana-de-chisporroteo-entre-entidades": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33419,7 +33572,16 @@
       "en medio de los desencuentros por el visec la mesa de enlace busco mostrarse unida en entre rios": "2026-11-08",
       "quien es suzano otro gigante brasileno que maneja 2 9 millones de hectareas y lidera la produccion mundial de pasta de celulosa": "2026-11-08",
       "a veces el arroz se pega los lideres de la mesa de enlace volvieron a mostrarse unidos en san salvador capital nacional de ese cultivo": "2026-11-08",
-      "ya esta disponible una plataforma publica permite hacer un mapeo del campo": "2026-11-08"
+      "ya esta disponible una plataforma publica permite hacer un mapeo del campo": "2026-11-08",
+      "clima hoy en mendoza el pronostico del tiempo para este 8 noviembre 2026": "2026-11-08",
+      "clima hoy en tucuman el pronostico del tiempo para este 8 noviembre 2026": "2026-11-08",
+      "cosecha de cruciferas las claves para no regalar rinde a ultimo momento": "2026-11-08",
+      "de agromanagement a la patagonia argentina y brasil fortalecen su cooperacion en investigacion agropecuaria": "2026-11-08",
+      "cambio un chancho por tres chivas y asi empezo a producir los famosos cabritos de quilino en medio del monte cordobes rodrigo vergara usa el gps para seguir a sus cabras y el esfuerzo para cuidar de su padre y de su hijo": "2026-11-08",
+      "cuando el aserradero vende menos el productor deja de plantar hoy lo que se debe cosechar en 15 20 anos el dilema forestal que hoy atraviesan corrientes y misiones": "2026-11-08",
+      "esta en riesgo el maiz en el norte argentino el comportamiento de la soja puede tener una respuesta": "2026-11-08",
+      "mas kilos y mejor calidad que animal necesita producir la ganaderia argentina": "2026-11-08",
+      "fiesta nacional arrocera donde castagnani y pino se vieron las caras luego de una semana de chisporroteo entre entidades": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35434,7 +35596,16 @@
       "a401610e396c94e8": "2026-11-08",
       "9a110b1cb5b05d46": "2026-11-08",
       "87e792172c363e67": "2026-11-08",
-      "30f71a3a6249aeb7": "2026-11-08"
+      "30f71a3a6249aeb7": "2026-11-08",
+      "c682e22e83df6a34": "2026-11-08",
+      "9e2c95a20d34c1cd": "2026-11-08",
+      "4144a89aad5af34d": "2026-11-08",
+      "47a57cd94b18e91c": "2026-11-08",
+      "9a3c935dc6e3a711": "2026-11-08",
+      "341f0cc26efdf649": "2026-11-08",
+      "a32684c88d6ff3cb": "2026-11-08",
+      "2e61d5fbefeca418": "2026-11-08",
+      "533fa8b62baa479d": "2026-11-08"
     }
   },
   "elegidas": [
@@ -62784,51 +62955,16 @@
         }
       },
       "portada_url": ""
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "277ac0dc3a2a",
-      "rep": {
-        "id": "277ac0dc3a2a",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/siembras-demoradas-heladas-y-nuevas-estrategias-para-una-campana-que-desafia-las-decisiones/",
-        "canonical_url": "https://infocampo.com.ar/siembras-demoradas-heladas-y-nuevas-estrategias-para-una-campana-que-desafia-las-decisiones",
-        "titulo": "Siembras demoradas, heladas y nuevas estrategias para una campaña que desafía las decisiones",
-        "titulo_norm": "siembras demoradas heladas y nuevas estrategias para una campana que desafia las decisiones",
-        "descripcion": "Con el maíz temprano prácticamente implantado y la soja ganando terreno, el arranque de la campaña gruesa muestra realidades diferentes según la región. Las lluvias, las bajas temperaturas y las expectativas de un año Niño están modificando fechas de siembra y decisiones de manejo.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/tomas-cabrini.jpeg",
-        "autor": "infocampo",
-        "publicado": "2026-11-07T22:01-03:00",
-        "capturado": "2026-11-08T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1cfd24e4f74c593a",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "277ac0dc3a2a",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/siembras-demoradas-heladas-y-nuevas-estrategias-para-una-campana-que-desafia-las-decisiones/",
-          "canonical_url": "https://infocampo.com.ar/siembras-demoradas-heladas-y-nuevas-estrategias-para-una-campana-que-desafia-las-decisiones",
-          "titulo": "Siembras demoradas, heladas y nuevas estrategias para una campaña que desafía las decisiones",
-          "titulo_norm": "siembras demoradas heladas y nuevas estrategias para una campana que desafia las decisiones",
-          "descripcion": "Con el maíz temprano prácticamente implantado y la soja ganando terreno, el arranque de la campaña gruesa muestra realidades diferentes según la región. Las lluvias, las bajas temperaturas y las expectativas de un año Niño están modificando fechas de siembra y decisiones de manejo.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/tomas-cabrini.jpeg",
-          "autor": "infocampo",
-          "publicado": "2026-11-07T22:01-03:00",
-          "capturado": "2026-11-08T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1cfd24e4f74c593a",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-08T10:00-03:00",
+      "titulo_original": "Siembras demoradas, heladas y nuevas estrategias para una campaña que desafía las decisiones",
+      "descripcion": "Con el maíz temprano prácticamente implantado y la soja ganando terreno, el arranque de la campaña gruesa muestra realidades diferentes según la región. Las lluvias, las bajas temperaturas y las expectativas de un año Niño están modificando fechas de siembra y decisiones de manejo.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/siembras-demoradas-heladas-y-nuevas-estrategias-para-una-campana-que-desafia-las-decisiones/",
+      "titular": "Campaña gruesa desafía al productor con demoras heladas y El Niño",
+      "volanta": "Agricultura",
       "score": {
         "conversacion": 15,
         "historia_concreta": 10,
@@ -62850,8 +62986,34 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-08T07:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "826291ca-13cf-45b1-8e68-421c4dc5e186",
+          "slug": "campana-gruesa-2026-27-demoras-heladas-y-estrategias-frente-a-68d44f",
+          "url": "https://www.diariolacampaña.com.ar/n/campana-gruesa-2026-27-demoras-heladas-y-estrategias-frente-a-68d44f",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "error": "FalloRed: crear el contenedor: HTTP 400 — No se pudo recuperar el contenido multimedia de este URI: https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_277ac0dc3a2a_c04.jpg.C"
+        },
+        "facebook": {
+          "id": "101271341650483_1752237823573881",
+          "fotos": 6
+        },
+        "historia_facebook": {
+          "id": "1114956641250777"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_277ac0dc3a2a_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "28b7940488dc",
       "rep": {
@@ -62991,8 +63153,8 @@
       "cuando": "2026-11-07T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-08T08:01:25-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-08T10:10:11-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
