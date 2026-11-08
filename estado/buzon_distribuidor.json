@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-08T23:01:25.000Z",
+  "actualizado": "2026-11-08T23:31:34.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/06/26895-aprehendieron-a-un-hombre-que-circulaba-en-una-moto-con-pedido-de-secuestro-en-bragado",
@@ -259,6 +259,30 @@
       "volanta": "Operativo en Pergamino y Junín",
       "categoria": "estafa",
       "distancia_km": 91.2,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/incendio-de-un-vehiculo-en-la-autopista.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-08T23:31:34.000Z",
+      "titulo": "Incendio total de un vehículo en la autopista Chacabuco-Junín",
+      "descripcion": "Un automóvil sufrió pérdidas materiales totales tras incendiarse mientras circulaba por la traza que conecta ambas localidades. Intervinieron los bomberos voluntarios para controlar las llamas.",
+      "texto_tiktok": "Un automóvil se incendió por completo mientras circulaba este lunes por la autopista que une Chacabuco con Junín.\n\nEl fuego se desató de manera imprevisa en plena traza y causó pérdidas totales en la unidad.\n\nDotaciones de bomberos voluntarios acudieron rápidamente al lugar para combatir las llamas y realizar tareas de enfriamiento.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Incendio #Autopista #SiniestroVial #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-08_2134_08_chacabuco_incendio-total-de-un-veh-culo-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-un-auto-se-prendio-fuego-por-completo-en-la-autopista-8bfd53",
+      "youtube_url": "https://youtube.com/shorts/tXQD9oukij4",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Autopista Chacabuco-Junín",
+      "categoria": "incendio",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
