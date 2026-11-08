@@ -29736,6 +29736,50 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1008cded4cb9b79f": {
+      "conversacion": 15,
+      "historia_concreta": 9,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 62,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "engorde y cría",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca de lleno al bolsillo del criador y el invernador de la zona con números claros sobre la rentabilidad.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        59
+      ]
+    },
+    "693b379dae53f32d": {
+      "conversacion": 10,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 48,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "influencer agro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Entrevista a un influencer del sector que divierte pero no cambia la diaria del productor local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31779,7 +31823,11 @@
       "https://bichosdecampo.com/un-solo-grafico-para-entender-por-que-la-mayor-parte-de-los-productores-estadounidenses-desaparecerian-sin-los-subsidios-estatales": "2026-11-08",
       "https://bichosdecampo.com/se-vienen-varios-dias-con-tiempo-ideal-para-avanzar-con-las-labores-agricolas-en-la-region-central-argentina": "2026-11-08",
       "https://lanacion.com.ar/economia/campo/sebastian-castillo-ceo-de-abuelo-julio-que-exporta-carne-potenciamos-el-negocio-familiar-de-mas-de-nid08112026": "2026-11-08",
-      "https://lacapital.com.ar/agro/el-vino-que-nacio-las-aulas-y-llegara-al-altar-leon-xiv-n10291137.html": "2026-11-08"
+      "https://lacapital.com.ar/agro/el-vino-que-nacio-las-aulas-y-llegara-al-altar-leon-xiv-n10291137.html": "2026-11-08",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249248-luciano-colombo-caida-en-la-rentabilidad-ganadera-impacto-del-5-de-retencion-y-la-enorme-brecha-invernada-gordo.html": "2026-11-08",
+      "https://agrositio.com.ar/noticia/249250-visec-el-productor-no-puede-seguir-pagando-las-decisiones-de-otros.html": "2026-11-08",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249249-la-joya-agro-seis-anos-de-crear-contenido-agropecuario-y-el-impacto-de-sus-historias-en-redes.html": "2026-11-08",
+      "https://lanacion.com.ar/economia/campo/castigo-cra-no-descarta-una-accion-judicial-en-medio-de-la-polemica-abierta-con-la-plataforma-visec-nid08112026": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33821,7 +33869,11 @@
       "un solo grafico para entender por que la mayor parte de los productores estadounidenses desaparecerian sin los subsidios estatales": "2026-11-08",
       "se vienen varios dias con tiempo ideal para avanzar con las labores agricolas en la region central argentina": "2026-11-08",
       "sebastian castillo ceo de abuelo julio que exporta carne potenciamos el negocio familiar de mas de cuatro generaciones": "2026-11-08",
-      "el vino que nacio en las aulas y llegara al altar de leon xiv": "2026-11-08"
+      "el vino que nacio en las aulas y llegara al altar de leon xiv": "2026-11-08",
+      "ganaderia en alerta cae la rentabilidad del engorde y se agranda la brecha entre invernada y gordo con l colombo consignatario": "2026-11-08",
+      "europa exige visec cra advierte que cumplir con la trazabilidad no obliga a usar una plataforma privada": "2026-11-08",
+      "la joya agro seis anos de crear contenido agropecuario y el impacto de sus historias en redes": "2026-11-08",
+      "castigo cra no descarta una accion judicial en medio de la polemica abierta con la plataforma visec por una exigencia de la union europea": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35863,7 +35915,11 @@
       "fb6950859f59eb20": "2026-11-08",
       "f9f4ae1aeded9506": "2026-11-08",
       "932a0af3d1faaaae": "2026-11-08",
-      "d95d04510224a9d6": "2026-11-08"
+      "d95d04510224a9d6": "2026-11-08",
+      "1008cded4cb9b79f": "2026-11-08",
+      "fd9634092a3da455": "2026-11-08",
+      "693b379dae53f32d": "2026-11-08",
+      "2ffcaa7c3b208a4b": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63517,11 +63573,75 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fd9044566097_portada.jpg"
+    },
+    {
+      "id": "df4518368ed9",
+      "cuando": "2026-11-08T19:30-03:00",
+      "titulo_original": "Ganadería en alerta: cae la rentabilidad del engorde y se agranda la brecha entre invernada y gordo; con L. Colombo - consignatario",
+      "descripcion": "¿Cómo está la rentabilidad ganadera?, ¿cómo influye la inflación en el consumo, y el dólar estable en las exportaciones? Una charla con el Cr. Luciano Colombo, Pte. de Colombo & Colombo y productor ganadero. Nos explica que la única actividad ganadera con rentabilidad positiva es la cría, mientras q",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249248-luciano-colombo-caida-en-la-rentabilidad-ganadera-impacto-del-5-de-retencion-y-la-enorme-brecha-invernada-gordo.html",
+      "titular": "Ganadería en alerta: la rentabilidad del engorde cae y solo sobrevive",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 62,
+        "commercial_score": 50,
+        "subtema": "ganaderia",
+        "tema": "engorde y cría",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca de lleno al bolsillo del criador y el invernador de la zona con números claros sobre la rentabilidad.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          59
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "dcf3fadb-248a-4bc3-882c-d2c53d1c67f8",
+          "slug": "ganaderia-en-alerta-cae-la-rentabilidad-del-engorde-y-solo-f7db47",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-en-alerta-cae-la-rentabilidad-del-engorde-y-solo-f7db47",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18083572460756876",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1752777513519912",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18118810658054667"
+        },
+        "historia_facebook": {
+          "id": "4536169919989631"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_df4518368ed9_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-08T19:00:21-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-08T19:35:02-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
