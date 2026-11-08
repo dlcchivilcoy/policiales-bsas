@@ -29248,6 +29248,46 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "51007a2198b88a94": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "agroexportación aca",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una charla técnica sobre macroeconomía de exportación que no le cambia el día a día al productor de la zona.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "381e2e8501f7339f": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 23,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "huella de carbono",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de sustentabilidad y certificaciones en abstracto, un tema muy lejano y teórico para el vecino del campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31247,7 +31287,10 @@
       "https://lanacion.com.ar/economia/campo/super-nino-miles-de-hectareas-fueron-alcanzadas-por-violentas-tormentas-y-hay-cultivos-barridos-por-nid07112026": "2026-11-07",
       "https://chacabuconoticias.com.ar/2026/11/07/siembra-de-gruesa-el-maiz-supero-la-mitad-del-area-prevista": "2026-11-07",
       "https://bichosdecampo.com/que-ueno-el-sector-agroexportador-de-paraguay-recibio-un-impulso-de-competitividad-proveniente-del-frente-cambiario": "2026-11-07",
-      "https://croplife.com/crop-inputs/herbicides/think-through-your-tank-mix-how-to-avoid-herbicide-antagonism": "2026-11-07"
+      "https://croplife.com/crop-inputs/herbicides/think-through-your-tank-mix-how-to-avoid-herbicide-antagonism": "2026-11-07",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249247-como-impactan-la-capacidad-de-molienda-la-logistica-y-el-visec-en-el-negocio-agroexportador-argentino-con-j-p-marcello-gte-aca.html": "2026-11-07",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249246-sustentabilidad-agropecuaria-medir-la-huella-de-carbono-permite-abrir-mercados-mas-rentables.html": "2026-11-07",
+      "https://agrositio.com.ar/noticia/249244-buenas-perspectivas-para-la-exportacion-de-trigo-argentino-ante-la-caida-de-la-cosecha-brasilena.html": "2026-11-07"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33245,7 +33288,10 @@
       "super nino miles de hectareas fueron alcanzadas por violentas tormentas y hay cultivos barridos por completo": "2026-11-07",
       "siembra de gruesa el maiz supero la mitad del area prevista": "2026-11-07",
       "que ueno el sector agroexportador de paraguay recibio un impulso de competitividad proveniente del frente cambiario": "2026-11-07",
-      "think through your tank mix how to avoid herbicide antagonism": "2026-11-07"
+      "think through your tank mix how to avoid herbicide antagonism": "2026-11-07",
+      "como impactan capacidad de molienda logistica y visec en el negocio agroexportador argentino con j p marcello gte aca": "2026-11-07",
+      "sustentabilidad agropecuaria medir la huella de carbono y hacer trazabilidad permite abrir mercados mas rentables": "2026-11-07",
+      "buenas perspectivas para la exportacion de trigo ante la caida de la cosecha brasilena": "2026-11-07"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35243,7 +35289,10 @@
       "0ef6b7c0e8e689cb": "2026-11-07",
       "e1d7a3befa86a64e": "2026-11-07",
       "f8447d4f2c4be6ac": "2026-11-07",
-      "cdfc333b6e5d9b94": "2026-11-07"
+      "cdfc333b6e5d9b94": "2026-11-07",
+      "51007a2198b88a94": "2026-11-07",
+      "381e2e8501f7339f": "2026-11-07",
+      "88abf142e016d61e": "2026-11-07"
     }
   },
   "elegidas": [
@@ -62477,6 +62526,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fd5417de5fbd_portada.jpg"
+    },
+    {
+      "id": "f65b6f413dac",
+      "cuando": "2026-11-07T21:00-03:00",
+      "titulo_original": "Maíz tardío: las claves del nitrógeno para destrabar el rinde",
+      "descripcion": "El suelo puede aportar más nitrógeno que el esperado, pero una decisión a ciegas cuesta rendimiento y dinero; qué medir, cuándo fertilizar y cómo ajustar la estrategia para aprovechar cada kilo aplicado",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/agricultura/maiz-tardio-las-claves-del-nitrogeno-para-destrabar-el-rinde-nid07112026/",
+      "titular": "Maíz tardío: claves de fertilización nitrogenada para cuidar el rinde",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 69,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "maíz tardío",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muy útil para el productor que encara la campaña de maíz y busca eficiencia.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          69,
+          67
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-07T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "90150d6f-2fde-4e46-9a5d-c062fac88167",
+          "slug": "maiz-tardio-como-medir-el-nitrogeno-y-ajustar-la-fertilizacion-1a37a5",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-tardio-como-medir-el-nitrogeno-y-ajustar-la-fertilizacion-1a37a5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17872272561659098",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1751580223639641",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18345290710268904"
+        },
+        "historia_facebook": {
+          "id": "2932323713813166"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f65b6f413dac_portada.jpg"
     }
   ],
   "pendientes": [
@@ -62682,79 +62795,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-07T10:00-03:00"
-    },
-    {
-      "id": "f65b6f413dac",
-      "rep": {
-        "id": "f65b6f413dac",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/agricultura/maiz-tardio-las-claves-del-nitrogeno-para-destrabar-el-rinde-nid07112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/agricultura/maiz-tardio-las-claves-del-nitrogeno-para-destrabar-el-rinde-nid07112026",
-        "titulo": "Maíz tardío: las claves del nitrógeno para destrabar el rinde",
-        "titulo_norm": "maiz tardio las claves del nitrogeno para destrabar el rinde",
-        "descripcion": "El suelo puede aportar más nitrógeno que el esperado, pero una decisión a ciegas cuesta rendimiento y dinero; qué medir, cuándo fertilizar y cómo ajustar la estrategia para aprovechar cada kilo aplicado",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/HPKLKTXK6BF4VDJLVHDGZKHQV4.jfif?auth=376692798ffec184e0938dfcd39f2a0d39c062eb85f46fb2c7214a20ef70feee&smart=true",
-        "autor": "Esteban Ciarlo, Franco Córdoba",
-        "publicado": "2026-11-07T06:00-03:00",
-        "capturado": "2026-11-07T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "90c1f3f48beb424a",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "f65b6f413dac",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/agricultura/maiz-tardio-las-claves-del-nitrogeno-para-destrabar-el-rinde-nid07112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/agricultura/maiz-tardio-las-claves-del-nitrogeno-para-destrabar-el-rinde-nid07112026",
-          "titulo": "Maíz tardío: las claves del nitrógeno para destrabar el rinde",
-          "titulo_norm": "maiz tardio las claves del nitrogeno para destrabar el rinde",
-          "descripcion": "El suelo puede aportar más nitrógeno que el esperado, pero una decisión a ciegas cuesta rendimiento y dinero; qué medir, cuándo fertilizar y cómo ajustar la estrategia para aprovechar cada kilo aplicado",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/HPKLKTXK6BF4VDJLVHDGZKHQV4.jfif?auth=376692798ffec184e0938dfcd39f2a0d39c062eb85f46fb2c7214a20ef70feee&smart=true",
-          "autor": "Esteban Ciarlo, Franco Córdoba",
-          "publicado": "2026-11-07T06:00-03:00",
-          "capturado": "2026-11-07T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "90c1f3f48beb424a",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 10,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 69,
-        "commercial_score": 65,
-        "subtema": "agro",
-        "tema": "maíz tardío",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muy útil para el productor que encara la campaña de maíz y busca eficiencia.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          67
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-07T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-07T19:35:13-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-07T21:07:37-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
