@@ -29592,6 +29592,26 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "096900ac737a910c": {
+      "conversacion": 3,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 19,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "biofábrica misiones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un caso interesante pero demasiado alejado geográficamente para el productor de la zona núcleo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31628,7 +31648,8 @@
       "https://bichosdecampo.com/luis-contigiani-es-uno-de-los-hombres-detras-de-la-estrategia-de-expansion-de-la-cooperativa-afa-pero-no-olvida-para-que-lo-hacen-el-sentido-ultimo-no-es-otro-que-el-chacarero-su-familia": "2026-11-08",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-8-noviembre-2026": "2026-11-08",
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-8-noviembre-2026": "2026-11-08",
-      "https://lacapital.com.ar/agro/cronicas-campana-el-viento-se-pone-frente-n10290921.html": "2026-11-08"
+      "https://lacapital.com.ar/agro/cronicas-campana-el-viento-se-pone-frente-n10290921.html": "2026-11-08",
+      "https://bichosdecampo.com/nacio-con-tecnologia-cubana-y-es-una-empresa-estatal-pero-20-anos-despues-la-biofabrica-de-misiones-rompe-prejuicios-y-confirma-que-muchas-veces-lo-publico-tambien-sirve": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33663,7 +33684,8 @@
       "luis contigiani es uno de los hombres detras de la estrategia de expansion de la cooperativa afa pero no olvida para que lo hacen el sentido ultimo no es otro que el chacarero su familia los pueblitos": "2026-11-08",
       "dolar blue a cuanto cotizan hoy en mendoza 8 noviembre 2026": "2026-11-08",
       "euro blue hoy precio y cotizacion de este 8 noviembre 2026": "2026-11-08",
-      "cronicas de campana el viento se pone de frente": "2026-11-08"
+      "cronicas de campana el viento se pone de frente": "2026-11-08",
+      "nacio con tecnologia cubana y es una empresa estatal pero 20 anos despues la biofabrica de misiones rompe prejuicios y confirma que muchas veces lo publico tambien sirve": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35698,7 +35720,8 @@
       "9026380aa905dfdb": "2026-11-08",
       "9182790bef64c2b7": "2026-11-08",
       "f64c0d77735037d5": "2026-11-08",
-      "23aac09f088b6357": "2026-11-08"
+      "23aac09f088b6357": "2026-11-08",
+      "096900ac737a910c": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63228,51 +63251,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_90b6ec833e4b_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "28b7940488dc",
-      "rep": {
-        "id": "28b7940488dc",
-        "fuente": "El Nuevo Cronista",
-        "tipo_fuente": "medio",
-        "source_url": "https://elnuevocronista.com/feed/",
-        "url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales/",
-        "canonical_url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales",
-        "titulo": "Voraz incendio destruye locales comerciales",
-        "titulo_norm": "voraz incendio destruye locales comerciales",
-        "descripcion": "Tras un arduo operativo conjunto que se extendió hasta la madrugada, lograron sofocar el fuego en una pinturería y una forrajería. Estuvo todo el equipo de Bomberos Voluntarios a cargo de Mario Quaglia, protección civil con Agustina Loré, y una red de instancias de asistencia ante la emergencia El siniestro, de grandes dimensiones, destruyó por […] La entrada Voraz incendio destruye locales comerciales se publicó primero en El Nuevo Cronista.",
-        "imagen_url": "",
-        "autor": "redaccion",
-        "publicado": "2026-11-07T14:19-03:00",
-        "capturado": "2026-11-07T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cb20488d3ee7ed2e",
-        "localidad_medio": "Mercedes"
-      },
-      "grupo": [
-        {
-          "id": "28b7940488dc",
-          "fuente": "El Nuevo Cronista",
-          "tipo_fuente": "medio",
-          "source_url": "https://elnuevocronista.com/feed/",
-          "url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales/",
-          "canonical_url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales",
-          "titulo": "Voraz incendio destruye locales comerciales",
-          "titulo_norm": "voraz incendio destruye locales comerciales",
-          "descripcion": "Tras un arduo operativo conjunto que se extendió hasta la madrugada, lograron sofocar el fuego en una pinturería y una forrajería. Estuvo todo el equipo de Bomberos Voluntarios a cargo de Mario Quaglia, protección civil con Agustina Loré, y una red de instancias de asistencia ante la emergencia El siniestro, de grandes dimensiones, destruyó por […] La entrada Voraz incendio destruye locales comerciales se publicó primero en El Nuevo Cronista.",
-          "imagen_url": "",
-          "autor": "redaccion",
-          "publicado": "2026-11-07T14:19-03:00",
-          "capturado": "2026-11-07T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cb20488d3ee7ed2e",
-          "localidad_medio": "Mercedes"
-        }
-      ],
+      "cuando": "2026-11-08T14:30-03:00",
+      "titulo_original": "Voraz incendio destruye locales comerciales",
+      "descripcion": "Tras un arduo operativo conjunto que se extendió hasta la madrugada, lograron sofocar el fuego en una pinturería y una forrajería. Estuvo todo el equipo de Bomberos Voluntarios a cargo de Mario Quaglia, protección civil con Agustina Loré, y una red de instancias de asistencia ante la emergencia El s",
+      "fuente": "El Nuevo Cronista",
+      "url": "https://elnuevocronista.com/voraz-incendio-destruye-locales-comerciales/",
+      "titular": "Voraz incendio destruye pinturería y forrajería en zona comercial",
+      "volanta": "Locales Comerciales",
       "score": {
         "conversacion": 15,
         "historia_concreta": 16,
@@ -63298,11 +63286,40 @@
         ],
         "de_zona": false
       },
-      "cuando": "2026-11-07T14:30-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "01398d6c-c72b-4340-a106-48b750714302",
+          "slug": "voraz-incendio-destruye-una-pintureria-y-una-forrajeria-en-un-a5a2d0",
+          "url": "https://www.diariolacampaña.com.ar/n/voraz-incendio-destruye-una-pintureria-y-una-forrajeria-en-un-a5a2d0",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18107705906130548",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1752515670212763",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17898208707477887"
+        },
+        "historia_facebook": {
+          "id": "3010252789310596"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_28b7940488dc_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-08T14:00:28-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-11-08T14:37:21-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
