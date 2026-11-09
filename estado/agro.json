@@ -30420,6 +30420,70 @@
         60,
         40
       ]
+    },
+    "7bbd97dda4ddd6a0": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 30,
+      "commercial_score": 10,
+      "subtema": "mercados",
+      "tema": "poroto",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un tema de comercio internacional que afecta al mercado global pero le queda lejos al productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0129efbc8611cd7f": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 40,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de mejora genética en trigo y premios, pero es un estudio general y no un hecho concreto de la zona.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "88b5656629868be0": {
+      "conversacion": 10,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 58,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "emergencia agropecuaria",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Declaran emergencia agropecuaria cerca de la región por cuestiones climáticas, algo que interesa y preocupa al productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        50
+      ]
     }
   },
   "indice": {
@@ -32518,7 +32582,10 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249253-de-china-al-campo-15-dias-con-lo-ultimo-en-tecnologias-con-s-salvaro-y-f-mayer.html": "2026-11-09",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249254-andres-leone-el-diputado-agronomo-que-impulsa-biocombustibles-y-agroindustria-en-el-congreso.html": "2026-11-09",
       "https://bichosdecampo.com/gustavo-piloni-fue-uno-de-los-fundadores-de-la-mayor-exportadora-de-citricos-dulces-hace-40-anos-cuando-habia-que-sacar-frutas-ahora-advierte-que-la-crisis-es-peor-porque-argentina-se-cayo": "2026-11-09",
-      "https://lanacion.com.ar/economia/campo/granos-despues-de-las-fuertes-bajas-que-precios-esperan-los-analistas-para-los-proximos-meses-nid09112026": "2026-11-09"
+      "https://lanacion.com.ar/economia/campo/granos-despues-de-las-fuertes-bajas-que-precios-esperan-los-analistas-para-los-proximos-meses-nid09112026": "2026-11-09",
+      "https://bichosdecampo.com/una-buena-noticia-que-en-realidad-es-mala-brasil-esta-experimentando-un-auge-de-exportaciones-de-poroto-hacia-la-union-europea": "2026-11-09",
+      "https://lacapital.com.ar/agro/trigo-argentino-el-mejoramiento-genetico-permitio-aumentar-el-rendimiento-cerca-1-ano-n10290643.html": "2026-11-09",
+      "https://diariojunin.com/noticias/103106_zrate-adhiere-a-la-emergencia-agropecuaria.html": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34615,7 +34682,10 @@
       "de china al campo 15 dias con lo ultimo en tecnologias con s salvaro y f mayer": "2026-11-09",
       "andres leone el diputado agronomo y amigo de milei que impulsa al campo en el congreso": "2026-11-09",
       "gustavo piloni fue uno de los fundadores de la mayor exportadora de citricos dulces hace 40 anos cuando habia que sacar frutas ahora advierte que la crisis es peor porque argentina se cayo del globo": "2026-11-09",
-      "granos despues de las fuertes bajas que precios esperan los analistas para los proximos meses": "2026-11-09"
+      "granos despues de las fuertes bajas que precios esperan los analistas para los proximos meses": "2026-11-09",
+      "una buena noticia que en realidad es mala brasil esta experimentando un auge de exportaciones de poroto hacia la union europea": "2026-11-09",
+      "trigo argentino el mejoramiento genetico permitio aumentar el rendimiento cerca de 1 por ano": "2026-11-09",
+      "zarate adhiere a la emergencia agropecuaria": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36712,7 +36782,10 @@
       "ba63064ce87b0f92": "2026-11-09",
       "ce2f5aa8bd4ed741": "2026-11-09",
       "17c2cc7e737f1789": "2026-11-09",
-      "802e2b7a067b28b1": "2026-11-09"
+      "802e2b7a067b28b1": "2026-11-09",
+      "7bbd97dda4ddd6a0": "2026-11-09",
+      "0129efbc8611cd7f": "2026-11-09",
+      "88b5656629868be0": "2026-11-09"
     }
   },
   "elegidas": [
@@ -64933,7 +65006,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-09T19:00:36-03:00",
+  "actualizado": "2026-11-09T19:33:44-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
