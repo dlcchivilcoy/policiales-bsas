@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T23:02:56.000Z",
+  "actualizado": "2026-11-09T23:30:57.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/noche07112026.html",
@@ -235,6 +235,30 @@
       "volanta": "Operativos viales en Salto",
       "categoria": "operativo_policial",
       "distancia_km": 70.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/policiales-de-chacabuco-choque-acoso-y.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-09T23:30:57.000Z",
+      "titulo": "Choque, operativos viales y pedido de auxilio por acoso en la madrugada de Chacabuco",
+      "descripcion": "Una madrugada agitada dejó un choque de vehículos, un llamado de auxilio por acoso mediante botón antipánico y múltiples vehículos retenidos en controles de tránsito.",
+      "texto_tiktok": "La madrugada dejó varios hechos en Chacabuco que movilizaron a la Policía y al área de Tránsito municipal.\n\nUn automóvil Chevrolet Corsa colisionó contra una camioneta Toyota Hilux estacionada sobre la calle Almirante Brown, entre Gutiérrez y Casasco, generando únicamente daños materiales.\n\nPor otro lado, una vecina de 37 años activó un botón antipánico para pedir auxilio policial debido a que su expareja la acosaba desde el exterior de su vivienda, aunque el agresor huyó antes de la llegada del patrullero.\n\nEn paralelo, la Subsecretaría de Tránsito desplegó operativos en el Acceso Juan XXIII y Roca, además de controles dinámicos, que derivaron en la retención de varias motocicletas y licencias por diversas infracciones, incluyendo un test de alcoholemia positivo.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #SiniestroVial #Policiales #ControlDeTransito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-09_2134_07_chacabuco_choque-operativos-viales-y-ped.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-choque-acoso-con-boton-antipanico-y-multiples-83143b",
+      "youtube_url": "https://youtube.com/shorts/AZvYq3Sp9CM",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Choques, operativos y acoso en Chacabuco",
+      "categoria": "accidente_vial",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
