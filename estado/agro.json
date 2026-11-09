@@ -30088,6 +30088,66 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "69ea2292b81a29c4": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 35,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "río anisacate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Córdoba y es una advertencia ambiental muy lejana para los vecinos de Chivilcoy y la zona.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9c7d94760a11e17b": {
+      "conversacion": 2,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 31,
+      "commercial_score": 25,
+      "subtema": "maquinaria",
+      "tema": "crucianelli",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es el aniversario y libro de una empresa de maquinaria de Santa Fe; no le cambia nada al productor local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1f418cc4ac9b356d": {
+      "conversacion": 18,
+      "historia_concreta": 18,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 79,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "motobomba",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una donación concreta de la cooperativa local para frenar anegamientos, toca de cerca a toda la región vecina.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -32161,7 +32221,17 @@
       "https://lanacion.com.ar/economia/campo/gonzalo-goni-sobre-un-desarrollo-argentino-innovador-esto-me-va-a-decir-cuanta-plata-te-puedo-nid09112026": "2026-11-09",
       "https://intainforma.inta.gob.ar/en-octubre-se-registraron-un-50-menos-de-horas-de-sol": "2026-11-09",
       "https://casaresonline.com.ar/mas-de-90-jovenes-de-buenos-aires-y-la-pampa-se-reunieron-en-carlos-casares-para-fortalecer-el-presente-y-el-futuro-del-campo": "2026-11-09",
-      "https://elregionaldigital.com.ar/jornadas-abiertas-sra-el-campo-protagonista-de-un-cambio-de-epoca": "2026-11-09"
+      "https://elregionaldigital.com.ar/jornadas-abiertas-sra-el-campo-protagonista-de-un-cambio-de-epoca": "2026-11-09",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/riesgo-pais-hoy-09-11-2026": "2026-11-09",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-9-noviembre-2026": "2026-11-09",
+      "https://bichosdecampo.com/se-puede-modificar-14-kilometros-de-cauce-sin-pensar-en-las-consecuencias-la-agronoma-alicia-barchuk-advierte-sobre-las-obras-proyectadas-sobre-el-rio-anisacate-vital-para-una-zona-de-cordoba": "2026-11-09",
+      "https://bichosdecampo.com/no-sabemos-cual-es-la-mejor-noticia-que-crucianelli-cumpla-70-anos-o-que-su-presidente-fierrero-haya-escrito-un-libro-cargado-de-nostalgia-y-se-lo-dedique-a-su-esposa": "2026-11-09",
+      "https://lamanana.com.ar/defensa-civil-sumo-nueva-motobomba-aportada-por-la-cooperativa-agricola-ganadera": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34233,7 +34303,17 @@
       "gonzalo goni sobre un desarrollo argentino innovador esto me va a decir cuanta plata te puedo prestar a partir de tu productividad": "2026-11-09",
       "en octubre se registraron un 50 menos de horas de sol": "2026-11-09",
       "mas de 90 jovenes de buenos aires y la pampa se reunieron en carlos casares para fortalecer el presente y el futuro del campo": "2026-11-09",
-      "jornadas abiertas sra el campo protagonista de un cambio de epoca": "2026-11-09"
+      "jornadas abiertas sra el campo protagonista de un cambio de epoca": "2026-11-09",
+      "precio del maiz en rosario hoy 9 noviembre 2026": "2026-11-09",
+      "precio del trigo en rosario hoy 9 noviembre 2026": "2026-11-09",
+      "precio del girasol en rosario hoy 9 noviembre 2026": "2026-11-09",
+      "precio de la soja en rosario hoy 9 noviembre 2026": "2026-11-09",
+      "precio del sorgo en rosario hoy 9 noviembre 2026": "2026-11-09",
+      "riesgo pais hoy 09 de noviembre de 2026": "2026-11-09",
+      "dolar blue a cuanto cotizan hoy en cordoba 9 noviembre 2026": "2026-11-09",
+      "se puede modificar 14 kilometros de cauce sin pensar en las consecuencias la agronoma alicia barchuk advierte sobre las obras proyectadas sobre el rio anisacate vital para una zona de cordoba": "2026-11-09",
+      "no sabemos cual es la mejor noticia que crucianelli cumpla 70 anos o que su presidente fierrero haya escrito un libro cargado de nostalgia y se lo dedique a su esposa": "2026-11-09",
+      "defensa civil sumo nueva motobomba aportada por la cooperativa agricola ganadera": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36305,7 +36385,17 @@
       "99b6fbfa647f8a26": "2026-11-09",
       "ee4a2a14c314db5a": "2026-11-09",
       "7551be6d7062c12b": "2026-11-09",
-      "1c3a035c422ce648": "2026-11-09"
+      "1c3a035c422ce648": "2026-11-09",
+      "26c4dfd447d12f2a": "2026-11-09",
+      "9a4a0e03f5453c35": "2026-11-09",
+      "20c2a53f6f34beaf": "2026-11-09",
+      "3f2d8a7a08e6be09": "2026-11-09",
+      "237f54dcf8d39efe": "2026-11-09",
+      "c34d29fb05aa0893": "2026-11-09",
+      "8923962dfdb105e7": "2026-11-09",
+      "69ea2292b81a29c4": "2026-11-09",
+      "9c7d94760a11e17b": "2026-11-09",
+      "1f418cc4ac9b356d": "2026-11-09"
     }
   },
   "elegidas": [
@@ -64211,6 +64301,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a5413d94f27f_portada.jpg"
+    },
+    {
+      "id": "fc65a2701cae",
+      "cuando": "2026-11-09T11:30-03:00",
+      "titulo_original": "Defensa Civil sumó nueva motobomba aportada por la Cooperativa Agrícola Ganadera",
+      "descripcion": "La institución recibió una potente unidad de extracción donada por la entidad cooperativa, destinada a optimizar las respuestas ante anegamientos y lluvias intensas en el partido.",
+      "fuente": "La Mañana (25 de Mayo)",
+      "url": "https://www.lamanana.com.ar/defensa-civil-sumo-nueva-motobomba-aportada-por-la-cooperativa-agricola-ganadera/",
+      "titular": "Saladillo: Defensa Civil recibe nueva motobomba para anegamientos",
+      "volanta": "Emergencia climática",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 79,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "motobomba",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una donación concreta de la cooperativa local para frenar anegamientos, toca de cerca a toda la región vecina.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-09T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "83b2ef6e-48c6-4646-bfe5-36f4ec035cb8",
+          "slug": "saladillo-defensa-civil-suma-motobomba-de-alta-potencia-para-218770",
+          "url": "https://www.diariolacampaña.com.ar/n/saladillo-defensa-civil-suma-motobomba-de-alta-potencia-para-218770",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17969736483234619",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1753579083439755",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18104726141055439"
+        },
+        "historia_facebook": {
+          "id": "1744151226679962"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fc65a2701cae_portada.jpg"
     }
   ],
   "pendientes": [
@@ -64284,8 +64434,8 @@
       "cuando": "2026-11-09T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-09T11:00:25-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-09T11:35:33-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
