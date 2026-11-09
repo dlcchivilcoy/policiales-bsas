@@ -30316,6 +30316,110 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4661f61be9fe4a30": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 1,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 13,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "tendencias alimentarias",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una feria internacional en Europa sobre consumo global, no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ba63064ce87b0f92": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 23,
+      "commercial_score": 20,
+      "subtema": "agtech",
+      "tema": "tecnología en china",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Habla de tecnología y viajes a China, un tema lejano y abstracto para el día a día local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ce2f5aa8bd4ed741": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 34,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "biocombustibles y leyes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Política legislativa nacional sobre fitosanitarios y biocombustibles; interesa pero es muy general.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "17c2cc7e737f1789": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 38,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "cítricos entre ríos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una historia de vida y crisis frutícola, pero pasa en el Litoral, lejos de nuestra zona.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "802e2b7a067b28b1": {
+      "conversacion": 12,
+      "historia_concreta": 5,
+      "cercania_pba": 8,
+      "interes_productores": 11,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 50,
+      "commercial_score": 45,
+      "subtema": "mercados",
+      "tema": "precios granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los precios de la soja y el maíz importan a todo productor de la zona a la hora de vender.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        40
+      ]
     }
   },
   "indice": {
@@ -32409,7 +32513,12 @@
       "https://casaresonline.com.ar/la-colza-gana-terreno-como-alternativa-al-trigo-y-busca-consolidarse-en-la-rotacion-agricola-de-la-region": "2026-11-09",
       "https://agrositio.com.ar/noticia/249252-soja-chicago-intenta-recuperarse-pero-el-usda-mantiene-la-presion.html": "2026-11-09",
       "https://bichosdecampo.com/los-exportadores-argentinos-saben-bien-que-tienen-que-aprovechar-al-maximo-la-temporada-de-caza-de-trigo-barato": "2026-11-09",
-      "https://agfundernews.com/guest-article-a-landscape-scale-strategy-for-regenerative-agriculture": "2026-11-09"
+      "https://agfundernews.com/guest-article-a-landscape-scale-strategy-for-regenerative-agriculture": "2026-11-09",
+      "https://todoagro.com.ar/sial-paris-reunio-a-300-000-profesionales-y-anticipo-las-nuevas-tendencias-de-la-industria-alimentaria": "2026-11-09",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249253-de-china-al-campo-15-dias-con-lo-ultimo-en-tecnologias-con-s-salvaro-y-f-mayer.html": "2026-11-09",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249254-andres-leone-el-diputado-agronomo-que-impulsa-biocombustibles-y-agroindustria-en-el-congreso.html": "2026-11-09",
+      "https://bichosdecampo.com/gustavo-piloni-fue-uno-de-los-fundadores-de-la-mayor-exportadora-de-citricos-dulces-hace-40-anos-cuando-habia-que-sacar-frutas-ahora-advierte-que-la-crisis-es-peor-porque-argentina-se-cayo": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/granos-despues-de-las-fuertes-bajas-que-precios-esperan-los-analistas-para-los-proximos-meses-nid09112026": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34501,7 +34610,12 @@
       "la colza gana terreno como alternativa al trigo y busca consolidarse en la rotacion agricola de la region": "2026-11-09",
       "la soja rebota en chicago china vuelve a comprar pero crece la expectativa de mayor cosecha en ee uu": "2026-11-09",
       "los exportadores argentinos saben bien que tienen que aprovechar al maximo la temporada de caza de trigo barato": "2026-11-09",
-      "guest article a landscape scale strategy for regenerative agriculture": "2026-11-09"
+      "guest article a landscape scale strategy for regenerative agriculture": "2026-11-09",
+      "sial paris reunio a 300 000 profesionales y anticipo las nuevas tendencias de la industria alimentaria": "2026-11-09",
+      "de china al campo 15 dias con lo ultimo en tecnologias con s salvaro y f mayer": "2026-11-09",
+      "andres leone el diputado agronomo y amigo de milei que impulsa al campo en el congreso": "2026-11-09",
+      "gustavo piloni fue uno de los fundadores de la mayor exportadora de citricos dulces hace 40 anos cuando habia que sacar frutas ahora advierte que la crisis es peor porque argentina se cayo del globo": "2026-11-09",
+      "granos despues de las fuertes bajas que precios esperan los analistas para los proximos meses": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36593,7 +36707,12 @@
       "f11e1f78aac72991": "2026-11-09",
       "6452e7192a4de676": "2026-11-09",
       "ba2c6e6dd74df698": "2026-11-09",
-      "410111ee67811b9c": "2026-11-09"
+      "410111ee67811b9c": "2026-11-09",
+      "4661f61be9fe4a30": "2026-11-09",
+      "ba63064ce87b0f92": "2026-11-09",
+      "ce2f5aa8bd4ed741": "2026-11-09",
+      "17c2cc7e737f1789": "2026-11-09",
+      "802e2b7a067b28b1": "2026-11-09"
     }
   },
   "elegidas": [
@@ -64747,51 +64866,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1c81c5dddf40_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "ae78fca57110",
-      "rep": {
-        "id": "ae78fca57110",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad/",
-        "canonical_url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad",
-        "titulo": "Algo anda mal en una de las mejores zonas agrícolas: En Río Cuarto, Eduardo Zacchi mete la pala en los lotes de maíz y encuentra “un techo” a 20 centímetros de profundidad",
-        "titulo_norm": "algo anda mal en una de las mejores zonas agricolas en rio cuarto eduardo zacchi mete la pala en los lotes de maiz y encuentra un techo a 20 centimetros de profundidad",
-        "descripcion": "A los veinte centímetros de profundidad, las raíces del maíz se topan con una capa de suelo tan dura que les cuesta seguir bajando. Llueve y, a los pocos días, la planta ya muestra señales de falta de humedad. Eduardo Zacchi, ingeniero agrónomo que trabaja en Río Cuarto, una zona maicera por excelencia, le llama […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/EDUARDO-ZACCHI.00_11_32_19.Still004.jpg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-09T08:31-03:00",
-        "capturado": "2026-11-09T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2737c04e0c25b564",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "ae78fca57110",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad/",
-          "canonical_url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad",
-          "titulo": "Algo anda mal en una de las mejores zonas agrícolas: En Río Cuarto, Eduardo Zacchi mete la pala en los lotes de maíz y encuentra “un techo” a 20 centímetros de profundidad",
-          "titulo_norm": "algo anda mal en una de las mejores zonas agricolas en rio cuarto eduardo zacchi mete la pala en los lotes de maiz y encuentra un techo a 20 centimetros de profundidad",
-          "descripcion": "A los veinte centímetros de profundidad, las raíces del maíz se topan con una capa de suelo tan dura que les cuesta seguir bajando. Llueve y, a los pocos días, la planta ya muestra señales de falta de humedad. Eduardo Zacchi, ingeniero agrónomo que trabaja en Río Cuarto, una zona maicera por excelencia, le llama […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/EDUARDO-ZACCHI.00_11_32_19.Still004.jpg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-09T08:31-03:00",
-          "capturado": "2026-11-09T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2737c04e0c25b564",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-09T18:00-03:00",
+      "titulo_original": "Algo anda mal en una de las mejores zonas agrícolas: En Río Cuarto, Eduardo Zacchi mete la pala en los lotes de maíz y encuentra “un techo” a 20 centímetros de profundidad",
+      "descripcion": "A los veinte centímetros de profundidad, las raíces del maíz se topan con una capa de suelo tan dura que les cuesta seguir bajando. Llueve y, a los pocos días, la planta ya muestra señales de falta de humedad. Eduardo Zacchi, ingeniero agrónomo que trabaja en Río Cuarto, una zona maicera por excelen",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad/",
+      "titular": "Maíz: detectan suelos compactados a veinte centímetros en Río Cuarto",
+      "volanta": "Suelos",
       "score": {
         "conversacion": 14,
         "historia_concreta": 15,
@@ -64817,11 +64901,40 @@
         ],
         "de_zona": false
       },
-      "cuando": "2026-11-09T10:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-09T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "45b66d82-2fe7-4113-870f-3d45da996483",
+          "slug": "alerta-en-rio-cuarto-por-suelos-compactados-que-frenan-las-b87e2d",
+          "url": "https://www.diariolacampaña.com.ar/n/alerta-en-rio-cuarto-por-suelos-compactados-que-frenan-las-b87e2d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18148023268579152",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1753926370071693",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18148625635579488"
+        },
+        "historia_facebook": {
+          "id": "1860988631744482"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ae78fca57110_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-09T16:05:43-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-11-09T18:06:27-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
