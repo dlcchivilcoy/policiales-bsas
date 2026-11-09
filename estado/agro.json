@@ -29940,6 +29940,154 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "345b486d5607b65e": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 31,
+      "commercial_score": 25,
+      "subtema": "empresas",
+      "tema": "vitivinicultura bonaerense",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una nota de debate político provincial sobre el INTA que no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "77434fddbaf446a8": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 24,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "desmontes chaco",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un derecho a réplica sobre desmontes en Chaco queda muy lejos de la realidad de los productores de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2737c04e0c25b564": {
+      "conversacion": 14,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 13,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 62,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "suelos maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El problema de la compactación de suelos y las napas toca de cerca a cualquier agricultor de la región núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        65
+      ]
+    },
+    "6290dbc68c2413fb": {
+      "conversacion": 8,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 40,
+      "commercial_score": 30,
+      "subtema": "maquinaria",
+      "tema": "cosecha yerba",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesante evolución de maquinaria pero muy específica de Misiones y Corrientes, ajena al centro bonaerense.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "99b6fbfa647f8a26": {
+      "conversacion": 8,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "agtech",
+      "tema": "fintech agro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Herramienta financiera basada en productividad que interesa, aunque roza el mundo de las empresas y agtech.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ee4a2a14c314db5a": {
+      "conversacion": 12,
+      "historia_concreta": 8,
+      "cercania_pba": 8,
+      "interes_productores": 11,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 55,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "clima trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "La caída drástica de horas de sol afecta directo el llenado de grano del trigo en gran parte de la región pampeana.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        43
+      ]
+    },
+    "7551be6d7062c12b": {
+      "conversacion": 15,
+      "historia_concreta": 15,
+      "cercania_pba": 20,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 75,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "jóvenes rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Encuentro de jóvenes rurales en Carlos Casares, plena zona vecina, con fuerte participación de ateneos locales y sociedades rurales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -32004,7 +32152,16 @@
       "https://lanacion.com.ar/economia/campo/sorpresa-en-una-feria-gigantesca-la-ia-los-robots-y-su-impacto-no-son-un-cuento-chino-nid09112026": "2026-11-09",
       "https://lanacion.com.ar/economia/campo/no-quedo-nada-retiraron-miles-de-vacas-de-una-zona-cercana-a-un-gran-humedal-nid09112026": "2026-11-09",
       "https://futurefarming.com/tech-in-focus/field-robots/finite-robotics-to-solve-labour-and-knowledge-gap-in-apple-thinning": "2026-11-09",
-      "https://futurefarming.com/smart-farming/who-is-to-blame-if-an-agricultural-robot-kills-someone": "2026-11-09"
+      "https://futurefarming.com/smart-farming/who-is-to-blame-if-an-agricultural-robot-kills-someone": "2026-11-09",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-9-noviembre-2026": "2026-11-09",
+      "https://bichosdecampo.com/kicillof-puede-largar-el-mate-que-ya-tiene-su-propio-vino-mientras-milei-desfinancia-el-inta-en-mendoza-y-liquida-la-coviar-el-gobierno-bonaerense-promueve-la-vitivinicultura-en-el-sur-de-la-provinc": "2026-11-09",
+      "https://bichosdecampo.com/el-empresario-fernando-emanuel-diaz-tiene-algo-que-aclarar-luego-de-una-nota-de-bichos-el-sector-forestal-no-es-responsable-de-los-desmontes-ilegales-en-chaco": "2026-11-09",
+      "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad": "2026-11-09",
+      "https://bichosdecampo.com/con-la-principal-fabricante-festejando-su-equipo-numero-100-la-mecanizacion-de-la-cosecha-de-yerba-mate-gana-terreno-en-las-chacras-de-misiones-y-corrientes": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/gonzalo-goni-sobre-un-desarrollo-argentino-innovador-esto-me-va-a-decir-cuanta-plata-te-puedo-nid09112026": "2026-11-09",
+      "https://intainforma.inta.gob.ar/en-octubre-se-registraron-un-50-menos-de-horas-de-sol": "2026-11-09",
+      "https://casaresonline.com.ar/mas-de-90-jovenes-de-buenos-aires-y-la-pampa-se-reunieron-en-carlos-casares-para-fortalecer-el-presente-y-el-futuro-del-campo": "2026-11-09",
+      "https://elregionaldigital.com.ar/jornadas-abiertas-sra-el-campo-protagonista-de-un-cambio-de-epoca": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34067,7 +34224,16 @@
       "sorpresa en una feria gigantesca la ia los robots y su impacto no son un cuento chino": "2026-11-09",
       "no quedo nada retiraron miles de vacas de una zona cercana a un gran humedal": "2026-11-09",
       "finite robotics to solve labour and knowledge gap in apple thinning": "2026-11-09",
-      "who is to blame if an agricultural robot kills someone": "2026-11-09"
+      "who is to blame if an agricultural robot kills someone": "2026-11-09",
+      "dolar blue hoy a cuanto cotiza el 9 noviembre 2026": "2026-11-09",
+      "kicillof puede largar el mate que ya tiene su propio vino mientras milei desfinancia el inta en mendoza y liquida la coviar el gobierno bonaerense promueve la vitivinicultura en el sur de la provincia": "2026-11-09",
+      "el empresario fernando emanuel diaz tiene algo que aclarar luego de una nota de bichos el sector forestal no es responsable de los desmontes ilegales en chaco": "2026-11-09",
+      "algo anda mal en una de las mejores zonas agricolas en rio cuarto eduardo zacchi mete la pala en los lotes de maiz y encuentra un techo a 20 centimetros de profundidad": "2026-11-09",
+      "con la principal fabricante festejando su equipo numero 100 la mecanizacion de la cosecha de yerba mate gana terreno en las chacras de misiones y corrientes": "2026-11-09",
+      "gonzalo goni sobre un desarrollo argentino innovador esto me va a decir cuanta plata te puedo prestar a partir de tu productividad": "2026-11-09",
+      "en octubre se registraron un 50 menos de horas de sol": "2026-11-09",
+      "mas de 90 jovenes de buenos aires y la pampa se reunieron en carlos casares para fortalecer el presente y el futuro del campo": "2026-11-09",
+      "jornadas abiertas sra el campo protagonista de un cambio de epoca": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36130,7 +36296,16 @@
       "36bc8569438da882": "2026-11-09",
       "b770112e2709bbd5": "2026-11-09",
       "2d3d07149e085343": "2026-11-09",
-      "1d3fa21bd26b0f0b": "2026-11-09"
+      "1d3fa21bd26b0f0b": "2026-11-09",
+      "f1341fb7c697d4a1": "2026-11-09",
+      "345b486d5607b65e": "2026-11-09",
+      "77434fddbaf446a8": "2026-11-09",
+      "2737c04e0c25b564": "2026-11-09",
+      "6290dbc68c2413fb": "2026-11-09",
+      "99b6fbfa647f8a26": "2026-11-09",
+      "ee4a2a14c314db5a": "2026-11-09",
+      "7551be6d7062c12b": "2026-11-09",
+      "1c3a035c422ce648": "2026-11-09"
     }
   },
   "elegidas": [
@@ -63976,11 +64151,141 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c06b7d5d10de_portada.jpg"
+    },
+    {
+      "id": "a5413d94f27f",
+      "cuando": "2026-11-09T10:00-03:00",
+      "titulo_original": "Más de 90 jóvenes de Buenos Aires y La Pampa se reunieron en Carlos Casares para fortalecer el presente y el futuro del campo",
+      "descripcion": "El Ateneo de la Sociedad Rural de Carlos Casares fue sede del Consejo de Ateneos CARBAP, un encuentro que reunió a representantes de distintos puntos de ambas provincias. Con apenas seis meses de trayectoria, la...",
+      "fuente": "Casares Online",
+      "url": "https://casaresonline.com.ar/mas-de-90-jovenes-de-buenos-aires-y-la-pampa-se-reunieron-en-carlos-casares-para-fortalecer-el-presente-y-el-futuro-del-campo/",
+      "titular": "Jóvenes rurales se reunieron en Carlos Casares con 6 meses de trayectoria",
+      "volanta": "Juventud Rural",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 15,
+        "cercania_pba": 20,
+        "interes_productores": 10,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 75,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "jóvenes rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Encuentro de jóvenes rurales en Carlos Casares, plena zona vecina, con fuerte participación de ateneos locales y sociedades rurales.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-09T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ae87debd-781f-480d-b638-f57f6c8c6552",
+          "slug": "jovenes-rurales-se-reunieron-en-carlos-casares-con-6-meses-de-032446",
+          "url": "https://www.diariolacampaña.com.ar/n/jovenes-rurales-se-reunieron-en-carlos-casares-con-6-meses-de-032446",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18375841531215359",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1753491913448472",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18156466450530235"
+        },
+        "historia_facebook": {
+          "id": "1015394584153533"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a5413d94f27f_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-11-09T08:02:11-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [
+    {
+      "id": "ae78fca57110",
+      "rep": {
+        "id": "ae78fca57110",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad/",
+        "canonical_url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad",
+        "titulo": "Algo anda mal en una de las mejores zonas agrícolas: En Río Cuarto, Eduardo Zacchi mete la pala en los lotes de maíz y encuentra “un techo” a 20 centímetros de profundidad",
+        "titulo_norm": "algo anda mal en una de las mejores zonas agricolas en rio cuarto eduardo zacchi mete la pala en los lotes de maiz y encuentra un techo a 20 centimetros de profundidad",
+        "descripcion": "A los veinte centímetros de profundidad, las raíces del maíz se topan con una capa de suelo tan dura que les cuesta seguir bajando. Llueve y, a los pocos días, la planta ya muestra señales de falta de humedad. Eduardo Zacchi, ingeniero agrónomo que trabaja en Río Cuarto, una zona maicera por excelencia, le llama […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/EDUARDO-ZACCHI.00_11_32_19.Still004.jpg",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-09T08:31-03:00",
+        "capturado": "2026-11-09T10:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2737c04e0c25b564",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "ae78fca57110",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad/",
+          "canonical_url": "https://bichosdecampo.com/algo-anda-mal-en-una-de-las-mejores-zonas-agricolas-en-rio-cuarto-eduardo-zacchi-mete-la-pala-en-los-lotes-de-maiz-y-encuentra-un-techo-a-20-centimetros-de-profundidad",
+          "titulo": "Algo anda mal en una de las mejores zonas agrícolas: En Río Cuarto, Eduardo Zacchi mete la pala en los lotes de maíz y encuentra “un techo” a 20 centímetros de profundidad",
+          "titulo_norm": "algo anda mal en una de las mejores zonas agricolas en rio cuarto eduardo zacchi mete la pala en los lotes de maiz y encuentra un techo a 20 centimetros de profundidad",
+          "descripcion": "A los veinte centímetros de profundidad, las raíces del maíz se topan con una capa de suelo tan dura que les cuesta seguir bajando. Llueve y, a los pocos días, la planta ya muestra señales de falta de humedad. Eduardo Zacchi, ingeniero agrónomo que trabaja en Río Cuarto, una zona maicera por excelencia, le llama […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/EDUARDO-ZACCHI.00_11_32_19.Still004.jpg",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-09T08:31-03:00",
+          "capturado": "2026-11-09T10:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2737c04e0c25b564",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 15,
+        "cercania_pba": 5,
+        "interes_productores": 13,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 62,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "suelos maíz",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El problema de la compactación de suelos y las napas toca de cerca a cualquier agricultor de la región núcleo.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          65
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-09T10:00-03:00"
+    }
+  ],
+  "actualizado": "2026-11-09T10:05:22-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
