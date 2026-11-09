@@ -30252,6 +30252,70 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6452e7192a4de676": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 18,
+      "commercial_score": 10,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es el clásico informe de Chicago que al productor le interesa como referencia general pero no le cambia el día a día.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ba2c6e6dd74df698": {
+      "conversacion": 12,
+      "historia_concreta": 9,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 60,
+      "commercial_score": 32,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca directamente el bolsillo del productor que cosecha trigo ahora y necesita vender con lo justo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        61,
+        59
+      ]
+    },
+    "410111ee67811b9c": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 2,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "agricultura regenerativa",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una columna teórica en inglés sobre agricultura regenerativa que no le aporta nada práctico al vecino de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -32342,7 +32406,10 @@
       "https://bichosdecampo.com/los-productores-de-yerba-intentan-que-el-papa-que-menciono-al-mate-como-simbolo-de-dialogo-logre-conmover-a-milei-ayudenos-a-contarle-al-mundo-nuestro-sufrimiento": "2026-11-09",
       "https://lanacion.com.ar/economia/campo/se-mantiene-la-toma-de-pauny-los-trabajadores-reclaman-un-plan-de-pagos-y-la-empresa-ofrece-una-nid09112026": "2026-11-09",
       "https://infocampo.com.ar/la-disputa-por-el-visec-desde-cra-no-descartan-recurrir-a-defensa-de-la-competencia": "2026-11-09",
-      "https://casaresonline.com.ar/la-colza-gana-terreno-como-alternativa-al-trigo-y-busca-consolidarse-en-la-rotacion-agricola-de-la-region": "2026-11-09"
+      "https://casaresonline.com.ar/la-colza-gana-terreno-como-alternativa-al-trigo-y-busca-consolidarse-en-la-rotacion-agricola-de-la-region": "2026-11-09",
+      "https://agrositio.com.ar/noticia/249252-soja-chicago-intenta-recuperarse-pero-el-usda-mantiene-la-presion.html": "2026-11-09",
+      "https://bichosdecampo.com/los-exportadores-argentinos-saben-bien-que-tienen-que-aprovechar-al-maximo-la-temporada-de-caza-de-trigo-barato": "2026-11-09",
+      "https://agfundernews.com/guest-article-a-landscape-scale-strategy-for-regenerative-agriculture": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34431,7 +34498,10 @@
       "los productores de yerba intentan que el papa que menciono al mate como simbolo de dialogo logre conmover a milei ayudenos a contarle al mundo nuestro sufrimiento": "2026-11-09",
       "se mantiene la toma de pauny los trabajadores reclaman un plan de pagos y la empresa ofrece una apertura parcial": "2026-11-09",
       "la disputa por el visec desde cra no descartan recurrir a defensa de la competencia": "2026-11-09",
-      "la colza gana terreno como alternativa al trigo y busca consolidarse en la rotacion agricola de la region": "2026-11-09"
+      "la colza gana terreno como alternativa al trigo y busca consolidarse en la rotacion agricola de la region": "2026-11-09",
+      "la soja rebota en chicago china vuelve a comprar pero crece la expectativa de mayor cosecha en ee uu": "2026-11-09",
+      "los exportadores argentinos saben bien que tienen que aprovechar al maximo la temporada de caza de trigo barato": "2026-11-09",
+      "guest article a landscape scale strategy for regenerative agriculture": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36520,7 +36590,10 @@
       "1aca4b2fc137b95b": "2026-11-09",
       "f80fdbe8de0881c4": "2026-11-09",
       "e43ab7e03da075eb": "2026-11-09",
-      "f11e1f78aac72991": "2026-11-09"
+      "f11e1f78aac72991": "2026-11-09",
+      "6452e7192a4de676": "2026-11-09",
+      "ba2c6e6dd74df698": "2026-11-09",
+      "410111ee67811b9c": "2026-11-09"
     }
   },
   "elegidas": [
@@ -64610,6 +64683,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fdf88e5ef0f1_portada.jpg"
+    },
+    {
+      "id": "1c81c5dddf40",
+      "cuando": "2026-11-09T16:00-03:00",
+      "titulo_original": "Los exportadores argentinos saben bien que tienen que aprovechar al máximo la “temporada de caza” de trigo barato",
+      "descripcion": "Los exportadores argentinos se encuentran en plena “temporada de caza” de trigo vendido por productores urgidos de liquidez. Pero esa situación, que se refleja de manera contundente en los precios negociados, tiene fecha de vencimiento. Con un precio FOB oficial de 238 u$s/tonelada para embarque en ",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-exportadores-argentinos-saben-bien-que-tienen-que-aprovechar-al-maximo-la-temporada-de-caza-de-trigo-barato/",
+      "titular": "El trigo argentino transita una etapa de precios bajos por urgencia",
+      "volanta": "Mercados",
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 60,
+        "commercial_score": 32,
+        "subtema": "mercados",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca directamente el bolsillo del productor que cosecha trigo ahora y necesita vender con lo justo.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          61,
+          59
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-09T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "af72db5a-ee32-4131-a7cc-adca8ed28a18",
+          "slug": "aprovechan-precios-bajos-del-trigo-argentino-antes-de-una-e5075d",
+          "url": "https://www.diariolacampaña.com.ar/n/aprovechan-precios-bajos-del-trigo-argentino-antes-de-una-e5075d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17927616987433997",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1753831276747869",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17968220880227255"
+        },
+        "historia_facebook": {
+          "id": "2378453999565393"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1c81c5dddf40_portada.jpg"
     }
   ],
   "pendientes": [
@@ -64683,8 +64820,8 @@
       "cuando": "2026-11-09T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-09T14:35:42-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-09T16:05:43-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
