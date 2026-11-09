@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T22:34:24.000Z",
+  "actualizado": "2026-11-09T23:02:56.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/noche07112026.html",
@@ -211,6 +211,30 @@
       "volanta": "Siniestro vial en Lobos",
       "categoria": "accidente_vial",
       "distancia_km": 89.8,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://laopinionline.ar/articulo/salto-secuestraron-una-camioneta-por-graves-infracciones-y-desarticularon-una-fiesta-clandestina",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-09T23:02:56.000Z",
+      "titulo": "Secuestraron una camioneta y frenaron una fiesta clandestina con 90 personas en Salto",
+      "descripcion": "Durante el fin de semana largo, agentes municipales y policiales interceptaron una Ford EcoSport tras una persecución y cortaron una reunión no autorizada con hasta noventa asistentes.",
+      "texto_tiktok": "El área de fiscalización urbana llevó adelante diversos procedimientos preventivos durante el fin de semana en diferentes puntos de la región.\n\nEntre los casos más destacados, un rodado fue retenido tras múltiples infracciones y amenazas al personal.\n\nAdemás, desbarataron una celebración ilegal e inspeccionaron localidades vecinas.\n\n📲 Más noticias de Salto en www.diariolacampaña.com.ar\n\n#Salto #OperativoPolicial #SeguridadVial #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-09_2134_04_pergamino_secuestraron-una-camioneta-y-f.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/salto-secuestraron-una-camioneta-tras-una-fuga-y-desarticularon-22f18d",
+      "youtube_url": "https://youtube.com/shorts/5JA3kA8haWo",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Salto",
+      "volanta": "Operativos viales en Salto",
+      "categoria": "operativo_policial",
+      "distancia_km": 70.7,
       "radio_ok": true,
       "plataformas": [
         "x",
