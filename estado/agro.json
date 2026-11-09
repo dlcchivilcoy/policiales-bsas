@@ -30148,6 +30148,70 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "223d48439cd7c779": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "drones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota genérica sobre tecnología y charlas de eventos en Buenos Aires que no le cambia nada al productor local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1aca4b2fc137b95b": {
+      "conversacion": 10,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 35,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "yerba mate",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Pasa en Misiones con la yerba, queda demasiado lejos de Chivilcoy y no es el cultivo de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f80fdbe8de0881c4": {
+      "conversacion": 15,
+      "historia_concreta": 16,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 63,
+      "commercial_score": 45,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El conflicto en una fábrica de tractores conocida afecta a proveedores y contratistas de la región, generando preocupación.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        63
+      ]
     }
   },
   "indice": {
@@ -32231,7 +32295,12 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-9-noviembre-2026": "2026-11-09",
       "https://bichosdecampo.com/se-puede-modificar-14-kilometros-de-cauce-sin-pensar-en-las-consecuencias-la-agronoma-alicia-barchuk-advierte-sobre-las-obras-proyectadas-sobre-el-rio-anisacate-vital-para-una-zona-de-cordoba": "2026-11-09",
       "https://bichosdecampo.com/no-sabemos-cual-es-la-mejor-noticia-que-crucianelli-cumpla-70-anos-o-que-su-presidente-fierrero-haya-escrito-un-libro-cargado-de-nostalgia-y-se-lo-dedique-a-su-esposa": "2026-11-09",
-      "https://lamanana.com.ar/defensa-civil-sumo-nueva-motobomba-aportada-por-la-cooperativa-agricola-ganadera": "2026-11-09"
+      "https://lamanana.com.ar/defensa-civil-sumo-nueva-motobomba-aportada-por-la-cooperativa-agricola-ganadera": "2026-11-09",
+      "https://infocampo.com.ar/el-boom-de-los-drones-en-el-agro-la-oportunidad-esta-es-un-cliente-que-adopta-tecnologias-muy-rapido": "2026-11-09",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-9-noviembre-2026": "2026-11-09",
+      "https://bichosdecampo.com/los-productores-de-yerba-intentan-que-el-papa-que-menciono-al-mate-como-simbolo-de-dialogo-logre-conmover-a-milei-ayudenos-a-contarle-al-mundo-nuestro-sufrimiento": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/se-mantiene-la-toma-de-pauny-los-trabajadores-reclaman-un-plan-de-pagos-y-la-empresa-ofrece-una-nid09112026": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34313,7 +34382,12 @@
       "dolar blue a cuanto cotizan hoy en cordoba 9 noviembre 2026": "2026-11-09",
       "se puede modificar 14 kilometros de cauce sin pensar en las consecuencias la agronoma alicia barchuk advierte sobre las obras proyectadas sobre el rio anisacate vital para una zona de cordoba": "2026-11-09",
       "no sabemos cual es la mejor noticia que crucianelli cumpla 70 anos o que su presidente fierrero haya escrito un libro cargado de nostalgia y se lo dedique a su esposa": "2026-11-09",
-      "defensa civil sumo nueva motobomba aportada por la cooperativa agricola ganadera": "2026-11-09"
+      "defensa civil sumo nueva motobomba aportada por la cooperativa agricola ganadera": "2026-11-09",
+      "el boom de los drones en el agro la oportunidad esta es un cliente que adopta tecnologias muy rapido": "2026-11-09",
+      "dolar blue a cuanto cotizan hoy en mendoza 9 noviembre 2026": "2026-11-09",
+      "euro blue hoy precio y cotizacion de este 9 noviembre 2026": "2026-11-09",
+      "los productores de yerba intentan que el papa que menciono al mate como simbolo de dialogo logre conmover a milei ayudenos a contarle al mundo nuestro sufrimiento": "2026-11-09",
+      "se mantiene la toma de pauny los trabajadores reclaman un plan de pagos y la empresa ofrece una apertura parcial": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36395,7 +36469,12 @@
       "8923962dfdb105e7": "2026-11-09",
       "69ea2292b81a29c4": "2026-11-09",
       "9c7d94760a11e17b": "2026-11-09",
-      "1f418cc4ac9b356d": "2026-11-09"
+      "1f418cc4ac9b356d": "2026-11-09",
+      "223d48439cd7c779": "2026-11-09",
+      "d10aa99d55d142fc": "2026-11-09",
+      "668472de7f4e44c2": "2026-11-09",
+      "1aca4b2fc137b95b": "2026-11-09",
+      "f80fdbe8de0881c4": "2026-11-09"
     }
   },
   "elegidas": [
@@ -64361,6 +64440,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fc65a2701cae_portada.jpg"
+    },
+    {
+      "id": "92fe91ab7dc4",
+      "cuando": "2026-11-09T13:00-03:00",
+      "titulo_original": "Se mantiene la toma de Pauny. Los trabajadores reclaman un plan de pagos y la empresa ofrece una apertura parcial",
+      "descripcion": "Esta semana habrá una reunión entre las partes; la firma, que tiene atrasos en el pago de salarios, quiere terminar unos tractores pedidos para reunir fondos",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/se-mantiene-la-toma-de-pauny-los-trabajadores-reclaman-un-plan-de-pagos-y-la-empresa-ofrece-una-nid09112026/",
+      "titular": "Sigue la toma en Pauny por salarios y proponen armar tres tractores",
+      "volanta": "Maquinaria",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 16,
+        "cercania_pba": 10,
+        "interes_productores": 9,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 63,
+        "commercial_score": 45,
+        "subtema": "maquinaria",
+        "tema": "pauny",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El conflicto en una fábrica de tractores conocida afecta a proveedores y contratistas de la región, generando preocupación.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          63
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-09T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b9841ec7-0136-4bf4-9712-5dc4bbd250a8",
+          "slug": "sigue-la-toma-en-pauny-en-las-varillas-con-450-operarios-4bf7fe",
+          "url": "https://www.diariolacampaña.com.ar/n/sigue-la-toma-en-pauny-en-las-varillas-con-450-operarios-4bf7fe",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17967635489981324",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1753667520097578",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18182960542428652"
+        },
+        "historia_facebook": {
+          "id": "2050776653004626"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_92fe91ab7dc4_portada.jpg"
     }
   ],
   "pendientes": [
@@ -64434,8 +64577,8 @@
       "cuando": "2026-11-09T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-09T11:35:33-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-09T13:07:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
