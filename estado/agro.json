@@ -29840,6 +29840,106 @@
       "urgente": false,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7df8581f7a2ee3f2": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 27,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "discurso papal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Menciona al campo pero es un discurso protocolar que no afecta en nada al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "36bc8569438da882": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 27,
+      "commercial_score": 25,
+      "subtema": "agtech",
+      "tema": "tecnología china",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Habla de robótica e IA en general, muy lejano de la realidad del contratista de Alberti o Suipacha.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b770112e2709bbd5": {
+      "conversacion": 18,
+      "historia_concreta": 20,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 72,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "inundación santa fe",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia humana fuerte de productores perdiendo todo por el agua, genera mucha empatía y charla.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2d3d07149e085343": {
+      "conversacion": 0,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 1,
+      "potencial_reel": 2,
+      "ai_score": 11,
+      "commercial_score": 10,
+      "subtema": "maquinaria",
+      "tema": "robots frutales",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Robots para raleo de manzanas en el exterior, cero relevancia para los pueblos de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1d3fa21bd26b0f0b": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 29,
+      "commercial_score": 20,
+      "subtema": "maquinaria",
+      "tema": "responsabilidad legal",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Debate teórico sobre quién es responsable si un tractor autónomo choca, demasiado abstracto para el día a día.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31890,7 +31990,21 @@
       "https://lanacion.com.ar/economia/campo/castigo-cra-no-descarta-una-accion-judicial-en-medio-de-la-polemica-abierta-con-la-plataforma-visec-nid08112026": "2026-11-08",
       "https://agrositio.com.ar/noticia/249251-los-fondos-aceleran-las-ventas-de-granos-y-el-mercado-espera-nuevas-senales-del-usda.html": "2026-11-08",
       "https://bichosdecampo.com/adrian-luna-vazquez-tiene-algo-que-decir-para-explicar-el-rechazo-de-cra-al-visec-una-cosa-es-cumplir-una-exigencia-externa-y-otra-muy-distinta-aceptar-que-una-plataforma-privada-se-convierta-en": "2026-11-08",
-      "https://bragadotv.com.ar/noticias/2026/11/08/26901-alumnas-de-irala-llevaron-sus-reclamos-a-un-encuentro-regional-en-chivilcoy": "2026-11-08"
+      "https://bragadotv.com.ar/noticias/2026/11/08/26901-alumnas-de-irala-llevaron-sus-reclamos-a-un-encuentro-regional-en-chivilcoy": "2026-11-08",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-9-noviembre-2026": "2026-11-09",
+      "https://infocampo.com.ar/clima-en-la-rioja-lluvia-moderada-el-pronostico-para-hoy-9-de-noviembre": "2026-11-09",
+      "https://infocampo.com.ar/el-papa-leon-xiv-ya-esta-en-argentina-y-el-campo-tuvo-protagonismo-en-su-primer-discurso": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/sorpresa-en-una-feria-gigantesca-la-ia-los-robots-y-su-impacto-no-son-un-cuento-chino-nid09112026": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/no-quedo-nada-retiraron-miles-de-vacas-de-una-zona-cercana-a-un-gran-humedal-nid09112026": "2026-11-09",
+      "https://futurefarming.com/tech-in-focus/field-robots/finite-robotics-to-solve-labour-and-knowledge-gap-in-apple-thinning": "2026-11-09",
+      "https://futurefarming.com/smart-farming/who-is-to-blame-if-an-agricultural-robot-kills-someone": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33939,7 +34053,21 @@
       "castigo cra no descarta una accion judicial en medio de la polemica abierta con la plataforma visec por una exigencia de la union europea": "2026-11-08",
       "que puede cambiar el usda en los mercados de soja maiz y trigo los fondos ya ajustan posiciones": "2026-11-08",
       "adrian luna vazquez tiene algo que decir para explicar el rechazo de cra al visec una cosa es cumplir una exigencia externa y otra muy distinta aceptar que una plataforma privada se convierta en arbitro": "2026-11-08",
-      "alumnas de irala llevaron sus reclamos a un encuentro regional en chivilcoy": "2026-11-08"
+      "alumnas de irala llevaron sus reclamos a un encuentro regional en chivilcoy": "2026-11-08",
+      "clima hoy en mendoza el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en tucuman el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en corrientes el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en cordoba el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en salta el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en rosario el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en san luis el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima hoy en neuquen el pronostico del tiempo para este 9 noviembre 2026": "2026-11-09",
+      "clima en la rioja lluvia moderada el pronostico para hoy 9 de noviembre": "2026-11-09",
+      "el papa leon xiv ya esta en argentina y el campo tuvo protagonismo en su primer discurso": "2026-11-09",
+      "sorpresa en una feria gigantesca la ia los robots y su impacto no son un cuento chino": "2026-11-09",
+      "no quedo nada retiraron miles de vacas de una zona cercana a un gran humedal": "2026-11-09",
+      "finite robotics to solve labour and knowledge gap in apple thinning": "2026-11-09",
+      "who is to blame if an agricultural robot kills someone": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35988,7 +36116,21 @@
       "2ffcaa7c3b208a4b": "2026-11-08",
       "4c6c77fadce796e9": "2026-11-08",
       "21d0553ebdb0dbf7": "2026-11-08",
-      "b31719d3d5d328f0": "2026-11-08"
+      "b31719d3d5d328f0": "2026-11-08",
+      "71abf53e32c515df": "2026-11-09",
+      "1edd5535531d4aa9": "2026-11-09",
+      "81ab6f7ebb9a64eb": "2026-11-09",
+      "fdfcb9d409829cc1": "2026-11-09",
+      "ff402475499f6526": "2026-11-09",
+      "c3d971ec964224d8": "2026-11-09",
+      "41afe02ace98ce76": "2026-11-09",
+      "3842e527aa1a5232": "2026-11-09",
+      "d60ac08837abb09b": "2026-11-09",
+      "7df8581f7a2ee3f2": "2026-11-09",
+      "36bc8569438da882": "2026-11-09",
+      "b770112e2709bbd5": "2026-11-09",
+      "2d3d07149e085343": "2026-11-09",
+      "1d3fa21bd26b0f0b": "2026-11-09"
     }
   },
   "elegidas": [
@@ -63766,11 +63908,79 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3c78cdc9de09_portada.jpg"
+    },
+    {
+      "id": "c06b7d5d10de",
+      "cuando": "2026-11-09T07:00-03:00",
+      "titulo_original": "“No quedó nada”: retiraron miles de vacas de una zona cercana a un gran humedal",
+      "descripcion": "Desde Villa Ocampo, Santa Fe, dos productores contaron a LA NACION cómo trasladaron sus rodeos a campos más altos antes de que el agua cubriera los puestos y corrales; con pocos establecimientos disponibles para alquilar, algunos vecinos ya empezaron a vender parte de sus animales",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/no-quedo-nada-retiraron-miles-de-vacas-de-una-zona-cercana-a-un-gran-humedal-nid09112026/",
+      "titular": "Hacienda: trasladan miles de vacas por la crecida en Santa Fe",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 20,
+        "cercania_pba": 5,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 72,
+        "commercial_score": 40,
+        "subtema": "ganaderia",
+        "tema": "inundación santa fe",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una historia humana fuerte de productores perdiendo todo por el agua, genera mucha empatía y charla.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "con_video": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-09T07:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "EoKGQmhyIa8",
+          "url": "https://youtube.com/shorts/EoKGQmhyIa8",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "4f922fd6-af30-4053-a20e-4d9ea02dc0c5",
+          "slug": "hacienda-trasladan-miles-de-vacas-por-la-crecida-en-villa-daa5ca",
+          "url": "https://www.diariolacampaña.com.ar/n/hacienda-trasladan-miles-de-vacas-por-la-crecida-en-villa-daa5ca",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "2081854909160440",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17954891967322103",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18165799543433816"
+        },
+        "historia_facebook": {
+          "id": "1140257598796504"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c06b7d5d10de_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-08T21:30:27-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-09T07:08:19-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
