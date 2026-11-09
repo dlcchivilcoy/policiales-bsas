@@ -29780,6 +29780,66 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4c6c77fadce796e9": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 3,
+      "potencial_reel": 0,
+      "ai_score": 21,
+      "commercial_score": 20,
+      "subtema": "mercados",
+      "tema": "informe usda",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es información internacional y técnica de mercados que no le cambia el día a día al productor local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "21d0553ebdb0dbf7": {
+      "conversacion": 4,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 25,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Discusión gremial y empresaria sobre el Visec y la Unión Europea, un tema lejano para el productor de a pie.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b31719d3d5d328f0": {
+      "conversacion": 18,
+      "historia_concreta": 16,
+      "cercania_pba": 20,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 80,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "caminos rurales irala",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en la zona (Irala/Chivilcoy), toca reclamos reales de escuelas rurales y genera conversación inmediata entre vecinos.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -31827,7 +31887,10 @@
       "https://agrositio.com.ar/canal-agrositio/30-online/249248-luciano-colombo-caida-en-la-rentabilidad-ganadera-impacto-del-5-de-retencion-y-la-enorme-brecha-invernada-gordo.html": "2026-11-08",
       "https://agrositio.com.ar/noticia/249250-visec-el-productor-no-puede-seguir-pagando-las-decisiones-de-otros.html": "2026-11-08",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249249-la-joya-agro-seis-anos-de-crear-contenido-agropecuario-y-el-impacto-de-sus-historias-en-redes.html": "2026-11-08",
-      "https://lanacion.com.ar/economia/campo/castigo-cra-no-descarta-una-accion-judicial-en-medio-de-la-polemica-abierta-con-la-plataforma-visec-nid08112026": "2026-11-08"
+      "https://lanacion.com.ar/economia/campo/castigo-cra-no-descarta-una-accion-judicial-en-medio-de-la-polemica-abierta-con-la-plataforma-visec-nid08112026": "2026-11-08",
+      "https://agrositio.com.ar/noticia/249251-los-fondos-aceleran-las-ventas-de-granos-y-el-mercado-espera-nuevas-senales-del-usda.html": "2026-11-08",
+      "https://bichosdecampo.com/adrian-luna-vazquez-tiene-algo-que-decir-para-explicar-el-rechazo-de-cra-al-visec-una-cosa-es-cumplir-una-exigencia-externa-y-otra-muy-distinta-aceptar-que-una-plataforma-privada-se-convierta-en": "2026-11-08",
+      "https://bragadotv.com.ar/noticias/2026/11/08/26901-alumnas-de-irala-llevaron-sus-reclamos-a-un-encuentro-regional-en-chivilcoy": "2026-11-08"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -33873,7 +33936,10 @@
       "ganaderia en alerta cae la rentabilidad del engorde y se agranda la brecha entre invernada y gordo con l colombo consignatario": "2026-11-08",
       "europa exige visec cra advierte que cumplir con la trazabilidad no obliga a usar una plataforma privada": "2026-11-08",
       "la joya agro seis anos de crear contenido agropecuario y el impacto de sus historias en redes": "2026-11-08",
-      "castigo cra no descarta una accion judicial en medio de la polemica abierta con la plataforma visec por una exigencia de la union europea": "2026-11-08"
+      "castigo cra no descarta una accion judicial en medio de la polemica abierta con la plataforma visec por una exigencia de la union europea": "2026-11-08",
+      "que puede cambiar el usda en los mercados de soja maiz y trigo los fondos ya ajustan posiciones": "2026-11-08",
+      "adrian luna vazquez tiene algo que decir para explicar el rechazo de cra al visec una cosa es cumplir una exigencia externa y otra muy distinta aceptar que una plataforma privada se convierta en arbitro": "2026-11-08",
+      "alumnas de irala llevaron sus reclamos a un encuentro regional en chivilcoy": "2026-11-08"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -35919,7 +35985,10 @@
       "1008cded4cb9b79f": "2026-11-08",
       "fd9634092a3da455": "2026-11-08",
       "693b379dae53f32d": "2026-11-08",
-      "2ffcaa7c3b208a4b": "2026-11-08"
+      "2ffcaa7c3b208a4b": "2026-11-08",
+      "4c6c77fadce796e9": "2026-11-08",
+      "21d0553ebdb0dbf7": "2026-11-08",
+      "b31719d3d5d328f0": "2026-11-08"
     }
   },
   "elegidas": [
@@ -63637,11 +63706,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_df4518368ed9_portada.jpg"
+    },
+    {
+      "id": "3c78cdc9de09",
+      "cuando": "2026-11-08T21:00-03:00",
+      "titulo_original": "Alumnas de Irala llevaron sus reclamos a un encuentro regional en Chivilcoy",
+      "descripcion": "Pidieron mejores caminos rurales, transporte y conectividad. También plantearon la incertidumbre laboral y el impacto de las redes sociales en las expectativas juveniles.",
+      "fuente": "Bragado TV",
+      "url": "https://www.bragadotv.com.ar/noticias/2026/11/08/26901-alumnas-de-irala-llevaron-sus-reclamos-a-un-encuentro-regional-en-chivilcoy",
+      "titular": "Alumnas de Irala reclamaron caminos y conectividad en Chivilcoy",
+      "volanta": "Educación Rural",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 16,
+        "cercania_pba": 20,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 80,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "caminos rurales irala",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pasa en la zona (Irala/Chivilcoy), toca reclamos reales de escuelas rurales y genera conversación inmediata entre vecinos.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-08T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d95053c4-ef15-48d4-bed7-99bb35923e46",
+          "slug": "jovenes-rurales-exigieron-mejores-caminos-y-conectividad-aea181",
+          "url": "https://www.diariolacampaña.com.ar/n/jovenes-rurales-exigieron-mejores-caminos-y-conectividad-aea181",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18152485951508951",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1752843193513344",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18111418373156547"
+        },
+        "historia_facebook": {
+          "id": "3073059589744329"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3c78cdc9de09_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-08T19:35:02-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-08T21:06:25-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
