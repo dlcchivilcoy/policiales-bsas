@@ -63769,7 +63769,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-08T21:06:25-03:00",
+  "actualizado": "2026-11-08T21:30:27-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -68137,6 +68137,43 @@
               },
               "facebook": {
                 "id": "1156614033433832"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-08T21:30:00-03:00": {
+      "dia": "2026-11-08",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué tipo de campo es el que más te consultan?",
+          "opciones": [],
+          "publico": "inmobiliarias",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "17880078543633135"
+            },
+            "facebook": {
+              "id": "1519869286867245"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17880078543633135"
+              },
+              "facebook": {
+                "id": "1519869286867245"
               }
             }
           ]
