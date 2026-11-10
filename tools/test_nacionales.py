@@ -994,10 +994,27 @@ chequear("agenda 04 (v12): 5 virales con Short + web y las que siguen, solo web"
          and all(_OK_WEB(p) for p in inf_s["piezas"]))
 if _pc.get("virales_short") != 5 or _pc.get("virales") != 3:
     print("   ", _pc, inf_s["descartadas"], inf_s["fallas"])
-chequear("agenda 04 (v12): el Short va adentro de la nota de la web, y nada a Facebook ni a Instagram",
+chequear("agenda 04 (v12): el Short va adentro de la nota de la web, y nada a Facebook ni al feed de Instagram",
          sum(1 for l in llamadas if l[0] == "web" and l[2]) == 5
-         and not {l[0] for l in llamadas} & {"facebook", "ig_contenedor", "ig_publicar"}
+         and not {l[0] for l in llamadas} & {"facebook"}
          and not any(k in p for p in inf_s["piezas"] for k in ("facebook", "instagram")))
+# 10/11/2026: cada viral con Short sale además como reel de PRUEBA en Instagram (hasta 5 por día).
+_prueba = [p for p in inf_s["piezas"] if _ok_red(p, "ig_prueba")]
+chequear("virales (10/11/2026): las 5 con Short salen también como reel de PRUEBA en Instagram",
+         len(_prueba) == 5 and all(p.get("youtube") for p in _prueba)
+         and all(p["ig_prueba"].get("prueba") == {"graduation_strategy": "SS_PERFORMANCE"} for p in _prueba)
+         and sum(1 for l in llamadas if l[0] == "ig_publicar") == 5)
+chequear("virales: el reel de prueba va sin colab y las solo web no lo llevan",
+         all(not p["ig_prueba"].get("colab") for p in _prueba)
+         and not any("ig_prueba" in p for p in inf_s["piezas"] if not p.get("youtube")))
+_c = PA.ig_prueba_virales()
+os.environ["NAC_IG_PRUEBA_VIRALES"] = "0"
+chequear("virales: 5 reels de prueba por día de fábrica; NAC_IG_PRUEBA_VIRALES=0 los apaga",
+         _c == 5 and PA.ig_prueba_virales() == 0)
+os.environ.pop("NAC_IG_PRUEBA_VIRALES")
+_mem_p = {"piezas": {f"u{i}": {"dia": "2026-11-10", "ig_prueba": {"estado": "ok"}} for i in range(5)}}
+chequear("virales: con 5 reels de prueba hoy, ya no sale otro (el tope cuenta lo de la memoria del día)",
+         PA._ig_prueba_hoy(_mem_p, "2026-11-10") == 5 and PA._ig_prueba_hoy(_mem_p, "2026-11-11") == 0)
 os.environ["NAC_SHORT_VIRALES"] = "0"
 chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "virales_short" not in AGE.topes(_lun(4)))
 os.environ.pop("NAC_SHORT_VIRALES")

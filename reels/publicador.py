@@ -84,12 +84,12 @@ GRAPH = f"https://graph.facebook.com/{VERSION_GRAPH}"
 
 REDES = ("instagram", "facebook", "youtube")
 NOMBRE_RED = {"instagram": "Instagram", "facebook": "Facebook", "youtube": "YouTube",
-              "web": "Web", "fb_youtube": "FB enlace"}
+              "web": "Web", "fb_youtube": "FB enlace", "ig_prueba": "IG prueba"}
 # El ORDEN dentro de cada pieza (27/09): YouTube primero, porque la nota de la web lleva
 # el Short adentro (la web solo muestra videos de YouTube); después la NOTA de la web,
 # porque Facebook lleva su link; después Facebook (el reel, o el enlace del Short si la
 # pieza no va como reel, 03/10) e Instagram.
-ORDEN = ("youtube", "web", "facebook", "fb_youtube", "instagram")
+ORDEN = ("youtube", "web", "facebook", "fb_youtube", "instagram", "ig_prueba")
 
 # INSTAGRAM (pedido del editor, 10/10/2026): reels NORMALES —al feed, ya no «de prueba»—,
 # hasta 5 por pasada, los de MÁS POTENCIAL VIRAL de la pasada (igual que Facebook: viral de la
@@ -625,6 +625,59 @@ def publicar_album_facebook(pieza: dict, slides: list, url_web: str = "") -> dic
     if r.status_code >= 400:
         raise FalloRed(_error(r, "Facebook (álbum)"))
     return {"id": str((r.json() or {}).get("id") or ""), "formato": "carrusel", "fotos": len(ids)}
+
+
+# REEL DE PRUEBA EN INSTAGRAM (pedido del editor, 10/11/2026: «subilos también como reels de prueba en mi
+# instagram; tiene 11 de tope, así que 5 y 5»). El reel que se arma para el Short de YouTube sale TAMBIÉN como
+# reel de PRUEBA (trial_params): lo ven primero los que NO siguen la cuenta y, si le va bien, Instagram lo pasa
+# solo al feed (SS_PERFORMANCE). Instagram acepta ~10-11 reels de prueba por día por la API: 5 policiales
+# (IG_PRUEBA_POLICIALES) y 5 virales de la corrida de las 4 (NAC_IG_PRUEBA_VIRALES, nacionales/pasada.py).
+# No sale si en Instagram la pieza ya va como reel NORMAL (el mismo video dos veces en la cuenta, no): con
+# los policiales en carrusel, sale siempre. Sin colab con agro. 0 lo apaga.
+IG_PRUEBA_POLICIALES_DEFAULT = 5
+HORAS_IG_PRUEBA = 12          # la tanda de la noche (19:00-22:00); la de ayer ya no cuenta
+
+
+def ig_prueba_policiales() -> int:
+    try:
+        return max(0, int((os.environ.get("IG_PRUEBA_POLICIALES") or "").strip() or IG_PRUEBA_POLICIALES_DEFAULT))
+    except ValueError:
+        return IG_PRUEBA_POLICIALES_DEFAULT
+
+
+def _ig_prueba_recientes(ledger: dict) -> int:
+    """Reels de prueba de policiales de las últimas HORAS_IG_PRUEBA (los sin confirmar también cuentan)."""
+    desde = (_ahora() - timedelta(hours=HORAS_IG_PRUEBA)).replace(tzinfo=None)
+    n = 0
+    for e in ledger.values():
+        r = e.get("ig_prueba") or {}
+        cuando = _hora(r.get("cuando"))
+        if r.get("estado") in ("ok", "sin_confirmar") and cuando and cuando.replace(tzinfo=None) >= desde:
+            n += 1
+    return n
+
+
+def publicar_reel_prueba_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
+    """El reel (el del Short) como reel de PRUEBA en Instagram, con su portada y la ubicación del hecho."""
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    url = subir_a_release(mp4, nombre)
+    caption = texto_del_posteo(pieza, "instagram")
+    ubic = UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "")
+    params = IG.contenedor_reel(url, caption, prueba=True, ubicacion=ubic)
+    portada = portada_del_reel(pieza, mp4)
+    nombre_portada = f"{Path(nombre).stem}_portada.jpg"
+    try:
+        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
+    except FalloRed as e:
+        if not ubic or "location" not in str(e).lower():
+            raise
+        params.pop("location_id", None)              # una ubicación rechazada no cuesta el reel
+        ubic = ""
+        cid, con_portada = contenedor_con_portada(uid, tok, params, portada, nombre_portada)
+    media_id = _publicar_contenedor(uid, tok, cid, caption)
+    return {"id": media_id or None, "prueba": json.loads(params["trial_params"]),
+            "ubicacion": ubic or None, "portada": con_portada}
 
 
 def publicar_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
@@ -1939,8 +1992,9 @@ def _peso_espera(turno: dict) -> float:
 
 def _publicar_red(red: str, pieza: dict, mp4: Path, carpeta: Path, url_web: str) -> dict:
     global _ig_sin_prueba
-    if red == "instagram":
-        res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
+    if red in ("instagram", "ig_prueba"):
+        fn = publicar_instagram if red == "instagram" else publicar_reel_prueba_instagram
+        res = _intentar(fn, pieza, mp4, f"{carpeta.name}_{mp4.name}")
         if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
             _ig_sin_prueba = True
             res = {"estado": "cupo", "detalle": "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
@@ -2019,7 +2073,7 @@ def _auditar_publicacion(informe: dict, listas: list, pid: str):
     """La publicación de la pasada en estado/auditoria.json (panel editorial, 17/10/2026)."""
     from reels import auditoria as AU
     geo = {p.get("orden"): (p.get("geo") or {}) for p, _ in listas}
-    redes = ("youtube", "web", "facebook", "fb_youtube", "instagram")
+    redes = ("youtube", "web", "facebook", "fb_youtube", "instagram", "ig_prueba")
     try:
         AU.anotar("publicacion", {
             "maximo": CUPO.maximo(), "reservadas": (informe.get("pasada") or {}).get("reservadas"),
@@ -2074,12 +2128,13 @@ def _paso_web(pieza: dict, mp4: Path, carpeta: Path, fila: dict, hecho: dict,
 
 def _simular(red: str, pieza: dict, mp4: Path, url_web: str = "") -> dict:
     """Todo lo que se puede verificar sin publicar."""
-    texto = texto_del_posteo(pieza, red, url_web)
+    texto = texto_del_posteo(pieza, "instagram" if red == "ig_prueba" else red, url_web)
     info = {"estado": "simulado", "kb": round(mp4.stat().st_size / 1024), "caracteres": len(texto)}
     if red == "facebook" and va_como_link(pieza, mp4, url_web):
         info.update(formato="link", link=link_para_facebook(url_web), texto=texto_link_nota(pieza))
-    if red == "instagram":
-        params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto)
+    if red in ("instagram", "ig_prueba"):
+        params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto,
+                                    prueba=True if red == "ig_prueba" else None)
         info["prueba"] = json.loads(params.get("trial_params") or "null")
     elif red == "youtube":
         info["titulo"] = metadatos_youtube(pieza)["snippet"]["title"]
@@ -2135,6 +2190,12 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     fb_link_on = fb_youtube_activo() and "facebook" in redes and "youtube" in redes
     if fb_link_on:
         informe["redes"].append("fb_youtube")
+    # El reel de PRUEBA en Instagram (10/11/2026): hasta IG_PRUEBA_POLICIALES por noche.
+    ig_prueba_tope = ig_prueba_policiales() if "instagram" in redes else 0
+    ig_prueba_hechos = _ig_prueba_recientes(ledger) if ig_prueba_tope else 0
+    if ig_prueba_tope:
+        informe["redes"].append("ig_prueba")
+        print(f"  Instagram (reel de prueba): hasta {ig_prueba_tope} por noche, ya van {ig_prueba_hechos}")
     # Un reel cada 30 minutos en cada red (13/10/2026): entra lo que cabe hasta la pasada siguiente.
     # Y como mucho 3 hechos por pasada entre TODAS las redes (reels/cupo.py, 17/10/2026). La pasada es
     # el horario: una corrida repetida (respaldo, a mano) comparte los lugares que ya se reservaron.
@@ -2299,8 +2360,23 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                         or (hecho.get("facebook") or {}).get("estado") in ("ok", "sin_confirmar"))
         falta_link = (fb_link_on and not va_como_reel and ("youtube" in pendientes or yt_hecho)
                       and (hecho.get("fb_youtube") or {}).get("estado") not in ("ok", "sin_confirmar"))
+        # El reel de PRUEBA: solo si en Instagram la pieza no va (ni fue) como reel normal.
+        ig_hecho = hecho.get("instagram") or {}
+        reel_normal_ig = not slides_de(pieza, mp4.parent) and (
+            "instagram" in pendientes or ig_hecho.get("estado") in ("ok", "sin_confirmar"))
+        falta_prueba = bool(ig_prueba_tope and not reel_normal_ig and ig_hecho.get("formato") != "reel"
+                            and (hecho.get("ig_prueba") or {}).get("estado")
+                            not in ("ok", "sin_confirmar", "rechazado"))
+        if falta_prueba and ig_prueba_hechos >= ig_prueba_tope:
+            falta_prueba = False
+            sin_lugar["ig_prueba"] = {"estado": "cupo", "detalle":
+                                      f"ya van {ig_prueba_hechos} reels de prueba esta noche (tope {ig_prueba_tope})"}
+        elif falta_prueba and publicar and _ig_sin_prueba:
+            falta_prueba = False
+            sin_lugar["ig_prueba"] = {"estado": "cupo", "detalle":
+                                      "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
         pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)
-                 or (r == "fb_youtube" and falta_link)]
+                 or (r == "fb_youtube" and falta_link) or (r == "ig_prueba" and falta_prueba)]
         for red in pasos:
             if red == "web":
                 res = _paso_web(pieza, mp4, carpeta, fila, hecho, publicar)
@@ -2331,6 +2407,16 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                     continue
                 else:
                     res = _intentar(publicar_link_youtube, pieza, url_yt, url_web)
+            elif red == "ig_prueba" and publicar and (lugar_ig := _lugar_en_instagram()) and lugar_ig[0] <= 0:
+                fila[red] = {"estado": "cupo", "detalle": f"la cuenta ya uso {lugar_ig[1]} de sus {lugar_ig[2]} "
+                                                          f"posteos de 24 h; los últimos quedan para el bot del diario"}
+                _mostrar(red, fila[red])
+                continue
+            elif red == "ig_prueba" and publicar:
+                # Sin intercalado: el reel de prueba no les llega a los seguidores.
+                res = _publicar_red(red, pieza, mp4, carpeta, url_web)
+                if res.get("estado") in ("ok", "sin_confirmar"):
+                    ig_prueba_hechos += 1
             elif not publicar:
                 res = _simular(red, pieza, mp4, url_web)
             elif red in INT.REDES:
@@ -2447,8 +2533,8 @@ def _mostrar(red: str, res: dict):
     elif est == "simulado" and red == "fb_youtube":
         print(f"  {nombre:<9} saldria el enlace del Short: «{(res.get('texto') or '').splitlines()[0]}»")
     elif est == "simulado":
-        if red == "instagram":
-            extra = f" · reel de PRUEBA {res.get('prueba')}"
+        if red in ("instagram", "ig_prueba"):
+            extra = f" · reel de PRUEBA {res.get('prueba')}" if res.get("prueba") else " · reel NORMAL"
         elif red == "facebook":
             extra = f" · link a la nota {res['link']}" if res.get("formato") == "link" else " · reel NORMAL"
         else:

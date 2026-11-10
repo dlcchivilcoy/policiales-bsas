@@ -449,10 +449,30 @@ def _shorts_hoy(mem: dict, dia: str) -> int:
     return policiales + sum(1 for p in de_hoy(mem, dia) if _ok(p.get("youtube")))
 
 
+# REEL DE PRUEBA DE LAS VIRALES (pedido del editor, 10/11/2026: «subilos también como reels de prueba en mi
+# instagram; tiene 11 de tope, así que 5 y 5»): las virales con Short de la corrida de las 4 salen además como
+# reel de PRUEBA en Instagram (lo ven primero los que no siguen la cuenta; si anda, pasa solo al feed). Hasta
+# NAC_IG_PRUEBA_VIRALES por día (5); los otros 5 son de policiales (reels/publicador.py, IG_PRUEBA_POLICIALES).
+# 0 lo apaga.
+IG_PRUEBA_VIRALES_DEFAULT = 5
+
+
+def ig_prueba_virales() -> int:
+    try:
+        return max(0, int((os.environ.get("NAC_IG_PRUEBA_VIRALES") or "").strip() or IG_PRUEBA_VIRALES_DEFAULT))
+    except ValueError:
+        return IG_PRUEBA_VIRALES_DEFAULT
+
+
+def _ig_prueba_hoy(mem: dict, dia: str) -> int:
+    return sum(1 for p in de_hoy(mem, dia) if _ok(p.get("ig_prueba")))
+
+
 def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: bool = True,
-                   instagram: bool = True) -> dict:
+                   instagram: bool = True, ig_prueba: bool = False) -> dict:
     """YouTube → web → Facebook → Instagram. Devuelve {red: resultado}. instagram=False: sin Instagram (las
-    virales con Short de la corrida de las 4, que van solo a YouTube y a la web)."""
+    virales con Short de la corrida de las 4, que van solo a YouTube y a la web). ig_prueba=True: además, el
+    reel como reel de PRUEBA en Instagram (10/11/2026)."""
     ig = instagram and instagram_activo()
     mp4 = Path(pieza["video"]["archivo"])
     cat = pieza["nota"].get("categoria") or ""        # deportes, espectáculos… (17/10/2026)
@@ -467,6 +487,9 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
         if ig:
             res["instagram"] = {"estado": "simulado", "formato": pieza.get("formato"),
                                 "laminas": len(pieza.get("slides") or []), "texto": caption_instagram(pieza["guion"])}
+        if ig_prueba:
+            res["ig_prueba"] = {"estado": "simulado", "formato": "reel de prueba",
+                                "texto": caption_instagram(pieza["guion"])}
         return res
 
     largo = PUB.largo_para_short(pieza)
@@ -503,6 +526,19 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
         else:
             res["instagram"] = dict(_resultado(publicar_imagen_instagram, Path(pieza["slide"]), caption, marca),
                                     formato="imagen")
+    if ig_prueba:
+        lugar = _lugar_ig()
+        if lugar and lugar[0] <= 0:
+            res["ig_prueba"] = {"estado": "cupo", "detalle": f"la cuenta ya usó {lugar[1]} de sus {lugar[2]} "
+                                                             f"posteos de 24 h; los últimos quedan para el bot del diario"}
+        else:
+            marca = hashlib.sha1(pieza["url_original"].encode()).hexdigest()[:10]
+            res["ig_prueba"] = dict(_resultado(publicar_reel_instagram, mp4, caption_instagram(pieza["guion"]),
+                                               f"prueba_{marca}", (pieza.get("video") or {}).get("portada") or "",
+                                               True), formato="reel de prueba")
+            if res["ig_prueba"].get("estado") == "fallo" and PUB._es_tope_de_prueba(res["ig_prueba"].get("error")):
+                res["ig_prueba"] = {"estado": "cupo", "cuando": res["ig_prueba"].get("cuando"),
+                                    "detalle": "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
     return res
 
 
@@ -533,20 +569,24 @@ def instagram_activo() -> bool:
     return (os.environ.get("NAC_INSTAGRAM") or "1").strip() != "0"
 
 
-def publicar_reel_instagram(mp4: Path, caption: str, marca: str, portada: str = "") -> dict:
+def publicar_reel_instagram(mp4: Path, caption: str, marca: str, portada: str = "", prueba: bool = False) -> dict:
     """El reel con su PORTADA de miniatura (reels/portada.py, 18/10/2026); si Instagram no la toma,
-    sale con la que elige él."""
+    sale con la que elige él. prueba=True: reel de PRUEBA (trial_params), sin colab."""
     from reels import instagram as IG
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     from reels import colab_agro as CA
     url = PUB.subir_a_release(mp4, f"variedad_{marca}_{mp4.name}")
     # Lo del campo, también en @diarioyradioagro como colaboración (reels/colab_agro.py, 27/10/2026).
+    params = IG.contenedor_reel(url, caption, prueba=prueba)
     (cid, con_portada), colab = CA.contenedor(
         lambda p: PUB.contenedor_con_portada(uid, tok, p, portada, f"variedad_{marca}_portada.jpg"),
-        IG.contenedor_reel(url, caption, prueba=False), CA.colaborador_para(caption, uid))
+        params, "" if prueba else CA.colaborador_para(caption, uid))
     media_id = PUB._publicar_contenedor(uid, tok, cid, caption) or None
-    return {"id": media_id, "portada": con_portada, "colab": CA.aceptar(media_id) if colab and media_id else None}
+    salida = {"id": media_id, "portada": con_portada, "colab": CA.aceptar(media_id) if colab and media_id else None}
+    if prueba:
+        salida["prueba"] = json.loads(params["trial_params"])
+    return salida
 
 
 def publicar_imagen_instagram(jpg: Path, caption: str, marca: str) -> dict:
@@ -1215,7 +1255,11 @@ def _una_pieza_web(c: dict, mem: dict, publicar: bool, carpeta: Path, ahora: dat
         firmar(pieza, _firma_servicio(mem, publicar))
     if con_short:
         con_youtube = _shorts_hoy(mem, dia) < PUB.tope_youtube() if publicar else True
-        res = publicar_pieza(pieza, False, publicar, con_youtube, instagram=False)
+        # El reel de PRUEBA en Instagram (10/11/2026), hasta NAC_IG_PRUEBA_VIRALES por día.
+        hechas = (_ig_prueba_hoy(mem, dia) if publicar else
+                  sum(1 for x in informe["piezas"] if (x.get("ig_prueba") or {}).get("estado") == "simulado"))
+        prueba = hechas < ig_prueba_virales()
+        res = publicar_pieza(pieza, False, publicar, con_youtube, instagram=False, ig_prueba=prueba)
     else:
         res = publicar_solo_web(pieza, publicar)
     registro = _registro(pieza, res, dia, _ahora().strftime("%H:%M"))

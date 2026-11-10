@@ -94,17 +94,17 @@ def seccion_volumen(pol: dict, nac: dict, ahora: datetime) -> list:
         for e in regs.values():
             if not isinstance(e, dict):
                 continue
-            for red in ("youtube", "web", "facebook", "fb_youtube", "instagram"):
+            for red in ("youtube", "web", "facebook", "fb_youtube", "instagram", "ig_prueba"):
                 r = e.get(red)
                 if isinstance(r, dict) and r.get("estado") in ("ok", "sin_confirmar"):
                     t = ME._utc(r.get("cuando"))
                     if t and t >= desde:
                         cuenta[(fuente, red)] += 1
     md = ["## Últimos 7 días: volumen por destino", "",
-          "| Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |", "|---|---:|---:|---:|---:|---:|"]
+          "| Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram | IG prueba |", "|---|---:|---:|---:|---:|---:|---:|"]
     for fuente in ("Policiales", "Nacionales"):
         md.append(f"| {fuente} | " + " | ".join(str(cuenta[(fuente, r)]) for r in
-                                                   ("youtube", "web", "facebook", "fb_youtube", "instagram")) + " |")
+                                                   ("youtube", "web", "facebook", "fb_youtube", "instagram", "ig_prueba")) + " |")
     md += ["", "Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día "
            "(1 de las categorías nuevas); X y TikTok en el "
            "[panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).",

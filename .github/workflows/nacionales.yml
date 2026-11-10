@@ -80,6 +80,8 @@ jobs:
           NAC_FB_POR_PASADA: ${{ vars.NAC_FB_POR_PASADA }}
           NAC_FB_POR_DIA: ${{ vars.NAC_FB_POR_DIA }}
           NAC_INSTAGRAM: ${{ vars.NAC_INSTAGRAM }}
+          # Reel de PRUEBA de las virales de las 4 (10/11/2026): hasta 5 por día; 0 lo apaga.
+          NAC_IG_PRUEBA_VIRALES: ${{ vars.NAC_IG_PRUEBA_VIRALES }}
           NAC_MINUTOS: ${{ vars.NAC_MINUTOS }}
           NAC_MINUTOS_FINDE: ${{ vars.NAC_MINUTOS_FINDE }}
           NAC_CARRUSEL_FB: ${{ vars.NAC_CARRUSEL_FB }}

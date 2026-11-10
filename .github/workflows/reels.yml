@@ -231,6 +231,8 @@ jobs:
           AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
           IG_POR_PASADA: ${{ vars.IG_POR_PASADA }}
           IG_PRUEBA_POR_PASADA: ${{ vars.IG_PRUEBA_POR_PASADA }}
+          # Reel de PRUEBA en Instagram (10/11/2026): hasta 5 policiales por noche; 0 lo apaga.
+          IG_PRUEBA_POLICIALES: ${{ vars.IG_PRUEBA_POLICIALES }}
           # Facebook admite 30 reels por día POR PÁGINA y la comparte con el bot: 2 por pasada,
           # los de más potencial de viralización (03/10).
           FB_POR_PASADA: ${{ vars.FB_POR_PASADA }}

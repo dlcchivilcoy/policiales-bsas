@@ -731,7 +731,23 @@ PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
 base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
-chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"] and len(meta.contenedores) == 2)
+prueba = [(f.get("ig_prueba") or {}).get("estado") for f in inf["piezas"]]
+chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"])
+# 10/11/2026: la de 3 sale como reel de PRUEBA (lo ven los que no siguen la cuenta); las del feed no se repiten.
+chequear("reel de PRUEBA (10/11/2026): sale la que no fue al feed, las otras dos no se repiten",
+         prueba == ["ok", None, None] and len(meta.contenedores) == 3
+         and sum(1 for c_ in meta.contenedores if "trial_params" in c_) == 1
+         and json.loads(next(c_ for c_ in meta.contenedores if "trial_params" in c_)["trial_params"])
+         == {"graduation_strategy": "SS_PERFORMANCE"})
+os.environ["IG_PRUEBA_POLICIALES"] = "0"
+chequear("IG_PRUEBA_POLICIALES=0 apaga el reel de prueba; de fábrica son 5",
+         PUB.ig_prueba_policiales() == 0 and PUB.IG_PRUEBA_POLICIALES_DEFAULT == 5)
+os.environ.pop("IG_PRUEBA_POLICIALES")
+_ahora_p = PUB._ahora()
+_led_p = {f"k{i}": {"ig_prueba": {"estado": "ok", "cuando": (_ahora_p - timedelta(hours=h)).isoformat()}}
+          for i, h in enumerate((1, 2, 3, 13, 30))}
+chequear("el tope de 5 cuenta solo la tanda de la noche (últimas 12 h), no la de ayer",
+         PUB._ig_prueba_recientes(_led_p) == 3)
 chequear("...con el motivo a la vista", "más virales" in inf["piezas"][0]["instagram"]["detalle"])
 chequear("...YouTube lleva las tres; Facebook, las mismas 2 más virales",
          all(f["youtube"]["estado"] == "ok" for f in inf["piezas"])
