@@ -31100,6 +31100,70 @@
         50,
         28
       ]
+    },
+    "ec2edfe5af7c7cfa": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 46,
+      "commercial_score": 40,
+      "subtema": "maquinaria",
+      "tema": "maquinaria agrícola",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un comunicado de una cámara empresaria sobre anuncios nacionales, poco atractivo para el vecino común.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "069caa1cb39ff8e4": {
+      "conversacion": 6,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 42,
+      "commercial_score": 38,
+      "subtema": "ganaderia",
+      "tema": "silaje",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de ganadería de carne y forrajes, un tema útil para productores ganaderos de la zona, aunque no pasa en un campo con nombre.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        32
+      ]
+    },
+    "e617b9d79527cf58": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una feria en China, lejana para el día a día del productor de Chivilcoy o Suipacha.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -33251,7 +33315,10 @@
       "https://bichosdecampo.com/una-alianza-para-llenar-el-tanque-bunge-y-gdm-se-asociaron-para-desarrollar-los-nuevos-cultivos-energeticos-que-pide-el-negocio-de-los-biocombustibles": "2026-11-10",
       "https://bichosdecampo.com/una-jornada-tecnica-en-pehuajo-los-sistemas-pastoriles-siguen-ofreciendo-respuestas-para-pensar-en-la-mejora-de-la-rentabilidad-de-los-tambos": "2026-11-10",
       "https://bichosdecampo.com/la-discusion-por-visec-reavivo-la-interna-por-las-rurales-con-doble-camiseta-carsfe-le-pidio-a-sus-entidades-que-definan-su-postura-respecto-a-esa-plataforma-ante-la-sra": "2026-11-10",
-      "https://lanacion.com.ar/economia/campo/la-multinacional-bunge-y-el-grupo-argentino-gdm-crearon-una-empresa-para-desarrollar-cultivos-nid10112026": "2026-11-10"
+      "https://lanacion.com.ar/economia/campo/la-multinacional-bunge-y-el-grupo-argentino-gdm-crearon-una-empresa-para-desarrollar-cultivos-nid10112026": "2026-11-10",
+      "https://infocampo.com.ar/en-medio-de-la-crisis-de-algunas-empresas-en-la-maquinaria-agricola-celebran-la-suspension-de-embargos": "2026-11-10",
+      "https://bichosdecampo.com/hay-un-monton-de-animales-que-todavia-no-conocen-el-silo-juan-monge-ve-en-la-ganaderia-de-carne-una-oportunidad-para-el-sector-forrajero": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/carne-a-china-fuerte-expectativa-por-otro-millonario-negocio-en-un-mercado-que-cada-vez-sorprende-nid10112026": "2026-11-10"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -35401,7 +35468,10 @@
       "una alianza para llenar el tanque bunge y gdm se asociaron para desarrollar los nuevos cultivos energeticos que pide el negocio de los biocombustibles": "2026-11-10",
       "una jornada tecnica en pehuajo los sistemas pastoriles siguen ofreciendo respuestas para pensar en la mejora de la rentabilidad de los tambos": "2026-11-10",
       "la discusion por visec reavivo la interna por las rurales con doble camiseta carsfe le pidio a sus entidades que definan su postura respecto a esa plataforma ante la sra": "2026-11-10",
-      "la multinacional bunge y el grupo argentino gdm crearon una empresa para desarrollar cultivos destinados a biocombustibles": "2026-11-10"
+      "la multinacional bunge y el grupo argentino gdm crearon una empresa para desarrollar cultivos destinados a biocombustibles": "2026-11-10",
+      "en medio de la crisis de algunas empresas en la maquinaria agricola celebran la suspension de embargos": "2026-11-10",
+      "hay un monton de animales que todavia no conocen el silo juan monge ve en la ganaderia de carne una oportunidad para el sector forrajero": "2026-11-10",
+      "carne para china fuerte expectativa por otro millonario negocio en un mercado que cada vez sorprende mas": "2026-11-10"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -37551,7 +37621,10 @@
       "83bb28b0e68565a2": "2026-11-10",
       "6be6f4e962547f89": "2026-11-10",
       "cfc8f4eaf2178fc5": "2026-11-10",
-      "85f28d23956be2b8": "2026-11-10"
+      "85f28d23956be2b8": "2026-11-10",
+      "ec2edfe5af7c7cfa": "2026-11-10",
+      "069caa1cb39ff8e4": "2026-11-10",
+      "e617b9d79527cf58": "2026-11-10"
     }
   },
   "elegidas": [
@@ -66013,51 +66086,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f70ffd9f9b12_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "2354dca2fd19",
-      "rep": {
-        "id": "2354dca2fd19",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina/",
-        "canonical_url": "https://todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina",
-        "titulo": "La superficie bajo siembra directa volvió a retroceder en Argentina",
-        "titulo_norm": "la superficie bajo siembra directa volvio a retroceder en argentina",
-        "descripcion": "El control de malezas se repite como la principal justificación a la hora de realizar la labranza. En menos de una década, el porcentaje de siembra directa retrocedió del 93% al 80%. Afirman que también influyó mucho la restricción en el uso de fitosanitarios, esquemas de alquiler y la compactación del suelo. La entrada La superficie bajo siembra directa volvió a retroceder en Argentina pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-10T10:40-03:00",
-        "capturado": "2026-11-10T11:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9360d4d34931f1c6",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "2354dca2fd19",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina/",
-          "canonical_url": "https://todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina",
-          "titulo": "La superficie bajo siembra directa volvió a retroceder en Argentina",
-          "titulo_norm": "la superficie bajo siembra directa volvio a retroceder en argentina",
-          "descripcion": "El control de malezas se repite como la principal justificación a la hora de realizar la labranza. En menos de una década, el porcentaje de siembra directa retrocedió del 93% al 80%. Afirman que también influyó mucho la restricción en el uso de fitosanitarios, esquemas de alquiler y la compactación del suelo. La entrada La superficie bajo siembra directa volvió a retroceder en Argentina pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-10T10:40-03:00",
-          "capturado": "2026-11-10T11:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9360d4d34931f1c6",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-10T14:30-03:00",
+      "titulo_original": "La superficie bajo siembra directa volvió a retroceder en Argentina",
+      "descripcion": "El control de malezas se repite como la principal justificación a la hora de realizar la labranza. En menos de una década, el porcentaje de siembra directa retrocedió del 93% al 80%. Afirman que también influyó mucho la restricción en el uso de fitosanitarios, esquemas de alquiler y la compactación ",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina/",
+      "titular": "La siembra directa cae al 80% en los campos nacionales",
+      "volanta": "Agricultura",
       "score": {
         "conversacion": 14,
         "historia_concreta": 12,
@@ -66083,11 +66121,40 @@
         ],
         "de_zona": false
       },
-      "cuando": "2026-11-10T11:30-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-10T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8e8e4e1e-d5ea-4226-95db-913cd4813135",
+          "slug": "la-superficie-bajo-siembra-directa-retrocede-al-80-6-en-la-717793",
+          "url": "https://www.diariolacampaña.com.ar/n/la-superficie-bajo-siembra-directa-retrocede-al-80-6-en-la-717793",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18194239054399215",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1754993359964994",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18070971743784177"
+        },
+        "historia_facebook": {
+          "id": "1438028104975743"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2354dca2fd19_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-10T14:00:31-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [],
+  "actualizado": "2026-11-10T14:36:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
