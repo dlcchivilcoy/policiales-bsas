@@ -30992,6 +30992,114 @@
         58,
         25
       ]
+    },
+    "8b07bf214cf744e6": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 38,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "maíz tardío",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una charla comercial por streaming, no pasa nada concreto en la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6a84025af6b4d462": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 17,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "día de la tradición",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Son saludos institucionales típicos de efeméride sin información útil.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "83bb28b0e68565a2": {
+      "conversacion": 10,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 7,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 43,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una alianza entre multinacionales; a escala local el productor común solo ve la macro.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6be6f4e962547f89": {
+      "conversacion": 10,
+      "historia_concreta": 14,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 64,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "tambos pehuajó",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Jornada tambera cerca en Pehuajó, interesa a la cuenca lechera vecina.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        60
+      ]
+    },
+    "cfc8f4eaf2178fc5": {
+      "conversacion": 9,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 39,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interna gremial y cruces entre rurales por la plataforma Visec; rosca política sectorial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        28
+      ]
     }
   },
   "indice": {
@@ -33135,7 +33243,15 @@
       "https://bichosdecampo.com/propiedad-privada-funcion-social-de-la-tierra-y-limites-ambientales-las-definiciones-agro-que-dejo-el-papa-leon-xiv-ante-la-mesa-de-enlace": "2026-11-10",
       "https://bichosdecampo.com/una-nacion-libre-de-riesgos-belicos-argentina-se-consolida-como-el-principal-proveedor-de-semilla-de-girasol-de-la-union-europea": "2026-11-10",
       "https://bichosdecampo.com/que-fue-del-proyecto-que-impulsaba-la-cria-de-burros-para-consumo-en-chubut-quedo-congelado-lamenta-su-promotor-julio-cittadini-que-insiste-con-que-el-freno-es-politico-y-n": "2026-11-10",
-      "https://latrochadigital.com.ar/2026/11/10/es-ley-municipios-podran-utilizar-fondos-de-caminos-rurales-para-obras-hidricas": "2026-11-10"
+      "https://latrochadigital.com.ar/2026/11/10/es-ley-municipios-podran-utilizar-fondos-de-caminos-rurales-para-obras-hidricas": "2026-11-10",
+      "https://infocampo.com.ar/maiz-tardio-una-jornada-tecnica-util-para-tomar-las-decisiones-que-definen-su-potencial": "2026-11-10",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/dia-de-la-tradicion-el-trabajo-de-quienes-producen-el-vinculo-profundo-con-nuestra-tierra": "2026-11-10",
+      "https://bichosdecampo.com/una-alianza-para-llenar-el-tanque-bunge-y-gdm-se-asociaron-para-desarrollar-los-nuevos-cultivos-energeticos-que-pide-el-negocio-de-los-biocombustibles": "2026-11-10",
+      "https://bichosdecampo.com/una-jornada-tecnica-en-pehuajo-los-sistemas-pastoriles-siguen-ofreciendo-respuestas-para-pensar-en-la-mejora-de-la-rentabilidad-de-los-tambos": "2026-11-10",
+      "https://bichosdecampo.com/la-discusion-por-visec-reavivo-la-interna-por-las-rurales-con-doble-camiseta-carsfe-le-pidio-a-sus-entidades-que-definan-su-postura-respecto-a-esa-plataforma-ante-la-sra": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/la-multinacional-bunge-y-el-grupo-argentino-gdm-crearon-una-empresa-para-desarrollar-cultivos-nid10112026": "2026-11-10"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -35277,7 +35393,15 @@
       "propiedad privada funcion social de la tierra y limites ambientales las definiciones agro que dejo el papa leon xiv ante la mesa de enlace": "2026-11-10",
       "una nacion libre de riesgos belicos argentina se consolida como el principal proveedor de semilla de girasol de la union europea": "2026-11-10",
       "que fue del proyecto que impulsaba la cria de burros para consumo en chubut quedo congelado lamenta su promotor julio cittadini que insiste con que el freno es politico y no legal": "2026-11-10",
-      "es ley municipios podran utilizar fondos de caminos rurales para obras hidricas": "2026-11-10"
+      "es ley municipios podran utilizar fondos de caminos rurales para obras hidricas": "2026-11-10",
+      "maiz tardio una jornada tecnica util para tomar las decisiones que definen su potencial": "2026-11-10",
+      "dolar blue a cuanto cotizan hoy en mendoza 10 noviembre 2026": "2026-11-10",
+      "euro blue hoy precio y cotizacion de este 10 noviembre 2026": "2026-11-10",
+      "dia de la tradicion el trabajo de quienes producen el vinculo profundo con nuestra tierra": "2026-11-10",
+      "una alianza para llenar el tanque bunge y gdm se asociaron para desarrollar los nuevos cultivos energeticos que pide el negocio de los biocombustibles": "2026-11-10",
+      "una jornada tecnica en pehuajo los sistemas pastoriles siguen ofreciendo respuestas para pensar en la mejora de la rentabilidad de los tambos": "2026-11-10",
+      "la discusion por visec reavivo la interna por las rurales con doble camiseta carsfe le pidio a sus entidades que definan su postura respecto a esa plataforma ante la sra": "2026-11-10",
+      "la multinacional bunge y el grupo argentino gdm crearon una empresa para desarrollar cultivos destinados a biocombustibles": "2026-11-10"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -37419,7 +37543,15 @@
       "4c2ffc5606565ad0": "2026-11-10",
       "c4f13d8555a4416c": "2026-11-10",
       "684df8a4e561fc2a": "2026-11-10",
-      "9582c42134cf6222": "2026-11-10"
+      "9582c42134cf6222": "2026-11-10",
+      "8b07bf214cf744e6": "2026-11-10",
+      "067540172f679e89": "2026-11-10",
+      "2f7153c59c8dd2ac": "2026-11-10",
+      "6a84025af6b4d462": "2026-11-10",
+      "83bb28b0e68565a2": "2026-11-10",
+      "6be6f4e962547f89": "2026-11-10",
+      "cfc8f4eaf2178fc5": "2026-11-10",
+      "85f28d23956be2b8": "2026-11-10"
     }
   },
   "elegidas": [
@@ -65817,6 +65949,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c37dfbc4ca30_portada.jpg"
+    },
+    {
+      "id": "f70ffd9f9b12",
+      "cuando": "2026-11-10T13:00-03:00",
+      "titulo_original": "Una jornada técnica en Pehuajó: Los sistemas pastoriles siguen ofreciendo respuestas para pensar en la mejora de la rentabilidad de los tambos",
+      "descripcion": "La producción pastoril, la genética aplicada a la eficiencia y la construcción de sistemas rentables fueron los grandes ejes de una jornada técnica realizada en Guanaco, en el partido de Pehuajó, provincia de Buenos Aires, en las instalaciones de TamboDem, el establecimiento demostrativo de la Cámar",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/una-jornada-tecnica-en-pehuajo-los-sistemas-pastoriles-siguen-ofreciendo-respuestas-para-pensar-en-la-mejora-de-la-rentabilidad-de-los-tambos/",
+      "titular": "Sistemas pastoriles y genética en tambos de Pehuajó",
+      "volanta": "Lechería",
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 14,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 50,
+        "subtema": "ganaderia",
+        "tema": "tambos pehuajó",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Jornada tambera cerca en Pehuajó, interesa a la cuenca lechera vecina.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          60
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-10T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "91f33d35-cfbb-4689-8507-32eceead3794",
+          "slug": "jornada-lechera-en-pehuajo-analizo-sistemas-pastoriles-y-5bfc6a",
+          "url": "https://www.diariolacampaña.com.ar/n/jornada-lechera-en-pehuajo-analizo-sistemas-pastoriles-y-5bfc6a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18116588471023866",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1754905953307068",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18101008334559276"
+        },
+        "historia_facebook": {
+          "id": "2015873632933831"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f70ffd9f9b12_portada.jpg"
     }
   ],
   "pendientes": [
@@ -65890,8 +66086,8 @@
       "cuando": "2026-11-10T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-10T11:34:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-10T13:06:45-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
