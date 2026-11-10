@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T23:30:57.000Z",
+  "actualizado": "2026-11-10T22:02:52.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.junindigital.com/policiales/2026-11-8-10-37-0-violencia-escolar-en-junin-atacaron-en-patota-a-una-adolescente-y-aprehendieron-a-una-menor-de-15-anos",
@@ -211,6 +211,30 @@
       "volanta": "Choques, operativos y acoso en Chacabuco",
       "categoria": "accidente_vial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diarioelsalado.com.ar/2026/11/crimen-de-mechita-una-camara-habria-registrado-a-los-acusados-trasladando-un-bulto-hacia-el-canal-cafiero/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-10T22:02:52.000Z",
+      "titulo": "Crimen de Mechita: filmaron a los sospechosos con un bulto hacia el canal Cafiero",
+      "descripcion": "Una filmación comprometería a los dos detenidos por el homicidio de Ezequiel Caraballo, hallado sin vida en el canal Cafiero. Ambos prefirieron no declarar ante la Justicia.",
+      "texto_tiktok": "La causa por el crimen de Ezequiel Caraballo sumó pruebas clave tras el análisis de las cámaras de seguridad de la zona.\n\nEn las imágenes se observa a los dos imputados transportando un bulto sospechoso hacia el cauce de agua.\n\nLos arrestados optaron por guardar silencio y la fiscalía pidió formalmente que sigan detenidos.\n\n📲 Más noticias de Alberti en www.diariolacampaña.com.ar\n\n#Alberti #Homicidio #Policiales #Justicia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-10_2135_01_alberti_crimen-de-mechita-filmaron-a-l.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/alberti-una-camara-complica-a-los-acusados-por-el-crimen-de-bceaa0",
+      "youtube_url": "https://youtube.com/shorts/gwe9Nc-xNVM",
+      "prioridad": 9,
+      "urgente": true,
+      "localidad": "Alberti",
+      "volanta": "Crimen en Alberti",
+      "categoria": "homicidio",
+      "distancia_km": 28.1,
       "radio_ok": true,
       "plataformas": [
         "x",
