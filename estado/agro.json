@@ -66814,7 +66814,7 @@
       "cuando": "2026-11-10T16:00-03:00"
     }
   ],
-  "actualizado": "2026-11-10T18:05:30-03:00",
+  "actualizado": "2026-11-10T19:01:11-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -71449,6 +71449,43 @@
               },
               "facebook": {
                 "id": "4701312763471964"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-10T19:00:00-03:00": {
+      "dia": "2026-11-10",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué queso es el que más sale en la fábrica?",
+          "opciones": [],
+          "publico": "lacteos",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18114420518613745"
+            },
+            "facebook": {
+              "id": "1072455272460627"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18114420518613745"
+              },
+              "facebook": {
+                "id": "1072455272460627"
               }
             }
           ]
