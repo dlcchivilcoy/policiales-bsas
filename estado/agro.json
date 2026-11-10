@@ -30484,6 +30484,70 @@
         68,
         50
       ]
+    },
+    "d15d43d7c3f7008b": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 3,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 29,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "mesa de enlace papa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una reunión institucional con el Papa que no le cambia nada al trabajo diario del productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d128ae0dbaa14f4b": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 41,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "exportaciones cítricos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos generales de exportación de fruta desde Zárate, sin impacto directo en la producción de nuestra zona.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3be81f8f020b4e42": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 12,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 41,
+      "commercial_score": 28,
+      "subtema": "empresas",
+      "tema": "expo rural lincoln",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es la grilla artística de una expo rural vecina (Lincoln), relevante para la agenda cultural pero menor para el trabajo de campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        30
+      ]
     }
   },
   "indice": {
@@ -32585,7 +32649,10 @@
       "https://lanacion.com.ar/economia/campo/granos-despues-de-las-fuertes-bajas-que-precios-esperan-los-analistas-para-los-proximos-meses-nid09112026": "2026-11-09",
       "https://bichosdecampo.com/una-buena-noticia-que-en-realidad-es-mala-brasil-esta-experimentando-un-auge-de-exportaciones-de-poroto-hacia-la-union-europea": "2026-11-09",
       "https://lacapital.com.ar/agro/trigo-argentino-el-mejoramiento-genetico-permitio-aumentar-el-rendimiento-cerca-1-ano-n10290643.html": "2026-11-09",
-      "https://diariojunin.com/noticias/103106_zrate-adhiere-a-la-emergencia-agropecuaria.html": "2026-11-09"
+      "https://diariojunin.com/noticias/103106_zrate-adhiere-a-la-emergencia-agropecuaria.html": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/la-mesa-de-enlace-participo-del-encuentro-con-el-papa-en-la-uca-y-valoro-positivamente-sus-mensajes-nid09112026": "2026-11-09",
+      "https://lanacion.com.ar/economia/campo/crecieron-las-exportaciones-de-citricos-se-movilizaron-90000-toneladas-de-fruta-y-hubo-un-aumento-nid09112026": "2026-11-09",
+      "https://lapostadelnoroeste.com.ar/ya-se-conocen-los-numeros-artisticos-que-estaran-en-la-reprogramada-expo-rural-2026": "2026-11-09"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34685,7 +34752,10 @@
       "granos despues de las fuertes bajas que precios esperan los analistas para los proximos meses": "2026-11-09",
       "una buena noticia que en realidad es mala brasil esta experimentando un auge de exportaciones de poroto hacia la union europea": "2026-11-09",
       "trigo argentino el mejoramiento genetico permitio aumentar el rendimiento cerca de 1 por ano": "2026-11-09",
-      "zarate adhiere a la emergencia agropecuaria": "2026-11-09"
+      "zarate adhiere a la emergencia agropecuaria": "2026-11-09",
+      "la mesa de enlace participo del encuentro con el papa en la uca y valoro positivamente sus mensajes": "2026-11-09",
+      "crecieron las exportaciones de citricos se movilizaron 90 000 toneladas de fruta y hubo un aumento del 9 3": "2026-11-09",
+      "ya se conocen los numeros artisticos que estaran en la reprogramada expo rural 2026": "2026-11-09"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36785,7 +36855,10 @@
       "802e2b7a067b28b1": "2026-11-09",
       "7bbd97dda4ddd6a0": "2026-11-09",
       "0129efbc8611cd7f": "2026-11-09",
-      "88b5656629868be0": "2026-11-09"
+      "88b5656629868be0": "2026-11-09",
+      "d15d43d7c3f7008b": "2026-11-09",
+      "d128ae0dbaa14f4b": "2026-11-09",
+      "3be81f8f020b4e42": "2026-11-09"
     }
   },
   "elegidas": [
@@ -65006,7 +65079,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-09T19:33:44-03:00",
+  "actualizado": "2026-11-09T21:04:42-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
