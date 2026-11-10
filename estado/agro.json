@@ -30860,6 +30860,138 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7778d4d64d5ed959": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "maquinaria agrícola",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un comunicado de una cámara empresaria pidiendo impuestos más bajos; al productor de a pie no le cambia el día.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9360d4d34931f1c6": {
+      "conversacion": 14,
+      "historia_concreta": 12,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 66,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "siembra directa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca un problema real que ven todos los lotes de la zona: la resistencia de malezas y el retroceso de la siembra directa.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        70
+      ]
+    },
+    "c33a3df6a4ca5003": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 38,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una gran fusión corporativa global de semillas y granos que no le mueve el amperímetro al chacarero local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4c2ffc5606565ad0": {
+      "conversacion": 15,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 46,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "mesa de enlace",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reúne política, religión y gremiales agropecuarias; genera debate en los pueblos pero poca utilidad práctica diaria.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c4f13d8555a4416c": {
+      "conversacion": 6,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 51,
+      "commercial_score": 50,
+      "subtema": "mercados",
+      "tema": "girasol",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Buena noticia de exportación y números firmes para el girasol nacional aprovechando el hueco de Ucrania.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        37
+      ]
+    },
+    "684df8a4e561fc2a": {
+      "conversacion": 10,
+      "historia_concreta": 14,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 41,
+      "commercial_score": 25,
+      "subtema": "ganaderia",
+      "tema": "carne de burro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota pintoresca y bizarra sobre un proyecto fallido de carne de burro en la Patagonia que da para charlar en el pueblo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        25
+      ]
     }
   },
   "indice": {
@@ -32989,7 +33121,21 @@
       "https://futurefarming.com/smart-farming/spray-logics-how-a-wildlife-saving-innovation-led-to-protecting-crops-and-fruits": "2026-11-10",
       "https://futurefarming.com/smart-farming/europe-s-soil-health-gets-a-boost-with-new-digital-tools-for-farmers": "2026-11-10",
       "https://lamanana.com.ar/rige-la-ley-que-permite-a-los-municipios-destinar-fondos-de-caminos-rurales-a-obras-hidricas": "2026-11-10",
-      "https://casaresonline.com.ar/rosgan-presenta-el-5-congreso-federal-ganadero-genetica-negocios-y-el-futuro-de-la-carne-argentina-en-el-centro-del-debate": "2026-11-10"
+      "https://casaresonline.com.ar/rosgan-presenta-el-5-congreso-federal-ganadero-genetica-negocios-y-el-futuro-de-la-carne-argentina-en-el-centro-del-debate": "2026-11-10",
+      "https://todoagro.com.ar/maquinaria-agricola-cafma-respaldo-los-anuncios-de-caputo-y-pidio-mas-reformas-fiscales": "2026-11-10",
+      "https://todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina": "2026-11-10",
+      "https://infocampo.com.ar/una-joint-venture-de-impacto-global-bunge-y-gdm-se-unen-para-desarrollar-cultivos-para-biocombustibles": "2026-11-10",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/riesgo-pais-hoy-10-11-2026": "2026-11-10",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-10-noviembre-2026": "2026-11-10",
+      "https://bichosdecampo.com/propiedad-privada-funcion-social-de-la-tierra-y-limites-ambientales-las-definiciones-agro-que-dejo-el-papa-leon-xiv-ante-la-mesa-de-enlace": "2026-11-10",
+      "https://bichosdecampo.com/una-nacion-libre-de-riesgos-belicos-argentina-se-consolida-como-el-principal-proveedor-de-semilla-de-girasol-de-la-union-europea": "2026-11-10",
+      "https://bichosdecampo.com/que-fue-del-proyecto-que-impulsaba-la-cria-de-burros-para-consumo-en-chubut-quedo-congelado-lamenta-su-promotor-julio-cittadini-que-insiste-con-que-el-freno-es-politico-y-n": "2026-11-10",
+      "https://latrochadigital.com.ar/2026/11/10/es-ley-municipios-podran-utilizar-fondos-de-caminos-rurales-para-obras-hidricas": "2026-11-10"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -35117,7 +35263,21 @@
       "spray logics how a wildlife saving innovation led to protecting crops and fruits": "2026-11-10",
       "europe s soil health gets a boost with new digital tools for farmers": "2026-11-10",
       "rige la ley que permite a los municipios destinar fondos de caminos rurales a obras hidricas": "2026-11-10",
-      "rosgan presenta el 5 congreso federal ganadero genetica negocios y el futuro de la carne argentina en el centro del debate": "2026-11-10"
+      "rosgan presenta el 5 congreso federal ganadero genetica negocios y el futuro de la carne argentina en el centro del debate": "2026-11-10",
+      "maquinaria agricola cafma respaldo los anuncios de caputo y pidio mas reformas fiscales": "2026-11-10",
+      "la superficie bajo siembra directa volvio a retroceder en argentina": "2026-11-10",
+      "una joint venture de impacto global bunge y gdm se unen para desarrollar cultivos para biocombustibles": "2026-11-10",
+      "precio del maiz en rosario hoy 10 noviembre 2026": "2026-11-10",
+      "precio del trigo en rosario hoy 10 noviembre 2026": "2026-11-10",
+      "precio del girasol en rosario hoy 10 noviembre 2026": "2026-11-10",
+      "precio de la soja en rosario hoy 10 noviembre 2026": "2026-11-10",
+      "precio del sorgo en rosario hoy 10 noviembre 2026": "2026-11-10",
+      "riesgo pais hoy 10 de noviembre de 2026": "2026-11-10",
+      "dolar blue a cuanto cotizan hoy en cordoba 10 noviembre 2026": "2026-11-10",
+      "propiedad privada funcion social de la tierra y limites ambientales las definiciones agro que dejo el papa leon xiv ante la mesa de enlace": "2026-11-10",
+      "una nacion libre de riesgos belicos argentina se consolida como el principal proveedor de semilla de girasol de la union europea": "2026-11-10",
+      "que fue del proyecto que impulsaba la cria de burros para consumo en chubut quedo congelado lamenta su promotor julio cittadini que insiste con que el freno es politico y no legal": "2026-11-10",
+      "es ley municipios podran utilizar fondos de caminos rurales para obras hidricas": "2026-11-10"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -37245,7 +37405,21 @@
       "c18a272fef079f24": "2026-11-10",
       "4407467c95a87d84": "2026-11-10",
       "424a1384623e0585": "2026-11-10",
-      "db192ec852aeef45": "2026-11-10"
+      "db192ec852aeef45": "2026-11-10",
+      "7778d4d64d5ed959": "2026-11-10",
+      "9360d4d34931f1c6": "2026-11-10",
+      "c33a3df6a4ca5003": "2026-11-10",
+      "d831fb264722a2b9": "2026-11-10",
+      "b6abdb9bcb4ddbeb": "2026-11-10",
+      "6a55a5ba950464cb": "2026-11-10",
+      "4680765afb76e16f": "2026-11-10",
+      "c21f5805d1a5a2ef": "2026-11-10",
+      "b62959fe62908219": "2026-11-10",
+      "894c885d56c9c896": "2026-11-10",
+      "4c2ffc5606565ad0": "2026-11-10",
+      "c4f13d8555a4416c": "2026-11-10",
+      "684df8a4e561fc2a": "2026-11-10",
+      "9582c42134cf6222": "2026-11-10"
     }
   },
   "elegidas": [
@@ -65583,51 +65757,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0a3f11c07755_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "c37dfbc4ca30",
-      "rep": {
-        "id": "c37dfbc4ca30",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/cuando-no-calienta-el-sol-el-nino-redujo-a-la-mitad-las-horas-de-radiacion-y-advierten-por-el-rendimiento-del-trigo-en-el-centro-del-pais/",
-        "canonical_url": "https://bichosdecampo.com/cuando-no-calienta-el-sol-el-nino-redujo-a-la-mitad-las-horas-de-radiacion-y-advierten-por-el-rendimiento-del-trigo-en-el-centro-del-pais",
-        "titulo": "Cuando (no) calienta el sol… El Niño redujo a la mitad las horas de radiación y advierten por el rendimiento del trigo en el centro del país",
-        "titulo_norm": "cuando no calienta el sol el nino redujo a la mitad las horas de radiacion y advierten por el rendimiento del trigo en el centro del pais",
-        "descripcion": "Los pronósticos metereológicos ubicaban a partir de octubre el inicio de la intensificación del fenómeno de “El Niño”, con un período de precipitaciones más copiosas que lo habitual, al menos, hasta diciembre. Uno de los registros que indican que se está cumpliendo lo proyectado es el de las horas de sol acumuladas, que ya se […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Heliofano.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-10T08:52-03:00",
-        "capturado": "2026-11-10T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a30ab5d31b05a43b",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "c37dfbc4ca30",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/cuando-no-calienta-el-sol-el-nino-redujo-a-la-mitad-las-horas-de-radiacion-y-advierten-por-el-rendimiento-del-trigo-en-el-centro-del-pais/",
-          "canonical_url": "https://bichosdecampo.com/cuando-no-calienta-el-sol-el-nino-redujo-a-la-mitad-las-horas-de-radiacion-y-advierten-por-el-rendimiento-del-trigo-en-el-centro-del-pais",
-          "titulo": "Cuando (no) calienta el sol… El Niño redujo a la mitad las horas de radiación y advierten por el rendimiento del trigo en el centro del país",
-          "titulo_norm": "cuando no calienta el sol el nino redujo a la mitad las horas de radiacion y advierten por el rendimiento del trigo en el centro del pais",
-          "descripcion": "Los pronósticos metereológicos ubicaban a partir de octubre el inicio de la intensificación del fenómeno de “El Niño”, con un período de precipitaciones más copiosas que lo habitual, al menos, hasta diciembre. Uno de los registros que indican que se está cumpliendo lo proyectado es el de las horas de sol acumuladas, que ya se […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Heliofano.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-10T08:52-03:00",
-          "capturado": "2026-11-10T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a30ab5d31b05a43b",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-10T11:30-03:00",
+      "titulo_original": "Cuando (no) calienta el sol… El Niño redujo a la mitad las horas de radiación y advierten por el rendimiento del trigo en el centro del país",
+      "descripcion": "Los pronósticos metereológicos ubicaban a partir de octubre el inicio de la intensificación del fenómeno de “El Niño”, con un período de precipitaciones más copiosas que lo habitual, al menos, hasta diciembre. Uno de los registros que indican que se está cumpliendo lo proyectado es el de las horas d",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/cuando-no-calienta-el-sol-el-nino-redujo-a-la-mitad-las-horas-de-radiacion-y-advierten-por-el-rendimiento-del-trigo-en-el-centro-del-pais/",
+      "titular": "Trigo: El Niño redujo a la mitad las horas de sol",
+      "volanta": "Clima y Cultivos",
       "score": {
         "conversacion": 18,
         "historia_concreta": 12,
@@ -65649,11 +65788,110 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-10T10:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-10T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "96809d27-a63b-4c3a-b4b0-71ef93630335",
+          "slug": "trigo-en-alerta-el-nino-redujo-a-la-mitad-las-horas-de-sol-en-96a24b",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-en-alerta-el-nino-redujo-a-la-mitad-las-horas-de-sol-en-96a24b",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18117777917014458",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1754814963316167",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17956777329036894"
+        },
+        "historia_facebook": {
+          "id": "1149801350828644"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c37dfbc4ca30_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-10T11:00:26-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [
+    {
+      "id": "2354dca2fd19",
+      "rep": {
+        "id": "2354dca2fd19",
+        "fuente": "TodoAgro",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.todoagro.com.ar/feed/",
+        "url": "https://www.todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina/",
+        "canonical_url": "https://todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina",
+        "titulo": "La superficie bajo siembra directa volvió a retroceder en Argentina",
+        "titulo_norm": "la superficie bajo siembra directa volvio a retroceder en argentina",
+        "descripcion": "El control de malezas se repite como la principal justificación a la hora de realizar la labranza. En menos de una década, el porcentaje de siembra directa retrocedió del 93% al 80%. Afirman que también influyó mucho la restricción en el uso de fitosanitarios, esquemas de alquiler y la compactación del suelo. La entrada La superficie bajo siembra directa volvió a retroceder en Argentina pertenece a Todo Agro.",
+        "imagen_url": "",
+        "autor": "TodoAgro",
+        "publicado": "2026-11-10T10:40-03:00",
+        "capturado": "2026-11-10T11:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9360d4d34931f1c6",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "2354dca2fd19",
+          "fuente": "TodoAgro",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.todoagro.com.ar/feed/",
+          "url": "https://www.todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina/",
+          "canonical_url": "https://todoagro.com.ar/la-superficie-bajo-siembra-directa-volvio-a-retroceder-en-argentina",
+          "titulo": "La superficie bajo siembra directa volvió a retroceder en Argentina",
+          "titulo_norm": "la superficie bajo siembra directa volvio a retroceder en argentina",
+          "descripcion": "El control de malezas se repite como la principal justificación a la hora de realizar la labranza. En menos de una década, el porcentaje de siembra directa retrocedió del 93% al 80%. Afirman que también influyó mucho la restricción en el uso de fitosanitarios, esquemas de alquiler y la compactación del suelo. La entrada La superficie bajo siembra directa volvió a retroceder en Argentina pertenece a Todo Agro.",
+          "imagen_url": "",
+          "autor": "TodoAgro",
+          "publicado": "2026-11-10T10:40-03:00",
+          "capturado": "2026-11-10T11:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9360d4d34931f1c6",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 66,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "siembra directa",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Toca un problema real que ven todos los lotes de la zona: la resistencia de malezas y el retroceso de la siembra directa.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          62,
+          70
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-10T11:30-03:00"
+    }
+  ],
+  "actualizado": "2026-11-10T11:34:31-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
