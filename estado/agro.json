@@ -30548,6 +30548,110 @@
         50,
         30
       ]
+    },
+    "a567f7df1a59122c": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 45,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "riego por goteo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una investigación técnica a largo plazo del INTA, interesante pero lejana al día a día del productor chico de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "11b98f9bdd254819": {
+      "conversacion": 8,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 49,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "alquileres",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Muestra una tendencia pesada del negocio agrícola y alquileres, toca de cerca a quienes alquilan campos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        41
+      ]
+    },
+    "f87dd31112b25dd9": {
+      "conversacion": 22,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 84,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "tormentas y calor",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta de calor y tormentas que afecta directamente los cultivos de la región central y genera inmediata preocupación.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aed5e2e0071e6de1": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 38,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "mapa productivo santafesino",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un informe estadístico sobre Santa Fe, de poco interés práctico para el productor de Chivilcoy.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1fbdf63b70c2c6de": {
+      "conversacion": 2,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 4,
+      "ai_score": 17,
+      "commercial_score": 20,
+      "subtema": "maquinaria",
+      "tema": "robot agrícola",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Lanzamiento de un robot extranjero para hortalizas, una novedad lejana que no aplica a nuestra producción local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -32652,7 +32756,22 @@
       "https://diariojunin.com/noticias/103106_zrate-adhiere-a-la-emergencia-agropecuaria.html": "2026-11-09",
       "https://lanacion.com.ar/economia/campo/la-mesa-de-enlace-participo-del-encuentro-con-el-papa-en-la-uca-y-valoro-positivamente-sus-mensajes-nid09112026": "2026-11-09",
       "https://lanacion.com.ar/economia/campo/crecieron-las-exportaciones-de-citricos-se-movilizaron-90000-toneladas-de-fruta-y-hubo-un-aumento-nid09112026": "2026-11-09",
-      "https://lapostadelnoroeste.com.ar/ya-se-conocen-los-numeros-artisticos-que-estaran-en-la-reprogramada-expo-rural-2026": "2026-11-09"
+      "https://lapostadelnoroeste.com.ar/ya-se-conocen-los-numeros-artisticos-que-estaran-en-la-reprogramada-expo-rural-2026": "2026-11-09",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-corrientes-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-cordoba-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-salta-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-rosario-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-san-luis-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-hoy-en-neuquen-el-pronostico-del-tiempo-para-este-10-noviembre-2026": "2026-11-10",
+      "https://infocampo.com.ar/clima-en-la-rioja-lluvia-moderada-el-pronostico-para-hoy-10-de-noviembre": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/primer-aporte-nacional-durante-12-anos-evaluaron-un-riego-usado-en-israel-y-estados-unidos-y-nid10112026": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/un-reconocido-grupo-de-siembra-recorto-30000-hectareas-y-acelera-en-otro-millonario-negocio-nid10112026": "2026-11-10",
+      "https://lacapital.com.ar/agro/clima-y-agro-mas-calor-y-tormentas-verano-plena-primavera-n10291277.html": "2026-11-10",
+      "https://lacapital.com.ar/agro/agricultura-y-ganaderia-el-nuevo-mapa-productivo-santa-fe-n10291064.html": "2026-11-10",
+      "https://futurefarming.com/tech-in-focus/field-robots/na-o-extends-robot-oz-with-new-plug-planting-implement": "2026-11-10"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -34755,7 +34874,22 @@
       "zarate adhiere a la emergencia agropecuaria": "2026-11-09",
       "la mesa de enlace participo del encuentro con el papa en la uca y valoro positivamente sus mensajes": "2026-11-09",
       "crecieron las exportaciones de citricos se movilizaron 90 000 toneladas de fruta y hubo un aumento del 9 3": "2026-11-09",
-      "ya se conocen los numeros artisticos que estaran en la reprogramada expo rural 2026": "2026-11-09"
+      "ya se conocen los numeros artisticos que estaran en la reprogramada expo rural 2026": "2026-11-09",
+      "dolar blue hoy a cuanto cotiza el 10 noviembre 2026": "2026-11-10",
+      "clima hoy en tucuman el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en mendoza el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en corrientes el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en cordoba el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en salta el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en rosario el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en san luis el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima hoy en neuquen el pronostico del tiempo para este 10 noviembre 2026": "2026-11-10",
+      "clima en la rioja lluvia moderada el pronostico para hoy 10 de noviembre": "2026-11-10",
+      "primer aporte nacional durante 12 anos evaluaron un riego usado en israel y estados unidos y descubrieron importantes resultados": "2026-11-10",
+      "un reconocido grupo de siembra recorto 30 000 hectareas y acelera en otro millonario negocio": "2026-11-10",
+      "clima y agro mas calor y tormentas de verano en plena primavera": "2026-11-10",
+      "agricultura y ganaderia el nuevo mapa productivo de santa fe": "2026-11-10",
+      "naio extends robot oz with new plug planting implement": "2026-11-10"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -36858,7 +36992,22 @@
       "88b5656629868be0": "2026-11-09",
       "d15d43d7c3f7008b": "2026-11-09",
       "d128ae0dbaa14f4b": "2026-11-09",
-      "3be81f8f020b4e42": "2026-11-09"
+      "3be81f8f020b4e42": "2026-11-09",
+      "02b28f1a0f98f74b": "2026-11-10",
+      "fb28bb2772b46c82": "2026-11-10",
+      "680f6aec9c2f5860": "2026-11-10",
+      "1fa453066ccdc3d0": "2026-11-10",
+      "1bcf9e07b85b5380": "2026-11-10",
+      "acb1c3f2bd224597": "2026-11-10",
+      "306eba973cdb361e": "2026-11-10",
+      "44c640e2e43e3378": "2026-11-10",
+      "50ec400b144a606a": "2026-11-10",
+      "3d6e44e9a33dae02": "2026-11-10",
+      "a567f7df1a59122c": "2026-11-10",
+      "11b98f9bdd254819": "2026-11-10",
+      "f87dd31112b25dd9": "2026-11-10",
+      "aed5e2e0071e6de1": "2026-11-10",
+      "1fbdf63b70c2c6de": "2026-11-10"
     }
   },
   "elegidas": [
@@ -65076,11 +65225,71 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ae78fca57110_portada.jpg"
+    },
+    {
+      "id": "19c668251beb",
+      "cuando": "2026-11-10T07:00-03:00",
+      "titulo_original": "Clima y agro: más calor y tormentas de verano en plena primavera",
+      "descripcion": "El calor se consolida en la región central, con máximas de hasta 34 °C. Hay chances de tormentas este martes y sábado, con acumulados muy desparejos entre localidades",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/clima-y-agro-mas-calor-y-tormentas-verano-plena-primavera-n10291277.html",
+      "titular": "Llega calor de hasta 34 °C y tormentas dispares a la región",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 84,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "tormentas y calor",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta de calor y tormentas que afecta directamente los cultivos de la región central y genera inmediata preocupación.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-10T07:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f08e03e2-d2e0-41ae-9ea3-94267a1bcf82",
+          "slug": "el-clima-anuncia-calor-de-hasta-34-c-y-tormentas-muy-desparejas-e18416",
+          "url": "https://www.diariolacampaña.com.ar/n/el-clima-anuncia-calor-de-hasta-34-c-y-tormentas-muy-desparejas-e18416",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18120512884964660",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1754547773342886",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18234783049323071"
+        },
+        "historia_facebook": {
+          "id": "1007381108348133"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_19c668251beb_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-09T21:35:03-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-10T07:08:27-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
