@@ -66086,7 +66086,7 @@
       "cuando": "2026-11-10T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-10T13:06:45-03:00",
+  "actualizado": "2026-11-10T14:00:31-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -70684,6 +70684,43 @@
               },
               "facebook": {
                 "id": "2085557782144463"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-10T14:00:00-03:00": {
+      "dia": "2026-11-10",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué es lo que más te toca atender en la manga?",
+          "opciones": [],
+          "publico": "veterinarios",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18358656046172599"
+            },
+            "facebook": {
+              "id": "4701312763471964"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18358656046172599"
+              },
+              "facebook": {
+                "id": "4701312763471964"
               }
             }
           ]
