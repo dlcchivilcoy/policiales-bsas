@@ -65079,7 +65079,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-09T21:04:42-03:00",
+  "actualizado": "2026-11-09T21:30:45-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -69599,6 +69599,47 @@
               },
               "facebook": {
                 "id": "876554738848643"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-09T21:30:00-03:00": {
+      "dia": "2026-11-09",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están los caminos para salir con el camión?",
+          "opciones": [
+            "Buenos",
+            "Más o menos",
+            "Malos"
+          ],
+          "publico": "transporte",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18416341405084133"
+            },
+            "facebook": {
+              "id": "2557599804652077"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18416341405084133"
+              },
+              "facebook": {
+                "id": "2557599804652077"
               }
             }
           ]
