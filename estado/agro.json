@@ -32416,6 +32416,150 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4f13d3fb55c19a02": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 35,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia de exportaciones y certificaciones que no le cambia el día a día al productor local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "99719ab9e9f419f4": {
+      "conversacion": 14,
+      "historia_concreta": 14,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 46,
+      "commercial_score": 38,
+      "subtema": "agro",
+      "tema": "uvas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Trata sobre una crisis terminal de precios, pero pasa en Cuyo y no afecta directamente a la zona.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        40
+      ]
+    },
+    "7cac74ef62662f47": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 37,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "jóvenes ganaderos",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Premio internacional a jóvenes argentinos; linda historia pero muy lejos de la realidad de Chivilcoy.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "27f9ffb26e6662ad": {
+      "conversacion": 22,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 78,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "clima",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El clima y las tormentas siempre interesan al productor para planificar las labores.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ce6f54fb4388a6f5": {
+      "conversacion": 12,
+      "historia_concreta": 14,
+      "cercania_pba": 0,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 47,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "rutas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reclamo por caminos en Río Negro, un problema de infraestructura pero demasiado lejos de nuestra zona.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7ecf38e5f3b6e795": {
+      "conversacion": 15,
+      "historia_concreta": 18,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 49,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "sidra",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia de emprendedor, simpática para redes, pero ajena al perfil productivo de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "24e2dc9d08c54687": {
+      "conversacion": 18,
+      "historia_concreta": 16,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 83,
+      "commercial_score": 65,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en 25 de Mayo (partido vecino), debate caliente por caminos rurales que toca de cerca a los productores.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -34659,7 +34803,18 @@
       "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte": "2026-11-11",
       "https://lanacion.com.ar/economia/campo/perspectivas-favorables-cresud-el-brazo-agropecuario-de-irsa-sembrara-324000-hectareas-un-33-mas-nid11112026": "2026-11-11",
       "https://intainforma.inta.gob.ar/mani-cultivos-de-cobertura-mixtos-mejoran-la-calidad-del-suelo": "2026-11-11",
-      "https://casaresonline.com.ar/girasol-las-lluvias-corren-la-siembra-y-encienden-una-alerta-sobre-el-potencial-de-rinde": "2026-11-11"
+      "https://casaresonline.com.ar/girasol-las-lluvias-corren-la-siembra-y-encienden-una-alerta-sobre-el-potencial-de-rinde": "2026-11-11",
+      "https://todoagro.com.ar/la-falta-de-sol-encendio-una-alerta-para-el-trigo-en-el-centro-de-cordoba": "2026-11-11",
+      "https://infocampo.com.ar/en-la-soja-el-visec-no-entra-en-polemicas-y-la-industria-aceitera-se-entusiasma-con-un-record-exportador": "2026-11-11",
+      "https://infocampo.com.ar/vinateros-cobran-230-por-kilo-con-costos-en-400-estamos-en-el-umbral-de-un-proceso-terminal": "2026-11-11",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-11-noviembre-2026": "2026-11-11",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-11-noviembre-2026": "2026-11-11",
+      "https://agrositio.com.ar/noticia/249279-triunfo-argentino-jovenes-ganaderos-se-consagran-con-el-primer-y-segundo-puesto-en-la-competencia-internacional-beef-en-canada.html": "2026-11-11",
+      "https://agrositio.com.ar/noticia/249278-marcada-oscilacion-termica-acompanada-por-precipitaciones-de-variada-intensidad-con-focos-de-tormentas.html": "2026-11-11",
+      "https://bichosdecampo.com/cansados-de-cantarle-el-feliz-cumpleanos-al-puente-derrumbado-y-del-deterioro-de-la-ruta-23-nueve-intendentes-rionegrinos-se-unieron-para-exigirle-a-nacion-que-abra-la-billetera": "2026-11-11",
+      "https://bichosdecampo.com/dejo-la-oficina-publica-para-hacer-sidra-artesanal-en-trevelin-la-historia-de-mariana-freeman-y-las-manzanas-que-la-convirtieron-en-la-primera-maestra-sidrera": "2026-11-11",
+      "https://lanacion.com.ar/economia/campo/historico-triunfo-un-grupo-de-jovenes-ganaderos-se-quedaron-con-el-primer-y-segundo-puesto-en-una-nid11112026": "2026-11-11",
+      "https://lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones": "2026-11-11"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -36901,7 +37056,18 @@
       "pedro pechar lleva 30 anos dando cursos de herrado por los campos de todo el pais nadie tiene la excusa para andar con sus caballos mancos despiados o bichocos advierte": "2026-11-11",
       "perspectivas favorables cresud el brazo agropecuario de irsa sembrara 324 000 hectareas un 3 3 mas": "2026-11-11",
       "mani cultivos de cobertura mixtos mejoran la calidad del suelo": "2026-11-11",
-      "girasol las lluvias corren la siembra y encienden una alerta sobre el potencial de rinde": "2026-11-11"
+      "girasol las lluvias corren la siembra y encienden una alerta sobre el potencial de rinde": "2026-11-11",
+      "la falta de sol encendio una alerta para el trigo en el centro de cordoba": "2026-11-11",
+      "en la soja el visec no entra en polemicas y la industria aceitera se entusiasma con un record exportador": "2026-11-11",
+      "vinateros cobran 230 por kilo con costos en 400 estamos en el umbral de un proceso terminal": "2026-11-11",
+      "dolar blue a cuanto cotizan hoy en mendoza 11 noviembre 2026": "2026-11-11",
+      "euro blue hoy precio y cotizacion de este 11 noviembre 2026": "2026-11-11",
+      "triunfo argentino jovenes ganaderos se consagran con el primer y segundo puesto en la competencia internacional beef en canada": "2026-11-11",
+      "marcada oscilacion termica acompanada por precipitaciones de variada intensidad con focos de tormentas": "2026-11-11",
+      "cansados de cantarle el feliz cumpleanos a un puente derrumbado y del deterioro de la ruta 23 nueve intendentes rionegrinos se unieron para exigirle a nacion que abra la billetera": "2026-11-11",
+      "dejo la oficina publica para hacer sidra artesanal en trevelin la historia de mariana freeman y las manzanas que la convirtieron en la primera maestra sidrera": "2026-11-11",
+      "historico triunfo un grupo de jovenes ganaderos se quedaron con el primer y segundo puesto en una importante competencia internacional": "2026-11-11",
+      "caminos rurales tras fuerte debate la creacion de una comision vial volvio a comisiones": "2026-11-11"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -39143,7 +39309,18 @@
       "f51d6bdef890d01d": "2026-11-11",
       "8d85e93a4efab559": "2026-11-11",
       "55edf1ead8eefc50": "2026-11-11",
-      "51ba46f9beab2217": "2026-11-11"
+      "51ba46f9beab2217": "2026-11-11",
+      "f4a1d857df368035": "2026-11-11",
+      "4f13d3fb55c19a02": "2026-11-11",
+      "99719ab9e9f419f4": "2026-11-11",
+      "cdb69807adfe3791": "2026-11-11",
+      "667282baf9a037c4": "2026-11-11",
+      "7cac74ef62662f47": "2026-11-11",
+      "27f9ffb26e6662ad": "2026-11-11",
+      "ce6f54fb4388a6f5": "2026-11-11",
+      "7ecf38e5f3b6e795": "2026-11-11",
+      "07efc24b39b94a5c": "2026-11-11",
+      "24e2dc9d08c54687": "2026-11-11"
     }
   },
   "elegidas": [
@@ -68093,9 +68270,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_962ab1856c0c_portada.jpg"
+    },
+    {
+      "id": "ccd420d6c499",
+      "cuando": "2026-11-11T13:00-03:00",
+      "titulo_original": "Marcada oscilación térmica, acompañada por precipitaciones de variada intensidad, con focos de tormentas",
+      "descripcion": "Dicho pronostico de la Bolsa de Cereales de Buenos Aires, ira dejando amplias extensiones sin aportes significativos....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249278-marcada-oscilacion-termica-acompanada-por-precipitaciones-de-variada-intensidad-con-focos-de-tormentas.html",
+      "titular": "Oscilación térmica y tormentas dispares alertan al agro nacional",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 78,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El clima y las tormentas siempre interesan al productor para planificar las labores.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-11T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "be419822-995d-4e52-b9f7-560cdfb918c1",
+          "slug": "pronostico-agroclimatico-oscilacion-termica-heladas-y-lluvias-268620",
+          "url": "https://www.diariolacampaña.com.ar/n/pronostico-agroclimatico-oscilacion-termica-heladas-y-lluvias-268620",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17973811905187487",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1756257576505239",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18134636695800345"
+        },
+        "historia_facebook": {
+          "id": "2330560641043776"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ccd420d6c499_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f15dd8d2701f",
+      "rep": {
+        "id": "f15dd8d2701f",
+        "fuente": "La Mañana (25 de Mayo)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lamanana.com.ar/feed/",
+        "url": "https://www.lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones/",
+        "canonical_url": "https://lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones",
+        "titulo": "Caminos rurales: tras fuerte debate, la creación de una Comisión Vial volvió a comisiones",
+        "titulo_norm": "caminos rurales tras fuerte debate la creacion de una comision vial volvio a comisiones",
+        "descripcion": "El Concejo Deliberante protagonizó una extensa discusión en torno a las iniciativas de La Libertad Avanza y la oposición para crear un nuevo ente de gestión vial. El oficialismo cuestionó duramente la inconstitucionalidad de la superestructura propuesta, la falta de aval de las entidades rurales y el manejo de los recursos municipales, logrando que el expediente retorne a estudio.",
+        "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/guarch-caronello.jpg",
+        "autor": "Andrés Alvarez",
+        "publicado": "2026-11-11T11:59-03:00",
+        "capturado": "2026-11-11T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "24e2dc9d08c54687",
+        "localidad_medio": "25 de Mayo"
+      },
+      "grupo": [
+        {
+          "id": "f15dd8d2701f",
+          "fuente": "La Mañana (25 de Mayo)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lamanana.com.ar/feed/",
+          "url": "https://www.lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones/",
+          "canonical_url": "https://lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones",
+          "titulo": "Caminos rurales: tras fuerte debate, la creación de una Comisión Vial volvió a comisiones",
+          "titulo_norm": "caminos rurales tras fuerte debate la creacion de una comision vial volvio a comisiones",
+          "descripcion": "El Concejo Deliberante protagonizó una extensa discusión en torno a las iniciativas de La Libertad Avanza y la oposición para crear un nuevo ente de gestión vial. El oficialismo cuestionó duramente la inconstitucionalidad de la superestructura propuesta, la falta de aval de las entidades rurales y el manejo de los recursos municipales, logrando que el expediente retorne a estudio.",
+          "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/guarch-caronello.jpg",
+          "autor": "Andrés Alvarez",
+          "publicado": "2026-11-11T11:59-03:00",
+          "capturado": "2026-11-11T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "24e2dc9d08c54687",
+          "localidad_medio": "25 de Mayo"
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 16,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 83,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "caminos rurales",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pasa en 25 de Mayo (partido vecino), debate caliente por caminos rurales que toca de cerca a los productores.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-11T13:00-03:00"
+    },
     {
       "id": "11a08ef92024",
       "rep": {
@@ -68250,8 +68552,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-11T11:35:18-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-11T13:07:46-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
