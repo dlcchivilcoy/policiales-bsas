@@ -32044,6 +32044,194 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1d4d994d334f4b40": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 34,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "lecheria",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un evento institucional y de debate, sin impacto directo inmediato para el tambero local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8c574a66d4fcb688": {
+      "conversacion": 8,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "inversiones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Habla de inversiones millonarias pero desde una perspectiva muy técnica y de anuncio oficial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f50b50389d32fb58": {
+      "conversacion": 10,
+      "historia_concreta": 11,
+      "cercania_pba": 5,
+      "interes_productores": 9,
+      "impacto_economico": 8,
+      "cercania_argentina": 4,
+      "potencial_reel": 2,
+      "ai_score": 49,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "El conflicto internacional en el Mar Negro mueve el tablero global del trigo y afecta precios locales.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        34
+      ]
+    },
+    "fc4846ccbd0d3972": {
+      "conversacion": 8,
+      "historia_concreta": 12,
+      "cercania_pba": 2,
+      "interes_productores": 7,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 42,
+      "commercial_score": 38,
+      "subtema": "maquinaria",
+      "tema": "logistica",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta el paso de camiones hacia Brasil, un tema relevante para el transporte de carga y exportaciones.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        31
+      ]
+    },
+    "1e8a7b77dc3d7cdf": {
+      "conversacion": 5,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 27,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "vino",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Trata sobre el control de vinos, un tema sin impacto directo en la zona agrícola núcleo de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "300bfcc73330ef53": {
+      "conversacion": 14,
+      "historia_concreta": 18,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 45,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "pesca",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una linda historia de vida y trabajo rural en la Patagonia, pero muy alejada geográficamente.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f6acd11d6fa389b6": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 26,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "biotecnologia",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aniversario institucional de un organismo oficial, sin impacto directo o historia atractiva.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b44ec10c696679c5": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 2,
+      "potencial_reel": 4,
+      "ai_score": 46,
+      "commercial_score": 60,
+      "subtema": "agtech",
+      "tema": "maquinaria",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Lanzamiento internacional de tecnología de pulverización, poco aplicable en el corto plazo para la mayoría.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2d3ba36ab95d8d81": {
+      "conversacion": 3,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 3,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 28,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "inta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Evento cultural en CABA del INTA, de escaso interés directo para el productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -34255,7 +34443,21 @@
       "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas": "2026-11-11",
       "https://elregionaldigital.com.ar/trigo-donmario-mas-este-ano-por-partida-doble": "2026-11-11",
       "https://elregionaldigital.com.ar/la-caida-de-la-cosecha-brasilena-abre-una-oportunidad-para-el-trigo-argentino": "2026-11-11",
-      "https://radioliderchacabuco.com.ar/avances-en-el-centro-de-equinoterapia": "2026-11-11"
+      "https://radioliderchacabuco.com.ar/avances-en-el-centro-de-equinoterapia": "2026-11-11",
+      "https://todoagro.com.ar/la-lecheria-argentina-busca-descifrar-su-nuevo-mapa-llega-el-7o-outlook-de-la-cadena-lactea": "2026-11-11",
+      "https://infocampo.com.ar/el-rimi-moviliza-inversiones-en-el-agro-ya-hay-proyectos-registrados-por-casi-us-300-millones": "2026-11-11",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-11-noviembre-2026": "2026-11-11",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-11-noviembre-2026": "2026-11-11",
+      "https://agrositio.com.ar/noticia/249264-mercado-de-granos-la-soja-trepa-en-chicago-impulsada-por-menores-existencias-del-usda.html": "2026-11-11",
+      "https://bichosdecampo.com/hay-apagon-logistico-del-mar-negro-para-rato-ucrania-ataco-al-principal-puerto-exportador-de-trigo-de-rusia-en-plena-fase-de-negociaciones": "2026-11-11",
+      "https://bichosdecampo.com/el-gobierno-avanza-con-la-privatizacion-de-paso-de-los-libres-y-ya-tiene-favorito-pica-en-punta-un-consorcio-ligado-a-flecha-bus-mercado-libre-y-hasta-el-obelisco": "2026-11-11",
+      "https://bichosdecampo.com/un-ano-despues-de-eliminar-casi-mil-normas-el-inv-ajusta-las-herramientas-para-controlar-el-vino-argentino": "2026-11-11",
+      "https://bichosdecampo.com/blanca-lleva-mas-de-40-anos-pescando-en-las-aguas-frias-de-rio-gallegos-aprendio-el-oficio-de-su-madre-y-ya-tiene-nietos-que-siguen-sus-pasos": "2026-11-11",
+      "https://argentina.gob.ar/noticias/conabia-35-anos-al-servicio-de-la-biotecnologia-agropecuaria-3": "2026-11-11",
+      "https://futurefarming.com/smart-farming/ecorobotix-introduces-ara-spot-sprayers-with-new-working-widths-and-tanks": "2026-11-11",
+      "https://intainforma.inta.gob.ar/el-inta-participara-por-primera-vez-en-la-noche-de-los-museos": "2026-11-11",
+      "https://latrochadigital.com.ar/2026/11/11/un-carnero-sospechoso-por-la-muerte-de-un-productor-rural-en-cnel-dorrego": "2026-11-11",
+      "https://elregionaldigital.com.ar/coronel-dorrego-fallece-un-productor-rural-tras-ser-atacado-por-un-carnero": "2026-11-11"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -36465,7 +36667,21 @@
       "diarrea neonatal bovina el diagnostico oportuno reduce las perdidas": "2026-11-11",
       "trigo donmario mas este ano por partida doble": "2026-11-11",
       "la caida de la cosecha brasilena abre una oportunidad para el trigo argentino": "2026-11-11",
-      "avances en el centro de equinoterapia": "2026-11-11"
+      "avances en el centro de equinoterapia": "2026-11-11",
+      "la lecheria argentina busca descifrar su nuevo mapa llega el 7 outlook de la cadena lactea": "2026-11-11",
+      "el rimi moviliza inversiones en el agro ya hay proyectos registrados por casi u s 300 millones": "2026-11-11",
+      "dolar blue hoy a cuanto cotiza el 11 noviembre 2026": "2026-11-11",
+      "clima hoy en tucuman el pronostico del tiempo para este 11 noviembre 2026": "2026-11-11",
+      "mercado de granos la soja trepa en chicago impulsada por menores existencias del usda": "2026-11-11",
+      "hay apagon logistico del mar negro para rato ucrania ataco al principal puerto exportador de trigo de rusia en plena fase de negociaciones": "2026-11-11",
+      "el gobierno avanza con la privatizacion de paso de los libres y ya tiene favorito pica en punta un consorcio ligado a flecha bus mercado libre y hasta el obelisco": "2026-11-11",
+      "un ano despues de eliminar casi mil normas el inv ajusta las herramientas para controlar el vino argentino": "2026-11-11",
+      "blanca lleva mas de 40 anos pescando en las aguas frias de rio gallegos aprendio el oficio de su madre y ya tiene nietos que siguen sus pasos": "2026-11-11",
+      "conabia 35 anos al servicio de la biotecnologia agropecuaria": "2026-11-11",
+      "ecorobotix introduces ara spot sprayers with new working widths and tanks": "2026-11-11",
+      "el inta participara por primera vez en la noche de los museos": "2026-11-11",
+      "un carnero sospechoso por la muerte de un productor rural en cnel dorrego": "2026-11-11",
+      "coronel dorrego fallece un productor rural tras ser atacado por un carnero": "2026-11-11"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -38675,7 +38891,21 @@
       "ceecf8a0d75be7ee": "2026-11-11",
       "4739bc6529514282": "2026-11-11",
       "4b8e4f123d8ff600": "2026-11-11",
-      "66ede345957aa080": "2026-11-11"
+      "66ede345957aa080": "2026-11-11",
+      "1d4d994d334f4b40": "2026-11-11",
+      "8c574a66d4fcb688": "2026-11-11",
+      "466ad91fe7fc851d": "2026-11-11",
+      "887ee67533111d21": "2026-11-11",
+      "a2dae124b4063ae6": "2026-11-11",
+      "f50b50389d32fb58": "2026-11-11",
+      "fc4846ccbd0d3972": "2026-11-11",
+      "1e8a7b77dc3d7cdf": "2026-11-11",
+      "300bfcc73330ef53": "2026-11-11",
+      "f6acd11d6fa389b6": "2026-11-11",
+      "b44ec10c696679c5": "2026-11-11",
+      "2d3ba36ab95d8d81": "2026-11-11",
+      "0db1ea8e4b1de29c": "2026-11-11",
+      "0fdb0df8455f0e6f": "2026-11-11"
     }
   },
   "elegidas": [
@@ -67501,51 +67731,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8366e6376596_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "0824715cd703",
-      "rep": {
-        "id": "0824715cd703",
-        "fuente": "El Regional Digital",
-        "tipo_fuente": "medio",
-        "source_url": "https://elregionaldigital.com.ar/feed/",
-        "url": "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas/",
-        "canonical_url": "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas",
-        "titulo": "Diarrea Neonatal Bovina: El diagnostico oportuno reduce las perdidas",
-        "titulo_norm": "diarrea neonatal bovina el diagnostico oportuno reduce las perdidas",
-        "descripcion": "Con el inicio de la temporada de pariciones comienza también el período de mayor riesgo para la aparición de la diarrea neonatal bovina, una de las enfermedades que genera mayores pérdidas sanitarias y económicas tanto en rodeos de cría como en establecimientos lecheros. Aunque la diarrea es un signo clínico de fácil identificación, su origen",
-        "imagen_url": "",
-        "autor": "ciri340043",
-        "publicado": "2026-11-11T00:20-03:00",
-        "capturado": "2026-11-11T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ceecf8a0d75be7ee",
-        "localidad_medio": "9 de Julio"
-      },
-      "grupo": [
-        {
-          "id": "0824715cd703",
-          "fuente": "El Regional Digital",
-          "tipo_fuente": "medio",
-          "source_url": "https://elregionaldigital.com.ar/feed/",
-          "url": "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas/",
-          "canonical_url": "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas",
-          "titulo": "Diarrea Neonatal Bovina: El diagnostico oportuno reduce las perdidas",
-          "titulo_norm": "diarrea neonatal bovina el diagnostico oportuno reduce las perdidas",
-          "descripcion": "Con el inicio de la temporada de pariciones comienza también el período de mayor riesgo para la aparición de la diarrea neonatal bovina, una de las enfermedades que genera mayores pérdidas sanitarias y económicas tanto en rodeos de cría como en establecimientos lecheros. Aunque la diarrea es un signo clínico de fácil identificación, su origen",
-          "imagen_url": "",
-          "autor": "ciri340043",
-          "publicado": "2026-11-11T00:20-03:00",
-          "capturado": "2026-11-11T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ceecf8a0d75be7ee",
-          "localidad_medio": "9 de Julio"
-        }
-      ],
+      "cuando": "2026-11-11T10:00-03:00",
+      "titulo_original": "Diarrea Neonatal Bovina: El diagnostico oportuno reduce las perdidas",
+      "descripcion": "Con el inicio de la temporada de pariciones comienza también el período de mayor riesgo para la aparición de la diarrea neonatal bovina, una de las enfermedades que genera mayores pérdidas sanitarias y económicas tanto en rodeos de cría como en establecimientos lecheros. Aunque la diarrea es un sign",
+      "fuente": "El Regional Digital",
+      "url": "https://elregionaldigital.com.ar/diarrea-neonatal-bovina-el-diagnostico-oportuno-reduce-las-perdidas/",
+      "titular": "Diarrea neonatal bovina: claves para frenar pérdidas en terneros",
+      "volanta": "Ganadería",
       "score": {
         "conversacion": 18,
         "historia_concreta": 14,
@@ -67567,8 +67762,38 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-11T07:00-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-11T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0b990ca8-c1b5-41d3-895b-1f9c4b678efc",
+          "slug": "diarrea-neonatal-bovina-como-el-diagnostico-temprano-reduce-33a534",
+          "url": "https://www.diariolacampaña.com.ar/n/diarrea-neonatal-bovina-como-el-diagnostico-temprano-reduce-33a534",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18129624574886446",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1756060306524966",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18045810962837551"
+        },
+        "historia_facebook": {
+          "id": "4326493740983127"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0824715cd703_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "962ab1856c0c",
       "rep": {
@@ -67639,8 +67864,8 @@
       "cuando": "2026-11-10T19:30-03:00"
     }
   ],
-  "actualizado": "2026-11-11T08:03:58-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-11T10:07:05-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
