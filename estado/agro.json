@@ -67639,7 +67639,7 @@
       "cuando": "2026-11-10T19:30-03:00"
     }
   ],
-  "actualizado": "2026-11-11T07:06:25-03:00",
+  "actualizado": "2026-11-11T08:03:58-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -72996,6 +72996,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-06": {
+        "fecha": "2026-11-06",
+        "productos": {
+          "trigo": {
+            "ars": 313300.0,
+            "usd": null,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "maiz": {
+            "ars": 273500.0,
+            "usd": null,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 768250.0,
+            "usd": null,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 535000.0,
+            "usd": null,
+            "estimado": true,
+            "direccion": "igual"
+          },
+          "sorgo": {
+            "ars": 276570.0,
+            "usd": null,
+            "estimado": true,
+            "direccion": "igual"
+          }
+        },
+        "tc": null,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -73456,6 +73496,10 @@
       "2026-11-09": {
         "fecha": "2026-11-09",
         "usd_t": 434.4
+      },
+      "2026-11-10": {
+        "fecha": "2026-11-10",
+        "usd_t": 449.9
       }
     },
     "chicago_maiz": {
@@ -73613,7 +73657,11 @@
       },
       "2026-11-10": {
         "fecha": "2026-11-10",
-        "usd_t": 174.1
+        "usd_t": 176.8
+      },
+      "2026-11-11": {
+        "fecha": "2026-11-11",
+        "usd_t": 176.2
       }
     },
     "chicago_trigo": {
@@ -73771,7 +73819,11 @@
       },
       "2026-11-10": {
         "fecha": "2026-11-10",
-        "usd_t": 216.9
+        "usd_t": 217.8
+      },
+      "2026-11-11": {
+        "fecha": "2026-11-11",
+        "usd_t": 220.9
       }
     }
   },
@@ -73872,6 +73924,33 @@
         "facebook": {
           "id": "101271341650483_1754602333337430",
           "fotos": 7
+        }
+      }
+    },
+    "2026-11-11T08:00:00-03:00": {
+      "dia": "2026-11-11",
+      "placas": [
+        "portada",
+        "mapa",
+        "pueblos",
+        "alerta",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Alerta amarilla por tormentas en la zona",
+      "publicado": {
+        "instagram": {
+          "id": "18156877948484327",
+          "colab": "no",
+          "diapositivas": 9
+        },
+        "facebook": {
+          "id": "101271341650483_1755929989871331",
+          "fotos": 9
         }
       }
     }
