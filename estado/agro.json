@@ -67355,7 +67355,7 @@
       "cuando": "2026-11-10T18:00-03:00"
     }
   ],
-  "actualizado": "2026-11-10T21:05:32-03:00",
+  "actualizado": "2026-11-10T21:30:26-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -72027,6 +72027,43 @@
               },
               "facebook": {
                 "id": "1072455272460627"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-10T21:30:00-03:00": {
+      "dia": "2026-11-10",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué fierro entró al taller?",
+          "opciones": [],
+          "publico": "talleres",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18081379982403127"
+            },
+            "facebook": {
+              "id": "2367231007017278"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18081379982403127"
+              },
+              "facebook": {
+                "id": "2367231007017278"
               }
             }
           ]
