@@ -998,23 +998,52 @@ chequear("agenda 04 (v12): el Short va adentro de la nota de la web, y nada a Fa
          sum(1 for l in llamadas if l[0] == "web" and l[2]) == 5
          and not {l[0] for l in llamadas} & {"facebook"}
          and not any(k in p for p in inf_s["piezas"] for k in ("facebook", "instagram")))
-# 10/11/2026: cada viral con Short sale además como reel de PRUEBA en Instagram (hasta 5 por día).
-_prueba = [p for p in inf_s["piezas"] if _ok_red(p, "ig_prueba")]
-chequear("virales (10/11/2026): las 5 con Short salen también como reel de PRUEBA en Instagram",
+# 10/11/2026: cada viral con Short sale además como reel de PRUEBA en Instagram (hasta 5 por día), A LAS 19:
+# la de las 4 deja el video en el Release y el reel «pendiente»; corrida_ig_prueba los publica.
+_prueba = [p for p in inf_s["piezas"] if (p.get("ig_prueba") or {}).get("estado") == "pendiente"]
+chequear("virales (10/11/2026): a las 4 las 5 con Short dejan su reel de PRUEBA pendiente para las 19, sin publicar",
          len(_prueba) == 5 and all(p.get("youtube") for p in _prueba)
-         and all(p["ig_prueba"].get("prueba") == {"graduation_strategy": "SS_PERFORMANCE"} for p in _prueba)
-         and sum(1 for l in llamadas if l[0] == "ig_publicar") == 5)
-chequear("virales: el reel de prueba va sin colab y las solo web no lo llevan",
-         all(not p["ig_prueba"].get("colab") for p in _prueba)
-         and not any("ig_prueba" in p for p in inf_s["piezas"] if not p.get("youtube")))
+         and all(p["ig_prueba"].get("video_url", "").startswith("https://gh/prueba_") for p in _prueba)
+         and all(p["ig_prueba"].get("para") == "19:00" for p in _prueba)
+         and not any(l[0] == "ig_publicar" for l in llamadas))
+chequear("virales: las solo web no llevan reel de prueba",
+         not any("ig_prueba" in p for p in inf_s["piezas"] if not p.get("youtube")))
+_ig_params = []
+_cl_antes, _pc_antes, _dormir_antes, _ahora_antes = PUB._contenedor_listo, PUB._publicar_contenedor, PA._dormir, PA._ahora
+PUB._contenedor_listo = lambda uid, tok, params: _ig_params.append(dict(params)) or "c"
+PUB._publicar_contenedor = lambda uid, tok, cid, cap: f"m{len(_ig_params)}"
+_esperas = []
+PA._dormir = lambda seg: _esperas.append(seg)
+_dia_v = _lun(4).date()
+PA._ahora = lambda: datetime.combine(_dia_v, datetime.strptime("18:58", "%H:%M").time(), PA.TZ_AR)
+_inf_19 = PA.corrida_ig_prueba(True)
+_mem_19 = PA.cargar()
+_hechas = [p for p in _mem_19["piezas"].values() if _ok_red(p, "ig_prueba")]
+chequear("virales a las 19: espera hasta las 19:00 y publica los 5 como reel de PRUEBA (sin colab)",
+         _inf_19["pendientes"] == 5 and len(_hechas) == 5 and _esperas == [120]
+         and len(_ig_params) == 5 and all(json.loads(x["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"}
+                                          and "share_to_feed" not in x and "collaborators" not in x
+                                          for x in _ig_params)
+         and all(x["video_url"].startswith("https://gh/prueba_") for x in _ig_params))
+_ig_params.clear()
+_inf_19b = PA.corrida_ig_prueba(True)
+chequear("virales a las 19: el respaldo de las 19:20 no repite nada", _inf_19b["pendientes"] == 0 and not _ig_params)
+PUB._contenedor_listo, PUB._publicar_contenedor, PA._dormir, PA._ahora = _cl_antes, _pc_antes, _dormir_antes, _ahora_antes
 _c = PA.ig_prueba_virales()
 os.environ["NAC_IG_PRUEBA_VIRALES"] = "0"
 chequear("virales: 5 reels de prueba por día de fábrica; NAC_IG_PRUEBA_VIRALES=0 los apaga",
          _c == 5 and PA.ig_prueba_virales() == 0)
 os.environ.pop("NAC_IG_PRUEBA_VIRALES")
-_mem_p = {"piezas": {f"u{i}": {"dia": "2026-11-10", "ig_prueba": {"estado": "ok"}} for i in range(5)}}
-chequear("virales: con 5 reels de prueba hoy, ya no sale otro (el tope cuenta lo de la memoria del día)",
+_mem_p = {"piezas": {f"u{i}": {"dia": "2026-11-10", "ig_prueba": {"estado": "ok" if i % 2 else "pendiente"}}
+                     for i in range(5)}}
+chequear("virales: con 5 reels de prueba hoy (publicados o pendientes), ya no sale otro",
          PA._ig_prueba_hoy(_mem_p, "2026-11-10") == 5 and PA._ig_prueba_hoy(_mem_p, "2026-11-11") == 0)
+os.environ["NAC_IG_PRUEBA_HORA"] = "20:30"
+chequear("virales: NAC_IG_PRUEBA_HORA cambia la hora (19:00 de fábrica; una hora mal escrita no rompe)",
+         PA.ig_prueba_hora() == "20:30")
+os.environ["NAC_IG_PRUEBA_HORA"] = "a la noche"
+chequear("...", PA.ig_prueba_hora() == "19:00")
+os.environ.pop("NAC_IG_PRUEBA_HORA")
 os.environ["NAC_SHORT_VIRALES"] = "0"
 chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "virales_short" not in AGE.topes(_lun(4)))
 os.environ.pop("NAC_SHORT_VIRALES")

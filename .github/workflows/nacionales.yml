@@ -8,6 +8,10 @@ name: Noticias nacionales
 #          las 10 generales del día para Chivilcoy, a las 23). Para volver: hora 22 en cron-job.org (job 8677866)
 #          y el respaldo «20 1 * * *» acá abajo.
 #
+#   19:00  REELS DE PRUEBA de las virales con Short que dejó la de las 4 (10/11/2026). La dispara el
+#          `schedule:` de GitHub (19:00 y respaldo 19:20; en esta PC no estaba la clave de cron-job.org). Para
+#          la hora exacta: un job de cron-job.org con inputs {"modo": "ig_prueba"}.
+#
 # Los policiales siguen en reels.yml (17 y 20).
 #
 # QUIÉN DISPARA: cron-job.org a horario exacto, con {"ref":"main","inputs":{"origen":"cron"}}.
@@ -16,6 +20,8 @@ name: Noticias nacionales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 7 * * *"    # 04:20 Argentina (respaldo de la de las 4, solo web)
+    - cron: "0 22 * * *"    # 19:00 Argentina: reels de prueba de las virales (10/11/2026; GitHub puede demorar unos minutos)
+    - cron: "20 22 * * *"   # 19:20 Argentina (respaldo de los reels de prueba de las virales)
     # (22:20 Argentina —«20 1 * * *», respaldo del carrusel de las 22— la sacó el editor el 25/10/2026: carrusel apagado)
   workflow_dispatch:
     inputs:
@@ -25,6 +31,9 @@ on:
       origen:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
+      modo:
+        description: '"ig_prueba" = solo los reels de prueba de las virales (19:00, cron-job.org). Vacío = la agenda'
+        default: ""
 
 # Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
 concurrency:
@@ -91,10 +100,17 @@ jobs:
           YT_SHORTS_POR_DIA: ${{ vars.YT_SHORTS_POR_DIA }}
           PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          MODO_INPUT: ${{ github.event.inputs.modo }}
+          CRON_GH: ${{ github.event.schedule }}
           NACIONALES_VAR: ${{ vars.NACIONALES }}
         run: |
           set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
           ARGS="--agenda"
+          # Los reels de prueba de las virales (10/11/2026): cron-job.org a las 19:00 con modo=ig_prueba, y el
+          # respaldo de las 19:20. Si ya salieron, no queda nada pendiente y termina sin hacer nada.
+          if [ "$MODO_INPUT" = "ig_prueba" ] || [ "$CRON_GH" = "0 22 * * *" ] || [ "$CRON_GH" = "20 22 * * *" ]; then
+            ARGS="--ig-prueba"
+          fi
           if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then
             ARGS="$ARGS --publicar"
           fi
