@@ -31840,6 +31840,46 @@
         58,
         59
       ]
+    },
+    "81b6abb27648d144": {
+      "conversacion": 2,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 24,
+      "commercial_score": 10,
+      "subtema": "maquinaria",
+      "tema": "feria eima italia",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una misión comercial en el exterior que no le cambia nada al productor de Chivilcoy y la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "938d2e0f689c8e52": {
+      "conversacion": 22,
+      "historia_concreta": 20,
+      "cercania_pba": 15,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 78,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "accidente rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un hecho policial trágico en un campo de la provincia que genera impacto y se comenta entre vecinos.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -34028,7 +34068,10 @@
       "https://croplife.com/crop-inputs/seed-biotech/syngenta-urges-growers-to-prepare-for-2027-as-red-crown-rot-expands-into-new-soybean-growing-areas": "2026-11-10",
       "https://croplife.com/crop-inputs/herbicides/as-herbicide-options-shrink-lasco-helps-farmers-find-new-tools-for-resistant-weeds-at-eco-ag": "2026-11-10",
       "https://croplife.com/crop-inputs/biologicals/the-bio-reckoning-is-here-in-agriculture": "2026-11-10",
-      "https://diarionoticiaspehuajo.com/2026-11-10/zurro-se-reunio-con-delegados-y-funcionarios-para-abordar-la-situacion-de-los-caminos-rurales-43661": "2026-11-10"
+      "https://diarionoticiaspehuajo.com/2026-11-10/zurro-se-reunio-con-delegados-y-funcionarios-para-abordar-la-situacion-de-los-caminos-rurales-43661": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/seis-empresas-argentinas-de-maquinaria-agricola-buscan-nuevos-compradores-en-italia-nid10112026": "2026-11-10",
+      "https://lanacion.com.ar/economia/campo/misteriosa-muerte-sospechan-que-un-carnero-mato-a-un-productor-agropecuario-de-81-anos-nid10112026": "2026-11-10",
+      "https://lapostadelnoroeste.com.ar/rige-la-ley-que-les-permite-a-los-municipios-destinar-fondos-de-caminos-rurales-a-obras-hidricas": "2026-11-10"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -36215,7 +36258,10 @@
       "syngenta urges growers to prepare for 2027 as red crown rot expands into new soybean growing areas": "2026-11-10",
       "as herbicide options shrink lasco helps farmers find new tools for resistant weeds at eco ag": "2026-11-10",
       "the bio reckoning is here in agriculture": "2026-11-10",
-      "zurro se reunio con delegados y funcionarios para abordar la situacion de los caminos rurales": "2026-11-10"
+      "zurro se reunio con delegados y funcionarios para abordar la situacion de los caminos rurales": "2026-11-10",
+      "seis empresas argentinas de maquinaria agricola buscan nuevos compradores en italia": "2026-11-10",
+      "muerte misteriosa sospechan que un carnero mato a un productor agropecuario de 81 anos": "2026-11-10",
+      "rige la ley que les permite a los municipios destinar fondos de caminos rurales a obras hidricas": "2026-11-10"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -38402,7 +38448,10 @@
       "1fa473ec0f076f24": "2026-11-10",
       "57fda9e65de3abd4": "2026-11-10",
       "5fe0a7a308813477": "2026-11-10",
-      "1bb81c4a9b3de63e": "2026-11-10"
+      "1bb81c4a9b3de63e": "2026-11-10",
+      "81b6abb27648d144": "2026-11-10",
+      "938d2e0f689c8e52": "2026-11-10",
+      "75d4fe98d4b630e0": "2026-11-10"
     }
   },
   "elegidas": [
@@ -67108,6 +67157,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ce57f280984a_portada.jpg"
+    },
+    {
+      "id": "dfa27bba9540",
+      "cuando": "2026-11-10T21:00-03:00",
+      "titulo_original": "Muerte misteriosa: sospechan que un carnero mató a un productor agropecuario de 81 años",
+      "descripcion": "Carlos Narciso Castiñeira estaba al frente de un establecimiento rural en Coronel Dorrego, provincia de Buenos Aires",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/misteriosa-muerte-sospechan-que-un-carnero-mato-a-un-productor-agropecuario-de-81-anos-nid10112026/",
+      "titular": "Un carnero mató a un productor rural de 81 años en Dorrego",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 20,
+        "cercania_pba": 15,
+        "interes_productores": 10,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 78,
+        "commercial_score": 40,
+        "subtema": "ganaderia",
+        "tema": "accidente rural",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Un hecho policial trágico en un campo de la provincia que genera impacto y se comenta entre vecinos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 0,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-10T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "378debf8-bfd2-4167-acd2-5d00ba95008a",
+          "slug": "un-carnero-mato-a-un-productor-rural-de-81-anos-en-un-campo-de-47d8c2",
+          "url": "https://www.diariolacampaña.com.ar/n/un-carnero-mato-a-un-productor-rural-de-81-anos-en-un-campo-de-47d8c2",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18665143891040050",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1755335959930734",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18121497061978770"
+        },
+        "historia_facebook": {
+          "id": "1108248531984235"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_dfa27bba9540_portada.jpg"
     }
   ],
   "pendientes": [
@@ -67246,8 +67355,8 @@
       "cuando": "2026-11-10T18:00-03:00"
     }
   ],
-  "actualizado": "2026-11-10T19:34:43-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-10T21:05:32-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
