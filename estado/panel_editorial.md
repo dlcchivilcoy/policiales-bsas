@@ -1,57 +1,59 @@
 # Panel editorial — Diario y Radio
-Actualizado: 10/11/2026 20:01 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 11/11/2026 20:02 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-11-10)
+## Hoy (2026-11-11)
 
 ### 18:30 — 3 de 6 hechos policiales
-Notas policiales leídas: 42 · fuera del radio: 15 · ubicación pendiente: 0 · repetidas: 1 · armadas: 4
+Notas policiales leídas: 34 · fuera del radio: 18 · ubicación pendiente: 0 · repetidas: 0 · armadas: 6
 
 | Hecho | Lugar | YouTube | Web | Facebook | Instagram |
 |---|---|---|---|---|---|
-| Crimen de Mechita: filmaron a los sospechosos con un bulto hacia el ca | Alberti (28.1 km) | ✅ | ✅ | ✅ | ✅ |
-| Hallan un cuerpo en el Canal Cafiero en el marco de la búsqueda de un  | Carlos Casares (28.1 km) | ✅ | ✅ | ✅ | ✅ |
-| Encontraron un cadáver desmembrado en un canal y hay dos demorados | 9 de Julio (39.8 km) | ✅ | ✅ | ✅ | ✅ |
+| Apresaron a dos hombres por el homicidio de Ezequiel Caraballo en Brag | Junín (40.8 km) | ✅ | ✅ | ✅ | ✅ |
+| Desplegaron 35 policías de 25 de Mayo en Luján por la visita de un Pap | 25 de Mayo (90.1 km) | ✅ | ✅ | ✅ | ✅ |
+| Detuvieron a un joven de 21 años tras una persecución y hallaron una m | Junín (91.2 km) | ✅ | ✅ | ✅ | ✅ |
 
 **No salieron en esta pasada:**
-- Información policial de Chacabuco — no apta: No es del temario de policiales (según la IA): La nota no relata un hecho policial concreto, un siniestro vial ni un delito específico, sino que se trata de un título genérico o institucional que no aporta i
+- Joven lesionado fue hospitalizado tras un incidente en Chacabuco — no apta: No es del temario de policiales (según la IA): Atención médica a un joven por una lesión
+- Repudio por un perro atropellado y abandonado en la calle — no apta: No es del temario de policiales (según la IA): Es un episodio de maltrato animal callejero repudiado en redes sociales, que no constituye un delito penal formalmente investigado ni un siniestro vial con vehí
+- Debate en el Concejo de San Antonio de Areco por un joven herido — no apta: No es del temario de policiales (según la IA): El hecho central trata sobre el debate político y la presentación de un proyecto en el Concejo Deliberante.
 
 **Fuera del radio de 100 km:**
-- Pergamino (122.9 km) ×6 · Cañuelas (115.9 km) ×5 · Pehuajó (198.5 km) ×1 · Las Flores (149.6 km) ×1 · General Pinto (171.5 km) ×1 · Campana (126.8 km) ×1
+- Cañuelas (115.9 km) ×6 · Pergamino (122.9 km) ×5 · San Carlos de Bolívar (178.3 km) ×2 · Pehuajó (198.5 km) ×2 · Carlos Casares (146.5 km) ×1 · Las Flores (149.6 km) ×1 · Bahía Blanca (469.5 km) ×1
 
 ## Últimos 7 días: volumen por destino
 
-| Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram |
-|---|---:|---:|---:|---:|---:|
-| Policiales | 28 | 28 | 28 | 0 | 28 |
-| Nacionales | 22 | 322 | 0 | 0 | 0 |
+| Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram | IG prueba |
+|---|---:|---:|---:|---:|---:|---:|
+| Policiales | 25 | 25 | 25 | 0 | 25 | 3 |
+| Nacionales | 24 | 320 | 0 | 0 | 0 | 0 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 49 piezas · mediana vistas 206 · mediana likes 1
+### YouTube — 50 piezas · mediana vistas 199.5 · mediana likes 1
 
-- **Por categoría:** policiales: 31, vistas 25, likes 0 · virales: 18, vistas 614, likes 6
-- **Por franja:** madrugada (0-6): 18, vistas 614, likes 6 · noche (18-24): 31, vistas 25, likes 0
-- **Por día:** domingo: 5, vistas 477, likes 1 · jueves: 8, vistas 26.5, likes 0 · lunes: 7, vistas 92, likes 1 · martes: 2, vistas 385.5, likes 2 ⚠️muestra chica · miércoles: 7, vistas 17, likes 0 · sábado: 9, vistas 939, likes 5 · viernes: 11, vistas 85, likes 2
-- **Por distancia:** 50 a 100 km: 20, vistas 22, likes 0 · Chivilcoy: 4, vistas 19.5, likes 0.5 ⚠️muestra chica · hasta 50 km: 7, vistas 136, likes 0
+- **Por categoría:** policiales: 30, vistas 41, likes 0 · virales: 20, vistas 614, likes 7
+- **Por franja:** madrugada (0-6): 20, vistas 614, likes 7 · noche (18-24): 30, vistas 41, likes 0
+- **Por día:** domingo: 5, vistas 477, likes 1 · jueves: 8, vistas 26.5, likes 0 · lunes: 8, vistas 86.5, likes 0.5 · martes: 7, vistas 221, likes 3 · miércoles: 2, vistas 200, likes 0.5 ⚠️muestra chica · sábado: 9, vistas 939, likes 5 · viernes: 11, vistas 85, likes 2
+- **Por distancia:** 50 a 100 km: 19, vistas 19, likes 0 · Chivilcoy: 3, vistas 21, likes 1 ⚠️muestra chica · hasta 50 km: 8, vistas 79, likes 0
 
-### Instagram — 29 piezas · mediana vistas s/d · mediana likes 5
+### Instagram — 24 piezas · mediana vistas s/d · mediana likes 5.5
 
-- **Por categoría:** policiales: 29, likes 5
-- **Por franja:** noche (18-24): 29, likes 5
-- **Por día:** domingo: 5, likes 6 · jueves: 6, likes 5 · lunes: 2, likes 2 ⚠️muestra chica · martes: 3, likes 4 ⚠️muestra chica · miércoles: 6, likes 6 · sábado: 4, likes 6.5 ⚠️muestra chica · viernes: 3, likes 6 ⚠️muestra chica
-- **Por distancia:** 50 a 100 km: 20, likes 5 · Chivilcoy: 2, likes 9.5 ⚠️muestra chica · hasta 50 km: 7, likes 5
+- **Por categoría:** policiales: 24, likes 5.5
+- **Por franja:** noche (18-24): 24, likes 5.5
+- **Por día:** domingo: 5, likes 6 · jueves: 6, likes 5 · lunes: 3, likes 1 ⚠️muestra chica · miércoles: 3, likes 7 ⚠️muestra chica · sábado: 4, likes 6.5 ⚠️muestra chica · viernes: 3, likes 6 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 19, likes 5 · Chivilcoy: 1, likes 12 ⚠️muestra chica · hasta 50 km: 4, likes 5.5 ⚠️muestra chica
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-procesado: 187 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 7
+procesado: 188 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 7
 
 ## Controles (sin tocar código)
 
