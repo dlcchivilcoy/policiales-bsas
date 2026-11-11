@@ -33016,6 +33016,158 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ce443e9281a348a9": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "trazabilidad",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una herramienta de trazabilidad provincial en Santa Fe; interesa poco al productor de Chivilcoy salvo por el tema regulatorio.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4924f4f30b5932d5": {
+      "conversacion": 18,
+      "historia_concreta": 18,
+      "cercania_pba": 10,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 77,
+      "commercial_score": 70,
+      "subtema": "ganaderia",
+      "tema": "estiércol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Caso práctico muy útil de reducción de costos usando estiércol de feedlot, genera interés directo en ganaderos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "095651fc41d56379": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 23,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "reflexión",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Columna de opinión económica y papal sin anclaje en el trabajo diario del campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "252502267501e069": {
+      "conversacion": 4,
+      "historia_concreta": 8,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 27,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "congreso",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un congreso de producción animal en Esquel queda demasiado lejos del productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8ad2ba160432b5f6": {
+      "conversacion": 15,
+      "historia_concreta": 18,
+      "cercania_pba": 5,
+      "interes_productores": 9,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 58,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "cras",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Hermosa historia de arraigo y producción caprina en Santiago del Estero, linda para leer pero geográficamente distante.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        59
+      ]
+    },
+    "b40c4220483ce9c7": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 2,
+      "interes_productores": 10,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 41,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Reclamo europeo sobre el reglamento de deforestación que afecta la exportación de harina de soja argentina.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        30
+      ]
+    },
+    "99e763f7a7ff042e": {
+      "conversacion": 13,
+      "historia_concreta": 14,
+      "cercania_pba": 2,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 4,
+      "potencial_reel": 2,
+      "ai_score": 49,
+      "commercial_score": 38,
+      "subtema": "maquinaria",
+      "tema": "silobolsas",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Rusia adoptando las silobolsas argentinas por la guerra; un dato curioso y de orgullo técnico para compartir.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        40
+      ]
     }
   },
   "indice": {
@@ -35293,7 +35445,15 @@
       "https://bichosdecampo.com/el-ano-nuevo-lunar-mueve-las-expectativas-de-los-frigorificos-con-brasil-a-media-maquina-la-carne-argentina-encontro-en-china-precios-historicos-y-nuevas-oportunidades": "2026-11-11",
       "https://bichosdecampo.com/si-no-te-gusta-el-visec-tenes-una-opcion-digital-y-gratuita-para-certificar-que-tu-campo-no-sufrio-deforestacion-eso-si-tenes-que-ser-santafesino-y-no-sentir-asquito-de-la-intervencion-del-es": "2026-11-11",
       "https://lanacion.com.ar/economia/campo/la-carne-vacuna-subio-apenas-un-01-en-octubre-y-en-el-ano-aumento-menos-que-la-inflacion-nid11112026": "2026-11-11",
-      "https://lanacion.com.ar/economia/campo/necesita-poca-agua-el-cultivo-de-90-dias-que-tiene-un-impresionante-avance-en-una-region-nid11112026": "2026-11-11"
+      "https://lanacion.com.ar/economia/campo/necesita-poca-agua-el-cultivo-de-90-dias-que-tiene-un-impresionante-avance-en-una-region-nid11112026": "2026-11-11",
+      "https://infocampo.com.ar/ya-se-inscribieron-mas-de-400-000-hectareas-santa-fe-avanza-con-su-propio-visec-para-certificar-trazabilidad": "2026-11-11",
+      "https://infocampo.com.ar/el-fertilizante-estaba-en-los-corrales-transformando-el-estiercol-en-insumo-redujeron-66-los-costos": "2026-11-11",
+      "https://agrositio.com.ar/canal-agrositio/30-online/249290-puede-el-mensaje-del-papa-inspirar-un-cambio-en-la-economia-y-la-politica-argentina-con-c-tiscornia-economista.html": "2026-11-11",
+      "https://agrositio.com.ar/noticia/249286-innovacion-y-produccion-ganadera-en-la-patagonia.html": "2026-11-11",
+      "https://bichosdecampo.com/testimonios-de-monte-adentro-a-los-23-anos-julia-ponce-cria-cabras-en-icano-y-prepara-tinturas-con-plantas-nativas-para-curarles-el-moquillo-y-las-heridas": "2026-11-11",
+      "https://bichosdecampo.com/toda-toda-la-cadena-agroindustrial-europea-pide-flexibilizar-el-eudr-porque-su-diseno-es-incompatible-con-el-comercio-mundial-de-harina-de-soja": "2026-11-11",
+      "https://lanacion.com.ar/economia/campo/guerra-con-ucrania-rusia-recurre-a-las-silobolsas-una-tecnologia-que-genero-una-revolucion-en-la-nid11112026": "2026-11-11",
+      "https://diarionoticiaspehuajo.com/2026-11-11/una-jornada-tecnica-en-guanaco-los-sistemas-pastoriles-siguen-ofreciendo-respuestas-para-la-mejora-de-la-rentabilidad-43689": "2026-11-11"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -37569,7 +37729,15 @@
       "el ano nuevo lunar mueve las expectativas de los frigorificos con brasil a media maquina la carne argentina encontro en china precios historicos y nuevas oportunidades": "2026-11-11",
       "si no te gusta el visec tenes una opcion digital y gratuita para certificar que tu campo no sufrio deforestacion eso si tenes que ser santafesino y no sentir asquito de la intervencion del estado": "2026-11-11",
       "la carne vacuna subio apenas un 0 1 en octubre y en el ano aumento menos que la inflacion": "2026-11-11",
-      "necesita poca agua el cultivo de 90 dias que tiene un impresionante avance en una region": "2026-11-11"
+      "necesita poca agua el cultivo de 90 dias que tiene un impresionante avance en una region": "2026-11-11",
+      "ya se inscribieron mas de 400 000 hectareas santa fe avanza con su propio visec para certificar trazabilidad": "2026-11-11",
+      "el fertilizante estaba en los corrales transformando el estiercol en insumo redujeron 66 los costos": "2026-11-11",
+      "puede el mensaje de leon xiv transformar la economia y la politica argentina camilo tiscornia reflexiona": "2026-11-11",
+      "congreso de la asoc arg de prod aimal innovacion y produccion ganadera en la patagonia": "2026-11-11",
+      "testimonios de monte adentro a los 23 anos julia ponce cria cabras en icano y prepara tinturas con plantas nativas para curarles el moquillo y las heridas": "2026-11-11",
+      "toda toda la cadena agroindustrial europea pide flexibilizar el eudr porque su diseno es incompatible con el comercio mundial de harina de soja": "2026-11-11",
+      "guerra con ucrania rusia recurre a las silobolsas una tecnologia que genero una revolucion en la argentina": "2026-11-11",
+      "una jornada tecnica en guanaco los sistemas pastoriles siguen ofreciendo respuestas para la mejora de la rentabilidad": "2026-11-11"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -39845,7 +40013,15 @@
       "a9812feb81ce7f3a": "2026-11-11",
       "61c47570ea7d1309": "2026-11-11",
       "7b4e78c36513079f": "2026-11-11",
-      "9332ad7d06121fb3": "2026-11-11"
+      "9332ad7d06121fb3": "2026-11-11",
+      "ce443e9281a348a9": "2026-11-11",
+      "4924f4f30b5932d5": "2026-11-11",
+      "095651fc41d56379": "2026-11-11",
+      "252502267501e069": "2026-11-11",
+      "8ad2ba160432b5f6": "2026-11-11",
+      "b40c4220483ce9c7": "2026-11-11",
+      "99e763f7a7ff042e": "2026-11-11",
+      "9bceb8e412402279": "2026-11-11"
     }
   },
   "elegidas": [
@@ -69035,9 +69211,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7cce8717da20_portada.jpg"
+    },
+    {
+      "id": "8ebd2c813ccf",
+      "cuando": "2026-11-11T19:30-03:00",
+      "titulo_original": "Drones agrícolas: una aplicación para controlar la dosis y la calidad de las labores",
+      "descripcion": "Desarrollada por técnicos del INTA Hilario Ascasubi, la aplicación permite regular drones agrícolas, controlar la dosis y la uniformidad de distribución, calcular insumos, verificar la compatibilidad de mezclas y registrar las condiciones meteorológicas durante las labores. La entrada Drones agrícol",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/drones-agricolas-una-aplicacion-para-controlar-la-dosis-y-la-calidad-de-las-labores/",
+      "titular": "Criollo Drones: la nueva app del INTA para regular pulverizaciones",
+      "volanta": "AgTech",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 79,
+        "commercial_score": 70,
+        "subtema": "agtech",
+        "tema": "drones agrícolas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Herramienta práctica con aplicación directa para contratistas y productores que usan drones.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-11T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a175bbc9-751a-472d-81fe-02de2715ad68",
+          "slug": "criollo-drones-lanzan-una-aplicacion-del-inta-para-regular-4d15cb",
+          "url": "https://www.diariolacampaña.com.ar/n/criollo-drones-lanzan-una-aplicacion-del-inta-para-regular-4d15cb",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17916627462509236",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1756587466472250",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18141232570657883"
+        },
+        "historia_facebook": {
+          "id": "1145218617962412"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_8ebd2c813ccf_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "2ccd27438072",
+      "rep": {
+        "id": "2ccd27438072",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/el-fertilizante-estaba-en-los-corrales-transformando-el-estiercol-en-insumo-redujeron-66-los-costos/",
+        "canonical_url": "https://infocampo.com.ar/el-fertilizante-estaba-en-los-corrales-transformando-el-estiercol-en-insumo-redujeron-66-los-costos",
+        "titulo": "El fertilizante estaba en los corrales: transformando el estiércol en insumo, redujeron 66% los costos",
+        "titulo_norm": "el fertilizante estaba en los corrales transformando el estiercol en insumo redujeron 66 los costos",
+        "descripcion": "Una empresa de San Luis utilizó los residuos de su feedlot como recurso estratégico para nutrir sus cultivos. Con aplicaciones cada tres campañas, logró reemplazar la compra de fósforo, azufre y zinc. Además, entrega el material sin cargo a productores vecinos.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/ser-beef-1.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-11-11T18:13-03:00",
+        "capturado": "2026-11-11T19:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "4924f4f30b5932d5",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "2ccd27438072",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-fertilizante-estaba-en-los-corrales-transformando-el-estiercol-en-insumo-redujeron-66-los-costos/",
+          "canonical_url": "https://infocampo.com.ar/el-fertilizante-estaba-en-los-corrales-transformando-el-estiercol-en-insumo-redujeron-66-los-costos",
+          "titulo": "El fertilizante estaba en los corrales: transformando el estiércol en insumo, redujeron 66% los costos",
+          "titulo_norm": "el fertilizante estaba en los corrales transformando el estiercol en insumo redujeron 66 los costos",
+          "descripcion": "Una empresa de San Luis utilizó los residuos de su feedlot como recurso estratégico para nutrir sus cultivos. Con aplicaciones cada tres campañas, logró reemplazar la compra de fósforo, azufre y zinc. Además, entrega el material sin cargo a productores vecinos.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/ser-beef-1.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-11-11T18:13-03:00",
+          "capturado": "2026-11-11T19:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "4924f4f30b5932d5",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 10,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 77,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "estiércol",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Caso práctico muy útil de reducción de costos usando estiércol de feedlot, genera interés directo en ganaderos.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-11T19:30-03:00"
+    },
     {
       "id": "512cdfee65dc",
       "rep": {
@@ -69167,71 +69468,6 @@
         "tema_doc": "sanidad",
         "urgente": false,
         "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-11T16:00-03:00"
-    },
-    {
-      "id": "8ebd2c813ccf",
-      "rep": {
-        "id": "8ebd2c813ccf",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/drones-agricolas-una-aplicacion-para-controlar-la-dosis-y-la-calidad-de-las-labores/",
-        "canonical_url": "https://intainforma.inta.gob.ar/drones-agricolas-una-aplicacion-para-controlar-la-dosis-y-la-calidad-de-las-labores",
-        "titulo": "Drones agrícolas: una aplicación para controlar la dosis y la calidad de las labores",
-        "titulo_norm": "drones agricolas una aplicacion para controlar la dosis y la calidad de las labores",
-        "descripcion": "Desarrollada por técnicos del INTA Hilario Ascasubi, la aplicación permite regular drones agrícolas, controlar la dosis y la uniformidad de distribución, calcular insumos, verificar la compatibilidad de mezclas y registrar las condiciones meteorológicas durante las labores. La entrada Drones agrícolas: una aplicación para controlar la dosis y la calidad de las labores se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/app-drones-2.jpg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-11-11T15:24-03:00",
-        "capturado": "2026-11-11T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2d4b5a0f8650e176",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "8ebd2c813ccf",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/drones-agricolas-una-aplicacion-para-controlar-la-dosis-y-la-calidad-de-las-labores/",
-          "canonical_url": "https://intainforma.inta.gob.ar/drones-agricolas-una-aplicacion-para-controlar-la-dosis-y-la-calidad-de-las-labores",
-          "titulo": "Drones agrícolas: una aplicación para controlar la dosis y la calidad de las labores",
-          "titulo_norm": "drones agricolas una aplicacion para controlar la dosis y la calidad de las labores",
-          "descripcion": "Desarrollada por técnicos del INTA Hilario Ascasubi, la aplicación permite regular drones agrícolas, controlar la dosis y la uniformidad de distribución, calcular insumos, verificar la compatibilidad de mezclas y registrar las condiciones meteorológicas durante las labores. La entrada Drones agrícolas: una aplicación para controlar la dosis y la calidad de las labores se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/app-drones-2.jpg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-11-11T15:24-03:00",
-          "capturado": "2026-11-11T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2d4b5a0f8650e176",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 5,
-        "ai_score": 79,
-        "commercial_score": 70,
-        "subtema": "agtech",
-        "tema": "drones agrícolas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Herramienta práctica con aplicación directa para contratistas y productores que usan drones.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
@@ -69391,8 +69627,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-11T19:00:24-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-11T19:35:35-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
