@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T22:01:44.000Z",
+  "actualizado": "2026-11-11T22:31:56.000Z",
   "eventos": [
     {
       "id": "policiales:https://lobos24.com.ar/2026/11/09/policiales-robaron-3-millones-de-una-inmobiliaria-y-un-joven-murio-en-un-siniestro-vial/",
@@ -163,6 +163,30 @@
       "volanta": "Crimen en Mechita",
       "categoria": "homicidio",
       "distancia_km": 40.8,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.lamanana.com.ar/unos-35-efectivos-policiales-fueron-parte-del-operativo-de-seguridad-en-lujan/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-11T22:31:56.000Z",
+      "titulo": "Desplegaron 35 policías de 25 de Mayo en Luján por la visita de un Papa",
+      "descripcion": "Treinta y cinco agentes de la Jefatura Departamental de 25 de Mayo participaron del dispositivo de seguridad armado por la llegada del Papa León XIV a la Basílica de Luján. El municipio local colaboró con la logística y el traslado.",
+      "texto_tiktok": "Un total de treinta y cinco efectivos llegaron desde el distrito vecino para custodiar la zona durante el evento papal.\n\nLa intendencia local se hizo cargo de la logística y el traslado del personal policial en casi su totalidad.\n\nEl dispositivo de seguridad finalizó este miércoles pasadas las 18:00 horas con el regreso de los agentes a su dependencia.\n\n📲 Más noticias de Luján en www.diariolacampaña.com.ar\n\n#Lujan #Operativo #Policia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-11_2134_03_25-de-mayo_desplegaron-35-polic-as-de-25-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/lujan-desplegaron-35-policias-de-25-de-mayo-por-la-visita-del-320da7",
+      "youtube_url": "https://youtube.com/shorts/lNK-FvKc--c",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Luján",
+      "volanta": "Operativo policial en Luján",
+      "categoria": "operativo_policial",
+      "distancia_km": 90.1,
       "radio_ok": true,
       "plataformas": [
         "x",
