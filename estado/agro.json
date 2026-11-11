@@ -32560,6 +32560,126 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c31f8811f7890252": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 75,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "camioneros",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta directamente los costos de flete para toda la provincia.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0607857dd4e05c63": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 2,
+      "potencial_reel": 3,
+      "ai_score": 22,
+      "commercial_score": 30,
+      "subtema": "agtech",
+      "tema": "drones",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una investigación lejana sin aplicación directa inmediata en la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f8a9b1512b6f3688": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "ciberataques",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "No tiene relación con el campo ni con la región.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "024807311b63751b": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 2,
+      "potencial_reel": 0,
+      "ai_score": 9,
+      "commercial_score": 20,
+      "subtema": "empresas",
+      "tema": "asociaciones publico-privadas",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Reporte teórico global sin impacto práctico para el productor.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "17d4c20b9e4dd39f": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 31,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "lecheria",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Anuncio de evento institucional y tendencias generales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2bbbb8f064e1ff6c": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "reclamo vecinal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reclamo vecinal urbano sin relación con el agro.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -34814,7 +34934,13 @@
       "https://bichosdecampo.com/cansados-de-cantarle-el-feliz-cumpleanos-al-puente-derrumbado-y-del-deterioro-de-la-ruta-23-nueve-intendentes-rionegrinos-se-unieron-para-exigirle-a-nacion-que-abra-la-billetera": "2026-11-11",
       "https://bichosdecampo.com/dejo-la-oficina-publica-para-hacer-sidra-artesanal-en-trevelin-la-historia-de-mariana-freeman-y-las-manzanas-que-la-convirtieron-en-la-primera-maestra-sidrera": "2026-11-11",
       "https://lanacion.com.ar/economia/campo/historico-triunfo-un-grupo-de-jovenes-ganaderos-se-quedaron-con-el-primer-y-segundo-puesto-en-una-nid11112026": "2026-11-11",
-      "https://lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones": "2026-11-11"
+      "https://lamanana.com.ar/caminos-rurales-25-de-mayo-tras-fuerte-debate-la-creacion-de-una-comision-vial-volvio-a-comisiones": "2026-11-11",
+      "https://bichosdecampo.com/los-moyano-husmean-por-canuelas-camioneros-se-reunio-con-las-empresas-transportistas-que-operan-en-el-mag-y-presiono-por-un-adicional-del-15-que-busca-extender-a-todo-el-pais": "2026-11-11",
+      "https://bichosdecampo.com/drones-que-deciden-solos-no-es-futurismo-un-investigador-brasileno-trabaja-para-que-actuen-por-su-cuenta-en-el-lote-y-hasta-decidan-donde-pulverizar": "2026-11-11",
+      "https://agfundernews.com/iran-denies-it-was-behind-cyberattacks-on-french-supermarkets": "2026-11-11",
+      "https://agfundernews.com/practical-lessons-for-public-private-partnerships-in-agrifood": "2026-11-11",
+      "https://intainforma.inta.gob.ar/innovacion-lactea-la-nutricion-el-sabor-y-la-practicidad-marcan-tendencia": "2026-11-11",
+      "https://chacabuquero.com.ar/2026/11/problemas-en-un-barrio-de-chacabuco.html": "2026-11-11"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -37067,7 +37193,13 @@
       "cansados de cantarle el feliz cumpleanos a un puente derrumbado y del deterioro de la ruta 23 nueve intendentes rionegrinos se unieron para exigirle a nacion que abra la billetera": "2026-11-11",
       "dejo la oficina publica para hacer sidra artesanal en trevelin la historia de mariana freeman y las manzanas que la convirtieron en la primera maestra sidrera": "2026-11-11",
       "historico triunfo un grupo de jovenes ganaderos se quedaron con el primer y segundo puesto en una importante competencia internacional": "2026-11-11",
-      "caminos rurales tras fuerte debate la creacion de una comision vial volvio a comisiones": "2026-11-11"
+      "caminos rurales tras fuerte debate la creacion de una comision vial volvio a comisiones": "2026-11-11",
+      "los moyano husmean por canuelas camioneros se reunio con las empresas transportistas que operan en el mag y presiono por un adicional del 15 que busca extender a todo el pais": "2026-11-11",
+      "drones que deciden solos no es futurismo un investigador brasileno trabaja para que actuen por su cuenta en el lote y hasta decidan donde pulverizar": "2026-11-11",
+      "iran denies it was behind cyberattacks on french supermarkets": "2026-11-11",
+      "practical lessons for public private partnerships in agrifood": "2026-11-11",
+      "innovacion lactea la nutricion el sabor y la practicidad marcan tendencia": "2026-11-11",
+      "problemas en un barrio de chacabuco": "2026-11-11"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -39320,7 +39452,13 @@
       "ce6f54fb4388a6f5": "2026-11-11",
       "7ecf38e5f3b6e795": "2026-11-11",
       "07efc24b39b94a5c": "2026-11-11",
-      "24e2dc9d08c54687": "2026-11-11"
+      "24e2dc9d08c54687": "2026-11-11",
+      "c31f8811f7890252": "2026-11-11",
+      "0607857dd4e05c63": "2026-11-11",
+      "f8a9b1512b6f3688": "2026-11-11",
+      "024807311b63751b": "2026-11-11",
+      "17d4c20b9e4dd39f": "2026-11-11",
+      "2bbbb8f064e1ff6c": "2026-11-11"
     }
   },
   "elegidas": [
@@ -68330,9 +68468,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ccd420d6c499_portada.jpg"
+    },
+    {
+      "id": "30198e407d44",
+      "cuando": "2026-11-11T14:30-03:00",
+      "titulo_original": "Pedro Pechar lleva 30 años dando cursos de herrado por los campos de todo el país: “Nadie tiene la excusa para andar con sus caballos mancos, despiados o bichocos”, advierte",
+      "descripcion": "El agrónomo Pedro Martín Pechar (62) lleva 30 años dedicándose a dar cursos prácticos sobre el mantenimiento de herrajes de los caballos, por toda la Argentina, si bien hace poco lo hizo también en Chile. “Es lamentable que sea común ver a los caballos gordos, con sus vasos rotos, porque hay que ent",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte/",
+      "titular": "Pedro Pechar capacita desde hace 30 años en herrado de caballos",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 74,
+        "commercial_score": 60,
+        "subtema": "ganaderia",
+        "tema": "caballos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Personaje entrañable que recorre el país enseñando herrado, ideal para la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-11T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "30d80293-9126-4aaa-9ac6-d1d83104470e",
+          "slug": "pedro-pechar-lleva-30-anos-ensenando-el-oficio-de-herrador-en-1002a7",
+          "url": "https://www.diariolacampaña.com.ar/n/pedro-pechar-lleva-30-anos-ensenando-el-oficio-de-herrador-en-1002a7",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18115567517125236",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1756338386497158",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17909081037668887"
+        },
+        "historia_facebook": {
+          "id": "1114026608165288"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_30198e407d44_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "3ec9be14576b",
+      "rep": {
+        "id": "3ec9be14576b",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/los-moyano-husmean-por-canuelas-camioneros-se-reunio-con-las-empresas-transportistas-que-operan-en-el-mag-y-presiono-por-un-adicional-del-15-que-busca-extender-a-todo-el-pais/",
+        "canonical_url": "https://bichosdecampo.com/los-moyano-husmean-por-canuelas-camioneros-se-reunio-con-las-empresas-transportistas-que-operan-en-el-mag-y-presiono-por-un-adicional-del-15-que-busca-extender-a-todo-el-pais",
+        "titulo": "Los Moyano husmean por Cañuelas: Camioneros se reunió con las empresas transportistas que operan en el MAG y presionó por un adicional del 15%, que busca extender a todo el país",
+        "titulo_norm": "los moyano husmean por canuelas camioneros se reunio con las empresas transportistas que operan en el mag y presiono por un adicional del 15 que busca extender a todo el pais",
+        "descripcion": "El Mercado Agroganadero de Cañuelas (MAG) recibió una áspera visita. Se trata del secretario general adjunto del Sindicato de Choferes de Camioneros, Pablo Moyano, que, para muchos empresarios, preanuncia la llegada de un posible dolor de cabeza. La razón de su paso por el predio de la Ruta 6 fue mantener una reunión con las […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/camion-en-canuelas-e1794413171506.jpg",
+        "autor": "Sofia Selasco",
+        "publicado": "2026-11-11T13:45-03:00",
+        "capturado": "2026-11-11T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c31f8811f7890252",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "3ec9be14576b",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/los-moyano-husmean-por-canuelas-camioneros-se-reunio-con-las-empresas-transportistas-que-operan-en-el-mag-y-presiono-por-un-adicional-del-15-que-busca-extender-a-todo-el-pais/",
+          "canonical_url": "https://bichosdecampo.com/los-moyano-husmean-por-canuelas-camioneros-se-reunio-con-las-empresas-transportistas-que-operan-en-el-mag-y-presiono-por-un-adicional-del-15-que-busca-extender-a-todo-el-pais",
+          "titulo": "Los Moyano husmean por Cañuelas: Camioneros se reunió con las empresas transportistas que operan en el MAG y presionó por un adicional del 15%, que busca extender a todo el país",
+          "titulo_norm": "los moyano husmean por canuelas camioneros se reunio con las empresas transportistas que operan en el mag y presiono por un adicional del 15 que busca extender a todo el pais",
+          "descripcion": "El Mercado Agroganadero de Cañuelas (MAG) recibió una áspera visita. Se trata del secretario general adjunto del Sindicato de Choferes de Camioneros, Pablo Moyano, que, para muchos empresarios, preanuncia la llegada de un posible dolor de cabeza. La razón de su paso por el predio de la Ruta 6 fue mantener una reunión con las […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/camion-en-canuelas-e1794413171506.jpg",
+          "autor": "Sofia Selasco",
+          "publicado": "2026-11-11T13:45-03:00",
+          "capturado": "2026-11-11T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c31f8811f7890252",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 75,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "camioneros",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta directamente los costos de flete para toda la provincia.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-11T14:30-03:00"
+    },
     {
       "id": "f15dd8d2701f",
       "rep": {
@@ -68485,75 +68748,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-11T11:30-03:00"
-    },
-    {
-      "id": "30198e407d44",
-      "rep": {
-        "id": "30198e407d44",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte/",
-        "canonical_url": "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte",
-        "titulo": "Pedro Pechar lleva 30 años dando cursos de herrado por los campos de todo el país: “Nadie tiene la excusa para andar con sus caballos mancos, despiados o bichocos”, advierte",
-        "titulo_norm": "pedro pechar lleva 30 anos dando cursos de herrado por los campos de todo el pais nadie tiene la excusa para andar con sus caballos mancos despiados o bichocos advierte",
-        "descripcion": "El agrónomo Pedro Martín Pechar (62) lleva 30 años dedicándose a dar cursos prácticos sobre el mantenimiento de herrajes de los caballos, por toda la Argentina, si bien hace poco lo hizo también en Chile. “Es lamentable que sea común ver a los caballos gordos, con sus vasos rotos, porque hay que entender que sus […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-09.45.48.jpeg",
-        "autor": "Esteban “El Colorado” López",
-        "publicado": "2026-11-11T10:04-03:00",
-        "capturado": "2026-11-11T11:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f51d6bdef890d01d",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "30198e407d44",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte/",
-          "canonical_url": "https://bichosdecampo.com/pedro-pechar-lleva-30-anos-dando-cursos-de-herrado-por-los-campos-de-todo-el-pais-nadie-tiene-la-excusa-para-andar-con-sus-caballos-mancos-despiados-o-bichocos-advierte",
-          "titulo": "Pedro Pechar lleva 30 años dando cursos de herrado por los campos de todo el país: “Nadie tiene la excusa para andar con sus caballos mancos, despiados o bichocos”, advierte",
-          "titulo_norm": "pedro pechar lleva 30 anos dando cursos de herrado por los campos de todo el pais nadie tiene la excusa para andar con sus caballos mancos despiados o bichocos advierte",
-          "descripcion": "El agrónomo Pedro Martín Pechar (62) lleva 30 años dedicándose a dar cursos prácticos sobre el mantenimiento de herrajes de los caballos, por toda la Argentina, si bien hace poco lo hizo también en Chile. “Es lamentable que sea común ver a los caballos gordos, con sus vasos rotos, porque hay que entender que sus […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-09.45.48.jpeg",
-          "autor": "Esteban “El Colorado” López",
-          "publicado": "2026-11-11T10:04-03:00",
-          "capturado": "2026-11-11T11:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f51d6bdef890d01d",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 4,
-        "cercania_argentina": 5,
-        "potencial_reel": 5,
-        "ai_score": 74,
-        "commercial_score": 60,
-        "subtema": "ganaderia",
-        "tema": "caballos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Personaje entrañable que recorre el país enseñando herrado, ideal para la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-11T14:00:29-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-11T14:36:16-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
