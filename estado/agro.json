@@ -33920,6 +33920,150 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cce3d467abd02506": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 29,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "guanacos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un problema específico del sur del país que no afecta a la zona de Chivilcoy.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a7e07e0983f180c5": {
+      "conversacion": 10,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 3,
+      "potencial_reel": 1,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "petróleo",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Noticia internacional sobre energía que impacta en costos de manera indirecta, muy lejana al día a día local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "abbf6dc41b8d743d": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 32,
+      "commercial_score": 25,
+      "subtema": "empresas",
+      "tema": "empleo rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buscan personal pero en La Pampa y Córdoba, fuera del alcance directo del público de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "30228ea08c713b4b": {
+      "conversacion": 11,
+      "historia_concreta": 10,
+      "cercania_pba": 8,
+      "interes_productores": 5,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 49,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "crecida paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a Rosario y la logística fluvial, pero no pega de forma directa en los campos de la zona oeste bonaerense.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        45
+      ]
+    },
+    "e5392d4f9b6f88d1": {
+      "conversacion": 3,
+      "historia_concreta": 4,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 20,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "bioceres",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Balance financiero de una empresa biotecnológica, tema corporativo que no le cambia nada al productor.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "87ad17f0d156a8b0": {
+      "conversacion": 20,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 14,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 82,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "siembra de soja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Ritmo furioso de siembra antes de las lluvias. Le pasa a todos los productores de la zona ahora mismo.",
+      "tema_doc": "campana",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5b37d85f18c6cd00": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 15,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 49,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "exportación carnes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Opinión general de un especialista sobre la ganadería, sin una historia concreta ni un hecho puntual local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -36261,7 +36405,18 @@
       "https://lanacion.com.ar/economia/el-nino-preocupa-a-los-vinedos-de-mendoza-podria-caer-la-produccion-y-adelantar-la-vendimia-nid12112026": "2026-11-12",
       "https://intainforma.inta.gob.ar/acuerdo-para-fortalecer-la-investigacion-agropecuaria-en-la-patagonia-norte": "2026-11-12",
       "https://chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado": "2026-11-12",
-      "https://chacabuquero.com.ar/2026/11/dia12112026.html": "2026-11-12"
+      "https://chacabuquero.com.ar/2026/11/dia12112026.html": "2026-11-12",
+      "https://todoagro.com.ar/como-es-el-dispositivo-que-busca-evitar-que-los-guanacos-se-apropien-de-los-bebederos-de-las-ovejas": "2026-11-12",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-12-noviembre-2026": "2026-11-12",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-12-noviembre-2026": "2026-11-12",
+      "https://agrositio.com.ar/noticia/249297-el-petroleo-supera-los-us-94-por-barril-tras-nuevas-advertencias-de-trump-a-iran.html": "2026-11-12",
+      "https://agrositio.com.ar/noticia/249295-empleo-en-el-agro-buscan-talentos-para-cubrir-cuatro-posiciones-en-la-pampa-y-cordoba.html": "2026-11-12",
+      "https://bichosdecampo.com/alberto-del-solar-cargo-contra-visec-y-las-gremiales-del-sector-cuatro-vivos-cartelizados-te-marcan-el-paso-dijo-y-anticipo-acciones-legales-contra-las-plataformas": "2026-11-12",
+      "https://bichosdecampo.com/el-parana-sigue-creciendo-y-pone-en-alerta-a-rosario-el-instituto-nacional-del-agua-preve-que-podria-superar-el-nivel-de-evacuacion-hacia-fines-de-noviembre": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/resulta-clave-visec-dijo-que-cumplir-con-el-reglamento-europeo-ligado-a-la-antideforestacion-es-nid12112026": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/cayeron-un-22-las-ventas-de-bioceres-crop-solutions-y-se-amplio-la-perdida-pero-se-repitio-la-mejora-nid12112026": "2026-11-12",
+      "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-fondo-se-sembraron-116-m-ha": "2026-11-12",
+      "https://elregionaldigital.com.ar/uno-de-los-caminos-un-especialista-aseguro-que-la-exportacion-es-lo-que-le-va-a-dar-futuro-a-la-ganaderia-argentina": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -38601,7 +38756,18 @@
       "el nino preocupa a los vinedos de mendoza podria caer la produccion y adelantar la vendimia": "2026-11-12",
       "acuerdo para fortalecer la investigacion agropecuaria en la patagonia": "2026-11-12",
       "la mitad del maiz ya esta sembrado": "2026-11-12",
-      "tambien le robaron en chacabuco": "2026-11-12"
+      "tambien le robaron en chacabuco": "2026-11-12",
+      "como es el dispositivo que busca evitar que los guanacos se apropien de los bebederos de las ovejas": "2026-11-12",
+      "dolar blue a cuanto cotizan hoy en mendoza 12 noviembre 2026": "2026-11-12",
+      "euro blue hoy precio y cotizacion de este 12 noviembre 2026": "2026-11-12",
+      "el petroleo supera los us 94 por barril tras nuevas advertencias de trump a iran": "2026-11-12",
+      "empleo en el agro buscan talentos para cubrir cuatro posiciones en la pampa y cordoba": "2026-11-12",
+      "alberto del solar cargo contra visec y las gremiales del sector cuatro vivos cartelizados te marcan el paso dijo y anticipo acciones legales contra las plataformas": "2026-11-12",
+      "el parana sigue creciendo y pone en alerta a rosario el instituto nacional del agua preve que podria superar el nivel de evacuacion hacia fines de noviembre": "2026-11-12",
+      "resulta clave visec dijo que cumplir con el reglamento europeo ligado a la antideforestacion es necesario para preservar ese mercado": "2026-11-12",
+      "cayeron un 22 las ventas de bioceres crop solutions y se amplio la perdida pero se repitio la mejora de otro indicador": "2026-11-12",
+      "soja a fondo se sembraron 1 16 m ha en los ultimos 7 dias": "2026-11-12",
+      "uno de los caminos un especialista aseguro que la exportacion es lo que le va a dar futuro a la ganaderia argentina": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -40941,7 +41107,18 @@
       "db33422d3bbddb39": "2026-11-12",
       "589f5a2e793b854a": "2026-11-12",
       "ce6e371ba001a3db": "2026-11-12",
-      "a69cbb1dea6cae23": "2026-11-12"
+      "a69cbb1dea6cae23": "2026-11-12",
+      "cce3d467abd02506": "2026-11-12",
+      "bc4741f659c4cfe3": "2026-11-12",
+      "56ec992c8676b963": "2026-11-12",
+      "a7e07e0983f180c5": "2026-11-12",
+      "abbf6dc41b8d743d": "2026-11-12",
+      "0acac844f76e4af6": "2026-11-12",
+      "30228ea08c713b4b": "2026-11-12",
+      "186550183dd0daf5": "2026-11-12",
+      "e5392d4f9b6f88d1": "2026-11-12",
+      "87ad17f0d156a8b0": "2026-11-12",
+      "5b37d85f18c6cd00": "2026-11-12"
     }
   },
   "elegidas": [
@@ -70431,51 +70608,52 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_5af24bc9379a_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
+    {
+      "id": "00490a28c158",
+      "cuando": "2026-11-12T13:00-03:00",
+      "titulo_original": "Soja a fondo: se sembraron 1,16 M ha en los últimos 7 días",
+      "descripcion": "Los productores primerean a las tormentas, buscan evitar atrasos y ganarle a la seguidilla de lluvias del fin de semana. Falta todavía el 30%. Márgenes: la soja se sostiene; el maíz no y busca ganar con el Niño por kilos.",
+      "fuente": "Bolsa de Comercio de Rosario",
+      "url": "https://www.bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-fondo-se-sembraron-116-m-ha",
+      "titular": "Soja: implantan 1,16 millones de hectáreas en una semana",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 20,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 82,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "siembra de soja",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Ritmo furioso de siembra antes de las lluvias. Le pasa a todos los productores de la zona ahora mismo.",
+        "tema_doc": "campana",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-12T13:00:00-03:00"
+    },
     {
       "id": "a78f7d53fa03",
-      "rep": {
-        "id": "a78f7d53fa03",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/los-tambos-empiezan-a-vender-vacas-para-hacer-caja-la-caida-de-rentabilidad-acelera-los-descartes-y-en-un-ano-se-perdieron-mas-de-55-000-animales/",
-        "canonical_url": "https://bichosdecampo.com/los-tambos-empiezan-a-vender-vacas-para-hacer-caja-la-caida-de-rentabilidad-acelera-los-descartes-y-en-un-ano-se-perdieron-mas-de-55-000-animales",
-        "titulo": "Los tambos empiezan a vender vacas para hacer caja: La caída de rentabilidad acelera los descartes y en un año se perdieron más de 55.000 animales",
-        "titulo_norm": "los tambos empiezan a vender vacas para hacer caja la caida de rentabilidad acelera los descartes y en un ano se perdieron mas de 55 000 animales",
-        "descripcion": "Cuando el precio de la leche no alcanza para pagar las cuentas, algunos tamberos empiezan a buscar otra manera de conseguir efectivo: vender las vacas de sus propios rodeos. El deterioro del valor que reciben por su producción está llevando a establecimientos, especialmente pequeños y medianos, a acelerar el descarte de vacas para conseguir efectivo. […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/37660623_100.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-12T11:00-03:00",
-        "capturado": "2026-11-12T11:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0a04de8698dd3188",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "a78f7d53fa03",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/los-tambos-empiezan-a-vender-vacas-para-hacer-caja-la-caida-de-rentabilidad-acelera-los-descartes-y-en-un-ano-se-perdieron-mas-de-55-000-animales/",
-          "canonical_url": "https://bichosdecampo.com/los-tambos-empiezan-a-vender-vacas-para-hacer-caja-la-caida-de-rentabilidad-acelera-los-descartes-y-en-un-ano-se-perdieron-mas-de-55-000-animales",
-          "titulo": "Los tambos empiezan a vender vacas para hacer caja: La caída de rentabilidad acelera los descartes y en un año se perdieron más de 55.000 animales",
-          "titulo_norm": "los tambos empiezan a vender vacas para hacer caja la caida de rentabilidad acelera los descartes y en un ano se perdieron mas de 55 000 animales",
-          "descripcion": "Cuando el precio de la leche no alcanza para pagar las cuentas, algunos tamberos empiezan a buscar otra manera de conseguir efectivo: vender las vacas de sus propios rodeos. El deterioro del valor que reciben por su producción está llevando a establecimientos, especialmente pequeños y medianos, a acelerar el descarte de vacas para conseguir efectivo. […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/37660623_100.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-12T11:00-03:00",
-          "capturado": "2026-11-12T11:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0a04de8698dd3188",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-12T13:00-03:00",
+      "titulo_original": "Los tambos empiezan a vender vacas para hacer caja: La caída de rentabilidad acelera los descartes y en un año se perdieron más de 55.000 animales",
+      "descripcion": "Cuando el precio de la leche no alcanza para pagar las cuentas, algunos tamberos empiezan a buscar otra manera de conseguir efectivo: vender las vacas de sus propios rodeos. El deterioro del valor que reciben por su producción está llevando a establecimientos, especialmente pequeños y medianos, a ac",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/los-tambos-empiezan-a-vender-vacas-para-hacer-caja-la-caida-de-rentabilidad-acelera-los-descartes-y-en-un-ano-se-perdieron-mas-de-55-000-animales/",
+      "titular": "Tambos reducen su rodeo lechero para generar caja",
+      "volanta": "Ganadería",
       "score": {
         "conversacion": 20,
         "historia_concreta": 15,
@@ -70497,8 +70675,38 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-12T11:30-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-12T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2e0caf62-c73e-425f-93b7-9507fab901d4",
+          "slug": "los-tambos-aceleran-la-venta-de-vacas-lecheras-para-hacer-caja-110b2a",
+          "url": "https://www.diariolacampaña.com.ar/n/los-tambos-aceleran-la-venta-de-vacas-lecheras-para-hacer-caja-110b2a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18117509483037798",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1757497386381258",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18136364722775326"
+        },
+        "historia_facebook": {
+          "id": "1847061066480315"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a78f7d53fa03_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "4b0a5a7882e3",
       "rep": {
@@ -71124,8 +71332,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T11:34:51-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-12T13:06:47-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
