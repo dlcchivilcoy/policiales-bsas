@@ -34320,6 +34320,166 @@
         57,
         37
       ]
+    },
+    "fb39911fd79f0f5f": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "congreso ganadero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un debate general de congreso sin una historia concreta que afecte directo al bolsillo de Chivilcoy.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9a0ecb3d4ac34a69": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "momento ganadero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Discurso político sobre la ganadería santafesina que no aporta datos concretos para el productor bonaerense.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "729ab695f3592ef4": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 41,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "agrónomo voluntario",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Historia pintoresca de un agrónomo, pero con poca utilidad práctica o productiva para la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7ddfba8485d05617": {
+      "conversacion": 12,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 49,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "radio rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Linda historia humana sobre extensión rural en radio, aunque queda lejos geográficamente.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "deddf22ec23e6d15": {
+      "conversacion": 5,
+      "historia_concreta": 6,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 6,
+      "cercania_argentina": 2,
+      "potencial_reel": 2,
+      "ai_score": 25,
+      "commercial_score": 20,
+      "subtema": "empresas",
+      "tema": "slc agricola",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Información sobre una megaempresa brasileña que no le cambia la realidad al productor de Chivilcoy.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "50ce73c703a2d187": {
+      "conversacion": 8,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 40,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "ingenio azucarero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Fusión empresaria gigante en el norte argentino, ajena al día a día de la zona oeste bonaerense.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6a38ccbac5007cf7": {
+      "conversacion": 2,
+      "historia_concreta": 4,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 4,
+      "cercania_argentina": 1,
+      "potencial_reel": 1,
+      "ai_score": 14,
+      "commercial_score": 10,
+      "subtema": "agtech",
+      "tema": "biochar",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Noticia internacional en inglés sobre inversiones en agtech de carbono que no impacta localmente.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "002c5b59f543f61d": {
+      "conversacion": 2,
+      "historia_concreta": 4,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 4,
+      "cercania_argentina": 1,
+      "potencial_reel": 1,
+      "ai_score": 14,
+      "commercial_score": 10,
+      "subtema": "agtech",
+      "tema": "biotecnologia",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Adquisición biotecnológica global en inglés sin ninguna relevancia para el productor de la región.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -36685,7 +36845,19 @@
       "https://agrositio.com.ar/noticia/249298-evolucion-climatica-y-perspectivas-agricolas-del-invierno-2026-al-otono-2027.html": "2026-11-12",
       "https://bichosdecampo.com/estados-unidos-podria-desplazar-a-china-como-principal-destino-de-la-carne-argentina-en-2027-segun-el-analista-victor-tonelli": "2026-11-12",
       "https://lanacion.com.ar/economia/campo/la-pesca-argentina-exporto-us1866-millones-hasta-septiembre-y-el-sector-pide-eliminar-las-nid12112026": "2026-11-12",
-      "https://lacapital.com.ar/agro/victor-tonelli-el-mundo-esta-una-fase-retencion-y-eso-asegura-precios-firmes-n10291864.html": "2026-11-12"
+      "https://lacapital.com.ar/agro/victor-tonelli-el-mundo-esta-una-fase-retencion-y-eso-asegura-precios-firmes-n10291864.html": "2026-11-12",
+      "https://todoagro.com.ar/mas-kilos-genetica-y-exportaciones-el-debate-que-abrio-rosgan-sobre-la-ganaderia-que-viene": "2026-11-12",
+      "https://infocampo.com.ar/la-ganaderia-esta-viviendo-un-momento-historico-ojala-no-lo-desaprovechemos": "2026-11-12",
+      "https://infocampo.com.ar/pauny-lanzo-retiros-voluntarios-para-reducir-150-empleos-y-promete-plan-de-pagos-pero-solo-si-se-levanta-la-toma-de-la-planta": "2026-11-12",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249303-como-sigue-la-vida-del-agronomo-que-como-voluntario-trabajo-los-3-dias-de-visita-del-papa-leon-xiv-con-f-perez-eseiza.html": "2026-11-12",
+      "https://bichosdecampo.com/de-los-folletos-del-inta-a-cuatro-horas-de-microfono-mumi-barreda-hace-extension-rural-para-familias-campesinas-desde-una-radio-comunitaria-de-cruz-del-eje": "2026-11-12",
+      "https://bichosdecampo.com/el-gigante-brasileno-slc-agricola-apuesta-fuerte-por-la-soja-en-2026-27-y-ya-tiene-mas-de-la-mitad-de-la-cosecha-vendida": "2026-11-12",
+      "https://bichosdecampo.com/con-la-compra-de-su-tercer-ingenio-azucarero-santiago-blaquier-termino-armando-en-el-mayor-grupo-azucarero-argentino-y-ya-duplica-la-produccion-de-ledesma-la-empresa-que-lo-vio-crecer": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/una-empresa-agropecuaria-de-tandil-acumula-cheques-rechazados-por-mas-de-2200-millones-nid12112026": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/un-blaquier-concreto-la-compra-del-ingenio-la-trinidad-y-adquirio-el-60-de-una-comercializadora-de-nid12112026": "2026-11-12",
+      "https://agfundernews.com/agrifood-signals-applied-carbon-nabs-72m-for-biochar-redalpine-just-carbon-close-funds": "2026-11-12",
+      "https://agfundernews.com/amyris-bets-on-sweet-proteins-with-oobli-acquisition": "2026-11-12",
+      "https://noticiasgilenses.com.ar/kicillof-habilito-a-los-municipios-a-usar-fondos-de-la-tasa-de-caminos-rurales-para-obras-hidricas-y-hay-bronca-de-los-productores": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -39049,7 +39221,19 @@
       "evolucion climatica y perspectivas agricolas del invierno 2026 al otono 2027": "2026-11-12",
       "estados unidos podria desplazar a china como principal destino de la carne argentina en 2027 segun el analista victor tonelli": "2026-11-12",
       "la pesca argentina exporto us 1866 millones hasta septiembre y el sector pide eliminar las retenciones": "2026-11-12",
-      "victor tonelli el mundo esta en una fase de retencion y eso asegura precios firmes": "2026-11-12"
+      "victor tonelli el mundo esta en una fase de retencion y eso asegura precios firmes": "2026-11-12",
+      "mas kilos genetica y exportaciones el debate que abrio rosgan sobre la ganaderia que viene": "2026-11-12",
+      "la ganaderia esta viviendo un momento historico ojala no lo desaprovechemos": "2026-11-12",
+      "pauny lanza retiros voluntarios para reducir 150 empleos y promete plan de pagos pero solo si se levanta la toma de la planta": "2026-11-12",
+      "como sigue la vida del agronomo que como voluntario trabajo los 3 dias de visita del papa leon xiv con f perez eseiza": "2026-11-12",
+      "de los folletos del inta a cuatro horas de microfono mumi barreda hace extension rural para familias campesinas desde una radio comunitaria de cruz del eje": "2026-11-12",
+      "el gigante brasileno slc agricola apuesta fuerte por la soja en 2026 27 y ya tiene mas de la mitad de la cosecha vendida": "2026-11-12",
+      "con la compra de su tercer ingenio azucarero santiago blaquier termino armando en el mayor grupo azucarero argentino y ya duplica la produccion de ledesma la empresa que lo vio crecer": "2026-11-12",
+      "una empresa agropecuaria de tandil acumula cheques rechazados por mas de 2200 millones": "2026-11-12",
+      "un blaquier concreto la compra del ingenio la trinidad y adquirio el 60 de una comercializadora de azucar": "2026-11-12",
+      "agrifood signals applied carbon nabs 72m for biochar redalpine just climate close funds": "2026-11-12",
+      "amyris bets on sweet proteins with oobli acquisition": "2026-11-12",
+      "kicillof habilito a los municipios a usar fondos de la tasa de caminos rurales para obras hidricas y hay bronca de los productores": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -41413,7 +41597,19 @@
       "c9b01ef0ae0168d2": "2026-11-12",
       "395b2fc48964c5f8": "2026-11-12",
       "d06fdcd252d28c91": "2026-11-12",
-      "864c2ddcfd9fb8d6": "2026-11-12"
+      "864c2ddcfd9fb8d6": "2026-11-12",
+      "fb39911fd79f0f5f": "2026-11-12",
+      "9a0ecb3d4ac34a69": "2026-11-12",
+      "ae7a36bc2b2615c4": "2026-11-12",
+      "729ab695f3592ef4": "2026-11-12",
+      "7ddfba8485d05617": "2026-11-12",
+      "deddf22ec23e6d15": "2026-11-12",
+      "50ce73c703a2d187": "2026-11-12",
+      "1f4d7084ef09f9a1": "2026-11-12",
+      "26e9cd1c5c3f0eec": "2026-11-12",
+      "6a38ccbac5007cf7": "2026-11-12",
+      "002c5b59f543f61d": "2026-11-12",
+      "0d5225b609d5d843": "2026-11-12"
     }
   },
   "elegidas": [
@@ -71119,51 +71315,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e5dbbd0dc135_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "78866320cf65",
-      "rep": {
-        "id": "78866320cf65",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026",
-        "titulo": "Tras nueve meses: reemplazan un puente de 1930 que se derrumbó por tubos de cemento y dicen que es “un parche definitivo”",
-        "titulo_norm": "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo",
-        "descripcion": "La estructura construida sobre el arroyo Venado, en Guaminí, fue arrasada por una crecida; después de más de 250 días sin una solución, el gobierno provincial comenzó a instalar conductos de hormigón para habilitar el paso, obra que los vecinos consideran insuficiente",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/2EZ4UHKE5ZD2FBYD5LVVBC5MLM.jpg?auth=d2c2ee9be99274c5fac6e2b1e9cf66e28972d85d3cd4d70fdf74153778ee6cf9&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-11-12T14:26-03:00",
-        "capturado": "2026-11-12T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f90cc830d50aa991",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "78866320cf65",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026",
-          "titulo": "Tras nueve meses: reemplazan un puente de 1930 que se derrumbó por tubos de cemento y dicen que es “un parche definitivo”",
-          "titulo_norm": "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo",
-          "descripcion": "La estructura construida sobre el arroyo Venado, en Guaminí, fue arrasada por una crecida; después de más de 250 días sin una solución, el gobierno provincial comenzó a instalar conductos de hormigón para habilitar el paso, obra que los vecinos consideran insuficiente",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/2EZ4UHKE5ZD2FBYD5LVVBC5MLM.jpg?auth=d2c2ee9be99274c5fac6e2b1e9cf66e28972d85d3cd4d70fdf74153778ee6cf9&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-11-12T14:26-03:00",
-          "capturado": "2026-11-12T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f90cc830d50aa991",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-12T18:00-03:00",
+      "titulo_original": "Tras nueve meses: reemplazan un puente de 1930 que se derrumbó por tubos de cemento y dicen que es “un parche definitivo”",
+      "descripcion": "La estructura construida sobre el arroyo Venado, en Guaminí, fue arrasada por una crecida; después de más de 250 días sin una solución, el gobierno provincial comenzó a instalar conductos de hormigón para habilitar el paso, obra que los vecinos consideran insuficiente",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026/",
+      "titular": "Reemplazan histórico puente bonaerense por tubos de cemento",
+      "volanta": "Infraestructura rural",
       "score": {
         "conversacion": 16,
         "historia_concreta": 17,
@@ -71190,8 +71351,45 @@
         "de_zona": false,
         "con_video": true
       },
-      "cuando": "2026-11-12T14:30-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-12T18:00:00-03:00",
+      "publicado": {
+        "youtube": {
+          "id": "tm2C281KNI4",
+          "url": "https://youtube.com/shorts/tm2C281KNI4",
+          "privacidad": "public",
+          "subida": "uploaded",
+          "miniatura": "portada del reel"
+        },
+        "web": {
+          "id": "29befb01-ef56-4abf-8904-4d5862f4b657",
+          "slug": "guamini-tras-un-derrumbe-reemplazan-un-puente-historico-por-4ed1a8",
+          "url": "https://www.diariolacampaña.com.ar/n/guamini-tras-un-derrumbe-reemplazan-un-puente-historico-por-4ed1a8",
+          "foto": true,
+          "video": true
+        },
+        "facebook": {
+          "id": "1125219026958682",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18118335131025455",
+          "portada": "propia"
+        },
+        "historia_instagram": {
+          "id": "18103191626071415"
+        },
+        "historia_facebook": {
+          "id": "4625884731055060"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_78866320cf65_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "4b0a5a7882e3",
       "rep": {
@@ -71817,8 +72015,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T16:08:03-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-12T18:10:14-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
