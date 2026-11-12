@@ -34208,6 +34208,118 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3fac375f565d7f6a": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 37,
+      "commercial_score": 30,
+      "subtema": "maquinaria",
+      "tema": "maquinaria hídrica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Santa Fe, no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c9b01ef0ae0168d2": {
+      "conversacion": 9,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 49,
+      "commercial_score": 48,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Informe general de clima; interesa por la campaña pero es un pronóstico amplio.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        48
+      ]
+    },
+    "395b2fc48964c5f8": {
+      "conversacion": 10,
+      "historia_concreta": 4,
+      "cercania_pba": 8,
+      "interes_productores": 9,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 45,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Análisis de mercado ganadero a nivel nacional, sin anclaje local directo.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        37
+      ]
+    },
+    "d06fdcd252d28c91": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "pesca",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es sobre pesca, un tema completamente ajeno al productor de la zona oeste bonaerense.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "864c2ddcfd9fb8d6": {
+      "conversacion": 11,
+      "historia_concreta": 5,
+      "cercania_pba": 8,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 48,
+      "commercial_score": 48,
+      "subtema": "ganaderia",
+      "tema": "precios ganaderos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Declaraciones de Víctor Tonelli sobre ganadería que interesan al criador local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        37
+      ]
     }
   },
   "indice": {
@@ -36567,7 +36679,13 @@
       "https://bichosdecampo.com/soja-visec-conviene-ser-pragmaticos-y-aprovechar-el-diferencial-de-precio-o-gestionar-la-comercializacion-en-base-a-una-cuestion-de-principios": "2026-11-12",
       "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026": "2026-11-12",
       "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-hasta-45-grados-lluvias-desiguales-y-un-posterior-cambio-termico-nid12112026": "2026-11-12",
-      "https://chacabuquero.com.ar/2026/11/choque-en-el-centro-de-chacabuco.html": "2026-11-12"
+      "https://chacabuquero.com.ar/2026/11/choque-en-el-centro-de-chacabuco.html": "2026-11-12",
+      "https://todoagro.com.ar/fuerte-avance-de-siembra-de-soja-en-la-zona-nucleo-permitio-cubrir-el-70-del-area": "2026-11-12",
+      "https://infocampo.com.ar/prevencion-ante-el-nino-santa-fe-invirtio-2-000-millones-para-renovar-su-maquinaria-hidrica": "2026-11-12",
+      "https://agrositio.com.ar/noticia/249298-evolucion-climatica-y-perspectivas-agricolas-del-invierno-2026-al-otono-2027.html": "2026-11-12",
+      "https://bichosdecampo.com/estados-unidos-podria-desplazar-a-china-como-principal-destino-de-la-carne-argentina-en-2027-segun-el-analista-victor-tonelli": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/la-pesca-argentina-exporto-us1866-millones-hasta-septiembre-y-el-sector-pide-eliminar-las-nid12112026": "2026-11-12",
+      "https://lacapital.com.ar/agro/victor-tonelli-el-mundo-esta-una-fase-retencion-y-eso-asegura-precios-firmes-n10291864.html": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -38925,7 +39043,13 @@
       "soja visec conviene ser pragmaticos y aprovechar el diferencial de precio o gestionar la comercializacion en base a una cuestion de principios": "2026-11-12",
       "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo": "2026-11-12",
       "el nino anticipan temperaturas de hasta 45 grados lluvias desiguales y un posterior cambio termico": "2026-11-12",
-      "choque en el centro de chacabuco": "2026-11-12"
+      "choque en el centro de chacabuco": "2026-11-12",
+      "fuerte avance de siembra de soja en la zona nucleo permitio cubrir el 70 del area": "2026-11-12",
+      "prevencion ante el nino santa fe invirtio 2 000 millones para renovar su maquinaria hidrica": "2026-11-12",
+      "evolucion climatica y perspectivas agricolas del invierno 2026 al otono 2027": "2026-11-12",
+      "estados unidos podria desplazar a china como principal destino de la carne argentina en 2027 segun el analista victor tonelli": "2026-11-12",
+      "la pesca argentina exporto us 1866 millones hasta septiembre y el sector pide eliminar las retenciones": "2026-11-12",
+      "victor tonelli el mundo esta en una fase de retencion y eso asegura precios firmes": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -41283,7 +41407,13 @@
       "75018b47bdf94b70": "2026-11-12",
       "f90cc830d50aa991": "2026-11-12",
       "f772420345b59850": "2026-11-12",
-      "6659a2c316727b97": "2026-11-12"
+      "6659a2c316727b97": "2026-11-12",
+      "e6c5dabbd3cabaab": "2026-11-12",
+      "3fac375f565d7f6a": "2026-11-12",
+      "c9b01ef0ae0168d2": "2026-11-12",
+      "395b2fc48964c5f8": "2026-11-12",
+      "d06fdcd252d28c91": "2026-11-12",
+      "864c2ddcfd9fb8d6": "2026-11-12"
     }
   },
   "elegidas": [
@@ -70929,51 +71059,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c1a0b121190c_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "e5dbbd0dc135",
-      "rep": {
-        "id": "e5dbbd0dc135",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
-        "canonical_url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios",
-        "titulo": "“Es una provocación y una humillación”: Los responsables de Pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
-        "titulo_norm": "es una provocacion y una humillacion los responsables de pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
-        "descripcion": "Un nuevo capítulo de la crisis que atraviesa el fabricante nacional de tractores Pauny tuvo lugar durante la mañana de este jueves. La tensión entre los empleados que no cobran hace ya dos meses y los responsables de la empresa agregó un nuevo escalón, pues en la mañana de hoy estaba prevista una audiencia entre […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-12-125113.png",
-        "autor": "Diego Mañas",
-        "publicado": "2026-11-12T13:36-03:00",
-        "capturado": "2026-11-12T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "2fa723fa1124aa88",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "e5dbbd0dc135",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
-          "canonical_url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios",
-          "titulo": "“Es una provocación y una humillación”: Los responsables de Pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
-          "titulo_norm": "es una provocacion y una humillacion los responsables de pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
-          "descripcion": "Un nuevo capítulo de la crisis que atraviesa el fabricante nacional de tractores Pauny tuvo lugar durante la mañana de este jueves. La tensión entre los empleados que no cobran hace ya dos meses y los responsables de la empresa agregó un nuevo escalón, pues en la mañana de hoy estaba prevista una audiencia entre […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-12-125113.png",
-          "autor": "Diego Mañas",
-          "publicado": "2026-11-12T13:36-03:00",
-          "capturado": "2026-11-12T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "2fa723fa1124aa88",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-12T16:00-03:00",
+      "titulo_original": "“Es una provocación y una humillación”: Los responsables de Pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
+      "descripcion": "Un nuevo capítulo de la crisis que atraviesa el fabricante nacional de tractores Pauny tuvo lugar durante la mañana de este jueves. La tensión entre los empleados que no cobran hace ya dos meses y los responsables de la empresa agregó un nuevo escalón, pues en la mañana de hoy estaba prevista una au",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
+      "titular": "Pauny ofrece retiros voluntarios tras ausentarse a la audiencia",
+      "volanta": "Empresas",
       "score": {
         "conversacion": 18,
         "historia_concreta": 15,
@@ -70995,8 +71090,38 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-12T14:30-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-12T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "36a34294-7809-4c77-ae44-550843613348",
+          "slug": "tension-en-pauny-la-empresa-falto-a-la-audiencia-y-propuso-15b18e",
+          "url": "https://www.diariolacampaña.com.ar/n/tension-en-pauny-la-empresa-falto-a-la-audiencia-y-propuso-15b18e",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18128231879302192",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1757668383030825",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17931326196427190"
+        },
+        "historia_facebook": {
+          "id": "1453916066087818"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e5dbbd0dc135_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "78866320cf65",
       "rep": {
@@ -71692,8 +71817,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T14:36:12-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-12T16:08:03-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
