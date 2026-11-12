@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-12T23:01:29.000Z",
+  "actualizado": "2026-11-12T23:31:18.000Z",
   "eventos": [
     {
       "id": "policiales:https://semanariodejunin.com.ar/nota/76483/crimen-en-mechita-una-pista-desde-la-carcel-permitio-esclarecer-el-asesinato",
@@ -138,6 +138,30 @@
       "localidad": "Chacabuco",
       "volanta": "Choque en Chacabuco",
       "categoria": "accidente_vial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/dia12112026.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-12T23:31:18.000Z",
+      "titulo": "Le robaron la moto a un vecino de Chacabuco en la madrugada",
+      "descripcion": "Delincuentes se llevaron una motocicleta de alta cilindrada que se encontraba estacionada en el exterior de una vivienda ubicada en el barrio Parque Chacabuco.",
+      "texto_tiktok": "Un vecino de Chacabuco sufrió el robo de su motocicleta durante la madrugada.\n\nEl damnificado constató el faltante del rodado en horas de la mañana.\n\nEl hecho tuvo lugar en el barrio Parque Chacabuco.\n\nLa víctima había dejado el vehículo estacionado en el exterior de su domicilio.\n\nIntervino la Policía tras la denuncia radicada por el propietario.\n\nLa investigación busca dar con los autores del ilícito.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Robo #Inseguridad #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-12_2135_05_chacabuco_le-robaron-la-moto-a-un-vecino.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-le-robaron-una-moto-200cc-a-un-vecino-en-el-barrio-f93a32",
+      "youtube_url": "https://youtube.com/shorts/9sciqb-LX74",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo en Chacabuco",
+      "categoria": "robo",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
