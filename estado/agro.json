@@ -34064,6 +34064,150 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "03d935aae22ad52c": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 30,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "exportación ganadera",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un congreso y charla de consultores sobre tendencias generales, sin datos concretos para el productor de a pie.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "56edb931fbc23b9b": {
+      "conversacion": 6,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "lucha antigranizo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Paso en Mendoza, muy lejos de nuestra zona nucleo bonaerense como para generar impacto directo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2fa723fa1124aa88": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 76,
+      "commercial_score": 60,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a una fábrica clave de tractores nacionales, con obreros sin cobrar y conflicto fuerte que preocupa al sector.",
+      "tema_doc": "costos",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "75018b47bdf94b70": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 47,
+      "commercial_score": 50,
+      "subtema": "mercados",
+      "tema": "soja visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema comercial complejo sobre la norma europea de deforestación que genera dudas en los vendedores de soja.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f90cc830d50aa991": {
+      "conversacion": 16,
+      "historia_concreta": 17,
+      "cercania_pba": 10,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 69,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "puente guaminí",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Bronca vecinal por una solución precaria en un camino rural tras meses de aislamiento en la provincia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        73
+      ]
+    },
+    "f772420345b59850": {
+      "conversacion": 20,
+      "historia_concreta": 12,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 81,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "calor extremo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta por temperaturas de 45 grados y lluvias desparejas que pega de lleno en los cultivos de la región.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6659a2c316727b97": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "choque urbano",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un choque urbano de tránsito sin vinculación con el campo ni la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -36416,7 +36560,14 @@
       "https://lanacion.com.ar/economia/campo/resulta-clave-visec-dijo-que-cumplir-con-el-reglamento-europeo-ligado-a-la-antideforestacion-es-nid12112026": "2026-11-12",
       "https://lanacion.com.ar/economia/campo/cayeron-un-22-las-ventas-de-bioceres-crop-solutions-y-se-amplio-la-perdida-pero-se-repitio-la-mejora-nid12112026": "2026-11-12",
       "https://bcr.com.ar/es/mercados/gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo/soja-fondo-se-sembraron-116-m-ha": "2026-11-12",
-      "https://elregionaldigital.com.ar/uno-de-los-caminos-un-especialista-aseguro-que-la-exportacion-es-lo-que-le-va-a-dar-futuro-a-la-ganaderia-argentina": "2026-11-12"
+      "https://elregionaldigital.com.ar/uno-de-los-caminos-un-especialista-aseguro-que-la-exportacion-es-lo-que-le-va-a-dar-futuro-a-la-ganaderia-argentina": "2026-11-12",
+      "https://infocampo.com.ar/un-nuevo-modelo-para-la-ganaderia-el-foco-en-la-exportacion-ante-un-mundo-con-demanda-infinita": "2026-11-12",
+      "https://bichosdecampo.com/estallo-la-alianza-antigranizo-la-pelea-entre-los-intendentes-de-san-rafael-y-general-alvear-dejo-al-sur-mendocino-sin-los-vuelos-para-proteger-la-produccion": "2026-11-12",
+      "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios": "2026-11-12",
+      "https://bichosdecampo.com/soja-visec-conviene-ser-pragmaticos-y-aprovechar-el-diferencial-de-precio-o-gestionar-la-comercializacion-en-base-a-una-cuestion-de-principios": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-hasta-45-grados-lluvias-desiguales-y-un-posterior-cambio-termico-nid12112026": "2026-11-12",
+      "https://chacabuquero.com.ar/2026/11/choque-en-el-centro-de-chacabuco.html": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -38767,7 +38918,14 @@
       "resulta clave visec dijo que cumplir con el reglamento europeo ligado a la antideforestacion es necesario para preservar ese mercado": "2026-11-12",
       "cayeron un 22 las ventas de bioceres crop solutions y se amplio la perdida pero se repitio la mejora de otro indicador": "2026-11-12",
       "soja a fondo se sembraron 1 16 m ha en los ultimos 7 dias": "2026-11-12",
-      "uno de los caminos un especialista aseguro que la exportacion es lo que le va a dar futuro a la ganaderia argentina": "2026-11-12"
+      "uno de los caminos un especialista aseguro que la exportacion es lo que le va a dar futuro a la ganaderia argentina": "2026-11-12",
+      "un nuevo modelo para la ganaderia el foco en la exportacion ante un mundo con demanda infinita": "2026-11-12",
+      "estallo la alianza antigranizo la pelea entre los intendentes de san rafael y general alvear dejo al sur mendocino sin los vuelos para proteger la produccion": "2026-11-12",
+      "es una provocacion y una humillacion los responsables de pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios": "2026-11-12",
+      "soja visec conviene ser pragmaticos y aprovechar el diferencial de precio o gestionar la comercializacion en base a una cuestion de principios": "2026-11-12",
+      "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo": "2026-11-12",
+      "el nino anticipan temperaturas de hasta 45 grados lluvias desiguales y un posterior cambio termico": "2026-11-12",
+      "choque en el centro de chacabuco": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -41118,7 +41276,14 @@
       "186550183dd0daf5": "2026-11-12",
       "e5392d4f9b6f88d1": "2026-11-12",
       "87ad17f0d156a8b0": "2026-11-12",
-      "5b37d85f18c6cd00": "2026-11-12"
+      "5b37d85f18c6cd00": "2026-11-12",
+      "03d935aae22ad52c": "2026-11-12",
+      "56edb931fbc23b9b": "2026-11-12",
+      "2fa723fa1124aa88": "2026-11-12",
+      "75018b47bdf94b70": "2026-11-12",
+      "f90cc830d50aa991": "2026-11-12",
+      "f772420345b59850": "2026-11-12",
+      "6659a2c316727b97": "2026-11-12"
     }
   },
   "elegidas": [
@@ -70704,9 +70869,204 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a78f7d53fa03_portada.jpg"
+    },
+    {
+      "id": "c1a0b121190c",
+      "cuando": "2026-11-12T14:30-03:00",
+      "titulo_original": "El Niño: anticipan temperaturas de hasta 45 grados, lluvias desiguales y un posterior cambio térmico",
+      "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires prevé fuertes variaciones de temperatura durante las próximas dos semanas; las precipitaciones se concentrarían en el norte y en algunas zonas de la región pampeana, mientras que otras áreas agrícolas recibirían pocos milímetros",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-anticipan-temperaturas-de-hasta-45-grados-lluvias-desiguales-y-un-posterior-cambio-termico-nid12112026/",
+      "titular": "Pronostican temperaturas de hasta 35 grados y lluvias desparejas",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 20,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 81,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "calor extremo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta por temperaturas de 45 grados y lluvias desparejas que pega de lleno en los cultivos de la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-12T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9f754453-7b6f-4ec8-811e-75242081ff23",
+          "slug": "anticipan-temperaturas-de-hasta-35-grados-lluvias-desparejas-y-12455a",
+          "url": "https://www.diariolacampaña.com.ar/n/anticipan-temperaturas-de-hasta-35-grados-lluvias-desparejas-y-12455a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18134741875744678",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1757585153039148",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "17991396636108666"
+        },
+        "historia_facebook": {
+          "id": "1131722926342927"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c1a0b121190c_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e5dbbd0dc135",
+      "rep": {
+        "id": "e5dbbd0dc135",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
+        "canonical_url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios",
+        "titulo": "“Es una provocación y una humillación”: Los responsables de Pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
+        "titulo_norm": "es una provocacion y una humillacion los responsables de pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
+        "descripcion": "Un nuevo capítulo de la crisis que atraviesa el fabricante nacional de tractores Pauny tuvo lugar durante la mañana de este jueves. La tensión entre los empleados que no cobran hace ya dos meses y los responsables de la empresa agregó un nuevo escalón, pues en la mañana de hoy estaba prevista una audiencia entre […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-12-125113.png",
+        "autor": "Diego Mañas",
+        "publicado": "2026-11-12T13:36-03:00",
+        "capturado": "2026-11-12T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "2fa723fa1124aa88",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "e5dbbd0dc135",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
+          "canonical_url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios",
+          "titulo": "“Es una provocación y una humillación”: Los responsables de Pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
+          "titulo_norm": "es una provocacion y una humillacion los responsables de pauny no se presentaron a una audiencia con los obreros y presentaron un plan de retiros voluntarios",
+          "descripcion": "Un nuevo capítulo de la crisis que atraviesa el fabricante nacional de tractores Pauny tuvo lugar durante la mañana de este jueves. La tensión entre los empleados que no cobran hace ya dos meses y los responsables de la empresa agregó un nuevo escalón, pues en la mañana de hoy estaba prevista una audiencia entre […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-12-125113.png",
+          "autor": "Diego Mañas",
+          "publicado": "2026-11-12T13:36-03:00",
+          "capturado": "2026-11-12T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "2fa723fa1124aa88",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 76,
+        "commercial_score": 60,
+        "subtema": "maquinaria",
+        "tema": "pauny",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta a una fábrica clave de tractores nacionales, con obreros sin cobrar y conflicto fuerte que preocupa al sector.",
+        "tema_doc": "costos",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-12T14:30-03:00"
+    },
+    {
+      "id": "78866320cf65",
+      "rep": {
+        "id": "78866320cf65",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026",
+        "titulo": "Tras nueve meses: reemplazan un puente de 1930 que se derrumbó por tubos de cemento y dicen que es “un parche definitivo”",
+        "titulo_norm": "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo",
+        "descripcion": "La estructura construida sobre el arroyo Venado, en Guaminí, fue arrasada por una crecida; después de más de 250 días sin una solución, el gobierno provincial comenzó a instalar conductos de hormigón para habilitar el paso, obra que los vecinos consideran insuficiente",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/2EZ4UHKE5ZD2FBYD5LVVBC5MLM.jpg?auth=d2c2ee9be99274c5fac6e2b1e9cf66e28972d85d3cd4d70fdf74153778ee6cf9&smart=true",
+        "autor": "Mariana Reinke",
+        "publicado": "2026-11-12T14:26-03:00",
+        "capturado": "2026-11-12T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f90cc830d50aa991",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "78866320cf65",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/tras-nueve-meses-reemplazan-un-puente-de-1930-que-se-derrumbo-por-tubos-de-cemento-y-dicen-que-es-un-nid12112026",
+          "titulo": "Tras nueve meses: reemplazan un puente de 1930 que se derrumbó por tubos de cemento y dicen que es “un parche definitivo”",
+          "titulo_norm": "tras nueve meses reemplazan un puente de 1930 que se derrumbo por tubos de cemento y dicen que es un parche definitivo",
+          "descripcion": "La estructura construida sobre el arroyo Venado, en Guaminí, fue arrasada por una crecida; después de más de 250 días sin una solución, el gobierno provincial comenzó a instalar conductos de hormigón para habilitar el paso, obra que los vecinos consideran insuficiente",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/2EZ4UHKE5ZD2FBYD5LVVBC5MLM.jpg?auth=d2c2ee9be99274c5fac6e2b1e9cf66e28972d85d3cd4d70fdf74153778ee6cf9&smart=true",
+          "autor": "Mariana Reinke",
+          "publicado": "2026-11-12T14:26-03:00",
+          "capturado": "2026-11-12T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f90cc830d50aa991",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 17,
+        "cercania_pba": 10,
+        "interes_productores": 11,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 69,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "puente guaminí",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Bronca vecinal por una solución precaria en un camino rural tras meses de aislamiento en la provincia.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          66,
+          73
+        ],
+        "de_zona": false,
+        "con_video": true
+      },
+      "cuando": "2026-11-12T14:30-03:00"
+    },
     {
       "id": "4b0a5a7882e3",
       "rep": {
@@ -71332,8 +71692,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T14:00:19-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-12T14:36:12-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
