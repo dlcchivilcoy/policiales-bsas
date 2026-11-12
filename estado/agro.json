@@ -34480,6 +34480,114 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "21d1705e5c69b9b4": {
+      "conversacion": 10,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 44,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "fitosanitarios",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una disputa institucional y legal sobre fitosanitarios e INTA que no afecta directamente al día a día del productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c43d777cff00c393": {
+      "conversacion": 9,
+      "historia_concreta": 7,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 53,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "plagas y malezas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Trata sobre cómo encarar plagas y malezas en una campaña Niño, algo muy relevante para los lotes de la región.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        62,
+        47
+      ]
+    },
+    "9c6ec2f0582da18c": {
+      "conversacion": 6,
+      "historia_concreta": 8,
+      "cercania_pba": 8,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 44,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El lanzamiento de una plataforma digital para comercializar invernada interesa al ganadero, aunque es más un anuncio comercial.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        36
+      ]
+    },
+    "645d7872856f30d6": {
+      "conversacion": 6,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 47,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "los grobo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un movimiento empresario de gran escala entre Amaggi y Los Grobo que al productor local de a pie no le cambia su operativa.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "242e612f046a2d2f": {
+      "conversacion": 4,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 30,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "congreso ganadero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Frases generales de un congreso en Rosario sin datos concretos ni impacto directo para el productor bonaerense.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -36857,7 +36965,13 @@
       "https://lanacion.com.ar/economia/campo/un-blaquier-concreto-la-compra-del-ingenio-la-trinidad-y-adquirio-el-60-de-una-comercializadora-de-nid12112026": "2026-11-12",
       "https://agfundernews.com/agrifood-signals-applied-carbon-nabs-72m-for-biochar-redalpine-just-carbon-close-funds": "2026-11-12",
       "https://agfundernews.com/amyris-bets-on-sweet-proteins-with-oobli-acquisition": "2026-11-12",
-      "https://noticiasgilenses.com.ar/kicillof-habilito-a-los-municipios-a-usar-fondos-de-la-tasa-de-caminos-rurales-para-obras-hidricas-y-hay-bronca-de-los-productores": "2026-11-12"
+      "https://noticiasgilenses.com.ar/kicillof-habilito-a-los-municipios-a-usar-fondos-de-la-tasa-de-caminos-rurales-para-obras-hidricas-y-hay-bronca-de-los-productores": "2026-11-12",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249304-inta-y-el-proyecto-sprint-el-pte-bronzovich-detalla-errores-y-sanciones-tras-la-investigacion-de-fitosanitarios-en-personas-y-alimentos.html": "2026-11-12",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249306-malezas-plagas-y-enfermedades-en-ano-nino-estamos-preparados-con-los-fitosanitarios-con-g-gastaldi-fender-agro.html": "2026-11-12",
+      "https://bichosdecampo.com/se-viene-el-roslot-rosgan-y-los-feedloteros-crearon-una-plataforma-digital-para-comercializar-hacienda-de-invernada-y-generar-una-referencia-de-mercado": "2026-11-12",
+      "https://bichosdecampo.com/amaggi-amplia-el-acuerdo-comercial-con-los-grobo-agropecuaria-para-potenciar-su-capacidad-de-originacion-y-se-hace-cargo-de-los-empleados-garantizando-condiciones-laborales": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/el-gigante-brasileno-amaggi-se-queda-a-traves-de-un-alquiler-con-un-negocio-emblematico-de-los-grobo-nid12112026": "2026-11-12",
+      "https://lacapital.com.ar/agro/congreso-ganadero-el-mundo-demanda-infinito-n10291872.html": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -39233,7 +39347,13 @@
       "un blaquier concreto la compra del ingenio la trinidad y adquirio el 60 de una comercializadora de azucar": "2026-11-12",
       "agrifood signals applied carbon nabs 72m for biochar redalpine just climate close funds": "2026-11-12",
       "amyris bets on sweet proteins with oobli acquisition": "2026-11-12",
-      "kicillof habilito a los municipios a usar fondos de la tasa de caminos rurales para obras hidricas y hay bronca de los productores": "2026-11-12"
+      "kicillof habilito a los municipios a usar fondos de la tasa de caminos rurales para obras hidricas y hay bronca de los productores": "2026-11-12",
+      "inta y el proyecto sprint el pte bronzovich detalla errores y sanciones tras la investigacion de fitosanitarios en personas y alimentos": "2026-11-12",
+      "malezas plagas y enfermedades esta preparado el agro para una campana nino con g gastaldi fender agro": "2026-11-12",
+      "se viene el roslot rosgan y los feedloteros crearon una plataforma digital para comercializar hacienda de invernada y generar una referencia de mercado": "2026-11-12",
+      "amaggi amplia el acuerdo comercial con los grobo agropecuaria para potenciar su capacidad de originacion y se hace cargo de los empleados garantizando condiciones laborales": "2026-11-12",
+      "el gigante brasileno amaggi alquilara un negocio emblematico de la concursada los grobo agropecuaria y reemplazara su marca": "2026-11-12",
+      "congreso ganadero el mundo demanda infinito": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -41609,7 +41729,13 @@
       "26e9cd1c5c3f0eec": "2026-11-12",
       "6a38ccbac5007cf7": "2026-11-12",
       "002c5b59f543f61d": "2026-11-12",
-      "0d5225b609d5d843": "2026-11-12"
+      "0d5225b609d5d843": "2026-11-12",
+      "21d1705e5c69b9b4": "2026-11-12",
+      "c43d777cff00c393": "2026-11-12",
+      "9c6ec2f0582da18c": "2026-11-12",
+      "645d7872856f30d6": "2026-11-12",
+      "fb2d0272ad3fd210": "2026-11-12",
+      "242e612f046a2d2f": "2026-11-12"
     }
   },
   "elegidas": [
@@ -71387,6 +71513,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_78866320cf65_portada.jpg"
+    },
+    {
+      "id": "6f54c1657261",
+      "cuando": "2026-11-12T19:30-03:00",
+      "titulo_original": "Año atípico para los feedlots: Corrales llenos, poca salida a faena y agregado de kilos para diluir costos y atender la demanda mundial",
+      "descripcion": "Los feedlots argentinos atraviesan una dinámica bastante diferente a la habitual para esta época del año. Hay mucho ganado encerrado, las salidas se mantienen relativamente limitadas y, contra lo que podría esperarse, no se está generando una sobreoferta de hacienda hacia los frigoríficos del consum",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/ano-atipico-para-los-feedlots-corrales-llenos-poca-salida-a-faena-y-agregado-de-kilos-para-diluir-costos-y-atender-la-demanda-mundial/",
+      "titular": "Feedlots llenos y menor faena marcan un año atípico",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 11,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 72,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "feedlots",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Explica muy bien la realidad actual de los feedlots con corrales llenos y pocos animales saliendo.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          75
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-12T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "0abd51ee-f6bf-4dcd-8fa3-d4a16f5842ca",
+          "slug": "corrales-llenos-y-baja-faena-el-escenario-atipico-que-90959f",
+          "url": "https://www.diariolacampaña.com.ar/n/corrales-llenos-y-baja-faena-el-escenario-atipico-que-90959f",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17949826425364468",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1757848019679528",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "17975297916177277"
+        },
+        "historia_facebook": {
+          "id": "2290929695022333"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6f54c1657261_portada.jpg"
     }
   ],
   "pendientes": [
@@ -71454,75 +71644,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-12T11:30-03:00"
-    },
-    {
-      "id": "6f54c1657261",
-      "rep": {
-        "id": "6f54c1657261",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/ano-atipico-para-los-feedlots-corrales-llenos-poca-salida-a-faena-y-agregado-de-kilos-para-diluir-costos-y-atender-la-demanda-mundial/",
-        "canonical_url": "https://bichosdecampo.com/ano-atipico-para-los-feedlots-corrales-llenos-poca-salida-a-faena-y-agregado-de-kilos-para-diluir-costos-y-atender-la-demanda-mundial",
-        "titulo": "Año atípico para los feedlots: Corrales llenos, poca salida a faena y agregado de kilos para diluir costos y atender la demanda mundial",
-        "titulo_norm": "ano atipico para los feedlots corrales llenos poca salida a faena y agregado de kilos para diluir costos y atender la demanda mundial",
-        "descripcion": "Los feedlots argentinos atraviesan una dinámica bastante diferente a la habitual para esta época del año. Hay mucho ganado encerrado, las salidas se mantienen relativamente limitadas y, contra lo que podría esperarse, no se está generando una sobreoferta de hacienda hacia los frigoríficos del consumo. Históricamente, en esta época del año lo normal era que […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/cuadro-ocupacion.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-12T08:35-03:00",
-        "capturado": "2026-11-12T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "09b80c8db4789725",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "6f54c1657261",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/ano-atipico-para-los-feedlots-corrales-llenos-poca-salida-a-faena-y-agregado-de-kilos-para-diluir-costos-y-atender-la-demanda-mundial/",
-          "canonical_url": "https://bichosdecampo.com/ano-atipico-para-los-feedlots-corrales-llenos-poca-salida-a-faena-y-agregado-de-kilos-para-diluir-costos-y-atender-la-demanda-mundial",
-          "titulo": "Año atípico para los feedlots: Corrales llenos, poca salida a faena y agregado de kilos para diluir costos y atender la demanda mundial",
-          "titulo_norm": "ano atipico para los feedlots corrales llenos poca salida a faena y agregado de kilos para diluir costos y atender la demanda mundial",
-          "descripcion": "Los feedlots argentinos atraviesan una dinámica bastante diferente a la habitual para esta época del año. Hay mucho ganado encerrado, las salidas se mantienen relativamente limitadas y, contra lo que podría esperarse, no se está generando una sobreoferta de hacienda hacia los frigoríficos del consumo. Históricamente, en esta época del año lo normal era que […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/cuadro-ocupacion.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-12T08:35-03:00",
-          "capturado": "2026-11-12T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "09b80c8db4789725",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 11,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 72,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "feedlots",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Explica muy bien la realidad actual de los feedlots con corrales llenos y pocos animales saliendo.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          75
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-12T10:00-03:00"
     },
     {
       "id": "8baab79bf7df",
@@ -72015,8 +72136,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T19:00:27-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-12T19:35:38-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
