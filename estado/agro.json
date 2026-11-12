@@ -70744,7 +70744,7 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T10:07:14-03:00",
+  "actualizado": "2026-11-12T11:00:24-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -75601,6 +75601,43 @@
               },
               "facebook": {
                 "id": "1666609164867749"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-12T11:00:00-03:00": {
+      "dia": "2026-11-12",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo aguantaron los lotes con los milímetros que cayeron?",
+          "opciones": [],
+          "publico": "agricultura",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18142118812626055"
+            },
+            "facebook": {
+              "id": "1827446571717562"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18142118812626055"
+              },
+              "facebook": {
+                "id": "1827446571717562"
               }
             }
           ]
