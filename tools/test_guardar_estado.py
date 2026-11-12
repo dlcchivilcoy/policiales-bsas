@@ -108,5 +108,14 @@ try:
 finally:
     shutil.rmtree(base, ignore_errors=True)
 
+# Fila de reels de prueba (12/11/2026): la fila anota el reel publicado sin tocar el «cuando» de la pieza, y la
+# pasada de policiales guarda una copia vieja de nacionales.json con el mismo «cuando» y el reel «pendiente».
+_remoto = {"piezas": {"u": {"cuando": "2026-11-12T04:00:00-03:00",
+                            "ig_prueba": {"estado": "ok", "id": "m1"}}}}
+_vieja = {"piezas": {"u": {"cuando": "2026-11-12T04:00:00-03:00",
+                           "ig_prueba": {"estado": "pendiente", "video_url": "https://gh/v"}}}}
+chequear("nacionales: un reel de prueba publicado no vuelve a «pendiente» por una copia vieja (12/11/2026)",
+         GE.combinar_nacionales(_vieja, _remoto)["piezas"]["u"]["ig_prueba"]["estado"] == "ok")
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

@@ -634,7 +634,12 @@ def publicar_album_facebook(pieza: dict, slides: list, url_web: str = "") -> dic
 # (IG_PRUEBA_POLICIALES) y 5 virales de la corrida de las 4 (NAC_IG_PRUEBA_VIRALES, nacionales/pasada.py).
 # No sale si en Instagram la pieza ya va como reel NORMAL (el mismo video dos veces en la cuenta, no): con
 # los policiales en carrusel, sale siempre. Sin colab con agro. 0 lo apaga.
-IG_PRUEBA_POLICIALES_DEFAULT = 5
+# FILA ÚNICA (pedido del editor, 12/11/2026: «solo reels con video, si es con foto descartalo; de los 11 que
+# permite por día, 1 cada media hora desde las 17, prioridad a los virales»): la pasada ya NO publica el reel
+# de prueba. Si el hecho trae VIDEO del medio (`tenia_video`), sube el video y la portada al Release y lo deja
+# «pendiente»; lo publica la corrida de la fila (nacionales/pasada.py → corrida_ig_prueba), de a uno cada
+# 30 minutos entre las 17 y las 22, después de las virales. Con foto, no hay reel de prueba.
+IG_PRUEBA_POLICIALES_DEFAULT = 11     # cuántos deja en la fila por noche, como mucho
 HORAS_IG_PRUEBA = 12          # la tanda de la noche (19:00-22:00); la de ayer ya no cuenta
 
 
@@ -652,9 +657,23 @@ def _ig_prueba_recientes(ledger: dict) -> int:
     for e in ledger.values():
         r = e.get("ig_prueba") or {}
         cuando = _hora(r.get("cuando"))
-        if r.get("estado") in ("ok", "sin_confirmar") and cuando and cuando.replace(tzinfo=None) >= desde:
+        if r.get("estado") in ("ok", "sin_confirmar", "pendiente") and cuando and cuando.replace(tzinfo=None) >= desde:
             n += 1
     return n
+
+
+def dejar_reel_prueba_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
+    """El reel de prueba a la FILA (12/11/2026): el video y la portada al Release (duran 24 h) y lo que la
+    corrida de la fila necesita para publicarlo. No toca Instagram."""
+    salida = {"video_url": subir_a_release(mp4, nombre), "caption": texto_del_posteo(pieza, "instagram"),
+              "ubicacion": UB.location_id(pieza.get("localidad_hecho") or pieza.get("localidad") or "") or ""}
+    portada = portada_del_reel(pieza, mp4)
+    if portada:
+        try:
+            salida["portada_url"] = subir_a_release(Path(portada), f"{Path(nombre).stem}_portada.jpg")
+        except (FalloRed, OSError, RuntimeError) as e:     # sin portada, la elige Instagram
+            salida["aviso"] = f"la portada no se pudo subir: {_tapar(e)[:160]}"
+    return salida
 
 
 def publicar_reel_prueba_instagram(pieza: dict, mp4: Path, nombre: str) -> dict:
@@ -1992,9 +2011,14 @@ def _peso_espera(turno: dict) -> float:
 
 def _publicar_red(red: str, pieza: dict, mp4: Path, carpeta: Path, url_web: str) -> dict:
     global _ig_sin_prueba
-    if red in ("instagram", "ig_prueba"):
-        fn = publicar_instagram if red == "instagram" else publicar_reel_prueba_instagram
-        res = _intentar(fn, pieza, mp4, f"{carpeta.name}_{mp4.name}")
+    if red == "ig_prueba":
+        # A la fila (12/11/2026): lo publica la corrida de los reels de prueba, de a uno cada 30 minutos.
+        res = _intentar(dejar_reel_prueba_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
+        if res.get("estado") == "ok":
+            res["estado"] = "pendiente"
+        return res
+    if red == "instagram":
+        res = _intentar(publicar_instagram, pieza, mp4, f"{carpeta.name}_{mp4.name}")
         if res.get("estado") == "fallo" and _es_tope_de_prueba(res.get("detalle")):
             _ig_sin_prueba = True
             res = {"estado": "cupo", "detalle": "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
@@ -2195,7 +2219,8 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
     ig_prueba_hechos = _ig_prueba_recientes(ledger) if ig_prueba_tope else 0
     if ig_prueba_tope:
         informe["redes"].append("ig_prueba")
-        print(f"  Instagram (reel de prueba): hasta {ig_prueba_tope} por noche, ya van {ig_prueba_hechos}")
+        print(f"  Instagram (reel de prueba, solo con video): hasta {ig_prueba_tope} a la fila por noche, "
+              f"ya van {ig_prueba_hechos}")
     # Un reel cada 30 minutos en cada red (13/10/2026): entra lo que cabe hasta la pasada siguiente.
     # Y como mucho 3 hechos por pasada entre TODAS las redes (reels/cupo.py, 17/10/2026). La pasada es
     # el horario: una corrida repetida (respaldo, a mano) comparte los lugares que ya se reservaron.
@@ -2364,17 +2389,15 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
         ig_hecho = hecho.get("instagram") or {}
         reel_normal_ig = not slides_de(pieza, mp4.parent) and (
             "instagram" in pendientes or ig_hecho.get("estado") in ("ok", "sin_confirmar"))
+        # Solo con VIDEO del medio (12/11/2026): un reel hecho con la foto no va de prueba.
         falta_prueba = bool(ig_prueba_tope and not reel_normal_ig and ig_hecho.get("formato") != "reel"
+                            and pieza.get("tenia_video")
                             and (hecho.get("ig_prueba") or {}).get("estado")
-                            not in ("ok", "sin_confirmar", "rechazado"))
+                            not in ("ok", "sin_confirmar", "rechazado", "pendiente", "vencido"))
         if falta_prueba and ig_prueba_hechos >= ig_prueba_tope:
             falta_prueba = False
             sin_lugar["ig_prueba"] = {"estado": "cupo", "detalle":
                                       f"ya van {ig_prueba_hechos} reels de prueba esta noche (tope {ig_prueba_tope})"}
-        elif falta_prueba and publicar and _ig_sin_prueba:
-            falta_prueba = False
-            sin_lugar["ig_prueba"] = {"estado": "cupo", "detalle":
-                                      "Instagram no acepta más reels de prueba por hoy (tope de la API)"}
         pasos = [r for r in ORDEN if r in pendientes or (r == "web" and falta_web)
                  or (r == "fb_youtube" and falta_link) or (r == "ig_prueba" and falta_prueba)]
         for red in pasos:
@@ -2407,15 +2430,10 @@ def publicar_lote(carpeta: Path, redes=REDES, publicar: bool = False) -> dict:
                     continue
                 else:
                     res = _intentar(publicar_link_youtube, pieza, url_yt, url_web)
-            elif red == "ig_prueba" and publicar and (lugar_ig := _lugar_en_instagram()) and lugar_ig[0] <= 0:
-                fila[red] = {"estado": "cupo", "detalle": f"la cuenta ya uso {lugar_ig[1]} de sus {lugar_ig[2]} "
-                                                          f"posteos de 24 h; los últimos quedan para el bot del diario"}
-                _mostrar(red, fila[red])
-                continue
             elif red == "ig_prueba" and publicar:
-                # Sin intercalado: el reel de prueba no les llega a los seguidores.
+                # A la fila (12/11/2026): sin intercalado, el reel de prueba no les llega a los seguidores.
                 res = _publicar_red(red, pieza, mp4, carpeta, url_web)
-                if res.get("estado") in ("ok", "sin_confirmar"):
+                if res.get("estado") == "pendiente":
                     ig_prueba_hechos += 1
             elif not publicar:
                 res = _simular(red, pieza, mp4, url_web)

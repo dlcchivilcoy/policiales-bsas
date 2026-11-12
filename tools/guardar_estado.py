@@ -87,6 +87,12 @@ def combinar_nacionales(nuestro: dict, remoto: dict) -> dict:
             otro = union.get(clave)
             if not isinstance(otro, dict) or (v.get("cuando") or "") >= (otro.get("cuando") or ""):
                 union[clave] = v
+                # El reel de prueba lo anota la fila (12/11/2026) sin tocar el «cuando» de la pieza: un
+                # publicado nunca vuelve a «pendiente» por una copia vieja (la de la pasada de policiales).
+                if isinstance(otro, dict) and seccion == "piezas":
+                    r_otro, r_mio = otro.get("ig_prueba") or {}, v.get("ig_prueba") or {}
+                    if r_otro.get("estado") in EXITO and r_mio.get("estado") not in EXITO:
+                        union[clave] = dict(v, ig_prueba=r_otro)
         out[seccion] = union
     out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
     return out

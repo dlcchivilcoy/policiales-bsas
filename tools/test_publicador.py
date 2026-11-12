@@ -686,12 +686,14 @@ chequear("el link reemplaza la línea «📲 Más noticias» si estaba",
 
 
 # --- 17. Instagram de PRUEBA: los más virales de cada pasada (27/09) --------------------
-def preparar_virales(virales, meta=None, titulares=None):
+def preparar_virales(virales, meta=None, titulares=None, con_video=()):
     base, carpeta, reloj, meta = preparar(meta)
     piezas = []
     for i, v in enumerate(virales, 1):
         pz = pieza(i, "junin")
         pz["viral"] = v
+        if i in con_video:
+            pz["tenia_video"] = True
         if titulares:
             pz["guion"] = {"titular": titulares[i - 1][0], "bajada": titulares[i - 1][1]}
         piezas.append(pz)
@@ -728,20 +730,26 @@ chequear("lugares por pasada: 12:20 → 6 (hasta las 14:55), 21:20 → 5 (hasta 
          and PUB.lugares_en_la_pasada(datetime(2026, 10, 13, 23, 50, tzinfo=_AR)) == 6)
 os.environ["IG_POR_PASADA"] = "2"
 PUB._hora_ar = lambda: datetime(2026, 9, 26, 18, 10, tzinfo=_AR)
-base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7], con_video=(1, 2, 3))
 inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
 ig = [f["instagram"]["estado"] for f in inf["piezas"]]
 prueba = [(f.get("ig_prueba") or {}).get("estado") for f in inf["piezas"]]
 chequear("van las 2 más virales (9 y 7); la de 3 no", ig == ["omitida", "ok", "ok"])
-# 10/11/2026: la de 3 sale como reel de PRUEBA (lo ven los que no siguen la cuenta); las del feed no se repiten.
-chequear("reel de PRUEBA (10/11/2026): sale la que no fue al feed, las otras dos no se repiten",
-         prueba == ["ok", None, None] and len(meta.contenedores) == 3
-         and sum(1 for c_ in meta.contenedores if "trial_params" in c_) == 1
-         and json.loads(next(c_ for c_ in meta.contenedores if "trial_params" in c_)["trial_params"])
-         == {"graduation_strategy": "SS_PERFORMANCE"})
+# 10/11/2026: la de 3 va como reel de PRUEBA (lo ven los que no siguen la cuenta); las del feed no se repiten.
+# 12/11/2026: la pasada no lo publica, lo deja en la FILA (video y portada en el Release) y lo publica la fila.
+_fila = (inf["piezas"][0].get("ig_prueba") or {})
+chequear("reel de PRUEBA (12/11/2026): la que no fue al feed queda en la FILA con su video, sin tocar Instagram",
+         prueba == ["pendiente", None, None] and len(meta.contenedores) == 2
+         and not any("trial_params" in c_ for c_ in meta.contenedores)
+         and _fila.get("video_url", "").startswith("https://") and "caption" in _fila)
+shutil.rmtree(base)
+base, carpeta, reloj, meta = preparar_virales([3, 9, 7])
+inf = silencio(PUB.publicar_lote, carpeta, PUB.REDES, publicar=True)
+chequear("reel de PRUEBA (12/11/2026): un hecho SIN video del medio (reel con foto) no va a la fila",
+         not any(f.get("ig_prueba") for f in inf["piezas"]))
 os.environ["IG_PRUEBA_POLICIALES"] = "0"
-chequear("IG_PRUEBA_POLICIALES=0 apaga el reel de prueba; de fábrica son 5",
-         PUB.ig_prueba_policiales() == 0 and PUB.IG_PRUEBA_POLICIALES_DEFAULT == 5)
+chequear("IG_PRUEBA_POLICIALES=0 apaga el reel de prueba; de fábrica, hasta 11 a la fila por noche",
+         PUB.ig_prueba_policiales() == 0 and PUB.IG_PRUEBA_POLICIALES_DEFAULT == 11)
 os.environ.pop("IG_PRUEBA_POLICIALES")
 _ahora_p = PUB._ahora()
 _led_p = {f"k{i}": {"ig_prueba": {"estado": "ok", "cuando": (_ahora_p - timedelta(hours=h)).isoformat()}}

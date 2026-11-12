@@ -229,7 +229,7 @@ def armar_reel(guion, salida, foto=None, clip=None, **k):
     Path(salida).parent.mkdir(parents=True, exist_ok=True)
     Path(salida).write_bytes(b"mp4")
     fotos_reel[guion["titular"][:20]] = str(foto)
-    return {"archivo": str(salida), "duracion": 12.9, "placa": None}
+    return {"archivo": str(salida), "duracion": 12.9, "placa": None, "con_video": bool(clip), "con_foto": not clip}
 
 
 # La foto: el epígrafe por URL y una descarga que deja una foto de verdad (la usa el compositor).
@@ -998,51 +998,99 @@ chequear("agenda 04 (v12): el Short va adentro de la nota de la web, y nada a Fa
          sum(1 for l in llamadas if l[0] == "web" and l[2]) == 5
          and not {l[0] for l in llamadas} & {"facebook"}
          and not any(k in p for p in inf_s["piezas"] for k in ("facebook", "instagram")))
-# 10/11/2026: cada viral con Short sale además como reel de PRUEBA en Instagram (hasta 5 por día), A LAS 19:
-# la de las 4 deja el video en el Release y el reel «pendiente»; corrida_ig_prueba los publica.
+# 10/11/2026: cada viral con Short sale además como reel de PRUEBA en Instagram. Desde el 12/11/2026 va a la
+# FILA ÚNICA: la de las 4 deja el video en el Release y el reel «pendiente»; la fila publica uno cada 30 minutos
+# desde las 17, primero las virales y después los policiales, y solo reels hechos con VIDEO.
 _prueba = [p for p in inf_s["piezas"] if (p.get("ig_prueba") or {}).get("estado") == "pendiente"]
-chequear("virales (10/11/2026): a las 4 las 5 con Short dejan su reel de PRUEBA pendiente para las 19, sin publicar",
+chequear("virales (12/11/2026): a las 4 las 5 con Short (con video) dejan su reel de PRUEBA en la fila, sin publicar",
          len(_prueba) == 5 and all(p.get("youtube") for p in _prueba)
          and all(p["ig_prueba"].get("video_url", "").startswith("https://gh/prueba_") for p in _prueba)
-         and all(p["ig_prueba"].get("para") == "19:00" for p in _prueba)
+         and all(p["ig_prueba"].get("para") == "fila de las 17" for p in _prueba)
          and not any(l[0] == "ig_publicar" for l in llamadas))
 chequear("virales: las solo web no llevan reel de prueba",
          not any("ig_prueba" in p for p in inf_s["piezas"] if not p.get("youtube")))
+# Los policiales de la fila viven en la memoria de policiales: un ledger de prueba.
+_ledger_antes = PUB.LEDGER
+PUB.LEDGER = estado_tmp / "publicados_fila.json"
+_dia_v = _lun(4).date()
+_utc = lambda h: (datetime.combine(_dia_v, datetime.strptime(h, "%H:%M").time(), PA.TZ_AR)  # noqa: E731
+                  .astimezone(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds"))
+PUB.guardar_ledger({
+    "pol1": {"titular": "Choque en la ruta 5", "ultimo": datetime.now().isoformat(timespec="seconds"),
+             "ig_prueba": {"estado": "pendiente", "cuando": _utc("19:40"), "video_url": "https://gh/pol1.mp4",
+                           "caption": "Choque", "ubicacion": "123"}},
+    "pol0": {"titular": "Robo en Bragado", "ultimo": datetime.now().isoformat(timespec="seconds"),
+             "ig_prueba": {"estado": "pendiente", "cuando": _utc("19:10"), "video_url": "https://gh/pol0.mp4",
+                           "caption": "Robo"}}})
 _ig_params = []
-_cl_antes, _pc_antes, _dormir_antes, _ahora_antes = PUB._contenedor_listo, PUB._publicar_contenedor, PA._dormir, PA._ahora
+_cl_antes, _pc_antes, _ahora_antes = PUB._contenedor_listo, PUB._publicar_contenedor, PA._ahora
 PUB._contenedor_listo = lambda uid, tok, params: _ig_params.append(dict(params)) or "c"
 PUB._publicar_contenedor = lambda uid, tok, cid, cap: f"m{len(_ig_params)}"
-_esperas = []
-PA._dormir = lambda seg: _esperas.append(seg)
-_dia_v = _lun(4).date()
-PA._ahora = lambda: datetime.combine(_dia_v, datetime.strptime("18:58", "%H:%M").time(), PA.TZ_AR)
-_inf_19 = PA.corrida_ig_prueba(True)
-_mem_19 = PA.cargar()
-_hechas = [p for p in _mem_19["piezas"].values() if _ok_red(p, "ig_prueba")]
-chequear("virales a las 19: espera hasta las 19:00 y publica los 5 como reel de PRUEBA (sin colab)",
-         _inf_19["pendientes"] == 5 and len(_hechas) == 5 and _esperas == [120]
-         and len(_ig_params) == 5 and all(json.loads(x["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"}
-                                          and "share_to_feed" not in x and "collaborators" not in x
-                                          for x in _ig_params)
-         and all(x["video_url"].startswith("https://gh/prueba_") for x in _ig_params))
-_ig_params.clear()
-_inf_19b = PA.corrida_ig_prueba(True)
-chequear("virales a las 19: el respaldo de las 19:20 no repite nada", _inf_19b["pendientes"] == 0 and not _ig_params)
-PUB._contenedor_listo, PUB._publicar_contenedor, PA._dormir, PA._ahora = _cl_antes, _pc_antes, _dormir_antes, _ahora_antes
+
+
+def _turno_a_las(h):
+    PA._ahora = lambda: datetime.combine(_dia_v, datetime.strptime(h, "%H:%M").time(), PA.TZ_AR)
+    return PA.corrida_ig_prueba(True)
+
+
+_inf_1650 = _turno_a_las("16:50")
+chequear("fila: antes de las 17 no sale nada", not _ig_params and "todavía no" in _inf_1650["turno"])
+_inf_1702 = _turno_a_las("17:02")
+chequear("fila: a las 17 sale UNA, una viral (las virales primero), como reel de PRUEBA sin colab",
+         len(_ig_params) == 1 and _ig_params[0]["video_url"].startswith("https://gh/prueba_")
+         and json.loads(_ig_params[0]["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"}
+         and "collaborators" not in _ig_params[0] and _inf_1702["pendientes"] == 7)
+_turno_a_las("17:15")
+chequear("fila: la corrida de las 17:15 no publica (el turno de las 17:00 ya tiene su reel)", len(_ig_params) == 1)
+for _h in ("17:31", "18:00", "18:30", "19:00"):
+    _turno_a_las(_h)
+chequear("fila: 17:30, 18, 18:30 y 19 → las otras 4 virales, de a una",
+         len(_ig_params) == 5 and all(x["video_url"].startswith("https://gh/prueba_") for x in _ig_params))
+_turno_a_las("19:45")
+_turno_a_las("19:50")
+chequear("fila: terminadas las virales sigue el policial que espera hace más, con su ubicación; y una corrida "
+         "atrasada (19:45, turno de las 19:30) no deja salir otro pegado a los 5 minutos",
+         len(_ig_params) == 6 and _ig_params[5]["video_url"] == "https://gh/pol0.mp4"
+         and "location_id" not in _ig_params[5])
+_led = PUB.cargar_ledger()
+chequear("fila: el policial queda publicado en la memoria de policiales",
+         _led["pol0"]["ig_prueba"]["estado"] == "ok" and _led["pol1"]["ig_prueba"]["estado"] == "pendiente")
+_turno_a_las("20:16")
+chequear("fila: el turno de las 20 (la corrida de las 20:16: la de las 20:01 quedaba pegada a la anterior) → el otro policial, con la ubicación del hecho",
+         len(_ig_params) == 7 and _ig_params[6]["video_url"] == "https://gh/pol1.mp4"
+         and _ig_params[6].get("location_id") == "123")
+_inf_vacia = _turno_a_las("20:46")
+chequear("fila: sin nada en la fila no se publica", len(_ig_params) == 7 and _inf_vacia["pendientes"] == 0)
+PUB._contenedor_listo, PUB._publicar_contenedor, PA._ahora = _cl_antes, _pc_antes, _ahora_antes
+PUB.LEDGER = _ledger_antes
+# Los turnos, sueltos: 11 por día, uno por media hora de 17 a 22, y lo vencido no se intenta.
+_a = lambda h: datetime.combine(_dia_v, datetime.strptime(h, "%H:%M").time(), PA.TZ_AR)  # noqa: E731
+chequear("turnos: con 11 hoy ya no sale otro; a las 23 tampoco; a las 22:30 se recupera el de las 22",
+         "tope 11" in PA.turno_ig_prueba(_a("21:59"), [_a("16:00")] * 11)
+         and "último turno" in PA.turno_ig_prueba(_a("23:00"), [])
+         and PA.turno_ig_prueba(_a("22:30"), [_a("17:00")] * 10) == "")
+_, _fila_v, _venc = PA.fila_ig_prueba(
+    {"piezas": {"vieja": {"dia": (_dia_v - timedelta(days=1)).isoformat(),
+                          "ig_prueba": {"estado": "pendiente", "video_url": "https://gh/v",
+                                        "cuando": _a("04:00").isoformat()}}}},
+    {"polvieja": {"ig_prueba": {"estado": "pendiente", "video_url": "https://gh/p", "cuando": _utc("19:00")}}},
+    _a("17:00") + timedelta(days=1))
+chequear("fila: la viral de ayer y el policial de hace 22 h están vencidos (el Release los borra a las 24 h)",
+         not _fila_v and len(_venc) == 2)
 _c = PA.ig_prueba_virales()
 os.environ["NAC_IG_PRUEBA_VIRALES"] = "0"
-chequear("virales: 5 reels de prueba por día de fábrica; NAC_IG_PRUEBA_VIRALES=0 los apaga",
-         _c == 5 and PA.ig_prueba_virales() == 0)
+chequear("virales: hasta 11 a la fila por día de fábrica; NAC_IG_PRUEBA_VIRALES=0 los apaga",
+         _c == 11 and PA.ig_prueba_virales() == 0 and PA.ig_prueba_por_dia() == 11)
 os.environ.pop("NAC_IG_PRUEBA_VIRALES")
 _mem_p = {"piezas": {f"u{i}": {"dia": "2026-11-10", "ig_prueba": {"estado": "ok" if i % 2 else "pendiente"}}
                      for i in range(5)}}
-chequear("virales: con 5 reels de prueba hoy (publicados o pendientes), ya no sale otro",
+chequear("virales: cuenta las de hoy (publicadas o en la fila)",
          PA._ig_prueba_hoy(_mem_p, "2026-11-10") == 5 and PA._ig_prueba_hoy(_mem_p, "2026-11-11") == 0)
 os.environ["NAC_IG_PRUEBA_HORA"] = "20:30"
-chequear("virales: NAC_IG_PRUEBA_HORA cambia la hora (19:00 de fábrica; una hora mal escrita no rompe)",
+chequear("fila: NAC_IG_PRUEBA_HORA cambia el primer turno (17:00 de fábrica; una hora mal escrita no rompe)",
          PA.ig_prueba_hora() == "20:30")
 os.environ["NAC_IG_PRUEBA_HORA"] = "a la noche"
-chequear("...", PA.ig_prueba_hora() == "19:00")
+chequear("...", PA.ig_prueba_hora() == "17:00")
 os.environ.pop("NAC_IG_PRUEBA_HORA")
 os.environ["NAC_SHORT_VIRALES"] = "0"
 chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "virales_short" not in AGE.topes(_lun(4)))

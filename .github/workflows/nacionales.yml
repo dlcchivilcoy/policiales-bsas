@@ -8,9 +8,11 @@ name: Noticias nacionales
 #          las 10 generales del día para Chivilcoy, a las 23). Para volver: hora 22 en cron-job.org (job 8677866)
 #          y el respaldo «20 1 * * *» acá abajo.
 #
-#   19:00  REELS DE PRUEBA de las virales con Short que dejó la de las 4 (10/11/2026). La dispara el
-#          `schedule:` de GitHub (19:00 y respaldo 19:20; en esta PC no estaba la clave de cron-job.org). Para
-#          la hora exacta: un job de cron-job.org con inputs {"modo": "ig_prueba"}.
+#   17:00-22:00  FILA DE REELS DE PRUEBA (12/11/2026): uno cada 30 minutos (11 por día), primero las virales
+#          con Short que dejó la de las 4 y después los policiales con video. El `schedule:` de GitHub pasa cada
+#          15 minutos de 17:00 a 22:45: cada corrida publica uno solo si su turno de media hora todavía no tiene
+#          el suyo (nacionales/pasada.py → turno_ig_prueba), así una corrida que GitHub atrasa o se saltea no
+#          pierde el turno. A mano: inputs {"modo": "ig_prueba"}.
 #
 # Los policiales siguen en reels.yml (17 y 20).
 #
@@ -20,8 +22,8 @@ name: Noticias nacionales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 7 * * *"    # 04:20 Argentina (respaldo de la de las 4, solo web)
-    - cron: "0 22 * * *"    # 19:00 Argentina: reels de prueba de las virales (10/11/2026; GitHub puede demorar unos minutos)
-    - cron: "20 22 * * *"   # 19:20 Argentina (respaldo de los reels de prueba de las virales)
+    - cron: "*/15 20-23 * * *"   # 17:00-20:45 Argentina: un turno de la fila de reels de prueba (12/11/2026)
+    - cron: "*/15 0-1 * * *"     # 21:00-22:45 Argentina: ídem
     # (22:20 Argentina —«20 1 * * *», respaldo del carrusel de las 22— la sacó el editor el 25/10/2026: carrusel apagado)
   workflow_dispatch:
     inputs:
@@ -32,7 +34,7 @@ on:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
       modo:
-        description: '"ig_prueba" = solo los reels de prueba de las virales (19:00, cron-job.org). Vacío = la agenda'
+        description: '"ig_prueba" = un turno de la fila de reels de prueba (17 a 22). Vacío = la agenda'
         default: ""
 
 # Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
@@ -89,8 +91,11 @@ jobs:
           NAC_FB_POR_PASADA: ${{ vars.NAC_FB_POR_PASADA }}
           NAC_FB_POR_DIA: ${{ vars.NAC_FB_POR_DIA }}
           NAC_INSTAGRAM: ${{ vars.NAC_INSTAGRAM }}
-          # Reel de PRUEBA de las virales de las 4 (10/11/2026): hasta 5 por día; 0 lo apaga.
+          # Reels de PRUEBA (fila del 12/11/2026): virales a la fila (11), los de Instagram por día (11) y la franja.
           NAC_IG_PRUEBA_VIRALES: ${{ vars.NAC_IG_PRUEBA_VIRALES }}
+          IG_PRUEBA_POR_DIA: ${{ vars.IG_PRUEBA_POR_DIA }}
+          NAC_IG_PRUEBA_HORA: ${{ vars.NAC_IG_PRUEBA_HORA }}
+          NAC_IG_PRUEBA_FIN: ${{ vars.NAC_IG_PRUEBA_FIN }}
           NAC_MINUTOS: ${{ vars.NAC_MINUTOS }}
           NAC_MINUTOS_FINDE: ${{ vars.NAC_MINUTOS_FINDE }}
           NAC_CARRUSEL_FB: ${{ vars.NAC_CARRUSEL_FB }}
@@ -106,9 +111,9 @@ jobs:
         run: |
           set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
           ARGS="--agenda"
-          # Los reels de prueba de las virales (10/11/2026): cron-job.org a las 19:00 con modo=ig_prueba, y el
-          # respaldo de las 19:20. Si ya salieron, no queda nada pendiente y termina sin hacer nada.
-          if [ "$MODO_INPUT" = "ig_prueba" ] || [ "$CRON_GH" = "0 22 * * *" ] || [ "$CRON_GH" = "20 22 * * *" ]; then
+          # La fila de reels de prueba (12/11/2026): cada 15 minutos de 17 a 22:45. Si el turno ya tiene su reel,
+          # termina sin hacer nada.
+          if [ "$MODO_INPUT" = "ig_prueba" ] || [ "$CRON_GH" = "*/15 20-23 * * *" ] || [ "$CRON_GH" = "*/15 0-1 * * *" ]; then
             ARGS="--ig-prueba"
           fi
           if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then
@@ -132,13 +137,14 @@ jobs:
         # Solo los archivos de nacionales: tools/guardar_estado.py los combina con lo que guardó policiales.
         if: always()
         run: |
-          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json estado/auditoria.json)" ]; then
+          if [ -z "$(git status --porcelain estado/nacionales.json estado/tema_reels.json estado/buzon_distribuidor.json estado/auditoria.json estado/publicados.json)" ]; then
             echo "La memoria de nacionales no cambió."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json auditoria.json
+          # publicados.json: la fila de reels de prueba anota ahí los policiales que publica (12/11/2026).
+          python tools/guardar_estado.py --solo nacionales.json tema_reels.json buzon_distribuidor.json auditoria.json publicados.json
 
       - name: Avisar en un issue
         if: failure()
