@@ -74608,7 +74608,7 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T18:07:52-03:00",
+  "actualizado": "2026-11-13T19:00:34-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -79695,6 +79695,43 @@
               },
               "facebook": {
                 "id": "2186039302267131"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-13T19:00:00-03:00": {
+      "dia": "2026-11-13",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué te encontraste en la recorrida?",
+          "opciones": [],
+          "publico": "agronomos",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18019944530967594"
+            },
+            "facebook": {
+              "id": "1854108276020223"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18019944530967594"
+              },
+              "facebook": {
+                "id": "1854108276020223"
               }
             }
           ]
