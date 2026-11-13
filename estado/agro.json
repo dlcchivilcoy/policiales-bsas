@@ -74035,7 +74035,7 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T13:06:10-03:00",
+  "actualizado": "2026-11-13T14:00:52-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -79085,6 +79085,43 @@
               },
               "facebook": {
                 "id": "1840583423732819"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-13T14:00:00-03:00": {
+      "dia": "2026-11-13",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué le estás revisando al fierro antes de salir?",
+          "opciones": [],
+          "publico": "maquinistas",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18116280622877986"
+            },
+            "facebook": {
+              "id": "2186039302267131"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18116280622877986"
+              },
+              "facebook": {
+                "id": "2186039302267131"
               }
             }
           ]
