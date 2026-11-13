@@ -35604,6 +35604,154 @@
         54,
         37
       ]
+    },
+    "02e5ccfb61aa294f": {
+      "conversacion": 3,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 21,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "sorgo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un evento institucional en Chaco que no le cambia nada al productor de Chivilcoy y la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "319022c3028b6a2e": {
+      "conversacion": 12,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 49,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "carne vacuna",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Analiza el consumo y precio de la carne, un tema que toca el bolsillo de todos pero es muy general.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8cb766c868a29bee": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 28,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "economías regionales",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un informe macro de Coninagro sin impacto directo ni historia cercana para el vecino de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f7f6b4cf9f6493e7": {
+      "conversacion": 10,
+      "historia_concreta": 17,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 53,
+      "commercial_score": 42,
+      "subtema": "ganaderia",
+      "tema": "cordero",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia de esfuerzo y producción local de un productor, aunque queda lejos geográficamente en Misiones.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        53
+      ]
+    },
+    "79d3c2d4423a03b5": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 35,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "horticultura",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Reitera el informe de Coninagro enfocado en la suba de precios de la horticultura; poco gancho local.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e151c694f054deaa": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 45,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Anuncio de una plataforma digital para hacienda que apunta más a futuro (2027) y no resuelve el día a día.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "035a2222ecdb21e2": {
+      "conversacion": 10,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 60,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "cazón",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de pueblo vecino (25 de Mayo) con participación de la Escuela Agraria, muy afín al público de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        51
+      ]
     }
   },
   "indice": {
@@ -38063,7 +38211,16 @@
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-consumo-8": "2026-11-13",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/el-petroleo-1": "2026-11-13",
       "https://bcr.com.ar/es/mercados/investigacion-y-desarrollo/informativo-semanal/noticias-informativo-semanal/claves-de-la": "2026-11-13",
-      "https://bragadotv.com.ar/noticias/2026/11/13/26984-alerta-naranja-por-tormentas-fuertes-para-bragado-y-la-regin-advierten-por-rfagas-de-hasta-90-kmh-y-posible-cada-de-granizo": "2026-11-13"
+      "https://bragadotv.com.ar/noticias/2026/11/13/26984-alerta-naranja-por-tormentas-fuertes-para-bragado-y-la-regin-advierten-por-rfagas-de-hasta-90-kmh-y-posible-cada-de-granizo": "2026-11-13",
+      "https://infocampo.com.ar/mas-sorgo-un-encuentro-para-descubrir-su-potencial-en-el-norte-del-pais": "2026-11-13",
+      "https://infocampo.com.ar/carne-vacuna-el-presupuesto-familiar-le-pone-un-techo-a-los-precios-y-anticipa-un-cierre-de-ano-atipico": "2026-11-13",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-13-noviembre-2026": "2026-11-13",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-13-noviembre-2026": "2026-11-13",
+      "https://agrositio.com.ar/noticia/249314-semaforo-de-economias-regionales-nueva-produccion-en-amarillo.html": "2026-11-13",
+      "https://bichosdecampo.com/el-infatigable-gabriel-montiel-logro-que-el-cordero-misionero-llegue-a-las-gondolas-de-posadas-en-paquetes-de-500-gramos-y-ahora-quiere-sumar-pequenos-productores-al-negocio": "2026-11-13",
+      "https://bichosdecampo.com/la-unica-buena-del-aumento-de-precios-con-subas-de-mas-del-50-el-sector-horticola-mejora-y-abandona-al-menos-por-ahora-el-selecto-grupo-de-economias-regionales-en-rojo": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/acuerdo-lanzaron-una-plataforma-digital-para-comprar-y-vender-hacienda-destinada-a-faena-nid13112026": "2026-11-13",
+      "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal": "2026-11-13"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -40521,7 +40678,16 @@
       "el consumo de maiz 2025 26 para forraje en argentina se estima en 15 6 mt": "2026-11-13",
       "el petroleo brent retrocede desde sus maximos en un contexto de elevada volatilidad financiera": "2026-11-13",
       "claves de la comercializacion del maiz en argentina": "2026-11-13",
-      "alerta naranja por tormentas fuertes para bragado y la region advierten por rafagas de hasta 90 km h y posible caida de granizo": "2026-11-13"
+      "alerta naranja por tormentas fuertes para bragado y la region advierten por rafagas de hasta 90 km h y posible caida de granizo": "2026-11-13",
+      "mas sorgo un encuentro para descubrir su potencial en el norte del pais": "2026-11-13",
+      "carne vacuna el presupuesto familiar le pone un techo a los precios y anticipa un cierre de ano atipico": "2026-11-13",
+      "dolar blue a cuanto cotizan hoy en mendoza 13 noviembre 2026": "2026-11-13",
+      "euro blue hoy precio y cotizacion de este 13 noviembre 2026": "2026-11-13",
+      "semaforo de economias regionales nueva produccion en amarillo": "2026-11-13",
+      "el infatigable gabriel montiel logro que el cordero misionero llegue a las gondolas de posadas en paquetes de 500 gramos y ahora quiere sumar pequenos productores al negocio": "2026-11-13",
+      "la unica buena del aumento de precios con subas de mas del 50 el sector horticola mejora y abandona al menos por ahora el selecto grupo de economias regionales en rojo": "2026-11-13",
+      "acuerdo lanzaron una plataforma digital para comprar y vender hacienda destinada a faena": "2026-11-13",
+      "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal": "2026-11-13"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -42979,7 +43145,16 @@
       "d734d512c59b6e63": "2026-11-13",
       "7398beaf4296bf51": "2026-11-13",
       "0f6cc5a704374365": "2026-11-13",
-      "ae5b23566f2a4505": "2026-11-13"
+      "ae5b23566f2a4505": "2026-11-13",
+      "02e5ccfb61aa294f": "2026-11-13",
+      "319022c3028b6a2e": "2026-11-13",
+      "d203787a4ab5773f": "2026-11-13",
+      "721aadef6fa8f49e": "2026-11-13",
+      "8cb766c868a29bee": "2026-11-13",
+      "f7f6b4cf9f6493e7": "2026-11-13",
+      "79d3c2d4423a03b5": "2026-11-13",
+      "e151c694f054deaa": "2026-11-13",
+      "035a2222ecdb21e2": "2026-11-13"
     }
   },
   "elegidas": [
@@ -73061,9 +73236,138 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6b1f9a2d40b2_portada.jpg"
+    },
+    {
+      "id": "0109c98019f1",
+      "cuando": "2026-11-13T13:00-03:00",
+      "titulo_original": "Contra una plaga histórica: Senasa renovó el plan de lucha contra las langostas y tucuras luego de 60 años, y recordó que los productores están obligados a combatirlas",
+      "descripcion": "Con disposiciones que llevaban más de 60 años vigentes, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) decidió actualizar las reglas para combatir la langosta sudamericana y las tucuras, dos plagas históricas que pueden provocar importantes daños en cultivos y pasturas. La medida",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/contra-una-plaga-historica-senasa-renovo-el-plan-de-lucha-contra-las-langostas-y-tucuras-luego-de-60-anos-y-recordo-que-los-productores-estan-obligados-a-combatirlas/",
+      "titular": "Senasa renueva el plan de control contra langostas y tucuras",
+      "volanta": "Sanidad",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 78,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "langostas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Actualización de plan sanitario obligatorio contra plagas que afecta directamente al productor.",
+        "tema_doc": "sanidad",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-13T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3d7fefe4-2683-4a65-a8b8-fa66273b5a1b",
+          "slug": "el-senasa-renovo-el-plan-de-control-contra-langostas-y-tucuras-570155",
+          "url": "https://www.diariolacampaña.com.ar/n/el-senasa-renovo-el-plan-de-control-contra-langostas-y-tucuras-570155",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18116736236038300",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1758820692915594",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18065339879799108"
+        },
+        "historia_facebook": {
+          "id": "2312409219301000"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0109c98019f1_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7b7d5f0b933b",
+      "rep": {
+        "id": "7b7d5f0b933b",
+        "fuente": "La Mañana (25 de Mayo)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lamanana.com.ar/feed/",
+        "url": "https://www.lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal/",
+        "canonical_url": "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal",
+        "titulo": "Cazón relanza sus atractivos y suma el Paseo de los Polinizadores en el Vivero Municipal",
+        "titulo_norm": "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal",
+        "descripcion": "El tradicional \"Pueblo del Millón de Árboles\" combina sus 40 hectáreas de bosque preservado, propuestas gastronómicas y turismo de bienestar con una reciente iniciativa educativa y ambiental desarrollada junto a la Escuela Agraria.",
+        "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-12.57.36.jpeg",
+        "autor": "Andrés Alvarez",
+        "publicado": "2026-11-13T12:01-03:00",
+        "capturado": "2026-11-13T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "035a2222ecdb21e2",
+        "localidad_medio": "25 de Mayo"
+      },
+      "grupo": [
+        {
+          "id": "7b7d5f0b933b",
+          "fuente": "La Mañana (25 de Mayo)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lamanana.com.ar/feed/",
+          "url": "https://www.lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal/",
+          "canonical_url": "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal",
+          "titulo": "Cazón relanza sus atractivos y suma el Paseo de los Polinizadores en el Vivero Municipal",
+          "titulo_norm": "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal",
+          "descripcion": "El tradicional \"Pueblo del Millón de Árboles\" combina sus 40 hectáreas de bosque preservado, propuestas gastronómicas y turismo de bienestar con una reciente iniciativa educativa y ambiental desarrollada junto a la Escuela Agraria.",
+          "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-12.57.36.jpeg",
+          "autor": "Andrés Alvarez",
+          "publicado": "2026-11-13T12:01-03:00",
+          "capturado": "2026-11-13T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "035a2222ecdb21e2",
+          "localidad_medio": "25 de Mayo"
+        }
+      ],
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 8,
+        "impacto_economico": 3,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 60,
+        "commercial_score": 45,
+        "subtema": "agro",
+        "tema": "cazón",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Nota de pueblo vecino (25 de Mayo) con participación de la Escuela Agraria, muy afín al público de la zona.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          51
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-13T13:00-03:00"
+    },
     {
       "id": "e895ce4abe8c",
       "rep": {
@@ -73258,71 +73562,6 @@
         "tema_doc": "campana",
         "urgente": false,
         "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T10:00-03:00"
-    },
-    {
-      "id": "0109c98019f1",
-      "rep": {
-        "id": "0109c98019f1",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/contra-una-plaga-historica-senasa-renovo-el-plan-de-lucha-contra-las-langostas-y-tucuras-luego-de-60-anos-y-recordo-que-los-productores-estan-obligados-a-combatirlas/",
-        "canonical_url": "https://bichosdecampo.com/contra-una-plaga-historica-senasa-renovo-el-plan-de-lucha-contra-las-langostas-y-tucuras-luego-de-60-anos-y-recordo-que-los-productores-estan-obligados-a-combatirlas",
-        "titulo": "Contra una plaga histórica: Senasa renovó el plan de lucha contra las langostas y tucuras luego de 60 años, y recordó que los productores están obligados a combatirlas",
-        "titulo_norm": "contra una plaga historica senasa renovo el plan de lucha contra las langostas y tucuras luego de 60 anos y recordo que los productores estan obligados a combatirlas",
-        "descripcion": "Con disposiciones que llevaban más de 60 años vigentes, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) decidió actualizar las reglas para combatir la langosta sudamericana y las tucuras, dos plagas históricas que pueden provocar importantes daños en cultivos y pasturas. La medida incluye la aprobación de un nuevo plan de contingencia y ratifica […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/04/langostas.webp",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-13T09:07-03:00",
-        "capturado": "2026-11-13T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f579ba1530081f53",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "0109c98019f1",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/contra-una-plaga-historica-senasa-renovo-el-plan-de-lucha-contra-las-langostas-y-tucuras-luego-de-60-anos-y-recordo-que-los-productores-estan-obligados-a-combatirlas/",
-          "canonical_url": "https://bichosdecampo.com/contra-una-plaga-historica-senasa-renovo-el-plan-de-lucha-contra-las-langostas-y-tucuras-luego-de-60-anos-y-recordo-que-los-productores-estan-obligados-a-combatirlas",
-          "titulo": "Contra una plaga histórica: Senasa renovó el plan de lucha contra las langostas y tucuras luego de 60 años, y recordó que los productores están obligados a combatirlas",
-          "titulo_norm": "contra una plaga historica senasa renovo el plan de lucha contra las langostas y tucuras luego de 60 anos y recordo que los productores estan obligados a combatirlas",
-          "descripcion": "Con disposiciones que llevaban más de 60 años vigentes, el Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) decidió actualizar las reglas para combatir la langosta sudamericana y las tucuras, dos plagas históricas que pueden provocar importantes daños en cultivos y pasturas. La medida incluye la aprobación de un nuevo plan de contingencia y ratifica […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2025/04/langostas.webp",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-13T09:07-03:00",
-          "capturado": "2026-11-13T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f579ba1530081f53",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 78,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "langostas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Actualización de plan sanitario obligatorio contra plagas que afecta directamente al productor.",
-        "tema_doc": "sanidad",
-        "urgente": true,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
@@ -73796,8 +74035,8 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T11:36:34-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-13T13:06:10-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
