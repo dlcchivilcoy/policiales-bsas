@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-13T00:31:22.000Z",
+  "actualizado": "2026-11-13T22:02:14.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://semanariodejunin.com.ar/nota/76483/crimen-en-mechita-una-pista-desde-la-carcel-permitio-esclarecer-el-asesinato",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-11T22:01:44.000Z",
-      "titulo": "Apresaron a dos hombres por el homicidio de Ezequiel Caraballo en Bragado",
-      "descripcion": "Dos sospechosos quedaron detenidos tras el hallazgo del cuerpo de Ezequiel Caraballo, de 27 años, en un canal de la localidad de Mechita. Una serie de mensajes enviados desde una prisión orientó la pesquisa.",
-      "texto_tiktok": "La investigación por el asesinato de Ezequiel Caraballo avanzó gracias a una pista clave aportada desde un penal bonaerense.\n\nEl cuerpo de la víctima fue hallado en el canal Cafiero tras diversos rastrillajes policiales y de bomberos.\n\nDos hombres de 34 y 37 años fueron arrestados y se negaron a declarar ante la Justicia en el marco de la causa.\n\n📲 Más noticias de Mechita en www.diariolacampaña.com.ar\n\n#Mechita #Policiales #Homicidio #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-11_2134_02_junin_apresaron-a-dos-hombres-por-el.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-esclarecieron-el-crimen-de-ezequiel-caraballo-en-541598",
-      "youtube_url": "https://youtube.com/shorts/TkPc9fnKVa4",
-      "prioridad": 9,
-      "urgente": true,
-      "localidad": "Mechita",
-      "volanta": "Crimen en Mechita",
-      "categoria": "homicidio",
-      "distancia_km": 40.8,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.lamanana.com.ar/unos-35-efectivos-policiales-fueron-parte-del-operativo-de-seguridad-en-lujan/",
       "origen": "policiales",
@@ -211,6 +187,30 @@
       "volanta": "Robo en Chacabuco",
       "categoria": "robo",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.lamanana.com.ar/secuestraron-seis-vehiculos-y-detectaron-un-caso-de-alcoholemia-en-operativos-de-transito/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-13T22:02:14.000Z",
+      "titulo": "Seis vehículos secuestrados y un caso de alcoholemia en Roque Pérez",
+      "descripcion": "Durante el fin de semana largo se realizaron controles vehiculares que derivaron en la retención de seis rodados, un caso positivo de alcohol en sangre y el hallazgo de una moto robada.",
+      "texto_tiktok": "El municipio desplegó controles de tránsito durante el fin de semana largo en Roque Pérez.\n\nComo resultado, seis vehículos fueron retenidos por diversas infracciones y se detectó un test de alcoholemia positivo.\n\nAdemás, la policía halló en la esquina de San Martín y San Juan una motocicleta Honda Wave robada.\n\n📲 Más noticias de Roque Pérez en www.diariolacampaña.com.ar\n\n#RoquePerez #Operativo #Policia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-13_2134_03_25-de-mayo_seis-veh-culos-secuestrados-y-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/roque-perez-seis-vehiculos-secuestrados-y-una-moto-robada-970dc5",
+      "youtube_url": "https://youtube.com/shorts/ptPzcCh6URw",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Roque Pérez",
+      "volanta": "Operativos viales en Roque Pérez",
+      "categoria": "operativo_policial",
+      "distancia_km": 83.7,
       "radio_ok": true,
       "plataformas": [
         "x",
