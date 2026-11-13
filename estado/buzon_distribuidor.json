@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T23:02:13.000Z",
+  "actualizado": "2026-11-13T23:31:43.000Z",
   "eventos": [
     {
       "id": "policiales:https://diarioelsalado.com.ar/2026/11/la-autopsia-confirmo-que-murio-por-un-fuerte-golpe-en-la-cabeza-antes-de-ser-mutilado/",
@@ -211,6 +211,30 @@
       "volanta": "Confrontación en Chacabuco",
       "categoria": "otro_policial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diarioelsalado.com.ar/2026/11/se-incendio-una-camioneta-en-el-camino-real-alberti-benitez/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-13T23:31:43.000Z",
+      "titulo": "Se prendió fuego una camioneta en el camino real Alberti-Benítez",
+      "descripcion": "El rodado sufrió un desperfecto mecánico durante la medianoche del jueves. Su conductor y el acompañante salieron ilesos. Bomberos trabajaron en el lugar.",
+      "texto_tiktok": "Una camioneta Peugeot Boxer se incendió por completo este jueves cerca de la medianoche sobre el camino real que conecta las localidades de Alberti y Benítez.\n\nEl fuego se desató alrededor de las 23:50 y las llamas fueron combatidas por una dotación de Bomberos Voluntarios de Alberti que acudió rápidamente tras un llamado al CPR local.\n\nLas autoridades informaron que el siniestro se habría originado a raíz de un desperfecto mecánico en el rodado, que es propiedad de un vecino de la zona.\n\nA pesar de la magnitud del fuego que afectó al vehículo, tanto el conductor como su acompañante lograron ponerse a salvo y resultaron ilesos.\n\n📲 Más noticias de Alberti en www.diariolacampaña.com.ar\n\n#Alberti #Incendio #Bomberos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-13_2134_07_alberti_se-prendi-fuego-una-camioneta-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/alberti-una-camioneta-se-incendio-en-el-camino-real-a-benitez-y-aa6d14",
+      "youtube_url": "https://youtube.com/shorts/e2UrpOpOwTQ",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Alberti",
+      "volanta": "Incendio en el camino real Alberti-Benítez",
+      "categoria": "incendio",
+      "distancia_km": 28.1,
       "radio_ok": true,
       "plataformas": [
         "x",
