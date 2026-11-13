@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T22:02:14.000Z",
+  "actualizado": "2026-11-13T22:31:31.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.lamanana.com.ar/unos-35-efectivos-policiales-fueron-parte-del-operativo-de-seguridad-en-lujan/",
@@ -211,6 +211,30 @@
       "volanta": "Operativos viales en Roque Pérez",
       "categoria": "operativo_policial",
       "distancia_km": 83.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/13/26984-alerta-naranja-por-tormentas-fuertes-para-bragado-y-la-region",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-13T22:31:31.000Z",
+      "titulo": "Rige alerta naranja por tormentas severas y fuertes ráfagas de viento",
+      "descripcion": "El Servicio Meteorológico Nacional emitió una advertencia para este viernes debido a la llegada de tormentas intensas, abundante caída de agua, granizo y vientos que podrían superar los 90 kilómetros por hora en la región.",
+      "texto_tiktok": "El Servicio Meteorológico Nacional emitió una advertencia de nivel naranja para este viernes 13 de noviembre debido a la llegada de tormentas severas.\n\nLa especialista Vanina Ferrero confirmó que se esperan abundantes precipitaciones, granizo y fuertes ráfagas de viento superiores a los 90 kilómetros por hora.\n\nHacia la tarde y la noche, el nivel de advertencia descenderá a amarillo mientras continúan las precauciones.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #AlertaMeteorologica #Tormentas #Clima #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-13_2134_04_bragado_rige-alerta-naranja-por-tormen.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-rige-una-alerta-naranja-por-tormentas-fuertes-y-rafagas-6447c1",
+      "youtube_url": "https://youtube.com/shorts/6n9hXebab6Q",
+      "prioridad": 9,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Alerta meteorológica en Bragado",
+      "categoria": "alerta_meteorologica",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
