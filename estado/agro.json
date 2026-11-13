@@ -72551,7 +72551,7 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T07:07:41-03:00",
+  "actualizado": "2026-11-13T08:03:55-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -78288,6 +78288,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-11": {
+        "fecha": "2026-11-11",
+        "productos": {
+          "trigo": {
+            "ars": 299500.0,
+            "usd": 195.11,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "maiz": {
+            "ars": 275000.0,
+            "usd": 179.15,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "girasol": {
+            "ars": 760000.0,
+            "usd": 495.11,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 545000.0,
+            "usd": 355.05,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "sorgo": {
+            "ars": 276300.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "baja"
+          }
+        },
+        "tc": 1535.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -78514,6 +78554,20 @@
           "compra": 1535.0,
           "venta": 1544.0
         }
+      },
+      "2026-11-12": {
+        "fuente": "Banco Nación",
+        "hora": "17:00",
+        "billete": {
+          "fecha": "2026-11-12",
+          "compra": 1520.0,
+          "venta": 1570.0
+        },
+        "divisa": {
+          "fecha": "2026-11-12",
+          "compra": 1536.5,
+          "venta": 1545.5
+        }
       }
     },
     "a3500": {
@@ -78612,6 +78666,10 @@
       "2026-11-11": {
         "fecha": "2026-11-11",
         "valor": 1547.9128
+      },
+      "2026-11-12": {
+        "fecha": "2026-11-12",
+        "valor": 1544.432
       }
     },
     "chicago_soja": {
@@ -78777,7 +78835,11 @@
       },
       "2026-11-12": {
         "fecha": "2026-11-12",
-        "usd_t": 449.7
+        "usd_t": 450.8
+      },
+      "2026-11-13": {
+        "fecha": "2026-11-13",
+        "usd_t": 457.2
       }
     },
     "chicago_maiz": {
@@ -78943,6 +79005,10 @@
       },
       "2026-11-12": {
         "fecha": "2026-11-12",
+        "usd_t": 174.2
+      },
+      "2026-11-13": {
+        "fecha": "2026-11-13",
         "usd_t": 176.0
       }
     },
@@ -79109,7 +79175,11 @@
       },
       "2026-11-12": {
         "fecha": "2026-11-12",
-        "usd_t": 219.0
+        "usd_t": 214.7
+      },
+      "2026-11-13": {
+        "fecha": "2026-11-13",
+        "usd_t": 218.6
       }
     }
   },
@@ -79264,6 +79334,34 @@
         },
         "facebook": {
           "id": "101271341650483_1757196483078015",
+          "fotos": 10
+        }
+      }
+    },
+    "2026-11-13T08:00:00-03:00": {
+      "dia": "2026-11-13",
+      "placas": [
+        "portada",
+        "mapa",
+        "pueblos",
+        "alerta",
+        "alerta",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Alerta naranja por tormentas en la zona",
+      "publicado": {
+        "instagram": {
+          "id": "18130334840309013",
+          "colab": "no",
+          "diapositivas": 10
+        },
+        "facebook": {
+          "id": "101271341650483_1758506189613711",
           "fotos": 10
         }
       }
