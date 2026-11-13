@@ -35752,6 +35752,114 @@
         68,
         51
       ]
+    },
+    "de7ae82e1483d706": {
+      "conversacion": 18,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 14,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 74,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El pronóstico de un evento climático extremo como El Niño preocupa directamente al productor de la zona para su campaña.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ed3f2121da744079": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 45,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "financiamiento",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Habla de financiamiento y tasas, un tema técnico y financiero que no suele generar charla de boliche.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        51,
+        39
+      ]
+    },
+    "4c828158f887abd0": {
+      "conversacion": 12,
+      "historia_concreta": 14,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 58,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Involucra un fallo histórico sobre retenciones y la 125, pero apunta a una multinacional y es un tema más legal.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        63,
+        54
+      ]
+    },
+    "a539eba91aefc816": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "club",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia local de un club de pesca que no tiene ninguna relación con el agro ni la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "abbed358289905f2": {
+      "conversacion": 2,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 22,
+      "commercial_score": 20,
+      "subtema": "empresas",
+      "tema": "comercios",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de habilitaciones comerciales urbanas en Chacabuco, sin impacto directo en el productor agropecuario.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -38220,7 +38328,12 @@
       "https://bichosdecampo.com/el-infatigable-gabriel-montiel-logro-que-el-cordero-misionero-llegue-a-las-gondolas-de-posadas-en-paquetes-de-500-gramos-y-ahora-quiere-sumar-pequenos-productores-al-negocio": "2026-11-13",
       "https://bichosdecampo.com/la-unica-buena-del-aumento-de-precios-con-subas-de-mas-del-50-el-sector-horticola-mejora-y-abandona-al-menos-por-ahora-el-selecto-grupo-de-economias-regionales-en-rojo": "2026-11-13",
       "https://lanacion.com.ar/economia/campo/acuerdo-lanzaron-una-plataforma-digital-para-comprar-y-vender-hacienda-destinada-a-faena-nid13112026": "2026-11-13",
-      "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal": "2026-11-13"
+      "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal": "2026-11-13",
+      "https://agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html": "2026-11-13",
+      "https://bichosdecampo.com/se-termino-la-licuacion-diego-palomeque-explica-como-financiar-al-agro-con-tasas-reales-positivas-y-margenes-cada-vez-mas-ajustados": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/retenciones-la-corte-dejo-firme-un-fallo-que-ordena-devolverle-a-la-multinacional-louis-dreyfus-lo-nid13112026": "2026-11-13",
+      "https://elnuevorojense.com.ar/realizaron-tareas-de-mantenimiento-en-el-club-de-pescadores": "2026-11-13",
+      "https://chacabuquero.com.ar/2026/11/cada-vez-hay-menos-habitaciones-de.html": "2026-11-13"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -40687,7 +40800,12 @@
       "el infatigable gabriel montiel logro que el cordero misionero llegue a las gondolas de posadas en paquetes de 500 gramos y ahora quiere sumar pequenos productores al negocio": "2026-11-13",
       "la unica buena del aumento de precios con subas de mas del 50 el sector horticola mejora y abandona al menos por ahora el selecto grupo de economias regionales en rojo": "2026-11-13",
       "acuerdo lanzaron una plataforma digital para comprar y vender hacienda destinada a faena": "2026-11-13",
-      "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal": "2026-11-13"
+      "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal": "2026-11-13",
+      "el nino supera los 2 8 c que esperar de las lluvias y temperaturas en los proximos dos meses cca agrositio": "2026-11-13",
+      "se termino la licuacion diego palomeque explica como financiar al agro con tasas reales positivas y margenes cada vez mas ajustados": "2026-11-13",
+      "retenciones la corte dejo firme un fallo que ordena devolverle a la multinacional louis dreyfus lo que pago de mas durante dos anos": "2026-11-13",
+      "realizaron tareas de mantenimiento en el club de pescadores": "2026-11-13",
+      "cada vez hay menos habitaciones de comercios en chacabuco": "2026-11-13"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -43154,7 +43272,12 @@
       "f7f6b4cf9f6493e7": "2026-11-13",
       "79d3c2d4423a03b5": "2026-11-13",
       "e151c694f054deaa": "2026-11-13",
-      "035a2222ecdb21e2": "2026-11-13"
+      "035a2222ecdb21e2": "2026-11-13",
+      "de7ae82e1483d706": "2026-11-13",
+      "ed3f2121da744079": "2026-11-13",
+      "4c828158f887abd0": "2026-11-13",
+      "a539eba91aefc816": "2026-11-13",
+      "abbed358289905f2": "2026-11-13"
     }
   },
   "elegidas": [
@@ -73296,9 +73419,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0109c98019f1_portada.jpg"
+    },
+    {
+      "id": "6638511db9ad",
+      "cuando": "2026-11-13T14:30-03:00",
+      "titulo_original": "Fin de discusión?: SENASA habilitó seis plataformas para certificar producción libre de deforestación ante las exigencias europeas",
+      "descripcion": "Durante el 5º Congreso Federal Ganadero de Rosgan, desarrollado en la ciudad de Rosario, fue oportuno dialogar con la presidente del SENASA, Ing. Agr. Maria Beatriz Giraudo quien explicó a la prensa , que los productores argentinos podrán elegir entre seis plataformas registradas para respaldar los ",
+      "fuente": "El Regional Digital",
+      "url": "https://elregionaldigital.com.ar/fin-de-discusio-senasa-habilito-seis-plataformas-para-certificar-produccion-libre-de-deforestacion-ante-las-exigencias-europeas/",
+      "titular": "Senasa homologa sistemas privados para avalar rodeos sin deforestación",
+      "volanta": "Ganadería y Mercados",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 14,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 77,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "deforestración",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El Senasa habilita plataformas para certificar exportaciones, un tema clave y muy esperado por ganaderos.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-13T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "7f7e37cb-cd36-4769-a2ec-66587769e086",
+          "slug": "el-senasa-valido-seis-herramientas-digitales-para-certificar-63f338",
+          "url": "https://www.diariolacampaña.com.ar/n/el-senasa-valido-seis-herramientas-digitales-para-certificar-63f338",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18115677176175907",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1758911356239861",
+          "fotos": 5
+        },
+        "historia_instagram": {
+          "id": "18344252725260805"
+        },
+        "historia_facebook": {
+          "id": "2369816197119942"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6638511db9ad_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "bfb8c6cd078d",
+      "rep": {
+        "id": "bfb8c6cd078d",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
+        "titulo": "El Niño supera los 2,8°C: qué esperar de las lluvias y temperaturas en los próximos dos meses - CCA/Agrositio",
+        "titulo_norm": "el nino supera los 2 8 c que esperar de las lluvias y temperaturas en los proximos dos meses cca agrositio",
+        "descripcion": "El principal forzante de escala planetaria apenas se ha modificado en el transcurso del mes de octubre. El calentamiento se mueve con una tendencia positiva más suave, pero aún se espera que en lo que resta del año, se cruce largamente la barrera de los 3ºC, confirmando uno de los eventos más intensos que se haya monitoreado...",
+        "imagen_url": "https://www.agrositio.com.ar/img/generica.jpg",
+        "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
+        "publicado": "2026-11-13T14:29-03:00",
+        "capturado": "2026-11-13T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "de7ae82e1483d706",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "bfb8c6cd078d",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
+          "titulo": "El Niño supera los 2,8°C: qué esperar de las lluvias y temperaturas en los próximos dos meses - CCA/Agrositio",
+          "titulo_norm": "el nino supera los 2 8 c que esperar de las lluvias y temperaturas en los proximos dos meses cca agrositio",
+          "descripcion": "El principal forzante de escala planetaria apenas se ha modificado en el transcurso del mes de octubre. El calentamiento se mueve con una tendencia positiva más suave, pero aún se espera que en lo que resta del año, se cruce largamente la barrera de los 3ºC, confirmando uno de los eventos más intensos que se haya monitoreado...",
+          "imagen_url": "https://www.agrositio.com.ar/img/generica.jpg",
+          "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
+          "publicado": "2026-11-13T14:29-03:00",
+          "capturado": "2026-11-13T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "de7ae82e1483d706",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 74,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de un evento climático extremo como El Niño preocupa directamente al productor de la zona para su campaña.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-13T14:30-03:00"
+    },
     {
       "id": "7b7d5f0b933b",
       "rep": {
@@ -73702,71 +73950,6 @@
       "cuando": "2026-11-13T07:00-03:00"
     },
     {
-      "id": "6638511db9ad",
-      "rep": {
-        "id": "6638511db9ad",
-        "fuente": "El Regional Digital",
-        "tipo_fuente": "medio",
-        "source_url": "https://elregionaldigital.com.ar/feed/",
-        "url": "https://elregionaldigital.com.ar/fin-de-discusio-senasa-habilito-seis-plataformas-para-certificar-produccion-libre-de-deforestacion-ante-las-exigencias-europeas/",
-        "canonical_url": "https://elregionaldigital.com.ar/fin-de-discusio-senasa-habilito-seis-plataformas-para-certificar-produccion-libre-de-deforestacion-ante-las-exigencias-europeas",
-        "titulo": "Fin de discusión?: SENASA habilitó seis plataformas para certificar producción libre de deforestación ante las exigencias europeas",
-        "titulo_norm": "fin de discusion senasa habilito seis plataformas para certificar produccion libre de deforestacion ante las exigencias europeas",
-        "descripcion": "Durante el 5º Congreso Federal Ganadero de Rosgan, desarrollado en la ciudad de Rosario, fue oportuno dialogar con la presidente del SENASA, Ing. Agr. Maria Beatriz Giraudo quien explicó a la prensa , que los productores argentinos podrán elegir entre seis plataformas registradas para respaldar los datos que exige el reglamento europeo contra la deforestación,",
-        "imagen_url": "",
-        "autor": "ciri340043",
-        "publicado": "2026-11-13T00:19-03:00",
-        "capturado": "2026-11-13T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1e19a333f5bec2af",
-        "localidad_medio": "9 de Julio"
-      },
-      "grupo": [
-        {
-          "id": "6638511db9ad",
-          "fuente": "El Regional Digital",
-          "tipo_fuente": "medio",
-          "source_url": "https://elregionaldigital.com.ar/feed/",
-          "url": "https://elregionaldigital.com.ar/fin-de-discusio-senasa-habilito-seis-plataformas-para-certificar-produccion-libre-de-deforestacion-ante-las-exigencias-europeas/",
-          "canonical_url": "https://elregionaldigital.com.ar/fin-de-discusio-senasa-habilito-seis-plataformas-para-certificar-produccion-libre-de-deforestacion-ante-las-exigencias-europeas",
-          "titulo": "Fin de discusión?: SENASA habilitó seis plataformas para certificar producción libre de deforestación ante las exigencias europeas",
-          "titulo_norm": "fin de discusion senasa habilito seis plataformas para certificar produccion libre de deforestacion ante las exigencias europeas",
-          "descripcion": "Durante el 5º Congreso Federal Ganadero de Rosgan, desarrollado en la ciudad de Rosario, fue oportuno dialogar con la presidente del SENASA, Ing. Agr. Maria Beatriz Giraudo quien explicó a la prensa , que los productores argentinos podrán elegir entre seis plataformas registradas para respaldar los datos que exige el reglamento europeo contra la deforestación,",
-          "imagen_url": "",
-          "autor": "ciri340043",
-          "publicado": "2026-11-13T00:19-03:00",
-          "capturado": "2026-11-13T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1e19a333f5bec2af",
-          "localidad_medio": "9 de Julio"
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 14,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 77,
-        "commercial_score": 70,
-        "subtema": "ganaderia",
-        "tema": "deforestración",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El Senasa habilita plataformas para certificar exportaciones, un tema clave y muy esperado por ganaderos.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T07:00-03:00"
-    },
-    {
       "id": "4b0a5a7882e3",
       "rep": {
         "id": "4b0a5a7882e3",
@@ -74035,8 +74218,8 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T14:00:52-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-13T14:37:21-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
