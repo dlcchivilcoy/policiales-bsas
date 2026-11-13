@@ -73099,7 +73099,7 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T10:08:09-03:00",
+  "actualizado": "2026-11-13T11:00:25-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -78108,6 +78108,47 @@
               },
               "facebook": {
                 "id": "3727819237371004"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-13T11:00:00-03:00": {
+      "dia": "2026-11-13",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están aguantando las pasturas?",
+          "opciones": [
+            "Bien",
+            "Regular",
+            "Mal"
+          ],
+          "publico": "ganaderia",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18188763943370563"
+            },
+            "facebook": {
+              "id": "1840583423732819"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18188763943370563"
+              },
+              "facebook": {
+                "id": "1840583423732819"
               }
             }
           ]
