@@ -254,6 +254,12 @@ def historias_de_reels() -> bool:
     return (os.environ.get("AGRO_REEL_HISTORIA") or "1").strip() != "0"
 
 
+def historias_de_carruseles() -> bool:
+    """13/11/2026, pedido del usuario: «sacar las historias sobre carruseles, dejar solo reels». La portada del
+    carrusel ya no va a historia; AGRO_CARRUSEL_HISTORIA=1 la vuelve a prender (y AGRO_REEL_HISTORIA=0 apaga las dos)."""
+    return historias_de_reels() and (os.environ.get("AGRO_CARRUSEL_HISTORIA") or "0").strip() == "1"
+
+
 def _video_historia(mp4: Path) -> Path:
     """Copia 1080x1920 del reel (4:5 → bandas grafito arriba y abajo) con el audio en AAC 48 kHz."""
     import subprocess
@@ -426,7 +432,7 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
             except Exception as e:                         # noqa: BLE001
                 salida["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Facebook FALLÓ: {salida['facebook']['error']}")
-        if not pieza.get("datos") and historias_de_reels():
+        if not pieza.get("datos") and historias_de_carruseles():
             _carrusel_a_historia(pieza, marca, salida, hecho, log)
     return salida
 

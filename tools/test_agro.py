@@ -1701,5 +1701,20 @@ with tempfile.TemporaryDirectory() as _th:
     finally:
         _PH._video_historia, _PH._historia_video_instagram, _PH._historia_video_facebook, _PBH.subir_a_release = _o3
 
+# 13/11/2026: «sacar las historias sobre carruseles, dejar solo reels»
+_env_h = {k: os.environ.pop(k, None) for k in ("AGRO_CARRUSEL_HISTORIA", "AGRO_REEL_HISTORIA")}
+try:
+    chequear("historias: de fábrica, los reels sí y los carruseles NO",
+             _PH.historias_de_reels() and not _PH.historias_de_carruseles())
+    os.environ["AGRO_CARRUSEL_HISTORIA"] = "1"
+    chequear("historias: AGRO_CARRUSEL_HISTORIA=1 vuelve a prender la del carrusel", _PH.historias_de_carruseles())
+    os.environ["AGRO_REEL_HISTORIA"] = "0"
+    chequear("historias: AGRO_REEL_HISTORIA=0 apaga las dos", not _PH.historias_de_carruseles())
+finally:
+    for _k, _v in _env_h.items():
+        os.environ.pop(_k, None)
+        if _v is not None:
+            os.environ[_k] = _v
+
 print(f"\n{total - len(fallas)}/{total} bien")
 sys.exit(1 if fallas else 0)
