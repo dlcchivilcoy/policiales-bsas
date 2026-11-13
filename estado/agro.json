@@ -35948,6 +35948,130 @@
         56,
         53
       ]
+    },
+    "b5ef37580c8be286": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 19,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "inversiones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una jornada institucional y de finanzas corporativas que no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f6bd03b8f11d941b": {
+      "conversacion": 10,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "A los productores les interesa saber si repunta la soja, pero es una columna de análisis técnico general.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "65647143db20915f": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 48,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "rio paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "La crecida del Paraná afecta a la logística exportadora, pero queda lejos del día a día del chacarero de la zona.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d229b8a0ef0a5740": {
+      "conversacion": 18,
+      "historia_concreta": 12,
+      "cercania_pba": 15,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 73,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "fletes granarios",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El aumento de fletes en provincia de Buenos Aires pega directo en el bolsillo del productor al sacar la cosecha.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cf45be27f6aa7401": {
+      "conversacion": 11,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 41,
+      "commercial_score": 38,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Dato macroeconómico fuerte sobre Vaca Muerta desplazando a la soja, pero no afecta de forma directa al productor local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        31
+      ]
+    },
+    "85c8a96d3e47b015": {
+      "conversacion": 24,
+      "historia_concreta": 20,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 97,
+      "commercial_score": 80,
+      "subtema": "agro",
+      "tema": "temporal escuela agraria",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Notición zonal: destrozó una escuela agraria vecina en Germania, moviliza a toda la comunidad rural de la región.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -38426,7 +38550,15 @@
       "https://agrositio.com.ar/noticia/249313-sa-plata-criar-cerdos-el-maiz-representa-el-60-de-los-costos-y-la-eficiencia-define-quien-gana.html": "2026-11-13",
       "https://bichosdecampo.com/otra-rural-se-baja-del-consejo-federal-de-la-sociedad-rural-esta-vez-fue-una-entidad-santafesina-y-la-pelea-con-cra-suma-un-nuevo-capitulo": "2026-11-13",
       "https://lanacion.com.ar/economia/campo/visec-fuerte-reclamo-de-consignatarios-por-demoras-en-la-plataforma-de-trazabilidad-para-exportar-nid13112026": "2026-11-13",
-      "https://lanacion.com.ar/economia/campo/ganaderia/remate-especial-en-el-mercado-agroganadero-de-canuelas-nid13112026": "2026-11-13"
+      "https://lanacion.com.ar/economia/campo/ganaderia/remate-especial-en-el-mercado-agroganadero-de-canuelas-nid13112026": "2026-11-13",
+      "https://infocampo.com.ar/agro-capital-day-como-convertir-la-competitividad-del-campo-en-inversion-de-largo-plazo": "2026-11-13",
+      "https://agrositio.com.ar/noticia/249323-era-hora-respiro-para-la-soja-rebote-tecnico-y-subas-preventivas-antes-del-fin-de-semana-por-manuel-alvarado-ledesma.html": "2026-11-13",
+      "https://agrositio.com.ar/noticia/249322-el-parana-en-rosario-alcanza-su-nivel-mas-alto-para-un-mes-de-noviembre-desde-1998-y-se-acerca-a-la-cota-de-alerta.html": "2026-11-13",
+      "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos": "2026-11-13",
+      "https://bichosdecampo.com/el-final-de-una-era-la-harina-de-soja-ya-no-es-el-principal-producto-que-exporta-argentina-tras-ser-superada-por-el-petroleo": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/arbitrario-tres-entidades-del-agro-cuestionaron-una-suba-del-16-que-fijo-el-gobierno-de-kicillof-nid13112026": "2026-11-13",
+      "https://junindigital.com/regionales/2026-11-13-17-26-0-el-temporal-arraso-la-escuela-agraria-de-germania-graves-destrozos-y-130-alumnos-evacuados": "2026-11-13",
+      "https://diariojunin.com/noticias/103146_el-temporal-provoc-daos-en-la-escuela-agraria-1-de-germania.html": "2026-11-13"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -40903,7 +41035,15 @@
       "sa plata criar cerdos el maiz representa el 60 de los costos y la eficiencia define quien gana": "2026-11-13",
       "otra rural se baja del consejo federal de la sociedad rural esta vez fue una entidad santafesina y la pelea con cra suma un nuevo capitulo": "2026-11-13",
       "visec fuerte reclamo de consignatarios por demoras en la plataforma de trazabilidad para exportar carne a europa": "2026-11-13",
-      "remate especial en el mercado agroganadero de canuelas": "2026-11-13"
+      "remate especial en el mercado agroganadero de canuelas": "2026-11-13",
+      "agro capital day como convertir la competitividad del campo en inversion de largo plazo": "2026-11-13",
+      "era hora respiro para la soja rebote tecnico y subas preventivas antes del fin de semana por manuel alvarado ledesma": "2026-11-13",
+      "record de altura del parana desde 1998 crece el rio pero siguen las restricciones para los buques": "2026-11-13",
+      "tres entidades del agro rechazaron el aumento impuesto por el gobierno de buenos aires a los fletes de granos": "2026-11-13",
+      "el final de una era la harina de soja ya no es el principal producto que exporta argentina tras ser superada por el petroleo": "2026-11-13",
+      "arbitrario tres entidades del agro cuestionaron una suba del 16 que fijo el gobierno de kicillof para el transporte de granos": "2026-11-13",
+      "el temporal arraso la escuela agraria de germania graves destrozos y 130 alumnos evacuados": "2026-11-13",
+      "el temporal provoco danos en la escuela agraria 1 de germania": "2026-11-13"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -43380,7 +43520,15 @@
       "9ab6a2173e0c8b12": "2026-11-13",
       "7aef617bd8a373fa": "2026-11-13",
       "8071d9b8cb3af009": "2026-11-13",
-      "bdcacccf805bde59": "2026-11-13"
+      "bdcacccf805bde59": "2026-11-13",
+      "b5ef37580c8be286": "2026-11-13",
+      "f6bd03b8f11d941b": "2026-11-13",
+      "65647143db20915f": "2026-11-13",
+      "d229b8a0ef0a5740": "2026-11-13",
+      "cf45be27f6aa7401": "2026-11-13",
+      "9b6b813e2a707a10": "2026-11-13",
+      "85c8a96d3e47b015": "2026-11-13",
+      "41a7e7d0d1a4d646": "2026-11-13"
     }
   },
   "elegidas": [
@@ -73642,9 +73790,153 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bfb8c6cd078d_portada.jpg"
+    },
+    {
+      "id": "f67b7a05d289",
+      "cuando": "2026-11-13T18:00-03:00",
+      "titulo_original": "El temporal arrasó la Escuela Agraria de Germania: graves destrozos y 130 alumnos evacuados",
+      "descripcion": "El establecimiento sufrió daños generalizados en sus edificios e instalaciones productivas. El viento destruyó silos, invernáculos, gallineros y otras dependencias. Los estudiantes fueron trasladados a otra escuela de la localidad y no hubo heridos.",
+      "fuente": "Junín Digital",
+      "url": "https://www.junindigital.com/regionales/2026-11-13-17-26-0-el-temporal-arraso-la-escuela-agraria-de-germania-graves-destrozos-y-130-alumnos-evacuados",
+      "titular": "Temporal destruye instalaciones y evacuan 130 alumnos en escuela agraria de Germania",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 24,
+        "historia_concreta": 20,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 97,
+        "commercial_score": 80,
+        "subtema": "agro",
+        "tema": "temporal escuela agraria",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Notición zonal: destrozó una escuela agraria vecina en Germania, moviliza a toda la comunidad rural de la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-13T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "a4cde145-e406-4c81-bf77-f1cfc905f128",
+          "slug": "un-violento-temporal-arraso-la-escuela-agraria-de-germania-y-597ed4",
+          "url": "https://www.diariolacampaña.com.ar/n/un-violento-temporal-arraso-la-escuela-agraria-de-germania-y-597ed4",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18347906776255170",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1759106159553714",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18125683615943278"
+        },
+        "historia_facebook": {
+          "id": "925233823883290"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f67b7a05d289_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "2629ebe213ed",
+      "rep": {
+        "id": "2629ebe213ed",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos/",
+        "canonical_url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos",
+        "titulo": "Tres entidades del agro rechazaron el aumento impuesto por el gobierno de Buenos Aires a los fletes de granos",
+        "titulo_norm": "tres entidades del agro rechazaron el aumento impuesto por el gobierno de buenos aires a los fletes de granos",
+        "descripcion": "La actualización de las tarifas de referencia para el transporte de granos en la provincia de Buenos Aires volvió a abrir un frente de conflicto entre las entidades del agro y el gobierno de Axel Kicillof. Esta vez, CARBAP, CONINAGRO y el Centro de Acopiadores de Cereales salieron a rechazar el aumento del 16% dispuesto […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-13T16:34-03:00",
+        "capturado": "2026-11-13T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d229b8a0ef0a5740",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "2629ebe213ed",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos/",
+          "canonical_url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos",
+          "titulo": "Tres entidades del agro rechazaron el aumento impuesto por el gobierno de Buenos Aires a los fletes de granos",
+          "titulo_norm": "tres entidades del agro rechazaron el aumento impuesto por el gobierno de buenos aires a los fletes de granos",
+          "descripcion": "La actualización de las tarifas de referencia para el transporte de granos en la provincia de Buenos Aires volvió a abrir un frente de conflicto entre las entidades del agro y el gobierno de Axel Kicillof. Esta vez, CARBAP, CONINAGRO y el Centro de Acopiadores de Cereales salieron a rechazar el aumento del 16% dispuesto […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-13T16:34-03:00",
+          "capturado": "2026-11-13T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d229b8a0ef0a5740",
+          "localidad_medio": ""
+        },
+        {
+          "id": "e1c3e86b3f30",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/arbitrario-tres-entidades-del-agro-cuestionaron-una-suba-del-16-que-fijo-el-gobierno-de-kicillof-nid13112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/arbitrario-tres-entidades-del-agro-cuestionaron-una-suba-del-16-que-fijo-el-gobierno-de-kicillof-nid13112026",
+          "titulo": "“Arbitrario”: tres entidades del agro cuestionaron una suba del 16% que fijó el gobierno de Kicillof para el transporte de granos",
+          "titulo_norm": "arbitrario tres entidades del agro cuestionaron una suba del 16 que fijo el gobierno de kicillof para el transporte de granos",
+          "descripcion": "Carbap, Coninagro y el Centro de Acopiadores rechazaron un laudo del Ministerio de Transporte bonaerense que superó el 15% pedido por los transportistas",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AASLJABNDRE5RE5KN2SGIUTCY4.jpeg?auth=bfe239154cbf1e36c52d0a4e3e32adeb30600fa8bbded5e971bd544ad42926d4&smart=true",
+          "autor": "",
+          "publicado": "2026-11-13T17:33-03:00",
+          "capturado": "2026-11-13T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9b6b813e2a707a10",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 73,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "fletes granarios",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El aumento de fletes en provincia de Buenos Aires pega directo en el bolsillo del productor al sacar la cosecha.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-13T18:00-03:00"
+    },
     {
       "id": "7b7d5f0b933b",
       "rep": {
@@ -74316,8 +74608,8 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T16:08:54-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-13T18:07:52-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
