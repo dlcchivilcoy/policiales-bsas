@@ -35860,6 +35860,94 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f6041eb8ecdfa54c": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 35,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "girasol",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un dato macroeconómico nacional que no le cambia el día a día al productor de la zona.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9ab6a2173e0c8b12": {
+      "conversacion": 9,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 48,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "cerdos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca costos clave de la producción porcina que interesan al productor local.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        37
+      ]
+    },
+    "7aef617bd8a373fa": {
+      "conversacion": 4,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 20,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "gremios",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una pelea gremial de Santa Fe que no afecta directamente al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bdcacccf805bde59": {
+      "conversacion": 9,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 11,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 54,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los precios del Mercado Agroganadero de Cañuelas interesan a los ganaderos de la región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        53
+      ]
     }
   },
   "indice": {
@@ -38333,7 +38421,12 @@
       "https://bichosdecampo.com/se-termino-la-licuacion-diego-palomeque-explica-como-financiar-al-agro-con-tasas-reales-positivas-y-margenes-cada-vez-mas-ajustados": "2026-11-13",
       "https://lanacion.com.ar/economia/campo/retenciones-la-corte-dejo-firme-un-fallo-que-ordena-devolverle-a-la-multinacional-louis-dreyfus-lo-nid13112026": "2026-11-13",
       "https://elnuevorojense.com.ar/realizaron-tareas-de-mantenimiento-en-el-club-de-pescadores": "2026-11-13",
-      "https://chacabuquero.com.ar/2026/11/cada-vez-hay-menos-habitaciones-de.html": "2026-11-13"
+      "https://chacabuquero.com.ar/2026/11/cada-vez-hay-menos-habitaciones-de.html": "2026-11-13",
+      "https://todoagro.com.ar/el-girasol-disparo-sus-exportaciones-un-822-y-se-convirtio-en-uno-de-los-grandes-protagonistas-del-crecimiento-agroindustrial": "2026-11-13",
+      "https://agrositio.com.ar/noticia/249313-sa-plata-criar-cerdos-el-maiz-representa-el-60-de-los-costos-y-la-eficiencia-define-quien-gana.html": "2026-11-13",
+      "https://bichosdecampo.com/otra-rural-se-baja-del-consejo-federal-de-la-sociedad-rural-esta-vez-fue-una-entidad-santafesina-y-la-pelea-con-cra-suma-un-nuevo-capitulo": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/visec-fuerte-reclamo-de-consignatarios-por-demoras-en-la-plataforma-de-trazabilidad-para-exportar-nid13112026": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/ganaderia/remate-especial-en-el-mercado-agroganadero-de-canuelas-nid13112026": "2026-11-13"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -40805,7 +40898,12 @@
       "se termino la licuacion diego palomeque explica como financiar al agro con tasas reales positivas y margenes cada vez mas ajustados": "2026-11-13",
       "retenciones la corte dejo firme un fallo que ordena devolverle a la multinacional louis dreyfus lo que pago de mas durante dos anos": "2026-11-13",
       "realizaron tareas de mantenimiento en el club de pescadores": "2026-11-13",
-      "cada vez hay menos habitaciones de comercios en chacabuco": "2026-11-13"
+      "cada vez hay menos habitaciones de comercios en chacabuco": "2026-11-13",
+      "el girasol disparo sus exportaciones un 822 y se convirtio en uno de los grandes protagonistas del crecimiento agroindustrial": "2026-11-13",
+      "sa plata criar cerdos el maiz representa el 60 de los costos y la eficiencia define quien gana": "2026-11-13",
+      "otra rural se baja del consejo federal de la sociedad rural esta vez fue una entidad santafesina y la pelea con cra suma un nuevo capitulo": "2026-11-13",
+      "visec fuerte reclamo de consignatarios por demoras en la plataforma de trazabilidad para exportar carne a europa": "2026-11-13",
+      "remate especial en el mercado agroganadero de canuelas": "2026-11-13"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -43277,7 +43375,12 @@
       "ed3f2121da744079": "2026-11-13",
       "4c828158f887abd0": "2026-11-13",
       "a539eba91aefc816": "2026-11-13",
-      "abbed358289905f2": "2026-11-13"
+      "abbed358289905f2": "2026-11-13",
+      "f6041eb8ecdfa54c": "2026-11-13",
+      "9ab6a2173e0c8b12": "2026-11-13",
+      "7aef617bd8a373fa": "2026-11-13",
+      "8071d9b8cb3af009": "2026-11-13",
+      "bdcacccf805bde59": "2026-11-13"
     }
   },
   "elegidas": [
@@ -73479,51 +73582,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6638511db9ad_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "bfb8c6cd078d",
-      "rep": {
-        "id": "bfb8c6cd078d",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
-        "titulo": "El Niño supera los 2,8°C: qué esperar de las lluvias y temperaturas en los próximos dos meses - CCA/Agrositio",
-        "titulo_norm": "el nino supera los 2 8 c que esperar de las lluvias y temperaturas en los proximos dos meses cca agrositio",
-        "descripcion": "El principal forzante de escala planetaria apenas se ha modificado en el transcurso del mes de octubre. El calentamiento se mueve con una tendencia positiva más suave, pero aún se espera que en lo que resta del año, se cruce largamente la barrera de los 3ºC, confirmando uno de los eventos más intensos que se haya monitoreado...",
-        "imagen_url": "https://www.agrositio.com.ar/img/generica.jpg",
-        "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
-        "publicado": "2026-11-13T14:29-03:00",
-        "capturado": "2026-11-13T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "de7ae82e1483d706",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "bfb8c6cd078d",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
-          "titulo": "El Niño supera los 2,8°C: qué esperar de las lluvias y temperaturas en los próximos dos meses - CCA/Agrositio",
-          "titulo_norm": "el nino supera los 2 8 c que esperar de las lluvias y temperaturas en los proximos dos meses cca agrositio",
-          "descripcion": "El principal forzante de escala planetaria apenas se ha modificado en el transcurso del mes de octubre. El calentamiento se mueve con una tendencia positiva más suave, pero aún se espera que en lo que resta del año, se cruce largamente la barrera de los 3ºC, confirmando uno de los eventos más intensos que se haya monitoreado...",
-          "imagen_url": "https://www.agrositio.com.ar/img/generica.jpg",
-          "autor": "info@agrositio.com (Germán Heinzenknecht (CCA))",
-          "publicado": "2026-11-13T14:29-03:00",
-          "capturado": "2026-11-13T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "de7ae82e1483d706",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-13T16:00-03:00",
+      "titulo_original": "El Niño supera los 2,8°C: qué esperar de las lluvias y temperaturas en los próximos dos meses - CCA/Agrositio",
+      "descripcion": "El principal forzante de escala planetaria apenas se ha modificado en el transcurso del mes de octubre. El calentamiento se mueve con una tendencia positiva más suave, pero aún se espera que en lo que resta del año, se cruce largamente la barrera de los 3ºC, confirmando uno de los eventos más intens",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249315-el-nino-supera-los-28c-que-esperar-de-las-lluvias-y-temperaturas-en-los-proximos-dos-meses-ccaagrositio.html",
+      "titular": "El fenómeno de El Niño supera los 2,8°C y apunta",
+      "volanta": "Clima",
       "score": {
         "conversacion": 18,
         "historia_concreta": 10,
@@ -73545,8 +73613,38 @@
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false
       },
-      "cuando": "2026-11-13T14:30-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-13T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5ccbcc8c-2d53-41ca-8404-bd6867c5f710",
+          "slug": "el-nino-supera-los-2-8-c-y-apunta-a-los-3-c-como-impacta-en-el-4b6f3a",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-supera-los-2-8-c-y-apunta-a-los-3-c-como-impacta-en-el-4b6f3a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18213727387366720",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1758999169564413",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18122399272978763"
+        },
+        "historia_facebook": {
+          "id": "2978799325821513"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_bfb8c6cd078d_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "7b7d5f0b933b",
       "rep": {
@@ -74218,8 +74316,8 @@
       "cuando": "2026-11-12T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T14:37:21-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-13T16:08:54-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
