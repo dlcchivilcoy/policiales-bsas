@@ -34588,6 +34588,66 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "939c1801c9442d83": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un análisis de mercados y precios internacionales que no afecta directamente el día a día local de forma urgente.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3ebc18d2d858b044": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 33,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "expo rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una exposición rural en Lincoln, un partido algo alejado de nuestra zona directa de influencia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d29781306f3faf80": {
+      "conversacion": 22,
+      "historia_concreta": 18,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 82,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "abigeato",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un caso policial de robo y recuperación de hacienda en Pehuajó que genera mucha preocupación e interés en toda la región.",
+      "tema_doc": "ganaderia",
+      "urgente": true,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -36971,7 +37031,11 @@
       "https://bichosdecampo.com/se-viene-el-roslot-rosgan-y-los-feedloteros-crearon-una-plataforma-digital-para-comercializar-hacienda-de-invernada-y-generar-una-referencia-de-mercado": "2026-11-12",
       "https://bichosdecampo.com/amaggi-amplia-el-acuerdo-comercial-con-los-grobo-agropecuaria-para-potenciar-su-capacidad-de-originacion-y-se-hace-cargo-de-los-empleados-garantizando-condiciones-laborales": "2026-11-12",
       "https://lanacion.com.ar/economia/campo/el-gigante-brasileno-amaggi-se-queda-a-traves-de-un-alquiler-con-un-negocio-emblematico-de-los-grobo-nid12112026": "2026-11-12",
-      "https://lacapital.com.ar/agro/congreso-ganadero-el-mundo-demanda-infinito-n10291872.html": "2026-11-12"
+      "https://lacapital.com.ar/agro/congreso-ganadero-el-mundo-demanda-infinito-n10291872.html": "2026-11-12",
+      "https://bichosdecampo.com/resistiendo-con-aguante-el-maiz-argentino-sigue-mostrando-una-mayor-entereza-ante-la-ola-bajista-presente-en-chicago": "2026-11-12",
+      "https://lanacion.com.ar/economia/campo/diez-dias-de-conflicto-la-fabrica-de-tractores-pauny-no-se-presento-a-una-audiencia-y-plantea-150-nid12112026": "2026-11-12",
+      "https://lapostadelnoroeste.com.ar/todo-listo-manana-comienza-la-53-expo-rural": "2026-11-12",
+      "https://diarionoticiaspehuajo.com/2026-11-12/recuperaron-once-vacunos-robados-en-pehuajo-e-imputaron-a-tres-personas-43720": "2026-11-12"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -39353,7 +39417,11 @@
       "se viene el roslot rosgan y los feedloteros crearon una plataforma digital para comercializar hacienda de invernada y generar una referencia de mercado": "2026-11-12",
       "amaggi amplia el acuerdo comercial con los grobo agropecuaria para potenciar su capacidad de originacion y se hace cargo de los empleados garantizando condiciones laborales": "2026-11-12",
       "el gigante brasileno amaggi alquilara un negocio emblematico de la concursada los grobo agropecuaria y reemplazara su marca": "2026-11-12",
-      "congreso ganadero el mundo demanda infinito": "2026-11-12"
+      "congreso ganadero el mundo demanda infinito": "2026-11-12",
+      "resistiendo con aguante el maiz argentino sigue mostrando una mayor entereza ante la ola bajista presente en chicago": "2026-11-12",
+      "diez dias de conflicto la fabrica de tractores pauny no se presento a una audiencia y plantea 150 retiros voluntarios": "2026-11-12",
+      "todo listo manana comienza la 53 expo rural": "2026-11-12",
+      "recuperaron once vacunos robados en pehuajo e imputaron a tres personas": "2026-11-12"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -41735,7 +41803,11 @@
       "9c6ec2f0582da18c": "2026-11-12",
       "645d7872856f30d6": "2026-11-12",
       "fb2d0272ad3fd210": "2026-11-12",
-      "242e612f046a2d2f": "2026-11-12"
+      "242e612f046a2d2f": "2026-11-12",
+      "939c1801c9442d83": "2026-11-12",
+      "b682b4ef8d27e975": "2026-11-12",
+      "3ebc18d2d858b044": "2026-11-12",
+      "d29781306f3faf80": "2026-11-12"
     }
   },
   "elegidas": [
@@ -71577,6 +71649,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_6f54c1657261_portada.jpg"
+    },
+    {
+      "id": "666bb7a36400",
+      "cuando": "2026-11-12T21:00-03:00",
+      "titulo_original": "Recuperaron once vacunos robados en Pehuajó e imputaron a tres personas",
+      "descripcion": "La hacienda fue hallada en una quinta del partido. La investigación incluyó cuatro allanamientos y el registro de un vehículo. Los tres imputados son mayores de edad.",
+      "fuente": "Diario Noticias Pehuajó",
+      "url": "https://www.diarionoticiaspehuajo.com/2026-11-12/recuperaron-once-vacunos-robados-en-pehuajo-e-imputaron-a-tres-personas-43720/",
+      "titular": "Pehuajó: recuperan 11 vacunos robados e imputan a tres personas",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 82,
+        "commercial_score": 60,
+        "subtema": "ganaderia",
+        "tema": "abigeato",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Un caso policial de robo y recuperación de hacienda en Pehuajó que genera mucha preocupación e interés en toda la región.",
+        "tema_doc": "ganaderia",
+        "urgente": true,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-12T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2d1c3310-a648-48bd-8ee3-b55e68e5de11",
+          "slug": "pehuajo-hallan-11-vacunos-robados-a-un-productor-e-imputan-a-f1c7dc",
+          "url": "https://www.diariolacampaña.com.ar/n/pehuajo-hallan-11-vacunos-robados-a-un-productor-e-imputan-a-f1c7dc",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18174585247458864",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1757926326338364",
+          "fotos": 6
+        },
+        "historia_instagram": {
+          "id": "18100503527674295"
+        },
+        "historia_facebook": {
+          "id": "1145997181304253"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_666bb7a36400_portada.jpg"
     }
   ],
   "pendientes": [
@@ -72136,8 +72268,8 @@
       "cuando": "2026-11-11T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-12T19:35:38-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-12T21:07:06-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
