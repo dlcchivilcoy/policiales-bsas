@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T00:02:59.000Z",
+  "actualizado": "2026-11-13T00:31:22.000Z",
   "eventos": [
     {
       "id": "policiales:https://semanariodejunin.com.ar/nota/76483/crimen-en-mechita-una-pista-desde-la-carcel-permitio-esclarecer-el-asesinato",
@@ -186,6 +186,30 @@
       "localidad": "Chacabuco",
       "volanta": "Robo de cables en Chacabuco",
       "categoria": "otro_policial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/robo-en-la-madrugada-de-chacabuco.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-13T00:31:22.000Z",
+      "titulo": "Robaron una moto Guerrero 110 negra en la zona de la quinta 1010",
+      "descripcion": "Un vecino denunció que le sustrajeron su moto Guerrero 110 de color negro que se encontraba estacionada en la vía pública, en cercanías del barrio ubicado en la quinta 1010.",
+      "texto_tiktok": "Un vecino de Chacabuco sufrió el robo de su moto durante la madrugada.\n\nEl rodado sustraído es un motovehículo Guerrero 110 de color negro.\n\nEl hecho ocurrió sobre la continuación de la calle Tulio Spinetti, frente a la zona de viviendas levantada en la subdivisión de la quinta 1010.\n\nPersonal policial tomó conocimiento del caso tras un llamado de alerta realizado por el damnificado.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Robo #Inseguridad #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-12_2135_10_chacabuco_robaron-una-moto-guerrero-110-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-robaron-una-moto-guerrero-110-negra-en-la-zona-de-la-fada34",
+      "youtube_url": "",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo en Chacabuco",
+      "categoria": "robo",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
