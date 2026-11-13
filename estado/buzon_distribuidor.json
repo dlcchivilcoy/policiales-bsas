@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-12T23:31:18.000Z",
+  "actualizado": "2026-11-13T00:02:59.000Z",
   "eventos": [
     {
       "id": "policiales:https://semanariodejunin.com.ar/nota/76483/crimen-en-mechita-una-pista-desde-la-carcel-permitio-esclarecer-el-asesinato",
@@ -162,6 +162,30 @@
       "localidad": "Chacabuco",
       "volanta": "Robo en Chacabuco",
       "categoria": "robo",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/ladrones-en-fuga-en-la-noche-de.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-13T00:02:59.000Z",
+      "titulo": "Delincuentes abandonaron una bicicleta y una amoladora al huir de la Policía",
+      "descripcion": "Dos jóvenes escaparon a pie al ser interceptados por un patrullero en inmediaciones de La Plata y Primera Junta. En el lugar hallaron cables tendidos y secuestraron las herramientas.",
+      "texto_tiktok": "Un llamado alertó a las autoridades sobre el hurto de cables en plena madrugada dentro de la ciudad de Chacabuco.\n\nAl arribar a la zona de calles La Plata y Primera Junta, los efectivos policiales hallaron el tendido eléctrico dañado y colgando.\n\nDurante las recorridas preventivas por las inmediaciones, visualizaron a dos jóvenes circulando en bicicleta que inmediatamente emprendieron la fuga a pie.\n\nEn su huida, los sospechosos dejaron abandonado el rodado junto a una amoladora utilizada para concretar el ilícito.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-12_2135_09_chacabuco_delincuentes-abandonaron-una-b.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-ladrones-abandonaron-una-bicicleta-y-una-amoladora-c3e9da",
+      "youtube_url": "https://youtube.com/shorts/QyA_oP2FBns",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo de cables en Chacabuco",
+      "categoria": "otro_policial",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
