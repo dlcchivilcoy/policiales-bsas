@@ -230,11 +230,12 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None, solo_web: 
     for otra in ([] if medios.get("video") or AG.reel_con_foto(nota.get("subgeneral") or "")
                  else (nota.get("otras_urls") or [])[:3]):
         try:
-            v = (leer(otra) or {}).get("video")
+            m_otra = leer(otra) or {}
         except Exception:                        # noqa: BLE001 — una página que no anda no frena
-            v = ""
-        if v:
-            medios["video"], medios["video_de"] = v, otra
+            m_otra = {}
+        if m_otra.get("video"):
+            medios["video"], medios["video_de"] = m_otra["video"], otra
+            medios["video_nombre"] = m_otra.get("video_nombre") or ""
             break
     # Virales e internacionales salen SOLO como reel con el video de la nota (19/10/2026): sin video, ni
     # se gasta la IA. Las generales de lunes a viernes (20/10/2026, noche): reel siempre, con video si lo
@@ -271,6 +272,18 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None, solo_web: 
         from reels.flujo import _bajar_video
         clip = _bajar_video(medios["video"], base.with_name(base.name + "_original.mp4"))
         if clip:
+            # ¿El video es de ESTA nota? (14/11/2026, reels/control_video.py): la página trae también los de
+            # otras notas, y así salió el bebé rescatado con el médico de la Selección.
+            from reels import control_video as CV
+            control = CV.controlar(clip, nota.get("titulo") or g["titular"], g.get("bajada") or "",
+                                   nota.get("cuerpo") or nota.get("resumen") or "", medios.get("video_nombre") or "",
+                                   carpeta=carpeta)
+            pieza["video_control"] = control
+            if not control["ok"]:
+                print(f"  video descartado: «{g['titular'][:60]}»: {control['motivo']}", flush=True)
+                pieza["video_descartado"] = medios["video"]
+                clip = None
+        if clip:
             pieza["video_original"] = medios["video"]
     if clip and not foto:
         # Sin foto usable: la imagen fija (tapa del carrusel, placa de Facebook, portada) es un cuadro del
@@ -280,7 +293,8 @@ def armar(nota: dict, carpeta: Path, redactar=None, leer_pagina=None, solo_web: 
     if es_lista:
         clip = None                                   # la lista va en carrusel; el video solo dio la tapa
     if solo_reel and not clip:
-        g.update(apta=False, motivo=f"{nota.get('categoria')}: el video original no se pudo bajar")
+        g.update(apta=False, motivo=f"{nota.get('categoria')}: " + (
+            (pieza.get("video_control") or {}).get("motivo") or "el video original no se pudo bajar"))
         return pieza
     if not clip and not foto:
         g.update(apta=False, motivo=f"sin imagen que se pueda usar ({info_foto.get('motivo') or 'el video no anduvo'})")
@@ -463,13 +477,20 @@ def _shorts_hoy(mem: dict, dia: str) -> int:
 # una sola fila y `--ig-prueba` (cada 15 minutos de 17 a 22:45 en nacionales.yml) publica UNO por turno de
 # 30 minutos: 17:00, 17:30… 22:00 = 11. Primero las virales del día; después los policiales (los deja la
 # pasada de reels/publicador.py en estado/publicados.json). Solo reels hechos con VIDEO.
+# DOS FRANJAS (pedido del editor, 14/11/2026: «que los virales salgan entre las 18 a 20hs y los policiales entre
+# 20 a 22»): virales a las 18:00, 18:30, 19:00 y 19:30; policiales a las 20:00, 20:30, 21:00, 21:30 y 22:00. Cada
+# franja publica solo lo suyo: una viral que sobra no pasa a la de los policiales ni al revés. Las dispara
+# cron-job.org a horario exacto (el `schedule:` de GitHub cada 15 minutos casi nunca corría: el 12 y el 13/11
+# hubo UNA corrida por noche, y por eso salía un reel por día).
 IG_PRUEBA_VIRALES_DEFAULT = 11        # cuántas virales del día van a la fila, como mucho
-IG_PRUEBA_HORA_DEFAULT = "17:00"      # el primer turno
-IG_PRUEBA_FIN_DEFAULT = "22:00"       # el último turno
+IG_PRUEBA_HORA_DEFAULT = "18:00"      # el primer turno de las virales
+IG_PRUEBA_VIRALES_FIN_DEFAULT = "19:30"   # el último turno de las virales
+IG_PRUEBA_POL_HORA_DEFAULT = "20:00"  # el primer turno de los policiales (y el fin de la franja de las virales)
+IG_PRUEBA_FIN_DEFAULT = "22:00"       # el último turno de los policiales
 IG_PRUEBA_CADA_MIN = 30               # un reel de prueba por turno
 IG_PRUEBA_POR_DIA_DEFAULT = 11        # lo que acepta Instagram por la API
 IG_PRUEBA_SEPARACION_MIN = 20         # nunca dos más pegados que esto (una corrida atrasada que se pone al día)
-IG_PRUEBA_TARDE_MIN = 45              # después del último turno, todavía se recupera un turno perdido
+IG_PRUEBA_TARDE_MIN = 15              # después del último turno, todavía se recupera un turno perdido
 IG_PRUEBA_VIGENCIA_H = 20             # el video del Release se borra a las 24 h
 
 
@@ -486,22 +507,33 @@ def _ig_prueba_hoy(mem: dict, dia: str) -> int:
                if _ok(p.get("ig_prueba")) or (p.get("ig_prueba") or {}).get("estado") == "pendiente")
 
 
-def ig_prueba_hora() -> str:
-    h = (os.environ.get("NAC_IG_PRUEBA_HORA") or "").strip() or IG_PRUEBA_HORA_DEFAULT
+def _hora_var(nombre: str, fabrica: str) -> str:
+    h = (os.environ.get(nombre) or "").strip() or fabrica
     try:
         datetime.strptime(h, "%H:%M")
         return h
     except ValueError:
-        return IG_PRUEBA_HORA_DEFAULT
+        return fabrica
+
+
+def ig_prueba_hora() -> str:
+    """El primer turno de las virales (NAC_IG_PRUEBA_HORA, 18:00)."""
+    return _hora_var("NAC_IG_PRUEBA_HORA", IG_PRUEBA_HORA_DEFAULT)
+
+
+def ig_prueba_virales_fin() -> str:
+    """El último turno de las virales (NAC_IG_PRUEBA_VIRALES_FIN, 19:30)."""
+    return _hora_var("NAC_IG_PRUEBA_VIRALES_FIN", IG_PRUEBA_VIRALES_FIN_DEFAULT)
+
+
+def ig_prueba_pol_hora() -> str:
+    """El primer turno de los policiales (NAC_IG_PRUEBA_POL_HORA, 20:00)."""
+    return _hora_var("NAC_IG_PRUEBA_POL_HORA", IG_PRUEBA_POL_HORA_DEFAULT)
 
 
 def ig_prueba_fin() -> str:
-    h = (os.environ.get("NAC_IG_PRUEBA_FIN") or "").strip() or IG_PRUEBA_FIN_DEFAULT
-    try:
-        datetime.strptime(h, "%H:%M")
-        return h
-    except ValueError:
-        return IG_PRUEBA_FIN_DEFAULT
+    """El último turno de los policiales (NAC_IG_PRUEBA_FIN, 22:00)."""
+    return _hora_var("NAC_IG_PRUEBA_FIN", IG_PRUEBA_FIN_DEFAULT)
 
 
 def ig_prueba_por_dia() -> int:
@@ -526,7 +558,7 @@ def _hora_ar(texto):
 
 
 def fila_ig_prueba(mem: dict, ledger: dict, ahora: datetime) -> tuple:
-    """(horas de los reels de prueba publicados HOY, la fila en orden). La fila: [(origen, clave, datos)],
+    """(los reels de prueba publicados HOY [(hora, origen)], la fila en orden). La fila: [(origen, clave, datos)],
     primero las virales del día y después los policiales, cada grupo por orden de llegada. Lo vencido
     (el Release lo borra a las 24 h) va aparte, para anotarlo."""
     dia, limite = ahora.date(), ahora - timedelta(hours=IG_PRUEBA_VIGENCIA_H)
@@ -537,7 +569,7 @@ def fila_ig_prueba(mem: dict, ledger: dict, ahora: datetime) -> tuple:
             c = _hora_ar(r.get("cuando"))
             if r.get("estado") in ("ok", "sin_confirmar"):
                 if c and c.date() == dia:
-                    hechos.append(c)
+                    hechos.append((c, origen))
             elif r.get("estado") == "pendiente" and r.get("video_url"):
                 if not c or c < limite or (origen == "viral" and p.get("dia") != dia.isoformat()):
                     vencidos.append((origen, clave, r))
@@ -548,24 +580,35 @@ def fila_ig_prueba(mem: dict, ledger: dict, ahora: datetime) -> tuple:
     return sorted(hechos), fila, vencidos
 
 
+def franja_ig_prueba(ahora: datetime) -> str:
+    """De quién es el turno a esta hora: "viral" antes de las 20:00, "policial" desde las 20:00."""
+    pol = datetime.combine(ahora.date(), datetime.strptime(ig_prueba_pol_hora(), "%H:%M").time(), TZ_AR)
+    return "viral" if ahora < pol else "policial"
+
+
 def turno_ig_prueba(ahora: datetime, hechos: list) -> str:
-    """"" si en este momento sale un reel de prueba; si no, por qué no."""
+    """"" si en este momento sale un reel de prueba; si no, por qué no. `hechos`: [(hora, origen)] de hoy (una
+    hora suelta, sin origen, cuenta como de la franja de ahora)."""
     def a_las(h):
         return datetime.combine(ahora.date(), datetime.strptime(h, "%H:%M").time(), TZ_AR)
-    inicio, fin = a_las(ig_prueba_hora()), a_las(ig_prueba_fin())
+    hechos = sorted((h if isinstance(h, tuple) else (h, None) for h in hechos), key=lambda x: x[0])
+    grupo = franja_ig_prueba(ahora)
+    inicio, fin = ((a_las(ig_prueba_hora()), a_las(ig_prueba_virales_fin())) if grupo == "viral"
+                   else (a_las(ig_prueba_pol_hora()), a_las(ig_prueba_fin())))
     tope = ig_prueba_por_dia()
-    if ahora < inicio:
+    if ahora < a_las(ig_prueba_hora()):
         return f"todavía no son las {ig_prueba_hora()}"
-    if ahora > fin + timedelta(minutes=IG_PRUEBA_TARDE_MIN):
+    if ahora > a_las(ig_prueba_fin()) + timedelta(minutes=IG_PRUEBA_TARDE_MIN):
         return f"ya pasó el último turno ({ig_prueba_fin()})"
     if len(hechos) >= tope:
         return f"ya salieron {len(hechos)} hoy (tope {tope})"
-    turnos = min(tope, int((min(ahora, fin) - inicio).total_seconds() // (IG_PRUEBA_CADA_MIN * 60)) + 1)
-    if len(hechos) >= turnos:
+    del_grupo = [c for c, o in hechos if o in (grupo, None)]
+    turnos = int((min(ahora, fin) - inicio).total_seconds() // (IG_PRUEBA_CADA_MIN * 60)) + 1
+    if len(del_grupo) >= turnos:
         turno = inicio + timedelta(minutes=IG_PRUEBA_CADA_MIN * (turnos - 1))
         return f"el turno de las {turno:%H:%M} ya tiene su reel"
-    if hechos and (ahora - hechos[-1]) < timedelta(minutes=IG_PRUEBA_SEPARACION_MIN):
-        return f"el último salió hace {(ahora - hechos[-1]).total_seconds() / 60:.0f} minutos"
+    if hechos and (ahora - hechos[-1][0]) < timedelta(minutes=IG_PRUEBA_SEPARACION_MIN):
+        return f"el último salió hace {(ahora - hechos[-1][0]).total_seconds() / 60:.0f} minutos"
     return ""
 
 
@@ -606,8 +649,8 @@ def publicar_reel_prueba_url(video_url: str, caption: str, portada_url: str = ""
 
 
 def corrida_ig_prueba(publicar: bool) -> dict:
-    """UN TURNO DE LA FILA (12/11/2026): si toca (turno_ig_prueba), publica UN reel de prueba —la viral del
-    día que espera hace más, y si no queda ninguna, el policial que espera hace más—. Si el primero falla,
+    """UN TURNO DE LA FILA (12/11/2026): si toca (turno_ig_prueba), publica UN reel de prueba de la franja de
+    ahora (14/11/2026: virales de 18 a 20, policiales de 20 a 22), el que espera hace más. Si el primero falla,
     prueba con el siguiente: el turno no se pierde. Lo vencido se anota y no se intenta."""
     informe = {"modo": "ig_prueba", "piezas": [], "fallas": [], "descartadas": []}
     mem = cargar()
@@ -622,9 +665,13 @@ def corrida_ig_prueba(publicar: bool) -> dict:
                                                              detalle="el video del Release ya no está"))
         _guardar_prueba(mem, ledger, {o for o, _, _ in vencidos})
     motivo = turno_ig_prueba(ahora, hechos)
+    grupo = franja_ig_prueba(ahora)
     informe["turno"] = motivo or "sale"
+    informe["franja"] = grupo
     print(f"Reels de prueba: {len(hechos)} hoy, {len(fila)} en la fila "
-          f"({sum(1 for f in fila if f[0] == 'viral')} virales). {motivo or 'Sale uno.'}", flush=True)
+          f"({sum(1 for f in fila if f[0] == 'viral')} virales). Turno de los {grupo}es. "
+          f"{motivo or 'Sale uno.'}", flush=True)
+    fila = [f for f in fila if f[0] == grupo]        # cada franja publica solo lo suyo (14/11/2026)
     if motivo or not fila:
         return informe
     if publicar and (lugar := _lugar_ig()) and lugar[0] <= 0:
@@ -696,7 +743,7 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
             res["instagram"] = {"estado": "simulado", "formato": pieza.get("formato"),
                                 "laminas": len(pieza.get("slides") or []), "texto": caption_instagram(pieza["guion"])}
         if ig_prueba:
-            res["ig_prueba"] = {"estado": "simulado", "formato": "reel de prueba", "para": "fila de las 17",
+            res["ig_prueba"] = {"estado": "simulado", "formato": "reel de prueba", "para": "fila de las 18",
                                 "texto": caption_instagram(pieza["guion"])}
         return res
 
@@ -735,12 +782,12 @@ def publicar_pieza(pieza: dict, a_facebook: bool, publicar: bool, con_youtube: b
             res["instagram"] = dict(_resultado(publicar_imagen_instagram, Path(pieza["slide"]), caption, marca),
                                     formato="imagen")
     if ig_prueba:
-        # Lo publica la fila (corrida_ig_prueba, desde las 17): acá solo se deja el video listo en el Release.
+        # Lo publica la fila (corrida_ig_prueba, desde las 18): acá solo se deja el video listo en el Release.
         marca = hashlib.sha1(pieza["url_original"].encode()).hexdigest()[:10]
         r = _resultado(dejar_reel_prueba, mp4, caption_instagram(pieza["guion"]), marca,
                        (pieza.get("video") or {}).get("portada") or "")
         if r.get("estado") == "ok":
-            r.update(estado="pendiente", para="fila de las 17")
+            r.update(estado="pendiente", para="fila de las 18")
         res["ig_prueba"] = dict(r, formato="reel de prueba")
     return res
 

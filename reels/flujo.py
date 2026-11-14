@@ -566,6 +566,22 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
                     "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
                     "titulo": nota.get("titulo"), "url_original": nota.get("url")}
 
+    # ¿El video es de ESTE hecho? (14/11/2026, reels/control_video.py): la página de un medio puede traer el
+    # de otra nota. Si no corresponde, la pieza sale con la foto (y sin reel de prueba, que pide video).
+    control_video = None
+    if clip and hacer_video:
+        from reels import control_video as CV
+        control_video = CV.controlar(clip, nota.get("titulo") or g.get("titular") or "", g.get("bajada") or "",
+                                     " ".join(str(nota.get(k) or "") for k in ("resumen", "copete", "cuerpo")),
+                                     nota.get("video_titulo") or "", carpeta=tmp_dir)
+        if not control_video["ok"]:
+            print(f"   video descartado: «{(g.get('titular') or '')[:60]}»: {control_video['motivo']}", flush=True)
+            clip = None
+            if not foto:
+                return {"orden": idx, "descartada": True, "por_que_no": control_video["motivo"],
+                        "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                        "titulo": nota.get("titulo"), "url_original": nota.get("url")}
+
     nombre = f"{idx:02d}_{_slug(nota.get('localidad_medio'))}_{_slug(g['titular'], 30)}"
     img = carpeta / f"{nombre}.jpg"
     avisos = []
@@ -694,6 +710,7 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
         "titulo_medio": nota.get("titulo") or "",
         "tenia_foto": bool(foto),
         "tenia_video": bool(clip),
+        "video_control": control_video,
         # Cuánto dura el video del medio (01/11/2026): el publicador pone primero los de hasta 1 min 30 s.
         "video_seg": _duracion(clip),
         "tenia_audio": bool(nota.get("audio")),

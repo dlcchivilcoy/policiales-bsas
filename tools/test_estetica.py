@@ -8,6 +8,7 @@ Correrlo SIEMPRE despues de tools\\traer_estetica_bot.py: el adaptador usa algun
 piezas internas del motor, y un cambio en el bot puede renombrarlas.
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import sys
 import tempfile
 from pathlib import Path

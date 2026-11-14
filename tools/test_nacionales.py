@@ -8,6 +8,7 @@ publica, dónde y cuántas veces.
 """
 import json
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import shutil
 import sys
 import tempfile
@@ -1005,7 +1006,7 @@ _prueba = [p for p in inf_s["piezas"] if (p.get("ig_prueba") or {}).get("estado"
 chequear("virales (12/11/2026): a las 4 las 5 con Short (con video) dejan su reel de PRUEBA en la fila, sin publicar",
          len(_prueba) == 5 and all(p.get("youtube") for p in _prueba)
          and all(p["ig_prueba"].get("video_url", "").startswith("https://gh/prueba_") for p in _prueba)
-         and all(p["ig_prueba"].get("para") == "fila de las 17" for p in _prueba)
+         and all(p["ig_prueba"].get("para") == "fila de las 18" for p in _prueba)
          and not any(l[0] == "ig_publicar" for l in llamadas))
 chequear("virales: las solo web no llevan reel de prueba",
          not any("ig_prueba" in p for p in inf_s["piezas"] if not p.get("youtube")))
@@ -1033,42 +1034,56 @@ def _turno_a_las(h):
     return PA.corrida_ig_prueba(True)
 
 
-_inf_1650 = _turno_a_las("16:50")
-chequear("fila: antes de las 17 no sale nada", not _ig_params and "todavía no" in _inf_1650["turno"])
-_inf_1702 = _turno_a_las("17:02")
-chequear("fila: a las 17 sale UNA, una viral (las virales primero), como reel de PRUEBA sin colab",
+# 14/11/2026: DOS FRANJAS. Virales a las 18:00, 18:30, 19:00 y 19:30; policiales de 20:00 a 22:00.
+_inf_1750 = _turno_a_las("17:50")
+chequear("fila: antes de las 18 no sale nada", not _ig_params and "todavía no" in _inf_1750["turno"])
+_inf_1802 = _turno_a_las("18:02")
+chequear("fila: a las 18 sale UNA viral, como reel de PRUEBA sin colab",
          len(_ig_params) == 1 and _ig_params[0]["video_url"].startswith("https://gh/prueba_")
          and json.loads(_ig_params[0]["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"}
-         and "collaborators" not in _ig_params[0] and _inf_1702["pendientes"] == 7)
-_turno_a_las("17:15")
-chequear("fila: la corrida de las 17:15 no publica (el turno de las 17:00 ya tiene su reel)", len(_ig_params) == 1)
-for _h in ("17:31", "18:00", "18:30", "19:00"):
+         and "collaborators" not in _ig_params[0] and _inf_1802["pendientes"] == 7
+         and _inf_1802["franja"] == "viral")
+_turno_a_las("18:15")
+chequear("fila: la corrida de las 18:15 no publica (el turno de las 18:00 ya tiene su reel)", len(_ig_params) == 1)
+for _h in ("18:31", "19:00", "19:30"):
     _turno_a_las(_h)
-chequear("fila: 17:30, 18, 18:30 y 19 → las otras 4 virales, de a una",
-         len(_ig_params) == 5 and all(x["video_url"].startswith("https://gh/prueba_") for x in _ig_params))
-_turno_a_las("19:45")
-_turno_a_las("19:50")
-chequear("fila: terminadas las virales sigue el policial que espera hace más, con su ubicación; y una corrida "
-         "atrasada (19:45, turno de las 19:30) no deja salir otro pegado a los 5 minutos",
-         len(_ig_params) == 6 and _ig_params[5]["video_url"] == "https://gh/pol0.mp4"
-         and "location_id" not in _ig_params[5])
+chequear("fila: 18:30, 19 y 19:30 → otras 3 virales, de a una",
+         len(_ig_params) == 4 and all(x["video_url"].startswith("https://gh/prueba_") for x in _ig_params))
+_inf_1945 = _turno_a_las("19:45")
+chequear("fila: la quinta viral NO sale a las 19:45 (las virales tienen 4 turnos, de 18 a 19:30)",
+         len(_ig_params) == 4 and "19:30 ya tiene" in _inf_1945["turno"])
+_inf_2001 = _turno_a_las("20:01")
+chequear("fila: a las 20 sale el policial que espera hace más (la viral que sobró no le gana)",
+         len(_ig_params) == 5 and _ig_params[4]["video_url"] == "https://gh/pol0.mp4"
+         and "location_id" not in _ig_params[4] and _inf_2001["franja"] == "policial")
 _led = PUB.cargar_ledger()
 chequear("fila: el policial queda publicado en la memoria de policiales",
          _led["pol0"]["ig_prueba"]["estado"] == "ok" and _led["pol1"]["ig_prueba"]["estado"] == "pendiente")
 _turno_a_las("20:16")
-chequear("fila: el turno de las 20 (la corrida de las 20:16: la de las 20:01 quedaba pegada a la anterior) → el otro policial, con la ubicación del hecho",
-         len(_ig_params) == 7 and _ig_params[6]["video_url"] == "https://gh/pol1.mp4"
-         and _ig_params[6].get("location_id") == "123")
-_inf_vacia = _turno_a_las("20:46")
-chequear("fila: sin nada en la fila no se publica", len(_ig_params) == 7 and _inf_vacia["pendientes"] == 0)
+chequear("fila: la corrida de las 20:16 no publica (el turno de las 20:00 ya tiene el suyo)", len(_ig_params) == 5)
+_turno_a_las("20:31")
+chequear("fila: el turno de las 20:30 → el otro policial, con la ubicación del hecho",
+         len(_ig_params) == 6 and _ig_params[5]["video_url"] == "https://gh/pol1.mp4"
+         and _ig_params[5].get("location_id") == "123")
+_inf_vacia = _turno_a_las("21:01")
+chequear("fila: sin policiales en la fila no se publica nada, aunque quede una viral",
+         len(_ig_params) == 6 and _inf_vacia["pendientes"] == 1)
 PUB._contenedor_listo, PUB._publicar_contenedor, PA._ahora = _cl_antes, _pc_antes, _ahora_antes
 PUB.LEDGER = _ledger_antes
-# Los turnos, sueltos: 11 por día, uno por media hora de 17 a 22, y lo vencido no se intenta.
+# Los turnos, sueltos: 11 por día como mucho; virales de 18 a 19:30 y policiales de 20 a 22; lo vencido no se intenta.
 _a = lambda h: datetime.combine(_dia_v, datetime.strptime(h, "%H:%M").time(), PA.TZ_AR)  # noqa: E731
-chequear("turnos: con 11 hoy ya no sale otro; a las 23 tampoco; a las 22:30 se recupera el de las 22",
-         "tope 11" in PA.turno_ig_prueba(_a("21:59"), [_a("16:00")] * 11)
+_pol = [(_a(h), "policial") for h in ("20:00", "20:30", "21:00", "21:30")]
+chequear("turnos: con 11 hoy ya no sale otro; a las 23 tampoco; a las 22:10 se recupera el de las 22, a las 22:20 ya no",
+         "tope 11" in PA.turno_ig_prueba(_a("21:59"), [(_a("18:00"), "viral")] * 11)
          and "último turno" in PA.turno_ig_prueba(_a("23:00"), [])
-         and PA.turno_ig_prueba(_a("22:30"), [_a("17:00")] * 10) == "")
+         and PA.turno_ig_prueba(_a("22:10"), _pol) == ""
+         and "último turno" in PA.turno_ig_prueba(_a("22:20"), _pol))
+chequear("turnos: las virales publicadas no le ocupan el turno a los policiales (y al revés)",
+         PA.turno_ig_prueba(_a("20:25"), [(_a(h), "viral") for h in ("18:00", "18:30", "19:00", "19:30")]) == ""
+         and PA.turno_ig_prueba(_a("18:40"), [(_a("18:00"), "viral")]) == ""
+         and "ya tiene" in PA.turno_ig_prueba(_a("18:40"), [(_a("18:00"), "viral"), (_a("18:30"), "viral")]))
+chequear("turnos: franja de las virales hasta las 19:59, de los policiales desde las 20:00",
+         PA.franja_ig_prueba(_a("19:59")) == "viral" and PA.franja_ig_prueba(_a("20:00")) == "policial")
 _, _fila_v, _venc = PA.fila_ig_prueba(
     {"piezas": {"vieja": {"dia": (_dia_v - timedelta(days=1)).isoformat(),
                           "ig_prueba": {"estado": "pendiente", "video_url": "https://gh/v",
@@ -1087,10 +1102,11 @@ _mem_p = {"piezas": {f"u{i}": {"dia": "2026-11-10", "ig_prueba": {"estado": "ok"
 chequear("virales: cuenta las de hoy (publicadas o en la fila)",
          PA._ig_prueba_hoy(_mem_p, "2026-11-10") == 5 and PA._ig_prueba_hoy(_mem_p, "2026-11-11") == 0)
 os.environ["NAC_IG_PRUEBA_HORA"] = "20:30"
-chequear("fila: NAC_IG_PRUEBA_HORA cambia el primer turno (17:00 de fábrica; una hora mal escrita no rompe)",
+chequear("fila: NAC_IG_PRUEBA_HORA cambia el primer turno (18:00 de fábrica; una hora mal escrita no rompe)",
          PA.ig_prueba_hora() == "20:30")
 os.environ["NAC_IG_PRUEBA_HORA"] = "a la noche"
-chequear("...", PA.ig_prueba_hora() == "17:00")
+chequear("...", PA.ig_prueba_hora() == "18:00" and PA.ig_prueba_virales_fin() == "19:30"
+         and PA.ig_prueba_pol_hora() == "20:00" and PA.ig_prueba_fin() == "22:00")
 os.environ.pop("NAC_IG_PRUEBA_HORA")
 os.environ["NAC_SHORT_VIRALES"] = "0"
 chequear("agenda v12: NAC_SHORT_VIRALES=0 saca los Shorts de las virales", "virales_short" not in AGE.topes(_lun(4)))

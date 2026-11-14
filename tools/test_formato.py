@@ -8,6 +8,7 @@ Sin red: las descargas, el motor y las redes se reemplazan.
   editor del 05/10: nada de reemplazarla por otra para esquivar el logo de un medio).
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import sys
 import tempfile
 from pathlib import Path

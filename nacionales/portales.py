@@ -337,14 +337,16 @@ def _video_tn(html: str) -> list:
     return []
 
 
-def video_jw(ids: list, titulo: str, cliente=None) -> str:
-    """El MP4 de la nota entre los videos de JW de la página: el que se parece al título de la nota, de
-    más de 8 segundos (los «loops» de cabecera no) y en su versión de 720p. "" si ninguno sirve."""
+def elegir_jw(ids: list, titulo: str, cliente=None, texto: str = "") -> dict:
+    """El video de JW que es de la nota, entre los de la página: {"file", "nombre", "parecido"} o {}.
+
+    De más de 8 segundos (los «loops» de cabecera no), en su versión de 720p, y el que más palabras comparte
+    con el título y el texto de la nota. 14/11/2026: si NINGUNO se parece, ninguno (antes ganaba el primero
+    de la página, que a veces es de otra nota: el bebé rescatado salió con el médico de la Selección)."""
     if not ids:
-        return ""
+        return {}
     cliente = cliente or _cliente()
-    from nacionales import impacto as IM
-    buscado = IM.palabras(titulo)
+    from reels import control_video as CV
     opciones = []
     for orden, i in enumerate(ids[:6]):
         try:
@@ -354,7 +356,8 @@ def video_jw(ids: list, titulo: str, cliente=None) -> str:
             item = (d.get("playlist") or [{}])[0]
         except Exception:                             # noqa: BLE001
             continue
-        nombre = f"{d.get('title') or ''} {item.get('title') or ''}"
+        nombre = " ".join(dict.fromkeys(x for x in (d.get("title"), item.get("title"), item.get("description"))
+                                        if x))
         if (item.get("duration") or 0) < 8 or re.search(r"\bloop\b", nombre, re.I):
             continue
         mp4 = [x for x in item.get("sources") or [] if x.get("type") == "video/mp4" and x.get("file")]
@@ -363,9 +366,17 @@ def video_jw(ids: list, titulo: str, cliente=None) -> str:
         corto = lambda x: min(x.get("width") or x.get("height") or 0, x.get("height") or 0)   # noqa: E731 — verticales
         abajo = [x for x in mp4 if corto(x) <= JW_ALTO]
         elegido = max(abajo, key=corto) if abajo else min(mp4, key=corto)
-        comunes = len(buscado & IM.palabras(nombre))
-        opciones.append((comunes, -orden, elegido["file"]))
-    return max(opciones)[2] if opciones else ""
+        p = CV.parecido(titulo, texto, nombre)
+        if p["veredicto"] == "no":
+            continue                                  # de otra nota de la página
+        opciones.append(((p["veredicto"] == "si", p["titulo"], p["texto"], -orden),
+                         {"file": elegido["file"], "nombre": nombre[:300], "parecido": p}))
+    return max(opciones, key=lambda x: x[0])[1] if opciones else {}
+
+
+def video_jw(ids: list, titulo: str, cliente=None, texto: str = "") -> str:
+    """El MP4 de la nota entre los videos de JW de la página (elegir_jw). "" si ninguno es de la nota."""
+    return elegir_jw(ids, titulo, cliente, texto).get("file") or ""
 
 
 def _cliente():
@@ -406,7 +417,9 @@ def leer(url: str, cliente=None) -> dict:
     if f.get("jw") and not _video_tn(r.text):
         # El de JW que corresponde a la nota, en 720p (18/10/2026): antes, el primer MP4 de la página
         # (a veces un «loop» de 6 segundos o la versión de 180p).
-        f["video"] = video_jw(f["jw"], f.get("titulo") or "", cliente) or ""
+        # 14/11/2026: el que se parece a la nota (título y texto), y si ninguno se parece, ninguno.
+        jw = elegir_jw(f["jw"], f.get("titulo") or "", cliente, f"{f.get('resumen') or ''} {f.get('texto') or ''}")
+        f["video"], f["video_nombre"] = jw.get("file") or "", jw.get("nombre") or ""
     return f
 
 

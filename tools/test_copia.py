@@ -6,6 +6,7 @@ descripción y rearmá la info de tal manera que no se note la copia». Medido e
 9 reels publicados: 3 arrastraban tramos de 10 a 14 palabras iguales a la nota original.
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import sys
 import tempfile
 from pathlib import Path

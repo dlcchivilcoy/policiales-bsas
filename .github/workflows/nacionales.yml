@@ -8,11 +8,12 @@ name: Noticias nacionales
 #          las 10 generales del día para Chivilcoy, a las 23). Para volver: hora 22 en cron-job.org (job 8677866)
 #          y el respaldo «20 1 * * *» acá abajo.
 #
-#   17:00-22:00  FILA DE REELS DE PRUEBA (12/11/2026): uno cada 30 minutos (11 por día), primero las virales
-#          con Short que dejó la de las 4 y después los policiales con video. El `schedule:` de GitHub pasa cada
-#          15 minutos de 17:00 a 22:45: cada corrida publica uno solo si su turno de media hora todavía no tiene
-#          el suyo (nacionales/pasada.py → turno_ig_prueba), así una corrida que GitHub atrasa o se saltea no
-#          pierde el turno. A mano: inputs {"modo": "ig_prueba"}.
+#   18:00-22:00  FILA DE REELS DE PRUEBA (12/11/2026; franjas del 14/11/2026): uno cada 30 minutos, las virales
+#          con Short que dejó la de las 4 de 18:00 a 19:30 y los policiales con video de 20:00 a 22:00. La dispara
+#          cron-job.org a las :00 y :30 de 18 a 22 con {"ref":"main","inputs":{"modo":"ig_prueba","origen":"cron"}}
+#          (el `schedule:` de GitHub cada 15 minutos casi nunca corría: una vez por noche el 12 y el 13/11). El
+#          `schedule:` de abajo queda de respaldo; cada corrida publica uno solo si su turno de media hora todavía
+#          no tiene el suyo (nacionales/pasada.py → turno_ig_prueba). A mano: inputs {"modo": "ig_prueba"}.
 #
 # Los policiales siguen en reels.yml (17 y 20).
 #
@@ -22,8 +23,8 @@ name: Noticias nacionales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 7 * * *"    # 04:20 Argentina (respaldo de la de las 4, solo web)
-    - cron: "*/15 20-23 * * *"   # 17:00-20:45 Argentina: un turno de la fila de reels de prueba (12/11/2026)
-    - cron: "*/15 0-1 * * *"     # 21:00-22:45 Argentina: ídem
+    - cron: "10,40 21-23 * * *"  # 18:10-20:40 Argentina: respaldo de la fila de reels de prueba (14/11/2026)
+    - cron: "10,40 0-1 * * *"    # 21:10-22:40 Argentina: ídem
     # (22:20 Argentina —«20 1 * * *», respaldo del carrusel de las 22— la sacó el editor el 25/10/2026: carrusel apagado)
   workflow_dispatch:
     inputs:
@@ -34,7 +35,7 @@ on:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
       modo:
-        description: '"ig_prueba" = un turno de la fila de reels de prueba (17 a 22). Vacío = la agenda'
+        description: '"ig_prueba" = un turno de la fila de reels de prueba (virales 18 a 20, policiales 20 a 22). Vacío = la agenda'
         default: ""
 
 # Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
@@ -95,7 +96,10 @@ jobs:
           NAC_IG_PRUEBA_VIRALES: ${{ vars.NAC_IG_PRUEBA_VIRALES }}
           IG_PRUEBA_POR_DIA: ${{ vars.IG_PRUEBA_POR_DIA }}
           NAC_IG_PRUEBA_HORA: ${{ vars.NAC_IG_PRUEBA_HORA }}
+          NAC_IG_PRUEBA_VIRALES_FIN: ${{ vars.NAC_IG_PRUEBA_VIRALES_FIN }}
+          NAC_IG_PRUEBA_POL_HORA: ${{ vars.NAC_IG_PRUEBA_POL_HORA }}
           NAC_IG_PRUEBA_FIN: ${{ vars.NAC_IG_PRUEBA_FIN }}
+          VIDEO_CONTROL: ${{ vars.VIDEO_CONTROL }}
           NAC_MINUTOS: ${{ vars.NAC_MINUTOS }}
           NAC_MINUTOS_FINDE: ${{ vars.NAC_MINUTOS_FINDE }}
           NAC_CARRUSEL_FB: ${{ vars.NAC_CARRUSEL_FB }}
@@ -111,9 +115,9 @@ jobs:
         run: |
           set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
           ARGS="--agenda"
-          # La fila de reels de prueba (12/11/2026): cada 15 minutos de 17 a 22:45. Si el turno ya tiene su reel,
-          # termina sin hacer nada.
-          if [ "$MODO_INPUT" = "ig_prueba" ] || [ "$CRON_GH" = "*/15 20-23 * * *" ] || [ "$CRON_GH" = "*/15 0-1 * * *" ]; then
+          # La fila de reels de prueba (12/11/2026; franjas del 14/11/2026): cron-job.org a las :00 y :30 de 18 a 22
+          # y los respaldos de GitHub. Si el turno ya tiene su reel, termina sin hacer nada.
+          if [ "$MODO_INPUT" = "ig_prueba" ] || [ "$CRON_GH" = "10,40 21-23 * * *" ] || [ "$CRON_GH" = "10,40 0-1 * * *" ]; then
             ARGS="--ig-prueba"
           fi
           if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$NACIONALES_VAR" != "0" ]; then

@@ -9,6 +9,7 @@ bot en Instagram, y que TikTok no salga.
 """
 import json
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import shutil
 import sys
 import tempfile

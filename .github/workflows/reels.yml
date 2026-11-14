@@ -178,6 +178,7 @@ jobs:
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
           GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          VIDEO_CONTROL: ${{ vars.VIDEO_CONTROL }}   # 0 apaga el control de que el video sea de la nota (14/11/2026)
           # Respaldo pago, solo si se agotaron todas las gratis. Puede quedar vacío.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         # --cadencia le pone hora a cada pieza (cada 30 minutos); el publicador espacia a 30

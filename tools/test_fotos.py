@@ -5,6 +5,7 @@ Nació el 27/09/2026: el reel de Chacabuco salió con una foto de 72x72 (la mini
 el RSS de Blogger) y el editor pidió descartar las chicas y priorizar las notas con video.
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import shutil
 import sys
 import tempfile

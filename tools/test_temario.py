@@ -6,6 +6,7 @@ meteorológica: el diccionario puntúa la página entera, con las notas del cost
 alertas meteorológicas después pasaron a ser DEL temario, a pedido del editor.)
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 import sys
 import tempfile
 from pathlib import Path

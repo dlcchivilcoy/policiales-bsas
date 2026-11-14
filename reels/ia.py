@@ -76,11 +76,15 @@ def proveedor_disponible() -> str:
 # =============================================================================
 
 def _pedir_gemini(system: str, material: str, clave: str, modelo: str,
-                  timeout: int = 90, max_tokens: int = 2000) -> str:
+                  timeout: int = 90, max_tokens: int = 2000, imagenes=None) -> str:
+    import base64
     import httpx
+    # `imagenes`: [(mime, bytes)] que Gemini MIRA junto con el texto (14/11/2026: el control de que el video
+    # del reel sea de la nota, reels/control_video.py).
+    partes = [{"inline_data": {"mime_type": m, "data": base64.b64encode(b).decode()}} for m, b in imagenes or []]
     payload = {
         "systemInstruction": {"parts": [{"text": system}]},
-        "contents": [{"role": "user", "parts": [{"text": material}]}],
+        "contents": [{"role": "user", "parts": partes + [{"text": material}]}],
         "generationConfig": {
             # Sin temperature: Google la depreca (aviso del 7/10/2026). Desde Gemini
             # 3.6 Flash no cambia nada y en los modelos que vienen da error.
@@ -115,8 +119,8 @@ class _Cuota(RuntimeError):
     """Cupo agotado de ESA clave. Se rota, no se espera."""
 
 
-def redactar_gemini(system: str, material: str, max_tokens: int = 2000) -> tuple:
-    """Devuelve (texto, detalle). Rota claves ante 429 y después baja de modelo."""
+def redactar_gemini(system: str, material: str, max_tokens: int = 2000, imagenes=None) -> tuple:
+    """Devuelve (texto, detalle). Rota claves ante 429 y después baja de modelo. `imagenes`: [(mime, bytes)]."""
     claves = _claves_gemini()
     if not claves:
         raise SinProveedor("no hay ninguna GEMINI_API_KEY en el entorno")
@@ -125,7 +129,7 @@ def redactar_gemini(system: str, material: str, max_tokens: int = 2000) -> tuple
     for modelo in MODELOS_GEMINI:
         for i, clave in enumerate(claves, 1):
             try:
-                texto = _pedir_gemini(system, material, clave, modelo, max_tokens=max_tokens)
+                texto = _pedir_gemini(system, material, clave, modelo, max_tokens=max_tokens, imagenes=imagenes)
                 return texto, f"gemini:{modelo} (clave {i}/{len(claves)})"
             except _Cuota as e:
                 ultimo = e

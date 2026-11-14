@@ -4,6 +4,7 @@
     venv\\Scripts\\python.exe tools\\test_agro.py
 """
 import os
+os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos: el control tiene sus pruebas (test_control_video)
 # Las pruebas de siempre corren con las imágenes IA prendidas; la regla del 18/10/2026 (sin IA, sin foto
 # real no sale) se prueba al final con AGRO_IMAGEN_IA=0.
 os.environ["AGRO_IMAGEN_IA"] = "1"
@@ -1512,8 +1513,32 @@ from agro import diseno as DIS  # noqa: E402
 from reels import publicador as _PB  # noqa: E402
 
 _gs = GU._salida(dict(BUENA, portada="Soja: arranca la siembra con 2% más de área en la zona núcleo hoy"), "x")
-chequear("guion: el texto de la miniatura (hasta 9 palabras, palabra clave primero)",
-         _gs["portada_seo"].startswith("Soja:") and len(_gs["portada_seo"].split()) <= 9)
+chequear("guion: el texto de la miniatura llega ENTERO (14/11/2026: ya no se corta a 9 palabras)",
+         _gs["portada_seo"] == "Soja: arranca la siembra con 2% más de área en la zona núcleo hoy")
+# 14/11/2026: los titulares cortados en la primera placa del carrusel («El Niño supera 2,8°C y apunta»).
+chequear("portada: hasta 12 palabras va entera, sin gastar la IA",
+         GU.portada_completa("Clima: El Niño supera 2,8°C y apunta a un verano lluvioso", "x",
+                             redactar=lambda *a, **k: 1 / 0) == "Clima: El Niño supera 2,8°C y apunta a un verano lluvioso")
+_pedidos = []
+
+
+def _acorta(system, material, max_tokens=0):
+    _pedidos.append(material)
+    return {"portada": "Soja: la siembra avanza en la zona núcleo."}, "x"
+
+
+chequear("portada: más larga que 12 palabras, la IA la acorta a una frase completa",
+         GU.portada_completa("Soja: avanza la siembra en la zona núcleo tras las lluvias de la última semana en "
+                             "toda la región", "Avanza la siembra de soja", _acorta)
+         == "Soja: la siembra avanza en la zona núcleo" and len(_pedidos) == 1)
+chequear("portada: si la IA devuelve algo colgado, va el titular",
+         GU.portada_completa("Soja: avanza la siembra en la zona núcleo tras las lluvias de la última semana en "
+                             "toda la región", "Avanza la siembra de soja en la zona núcleo",
+                             lambda *a, **k: ({"portada": "Soja: avanza la siembra tras"}, "x"))
+         == "Avanza la siembra de soja en la zona núcleo")
+chequear("portada: un texto que termina en «y», «tras» o dos puntos está colgado",
+         GU.portada_colgada("El Niño supera 2,8°C y") and GU.portada_colgada("avanza la siembra tras")
+         and GU.portada_colgada("Soja:") and not GU.portada_colgada("Soja: avanza la siembra"))
 chequear("sin texto de miniatura, va el titular", DIS.texto_portada({"titular": "Trigo en alza"}) == "Trigo en alza")
 _pl = DIS.plan_bloque("Agricultura", "Soja: arranca la siembra", "blanco", 810, tope=DIS.PORTADA)
 chequear("miniatura: letra más grande que el titular y la clave en naranja",
