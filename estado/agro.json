@@ -75653,7 +75653,7 @@
       "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T07:08:08-03:00",
+  "actualizado": "2026-11-14T08:02:50-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -81582,6 +81582,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-12": {
+        "fecha": "2026-11-12",
+        "productos": {
+          "trigo": {
+            "ars": 288900.0,
+            "usd": 188.02,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "maiz": {
+            "ars": 275800.0,
+            "usd": 179.5,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "girasol": {
+            "ars": 752885.0,
+            "usd": 490.0,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 540000.0,
+            "usd": 351.45,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "sorgo": {
+            "ars": 276570.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1536.5,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -81822,6 +81862,20 @@
           "compra": 1536.5,
           "venta": 1545.5
         }
+      },
+      "2026-11-13": {
+        "fuente": "Banco Nación",
+        "hora": "17:00",
+        "billete": {
+          "fecha": "2026-11-13",
+          "compra": 1520.0,
+          "venta": 1570.0
+        },
+        "divisa": {
+          "fecha": "2026-11-13",
+          "compra": 1534.5,
+          "venta": 1543.5
+        }
       }
     },
     "a3500": {
@@ -81924,6 +81978,10 @@
       "2026-11-12": {
         "fecha": "2026-11-12",
         "valor": 1544.432
+      },
+      "2026-11-13": {
+        "fecha": "2026-11-13",
+        "valor": 1547.0336
       }
     },
     "chicago_soja": {
@@ -82005,95 +82063,95 @@
       },
       "2026-10-14": {
         "fecha": "2026-10-14",
-        "usd_t": 469.3
+        "usd_t": 474.7
       },
       "2026-10-15": {
         "fecha": "2026-10-15",
-        "usd_t": 464.1
+        "usd_t": 469.5
       },
       "2026-10-16": {
         "fecha": "2026-10-16",
-        "usd_t": 463.4
+        "usd_t": 468.8
       },
       "2026-10-19": {
         "fecha": "2026-10-19",
-        "usd_t": 460.6
+        "usd_t": 466.2
       },
       "2026-10-20": {
         "fecha": "2026-10-20",
-        "usd_t": 458.7
+        "usd_t": 464.3
       },
       "2026-10-21": {
         "fecha": "2026-10-21",
-        "usd_t": 457.6
+        "usd_t": 462.3
       },
       "2026-10-22": {
         "fecha": "2026-10-22",
-        "usd_t": 460.4
+        "usd_t": 464.7
       },
       "2026-10-23": {
         "fecha": "2026-10-23",
-        "usd_t": 461.7
+        "usd_t": 466.1
       },
       "2026-10-26": {
         "fecha": "2026-10-26",
-        "usd_t": 456.1
+        "usd_t": 460.2
       },
       "2026-10-27": {
         "fecha": "2026-10-27",
-        "usd_t": 451.7
+        "usd_t": 456.7
       },
       "2026-10-28": {
         "fecha": "2026-10-28",
-        "usd_t": 449.9
+        "usd_t": 454.9
       },
       "2026-10-29": {
         "fecha": "2026-10-29",
-        "usd_t": 448.2
+        "usd_t": 453.7
       },
       "2026-10-30": {
         "fecha": "2026-10-30",
-        "usd_t": 449.1
+        "usd_t": 453.5
       },
       "2026-11-02": {
         "fecha": "2026-11-02",
-        "usd_t": 442.7
+        "usd_t": 447.1
       },
       "2026-11-03": {
         "fecha": "2026-11-03",
-        "usd_t": 442.0
+        "usd_t": 446.1
       },
       "2026-11-04": {
         "fecha": "2026-11-04",
-        "usd_t": 438.4
+        "usd_t": 441.8
       },
       "2026-11-05": {
         "fecha": "2026-11-05",
-        "usd_t": 433.9
+        "usd_t": 436.6
       },
       "2026-11-06": {
         "fecha": "2026-11-06",
-        "usd_t": 436.9
+        "usd_t": 438.6
       },
       "2026-11-09": {
         "fecha": "2026-11-09",
-        "usd_t": 434.4
+        "usd_t": 436.6
       },
       "2026-11-10": {
         "fecha": "2026-11-10",
-        "usd_t": 449.9
+        "usd_t": 451.2
       },
       "2026-11-11": {
         "fecha": "2026-11-11",
-        "usd_t": 451.6
+        "usd_t": 452.2
       },
       "2026-11-12": {
         "fecha": "2026-11-12",
-        "usd_t": 450.8
+        "usd_t": 447.9
       },
       "2026-11-13": {
         "fecha": "2026-11-13",
-        "usd_t": 457.2
+        "usd_t": 452.5
       }
     },
     "chicago_maiz": {
@@ -82263,7 +82321,7 @@
       },
       "2026-11-13": {
         "fecha": "2026-11-13",
-        "usd_t": 176.0
+        "usd_t": 175.4
       }
     },
     "chicago_trigo": {
@@ -82433,7 +82491,7 @@
       },
       "2026-11-13": {
         "fecha": "2026-11-13",
-        "usd_t": 218.6
+        "usd_t": 218.0
       }
     }
   },
@@ -82617,6 +82675,32 @@
         "facebook": {
           "id": "101271341650483_1758506189613711",
           "fotos": 10
+        }
+      }
+    },
+    "2026-11-14T08:00:00-03:00": {
+      "dia": "2026-11-14",
+      "placas": [
+        "portada",
+        "mapa",
+        "pueblos",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Llegan 15 mm de lluvia a Chivilcoy",
+      "publicado": {
+        "instagram": {
+          "id": "18129699049921027",
+          "colab": "no",
+          "diapositivas": 8
+        },
+        "facebook": {
+          "id": "101271341650483_1759799609484369",
+          "fotos": 8
         }
       }
     }
