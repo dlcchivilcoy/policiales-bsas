@@ -37184,6 +37184,86 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ffe434ddc3091f45": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "campaña agrícola",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una entrevista analítica general sobre mercados y campañas que no aterriza en un hecho local concreto.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ad9cfeba4d0d96bd": {
+      "conversacion": 4,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 27,
+      "commercial_score": 25,
+      "subtema": "agro",
+      "tema": "suelos y nutrientes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Trata sobre conceptos técnicos y teóricos de fertilización, muy abstracto para el día a dia del productor zonal.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dc3e7395f7a7bd58": {
+      "conversacion": 6,
+      "historia_concreta": 3,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "maíz forrajero",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe de consumo récord de maíz que interesa a los productores maiceros de la zona, aunque es un dato nacional.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "a4b5f1a07bb36829": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 2,
+      "ai_score": 11,
+      "commercial_score": 10,
+      "subtema": "agtech",
+      "tema": "plasma frío",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Investigación científica de Estados Unidos sobre frutas y verduras, sin impacto directo para la producción local de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -39750,7 +39830,11 @@
       "https://bichosdecampo.com/una-familia-alegre-que-encontro-en-la-frutilla-su-propia-identidad-productiva-en-bella-vista-corrientes": "2026-11-14",
       "https://bichosdecampo.com/un-hecho-historico-del-que-pocos-hablan-esta-ocurriendo-en-el-mercado-argentino-de-maiz-con-el-creciente-protagonismo-de-los-consumos": "2026-11-14",
       "https://lanacion.com.ar/economia/campo/un-importante-empresario-del-agro-compro-10000-hectareas-en-una-zona-con-condiciones-excepcionales-nid14112026": "2026-11-14",
-      "https://agfundernews.com/trade-tensions-el-nino-and-other-forces-could-make-or-break-agtech-adoption-in-2027": "2026-11-14"
+      "https://agfundernews.com/trade-tensions-el-nino-and-other-forces-could-make-or-break-agtech-adoption-in-2027": "2026-11-14",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249330-pablo-scarafoni-la-campana-agricola-202627-muestra-un-panorama-positivo-para-el-agro-por-que.html": "2026-11-14",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249331-que-es-la-matematica-biologica-y-como-influye-en-la-nutricion-y-rendimiento-de-los-cultivos.html": "2026-11-14",
+      "https://agrositio.com.ar/noticia/249321-el-consumo-de-maiz-202526-para-forraje-en-argentina-se-estima-en-156-mt.html": "2026-11-14",
+      "https://bichosdecampo.com/una-limpieza-de-ciencia-ficcion-investigan-una-alternativa-al-tradicional-cloro-para-desinfectar-frutas-y-verduras-mediante-un-gas-energizado": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42315,7 +42399,11 @@
       "una familia alegre que encontro en la frutilla su propia identidad productiva en bella vista corrientes": "2026-11-14",
       "un hecho historico del que pocos hablan esta ocurriendo en el mercado argentino de maiz con el creciente protagonismo de los consumos": "2026-11-14",
       "un importante empresario del agro compro 10 000 hectareas en una zona con condiciones excepcionales": "2026-11-14",
-      "trade tensions el nino and other forces could make or break agtech adoption in 2027": "2026-11-14"
+      "trade tensions el nino and other forces could make or break agtech adoption in 2027": "2026-11-14",
+      "pablo scarafoni la campana agricola 2026 27 muestra un panorama positivo para el agro por que": "2026-11-14",
+      "matematica biologica una nueva mirada para entender el suelo los nutrientes y el rendimiento": "2026-11-14",
+      "record de consumo forrajero argentina utilizara 15 6 mill tons de maiz": "2026-11-14",
+      "una limpieza de ciencia ficcion investigan una alternativa al tradicional cloro para desinfectar frutas y verduras mediante un gas energizado": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44880,7 +44968,11 @@
       "93afbcbabafc06b8": "2026-11-14",
       "162cc02513c1535c": "2026-11-14",
       "27835c89824ab09d": "2026-11-14",
-      "36f7802abf63447d": "2026-11-14"
+      "36f7802abf63447d": "2026-11-14",
+      "ffe434ddc3091f45": "2026-11-14",
+      "ad9cfeba4d0d96bd": "2026-11-14",
+      "dc3e7395f7a7bd58": "2026-11-14",
+      "a4b5f1a07bb36829": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75742,6 +75834,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f3a2b5a3ecef_portada.jpg"
+    },
+    {
+      "id": "7b7d5f0b933b",
+      "cuando": "2026-11-14T19:30-03:00",
+      "titulo_original": "Cazón relanza sus atractivos y suma el Paseo de los Polinizadores en el Vivero Municipal",
+      "descripcion": "El tradicional \"Pueblo del Millón de Árboles\" combina sus 40 hectáreas de bosque preservado, propuestas gastronómicas y turismo de bienestar con una reciente iniciativa educativa y ambiental desarrollada junto a la Escuela Agraria.",
+      "fuente": "La Mañana (25 de Mayo)",
+      "url": "https://www.lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal/",
+      "titular": "Cazón estrena el Paseo de los Polinizadores en su vivero municipal",
+      "volanta": "Turismo Rural",
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 8,
+        "impacto_economico": 3,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 60,
+        "commercial_score": 45,
+        "subtema": "agro",
+        "tema": "cazón",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Nota de pueblo vecino (25 de Mayo) con participación de la Escuela Agraria, muy afín al público de la zona.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          51
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "b9784386-f874-46e4-83ec-c35356fc45cf",
+          "slug": "cazon-inauguro-el-paseo-de-los-polinizadores-en-su-historico-473ae9",
+          "url": "https://www.diariolacampaña.com.ar/n/cazon-inauguro-el-paseo-de-los-polinizadores-en-su-historico-473ae9",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17911862430657278",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760430119421318",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7b7d5f0b933b_portada.jpg"
     }
   ],
   "pendientes": [
@@ -76022,75 +76172,6 @@
       "cuando": "2026-11-13T21:00-03:00"
     },
     {
-      "id": "7b7d5f0b933b",
-      "rep": {
-        "id": "7b7d5f0b933b",
-        "fuente": "La Mañana (25 de Mayo)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lamanana.com.ar/feed/",
-        "url": "https://www.lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal/",
-        "canonical_url": "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal",
-        "titulo": "Cazón relanza sus atractivos y suma el Paseo de los Polinizadores en el Vivero Municipal",
-        "titulo_norm": "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal",
-        "descripcion": "El tradicional \"Pueblo del Millón de Árboles\" combina sus 40 hectáreas de bosque preservado, propuestas gastronómicas y turismo de bienestar con una reciente iniciativa educativa y ambiental desarrollada junto a la Escuela Agraria.",
-        "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-12.57.36.jpeg",
-        "autor": "Andrés Alvarez",
-        "publicado": "2026-11-13T12:01-03:00",
-        "capturado": "2026-11-13T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "035a2222ecdb21e2",
-        "localidad_medio": "25 de Mayo"
-      },
-      "grupo": [
-        {
-          "id": "7b7d5f0b933b",
-          "fuente": "La Mañana (25 de Mayo)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lamanana.com.ar/feed/",
-          "url": "https://www.lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal/",
-          "canonical_url": "https://lamanana.com.ar/cazon-relanza-sus-atractivos-y-suma-el-paseo-de-los-polinizadores-en-el-vivero-municipal",
-          "titulo": "Cazón relanza sus atractivos y suma el Paseo de los Polinizadores en el Vivero Municipal",
-          "titulo_norm": "cazon relanza sus atractivos y suma el paseo de los polinizadores en el vivero municipal",
-          "descripcion": "El tradicional \"Pueblo del Millón de Árboles\" combina sus 40 hectáreas de bosque preservado, propuestas gastronómicas y turismo de bienestar con una reciente iniciativa educativa y ambiental desarrollada junto a la Escuela Agraria.",
-          "imagen_url": "https://www.lamanana.com.ar/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-12.57.36.jpeg",
-          "autor": "Andrés Alvarez",
-          "publicado": "2026-11-13T12:01-03:00",
-          "capturado": "2026-11-13T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "035a2222ecdb21e2",
-          "localidad_medio": "25 de Mayo"
-        }
-      ],
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 8,
-        "impacto_economico": 3,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 60,
-        "commercial_score": 45,
-        "subtema": "agro",
-        "tema": "cazón",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Nota de pueblo vecino (25 de Mayo) con participación de la Escuela Agraria, muy afín al público de la zona.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          51
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T13:00-03:00"
-    },
-    {
       "id": "e895ce4abe8c",
       "rep": {
         "id": "e895ce4abe8c",
@@ -76160,8 +76241,8 @@
       "cuando": "2026-11-13T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-14T19:01:11-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-14T19:37:26-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
