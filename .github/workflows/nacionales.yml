@@ -15,6 +15,11 @@ name: Noticias nacionales
 #          `schedule:` de abajo queda de respaldo; cada corrida publica uno solo si su turno de media hora todavía
 #          no tiene el suyo (nacionales/pasada.py → turno_ig_prueba). A mano: inputs {"modo": "ig_prueba"}.
 #
+#   10:00  HISTORIA DEL PROGRAMA DE CORRESPONSALES (15/11/2026, reels/historia_corresponsales.py): una pregunta
+#          por día sobre imagen IA para que manden su material al WhatsApp del bot. cron-job.org con
+#          {"ref":"main","inputs":{"modo":"corresponsales","origen":"cron"}}. Publica SOLO si la dispara
+#          cron-job.org (origen=cron) o con publicar=si; a mano, sin eso, la simula.
+#
 # Los policiales siguen en reels.yml (17 y 20).
 #
 # QUIÉN DISPARA: cron-job.org a horario exacto, con {"ref":"main","inputs":{"origen":"cron"}}.
@@ -35,7 +40,7 @@ on:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
       modo:
-        description: '"ig_prueba" = un turno de la fila de reels de prueba (virales 18 a 20, policiales 20 a 22). Vacío = la agenda'
+        description: '"ig_prueba" = un turno de la fila de reels de prueba (virales 18 a 20, policiales 20 a 22). "corresponsales" = la historia de las 10. Vacío = la agenda'
         default: ""
 
 # Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
@@ -110,10 +115,21 @@ jobs:
           PUBLICAR_VAR: ${{ vars.PUBLICAR_REDES }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
           MODO_INPUT: ${{ github.event.inputs.modo }}
+          ORIGEN_INPUT: ${{ github.event.inputs.origen }}
+          # La historia de corresponsales: imagen IA de Cloudflare (los mismos secrets que agro).
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          HIST_CORRESPONSALES: ${{ vars.HIST_CORRESPONSALES }}
           CRON_GH: ${{ github.event.schedule }}
           NACIONALES_VAR: ${{ vars.NACIONALES }}
         run: |
           set -o pipefail      # sin esto, el `| tee` se come la falla y la corrida no avisa
+          if [ "$MODO_INPUT" = "corresponsales" ]; then
+            CARGS=""
+            if [ "$ORIGEN_INPUT" = "cron" ] || [ "$PUBLICAR_INPUT" = "si" ]; then CARGS="--publicar"; fi
+            python -m reels.historia_corresponsales $CARGS | tee informe_nacionales.md
+            exit 0
+          fi
           ARGS="--agenda"
           # La fila de reels de prueba (12/11/2026; franjas del 14/11/2026): cron-job.org a las :00 y :30 de 18 a 22
           # y los respaldos de GitHub. Si el turno ya tiene su reel, termina sin hacer nada.
