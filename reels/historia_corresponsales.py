@@ -19,7 +19,8 @@ fotos, videos o audios al bot de WhatsApp de corresponsales (2346-533450), para 
 - Los sonidos se generan acá.
 
 Corre con `python -m reels.historia_corresponsales [--publicar]` (nacionales.yml, modo «corresponsales», que
-dispara cron-job.org a las 10:00). HIST_CORRESPONSALES=0 la apaga.
+dispara cron-job.org a las 10:00). HIST_CORRESPONSALES=0 la apaga. Los sábados y domingos el mismo video sale
+además como REEL en Instagram y Facebook (HIST_CORRESPONSALES_REEL, ver `dias_reel`).
 """
 from __future__ import annotations
 
@@ -96,6 +97,49 @@ MODELOS_IMAGEN = ("@cf/leonardo/lucid-origin", "@cf/leonardo/phoenix-1.0")
 
 def activo() -> bool:
     return (os.environ.get("HIST_CORRESPONSALES") or "1").strip() != "0"
+
+
+# EL REEL DE LOS SÁBADOS Y DOMINGOS (14/11/2026, pedido del usuario: «agregar para sábado/domingo a las 10am reel
+# de la historia del bot»): esos días el mismo video sale ADEMÁS como reel en Instagram y Facebook. Días con
+# HIST_CORRESPONSALES_REEL (0=lunes … 6=domingo, separados por coma; por defecto «5,6»); «no» lo apaga.
+WHATSAPP_LINK = "https://wa.me/542346533450"
+HASHTAGS = "#Chivilcoy #Corresponsales #DiarioLaCampaña #RadioDelCentro #Noticias"
+
+
+def dias_reel() -> set:
+    crudo = (os.environ.get("HIST_CORRESPONSALES_REEL") or "5,6").strip().lower()
+    if crudo in ("0", "no", "off", "ninguno"):
+        return set()
+    return {int(x) for x in crudo.replace(" ", "").split(",") if x.isdigit() and int(x) <= 6}
+
+
+def lleva_reel(dia: date) -> bool:
+    return dia.weekday() in dias_reel()
+
+
+def texto_reel(pregunta: str, red: str) -> str:
+    """El texto del reel. En Instagram, sin links (regla del diario); en Facebook, con el link al WhatsApp."""
+    wa = f"\n👉 {WHATSAPP_LINK}" if red == "facebook" else ""
+    return (f"📲 {pregunta} Contanos.\n\n"
+            f"Mandanos tu video, foto o audio con tu noticia por WhatsApp al {NUMERO}.{wa}\n\n"
+            f"Sumate al Programa de Corresponsales de Diario La Campaña: tu noticia puede tener premio.\n\n"
+            f"{HASHTAGS}")
+
+
+def _reel_instagram(url: str, caption: str, portada_ms: int) -> dict:
+    from reels import instagram as IG
+    from reels import publicador as PB
+    uid = os.environ.get("INSTAGRAM_USER_ID", "")
+    tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    params = IG.contenedor_reel(url, caption, prueba=False)
+    params["thumb_offset"] = str(max(0, int(portada_ms)))     # la portada: con todo el texto a la vista
+    cid = PB._contenedor_listo(uid, tok, params)
+    return {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None}
+
+
+def _reel_facebook(mp4: Path, caption: str) -> dict:
+    from reels import publicador as PB
+    return PB._publicar_facebook({"descripcion_tiktok": caption}, Path(mp4))
 
 
 def pregunta_de(dia: date) -> tuple:
@@ -588,6 +632,8 @@ def correr(publicar: bool, dia: date | None = None, carpeta: Path | None = None,
         log(f"   sujeto: de {caja[0]:.0%} a {caja[2]:.0%} del alto")
     mp4 = armar(pregunta, imagen, carpeta / f"historia_corresponsales_{dia:%Y%m%d}.mp4", caja, log)
     informe = {"estado": "simulada", "pregunta": pregunta, "imagen": bool(imagen), "archivo": str(mp4)}
+    if lleva_reel(dia):
+        log("   hoy también sale como reel en Instagram y Facebook")
     if not publicar:
         log(f"   (simulada) {mp4}")
         return informe
@@ -612,6 +658,25 @@ def correr(publicar: bool, dia: date | None = None, carpeta: Path | None = None,
         informe["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
         log(f"   Facebook: FALLÓ {informe['facebook']['error']}")
     informe["estado"] = "publicada" if "id" in (informe.get("instagram") or {}) else "con_fallas"
+    if lleva_reel(dia):
+        # Una falla del reel no pinta de rojo la corrida: re-dispararla publicaría la historia otra vez.
+        portada_ms = int(plan(pregunta)["total"] * 0.85 * 1000)
+        reel = informe["reel"] = {}
+        if lugar is None or lugar[0] >= 2:
+            try:
+                reel["instagram"] = _reel_instagram(url, texto_reel(pregunta, "instagram"), portada_ms)
+                log(f"   Reel Instagram: OK {reel['instagram'].get('id')}")
+            except Exception as e:  # noqa: BLE001
+                reel["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+                log(f"   Reel Instagram: FALLÓ {reel['instagram']['error']}")
+        else:
+            reel["instagram"] = {"omitido": "sin cupo de Instagram"}
+        try:
+            reel["facebook"] = _reel_facebook(mp4, texto_reel(pregunta, "facebook"))
+            log(f"   Reel Facebook: OK {reel['facebook'].get('id')}")
+        except Exception as e:  # noqa: BLE001
+            reel["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+            log(f"   Reel Facebook: FALLÓ {reel['facebook']['error']}")
     return informe
 
 

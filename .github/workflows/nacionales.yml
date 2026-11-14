@@ -120,6 +120,7 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           HIST_CORRESPONSALES: ${{ vars.HIST_CORRESPONSALES }}
+          HIST_CORRESPONSALES_REEL: ${{ vars.HIST_CORRESPONSALES_REEL }}
           CRON_GH: ${{ github.event.schedule }}
           NACIONALES_VAR: ${{ vars.NACIONALES }}
         run: |

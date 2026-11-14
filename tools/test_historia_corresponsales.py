@@ -106,5 +106,43 @@ chequear("ubicar_sujeto pasa la caja de Gemini (0 a 1000) a 0 a 1", r == (0.52, 
 r = HC.ubicar_sujeto("x.jpg", preguntar=lambda _: 1 / 0, log=lambda *a: None)
 chequear("si Gemini no contesta, se supone el sujeto abajo (lo que se pidió)", r == HC.CAJA_POR_DEFECTO)
 
+# --- el reel de los sábados y domingos (pedido del 14/11/2026) --------------------------------------------
+os.environ.pop("HIST_CORRESPONSALES_REEL", None)
+chequear("sábado y domingo sale también como reel; de lunes a viernes, no",
+         HC.lleva_reel(date(2026, 11, 14)) and HC.lleva_reel(date(2026, 11, 15))
+         and not any(HC.lleva_reel(date(2026, 11, 16) + timedelta(days=k)) for k in range(5)))
+os.environ["HIST_CORRESPONSALES_REEL"] = "no"
+chequear("HIST_CORRESPONSALES_REEL=no apaga el reel", not HC.lleva_reel(date(2026, 11, 15)))
+os.environ.pop("HIST_CORRESPONSALES_REEL", None)
+ig, fb = HC.texto_reel("¿Viste algo raro?", "instagram"), HC.texto_reel("¿Viste algo raro?", "facebook")
+chequear("el texto del reel: número en las dos redes, link de WhatsApp solo en Facebook",
+         HC.NUMERO in ig and HC.NUMERO in fb and "http" not in ig and HC.WHATSAPP_LINK in fb)
+
+from agro import publicar as AP  # noqa: E402
+from reels import publicador as PB  # noqa: E402
+
+hechos = []
+AP.credenciales_diario = lambda: {}
+PB.subir_a_release = lambda p, n: "https://x/" + n
+PB._lugar_en_instagram = lambda: (50, 50, 100)
+AP._historia_video_instagram = lambda url: hechos.append("historia ig") or {"id": "1"}
+AP._historia_video_facebook = lambda mp4: hechos.append("historia fb") or {"id": "2"}
+HC._reel_instagram = lambda url, cap, ms: hechos.append(("reel ig", ms > 0)) or {"id": "3"}
+HC._reel_facebook = lambda mp4, cap: hechos.append("reel fb") or {"id": "4"}
+HC.generar_imagen = lambda *a, **k: ""
+HC.armar = lambda pregunta, imagen, salida, caja, log: Path(salida)
+silencio = lambda *a: None  # noqa: E731
+inf = HC.correr(True, date(2026, 11, 15), tmp / "dom", log=silencio)
+chequear("domingo: historia en IG y FB y además el reel en IG (con portada) y FB",
+         hechos == ["historia ig", "historia fb", ("reel ig", True), "reel fb"] and inf["estado"] == "publicada")
+hechos.clear()
+HC.correr(True, date(2026, 11, 16), tmp / "lun", log=silencio)
+chequear("lunes: solo la historia", hechos == ["historia ig", "historia fb"])
+hechos.clear()
+HC._reel_instagram = lambda *a: 1 / 0
+inf = HC.correr(True, date(2026, 11, 14), tmp / "sab", log=silencio)
+chequear("si el reel falla, la historia queda publicada y la corrida no se pinta de rojo",
+         inf["estado"] == "publicada" and "error" in inf["reel"]["instagram"] and hechos[-1] == "reel fb")
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
