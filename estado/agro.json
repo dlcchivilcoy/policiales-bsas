@@ -36928,6 +36928,138 @@
         56,
         39
       ]
+    },
+    "9a518f5171c80f5c": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 3,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 34,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "arándanos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una economía regional muy específica y lejana a la zona de Chivilcoy.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cc9d4a21465a0c94": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 19,
+      "commercial_score": 10,
+      "subtema": "ganaderia",
+      "tema": "avicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Premio internacional que no afecta al productor local común.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1c16b416c7c586a9": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "mujeres rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Encuentro regional en Tandil sobre mujeres en el agro, de interés zonal.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3bb4d4395bbe7970": {
+      "conversacion": 15,
+      "historia_concreta": 6,
+      "cercania_pba": 12,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 62,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "fertilizantes",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El precio y la compra de fertilizantes interesa directamente a los productores de la zona.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        57
+      ]
+    },
+    "bb49c38183c404aa": {
+      "conversacion": 15,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 11,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 57,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema judicial sobre retenciones que abre debate nacional y preocupa al campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        45
+      ]
+    },
+    "0f2fbf1b4b4cf998": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 46,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Nota corta de Chacabuco sobre la suba de la soja en Chicago, importa al bolsillo local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        24
+      ]
     }
   },
   "indice": {
@@ -39480,7 +39612,15 @@
       "https://bichosdecampo.com/un-diplomatico-europeo-explica-el-controvertido-reglamento-1115-y-considera-que-el-exportador-argentino-esta-en-condiciones-de-sacar-ventaja-frente-a-otros-paises-proveedores": "2026-11-14",
       "https://bichosdecampo.com/arboles-o-vacas-hay-tipos-que-resuelven-dilemas-y-luis-colcombet-que-acaba-de-jubilarse-del-inta-finalmente-dice-que-no-hay-que-elegir-sino-abrazar-los-sistemas-silvopastoriles": "2026-11-14",
       "https://bichosdecampo.com/testimonios-de-monte-adentro-me-gusta-renegar-expresa-juan-carlos-diaz-sobre-aquellas-tardes-en-que-debe-ir-a-buscar-sus-cabras-en-temporada-seca-y-mantenerlas-con-un-poco-de-maiz": "2026-11-14",
-      "https://lanacion.com.ar/economia/campo/la-justicia-nos-vuelve-a-dar-la-razon-federacion-agraria-pidio-derogar-el-articulo-del-codigo-nid14112026": "2026-11-14"
+      "https://lanacion.com.ar/economia/campo/la-justicia-nos-vuelve-a-dar-la-razon-federacion-agraria-pidio-derogar-el-articulo-del-codigo-nid14112026": "2026-11-14",
+      "https://infocampo.com.ar/a-los-arandanos-les-florecen-los-problemas-hay-cada-vez-menos-plantaciones-y-el-nino-sumo-otro-obstaculo": "2026-11-14",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/argentina-tiene-huevos-de-oro-la-industria-avicola-se-trajo-varios-premios-de-un-concurso-latinoamericano": "2026-11-14",
+      "https://agrositio.com.ar/canal-agrositio/mujeres-de-campo/249329-como-esta-cambiando-la-presencia-de-mujeres-en-el-agro-y-que-espera-el-encuentro-en-tandil.html": "2026-11-14",
+      "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha": "2026-11-14",
+      "https://lanacion.com.ar/economia/campo/retenciones-el-fallo-de-la-corte-que-reabre-una-discusion-pendiente-entre-el-campo-y-el-estado-nid14112026": "2026-11-14",
+      "https://chacabucoenred.com/por-fin-mejoro-chicago": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42031,7 +42171,15 @@
       "un diplomatico europeo explica el controvertido reglamento 1115 y considera que el exportador argentino esta en condiciones de sacar ventaja frente a otros paises proveedores": "2026-11-14",
       "arboles o vacas hay tipos que resuelven dilemas y luis colcombet que acaba de jubilarse del inta finalmente dice que no hay que elegir sino abrazar los sistemas silvopastoriles": "2026-11-14",
       "testimonios de monte adentro me gusta renegar expresa juan carlos diaz sobre aquellas tardes en que debe ir a buscar sus cabras en temporada seca y mantenerlas con un poco de maiz": "2026-11-14",
-      "la justicia nos vuelve a dar la razon federacion agraria pidio derogar el articulo del codigo aduanero que se uso para modificar retenciones": "2026-11-14"
+      "la justicia nos vuelve a dar la razon federacion agraria pidio derogar el articulo del codigo aduanero que se uso para modificar retenciones": "2026-11-14",
+      "a los arandanos les florecen los problemas hay cada vez menos plantaciones y el nino sumo otro obstaculo": "2026-11-14",
+      "dolar blue a cuanto cotizan hoy en mendoza 14 noviembre 2026": "2026-11-14",
+      "euro blue hoy precio y cotizacion de este 14 noviembre 2026": "2026-11-14",
+      "argentina tiene huevos de oro la industria avicola se trajo varios premios de un concurso latinoamericano": "2026-11-14",
+      "como esta cambiando el rol de las mujeres en el agro tandil prepara un encuentro clave": "2026-11-14",
+      "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha": "2026-11-14",
+      "retenciones el fallo de la corte que reabre una discusion pendiente entre el campo y el estado": "2026-11-14",
+      "por fin mejoro chicago": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44582,7 +44730,15 @@
       "e1ef4e7de8bf0777": "2026-11-14",
       "1c27ad8bf0d4fa49": "2026-11-14",
       "0711f36bce2fda05": "2026-11-14",
-      "c210976a55092378": "2026-11-14"
+      "c210976a55092378": "2026-11-14",
+      "9a518f5171c80f5c": "2026-11-14",
+      "3b58044640ccdabf": "2026-11-14",
+      "3b81d7494989a4cf": "2026-11-14",
+      "cc9d4a21465a0c94": "2026-11-14",
+      "1c16b416c7c586a9": "2026-11-14",
+      "3bb4d4395bbe7970": "2026-11-14",
+      "bb49c38183c404aa": "2026-11-14",
+      "0f2fbf1b4b4cf998": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75184,9 +75340,136 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_844628f0d0b5_portada.jpg"
+    },
+    {
+      "id": "1c618f2c3afd",
+      "cuando": "2026-11-14T13:00-03:00",
+      "titulo_original": "Garrapatas en el ganado: una amenaza que provoca pérdidas estimadas en us$ 200 millones al año y cómo prevenirla",
+      "descripcion": "Con la llegada de las temperaturas más cálidas, comienza una etapa decisiva para el control de la garrapata bovina, uno de los principales problemas sanitarios y productivos de la ganadería argentina. Según estimaciones difundidas por el INTA, las pérdidas asociadas a este parásito pueden alcanzar l",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249302-garrapatas-en-el-ganado-una-amenaza-que-provoca-perdidas-estimadas-en-us-200-millones-al-ano-y-como-prevenirla.html",
+      "titular": "Hacienda: la garrapata bovina genera pérdidas anuales de US$ 200 millones",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 11,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 71,
+        "commercial_score": 55,
+        "subtema": "ganaderia",
+        "tema": "garrapatas",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Importante aviso sanitario sobre garrapatas que afecta directamente a los ganaderos de la región.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          75
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "9223452b-cdf5-4f15-8c71-a821db3a2b86",
+          "slug": "hacienda-la-garrapata-bovina-genera-perdidas-por-us-200-d61c5d",
+          "url": "https://www.diariolacampaña.com.ar/n/hacienda-la-garrapata-bovina-genera-perdidas-por-us-200-d61c5d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17910250548573819",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760093676121629",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1c618f2c3afd_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "c196a9af80ae",
+      "rep": {
+        "id": "c196a9af80ae",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha/",
+        "canonical_url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha",
+        "titulo": "Con productores comprando solo lo justo y necesario, los importadores de fertlizantes siguen “haciendo la plancha”",
+        "titulo_norm": "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha",
+        "descripcion": "El mercado internacional de fertilizantes nitrogenados ingresó en una fase de marcada apatía y tono bajista. La falta de liquidez en la demanda “spot” global y la distensión en las cotizaciones internacionales de la energía debilitaron la firmeza previa del mercado. “A pesar de que se registraron recortes del 20% en la producción de urea […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/grafico1-1.png",
+        "autor": "Valor Soja",
+        "publicado": "2026-11-14T12:27-03:00",
+        "capturado": "2026-11-14T13:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "3bb4d4395bbe7970",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "c196a9af80ae",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha/",
+          "canonical_url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha",
+          "titulo": "Con productores comprando solo lo justo y necesario, los importadores de fertlizantes siguen “haciendo la plancha”",
+          "titulo_norm": "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha",
+          "descripcion": "El mercado internacional de fertilizantes nitrogenados ingresó en una fase de marcada apatía y tono bajista. La falta de liquidez en la demanda “spot” global y la distensión en las cotizaciones internacionales de la energía debilitaron la firmeza previa del mercado. “A pesar de que se registraron recortes del 20% en la producción de urea […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/grafico1-1.png",
+          "autor": "Valor Soja",
+          "publicado": "2026-11-14T12:27-03:00",
+          "capturado": "2026-11-14T13:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "3bb4d4395bbe7970",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 6,
+        "cercania_pba": 12,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 62,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "fertilizantes",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El precio y la compra de fertilizantes interesa directamente a los productores de la zona.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          57
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-14T13:00-03:00"
+    },
     {
       "id": "bfd74fa8419b",
       "rep": {
@@ -75820,75 +76103,6 @@
       "cuando": "2026-11-13T10:00-03:00"
     },
     {
-      "id": "1c618f2c3afd",
-      "rep": {
-        "id": "1c618f2c3afd",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249302-garrapatas-en-el-ganado-una-amenaza-que-provoca-perdidas-estimadas-en-us-200-millones-al-ano-y-como-prevenirla.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249302-garrapatas-en-el-ganado-una-amenaza-que-provoca-perdidas-estimadas-en-us-200-millones-al-ano-y-como-prevenirla.html",
-        "titulo": "Garrapatas en el ganado: una amenaza que provoca pérdidas estimadas en us$ 200 millones al año y cómo prevenirla",
-        "titulo_norm": "garrapatas en el ganado una amenaza que provoca perdidas estimadas en us 200 millones al ano y como prevenirla",
-        "descripcion": "Con la llegada de las temperaturas más cálidas, comienza una etapa decisiva para el control de la garrapata bovina, uno de los principales problemas sanitarios y productivos de la ganadería argentina. Según estimaciones difundidas por el INTA, las pérdidas asociadas a este parásito pueden alcanzar los US$ 200 millones anuales. La detección temprana, los tratamientos estratégicos y la prevención de la resistencia a los garrapaticidas son fundamentales para proteger la salud y la productividad del rodeo....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249302_50249163.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-12T17:07-03:00",
-        "capturado": "2026-11-13T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "af23b54fa0b0802d",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "1c618f2c3afd",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249302-garrapatas-en-el-ganado-una-amenaza-que-provoca-perdidas-estimadas-en-us-200-millones-al-ano-y-como-prevenirla.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249302-garrapatas-en-el-ganado-una-amenaza-que-provoca-perdidas-estimadas-en-us-200-millones-al-ano-y-como-prevenirla.html",
-          "titulo": "Garrapatas en el ganado: una amenaza que provoca pérdidas estimadas en us$ 200 millones al año y cómo prevenirla",
-          "titulo_norm": "garrapatas en el ganado una amenaza que provoca perdidas estimadas en us 200 millones al ano y como prevenirla",
-          "descripcion": "Con la llegada de las temperaturas más cálidas, comienza una etapa decisiva para el control de la garrapata bovina, uno de los principales problemas sanitarios y productivos de la ganadería argentina. Según estimaciones difundidas por el INTA, las pérdidas asociadas a este parásito pueden alcanzar los US$ 200 millones anuales. La detección temprana, los tratamientos estratégicos y la prevención de la resistencia a los garrapaticidas son fundamentales para proteger la salud y la productividad del rodeo....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249302_50249163.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-12T17:07-03:00",
-          "capturado": "2026-11-13T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "af23b54fa0b0802d",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 11,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 71,
-        "commercial_score": 55,
-        "subtema": "ganaderia",
-        "tema": "garrapatas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Importante aviso sanitario sobre garrapatas que afecta directamente a los ganaderos de la región.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          75
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T07:00-03:00"
-    },
-    {
       "id": "08b1258629e4",
       "rep": {
         "id": "08b1258629e4",
@@ -75954,8 +76168,8 @@
       "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T11:36:31-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-14T13:08:10-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
