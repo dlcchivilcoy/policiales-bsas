@@ -207,8 +207,8 @@ def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: i
     solo texto bien diseñado»). La foto va únicamente en la tapa (slide_carrusel); `foto` queda en la
     firma por compatibilidad y no se usa.
 
-    Grafito con un resplandor naranja tenue, la marca y el número arriba, el número de la lámina
-    enorme y apenas visible de fondo, y el bloque centrado: sección con su filo naranja, el título en
+    Grafito con un resplandor naranja tenue, la marca y el número arriba (sin número de fondo desde el
+    14/11/2026), y el bloque centrado: sección con su filo naranja, el título en
     blanco y el texto en gris claro. Abajo, «Deslizá y seguí leyendo →» o, en la última, el sitio.
     """
     W, H, M = 1080, 1350, 84
@@ -218,10 +218,8 @@ def lamina_texto(seccion: str, titulo: str, texto: str, destino: Path, *, idx: i
     luz = Image.new("L", tam, 0)
     ImageDraw.Draw(luz).ellipse((int(W * 0.45), int(-H * 0.30), int(W * 1.45), int(H * 0.35)), fill=60)
     img = Image.composite(Image.new("RGB", tam, NARANJA_CAJA), img, luz.filter(ImageFilter.GaussianBlur(220)))
-    # El número de la lámina, enorme y casi transparente, abajo a la derecha.
-    capa = Image.new("L", tam, 0)
-    ImageDraw.Draw(capa).text((W - 40, H - 150), f"{idx:02d}", font=fuente(520, 800), fill=22, anchor="rs")
-    img = Image.composite(Image.new("RGB", tam, BLANCO), img, capa)
+    # 14/11/2026 (pedido del editor: «sacale el número de fondo en las placas»): ya no va el número de la
+    # lámina enorme y casi transparente abajo a la derecha.
     img = _grano(img, semilla or zlib.crc32(f"{titulo}{idx}".encode("utf-8")), 6)
     d = ImageDraw.Draw(img)
 
