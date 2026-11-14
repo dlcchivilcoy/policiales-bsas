@@ -37060,6 +37060,46 @@
         68,
         24
       ]
+    },
+    "6601eebe621ca7b1": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 12,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "presupuesto emergencia",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es una nota de opinión y comparación política internacional, poco útil para el productor de la zona que busca soluciones locales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "94880c3ea555a42a": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 38,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "alfalfa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Trata sobre manejo técnico de alfalfa en una exposición, útil para ganaderos pero con un formato muy institucional y genérico.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -39620,7 +39660,9 @@
       "https://agrositio.com.ar/canal-agrositio/mujeres-de-campo/249329-como-esta-cambiando-la-presencia-de-mujeres-en-el-agro-y-que-espera-el-encuentro-en-tandil.html": "2026-11-14",
       "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha": "2026-11-14",
       "https://lanacion.com.ar/economia/campo/retenciones-el-fallo-de-la-corte-que-reabre-una-discusion-pendiente-entre-el-campo-y-el-estado-nid14112026": "2026-11-14",
-      "https://chacabucoenred.com/por-fin-mejoro-chicago": "2026-11-14"
+      "https://chacabucoenred.com/por-fin-mejoro-chicago": "2026-11-14",
+      "https://bichosdecampo.com/que-distintos-somos-ante-las-inundaciones-espana-destina-85-millones-de-euros-para-sus-caminos-rurales-15-veces-el-presupuesto-de-milei-para-atender-las-emergencias-agropecuarias-en-todo-2027": "2026-11-14",
+      "https://intainforma.inta.gob.ar/la-genetica-y-el-manejo-del-cultivo-claves-para-mejorar-la-productividad-de-la-alfalfa": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42179,7 +42221,9 @@
       "como esta cambiando el rol de las mujeres en el agro tandil prepara un encuentro clave": "2026-11-14",
       "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha": "2026-11-14",
       "retenciones el fallo de la corte que reabre una discusion pendiente entre el campo y el estado": "2026-11-14",
-      "por fin mejoro chicago": "2026-11-14"
+      "por fin mejoro chicago": "2026-11-14",
+      "que distintos somos ante las inundaciones espana destina 85 millones de euros para sus caminos rurales 15 veces el presupuesto de milei para atender las emergencias agropecuarias en todo 2027": "2026-11-14",
+      "la genetica y el manejo del cultivo claves para mejorar la productividad de la alfalfa": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44738,7 +44782,9 @@
       "1c16b416c7c586a9": "2026-11-14",
       "3bb4d4395bbe7970": "2026-11-14",
       "bb49c38183c404aa": "2026-11-14",
-      "0f2fbf1b4b4cf998": "2026-11-14"
+      "0f2fbf1b4b4cf998": "2026-11-14",
+      "6601eebe621ca7b1": "2026-11-14",
+      "94880c3ea555a42a": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75398,6 +75444,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1c618f2c3afd_portada.jpg"
+    },
+    {
+      "id": "2629ebe213ed",
+      "cuando": "2026-11-14T14:30-03:00",
+      "titulo_original": "Tres entidades del agro rechazaron el aumento impuesto por el gobierno de Buenos Aires a los fletes de granos",
+      "descripcion": "La actualización de las tarifas de referencia para el transporte de granos en la provincia de Buenos Aires volvió a abrir un frente de conflicto entre las entidades del agro y el gobierno de Axel Kicillof. Esta vez, CARBAP, CONINAGRO y el Centro de Acopiadores de Cereales salieron a rechazar el aume",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos/",
+      "titular": "Fletes: CARBAP y acopiadores rechazan la suba del 16% en Buenos Aires",
+      "volanta": "Transporte",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 73,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "fletes granarios",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "El aumento de fletes en provincia de Buenos Aires pega directo en el bolsillo del productor al sacar la cosecha.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "32c9d168-4960-4370-8e75-a98233465722",
+          "slug": "fletes-de-granos-carbap-y-acopiadores-rechazan-el-aumento-del-b1ed35",
+          "url": "https://www.diariolacampaña.com.ar/n/fletes-de-granos-carbap-y-acopiadores-rechazan-el-aumento-del-b1ed35",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18132669727745400",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760188662778797",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2629ebe213ed_portada.jpg"
     }
   ],
   "pendientes": [
@@ -75469,75 +75569,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-14T13:00-03:00"
-    },
-    {
-      "id": "bfd74fa8419b",
-      "rep": {
-        "id": "bfd74fa8419b",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249325-la-siembra-de-soja-se-acelera-y-registra-un-importante-adelanto-interanual.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249325-la-siembra-de-soja-se-acelera-y-registra-un-importante-adelanto-interanual.html",
-        "titulo": "La siembra de soja se acelera y registra un importante adelanto interanual",
-        "titulo_norm": "la siembra de soja se acelera y registra un importante adelanto interanual",
-        "descripcion": "Según el informe de la Bolsa de Cereales de Buenos Aires, luego de un progreso intersemanal de 13,1 puntos porcentuales, la siembra de soja cubre el 17,8% de las 17 MHa proyectadas para la campaña 2026/27...",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249325_52701987.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-13T17:24-03:00",
-        "capturado": "2026-11-14T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "96be647fdfe5aeb9",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "bfd74fa8419b",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249325-la-siembra-de-soja-se-acelera-y-registra-un-importante-adelanto-interanual.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249325-la-siembra-de-soja-se-acelera-y-registra-un-importante-adelanto-interanual.html",
-          "titulo": "La siembra de soja se acelera y registra un importante adelanto interanual",
-          "titulo_norm": "la siembra de soja se acelera y registra un importante adelanto interanual",
-          "descripcion": "Según el informe de la Bolsa de Cereales de Buenos Aires, luego de un progreso intersemanal de 13,1 puntos porcentuales, la siembra de soja cubre el 17,8% de las 17 MHa proyectadas para la campaña 2026/27...",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249325_52701987.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-13T17:24-03:00",
-          "capturado": "2026-11-14T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "96be647fdfe5aeb9",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 8,
-        "cercania_pba": 15,
-        "interes_productores": 13,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 62,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "soja",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El avance de la siembra de soja pega directo en los productores agrícolas de nuestra región.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          55
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-14T10:00-03:00"
     },
     {
       "id": "ad20ba193c22",
@@ -75816,90 +75847,6 @@
       "cuando": "2026-11-13T21:00-03:00"
     },
     {
-      "id": "2629ebe213ed",
-      "rep": {
-        "id": "2629ebe213ed",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos/",
-        "canonical_url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos",
-        "titulo": "Tres entidades del agro rechazaron el aumento impuesto por el gobierno de Buenos Aires a los fletes de granos",
-        "titulo_norm": "tres entidades del agro rechazaron el aumento impuesto por el gobierno de buenos aires a los fletes de granos",
-        "descripcion": "La actualización de las tarifas de referencia para el transporte de granos en la provincia de Buenos Aires volvió a abrir un frente de conflicto entre las entidades del agro y el gobierno de Axel Kicillof. Esta vez, CARBAP, CONINAGRO y el Centro de Acopiadores de Cereales salieron a rechazar el aumento del 16% dispuesto […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-13T16:34-03:00",
-        "capturado": "2026-11-13T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "d229b8a0ef0a5740",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "2629ebe213ed",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos/",
-          "canonical_url": "https://bichosdecampo.com/tres-entidades-del-agro-rechazaron-el-aumento-impuesto-por-el-gobierno-de-buenos-aires-a-los-fletes-de-granos",
-          "titulo": "Tres entidades del agro rechazaron el aumento impuesto por el gobierno de Buenos Aires a los fletes de granos",
-          "titulo_norm": "tres entidades del agro rechazaron el aumento impuesto por el gobierno de buenos aires a los fletes de granos",
-          "descripcion": "La actualización de las tarifas de referencia para el transporte de granos en la provincia de Buenos Aires volvió a abrir un frente de conflicto entre las entidades del agro y el gobierno de Axel Kicillof. Esta vez, CARBAP, CONINAGRO y el Centro de Acopiadores de Cereales salieron a rechazar el aumento del 16% dispuesto […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-13T16:34-03:00",
-          "capturado": "2026-11-13T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "d229b8a0ef0a5740",
-          "localidad_medio": ""
-        },
-        {
-          "id": "e1c3e86b3f30",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/arbitrario-tres-entidades-del-agro-cuestionaron-una-suba-del-16-que-fijo-el-gobierno-de-kicillof-nid13112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/arbitrario-tres-entidades-del-agro-cuestionaron-una-suba-del-16-que-fijo-el-gobierno-de-kicillof-nid13112026",
-          "titulo": "“Arbitrario”: tres entidades del agro cuestionaron una suba del 16% que fijó el gobierno de Kicillof para el transporte de granos",
-          "titulo_norm": "arbitrario tres entidades del agro cuestionaron una suba del 16 que fijo el gobierno de kicillof para el transporte de granos",
-          "descripcion": "Carbap, Coninagro y el Centro de Acopiadores rechazaron un laudo del Ministerio de Transporte bonaerense que superó el 15% pedido por los transportistas",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/AASLJABNDRE5RE5KN2SGIUTCY4.jpeg?auth=bfe239154cbf1e36c52d0a4e3e32adeb30600fa8bbded5e971bd544ad42926d4&smart=true",
-          "autor": "",
-          "publicado": "2026-11-13T17:33-03:00",
-          "capturado": "2026-11-13T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9b6b813e2a707a10",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 73,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "fletes granarios",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El aumento de fletes en provincia de Buenos Aires pega directo en el bolsillo del productor al sacar la cosecha.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T18:00-03:00"
-    },
-    {
       "id": "7b7d5f0b933b",
       "rep": {
         "id": "7b7d5f0b933b",
@@ -76168,8 +76115,8 @@
       "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T14:00:28-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-14T14:37:10-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
