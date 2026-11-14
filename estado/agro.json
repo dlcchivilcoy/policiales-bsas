@@ -75498,6 +75498,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_2629ebe213ed_portada.jpg"
+    },
+    {
+      "id": "cf805ab99549",
+      "cuando": "2026-11-14T16:00-03:00",
+      "titulo_original": "Contraste: cayó un 11,2% el consumo de carne vacuna y, por primera vez en la historia, la exportación se llevó el 31,1% de la producción",
+      "descripcion": "Según un relevamiento privado, a octubre pasado la ingesta se ubicó en el equivalente a 44,5 kilos por habitante por año",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026/",
+      "titular": "Caída del consumo interno y récord histórico de exportación de carne vacuna",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 13,
+        "cercania_pba": 12,
+        "interes_productores": 11,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 69,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "consumo carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca el bolsillo y la mesa de todos los vecinos, generando debate por la caída del consumo interno frente a la exportación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          74
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "74e262d4-975d-4d43-a7bf-fb87fa23c552",
+          "slug": "carne-vacuna-el-consumo-cayo-a-44-5-kilos-y-la-exportacion-b916f5",
+          "url": "https://www.diariolacampaña.com.ar/n/carne-vacuna-el-consumo-cayo-a-44-5-kilos-y-la-exportacion-b916f5",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18242754283320474",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1760269392770724",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cf805ab99549_portada.jpg"
     }
   ],
   "pendientes": [
@@ -75707,75 +75765,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-14T07:00-03:00"
-    },
-    {
-      "id": "cf805ab99549",
-      "rep": {
-        "id": "cf805ab99549",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026",
-        "titulo": "Contraste: cayó un 11,2% el consumo de carne vacuna y, por primera vez en la historia, la exportación se llevó el 31,1% de la producción",
-        "titulo_norm": "contraste cayo un 11 2 el consumo de carne vacuna y por primera vez en la historia la exportacion se llevo el 31 1 de la produccion",
-        "descripcion": "Según un relevamiento privado, a octubre pasado la ingesta se ubicó en el equivalente a 44,5 kilos por habitante por año",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/VDAX6J3BQBFWJPT22HOWK3PLDY.jpg?auth=be6399b0ae81d99ec1e3c317f79d1c75530d8e521d37826675e64e92bfedd2bb&smart=true",
-        "autor": "",
-        "publicado": "2026-11-13T20:15-03:00",
-        "capturado": "2026-11-13T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9cf3c707a4b077e9",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "cf805ab99549",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026",
-          "titulo": "Contraste: cayó un 11,2% el consumo de carne vacuna y, por primera vez en la historia, la exportación se llevó el 31,1% de la producción",
-          "titulo_norm": "contraste cayo un 11 2 el consumo de carne vacuna y por primera vez en la historia la exportacion se llevo el 31 1 de la produccion",
-          "descripcion": "Según un relevamiento privado, a octubre pasado la ingesta se ubicó en el equivalente a 44,5 kilos por habitante por año",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/VDAX6J3BQBFWJPT22HOWK3PLDY.jpg?auth=be6399b0ae81d99ec1e3c317f79d1c75530d8e521d37826675e64e92bfedd2bb&smart=true",
-          "autor": "",
-          "publicado": "2026-11-13T20:15-03:00",
-          "capturado": "2026-11-13T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9cf3c707a4b077e9",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 13,
-        "cercania_pba": 12,
-        "interes_productores": 11,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 69,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "consumo carne",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Toca el bolsillo y la mesa de todos los vecinos, generando debate por la caída del consumo interno frente a la exportación.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          74
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T21:00-03:00"
     },
     {
       "id": "f4fd67b3a379",
@@ -76115,8 +76104,8 @@
       "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T14:37:10-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-14T16:08:32-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
