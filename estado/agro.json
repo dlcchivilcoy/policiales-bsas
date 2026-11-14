@@ -37100,6 +37100,90 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "93afbcbabafc06b8": {
+      "conversacion": 5,
+      "historia_concreta": 15,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 34,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "frutilla",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Linda historia familiar pero queda muy lejos geográficamente para nuestra zona de Chivilcoy.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "162cc02513c1535c": {
+      "conversacion": 9,
+      "historia_concreta": 6,
+      "cercania_pba": 8,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 50,
+      "commercial_score": 42,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema importante de comercialización de maíz, aunque es un análisis general de mercado y no algo local.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        45
+      ]
+    },
+    "27835c89824ab09d": {
+      "conversacion": 8,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 37,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "inversiones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Compra de campos muy lejos de Buenos Aires, no le cambia el día a día al productor de la zona.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "36f7802abf63447d": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 3,
+      "potencial_reel": 1,
+      "ai_score": 13,
+      "commercial_score": 10,
+      "subtema": "agtech",
+      "tema": "adopción tecnológica",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Informe general en inglés sobre proyecciones globales de agtech, muy alejado de la realidad local.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -39662,7 +39746,11 @@
       "https://lanacion.com.ar/economia/campo/retenciones-el-fallo-de-la-corte-que-reabre-una-discusion-pendiente-entre-el-campo-y-el-estado-nid14112026": "2026-11-14",
       "https://chacabucoenred.com/por-fin-mejoro-chicago": "2026-11-14",
       "https://bichosdecampo.com/que-distintos-somos-ante-las-inundaciones-espana-destina-85-millones-de-euros-para-sus-caminos-rurales-15-veces-el-presupuesto-de-milei-para-atender-las-emergencias-agropecuarias-en-todo-2027": "2026-11-14",
-      "https://intainforma.inta.gob.ar/la-genetica-y-el-manejo-del-cultivo-claves-para-mejorar-la-productividad-de-la-alfalfa": "2026-11-14"
+      "https://intainforma.inta.gob.ar/la-genetica-y-el-manejo-del-cultivo-claves-para-mejorar-la-productividad-de-la-alfalfa": "2026-11-14",
+      "https://bichosdecampo.com/una-familia-alegre-que-encontro-en-la-frutilla-su-propia-identidad-productiva-en-bella-vista-corrientes": "2026-11-14",
+      "https://bichosdecampo.com/un-hecho-historico-del-que-pocos-hablan-esta-ocurriendo-en-el-mercado-argentino-de-maiz-con-el-creciente-protagonismo-de-los-consumos": "2026-11-14",
+      "https://lanacion.com.ar/economia/campo/un-importante-empresario-del-agro-compro-10000-hectareas-en-una-zona-con-condiciones-excepcionales-nid14112026": "2026-11-14",
+      "https://agfundernews.com/trade-tensions-el-nino-and-other-forces-could-make-or-break-agtech-adoption-in-2027": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42223,7 +42311,11 @@
       "retenciones el fallo de la corte que reabre una discusion pendiente entre el campo y el estado": "2026-11-14",
       "por fin mejoro chicago": "2026-11-14",
       "que distintos somos ante las inundaciones espana destina 85 millones de euros para sus caminos rurales 15 veces el presupuesto de milei para atender las emergencias agropecuarias en todo 2027": "2026-11-14",
-      "la genetica y el manejo del cultivo claves para mejorar la productividad de la alfalfa": "2026-11-14"
+      "la genetica y el manejo del cultivo claves para mejorar la productividad de la alfalfa": "2026-11-14",
+      "una familia alegre que encontro en la frutilla su propia identidad productiva en bella vista corrientes": "2026-11-14",
+      "un hecho historico del que pocos hablan esta ocurriendo en el mercado argentino de maiz con el creciente protagonismo de los consumos": "2026-11-14",
+      "un importante empresario del agro compro 10 000 hectareas en una zona con condiciones excepcionales": "2026-11-14",
+      "trade tensions el nino and other forces could make or break agtech adoption in 2027": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44784,7 +44876,11 @@
       "bb49c38183c404aa": "2026-11-14",
       "0f2fbf1b4b4cf998": "2026-11-14",
       "6601eebe621ca7b1": "2026-11-14",
-      "94880c3ea555a42a": "2026-11-14"
+      "94880c3ea555a42a": "2026-11-14",
+      "93afbcbabafc06b8": "2026-11-14",
+      "162cc02513c1535c": "2026-11-14",
+      "27835c89824ab09d": "2026-11-14",
+      "36f7802abf63447d": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75556,6 +75652,96 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_cf805ab99549_portada.jpg"
+    },
+    {
+      "id": "08b1258629e4",
+      "cuando": "2026-11-14T18:00-03:00",
+      "titulo_original": "“Kiosco de la casta”: productores autoconvocados de todo el país apuntaron contra Visec",
+      "descripcion": "La Red Nacional de Productores Autoconvocados cuestionó sobre la plataforma de trazabilidad: “Obliga a demostrar inocencia antes de vender”",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/kiosco-de-la-casta-productores-autoconvocados-de-todo-el-pais-apuntaron-contra-visec-nid12112026/",
+      "titular": "Productores autoconvocados rechazan Visec y cuestionan la trazabilidad obligatoria",
+      "volanta": "Ganadería y Agricultura",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 73,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "visec",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Fuerte rechazo de productores a la plataforma de trazabilidad, genera debate y preocupación.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "reel",
+      "turno": "2026-11-14T18:00:00-03:00"
+    },
+    {
+      "id": "f3a2b5a3ecef",
+      "cuando": "2026-11-14T18:00-03:00",
+      "titulo_original": "El trigo suma otro medio millón de toneladas y confirma que no hay fórmulas mágicas: Cuando aflojan los costos, el productor responde e invierte más",
+      "descripcion": "Lento, y sin chistar, la campaña triguera 2026/27 se fue ubicando cómodamente como la segunda más importante entre los registros históricos. Y es que de una proyección inicial de 18 millones de toneladas ya se posicionó en 24,3 millones, y va camino a una medalla de plata en área sembrada, rinde y p",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/el-trigo-suma-otro-medio-millon-de-toneladas-y-confirma-que-no-hay-formulas-magicas-cuando-aflojan-los-costos-el-productor-responde-e-invierte-mas/",
+      "titular": "Trigo 2026/27: la cosecha trepa a 24,3 millones de toneladas",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 14,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 74,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Excelente campaña de trigo con números concretos que interesan al productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3cebf3c4-2325-42b8-ac6f-897858b7f1b0",
+          "slug": "el-trigo-2026-27-trepa-a-24-3-millones-de-toneladas-y-consolida-d1df3f",
+          "url": "https://www.diariolacampaña.com.ar/n/el-trigo-2026-27-trepa-a-24-3-millones-de-toneladas-y-consolida-d1df3f",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18042487658849817",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760360569428273",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f3a2b5a3ecef_portada.jpg"
     }
   ],
   "pendientes": [
@@ -75972,140 +76158,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-13T11:30-03:00"
-    },
-    {
-      "id": "f3a2b5a3ecef",
-      "rep": {
-        "id": "f3a2b5a3ecef",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-trigo-suma-otro-medio-millon-de-toneladas-y-confirma-que-no-hay-formulas-magicas-cuando-aflojan-los-costos-el-productor-responde-e-invierte-mas/",
-        "canonical_url": "https://bichosdecampo.com/el-trigo-suma-otro-medio-millon-de-toneladas-y-confirma-que-no-hay-formulas-magicas-cuando-aflojan-los-costos-el-productor-responde-e-invierte-mas",
-        "titulo": "El trigo suma otro medio millón de toneladas y confirma que no hay fórmulas mágicas: Cuando aflojan los costos, el productor responde e invierte más",
-        "titulo_norm": "el trigo suma otro medio millon de toneladas y confirma que no hay formulas magicas cuando aflojan los costos el productor responde e invierte mas",
-        "descripcion": "Lento, y sin chistar, la campaña triguera 2026/27 se fue ubicando cómodamente como la segunda más importante entre los registros históricos. Y es que de una proyección inicial de 18 millones de toneladas ya se posicionó en 24,3 millones, y va camino a una medalla de plata en área sembrada, rinde y producción. “Habrá supercampaña […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/proyeccion-trigo-2026-2027-BCR.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-13T09:36-03:00",
-        "capturado": "2026-11-13T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bcb53ae6e5c09a56",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "f3a2b5a3ecef",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-trigo-suma-otro-medio-millon-de-toneladas-y-confirma-que-no-hay-formulas-magicas-cuando-aflojan-los-costos-el-productor-responde-e-invierte-mas/",
-          "canonical_url": "https://bichosdecampo.com/el-trigo-suma-otro-medio-millon-de-toneladas-y-confirma-que-no-hay-formulas-magicas-cuando-aflojan-los-costos-el-productor-responde-e-invierte-mas",
-          "titulo": "El trigo suma otro medio millón de toneladas y confirma que no hay fórmulas mágicas: Cuando aflojan los costos, el productor responde e invierte más",
-          "titulo_norm": "el trigo suma otro medio millon de toneladas y confirma que no hay formulas magicas cuando aflojan los costos el productor responde e invierte mas",
-          "descripcion": "Lento, y sin chistar, la campaña triguera 2026/27 se fue ubicando cómodamente como la segunda más importante entre los registros históricos. Y es que de una proyección inicial de 18 millones de toneladas ya se posicionó en 24,3 millones, y va camino a una medalla de plata en área sembrada, rinde y producción. “Habrá supercampaña […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/proyeccion-trigo-2026-2027-BCR.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-13T09:36-03:00",
-          "capturado": "2026-11-13T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bcb53ae6e5c09a56",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 14,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 9,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 74,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Excelente campaña de trigo con números concretos que interesan al productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T10:00-03:00"
-    },
-    {
-      "id": "08b1258629e4",
-      "rep": {
-        "id": "08b1258629e4",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/kiosco-de-la-casta-productores-autoconvocados-de-todo-el-pais-apuntaron-contra-visec-nid12112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/kiosco-de-la-casta-productores-autoconvocados-de-todo-el-pais-apuntaron-contra-visec-nid12112026",
-        "titulo": "“Kiosco de la casta”: productores autoconvocados de todo el país apuntaron contra Visec",
-        "titulo_norm": "kiosco de la casta productores autoconvocados de todo el pais apuntaron contra visec",
-        "descripcion": "La Red Nacional de Productores Autoconvocados cuestionó sobre la plataforma de trazabilidad: “Obliga a demostrar inocencia antes de vender”",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/TF4OFWBD7BH53KVXNJ3YKROPZA.jpeg?auth=6c80322adb2a419b96d26a1782854116ab56bbcec26a0e6e98f2b854ea363127&smart=true",
-        "autor": "",
-        "publicado": "2026-11-12T21:19-03:00",
-        "capturado": "2026-11-13T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4d119fc361df5ec1",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "08b1258629e4",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/kiosco-de-la-casta-productores-autoconvocados-de-todo-el-pais-apuntaron-contra-visec-nid12112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/kiosco-de-la-casta-productores-autoconvocados-de-todo-el-pais-apuntaron-contra-visec-nid12112026",
-          "titulo": "“Kiosco de la casta”: productores autoconvocados de todo el país apuntaron contra Visec",
-          "titulo_norm": "kiosco de la casta productores autoconvocados de todo el pais apuntaron contra visec",
-          "descripcion": "La Red Nacional de Productores Autoconvocados cuestionó sobre la plataforma de trazabilidad: “Obliga a demostrar inocencia antes de vender”",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/TF4OFWBD7BH53KVXNJ3YKROPZA.jpeg?auth=6c80322adb2a419b96d26a1782854116ab56bbcec26a0e6e98f2b854ea363127&smart=true",
-          "autor": "",
-          "publicado": "2026-11-12T21:19-03:00",
-          "capturado": "2026-11-13T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4d119fc361df5ec1",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 73,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "visec",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Fuerte rechazo de productores a la plataforma de trazabilidad, genera debate y preocupación.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T16:08:32-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-14T18:09:31-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
