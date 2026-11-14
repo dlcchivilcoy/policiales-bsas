@@ -36844,6 +36844,90 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e1ef4e7de8bf0777": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "reglamento europeo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una charla técnica sobre normas de exportación que al productor de la zona no le cambia el día a día.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1c27ad8bf0d4fa49": {
+      "conversacion": 3,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 33,
+      "commercial_score": 25,
+      "subtema": "ganaderia",
+      "tema": "sistemas silvopastoriles",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Homenaje a un técnico del INTA que se jubila hablando de árboles y vacas en Misiones, muy lejos de nuestra zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0711f36bce2fda05": {
+      "conversacion": 4,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 30,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "cabras",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una crónica linda de monte adentro sobre cabras, pero no tiene relación con la producción típica de Chivilcoy y la región.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c210976a55092378": {
+      "conversacion": 11,
+      "historia_concreta": 8,
+      "cercania_pba": 8,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 48,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Reclamo gremial y fallo judicial sobre retenciones que importa al sector, aunque es un tema más institucional que local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        39
+      ]
     }
   },
   "indice": {
@@ -39386,7 +39470,17 @@
       "https://bichosdecampo.com/el-presidente-del-inta-finalmente-tuvo-que-salir-a-explicar-por-que-echaron-a-virginia-aparicio-desde-europa-en-cambio-dijeron-que-la-investigadora-siguio-los-protocolos-al-pie-de-la-letra": "2026-11-14",
       "https://latrochadigital.com.ar/2026/11/14/la-provincia-aumento-un-16-los-fletes-de-granos": "2026-11-14",
       "https://lavozdebragado.com.ar/jovenes-argentinos-brillaron-en-un-mundial-de-ganaderia-en-canada": "2026-11-14",
-      "https://elregionaldigital.com.ar/el-desafio-de-la-carne-argentina-transformar-su-prestigio-en-valor-y-conquistar-consumidores": "2026-11-14"
+      "https://elregionaldigital.com.ar/el-desafio-de-la-carne-argentina-transformar-su-prestigio-en-valor-y-conquistar-consumidores": "2026-11-14",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-14-noviembre-2026": "2026-11-14",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-14-noviembre-2026": "2026-11-14",
+      "https://bichosdecampo.com/un-diplomatico-europeo-explica-el-controvertido-reglamento-1115-y-considera-que-el-exportador-argentino-esta-en-condiciones-de-sacar-ventaja-frente-a-otros-paises-proveedores": "2026-11-14",
+      "https://bichosdecampo.com/arboles-o-vacas-hay-tipos-que-resuelven-dilemas-y-luis-colcombet-que-acaba-de-jubilarse-del-inta-finalmente-dice-que-no-hay-que-elegir-sino-abrazar-los-sistemas-silvopastoriles": "2026-11-14",
+      "https://bichosdecampo.com/testimonios-de-monte-adentro-me-gusta-renegar-expresa-juan-carlos-diaz-sobre-aquellas-tardes-en-que-debe-ir-a-buscar-sus-cabras-en-temporada-seca-y-mantenerlas-con-un-poco-de-maiz": "2026-11-14",
+      "https://lanacion.com.ar/economia/campo/la-justicia-nos-vuelve-a-dar-la-razon-federacion-agraria-pidio-derogar-el-articulo-del-codigo-nid14112026": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -41927,7 +42021,17 @@
       "el presidente del inta finalmente tuvo que salir a explicar por que echaron a virginia aparicio desde europa en cambio dijeron que la investigadora siguio los protocolos al pie de la letra": "2026-11-14",
       "la provincia aumento un 16 los fletes de granos": "2026-11-14",
       "jovenes argentinos brillaron en un mundial de ganaderia en canada": "2026-11-14",
-      "el desafio de la carne argentina transformar su prestigio en valor y conquistar consumidores": "2026-11-14"
+      "el desafio de la carne argentina transformar su prestigio en valor y conquistar consumidores": "2026-11-14",
+      "precio del maiz en rosario hoy 14 noviembre 2026": "2026-11-14",
+      "precio del trigo en rosario hoy 14 noviembre 2026": "2026-11-14",
+      "precio del girasol en rosario hoy 14 noviembre 2026": "2026-11-14",
+      "precio de la soja en rosario hoy 14 noviembre 2026": "2026-11-14",
+      "precio del sorgo en rosario hoy 14 noviembre 2026": "2026-11-14",
+      "dolar blue a cuanto cotizan hoy en cordoba 14 noviembre 2026": "2026-11-14",
+      "un diplomatico europeo explica el controvertido reglamento 1115 y considera que el exportador argentino esta en condiciones de sacar ventaja frente a otros paises proveedores": "2026-11-14",
+      "arboles o vacas hay tipos que resuelven dilemas y luis colcombet que acaba de jubilarse del inta finalmente dice que no hay que elegir sino abrazar los sistemas silvopastoriles": "2026-11-14",
+      "testimonios de monte adentro me gusta renegar expresa juan carlos diaz sobre aquellas tardes en que debe ir a buscar sus cabras en temporada seca y mantenerlas con un poco de maiz": "2026-11-14",
+      "la justicia nos vuelve a dar la razon federacion agraria pidio derogar el articulo del codigo aduanero que se uso para modificar retenciones": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44468,7 +44572,17 @@
       "48c590987f068a92": "2026-11-14",
       "45574f3b8383a7bc": "2026-11-14",
       "328be346b0a1e868": "2026-11-14",
-      "ea700407f1177770": "2026-11-14"
+      "ea700407f1177770": "2026-11-14",
+      "120851eec54a1d6a": "2026-11-14",
+      "eb53df4e0eab0ec1": "2026-11-14",
+      "43aa42b19c9624a0": "2026-11-14",
+      "6fa3f942191c1f2a": "2026-11-14",
+      "1257bcdd0d8c1a3b": "2026-11-14",
+      "825cc3707cddfcd4": "2026-11-14",
+      "e1ef4e7de8bf0777": "2026-11-14",
+      "1c27ad8bf0d4fa49": "2026-11-14",
+      "0711f36bce2fda05": "2026-11-14",
+      "c210976a55092378": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75016,6 +75130,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b8eb90a07377_portada.jpg"
+    },
+    {
+      "id": "844628f0d0b5",
+      "cuando": "2026-11-14T11:30-03:00",
+      "titulo_original": "Alejandra Gribaldo produce cebada sobre soja de cobertura (¿qué?) y tiene una muy buena razón para hacerlo",
+      "descripcion": "En un campo de la localidad bonaerense de Tres Arroyos se produce cebada con soja como cultivo antecesor. Perdón, debe haber un error. Seguramente se trata de soja sobre cebada. ¡No! La información es correcta: la cebada se siembra luego de una soja que es antecedida por una vicia a modo de cobertur",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/alejandra-gribaldo-produce-cebada-sobre-soja-de-cobertura-que-y-tiene-una-muy-buena-razon-para-hacerlo/",
+      "titular": "Cebada sobre soja de cobertura: la innovadora rotación en Tres Arroyos",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 79,
+        "commercial_score": 65,
+        "subtema": "agro",
+        "tema": "cebada y soja de cobertura",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Manejo agrícola innovador en la provincia que llama la atención de cualquier productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "cc96731a-745c-4d13-947c-5ee554bd5920",
+          "slug": "cebada-sobre-soja-de-cobertura-la-innovadora-rotacion-986a8d",
+          "url": "https://www.diariolacampaña.com.ar/n/cebada-sobre-soja-de-cobertura-la-innovadora-rotacion-986a8d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17999877972008282",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760005376130459",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_844628f0d0b5_portada.jpg"
     }
   ],
   "pendientes": [
@@ -75087,71 +75255,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-14T10:00-03:00"
-    },
-    {
-      "id": "844628f0d0b5",
-      "rep": {
-        "id": "844628f0d0b5",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/alejandra-gribaldo-produce-cebada-sobre-soja-de-cobertura-que-y-tiene-una-muy-buena-razon-para-hacerlo/",
-        "canonical_url": "https://bichosdecampo.com/alejandra-gribaldo-produce-cebada-sobre-soja-de-cobertura-que-y-tiene-una-muy-buena-razon-para-hacerlo",
-        "titulo": "Alejandra Gribaldo produce cebada sobre soja de cobertura (¿qué?) y tiene una muy buena razón para hacerlo",
-        "titulo_norm": "alejandra gribaldo produce cebada sobre soja de cobertura que y tiene una muy buena razon para hacerlo",
-        "descripcion": "En un campo de la localidad bonaerense de Tres Arroyos se produce cebada con soja como cultivo antecesor. Perdón, debe haber un error. Seguramente se trata de soja sobre cebada. ¡No! La información es correcta: la cebada se siembra luego de una soja que es antecedida por una vicia a modo de cobertura. ¿Cómo? Para […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/viciacortada.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-14T01:06-03:00",
-        "capturado": "2026-11-14T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b373fba52e3707d6",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "844628f0d0b5",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/alejandra-gribaldo-produce-cebada-sobre-soja-de-cobertura-que-y-tiene-una-muy-buena-razon-para-hacerlo/",
-          "canonical_url": "https://bichosdecampo.com/alejandra-gribaldo-produce-cebada-sobre-soja-de-cobertura-que-y-tiene-una-muy-buena-razon-para-hacerlo",
-          "titulo": "Alejandra Gribaldo produce cebada sobre soja de cobertura (¿qué?) y tiene una muy buena razón para hacerlo",
-          "titulo_norm": "alejandra gribaldo produce cebada sobre soja de cobertura que y tiene una muy buena razon para hacerlo",
-          "descripcion": "En un campo de la localidad bonaerense de Tres Arroyos se produce cebada con soja como cultivo antecesor. Perdón, debe haber un error. Seguramente se trata de soja sobre cebada. ¡No! La información es correcta: la cebada se siembra luego de una soja que es antecedida por una vicia a modo de cobertura. ¿Cómo? Para […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/viciacortada.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-14T01:06-03:00",
-          "capturado": "2026-11-14T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b373fba52e3707d6",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 79,
-        "commercial_score": 65,
-        "subtema": "agro",
-        "tema": "cebada y soja de cobertura",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Manejo agrícola innovador en la provincia que llama la atención de cualquier productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-14T07:00-03:00"
     },
     {
       "id": "ad20ba193c22",
@@ -75851,8 +75954,8 @@
       "cuando": "2026-11-13T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-14T11:00:26-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-14T11:36:31-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
