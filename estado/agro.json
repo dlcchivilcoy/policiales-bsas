@@ -36292,6 +36292,98 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "00309aef5d866273": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 5,
+      "cercania_argentina": 1,
+      "potencial_reel": 2,
+      "ai_score": 27,
+      "commercial_score": 20,
+      "subtema": "mercados",
+      "tema": "girasol",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es un conflicto bélico lejano que afecta el mercado internacional de aceites pero no le cambia el día a día al productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9cf3c707a4b077e9": {
+      "conversacion": 18,
+      "historia_concreta": 13,
+      "cercania_pba": 12,
+      "interes_productores": 11,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 69,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "consumo carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Toca el bolsillo y la mesa de todos los vecinos, generando debate por la caída del consumo interno frente a la exportación.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        74
+      ]
+    },
+    "378f7267d6d00e9d": {
+      "conversacion": 12,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 13,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 64,
+      "commercial_score": 55,
+      "subtema": "ganaderia",
+      "tema": "precios hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los precios de Cañuelas marcan el pulso de la hacienda que se negocia en toda la provincia, interesando directo al ganadero.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        63
+      ]
+    },
+    "992b41079cb699ae": {
+      "conversacion": 9,
+      "historia_concreta": 12,
+      "cercania_pba": 8,
+      "interes_productores": 7,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 50,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "rio paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Informa sobre la crecida del Paraná, un dato clave para la logística de exportación de granos de la región pampeana.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        46
+      ]
     }
   },
   "indice": {
@@ -38788,7 +38880,14 @@
       "https://intainforma.inta.gob.ar/reconocen-al-inta-por-su-aporte-cientifico-a-la-biotecnologia": "2026-11-13",
       "https://intainforma.inta.gob.ar/recomendaciones-para-reducir-riesgos-en-la-produccion-ante-lluvias-intensas": "2026-11-13",
       "https://casaresonline.com.ar/maria-beatriz-pilu-giraudo-el-estatus-sanitario-nos-permite-acceder-a-cada-vez-mas-y-mejores-mercados": "2026-11-13",
-      "https://elnuevocronista.com/brillante-cierre-de-ano-para-el-club-mercedes-en-la-premiacion-de-la-federacion-portena-de-patin": "2026-11-13"
+      "https://elnuevocronista.com/brillante-cierre-de-ano-para-el-club-mercedes-en-la-premiacion-de-la-federacion-portena-de-patin": "2026-11-13",
+      "https://infocampo.com.ar/transporte-de-cargas-suba-del-16-en-la-tarifa-nacional-y-enojo-en-buenos-aires-del-agro-con-la-provincia": "2026-11-13",
+      "https://bichosdecampo.com/diganle-adios-al-precio-del-girasol-que-se-va-industrias-aceiteras-ucranianas-suspenden-operaciones-ante-ataques-masivos-de-rusia": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid13112026": "2026-11-13",
+      "https://lanacion.com.ar/economia/campo/en-rosario-el-rio-parana-subio-casi-dos-metros-en-nueve-semanas-y-quedo-a-53-centimetros-del-nivel-nid13112026": "2026-11-13",
+      "https://presentenoticias.com/noticias/2026/11/13/23168-la-provincia-fijo-una-suba-del-16por_ciento-en-los-fletes-de-granos-y-desato-el-enojo-del-campo": "2026-11-13",
+      "https://lapostadelnoroeste.com.ar/la-escuela-agraria-de-germania-sufrio-graves-danos-por-el-temporal": "2026-11-13"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -41283,7 +41382,14 @@
       "reconocen al inta por su aporte cientifico a la biotecnologia": "2026-11-13",
       "recomendaciones para reducir riesgos en la produccion ante lluvias intensas": "2026-11-13",
       "maria beatriz pilu giraudo el estatus sanitario nos permite acceder a cada vez mas y mejores mercados": "2026-11-13",
-      "brillante cierre de ano para el club mercedes en la premiacion de la federacion portena de patin": "2026-11-13"
+      "brillante cierre de ano para el club mercedes en la premiacion de la federacion portena de patin": "2026-11-13",
+      "transporte de cargas suba del 16 en la tarifa nacional y enojo en buenos aires del agro con la provincia": "2026-11-13",
+      "diganle adios al precio del girasol que se va industrias aceiteras ucranianas suspenden operaciones ante ataques masivos de rusia": "2026-11-13",
+      "contraste cayo un 11 2 el consumo de carne vacuna y por primera vez en la historia la exportacion se llevo el 31 1 de la produccion": "2026-11-13",
+      "vacunos cierre de semana con bajas en el mercado agroganadero de canuelas": "2026-11-13",
+      "en rosario el rio parana subio casi dos metros en nueve semanas y quedo a 53 centimetros del nivel de alerta": "2026-11-13",
+      "la provincia fijo una suba del 16 en los fletes de granos y desato el enojo del campo": "2026-11-13",
+      "la escuela agraria de germania sufrio graves danos por el temporal": "2026-11-13"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -43778,7 +43884,14 @@
       "d451005c5be46c03": "2026-11-13",
       "e1db63ac22c007a1": "2026-11-13",
       "e62b6ac3a4bcef86": "2026-11-13",
-      "6f1b9d1aa955ebda": "2026-11-13"
+      "6f1b9d1aa955ebda": "2026-11-13",
+      "0b66a5855b4ef4ca": "2026-11-13",
+      "00309aef5d866273": "2026-11-13",
+      "9cf3c707a4b077e9": "2026-11-13",
+      "378f7267d6d00e9d": "2026-11-13",
+      "992b41079cb699ae": "2026-11-13",
+      "7c3358471aaf9132": "2026-11-13",
+      "531494e6c1e52037": "2026-11-13"
     }
   },
   "elegidas": [
@@ -74160,9 +74273,201 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_9dccc613f1cc_portada.jpg"
+    },
+    {
+      "id": "4b0a5a7882e3",
+      "cuando": "2026-11-13T21:00-03:00",
+      "titulo_original": "La mitad del maíz ya está sembrado",
+      "descripcion": "El 50,5% de las 8,4 millones de hectáreas proyectadas con maíz ya están implantadas, mientras que la siembra de soja llega al 4,7%",
+      "fuente": "Chacabuco Noticias",
+      "url": "https://www.chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado/",
+      "titular": "Maíz: la siembra cubre el 50,5% de las hectáreas proyectadas",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 14,
+        "cercania_pba": 20,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 79,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "siembra de maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos de avance de siembra en Chacabuco y la zona, información directa que usa el productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-13T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "35541a2a-3b4e-4d96-8dca-7572e0456d44",
+          "slug": "maiz-la-siembra-cubre-el-50-5-de-las-hectareas-proyectadas-en-b05c3a",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-la-siembra-cubre-el-50-5-de-las-hectareas-proyectadas-en-b05c3a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18101053226541166",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1759245086206488",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_4b0a5a7882e3_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "cf805ab99549",
+      "rep": {
+        "id": "cf805ab99549",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026",
+        "titulo": "Contraste: cayó un 11,2% el consumo de carne vacuna y, por primera vez en la historia, la exportación se llevó el 31,1% de la producción",
+        "titulo_norm": "contraste cayo un 11 2 el consumo de carne vacuna y por primera vez en la historia la exportacion se llevo el 31 1 de la produccion",
+        "descripcion": "Según un relevamiento privado, a octubre pasado la ingesta se ubicó en el equivalente a 44,5 kilos por habitante por año",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/VDAX6J3BQBFWJPT22HOWK3PLDY.jpg?auth=be6399b0ae81d99ec1e3c317f79d1c75530d8e521d37826675e64e92bfedd2bb&smart=true",
+        "autor": "",
+        "publicado": "2026-11-13T20:15-03:00",
+        "capturado": "2026-11-13T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "9cf3c707a4b077e9",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "cf805ab99549",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/contraste-cayo-un-112-el-consumo-de-carne-vacuna-y-por-primera-vez-en-la-historia-la-exportacion-se-nid13112026",
+          "titulo": "Contraste: cayó un 11,2% el consumo de carne vacuna y, por primera vez en la historia, la exportación se llevó el 31,1% de la producción",
+          "titulo_norm": "contraste cayo un 11 2 el consumo de carne vacuna y por primera vez en la historia la exportacion se llevo el 31 1 de la produccion",
+          "descripcion": "Según un relevamiento privado, a octubre pasado la ingesta se ubicó en el equivalente a 44,5 kilos por habitante por año",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/VDAX6J3BQBFWJPT22HOWK3PLDY.jpg?auth=be6399b0ae81d99ec1e3c317f79d1c75530d8e521d37826675e64e92bfedd2bb&smart=true",
+          "autor": "",
+          "publicado": "2026-11-13T20:15-03:00",
+          "capturado": "2026-11-13T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "9cf3c707a4b077e9",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 13,
+        "cercania_pba": 12,
+        "interes_productores": 11,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 69,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "consumo carne",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Toca el bolsillo y la mesa de todos los vecinos, generando debate por la caída del consumo interno frente a la exportación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          74
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-13T21:00-03:00"
+    },
+    {
+      "id": "f4fd67b3a379",
+      "rep": {
+        "id": "f4fd67b3a379",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid13112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid13112026",
+        "titulo": "Vacunos: cierre de semana con bajas en el Mercado Agroganadero de Cañuelas",
+        "titulo_norm": "vacunos cierre de semana con bajas en el mercado agroganadero de canuelas",
+        "descripcion": "Con una entrada de 5332 cabezas, se pagó $4700 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3929,883 con un promedio semanal de $4102,571",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/KJBRNLCURBEKHEQCF7ZMMFW6V4.jpeg?auth=a2f1e10edd5c2ff2c8e914b23cadcf2c01788d5f54e51fe3fc7ecebcd16667ce&smart=true",
+        "autor": "",
+        "publicado": "2026-11-13T19:51-03:00",
+        "capturado": "2026-11-13T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "378f7267d6d00e9d",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "f4fd67b3a379",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid13112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-cierre-de-semana-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid13112026",
+          "titulo": "Vacunos: cierre de semana con bajas en el Mercado Agroganadero de Cañuelas",
+          "titulo_norm": "vacunos cierre de semana con bajas en el mercado agroganadero de canuelas",
+          "descripcion": "Con una entrada de 5332 cabezas, se pagó $4700 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $3929,883 con un promedio semanal de $4102,571",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/KJBRNLCURBEKHEQCF7ZMMFW6V4.jpeg?auth=a2f1e10edd5c2ff2c8e914b23cadcf2c01788d5f54e51fe3fc7ecebcd16667ce&smart=true",
+          "autor": "",
+          "publicado": "2026-11-13T19:51-03:00",
+          "capturado": "2026-11-13T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "378f7267d6d00e9d",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 13,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 64,
+        "commercial_score": 55,
+        "subtema": "ganaderia",
+        "tema": "precios hacienda",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Los precios de Cañuelas marcan el pulso de la hacienda que se negocia en toda la provincia, interesando directo al ganadero.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          63
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-13T21:00-03:00"
+    },
     {
       "id": "5c9b700ea30a",
       "rep": {
@@ -74654,71 +74959,6 @@
       "cuando": "2026-11-13T07:00-03:00"
     },
     {
-      "id": "4b0a5a7882e3",
-      "rep": {
-        "id": "4b0a5a7882e3",
-        "fuente": "Chacabuco Noticias",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.chacabuconoticias.com.ar/feed/",
-        "url": "https://www.chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado/",
-        "canonical_url": "https://chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado",
-        "titulo": "La mitad del maíz ya está sembrado",
-        "titulo_norm": "la mitad del maiz ya esta sembrado",
-        "descripcion": "El 50,5% de las 8,4 millones de hectáreas proyectadas con maíz ya están implantadas, mientras que la siembra de soja llega al 4,7%",
-        "imagen_url": "",
-        "autor": "Mates y Noticias",
-        "publicado": "2026-11-12T10:12-03:00",
-        "capturado": "2026-11-12T11:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ce6e371ba001a3db",
-        "localidad_medio": "Chacabuco"
-      },
-      "grupo": [
-        {
-          "id": "4b0a5a7882e3",
-          "fuente": "Chacabuco Noticias",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.chacabuconoticias.com.ar/feed/",
-          "url": "https://www.chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado/",
-          "canonical_url": "https://chacabuconoticias.com.ar/2026/11/12/la-mitad-del-maiz-ya-esta-sembrado",
-          "titulo": "La mitad del maíz ya está sembrado",
-          "titulo_norm": "la mitad del maiz ya esta sembrado",
-          "descripcion": "El 50,5% de las 8,4 millones de hectáreas proyectadas con maíz ya están implantadas, mientras que la siembra de soja llega al 4,7%",
-          "imagen_url": "",
-          "autor": "Mates y Noticias",
-          "publicado": "2026-11-12T10:12-03:00",
-          "capturado": "2026-11-12T11:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ce6e371ba001a3db",
-          "localidad_medio": "Chacabuco"
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 14,
-        "cercania_pba": 20,
-        "interes_productores": 14,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 79,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "siembra de maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos de avance de siembra en Chacabuco y la zona, información directa que usa el productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-12T11:30-03:00"
-    },
-    {
       "id": "8baab79bf7df",
       "rep": {
         "id": "8baab79bf7df",
@@ -74853,8 +75093,8 @@
       "cuando": "2026-11-12T10:00-03:00"
     }
   ],
-  "actualizado": "2026-11-13T19:35:51-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-13T21:07:27-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
