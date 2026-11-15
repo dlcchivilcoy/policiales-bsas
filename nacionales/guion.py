@@ -284,7 +284,7 @@ def generar(nota: dict, redactar=None) -> dict:
     sistema = SYSTEM_PROMPT + (CAT.GUIAS.get(categoria) or "")
     datos, detalle = redactar(sistema, material)
     g = _salida(datos, detalle, nota)
-    if categoria:
+    if categoria in CAT.CATEGORIAS:          # los policiales de los reels de prueba (nacionales/prueba.py): la de la IA
         g["seccion"] = CAT.CATEGORIAS[categoria]["nombre"]
 
     original = G._palabras(f"{titular} {texto}")
