@@ -37492,6 +37492,50 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e6be505be1f8ae84": {
+      "conversacion": 12,
+      "historia_concreta": 15,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 54,
+      "commercial_score": 40,
+      "subtema": "maquinaria",
+      "tema": "cocinas istilart",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia linda y tradicional de la provincia, pero queda lejos geográficamente de Chivilcoy.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        54
+      ]
+    },
+    "bb81c789537a4f3c": {
+      "conversacion": 24,
+      "historia_concreta": 20,
+      "cercania_pba": 20,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 85,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "accidente ruta 5",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en la Ruta 5 cerca de la zona y la víctima es de Alberti, genera impacto inmediato en los vecinos.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -40096,7 +40140,11 @@
       "https://bichosdecampo.com/la-cascara-de-mani-no-se-tira-apoyada-por-el-conicet-y-el-inti-una-empresa-de-cordoba-logro-fabricar-vajilla-envases-y-hasta-muebles-con-el-descarte-de-esa-industria": "2026-11-15",
       "https://bichosdecampo.com/el-gobierno-habilito-a-seis-empresas-para-certificar-esquemas-de-diferenciacion-agroindustriales-pero-solo-cuatro-de-ellas-sirven-para-evitar-las-trabas-europeas-por-deforestacion-cuales-so": "2026-11-15",
       "https://chacabuquero.com.ar/2026/11/inquietud-de-un-joven-por-que-no-se.html": "2026-11-15",
-      "https://chacabuquero.com.ar/2026/11/despego-un-vuelo-sanitario-desde.html": "2026-11-15"
+      "https://chacabuquero.com.ar/2026/11/despego-un-vuelo-sanitario-desde.html": "2026-11-15",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-15-noviembre-2026": "2026-11-15",
+      "https://lanacion.com.ar/economia/campo/todo-empezo-con-un-inmigrante-en-1898-y-hoy-despues-de-mas-de-100-anos-mantiene-su-vigencia-mi-nid15112026": "2026-11-15",
+      "https://chacabuquero.com.ar/2026/11/otro-siniestro-vial-fatal-en-una-ruta.html": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42699,7 +42747,11 @@
       "la cascara de mani no se tira apoyada por el conicet y el inti una empresa de cordoba logro fabricar vajilla envases y hasta muebles con el descarte de esa industria": "2026-11-15",
       "el gobierno habilito a seis plataformas para certificar esquemas de diferenciacion agroindustriales pero solo cuatro de ellas sirven para evitar las trabas europeas por deforestacion cuales son y quien esta detras de cada una de ellas": "2026-11-15",
       "inquietud de un joven por que no se hace la fiesta nacional del maiz en chacabuco": "2026-11-15",
-      "despego un vuelo sanitario desde chacabuco": "2026-11-15"
+      "despego un vuelo sanitario desde chacabuco": "2026-11-15",
+      "dolar blue a cuanto cotizan hoy en mendoza 15 noviembre 2026": "2026-11-15",
+      "euro blue hoy precio y cotizacion de este 15 noviembre 2026": "2026-11-15",
+      "todo empezo con un inmigrante en 1898 y hoy despues de mas de 100 anos mantiene su vigencia mi abuela hacia dulce de leche en estas cocinas": "2026-11-15",
+      "otro siniestro vial fatal en una ruta de la region": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45302,7 +45354,11 @@
       "7d460b8b4619628a": "2026-11-15",
       "59084966edcb0c24": "2026-11-15",
       "70b694946a311cd2": "2026-11-15",
-      "53c25ace2e311e14": "2026-11-15"
+      "53c25ace2e311e14": "2026-11-15",
+      "9f9882b9f96cbccd": "2026-11-15",
+      "1893c467601265ed": "2026-11-15",
+      "e6be505be1f8ae84": "2026-11-15",
+      "bb81c789537a4f3c": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76450,6 +76506,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_790155876800_portada.jpg"
+    },
+    {
+      "id": "ff71747f2981",
+      "cuando": "2026-11-15T13:00-03:00",
+      "titulo_original": "Otro siniestro vial fatal en una ruta de la región",
+      "descripcion": "El fallecido era oriundo de una ciudad de la zona.Un nuevo siniestro vial se registró en una ruta de la región en las últimas horas. Volver a Chacabuquero. Participaron un auto Chevrolet Vectra y un camión Scania con Semirremolque. El conductor del coche, identificado como Adrián Buchholz, de 29 año",
+      "fuente": "Chacabuquero",
+      "url": "https://www.chacabuquero.com.ar/2026/11/otro-siniestro-vial-fatal-en-una-ruta.html",
+      "titular": "Choque fatal entre un auto y un camión en ruta 5",
+      "volanta": "Regionales",
+      "score": {
+        "conversacion": 24,
+        "historia_concreta": 20,
+        "cercania_pba": 20,
+        "interes_productores": 10,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 85,
+        "commercial_score": 20,
+        "subtema": "agro",
+        "tema": "accidente ruta 5",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pasa en la Ruta 5 cerca de la zona y la víctima es de Alberti, genera impacto inmediato en los vecinos.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 0,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-15T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d3c62c28-1e66-47d4-82f8-1bda217fe6f8",
+          "slug": "tragedia-en-la-ruta-5-un-joven-de-alberti-murio-tras-chocar-con-de9220",
+          "url": "https://www.diariolacampaña.com.ar/n/tragedia-en-la-ruta-5-un-joven-de-alberti-murio-tras-chocar-con-de9220",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18130279501881777",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1761500825980914",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ff71747f2981_portada.jpg"
     }
   ],
   "pendientes": [
@@ -76523,8 +76633,8 @@
       "cuando": "2026-11-14T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-15T11:36:06-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-15T13:07:50-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
