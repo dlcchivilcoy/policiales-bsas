@@ -37264,6 +37264,66 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5de8c35ff7ee75fb": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 39,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Importa a la exportación nacional, pero al productor local le queda lejos del día a día.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "42de203982fd7b3f": {
+      "conversacion": 2,
+      "historia_concreta": 4,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 11,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "brasil",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un informe sobre una empresa extranjera que no afecta al productor de la zona.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6844a8f95f9117f8": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "fútbol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia de fútbol local, no tiene relación con el campo ni la producción.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -39834,7 +39894,10 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249330-pablo-scarafoni-la-campana-agricola-202627-muestra-un-panorama-positivo-para-el-agro-por-que.html": "2026-11-14",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249331-que-es-la-matematica-biologica-y-como-influye-en-la-nutricion-y-rendimiento-de-los-cultivos.html": "2026-11-14",
       "https://agrositio.com.ar/noticia/249321-el-consumo-de-maiz-202526-para-forraje-en-argentina-se-estima-en-156-mt.html": "2026-11-14",
-      "https://bichosdecampo.com/una-limpieza-de-ciencia-ficcion-investigan-una-alternativa-al-tradicional-cloro-para-desinfectar-frutas-y-verduras-mediante-un-gas-energizado": "2026-11-14"
+      "https://bichosdecampo.com/una-limpieza-de-ciencia-ficcion-investigan-una-alternativa-al-tradicional-cloro-para-desinfectar-frutas-y-verduras-mediante-un-gas-energizado": "2026-11-14",
+      "https://bichosdecampo.com/conab-blanquea-que-brasil-tendra-que-importar-un-volumen-record-de-trigo-y-reconoce-que-gran-parte-de-la-cosecha-tiene-calidad-forrajera": "2026-11-14",
+      "https://bichosdecampo.com/quien-es-terra-santa-la-empresa-brasilena-que-tiene-80-000-hectareas-y-paso-de-producir-granos-a-alquilar-sus-campos": "2026-11-14",
+      "https://chacabucoenred.com/el-azul-se-convirtio-en-el-primer-finalista-de-la-liguilla-del-clausura": "2026-11-14"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42403,7 +42466,10 @@
       "pablo scarafoni la campana agricola 2026 27 muestra un panorama positivo para el agro por que": "2026-11-14",
       "matematica biologica una nueva mirada para entender el suelo los nutrientes y el rendimiento": "2026-11-14",
       "record de consumo forrajero argentina utilizara 15 6 mill tons de maiz": "2026-11-14",
-      "una limpieza de ciencia ficcion investigan una alternativa al tradicional cloro para desinfectar frutas y verduras mediante un gas energizado": "2026-11-14"
+      "una limpieza de ciencia ficcion investigan una alternativa al tradicional cloro para desinfectar frutas y verduras mediante un gas energizado": "2026-11-14",
+      "conab blanquea que brasil tendra que importar un volumen record de trigo y reconoce que gran parte de la cosecha tiene calidad forrajera": "2026-11-14",
+      "quien es terra santa la empresa brasilena que tiene 80 000 hectareas y paso de producir granos a alquilar sus campos": "2026-11-14",
+      "el azul se convirtio en el primer finalista de la liguilla del clausura": "2026-11-14"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -44972,7 +45038,10 @@
       "ffe434ddc3091f45": "2026-11-14",
       "ad9cfeba4d0d96bd": "2026-11-14",
       "dc3e7395f7a7bd58": "2026-11-14",
-      "a4b5f1a07bb36829": "2026-11-14"
+      "a4b5f1a07bb36829": "2026-11-14",
+      "5de8c35ff7ee75fb": "2026-11-14",
+      "42de203982fd7b3f": "2026-11-14",
+      "6844a8f95f9117f8": "2026-11-14"
     }
   },
   "elegidas": [
@@ -75892,6 +75961,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7b7d5f0b933b_portada.jpg"
+    },
+    {
+      "id": "ad20ba193c22",
+      "cuando": "2026-11-14T21:00-03:00",
+      "titulo_original": "Zarpado: Se registraron embarques de maíz argentino por 680.000 toneladas en una sola jornada",
+      "descripcion": "La presión de la demanda internacional sobre el maíz sudamericano en general y argentino en particular es un “regalo” del cielo para los productores, porque, gracias a esa circunstancia, reciben precios atractivos en un contexto de oferta abundante. Este viernes se registraron más de 680.000 tonelad",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/zarpado-se-registraron-embarques-de-maiz-argentino-por-680-000-toneladas-en-una-soja-jornada/",
+      "titular": "Maíz: anotan 680.000 toneladas en DJVE durante una sola jornada",
+      "volanta": "Mercados",
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 55,
+        "subtema": "mercados",
+        "tema": "exportaciones de maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Gran volumen de exportación que sostiene los precios locales del maíz para los productores.",
+        "tema_doc": "precios",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          65
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-14T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "19dcdc6a-794e-4113-ae3f-a0302e14afb1",
+          "slug": "registran-embarques-de-maiz-por-680-000-toneladas-en-una-sola-bc55a9",
+          "url": "https://www.diariolacampaña.com.ar/n/registran-embarques-de-maiz-por-680-000-toneladas-en-una-sola-bc55a9",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18135388174767275",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1760496492748014",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ad20ba193c22_portada.jpg"
     }
   ],
   "pendientes": [
@@ -75963,75 +76090,6 @@
         "de_zona": false
       },
       "cuando": "2026-11-14T13:00-03:00"
-    },
-    {
-      "id": "ad20ba193c22",
-      "rep": {
-        "id": "ad20ba193c22",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/zarpado-se-registraron-embarques-de-maiz-argentino-por-680-000-toneladas-en-una-soja-jornada/",
-        "canonical_url": "https://bichosdecampo.com/zarpado-se-registraron-embarques-de-maiz-argentino-por-680-000-toneladas-en-una-soja-jornada",
-        "titulo": "Zarpado: Se registraron embarques de maíz argentino por 680.000 toneladas en una sola jornada",
-        "titulo_norm": "zarpado se registraron embarques de maiz argentino por 680 000 toneladas en una sola jornada",
-        "descripcion": "La presión de la demanda internacional sobre el maíz sudamericano en general y argentino en particular es un “regalo” del cielo para los productores, porque, gracias a esa circunstancia, reciben precios atractivos en un contexto de oferta abundante. Este viernes se registraron más de 680.000 toneladas de Declaraciones Juradas de Ventas Externas (DJVE) de maíz […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/djve-1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-13T21:41-03:00",
-        "capturado": "2026-11-14T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "50a613d00db126ee",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "ad20ba193c22",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/zarpado-se-registraron-embarques-de-maiz-argentino-por-680-000-toneladas-en-una-soja-jornada/",
-          "canonical_url": "https://bichosdecampo.com/zarpado-se-registraron-embarques-de-maiz-argentino-por-680-000-toneladas-en-una-soja-jornada",
-          "titulo": "Zarpado: Se registraron embarques de maíz argentino por 680.000 toneladas en una sola jornada",
-          "titulo_norm": "zarpado se registraron embarques de maiz argentino por 680 000 toneladas en una sola jornada",
-          "descripcion": "La presión de la demanda internacional sobre el maíz sudamericano en general y argentino en particular es un “regalo” del cielo para los productores, porque, gracias a esa circunstancia, reciben precios atractivos en un contexto de oferta abundante. Este viernes se registraron más de 680.000 toneladas de Declaraciones Juradas de Ventas Externas (DJVE) de maíz […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/djve-1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-13T21:41-03:00",
-          "capturado": "2026-11-14T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "50a613d00db126ee",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 9,
-        "cercania_pba": 12,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 64,
-        "commercial_score": 55,
-        "subtema": "mercados",
-        "tema": "exportaciones de maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Gran volumen de exportación que sostiene los precios locales del maíz para los productores.",
-        "tema_doc": "precios",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          65
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-14T07:00-03:00"
     },
     {
       "id": "790155876800",
@@ -76241,8 +76299,8 @@
       "cuando": "2026-11-13T11:30-03:00"
     }
   ],
-  "actualizado": "2026-11-14T19:37:26-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-14T21:07:34-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
