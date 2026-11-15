@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-15T22:03:17.000Z",
+  "actualizado": "2026-11-15T22:32:12.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/13/26984-alerta-naranja-por-tormentas-fuertes-para-bragado-y-la-region",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-13T22:31:31.000Z",
-      "titulo": "Rige alerta naranja por tormentas severas y fuertes ráfagas de viento",
-      "descripcion": "El Servicio Meteorológico Nacional emitió una advertencia para este viernes debido a la llegada de tormentas intensas, abundante caída de agua, granizo y vientos que podrían superar los 90 kilómetros por hora en la región.",
-      "texto_tiktok": "El Servicio Meteorológico Nacional emitió una advertencia de nivel naranja para este viernes 13 de noviembre debido a la llegada de tormentas severas.\n\nLa especialista Vanina Ferrero confirmó que se esperan abundantes precipitaciones, granizo y fuertes ráfagas de viento superiores a los 90 kilómetros por hora.\n\nHacia la tarde y la noche, el nivel de advertencia descenderá a amarillo mientras continúan las precauciones.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #AlertaMeteorologica #Tormentas #Clima #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-13_2134_04_bragado_rige-alerta-naranja-por-tormen.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-rige-una-alerta-naranja-por-tormentas-fuertes-y-rafagas-6447c1",
-      "youtube_url": "https://youtube.com/shorts/6n9hXebab6Q",
-      "prioridad": 9,
-      "urgente": false,
-      "localidad": "Bragado",
-      "volanta": "Alerta meteorológica en Bragado",
-      "categoria": "alerta_meteorologica",
-      "distancia_km": 49.3,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/confrontacion-con-un-herido-en-un.html",
       "origen": "policiales",
@@ -163,6 +139,30 @@
       "volanta": "Operativo antidrogas en Chacabuco",
       "categoria": "operativo_policial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://diarioelsalado.com.ar/2026/11/un-vecino-de-alberti-murio-en-un-choque-frontal-sobre-la-ruta-5/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-15T22:32:12.000Z",
+      "titulo": "Murió un conductor de 30 años en un choque frontal en la Ruta 5",
+      "descripcion": "Adrián Ezequiel Buchholz, de 30 años y domiciliado en la ciudad, falleció en la madrugada de este domingo al chocar su auto contra un camión en el kilómetro 183 de la Ruta Nacional 5.",
+      "texto_tiktok": "Un trágico choque frontal sobre la Ruta 5 cobró la vida de un vecino de la zona durante las primeras horas del domingo.\n\nEl impacto se produjo a la altura del kilómetro 183 entre un automóvil y un camión de carga.\n\nLas autoridades judiciales investigan las causas del siniestro vial bajo la carátula de homicidio culposo.\n\n📲 Más noticias de Alberti en www.diariolacampaña.com.ar\n\n#Alberti #SiniestroVial #Ruta5 #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-15_2135_03_alberti_muri-un-conductor-de-30-a-os-e.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/alberti-un-automovilista-de-30-anos-murio-en-un-choque-frontal-2c0fa3",
+      "youtube_url": "https://youtube.com/shorts/yII15iIFYTE",
+      "prioridad": 9,
+      "urgente": false,
+      "localidad": "Alberti",
+      "volanta": "Choque fatal en Alberti",
+      "categoria": "accidente_vial",
+      "distancia_km": 28.1,
       "radio_ok": true,
       "plataformas": [
         "x",
