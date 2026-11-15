@@ -37536,6 +37536,26 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7808c612e7ac47cc": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 46,
+      "commercial_score": 40,
+      "subtema": "maquinaria",
+      "tema": "pick-ups rimi",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directo a los productores que compran camionetas, pero es un debate reglamentario nacional.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -40144,7 +40164,8 @@
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-15-noviembre-2026": "2026-11-15",
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-15-noviembre-2026": "2026-11-15",
       "https://lanacion.com.ar/economia/campo/todo-empezo-con-un-inmigrante-en-1898-y-hoy-despues-de-mas-de-100-anos-mantiene-su-vigencia-mi-nid15112026": "2026-11-15",
-      "https://chacabuquero.com.ar/2026/11/otro-siniestro-vial-fatal-en-una-ruta.html": "2026-11-15"
+      "https://chacabuquero.com.ar/2026/11/otro-siniestro-vial-fatal-en-una-ruta.html": "2026-11-15",
+      "https://infocampo.com.ar/el-dilema-de-las-pick-ups-en-el-rimi-el-decreto-que-limita-una-inversion-esencial-en-el-agro": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42751,7 +42772,8 @@
       "dolar blue a cuanto cotizan hoy en mendoza 15 noviembre 2026": "2026-11-15",
       "euro blue hoy precio y cotizacion de este 15 noviembre 2026": "2026-11-15",
       "todo empezo con un inmigrante en 1898 y hoy despues de mas de 100 anos mantiene su vigencia mi abuela hacia dulce de leche en estas cocinas": "2026-11-15",
-      "otro siniestro vial fatal en una ruta de la region": "2026-11-15"
+      "otro siniestro vial fatal en una ruta de la region": "2026-11-15",
+      "el dilema de las pick ups en el rimi el decreto que limita una inversion esencial en el agro": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45358,7 +45380,8 @@
       "9f9882b9f96cbccd": "2026-11-15",
       "1893c467601265ed": "2026-11-15",
       "e6be505be1f8ae84": "2026-11-15",
-      "bb81c789537a4f3c": "2026-11-15"
+      "bb81c789537a4f3c": "2026-11-15",
+      "7808c612e7ac47cc": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76560,51 +76583,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ff71747f2981_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "c196a9af80ae",
-      "rep": {
-        "id": "c196a9af80ae",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha/",
-        "canonical_url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha",
-        "titulo": "Con productores comprando solo lo justo y necesario, los importadores de fertlizantes siguen “haciendo la plancha”",
-        "titulo_norm": "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha",
-        "descripcion": "El mercado internacional de fertilizantes nitrogenados ingresó en una fase de marcada apatía y tono bajista. La falta de liquidez en la demanda “spot” global y la distensión en las cotizaciones internacionales de la energía debilitaron la firmeza previa del mercado. “A pesar de que se registraron recortes del 20% en la producción de urea […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/grafico1-1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-14T12:27-03:00",
-        "capturado": "2026-11-14T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3bb4d4395bbe7970",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "c196a9af80ae",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha/",
-          "canonical_url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha",
-          "titulo": "Con productores comprando solo lo justo y necesario, los importadores de fertlizantes siguen “haciendo la plancha”",
-          "titulo_norm": "con productores comprando solo lo justo y necesario los importadores de fertlizantes siguen haciendo la plancha",
-          "descripcion": "El mercado internacional de fertilizantes nitrogenados ingresó en una fase de marcada apatía y tono bajista. La falta de liquidez en la demanda “spot” global y la distensión en las cotizaciones internacionales de la energía debilitaron la firmeza previa del mercado. “A pesar de que se registraron recortes del 20% en la producción de urea […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/grafico1-1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-14T12:27-03:00",
-          "capturado": "2026-11-14T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3bb4d4395bbe7970",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-15T14:30-03:00",
+      "titulo_original": "Con productores comprando solo lo justo y necesario, los importadores de fertlizantes siguen “haciendo la plancha”",
+      "descripcion": "El mercado internacional de fertilizantes nitrogenados ingresó en una fase de marcada apatía y tono bajista. La falta de liquidez en la demanda “spot” global y la distensión en las cotizaciones internacionales de la energía debilitaron la firmeza previa del mercado. “A pesar de que se registraron re",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/con-productores-comprando-solo-lo-justo-y-necesario-los-importadores-de-fertlizantes-siguen-haciendo-la-plancha/",
+      "titular": "Urea: precios y compras a la baja mientras avanza el maíz",
+      "volanta": "Mercados",
       "score": {
         "conversacion": 15,
         "historia_concreta": 6,
@@ -76630,11 +76618,34 @@
         ],
         "de_zona": false
       },
-      "cuando": "2026-11-14T13:00-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-15T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "295597fa-0f16-4716-9990-cc139cd20d37",
+          "slug": "urea-y-fertilizantes-precios-cotizaciones-en-baja-y-el-impacto-87ec8d",
+          "url": "https://www.diariolacampaña.com.ar/n/urea-y-fertilizantes-precios-cotizaciones-en-baja-y-el-impacto-87ec8d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18358566433175375",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1761589682638695",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c196a9af80ae_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-15T14:01:11-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-11-15T14:36:35-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
