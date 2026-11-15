@@ -37428,6 +37428,70 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7d460b8b4619628a": {
+      "conversacion": 10,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 47,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "cascara de mani",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una novedad curiosa sobre valor agregado pero queda lejos de nuestra zona manisera.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "70b694946a311cd2": {
+      "conversacion": 12,
+      "historia_concreta": 8,
+      "cercania_pba": 20,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 54,
+      "commercial_score": 32,
+      "subtema": "agro",
+      "tema": "fiesta del maiz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Toca de cerca a Chacabuco y genera debate local por la identidad maicera, aunque es una opinión.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        49
+      ]
+    },
+    "53c25ace2e311e14": {
+      "conversacion": 5,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 10,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "general",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia de emergencia médica general de un diario local, sin relación con el campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -40022,7 +40086,17 @@
       "https://bichosdecampo.com/aterrizo-un-ovni-encontro-figuras-extranas-sobre-su-trigo-y-salio-a-investigarlas-desde-el-aire-ahora-busca-que-cada-lote-tenga-su-propia-caja-negra-y-pueda-hablar": "2026-11-15",
       "https://lacapital.com.ar/agro/la-bolsa-rosario-elevo-la-cosecha-trigo-243-millones-toneladas-n10292238.html": "2026-11-15",
       "https://diariojunin.com/noticias/103153_recuperan-11-vacunos-robados.html": "2026-11-15",
-      "https://viamontedigital.com.ar/franco-flexas-lanzo-su-candidatura-a-gobernador-bonaerense-con-el-anuncio-de-una-caminata-de-mas-de-350-kilometros-hacia-la-plata": "2026-11-15"
+      "https://viamontedigital.com.ar/franco-flexas-lanzo-su-candidatura-a-gobernador-bonaerense-con-el-anuncio-de-una-caminata-de-mas-de-350-kilometros-hacia-la-plata": "2026-11-15",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-15-noviembre-2026": "2026-11-15",
+      "https://bichosdecampo.com/la-cascara-de-mani-no-se-tira-apoyada-por-el-conicet-y-el-inti-una-empresa-de-cordoba-logro-fabricar-vajilla-envases-y-hasta-muebles-con-el-descarte-de-esa-industria": "2026-11-15",
+      "https://bichosdecampo.com/el-gobierno-habilito-a-seis-empresas-para-certificar-esquemas-de-diferenciacion-agroindustriales-pero-solo-cuatro-de-ellas-sirven-para-evitar-las-trabas-europeas-por-deforestacion-cuales-so": "2026-11-15",
+      "https://chacabuquero.com.ar/2026/11/inquietud-de-un-joven-por-que-no-se.html": "2026-11-15",
+      "https://chacabuquero.com.ar/2026/11/despego-un-vuelo-sanitario-desde.html": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42615,7 +42689,17 @@
       "aterrizo un ovni encontro figuras extranas sobre su trigo y salio a investigarlas desde el aire ahora busca que cada lote tenga su propia caja negra y pueda hablar para contar que le pasa": "2026-11-15",
       "la bolsa de rosario elevo la cosecha de trigo a 24 3 millones de toneladas": "2026-11-15",
       "recuperan 11 vacunos robados": "2026-11-15",
-      "franco flexas lanzo su candidatura a gobernador bonaerense con el anuncio de una caminata de mas de 350 kilometros hacia la plata": "2026-11-15"
+      "franco flexas lanzo su candidatura a gobernador bonaerense con el anuncio de una caminata de mas de 350 kilometros hacia la plata": "2026-11-15",
+      "precio del maiz en rosario hoy 15 noviembre 2026": "2026-11-15",
+      "precio del trigo en rosario hoy 15 noviembre 2026": "2026-11-15",
+      "precio del girasol en rosario hoy 15 noviembre 2026": "2026-11-15",
+      "precio de la soja en rosario hoy 15 noviembre 2026": "2026-11-15",
+      "precio del sorgo en rosario hoy 15 noviembre 2026": "2026-11-15",
+      "dolar blue a cuanto cotizan hoy en cordoba 15 noviembre 2026": "2026-11-15",
+      "la cascara de mani no se tira apoyada por el conicet y el inti una empresa de cordoba logro fabricar vajilla envases y hasta muebles con el descarte de esa industria": "2026-11-15",
+      "el gobierno habilito a seis plataformas para certificar esquemas de diferenciacion agroindustriales pero solo cuatro de ellas sirven para evitar las trabas europeas por deforestacion cuales son y quien esta detras de cada una de ellas": "2026-11-15",
+      "inquietud de un joven por que no se hace la fiesta nacional del maiz en chacabuco": "2026-11-15",
+      "despego un vuelo sanitario desde chacabuco": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45208,7 +45292,17 @@
       "61c9a4b2f6aa7159": "2026-11-15",
       "9faa970a79546260": "2026-11-15",
       "989c334e15ee715c": "2026-11-15",
-      "acf0a37b41481b93": "2026-11-15"
+      "acf0a37b41481b93": "2026-11-15",
+      "f5c638706317770d": "2026-11-15",
+      "c1dad30dcc37a7a0": "2026-11-15",
+      "584a265df316aee6": "2026-11-15",
+      "b002e1e0a3ce4854": "2026-11-15",
+      "792963dd27cac1b8": "2026-11-15",
+      "41098c046aa7c130": "2026-11-15",
+      "7d460b8b4619628a": "2026-11-15",
+      "59084966edcb0c24": "2026-11-15",
+      "70b694946a311cd2": "2026-11-15",
+      "53c25ace2e311e14": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76298,6 +76392,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_52fb67e78374_portada.jpg"
+    },
+    {
+      "id": "790155876800",
+      "cuando": "2026-11-15T11:30-03:00",
+      "titulo_original": "El trigo evoluciona favorablemente y se abre una oportunidad en Brasil",
+      "descripcion": "Salvo algunos problemas focalizados, el cereal de la campaña 2026/27 se encuentra en buenas condiciones; el país vecino tendrá una merma en la producción",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-trigo-evoluciona-favorablemente-y-se-abre-una-oportunidad-en-brasil-nid14112026/",
+      "titular": "Trigo 2026/27: buena cosecha local y Brasil como gran comprador",
+      "volanta": "Mercados",
+      "score": {
+        "conversacion": 11,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 13,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 60,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "trigo y mercado brasileño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Estado del trigo y oportunidad comercial importante con Brasil que interesa al productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          64,
+          57
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-15T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1cca8835-63c4-44a5-8af2-b2283f4b021d",
+          "slug": "trigo-2026-27-como-impacta-la-caida-en-chicago-y-la-fuerte-500211",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-2026-27-como-impacta-la-caida-en-chicago-y-la-fuerte-500211",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18113351765582747",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1761394359324894",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_790155876800_portada.jpg"
     }
   ],
   "pendientes": [
@@ -76369,79 +76521,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-14T13:00-03:00"
-    },
-    {
-      "id": "790155876800",
-      "rep": {
-        "id": "790155876800",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-trigo-evoluciona-favorablemente-y-se-abre-una-oportunidad-en-brasil-nid14112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-trigo-evoluciona-favorablemente-y-se-abre-una-oportunidad-en-brasil-nid14112026",
-        "titulo": "El trigo evoluciona favorablemente y se abre una oportunidad en Brasil",
-        "titulo_norm": "el trigo evoluciona favorablemente y se abre una oportunidad en brasil",
-        "descripcion": "Salvo algunos problemas focalizados, el cereal de la campaña 2026/27 se encuentra en buenas condiciones; el país vecino tendrá una merma en la producción",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/TUH4X5UJINF2BN3TW3DHTUEV6E.jpg?auth=dddcd019406c98cb20403e344ca6e40566f65eeec562977041071242ca3e594d&smart=true",
-        "autor": "Carlos Marin Moreno",
-        "publicado": "2026-11-14T05:30-03:00",
-        "capturado": "2026-11-14T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "07a18bb203eb030c",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "790155876800",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-trigo-evoluciona-favorablemente-y-se-abre-una-oportunidad-en-brasil-nid14112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-trigo-evoluciona-favorablemente-y-se-abre-una-oportunidad-en-brasil-nid14112026",
-          "titulo": "El trigo evoluciona favorablemente y se abre una oportunidad en Brasil",
-          "titulo_norm": "el trigo evoluciona favorablemente y se abre una oportunidad en brasil",
-          "descripcion": "Salvo algunos problemas focalizados, el cereal de la campaña 2026/27 se encuentra en buenas condiciones; el país vecino tendrá una merma en la producción",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/TUH4X5UJINF2BN3TW3DHTUEV6E.jpg?auth=dddcd019406c98cb20403e344ca6e40566f65eeec562977041071242ca3e594d&smart=true",
-          "autor": "Carlos Marin Moreno",
-          "publicado": "2026-11-14T05:30-03:00",
-          "capturado": "2026-11-14T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "07a18bb203eb030c",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 9,
-        "cercania_pba": 12,
-        "interes_productores": 13,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 60,
-        "commercial_score": 52,
-        "subtema": "agro",
-        "tema": "trigo y mercado brasileño",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Estado del trigo y oportunidad comercial importante con Brasil que interesa al productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          57
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-14T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-15T11:01:12-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-15T11:36:06-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
