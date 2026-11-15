@@ -37344,6 +37344,90 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0e72e265e6b084db": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 29,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "educacion ambiental",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una propuesta turística y educativa en Chascomús, muy alejada de Chivilcoy y sin impacto productivo para los productores.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6b095b33688091ce": {
+      "conversacion": 12,
+      "historia_concreta": 6,
+      "cercania_pba": 12,
+      "interes_productores": 10,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 54,
+      "commercial_score": 35,
+      "subtema": "ganaderia",
+      "tema": "frigorificos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Habla de la crisis de los frigoríficos y márgenes negativos, un dato que afecta a la cadena cárnica pero basado en reclamos de cámaras.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        51
+      ]
+    },
+    "61c9a4b2f6aa7159": {
+      "conversacion": 22,
+      "historia_concreta": 18,
+      "cercania_pba": 20,
+      "interes_productores": 12,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 86,
+      "commercial_score": 70,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa cerca (Junín), tiene el gancho de las figuras extrañas en un lote de trigo y propone tecnología útil para el productor.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "acf0a37b41481b93": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 15,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 40,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "politica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es el lanzamiento de una candidatura política provincial, sin relación directa con la producción agropecuaria de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -39931,7 +40015,14 @@
       "https://infocampo.com.ar/clima-hoy-en-bahia-blanca-el-pronostico-del-tiempo-para-este-15-noviembre-2026": "2026-11-15",
       "https://infocampo.com.ar/clima-hoy-en-mar-del-plata-el-pronostico-del-tiempo-para-este-15-noviembre-2026": "2026-11-15",
       "https://infocampo.com.ar/clima-hoy-en-misiones-el-pronostico-del-tiempo-para-este-15-noviembre-2026": "2026-11-15",
-      "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-15-noviembre-2026": "2026-11-15"
+      "https://infocampo.com.ar/clima-hoy-en-buenos-aires-el-pronostico-del-tiempo-para-este-15-noviembre-2026": "2026-11-15",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-15-noviembre-2026": "2026-11-15",
+      "https://bichosdecampo.com/de-raiz-ciencia-en-la-laguna-la-propuesta-en-chascomus-para-que-los-chicos-aprendan-biologia-tocando-y-explorando-la-naturaleza": "2026-11-15",
+      "https://bichosdecampo.com/mas-advertencias-sobre-la-crisis-de-los-frigorificos-del-consumo-los-margenes-son-negativos-cayo-la-produccion-y-el-consumo-no-reacciona-dijo-el-empresario-gustavo-marcos-que-reclama-medidas": "2026-11-15",
+      "https://bichosdecampo.com/aterrizo-un-ovni-encontro-figuras-extranas-sobre-su-trigo-y-salio-a-investigarlas-desde-el-aire-ahora-busca-que-cada-lote-tenga-su-propia-caja-negra-y-pueda-hablar": "2026-11-15",
+      "https://lacapital.com.ar/agro/la-bolsa-rosario-elevo-la-cosecha-trigo-243-millones-toneladas-n10292238.html": "2026-11-15",
+      "https://diariojunin.com/noticias/103153_recuperan-11-vacunos-robados.html": "2026-11-15",
+      "https://viamontedigital.com.ar/franco-flexas-lanzo-su-candidatura-a-gobernador-bonaerense-con-el-anuncio-de-una-caminata-de-mas-de-350-kilometros-hacia-la-plata": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42517,7 +42608,14 @@
       "clima hoy en bahia blanca el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15",
       "clima hoy en mar del plata el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15",
       "clima hoy en misiones el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15",
-      "clima hoy en buenos aires el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15"
+      "clima hoy en buenos aires el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15",
+      "dolar blue hoy a cuanto cotiza el 15 noviembre 2026": "2026-11-15",
+      "de raiz ciencia en la laguna la propuesta en chascomus para que los chicos aprendan biologia tocando y explorando la naturaleza": "2026-11-15",
+      "mas advertencias sobre la crisis de los frigorificos del consumo los margenes son negativos cayo la produccion y el consumo no reacciona dijo el empresario gustavo marcos que reclama medidas": "2026-11-15",
+      "aterrizo un ovni encontro figuras extranas sobre su trigo y salio a investigarlas desde el aire ahora busca que cada lote tenga su propia caja negra y pueda hablar para contar que le pasa": "2026-11-15",
+      "la bolsa de rosario elevo la cosecha de trigo a 24 3 millones de toneladas": "2026-11-15",
+      "recuperan 11 vacunos robados": "2026-11-15",
+      "franco flexas lanzo su candidatura a gobernador bonaerense con el anuncio de una caminata de mas de 350 kilometros hacia la plata": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45103,7 +45201,14 @@
       "57a7664e577ebe9a": "2026-11-15",
       "29d9467e92e6af68": "2026-11-15",
       "e3ac2a7cdca3fbe0": "2026-11-15",
-      "900681cf071fd5df": "2026-11-15"
+      "900681cf071fd5df": "2026-11-15",
+      "10bae77448f0d37a": "2026-11-15",
+      "0e72e265e6b084db": "2026-11-15",
+      "6b095b33688091ce": "2026-11-15",
+      "61c9a4b2f6aa7159": "2026-11-15",
+      "9faa970a79546260": "2026-11-15",
+      "989c334e15ee715c": "2026-11-15",
+      "acf0a37b41481b93": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76139,6 +76244,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_f4fd67b3a379_portada.jpg"
+    },
+    {
+      "id": "52fb67e78374",
+      "cuando": "2026-11-15T10:00-03:00",
+      "titulo_original": "¿Aterrizó un OVNI? Encontró figuras extrañas sobre su trigo y salió a investigarlas desde el aire: Ahora busca que cada lote tenga su propia “caja negra” y pueda “hablar” para contar qué le pasa",
+      "descripcion": "En un campo de Agustín Roca, en la localidad de Junín, encontraron días atrás unos huecos curiosos en el lote de trigo. Vistos desde arriba, los manchones, muy bien alineados, configuran unas extrañas figuras similares a las que, en más de una ocasión, han dado lugar a historias sobrenaturales. Le o",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/aterrizo-un-ovni-encontro-figuras-extranas-sobre-su-trigo-y-salio-a-investigarlas-desde-el-aire-ahora-busca-que-cada-lote-tenga-su-propia-caja-negra-y-pueda-hablar/",
+      "titular": "Trigo: hallan figuras extrañas en Junín por exceso de nitrógeno",
+      "volanta": "AgTech",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 18,
+        "cercania_pba": 20,
+        "interes_productores": 12,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 86,
+        "commercial_score": 70,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pasa cerca (Junín), tiene el gancho de las figuras extrañas en un lote de trigo y propone tecnología útil para el productor.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-15T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "d1ee0a74-aae0-4702-bde9-0c32166c7489",
+          "slug": "hallan-figuras-extranas-en-un-lote-de-trigo-en-junin-y-explican-605337",
+          "url": "https://www.diariolacampaña.com.ar/n/hallan-figuras-extranas-en-un-lote-de-trigo-en-junin-y-explican-605337",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18120383332992194",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1761285456002451",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_52fb67e78374_portada.jpg"
     }
   ],
   "pendientes": [
@@ -76281,8 +76440,8 @@
       "cuando": "2026-11-14T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-15T08:03:01-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-15T10:05:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
