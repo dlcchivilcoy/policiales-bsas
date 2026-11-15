@@ -37556,6 +37556,26 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "64179c8a384c80ec": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "necrologicas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un aviso fúnebre local sin relación con el agro ni la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -40165,7 +40185,8 @@
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-15-noviembre-2026": "2026-11-15",
       "https://lanacion.com.ar/economia/campo/todo-empezo-con-un-inmigrante-en-1898-y-hoy-despues-de-mas-de-100-anos-mantiene-su-vigencia-mi-nid15112026": "2026-11-15",
       "https://chacabuquero.com.ar/2026/11/otro-siniestro-vial-fatal-en-una-ruta.html": "2026-11-15",
-      "https://infocampo.com.ar/el-dilema-de-las-pick-ups-en-el-rimi-el-decreto-que-limita-una-inversion-esencial-en-el-agro": "2026-11-15"
+      "https://infocampo.com.ar/el-dilema-de-las-pick-ups-en-el-rimi-el-decreto-que-limita-una-inversion-esencial-en-el-agro": "2026-11-15",
+      "https://chacabuquero.com.ar/2026/11/necrologicas-i-de-chacabuco.html": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42773,7 +42794,8 @@
       "euro blue hoy precio y cotizacion de este 15 noviembre 2026": "2026-11-15",
       "todo empezo con un inmigrante en 1898 y hoy despues de mas de 100 anos mantiene su vigencia mi abuela hacia dulce de leche en estas cocinas": "2026-11-15",
       "otro siniestro vial fatal en una ruta de la region": "2026-11-15",
-      "el dilema de las pick ups en el rimi el decreto que limita una inversion esencial en el agro": "2026-11-15"
+      "el dilema de las pick ups en el rimi el decreto que limita una inversion esencial en el agro": "2026-11-15",
+      "necrologicas i de chacabuco": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45381,7 +45403,8 @@
       "1893c467601265ed": "2026-11-15",
       "e6be505be1f8ae84": "2026-11-15",
       "bb81c789537a4f3c": "2026-11-15",
-      "7808c612e7ac47cc": "2026-11-15"
+      "7808c612e7ac47cc": "2026-11-15",
+      "64179c8a384c80ec": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76644,7 +76667,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-15T14:36:35-03:00",
+  "actualizado": "2026-11-15T16:04:37-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
