@@ -37680,6 +37680,70 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "22bb1b313d95678f": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 10,
+      "interes_productores": 14,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 73,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "alerta naranja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta meteorológica importante que afecta de lleno la planificación de los productores de la región.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dd24211654a107d1": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 16,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 48,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "sociedad rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reunión política institucional en partido vecino sobre caminos y ordenanzas que interesa a nivel local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        37
+      ]
+    },
+    "6b978fcbe05c0cab": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "fútbol local",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia de fútbol local que no tiene ninguna relación con el agro ni la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -40295,7 +40359,10 @@
       "https://agrositio.com.ar/canal-agrositio/30-online/249333-clima-y-agricultura-german-heinzenknecht-y-una-campana-sera-similar-a-la-del-ano-pasado-pese-al-nino.html": "2026-11-15",
       "https://agrositio.com.ar/canal-agrositio/30-online/249334-juan-santillan-sobre-trazabilidad-y-mercados-es-un-salto-de-calidad-para-la-ganaderia-pero-como-darlo-sin-golpearnos.html": "2026-11-15",
       "https://agrositio.com.ar/canal-agrositio/30-online/249332-javier-treboux-de-fyo-como-se-desarma-la-madeja-de-conflictos-en-el-mundo-y-su-impactoen-los-granos.html": "2026-11-15",
-      "https://bichosdecampo.com/en-una-noticia-que-parece-llegar-de-otro-pais-una-empresa-saltena-de-colchones-invirtio-20-millones-de-dolares-para-abrir-un-complejo-maderero-en-corrientes-y-quiere-crear-unos-200-puestos-de-trabajo": "2026-11-15"
+      "https://bichosdecampo.com/en-una-noticia-que-parece-llegar-de-otro-pais-una-empresa-saltena-de-colchones-invirtio-20-millones-de-dolares-para-abrir-un-complejo-maderero-en-corrientes-y-quiere-crear-unos-200-puestos-de-trabajo": "2026-11-15",
+      "https://bichosdecampo.com/alerta-naranja-se-vienen-tormentas-intensas-con-acumulados-importantes-sobre-la-region-central-argentina": "2026-11-15",
+      "https://elnuevocronista.com/mauricio-pollacchi-se-reunio-con-la-cupula-de-la-sociedad-rural-argentina": "2026-11-15",
+      "https://navarronoticias.com/131480-2": "2026-11-15"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -42909,7 +42976,10 @@
       "german heinzenknecht por que la campana agricola podria parecerse a la del ano pasado pese al nino": "2026-11-15",
       "juan santillan la trazabilidad ganadera es un salto de calidad pero como darlo sin golpearnos": "2026-11-15",
       "javier treboux de fyo se desarma la madeja de conflictos en el mundo y como impacta en granos": "2026-11-15",
-      "en una noticia que parece llegar de otro pais una empresa saltena de colchones invirtio 20 millones de dolares para abrir un complejo maderero en corrientes y quiere crear unos 200 puestos de trabajo": "2026-11-15"
+      "en una noticia que parece llegar de otro pais una empresa saltena de colchones invirtio 20 millones de dolares para abrir un complejo maderero en corrientes y quiere crear unos 200 puestos de trabajo": "2026-11-15",
+      "alerta naranja se vienen tormentas intensas con acumulados importantes sobre la region central argentina": "2026-11-15",
+      "mauricio pollacchi se reunio con la cupula de la sociedad rural argentina": "2026-11-15",
+      "club dorrego se metio en semifinales con primera y sub 25": "2026-11-15"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -45523,7 +45593,10 @@
       "0ed5272ee9bad82e": "2026-11-15",
       "6d73eec04d2a73c9": "2026-11-15",
       "6bc70633f419133d": "2026-11-15",
-      "782f95e0dbec7ad0": "2026-11-15"
+      "782f95e0dbec7ad0": "2026-11-15",
+      "22bb1b313d95678f": "2026-11-15",
+      "dd24211654a107d1": "2026-11-15",
+      "6b978fcbe05c0cab": "2026-11-15"
     }
   },
   "elegidas": [
@@ -76783,11 +76856,65 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c196a9af80ae_portada.jpg"
+    },
+    {
+      "id": "c3b0db4a2edd",
+      "cuando": "2026-11-15T21:00-03:00",
+      "titulo_original": "Alerta naranja: Se vienen tormentas intensas con acumulados importantes sobre la región central argentina",
+      "descripcion": "El Servicio Meteorológico Nacional (SMN) emitió una “alerta naranja” por tormentas severas para este lunes en las provincias de Córdoba, San Luis, Mendoza, La Rioja y Catamarca. La “alerta naranja” (fenómenos meteorológicos peligrosos para la sociedad, la vida, los bienes y el medio ambiente) se cor",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/alerta-naranja-se-vienen-tormentas-intensas-con-acumulados-importantes-sobre-la-region-central-argentina/",
+      "titular": "Alerta naranja por tormentas severas y lluvias en cinco provincias",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 10,
+        "interes_productores": 14,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 73,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "alerta naranja",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta meteorológica importante que afecta de lleno la planificación de los productores de la región.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-15T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "298d2534-eada-4566-bef3-b67a99af6c9f",
+          "slug": "emiten-alerta-naranja-por-tormentas-intensas-y-acumulados-bacfdb",
+          "url": "https://www.diariolacampaña.com.ar/n/emiten-alerta-naranja-por-tormentas-intensas-y-acumulados-bacfdb",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18419085079094861",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1761922425938754",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c3b0db4a2edd_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-15T19:35:46-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-15T21:08:08-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
