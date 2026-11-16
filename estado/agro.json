@@ -78581,7 +78581,7 @@
       "cuando": "2026-11-16T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T13:05:59-03:00",
+  "actualizado": "2026-11-16T14:01:17-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -84083,6 +84083,43 @@
               },
               "facebook": {
                 "id": "1843268937023810"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-16T14:00:00-03:00": {
+      "dia": "2026-11-16",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Por qué partido anda rindiendo el equipo?",
+          "opciones": [],
+          "publico": "contratistas",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "17950676862071914"
+            },
+            "facebook": {
+              "id": "2771601606567408"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17950676862071914"
+              },
+              "facebook": {
+                "id": "2771601606567408"
               }
             }
           ]
