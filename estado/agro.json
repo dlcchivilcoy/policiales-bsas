@@ -38692,6 +38692,158 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "23bdeac27b673b25": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 80,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El pronóstico de lluvias y El Niño interesa a todos los productores de la zona pampeana para planificar la campaña.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d2ca25c06b1d5080": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 26,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "escenario electoral",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un análisis político abstracto sobre el 2027 que no le cambia el día a día al productor local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b4fb99ec043d8e5c": {
+      "conversacion": 8,
+      "historia_concreta": 12,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 45,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "faro verde",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Una millonaria compra forestal en el NEA, de poco impacto directo para el productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3528b71e90693ebc": {
+      "conversacion": 10,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "hongos vitamina d",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de color sobre innovación alimentaria, sin llegada directa al productor agropecuario zonal.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aef518ce7e3d2b08": {
+      "conversacion": 12,
+      "historia_concreta": 14,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 51,
+      "commercial_score": 35,
+      "subtema": "ganaderia",
+      "tema": "lácteos verónica",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Conflicto judicial y gremial por plantas lecheras, toca de cerca a la cadena láctea de la provincia.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        64,
+        39
+      ]
+    },
+    "42b8e5c91fa3a4d2": {
+      "conversacion": 14,
+      "historia_concreta": 14,
+      "cercania_pba": 2,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 52,
+      "commercial_score": 42,
+      "subtema": "ganaderia",
+      "tema": "ramón díaz cabaña",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tiene el gancho de Ramón Díaz rematando hacienda en Entre Ríos, pero queda lejos geográficamente.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        52,
+        52
+      ]
+    },
+    "0db4ceccd1342484": {
+      "conversacion": 8,
+      "historia_concreta": 12,
+      "cercania_pba": 2,
+      "interes_productores": 8,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 40,
+      "commercial_score": 22,
+      "subtema": "agro",
+      "tema": "cultivos bajo cubierta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Recomendaciones técnicas del INTA para horticultura, útil pero enfocado en Corrientes.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        29
+      ]
     }
   },
   "indice": {
@@ -41387,7 +41539,15 @@
       "https://25digital.com.ar/index.php/2026/11/16/nota-de-opinion-por-dr-horacio-canullan-sin-rodeos-madurez-para-confluir": "2026-11-16",
       "https://diariojunin.com/noticias/103170_la-comunidad-se-uni-para-recuperar-la-escuela-agraria-de-germania.html": "2026-11-16",
       "https://diariojunin.com/noticias/103168_se-cree-que-un-carnero-atac-a-un-productor-rural-de-81-aos.html": "2026-11-16",
-      "https://diariojunin.com/noticias/103166_los-hechos-de-abigeato-no-se-detienen-en-el-noroeste-bonaerense.html": "2026-11-16"
+      "https://diariojunin.com/noticias/103166_los-hechos-de-abigeato-no-se-detienen-en-el-noroeste-bonaerense.html": "2026-11-16",
+      "https://infocampo.com.ar/clima-hoy-en-santa-fe-el-pronostico-del-tiempo-para-este-16-noviembre-2026": "2026-11-16",
+      "https://infocampo.com.ar/el-nino-alcanzo-la-categoria-super-pero-muy-lejos-del-nivel-extremo-que-le-adjudican-versiones-alarmistas": "2026-11-16",
+      "https://agrositio.com.ar/noticia/249351-el-2027-un-escenario-repleto-de-hipotesis.html": "2026-11-16",
+      "https://bichosdecampo.com/el-faro-mas-verde-que-nunca-faro-verde-compro-los-activos-forestales-de-bosques-del-plata-y-suma-94-mil-hectareas-en-el-nea": "2026-11-16",
+      "https://bichosdecampo.com/los-hongos-ya-pueden-tomar-sol-por-nosotros-argentina-autorizo-el-tratamiento-con-rayos-uv-para-aumentar-su-contenido-de-vitamina-d": "2026-11-16",
+      "https://bichosdecampo.com/reves-para-atilra-en-lacteos-veronica-el-gremio-pidio-intervenir-en-la-venta-de-dos-plantas-pero-la-justicia-le-cerro-la-puerta": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/ramon-diaz-la-insolita-conferencia-simulada-donde-el-principal-anuncio-no-fue-sobre-su-destino-como-nid16112026": "2026-11-16",
+      "https://intainforma.inta.gob.ar/cultivos-bajo-cubierta-pautas-para-enfrentar-periodos-de-lluvias-frecuentes": "2026-11-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -44081,7 +44241,15 @@
       "nota de opinion por dr horacio canullan sin rodeos madurez para confluir": "2026-11-16",
       "la comunidad se unio para recuperar la escuela agraria de germania": "2026-11-16",
       "se cree que un carnero ataco a un productor rural de 81 anos": "2026-11-16",
-      "los hechos de abigeato no se detienen en el noroeste bonaerense": "2026-11-16"
+      "los hechos de abigeato no se detienen en el noroeste bonaerense": "2026-11-16",
+      "clima hoy en santa fe el pronostico del tiempo para este 16 noviembre 2026": "2026-11-16",
+      "el nino alcanzo la categoria super pero muy lejos del nivel extremo que le adjudican versiones alarmistas": "2026-11-16",
+      "el 2027 un escenario repleto de hipotesis": "2026-11-16",
+      "el faro mas verde que nunca faro verde compro los activos forestales de bosques del plata y suma 94 mil hectareas en el nea": "2026-11-16",
+      "los hongos ya pueden tomar sol por nosotros argentina autorizo el tratamiento con rayos uv para aumentar su contenido de vitamina d": "2026-11-16",
+      "reves para atilra en lacteos veronica el gremio pidio intervenir en la venta de dos plantas pero la justicia le cerro la puerta": "2026-11-16",
+      "ramon diaz la insolita conferencia simulada donde el principal anuncio no fue sobre su destino como entrenador": "2026-11-16",
+      "cultivos bajo cubierta pautas para enfrentar periodos de lluvias frecuentes": "2026-11-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -46775,7 +46943,15 @@
       "44ccf2ebffffe46d": "2026-11-16",
       "a499ab71d4703a5e": "2026-11-16",
       "e3a646e8534fe038": "2026-11-16",
-      "8ff98ca5ff3a2ae4": "2026-11-16"
+      "8ff98ca5ff3a2ae4": "2026-11-16",
+      "355d45f87bdba2ec": "2026-11-16",
+      "23bdeac27b673b25": "2026-11-16",
+      "d2ca25c06b1d5080": "2026-11-16",
+      "b4fb99ec043d8e5c": "2026-11-16",
+      "3528b71e90693ebc": "2026-11-16",
+      "aef518ce7e3d2b08": "2026-11-16",
+      "42b8e5c91fa3a4d2": "2026-11-16",
+      "0db4ceccd1342484": "2026-11-16"
     }
   },
   "elegidas": [
@@ -78309,9 +78485,132 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_365482055de8_portada.jpg"
+    },
+    {
+      "id": "434d000d7f6a",
+      "cuando": "2026-11-16T14:30-03:00",
+      "titulo_original": "Cultivos de invierno: Las cosechadoras avanzan en los lotes de trigo y expectativas por cebada",
+      "descripcion": "La cosecha de trigo avanza sobre el 11,9 % del área apta, con un rinde promedio nacional que se ubica en 22,2 qq/ha, con resultados regionales que, por el momento, superan el promedio del último quinquenio, informo el Panorama Agrícolas Semanal – PAS- de la Bolsa de Cereales de Buenos Aires Hacia el",
+      "fuente": "El Regional Digital",
+      "url": "https://elregionaldigital.com.ar/cultivos-de-invierno-las-cosechadoras-avanzan-en-los-lotes-de-trigo-y-expectativas-por-cebada/",
+      "titular": "Trigo y cebada: avanza la cosecha con rindes iniciales de 22,2 qq/ha",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 11,
+        "historia_concreta": 9,
+        "cercania_pba": 15,
+        "interes_productores": 14,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 63,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "trigo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Avance de cosecha de trigo a nivel nacional con buenos rindes. Le interesa directamente al productor.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          58
+        ],
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-16T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8d9bf085-4a42-4b63-be37-c86d6bb047a9",
+          "slug": "trigo-y-cebada-avanza-la-cosecha-nacional-y-relevan-el-estado-9b541b",
+          "url": "https://www.diariolacampaña.com.ar/n/trigo-y-cebada-avanza-la-cosecha-nacional-y-relevan-el-estado-9b541b",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18115529252521967",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1763091455821851",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_434d000d7f6a_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "748458bf15eb",
+      "rep": {
+        "id": "748458bf15eb",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/el-nino-alcanzo-la-categoria-super-pero-muy-lejos-del-nivel-extremo-que-le-adjudican-versiones-alarmistas/",
+        "canonical_url": "https://infocampo.com.ar/el-nino-alcanzo-la-categoria-super-pero-muy-lejos-del-nivel-extremo-que-le-adjudican-versiones-alarmistas",
+        "titulo": "“El Niño alcanzó la categoría súper, pero muy lejos del nivel extremo que le adjudican versiones alarmistas”",
+        "titulo_norm": "el nino alcanzo la categoria super pero muy lejos del nivel extremo que le adjudican versiones alarmistas",
+        "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires pronostica un escenario de lluvias muy dispares para lo que resta de la campaña 2026/27. La corriente fría de Malvinas se consolida para reducir el impacto de El Niño en parte de la región pampeana",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/super-el-nino.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-11-16T13:13-03:00",
+        "capturado": "2026-11-16T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "23bdeac27b673b25",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "748458bf15eb",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/el-nino-alcanzo-la-categoria-super-pero-muy-lejos-del-nivel-extremo-que-le-adjudican-versiones-alarmistas/",
+          "canonical_url": "https://infocampo.com.ar/el-nino-alcanzo-la-categoria-super-pero-muy-lejos-del-nivel-extremo-que-le-adjudican-versiones-alarmistas",
+          "titulo": "“El Niño alcanzó la categoría súper, pero muy lejos del nivel extremo que le adjudican versiones alarmistas”",
+          "titulo_norm": "el nino alcanzo la categoria super pero muy lejos del nivel extremo que le adjudican versiones alarmistas",
+          "descripcion": "Un informe de la Bolsa de Cereales de Buenos Aires pronostica un escenario de lluvias muy dispares para lo que resta de la campaña 2026/27. La corriente fría de Malvinas se consolida para reducir el impacto de El Niño en parte de la región pampeana",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/super-el-nino.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-11-16T13:13-03:00",
+          "capturado": "2026-11-16T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "23bdeac27b673b25",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 80,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de lluvias y El Niño interesa a todos los productores de la zona pampeana para planificar la campaña.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-16T14:30-03:00"
+    },
     {
       "id": "1b8561d2e086",
       "rep": {
@@ -78510,79 +78809,10 @@
         "de_zona": false
       },
       "cuando": "2026-11-16T13:00-03:00"
-    },
-    {
-      "id": "434d000d7f6a",
-      "rep": {
-        "id": "434d000d7f6a",
-        "fuente": "El Regional Digital",
-        "tipo_fuente": "medio",
-        "source_url": "https://elregionaldigital.com.ar/feed/",
-        "url": "https://elregionaldigital.com.ar/cultivos-de-invierno-las-cosechadoras-avanzan-en-los-lotes-de-trigo-y-expectativas-por-cebada/",
-        "canonical_url": "https://elregionaldigital.com.ar/cultivos-de-invierno-las-cosechadoras-avanzan-en-los-lotes-de-trigo-y-expectativas-por-cebada",
-        "titulo": "Cultivos de invierno: Las cosechadoras avanzan en los lotes de trigo y expectativas por cebada",
-        "titulo_norm": "cultivos de invierno las cosechadoras avanzan en los lotes de trigo y expectativas por cebada",
-        "descripcion": "La cosecha de trigo avanza sobre el 11,9 % del área apta, con un rinde promedio nacional que se ubica en 22,2 qq/ha, con resultados regionales que, por el momento, superan el promedio del último quinquenio, informo el Panorama Agrícolas Semanal – PAS- de la Bolsa de Cereales de Buenos Aires Hacia el centro del área",
-        "imagen_url": "",
-        "autor": "ciri340043",
-        "publicado": "2026-11-16T06:09-03:00",
-        "capturado": "2026-11-16T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "09bccd73168cfe5f",
-        "localidad_medio": "9 de Julio"
-      },
-      "grupo": [
-        {
-          "id": "434d000d7f6a",
-          "fuente": "El Regional Digital",
-          "tipo_fuente": "medio",
-          "source_url": "https://elregionaldigital.com.ar/feed/",
-          "url": "https://elregionaldigital.com.ar/cultivos-de-invierno-las-cosechadoras-avanzan-en-los-lotes-de-trigo-y-expectativas-por-cebada/",
-          "canonical_url": "https://elregionaldigital.com.ar/cultivos-de-invierno-las-cosechadoras-avanzan-en-los-lotes-de-trigo-y-expectativas-por-cebada",
-          "titulo": "Cultivos de invierno: Las cosechadoras avanzan en los lotes de trigo y expectativas por cebada",
-          "titulo_norm": "cultivos de invierno las cosechadoras avanzan en los lotes de trigo y expectativas por cebada",
-          "descripcion": "La cosecha de trigo avanza sobre el 11,9 % del área apta, con un rinde promedio nacional que se ubica en 22,2 qq/ha, con resultados regionales que, por el momento, superan el promedio del último quinquenio, informo el Panorama Agrícolas Semanal – PAS- de la Bolsa de Cereales de Buenos Aires Hacia el centro del área",
-          "imagen_url": "",
-          "autor": "ciri340043",
-          "publicado": "2026-11-16T06:09-03:00",
-          "capturado": "2026-11-16T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "09bccd73168cfe5f",
-          "localidad_medio": "9 de Julio"
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 9,
-        "cercania_pba": 15,
-        "interes_productores": 14,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 63,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Avance de cosecha de trigo a nivel nacional con buenos rindes. Le interesa directamente al productor.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          58
-        ],
-        "de_zona": false
-      },
-      "cuando": "2026-11-16T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T14:01:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-16T14:36:55-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
