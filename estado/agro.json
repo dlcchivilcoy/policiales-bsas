@@ -77775,7 +77775,7 @@
       "cuando": "2026-11-16T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T10:06:32-03:00",
+  "actualizado": "2026-11-16T11:00:32-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -83240,6 +83240,43 @@
               },
               "facebook": {
                 "id": "977136915044716"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-16T11:00:00-03:00": {
+      "dia": "2026-11-16",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cuánto llovió en tu campo?",
+          "opciones": [],
+          "publico": "agricultura",
+          "via": "lista",
+          "publicado": {
+            "instagram": {
+              "id": "18141399310657826"
+            },
+            "facebook": {
+              "id": "1843268937023810"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18141399310657826"
+              },
+              "facebook": {
+                "id": "1843268937023810"
               }
             }
           ]
