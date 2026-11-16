@@ -38988,6 +38988,134 @@
       "urgente": false,
       "potencial_carrusel": 8,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3b3a8a8f05913a56": {
+      "conversacion": 3,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "centro experimental",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una inversión institucional y corporativa en Córdoba, muy lejos y poco útil para el productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "19ae474ffffdd77b": {
+      "conversacion": 8,
+      "historia_concreta": 10,
+      "cercania_pba": 8,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 51,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa por el manejo de fertilizantes en maíz, aunque sea de ensayos generales, le sirve al agrónomo y productor.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        47
+      ]
+    },
+    "0a3f9c3193ab7281": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 36,
+      "commercial_score": 25,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis de mercado y precios de granos, información técnica para comercialización pero sin anclaje local.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3278933f33debe7c": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 36,
+      "commercial_score": 25,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informe sobre precios de trigo y USDA, muy técnico y de clínica de granos.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "006f3a08c232c2cd": {
+      "conversacion": 11,
+      "historia_concreta": 14,
+      "cercania_pba": 12,
+      "interes_productores": 10,
+      "impacto_economico": 10,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 65,
+      "commercial_score": 55,
+      "subtema": "maquinaria",
+      "tema": "toyota tacoma",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inversión millonaria en Zárate para fabricar una pick-up híbrida; interesa a todo el campo bonaerense.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        68,
+        62
+      ]
+    },
+    "47cd83bc8eb53d1d": {
+      "conversacion": 18,
+      "historia_concreta": 18,
+      "cercania_pba": 10,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 76,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "granizo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Relato humano directo de una productora que perdió todo por la tormenta en Santa Fe; genera empatía e impacto.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -41699,7 +41827,15 @@
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249366-como-se-organizo-tan-bien-la-misa-del-papa-en-buenos-aires-el-testimonio-de-un-ingeniero-y-voluntario.html": "2026-11-16",
       "https://agrositio.com.ar/noticia/249352-como-curar-un-mate-nuevo-el-paso-a-paso-para-que-no-tenga-gusto-amargo-y-dure-muchos-anos.html": "2026-11-16",
       "https://lanacion.com.ar/economia/campo/pasan-a-manos-nacionales-el-gigante-chileno-cmpc-le-vendio-a-faro-verde-por-us170-millones-sus-nid16112026": "2026-11-16",
-      "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos": "2026-11-16"
+      "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos": "2026-11-16",
+      "https://todoagro.com.ar/mastitis-bovina-detectarla-a-tiempo-puede-reducir-hasta-un-50-el-uso-de-antibioticos": "2026-11-16",
+      "https://infocampo.com.ar/id-y-campo-todo-en-un-mismo-lugar-un-nuevo-centro-experimental-modelo-nace-en-cordoba": "2026-11-16",
+      "https://infocampo.com.ar/fertilizacion-en-maiz-nuevos-ensayos-ponen-en-discusion-cuanto-nitrogeno-aplicar-y-cuando": "2026-11-16",
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249371-maiz-buenas-siembras-2627-y-existencias-presionan-al-cereal-con-lorena-d-angelo-clinica-de-granos.html": "2026-11-16",
+      "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249370-con-el-avance-de-la-cosecha-de-trigo-se-perdio-la-oportunidad-con-lorena-d-angelo-clinica-de-granos.html": "2026-11-16",
+      "https://bichosdecampo.com/mastitis-bovina-el-inta-asegura-que-un-diagnostico-a-tiempo-puede-reducir-hasta-50-el-uso-de-antibioticos-en-los-tambos": "2026-11-16",
+      "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026": "2026-11-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -44409,7 +44545,15 @@
       "del detras de escena al saludo del papa la experiencia de un voluntario que vivio un momento unico": "2026-11-16",
       "como curar un mate nuevo el paso a paso para que no tenga gusto amargo y dure muchos anos": "2026-11-16",
       "pasan a manos nacionales el gigante chileno cmpc le vendio a faro verde por us 170 millones sus activos forestales y deja esta actividad en la argentina": "2026-11-16",
-      "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos": "2026-11-16"
+      "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos": "2026-11-16",
+      "mastitis bovina detectarla a tiempo puede reducir hasta un 50 el uso de antibioticos": "2026-11-16",
+      "i d y campo todo en un mismo lugar un nuevo centro experimental modelo nace en cordoba": "2026-11-16",
+      "fertilizacion en maiz nuevos ensayos ponen en discusion cuanto nitrogeno aplicar y cuando": "2026-11-16",
+      "maiz buenas siembras 26 27 y existencias presionan al cereal con lorena d angelo clinica de granos": "2026-11-16",
+      "con el avance de la cosecha de trigo se perdio la oportunidad con lorena d angelo clinica de granos": "2026-11-16",
+      "mastitis bovina el inta asegura que un diagnostico a tiempo puede reducir hasta 50 el uso de antibioticos en los tambos": "2026-11-16",
+      "la agenda 2030 ya se siente toyota invertira 1 300 millones de dolares en argentina para fabricar una pick up hibrida a partir de ese ano": "2026-11-16",
+      "en 45 minutos se llevo todo una devastadora tormenta con granizo dejo importantes danos en santa fe": "2026-11-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -47119,7 +47263,15 @@
       "1a821f276e73a01b": "2026-11-16",
       "99a0b5e4b6c855a7": "2026-11-16",
       "41fc849a5a2bac9d": "2026-11-16",
-      "406b6e45f8889a7c": "2026-11-16"
+      "406b6e45f8889a7c": "2026-11-16",
+      "8c99be0cd157e6e1": "2026-11-16",
+      "3b3a8a8f05913a56": "2026-11-16",
+      "19ae474ffffdd77b": "2026-11-16",
+      "0a3f9c3193ab7281": "2026-11-16",
+      "3278933f33debe7c": "2026-11-16",
+      "e2ae3430278255fb": "2026-11-16",
+      "006f3a08c232c2cd": "2026-11-16",
+      "47cd83bc8eb53d1d": "2026-11-16"
     }
   },
   "elegidas": [
@@ -78765,9 +78917,198 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c17303498c76_portada.jpg"
+    },
+    {
+      "id": "c7023094329d",
+      "cuando": "2026-11-16T18:00-03:00",
+      "titulo_original": "La invernada también siente el freno del consumo: El consignatario Carlos Lanser advierte que los terneros caen hasta 15% y se ralentiza la cadena de pagos.",
+      "descripcion": "La caída de los precios del ganado para faena ya le está pegando de lleno a la invernada. Los terneros también registran bajas que reflejan las dificultades que atraviesa el consumo interno y la imposibilidad de trasladar a la góndola los valores que alcanzó la hacienda durante la zafra. Según el co",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/la-invernada-tambien-siente-el-freno-del-consumo-el-consignatario-carlos-lanser-advierte-que-los-terneros-caen-hasta-15-y-se-ralentiza-la-cadena-de-pagos/",
+      "titular": "Terneros caen hasta 15% y frenan los pagos en la cadena cárnica",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 18,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 83,
+        "commercial_score": 75,
+        "subtema": "ganaderia",
+        "tema": "terneros invernada",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "La caída de precios de terneros y problemas en la cadena de pagos pega directo en los criadores de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-16T18:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ae7bdd12-758d-4924-96aa-42b6571e48cb",
+          "slug": "la-invernada-cae-hasta-15-por-el-freno-del-consumo-y-se-e23a61",
+          "url": "https://www.diariolacampaña.com.ar/n/la-invernada-cae-hasta-15-por-el-freno-del-consumo-y-se-e23a61",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18651913447028868",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1763314662466197",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c7023094329d_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "f0e7ca5055d1",
+      "rep": {
+        "id": "f0e7ca5055d1",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano/",
+        "canonical_url": "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano",
+        "titulo": "La agenda 2030 ya se siente: Toyota invertirá 1.300 millones de dólares en Argentina para fabricar una pick-up híbrida a partir de ese año",
+        "titulo_norm": "la agenda 2030 ya se siente toyota invertira 1 300 millones de dolares en argentina para fabricar una pick up hibrida a partir de ese ano",
+        "descripcion": "La transformación de la industria automotriz mundial empieza a tomar forma en Argentina. Toyota anunció oficialmente una inversión superior a los 1.300 millones de dólares para construir una nueva planta industrial en su complejo de Zárate, provincia de Buenos Aires, donde a partir de 2030 comenzará a fabricar la pick-up híbrida Tacoma. El anuncio, realizado […]",
+        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/toyota-argentina-zarate.avif",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-16T16:06-03:00",
+        "capturado": "2026-11-16T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "006f3a08c232c2cd",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "f0e7ca5055d1",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano/",
+          "canonical_url": "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano",
+          "titulo": "La agenda 2030 ya se siente: Toyota invertirá 1.300 millones de dólares en Argentina para fabricar una pick-up híbrida a partir de ese año",
+          "titulo_norm": "la agenda 2030 ya se siente toyota invertira 1 300 millones de dolares en argentina para fabricar una pick up hibrida a partir de ese ano",
+          "descripcion": "La transformación de la industria automotriz mundial empieza a tomar forma en Argentina. Toyota anunció oficialmente una inversión superior a los 1.300 millones de dólares para construir una nueva planta industrial en su complejo de Zárate, provincia de Buenos Aires, donde a partir de 2030 comenzará a fabricar la pick-up híbrida Tacoma. El anuncio, realizado […]",
+          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/toyota-argentina-zarate.avif",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-16T16:06-03:00",
+          "capturado": "2026-11-16T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "006f3a08c232c2cd",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 11,
+        "historia_concreta": 14,
+        "cercania_pba": 12,
+        "interes_productores": 10,
+        "impacto_economico": 10,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 65,
+        "commercial_score": 55,
+        "subtema": "maquinaria",
+        "tema": "toyota tacoma",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Inversión millonaria en Zárate para fabricar una pick-up híbrida; interesa a todo el campo bonaerense.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          68,
+          62
+        ],
+        "de_zona": false
+      },
+      "cuando": "2026-11-16T18:00-03:00"
+    },
+    {
+      "id": "f254ece0cc0d",
+      "rep": {
+        "id": "f254ece0cc0d",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026",
+        "titulo": "“En 45 minutos se llevó todo”: una devastadora tormenta con granizo dejó importantes daños en Santa Fe",
+        "titulo_norm": "en 45 minutos se llevo todo una devastadora tormenta con granizo dejo importantes danos en santa fe",
+        "descripcion": "Lidia Sánchez, que trabaja en la zona de Cululú, en el centro provincial, contó cómo el temporal arrasó con buena parte de sus cultivos de trigo, maíz y alfalfa, además de afectar las instalaciones rurales",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSD5JRJR6VDB3BXTIG74AXJDUA.png?auth=d757fa86d4a5c4770d071be8b06b0b14018a7b0317ecd2fdefbdbbc0cf4684df&smart=true",
+        "autor": "Mariana Reinke",
+        "publicado": "2026-11-16T17:06-03:00",
+        "capturado": "2026-11-16T18:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "47cd83bc8eb53d1d",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "f254ece0cc0d",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026",
+          "titulo": "“En 45 minutos se llevó todo”: una devastadora tormenta con granizo dejó importantes daños en Santa Fe",
+          "titulo_norm": "en 45 minutos se llevo todo una devastadora tormenta con granizo dejo importantes danos en santa fe",
+          "descripcion": "Lidia Sánchez, que trabaja en la zona de Cululú, en el centro provincial, contó cómo el temporal arrasó con buena parte de sus cultivos de trigo, maíz y alfalfa, además de afectar las instalaciones rurales",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RSD5JRJR6VDB3BXTIG74AXJDUA.png?auth=d757fa86d4a5c4770d071be8b06b0b14018a7b0317ecd2fdefbdbbc0cf4684df&smart=true",
+          "autor": "Mariana Reinke",
+          "publicado": "2026-11-16T17:06-03:00",
+          "capturado": "2026-11-16T18:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "47cd83bc8eb53d1d",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 10,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 76,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "granizo",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Relato humano directo de una productora que perdió todo por la tormenta en Santa Fe; genera empatía e impacto.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "con_video": true
+      },
+      "cuando": "2026-11-16T18:00-03:00"
+    },
     {
       "id": "e91acf2e8147",
       "rep": {
@@ -78968,71 +79309,6 @@
       "cuando": "2026-11-16T13:00-03:00"
     },
     {
-      "id": "c7023094329d",
-      "rep": {
-        "id": "c7023094329d",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-invernada-tambien-siente-el-freno-del-consumo-el-consignatario-carlos-lanser-advierte-que-los-terneros-caen-hasta-15-y-se-ralentiza-la-cadena-de-pagos/",
-        "canonical_url": "https://bichosdecampo.com/la-invernada-tambien-siente-el-freno-del-consumo-el-consignatario-carlos-lanser-advierte-que-los-terneros-caen-hasta-15-y-se-ralentiza-la-cadena-de-pagos",
-        "titulo": "La invernada también siente el freno del consumo: El consignatario Carlos Lanser advierte que los terneros caen hasta 15% y se ralentiza la cadena de pagos.",
-        "titulo_norm": "la invernada tambien siente el freno del consumo el consignatario carlos lanser advierte que los terneros caen hasta 15 y se ralentiza la cadena de pagos",
-        "descripcion": "La caída de los precios del ganado para faena ya le está pegando de lleno a la invernada. Los terneros también registran bajas que reflejan las dificultades que atraviesa el consumo interno y la imposibilidad de trasladar a la góndola los valores que alcanzó la hacienda durante la zafra. Según el consignatario Carlos Lanser, “los […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-12.24.34.jpeg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-16T12:24-03:00",
-        "capturado": "2026-11-16T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "78ea363858efd59f",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "c7023094329d",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-invernada-tambien-siente-el-freno-del-consumo-el-consignatario-carlos-lanser-advierte-que-los-terneros-caen-hasta-15-y-se-ralentiza-la-cadena-de-pagos/",
-          "canonical_url": "https://bichosdecampo.com/la-invernada-tambien-siente-el-freno-del-consumo-el-consignatario-carlos-lanser-advierte-que-los-terneros-caen-hasta-15-y-se-ralentiza-la-cadena-de-pagos",
-          "titulo": "La invernada también siente el freno del consumo: El consignatario Carlos Lanser advierte que los terneros caen hasta 15% y se ralentiza la cadena de pagos.",
-          "titulo_norm": "la invernada tambien siente el freno del consumo el consignatario carlos lanser advierte que los terneros caen hasta 15 y se ralentiza la cadena de pagos",
-          "descripcion": "La caída de los precios del ganado para faena ya le está pegando de lleno a la invernada. Los terneros también registran bajas que reflejan las dificultades que atraviesa el consumo interno y la imposibilidad de trasladar a la góndola los valores que alcanzó la hacienda durante la zafra. Según el consignatario Carlos Lanser, “los […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-02-at-12.24.34.jpeg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-16T12:24-03:00",
-          "capturado": "2026-11-16T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "78ea363858efd59f",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 15,
-        "cercania_pba": 18,
-        "interes_productores": 15,
-        "impacto_economico": 9,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 83,
-        "commercial_score": 75,
-        "subtema": "ganaderia",
-        "tema": "terneros invernada",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "La caída de precios de terneros y problemas en la cadena de pagos pega directo en los criadores de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-16T13:00-03:00"
-    },
-    {
       "id": "7c85204fc749",
       "rep": {
         "id": "7c85204fc749",
@@ -79098,8 +79374,8 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T16:06:18-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-16T18:09:37-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
