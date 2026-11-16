@@ -81,6 +81,22 @@ def laminas_de(g: dict) -> list:
     return [{"titulo": t, "texto": x[:320]} for t, x in zip(TITULOS_RESPALDO, parrafos)][:4]
 
 
+def volanta_de_portada(volanta: str, titular: str) -> tuple:
+    """(volanta, titular) para la PORTADA del carrusel (15/11/2026, pedido del editor: «la misma estética de la
+    volanta que ponés en los carruseles»: chica, arriba del título y sin dos puntos). El titular de policiales
+    arranca con el lugar («Junín: un repartidor…»): ese «Junín» pasa a la volanta si ella no lo dice ya, y el
+    título queda sin él y con mayúscula. La web y los textos de las redes no cambian."""
+    from nacionales.filtro import norm
+    volanta, titular = (volanta or "").strip().rstrip(":").strip(), (titular or "").strip()
+    lugar, sep, resto = titular.partition(":")
+    if not (sep and lugar.strip() and resto.strip() and len(lugar.split()) <= 4):
+        return volanta, titular
+    lugar, resto = lugar.strip(), resto.strip()
+    if norm(lugar) not in norm(volanta):
+        volanta = f"{lugar} · {volanta}" if volanta else lugar
+    return volanta, resto[:1].upper() + resto[1:]
+
+
 def armar_carrusel(g: dict, foto, carpeta: Path, nombre: str) -> list:
     """Portada + láminas, 1080x1350, en `carpeta`. [] si no alcanza para un carrusel (menos de 3)."""
     from nacionales import placa as P
@@ -89,7 +105,8 @@ def armar_carrusel(g: dict, foto, carpeta: Path, nombre: str) -> list:
     if total < 3:
         return []
     semilla = sum(ord(c) for c in nombre)
-    slides = [str(P.slide_carrusel("Policiales", g.get("volanta") or "", g["titular"], g.get("bajada") or "",
+    volanta, titular = volanta_de_portada(g.get("volanta") or "", g["titular"])
+    slides = [str(P.slide_carrusel("Policiales", volanta, titular, g.get("bajada") or "",
                                    carpeta / f"{nombre}_c01.jpg", sitio=SITIO, idx=1, total=total,
                                    semilla=semilla, foto=foto))]
     for i, l in enumerate(laminas, 2):
@@ -532,6 +549,14 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
                 "titulo": nota.get("titulo"), "url_original": nota.get("url")}
 
     nota = material(nota)
+    # La COMPETENCIA (15/11/2026, reels/competencia.py): una nota copiada de La Razón de Chivilcoy, La Gaceta del
+    # Oeste, DeChivilcoy o Chivilcoy al Día no sale. Antes del guion: no se gasta la IA.
+    from reels import competencia as COMP
+    rival = COMP.de_la_nota(nota)
+    if rival:
+        return {"orden": idx, "descartada": True, "competencia": rival, "por_que_no": COMP.motivo(rival),
+                "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                "titulo": nota.get("titulo"), "url_original": nota.get("url")}
     g = G.generar(nota, usar_ia=usar_ia, preferir=preferir, sitio=SITIO)
 
     # ¿El guion cuenta el hecho de ESTA nota? La foto y el enlace son de ella: si la IA leyó otra
@@ -563,6 +588,18 @@ def procesar(nota: dict, carpeta: Path, usar_ia: bool, idx: int,
                           usar_ia=g.get("via", "").startswith(("claude", "gemini")))
         if rep:
             return {"orden": idx, "descartada": True, "repetida": True, "por_que_no": RV.motivo(rep),
+                    "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
+                    "titulo": nota.get("titulo"), "url_original": nota.get("url")}
+
+    # ¿La foto (o el video) trae la marca de agua de la competencia? (15/11/2026: Junín 24 publicó el choque de
+    # Chivilcoy con la foto de La Razón). Después de los descartes baratos, para no gastar la IA de más.
+    if not g.get("fuera_de_temario"):
+        cuadro = tmp_dir / f"reel_cuadro_{idx}.jpg"
+        rival = COMP.en_imagen([foto, cuadro if clip and cuadro.is_file() else None])
+        if rival:
+            print(f"   descartada: la imagen tiene la marca de {rival}", flush=True)
+            return {"orden": idx, "descartada": True, "competencia": rival,
+                    "por_que_no": COMP.motivo(rival) + " (marca en la imagen)",
                     "localidad": nota.get("localidad_medio"), "medio": nota.get("medio"),
                     "titulo": nota.get("titulo"), "url_original": nota.get("url")}
 
