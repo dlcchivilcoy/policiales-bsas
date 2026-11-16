@@ -38844,6 +38844,150 @@
         50,
         29
       ]
+    },
+    "a3defa4c648d3584": {
+      "conversacion": 11,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 50,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "ganaderia vs agricultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        47
+      ]
+    },
+    "60919689b41f6034": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 5,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "jacaranda",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b484295ba54efe6c": {
+      "conversacion": 22,
+      "historia_concreta": 15,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 10,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 91,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "lluvias",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1a821f276e73a01b": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 5,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "papa",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "99a0b5e4b6c855a7": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 22,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "mate",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "41fc849a5a2bac9d": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 46,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "cmpc",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "406b6e45f8889a7c": {
+      "conversacion": 16,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 77,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "mastitis bovina",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -41547,7 +41691,15 @@
       "https://bichosdecampo.com/los-hongos-ya-pueden-tomar-sol-por-nosotros-argentina-autorizo-el-tratamiento-con-rayos-uv-para-aumentar-su-contenido-de-vitamina-d": "2026-11-16",
       "https://bichosdecampo.com/reves-para-atilra-en-lacteos-veronica-el-gremio-pidio-intervenir-en-la-venta-de-dos-plantas-pero-la-justicia-le-cerro-la-puerta": "2026-11-16",
       "https://lanacion.com.ar/economia/campo/ramon-diaz-la-insolita-conferencia-simulada-donde-el-principal-anuncio-no-fue-sobre-su-destino-como-nid16112026": "2026-11-16",
-      "https://intainforma.inta.gob.ar/cultivos-bajo-cubierta-pautas-para-enfrentar-periodos-de-lluvias-frecuentes": "2026-11-16"
+      "https://intainforma.inta.gob.ar/cultivos-bajo-cubierta-pautas-para-enfrentar-periodos-de-lluvias-frecuentes": "2026-11-16",
+      "https://infocampo.com.ar/el-mayor-desafio-es-el-capital-hacienda-los-retos-para-volver-a-la-ganaderia-tras-decadas-de-dominio-agricola": "2026-11-16",
+      "https://infocampo.com.ar/clima-hoy-en-san-juan-el-pronostico-del-tiempo-para-este-16-noviembre-2026": "2026-11-16",
+      "https://infocampo.com.ar/jacaranda-florece-noviembre-cuidados": "2026-11-16",
+      "https://agrositio.com.ar/noticia/249353-semana-inestable-con-lluvias-dispares-ccaagrositio.html": "2026-11-16",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249366-como-se-organizo-tan-bien-la-misa-del-papa-en-buenos-aires-el-testimonio-de-un-ingeniero-y-voluntario.html": "2026-11-16",
+      "https://agrositio.com.ar/noticia/249352-como-curar-un-mate-nuevo-el-paso-a-paso-para-que-no-tenga-gusto-amargo-y-dure-muchos-anos.html": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/pasan-a-manos-nacionales-el-gigante-chileno-cmpc-le-vendio-a-faro-verde-por-us170-millones-sus-nid16112026": "2026-11-16",
+      "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos": "2026-11-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -44249,7 +44401,15 @@
       "los hongos ya pueden tomar sol por nosotros argentina autorizo el tratamiento con rayos uv para aumentar su contenido de vitamina d": "2026-11-16",
       "reves para atilra en lacteos veronica el gremio pidio intervenir en la venta de dos plantas pero la justicia le cerro la puerta": "2026-11-16",
       "ramon diaz la insolita conferencia simulada donde el principal anuncio no fue sobre su destino como entrenador": "2026-11-16",
-      "cultivos bajo cubierta pautas para enfrentar periodos de lluvias frecuentes": "2026-11-16"
+      "cultivos bajo cubierta pautas para enfrentar periodos de lluvias frecuentes": "2026-11-16",
+      "el mayor desafio es el capital hacienda los retos para volver a la ganaderia tras decadas de dominio agricola": "2026-11-16",
+      "clima hoy en san juan el pronostico del tiempo para este 16 noviembre 2026": "2026-11-16",
+      "el arbol que pinta de violeta a buenos aires historia del jacaranda y como tener uno en casa": "2026-11-16",
+      "donde llegaran las lluvias que necesita el campo cca anticipa una semana de marcada disparidad": "2026-11-16",
+      "del detras de escena al saludo del papa la experiencia de un voluntario que vivio un momento unico": "2026-11-16",
+      "como curar un mate nuevo el paso a paso para que no tenga gusto amargo y dure muchos anos": "2026-11-16",
+      "pasan a manos nacionales el gigante chileno cmpc le vendio a faro verde por us 170 millones sus activos forestales y deja esta actividad en la argentina": "2026-11-16",
+      "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos": "2026-11-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -46951,7 +47111,15 @@
       "3528b71e90693ebc": "2026-11-16",
       "aef518ce7e3d2b08": "2026-11-16",
       "42b8e5c91fa3a4d2": "2026-11-16",
-      "0db4ceccd1342484": "2026-11-16"
+      "0db4ceccd1342484": "2026-11-16",
+      "a3defa4c648d3584": "2026-11-16",
+      "57ed63ceaa7e8c10": "2026-11-16",
+      "60919689b41f6034": "2026-11-16",
+      "b484295ba54efe6c": "2026-11-16",
+      "1a821f276e73a01b": "2026-11-16",
+      "99a0b5e4b6c855a7": "2026-11-16",
+      "41fc849a5a2bac9d": "2026-11-16",
+      "406b6e45f8889a7c": "2026-11-16"
     }
   },
   "elegidas": [
@@ -78543,9 +78711,128 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_434d000d7f6a_portada.jpg"
+    },
+    {
+      "id": "c17303498c76",
+      "cuando": "2026-11-16T16:00-03:00",
+      "titulo_original": "¿Dónde llegarán las lluvias que necesita el campo? CCA anticipa una semana de marcada disparidad",
+      "descripcion": "Semana inestable con lluvias dispares. Se perfila una semana con auxilios pluviales en gran parte de la región pampeana. Claramente la demanda no es la misma y por lo que se ve en los pronósticos, posiblemente las zonas del centro oeste de la región pampeana, recibirían un mejor volumen de lluvias q",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249353-semana-inestable-con-lluvias-dispares-ccaagrositio.html",
+      "titular": "Lluvias dispares y marcas térmicas estables anticipan para el campo",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 15,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 10,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 91,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "lluvias",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-16T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "842af91e-ee56-46a1-af78-06558a03c596",
+          "slug": "pronostican-lluvias-dispares-estabilidad-termica-y-aportes-dc0dad",
+          "url": "https://www.diariolacampaña.com.ar/n/pronostican-lluvias-dispares-estabilidad-termica-y-aportes-dc0dad",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18433017382148552",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1763200995810897",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c17303498c76_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e91acf2e8147",
+      "rep": {
+        "id": "e91acf2e8147",
+        "fuente": "INTA",
+        "tipo_fuente": "oficial",
+        "source_url": "https://intainforma.inta.gob.ar/feed/",
+        "url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos/",
+        "canonical_url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos",
+        "titulo": "Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos",
+        "titulo_norm": "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos",
+        "descripcion": "Una investigación del INTA Rafaela-CONICET encontró que el diagnóstico microbiológico mediante cultivo en tambo permite reducir las aplicaciones de antibióticos en casos de mastitis clínica leve y moderada. Se trata de información clave para mejorar la prevención y el tratamiento de una enfermedad que afecta la producción, la calidad de la leche y los costos de los establecimientos. La entrada Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos se publicó primero en INTA Informa.",
+        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/mastitis-bovina-2.jpg",
+        "autor": "Cecilia Ayesta",
+        "publicado": "2026-11-16T12:00-03:00",
+        "capturado": "2026-11-16T16:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "406b6e45f8889a7c",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "e91acf2e8147",
+          "fuente": "INTA",
+          "tipo_fuente": "oficial",
+          "source_url": "https://intainforma.inta.gob.ar/feed/",
+          "url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos/",
+          "canonical_url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos",
+          "titulo": "Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos",
+          "titulo_norm": "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos",
+          "descripcion": "Una investigación del INTA Rafaela-CONICET encontró que el diagnóstico microbiológico mediante cultivo en tambo permite reducir las aplicaciones de antibióticos en casos de mastitis clínica leve y moderada. Se trata de información clave para mejorar la prevención y el tratamiento de una enfermedad que afecta la producción, la calidad de la leche y los costos de los establecimientos. La entrada Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos se publicó primero en INTA Informa.",
+          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/mastitis-bovina-2.jpg",
+          "autor": "Cecilia Ayesta",
+          "publicado": "2026-11-16T12:00-03:00",
+          "capturado": "2026-11-16T16:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "406b6e45f8889a7c",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 77,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "mastitis bovina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "cuando": "2026-11-16T16:00-03:00"
+    },
     {
       "id": "748458bf15eb",
       "rep": {
@@ -78811,8 +79098,8 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T14:36:55-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-16T16:06:18-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
