@@ -39116,6 +39116,110 @@
       "urgente": true,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fc4a4c60a996174d": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 33,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una columna de análisis sobre precios internacionales que no menciona un hecho local concreto.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "32317cd1a274bdf6": {
+      "conversacion": 3,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "vitivinicultura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Una historia interesante sobre vinos en Jujuy pero totalmente ajena al productor de la zona núcleo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1f88cc91a20c5b61": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 48,
+      "commercial_score": 60,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Impacta directo en la comercialización del trigo por la demanda de Brasil, interesando a los cerealeros.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "929f83f5fb09e5bf": {
+      "conversacion": 4,
+      "historia_concreta": 12,
+      "cercania_pba": 10,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "historia rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de color sobre la fundación de un pueblo bonaerense lejano, poco relevante para el día a día.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "39f39ca93cb0937d": {
+      "conversacion": 11,
+      "historia_concreta": 13,
+      "cercania_pba": 15,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 60,
+      "commercial_score": 52,
+      "subtema": "empresas",
+      "tema": "don mario",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Involucra a un empresario vinculado a Chacabuco haciendo una inversión millonaria, generando atención local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        70,
+        50
+      ]
     }
   },
   "indice": {
@@ -41835,7 +41939,13 @@
       "https://agrositio.com.ar/canal-agrositio/clinica-de-granos/249370-con-el-avance-de-la-cosecha-de-trigo-se-perdio-la-oportunidad-con-lorena-d-angelo-clinica-de-granos.html": "2026-11-16",
       "https://bichosdecampo.com/mastitis-bovina-el-inta-asegura-que-un-diagnostico-a-tiempo-puede-reducir-hasta-50-el-uso-de-antibioticos-en-los-tambos": "2026-11-16",
       "https://bichosdecampo.com/la-agenda-2030-ya-se-siente-toyota-invertira-1-300-millones-de-dolares-en-argentina-para-fabricar-una-pick-up-hibrida-a-partir-de-ese-ano": "2026-11-16",
-      "https://lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026": "2026-11-16"
+      "https://lanacion.com.ar/economia/campo/en-45-minutos-se-llevo-todo-una-devastadora-tormenta-con-granizo-dejo-importantes-danos-en-santa-fe-nid16112026": "2026-11-16",
+      "https://infocampo.com.ar/mega-inversion-toyota-le-mostro-a-milei-su-plan-para-la-primera-pick-up-hibrida-de-fabricacion-nacional": "2026-11-16",
+      "https://agrositio.com.ar/noticia/249374-preocupante-el-real-brasileno-y-el-petroleo-golpean-el-precio-de-la-soja-por-manuel-alvarado-ledesma.html": "2026-11-16",
+      "https://bichosdecampo.com/jujuy-todavia-esta-descubriendo-su-identidad-vitivinicola-dos-jovenes-agronomos-crearon-la-primera-bodega-urbana-en-la-capital-y-acaban-de-lanzar-los-primeros-espumantes-en-la-historia-de": "2026-11-16",
+      "https://bichosdecampo.com/el-trigo-argentino-puede-subir-25-us-tonelada-mas-y-seguir-siendo-competitivo-en-brasil-por-la-catastrofe-productiva-registrada-en-ese-pais": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/quien-lo-fundo-el-pueblo-que-nacio-en-500-hectareas-y-lleva-un-novillo-en-su-bandera-nid16112026": "2026-11-16",
+      "https://chacabucoenred.com/un-empresario-vinculado-a-chacabuco-compro-10-000-hectareas-en-una-region-del-pais-con-gran-potencial": "2026-11-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -44553,7 +44663,13 @@
       "con el avance de la cosecha de trigo se perdio la oportunidad con lorena d angelo clinica de granos": "2026-11-16",
       "mastitis bovina el inta asegura que un diagnostico a tiempo puede reducir hasta 50 el uso de antibioticos en los tambos": "2026-11-16",
       "la agenda 2030 ya se siente toyota invertira 1 300 millones de dolares en argentina para fabricar una pick up hibrida a partir de ese ano": "2026-11-16",
-      "en 45 minutos se llevo todo una devastadora tormenta con granizo dejo importantes danos en santa fe": "2026-11-16"
+      "en 45 minutos se llevo todo una devastadora tormenta con granizo dejo importantes danos en santa fe": "2026-11-16",
+      "mega inversion toyota le mostro a milei su plan para la primera pick up hibrida de fabricacion nacional": "2026-11-16",
+      "preocupante el real brasileno y el petroleo golpean el precio de la soja por manuel alvarado ledesma": "2026-11-16",
+      "jujuy todavia esta descubriendo su identidad vitivinicola dos jovenes agronomos crearon la primera bodega urbana en la capital y acaban de lanzar los primeros espumantes en la historia de la provincia": "2026-11-16",
+      "el trigo argentino puede subir 25 u s tonelada mas y seguir siendo competitivo en brasil por la catastrofe productiva registrada en ese pais": "2026-11-16",
+      "quien lo fundo el pueblo que nacio en 500 hectareas y lleva un novillo en su bandera": "2026-11-16",
+      "un empresario vinculado a chacabuco compro 10 000 hectareas en una region del pais con gran potencial": "2026-11-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -47271,7 +47387,13 @@
       "3278933f33debe7c": "2026-11-16",
       "e2ae3430278255fb": "2026-11-16",
       "006f3a08c232c2cd": "2026-11-16",
-      "47cd83bc8eb53d1d": "2026-11-16"
+      "47cd83bc8eb53d1d": "2026-11-16",
+      "ba8a0abb995cf6ee": "2026-11-16",
+      "fc4a4c60a996174d": "2026-11-16",
+      "32317cd1a274bdf6": "2026-11-16",
+      "1f88cc91a20c5b61": "2026-11-16",
+      "929f83f5fb09e5bf": "2026-11-16",
+      "39f39ca93cb0937d": "2026-11-16"
     }
   },
   "elegidas": [
@@ -78971,6 +79093,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c7023094329d_portada.jpg"
+    },
+    {
+      "id": "d123554c4dc1",
+      "cuando": "2026-11-16T19:30-03:00",
+      "titulo_original": "Un empresario vinculado a Chacabuco compró 10.000 hectáreas en una región del país con gran potencial",
+      "descripcion": "Se trata de Ignacio Bartolomé, del Grupo Don Mario, que adquirió un establecimiento en una región de Río Negro que se encuentra en expansión para la producción agropecuaria. Source",
+      "fuente": "Chacabuco en Red",
+      "url": "https://chacabucoenred.com/un-empresario-vinculado-a-chacabuco-compro-10-000-hectareas-en-una-region-del-pais-con-gran-potencial/",
+      "titular": "Ignacio Bartolomé compró 10.000 hectáreas en Río Negro para producción agropecuaria",
+      "volanta": "Empresas",
+      "score": {
+        "conversacion": 11,
+        "historia_concreta": 13,
+        "cercania_pba": 15,
+        "interes_productores": 8,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 60,
+        "commercial_score": 52,
+        "subtema": "empresas",
+        "tema": "don mario",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Involucra a un empresario vinculado a Chacabuco haciendo una inversión millonaria, generando atención local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          50
+        ],
+        "de_zona": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-16T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "3003d538-2d11-42ea-b568-95f05a6c60ab",
+          "slug": "ignacio-bartolome-compro-10-000-hectareas-en-rio-negro-para-3ecc5b",
+          "url": "https://www.diariolacampaña.com.ar/n/ignacio-bartolome-compro-10-000-hectareas-en-rio-negro-para-3ecc5b",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18173073889467933",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1763390935791903",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d123554c4dc1_portada.jpg"
     }
   ],
   "pendientes": [
@@ -79374,8 +79554,8 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T19:01:13-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-16T19:35:14-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
