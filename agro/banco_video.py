@@ -96,7 +96,7 @@ TAGS = {
 POR_SUBTEMA = {"agro": "campo", "mercados": "granos", "agtech": "tecnologia", "maquinaria": "maquinaria",
                "ganaderia": "ganado", "empresas": "campo"}
 # Lo que tiene que decir el título o la descripción del archivo en Commons (la búsqueda trae de todo).
-EXIGE = {"cosecha": r"combine|harvest", "soja": r"soy", "maiz": r"\bcorn|maize", "trigo": r"wheat|barley",
+EXIGE = {"cosecha": r"combine|harvest", "soja": r"soybean|soya|soy ?(field|crop|plant|harvest)", "maiz": r"\bcorn|maize", "trigo": r"wheat|barley",
          "girasol": r"sunflower", "siembra": r"seed|planter|planting|sowing|drill", "pulverizacion": r"spray",
          "maquinaria": r"tractor|machiner|plow|plough", "ganado": r"cattle|\bcows?\b|beef|herd|steer|heifer",
          "tambo": r"dairy|milk", "lluvia": r"\brain|storm|cloud|thunder", "granizo": r"\bhail",
@@ -151,7 +151,8 @@ def elegir(texto: str, subtema: str, usados: dict, ahora: datetime, indice: list
         del_tag = [v for v in indice if v.get("tag") == tag]
         libres = [v for v in del_tag if (usados or {}).get(v["archivo"], "") < limite]
         if libres:
-            return sorted(libres, key=lambda v: (usados or {}).get(v["archivo"], ""))[0]
+            # Entre los libres, primero el de más impacto (los viejos, sin puntaje, cuentan como 5).
+            return sorted(libres, key=lambda v: ((usados or {}).get(v["archivo"], ""), -(v.get("impacto") or 5)))[0]
     # Todos los de esos temas se usaron hace poco: el usado hace más tiempo, pero SIEMPRE de esos temas (16/11: una
     # alerta de tormenta salió con una cosechadora porque el banco no tenía lluvia y se tomaba cualquiera).
     posibles = [v for v in indice if v.get("tag") in permitidos]
@@ -242,6 +243,7 @@ def _ffmpeg() -> str:
 
 
 MAX_MB = 250
+MAX_SEG_BAJADA = 300      # un archivo que tarda más de 5 minutos se saltea
 
 
 def _descargar(url: str, destino: Path) -> bool:
@@ -258,10 +260,11 @@ def _descargar(url: str, destino: Path) -> bool:
                 if r.status_code >= 400:
                     return False
                 total = 0
+                limite = time.time() + MAX_SEG_BAJADA     # 17/11: Commons a veces manda a 20 KB/s y no termina nunca
                 with open(destino, "wb") as fh:
                     for trozo in r.iter_bytes(1 << 16):
                         total += len(trozo)
-                        if total > MAX_MB * 1024 * 1024:
+                        if total > MAX_MB * 1024 * 1024 or time.time() > limite:
                             fh.close()
                             destino.unlink(missing_ok=True)
                             return False
@@ -309,7 +312,10 @@ def _cuadros(mp4: Path, seg: float) -> list:
 SISTEMA = (
     "Mirás tres cuadros de un video que va a ilustrar una noticia del campo argentino (región pampeana). "
     "Respondé SOLO con JSON: {\"apto\": true|false, \"motivo\": \"por qué no, si no\", \"describe\": \"qué se ve, en "
-    "castellano, 12 palabras\"}. Es APTO solo si: es una filmación real (no animación ni gráfico), nítida y con buena "
+    "castellano, 12 palabras\", \"impacto\": 1-10}. «impacto» es cuánto frenaría a alguien que pasa el dedo por "
+    "Instagram: 9-10 acción fuerte y de cerca (granizo cayendo, una cosechadora llenando la tolva en primer plano, "
+    "un dron pasando sobre el cultivo, un rodeo corriendo); 5-6 algo que se mueve pero lejos; 1-3 un plano quieto "
+    "o aburrido. Es APTO solo si: es una filmación real (no animación ni gráfico), nítida y con buena "
     "luz; muestra lo que se pide; podría ser un campo de Argentina (no arrozales, nieve, selva, montañas ni pueblos de "
     "Asia o África); NO tiene textos, subtítulos, logos sobreimpresos ni marcas de agua; NO muestra animales muertos, "
     "faena, sangre ni accidentes; las personas, si aparecen, están lejos o de espaldas.")
@@ -320,6 +326,22 @@ def _mirar(cuadros: list, pedido: str) -> dict:
     partes = [("image/jpeg", Path(c).read_bytes()) for c in cuadros]
     crudo, _via = IA.redactar_gemini(SISTEMA, f"Lo que tiene que verse: {pedido}.", max_tokens=300, imagenes=partes)
     return IA._parsear(crudo) or {}
+
+
+def _impacto(veredicto: dict) -> int:
+    try:
+        return max(0, min(10, int(round(float(veredicto.get("impacto") or 0)))))
+    except (TypeError, ValueError):
+        return 0
+
+
+def impacto_min() -> int:
+    """17/11/2026 (pedido del editor: «el que tenga más chance de viralizar»): al armar, solo entra el video con
+    impacto ≥ AGRO_BANCO_IMPACTO (7). "0" acepta todo."""
+    try:
+        return int(os.environ.get("AGRO_BANCO_IMPACTO") or 7)
+    except ValueError:
+        return 7
 
 
 def armar(tags: list = None, por_tag: int = POR_TAG, log=print) -> list:
@@ -375,6 +397,9 @@ def armar(tags: list = None, por_tag: int = POR_TAG, log=print) -> list:
             for c in cuadros:
                 c.unlink(missing_ok=True)
             usados_titulos.add(info["titulo"])
+            impacto = _impacto(veredicto)
+            if veredicto.get("apto") and impacto < impacto_min():
+                veredicto = dict(veredicto, apto=False, motivo=f"poco impacto para un reel ({impacto}/10)")
             if not veredicto.get("apto"):
                 log(f"   ✗ {info['titulo'][5:70]}: {str(veredicto.get('motivo'))[:90]}")
                 mp4.unlink(missing_ok=True)
@@ -382,8 +407,8 @@ def armar(tags: list = None, por_tag: int = POR_TAG, log=print) -> list:
             tiene += 1
             indice.append({"archivo": archivo, "tag": tag, "titulo": info["titulo"], "autor": info["autor"][:120],
                            "licencia": info["licencia"], "fuente": info["pagina"], "seg": round(seg, 1),
-                           "describe": str(veredicto.get("describe") or "")[:160]})
-            log(f"   ✓ {archivo}: {veredicto.get('describe')} ({info['licencia']}, {info['autor'][:40]})")
+                           "describe": str(veredicto.get("describe") or "")[:160], "impacto": impacto})
+            log(f"   ✓ {archivo} [{impacto}/10]: {veredicto.get('describe')} ({info['licencia']}, {info['autor'][:40]})")
             INDICE.write_text(json.dumps({"actualizado": datetime.now().isoformat(timespec="minutes"),
                                           "videos": indice}, ensure_ascii=False, indent=1), encoding="utf-8")
     return indice
