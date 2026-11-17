@@ -3,7 +3,7 @@
 
 Pedido del editor: «virales relacionados al campo, pero esos subilos como reels de prueba». Un reel de prueba de
 Instagram lo ven solo los que NO siguen la cuenta: sirve para llegar a gente nueva sin cargarle el feed a los
-seguidores (por eso no cuenta en la grilla reel/carrusel, no va a Facebook ni a historias).
+seguidores (por eso no cuenta en la grilla reel/carrusel, no va a historias). Desde el 17/11/2026 sale también en la página de Facebook de agro como reel normal (AGRO_VIRALES_FB).
 
 De dónde: los portales de variedad de nacionales (nacionales/categorias.bajar: TN, Infobae, Clarín, La Nación…),
 lo que es del campo (animales de granja, tractores, cosechas, gauchos, tambos — CAMPO_VIRAL, o las palabras firmes
@@ -116,8 +116,18 @@ def elegir(cands: list, carpeta: Path, leer=None, bajar=None, log=print):
     return None
 
 
-def publicar_prueba(mp4: Path, caption: str, portada: str, marca: str) -> dict:
-    """El reel de PRUEBA en el Instagram de agro (solo lo ven los que no siguen la cuenta)."""
+def a_facebook() -> bool:
+    """17/11/2026 (pedido del editor: «lo mismo para los reels de prueba de @diarioyradioagro, al Facebook de
+    agro»): el viral sale también en la página de Facebook de agro, como reel NORMAL (la API de Facebook no
+    tiene reels de prueba). AGRO_VIRALES_FB=0 lo apaga."""
+    import os
+    return (os.environ.get("AGRO_VIRALES_FB") or "1").strip() != "0"
+
+
+def publicar_prueba(mp4: Path, caption: str, portada: str, marca: str, alto: int = 1350, duracion: float = 0,
+                    titular: str = "") -> dict:
+    """El reel de PRUEBA en el Instagram de agro (solo lo ven los que no siguen la cuenta) y el mismo reel en la
+    página de Facebook de agro. Una falla en una red no frena la otra."""
     import os
     from agro import publicar as PUB
     from reels import instagram as IG
@@ -129,15 +139,38 @@ def publicar_prueba(mp4: Path, caption: str, portada: str, marca: str) -> dict:
             portada_url = PB.subir_a_release(Path(portada), f"agro_viral_{marca}.jpg")
         except Exception:                                  # noqa: BLE001
             portada_url = ""
+    salida = {}
     with PUB.credenciales_agro():
         uid, tok = os.environ.get("INSTAGRAM_USER_ID", ""), os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
-        params = IG.contenedor_reel(url, caption, prueba=True, portada=portada_url)
         try:
-            cid = PB._contenedor_listo(uid, tok, params)
-        except PB.FalloRed:
-            params.pop("cover_url", None)
-            cid = PB._contenedor_listo(uid, tok, params)
-        return {"instagram_prueba": {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None}}
+            params = IG.contenedor_reel(url, caption, prueba=True, portada=portada_url)
+            try:
+                cid = PB._contenedor_listo(uid, tok, params)
+            except PB.FalloRed:
+                params.pop("cover_url", None)
+                cid = PB._contenedor_listo(uid, tok, params)
+            salida["instagram_prueba"] = {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None}
+        except Exception as e:                             # noqa: BLE001
+            salida["instagram_prueba"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+        if a_facebook():
+            salida["facebook"] = publicar_facebook(Path(mp4), caption, alto, duracion, titular)
+    return salida
+
+
+def publicar_facebook(mp4: Path, caption: str, alto: int = 1350, duracion: float = 0, titular: str = "",
+                      lugar=None, publicar_fn=None) -> dict:
+    """El reel en la página de Facebook de AGRO (llamar adentro de credenciales_agro). Respeta el tope de reels de
+    la página en 24 h."""
+    from reels import publicador as PB
+    try:
+        hay = (lugar or PB._lugar_en_facebook)()
+        if hay and hay[0] >= hay[1]:
+            return {"omitido": f"la página ya tiene {hay[0]} reels en 24 h (tope {hay[1]})"}
+        pieza = {"descripcion_tiktok": caption, "formato": "reel", "video": {"alto": alto, "duracion": duracion},
+                 "guion": {"titular": titular, "bajada": ""}}
+        return dict((publicar_fn or PB.publicar_facebook)(pieza, Path(mp4), "") or {})
+    except Exception as e:                                 # noqa: BLE001
+        return {"error": f"{type(e).__name__}: {str(e)[:200]}"}
 
 
 def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpeta: Path = None, ahora: datetime = None,
@@ -187,13 +220,17 @@ def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpet
                 mem.setdefault("historias", {})[horario.isoformat()] = entrada
                 PA.guardar(mem, ahora, ruta_mem)
                 try:
-                    res = (publicador or publicar_prueba)(Path(reel["archivo"]), caption, reel.get("vista") or "",
-                                                          rep["id"])
+                    if publicador:
+                        res = publicador(Path(reel["archivo"]), caption, reel.get("vista") or "", rep["id"])
+                    else:
+                        res = publicar_prueba(Path(reel["archivo"]), caption, reel.get("vista") or "", rep["id"],
+                                              alto=reel.get("alto") or 1350, duracion=reel.get("duracion") or 0,
+                                              titular=g["titular"])
                 except Exception as e:                     # noqa: BLE001
                     res = {"instagram_prueba": {"error": f"{type(e).__name__}: {str(e)[:200]}"}}
                 entrada["publicado"] = res
                 conteos["Publicado"] = json.dumps(res, ensure_ascii=False)[:200]
-                log(f"   Instagram (prueba): {res}")
+                log(f"   Instagram (prueba) y Facebook: {res}")
     if publicar and not entrada.get("publicado"):
         entrada["publicado"] = {"omitido": conteos.get("No se publicó", "")}   # el respaldo no lo vuelve a buscar
     if publicar:

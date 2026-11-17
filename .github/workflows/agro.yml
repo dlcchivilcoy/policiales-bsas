@@ -138,6 +138,7 @@ jobs:
           AGRO_VIDEO_TOLERANCIA: ${{ vars.AGRO_VIDEO_TOLERANCIA }}
           AGRO_VIDEO_REVISAR: ${{ vars.AGRO_VIDEO_REVISAR }}
           AGRO_VIRALES: ${{ vars.AGRO_VIRALES }}
+          AGRO_VIRALES_FB: ${{ vars.AGRO_VIRALES_FB }}
           AGRO_INNOVACION_TOLERANCIA: ${{ vars.AGRO_INNOVACION_TOLERANCIA }}
           AGRO_IMAGEN_IA: ${{ vars.AGRO_IMAGEN_IA }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}

@@ -257,6 +257,22 @@ VI.pasada(True, ahora_v.replace(hour=20, minute=45), log=lambda m: None, carpeta
           publicador=lambda *a: subidos.append(1) or {})
 chequear("el mismo viral no sale dos veces", not subidos)
 
+# ---- 17/11: el viral (reel de prueba de IG) sale también en el Facebook de agro ----
+fb_v = []
+r_fbv = VI.publicar_facebook(Path(__file__), "Texto viral", 1350, 40, "Tit", lugar=lambda: (3, 26),
+                             publicar_fn=lambda p, m, u: fb_v.append((p["descripcion_tiktok"], p["formato"],
+                                                                      p["video"]["duracion"])) or {"id": "7"})
+chequear("viral: sale en el Facebook de agro como reel con el texto de Instagram",
+         r_fbv == {"id": "7"} and fb_v == [("Texto viral", "reel", 40)])
+chequear("viral: con la página en el tope no sale en Facebook",
+         "omitido" in VI.publicar_facebook(Path(__file__), "x", lugar=lambda: (26, 26), publicar_fn=lambda *a: 1 / 0))
+chequear("viral: si Facebook falla queda anotado", "error" in VI.publicar_facebook(
+    Path(__file__), "x", lugar=lambda: None, publicar_fn=lambda *a: 1 / 0))
+os.environ["AGRO_VIRALES_FB"] = "0"
+chequear("AGRO_VIRALES_FB=0 lo apaga", not VI.a_facebook())
+os.environ.pop("AGRO_VIRALES_FB")
+chequear("viene prendido", VI.a_facebook())
+
 # ---- 17/11: lo scrappeado sin imágenes IA; la nota con video usa un cuadro del video ----
 from agro import imagen as IMG
 _viejo = os.environ.pop("AGRO_IMAGEN_IA", None)
