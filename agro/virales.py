@@ -42,6 +42,9 @@ REVISAR = 25          # candidatas que se abren buscando video (17/11: la mayor�
 TANDAS_DEFECTO = "10:00*3,14:00*3,18:00*3,22:00*2"
 PASO_DEFECTO = 20
 # Además de los portales de nacionales (categorias.bajar): (categoría, nombre, vía, url, extra) de nacionales/portales.
+# Palabras del campo en la dirección de una nota (para los sitemaps, que no traen el título a mano).
+CAMPO_SLUG = (r"[^<]*(?:campo|rural|ganad|vaca|terner|novill|soja|trigo|maiz|cosecha|siembra|abigeato|cuatrer|"
+              r"tractor|granizo|productor|tambo|feedlot|agro)[^<]*")
 REGIONALES = (
     ("policiales", "La Capital", "rss", "https://www.lacapital.com.ar/rss/home.xml", {}),
     ("policiales", "Aire de Santa Fe", "rss", "https://www.airedesantafe.com.ar/rss/policiales.xml", {}),
@@ -62,6 +65,20 @@ REGIONALES = (
     ("policiales", "Diario Junio", "rss", "https://www.diariojunio.com.ar/feed", {}),
     ("policiales", "La Calle", "rss", "https://www.lacalle.com.ar/feed", {}),
     ("policiales", "Entre Ríos Ahora", "rss", "https://www.entreriosahora.com/feed", {}),
+    # 17/11: provincia de Buenos Aires. De los sitemaps de Google Noticias solo las notas cuya dirección dice algo
+    # del campo (cada una es una página que se lee). Infocielo y Qué Digital bloquean (403); el RSS de El Día está
+    # viejo (septiembre); La Capital de Mar del Plata no tiene feed.
+    ("policiales", "El Día", "lista", "https://www.eldia.com/news_1.xml",
+     {"links": r"<loc>(https://www\.eldia\.com/[a-z-]+/" + CAMPO_SLUG + r")</loc>", "max": 6}),
+    ("policiales", "La Nueva", "lista", "https://www.lanueva.com/sitemap_news.xml",
+     {"links": r"<loc>(https://www\.lanueva\.com/nota/" + CAMPO_SLUG + r")</loc>", "max": 6}),
+    ("policiales", "El Eco de Tandil", "lista", "https://www.eleco.com.ar/sitemap-news.xml",
+     {"links": r"<loc>(https://www\.eleco\.com\.ar/[a-z-]+/" + CAMPO_SLUG + r")</loc>", "max": 6}),
+    ("policiales", "Diario Democracia", "lista", "https://www.diariodemocracia.com/sitemaps/google_news.xml",
+     {"links": r"<loc>(https://www\.diariodemocracia\.com/[a-z/-]+/" + CAMPO_SLUG + r")</loc>", "max": 6}),
+    ("policiales", "Diario Popular", "rss", "https://www.diariopopular.com.ar/rss/policiales.xml", {}),
+    ("policiales", "La Brújula 24", "rss", "https://www.labrujula24.com/feed", {}),
+    ("policiales", "0223", "rss", "https://www.0223.com.ar/rss", {}),
 )
 REGION = re.compile(r"\b(cordob\w*|santa fe|santafesin\w*|rosario|rafaela|venado tuerto|reconquista|villa maria|"
                     r"rio cuarto|san francisco|marcos juarez|entre rios|entrerrian\w*|parana|concordia|gualeguay\w*|"
