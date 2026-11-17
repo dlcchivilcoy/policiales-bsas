@@ -339,5 +339,32 @@ cu2 = PA._cuadro_del_video(vid, tmp / "cuadro2.jpg", mirar=lambda r: vistos.appe
 chequear("si el cuadro tiene zócalo prueba otro momento", bool(cu2) and len(vistos) == 3)
 chequear("si todos tienen letras, ninguno", PA._cuadro_del_video(vid, tmp / "c3.jpg", mirar=lambda r: True) is None)
 
+# 17/11: la máquina corta a los 150 min — ningún turno de la agenda puede quedar más lejos que eso
+from agro import agenda as AG2  # noqa: E402
+_lejos = []
+for _h, _m in AG2.corridas():
+    _ini, _, _ts = AG2.corrida(datetime(2026, 11, 18, _h, _m, tzinfo=PA.TZ_AR))
+    _lejos += [f"{t:%H:%M}" for t, _ in _ts if (t - _ini).total_seconds() / 60 > PA.espera_max_min()]
+chequear("todos los turnos de la agenda entran antes del corte de la máquina", _lejos == [])
+_orig = (PA.corrida, PA._esperar, PA._un_turno, PA.cargar, PA.ya_publicado, PA._guardar_en_la_nube)
+_hechos = []
+try:
+    _t0 = datetime(2026, 11, 17, 18, 0, tzinfo=PA.TZ_AR)
+    PA.corrida = lambda ahora: (_t0, True, [(_t0, "carrusel"), (_t0.replace(hour=20, minute=45), "viral")])
+    PA._esperar = lambda hasta, log=print: None
+    PA._un_turno = lambda pub, tipo, *a, **k: _hechos.append(tipo) or "informe"
+    PA.cargar = lambda *a, **k: {}
+    PA.ya_publicado = lambda *a, **k: None
+    PA._guardar_en_la_nube = lambda log=print: None
+    try:
+        PA.correr_corrida(log=lambda m: None, ahora=_t0)
+        _error = ""
+    except RuntimeError as e:
+        _error = str(e)
+    chequear("el turno que no llega antes del corte se saltea y se avisa (no mata la corrida)",
+             _hechos == ["carrusel"] and "20:45 viral: salteado" in _error)
+finally:
+    PA.corrida, PA._esperar, PA._un_turno, PA.cargar, PA.ya_publicado, PA._guardar_en_la_nube = _orig
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

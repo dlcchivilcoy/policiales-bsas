@@ -211,6 +211,16 @@ def correr(publicar: bool = False, tipo: str = "", bloque: str = "", momento: da
                      fuera_de_cupo=fuera_de_cupo, max_piezas=max_piezas, con_reel=con_reel, horas=horas)
 
 
+ESPERA_MAX_MIN = 120      # el paso «Pasada agro» se corta a los 150 min: 30 para publicar el último
+
+
+def espera_max_min() -> int:
+    try:
+        return int((os.environ.get("AGRO_ESPERA_MAX_MIN") or "").strip() or ESPERA_MAX_MIN)
+    except ValueError:
+        return ESPERA_MAX_MIN
+
+
 def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_piezas: int = 0,
                    con_reel: bool = True, horas: int = 48) -> list:
     """Publica la corrida de `ahora`, horario por horario y esperando cada uno (19/10/2026: reel, una
@@ -226,9 +236,16 @@ def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_pieza
         return [_informe_vacio(carpeta, ahora, f"fuera de horario: la próxima corrida es la de las "
                                                f"{inicio:%d/%m %H:%M}", True, horas)]
     log(f"[agro] CORRIDA de las {inicio:%H:%M}: " + ", ".join(f"{t:%H:%M} {tipo}" for t, tipo in turnos))
+    # 17/11/2026: la máquina corta el paso a los 150 min. La corrida de las 18 esperó el viral de las 20:45 y la
+    # mataron a las 20:30 (falló sin avisar qué faltaba). Lo que no llega a tiempo se saltea y se avisa.
+    limite = ahora + timedelta(minutes=espera_max_min())
     rutas, errores, ultimo_feed, quedan = [], [], None, len(turnos)
     for horario, tipo in turnos:
         quedan -= 1
+        if horario > limite:
+            log(f"{horario:%H:%M} {tipo}: SALTEADO, no llega antes del corte de la máquina ({limite:%H:%M})")
+            errores.append(f"{horario:%H:%M} {tipo}: salteado (más de {espera_max_min()} min de espera)")
+            continue
         ya = ya_publicado(cargar(MEMORIA_REAL), horario, tipo)
         if ya:
             que = ya.get("titular") or f"{len(ya.get('items') or [])} historias"
