@@ -79,6 +79,13 @@ REGIONALES = (
     ("policiales", "Diario Popular", "rss", "https://www.diariopopular.com.ar/rss/policiales.xml", {}),
     ("policiales", "La Brújula 24", "rss", "https://www.labrujula24.com/feed", {}),
     ("policiales", "0223", "rss", "https://www.0223.com.ar/rss", {}),
+    # 17/11: La Pampa. El Diario de La Pampa solo tiene un sitemap general sin fechas (casi 9.000 direcciones) e
+    # InfoHuella bloquea (403).
+    ("policiales", "La Arena", "lista", "https://www.laarena.com.ar/sitemap-news.xml",
+     {"links": r"<loc>(https://www\.laarena\.com\.ar/[a-z-]+/" + CAMPO_SLUG + r")</loc>", "max": 6}),
+    ("policiales", "InfoPico", "rss", "https://www.infopico.com/rss", {}),
+    ("policiales", "Plan B Noticias", "rss", "https://www.planbnoticias.com.ar/index.php/feed/", {}),
+    ("policiales", "Diario Textual", "rss", "https://diariotextual.com/inicio/index.php/feed/", {}),
 )
 REGION = re.compile(r"\b(cordob\w*|santa fe|santafesin\w*|rosario|rafaela|venado tuerto|reconquista|villa maria|"
                     r"rio cuarto|san francisco|marcos juarez|entre rios|entrerrian\w*|parana|concordia|gualeguay\w*|"
