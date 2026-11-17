@@ -98,7 +98,22 @@ def prioridad(s: dict, formato: str = "reel") -> tuple:
             valor -= RESERVA_VIDEO                     # 16/11/2026: la que trae video espera el turno de reel
     elif s.get("con_video"):
         valor += bono_video()
+        if s.get("policial_rural"):
+            valor += BONO_POLICIAL_VIDEO               # 17/11/2026: un policial con video por turno de reel
     return (bool(s.get("urgente")), valor, s.get("commercial_score", 0))
+
+
+# 17/11/2026 (pedido del editor: «tratá de subir un policial con video por corrida normal para el feed»): en un turno
+# de reel, el policial del campo que trae video va primero (salvo una alerta urgente) y entra con
+# AGRO_POLICIAL_VIDEO_TOLERANCIA puntos menos que el mínimo (en vez de AGRO_VIDEO_TOLERANCIA).
+BONO_POLICIAL_VIDEO = 40
+
+
+def policial_video_tolerancia() -> int:
+    try:
+        return max(0, int(os.environ.get("AGRO_POLICIAL_VIDEO_TOLERANCIA") or 20))
+    except ValueError:
+        return 20
 
 
 # 16/11/2026 (pedido del editor: «priorizá encontrar noticias con videos para armar reels»). En la grilla intercalada
@@ -116,7 +131,9 @@ def video_tolerancia() -> int:
 
 def minimo_de(s: dict, minimo: int, formato: str) -> int:
     """El puntaje mínimo de ESA candidata: más bajo si trae video y el turno es de reel."""
-    return minimo - (video_tolerancia() if formato == "reel" and s.get("con_video") else 0)
+    if formato == "reel" and s.get("con_video"):
+        return minimo - max(video_tolerancia(), policial_video_tolerancia() if s.get("policial_rural") else 0)
+    return minimo
 
 
 # 16/11/2026 (pedido del editor: «priorizá videos de policiales en el campo» y «contenido variado en el feed, también

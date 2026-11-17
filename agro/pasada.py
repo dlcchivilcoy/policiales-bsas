@@ -335,6 +335,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         motivo = DD.ya_vista(n, mem)
         if motivo:
             continue                                   # ya pasó por el circuito: ni se informa
+        if n.get("url") and n["url"] in (mem.get("virales") or {}):
+            continue                                   # 17/11/2026: ya salió como reel de prueba
         if es_tablero(n):
             descartar(n, "tablero automático (cotización, clima o dólar del día): no es una noticia")
             DD.anotar(n, mem)
@@ -804,8 +806,11 @@ def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, ba
     # video entran igual en un turno de reel). Las que ya se abrieron sin video no se vuelven a abrir
     # (mem["sin_video"], `vistas`): así cada corrida mira notas nuevas.
     minimo = SE.score_min() - SE.video_tolerancia()
+    # 17/11/2026: los policiales del campo se abren con su tolerancia propia (entran con video aunque puntúen menos).
+    minimo_pol = SE.score_min() - max(SE.video_tolerancia(), SE.policial_video_tolerancia())
     vistas = vistas if vistas is not None else {}
-    orden = sorted((c for c in candidatos if c["score"].get("ai_score", 0) >= minimo and c["id"] not in vistas),
+    orden = sorted((c for c in candidatos if c["id"] not in vistas and c["score"].get("ai_score", 0) >= (
+                        minimo_pol if c["score"].get("policial_rural") else minimo)),
                    key=lambda c: SE.prioridad(c["score"]), reverse=True)[:videos_a_revisar()]
     con = 0
     for c in orden:

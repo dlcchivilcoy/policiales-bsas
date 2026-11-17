@@ -224,8 +224,18 @@ chequear("viral del campo: el video de una vaca en la ruta sí; Vaca Muerta, un 
          and not VI.es_viral_del_campo({"titulo": "Vaca Muerta: nuevo récord de producción"})
          and not VI.es_viral_del_campo({"titulo": "Mega-granizo en Córdoba: alerta naranja"})
          and not VI.es_viral_del_campo({"titulo": "Invadió el campo de juego en el Mundial"}))
-chequear("la agenda tiene los virales a las 12:15 y 20:45, fuera del feed",
-         [(h, m) for h, m, t in AG.agenda() if t == "viral"] == [(12, 15), (20, 45)] and "viral" in AG.FUERA_DEL_FEED)
+chequear("la agenda tiene los 11 reels de prueba: 3 a las 10, 3 a las 14, 3 a las 18 y 2 a las 22, fuera del feed",
+         [(h, m) for h, m, t in AG.agenda() if t == "viral"] == [(10, 0), (10, 20), (10, 40), (14, 0), (14, 20), (14, 40),
+                                                                (18, 0), (18, 20), (18, 40), (22, 0), (22, 20)]
+         and "viral" in AG.FUERA_DEL_FEED)
+os.environ["AGRO_VIRALES"] = "12:15,20:45"
+chequear("AGRO_VIRALES (lista) manda sobre las tandas", VI.horas_virales() == [(12, 15), (20, 45)])
+os.environ["AGRO_VIRALES"] = ""
+os.environ["AGRO_PRUEBA_TANDAS"] = "09:00*2"
+os.environ["AGRO_PRUEBA_PASO"] = "30"
+chequear("AGRO_PRUEBA_TANDAS y AGRO_PRUEBA_PASO", VI.horas_virales() == [(9, 0), (9, 30)])
+for _k in ("AGRO_VIRALES", "AGRO_PRUEBA_TANDAS", "AGRO_PRUEBA_PASO"):
+    os.environ.pop(_k, None)
 ahora_v = datetime(2026, 11, 16, 12, 15, tzinfo=TZ)
 ts = ahora_v.timestamp()
 notas_v = [{"url": "https://tn/a", "titulo": "El ternero que sigue a su dueño a todos lados", "fecha": ts - 3600,
@@ -236,8 +246,37 @@ notas_v = [{"url": "https://tn/a", "titulo": "El ternero que sigue a su dueño a
            {"url": "https://tn/d", "titulo": "Video: vacas sueltas en la ruta. Fuente: La Razón de Chivilcoy", "fecha": ts - 60, "fuente": "X"},
            {"url": "https://tn/e", "titulo": "Elecciones en Chile", "fecha": ts - 60, "fuente": "X"}]
 c_v = VI.candidatas(ahora_v, notas_v, {"virales": {"https://tn/c": "2026-11-15T12:00"}})
-chequear("candidatas: lo del campo de las últimas 36 h, sin lo ya publicado; primero la sección virales",
-         [n["url"] for n in c_v] == ["https://tn/a", "https://tn/d"])
+chequear("candidatas: lo del campo de las últimas 36 h, sin lo ya publicado",
+         sorted(n["url"] for n in c_v) == ["https://tn/a", "https://tn/d"])
+# 17/11: niveles (policial del campo > viral > otra del campo) y las más compartidas primero
+_np = [{"url": "https://x/1", "titulo": "Récord de exportaciones de soja en Rosario", "fecha": ts - 600, "fuente": "Infobae"},
+       {"url": "https://x/2", "titulo": "Cuatreros robaron 40 vacas de un campo en Chacabuco", "fecha": ts - 9000,
+        "fuente": "La Capital"},
+       {"url": "https://x/3", "titulo": "Cuatreros robaron 40 vacas de un campo en Chacabuco: hay detenidos",
+        "fecha": ts - 8000, "fuente": "TN"},
+       {"url": "https://x/4", "titulo": "Video: un ternero rescatado de un pozo se volvió viral", "fecha": ts - 300,
+        "fuente": "TN", "categoria": "virales"}]
+_cp = VI.candidatas(ahora_v, _np, {})
+chequear("niveles: primero el policial del campo, después el viral, después la otra nota del campo",
+         [c["nivel"] for c in _cp] == [0, 1, 2])
+chequear("lo de la sección internacionales no es del campo de acá",
+         VI.nivel({"titulo": "Trump hablará sin rodeos con Xi", "categoria": "internacionales"}) is None
+         and VI.nivel({"titulo": "Récord de soja en Rosario", "categoria": "economia"}) == 2)
+chequear("el mismo hecho en dos portales es UNA candidata, del portal con video (TN), con la otra para buscar video",
+         _cp[0]["url"] == "https://x/3" and _cp[0]["cobertura"] == 2 and _cp[0]["otras_urls"] == ["https://x/2"])
+_lee = lambda u: {"video": "https://v.mp4", "titulo": "De TN"} if u == "https://x/3" else {"video": ""}  # noqa: E731
+_el = VI.elegir([dict(_cp[0], url="https://x/2", fuente="La Capital", otras_urls=["https://x/3"])], tmp, leer=_lee,
+                bajar=lambda u, d: Path(__file__))
+chequear("sin video en la nota, lo busca en la misma noticia de otro portal (y el crédito es de ese portal)",
+         _el and _el[0]["url"] == "https://x/3" and _el[0]["url_hecho"] == "https://x/2" and _el[0]["fuente"] != "La Capital")
+_cv = VI.candidatas(ahora_v, _np, {"virales": {"https://x/2": "2026-11-16T10:00"}})
+chequear("si el hecho ya salió (por cualquiera de sus notas), no vuelve", all(c["url"] not in ("https://x/2", "https://x/3")
+                                                                             for c in _cv))
+chequear("feed: el policial del campo con video va primero en un turno de reel y entra con 20 puntos menos",
+         SE.prioridad({"ai_score": 60, "con_video": True, "policial_rural": True})[1]
+         > SE.prioridad({"ai_score": 85, "con_video": True})[1]
+         and SE.minimo_de({"con_video": True, "policial_rural": True}, 60, "reel") == 40
+         and SE.minimo_de({"con_video": True}, 60, "reel") == 50)
 el_v = VI.elegir(c_v[::-1], tmp, leer=lambda u: {"video": "https://v.mp4", "texto": "x"}, bajar=lambda u, d: Path(__file__))
 chequear("elegir: salta la de la competencia y toma la que trae video", el_v and el_v[0]["url"] == "https://tn/a")
 chequear("elegir: sin video, nada", VI.elegir(c_v, tmp, leer=lambda u: {"video": ""}, bajar=lambda u, d: None) is None)

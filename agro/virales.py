@@ -13,6 +13,21 @@ El texto lo escribe el guion de agro; el reel es el 4:5 de agro con el video ent
 
 Horarios: AGRO_VIRALES («12:15,20:45»; "0" los apaga). Uno por horario, si hay. Memoria: mem["virales"] (las URL
 publicadas, para no repetir) y mem["historias"][horario] con bloque «viral» (así el respaldo no lo repite).
+
+17/11/2026 — LOS 11 REELS DE PRUEBA DEL DÍA (pedido del editor: «policiales agro: subir reels con video y usar los 11
+reels de prueba por día que permite Instagram; los más virales; 4 corridas a las 10, 14, 18 y 22, 3-3-3-2; si no hay
+de Chivilcoy y alrededores, provinciales o nacionales, también Córdoba, Santa Fe, Entre Ríos»). Medido ese día: en
+36 h, de 1.558 notas, 6 policiales del campo y NINGUNO con video propio; el editor eligió completar con «cualquier
+nota del campo con video». Entonces:
+- Horarios: AGRO_PRUEBA_TANDAS («10:00*3,14:00*3,18:00*3,22:00*2», cada AGRO_PRUEBA_PASO = 20 min). AGRO_VIRALES,
+  si está, manda (lista de horarios como antes).
+- Candidatas, en NIVELES: 1) policiales del campo, 2) virales del campo, 3) cualquier nota del campo. Dentro de cada
+  nivel, las MÁS COMPARTIDAS: cuántos portales cuentan el mismo hecho (nacionales/filtro.agrupar), de la zona de
+  Chivilcoy > provincia > Córdoba/Santa Fe/Entre Ríos > el resto, la sección virales y lo más nuevo.
+- Fuentes: los portales de nacionales, sus secciones de policiales, TN Campo y Clarín Rural, y los diarios de Santa
+  Fe, Entre Ríos y Córdoba con RSS (La Capital, Aire de Santa Fe, Uno Santa Fe, Uno Entre Ríos, Cba24n). Estos
+  últimos casi nunca traen video propio (YouTube, que desde la nube no se baja): sirven para encontrar el hecho y
+  contar la cobertura; el video sale del portal que lo tenga (se prueban las otras notas del mismo hecho).
 """
 from __future__ import annotations
 
@@ -23,7 +38,20 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 HORAS = 36
-REVISAR = 12
+REVISAR = 25          # candidatas que se abren buscando video (17/11: la mayoría no trae)
+TANDAS_DEFECTO = "10:00*3,14:00*3,18:00*3,22:00*2"
+PASO_DEFECTO = 20
+# Además de los portales de nacionales (categorias.bajar): (categoría, nombre, vía, url, extra) de nacionales/portales.
+REGIONALES = (
+    ("policiales", "La Capital", "rss", "https://www.lacapital.com.ar/rss/home.xml", {}),
+    ("policiales", "Aire de Santa Fe", "rss", "https://www.airedesantafe.com.ar/rss/policiales.xml", {}),
+    ("policiales", "Uno Santa Fe", "rss", "https://www.unosantafe.com.ar/rss/policiales.xml", {}),
+    ("policiales", "Uno Entre Ríos", "rss", "https://www.unoentrerios.com.ar/rss/policiales.xml", {}),
+    ("policiales", "Cba24n", "rss", "https://www.cba24n.com.ar/rss", {}),
+)
+REGION = re.compile(r"\b(cordob\w*|santa fe|santafesin\w*|rosario|rafaela|venado tuerto|reconquista|villa maria|"
+                    r"rio cuarto|san francisco|marcos juarez|entre rios|entrerrian\w*|parana|concordia|gualeguay\w*|"
+                    r"concepcion del uruguay|victoria|la pampa|pampean\w*)\b")
 # Lo del campo que se VE en un video: animales de granja, máquinas, gente de campo. En minúscula a propósito (se
 # busca sin pasar a minúscula): «Cordero» o «Toro» con mayúscula son apellidos o marcas. «Vaca Muerta» no.
 CAMPO_VIRAL = re.compile(
@@ -57,11 +85,7 @@ def es_viral_del_campo(nota: dict) -> bool:
     return bool(campo) and (nota.get("categoria") == "virales" or bool(VIRAL.search(texto)))
 
 
-def horas_virales() -> list:
-    import os
-    crudo = (os.environ.get("AGRO_VIRALES") or "12:15,20:45").strip()
-    if crudo.lower() in ("0", "no", "off"):
-        return []
+def _horas(crudo: str) -> list:
     salida = []
     for parte in crudo.split(","):
         h, _, m = parte.strip().partition(":")
@@ -70,23 +94,124 @@ def horas_virales() -> list:
                 salida.append((int(h), int(m or 0)))
         except ValueError:
             continue
+    return salida
+
+
+def horas_virales() -> list:
+    """Los horarios de los reels de prueba: AGRO_VIRALES (lista) si está; si no, las tandas de AGRO_PRUEBA_TANDAS
+    («10:00*3,…»: 3 reels desde las 10, uno cada AGRO_PRUEBA_PASO minutos)."""
+    import os
+    crudo = (os.environ.get("AGRO_VIRALES") or "").strip()
+    if crudo.lower() in ("0", "no", "off"):
+        return []
+    if crudo:
+        return sorted(set(_horas(crudo)))
+    try:
+        paso = max(5, int(os.environ.get("AGRO_PRUEBA_PASO") or PASO_DEFECTO))
+    except ValueError:
+        paso = PASO_DEFECTO
+    salida = []
+    for tanda in (os.environ.get("AGRO_PRUEBA_TANDAS") or TANDAS_DEFECTO).split(","):
+        hora, _, cuantos = tanda.strip().partition("*")
+        try:
+            n = max(1, int(cuantos or 1))
+        except ValueError:
+            n = 1
+        for h, m in _horas(hora)[:1]:
+            for k in range(n):
+                t = h * 60 + m + k * paso
+                if t < 24 * 60:
+                    salida.append((t // 60, t % 60))
     return sorted(set(salida))
 
 
+SECCIONES_FUERA = {"internacionales"}
+
+
+def nivel(nota: dict) -> int | None:
+    """0 = policial del campo, 1 = viral del campo, 2 = otra nota del campo; None = no es del campo."""
+    from agro import fuentes as FU
+    texto = f"{nota.get('titulo') or ''}. {nota.get('resumen') or ''}"
+    if re.search(NO_CAMPO, _sin_tildes(texto)):
+        return None
+    # 17/11: lo del exterior no es el campo de acá (la simulación trajo a Trump «sin rodeos», frigoríficos de
+    # Centroamérica, la aduana de Guatemala).
+    if (nota.get("categoria") or "") in SECCIONES_FUERA:
+        return None
+    if FU.es_policial_rural(texto):
+        return 0
+    if es_viral_del_campo(nota):
+        return 1
+    if FU.es_del_campo(texto):
+        return 2
+    return None
+
+
+def puntaje(nota: dict, cobertura: int, ts: float) -> int:
+    """Las más compartidas primero: portales que cuentan el hecho, cercanía (zona > provincia > Córdoba, Santa Fe,
+    Entre Ríos), la sección virales y lo más nuevo."""
+    from nacionales import prueba as NP
+    from nacionales import filtro as F
+    texto = F.norm(f"{nota.get('titulo') or ''} {nota.get('resumen') or ''}")
+    puntos = 10 * cobertura
+    if NP._zona_cerca().search(texto):
+        puntos += 30
+    elif NP.PROVINCIA.search(texto):
+        puntos += 15
+    elif REGION.search(_norm(texto)):
+        puntos += 10
+    if nota.get("categoria") == "virales":
+        puntos += 10
+    horas = max(0.0, (ts - (nota.get("fecha") or ts)) / 3600)
+    return puntos + max(0, 10 - round(horas))
+
+
+def _bajar_todo(log=print) -> list:
+    from nacionales import categorias as CAT
+    from nacionales import portales as PO
+    from nacionales import prueba as NP
+    notas, fallas, _ = CAT.bajar()
+    extra = tuple(NP.FUENTES_POLICIALES) + (("campo", "TN", "rss", PO.TN.format("campo"), {}),
+                                            ("campo", "Clarín", "rss", PO.CLARIN.format("rural"), {})) + REGIONALES
+    mas, fallas2, _ = PO.bajar(extra)
+    if fallas or fallas2:
+        log(f"   reels de prueba: no contestaron {len(fallas) + len(fallas2)} fuentes")
+    vistas, salida = set(), []
+    for n in notas + mas:
+        if n.get("url") and n["url"] not in vistas:
+            vistas.add(n["url"])
+            salida.append(n)
+    return salida
+
+
 def candidatas(ahora: datetime, notas=None, mem: dict = None, log=print) -> list:
-    """Las notas del campo de los portales de variedad, sin las ya publicadas: primero las de virales, después las
-    más nuevas."""
+    """Una por hecho, del campo, de las últimas HORAS y sin lo ya publicado (acá o en el feed): primero los policiales
+    del campo, después los virales del campo, después cualquier nota del campo; dentro de cada nivel, las más
+    compartidas. Cada una trae `otras_urls` (el mismo hecho en otros portales: ahí se busca el video si la elegida
+    no lo tiene)."""
+    from nacionales import filtro as F
+    from nacionales import prueba as NP
+    from nacionales import portales as PO
     if notas is None:
-        from nacionales import categorias as CAT
-        notas, fallas, _ = CAT.bajar()
-        if fallas:
-            log(f"   virales: no contestaron {len(fallas)} portales")
+        notas = _bajar_todo(log)
     mem = mem or {}
     vistas = set((mem.get("virales") or {})) | {p.get("url") for p in mem.get("elegidas") or []}
     ts = ahora.timestamp()
-    salida = [n for n in notas if n.get("url") and n["url"] not in vistas and n.get("titulo")
-              and (not n.get("fecha") or ts - n["fecha"] <= HORAS * 3600) and es_viral_del_campo(n)]
-    salida.sort(key=lambda n: (n.get("categoria") == "virales", n.get("fecha") or 0), reverse=True)
+    recientes = [n for n in notas if n.get("url") and n.get("titulo")
+                 and (not n.get("fecha") or ts - n["fecha"] <= HORAS * 3600)]
+    salida = []
+    for grupo in F.agrupar(recientes):
+        if any(n["url"] in vistas for n in grupo):
+            continue                                   # ese hecho ya salió
+        niveles = [nv for nv in (nivel(n) for n in grupo) if nv is not None]
+        if not niveles:
+            continue
+        mejor = max(grupo, key=lambda x: (nivel(x) is not None, NP.ORDEN_VIDEO.get(PO.fuente_de(x), 0),
+                                          x.get("categoria") == "virales", x.get("fecha") or 0))
+        otras = [x["url"] for x in grupo if x is not mejor]
+        salida.append(dict(mejor, nivel=min(niveles), cobertura=len(grupo), otras_urls=otras[:3],
+                           puntos=puntaje(mejor, len(grupo), ts)))
+    salida.sort(key=lambda c: (c["nivel"], -c["puntos"], -(c.get("fecha") or 0)))
     return salida
 
 
@@ -104,15 +229,20 @@ def elegir(cands: list, carpeta: Path, leer=None, bajar=None, log=print):
     for i, n in enumerate(cands[:REVISAR]):
         if COMP.de_la_nota(n):
             continue
-        try:
-            ficha = leer(n["url"]) or {}
-        except Exception:                                  # noqa: BLE001
-            continue
-        if not ficha.get("video") or COMP.de_la_nota({**n, "cuerpo": ficha.get("texto", "")}):
-            continue
-        clip = bajar(ficha["video"], carpeta / f"viral_{i:02d}_clip.mp4")
-        if clip:
-            return n, ficha, clip
+        # La nota y, si no trae video, la misma noticia en otro portal (17/11/2026).
+        for k, url in enumerate([n["url"]] + list(n.get("otras_urls") or [])[:2]):
+            try:
+                ficha = leer(url) or {}
+            except Exception:                              # noqa: BLE001
+                continue
+            if not ficha.get("video") or COMP.de_la_nota({**n, "url": url, "cuerpo": ficha.get("texto", "")}):
+                continue
+            clip = bajar(ficha["video"], carpeta / f"viral_{i:02d}_{k}_clip.mp4")
+            if clip:
+                if url != n["url"]:                      # el crédito es del portal que tiene el video
+                    n = dict(n, url=url, url_hecho=n["url"], fuente=PO.fuente_de({"url": url}),
+                             titulo=ficha.get("titulo") or n["titulo"], resumen=ficha.get("resumen") or n.get("resumen"))
+                return n, ficha, clip
     return None
 
 
@@ -188,8 +318,10 @@ def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpet
     conteos = {}
     log(f"[agro] VIRAL DEL CAMPO (reel de prueba) {'REAL' if publicar else 'SIMULADO'} {ahora:%d/%m %H:%M}")
     cands = candidatas(ahora, notas, mem, log)
-    conteos["Virales del campo encontrados"] = len(cands)
-    log(f"   {len(cands)} notas del campo en los portales")
+    conteos["Notas del campo encontradas"] = len(cands)
+    conteos["Policiales / virales / otras del campo"] = " / ".join(
+        str(sum(1 for c in cands if c.get("nivel", 1) == k)) for k in (0, 1, 2))
+    log(f"   {len(cands)} hechos del campo en los portales (policiales {sum(1 for c in cands if c.get('nivel', 1) == 0)})")
     elegida = elegir(cands, carpeta, leer, bajar, log) if cands else None
     entrada = {"bloque": "viral", "items": []}
     if not elegida:
@@ -215,6 +347,8 @@ def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpet
             log(f"   reel de prueba: {g['titular']} ({reel.get('duracion', 0):.0f} s)")
             (carpeta / "texto_viral.txt").write_text(caption, encoding="utf-8")
             mem.setdefault("virales", {})[n["url"]] = ahora.isoformat(timespec="minutes")
+            if n.get("url_hecho"):                     # el hecho, aunque el video haya salido de otro portal
+                mem["virales"][n["url_hecho"]] = ahora.isoformat(timespec="minutes")
             if publicar:
                 entrada["publicado"] = {"estado": "publicando"}
                 mem.setdefault("historias", {})[horario.isoformat()] = entrada
