@@ -95,7 +95,7 @@ def recrear(foto, destino: Path, contexto: str = "", pedir=None, variante: int =
     return {"motivo": f"Cloudflare (recrear): {ultimo}"}
 
 
-MIN_ANCHO = 900         # una foto más chica se ve borrosa a 1080 de ancho
+MIN_ANCHO = 720         # 17/11/2026: antes 900; la foto ORIGINAL vale más que una más nítida (pedido del editor)
 BANCO = Path(__file__).resolve().parent / "marca" / "banco"
 
 # Escenas sin nada que suela traer letras (máquinas de cerca, carteles, envases, edificios).

@@ -107,7 +107,10 @@ NO_VA = re.compile(r"slaughter|abattoir|kill|vegan|protest|cruelty|blood|acciden
 
 
 def activo() -> bool:
-    return (os.environ.get("AGRO_BANCO_VIDEO") or "1").strip() != "0"
+    """APAGADO desde el 17/11/2026 (pedido del editor: «poner siempre los videos y fotos originales de las notas
+    con cita, para no optar por las imágenes ilustrativas»): el turno de reel sin video de la nota sale con el
+    reel del clima o como carrusel con la foto original. AGRO_BANCO_VIDEO=1 lo vuelve a prender."""
+    return (os.environ.get("AGRO_BANCO_VIDEO") or "0").strip() != "0"
 
 
 def _norm(t: str) -> str:

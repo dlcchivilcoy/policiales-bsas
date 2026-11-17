@@ -17,6 +17,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 for k in ("AGRO_GRILLA", "AGRO_CLIMA_REEL", "AGRO_BANCO_VIDEO", "AGRO_AGENDA", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN"):
     os.environ.pop(k, None)
 os.environ["AGRO_SCORE_MIN"] = "60"
+from agro import banco_video as _BV0  # noqa: E402
+assert not _BV0.activo(), "el banco de video ilustrativo viene apagado (17/11)"
+os.environ["AGRO_BANCO_VIDEO"] = "1"     # las pruebas del banco, con el banco prendido
 
 from agro import agenda as AG  # noqa: E402
 from agro import banco_video as BV  # noqa: E402
@@ -86,7 +89,7 @@ chequear("elegir: si los del tema se usaron hace poco, pasa al tema siguiente",
 chequear("elegir: banco vacío → None", BV.elegir("trigo", "agro", {}, ahora, []) is None)
 os.environ["AGRO_BANCO_VIDEO"] = "0"
 chequear("AGRO_BANCO_VIDEO=0 lo apaga", BV.elegir("trigo", "agro", {}, ahora, indice) is None)
-os.environ.pop("AGRO_BANCO_VIDEO")
+os.environ["AGRO_BANCO_VIDEO"] = "1"
 chequear("el crédito: autor sin HTML, licencia y Commons",
          BV.credito(indice[2]) == "Juan Pérez · CC BY-SA 4.0 · Wikimedia Commons")
 g = PA.con_credito_ilustrativo({"descripcion": "Texto."}, indice[2])
