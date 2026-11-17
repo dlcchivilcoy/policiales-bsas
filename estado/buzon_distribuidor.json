@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T00:03:11.000Z",
+  "actualizado": "2026-11-17T00:32:57.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/348057-detenido-e-imputado-por-comercializar-sustancias-p",
@@ -211,6 +211,30 @@
       "volanta": "San Andrés de Giles",
       "categoria": "otro_policial",
       "distancia_km": 72.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadotv.com.ar/noticias/2026/11/16/27009-bragado-bajo-alerta-amarilla-por-tormentas-cuando-se-esperan-las-lluvias-mas-intensas",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-17T00:32:57.000Z",
+      "titulo": "Bragado bajo alerta amarilla por tormentas y posibles ráfagas intensas",
+      "descripcion": "Rige un aviso oficial para este lunes 16 y martes 17 de noviembre. Se prevén precipitaciones acumuladas de hasta 50 milímetros, actividad eléctrica y ocasional caída de granizo en la región.",
+      "texto_tiktok": "El partido de Bragado y gran parte de la provincia de Buenos Aires se encuentran bajo alerta meteorológica de nivel amarillo por tormentas fuertes.\n\nEl fenómeno rige entre el lunes 16 y el martes 17 de noviembre, impulsado por el avance de un frente frío que genera inestabilidad.\n\nSe esperan ráfagas intensas, actividad eléctrica, ocasional caída de granizo y acumulados de lluvia de hasta 50 milímetros.\n\nLas condiciones más críticas se concentran durante la tarde y la noche de este lunes.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Clima #AlertaMeteorologica #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-16_2135_10_bragado_bragado-bajo-alerta-amarilla-p.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-rige-una-alerta-amarilla-por-tormentas-y-pronostican-733174",
+      "youtube_url": "https://youtube.com/shorts/p6LU4p9V5qA",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Alerta meteorológica en Bragado",
+      "categoria": "alerta_meteorologica",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
