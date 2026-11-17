@@ -83463,7 +83463,7 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-17T18:07:39-03:00",
+  "actualizado": "2026-11-17T19:00:26-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -89161,6 +89161,43 @@
               },
               "facebook": {
                 "id": "4711880832375456"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-17T19:00:00-03:00": {
+      "dia": "2026-11-17",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué plaga te viene dando más trabajo en el lote?",
+          "opciones": [],
+          "publico": "agronomos",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18134814469818447"
+            },
+            "facebook": {
+              "id": "1157791270106589"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18134814469818447"
+              },
+              "facebook": {
+                "id": "1157791270106589"
               }
             }
           ]
