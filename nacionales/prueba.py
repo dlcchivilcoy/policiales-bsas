@@ -209,7 +209,30 @@ def publicar_prueba(pieza: dict, caption: str) -> dict:
     if subida.get("estado") != "ok":
         return subida
     res = PA._resultado(PA.publicar_reel_prueba_url, subida["video_url"], caption, subida.get("portada_url") or "")
-    return dict(subida, **res)
+    salida = dict(subida, **res)
+    if prueba_a_facebook():
+        salida["facebook"] = publicar_facebook(pieza, caption)
+    return salida
+
+
+def prueba_a_facebook() -> bool:
+    """17/11/2026 (pedido del editor: «los reels de prueba de Instagram, ¿se pueden compartir al mismo tiempo en
+    Facebook?»): cada reel de prueba sale también en la página de Facebook. Ahí es un reel NORMAL (Facebook no
+    tiene reels de prueba por la API): lo ven los seguidores de la página. NAC_PRUEBA_FB=0 lo apaga."""
+    return (os.environ.get("NAC_PRUEBA_FB") or "1").strip() != "0"
+
+
+def publicar_facebook(pieza: dict, caption: str, lugar=None, publicar_fn=None) -> dict:
+    """El mismo reel en la página de Facebook, con el texto de Instagram. Respeta el tope de reels de la página
+    en 24 h (el mismo que usa el publicador). Una falla de Facebook no toca lo de Instagram."""
+    lugar = (lugar or PUB._lugar_en_facebook)()
+    if lugar and lugar[0] >= lugar[1]:
+        return {"estado": "cupo", "detalle": f"la página ya tiene {lugar[0]} reels en 24 h (tope {lugar[1]})"}
+    mp4 = Path((pieza.get("video") or {}).get("archivo") or "")
+    if not mp4.is_file():
+        return {"estado": "fallo", "error": "no está el video"}
+    pieza_fb = dict(pieza, descripcion_tiktok=caption, formato="reel")
+    return PA._resultado(publicar_fn or PUB.publicar_facebook, pieza_fb, mp4, "")
 
 
 def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=None, ahora_fn=None,
@@ -306,7 +329,9 @@ def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=N
         informe["piezas"].append(registro)
         contadas.append({"titulo": pieza["guion"]["titular"], "tema": c.get("tema") or []})
         ultimo = ahora_fn()
-        print(f"  [{grupo}] {registro['titular'][:70]}: {res.get('estado')} {res.get('id') or res.get('error') or ''}",
+        fb = res.get("facebook") or {}
+        print(f"  [{grupo}] {registro['titular'][:70]}: {res.get('estado')} {res.get('id') or res.get('error') or ''}"
+              + (f" · Facebook: {fb.get('estado')} {fb.get('id') or fb.get('error') or fb.get('detalle') or ''}" if fb else ""),
               flush=True)
         if publicar:
             mem["piezas"][c["url"]] = registro

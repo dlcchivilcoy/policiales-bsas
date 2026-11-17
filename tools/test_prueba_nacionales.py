@@ -156,5 +156,25 @@ inf5 = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"vide
 chequear("si Instagram dice que llegó al tope de reels de prueba, la corrida para", len(llamadas) == 1)
 print("\n" + PR.resumen(inf)[:400])
 
+# ---- 17/11: el reel de prueba también sale en Facebook ----
+import tempfile as _tf  # noqa: E402
+from pathlib import Path  # noqa: E402
+_mp4 = Path(_tf.mkdtemp()) / "r.mp4"
+_mp4.write_bytes(b"x" * 10)
+_pz = {"video": {"archivo": str(_mp4), "duracion": 30}, "formato": "carrusel", "guion": {"titular": "T"}}
+_vistos = []
+r_fb = PR.publicar_facebook(_pz, "Texto IG", lugar=lambda: (5, 25),
+                            publicar_fn=lambda p, m, u: _vistos.append((p["descripcion_tiktok"], p["formato"], m)) or {"id": "9"})
+chequear("Facebook: sale como reel con el texto de Instagram", r_fb.get("estado") == "ok" and r_fb.get("id") == "9"
+         and _vistos == [("Texto IG", "reel", _mp4)])
+r_cupo = PR.publicar_facebook(_pz, "x", lugar=lambda: (25, 25), publicar_fn=lambda *a: _vistos.append(1))
+chequear("Facebook: con la página en el tope de 24 h no publica", r_cupo["estado"] == "cupo" and len(_vistos) == 1)
+r_err = PR.publicar_facebook(_pz, "x", lugar=lambda: None, publicar_fn=lambda *a: 1 / 0)
+chequear("Facebook: si falla queda anotado y no rompe", r_err["estado"] == "fallo")
+os.environ["NAC_PRUEBA_FB"] = "0"
+chequear("NAC_PRUEBA_FB=0 lo apaga", not PR.prueba_a_facebook())
+os.environ.pop("NAC_PRUEBA_FB")
+chequear("viene prendido", PR.prueba_a_facebook())
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
