@@ -6,6 +6,7 @@
 """
 import json
 import os
+import subprocess
 import sys
 import tempfile
 from datetime import datetime, timedelta, timezone
@@ -255,6 +256,30 @@ VI.pasada(True, ahora_v.replace(hour=20, minute=45), log=lambda m: None, carpeta
           leer=lambda u: {"video": "https://v.mp4"}, bajar=lambda u, d: Path(__file__), generar=gen, armar_reel=arm,
           publicador=lambda *a: subidos.append(1) or {})
 chequear("el mismo viral no sale dos veces", not subidos)
+
+# ---- 17/11: lo scrappeado sin imágenes IA; la nota con video usa un cuadro del video ----
+from agro import imagen as IMG
+_viejo = os.environ.pop("AGRO_IMAGEN_IA", None)
+chequear("la IA de las portadas viene APAGADA (AGRO_IMAGEN_IA vacío)", not IMG.ia_activa())
+os.environ["AGRO_IMAGEN_IA"] = "1"
+chequear("AGRO_IMAGEN_IA=1 la vuelve a prender", IMG.ia_activa())
+if _viejo is None:
+    os.environ.pop("AGRO_IMAGEN_IA", None)
+else:
+    os.environ["AGRO_IMAGEN_IA"] = _viejo
+r_sin = IMG.elegir({"id": "x", "tipo_fuente": "medio", "fuente": "TN"}, "https://foto.jpg", "una vaca",
+                   tmp / "sin_ia.jpg", generar=lambda *a, **k: {"archivo": "no"}, bajar=lambda u, d: False,
+                   mirar=lambda r: False, recrear_con=lambda *a, **k: {"archivo": "no"})
+chequear("sin foto original usable no se genera nada con IA", r_sin.get("origen") == "ninguna" and not r_sin.get("archivo"))
+vid = tmp / "prueba_cuadro.mp4"
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=size=640x360:rate=25", "-t", "10",
+                "-pix_fmt", "yuv420p", str(vid)], check=True)
+cu = PA._cuadro_del_video(vid, tmp / "cuadro.jpg", mirar=lambda r: False)
+chequear("la nota con video: la tapa es un cuadro del video", bool(cu) and Path(cu).is_file())
+vistos = []
+cu2 = PA._cuadro_del_video(vid, tmp / "cuadro2.jpg", mirar=lambda r: vistos.append(r) or len(vistos) < 3)
+chequear("si el cuadro tiene zócalo prueba otro momento", bool(cu2) and len(vistos) == 3)
+chequear("si todos tienen letras, ninguno", PA._cuadro_del_video(vid, tmp / "c3.jpg", mirar=lambda r: True) is None)
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

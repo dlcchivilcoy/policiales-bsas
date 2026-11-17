@@ -139,6 +139,7 @@ jobs:
           AGRO_VIDEO_REVISAR: ${{ vars.AGRO_VIDEO_REVISAR }}
           AGRO_VIRALES: ${{ vars.AGRO_VIRALES }}
           AGRO_INNOVACION_TOLERANCIA: ${{ vars.AGRO_INNOVACION_TOLERANCIA }}
+          AGRO_IMAGEN_IA: ${{ vars.AGRO_IMAGEN_IA }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
           TIPO_INPUT: ${{ github.event.inputs.tipo }}

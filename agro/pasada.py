@@ -491,6 +491,13 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
             carpeta.mkdir(parents=True, exist_ok=True)
             imagen_previa = IMG.elegir(rep, completo.get("imagen", ""), "", base_previa.with_name(
                 base_previa.name + "_imagen.jpg"), subtema=s.get("subtema", ""))
+            if not imagen_previa.get("archivo") and c.get("clip") and Path(c["clip"]).is_file():
+                # 17/11/2026: la nota que trae SU video no se pierde por la foto: la tapa es un cuadro del video.
+                cuadro = _cuadro_del_video(Path(c["clip"]), base_previa.with_name(base_previa.name + "_cuadro.jpg"))
+                if cuadro:
+                    imagen_previa = {"archivo": str(cuadro), "origen": "fuente", "credito": rep.get("fuente", ""),
+                                     "url_original": imagen_previa.get("url_original", ""),
+                                     "motivo": f"cuadro del video de la nota ({imagen_previa.get('motivo')})"}
             if not imagen_previa.get("archivo"):
                 descartar(rep, imagen_previa.get("motivo") or "sin foto real", s)
                 reponer("sin foto real")
@@ -715,6 +722,24 @@ def video_ilustrativo(g: dict, rep: dict, s: dict, mem: dict, ahora: datetime, b
         return None
     log(f"   sin video propio: va el ilustrativo {video['archivo']} ({video.get('tag')}: {video.get('describe', '')[:60]})")
     return clip, video
+
+
+def _cuadro_del_video(clip: Path, destino: Path, mirar=None):
+    """Un cuadro del video de la nota sin letras (zócalos, placas) para la tapa, o None. Prueba tres momentos."""
+    import subprocess
+    if mirar is None:
+        from archivo import imagen as IM
+        mirar = IM.tiene_texto
+    for i, seg in enumerate((1.5, 4, 8)):
+        sal = destino.with_name(f"{destino.stem}_{i}.jpg")
+        try:
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(seg), "-i", str(clip), "-frames:v", "1",
+                            "-q:v", "2", str(sal)], check=True, capture_output=True, timeout=60)
+        except Exception:                                  # noqa: BLE001
+            continue
+        if sal.is_file() and sal.stat().st_size > 5000 and not mirar(str(sal)):
+            return sal
+    return None
 
 
 def con_credito_ilustrativo(g: dict, video: dict) -> dict:

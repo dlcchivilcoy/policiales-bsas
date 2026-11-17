@@ -127,8 +127,10 @@ ESTILO = (" Realistic modern editorial photograph for an agribusiness and agtech
 
 
 def ia_activa() -> bool:
-    """La IA como respaldo de la foto original (prendida; AGRO_IMAGEN_IA=0 la apaga)."""
-    return (os.environ.get("AGRO_IMAGEN_IA") or "1").strip() != "0"
+    """La IA como respaldo de la foto original. APAGADA desde el 17/11/2026 (pedido del editor: «lo que es
+    carruseles scrappeados que vaya con foto/video original»): sin foto real, la nota no sale y entra otra.
+    AGRO_IMAGEN_IA=1 la vuelve a prender. Las historias para participar no pasan por acá: siguen con IA."""
+    return (os.environ.get("AGRO_IMAGEN_IA") or "0").strip() != "0"
 
 
 def foto_original(rep: dict, url: str, destino: Path, bajar, mirar) -> dict:
