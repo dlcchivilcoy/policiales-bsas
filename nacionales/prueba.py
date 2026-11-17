@@ -47,6 +47,10 @@ GRUPOS = {
     "policiales": ("NAC_PRUEBA_POLICIALES_HORA", "20:00", "21:55"),
 }
 CUANTOS_DEFAULT = 5
+# 17/11/2026 (pedido del editor: «agregá el que falta del que encuentre»): 11 por día entre los dos grupos. Los
+# policiales van después de los virales y completan lo que falta (5 base, hasta 3 más). NAC_PRUEBA_TOTAL=0 apaga.
+TOTAL_DIA_DEFAULT = 11
+EXTRA_MAX = 3
 PASO_MIN_DEFAULT = 25
 PASO_MIN_TARDE = 10           # si la corrida arrancó tarde, lo mínimo entre dos reels
 INTENTOS_MAX = 40             # notas que se miran como mucho (cada una lee su página; la IA, solo con video)
@@ -88,6 +92,18 @@ def cuantos() -> int:
     return _entero("NAC_PRUEBA_CUANTOS", CUANTOS_DEFAULT)
 
 
+def total_dia() -> int:
+    return _entero("NAC_PRUEBA_TOTAL", TOTAL_DIA_DEFAULT)
+
+
+def cuantos_de(grupo: str, mem: dict, dia: str) -> int:
+    """Cuántos le tocan hoy al grupo: los policiales completan el total del día con lo que no encontraron los virales."""
+    base = cuantos()
+    if grupo != "policiales" or not total_dia():
+        return base
+    return max(base, min(base + EXTRA_MAX, total_dia() - hechos_hoy(mem, "virales", dia)))
+
+
 def paso_min() -> int:
     return max(PASO_MIN_TARDE, _entero("NAC_PRUEBA_PASO_MIN", PASO_MIN_DEFAULT))
 
@@ -96,21 +112,21 @@ def _a_las(dia, hhmm: str) -> datetime:
     return datetime.combine(dia, datetime.strptime(hhmm, "%H:%M").time(), TZ_AR)
 
 
-def franja(grupo: str, dia) -> tuple:
-    """(primer turno, fin de la franja) de ese día."""
+def franja(grupo: str, dia, total: int | None = None) -> tuple:
+    """(primer turno, fin de la franja) de ese día. La franja se estira si al grupo le tocan más de los de fábrica."""
     var, fabrica, fin = GRUPOS[grupo]
     hhmm = (os.environ.get(var) or "").strip() or fabrica
     try:
         primero = _a_las(dia, hhmm)
     except ValueError:
         primero = _a_las(dia, fabrica)
-    return primero, max(_a_las(dia, fin), primero + timedelta(minutes=paso_min() * (cuantos() - 1) + 5))
+    return primero, max(_a_las(dia, fin), primero + timedelta(minutes=paso_min() * ((total or cuantos()) - 1) + 5))
 
 
-def turnos(grupo: str, ahora: datetime, n: int) -> list:
+def turnos(grupo: str, ahora: datetime, n: int, total: int | None = None) -> list:
     """Los `n` turnos que todavía entran en la franja: cada `paso_min()` desde el primero; los que ya pasaron
     se corren a partir de ahora, con PASO_MIN_TARDE entre uno y otro."""
-    primero, fin = franja(grupo, ahora.date())
+    primero, fin = franja(grupo, ahora.date(), total)
     salida, previo = [], None
     for k in range(n):
         t = primero + timedelta(minutes=paso_min() * k)
@@ -245,8 +261,9 @@ def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=N
     informe = {"modo": f"prueba_{grupo}", "cuando": ahora.isoformat(timespec="seconds"), "publicar": publicar,
                "piezas": [], "descartadas": [], "fallas": [], "avisos": []}
     mem = PA.cargar()
-    faltan = cuantos() - hechos_hoy(mem, grupo, dia)
-    plan = turnos(grupo, ahora, max(0, faltan))
+    total = cuantos_de(grupo, mem, dia)
+    faltan = total - hechos_hoy(mem, grupo, dia)
+    plan = turnos(grupo, ahora, max(0, faltan), total)
     informe["turnos"] = [t.strftime("%H:%M") for t in plan]
     if not plan:
         informe["estado"] = "nada" if faltan <= 0 else "fuera_de_hora"
@@ -311,7 +328,7 @@ def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=N
         if espera > 0 and (publicar or dormir is not PA._dormir):     # simulando, no se espera de verdad
             print(f"  esperando {espera / 60:.1f} min al turno de las {objetivo:%H:%M}…", flush=True)
             dormir(espera)
-        if publicar and ahora_fn() > franja(grupo, ahora.date())[1]:
+        if publicar and ahora_fn() > franja(grupo, ahora.date(), total)[1]:
             informe["avisos"].append("se terminó la franja")
             break
         caption = PA.caption_instagram(pieza["guion"])

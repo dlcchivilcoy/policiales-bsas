@@ -48,6 +48,10 @@ REGIONALES = (
     ("policiales", "Uno Santa Fe", "rss", "https://www.unosantafe.com.ar/rss/policiales.xml", {}),
     ("policiales", "Uno Entre Ríos", "rss", "https://www.unoentrerios.com.ar/rss/policiales.xml", {}),
     ("policiales", "Cba24n", "rss", "https://www.cba24n.com.ar/rss", {}),
+    # 17/11 (los que muestra Google para «diario córdoba»): La Voz y La Nueva Mañana bloquean a los lectores
+    # automáticos (403); Diario Córdoba es de España.
+    ("policiales", "Hoy Día Córdoba", "rss", "https://hoydia.com.ar/feed", {}),
+    ("policiales", "El Diario del centro del país", "rss", "https://www.eldiariocba.com.ar/feeds/rss", {}),
 )
 REGION = re.compile(r"\b(cordob\w*|santa fe|santafesin\w*|rosario|rafaela|venado tuerto|reconquista|villa maria|"
                     r"rio cuarto|san francisco|marcos juarez|entre rios|entrerrian\w*|parana|concordia|gualeguay\w*|"

@@ -104,6 +104,7 @@ jobs:
           NAC_PRUEBA_CUANTOS: ${{ vars.NAC_PRUEBA_CUANTOS }}
           NAC_PRUEBA_FB: ${{ vars.NAC_PRUEBA_FB }}
           NAC_PRUEBA_PASO_MIN: ${{ vars.NAC_PRUEBA_PASO_MIN }}
+          NAC_PRUEBA_TOTAL: ${{ vars.NAC_PRUEBA_TOTAL }}
           NAC_PRUEBA_VIRALES_HORA: ${{ vars.NAC_PRUEBA_VIRALES_HORA }}
           NAC_PRUEBA_POLICIALES_HORA: ${{ vars.NAC_PRUEBA_POLICIALES_HORA }}
           IG_PRUEBA_POR_DIA: ${{ vars.IG_PRUEBA_POR_DIA }}

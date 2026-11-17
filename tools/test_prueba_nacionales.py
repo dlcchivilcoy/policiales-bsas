@@ -42,6 +42,19 @@ chequear("si arranca tarde (18:30), se corren los turnos con 10 min como mínimo
          hh(PR.turnos("virales", a("18:30"), 5)) == ["18:30", "18:40", "18:50", "19:15", "19:40"])
 chequear("si ya salieron 3 hoy, quedan 2 turnos", len(PR.turnos("virales", a("17:35"), 2)) == 2)
 chequear("pasada la franja, no hay turnos", PR.turnos("virales", a("20:05"), 5) == [])
+# 17/11: 11 por día; los policiales completan lo que no encontraron los virales
+_dia = DIA.isoformat()
+_mem_v = lambda n: {"piezas": {f"v{i}": {"prueba": "virales", "dia": _dia, "ig_prueba": {"estado": "ok"}}  # noqa: E731
+                               for i in range(n)}}
+chequear("11 por día: con 5 virales, los policiales hacen 6", PR.cuantos_de("policiales", _mem_v(5), _dia) == 6)
+chequear("si los virales encontraron 3, los policiales intentan 8",
+         PR.cuantos_de("policiales", _mem_v(3), _dia) == 8)
+chequear("los virales siguen en 5", PR.cuantos_de("virales", _mem_v(0), _dia) == 5)
+chequear("el sexto policial entra en la franja (22:05)",
+         hh(PR.turnos("policiales", a("19:45"), 6, 6)) == ["20:00", "20:25", "20:50", "21:15", "21:40", "22:05"])
+os.environ["NAC_PRUEBA_TOTAL"] = "0"
+chequear("NAC_PRUEBA_TOTAL=0: 5 y 5 como antes", PR.cuantos_de("policiales", _mem_v(5), _dia) == 5)
+os.environ.pop("NAC_PRUEBA_TOTAL")
 
 # --- las candidatas de policiales -----------------------------------------------------------------------
 ts = a("19:45").timestamp()
@@ -115,6 +128,7 @@ class Guardia:
         return True
 
 
+os.environ["NAC_PRUEBA_TOTAL"] = "0"       # este bloque prueba la corrida con los 5 de fábrica
 g = Guardia()
 inf = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"video": "x" if u in con_video else ""},
                  ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso, guardia=g)
@@ -129,6 +143,7 @@ publicados.clear()
 inf2 = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"video": "x"},
                   ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso, guardia=Guardia())
 chequear("si ya salieron las 5 del día, la segunda corrida no hace nada", inf2["estado"] == "nada" and not publicados)
+os.environ.pop("NAC_PRUEBA_TOTAL")
 mem["piezas"].clear()
 inf3 = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"video": "x"},
                   ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso, guardia=g)
