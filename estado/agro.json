@@ -39220,6 +39220,66 @@
         70,
         50
       ]
+    },
+    "ac4e456f44d1cc3f": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "harina de soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un dato de mercado internacional que afecta los precios locales, pero no tiene una historia local ni cercana.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dda7ac378ef65685": {
+      "conversacion": 2,
+      "historia_concreta": 1,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 21,
+      "commercial_score": 20,
+      "subtema": "empresas",
+      "tema": "inversiones agro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una charla teórica sobre inversiones millonarias que no le cambia el día a día al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4ad38ca216b4bbd6": {
+      "conversacion": 4,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "centro de ensayos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Inauguración de un centro importante, pero al no detallar la ubicación exacta en la provincia pierde cercanía directa.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -41945,7 +42005,10 @@
       "https://bichosdecampo.com/jujuy-todavia-esta-descubriendo-su-identidad-vitivinicola-dos-jovenes-agronomos-crearon-la-primera-bodega-urbana-en-la-capital-y-acaban-de-lanzar-los-primeros-espumantes-en-la-historia-de": "2026-11-16",
       "https://bichosdecampo.com/el-trigo-argentino-puede-subir-25-us-tonelada-mas-y-seguir-siendo-competitivo-en-brasil-por-la-catastrofe-productiva-registrada-en-ese-pais": "2026-11-16",
       "https://lanacion.com.ar/economia/campo/quien-lo-fundo-el-pueblo-que-nacio-en-500-hectareas-y-lleva-un-novillo-en-su-bandera-nid16112026": "2026-11-16",
-      "https://chacabucoenred.com/un-empresario-vinculado-a-chacabuco-compro-10-000-hectareas-en-una-region-del-pais-con-gran-potencial": "2026-11-16"
+      "https://chacabucoenred.com/un-empresario-vinculado-a-chacabuco-compro-10-000-hectareas-en-una-region-del-pais-con-gran-potencial": "2026-11-16",
+      "https://bichosdecampo.com/se-cae-todo-como-un-piano-salvo-los-precios-de-la-harina-de-soja-a-causa-de-la-desesperacion-de-los-europeos": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/que-hacer-con-us50-millones-empresarios-del-agro-respondieron-como-invertirian-ese-dinero-nid16112026": "2026-11-16",
+      "https://lanacion.com.ar/economia/campo/invirtio-mas-de-us5-millones-una-empresa-inaugura-un-centro-con-80-hectareas-para-ensayos-agricolas-nid16112026": "2026-11-16"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -44669,7 +44732,10 @@
       "jujuy todavia esta descubriendo su identidad vitivinicola dos jovenes agronomos crearon la primera bodega urbana en la capital y acaban de lanzar los primeros espumantes en la historia de la provincia": "2026-11-16",
       "el trigo argentino puede subir 25 u s tonelada mas y seguir siendo competitivo en brasil por la catastrofe productiva registrada en ese pais": "2026-11-16",
       "quien lo fundo el pueblo que nacio en 500 hectareas y lleva un novillo en su bandera": "2026-11-16",
-      "un empresario vinculado a chacabuco compro 10 000 hectareas en una region del pais con gran potencial": "2026-11-16"
+      "un empresario vinculado a chacabuco compro 10 000 hectareas en una region del pais con gran potencial": "2026-11-16",
+      "se cae todo como un piano salvo los precios de la harina de soja a causa de la desesperacion de los europeos": "2026-11-16",
+      "que hacer con us 50 millones empresarios del agro respondieron como invertirian ese dinero": "2026-11-16",
+      "invirtio mas de us 5 millones una empresa inaugura un centro con 80 hectareas para ensayos agricolas": "2026-11-16"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -47393,7 +47459,10 @@
       "32317cd1a274bdf6": "2026-11-16",
       "1f88cc91a20c5b61": "2026-11-16",
       "929f83f5fb09e5bf": "2026-11-16",
-      "39f39ca93cb0937d": "2026-11-16"
+      "39f39ca93cb0937d": "2026-11-16",
+      "ac4e456f44d1cc3f": "2026-11-16",
+      "dda7ac378ef65685": "2026-11-16",
+      "4ad38ca216b4bbd6": "2026-11-16"
     }
   },
   "elegidas": [
@@ -79151,6 +79220,60 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d123554c4dc1_portada.jpg"
+    },
+    {
+      "id": "e91acf2e8147",
+      "cuando": "2026-11-16T21:00-03:00",
+      "titulo_original": "Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos",
+      "descripcion": "Una investigación del INTA Rafaela-CONICET encontró que el diagnóstico microbiológico mediante cultivo en tambo permite reducir las aplicaciones de antibióticos en casos de mastitis clínica leve y moderada. Se trata de información clave para mejorar la prevención y el tratamiento de una enfermedad q",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos/",
+      "titular": "Mastitis bovina: el diagnóstico reduce el uso de antibióticos",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 16,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 77,
+        "commercial_score": 65,
+        "subtema": "ganaderia",
+        "tema": "mastitis bovina",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-16T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "41c9a58b-5f6c-4f88-9241-47e6c41cde34",
+          "slug": "mastitis-bovina-el-diagnostico-en-tambos-reduce-hasta-un-50-los-8e1354",
+          "url": "https://www.diariolacampaña.com.ar/n/mastitis-bovina-el-diagnostico-en-tambos-reduce-hasta-un-50-los-8e1354",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18497636344110893",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1763490532448610",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e91acf2e8147_portada.jpg"
     }
   ],
   "pendientes": [
@@ -79288,71 +79411,6 @@
         "con_video": true
       },
       "cuando": "2026-11-16T18:00-03:00"
-    },
-    {
-      "id": "e91acf2e8147",
-      "rep": {
-        "id": "e91acf2e8147",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos/",
-        "canonical_url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos",
-        "titulo": "Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos",
-        "titulo_norm": "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos",
-        "descripcion": "Una investigación del INTA Rafaela-CONICET encontró que el diagnóstico microbiológico mediante cultivo en tambo permite reducir las aplicaciones de antibióticos en casos de mastitis clínica leve y moderada. Se trata de información clave para mejorar la prevención y el tratamiento de una enfermedad que afecta la producción, la calidad de la leche y los costos de los establecimientos. La entrada Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos se publicó primero en INTA Informa.",
-        "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/mastitis-bovina-2.jpg",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-11-16T12:00-03:00",
-        "capturado": "2026-11-16T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "406b6e45f8889a7c",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "e91acf2e8147",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos/",
-          "canonical_url": "https://intainforma.inta.gob.ar/mastitis-bovina-el-diagnostico-reduce-hasta-un-50-el-uso-de-antibioticos",
-          "titulo": "Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos",
-          "titulo_norm": "mastitis bovina el diagnostico reduce hasta un 50 el uso de antibioticos",
-          "descripcion": "Una investigación del INTA Rafaela-CONICET encontró que el diagnóstico microbiológico mediante cultivo en tambo permite reducir las aplicaciones de antibióticos en casos de mastitis clínica leve y moderada. Se trata de información clave para mejorar la prevención y el tratamiento de una enfermedad que afecta la producción, la calidad de la leche y los costos de los establecimientos. La entrada Mastitis bovina: el diagnóstico reduce hasta un 50 % el uso de antibióticos se publicó primero en INTA Informa.",
-          "imagen_url": "https://intainforma.inta.gob.ar/wp-content/uploads/2026/11/mastitis-bovina-2.jpg",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-11-16T12:00-03:00",
-          "capturado": "2026-11-16T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "406b6e45f8889a7c",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 77,
-        "commercial_score": 65,
-        "subtema": "ganaderia",
-        "tema": "mastitis bovina",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false
-      },
-      "cuando": "2026-11-16T16:00-03:00"
     },
     {
       "id": "748458bf15eb",
@@ -79554,8 +79612,8 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-16T19:35:14-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-16T21:06:01-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
