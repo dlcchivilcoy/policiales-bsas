@@ -89,6 +89,32 @@ FUENTES = [
      "patron": r"bcr\.com\.ar/es/mercados/(investigacion-y-desarrollo/informativo-semanal/"
                r"noticias-informativo-semanal|gea/seguimiento-de-cultivos/informe-semanal-zona-nucleo)/[\w-]+$",
      "horas": 168, "foto": False, "tipo": "oficial", "activa": True},
+    # 16/11/2026 (pedido del editor: «priorizá encontrar noticias con videos para armar reels; buscá también
+    # tecnología aplicada al agro, maquinarias u otro rubro ligado al campo»). Sondeo de ese día: casi todos los
+    # medios de campo suben sus videos a YouTube (Clarín Rural, Agrofy, EFE Agro, Maquinac, Agriland), que desde la
+    # nube no se baja; TN aloja los suyos (se leen con nacionales/portales, como en nacionales). Se suman igual: más
+    # noticias de campo, maquinaria y tecnología para los reels (con el video de la nota o con uno ilustrativo,
+    # agro/banco_video.py). Descartados: Canal Rural (no contesta), Successful Farming, AgWeb, Farmers Weekly y
+    # Agromaquinaria (403), La Voz Agro (403), EFE Agro (casi todo de España).
+    {"nombre": "Clarín Rural", "base": "https://www.clarin.com", "rss": ["https://www.clarin.com/rss/rural/"],
+     "tipo": "medio", "activa": True},
+    {"nombre": "TN Campo", "base": "https://tn.com.ar",
+     "rss": ["https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml"], "tipo": "medio", "activa": True},
+    {"nombre": "Agrofy News", "base": "https://news.agrofy.com.ar", "rss": ["https://news.agrofy.com.ar/rss.xml"],
+     "tipo": "medio", "activa": True},
+    {"nombre": "Maquinac", "base": "https://www.maquinac.com", "rss": ["https://www.maquinac.com/feed/"],
+     "tipo": "medio", "activa": True},
+    # 16/11/2026 (pedido del editor: «priorizá videos que tengan que ver con policiales en el campo»): las secciones
+    # de policiales de los portales que más seguido alojan su propio video (las mismas de nacionales/prueba.py), solo
+    # lo que es del campo (abigeato, robos en campos, silobolsas, incendios rurales, accidentes con maquinaria).
+    {"nombre": "TN Policiales", "base": "https://tn.com.ar",
+     "rss": ["https://tn.com.ar/arc/outboundfeeds/rss/category/policiales/?outputType=xml"], "tipo": "medio",
+     "solo_campo": True, "policial": True, "activa": True},
+    {"nombre": "Infobae Policiales", "base": "https://www.infobae.com",
+     "rss": ["https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/policiales/?outputType=xml"],
+     "tipo": "medio", "solo_campo": True, "policial": True, "activa": True},
+    {"nombre": "Clarín Policiales", "base": "https://www.clarin.com", "rss": ["https://www.clarin.com/rss/policiales/"],
+     "tipo": "medio", "solo_campo": True, "policial": True, "activa": True},
 ]
 
 
@@ -100,7 +126,21 @@ ZONA = ("25 de Mayo", "9 de Julio", "Alberti", "Bolivar", "Bragado", "Carlos Cas
         "General Arenales", "General Viamonte", "Junin", "Las Flores", "Lincoln", "Lobos", "Mercedes", "Navarro",
         "Pehuajo", "Rojas", "Roque Perez", "Saladillo", "Salto", "San Andres de Giles", "Suipacha")
 # Además de las palabras firmes del campo de reels/colab_agro.py. «hacienda» no: también es la Secretaría de Hacienda.
-MAS_CAMPO = ("granizo", "ganado", "novillo-", "ternero-", "productores rurales", "productor rural", "cuatrerismo")
+MAS_CAMPO = ("granizo", "ganado", "novillo-", "ternero-", "productores rurales", "productor rural", "cuatrerismo",
+             # 16/11/2026: los policiales del campo
+             "faena clandestina", "robo de hacienda", "robo de ganado", "vacas robadas", "zona rural", "establecimiento rural",
+             "campo de la zona", "maquinaria agricola", "tractor-", "quema de pastizales", "incendio rural", "cuatrero-")
+
+# Lo policial (delito, incendio, accidente) — con una palabra del campo, la nota es un POLICIAL DEL CAMPO.
+POLICIAL = re.compile(r"\b(rob[oóa]\w*|hurt\w*|delincuent\w*|ladr[oó]n\w*|detenid\w*|deten[ce]\w*|allanamient\w*|"
+                      r"abigeato|cuatrer\w*|faena clandestina|estaf\w*|incendi\w*|fuego|choque|choc[oó]|vuelc\w*|volc[oó]|"
+                      r"accident\w*|muri[oó]|muert[eo]\w*|homicid\w*|asesin\w*|secuestr\w*|baleado|disparo\w*|"
+                      r"usurpaci[oó]n|intrus\w*|polic[ií]a\w*)\b", re.I)
+
+
+def es_policial_rural(texto: str) -> bool:
+    """¿Es un policial del campo? Un delito, un incendio o un accidente, en una nota del campo."""
+    return bool(POLICIAL.search(texto or "")) and es_del_campo(texto)
 
 
 def medios_zona_activos() -> bool:

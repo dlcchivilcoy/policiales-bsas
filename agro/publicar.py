@@ -116,6 +116,7 @@ def publicar(pieza: dict, ya: dict = None, redes=REDES, log=print) -> dict:
     # La portada (imagen + texto SEO, agro/portada.py) se sube PRIMERO: es la miniatura del reel en
     # Instagram (cover_url) y en Facebook, y la «novedad» de las historias.
     portada_url = _subir_portada(pieza)
+    redes = tuple(pieza.get("redes") or redes)         # el reel del clima: solo Facebook e Instagram
     if pieza.get("formato") == "carrusel":
         salida = publicar_carrusel(pieza, ya, log=log)
     else:

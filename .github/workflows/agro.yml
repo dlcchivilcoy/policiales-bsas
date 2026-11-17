@@ -131,6 +131,14 @@ jobs:
           AGRO_UN_SITIO_POR_CORRIDA: ${{ vars.AGRO_UN_SITIO_POR_CORRIDA }}
           AGRO_REVISION_SENSIBLE: ${{ vars.AGRO_REVISION_SENSIBLE }}
           AGRO_SCORE_MIN: ${{ vars.AGRO_SCORE_MIN }}
+          # 16/11/2026: grilla reel/carrusel, reel del clima y videos ilustrativos ("0" apaga cada uno).
+          AGRO_GRILLA: ${{ vars.AGRO_GRILLA }}
+          AGRO_CLIMA_REEL: ${{ vars.AGRO_CLIMA_REEL }}
+          AGRO_BANCO_VIDEO: ${{ vars.AGRO_BANCO_VIDEO }}
+          AGRO_VIDEO_TOLERANCIA: ${{ vars.AGRO_VIDEO_TOLERANCIA }}
+          AGRO_VIDEO_REVISAR: ${{ vars.AGRO_VIDEO_REVISAR }}
+          AGRO_VIRALES: ${{ vars.AGRO_VIRALES }}
+          AGRO_INNOVACION_TOLERANCIA: ${{ vars.AGRO_INNOVACION_TOLERANCIA }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
           TIPO_INPUT: ${{ github.event.inputs.tipo }}

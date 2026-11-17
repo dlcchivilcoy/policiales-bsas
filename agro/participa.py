@@ -28,6 +28,7 @@ MAX_OPCION = 16
 RECORDAR = 40                  # no repetir las preguntas de los últimos 10 días
 INVITACION = "Respondé esta historia con tu foto o tu dato, y contanos de qué pueblo sos"
 AVISO_IA = "Imagen ilustrativa generada con IA"
+INVITACION_VIDEO = "¿Tenés un video de tu campo? Mandalo por WhatsApp al 2346-533450"
 # La IA dibuja tractores verdes y amarillos que parecen de una marca real (simulación del 07/11/2026).
 SIN_MARCAS = ("Any machinery or vehicle must appear only as a tiny dark silhouette far away on the horizon, never close up, "
               "never green and yellow. No logos, no brands, no letters.")
@@ -321,13 +322,18 @@ def placa(pregunta: str, fondo: str, destino: Path, etiqueta: str = "PARTICIPÁ"
     fi, ri = D.ajustar(d, invitacion(opciones), "medium", 44, 34, ancho, 3)
     fa = D.fuente("regular", 26)
     fc = D.fuente("bold", 34)
-    alto = 58 + 26 + round(len(rp) * fp.size * 1.14) + 34 + round(len(ri) * fi.size * 1.24) + 34 + 34
+    # 16/11/2026: la invitación a mandar VIDEOS al WhatsApp del bot: lo que llega ahí sale como reel (y si es del
+    # campo, en colaboración con @diarioyradioagro). Las respuestas a la historia no las lee ningún sistema.
+    fw, rw = D.ajustar(d, INVITACION_VIDEO, "bold", 40, 32, ancho, 2)
+    alto = (58 + 26 + round(len(rp) * fp.size * 1.14) + 34 + round(len(ri) * fi.size * 1.24) + 26
+            + round(len(rw) * fw.size * 1.22) + 34 + 34)
     y = HI.SEGURA[1] - alto
     d.rectangle((D.X, y, D.X + d.textlength(etiqueta, font=fc) + 36, y + 58), fill=D.NARANJA_CAJA)
     d.text((D.X + 18, y + 10), etiqueta, font=fc, fill=D.BLANCO)
     y += 58 + 26
     y = D.escribir(d, D.X, y, rp, fp, D.BLANCO, 1.14) + 34
-    y = D.escribir(d, D.X, y, ri, fi, (232, 235, 240), 1.24) + 34
+    y = D.escribir(d, D.X, y, ri, fi, (232, 235, 240), 1.24) + 26
+    y = D.escribir(d, D.X, y, rw, fw, D.NARANJA, 1.22) + 34
     d.text((D.X, y), AVISO_IA, font=fa, fill=(190, 195, 202))
     destino = Path(destino)
     destino.parent.mkdir(parents=True, exist_ok=True)

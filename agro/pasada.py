@@ -35,6 +35,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import entorno  # noqa: E402
 from agro import agenda as AG  # noqa: E402
+from agro import banco_video as BV  # noqa: E402
 from agro import captura as CA  # noqa: E402
 from agro import dedup as DD  # noqa: E402
 from agro import diseno as DIS  # noqa: E402
@@ -43,6 +44,7 @@ from agro import guion as GU  # noqa: E402
 from agro import imagen as IMG  # noqa: E402
 from agro import informe as INF  # noqa: E402
 from agro import portada as POR  # noqa: E402
+from agro import reel_clima as RC  # noqa: E402
 from agro import scoring as SC  # noqa: E402
 from agro import seleccion as SE  # noqa: E402
 from reels import web as WEB  # noqa: E402
@@ -273,6 +275,10 @@ def _un_turno(publicar: bool, tipo: str, horario: datetime, ahora: datetime, car
         from agro import reel_datos as RD
         return RD.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), publicador=publicador,
                          carpeta=carpeta, ahora=ahora)
+    if tipo == "viral":
+        from agro import virales as VI
+        # El publicador de las piezas no sirve acá: el viral va como reel de PRUEBA (VI.publicar_prueba).
+        return VI.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), carpeta=carpeta, ahora=ahora)
     if tipo == "participa":
         from agro import participa as PT
         return PT.pasada(publicar=publicar, horario=horario, log=_con_reloj(log), publicador=publicador,
@@ -341,7 +347,7 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     limite = (ahora - timedelta(days=DIAS_REPETIDA)).isoformat()
     previas = [{"id": p["id"], "titulo": p["titulo_original"], "descripcion": p.get("descripcion", ""),
                 "fuente": p.get("fuente", ""), "url": p.get("url", "")}
-               for p in mem.get("elegidas", []) if p.get("cuando", "") >= limite]
+               for p in mem.get("elegidas", []) if p.get("cuando", "") >= limite and p.get("formato") != "clima"]
     # Las pendientes (buenas que no entraron en una corrida anterior) también cuentan: si una nueva
     # cuenta lo mismo, ya está representada y espera su turno.
     lim_pend = (ahora - timedelta(hours=PENDIENTE_HORAS)).isoformat()
@@ -382,7 +388,10 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                 mem["indice"]["titulo"].pop(n["titulo_norm"], None)
                 mem["indice"]["hash"].pop(n["hash"], None)
             continue
-        candidatos.append({"id": r["id"], "rep": r, "grupo": g, "score": dict(s, de_zona=FU.nombra_la_zona(f"{r['titulo']}. {r.get('descripcion') or ''}")),
+        texto_r = f"{r['titulo']}. {r.get('descripcion') or ''}"
+        candidatos.append({"id": r["id"], "rep": r, "grupo": g,
+                           "score": dict(s, de_zona=FU.nombra_la_zona(texto_r),
+                                         policial_rural=FU.es_policial_rural(texto_r)),
                            "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
     candidatos += [dict(p, pendiente=True) for p in pendientes]
@@ -395,7 +404,23 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     usadas = sitios_de_la_corrida(mem, horario) if un_sitio_por_corrida() else set()
     elegibles = [c for c in candidatos if c["rep"].get("fuente") not in usadas]
     if formato == "reel" and con_reel:
-        marcar_videos(elegibles, carpeta, log)
+        sin_video = mem.setdefault("sin_video", {})
+        lim_sv = (ahora - timedelta(hours=PENDIENTE_HORAS + 12)).isoformat()[:16]
+        for k_sv in [k for k, v in sin_video.items() if v < lim_sv]:
+            sin_video.pop(k_sv)
+        marcar_videos(elegibles, carpeta, log, vistas=sin_video)
+        # 16/11/2026: un turno de reel de la tarde sin noticia con video, con lluvia prevista, es el reel del clima
+        # (agro/reel_clima.py, una vez por día). Las noticias esperan al turno siguiente.
+        hay_video = any(c["score"].get("con_video") and c["score"]["ai_score"] >= SE.minimo_de(
+            c["score"], SE.score_min(), "reel") for c in elegibles)
+        if AG.grilla() and not hay_video and not fuera_de_cupo and RC.toca(mem, horario):
+            datos_clima = clima_si_llueve(ahora, log)
+            if datos_clima:
+                mem["pendientes"] = [{k: c[k] for k in ("id", "rep", "grupo", "score", "cuando")} for c in candidatos
+                                     if c["score"]["ai_score"] >= SE.score_min() - SE.video_tolerancia()
+                                     ][:MAX_PENDIENTES]
+                guardar(mem, ahora, ruta_mem)
+                return pasada_clima(datos_clima, publicar, horario, ahora, carpeta, ruta_mem, log, publicador)
     if usadas:
         log(f"   ya salieron en esta corrida: {', '.join(sorted(usadas))}")
     hoy = ahora.strftime("%Y-%m-%d")
@@ -450,6 +475,15 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         otras = [n for n in c["grupo"] if n["id"] != rep["id"]]
         log(f"6) [{k + 1}/{k + 1 + len(cola)}] {s['ai_score']} · {s['subtema']} · {rep['titulo'][:70]}")
         completo = c.get("completo") or CA.completar(rep)
+        # 16/11/2026: nada copiado de los medios de la competencia de Chivilcoy (la misma regla que policiales,
+        # reels/competencia.py): ahora agro también toma policiales del campo.
+        from reels import competencia as COMP
+        rival = COMP.de_la_nota({**rep, "resumen": rep.get("descripcion", ""), "cuerpo": completo.get("cuerpo", ""),
+                                 "imagen": completo.get("imagen", "")})
+        if rival:
+            descartar(rep, COMP.motivo(rival), s)
+            reponer("de la competencia")
+            continue
         base_previa = carpeta / f"{k + 1:02d}_previa"
         imagen_previa = None
         if not IMG.ia_activa():
@@ -480,9 +514,14 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         if g["apta"] and con_reel and not carrusel:
             clip = (Path(c["clip"]) if c.get("clip") and Path(c["clip"]).is_file()
                     else _clip_de_la_fuente(rep, completo, base))
+            if not clip and formato == "reel" and AG.grilla():
+                ilustrativo = video_ilustrativo(g, rep, s, mem, ahora, base, log)
+                if ilustrativo:
+                    clip, pieza["ilustrativo"] = ilustrativo
+                    g = pieza["guion"] = con_credito_ilustrativo(g, pieza["ilustrativo"])
             carrusel_pieza = formato_segun_video(formato, clip) == "carrusel"
             pieza["formato"] = "carrusel" if carrusel_pieza else "reel"
-            if clip:
+            if clip and not pieza.get("ilustrativo"):
                 pieza["youtube"] = True                # los reels con video son pocos: entran en el cupo
         if g["apta"]:
             pieza["imagen"] = imagen_previa or IMG.elegir(rep, completo.get("imagen", ""), g["prompt_imagen"],
@@ -512,10 +551,15 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                 if con_reel:
                     try:
                         t0 = time.time()
-                        pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"), origen,
-                                                credito, clip=clip, tema=tema)
+                        ilu = pieza.get("ilustrativo")
+                        pieza["reel"] = GU_reel(g, pieza["imagen"].get("archivo"), base.with_suffix(".mp4"),
+                                                "ilustrativo" if ilu else origen, BV.credito(ilu) if ilu else credito,
+                                                clip=clip, tema=tema)
+                        if ilu:
+                            BV.anotar(mem.setdefault("banco_usados", {}), ilu, ahora)
+                        que = ("con un video ilustrativo, " if ilu else "con el video de la fuente, ") if clip else ""
                         log(f"   reel {pieza['reel']['duracion']:.0f} s, {pieza['reel']['peso_kb']} KB "
-                            f"({'con el video de la fuente, ' if clip else ''}{time.time() - t0:.0f} s)")
+                            f"({que}{time.time() - t0:.0f} s)")
                     except Exception as e:             # noqa: BLE001 — la portada queda igual
                         pieza["reel"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                         log(f"   el reel falló: {pieza['reel']['error']}")
@@ -605,6 +649,83 @@ def formato_segun_video(formato: str, clip) -> str:
     return "carrusel"
 
 
+def clima_si_llueve(ahora: datetime, log=print, chivilcoy=None, grilla=None):
+    """Los datos del reel del clima si en Chivilcoy se esperan al menos RC.minimo_mm() en 72 h, o None."""
+    try:
+        mm = (chivilcoy or RC.lluvia_chivilcoy)(ahora)
+    except Exception:                                  # noqa: BLE001
+        mm = None
+    if mm is None or mm < RC.minimo_mm():
+        log(f"   reel del clima: no ({'sin pronóstico' if mm is None else f'{mm:.0f} mm previstos en Chivilcoy'})")
+        return None
+    log(f"   reel del clima: {mm:.0f} mm previstos en Chivilcoy en 72 h")
+    try:
+        return (grilla or RC.datos)(ahora, log=log)
+    except Exception as e:                             # noqa: BLE001
+        log(f"   reel del clima: falló el pronóstico ({type(e).__name__})")
+        return None
+
+
+def pasada_clima(datos_clima: dict, publicar: bool, horario: datetime, ahora: datetime, carpeta: Path, ruta_mem: Path,
+                 log=print, publicador=None) -> Path:
+    """Arma (y con --publicar publica) el reel del clima en el turno de `horario` y lo anota en la memoria."""
+    mem = cargar(ruta_mem)
+    pieza = RC.pieza(datos_clima, horario, carpeta, tema_siguiente(mem))
+    log(f"   reel del clima: {pieza['reel']['duracion']:.0f} s, {pieza['reel']['peso_kb']} KB")
+    anotada = {"id": pieza["id"], "cuando": ahora.isoformat(timespec="minutes"), "titulo_original": pieza["rep"]["titulo"],
+               "descripcion": "", "fuente": "MET Norway", "url": "", "titular": pieza["guion"]["titular"],
+               "volanta": "Clima", "score": pieza["score"], "apta": True, "revision": False, "fuera_de_cupo": True,
+               "formato": "clima", "turno": horario.isoformat() if publicar else ""}
+    mem.setdefault("elegidas", []).append(anotada)
+    plan = {"Hora": f"{horario:%d/%m %H:%M}", "Instagram @diarioyradioagro": "reel del clima + historia",
+            "Facebook @diarioyradioagro": "reel del clima + historia",
+            "Publicación automática": "SÍ" if publicar else "APAGADA (simulación)"}
+    if publicar:
+        if publicador is None:
+            from agro import publicar as PUB
+            publicador = PUB.publicar
+        anotada["publicado"] = {"estado": "publicando"}
+        guardar(mem, ahora, ruta_mem)
+        res = publicador(pieza, log=log)
+        anotada["portada_url"] = res.pop("portada_url", "") if isinstance(res, dict) else ""
+        anotada["publicado"] = res
+        plan["Publicado en"] = ", ".join(r for r, v in res.items() if isinstance(v, dict) and not v.get("error")) or "ninguna red"
+    guardar(mem, ahora, ruta_mem)
+    inf = {"cuando": f"{ahora:%d/%m/%Y %H:%M}", "formato": "reel del clima",
+           "conteos": {"Reel del clima": f"{datos_clima.get('chivilcoy_total') or 0:.0f} mm previstos en Chivilcoy",
+                       **plan},
+           "fuentes": [], "piezas": [], "descartadas": [], "grupos_duplicados": [], "publicar": publicar,
+           "config": {"score_min": SE.score_min(), "max_dia": SE.max_dia(), "horas": 72}}
+    (carpeta / "informe.json").write_text(json.dumps(inf, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    (carpeta / "texto_clima.txt").write_text(pieza["guion"]["descripcion"], encoding="utf-8")
+    return INF.escribir(inf, carpeta)
+
+
+def video_ilustrativo(g: dict, rep: dict, s: dict, mem: dict, ahora: datetime, base: Path, log=print):
+    """(clip, video del banco) para un turno de reel cuya nota no trae video (agro/banco_video.py), o None."""
+    from agro import banco_video as BVI
+    texto = " ".join(str(x or "") for x in (g.get("titular"), g.get("volanta"), g.get("bajada"), rep.get("titulo"),
+                                             rep.get("descripcion")))
+    video = BVI.elegir(texto, s.get("subtema", ""), mem.get("banco_usados") or {}, ahora)
+    if not video:
+        return None
+    clip = BVI.bajar(video, base.with_name(base.name + "_ilustrativo.mp4"))
+    if not clip:
+        log(f"   el video ilustrativo {video['archivo']} no se pudo bajar")
+        return None
+    log(f"   sin video propio: va el ilustrativo {video['archivo']} ({video.get('tag')}: {video.get('describe', '')[:60]})")
+    return clip, video
+
+
+def con_credito_ilustrativo(g: dict, video: dict) -> dict:
+    """El guion con el crédito del video ilustrativo al final del texto (la licencia pide autor y licencia)."""
+    from agro import banco_video as BVI
+    linea = BVI.linea_caption(video)
+    if linea in (g.get("descripcion") or ""):
+        return g
+    return dict(g, descripcion=(g.get("descripcion") or "").rstrip() + "\n\n" + linea)
+
+
 def video_max_seg() -> float:
     """El video más largo que entra en un reel de agro: 90 s (31/10/2026, pedido del editor: «videos cortos
     de máximo 1 minuto y medio»). AGRO_VIDEO_MAX_SEG."""
@@ -642,20 +763,24 @@ def _clip_de_la_fuente(rep: dict, completo: dict, base: Path):
 def videos_a_revisar() -> int:
     """Cuántas candidatas (las mejores) se abren antes de elegir para ver si traen video. AGRO_VIDEO_REVISAR."""
     try:
-        return max(0, int(os.environ.get("AGRO_VIDEO_REVISAR") or 8))
+        return max(0, int(os.environ.get("AGRO_VIDEO_REVISAR") or 25))
     except ValueError:
-        return 8
+        return 25
 
 
-def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, bajar=None) -> int:
+def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, bajar=None, vistas=None) -> int:
     """PRIORIZAR LAS NOTAS CON VIDEO (31/10/2026). Antes de la selección se abren las mejores candidatas (por
     prioridad, con puntaje suficiente) y se baja el video de las que lo traen: la que tiene uno de hasta
     video_max_seg() queda marcada (score «con_video», que suma AGRO_BONO_VIDEO al ordenar) y guarda el clip
     y la nota leída para no volver a bajarlos. Devuelve cuántas quedaron con video."""
     completar = completar or CA.completar
     bajar = bajar or _clip_de_la_fuente
-    minimo = SE.score_min()
-    orden = sorted((c for c in candidatos if c["score"].get("ai_score", 0) >= minimo),
+    # 16/11/2026: se abren más notas (25) y también las que quedan hasta VIDEO_TOLERANCIA debajo del mínimo (con
+    # video entran igual en un turno de reel). Las que ya se abrieron sin video no se vuelven a abrir
+    # (mem["sin_video"], `vistas`): así cada corrida mira notas nuevas.
+    minimo = SE.score_min() - SE.video_tolerancia()
+    vistas = vistas if vistas is not None else {}
+    orden = sorted((c for c in candidatos if c["score"].get("ai_score", 0) >= minimo and c["id"] not in vistas),
                    key=lambda c: SE.prioridad(c["score"]), reverse=True)[:videos_a_revisar()]
     con = 0
     for c in orden:
@@ -674,8 +799,10 @@ def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, ba
             c["clip"] = str(clip)
             c["score"] = dict(c["score"], con_video=True)
             con += 1
-        elif c["score"].get("con_video"):
-            c["score"] = {k: v for k, v in c["score"].items() if k != "con_video"}
+        else:
+            vistas[c["id"]] = (c.get("cuando") or "")[:16]
+            if c["score"].get("con_video"):
+                c["score"] = {k: v for k, v in c["score"].items() if k != "con_video"}
     if orden:
         log(f"   videos: {con} de las {len(orden)} mejores traen uno de hasta {video_max_seg():.0f} s")
     return con

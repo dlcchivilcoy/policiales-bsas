@@ -260,6 +260,23 @@ def video_de_jsonld(html: str) -> tuple:
     return "", 0.0
 
 
+def video_de_portal(html: str, nota: dict, elegir_jw=None) -> str:
+    """16/11/2026: el video propio que encuentra el lector de nacionales (nacionales/portales.ficha): el de TN
+    (su reproductor «genoa»), el MP4 que el medio declara y, entre los de JW Player de la página, el que se parece
+    a la nota (los de otras notas no). "" si no hay. Una falla no frena la nota."""
+    try:
+        from nacionales import portales as PO
+        f = PO.ficha(html)
+        if f.get("video") and re.search(r"\.mp4(\?|$)", f["video"], re.I):
+            return f["video"]
+        if f.get("jw"):
+            texto = f"{nota.get('descripcion') or ''} {f.get('texto') or ''}"
+            return (elegir_jw or PO.video_jw)(f["jw"], nota.get("titulo") or f.get("titulo") or "", texto=texto) or ""
+    except Exception:                                      # noqa: BLE001
+        pass
+    return ""
+
+
 def completar(nota: dict, detalle=None, get=None) -> dict:
     """El texto completo de UNA nota (solo de las elegidas). Respeta robots.txt."""
     detalle = detalle or FE.detalle
@@ -283,5 +300,7 @@ def completar(nota: dict, detalle=None, get=None) -> dict:
             cuerpo = otro
     if html and not video:
         video, video_seg = video_de_jsonld(html)
+    if html and not video:
+        video = video_de_portal(html, nota)
     return {"ok": True, "cuerpo": cuerpo, "imagen": d.get("imagen") or nota.get("imagen_url") or "",
             "video": video, "video_seg": video_seg}

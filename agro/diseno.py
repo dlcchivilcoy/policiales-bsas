@@ -285,6 +285,8 @@ def texto_leyenda(origen: str, credito: str = "") -> str:
     """Lo que dice la imagen: IA (generada o recreada) o el crédito de la foto oficial."""
     if origen in ("ia", "recreada"):
         return "Imagen generada con IA"
+    if origen == "ilustrativo":
+        return f"Video ilustrativo: {credito}" if credito else "Video ilustrativo"
     if origen == "video" and credito:
         return f"Video: {credito}"
     return f"Foto: {credito}" if credito else ""

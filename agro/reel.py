@@ -160,7 +160,7 @@ def armar(guion: dict, imagen, salida: Path, origen: str = "ia", credito: str = 
                          tope=D.PORTADA)
     hm = plan["alto_imagen"]
     base = D.base_bloque(plan)
-    leyenda = D.texto_leyenda("video" if clip else origen, credito)
+    leyenda = D.texto_leyenda(origen if origen == "ilustrativo" else ("video" if clip else origen), credito)
     capas = {nombre: _capa_tramo(plan, guion, nombre) for nombre, _ in tramos if nombre != "cierre"}
     placa = cierre(tema, (guion.get("reel") or {}).get("cierre", "")).convert("RGB")
     foto = Image.open(imagen).convert("RGB") if (imagen and not clip) else None

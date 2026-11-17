@@ -207,6 +207,11 @@ def combinar_agro(nuestro: dict, remoto: dict) -> dict:
         out["mercado"] = merc
     if mas_nuevo.get("tema_ultimo"):
         out["tema_ultimo"] = mas_nuevo["tema_ultimo"]
+    # 16/11/2026: las notas ya abiertas sin video y los videos ilustrativos usados (unión: son «ya visto»).
+    for clave in ("sin_video", "banco_usados", "virales"):
+        junto = {**(remoto.get(clave) or {}), **(nuestro.get(clave) or {})}
+        if junto:
+            out[clave] = junto
     out["actualizado"] = max(nuestro.get("actualizado") or "", remoto.get("actualizado") or "")
     return out
 

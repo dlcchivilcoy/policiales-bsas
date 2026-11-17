@@ -90,11 +90,55 @@ def prioridad(s: dict, formato: str = "reel") -> tuple:
     valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0)
     if s.get("de_zona"):
         valor += BONO_ZONA
+    if s.get("policial_rural"):
+        valor += BONO_POLICIAL_RURAL
     if formato == "carrusel":
         valor += 2 * (s.get("potencial_carrusel", 5) - 5)
+        if s.get("con_video") and not s.get("urgente") and (os.environ.get("AGRO_GRILLA") or "1").strip() != "0":
+            valor -= RESERVA_VIDEO                     # 16/11/2026: la que trae video espera el turno de reel
     elif s.get("con_video"):
         valor += bono_video()
     return (bool(s.get("urgente")), valor, s.get("commercial_score", 0))
+
+
+# 16/11/2026 (pedido del editor: «priorizá encontrar noticias con videos para armar reels»). En la grilla intercalada
+# (agro/agenda.py) los turnos de carrusel dejan para el reel siguiente la nota que trae video, y en un turno de reel
+# una nota con video entra con hasta VIDEO_TOLERANCIA puntos menos que el mínimo.
+RESERVA_VIDEO = 40
+
+
+def video_tolerancia() -> int:
+    try:
+        return max(0, int(os.environ.get("AGRO_VIDEO_TOLERANCIA") or 10))
+    except ValueError:
+        return 10
+
+
+def minimo_de(s: dict, minimo: int, formato: str) -> int:
+    """El puntaje mínimo de ESA candidata: más bajo si trae video y el turno es de reel."""
+    return minimo - (video_tolerancia() if formato == "reel" and s.get("con_video") else 0)
+
+
+# 16/11/2026 (pedido del editor: «priorizá videos de policiales en el campo» y «contenido variado en el feed, también
+# innovaciones tecnológicas»):
+# - un policial del campo (agro/fuentes.es_policial_rural: abigeato, robos en campos, incendios rurales) va antes;
+# - si en el día todavía no salió nada de tecnología o maquinaria, desde el tercer posteo una de esas entra con
+#   INNOVACION_TOLERANCIA puntos menos y va adelante (el puntaje de la IA no premia la innovación: sin esto casi
+#   nunca llegaba al mínimo);
+# - el mismo subtema que el último posteo va un poco atrás (VARIEDAD), para que el feed no repita.
+BONO_POLICIAL_RURAL = 12
+INNOVACION = ("agtech", "maquinaria")
+BONO_INNOVACION = 15
+VARIEDAD = 8
+
+
+def innovacion_tolerancia() -> int:
+    return _entero("AGRO_INNOVACION_TOLERANCIA", 15) if (os.environ.get("AGRO_INNOVACION_TOLERANCIA") or "").strip() != "0" else 0
+
+
+def falta_innovacion(de_hoy: list) -> bool:
+    return len(de_hoy) >= 2 and innovacion_tolerancia() > 0 and not any(
+        (p.get("score") or {}).get("subtema") in INNOVACION for p in de_hoy)
 
 
 def mezcla() -> dict:
@@ -139,12 +183,24 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         if s.get("tema"):
             temas[s["tema"]] = temas.get(s["tema"], 0) + 1
     lugar = cupo_dia - len(de_hoy)
-    orden = sorted(candidatos, key=lambda c: prioridad(c["score"], formato), reverse=True)
+    innovar = falta_innovacion(de_hoy)
+    ultimo_sub = ((de_hoy[-1].get("score") or {}).get("subtema") if de_hoy else None)
+
+    def clave(c):
+        urg, valor, com = prioridad(c["score"], formato)
+        sub = c["score"].get("subtema")
+        if innovar and sub in INNOVACION:
+            valor += BONO_INNOVACION
+        if ultimo_sub and sub == ultimo_sub:
+            valor -= VARIEDAD
+        return urg, valor, com
+    orden = sorted(candidatos, key=clave, reverse=True)
     elegidos, descartados, reserva = [], [], []
     for c in orden:
         s = c["score"]
-        if s["ai_score"] < minimo and not (s.get("urgente") and s["ai_score"] >= minimo - URGENTE_TOLERANCIA):
-            descartados.append((c, f"score {s['ai_score']} < {minimo}"))
+        propio = minimo_de(s, minimo, formato) - (innovacion_tolerancia() if innovar and s.get("subtema") in INNOVACION else 0)
+        if s["ai_score"] < propio and not (s.get("urgente") and s["ai_score"] >= propio - URGENTE_TOLERANCIA):
+            descartados.append((c, f"score {s['ai_score']} < {propio}"))
             continue
         if s.get("tema") and temas.get(s["tema"], 0) >= MAX_MISMO_TEMA:
             descartados.append((c, f"ya hay {MAX_MISMO_TEMA} del tema «{s['tema']}» hoy"))

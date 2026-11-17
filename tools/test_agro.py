@@ -8,6 +8,13 @@ os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son fa
 # Las pruebas de siempre corren con las imágenes IA prendidas; la regla del 18/10/2026 (sin IA, sin foto
 # real no sale) se prueba al final con AGRO_IMAGEN_IA=0.
 os.environ["AGRO_IMAGEN_IA"] = "1"
+# 16/11/2026: estas pruebas son de la agenda de antes (todos los turnos «reel») y sin red: la grilla intercalada, el
+# reel del clima y el banco de videos ilustrativos tienen las suyas en tools/test_agro_grilla.py.
+os.environ["AGRO_GRILLA"] = "0"
+os.environ["AGRO_CLIMA_REEL"] = "0"
+os.environ["AGRO_BANCO_VIDEO"] = "0"
+os.environ["AGRO_VIRALES"] = "0"
+os.environ["AGRO_INNOVACION_TOLERANCIA"] = "0"
 # Las tandas de historias de datos están apagadas desde el 01/11/2026; la mecánica se sigue probando con ellas
 # prendidas (el valor de fábrica se prueba al final).
 os.environ["AGRO_HISTORIAS_DATOS"] = "1"
@@ -1157,7 +1164,7 @@ chequear("zona: cuenta que la nota nombre un pueblo, no qué diario la publica",
          and not _FZ.nombra_la_zona("Milei prometió retenciones cero en la Sociedad Rural")
          and not _FZ.nombra_la_zona("Un salto productivo: los lobos marinos y las mercedes del rey"))
 os.environ["AGRO_MEDIOS_ZONA"] = "0"
-chequear("AGRO_MEDIOS_ZONA=0 los apaga", not any(f.get("solo_campo") for f in _FZ.activas()))
+chequear("AGRO_MEDIOS_ZONA=0 los apaga", not any(f.get("localidad") for f in _FZ.activas()))
 os.environ.pop("AGRO_MEDIOS_ZONA")
 _nz, _ = CA.capturar([{"nombre": "Diario Local", "base": "https://x", "rss": ["https://x/feed"], "tipo": "medio",
                        "localidad": "Alberti", "solo_campo": True}], listar=lambda u: [

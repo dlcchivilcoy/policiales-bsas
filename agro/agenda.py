@@ -60,13 +60,13 @@ def historias_datos() -> bool:
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
 CON_DOS_POSTEOS = ((10, 0), (13, 0), (18, 0))     # las demás corridas publican uno (06/11/2026)
 INTERVALO_MIN = 90           # entre un posteo y el siguiente de la misma corrida
-TIPOS = ("reel", "carrusel", "historias", "reel_datos", "participa")
+TIPOS = ("reel", "carrusel", "historias", "reel_datos", "participa", "viral")
 # 23/10/2026: el REEL DE DATOS de cada mañana (agro/reel_datos.py), con su propia corrida. AGRO_REEL_DATOS
 # cambia la hora; "0" lo apaga.
 # 06/11/2026: a las 08:00 (a las 5 casi no hay nadie conectado). Hay que mover también la tarea 8709629 de cron-job.org.
 REEL_DATOS_DEFECTO = "08:00"
 # Lo que no va al feed: no cuenta para los 90 minutos entre posteos.
-FUERA_DEL_FEED = ("historias", "participa")
+FUERA_DEL_FEED = ("historias", "participa", "viral")   # «viral»: reel de PRUEBA (no llega a los seguidores)
 # 06/11/2026: la historia que invita a participar (agro/participa.py). AGRO_PARTICIPA: otras horas, o "0" la apaga.
 # 07/11/2026 («más historias interactivas por día»): 4, cada una para un oficio. Todas caen en una corrida que ya
 # está esperando su segundo posteo, salvo la de las 21:30, que estira media hora la de las 21.
@@ -118,11 +118,39 @@ def agenda_texto_defecto() -> str:
     if datos:
         partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
     partes += [f"{h:02d}:{m:02d} participa" for h, m in horas_participa()]
+    from agro import virales as VI
+    partes += [f"{h:02d}:{m:02d} viral" for h, m in VI.horas_virales()]
+    noticias = []
     for i, ini in enumerate(inicios):
         fin = inicios[i + 1] if i + 1 < len(inicios) else 24 * 60
-        partes += [f"{t // 60:02d}:{t % 60:02d} reel"
-                   for t in (ini + k * intervalo_min() for k in range(por_corrida((ini // 60, ini % 60)))) if t < fin]
+        noticias += [t for t in (ini + k * intervalo_min() for k in range(por_corrida((ini // 60, ini % 60))))
+                     if t < fin]
+    partes += [f"{t // 60:02d}:{t % 60:02d} {tipo}" for t, tipo in tipos_intercalados(
+        noticias, datos[0] * 60 + datos[1] if datos else None)]
     return ", ".join(partes)
+
+
+def grilla() -> bool:
+    """16/11/2026 (pedido del editor: «un ecosistema de publicaciones lo más intercalado posible: un reel, un carrusel»):
+    los turnos de noticias se alternan reel / carrusel en todo el día, contando el posteo de datos de las 08 (es un
+    carrusel). El turno de reel siempre es reel: con el video de la nota, el reel del clima o un video ilustrativo
+    (agro/pasada.py). AGRO_GRILLA=0 vuelve a lo de antes: todos «reel», y sin video salía carrusel."""
+    return (os.environ.get("AGRO_GRILLA") or "1").strip() != "0"
+
+
+def tipos_intercalados(minutos: list, datos: int = None) -> list:
+    """[(minuto del día, «reel» | «carrusel»)]: arranca con reel y alterna con el posteo anterior del feed."""
+    if not grilla():
+        return [(t, "reel") for t in sorted(minutos)]
+    salida, anterior = [], None
+    for t in sorted(set(minutos) | ({datos} if datos is not None else set())):
+        if t == datos and t not in minutos:
+            anterior = "carrusel"
+            continue
+        tipo = "carrusel" if anterior == "reel" else "reel"
+        salida.append((t, tipo))
+        anterior = tipo
+    return salida
 
 
 def agenda() -> list:
@@ -246,6 +274,10 @@ def cuantos(tipo: str) -> int:
 def es_primer_carrusel_del_sabado(horario: datetime) -> bool:
     """El carrusel de datos «Los números de la semana» sale en el primer horario de carrusel del sábado."""
     if horario.weekday() != 5:
+        return False
+    # 16/11/2026: con la grilla intercalada vuelve a haber carruseles en la agenda; «Los números de la semana» no
+    # salía desde el 20/10 y no se prende solo: AGRO_NUMEROS_SEMANA=1.
+    if grilla() and (os.environ.get("AGRO_NUMEROS_SEMANA") or "0").strip() != "1":
         return False
     carr = sorted((h, m) for h, m, t in agenda() if t == "carrusel")
     return bool(carr) and (horario.hour, horario.minute) == carr[0]
