@@ -82047,7 +82047,7 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-17T10:09:53-03:00",
+  "actualizado": "2026-11-17T11:00:26-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -87660,6 +87660,47 @@
               },
               "facebook": {
                 "id": "1171583311973104"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-17T11:00:00-03:00": {
+      "dia": "2026-11-17",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo está el agua para la hacienda?",
+          "opciones": [
+            "Bien",
+            "Regular",
+            "Mal"
+          ],
+          "publico": "ganaderia",
+          "via": "lista",
+          "publicado": {
+            "instagram": {
+              "id": "18063519764548442"
+            },
+            "facebook": {
+              "id": "1021796686870849"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18063519764548442"
+              },
+              "facebook": {
+                "id": "1021796686870849"
               }
             }
           ]
