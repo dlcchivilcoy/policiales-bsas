@@ -52,6 +52,16 @@ REGIONALES = (
     # automáticos (403); Diario Córdoba es de España.
     ("policiales", "Hoy Día Córdoba", "rss", "https://hoydia.com.ar/feed", {}),
     ("policiales", "El Diario del centro del país", "rss", "https://www.eldiariocba.com.ar/feeds/rss", {}),
+    # 17/11: Santa Fe y Entre Ríos. El Litoral no tiene RSS: su sitemap de Google Noticias (sucesos y Campo Litoral).
+    # Rosario3, Elonce, Análisis y El Heraldo no tienen feed que funcione.
+    ("policiales", "El Litoral", "lista", "https://www.ellitoral.com/sitemaps/sitemap_google_news.xml",
+     {"links": r"<loc>(https://www\.ellitoral\.com/(?:sucesos|campolitoral)/[^<]+\.html)", "max": 10}),
+    ("policiales", "El Ciudadano", "rss", "https://www.elciudadanoweb.com/feed", {}),
+    ("policiales", "Sin Mordaza", "rss", "https://www.sinmordaza.com/feed", {}),
+    ("policiales", "El Diario Paraná", "rss", "https://www.eldiario.com.ar/feed", {}),
+    ("policiales", "Diario Junio", "rss", "https://www.diariojunio.com.ar/feed", {}),
+    ("policiales", "La Calle", "rss", "https://www.lacalle.com.ar/feed", {}),
+    ("policiales", "Entre Ríos Ahora", "rss", "https://www.entreriosahora.com/feed", {}),
 )
 REGION = re.compile(r"\b(cordob\w*|santa fe|santafesin\w*|rosario|rafaela|venado tuerto|reconquista|villa maria|"
                     r"rio cuarto|san francisco|marcos juarez|entre rios|entrerrian\w*|parana|concordia|gualeguay\w*|"
