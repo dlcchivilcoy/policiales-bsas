@@ -84434,7 +84434,7 @@
       "cuando": "2026-11-17T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-18T10:40:40-03:00",
+  "actualizado": "2026-11-18T11:00:29-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -90297,6 +90297,43 @@
       "items": [],
       "publicado": {
         "omitido": "ninguna trae video propio corto"
+      }
+    },
+    "2026-11-18T11:00:00-03:00": {
+      "dia": "2026-11-18",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están los lotes para meterle a la siembra?",
+          "opciones": [],
+          "publico": "agricultura",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18101624624097287"
+            },
+            "facebook": {
+              "id": "1715049023556681"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18101624624097287"
+              },
+              "facebook": {
+                "id": "1715049023556681"
+              }
+            }
+          ]
+        }
       }
     }
   },
