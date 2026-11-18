@@ -43892,6 +43892,50 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "271f479010e9868f": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 39,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "trazabilidad visec",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una discusión institucional sobre exportaciones que le importa a los acopiadores pero no cambia el día a día en el campo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "faa4f70095339923": {
+      "conversacion": 10,
+      "historia_concreta": 9,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 59,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "precios hacienda cañuelas",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los precios del Mercado Agroganadero de Cañuelas marcan el pulso de la hacienda para los productores ganaderos de la zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        59
+      ]
     }
   },
   "indice": {
@@ -46910,7 +46954,10 @@
       "https://clarin.com/rural/gigante-agro-anuncio-ampliacion-iniciativa-trazabilidad-soja-tecnologia-blockchain-vietnam-incluira-harina-argentina_0_Czhm2r63ul.html": "2026-11-18",
       "https://clarin.com/rural/solucion-definitiva-iraeta-hablo-avances-negociaciones-semillas-dejo-mensaje-plataformas-certificacion-exportar-ue_0_7gHhqnFLpE.html": "2026-11-18",
       "https://news.agrofy.com.ar/noticia/217027/agroactiva-2027-pullaro-llamo-discutir-argentina-viene-lanzamiento-muestra": "2026-11-18",
-      "https://elnuevorojense.com.ar/se-disputo-la-septima-fecha-del-clausura-del-intercoperadoras": "2026-11-18"
+      "https://elnuevorojense.com.ar/se-disputo-la-septima-fecha-del-clausura-del-intercoperadoras": "2026-11-18",
+      "https://bichosdecampo.com/desde-la-federacion-de-acopiadores-fernando-rivara-defendio-el-sistema-visec-y-cuestiono-a-quienes-se-oponen-a-las-exigencias-europeas-para-exportar": "2026-11-18",
+      "https://lanacion.com.ar/economia/campo/vacunos-oferta-muy-moderada-y-precios-con-bajas-en-el-mercado-agroganadero-de-canuelas-nid18112026": "2026-11-18",
+      "https://news.agrofy.com.ar/noticia/217028/por-glutomatic-molino-siempre-anda-bien-clausula-le-quita-342000-camion-trigo": "2026-11-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -49927,7 +49974,10 @@
       "un gigante del agro anuncio la ampliacion de su iniciativa de trazabilidad de soja con tecnologia blockchain a vietnam e incluira a la harina argentina": "2026-11-18",
       "solucion definitiva iraeta hablo de los avances en las negociaciones sobre semillas y dejo un mensaje sobre las plataformas de certificacion para exportar a la ue": "2026-11-18",
       "agroactiva 2027 pullaro llamo a discutir la argentina que viene en el lanzamiento de la muestra": "2026-11-18",
-      "se disputo la septima fecha del clausura del intercoperadoras": "2026-11-18"
+      "se disputo la septima fecha del clausura del intercoperadoras": "2026-11-18",
+      "desde la federacion de acopiadores fernando rivara defendio el sistema visec y cuestiono a quienes se oponen a las exigencias europeas para exportar": "2026-11-18",
+      "vacunos oferta muy moderada y precios con bajas en el mercado agroganadero de canuelas": "2026-11-18",
+      "por que el glutomatic del molino siempre anda bien la clausula que le quita 342 000 por camion al trigo": "2026-11-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -52944,7 +52994,10 @@
       "f359adec88275670": "2026-11-18",
       "94dfade28e93197c": "2026-11-18",
       "b376514af8c02d1c": "2026-11-18",
-      "641398244c123b82": "2026-11-18"
+      "641398244c123b82": "2026-11-18",
+      "271f479010e9868f": "2026-11-18",
+      "faa4f70095339923": "2026-11-18",
+      "b2fc8cff97d9df65": "2026-11-18"
     }
   },
   "elegidas": [
@@ -85470,7 +85523,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-18T16:07:43-03:00",
+  "actualizado": "2026-11-18T16:30:09-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -93614,7 +93667,8 @@
     "2b3dc82c146b": "2026-11-18T16:00",
     "800f47c82021": "2026-11-18T16:00",
     "53e78e51ac95": "2026-11-18T16:00",
-    "2f94835f8401": "2026-11-18T16:00"
+    "2f94835f8401": "2026-11-18T16:00",
+    "8b5b01c04036": "2026-11-18T16:25"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
