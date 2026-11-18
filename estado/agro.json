@@ -44040,6 +44040,154 @@
         63,
         43
       ]
+    },
+    "4f8d8c107e5ca46f": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 21,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "agroactiva",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es el lanzamiento institucional de una muestra lejana en Santa Fe, sin impacto directo en la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "eef65b5ce66dfa4c": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 7,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 36,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "don mario",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Perfil empresarial sobre el creador de una marca de semillas muy usada, pero es una nota extensa y poco urgente.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6392dbd3190a122e": {
+      "conversacion": 3,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 29,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "inta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reclamo gremial político sobre cargos en el INTA que no le cambia nada al día a día del productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d221313a0a24dd76": {
+      "conversacion": 3,
+      "historia_concreta": 6,
+      "cercania_pba": 0,
+      "interes_productores": 4,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 22,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "bosques nativos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un tema legislativo y de ordenamiento territorial específico de la provincia de Córdoba.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c48359862a586eba": {
+      "conversacion": 3,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 31,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "cra",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Reunión institucional con reclamos gremiales habituales de las entidades rurales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "18006e130cc65c65": {
+      "conversacion": 10,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 48,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente el precio y la comercialización de la producción ante exigencias de la Unión Europea.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        43
+      ]
+    },
+    "31b0401dc8486618": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 8,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 41,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "visec",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cruje la comercialización de granos con acusaciones fuertes entre acopiadores, molinos y exportadores por descuentos y retenciones.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        27
+      ]
     }
   },
   "indice": {
@@ -47068,7 +47216,15 @@
       "https://lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026": "2026-11-18",
       "https://lanacion.com.ar/economia/campo/celebramos-esta-decision-prohibieron-el-uso-de-un-farmaco-en-cerdos-y-cierran-una-contradiccion-nid18112026": "2026-11-18",
       "https://clarin.com/rural/suspenden-uso-drones-agricolas-misiones-sancionar-marco-regulatorio_0_xJXOXCLiU2.html": "2026-11-18",
-      "https://tn.com.ar/campo/2026/11/18/mas-de-500000-millones-de-deuda-la-justicia-abrio-el-concurso-de-una-de-las-mayores-avicolas-del-pais": "2026-11-18"
+      "https://tn.com.ar/campo/2026/11/18/mas-de-500000-millones-de-deuda-la-justicia-abrio-el-concurso-de-una-de-las-mayores-avicolas-del-pais": "2026-11-18",
+      "https://infocampo.com.ar/se-lanzo-agroactiva-2027-esta-es-la-patria-que-queremos-mostrar": "2026-11-18",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249416-la-vision-agroindustrial-de-gerardo-bartolome-el-rey-de-la-genetica-en-soja.html": "2026-11-18",
+      "https://bichosdecampo.com/viene-lerda-la-cosa-cra-le-reclamo-al-gobierno-que-oficialice-a-luis-lerda-como-consejero-del-inta-tras-un-ano-de-sospechosas-demoras": "2026-11-18",
+      "https://bichosdecampo.com/ordenamiento-territorial-en-cordoba-las-rurales-del-noroeste-lograron-llevar-a-la-legislatura-provincial-un-reclamo-que-lleva-15-anos-de-postergaciones": "2026-11-18",
+      "https://lanacion.com.ar/economia/campo/reunion-cra-recibio-a-iraeta-reclamo-por-un-lugar-en-el-inta-y-apunto-sobre-la-plataforma-visec-nid18112026": "2026-11-18",
+      "https://lanacion.com.ar/economia/campo/debe-mas-de-15000-millones-se-presento-en-concurso-de-acreedores-agro-de-souza-una-importante-firma-nid18112026": "2026-11-18",
+      "https://lanacion.com.ar/economia/campo/mercado-paralelo-diputados-y-senadores-apoyaron-a-los-productores-frente-a-una-exigencia-nid18112026": "2026-11-18",
+      "https://lanacion.com.ar/economia/campo/nefasta-clausula-el-presidente-de-acopiadores-fustigo-practicas-de-los-molinos-y-tambien-cuestiono-a-nid18112026": "2026-11-18"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -50095,7 +50251,15 @@
       "tasas viales la justicia le puso limites a un municipio bonaerense por cobrar sin una contraprestacion comprobada": "2026-11-18",
       "celebramos esta decision cierran una contradiccion normativa y prohiben el uso de un farmaco en cerdos": "2026-11-18",
       "suspenden el uso de drones agricolas en misiones hasta sancionar un marco regulatorio": "2026-11-18",
-      "mas de 500 000 millones de deuda la justicia abrio el concurso de una de las mayores avicolas del pais": "2026-11-18"
+      "mas de 500 000 millones de deuda la justicia abrio el concurso de una de las mayores avicolas del pais": "2026-11-18",
+      "se lanzo agroactiva 2027 esta es la patria que queremos mostrar": "2026-11-18",
+      "gerardo bartolome el creador de don mario cuenta como construyo gdm y por que sigue apostando al agro": "2026-11-18",
+      "viene lerda la cosa cra le reclamo al gobierno que oficialice a luis lerda como consejero del inta tras un ano de sospechosas demoras": "2026-11-18",
+      "ordenamiento territorial en cordoba las rurales del noroeste lograron llevar a la legislatura provincial un reclamo que lleva 15 anos de postergaciones": "2026-11-18",
+      "reunion cra recibio a iraeta reclamo por un lugar en el inta y apunto sobre la plataforma visec": "2026-11-18",
+      "debe mas de 15 000 millones se presento en concurso de acreedores agro de souza una importante firma del sudoeste bonaerense": "2026-11-18",
+      "mercado paralelo diputados y senadores apoyaron a los productores frente a una exigencia antideforestacion de la union europea": "2026-11-18",
+      "nefasta clausula el presidente de acopiadores fustigo practicas de los molinos y tambien cuestiono a los exportadores": "2026-11-18"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -53122,7 +53286,15 @@
       "6d1a9d5efdd8395f": "2026-11-18",
       "ac53b6c308b43285": "2026-11-18",
       "bee9c8e731553323": "2026-11-18",
-      "7c82c75476040b5d": "2026-11-18"
+      "7c82c75476040b5d": "2026-11-18",
+      "4f8d8c107e5ca46f": "2026-11-18",
+      "eef65b5ce66dfa4c": "2026-11-18",
+      "6392dbd3190a122e": "2026-11-18",
+      "d221313a0a24dd76": "2026-11-18",
+      "c48359862a586eba": "2026-11-18",
+      "eb1f4440c89f405c": "2026-11-18",
+      "18006e130cc65c65": "2026-11-18",
+      "31b0401dc8486618": "2026-11-18"
     }
   },
   "elegidas": [
@@ -85700,117 +85872,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_982df701bfd1_portada.jpg"
-    }
-  ],
-  "pendientes": [
-    {
-      "id": "1e31dd299916",
-      "rep": {
-        "id": "1e31dd299916",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/siguen-los-exitos-en-el-campo-argentino-agro-de-souza-una-importante-empresa-del-interior-bonaerense-se-presento-a-concurso-de-acreedores-tras-acumular-una-abultada-deuda/",
-        "canonical_url": "https://bichosdecampo.com/siguen-los-exitos-en-el-campo-argentino-agro-de-souza-una-importante-empresa-del-interior-bonaerense-se-presento-a-concurso-de-acreedores-tras-acumular-una-abultada-deuda",
-        "titulo": "Siguen los éxitos en el campo argentino: Agro de Souza, una importante empresa del interior bonaerense se presentó a concurso de acreedores tras acumular una abultada deuda",
-        "titulo_norm": "siguen los exitos en el campo argentino agro de souza una importante empresa del interior bonaerense se presento a concurso de acreedores tras acumular una abultada deuda",
-        "descripcion": "Otra triste noticia surge de las entrañas del sector agropecuario argentino. Lamentablemente se confirmó un hecho que en los últimos meses comenzó a resonar en los pasillos de las agronomías del centro y sur bonaerense, que tiene como protagonista a Agro de Souza, una gran empresa con sede central en Coronel Suárez, Buenos Aires. El […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Infografia-deuda-bancaria-agro-de-souza.jpg",
-        "autor": "Diego Mañas",
-        "publicado": "2026-11-18T17:24-03:00",
-        "capturado": "2026-11-18T18:03-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3475a7f9483418c0",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "1e31dd299916",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/siguen-los-exitos-en-el-campo-argentino-agro-de-souza-una-importante-empresa-del-interior-bonaerense-se-presento-a-concurso-de-acreedores-tras-acumular-una-abultada-deuda/",
-          "canonical_url": "https://bichosdecampo.com/siguen-los-exitos-en-el-campo-argentino-agro-de-souza-una-importante-empresa-del-interior-bonaerense-se-presento-a-concurso-de-acreedores-tras-acumular-una-abultada-deuda",
-          "titulo": "Siguen los éxitos en el campo argentino: Agro de Souza, una importante empresa del interior bonaerense se presentó a concurso de acreedores tras acumular una abultada deuda",
-          "titulo_norm": "siguen los exitos en el campo argentino agro de souza una importante empresa del interior bonaerense se presento a concurso de acreedores tras acumular una abultada deuda",
-          "descripcion": "Otra triste noticia surge de las entrañas del sector agropecuario argentino. Lamentablemente se confirmó un hecho que en los últimos meses comenzó a resonar en los pasillos de las agronomías del centro y sur bonaerense, que tiene como protagonista a Agro de Souza, una gran empresa con sede central en Coronel Suárez, Buenos Aires. El […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Infografia-deuda-bancaria-agro-de-souza.jpg",
-          "autor": "Diego Mañas",
-          "publicado": "2026-11-18T17:24-03:00",
-          "capturado": "2026-11-18T18:03-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3475a7f9483418c0",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 77,
-        "commercial_score": 50,
-        "subtema": "empresas",
-        "tema": "concurso de acreedores",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "La caída de una importante empresa bonaerense genera preocupación y comentarios en toda la cadena.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-18T18:03-03:00"
     },
     {
       "id": "b3e962b0fce3",
-      "rep": {
-        "id": "b3e962b0fce3",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026",
-        "titulo": "Tasas viales: la Justicia le puso límites a un municipio bonaerense por cobrar sin una contraprestación comprobada",
-        "titulo_norm": "tasas viales la justicia le puso limites a un municipio bonaerense por cobrar sin una contraprestacion comprobada",
-        "descripcion": "La Cámara de San Martín confirmó un fallo favorable a productores de Daireaux que cuestionaron el tributo; la resolución ratificó que el Estado es quien debe demostrar que presta el servicio de mantenimiento de la red vial y que los fondos recaudados se destinan a ese fin",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RJHNRPGDT5HXNDEN7DUMLVDLN4.png?auth=32731d78d2165d47a44ba61df35e5a65ac01720b4714a56f1609e625cc20d67a&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-11-18T17:22-03:00",
-        "capturado": "2026-11-18T18:03-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6d1a9d5efdd8395f",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "b3e962b0fce3",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026",
-          "titulo": "Tasas viales: la Justicia le puso límites a un municipio bonaerense por cobrar sin una contraprestación comprobada",
-          "titulo_norm": "tasas viales la justicia le puso limites a un municipio bonaerense por cobrar sin una contraprestacion comprobada",
-          "descripcion": "La Cámara de San Martín confirmó un fallo favorable a productores de Daireaux que cuestionaron el tributo; la resolución ratificó que el Estado es quien debe demostrar que presta el servicio de mantenimiento de la red vial y que los fondos recaudados se destinan a ese fin",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RJHNRPGDT5HXNDEN7DUMLVDLN4.png?auth=32731d78d2165d47a44ba61df35e5a65ac01720b4714a56f1609e625cc20d67a&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-11-18T17:22-03:00",
-          "capturado": "2026-11-18T18:03-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6d1a9d5efdd8395f",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-18T19:33-03:00",
+      "titulo_original": "Tasas viales: la Justicia le puso límites a un municipio bonaerense por cobrar sin una contraprestación comprobada",
+      "descripcion": "La Cámara de San Martín confirmó un fallo favorable a productores de Daireaux que cuestionaron el tributo; la resolución ratificó que el Estado es quien debe demostrar que presta el servicio de mantenimiento de la red vial y que los fondos recaudados se destinan a ese fin",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026/",
+      "titular": "Justicia limita tasa vial municipal por falta de contraprestación",
+      "volanta": "Impuestos",
       "score": {
         "conversacion": 22,
         "historia_concreta": 18,
@@ -85833,11 +85904,34 @@
         "de_zona": false,
         "policial_rural": false
       },
-      "cuando": "2026-11-18T18:03-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-18T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "f3d68905-3012-4c27-8dc5-68c1c5034b42",
+          "slug": "la-justicia-frena-tasa-vial-municipal-en-daireaux-por-falta-de-037cd6",
+          "url": "https://www.diariolacampaña.com.ar/n/la-justicia-frena-tasa-vial-municipal-en-daireaux-por-falta-de-037cd6",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17998353540103975",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1765982148866115",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b3e962b0fce3_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-18T19:00:27-03:00",
-  "tema_ultimo": "grafito",
+  "pendientes": [],
+  "actualizado": "2026-11-18T19:38:02-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -94078,7 +94172,9 @@
     "800f47c82021": "2026-11-18T16:00",
     "53e78e51ac95": "2026-11-18T16:00",
     "2f94835f8401": "2026-11-18T16:00",
-    "8b5b01c04036": "2026-11-18T16:25"
+    "8b5b01c04036": "2026-11-18T16:25",
+    "b3e962b0fce3": "2026-11-18T18:03",
+    "1e31dd299916": "2026-11-18T18:03"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
