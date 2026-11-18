@@ -83556,7 +83556,7 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-17T21:30:34-03:00",
+  "actualizado": "2026-11-17T22:02:22-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -89333,6 +89333,26 @@
           ]
         }
       }
+    },
+    "2026-11-17T22:00:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "Club San Jorge vende su estadio y predio por US$ 700.000",
+          "url": "https://www.lanacion.com.ar/deportes/un-club-vende-a-traves-de-una-inmobiliaria-su-estadio-y-todas-sus-instalaciones-tras-un-conflicto-nid17112026/",
+          "fuente": "La Nación",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-17_2200_viral/viral.mp4",
+          "duracion": 49.27
+        }
+      ],
+      "publicado": {
+        "instagram_prueba": {
+          "id": "17955470130345816"
+        },
+        "facebook": {
+          "id": "1433071598994390"
+        }
+      }
     }
   },
   "mercado": {
@@ -91417,5 +91437,9 @@
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
     "bv_lluvia_02.mp4": "2026-11-17T10:00-03:00"
+  },
+  "virales": {
+    "https://www.lanacion.com.ar/deportes/un-club-vende-a-traves-de-una-inmobiliaria-su-estadio-y-todas-sus-instalaciones-tras-un-conflicto-nid17112026/": "2026-11-17T22:00-03:00",
+    "https://sinmordaza.com/noticia/525692-femicidio-seguido-de-suicidio-en-un-campo-de-villa-ana.html": "2026-11-17T22:00-03:00"
   }
 }
