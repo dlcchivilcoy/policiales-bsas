@@ -88,6 +88,21 @@ with tempfile.TemporaryDirectory() as tmp:
              PUB.texto_link_nota(PIEZA) == "Detuvieron a dos jóvenes en Chivilcoy.")
     chequear("sin texto, va el titular", PUB.texto_link_nota(dict(PIEZA, descripcion_tiktok="#Solo #Tags")) == "Un hecho")
 
+    # 18/11/2026: de fábrica sale como FOTO (la portada), con el texto del posteo y el link escrito, sin tarjeta
+    fb = Facebook()
+    res = correr(fb, tmp)
+    chequear("de fábrica: una foto, la portada, sin leer la nota", res.get("estado") == "ok"
+             and res.get("formato") == "foto" and fb.fotos == 1 and fb.lecturas == 0 and fb.feed == [])
+    with mock.patch.dict(os.environ, {"POL_FB_FOTO": "0"}):
+        fb = Facebook()
+        res = correr(fb, tmp)
+    chequear("POL_FB_FOTO=0 vuelve al álbum", res.get("formato") == "carrusel" and fb.fotos == 4)
+    with mock.patch.object(PUB, "_pedir", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no toca la red"))):
+        mp4 = Path(tmp) / "01.mp4"
+        mp4.write_bytes(b"x")
+        chequear("simular muestra la foto", PUB._simular("facebook", PIEZA, mp4, URL).get("formato") == "foto")
+    os.environ["POL_FB_LINK"] = "1"           # lo que sigue prueba el link (POL_FB_LINK=1)
+
     fb = Facebook()
     res = correr(fb, tmp)
     chequear("sale como link", res.get("estado") == "ok" and res.get("formato") == "link" and res.get("link") == LINK)
@@ -126,7 +141,7 @@ with tempfile.TemporaryDirectory() as tmp:
 
     fb = Facebook()
     res = correr(fb, tmp, url="")
-    chequear("sin nota en la web no hay link: carrusel", res.get("formato") == "carrusel" and fb.lecturas == 0)
+    chequear("sin nota en la web no hay link: sale la foto", res.get("formato") == "foto" and fb.lecturas == 0)
 
     def cortado(metodo, url, token="", **kw):
         if url.endswith("/feed"):
@@ -137,7 +152,7 @@ with tempfile.TemporaryDirectory() as tmp:
         res = PUB._publicar_red("facebook", PIEZA, Path(tmp) / "01.mp4", Path(tmp), URL)
     chequear("corte al publicar: sin confirmar, no repite con el carrusel", res.get("estado") == "sin_confirmar")
 
-    with mock.patch.dict(os.environ, {"POL_FB_LINK": "0"}):
+    with mock.patch.dict(os.environ, {"POL_FB_LINK": "0", "POL_FB_FOTO": "0"}):
         fb = Facebook()
         res = correr(fb, tmp)
     chequear("POL_FB_LINK=0 vuelve al carrusel", res.get("formato") == "carrusel" and fb.lecturas == 0)

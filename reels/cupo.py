@@ -34,7 +34,9 @@ MAX_DEFAULT = 6
 # 24/10/2026 (noche, «1 corrida a una hora que genere 1 posteo cada 30 minutos entre 19 hs a 21 hs, que serían 5
 # posteos máximo», ahora en carrusel «deslizá y leé»): UNA corrida a las 18:30 todos los días; turnos.py
 # (DEMORA_PRIMERO 30, MINUTOS 30) la publica a las 19:00, 19:30, 20:00, 20:30 y 21:00.
-PASADAS_SEMANA = ((18, 30),)
+# 18/11/2026 (informe de métricas: los policiales rinden el doble a las 23; «correme a las 23hs la corrida de
+# policiales en ig/face»): la corrida a las 22:30 y los 6 de 23:00 a 00:15, uno cada 15 minutos.
+PASADAS_SEMANA = ((22, 30),)
 PASADAS_FINDE = ()
 PASADAS_AR = PASADAS_SEMANA
 

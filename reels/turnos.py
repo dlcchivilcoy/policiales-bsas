@@ -32,7 +32,7 @@ TZ_AR = timezone(timedelta(hours=-3))
 # 20/10/2026: policiales comparte horario con nacionales (finde) y la de las 22 se cruza con la de las 21 de
 # nacionales; nacionales sale a los :15 y :45, así que policiales va a los :30 y :00 — uno cada 30 minutos,
 # el primero a los 30 minutos de la pasada, seguidos (ya no comparten fila: se intercalan por la hora).
-MINUTOS = 30                   # entre un posteo y el siguiente
+MINUTOS = 15                   # entre un posteo y el siguiente (18/11/2026: 15, los 6 entre 23:00 y 00:15)
 DEMORA_PRIMERO = 30            # el primer turno, a los 30 minutos del horario de la pasada
 SEPARACION = 1                 # turnos entre dos policiales (2 = nunca dos seguidos, la fila vieja)
 POR_PASADA = 12                # turnos por pasada, como mucho

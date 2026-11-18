@@ -31,6 +31,9 @@ _CUPO.DIAS = 3650               # las pasadas de prueba (17/10) no se borran por
 from reels import turnos as _TUR  # noqa: E402
 _TUR.MINUTOS, _TUR.DEMORA_PRIMERO, _TUR.SEPARACION = 15, 15, 2
 PUB.PASADAS_AR = _CUPO.PASADAS_AR
+# 18/11/2026: la mecánica se prueba con el espaciado y la ventana de antes (30 min y 210); los reales, más abajo.
+_MIN_REAL, _VENTANA_REAL = PUB.MINUTOS_ENTRE_POSTEOS, PUB.VENTANA_PASADA_MIN
+PUB.MINUTOS_ENTRE_POSTEOS, PUB.VENTANA_PASADA_MIN = 30, 210
 
 # La hora argentina fija en una pasada «de 2» (18:05): los reels de prueba por pasada
 # dependen del horario, y las pruebas no pueden depender de cuándo se corren.
@@ -1617,9 +1620,9 @@ import importlib.util as _ilu  # noqa: E402
 _spec = _ilu.spec_from_file_location("_cupo_real", Path(_CUPO.__file__))
 _cupo_real = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_cupo_real)
-chequear("policiales: UNA corrida a las 18:30 todos los días, máximo 6 (19:00 a 21:30, 01/11/2026)",
-         _cupo_real.PASADAS_AR == ((18, 30),) and _cupo_real.PASADAS_FINDE == ()
-         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((18, 30),) and _cupo_real.MAX_DEFAULT == 6)
+chequear("policiales: UNA corrida a las 22:30 todos los días, máximo 6 (23:00 a 00:15, 18/11/2026)",
+         _cupo_real.PASADAS_AR == ((22, 30),) and _cupo_real.PASADAS_FINDE == ()
+         and _cupo_real.del_dia(datetime(2026, 10, 24)) == ((22, 30),) and _cupo_real.MAX_DEFAULT == 6)
 _sin_video = {"url_original": "https://a/1", "viral": 9, "orden": 1, "guion": {"titular": "Sin video"}}
 _con_video = {"url_original": "https://a/2", "viral": 6, "orden": 2, "tenia_video": True, "guion": {"titular": "Con video"}}
 _entran, _fuera = PUB.solo_las_que_entran([(_sin_video, "a.mp4"), (_con_video, "b.mp4")], {}, 1, set())
@@ -1713,15 +1716,17 @@ with _tfc.TemporaryDirectory() as _tc:
 from datetime import timezone as _tzc  # noqa: E402
 _tz = _tzc(timedelta(hours=-3))
 _PA0 = PUB.PASADAS_AR
-PUB.PASADAS_AR = ((18, 30),)
-_CUPO.PASADAS_AR = ((18, 30),)
+PUB.PASADAS_AR = ((22, 30),)
+_CUPO.PASADAS_AR = ((22, 30),)
+PUB.MINUTOS_ENTRE_POSTEOS, PUB.VENTANA_PASADA_MIN = _MIN_REAL, _VENTANA_REAL
 try:
-    _c = PUB.cierre_de_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz))
-    chequear("policiales: la pasada de las 18:30 cierra a las 22:00 (01/11/2026), no al día siguiente",
-             (_c.day, _c.hour, _c.minute) == (24, 22, 0))
+    _c = PUB.cierre_de_la_pasada(datetime(2026, 10, 24, 22, 36, tzinfo=_tz))
+    chequear("policiales: la pasada de las 22:30 cierra a las 00:30 (18/11/2026), no la noche siguiente",
+             (_c.day, _c.hour, _c.minute) == (25, 0, 30))
     _max0 = os.environ.get("MAX_POLICE_REELS_PER_PASS")
     os.environ.pop("MAX_POLICE_REELS_PER_PASS", None)
-    chequear("policiales: entran los 6 (19:00 a 21:30)", PUB.lugares_en_la_pasada(datetime(2026, 10, 24, 18, 36, tzinfo=_tz)) == 6)
+    chequear("policiales: entran los 6 (23:00 a 00:15, cada 15 min)",
+             PUB.lugares_en_la_pasada(datetime(2026, 10, 24, 22, 36, tzinfo=_tz)) == 6)
     if _max0 is None:
         os.environ.pop("MAX_POLICE_REELS_PER_PASS")
     else:
@@ -1729,6 +1734,7 @@ try:
 finally:
     PUB.PASADAS_AR = _PA0
     _CUPO.PASADAS_AR = _PA0
+    PUB.MINUTOS_ENTRE_POSTEOS, PUB.VENTANA_PASADA_MIN = 30, 210
 os.environ.pop("INTERCALADO", None)
 from reels import intercalado as _INT  # noqa: E402
 chequear("intercalado: apagado de fábrica desde el 25/10/2026 (5 policiales seguidos de 19 a 21)", not _INT.activo())

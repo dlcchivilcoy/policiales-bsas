@@ -806,7 +806,33 @@ UA_FACEBOOK = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uat
 
 
 def fb_con_link() -> bool:
-    return (os.environ.get("POL_FB_LINK") or "1").strip() != "0"
+    """18/11/2026: apagado de fábrica (el informe de métricas: 34 posteos con link, 0 compartidas y 0 comentarios;
+    la foto rinde el doble). POL_FB_LINK=1 lo vuelve a prender."""
+    return (os.environ.get("POL_FB_LINK") or "0").strip() == "1"
+
+
+# EL POLICIAL EN FACEBOOK COMO FOTO (pedido del editor, 18/11/2026: «sacale link a los policiales y pone foto»).
+# La portada del carrusel (foto real + título) como posteo de foto, con el texto de siempre (el link a la nota
+# queda escrito en el texto, sin tarjeta). POL_FB_FOTO=0 vuelve al álbum.
+def fb_con_foto() -> bool:
+    return (os.environ.get("POL_FB_FOTO") or "1").strip() != "0"
+
+
+def publicar_foto_facebook(pieza: dict, mp4: Path, url_web: str = "") -> dict:
+    """/{page}/photos con la portada, publicada, y el texto del posteo."""
+    slides = slides_de(pieza, Path(mp4).parent)
+    portada = Path(slides[0])
+    try:
+        r = _pedir("POST", f"{GRAPH}/{os.environ.get('FACEBOOK_PAGE_ID', '')}/photos",
+                   os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", ""),
+                   data={"message": texto_del_posteo(pieza, "facebook", url_web), "published": "true"},
+                   files={"source": (portada.name, portada.read_bytes(), "image/jpeg")})
+    except _Cortado as e:
+        raise SinConfirmar(f"Facebook (foto): {e}")       # pudo haber salido: no se reintenta
+    if r.status_code >= 400:
+        raise FalloRed(_error(r, "Facebook (foto)"))
+    d = r.json() or {}
+    return {"id": str(d.get("post_id") or d.get("id") or ""), "formato": "foto"}
 
 
 def va_como_link(pieza: dict, mp4: Path, url_web: str) -> bool:
@@ -1841,7 +1867,8 @@ MARGEN_PASADA_MIN = 10       # la última sale al menos 10 minutos antes de la p
 # intercalado hasta que GitHub la cortó a las 5 h («timed out after 300 minutes»). Ahora cierra a las
 # 18:30 + 3 h = 21:30 (el último turno es a las 21:00). Con pasadas cada 3 h o menos no cambia nada.
 # 01/11/2026: con 6 reels el último va a las 21:30 → la pasada cierra a las 22:00 (18:30 + 3 h 30).
-VENTANA_PASADA_MIN = 210
+# 18/11/2026: corrida a las 22:30, 6 cada 15 min de 23:00 a 00:15 → cierra a las 00:30 (22:30 + 2 h).
+VENTANA_PASADA_MIN = 120
 
 
 def cierre_de_la_pasada(ahora_ar: datetime = None) -> datetime:
@@ -2025,6 +2052,8 @@ def _publicar_red(red: str, pieza: dict, mp4: Path, carpeta: Path, url_web: str)
         return res
     if va_como_link(pieza, mp4, url_web):
         return _intentar(publicar_nota_facebook, pieza, mp4, url_web)
+    if fb_con_foto() and slides_de(pieza, Path(mp4).parent):
+        return _intentar(publicar_foto_facebook, pieza, mp4, url_web)
     return _intentar(publicar_facebook, pieza, mp4, url_web)
 
 
@@ -2156,6 +2185,8 @@ def _simular(red: str, pieza: dict, mp4: Path, url_web: str = "") -> dict:
     info = {"estado": "simulado", "kb": round(mp4.stat().st_size / 1024), "caracteres": len(texto)}
     if red == "facebook" and va_como_link(pieza, mp4, url_web):
         info.update(formato="link", link=link_para_facebook(url_web), texto=texto_link_nota(pieza))
+    elif red == "facebook" and fb_con_foto() and slides_de(pieza, Path(mp4).parent):
+        info.update(formato="foto")
     if red in ("instagram", "ig_prueba"):
         params = IG.contenedor_reel("https://ejemplo.invalid/reel.mp4", texto,
                                     prueba=True if red == "ig_prueba" else None)

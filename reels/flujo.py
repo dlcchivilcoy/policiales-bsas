@@ -183,7 +183,8 @@ CONTENCION_MISMA_LOCALIDAD = 0.40
 # 30 desde el 13/10/2026 (pedido del editor: «postear 1 reel cada 30 minutos, lo mismo para las otras
 # redes»). Antes, 5. Cada pieza sale en todas sus redes juntas, así que en cada red queda un reel cada 30
 # minutos como mucho; cuántas entran en una pasada lo decide el publicador (`lugares_en_la_pasada`).
-MINUTOS_ENTRE_POSTEOS = 30
+# 18/11/2026: 15, la corrida de policiales sale toda en la hora que mejor rinde (23:00 a 00:15).
+MINUTOS_ENTRE_POSTEOS = 15
 
 # Cuántas notas se ARMAN por pasada cuando no se pide un número (--cuantos 0): el tope de reels
 # de la pasada (3) más margen para las que se caen al armar. Variable POLICIALES_ARMAR_POR_PASADA.
