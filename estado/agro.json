@@ -42100,6 +42100,54 @@
       "urgente": true,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "12ef2137fb3b8a9e": {
+      "conversacion": 11,
+      "historia_concreta": 6,
+      "cercania_pba": 12,
+      "interes_productores": 11,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 53,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "créditos bancarios",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un dato macroeconómico importante sobre financiación, pero abstracto para el día a día del productor.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        49
+      ]
+    },
+    "e180c2a9e1a2d3a0": {
+      "conversacion": 9,
+      "historia_concreta": 4,
+      "cercania_pba": 12,
+      "interes_productores": 9,
+      "impacto_economico": 10,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 49,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "retenciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Reclamos institucionales de cámaras; toca un tema sensible pero es una noticia de reuniones y pedidos sin hechos concretos locales.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        43
+      ]
     }
   },
   "indice": {
@@ -45001,7 +45049,9 @@
       "https://clarin.com/rural/maquinaria-agricola-argentina-grandes-vidrieras-europeas_0_V0YIOyxBZj.html": "2026-11-17",
       "https://tn.com.ar/campo/2026/11/17/el-gobierno-bonaerense-dicto-la-conciliacion-obligatoria-para-frenar-los-despidos-de-bunge-en-la-planta-de-campana": "2026-11-17",
       "https://news.agrofy.com.ar/noticia/217018/frigorifico-salteno-multiplico-seis-exportaciones-carne-ano-inversion-us-20-millones-detras-salto": "2026-11-17",
-      "https://diarionoticiaspehuajo.com/2026-11-17/intensifican-los-trabajos-en-caminos-rurales-ante-el-exceso-de-lluvias-y-la-preocupacion-por-el-fenomeno-de-el-nino-43801": "2026-11-17"
+      "https://diarionoticiaspehuajo.com/2026-11-17/intensifican-los-trabajos-en-caminos-rurales-ante-el-exceso-de-lluvias-y-la-preocupacion-por-el-fenomeno-de-el-nino-43801": "2026-11-17",
+      "https://bichosdecampo.com/el-credito-bancario-destinado-al-sector-agricola-argentino-esta-en-un-maximo-historico-buena-o-mala-noticia": "2026-11-17",
+      "https://lanacion.com.ar/economia/campo/las-cuatro-cadenas-agricolas-pidieron-una-ley-que-fije-el-camino-para-eliminar-las-retenciones-nid17112026": "2026-11-17"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -47901,7 +47951,9 @@
       "la maquinaria agricola argentina en una de las grandes vidrieras europeas": "2026-11-17",
       "el gobierno bonaerense dicto la conciliacion obligatoria para frenar los despidos de bunge en la planta de campana": "2026-11-17",
       "el frigorifico salteno que multiplico por seis sus exportaciones de carne en un ano la inversion de us 20 millones detras del salto": "2026-11-17",
-      "intensifican los trabajos en caminos rurales ante el exceso de lluvias y la preocupacion por el fenomeno de el nino": "2026-11-17"
+      "intensifican los trabajos en caminos rurales ante el exceso de lluvias y la preocupacion por el fenomeno de el nino": "2026-11-17",
+      "el credito bancario destinado al sector agricola argentino esta en un maximo historico buena o mala noticia": "2026-11-17",
+      "las cuatro cadenas agricolas pidieron una ley que fije el camino para eliminar las retenciones": "2026-11-17"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -50801,7 +50853,9 @@
       "fb2145bf3e360129": "2026-11-17",
       "d191281b19ba3820": "2026-11-17",
       "2939051182634570": "2026-11-17",
-      "68d4f6e0643108a8": "2026-11-17"
+      "68d4f6e0643108a8": "2026-11-17",
+      "12ef2137fb3b8a9e": "2026-11-17",
+      "e180c2a9e1a2d3a0": "2026-11-17"
     }
   },
   "elegidas": [
@@ -83041,75 +83095,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0555b4015979_portada.jpg"
+    },
+    {
+      "id": "d2718cc960e1",
+      "cuando": "2026-11-17T21:00-03:00",
+      "titulo_original": "Persecución y tiroteo en las islas de Victoria: cuatreros escaparon de la policía rural con un vacuno faenado",
+      "descripcion": "",
+      "fuente": "TN Campo",
+      "url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado/",
+      "titular": "Persecución y tiroteo en Victoria tras robar un vacuno faenado",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 18,
+        "cercania_pba": 10,
+        "interes_productores": 12,
+        "impacto_economico": 5,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 72,
+        "commercial_score": 70,
+        "subtema": "ganaderia",
+        "tema": "cuatreros",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Persecución policial a cuatreros con vacuno faenado, un clásico delito rural que genera indignación.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": true
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-17T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1c260492-afa2-4b20-842e-0b96c7782b03",
+          "slug": "tiroteo-y-persecucion-en-las-islas-de-victoria-cuatreros-fff3b6",
+          "url": "https://www.diariolacampaña.com.ar/n/tiroteo-y-persecucion-en-las-islas-de-victoria-cuatreros-fff3b6",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17921699904464708",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1764906118973718",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d2718cc960e1_portada.jpg"
     }
   ],
   "pendientes": [
-    {
-      "id": "9f6f247c3639",
-      "rep": {
-        "id": "9f6f247c3639",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/polemica-productores-de-un-municipio-bonaerense-abren-una-batalla-judicial-por-el-cobro-de-tasas-nid17112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/polemica-productores-de-un-municipio-bonaerense-abren-una-batalla-judicial-por-el-cobro-de-tasas-nid17112026",
-        "titulo": "Polémica: productores de un municipio bonaerense abren una batalla judicial por el cobro de tasas",
-        "titulo_norm": "polemica productores de un municipio bonaerense abren una batalla judicial por el cobro de tasas",
-        "descripcion": "Autoconvocados de Zárate cuestionan la eliminación de una tasa específica para mantener los caminos rurales y el cobro de alumbrado público en las facturas de luz de establecimientos rurales que no tienen luminarias",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/WXGZI7DSRZBLBGPWVJXMPEGVVU.png?auth=32f957f5c8f465397a5add7a27265ca407c5c1dd981749d85cf7aeb060ccab16&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-11-17T18:18-03:00",
-        "capturado": "2026-11-17T19:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b6a1ddc3ec0c7e50",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "9f6f247c3639",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/polemica-productores-de-un-municipio-bonaerense-abren-una-batalla-judicial-por-el-cobro-de-tasas-nid17112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/polemica-productores-de-un-municipio-bonaerense-abren-una-batalla-judicial-por-el-cobro-de-tasas-nid17112026",
-          "titulo": "Polémica: productores de un municipio bonaerense abren una batalla judicial por el cobro de tasas",
-          "titulo_norm": "polemica productores de un municipio bonaerense abren una batalla judicial por el cobro de tasas",
-          "descripcion": "Autoconvocados de Zárate cuestionan la eliminación de una tasa específica para mantener los caminos rurales y el cobro de alumbrado público en las facturas de luz de establecimientos rurales que no tienen luminarias",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/WXGZI7DSRZBLBGPWVJXMPEGVVU.png?auth=32f957f5c8f465397a5add7a27265ca407c5c1dd981749d85cf7aeb060ccab16&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-11-17T18:18-03:00",
-          "capturado": "2026-11-17T19:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b6a1ddc3ec0c7e50",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 20,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 76,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "tasas viales zárate",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Conflicto por tasas viales en la provincia; a cualquier productor bonaerense le toca un nervio sensible.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-17T19:30-03:00"
-    },
     {
       "id": "d3d8610061f5",
       "rep": {
@@ -83175,297 +83218,6 @@
         "policial_rural": false
       },
       "cuando": "2026-11-17T19:30-03:00"
-    },
-    {
-      "id": "f1e4806059c3",
-      "rep": {
-        "id": "f1e4806059c3",
-        "fuente": "Qué Pasa En Bolívar",
-        "tipo_fuente": "medio",
-        "source_url": "https://quepasaenbolivar.com.ar/feed/",
-        "url": "https://quepasaenbolivar.com.ar/recuperaron-un-animal-vacuno-que-habia-sido-robado-de-la-escuela-agraria/",
-        "canonical_url": "https://quepasaenbolivar.com.ar/recuperaron-un-animal-vacuno-que-habia-sido-robado-de-la-escuela-agraria",
-        "titulo": "RECUPERARON UN ANIMAL VACUNO QUE HABÍA SIDO ROBADO DE LA ESCUELA AGRARIA",
-        "titulo_norm": "recuperaron un animal vacuno que habia sido robado de la escuela agraria",
-        "descripcion": "Un animal vacuno de raza Holando Argentino, valuado en aproximadamente 2.200.000 pesos, que había sido... La entrada RECUPERARON UN ANIMAL VACUNO QUE HABÍA SIDO ROBADO DE LA ESCUELA AGRARIA se publicó primero en Q<>B.",
-        "imagen_url": "",
-        "autor": "santiurd@gmail.com",
-        "publicado": "2026-11-17T17:55-03:00",
-        "capturado": "2026-11-17T18:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4df01c22ac2dd145",
-        "localidad_medio": "Bolivar"
-      },
-      "grupo": [
-        {
-          "id": "f1e4806059c3",
-          "fuente": "Qué Pasa En Bolívar",
-          "tipo_fuente": "medio",
-          "source_url": "https://quepasaenbolivar.com.ar/feed/",
-          "url": "https://quepasaenbolivar.com.ar/recuperaron-un-animal-vacuno-que-habia-sido-robado-de-la-escuela-agraria/",
-          "canonical_url": "https://quepasaenbolivar.com.ar/recuperaron-un-animal-vacuno-que-habia-sido-robado-de-la-escuela-agraria",
-          "titulo": "RECUPERARON UN ANIMAL VACUNO QUE HABÍA SIDO ROBADO DE LA ESCUELA AGRARIA",
-          "titulo_norm": "recuperaron un animal vacuno que habia sido robado de la escuela agraria",
-          "descripcion": "Un animal vacuno de raza Holando Argentino, valuado en aproximadamente 2.200.000 pesos, que había sido... La entrada RECUPERARON UN ANIMAL VACUNO QUE HABÍA SIDO ROBADO DE LA ESCUELA AGRARIA se publicó primero en Q<>B.",
-          "imagen_url": "",
-          "autor": "santiurd@gmail.com",
-          "publicado": "2026-11-17T17:55-03:00",
-          "capturado": "2026-11-17T18:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4df01c22ac2dd145",
-          "localidad_medio": "Bolivar"
-        }
-      ],
-      "score": {
-        "conversacion": 22,
-        "historia_concreta": 20,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 83,
-        "commercial_score": 50,
-        "subtema": "ganaderia",
-        "tema": "robo escuela agraria",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Caso policial rural en Bolívar que afecta a una escuela agraria, genera mucha empatía y bronca local.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 2,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": true
-      },
-      "cuando": "2026-11-17T18:00-03:00"
-    },
-    {
-      "id": "d2718cc960e1",
-      "rep": {
-        "id": "d2718cc960e1",
-        "fuente": "TN Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-        "url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado/",
-        "canonical_url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado",
-        "titulo": "Persecución y tiroteo en las islas de Victoria: cuatreros escaparon de la policía rural con un vacuno faenado",
-        "titulo_norm": "persecucion y tiroteo en las islas de victoria cuatreros escaparon de la policia rural con un vacuno faenado",
-        "descripcion": "",
-        "imagen_url": "https://tn.com.ar/resizer/v2/X3BZRNJYNJCPRIMOGVF6TZMVCM.jpg?auth=5f8c7caa7260cf4c088fbc70be5851a3bbccff30e1d1a04c4e9230f6450c594b",
-        "autor": "",
-        "publicado": "2026-11-17T14:42-03:00",
-        "capturado": "2026-11-17T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "9aaa134ca1bd30a3",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "d2718cc960e1",
-          "fuente": "TN Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-          "url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado/",
-          "canonical_url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado",
-          "titulo": "Persecución y tiroteo en las islas de Victoria: cuatreros escaparon de la policía rural con un vacuno faenado",
-          "titulo_norm": "persecucion y tiroteo en las islas de victoria cuatreros escaparon de la policia rural con un vacuno faenado",
-          "descripcion": "",
-          "imagen_url": "https://tn.com.ar/resizer/v2/X3BZRNJYNJCPRIMOGVF6TZMVCM.jpg?auth=5f8c7caa7260cf4c088fbc70be5851a3bbccff30e1d1a04c4e9230f6450c594b",
-          "autor": "",
-          "publicado": "2026-11-17T14:42-03:00",
-          "capturado": "2026-11-17T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "9aaa134ca1bd30a3",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 72,
-        "commercial_score": 70,
-        "subtema": "ganaderia",
-        "tema": "cuatreros",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Persecución policial a cuatreros con vacuno faenado, un clásico delito rural que genera indignación.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": true
-      },
-      "cuando": "2026-11-17T16:00-03:00"
-    },
-    {
-      "id": "f16530e7d52a",
-      "rep": {
-        "id": "f16530e7d52a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/bunge-la-provincia-de-buenos-aires-dicto-conciliacion-obligatoria-para-que-los-empleados-vuelvan-a-la-fabrica-pero-denuncian-que-no-les-asignan-tareas/",
-        "canonical_url": "https://bichosdecampo.com/bunge-la-provincia-de-buenos-aires-dicto-conciliacion-obligatoria-para-que-los-empleados-vuelvan-a-la-fabrica-pero-denuncian-que-no-les-asignan-tareas",
-        "titulo": "Bunge: La provincia de Buenos Aires dictó conciliación obligatoria para que los empleados vuelvan a la fábrica pero denuncian que no les asignan tareas",
-        "titulo_norm": "bunge la provincia de buenos aires dicto conciliacion obligatoria para que los empleados vuelvan a la fabrica pero denuncian que no les asignan tareas",
-        "descripcion": "La provincia de Buenos Aires, a través de su Ministerio de Trabajo, resolvió dictar la conciliación obligatoria en el conflicto que tiene a los trabajadores de una fábrica de fertilizantes en Campana en la calle luego de que la multinacional haya anunciado el cierre definitivo de las operaciones. La conciliación obligatoria dictada frenó temporalmente los […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-17-095322.png",
-        "autor": "Diego Mañas",
-        "publicado": "2026-11-17T10:13-03:00",
-        "capturado": "2026-11-17T11:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "91ea8060d29d7ecc",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "f16530e7d52a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/bunge-la-provincia-de-buenos-aires-dicto-conciliacion-obligatoria-para-que-los-empleados-vuelvan-a-la-fabrica-pero-denuncian-que-no-les-asignan-tareas/",
-          "canonical_url": "https://bichosdecampo.com/bunge-la-provincia-de-buenos-aires-dicto-conciliacion-obligatoria-para-que-los-empleados-vuelvan-a-la-fabrica-pero-denuncian-que-no-les-asignan-tareas",
-          "titulo": "Bunge: La provincia de Buenos Aires dictó conciliación obligatoria para que los empleados vuelvan a la fábrica pero denuncian que no les asignan tareas",
-          "titulo_norm": "bunge la provincia de buenos aires dicto conciliacion obligatoria para que los empleados vuelvan a la fabrica pero denuncian que no les asignan tareas",
-          "descripcion": "La provincia de Buenos Aires, a través de su Ministerio de Trabajo, resolvió dictar la conciliación obligatoria en el conflicto que tiene a los trabajadores de una fábrica de fertilizantes en Campana en la calle luego de que la multinacional haya anunciado el cierre definitivo de las operaciones. La conciliación obligatoria dictada frenó temporalmente los […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-17-095322.png",
-          "autor": "Diego Mañas",
-          "publicado": "2026-11-17T10:13-03:00",
-          "capturado": "2026-11-17T11:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "91ea8060d29d7ecc",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 13,
-        "cercania_pba": 12,
-        "interes_productores": 10,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 62,
-        "commercial_score": 42,
-        "subtema": "empresas",
-        "tema": "fertilizantes bunge",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Conflicto y conciliación obligatoria en planta de fertilizantes en Campana, insumo crítico para la campaña agrícola bonaerense.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          68,
-          56
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-17T11:30-03:00"
-    },
-    {
-      "id": "b45f9c413d0a",
-      "rep": {
-        "id": "b45f9c413d0a",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/el-senasa-cambio-las-reglas-para-fumigar-granos-le-quito-a-sus-inspectores-la-obligacion-de-verificar-habilitaciones-provinciales/",
-        "canonical_url": "https://bichosdecampo.com/el-senasa-cambio-las-reglas-para-fumigar-granos-le-quito-a-sus-inspectores-la-obligacion-de-verificar-habilitaciones-provinciales",
-        "titulo": "El Senasa cambió las reglas para fumigar granos: Le quitó a sus inspectores la obligación de verificar habilitaciones provinciales",
-        "titulo_norm": "el senasa cambio las reglas para fumigar granos le quito a sus inspectores la obligacion de verificar habilitaciones provinciales",
-        "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) modificó el procedimiento para supervisar las fumigaciones oficiales de granos y otras mercaderías vinculadas al comercio internacional. Entre los principales cambios, la nueva normativa elimina la obligación de que sus inspectores verifiquen las habilitaciones provinciales de las empresas fumigadoras y las autorizaciones de sus directores técnicos. […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/senasa-726x375-1.png",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-17T09:00-03:00",
-        "capturado": "2026-11-17T10:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "21c53f41d0e4d771",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "b45f9c413d0a",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/el-senasa-cambio-las-reglas-para-fumigar-granos-le-quito-a-sus-inspectores-la-obligacion-de-verificar-habilitaciones-provinciales/",
-          "canonical_url": "https://bichosdecampo.com/el-senasa-cambio-las-reglas-para-fumigar-granos-le-quito-a-sus-inspectores-la-obligacion-de-verificar-habilitaciones-provinciales",
-          "titulo": "El Senasa cambió las reglas para fumigar granos: Le quitó a sus inspectores la obligación de verificar habilitaciones provinciales",
-          "titulo_norm": "el senasa cambio las reglas para fumigar granos le quito a sus inspectores la obligacion de verificar habilitaciones provinciales",
-          "descripcion": "El Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa) modificó el procedimiento para supervisar las fumigaciones oficiales de granos y otras mercaderías vinculadas al comercio internacional. Entre los principales cambios, la nueva normativa elimina la obligación de que sus inspectores verifiquen las habilitaciones provinciales de las empresas fumigadoras y las autorizaciones de sus directores técnicos. […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/senasa-726x375-1.png",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-17T09:00-03:00",
-          "capturado": "2026-11-17T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "21c53f41d0e4d771",
-          "localidad_medio": ""
-        },
-        {
-          "id": "843d4a0ac17d",
-          "fuente": "Agrofy News",
-          "tipo_fuente": "medio",
-          "source_url": "https://news.agrofy.com.ar/rss.xml",
-          "url": "https://news.agrofy.com.ar/noticia/217010/senasa-actualizo-controles-fitosanitarios-exportacion-granos",
-          "canonical_url": "https://news.agrofy.com.ar/noticia/217010/senasa-actualizo-controles-fitosanitarios-exportacion-granos",
-          "titulo": "El Senasa actualizó los controles fitosanitarios para la exportación de granos",
-          "titulo_norm": "el senasa actualizo los controles fitosanitarios para la exportacion de granos",
-          "descripcion": "El organismo publicó un nuevo procedimiento para la a supervisión y certificación de los tratamientos",
-          "imagen_url": "https://news.agrofystatic.com/portadas/acopios-96c05.jpg",
-          "autor": "",
-          "publicado": "2026-11-17T09:38-03:00",
-          "capturado": "2026-11-17T10:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "18b96738cb5d5ef4",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 10,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 60,
-        "commercial_score": 50,
-        "subtema": "empresas",
-        "tema": "senasa fumigaciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Cambio normativo nacional directo que afecta las habilitaciones y controles de fumigación.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          59
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-17T10:00-03:00"
     },
     {
       "id": "bb6e4a0a1122",
@@ -83804,8 +83556,8 @@
       "cuando": "2026-11-16T13:00-03:00"
     }
   ],
-  "actualizado": "2026-11-17T19:35:17-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-17T21:06:21-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
