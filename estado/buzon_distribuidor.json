@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T00:03:17.000Z",
+  "actualizado": "2026-11-18T00:32:05.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.diariodemocracia.com/policiales/348139-ruta-65-interceptaron-a-un-hombre-de-45-anos-que-r",
@@ -259,6 +259,30 @@
       "volanta": "Operativo en La Limpia",
       "categoria": "operativo_policial",
       "distancia_km": 56.0,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://junin24.com/policiales/rapido-accionar-policial-en-junin-recuperan-una-motocicleta-robada-en-menos-de-dos-horas-tras-seguirla-por-las-camaras-del-com",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-18T00:32:05.000Z",
+      "titulo": "Recuperan en menos de dos horas una moto robada en Junín tras seguirla por las cámaras",
+      "descripcion": "Una Corven Energy 110 sustraída de madrugada fue hallada oculta entre la vegetación cerca del río Salado. La policía la ubicó en menos de dos horas mediante el seguimiento del COM.",
+      "texto_tiktok": "Una motocicleta robada en Junín fue recuperada por la policía en menos de dos horas durante la madrugada.\n\nEl operativo se concretó mediante el monitoreo de las cámaras del COM y un rastrillaje cerca del río Salado.\n\nEl rodado estaba escondido entre la vegetación próxima al puente Posadas y la investigación quedó a cargo de la fiscalía interviniente.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Policiales #Seguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-17_2134_10_junin_recuperan-en-menos-de-dos-hora.mp4",
+      "duracion_seg": 56.2,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-recuperan-una-moto-robada-en-menos-de-dos-horas-con-las-13161d",
+      "youtube_url": "https://youtube.com/shorts/9Zffe-ZfP0M",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Robo en Junín",
+      "categoria": "robo",
+      "distancia_km": 91.2,
       "radio_ok": true,
       "plataformas": [
         "x",
