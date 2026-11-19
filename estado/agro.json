@@ -45480,6 +45480,118 @@
         54,
         31
       ]
+    },
+    "8faf24cbef99cc44": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 19,
+      "commercial_score": 15,
+      "subtema": "empresas",
+      "tema": "premio innovación",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un premio a una empresa, no le cambia nada al productor de Chivilcoy en su día a día.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2bc7dcb1de3e37de": {
+      "conversacion": 2,
+      "historia_concreta": 1,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 22,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "transgénicos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Balance macroeconómico e histórico a nivel país; al productor local no le aporta una solución práctica.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1321278d63bd3f9e": {
+      "conversacion": 8,
+      "historia_concreta": 11,
+      "cercania_pba": 12,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 49,
+      "commercial_score": 38,
+      "subtema": "empresas",
+      "tema": "inauguración planta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Pergamino (cerca), inversión concreta y aniversario de una empresa conocida en la región.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        40
+      ]
+    },
+    "63afce323c6fc0e4": {
+      "conversacion": 18,
+      "historia_concreta": 18,
+      "cercania_pba": 5,
+      "interes_productores": 10,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 66,
+      "commercial_score": 45,
+      "subtema": "maquinaria",
+      "tema": "pauny conflicto",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Conflicto grave en una fábrica de tractores muy usada en la zona, genera mucha charla entre contratistas.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        67
+      ]
+    },
+    "1cb5bb3c35fc4232": {
+      "conversacion": 15,
+      "historia_concreta": 10,
+      "cercania_pba": 12,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 66,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "chicharrita maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sanitaria sobre la chicharrita del maíz, un tema clave y de máxima preocupación para la siembra en la zona.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        66,
+        68
+      ]
     }
   },
   "indice": {
@@ -48606,7 +48718,12 @@
       "https://news.agrofy.com.ar/noticia/217033/fuerte-cruce-carbap-coninagro-directorio-puerto-quequen-denuncias-e-impugnaciones": "2026-11-19",
       "https://infocampo.com.ar/diente-de-leon-propiedades-usos": "2026-11-19",
       "https://bichosdecampo.com/ante-el-avance-del-delito-rural-en-entre-rios-quieren-crear-fiscalias-especializadas-una-iniciativa-que-corrientes-puso-en-marcha-hace-20-anos-y-aun-tiene-a-medio-hacer": "2026-11-19",
-      "https://clarin.com/rural/gestionan-reduccion-riesgo-argentino-exigencia-europea-deforestacion_0_0QrKv5nA4j.html": "2026-11-19"
+      "https://clarin.com/rural/gestionan-reduccion-riesgo-argentino-exigencia-europea-deforestacion_0_0QrKv5nA4j.html": "2026-11-19",
+      "https://infocampo.com.ar/lo-que-realmente-vale-es-el-equipo-producen-bioinsumos-y-fueron-premiados-por-su-excelencia-en-innovacion": "2026-11-19",
+      "https://agrositio.com.ar/noticia/249420-30-anos-de-cultivos-transgenicos-una-tecnologia-que-genero-usd-197500-millones-y-un-nuevo-desafio-para-la-argentina.html": "2026-11-19",
+      "https://bichosdecampo.com/dia-de-celebracion-la-empresa-agricola-tropfen-festejo-sus-10-anos-de-vida-inaugurando-en-pergamino-una-nueva-planta-que-le-costo-15-millones-de-dolares": "2026-11-19",
+      "https://bichosdecampo.com/sorpresa-pauny-ofrecio-reanudar-la-produccion-y-pagar-los-sueldos-de-septiembre-y-octubre-en-cuotas-pero-condiciona-todo-a-que-los-obreros-devuelvan-la-planta": "2026-11-19",
+      "https://news.agrofy.com.ar/noticia/217034/cambio-tendencia-chicharrita-algunas-regiones-aumento-casi-desaparecio": "2026-11-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -51731,7 +51848,12 @@
       "fuerte cruce entre carbap y coninagro por el directorio del puerto de quequen denuncias e impugnaciones": "2026-11-19",
       "la maleza que tenes en el jardin y tiene mas usos de los que crees el diente de leon": "2026-11-19",
       "ante el avance del delito rural en entre rios quieren crear fiscalias especializadas una iniciativa que corrientes puso en marcha hace 20 anos y aun tiene a medio hacer": "2026-11-19",
-      "gestionan una reduccion de riesgo argentino ante la exigencia europea contra la deforestacion": "2026-11-19"
+      "gestionan una reduccion de riesgo argentino ante la exigencia europea contra la deforestacion": "2026-11-19",
+      "lo que realmente vale es el equipo producen bioinsumos y fueron premiados por su excelencia en innovacion": "2026-11-19",
+      "30 anos de cultivos transgenicos una tecnologia que genero usd 197 500 millones y un nuevo desafio para la argentina": "2026-11-19",
+      "dia de celebracion la empresa agricola tropfen festejo sus 10 anos de vida inaugurando en pergamino una nueva planta que le costo 1 5 millones de dolares": "2026-11-19",
+      "sorpresa pauny ofrecio reanudar la produccion y pagar los sueldos de septiembre y octubre en cuotas pero condiciona todo a que los obreros devuelvan la planta": "2026-11-19",
+      "cambio la tendencia de la chicharrita en algunas regiones donde aumento y donde casi desaparecio": "2026-11-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -54856,7 +54978,12 @@
       "f19b2f86b4a43084": "2026-11-19",
       "757c6b399deac6a0": "2026-11-19",
       "c3a9eac5dacfe833": "2026-11-19",
-      "4c6b0559146155df": "2026-11-19"
+      "4c6b0559146155df": "2026-11-19",
+      "8faf24cbef99cc44": "2026-11-19",
+      "2bc7dcb1de3e37de": "2026-11-19",
+      "1321278d63bd3f9e": "2026-11-19",
+      "63afce323c6fc0e4": "2026-11-19",
+      "1cb5bb3c35fc4232": "2026-11-19"
     }
   },
   "elegidas": [
@@ -87853,7 +87980,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-19T14:40:40-03:00",
+  "actualizado": "2026-11-19T16:04:53-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -96405,7 +96532,8 @@
     "90f337fb7104": "2026-11-19T13:00",
     "851ca7181bc3": "2026-11-19T13:00",
     "6e4f636bd887": "2026-11-19T13:00",
-    "0450dc14d6a4": "2026-11-19T13:00"
+    "0450dc14d6a4": "2026-11-19T13:00",
+    "1462f493805d": "2026-11-19T16:00"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
