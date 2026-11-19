@@ -86721,7 +86721,7 @@
       "cuando": "2026-11-19T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-19T07:07:50-03:00",
+  "actualizado": "2026-11-19T08:02:44-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -93717,6 +93717,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-17": {
+        "fecha": "2026-11-17",
+        "productos": {
+          "trigo": {
+            "ars": 285455.0,
+            "usd": 185.0,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 268500.0,
+            "usd": 174.01,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 741000.0,
+            "usd": 480.23,
+            "estimado": true,
+            "direccion": "baja"
+          },
+          "soja": {
+            "ars": 550000.0,
+            "usd": 356.45,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "sorgo": {
+            "ars": 277740.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1543.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -93999,6 +94039,20 @@
           "compra": 1543.0,
           "venta": 1552.0
         }
+      },
+      "2026-11-18": {
+        "fuente": "Banco Nación",
+        "hora": "17:02",
+        "billete": {
+          "fecha": "2026-11-18",
+          "compra": 1530.0,
+          "venta": 1580.0
+        },
+        "divisa": {
+          "fecha": "2026-11-18",
+          "compra": 1550.5,
+          "venta": 1559.5
+        }
       }
     },
     "a3500": {
@@ -94113,6 +94167,10 @@
       "2026-11-17": {
         "fecha": "2026-11-17",
         "valor": 1552.2627
+      },
+      "2026-11-18": {
+        "fecha": "2026-11-18",
+        "valor": 1558.2427
       }
     },
     "chicago_soja": {
@@ -94294,7 +94352,11 @@
       },
       "2026-11-18": {
         "fecha": "2026-11-18",
-        "usd_t": 448.3
+        "usd_t": 447.1
+      },
+      "2026-11-19": {
+        "fecha": "2026-11-19",
+        "usd_t": 448.5
       }
     },
     "chicago_maiz": {
@@ -94476,7 +94538,11 @@
       },
       "2026-11-18": {
         "fecha": "2026-11-18",
-        "usd_t": 174.7
+        "usd_t": 171.4
+      },
+      "2026-11-19": {
+        "fecha": "2026-11-19",
+        "usd_t": 171.2
       }
     },
     "chicago_trigo": {
@@ -94658,7 +94724,11 @@
       },
       "2026-11-18": {
         "fecha": "2026-11-18",
-        "usd_t": 215.1
+        "usd_t": 209.4
+      },
+      "2026-11-19": {
+        "fecha": "2026-11-19",
+        "usd_t": 210.9
       }
     }
   },
@@ -94975,6 +95045,32 @@
         },
         "facebook": {
           "id": "101271341650483_1765399612257702",
+          "fotos": 8
+        }
+      }
+    },
+    "2026-11-19T08:00:00-03:00": {
+      "dia": "2026-11-19",
+      "placas": [
+        "portada",
+        "mapa",
+        "pueblos",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Llegan 8 mm de lluvia a Chivilcoy",
+      "publicado": {
+        "instagram": {
+          "id": "18442143538177296",
+          "colab": "no",
+          "diapositivas": 8
+        },
+        "facebook": {
+          "id": "101271341650483_1766576145473382",
           "fotos": 8
         }
       }
