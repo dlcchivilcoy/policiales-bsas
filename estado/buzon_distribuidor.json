@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-19T02:02:08.000Z",
+  "actualizado": "2026-11-19T02:18:14.000Z",
   "eventos": [
     {
       "id": "policiales:https://noticiasgilenses.com.ar/el-conductor-de-la-moto-que-atropello-al-vecino-limonta-quedo-detenido/",
@@ -163,6 +163,30 @@
       "volanta": "Incidente en el camino a Irala",
       "categoria": "otro_policial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.lamanana.com.ar/detuvieron-a-un-hombre-por-violencia-de-genero-reiterada/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-19T02:18:14.000Z",
+      "titulo": "Capturan a un hombre que hostigó a su expareja e incumplió la prohibición de acercamiento",
+      "descripcion": "Un individuo fue apresado por la policía tras presentarse dos veces en un día en la casa de su expareja. Violó restricciones judiciales y la intimidó.",
+      "texto_tiktok": "La detención se concretó tras reiteradas llamadas de alerta emitidas desde el domicilio de la víctima.\n\nEl agresor se había presentado en dos ocasiones en la misma jornada para intimidarla.\n\nLas actuaciones quedaron bajo la órbita de la fiscalía local a la espera de su declaración indagatoria.\n\n📲 Más noticias de 25 de Mayo en www.diariolacampaña.com.ar\n\n#25DeMayo #ViolenciaDeGenero #Detenido #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-19_0134_02_25-de-mayo_capturan-a-un-hombre-que-hosti.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/25-de-mayo-arrestaron-a-un-sujeto-por-desobedecer-restricciones-80ef22",
+      "youtube_url": "https://youtube.com/shorts/N3Hra_x5jYI",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "25 de Mayo",
+      "volanta": "Violencia de género en 25 de Mayo",
+      "categoria": "violencia_genero",
+      "distancia_km": 61.1,
       "radio_ok": true,
       "plataformas": [
         "x",
