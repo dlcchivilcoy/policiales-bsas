@@ -45412,6 +45412,74 @@
         66,
         32
       ]
+    },
+    "757c6b399deac6a0": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 2,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 21,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "diente de león",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota de color sobre jardinería que no le cambia nada al productor de la zona.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c3a9eac5dacfe833": {
+      "conversacion": 14,
+      "historia_concreta": 11,
+      "cercania_pba": 5,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 54,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "delito rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa por el tema de seguridad rural pero pasa en Entre Ríos y Corrientes, lejos de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        54
+      ]
+    },
+    "4c6b0559146155df": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 8,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 41,
+      "commercial_score": 38,
+      "subtema": "agro",
+      "tema": "deforestación europa",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una gestión nacional/institucional sobre exportaciones que afecta al negocio pero queda lejos del día a día del chacarero.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        31
+      ]
     }
   },
   "indice": {
@@ -48535,7 +48603,10 @@
       "https://clarin.com/rural/proyecto-vandalismo-rural-obtuvo-dictamen-senado-plantean-necesidad-modificaciones-texto_0_zgHgk9PwPz.html": "2026-11-19",
       "https://tn.com.ar/campo/2026/11/19/de-bolonia-a-rumania-el-balance-de-la-maquinaria-agricola-argentina-en-europa": "2026-11-19",
       "https://tn.com.ar/campo/2026/11/19/legisladores-y-productores-unieron-posiciones-frente-a-las-exigencias-europeas-para-exportar-carne-y-soja": "2026-11-19",
-      "https://news.agrofy.com.ar/noticia/217033/fuerte-cruce-carbap-coninagro-directorio-puerto-quequen-denuncias-e-impugnaciones": "2026-11-19"
+      "https://news.agrofy.com.ar/noticia/217033/fuerte-cruce-carbap-coninagro-directorio-puerto-quequen-denuncias-e-impugnaciones": "2026-11-19",
+      "https://infocampo.com.ar/diente-de-leon-propiedades-usos": "2026-11-19",
+      "https://bichosdecampo.com/ante-el-avance-del-delito-rural-en-entre-rios-quieren-crear-fiscalias-especializadas-una-iniciativa-que-corrientes-puso-en-marcha-hace-20-anos-y-aun-tiene-a-medio-hacer": "2026-11-19",
+      "https://clarin.com/rural/gestionan-reduccion-riesgo-argentino-exigencia-europea-deforestacion_0_0QrKv5nA4j.html": "2026-11-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -51657,7 +51728,10 @@
       "el proyecto de vandalismo rural obtuvo dictamen en el senado pero plantean la necesidad de modificaciones en el texto": "2026-11-19",
       "de bolonia a rumania el balance de la maquinaria agricola argentina en europa": "2026-11-19",
       "legisladores y productores unieron posiciones frente a las exigencias europeas para exportar carne y soja": "2026-11-19",
-      "fuerte cruce entre carbap y coninagro por el directorio del puerto de quequen denuncias e impugnaciones": "2026-11-19"
+      "fuerte cruce entre carbap y coninagro por el directorio del puerto de quequen denuncias e impugnaciones": "2026-11-19",
+      "la maleza que tenes en el jardin y tiene mas usos de los que crees el diente de leon": "2026-11-19",
+      "ante el avance del delito rural en entre rios quieren crear fiscalias especializadas una iniciativa que corrientes puso en marcha hace 20 anos y aun tiene a medio hacer": "2026-11-19",
+      "gestionan una reduccion de riesgo argentino ante la exigencia europea contra la deforestacion": "2026-11-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -54779,7 +54853,10 @@
       "db807e6e0e764d09": "2026-11-19",
       "064615ee9e900a6d": "2026-11-19",
       "e9e7fcee81b34345": "2026-11-19",
-      "f19b2f86b4a43084": "2026-11-19"
+      "f19b2f86b4a43084": "2026-11-19",
+      "757c6b399deac6a0": "2026-11-19",
+      "c3a9eac5dacfe833": "2026-11-19",
+      "4c6b0559146155df": "2026-11-19"
     }
   },
   "elegidas": [
@@ -87714,365 +87791,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_clima-202611191300_portada.jpg"
-    }
-  ],
-  "pendientes": [
-    {
-      "id": "6e4f636bd887",
-      "rep": {
-        "id": "6e4f636bd887",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/fumata-blanca-en-el-aire-tras-la-polemica-misiones-levanta-la-prohibicion-a-los-drones-agricolas-y-prepara-un-registro-definitivo/",
-        "canonical_url": "https://bichosdecampo.com/fumata-blanca-en-el-aire-tras-la-polemica-misiones-levanta-la-prohibicion-a-los-drones-agricolas-y-prepara-un-registro-definitivo",
-        "titulo": "Fumata blanca en el aire: Tras la polémica, Misiones levanta la prohibición a los drones agrícolas y prepara un registro definitivo",
-        "titulo_norm": "fumata blanca en el aire tras la polemica misiones levanta la prohibicion a los drones agricolas y prepara un registro definitivo",
-        "descripcion": "Finalizada la reunión convocada por el ministerio de Ecología y Recursos Naturales Renovables de Misiones para la mañana de este jueves, el sector productivo y los funcionarios acordaron que la provincia levante la prohibición impuesta al uso de drones agrícolas. La decisión, que había sido tomada este martes a causa de ciertos casos de derivas […]",
-        "imagen_url": "",
-        "autor": "Lucas Torsiglieri",
-        "publicado": "2026-11-19T12:46-03:00",
-        "capturado": "2026-11-19T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "5cbb2e40e8673abe",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "6e4f636bd887",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/fumata-blanca-en-el-aire-tras-la-polemica-misiones-levanta-la-prohibicion-a-los-drones-agricolas-y-prepara-un-registro-definitivo/",
-          "canonical_url": "https://bichosdecampo.com/fumata-blanca-en-el-aire-tras-la-polemica-misiones-levanta-la-prohibicion-a-los-drones-agricolas-y-prepara-un-registro-definitivo",
-          "titulo": "Fumata blanca en el aire: Tras la polémica, Misiones levanta la prohibición a los drones agrícolas y prepara un registro definitivo",
-          "titulo_norm": "fumata blanca en el aire tras la polemica misiones levanta la prohibicion a los drones agricolas y prepara un registro definitivo",
-          "descripcion": "Finalizada la reunión convocada por el ministerio de Ecología y Recursos Naturales Renovables de Misiones para la mañana de este jueves, el sector productivo y los funcionarios acordaron que la provincia levante la prohibición impuesta al uso de drones agrícolas. La decisión, que había sido tomada este martes a causa de ciertos casos de derivas […]",
-          "imagen_url": "",
-          "autor": "Lucas Torsiglieri",
-          "publicado": "2026-11-19T12:46-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "5cbb2e40e8673abe",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 14,
-        "cercania_pba": 5,
-        "interes_productores": 10,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 54,
-        "commercial_score": 42,
-        "subtema": "agro",
-        "tema": "drones agrícolas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es en Misiones, lejos de la zona, aunque interesa por el uso de tecnología.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          50,
-          58
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-19T13:00-03:00"
-    },
-    {
-      "id": "851ca7181bc3",
-      "rep": {
-        "id": "851ca7181bc3",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/puerto-quequen-renovo-su-directorio-dejando-hijos-y-entenados-carbap-critico-fuerte-a-la-gestion-de-kicillof-por-haberla-dejado-afuera-otorgando-dos-sillas-a-coninagro/",
-        "canonical_url": "https://bichosdecampo.com/puerto-quequen-renovo-su-directorio-dejando-hijos-y-entenados-carbap-critico-fuerte-a-la-gestion-de-kicillof-por-haberla-dejado-afuera-otorgando-dos-sillas-a-coninagro",
-        "titulo": "Puerto Quequén renovó su directorio dejando hijos y entenados: Carbap criticó fuerte a la gestión de Kicillof por haberla dejado afuera, otorgando dos sillas a Coninagro",
-        "titulo_norm": "puerto quequen renovo su directorio dejando hijos y entenados carbap critico fuerte a la gestion de kicillof por haberla dejado afuera otorgando dos sillas a coninagro",
-        "descripcion": "El gobierno de Axel Kicillof fue criticado en las últimas horas por la entidad rural más poderosa de la provincia, la Confederación de Asociaciones Rurales de Buenos Aires y La Pampa (CARBAP), por haber avalado en la conformación de un nuevo directorio para administrar el Puerto Quequén, lindero a Necochea, que el lugar que le […]",
-        "imagen_url": "",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-19T11:45-03:00",
-        "capturado": "2026-11-19T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6728287664310647",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "851ca7181bc3",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/puerto-quequen-renovo-su-directorio-dejando-hijos-y-entenados-carbap-critico-fuerte-a-la-gestion-de-kicillof-por-haberla-dejado-afuera-otorgando-dos-sillas-a-coninagro/",
-          "canonical_url": "https://bichosdecampo.com/puerto-quequen-renovo-su-directorio-dejando-hijos-y-entenados-carbap-critico-fuerte-a-la-gestion-de-kicillof-por-haberla-dejado-afuera-otorgando-dos-sillas-a-coninagro",
-          "titulo": "Puerto Quequén renovó su directorio dejando hijos y entenados: Carbap criticó fuerte a la gestión de Kicillof por haberla dejado afuera, otorgando dos sillas a Coninagro",
-          "titulo_norm": "puerto quequen renovo su directorio dejando hijos y entenados carbap critico fuerte a la gestion de kicillof por haberla dejado afuera otorgando dos sillas a coninagro",
-          "descripcion": "El gobierno de Axel Kicillof fue criticado en las últimas horas por la entidad rural más poderosa de la provincia, la Confederación de Asociaciones Rurales de Buenos Aires y La Pampa (CARBAP), por haber avalado en la conformación de un nuevo directorio para administrar el Puerto Quequén, lindero a Necochea, que el lugar que le […]",
-          "imagen_url": "",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-19T11:45-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6728287664310647",
-          "localidad_medio": ""
-        },
-        {
-          "id": "029671787e3c",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/quequen-polemica-por-los-cambios-en-el-directorio-de-un-puerto-clave-para-las-exportaciones-nid19112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/quequen-polemica-por-los-cambios-en-el-directorio-de-un-puerto-clave-para-las-exportaciones-nid19112026",
-          "titulo": "Quequén: polémica por los cambios en el directorio de un puerto clave para las exportaciones",
-          "titulo_norm": "quequen polemica por los cambios en el directorio de un puerto clave para las exportaciones",
-          "descripcion": "Tras una renovación impulsada por Axel Kicillof, Carbap rechazó la nueva integración, cuestionó las designaciones y advirtió sobre posibles conflictos de intereses",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/FOAHPEE7BZFNPPOHMMGN72YYFY.png?auth=8d6360c725078d9290d071b3c93d4cd3148aaae77bf410767745a75878f4425d&smart=true",
-          "autor": "",
-          "publicado": "2026-11-19T12:49-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8a265fc52a8b57bf",
-          "localidad_medio": ""
-        },
-        {
-          "id": "003aa7dee56f",
-          "fuente": "Agrofy News",
-          "tipo_fuente": "medio",
-          "source_url": "https://news.agrofy.com.ar/rss.xml",
-          "url": "https://news.agrofy.com.ar/noticia/217033/fuerte-cruce-carbap-coninagro-directorio-puerto-quequen-denuncias-e-impugnaciones",
-          "canonical_url": "https://news.agrofy.com.ar/noticia/217033/fuerte-cruce-carbap-coninagro-directorio-puerto-quequen-denuncias-e-impugnaciones",
-          "titulo": "Fuerte cruce entre Carbap y Coninagro por el directorio del puerto de Quequén: denuncias e impugnaciones",
-          "titulo_norm": "fuerte cruce entre carbap y coninagro por el directorio del puerto de quequen denuncias e impugnaciones",
-          "descripcion": "La entidad que agrupa a los productores de Buenos Aires y La Pampa reclamó su participación",
-          "imagen_url": "https://news.agrofystatic.com/precio-trigo-200236.jpg",
-          "autor": "",
-          "publicado": "2026-11-19T11:38-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f19b2f86b4a43084",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 10,
-        "cercania_pba": 12,
-        "interes_productores": 9,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 56,
-        "commercial_score": 48,
-        "subtema": "agro",
-        "tema": "puerto quequén",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Reclamo de Carbap por cargos en Puerto Quequén; toca la provincia pero es institucional.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          62,
-          51
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-19T13:00-03:00"
-    },
-    {
-      "id": "0450dc14d6a4",
-      "rep": {
-        "id": "0450dc14d6a4",
-        "fuente": "INTA",
-        "tipo_fuente": "oficial",
-        "source_url": "https://intainforma.inta.gob.ar/feed/",
-        "url": "https://intainforma.inta.gob.ar/la-fertilizacion-nitrogenada-mejora-la-rentabilidad/",
-        "canonical_url": "https://intainforma.inta.gob.ar/la-fertilizacion-nitrogenada-mejora-la-rentabilidad",
-        "titulo": "Maíz: la fertilización nitrogenada mejora la rentabilidad",
-        "titulo_norm": "maiz la fertilizacion nitrogenada mejora la rentabilidad",
-        "descripcion": "Ensayos de seis campañas en 16 ambientes del Noroeste Argentino, realizados por el INTA Salta y el Conicet, mostraron que fertilizar con nitrógeno aumenta los rendimientos y los retornos económicos. Además, las pérdidas gaseosas del nutriente resultaron significativamente menores a lo que se creía. La entrada Maíz: la fertilización nitrogenada mejora la rentabilidad se publicó primero en INTA Informa.",
-        "imagen_url": "",
-        "autor": "Cecilia Ayesta",
-        "publicado": "2026-11-19T12:16-03:00",
-        "capturado": "2026-11-19T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6eb740e49fbb1d13",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "0450dc14d6a4",
-          "fuente": "INTA",
-          "tipo_fuente": "oficial",
-          "source_url": "https://intainforma.inta.gob.ar/feed/",
-          "url": "https://intainforma.inta.gob.ar/la-fertilizacion-nitrogenada-mejora-la-rentabilidad/",
-          "canonical_url": "https://intainforma.inta.gob.ar/la-fertilizacion-nitrogenada-mejora-la-rentabilidad",
-          "titulo": "Maíz: la fertilización nitrogenada mejora la rentabilidad",
-          "titulo_norm": "maiz la fertilizacion nitrogenada mejora la rentabilidad",
-          "descripcion": "Ensayos de seis campañas en 16 ambientes del Noroeste Argentino, realizados por el INTA Salta y el Conicet, mostraron que fertilizar con nitrógeno aumenta los rendimientos y los retornos económicos. Además, las pérdidas gaseosas del nutriente resultaron significativamente menores a lo que se creía. La entrada Maíz: la fertilización nitrogenada mejora la rentabilidad se publicó primero en INTA Informa.",
-          "imagen_url": "",
-          "autor": "Cecilia Ayesta",
-          "publicado": "2026-11-19T12:16-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6eb740e49fbb1d13",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 8,
-        "historia_concreta": 12,
-        "cercania_pba": 8,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 54,
-        "commercial_score": 45,
-        "subtema": "agro",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Ensayos de fertilización en maíz del INTA; buen dato técnico aunque sea del NOA.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          66,
-          43
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-19T13:00-03:00"
-    },
-    {
-      "id": "90f337fb7104",
-      "rep": {
-        "id": "90f337fb7104",
-        "fuente": "Clarín Rural",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.clarin.com/rss/rural/",
-        "url": "https://www.clarin.com/rural/proyecto-vandalismo-rural-obtuvo-dictamen-senado-plantean-necesidad-modificaciones-texto_0_zgHgk9PwPz.html",
-        "canonical_url": "https://clarin.com/rural/proyecto-vandalismo-rural-obtuvo-dictamen-senado-plantean-necesidad-modificaciones-texto_0_zgHgk9PwPz.html",
-        "titulo": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
-        "titulo_norm": "el proyecto de vandalismo rural obtuvo dictamen en el senado pero plantean la necesidad de modificaciones en el texto",
-        "descripcion": "La iniciativa, que ya tiene media sanción en Diputados, reunió las firmas necesarias, pero también se dejó abierta la puerta a modificaciones.",
-        "imagen_url": "https://www.clarin.com/img/2026/11/19/Gokjdq37j_1200x630__1.jpg",
-        "autor": "Clarin.com - Home",
-        "publicado": "2026-11-19T10:31-03:00",
-        "capturado": "2026-11-19T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "db807e6e0e764d09",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "90f337fb7104",
-          "fuente": "Clarín Rural",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.clarin.com/rss/rural/",
-          "url": "https://www.clarin.com/rural/proyecto-vandalismo-rural-obtuvo-dictamen-senado-plantean-necesidad-modificaciones-texto_0_zgHgk9PwPz.html",
-          "canonical_url": "https://clarin.com/rural/proyecto-vandalismo-rural-obtuvo-dictamen-senado-plantean-necesidad-modificaciones-texto_0_zgHgk9PwPz.html",
-          "titulo": "El proyecto de Vandalismo Rural obtuvo dictamen en el Senado, pero plantean la necesidad de modificaciones en el texto",
-          "titulo_norm": "el proyecto de vandalismo rural obtuvo dictamen en el senado pero plantean la necesidad de modificaciones en el texto",
-          "descripcion": "La iniciativa, que ya tiene media sanción en Diputados, reunió las firmas necesarias, pero también se dejó abierta la puerta a modificaciones.",
-          "imagen_url": "https://www.clarin.com/img/2026/11/19/Gokjdq37j_1200x630__1.jpg",
-          "autor": "Clarin.com - Home",
-          "publicado": "2026-11-19T10:31-03:00",
-          "capturado": "2026-11-19T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "db807e6e0e764d09",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 20,
-        "historia_concreta": 15,
-        "cercania_pba": 20,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 87,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "vandalismo rural",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El proyecto de ley contra el vandalismo rural avanza en el Senado; toca de lleno a los productores.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-19T13:00-03:00"
     },
     {
       "id": "7c10f4ad95f7",
-      "rep": {
-        "id": "7c10f4ad95f7",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando/",
-        "canonical_url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando",
-        "titulo": "Con el “Súper Niño” encima, Nación pone la firma para obras hídricas en Santa Fe y Córdoba, mientras el Salado sigue esperando",
-        "titulo_norm": "con el super nino encima nacion pone la firma para obras hidricas en santa fe y cordoba mientras el salado sigue esperando",
-        "descripcion": "En medio de una fuerte crecida del río Paraná, que ya golpea incluso a las zonas de mayor densidad poblacional de Santa Fe, el gobierno nacional autorizó una nueva operación con garantía del Tesoro para que la provincia pueda tomar un préstamo y financiar obras hídricas. La operación fue oficializada por un decreto firmado por […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/obras-hidricas-san-javier-santa-fe.webp",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-19T09:00-03:00",
-        "capturado": "2026-11-19T10:01-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bf4f7aa75d8e6171",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "7c10f4ad95f7",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando/",
-          "canonical_url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando",
-          "titulo": "Con el “Súper Niño” encima, Nación pone la firma para obras hídricas en Santa Fe y Córdoba, mientras el Salado sigue esperando",
-          "titulo_norm": "con el super nino encima nacion pone la firma para obras hidricas en santa fe y cordoba mientras el salado sigue esperando",
-          "descripcion": "En medio de una fuerte crecida del río Paraná, que ya golpea incluso a las zonas de mayor densidad poblacional de Santa Fe, el gobierno nacional autorizó una nueva operación con garantía del Tesoro para que la provincia pueda tomar un préstamo y financiar obras hídricas. La operación fue oficializada por un decreto firmado por […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/obras-hidricas-san-javier-santa-fe.webp",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-19T09:00-03:00",
-          "capturado": "2026-11-19T10:01-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bf4f7aa75d8e6171",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-19T14:30-03:00",
+      "titulo_original": "Con el “Súper Niño” encima, Nación pone la firma para obras hídricas en Santa Fe y Córdoba, mientras el Salado sigue esperando",
+      "descripcion": "En medio de una fuerte crecida del río Paraná, que ya golpea incluso a las zonas de mayor densidad poblacional de Santa Fe, el gobierno nacional autorizó una nueva operación con garantía del Tesoro para que la provincia pueda tomar un préstamo y financiar obras hídricas. La operación fue oficializad",
+      "fuente": "Bichos de Campo",
+      "url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando/",
+      "titular": "Nación avala préstamos para obras hídricas en Santa Fe y Córdoba",
+      "volanta": "Clima",
       "score": {
         "conversacion": 12,
         "historia_concreta": 10,
@@ -88099,11 +87827,34 @@
         "de_zona": false,
         "policial_rural": false
       },
-      "cuando": "2026-11-19T10:01-03:00"
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-19T14:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "4f045ee3-5d6a-4289-b908-77ee87f0052a",
+          "slug": "nacion-avala-prestamos-para-obras-hidricas-en-santa-fe-y-67c953",
+          "url": "https://www.diariolacampaña.com.ar/n/nacion-avala-prestamos-para-obras-hidricas-en-santa-fe-y-67c953",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18496703329111268",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1766957118768618",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c10f4ad95f7_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-19T14:22:13-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [],
+  "actualizado": "2026-11-19T14:35:54-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
