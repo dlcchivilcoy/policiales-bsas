@@ -45592,6 +45592,70 @@
         66,
         68
       ]
+    },
+    "67e75513661128cc": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 32,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "siembra de soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un informe general de la Bolsa de Cereales a nivel país, sin anclaje local ni una historia concreta para la zona.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "5ce494941f7b74b3": {
+      "conversacion": 3,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 4,
+      "cercania_argentina": 3,
+      "potencial_reel": 1,
+      "ai_score": 18,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "tierras bajo riego",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Neuquén, una realidad completamente ajena a los productores de Chivilcoy y la región pampeana.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6b423877427005ad": {
+      "conversacion": 18,
+      "historia_concreta": 9,
+      "cercania_pba": 18,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 76,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El clima y las tormentas severas interesan y preocupan directamente a todos los productores de la zona.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        81
+      ]
     }
   },
   "indice": {
@@ -48723,7 +48787,10 @@
       "https://agrositio.com.ar/noticia/249420-30-anos-de-cultivos-transgenicos-una-tecnologia-que-genero-usd-197500-millones-y-un-nuevo-desafio-para-la-argentina.html": "2026-11-19",
       "https://bichosdecampo.com/dia-de-celebracion-la-empresa-agricola-tropfen-festejo-sus-10-anos-de-vida-inaugurando-en-pergamino-una-nueva-planta-que-le-costo-15-millones-de-dolares": "2026-11-19",
       "https://bichosdecampo.com/sorpresa-pauny-ofrecio-reanudar-la-produccion-y-pagar-los-sueldos-de-septiembre-y-octubre-en-cuotas-pero-condiciona-todo-a-que-los-obreros-devuelvan-la-planta": "2026-11-19",
-      "https://news.agrofy.com.ar/noticia/217034/cambio-tendencia-chicharrita-algunas-regiones-aumento-casi-desaparecio": "2026-11-19"
+      "https://news.agrofy.com.ar/noticia/217034/cambio-tendencia-chicharrita-algunas-regiones-aumento-casi-desaparecio": "2026-11-19",
+      "https://agrositio.com.ar/noticia/249421-la-soja-de-primera-continua-avanzando-a-buen-ritmo-a-nivel-nacional.html": "2026-11-19",
+      "https://lanacion.com.ar/economia/campo/por-ley-neuquen-prohibio-que-las-tierras-productivas-bajo-riego-se-puedan-lotear-construir-hoteles-o-nid19112026": "2026-11-19",
+      "https://intainforma.inta.gob.ar/el-nino-evoluciona-claves-para-decidir-en-la-campana": "2026-11-19"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -51853,7 +51920,10 @@
       "30 anos de cultivos transgenicos una tecnologia que genero usd 197 500 millones y un nuevo desafio para la argentina": "2026-11-19",
       "dia de celebracion la empresa agricola tropfen festejo sus 10 anos de vida inaugurando en pergamino una nueva planta que le costo 1 5 millones de dolares": "2026-11-19",
       "sorpresa pauny ofrecio reanudar la produccion y pagar los sueldos de septiembre y octubre en cuotas pero condiciona todo a que los obreros devuelvan la planta": "2026-11-19",
-      "cambio la tendencia de la chicharrita en algunas regiones donde aumento y donde casi desaparecio": "2026-11-19"
+      "cambio la tendencia de la chicharrita en algunas regiones donde aumento y donde casi desaparecio": "2026-11-19",
+      "la soja de primera continua avanzando a buen ritmo a nivel nacional": "2026-11-19",
+      "por ley neuquen prohibio que las tierras productivas bajo riego se puedan lotear construir hoteles o instalar industrias": "2026-11-19",
+      "el nino evoluciona claves para decidir en la campana": "2026-11-19"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -54983,7 +55053,10 @@
       "2bc7dcb1de3e37de": "2026-11-19",
       "1321278d63bd3f9e": "2026-11-19",
       "63afce323c6fc0e4": "2026-11-19",
-      "1cb5bb3c35fc4232": "2026-11-19"
+      "1cb5bb3c35fc4232": "2026-11-19",
+      "67e75513661128cc": "2026-11-19",
+      "5ce494941f7b74b3": "2026-11-19",
+      "6b423877427005ad": "2026-11-19"
     }
   },
   "elegidas": [
@@ -87977,11 +88050,70 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c10f4ad95f7_portada.jpg"
+    },
+    {
+      "id": "e4fb5782d3f1",
+      "cuando": "2026-11-19T16:31-03:00",
+      "titulo_original": "El Niño evoluciona: claves para decidir en la campaña",
+      "descripcion": "El fenómeno se consolida con menores lluvias acumuladas en las zonas productivas a las inicialmente esperadas, pero con tormentas severas cada vez más frecuentes. Desde el INTA recomiendan monitorear cada región y anticipar decisiones para prevenir excesos de agua y aprovechar las oportunidades. La ",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/el-nino-evoluciona-claves-para-decidir-en-la-campana/",
+      "titular": "El Niño 2026 deja menos lluvias locales y tormentas severas",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 9,
+        "cercania_pba": 18,
+        "interes_productores": 14,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 76,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El clima y las tormentas severas interesan y preocupan directamente a todos los productores de la zona.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          67,
+          81
+        ],
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-19T16:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e0e882fe-63d4-457f-9a52-bf12d554e356",
+          "slug": "el-nino-2026-27-claves-del-inta-sobre-lluvias-crecidas-y-510070",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-2026-27-claves-del-inta-sobre-lluvias-crecidas-y-510070",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18500724982110211",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1767061385424858",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_e4fb5782d3f1_portada.jpg"
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-19T16:10:49-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-19T16:35:37-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -96533,7 +96665,8 @@
     "851ca7181bc3": "2026-11-19T13:00",
     "6e4f636bd887": "2026-11-19T13:00",
     "0450dc14d6a4": "2026-11-19T13:00",
-    "1462f493805d": "2026-11-19T16:00"
+    "1462f493805d": "2026-11-19T16:00",
+    "e4fb5782d3f1": "2026-11-19T16:31"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
