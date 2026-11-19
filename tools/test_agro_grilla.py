@@ -288,7 +288,8 @@ arm = lambda g, img, sal, origen, credito, clip=None, tema="blanco": {"archivo":
 subidos = []
 r_v = VI.pasada(True, ahora_v, log=lambda m: None, carpeta=tmp / "v", ahora=ahora_v, notas=notas_v,
                 leer=lambda u: {"video": "https://v.mp4", "texto": "x"}, bajar=lambda u, d: Path(__file__), generar=gen,
-                armar_reel=arm, publicador=lambda mp4, cap, por, marca: subidos.append(cap) or {"instagram_prueba": {"id": "9"}})
+                armar_reel=arm, publicador=lambda mp4, cap, por, marca: subidos.append(cap) or {"instagram_prueba": {"id": "9"}},
+                juez=lambda c, m, log=None: c)
 mem_v = json.loads(PA.MEMORIA_REAL.read_text(encoding="utf-8"))
 chequear("real: sale UN reel de prueba con el texto del guion y queda anotado (el respaldo no lo repite)",
          subidos == ["Texto viral.\n\n#Campo"] and "https://tn/a" in mem_v["virales"]
@@ -296,8 +297,68 @@ chequear("real: sale UN reel de prueba con el texto del guion y queda anotado (e
 subidos.clear()
 VI.pasada(True, ahora_v.replace(hour=20, minute=45), log=lambda m: None, carpeta=tmp / "v2", ahora=ahora_v, notas=notas_v[:1],
           leer=lambda u: {"video": "https://v.mp4"}, bajar=lambda u, d: Path(__file__), generar=gen, armar_reel=arm,
-          publicador=lambda *a: subidos.append(1) or {})
+          publicador=lambda *a: subidos.append(1) or {}, juez=lambda c, m, log=None: c)
 chequear("el mismo viral no sale dos veces", not subidos)
+
+# ---- 19/11: solo del campo (el juez de la IA y lo del exterior) y, sin video, el reel con la foto original ----
+chequear("fuera: lo del exterior por la URL, el estadio de un club, el zoológico y el granizo de la ciudad",
+         VI.nivel({"titulo": "Video: metieron un caballo a una peluquería",
+                   "url": "https://www.infobae.com/colombia/2026/11/19/caballo"}) is None
+         and VI.nivel({"titulo": "Club San Jorge vende su estadio y su predio", "resumen": "en el campo"}) is None
+         and VI.nivel({"titulo": "Una hipopótama del zoológico se tragó un gorro: el video"}) is None
+         and VI.nivel({"titulo": "Temporal con granizo sorprende al AMBA",
+                       "url": "https://www.infobae.com/sociedad/2026/11/18/granizo"}) is None)
+chequear("dentro: el granizo que rompe cultivos y el policial rural",
+         VI.nivel({"titulo": "El granizo destruyó cultivos de trigo en Chivilcoy"}) == 2
+         and VI.nivel({"titulo": "Cuatreros robaron 40 vacas de un campo en Chacabuco"}) == 0)
+_cj = [{"url": "https://j/1", "titulo": "Remate de terneros en Alberti", "nivel": 2},
+       {"url": "https://j/2", "titulo": "Un caballo baila en una fiesta", "nivel": 1},
+       {"url": "https://j/3", "titulo": "Robo de hacienda en Bragado", "nivel": 0}]
+_mj = {}
+_pedidos = []
+_red = lambda sys, mat: _pedidos.append(mat) or ({"notas": [{"n": 1, "campo": True}, {"n": 2, "campo": False, "motivo": "fiesta"},  # noqa: E731
+                                                            {"n": 3, "campo": True}]}, "x")
+chequear("juez: quedan solo las que la IA da por del campo, en el mismo orden",
+         [c["url"] for c in VI.juzgar(_cj, _mj, redactar=_red, log=lambda m: None)] == ["https://j/1", "https://j/3"])
+VI.juzgar(_cj, _mj, redactar=_red, log=lambda m: None)
+chequear("juez: lo ya juzgado no se vuelve a preguntar", len(_pedidos) == 1)
+def _sin_ia(sys, mat):
+    raise RuntimeError("sin IA")
+chequear("juez: si la IA no contesta, afuera los «virales» por un animal; quedan los de palabras firmes",
+         [c["url"] for c in VI.juzgar(_cj, {}, redactar=_sin_ia, log=lambda m: None)] == ["https://j/1", "https://j/3"])
+_cf = []
+VI.elegir([{"url": "https://f/1", "titulo": "Remate en Alberti", "fuente": "Infobae"}], tmp,
+          leer=lambda u: {"video": "", "imagen": "https://f/1.jpg"}, bajar=lambda u, d: None, con_foto=_cf)
+chequear("elegir: sin video pero con foto, la anota para el reel con la foto", len(_cf) == 1 and _cf[0][0]["url"] == "https://f/1")
+from PIL import Image as _Img  # noqa: E402
+def _bf(u, d):
+    _Img.new("RGB", (1200, 800), "green").save(d)
+    return True
+_ef = VI.elegir_foto(_cf, tmp, bajar=_bf, mirar=lambda r: False, log=lambda m: None)
+chequear("elegir_foto: toma la foto original de la nota", _ef and Path(_ef[2]).is_file())
+chequear("elegir_foto: la foto de agencia no sirve",
+         VI.elegir_foto([({"url": "https://f/2", "titulo": "x"}, {"imagen": "https://img.afp.com/x.jpg"})], tmp,
+                        bajar=_bf, mirar=lambda r: False, log=lambda m: None) is None)
+subidos.clear()
+_armados = []
+_arm2 = lambda g, img, sal, origen, credito, clip=None, tema="blanco": _armados.append((img, origen, clip)) or {  # noqa: E731
+    "archivo": str(sal), "duracion": 22, "vista": ""}
+VI.pasada(True, ahora_v.replace(hour=14), log=lambda m: None, carpeta=tmp / "v3", ahora=ahora_v,
+          notas=[{"url": "https://f/9", "titulo": "Remate récord de terneros en Alberti", "fecha": ts - 60, "fuente": "Infobae"}],
+          leer=lambda u: {"video": "", "imagen": "https://f/9.jpg", "texto": "x"}, bajar=lambda u, d: None,
+          generar=gen, armar_reel=_arm2, publicador=lambda *a: subidos.append(1) or {"instagram_prueba": {"id": "8"}},
+          juez=lambda c, m, log=None: c, bajar_foto=_bf, mirar=lambda r: False)
+chequear("sin video: sale el reel con la foto original (leyenda «Foto:», sin clip)",
+         subidos == [1] and _armados and _armados[0][1] == "fuente" and _armados[0][2] is None and _armados[0][0])
+os.environ["AGRO_PRUEBA_FOTO"] = "0"
+subidos.clear()
+VI.pasada(True, ahora_v.replace(hour=18), log=lambda m: None, carpeta=tmp / "v4", ahora=ahora_v,
+          notas=[{"url": "https://f/10", "titulo": "Remate de vaquillonas en Bragado", "fecha": ts - 60, "fuente": "Infobae"}],
+          leer=lambda u: {"video": "", "imagen": "https://f/10.jpg"}, bajar=lambda u, d: None, generar=gen,
+          armar_reel=_arm2, publicador=lambda *a: subidos.append(1) or {}, juez=lambda c, m, log=None: c,
+          bajar_foto=_bf, mirar=lambda r: False)
+os.environ.pop("AGRO_PRUEBA_FOTO")
+chequear("AGRO_PRUEBA_FOTO=0: sin video no sale nada", not subidos)
 
 # ---- 17/11: el viral (reel de prueba de IG) sale también en el Facebook de agro ----
 fb_v = []
