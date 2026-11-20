@@ -321,7 +321,7 @@ def tema_nino(af: dict, hoy) -> dict | None:
     except ValueError:
         return None
     k = "nino" if fase == "El Niño" else "nina"
-    gancho = f"Hay {fase}: ¿qué le pasa al campo de Chivilcoy?"
+    gancho = f"Llegó {fase}: ¿qué le pasa al campo de Chivilcoy?"     # 20/11/2026: era «Hay El Niño» (sonaba forzado)
     filas = sorted([(NOMBRE_CULTIVO.get(c, c).capitalize(), v[k]) for c, v in tabla.items() if v.get(k) is not None],
                    key=lambda f: -f[1])
     soja = tabla["soja"][k]
