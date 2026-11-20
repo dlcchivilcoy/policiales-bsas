@@ -101,16 +101,61 @@ def _renglones(d: ImageDraw.ImageDraw, palabras: list, f, ancho: int) -> list:
     return salida
 
 
+def _equilibrar(d, linea: list, f, ancho: int) -> list:
+    """Los mismos renglones que el corte común, pero repartidos PAREJOS: de todos los cortes posibles con esa
+    cantidad de renglones, el que deja el renglón más largo lo más corto posible (y los demás parecidos). Así no
+    queda «SE PERDIÓ EL 42 % DE LA» arriba y «SOJA» sola abajo."""
+    from itertools import combinations
+    base = [[linea[j] for _p, j in r] for r in _renglones(d, [p for p, _ in linea], f, ancho)]
+    n, k = len(base), len(linea)
+    if n <= 1 or k > 22:
+        return base
+    esp = d.textlength(" ", font=f)
+    w = [d.textlength(p, font=f) for p, _ in linea]
+
+    def largo(a, b):
+        return sum(w[a:b]) + esp * (b - a - 1)
+    mejor, puntos = None, None
+    for cortes in combinations(range(1, k), n - 1):
+        lim = (0, *cortes, k)
+        anchos = [largo(lim[j], lim[j + 1]) for j in range(n)]
+        if max(anchos) > ancho:
+            continue
+        clave = (round(max(anchos)), sum((a - sum(anchos) / n) ** 2 for a in anchos))
+        if mejor is None or clave < mejor:
+            mejor, puntos = clave, lim
+    if puntos is None:
+        return base
+    return [linea[puntos[j]:puntos[j + 1]] for j in range(n)]
+
+
+def _renglones_titulo(d, palabras: list, f, ancho: int) -> list:
+    """Los renglones de un TÍTULO (20/11/2026, pedido del editor: «que después de los dos puntos vaya un renglón
+    aparte, con equilibrio y simetría»): lo que sigue a «:» arranca renglón nuevo, y cada parte se reparte en
+    renglones parejos (_equilibrar)."""
+    pares = [(p, i) for i, p in enumerate(palabras)]
+    corte = next((i + 1 for i, p in enumerate(palabras[:-1]) if p.endswith(":")), None)
+    partes = [pares[:corte], pares[corte:]] if corte else [pares]
+    salida = []
+    for parte in partes:
+        salida += _equilibrar(d, parte, f, ancho)
+    return salida
+
+
 def ajustar(d, texto: str, ancho: int, max_renglones: int, tope: int, piso: int, mayus: bool = True):
-    """(fuente, renglones, palabras): Anton lo más grande posible en `max_renglones`."""
+    """(fuente, renglones, palabras): Anton lo más grande posible en `max_renglones`, cortado como título
+    (después de «:» renglón aparte; renglones parejos)."""
     palabras = (texto.upper() if mayus else texto).split()
     for tam in range(tope, piso - 1, -4):
         f = anton(tam)
-        r = _renglones(d, palabras, f, ancho)
+        r = _renglones_titulo(d, palabras, f, ancho)
         if len(r) <= max_renglones:
             return f, r, palabras
     f = anton(piso)
-    return f, _renglones(d, palabras, f, ancho)[:max_renglones], palabras
+    r = _renglones_titulo(d, palabras, f, ancho)
+    if len(r) > max_renglones:                           # no entra ni al mínimo: el corte común, como antes
+        r = _renglones(d, palabras, f, ancho)
+    return f, r[:max_renglones], palabras
 
 
 def escribir(im: Image.Image, x: int, y: int, renglones: list, f, marca: list, color=BLANCO, verde=VERDE,

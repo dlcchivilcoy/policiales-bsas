@@ -81,10 +81,13 @@ def anton(tam: int):
 
 
 def plan_titulo(texto: str, ancho: int, max_renglones: int = 2, tope: int = 84, piso: int = 54,
-                destacado: str = "") -> dict:
+                destacado: str = None) -> dict:
     """{f, renglones [[(palabra, verde)]], alto_renglon}: el título en mayúsculas lo más grande que entra."""
     from agro import impacto as I
     medir = ImageDraw.Draw(Image.new("L", (1, 1)))
+    # Con «:», la segunda parte va en su renglón (impacto._renglones_titulo): un renglón más de lugar.
+    if any(p.endswith(":") for p in texto.split()[:-1]):
+        max_renglones += 1
     f, r, palabras = I.ajustar(medir, texto, ancho, max_renglones, tope, piso)
     marca = I._marcas(palabras, destacado if destacado is not None else I.destacado_de(texto))
     return {"f": f, "renglones": [[(p, marca[i]) for p, i in linea] for linea in r], "salto": round(f.size * 1.04)}

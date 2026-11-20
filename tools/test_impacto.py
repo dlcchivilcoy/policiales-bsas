@@ -76,5 +76,15 @@ with tempfile.TemporaryDirectory() as t:
     chequear("AGRO_CARRUSEL_ESTILO=bot vuelve al diseño anterior", not I.activo())
     os.environ.pop("AGRO_CARRUSEL_ESTILO")
 
+# 20/11/2026: después de «:» renglón aparte, y renglones parejos.
+from PIL import Image as _Imt, ImageDraw as _IDt  # noqa: E402
+_dt = _IDt.Draw(_Imt.new("L", (1, 1)))
+_f, _r, _p = I.ajustar(_dt, "La sequía 2022/23: cuánta soja no se pudo cosechar", 890, 4, 84, 56)
+_lin = [" ".join(p for p, _ in l) for l in _r]
+chequear("título: lo que sigue a los dos puntos arranca renglón aparte", _lin[0].endswith(":") and _lin[1].startswith("CUÁNTA"))
+_f, _r, _p = I.ajustar(_dt, "Se perdió el 42 por ciento de la soja sembrada en Chivilcoy", 700, 3, 84, 56)
+_an = [sum(_dt.textlength(p, font=_f) for p, _ in l) for l in _r]
+chequear("título: los renglones quedan parejos (ninguna palabra sola abajo)", len(_r) >= 2 and min(_an) > 0.55 * max(_an))
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
