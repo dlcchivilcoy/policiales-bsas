@@ -48476,6 +48476,130 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fe6aac0a7818e18a": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 82,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "trámites laborales provincia",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente a todos los productores bonaerenses que deben lidiar con más burocracia laboral.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6c5a7a68f3023fd4": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 15,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "jardinería interior",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una nota de color sobre plantas de interior que no le interesa al productor rural ni tiene que ver con el campo.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3e5d0d06209d6ad8": {
+      "conversacion": 11,
+      "historia_concreta": 8,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 58,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Los números de la cosecha nacional de trigo interesan en la zona núcleo pese a los problemas climáticos.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        51
+      ]
+    },
+    "573b5191a92101ba": {
+      "conversacion": 5,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 42,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "agrónomos en el mundo",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Entrevista a un profesional agrónomo con trayectoria internacional, de baja llegada directa al productor local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "be6daf49c9dcbee8": {
+      "conversacion": 15,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 76,
+      "commercial_score": 65,
+      "subtema": "ganaderia",
+      "tema": "peso de faena vacuna",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Dato histórico de la ganadería nacional sobre el peso de faena que genera debate entre productores.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f915cd6cbbf3a476": {
+      "conversacion": 0,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 2,
+      "commercial_score": 0,
+      "subtema": "maquinaria",
+      "tema": "transporte y combustible eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Noticia de Estados Unidos sobre barcazas y diésel que no afecta en nada a los vecinos de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -51786,7 +51910,14 @@
       "https://news.agrofy.com.ar/noticia/217040/res-bovina-argentina-mas-pesada-mas-100-anos-promedio-241-kilos-2026": "2026-11-20",
       "https://agroempresario.com/publicacion/124019/reglamento-europeo-productores-y-legisladores-reclaman-cambios": "2026-11-20",
       "https://casaresonline.com.ar/feedlots-fernando-storni-advierte-sobre-los-desafios-del-engorde-a-corral-y-destaca-la-oportunidad-de-argentina-ante-la-demanda-mundial-de-carne": "2026-11-20",
-      "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido": "2026-11-20"
+      "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido": "2026-11-20",
+      "https://infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof": "2026-11-20",
+      "https://infocampo.com.ar/plantas-interior-faciles-resistentes": "2026-11-20",
+      "https://infocampo.com.ar/trigo-aunque-con-algunos-problemas-climaticos-asoma-otra-cosecha-extraordinaria": "2026-11-20",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249447-cotizan-los-agronomos-argentinos-en-el-mundo-francisco-cinque-de-vendedor-a-liderar-semillas-en-america-viajando-180-dias-al-ano.html": "2026-11-20",
+      "https://bichosdecampo.com/merito-del-gobierno-de-milei-o-de-la-abundancia-de-pasto-como-sea-el-peso-promedio-de-faena-de-los-bovinos-llego-al-nivel-mas-alto-en-100-anos-de-historia": "2026-11-20",
+      "https://lanacion.com.ar/economia/campo/despues-de-100-anos-el-peso-promedio-de-faena-de-la-res-bovina-supero-los-240-kilos-nid20112026": "2026-11-20",
+      "https://croplife.com/management/croplife-retail-week-alternatives-to-diesel-and-the-shrinking-u-s-barge-fleet": "2026-11-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -55095,7 +55226,14 @@
       "la res bovina argentina la mas pesada en mas de 100 anos promedio 241 kilos en 2026": "2026-11-20",
       "reglamento europeo productores y legisladores reclaman cambios": "2026-11-20",
       "feedlots fernando storni advierte sobre los desafios del engorde a corral y destaca la oportunidad de argentina ante la demanda mundial de carne": "2026-11-20",
-      "la cooperativa de carabelas realizo una importante donacion al taller protegido": "2026-11-20"
+      "la cooperativa de carabelas realizo una importante donacion al taller protegido": "2026-11-20",
+      "mas burocracia la sociedad rural apunto contra una medida laboral del gobierno de kicillof": "2026-11-20",
+      "para los que matan todas las plantas 15 especies de interior casi indestructibles": "2026-11-20",
+      "trigo aunque con algunos problemas climaticos asoma otra cosecha extraordinaria": "2026-11-20",
+      "cotizan los agronomos argentinos en el mundo francisco cinque de vendedor a liderar semillas en america viajando 180 dias al ano": "2026-11-20",
+      "merito del gobierno de milei o de la abundancia de pasto como sea el peso promedio de faena de los bovinos llego al nivel mas alto en 100 anos de historia": "2026-11-20",
+      "despues de 100 anos el peso promedio de faena de la res bovina supero los 240 kilos": "2026-11-20",
+      "croplife retail week alternatives to diesel and the shrinking u s barge fleet": "2026-11-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -58404,7 +58542,14 @@
       "46c7cc757bce4262": "2026-11-20",
       "1e59f6b920409be8": "2026-11-20",
       "992b7bc13346ee8d": "2026-11-20",
-      "e48b7a79257b4d31": "2026-11-20"
+      "e48b7a79257b4d31": "2026-11-20",
+      "fe6aac0a7818e18a": "2026-11-20",
+      "6c5a7a68f3023fd4": "2026-11-20",
+      "3e5d0d06209d6ad8": "2026-11-20",
+      "573b5191a92101ba": "2026-11-20",
+      "be6daf49c9dcbee8": "2026-11-20",
+      "49d4455306985feb": "2026-11-20",
+      "f915cd6cbbf3a476": "2026-11-20"
     }
   },
   "elegidas": [
@@ -91964,9 +92109,134 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_a411b3a741c4_portada.jpg"
+    },
+    {
+      "id": "80a3a6cc379e",
+      "cuando": "2026-11-20T17:30-03:00",
+      "titulo_original": "“Vamos a salir adelante”: Plantium busca su reestructuración y se presentó en concurso de acreedores",
+      "descripcion": "La firma publicó un comunicado en sus redes donde ratificó que no cerró y que sigue operando, pero que tuvo que encarar una “decisión dolorosa” con el fin de “preservar la continuidad”.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/vamos-a-salir-adelante-plantium-busca-su-reestructuracion-y-se-presento-en-concurso-de-acreedores/",
+      "titular": "Plantium se presentó en concurso preventivo para reestructurar su deuda",
+      "volanta": "AgTech",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 11,
+        "cercania_pba": 10,
+        "interes_productores": 11,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 61,
+        "commercial_score": 45,
+        "subtema": "maquinaria",
+        "tema": "plantium",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "La crisis de una empresa nacional de tecnología agrícola conocida preocupa a contratistas y usuarios.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          59,
+          62
+        ],
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-20T17:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "287b45a8-c6c7-4059-8f63-0c56380a66ba",
+          "slug": "plantium-se-presento-en-concurso-preventivo-y-busca-5a6c75",
+          "url": "https://www.diariolacampaña.com.ar/n/plantium-se-presento-en-concurso-preventivo-y-busca-5a6c75",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18201054544344968",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1768360271961636",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_80a3a6cc379e_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "048cd687b0c9",
+      "rep": {
+        "id": "048cd687b0c9",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof/",
+        "canonical_url": "https://infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof",
+        "titulo": "“Más burocracia”: la Sociedad Rural apuntó contra una medida laboral del gobierno de Kicillof",
+        "titulo_norm": "mas burocracia la sociedad rural apunto contra una medida laboral del gobierno de kicillof",
+        "descripcion": "La entidad del campo expresó su rechazo a una resolución del Gobierno bonaerense que obliga a presentar de manera mensual información laboral en un sistema denominado FUTURO y que considera incurre en “controles excesivos”.",
+        "imagen_url": "",
+        "autor": "infocampo",
+        "publicado": "2026-11-20T17:17-03:00",
+        "capturado": "2026-11-20T17:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "fe6aac0a7818e18a",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "048cd687b0c9",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof/",
+          "canonical_url": "https://infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof",
+          "titulo": "“Más burocracia”: la Sociedad Rural apuntó contra una medida laboral del gobierno de Kicillof",
+          "titulo_norm": "mas burocracia la sociedad rural apunto contra una medida laboral del gobierno de kicillof",
+          "descripcion": "La entidad del campo expresó su rechazo a una resolución del Gobierno bonaerense que obliga a presentar de manera mensual información laboral en un sistema denominado FUTURO y que considera incurre en “controles excesivos”.",
+          "imagen_url": "",
+          "autor": "infocampo",
+          "publicado": "2026-11-20T17:17-03:00",
+          "capturado": "2026-11-20T17:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "fe6aac0a7818e18a",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 82,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "trámites laborales provincia",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente a todos los productores bonaerenses que deben lidiar con más burocracia laboral.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "cuando": "2026-11-20T17:30-03:00"
+    },
     {
       "id": "30bd6aabf13f",
       "rep": {
@@ -92582,76 +92852,6 @@
       "cuando": "2026-11-20T13:00-03:00"
     },
     {
-      "id": "80a3a6cc379e",
-      "rep": {
-        "id": "80a3a6cc379e",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/vamos-a-salir-adelante-plantium-busca-su-reestructuracion-y-se-presento-en-concurso-de-acreedores/",
-        "canonical_url": "https://infocampo.com.ar/vamos-a-salir-adelante-plantium-busca-su-reestructuracion-y-se-presento-en-concurso-de-acreedores",
-        "titulo": "“Vamos a salir adelante”: Plantium busca su reestructuración y se presentó en concurso de acreedores",
-        "titulo_norm": "vamos a salir adelante plantium busca su reestructuracion y se presento en concurso de acreedores",
-        "descripcion": "La firma publicó un comunicado en sus redes donde ratificó que no cerró y que sigue operando, pero que tuvo que encarar una “decisión dolorosa” con el fin de “preservar la continuidad”.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-11-20T10:51-03:00",
-        "capturado": "2026-11-20T11:32-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7a06f039f2837453",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "80a3a6cc379e",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/vamos-a-salir-adelante-plantium-busca-su-reestructuracion-y-se-presento-en-concurso-de-acreedores/",
-          "canonical_url": "https://infocampo.com.ar/vamos-a-salir-adelante-plantium-busca-su-reestructuracion-y-se-presento-en-concurso-de-acreedores",
-          "titulo": "“Vamos a salir adelante”: Plantium busca su reestructuración y se presentó en concurso de acreedores",
-          "titulo_norm": "vamos a salir adelante plantium busca su reestructuracion y se presento en concurso de acreedores",
-          "descripcion": "La firma publicó un comunicado en sus redes donde ratificó que no cerró y que sigue operando, pero que tuvo que encarar una “decisión dolorosa” con el fin de “preservar la continuidad”.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-11-20T10:51-03:00",
-          "capturado": "2026-11-20T11:32-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7a06f039f2837453",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 11,
-        "cercania_pba": 10,
-        "interes_productores": 11,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 61,
-        "commercial_score": 45,
-        "subtema": "maquinaria",
-        "tema": "plantium",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "La crisis de una empresa nacional de tecnología agrícola conocida preocupa a contratistas y usuarios.",
-        "tema_doc": "tecnologia",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          62
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T11:32-03:00"
-    },
-    {
       "id": "b775144dbe84",
       "rep": {
         "id": "b775144dbe84",
@@ -93219,8 +93419,8 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T16:08:16-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-20T17:34:53-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -102236,7 +102436,10 @@
     "30bd6aabf13f": "2026-11-20T16:00",
     "9c810a97c84e": "2026-11-20T16:00",
     "f3e2069090af": "2026-11-20T16:00",
-    "f7940506bb27": "2026-11-20T16:00"
+    "f7940506bb27": "2026-11-20T16:00",
+    "048cd687b0c9": "2026-11-20T17:30",
+    "78e994101a03": "2026-11-20T17:30",
+    "acfacd647596": "2026-11-20T17:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
