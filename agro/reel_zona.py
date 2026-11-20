@@ -735,7 +735,9 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
     fuente = tema.get("fuente") or FUENTE_CORTA
     planes = []
     for i, (tipo, d) in enumerate(tema["diapositivas"]):
-        dur = DURACION_GANCHO if (tipo == "video" and d.get("titulo")) else DURACION[tipo]
+        # «propia» (20/11/2026, agro/reel_tiempo.py): la diapositiva la dibuja d["fn"](t) durante d["dur"] segundos.
+        dur = d["dur"] if tipo == "propia" else (DURACION_GANCHO if (tipo == "video" and d.get("titulo"))
+                                                 else DURACION[tipo])
         planes.append((tipo, d, dur, videos.get(i)))
     total = sum(p[2] for p in planes)
     cmd = [_ffmpeg(), "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{D.W}x{D.H45}",
@@ -767,6 +769,8 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
                     cuadro = placa_serie(d, t, fuente)
                 elif tipo == "lista":
                     cuadro = placa_lista(d, t, fuente)
+                elif tipo == "propia":
+                    cuadro = d["fn"](t).convert("RGB")
                 else:
                     cuadro = cierre
                 if fin_anterior is not None and t < FUNDIDO:
@@ -793,7 +797,8 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
 
 def caption(tema: dict, videos: dict) -> str:
     partes = list(tema["texto"])
-    partes.append((tema.get("fuente") or FUENTE_CORTA) + " (argenfields.com).")
+    fuente = tema.get("fuente") or FUENTE_CORTA
+    partes.append(fuente + (" (argenfields.com)." if "ArgenFields" in fuente else "."))
     creditos = sorted({c for _clip, c, _v in (videos or {}).values()})
     if creditos:
         partes.append("🎥 Videos ilustrativos: " + "; ".join(creditos) + ".")

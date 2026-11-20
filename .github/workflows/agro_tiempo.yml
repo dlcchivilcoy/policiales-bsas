@@ -1,0 +1,125 @@
+name: Agro - vigía del tiempo
+
+# 20/11/2026 (pedido del editor): reels del tiempo en Chivilcoy para @diarioyradioagro (agro/reel_tiempo.py).
+# Cada hora mira el pronóstico de MET Norway, anota la lluvia de cada hora (para estimar cuánto llovió) y, si toca,
+# publica UN reel: a qué hora llueve (lluvia o tormenta en las próximas 24 h), cuánto llovió (cuando paró), calor
+# o helada. Como mucho 2 por día.
+#
+# Quién dispara: cron-job.org a los :05 de 6 a 22. El `schedule:` de abajo es el respaldo (cada 2 horas, a los :35):
+# lo que ya salió hoy queda en la memoria (estado/agro_tiempo.json) y no se repite.
+#
+# Publica si la variable del repo AGRO_PUBLICAR es 1 y AGRO_TIEMPO no es 0.
+on:
+  schedule:                     # UTC; Argentina es UTC-3.
+    - cron: "35 9-23/2 * * *"   # 06:35, 08:35 … 20:35
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" publica aunque AGRO_PUBLICAR no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+      forzar:
+        description: 'arma ese reel aunque no toque: lluvia_horas, llovio, calor o helada'
+        default: ""
+
+concurrency:
+  group: agro-tiempo
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  tiempo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Vigía del tiempo
+        timeout-minutes: 30
+        env:
+          PYTHONUNBUFFERED: "1"
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          # Las del diario solo para la salvaguarda (que agro nunca publique con ellas).
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AGRO_TIEMPO: ${{ vars.AGRO_TIEMPO }}
+          AGRO_TIEMPO_TIPOS: ${{ vars.AGRO_TIEMPO_TIPOS }}
+          ZONA_HORAS_MM: ${{ vars.ZONA_HORAS_MM }}
+          LLOVIO_MM: ${{ vars.LLOVIO_MM }}
+          LLOVIO_CAMINOS_MM: ${{ vars.LLOVIO_CAMINOS_MM }}
+          CALOR_MAX: ${{ vars.CALOR_MAX }}
+          HELADA_MIN: ${{ vars.HELADA_MIN }}
+          AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
+          PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          FORZAR_INPUT: ${{ github.event.inputs.forzar }}
+        run: |
+          set -o pipefail
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
+            ARGS="--publicar"
+          fi
+          if [ -n "$FORZAR_INPUT" ]; then ARGS="$ARGS --forzar $FORZAR_INPUT"; fi
+          echo "python -m agro.reel_tiempo $ARGS"
+          python -m agro.reel_tiempo $ARGS | tee informe_tiempo.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agro-tiempo-${{ github.run_number }}
+          path: |
+            salida_agro/tiempo_*/*.mp4
+            salida_agro/tiempo_*/*.jpg
+            salida_agro/tiempo_*/*.txt
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: ignore
+
+      - name: Recordar qué salió
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/agro_tiempo.json)" ]; then
+            echo "La memoria no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo agro_tiempo.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="La vigía del tiempo de agro falló"
+          CUERPO="$( [ -f informe_tiempo.md ] && tail -40 informe_tiempo.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
