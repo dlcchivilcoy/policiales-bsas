@@ -89740,7 +89740,7 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T07:08:31-03:00",
+  "actualizado": "2026-11-20T08:03:13-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -97061,6 +97061,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-18": {
+        "fecha": "2026-11-18",
+        "productos": {
+          "trigo": {
+            "ars": 286850.0,
+            "usd": 185.0,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 271000.0,
+            "usd": 174.78,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "girasol": {
+            "ars": 744240.0,
+            "usd": 480.0,
+            "estimado": true,
+            "direccion": "sube"
+          },
+          "soja": {
+            "ars": 550000.0,
+            "usd": 354.72,
+            "estimado": true,
+            "direccion": "igual"
+          },
+          "sorgo": {
+            "ars": 279090.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1550.5,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -97357,6 +97397,20 @@
           "compra": 1550.5,
           "venta": 1559.5
         }
+      },
+      "2026-11-19": {
+        "fuente": "Banco Nación",
+        "hora": "17:00",
+        "billete": {
+          "fecha": "2026-11-19",
+          "compra": 1535.0,
+          "venta": 1585.0
+        },
+        "divisa": {
+          "fecha": "2026-11-19",
+          "compra": 1556.0,
+          "venta": 1565.0
+        }
       }
     },
     "a3500": {
@@ -97475,6 +97529,10 @@
       "2026-11-18": {
         "fecha": "2026-11-18",
         "valor": 1558.2427
+      },
+      "2026-11-19": {
+        "fecha": "2026-11-19",
+        "valor": 1562.9893
       }
     },
     "chicago_soja": {
@@ -97660,7 +97718,11 @@
       },
       "2026-11-19": {
         "fecha": "2026-11-19",
-        "usd_t": 448.5
+        "usd_t": 443.7
+      },
+      "2026-11-20": {
+        "fecha": "2026-11-20",
+        "usd_t": 444.9
       }
     },
     "chicago_maiz": {
@@ -97846,7 +97908,11 @@
       },
       "2026-11-19": {
         "fecha": "2026-11-19",
-        "usd_t": 171.2
+        "usd_t": 172.8
+      },
+      "2026-11-20": {
+        "fecha": "2026-11-20",
+        "usd_t": 171.9
       }
     },
     "chicago_trigo": {
@@ -98032,7 +98098,11 @@
       },
       "2026-11-19": {
         "fecha": "2026-11-19",
-        "usd_t": 210.9
+        "usd_t": 212.5
+      },
+      "2026-11-20": {
+        "fecha": "2026-11-20",
+        "usd_t": 212.5
       }
     }
   },
@@ -98375,6 +98445,32 @@
         },
         "facebook": {
           "id": "101271341650483_1766576145473382",
+          "fotos": 8
+        }
+      }
+    },
+    "2026-11-20T08:00:00-03:00": {
+      "dia": "2026-11-20",
+      "placas": [
+        "portada",
+        "mapa",
+        "pueblos",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "carrusel",
+      "gancho": "Lo que tenés que saber del campo hoy",
+      "publicado": {
+        "instagram": {
+          "id": "18120859999768890",
+          "colab": "no",
+          "diapositivas": 8
+        },
+        "facebook": {
+          "id": "101271341650483_1767798778684452",
           "fotos": 8
         }
       }
