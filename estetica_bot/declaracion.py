@@ -58,6 +58,10 @@ FRASE_BLOQUE = (60, 40)         # tope y piso de la frase (todas con la misma le
 RECORTE_MIN = 0.5               # la imagen conserva al menos la mitad de su alto
 OSCURO_FONDO = 0.42
 FADE_IN, FADE_OUT = 0.15, 0.4
+# VARIAS PERSONAS (07/11/2026, pedido del usuario): cuando el corresponsal manda varios audios y dice quién
+# habla en cada uno, el reel se arma por tramos (uno por persona, con su nombre y su cargo) y se pegan. Un
+# tramo más corto que esto se suma al anterior: no alcanza para leer el nombre.
+MIN_TRAMO_HABLANTE = 2.0
 
 
 class DeclaracionError(Exception):
@@ -222,10 +226,13 @@ def bloque_4x5(nombre: str, cargo: str, frases: list, f: dict, tema: str, y: int
                 y_espectro=y_espectro, y_progreso=y_progreso, fin=yy, alto=yy - y)
 
 
-def plan(w: int, h: int, nombre: str, cargo: str, frases: list, caras=None, tema: str = "") -> dict:
+def plan(w: int, h: int, nombre: str, cargo: str, frases: list, caras=None, tema: str = "",
+         entera: bool = False) -> dict:
     """Dónde va cada cosa para una imagen de w x h. `lienzo`, `media` (x, y, ancho, alto, cover),
     `bloque` y si hay que sombrear detrás del texto (cuando va encima de la imagen). Con material
-    horizontal y el estilo bloque prendido, además `tema` y `cajas` (la línea y el bloque)."""
+    horizontal y el estilo bloque prendido, además `tema` y `cajas` (la línea y el bloque).
+    `entera` (un VIDEO, 2026-11-08): si el bloque le quita alto, la imagen se achica entera y
+    centrada sobre su fondo difuminado en vez de recortarse arriba y abajo."""
     f = V._fuentes_placa()
     w, h = max(1, int(w)), max(1, int(h))
     if V._bloque_on() and w / h < AR_4X5:
@@ -263,7 +270,11 @@ def plan(w: int, h: int, nombre: str, cargo: str, frases: list, caras=None, tema
                        hm + V.BLOQUE_LINEA + pad_a + round(extra * 0.38))
         cajas = [(0, hm, 1080, hm + V.BLOQUE_LINEA, V.BLOQUE_TEMAS[tema]["linea"]),
                  (0, hm + V.BLOQUE_LINEA, 1080, H, V.BLOQUE_TEMAS[tema]["fondo"])]
-        return dict(lienzo=(1080, H), media=(0, 0, 1080, hm, hm < am), bloque=b, encima=False,
+        media = (0, 0, 1080, hm, hm < am)
+        if entera and hm < am:
+            wi = max(2, round(hm * w / h) // 2 * 2)
+            media = ((1080 - wi) // 2, 0, wi, hm, False)
+        return dict(lienzo=(1080, H), media=media, bloque=b, encima=False,
                     fuentes=f, tema=tema, cajas=cajas)
     prueba = bloque(nombre, cargo, frases, f, 0)
     if w / h >= AR_4X5:
@@ -458,18 +469,19 @@ def _espectro_mov(audio: Path, desde: float, dur: float, salida: Path,
 # =============================================================================
 
 def armar(audio, visual, salida, *, nombre: str, cargo: str = "", frases=None, tramo=None,
-          es_foto: bool = True, respaldo: str = "", work_dir=None, tema: str = "") -> dict:
+          es_foto: bool = True, respaldo: str = "", work_dir=None, tema: str = "", rango=None) -> dict:
     """El contenido del reel (sin isologo ni placa de cierre): imagen, marca, cargo, nombre,
     frases que cambian, espectro y el audio. `frases` = [{desde, texto}] con los segundos del
     audio ORIGINAL; `tramo` = {desde, hasta} (si el audio pasa de MAX_SEG); `tema` = los colores
-    del 4:5 estilo bloque. Devuelve {archivo, alto, dur, frases, tramo, tema}."""
+    del 4:5 estilo bloque; `rango` = (desde, hasta) exactos, para el tramo de una de varias personas
+    (`armar_varios`). Devuelve {archivo, alto, dur, frases, tramo, tema}."""
     audio, visual, salida = Path(audio), Path(visual), Path(salida)
     work = Path(work_dir or salida.parent)
     work.mkdir(parents=True, exist_ok=True)
     dur_audio = float(V.duration_seconds(audio) or 0)
     if dur_audio < MIN_SEG:
         raise DeclaracionError(f"el audio dura {dur_audio:.1f} s: muy corto")
-    desde, hasta = tramo_valido(tramo, dur_audio)
+    desde, hasta = (float(rango[0]), float(rango[1])) if rango else tramo_valido(tramo, dur_audio)
     dur = hasta - desde
     lista = frases_validas(frases, desde, hasta, respaldo=respaldo or nombre)
     clave = salida.stem
@@ -483,7 +495,7 @@ def armar(audio, visual, salida, *, nombre: str, cargo: str = "", frases=None, t
         img = _foto_rgb(V.frame_at(visual, min(1.0, max(0.0, float(V.duration_seconds(visual) or 0) / 3)),
                                    work / f"_cuadro_{clave}.jpg"))
     caras = V._caras_de_foto(img) if w / h < AR_4X5 else None
-    p = plan(w, h, nombre, cargo, lista, caras, tema=tema)
+    p = plan(w, h, nombre, cargo, lista, caras, tema=tema, entera=V.foto_entera() if es_foto else V.video_entero())
     W, H = p["lienzo"]
     x, y, mw, mh, cover = p["media"]
     fondo = _fondo(img, (W, H), work / f"_fondo_{clave}.jpg")
@@ -546,15 +558,96 @@ def armar(audio, visual, salida, *, nombre: str, cargo: str = "", frases=None, t
             "tema": p.get("tema", "")}
 
 
+def _segundo(frase):
+    try:
+        return float((frase or {}).get("desde"))
+    except (TypeError, ValueError, AttributeError):
+        return None
+
+
+def tramos_por_hablante(hablantes, desde: float, hasta: float) -> list:
+    """[(desde, hasta, nombre, cargo)] de cada persona dentro de [desde, hasta], con los segundos del
+    audio ORIGINAL. `hablantes` = [{desde, nombre, cargo}] (desde = dónde empieza su audio). Los
+    tramos muy cortos se suman al anterior; dos seguidos de la misma persona, en uno."""
+    lista = sorted((h for h in (hablantes or []) if (h or {}).get("nombre")),
+                   key=lambda h: float(h.get("desde") or 0))
+    tramos = []
+    for i, h in enumerate(lista):
+        a = max(desde, float(h.get("desde") or 0))
+        b = min(hasta, float(lista[i + 1].get("desde") or 0) if i + 1 < len(lista) else hasta)
+        if b <= a:
+            continue
+        quien = (" ".join(str(h["nombre"]).split()), " ".join(str(h.get("cargo") or "").split()))
+        if tramos and (tramos[-1][2:] == quien or b - a < MIN_TRAMO_HABLANTE):
+            tramos[-1] = (tramos[-1][0], b) + tramos[-1][2:]
+        else:
+            tramos.append((a, b) + quien)
+    if tramos and tramos[0][0] > desde:              # lo de antes del primero, a cargo del primero
+        tramos[0] = (desde,) + tramos[0][1:]
+    if len(tramos) > 1 and tramos[0][1] - tramos[0][0] < MIN_TRAMO_HABLANTE:
+        tramos[1] = (tramos[0][0],) + tramos[1][1:]
+        tramos.pop(0)
+    return tramos
+
+
+def armar_varios(audio, visual, salida, *, hablantes, frases=None, tramo=None, es_foto: bool = True,
+                 respaldo: str = "", work_dir=None, tema: str = "") -> dict:
+    """Como `armar`, con varias personas: un tramo por persona, cada uno con su nombre y su cargo y el
+    mismo diseño y colores, pegados en uno. Lo mismo que devuelve `armar`."""
+    audio, salida = Path(audio), Path(salida)
+    work = Path(work_dir or salida.parent)
+    work.mkdir(parents=True, exist_ok=True)
+    dur_audio = float(V.duration_seconds(audio) or 0)
+    desde, hasta = tramo_valido(tramo, dur_audio)
+    tramos = tramos_por_hablante(hablantes, desde, hasta)
+    if not tramos:
+        raise DeclaracionError("no hay quién habla en ningún tramo")
+    if len(tramos) == 1:
+        _a, _b, nombre, cargo = tramos[0]
+        return armar(audio, visual, salida, nombre=nombre, cargo=cargo, frases=frases, tramo=tramo,
+                     es_foto=es_foto, respaldo=respaldo, work_dir=work, tema=tema)
+    partes = []
+    for i, (a, b, nombre, cargo) in enumerate(tramos):
+        # Solo las frases que se dicen en ESTE tramo: `frases_validas` pone la primera en el segundo 0,
+        # así que una de la persona anterior aparecería al empezar la siguiente.
+        propias = [f for f in (frases or []) if _segundo(f) is not None and a - 1.0 <= _segundo(f) < b]
+        info = armar(audio, visual, work / f"_tramo{i}_{salida.stem}.mp4", nombre=nombre, cargo=cargo,
+                     frases=propias, es_foto=es_foto, respaldo=respaldo or nombre, work_dir=work,
+                     tema=tema, rango=(a, b))
+        tema = info.get("tema") or tema              # el mismo bloque de colores en todos los tramos
+        partes.append(info)
+    lista = work / f"_tramos_{salida.stem}.txt"
+    lista.write_text("".join("file '" + Path(p["archivo"]).resolve().as_posix().replace("'", "'\\''") + "'\n"
+                             for p in partes), encoding="utf-8")
+    cmd = [V._ffmpeg(), "-y", "-f", "concat", "-safe", "0", "-i", str(lista), "-r", str(FPS),
+           "-c:v", "libx264", "-preset", "veryfast", *V._calidad(), "-pix_fmt", "yuv420p",
+           "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-movflags", "+faststart", str(salida)]
+    V._run_ffmpeg(cmd, "declaración con varias personas")
+    corrido, frases_todas = 0.0, []
+    for p in partes:
+        frases_todas += [[round(a + corrido, 2), round(b + corrido, 2), t] for a, b, t in p["frases"]]
+        corrido += p["dur"]
+    logger.info(f"Declaración con {len(tramos)} personas: "
+                + " · ".join(f"{a:.0f}-{b:.0f}s {n}" for a, b, n, _c in tramos))
+    return {"archivo": str(salida), "alto": partes[0]["alto"], "dur": round(corrido, 2),
+            "tramo": [desde, hasta], "frases": frases_todas, "tema": tema,
+            "tramos": [[round(a, 2), round(b, 2), n, c] for a, b, n, c in tramos]}
+
+
 def reel(audio, visual, salida, *, nombre: str, cargo: str = "", frases=None, tramo=None,
-         es_foto: bool = True, respaldo: str = "", work_dir=None, tema: str = "") -> dict:
+         es_foto: bool = True, respaldo: str = "", work_dir=None, tema: str = "", hablantes=None) -> dict:
     """El reel TERMINADO: `armar` + isologo y placa de cierre (`video.to_vertical_reel`). En el 4:5
-    estilo bloque el isologo ya va en el bloque."""
+    estilo bloque el isologo ya va en el bloque. Con `hablantes` de más de una persona, `armar_varios`."""
     salida = Path(salida)
     work = Path(work_dir or salida.parent)
     contenido = work / f"_decl_{salida.stem}.mp4"
-    info = armar(audio, visual, contenido, nombre=nombre, cargo=cargo, frases=frases, tramo=tramo,
-                 es_foto=es_foto, respaldo=respaldo, work_dir=work, tema=tema)
+    distintos = {(h.get("nombre"), h.get("cargo")) for h in (hablantes or []) if (h or {}).get("nombre")}
+    if len(distintos) > 1:
+        info = armar_varios(audio, visual, contenido, hablantes=hablantes, frases=frases, tramo=tramo,
+                            es_foto=es_foto, respaldo=respaldo, work_dir=work, tema=tema)
+    else:
+        info = armar(audio, visual, contenido, nombre=nombre, cargo=cargo, frases=frases, tramo=tramo,
+                     es_foto=es_foto, respaldo=respaldo, work_dir=work, tema=tema)
     V.to_vertical_reel(contenido, salida, compuesto=True, estilo="corresponsal", alto=info["alto"],
                        logo=not info.get("tema"))
     info["archivo"] = str(salida)

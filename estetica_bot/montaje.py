@@ -263,16 +263,29 @@ def _x_seguimiento(ancho: int, foco: float, foco_fin: float, dur: float) -> str:
 
 
 def _entrada(src: Path, recorte, ancho: int, alto: int, foco: float, vel: float,
-             foco_fin: float | None = None, dur: float = 0.0) -> str:
+             foco_fin: float | None = None, dur: float = 0.0, idx: int = 0) -> str:
     """Cadena de filtros de una cámara: sin giro, sin barras negras, a su velocidad, llenando su
     panel (escala = la mayor de ancho y alto) y corrida hacia la acción (`foco`; si viene
     `foco_fin`, el recorte la sigue a lo largo de los `dur` segundos del tramo)."""
     cad = V._sin_giro()
     if recorte:
         cad += f",crop={recorte[0]}:{recorte[1]}:{recorte[2]}:{recorte[3]}"
+    base = f"{cad},setpts=(PTS-STARTPTS)/{vel:g},fps={FPS},"
+    if V.video_entero():
+        # ENTERO en su panel (2026-11-08: «que se respete el tamaño… se pierde información»): a su
+        # proporción, centrado, y lo que sobra del panel es el mismo video desenfocado y oscurecido
+        # (igual que un video vertical solo). Ya no hay recorte, así que el `foco` no se usa.
+        k = f"e{idx}"
+        return (f"{base}split=2[{k}a][{k}b];"
+                f"[{k}a]scale={ancho}:{alto}:force_original_aspect_ratio=increase,"
+                f"crop={ancho}:{alto},scale={max(2, ancho // 8)}:{max(2, alto // 8)},"
+                f"boxblur=luma_radius=6:luma_power=2,scale={ancho}:{alto},"
+                f"colorchannelmixer=rr=0.45:gg=0.45:bb=0.45,setsar=1[{k}c];"
+                f"[{k}b]scale={ancho}:{alto}:force_original_aspect_ratio=decrease,"
+                f"scale=trunc(iw/2)*2:trunc(ih/2)*2,setsar=1[{k}d];"
+                f"[{k}c][{k}d]overlay=(W-w)/2:(H-h)/2,setsar=1")
     x = _x_seguimiento(ancho, foco, foco if foco_fin is None else foco_fin, dur)
-    return (f"{cad},setpts=(PTS-STARTPTS)/{vel:g},fps={FPS},"
-            f"scale={ancho}:{alto}:force_original_aspect_ratio=increase,"
+    return (f"{base}scale={ancho}:{alto}:force_original_aspect_ratio=increase,"
             f"crop={ancho}:{alto}:{x}:(ih-{alto})*0.5,setsar=1")
 
 
@@ -295,7 +308,7 @@ def _armar_tramo(entradas: list, paneles: list, capa: Path, dur: float, salida: 
     color = "0x%02X%02X%02X" % V.CORR_GRAFITO[:3]
     fc = [f"color=c={color}:s=1080x1920:r={FPS}:d={dur:.3f}[b0]"]
     for i, ((src, _d, rec, foco, vel, fin), (x, y, w, h)) in enumerate(zip(entradas, paneles)):
-        fc.append(f"[{i}:v]{_entrada(Path(src), rec, w, h, foco, vel, fin, dur)}[p{i}]")
+        fc.append(f"[{i}:v]{_entrada(Path(src), rec, w, h, foco, vel, fin, dur, i)}[p{i}]")
         fc.append(f"[b{i}][p{i}]overlay={x}:{y}:eof_action=pass[b{i + 1}]")
     n = len(entradas)
     if tarjeta:
@@ -429,10 +442,11 @@ def autoprueba(tmp: Path) -> bool:
 
 # ── Entrada ─────────────────────────────────────────────────────────────────────────
 def montar(videos: list, salida: Path, *, fuentes: str, work_dir: Path, tema: str = "",
-           titulo: tuple = ("", "")) -> Path | None:
+           titulo: tuple = ("", ""), sin_audio: bool = False) -> Path | None:
     """Arma el montaje de `videos` (varios, del mismo envío) en `salida` (1080x1920, hasta 55 s,
     con marca, etiquetas y tarjetas; sin isologo ni placa de cierre). None si no se pudo: el
-    que llama usa el armado de siempre."""
+    que llama usa el armado de siempre. `sin_audio`: Gemini los mira MUDOS y los textos salen solo
+    de lo escrito (el montaje en sí conserva el sonido)."""
     videos = [Path(v) for v in videos]
     if len(videos) < 2:
         return None
@@ -446,7 +460,8 @@ def montar(videos: list, salida: Path, *, fuentes: str, work_dir: Path, tema: st
         cuadros = [(_cuadro(v, 0.3, work_dir / f"_ini_{i}.jpg"),
                     _cuadro(v, max(0.0, d - 0.5), work_dir / f"_fin_{i}.jpg"))
                    for i, (v, d) in enumerate(zip(videos, durs))]
-        raw = gemini.plan_montaje(list(zip(videos, durs)), cuadros, fuentes, MAX_SEG)
+        raw = gemini.plan_montaje(list(zip(videos, durs)), cuadros, fuentes, MAX_SEG,
+                                  sin_audio=sin_audio)
         plan = validar(raw, durs)
         if not plan:
             raise RuntimeError("el plan de montaje no trajo tramos usables")

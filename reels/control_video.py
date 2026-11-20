@@ -39,9 +39,23 @@ SISTEMA = (
     "OTRA noticia: otro tema, otras personas, otro animal u otro lugar (por ejemplo fútbol o la Selección "
     "en una noticia de un rescate, o un concurso de cálculo en una noticia de maratones). Una persona "
     "hablando a cámara o un estudio de TV corresponden si el zócalo, el texto en pantalla o lo que se ve "
-    "tienen que ver con la noticia. Respondé SOLO un JSON: "
+    "tienen que ver con la noticia. Tiene que ser el MISMO hecho, no uno parecido: mirá el título que le puso "
+    "el medio al video, los zócalos y los carteles. Si cuentan otro lugar, otra fecha u otras personas, NO "
+    "corresponde aunque el tema se parezca (granizo en Corrientes para una noticia del granizo en el AMBA, un "
+    "baile ante el Papa en Perú para una noticia del Papa con Cáritas, otro viajero para una noticia de "
+    "jubilados en motorhome, el discurso de una política para una noticia de una inventora). Ante la duda, NO. "
+    "Respondé SOLO un JSON: "
     '{"corresponde": true o false, "que_muestra": "qué se ve, en una frase", "motivo": "por qué, en una frase"}'
 )
+
+
+def estricto() -> bool:
+    """20/11/2026 (el editor: «hay algunos que no tienen relación entre el video y el texto»): salieron el granizo
+    del AMBA con el de Corrientes, el Papa con Cáritas con un baile en Perú, la inventora del «Baño Calientito» con
+    una política mexicana. Las palabras en común («Papa», «granizo») los daban por buenos sin mirar. En modo
+    estricto la IA mira SIEMPRE los cuadros, y si no contesta solo pasa el video cuyo título coincide de verdad.
+    VIDEO_CONTROL_ESTRICTO=0 vuelve al control de antes (las palabras deciden solas cuando coinciden)."""
+    return (os.environ.get("VIDEO_CONTROL_ESTRICTO") or "1").strip() != "0"
 
 
 def activo() -> bool:
@@ -112,7 +126,8 @@ def controlar(clip, titulo: str, bajada: str = "", texto: str = "", nombre_video
         return {"ok": True, "via": "apagado (VIDEO_CONTROL=0)", "motivo": ""}
     p = parecido(titulo, texto, nombre_video)
     base = {"parecido": p, "video": (nombre_video or "")[:160]}
-    if p["veredicto"] == "si":
+    duro = estricto()
+    if p["veredicto"] == "si" and not duro:
         return dict(base, ok=True, via="palabras", motivo="")
     if p["veredicto"] == "no":
         return dict(base, ok=False, via="palabras",
@@ -126,6 +141,6 @@ def controlar(clip, titulo: str, bajada: str = "", texto: str = "", nombre_video
                         motivo="" if ok else f"la IA vio que el video es de otra cosa: {r.get('que_muestra') or r.get('motivo')}")
         except Exception as e:                       # noqa: BLE001 — sin la IA decide el control de palabras
             base["ia_error"] = re.sub(r"key=[^&\s]+", "key=…", str(e))[:160]
-    ok = p["titulo"] >= 1 or p["texto"] >= SIN_IA_TEXTO
+    ok = (p["veredicto"] == "si") if duro else (p["titulo"] >= 1 or p["texto"] >= SIN_IA_TEXTO)
     return dict(base, ok=ok, via="palabras (sin la IA)",
                 motivo="" if ok else "no se pudo comprobar que el video sea de la nota")

@@ -359,6 +359,15 @@ def elegir(cands: list, carpeta: Path, leer=None, bajar=None, log=print, con_fot
                 continue
             clip = bajar(ficha["video"], carpeta / f"viral_{i:02d}_{k}_clip.mp4")
             if clip:
+                # 20/11/2026: ¿el video es de ESTA nota? (reels/control_video.py, el mismo control que @diarioyradio;
+                # antes acá no había ninguno y la página trae también los videos de otras notas).
+                from reels import control_video as CV
+                control = CV.controlar(clip, n.get("titulo") or "", n.get("resumen") or "",
+                                       ficha.get("texto") or n.get("cuerpo") or "", ficha.get("video_nombre") or "",
+                                       carpeta=carpeta)
+                if not control.get("ok"):
+                    log(f"   video descartado en «{(n.get('titulo') or '')[:60]}»: {control.get('motivo')}")
+                    continue
                 if url != n["url"]:                      # el crédito es del portal que tiene el video
                     n = dict(n, url=url, url_hecho=n["url"], fuente=PO.fuente_de({"url": url}),
                              titulo=ficha.get("titulo") or n["titulo"], resumen=ficha.get("resumen") or n.get("resumen"))

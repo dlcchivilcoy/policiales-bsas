@@ -105,11 +105,12 @@ def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
 
 
 def _cuadros_video(clip, w: int, h: int, total: float):
-    """Generador de cuadros RGB (PIL) del video de la fuente, cubriendo w×h, sin sonido; si es más
-    corto que el reel se repite."""
+    """Generador de cuadros RGB (PIL) del video de la fuente en w×h, sin sonido; si es más corto que el reel
+    se repite. 20/11/2026 (el editor: «que no salgan mal cortados los videos que scrappees»): el video va
+    ENTERO, achicado y centrado sobre sí mismo desenfocado; solo si su forma es casi la del recuadro (se
+    perdería ≤ RECORTE_MAX por lado) se lo recorta para llenarlo. AGRO_VIDEO_ENTERO=0 vuelve a recortar siempre."""
     cmd = [_ffmpeg(), "-loglevel", "error", "-stream_loop", "-1", "-i", str(clip), "-t", f"{total:.2f}",
-           "-vf", f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps={FPS}",
-           "-f", "rawvideo", "-pix_fmt", "rgb24", "-an", "-"]
+           "-vf", filtro_encuadre(clip, w, h), "-f", "rawvideo", "-pix_fmt", "rgb24", "-an", "-"]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
     tam = w * h * 3
     ultimo = None
@@ -124,6 +125,43 @@ def _cuadros_video(clip, w: int, h: int, total: float):
         proc.kill()
     while ultimo is not None:                  # por si ffmpeg cortó antes: el último cuadro quieto
         yield ultimo
+
+
+RECORTE_MAX = 0.06       # hasta 6 % del ancho (o del alto) por lado se puede recortar para llenar
+
+
+def _tamano(clip) -> tuple:
+    """(ancho, alto, recorte) del contenido del video: sin las barras negras que traiga pegadas (recorte =
+    «crop=…,» para ffmpeg, o ""). (0, 0, "") si no se puede medir."""
+    try:
+        from reels import reel_bot as R
+        V = R.motor()
+        r = V.detectar_recorte(Path(clip))
+        if r:
+            return r[0], r[1], f"crop={r[0]}:{r[1]}:{r[2]}:{r[3]},"
+        w, h = V._dimensiones(Path(clip))
+        return w, h, ""
+    except Exception:                                  # noqa: BLE001
+        return (0, 0, "")
+
+
+def filtro_encuadre(clip, w: int, h: int, tamano=None) -> str:
+    """El filtro de ffmpeg que pone el video en w×h: entero sobre sí mismo desenfocado, o recortado si casi
+    no pierde nada."""
+    import os
+    cubrir = f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}"
+    if (os.environ.get("AGRO_VIDEO_ENTERO") or "1").strip() == "0":
+        return f"{cubrir},fps={FPS}"
+    vw, vh, sin_barras = tamano or _tamano(clip)
+    if not vw or not vh:
+        return f"{cubrir},fps={FPS}"
+    ar_v, ar_r = vw / vh, w / h
+    perdida = 1 - min(ar_v, ar_r) / max(ar_v, ar_r)            # lo que se va (sumando los dos lados)
+    if perdida <= 2 * RECORTE_MAX:
+        return f"{sin_barras}{cubrir},fps={FPS}"
+    return (f"{sin_barras}split[a][b];[a]{cubrir},boxblur=24:3,colorchannelmixer=rr=0.55:gg=0.55:bb=0.55[fondo];"
+            f"[b]scale={w}:{h}:force_original_aspect_ratio=decrease[frente];"
+            f"[fondo][frente]overlay=(W-w)/2:(H-h)/2,setsar=1,fps={FPS}")
 
 
 def _medir(clip) -> tuple:

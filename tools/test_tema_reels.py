@@ -61,8 +61,10 @@ with tempfile.TemporaryDirectory() as d:
         px = cuadro.getpixel((1040, 1320))           # abajo a la derecha: el bloque, sin texto
         chequear(f"el bloque {tema} es del color del tema ({px})",
                  all(abs(a - b) < 18 for a, b in zip(px, fondo)))
-        chequear("la imagen ocupa más que el bloque (en y 700 todavía es foto)",
-                 not all(abs(a - b) < 18 for a, b in zip(cuadro.getpixel((540, 700)), fondo)))
+        # Desde el 8/11 (bot) / 20/11 (acá) la foto va ENTERA: la 16:9 ocupa 1080×608 y no se recortan costados
+        # para que llegue más abajo (REEL_FOTO_ENTERA=0 vuelve al recorte, donde en y 700 todavía era foto).
+        chequear("la foto apaisada va entera a todo el ancho (en y 560 es foto)",
+                 not all(abs(a - b) < 18 for a, b in zip(cuadro.getpixel((540, 560)), fondo)))
         arriba = cuadro.getpixel((540, 20))
         chequear(f"la imagen arranca arriba de todo ({arriba})",
                  not all(abs(a - b) < 18 for a, b in zip(arriba, fondo)))

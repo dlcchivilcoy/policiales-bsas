@@ -118,7 +118,28 @@ chequear("controlar: si la IA no contesta y no hay con qué comparar, el video n
 r = CV.controlar(clip, "Rescataron a una yegua atada a un carro", "",
                  "La yegua llegó al Hospital Jaulas Vacías de Pelitos en el Corazón, donde la operaron del intestino",
                  "Hospital Jaulas Vacías - Pelitos en el Corazón", carpeta=tmp, mirar_fn=ia_caida)
-chequear("controlar: sin la IA, lo dudoso que comparte mucho con el texto va igual",
+chequear("controlar (estricto): sin la IA, lo dudoso NO va aunque comparta con el texto",
+         r["ok"] is False and r["via"] == "palabras (sin la IA)")
+os.environ["VIDEO_CONTROL_ESTRICTO"] = "0"
+r = CV.controlar(clip, "Rescataron a una yegua atada a un carro", "",
+                 "La yegua llegó al Hospital Jaulas Vacías de Pelitos en el Corazón, donde la operaron del intestino",
+                 "Hospital Jaulas Vacías - Pelitos en el Corazón", carpeta=tmp, mirar_fn=ia_caida)
+chequear("controlar (VIDEO_CONTROL_ESTRICTO=0): sin la IA, lo dudoso que comparte mucho con el texto va igual",
+         r["ok"] and r["via"] == "palabras (sin la IA)")
+vistas.clear()
+r = CV.controlar(clip, "Granizo, videos virales y alerta meteorológica en el AMBA", "", "Cayó granizo en el AMBA",
+                 "Granizo, alerta y videos virales: tormenta en Corrientes", carpeta=tmp, mirar_fn=ia_no)
+os.environ.pop("VIDEO_CONTROL_ESTRICTO")
+chequear("controlar (VIDEO_CONTROL_ESTRICTO=0): lo que coincide por palabras pasa sin que mire la IA (lo de antes)",
+         r["ok"] and r["via"] == "palabras" and vistas == [])
+vistas.clear()
+r = CV.controlar(clip, "Granizo, videos virales y alerta meteorológica en el AMBA", "", "Cayó granizo en el AMBA",
+                 "Granizo, alerta y videos virales: tormenta en Corrientes", carpeta=tmp, mirar_fn=ia_no)
+chequear("controlar (estricto): aunque coincidan palabras («granizo»), la IA mira y si es otro hecho no va",
+         r["ok"] is False and r["via"] == "ia" and vistas == [3])
+r = CV.controlar(clip, "Granizo, videos virales y alerta meteorológica en el AMBA", "", "Cayó granizo en el AMBA",
+                 "Granizo, alerta y videos virales en el AMBA", carpeta=tmp, mirar_fn=ia_caida)
+chequear("controlar (estricto): si la IA no contesta, pasa solo el video cuyo título coincide",
          r["ok"] and r["via"] == "palabras (sin la IA)")
 vistas.clear()
 r = CV.controlar(clip, *MALOS[1][:2][:1], "", MALOS[1][1], MALOS[1][2], carpeta=tmp, mirar_fn=ia_si)
