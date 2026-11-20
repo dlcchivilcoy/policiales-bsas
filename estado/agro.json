@@ -93692,7 +93692,7 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T18:42:15-03:00",
+  "actualizado": "2026-11-20T19:00:36-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -100334,6 +100334,43 @@
         },
         "facebook": {
           "id": "1725085035700380"
+        }
+      }
+    },
+    "2026-11-20T19:00:00-03:00": {
+      "dia": "2026-11-20",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué es lo más difícil del trabajo en el tambo?",
+          "opciones": [],
+          "publico": "tambos",
+          "via": "lista",
+          "publicado": {
+            "instagram": {
+              "id": "18420042421085280"
+            },
+            "facebook": {
+              "id": "1813892709663549"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18420042421085280"
+              },
+              "facebook": {
+                "id": "1813892709663549"
+              }
+            }
+          ]
         }
       }
     }
