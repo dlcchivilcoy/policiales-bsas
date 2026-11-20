@@ -138,26 +138,41 @@ def _subir_portada(pieza: dict) -> str:
         return ""
 
 
-def _reel_instagram(pp: dict, mp4: Path, nombre: str, portada_url: str = "") -> dict:
+def _reel_instagram(pp: dict, mp4: Path, nombre: str, portada_url: str = "", colab: str = "") -> dict:
     """El reel en Instagram con la PORTADA propia de miniatura en la grilla (`cover_url`, 17/10/2026).
-    Es publicador.publicar_instagram más la portada; si Instagram no la toma, sale sin ella."""
+    Es publicador.publicar_instagram más la portada; si Instagram no la toma, sale sin ella.
+    `colab` (20/11/2026, los reels de datos de la zona): el usuario invitado como COLABORADOR; si Instagram no lo
+    toma, sale solo en agro. El resultado dice "colab": "si"/"no"."""
     from reels import instagram as IG
     from reels import publicador as PB
-    if not portada_url:
+    if not portada_url and not colab:
         return PB.publicar_instagram(pp, mp4, nombre)
     uid = os.environ.get("INSTAGRAM_USER_ID", "")
     tok = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
     url = PB.subir_a_release(mp4, nombre)
     caption = PB.texto_del_posteo(pp, "instagram")
-    params = IG.contenedor_reel(url, caption, portada=portada_url)
+    params = IG.contenedor_reel(url, caption, portada=portada_url) if portada_url else IG.contenedor_reel(url, caption)
+    con_colab = "no"
+    if colab:
+        try:
+            cid = PB._contenedor_listo(uid, tok, dict(params, collaborators=json.dumps([colab])))
+            portada, con_colab = ("propia" if portada_url else "la que elige Instagram"), "si"
+        except PB.FalloRed:
+            cid = None                                     # sin colab, como siempre (abajo)
+        if con_colab == "si":
+            return {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": portada,
+                    "colab": con_colab}
     try:
         cid = PB._contenedor_listo(uid, tok, params)
-        portada = "propia"
+        portada = "propia" if portada_url else "la que elige Instagram"
     except PB.FalloRed:
         params.pop("cover_url", None)                      # una portada rechazada no cuesta el reel
         cid = PB._contenedor_listo(uid, tok, params)
         portada = "la que elige Instagram (rechazó la propia)"
-    return {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": portada}
+    salida = {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None, "portada": portada}
+    if colab:
+        salida["colab"] = con_colab
+    return salida
 
 
 def _miniatura_facebook(video_id: str, jpg) -> str:
@@ -229,7 +244,8 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_
                 log(f"   Facebook FALLÓ: {salida['facebook']['error']}")
         if "instagram" in redes and not hecho("instagram"):
             try:
-                salida["instagram"] = _reel_instagram(pp, mp4, f"agro_{pieza['id']}.mp4", portada_url)
+                salida["instagram"] = _reel_instagram(pp, mp4, f"agro_{pieza['id']}.mp4", portada_url,
+                                                      colab=usuario_diario() if pieza.get("colab_diario") else "")
                 log(f"   Instagram: {salida['instagram'].get('id')} (portada: {salida['instagram'].get('portada', '—')})")
             except Exception as e:                         # noqa: BLE001
                 salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}

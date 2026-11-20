@@ -296,7 +296,7 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None, dormir=time.sleep) -> st
 if __name__ == "__main__":
     from datetime import datetime, timezone
     solo = sys.argv[sys.argv.index("--solo") + 1:] if "--solo" in sys.argv else None
-    que = {"nacionales.json": "Nacionales", "archivo.json": "Archivo", "agro.json": "Agro"}.get((solo or [""])[0], "Reels")
+    que = {"nacionales.json": "Nacionales", "archivo.json": "Archivo", "agro.json": "Agro", "agro_zona.json": "Agro zona"}.get((solo or [""])[0], "Reels")
     msg = f"{que} de {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC [skip ci]"
     try:
         print(guardar(msg, solo=solo))

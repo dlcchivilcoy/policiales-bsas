@@ -59,8 +59,12 @@ def desde_hora() -> tuple:
 
 def ya_hoy(mem: dict, ahora: datetime) -> bool:
     hoy = ahora.strftime("%Y-%m-%d")
-    return any(p.get("formato") == "clima" and (p.get("cuando") or "").startswith(hoy) and p.get("publicado")
-               for p in mem.get("elegidas") or [])
+    if any(p.get("formato") == "clima" and (p.get("cuando") or "").startswith(hoy) and p.get("publicado")
+           for p in mem.get("elegidas") or []):
+        return True
+    # 20/11/2026: si el reel de datos de la zona de las 11 fue el de la lluvia, la tarde no lo repite.
+    from agro import reel_zona as RZ
+    return RZ.lluvia_hoy(hoy)
 
 
 def toca(mem: dict, horario: datetime) -> bool:

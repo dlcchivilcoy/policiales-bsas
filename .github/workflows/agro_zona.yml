@@ -1,0 +1,122 @@
+name: Agro - reel de datos de la zona
+
+# 20/11/2026 (pedido del editor): un reel por día con datos de la zona (ArgenFields, El Niño, la lluvia) en
+# colaboración @diarioyradioagro + @diarioyradio, entre las 11 y las 12 (agro/reel_zona.py).
+#
+# Quién dispara: cron-job.org a las 11:10 con {"ref":"main","inputs":{"origen":"cron"}}. El `schedule:` de abajo es
+# el RESPALDO (11:25): si el de hoy ya salió, la memoria (estado/agro_zona.json) lo frena; y GitHub a veces llega con
+# horas de atraso: pasadas las 12:30 la corrida no publica nada (AGRO_ZONA_VENTANA).
+#
+# Publica si la variable del repo AGRO_PUBLICAR es 1 (la misma de agro) y AGRO_ZONA no es 0.
+on:
+  schedule:                 # UTC; Argentina es UTC-3 todo el año.
+    - cron: "25 14 * * *"   # 11:25, respaldo
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" publica aunque AGRO_PUBLICAR no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+      tema:
+        description: 'un tema a elección (trigo_zona, soja_zona, maiz_zona, tierra, nino, lluvia, suelo, sequias, gemelas, trigo_historia, soja_historia, maiz_historia); vacío = el que toca hoy'
+        default: ""
+
+concurrency:
+  group: agro-zona
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # estado/agro_zona.json y el video al Release temporal
+  issues: write
+
+jobs:
+  zona:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Reel de la zona
+        timeout-minutes: 30
+        env:
+          PYTHONUNBUFFERED: "1"
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          # Las del diario: la salvaguarda compara, se acepta la colab y sale en la página de Facebook del diario.
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          AGRO_ZONA: ${{ vars.AGRO_ZONA }}
+          AGRO_ZONA_COLAB: ${{ vars.AGRO_ZONA_COLAB }}
+          AGRO_ZONA_FB_DIARIO: ${{ vars.AGRO_ZONA_FB_DIARIO }}
+          AGRO_ZONA_VENTANA: ${{ vars.AGRO_ZONA_VENTANA }}
+          ZONA_LLUVIA_MM: ${{ vars.ZONA_LLUVIA_MM }}
+          AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
+          PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          TEMA_INPUT: ${{ github.event.inputs.tema }}
+        run: |
+          set -o pipefail
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
+            ARGS="--publicar"
+          fi
+          if [ -n "$TEMA_INPUT" ]; then ARGS="$ARGS --tema $TEMA_INPUT"; fi
+          echo "python -m agro.reel_zona $ARGS"
+          python -m agro.reel_zona $ARGS | tee informe_zona.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agro-zona-${{ github.run_number }}
+          path: |
+            salida_agro/zona_*/*.mp4
+            salida_agro/zona_*/*.jpg
+            salida_agro/zona_*/*.txt
+          retention-days: 3
+          compression-level: 0
+
+      - name: Recordar qué salió
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/agro_zona.json)" ]; then
+            echo "La memoria no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo agro_zona.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="El reel de datos de la zona falló"
+          CUERPO="$( [ -f informe_zona.md ] && tail -40 informe_zona.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
