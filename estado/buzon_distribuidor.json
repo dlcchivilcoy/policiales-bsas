@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T02:18:25.000Z",
+  "actualizado": "2026-11-20T02:33:29.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/incidente-con-demorados-entre-chacabuco.html",
@@ -187,6 +187,30 @@
       "volanta": "Incendio en 25 de Mayo",
       "categoria": "incendio",
       "distancia_km": 61.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://noticiasgilenses.com.ar/la-justicia-excarcelo-al-motoclista-que-le-quito-la-vida-a-jorge-limonta/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-20T02:33:29.000Z",
+      "titulo": "Excarcelaron al joven de 18 años que mató a Jorge Limonta",
+      "descripcion": "La Justicia otorgó la libertad al motoclista de 18 años acusado de atropellar y matar a Jorge Limonta. El hecho ocurrió el domingo por la noche y la causa está caratulada como homicidio culposo agravado.",
+      "texto_tiktok": "Un joven de dieciocho años que atropelló y mató con su moto a Jorge Limonta quedó en libertad tras prestar declaración.\n\nEl hecho ocurrió el domingo por la noche en San Andrés de Giles y la causa está a cargo del Juzgado de Garantías Nro 3 de Mercedes.\n\nEl juez Patricio Guillermo Arrieta concedió la excarcelación en el marco de una investigación por homicidio culposo agravado mientras aguardan peritajes.\n\n📲 Más noticias de San Andrés de Giles en www.diariolacampaña.com.ar\n\n#SanAndresDeGiles #Justicia #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-20_0132_06_san-andres-de-giles_excarcelaron-al-joven-de-18-a-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/san-andres-de-giles-excarcelaron-al-motoclista-que-mato-a-jorge-e97c5e",
+      "youtube_url": "https://youtube.com/shorts/EbfbWKnvI_I",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "San Andrés de Giles",
+      "volanta": "San Andrés de Giles",
+      "categoria": "judicial",
+      "distancia_km": 72.7,
       "radio_ok": true,
       "plataformas": [
         "x",
