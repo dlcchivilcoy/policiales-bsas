@@ -124,7 +124,7 @@ def _titulo(im, y: int, texto: str, dorado: str = "", tope: int = 104, piso: int
         ancho = sum(d.textlength(p, font=f) for p, _ in linea) + esp * (len(linea) - 1)
         x = (W - ancho) / 2
         for p, i in linea:
-            d.text((x, y), p, font=f, fill=DORADO if marca[i] else BLANCO)
+            d.text((x, y), p, font=f, fill=DORADO if marca[i] is True else BLANCO)   # el perfil: blanco y dorado
             x += d.textlength(p, font=f) + esp
         y += alto
     return y + round(f.size * 0.2)

@@ -59,8 +59,13 @@ def _norm(t: str) -> str:
 # Texto: renglones con palabras en verde
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 def _marcas(palabras: list, destacado: str) -> list:
-    """[bool] por palabra: True si es parte de `destacado` (la primera vez que aparece, completo)."""
+    """[bool | "naranja"] por palabra: True (verde) si es parte de `destacado` (la primera vez que aparece,
+    completo); "naranja" lo que va ANTES de los dos puntos (20/11/2026, pedido del editor: «usá también mi color
+    naranja para los textos»: la primera parte naranja y la segunda verde, como el isologo)."""
     marca = [False] * len(palabras)
+    corte = next((i + 1 for i, p in enumerate(palabras[:-1]) if p.endswith(":")), 0)
+    for k in range(corte):
+        marca[k] = "naranja"
     obj = [_norm(re.sub(r"[^\w%$.,]", "", p)) for p in (destacado or "").split()]
     obj = [o for o in obj if o]
     if not obj:
@@ -168,7 +173,7 @@ def escribir(im: Image.Image, x: int, y: int, renglones: list, f, marca: list, c
     for linea in renglones:
         xx = x
         for p, i in linea:
-            d.text((xx, y), p, font=f, fill=verde if marca[i] else color)
+            d.text((xx, y), p, font=f, fill=D.NARANJA_MARCA if marca[i] == "naranja" else verde if marca[i] else color)
             xx += d.textlength(p, font=f) + esp
         ultima = y
         y += alto

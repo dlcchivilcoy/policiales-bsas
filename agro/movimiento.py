@@ -111,7 +111,7 @@ def dibujar_titulo(im: Image.Image, x: int, y: int, plan: dict, t: float, color=
         for p, es_verde in linea:
             u = ease_out((t - k * PALABRA) / SUBIDA) if activo() else 1.0
             if u > 0:
-                c = verde if es_verde else color
+                c = D.NARANJA_MARCA if es_verde == "naranja" else verde if es_verde else color
                 d.text((xx, yy + round(28 * (1 - u))), p, font=f, fill=tuple(c[:3]) + (round(255 * u),))
             xx += d.textlength(p, font=f) + esp
             k += 1

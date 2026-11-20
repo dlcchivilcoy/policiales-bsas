@@ -25,6 +25,7 @@ FUENTES = RAIZ / "estetica_bot" / "fonts"
 W, H45, H916 = 1080, 1350, 1920
 GRAFITO = (32, 34, 38)                   # #202226, el del motor
 NARANJA = (239, 150, 60)                 # #EF963C: la línea y los acentos
+NARANJA_MARCA = (253, 133, 17)           # #FD8511: el naranja del isologo (títulos, 20/11/2026)
 NARANJA_OSCURO = (222, 112, 26)          # la volanta sobre blanco
 NARANJA_CAJA = (179, 91, 24)             # #B35B18: cajas
 VERDE = (118, 178, 60)                   # el verde de las hojas del isologo
