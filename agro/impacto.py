@@ -76,6 +76,10 @@ def _marcas(palabras: list, destacado: str) -> list:
             for k in range(i, i + len(obj)):
                 marca[k] = True
             break
+    # Sin dos puntos (20/11/2026, el editor: «en esos también»): lo que no es la palabra clave va en naranja, así
+    # todo título es naranja + verde, como el isologo.
+    if not corte and any(m is True for m in marca):
+        marca = [m if m is True else "naranja" for m in marca]
     return marca
 
 
