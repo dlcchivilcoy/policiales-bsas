@@ -90869,7 +90869,7 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T10:42:01-03:00",
+  "actualizado": "2026-11-20T11:00:27-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -97328,6 +97328,47 @@
         },
         "facebook": {
           "id": "1157741016879071"
+        }
+      }
+    },
+    "2026-11-20T11:00:00-03:00": {
+      "dia": "2026-11-20",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están los caminos para sacar la cosecha?",
+          "opciones": [
+            "Buenos",
+            "Regulares",
+            "Malos"
+          ],
+          "publico": "agricultura",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18100009640126856"
+            },
+            "facebook": {
+              "id": "2184207792982066"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18100009640126856"
+              },
+              "facebook": {
+                "id": "2184207792982066"
+              }
+            }
+          ]
         }
       }
     }
