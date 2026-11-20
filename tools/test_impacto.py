@@ -28,6 +28,7 @@ chequear("la fuente Anton está en el repo", I.ANTON.is_file())
 chequear("cifra corta: «60%»", I.cifra_corta("el 60% de la soja") == "60%")
 chequear("cifra corta: «+50.000 ha»", I.cifra_corta("+50.000 hectáreas") == "+50.000 ha")
 chequear("sin número no hay cifra", I.cifra_corta("muchas hectáreas") == "")
+chequear("los grados van con la cifra («40 °C»)", I.cifra_corta("40 °C de máxima") == "40 °C" and I.cifra_corta("40°C") == "40°C")
 chequear("una fecha no va como cifra gigante", bool(I.MESES.search("16 de noviembre")) and not I.MESES.search("78%"))
 chequear("destacado: lo de después de los dos puntos",
          I.destacado_de("Pasturas polifíticas: cómo combinarlas") == "cómo combinarlas")

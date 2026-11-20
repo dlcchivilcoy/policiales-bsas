@@ -355,8 +355,8 @@ def cierre(pregunta: str, n: int, destino: Path, imagen=None) -> Path:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # Desde el guion y el contenido del carrusel
 # ─────────────────────────────────────────────────────────────────────────────────────────────
-CIFRA = re.compile(r"(?:US\$|u\$s|\$|\+)?\s?\d[\d.,]*\s?(?:%|ha\b|hectáreas|millones|mil|t\b|toneladas|qq|kg|mm|"
-                   r"cabezas|litros)?", re.I)
+CIFRA = re.compile(r"(?:US\$|u\$s|\$|\+|-|−)?\s?\d[\d.,]*\s?(?:°\s?C|°|%|ha\b|hectáreas|millones|mil|t\b|toneladas|qq|kg|"
+                   r"mm|cabezas|litros)?", re.I)
 
 
 def cifra_corta(texto: str) -> str:
