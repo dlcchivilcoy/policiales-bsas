@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T02:33:29.000Z",
+  "actualizado": "2026-11-20T02:47:57.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/incidente-con-demorados-entre-chacabuco.html",
@@ -211,6 +211,30 @@
       "volanta": "San Andrés de Giles",
       "categoria": "judicial",
       "distancia_km": 72.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://noticiasmercedes.com/policia-de-mercedes-condenado-por-abusos-sexuales-en-su-casa-cobrando-2-364-000/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-20T02:47:57.000Z",
+      "titulo": "Excapitán de la Bonaerense condenado por abuso sexual cobra más de dos millones",
+      "descripcion": "Sandro Herrera, exmano derecha del superintendente de la Policía Bonaerense, cumple prisión domiciliaria tras ser condenado por abusar de dos mujeres en Mercedes y percibe una suma mensual de $2.364.000.",
+      "texto_tiktok": "El excapitán de la Policía Bonaerense Sandro Herrera cumple condena en su domicilio tras ser hallado culpable de abusar sexualmente de dos mujeres en la ciudad de Mercedes.\n\nA pesar de la gravedad de los delitos y de contar con denuncias previas, la Justicia le otorgó el beneficio de la prisión domiciliaria durante el proceso judicial.\n\nActualmente, el exoficial percibe una suma mensual de $2.364.000, equivalente a cinco jubilaciones mínimas, gracias a un haber previsional que continúa cobrando desde su hogar.\n\nLa causa también incluyó medidas restrictivas por parte del juez Marcelo Fabián Valle, quien impuso un bozal legal para frenar la cobertura periodística sobre estos abusos cometidos contra subalternas.\n\n📲 Más noticias de Mercedes en www.diariolacampaña.com.ar\n\n#Mercedes #Justicia #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-20_0132_07_mercedes_excapit-n-de-la-bonaerense-con.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/mercedes-excapitan-de-la-policia-bonaerense-condenado-por-abuso-17ca5d",
+      "youtube_url": "https://youtube.com/shorts/Y1Zo10E7_pw",
+      "prioridad": 9,
+      "urgente": false,
+      "localidad": "Mercedes",
+      "volanta": "Condena en Mercedes",
+      "categoria": "judicial",
+      "distancia_km": 60.3,
       "radio_ok": true,
       "plataformas": [
         "x",
