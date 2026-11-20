@@ -1,0 +1,115 @@
+name: Agro - perfil productivo de los partidos
+
+# 20/11/2026 (pedido del editor): carruseles informativos con el perfil productivo de Chivilcoy y los partidos
+# vecinos (agro/perfil.py), uno por vez, martes y viernes a las 17:30, solo en @diarioyradioagro.
+#
+# Quién dispara: cron-job.org martes y viernes 17:30. El `schedule:` de abajo es el respaldo (17:45); si ya salió
+# el de hoy no hace nada, y fuera de 17:00-19:30 no publica (GitHub puede atrasarse horas).
+on:
+  schedule:
+    - cron: "45 20 * * 2,5"     # martes y viernes 17:45, respaldo
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" publica aunque AGRO_PUBLICAR no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+      partido:
+        description: 'uno a elección (slug: chivilcoy, alberti, bragado…); vacío = el que toca'
+        default: ""
+
+concurrency:
+  group: agro-perfil
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  perfil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Perfil productivo
+        timeout-minutes: 30
+        env:
+          PYTHONUNBUFFERED: "1"
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          # Las del diario solo para la salvaguarda (que agro nunca publique con ellas).
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AGRO_PERFIL: ${{ vars.AGRO_PERFIL }}
+          AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
+          PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          PARTIDO_INPUT: ${{ github.event.inputs.partido }}
+        run: |
+          set -o pipefail
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
+            ARGS="--publicar"
+          fi
+          if [ -n "$PARTIDO_INPUT" ]; then ARGS="$ARGS --partido $PARTIDO_INPUT"; fi
+          echo "python -m agro.perfil $ARGS"
+          python -m agro.perfil $ARGS | tee informe_perfil.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agro-perfil-${{ github.run_number }}
+          path: |
+            salida_agro/perfil_*/*.mp4
+            salida_agro/perfil_*/*.jpg
+            salida_agro/perfil_*/*.txt
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: ignore
+
+      - name: Recordar qué salió
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/agro_perfil.json)" ]; then
+            echo "La memoria no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo agro_perfil.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="El perfil productivo de agro falló"
+          CUERPO="$( [ -f informe_perfil.md ] && tail -40 informe_perfil.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
