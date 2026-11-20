@@ -55,6 +55,11 @@ PASO_MIN_DEFAULT = 25
 PASO_MIN_TARDE = 10           # si la corrida arrancó tarde, lo mínimo entre dos reels
 INTENTOS_MAX = 40             # notas que se miran como mucho (cada una lee su página; la IA, solo con video)
 HORAS_POLICIALES = 18         # qué tan nuevo tiene que ser un policial
+# 20/11/2026: el respaldo de GitHub de las 19:45 llegaba con 5 h de atraso (00:45 del día siguiente), tomaba la
+# guardia de ESE día, esperaba 19 h al turno de las 20:00 y moría a los 310 min; a la noche la de cron-job.org
+# encontraba la guardia tomada («ya_corrio») y no salía ningún policial. Una corrida que llega más de esto antes
+# del primer turno termina sin tocar nada (NAC_PRUEBA_ANTICIPO_MIN).
+ANTICIPO_MIN_DEFAULT = 90
 
 FUENTES_POLICIALES = (
     ("policiales", "TN", "rss", PO.TN.format("policiales"), {}),
@@ -102,6 +107,10 @@ def cuantos_de(grupo: str, mem: dict, dia: str) -> int:
     if grupo != "policiales" or not total_dia():
         return base
     return max(base, min(base + EXTRA_MAX, total_dia() - hechos_hoy(mem, "virales", dia)))
+
+
+def anticipo_min() -> int:
+    return _entero("NAC_PRUEBA_ANTICIPO_MIN", ANTICIPO_MIN_DEFAULT)
 
 
 def paso_min() -> int:
@@ -267,6 +276,11 @@ def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=N
     informe["turnos"] = [t.strftime("%H:%M") for t in plan]
     if not plan:
         informe["estado"] = "nada" if faltan <= 0 else "fuera_de_hora"
+        return informe
+    if plan[0] - ahora > timedelta(minutes=anticipo_min()):
+        informe["estado"] = "temprano"
+        informe["avisos"].append(f"llegó {(plan[0] - ahora).total_seconds() / 3600:.1f} h antes del primer turno "
+                                 f"({plan[0]:%H:%M}): no se hace nada")
         return informe
     # Una sola corrida por día y grupo: la de cron-job.org o la de respaldo de GitHub, la primera que llega.
     if guardia is None and publicar and os.environ.get("GITHUB_ACTIONS") == "true":

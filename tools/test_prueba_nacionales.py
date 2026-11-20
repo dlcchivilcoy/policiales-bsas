@@ -149,6 +149,23 @@ inf3 = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"vide
                   ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso, guardia=g)
 chequear("la guardia: la corrida de respaldo no publica si ya corrió la de cron-job.org", inf3["estado"] == "ya_corrio")
 
+# 20/11/2026: el respaldo de GitHub llegó a las 00:46; no tiene que tomar la guardia del día ni esperar 19 h.
+mem["piezas"].clear()
+publicados.clear()
+reloj[0] = a("00:46")
+g_temprano, durmio = Guardia(), []
+inf_t = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"video": "x"},
+                   ahora_fn=lambda: reloj[0], dormir=lambda s: durmio.append(s), publicar_fn=publicar_falso,
+                   guardia=g_temprano)
+chequear("la corrida que llega a las 00:46 termina «temprano», sin esperar ni publicar",
+         inf_t["estado"] == "temprano" and not durmio and not publicados)
+chequear("…y deja libre la guardia del día para la de la noche", not g_temprano.tomada)
+reloj[0] = a("19:45")
+chequear("la de las 19:45 (15 min antes) sí corre",
+         PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"video": "x"},
+                    ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso,
+                    guardia=g_temprano)["estado"] not in ("temprano", "ya_corrio") and g_temprano.tomada)
+
 # Sin video en ninguna: no sale nada y lo avisa.
 mem["piezas"].clear()
 publicados.clear()
