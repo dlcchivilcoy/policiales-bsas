@@ -42,13 +42,13 @@ jobs:
 
       - name: Guardar si cambió
         run: |
-          if [ -z "$(git status --porcelain agro/datos/argenfields.json)" ]; then
+          if [ -z "$(git status --porcelain agro/datos/argenfields.json agro/datos/rindes_zona.json)" ]; then
             echo "Los datos no cambiaron."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add agro/datos/argenfields.json
+          git add agro/datos/argenfields.json agro/datos/rindes_zona.json
           git commit -m "Agro: datos de ArgenFields de $(date -u +%Y-%m) [skip ci]"
           for i in 1 2 3 4 5; do
             git pull --rebase -q origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && exit 0

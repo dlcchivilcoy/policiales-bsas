@@ -81,8 +81,16 @@ def fuente(peso: str, tam: int):
         return ImageFont.load_default()
 
 
+ISOLOGO_NUEVO = MARCA / "isologo_agro.png"   # 20/11/2026: las C nuevas del diario + el brote verde de agro
+#                                              (tools/generar_isologo_agro.py); AGRO_ISOLOGO_VIEJO=1 vuelve al de antes
+
+
 @lru_cache(maxsize=8)
 def _isologo(alto: int) -> Image.Image:
+    import os
+    if ISOLOGO_NUEVO.exists() and os.environ.get("AGRO_ISOLOGO_VIEJO", "").strip() != "1":
+        im = Image.open(ISOLOGO_NUEVO).convert("RGBA")
+        return im.resize((round(im.width * alto / im.height), alto), Image.LANCZOS)
     im = Image.open(MARCA / "logo_original.png").convert("RGB")
     gris = im.convert("L").point(lambda v: 255 if v > 30 else 0)
     caja = gris.getbbox() or (0, 0, im.width, im.height)

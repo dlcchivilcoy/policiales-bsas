@@ -330,6 +330,14 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "") -> Path:
 
 
 def cierre(pregunta: str, n: int, destino: Path, imagen=None) -> Path:
+    # 20/11/2026 (el editor: «la placa final de los reels/carruseles, actualizá el logo e isologo»): el carrusel
+    # termina con LA MISMA placa final que los reels (agro/reel.cierre: isologo nuevo, nombre, usuario, redes),
+    # con la pregunta como frase. AGRO_CIERRE_PLACA=0 vuelve a la lámina de la pregunta grande.
+    if os.environ.get("AGRO_CIERRE_PLACA", "1").strip() != "0":
+        from agro import reel as RE
+        pregunta = (pregunta or "").strip() or "¿Qué opinás?"
+        frase = pregunta if "comentario" in pregunta.lower() else f"{pregunta} Contanos en los comentarios"
+        return _guardar(RE.cierre("grafito", frase, H), destino)
     im = Image.new("RGBA", (W, H), FONDO + (255,))
     if imagen:
         foto = _foto(imagen, H).filter(ImageFilter.GaussianBlur(14))

@@ -81,26 +81,101 @@ def _capa_tramo(plan: dict, guion: dict, tramo: str) -> list:
     return [(0.0, capa)]
 
 
+LEMA = ("CAMPO", "MERCADOS", "CLIMA")
+
+
+def _espaciado(d, texto: str, f, ancho: float) -> tuple:
+    """Las letras de `texto` repartidas para ocupar `ancho` (como «RADIO DEL CENTRO» en la placa del diario)."""
+    anchos = [d.textlength(c, font=f) for c in texto]
+    paso = (ancho - sum(anchos)) / max(1, len(texto) - 1)
+    return anchos, paso
+
+
+def _icono(nombre: str, alto: int, color) -> Image.Image:
+    im = Image.open(D.MARCA / nombre).convert("RGBA")
+    im = im.resize((round(im.width * alto / im.height), alto), Image.LANCZOS)
+    tinta = Image.new("RGBA", im.size, tuple(color) + (255,))
+    tinta.putalpha(im.getchannel("A"))
+    return tinta
+
+
 def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
-    """La placa de cierre 4:5 de agro: logo grande, el nombre, el usuario y una frase."""
+    """La placa de cierre 4:5 de agro. 20/11/2026 (el editor: «actualizá el logo e isologo de la placa final»): la
+    misma diagramación que la placa final del diario (estetica_bot/placa_final_4x5.png): arriba el lema, el
+    isologo NUEVO (las C del diario con el brote de agro), DIARIO Y RADIO / A G R O, la rayita naranja, la frase
+    (o «Seguinos en redes»), el usuario grande y los íconos de las redes donde está agro (Instagram y Facebook)."""
     t = D.TEMAS[tema]
     lienzo = Image.new("RGBA", (D.W, alto), t["fondo"] + (255,))
-    iso = D.isologo(300)
-    y = round(alto * 0.20)
-    lienzo.alpha_composite(iso, ((D.W - iso.width) // 2, y))
     d = ImageDraw.Draw(lienzo)
+    cx = D.W / 2
 
     def centrado(texto, f, yy, c):
-        d.text(((D.W - d.textlength(texto, font=f)) / 2, yy), texto, font=f, fill=c)
-    y += iso.height + 50
-    centrado("DIARIO Y RADIO", D.fuente("bold", 60), y, t["titular"])
-    centrado("AGRO", D.fuente("bold", 60), y + 70, t["verde"])
-    d.rectangle(((D.W - 120) // 2, y + 168, (D.W + 120) // 2, y + 176), fill=D.NARANJA)
-    centrado(D.USUARIO, D.fuente("bold", 44), y + 205, t["volanta"])
-    if frase:
-        f, r = D.ajustar(d, frase, "regular", 38, 28, D.W - 2 * D.X, 2)
-        for i, linea in enumerate(r):
-            centrado(linea, f, y + 290 + i * round(f.size * 1.3), t["texto"])
+        d.text((cx - d.textlength(texto, font=f) / 2, yy), texto, font=f, fill=c)
+
+    # El lema, con puntos naranjas entre las palabras.
+    f_l = D.fuente("bold", 36)
+    trozos = [(w, d.textlength(w, font=f_l) + 4 * (len(w) - 1)) for w in LEMA]
+    sep = 70
+    x = cx - (sum(a for _, a in trozos) + sep * (len(trozos) - 1)) / 2
+    y_lema = round(alto * 0.10)
+    for i, (w, a) in enumerate(trozos):
+        xx = x
+        for c in w:
+            d.text((xx, y_lema), c, font=f_l, fill=t["titular"])
+            xx += d.textlength(c, font=f_l) + 4
+        x += a
+        if i < len(trozos) - 1:
+            d.ellipse((x + sep / 2 - 8, y_lema + 14, x + sep / 2 + 8, y_lema + 30), fill=D.NARANJA)
+            x += sep
+
+    iso = D.isologo(round(alto * 0.22))
+    y = round(alto * 0.205)
+    lienzo.alpha_composite(iso, (round(cx - iso.width / 2), y))
+    y += iso.height + round(alto * 0.045)
+
+    # DIARIO Y RADIO (negra) y abajo A G R O en verde, espaciada al mismo ancho.
+    f1 = D.fuente("negra", 100)
+    ancho1 = d.textlength("DIARIO Y RADIO", font=f1)
+    if ancho1 > D.W - 2 * D.X:
+        f1 = D.fuente("negra", int(100 * (D.W - 2 * D.X) / ancho1))
+        ancho1 = d.textlength("DIARIO Y RADIO", font=f1)
+    centrado("DIARIO Y RADIO", f1, y, t["titular"])
+    y += round(f1.size * 1.12)
+    f2 = D.fuente("bold", round(f1.size * 0.62))
+    anchos, paso = _espaciado(d, "AGRO", f2, ancho1 * 0.46)
+    xx = cx - ancho1 * 0.23
+    for c, a in zip("AGRO", anchos):
+        d.text((xx, y), c, font=f2, fill=t["verde"])
+        xx += a + paso
+    y += round(f2.size * 1.5)
+    d.rectangle((cx - 65, y, cx + 65, y + 7), fill=D.NARANJA)
+    y += 45
+
+    # La frase (o «Seguinos en redes»), el usuario grande y los íconos.
+    f, r = D.ajustar(d, frase or "Seguinos en redes", "medium", 46, 32, D.W - 2 * D.X, 2)
+    for linea in r:
+        centrado(linea, f, y, t["texto"])
+        y += round(f.size * 1.25)
+    y += 14
+    try:
+        from PIL import ImageFont
+        f_u = ImageFont.truetype(str(D.MARCA / "Anton-Regular.ttf"), 104)
+        if d.textlength(D.USUARIO, font=f_u) > D.W - 2 * D.X:
+            f_u = ImageFont.truetype(str(D.MARCA / "Anton-Regular.ttf"),
+                                     int(104 * (D.W - 2 * D.X) / d.textlength(D.USUARIO, font=f_u)))
+    except OSError:
+        f_u = D.fuente("negra", 80)
+    centrado(D.USUARIO, f_u, y, t["titular"])
+    y += round(f_u.size * 1.75)
+    try:
+        iconos = [_icono(n, 66, t["titular"]) for n in ("icono_ig.png", "icono_fb.png")]
+        gap = 70
+        x = cx - (sum(i.width for i in iconos) + gap * (len(iconos) - 1)) / 2
+        for ic in iconos:
+            lienzo.alpha_composite(ic, (round(x), min(y, alto - 120)))
+            x += ic.width + gap
+    except OSError:
+        pass
     return lienzo
 
 
