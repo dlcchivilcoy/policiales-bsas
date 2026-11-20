@@ -37,7 +37,8 @@ chequear("destacado: el que propone la IA si está en el título",
 chequear("destacado: el de la IA que no está en el título no va",
          I.destacado_de("Bunge y GDM crean Enerseed", "otra cosa") != "otra cosa")
 m = I._marcas("LA SOJA RINDIÓ MÁS QUE EL PROMEDIO".split(), "más que el promedio".upper())
-chequear("las palabras marcadas en verde son las del destacado", m == [False, False, False, True, True, True, True])
+chequear("las palabras marcadas en verde son las del destacado; el resto, naranja (20/11/2026)",
+         m == ["naranja", "naranja", "naranja", True, True, True, True])
 
 
 def redactar_falso(system, material, max_tokens=0):
