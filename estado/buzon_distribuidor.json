@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T02:03:21.000Z",
+  "actualizado": "2026-11-20T02:18:25.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/incidente-con-demorados-entre-chacabuco.html",
@@ -163,6 +163,30 @@
       "volanta": "Mechita, partido de Bragado",
       "categoria": "homicidio",
       "distancia_km": 40.8,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.lamanana.com.ar/perdidas-totales-tras-el-incendio-de-una-vivienda/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-20T02:18:25.000Z",
+      "titulo": "Destrucción total de una casa por las llamas en 25 de Mayo",
+      "descripcion": "El fuego consumió por completo una vivienda este jueves por la tarde. Tres dotaciones de bomberos combatieron el foco ígneo para evitar daños en inmuebles vecinos y una mujer recibió asistencia médica tras sufrir una crisis nerviosa.",
+      "texto_tiktok": "Una vivienda sufrió daños totales este jueves tras desatarse un voraz incendio en la ciudad de 25 de Mayo.\n\nEl siniestro se registró cerca de las 15:00 en un inmueble situado sobre la calle 8, entre los números 28 y 29.\n\nTres dotaciones de bomberos voluntarios acudieron al lugar y trabajaron arduamente para extinguir las llamas y frenar su avance hacia terrenos vecinos.\n\nDurante el operativo, profesionales de la salud atendieron en el sitio a una mujer que atravesó una fuerte crisis de nervios por la situación.\n\n📲 Más noticias de 25 de Mayo en www.diariolacampaña.com.ar\n\n#25DeMayo #Incendio #BomberosVoluntarios #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-20_0132_04_25-de-mayo_destrucci-n-total-de-una-casa-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/25-de-mayo-voraz-incendio-destruyo-por-completo-una-vivienda-y-016de3",
+      "youtube_url": "https://youtube.com/shorts/OgiuA5F3i5w",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "25 de Mayo",
+      "volanta": "Incendio en 25 de Mayo",
+      "categoria": "incendio",
+      "distancia_km": 61.1,
       "radio_ok": true,
       "plataformas": [
         "x",
