@@ -44,6 +44,13 @@ chequear("cada tema arranca con la info (mapa, gráfico o lista) con el gancho, 
          all(x["diapositivas"][0][0] in ("mapa", "barras", "serie", "lista") and x["diapositivas"][0][1].get("titulo")
              == x["gancho"] for x in disp.values()))
 chequear("…y termina con el cierre", all(x["diapositivas"][-1][0] == "cierre" for x in disp.values()))
+chequear("con los datos abiertos de ArgenFields: campaña, pérdidas y casi un siglo",
+         {"trigo_campana", "soja_perdidas", "trigo_siglo"} <= set(disp))
+chequear("las pérdidas van en rojo y citan los datos abiertos de ArgenFields",
+         disp["soja_perdidas"]["diapositivas"][0][1].get("paleta") == "rojo"
+         and "ArgenFields" in disp["soja_perdidas"]["fuente"] and "CC BY 4.0" in disp["soja_perdidas"]["fuente"])
+chequear("todo tema de la zona cita a ArgenFields (o MET Norway)",
+         all("ArgenFields" in (t.get("fuente") or RZ.FUENTE_CORTA) for t in disp.values()))
 chequear("los rankings de la zona arrancan con el mapa", disp["trigo_zona"]["diapositivas"][0][0] == "mapa"
          and disp["tierra"]["diapositivas"][0][0] == "mapa")
 viejo = dict(AF, traido="2026-08-01")

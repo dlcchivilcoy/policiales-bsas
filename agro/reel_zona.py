@@ -66,8 +66,11 @@ WHATSAPP = "2346-533450"
 FUENTE_CORTA = "Fuente: ArgenFields, con datos del INTA y del Ministerio de Agricultura"
 CELESTE = (120, 180, 255)
 GRIS_BARRA = (92, 98, 108)
-ORDEN = ("trigo_zona", "tierra", "soja_zona", "gemelas", "sequias", "maiz_zona", "trigo_historia", "soja_historia",
-         "suelo", "maiz_historia")
+ORDEN = ("trigo_zona", "soja_perdidas", "tierra", "trigo_campana", "soja_zona", "trigo_siglo", "gemelas",
+         "maiz_perdidas", "sequias", "soja_campana", "maiz_zona", "maiz_siglo", "trigo_historia", "maiz_campana",
+         "soja_historia", "suelo", "maiz_historia")
+RINDES = Path(__file__).resolve().parent / "datos" / "rindes_zona.json"
+FUENTE_ABIERTOS = "Fuente: ArgenFields, datos abiertos (CC BY 4.0), con datos de Estimaciones Agrícolas del MAGyP"
 NOMBRE_CULTIVO = {"soja": "soja", "trigo": "trigo", "maiz": "maíz", "cebada": "cebada", "girasol": "girasol"}
 VIDEO_CULTIVO = {"soja": "cosecha", "trigo": "trigo", "maiz": "maiz", "cebada": "trigo", "girasol": "girasol"}
 
@@ -437,10 +440,158 @@ def tema_gemelas(af: dict) -> dict | None:
             "hashtags": ["#Chivilcoy", "#Campo", "#Agro", "#Curiosidades"]}
 
 
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# 20/11/2026: con los DATOS ABIERTOS de ArgenFields (rindes, sembrado y cosechado de cada partido desde 1923; CC BY
+# 4.0, agro/datos/rindes_zona.json, tools/traer_argenfields.py): quién rindió más la última campaña, cuánto se perdió
+# (sembrado que no se cosechó) y cien años de un cultivo en Chivilcoy. Siempre se cita a ArgenFields.
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+def datos_rindes(ruta: Path = None) -> dict:
+    try:
+        return json.loads(Path(ruta or RINDES).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"partidos": {}}
+
+
+def _filas(dr: dict, slug: str, cultivo: str) -> list:
+    return ((dr.get("partidos") or {}).get(slug) or {}).get(cultivo) or []
+
+
+def _nombre_slug(af: dict, slug: str) -> str:
+    return ((af.get("partidos") or {}).get(slug) or {}).get("partido") or slug.replace("-", " ").title()
+
+
+def tema_campana(af: dict, dr: dict, cultivo: str, hoy) -> dict | None:
+    """¿Quién rindió más en la última campaña? (mapa + ranking + Chivilcoy contra su promedio)."""
+    nombre = NOMBRE_CULTIVO[cultivo]
+    el, del_ = ("la", "de la") if cultivo == "soja" else ("el", "del")
+    chiv = _filas(dr, "chivilcoy", cultivo)
+    if not chiv or not chiv[-1][4]:
+        return None
+    camp = chiv[-1][0]
+    if hoy.year - int(camp[:4]) > 2:                   # una campaña vieja no es noticia
+        return None
+    valores = {}
+    for slug in (dr.get("partidos") or {}):
+        f = [x for x in _filas(dr, slug, cultivo) if x[0] == camp and x[4]]
+        if f:
+            valores[slug] = round(f[0][4] / 100, 1)
+    if len(valores) < 5 or "chivilcoy" not in valores:
+        return None
+    filas = sorted(((_nombre_slug(af, k), v) for k, v in valores.items()), key=lambda x: -x[1])
+    puesto = next((i + 1 for i, (n, _) in enumerate(filas) if n == "Chivilcoy"), 0)
+    previas = [x[4] / 100 for x in chiv[-6:-1] if x[4]]
+    prom = sum(previas) / len(previas) if previas else None
+    gancho = f"¿Quién rindió más {nombre} en la campaña {camp}?"
+    diap = [("mapa", {"titulo": gancho, "sub": f"Rinde {del_} {nombre} en la campaña {camp}, qq/ha, partido por partido",
+                      "valores": valores, "dec": 1}),
+            ("barras", {"titulo": f"El ranking de la campaña {camp}", "sub": f"Rinde {del_} {nombre}, qq/ha",
+                        "filas": filas, "dec": 1})]
+    if prom:
+        dif = round(100 * (valores["chivilcoy"] - prom) / prom)
+        diap.append(("video", {"volanta": f"CHIVILCOY, {puesto}.º DE {len(filas)}", "numero": valores["chivilcoy"],
+                               "dec": 1, "unidad": "qq/ha",
+                               "texto": f"rindió {el} {nombre} en Chivilcoy en la {camp}: un {abs(dif)} % "
+                                        f"{'más' if dif >= 0 else 'menos'} que el promedio de las cinco campañas "
+                                        f"anteriores ({_coma(prom)}).", "video": VIDEO_CULTIVO[cultivo]}))
+    diap.append(_cierre(f"¿Cuánto te rindió {el} {nombre} en la {camp}? Contanos en los comentarios"))
+    texto = [f"🌾 {gancho} " + ", ".join(f"{n} {_coma(v)}" for n, v in filas[:5]) + " qq/ha.",
+             f"Chivilcoy quedó {puesto}.º de {len(filas)} con {_coma(valores['chivilcoy'])} qq/ha.",
+             "📲 ¿Cuánto te rindió? Contanos de qué pueblo sos en los comentarios."]
+    return {"tema": f"{cultivo}_campana", "gancho": gancho, "diapositivas": diap, "texto": texto,
+            "hashtags": ["#Chivilcoy", f"#{nombre.capitalize().replace('í', 'i')}", "#Cosecha", "#Campo", "#Agro"],
+            "fuente": FUENTE_ABIERTOS}
+
+
+def tema_perdidas(af: dict, dr: dict, cultivo: str) -> dict | None:
+    """La campaña de los últimos 15 años en la que más se sembró y no se cosechó en la zona, partido por partido."""
+    nombre = NOMBRE_CULTIVO[cultivo]
+    por_camp = {}
+    for slug in (dr.get("partidos") or {}):
+        for c, sem, cos, *_ in _filas(dr, slug, cultivo)[-15:]:
+            if sem and cos is not None and sem > 0:
+                por_camp.setdefault(c, {})[slug] = (sem, cos)
+    if not por_camp:
+        return None
+
+    def perdida(d):
+        s_, c_ = sum(v[0] for v in d.values()), sum(v[1] for v in d.values())
+        return 1 - c_ / s_ if s_ else 0
+    camp = max(por_camp, key=lambda c: perdida(por_camp[c]))
+    d = por_camp[camp]
+    if perdida(d) < 0.08 or len(d) < 5 or "chivilcoy" not in d:
+        return None
+    valores = {k: round(100 * (1 - cos / sem)) for k, (sem, cos) in d.items()}
+    filas = sorted(((_nombre_slug(af, k), v) for k, v in valores.items()), key=lambda x: -x[1])
+    sem_c, cos_c = d["chivilcoy"]
+    sequia = camp == "2022/23"
+    cuanto = "cuánta" if cultivo == "soja" else "cuánto"
+    gancho = (f"La sequía {camp}: {cuanto} {nombre} no se pudo cosechar" if sequia else
+              f"Campaña {camp}: {cuanto} {nombre} se perdió en la zona")
+    diap = [("mapa", {"titulo": gancho, "sub": "% de lo sembrado que no se cosechó, partido por partido",
+                      "valores": valores, "dec": 0, "unidad": "%", "paleta": "rojo"}),
+            ("barras", {"titulo": "Lo que se perdió", "sub": f"% de lo sembrado con {nombre} que no se cosechó en la {camp}",
+                        "filas": filas, "dec": 0, "unidad": "%"}),
+            ("video", {"volanta": "EN CHIVILCOY", "numero": round(sem_c - cos_c), "dec": 0, "unidad": "ha",
+                       "texto": f"de {nombre} sembradas no se cosecharon en la {camp}: el {valores['chivilcoy']} % "
+                                f"de las {_coma(sem_c, 0)} ha.", "video": "campo"}),
+            _cierre("¿Cómo te fue a vos esa campaña? Contanos en los comentarios")]
+    texto = [f"📉 {gancho}. En Chivilcoy se sembraron {_coma(sem_c, 0)} ha y se cosecharon {_coma(cos_c, 0)}: "
+             f"el {valores['chivilcoy']} % se perdió.",
+             "En la zona: " + ", ".join(f"{n} {v} %" for n, v in filas[:5]) + ".",
+             "📲 ¿Cómo te fue a vos? Contanos en los comentarios."]
+    return {"tema": f"{cultivo}_perdidas", "gancho": gancho, "diapositivas": diap, "texto": texto,
+            "hashtags": ["#Chivilcoy", "#Sequía", f"#{nombre.capitalize().replace('í', 'i')}", "#Campo", "#Agro"],
+            "fuente": FUENTE_ABIERTOS}
+
+
+def tema_siglo(af: dict, dr: dict, cultivo: str) -> dict | None:
+    """Casi cien años de un cultivo en Chivilcoy: el rinde promedio de cada década."""
+    nombre = NOMBRE_CULTIVO[cultivo]
+    el, del_ = ("la", "de la") if cultivo == "soja" else ("el", "del")
+    filas = [x for x in _filas(dr, "chivilcoy", cultivo) if x[4]]
+    if len(filas) < 50:
+        return None
+    decadas = {}
+    for x in filas:
+        decadas.setdefault(int(x[0][:4]) // 10 * 10, []).append(x[4] / 100)
+    serie = [(f"{d}s", round(sum(v) / len(v), 1)) for d, v in sorted(decadas.items()) if len(v) >= 3]
+    if len(serie) < 6:
+        return None
+    primera, ultima = serie[0], serie[-1]
+    veces = ultima[1] / primera[1] if primera[1] else 0
+    mejor = max(filas, key=lambda x: x[4])
+    anios = int(filas[-1][0][:4]) - int(filas[0][0][:4])
+    gancho = f"{anios} años de {nombre} en Chivilcoy: así cambió el rinde"
+    diap = [("serie", {"titulo": gancho, "sub": f"Rinde promedio {del_} {nombre} por década, qq/ha",
+                       "serie": serie, "mejor": max(serie, key=lambda x: x[1])[0],
+                       "peor": min(serie, key=lambda x: x[1])[0]}),
+            ("video", {"volanta": f"DE LOS {primera[0][:4]} A HOY", "numero": round(veces, 1), "dec": 1, "unidad": "veces",
+                       "texto": f"más rinde {el} {nombre} en Chivilcoy: de {_coma(primera[1])} a {_coma(ultima[1])} "
+                                "qq/ha de promedio.", "video": VIDEO_CULTIVO[cultivo]}),
+            ("video", {"volanta": "EL RÉCORD", "numero": round(mejor[4] / 100, 1), "dec": 1, "unidad": "qq/ha",
+                       "texto": f"en la campaña {mejor[0]}.", "video": "cosecha"}),
+            _cierre("Guardalo y compartilo con alguien del campo")]
+    texto = [f"📊 {gancho}. En los {primera[0][:4]} rendía {_coma(primera[1])} qq/ha de promedio; en los "
+             f"{ultima[0][:4]}, {_coma(ultima[1])}: {_coma(veces)} veces más.",
+             f"El récord: {_coma(mejor[4] / 100)} qq/ha en la campaña {mejor[0]}.",
+             "📲 ¿Desde cuándo tu familia trabaja el campo? Contanos en los comentarios."]
+    return {"tema": f"{cultivo}_siglo", "gancho": gancho, "diapositivas": diap, "texto": texto,
+            "hashtags": ["#Chivilcoy", f"#{nombre.capitalize().replace('í', 'i')}", "#Historia", "#Campo", "#Agro"],
+            "fuente": FUENTE_ABIERTOS}
+
+
 def temas_disponibles(af: dict, hoy) -> dict:
     """{clave: tema} de los temas de ArgenFields que tienen datos hoy."""
     salida = {}
-    for clave, fn in (("trigo_zona", lambda: tema_ranking_cultivo(af, "trigo")),
+    dr = datos_rindes()
+    for clave, fn in (("trigo_campana", lambda: tema_campana(af, dr, "trigo", hoy)),
+                      ("soja_campana", lambda: tema_campana(af, dr, "soja", hoy)),
+                      ("maiz_campana", lambda: tema_campana(af, dr, "maiz", hoy)),
+                      ("soja_perdidas", lambda: tema_perdidas(af, dr, "soja")),
+                      ("maiz_perdidas", lambda: tema_perdidas(af, dr, "maiz")),
+                      ("trigo_siglo", lambda: tema_siglo(af, dr, "trigo")),
+                      ("maiz_siglo", lambda: tema_siglo(af, dr, "maiz")),
+                      ("trigo_zona", lambda: tema_ranking_cultivo(af, "trigo")),
                       ("soja_zona", lambda: tema_ranking_cultivo(af, "soja")),
                       ("maiz_zona", lambda: tema_ranking_cultivo(af, "maiz")),
                       ("trigo_historia", lambda: tema_historia(af, "trigo")),
@@ -680,7 +831,8 @@ def placa_mapa(d: dict, t: float, fuente: str) -> Image.Image:
     y = _encabezado(dr, d, tc)
     fmt = (lambda v: _numero_txt(v, d.get("dec", 0), d.get("signo")) + (d.get("unidad") or ""))
     alto = D.H45 - 70 - y
-    m = MZ.dibujar(d["valores"], t, 980, alto, fmt=fmt, divergente=d.get("divergente", False), fondo=tc["linea"])
+    m = MZ.dibujar(d["valores"], t, 980, alto, fmt=fmt, divergente=d.get("divergente", False), fondo=tc["linea"],
+                  paleta=d.get("paleta", "verde"))
     im.alpha_composite(m, ((D.W - m.width) // 2, y))
     dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
     return im.convert("RGB")

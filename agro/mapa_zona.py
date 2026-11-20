@@ -56,7 +56,10 @@ def _mezcla(a, b, t):
     return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
 
 
-def color_de(v: float, lo: float, hi: float, divergente: bool = False) -> tuple:
+def color_de(v: float, lo: float, hi: float, divergente: bool = False, paleta: str = "verde") -> tuple:
+    if paleta == "rojo":                               # pérdidas: más rojo cuanto más se perdió
+        t = 0.0 if hi == lo else (v - lo) / (hi - lo)
+        return _mezcla((96, 70, 62), (232, 72, 58), t)
     if divergente:
         tope = max(abs(lo), abs(hi)) or 1
         t = min(1.0, abs(v) / tope)
@@ -66,7 +69,8 @@ def color_de(v: float, lo: float, hi: float, divergente: bool = False) -> tuple:
 
 
 def dibujar(valores: dict, t: float, lado_x: int = 960, lado_y: int = 900, fmt=lambda v: f"{v:g}",
-            divergente: bool = False, resaltar: str = "chivilcoy", durar: float = 1.6, fondo=(44, 47, 53)) -> Image.Image:
+            divergente: bool = False, resaltar: str = "chivilcoy", durar: float = 1.6, fondo=(44, 47, 53),
+            paleta: str = "verde") -> Image.Image:
     """El mapa con los partidos de `valores` ({slug: número}) pintados en orden, del menor al mayor, durante
     `durar` segundos; los que no tienen dato, grises. Devuelve RGBA lado_x × lado_y."""
     im = Image.new("RGBA", (lado_x, lado_y), (0, 0, 0, 0))
@@ -84,7 +88,7 @@ def dibujar(valores: dict, t: float, lado_x: int = 960, lado_y: int = 900, fmt=l
             pts = [p(x, y) for x, y in a]
             if k in orden:
                 aparece = max(0.0, min(1.0, (t - durar * orden[k] / n) / 0.35))
-                color = _mezcla(fondo, color_de(valores[k], lo, hi, divergente), aparece)
+                color = _mezcla(fondo, color_de(valores[k], lo, hi, divergente, paleta), aparece)
             else:
                 color = fondo
             d.polygon(pts, fill=color + (255,), outline=(20, 22, 26, 255))

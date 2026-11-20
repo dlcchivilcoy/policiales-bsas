@@ -227,6 +227,51 @@ def traer(slugs: list, get=None, log=print) -> dict:
     return salida
 
 
+RINDES = DESTINO.with_name("rindes_zona.json")
+CSV_RINDES = "https://www.argenfields.com/datos/argentina/rindes-{}.csv"
+CULTIVOS_CSV = ("soja", "maiz", "trigo", "girasol", "cebada", "sorgo")
+
+
+def traer_rindes(partidos: list, get=None, log=print) -> dict:
+    """Los DATOS ABIERTOS de ArgenFields (CC BY 4.0, de las Estimaciones Agrícolas del Ministerio de Agricultura;
+    https://www.argenfields.com/datos-abiertos): sembrado, cosechado, producción y rinde de cada campaña desde 1923,
+    solo de los partidos de la zona. {slug: {cultivo: [[campaña, sembrada_ha, cosechada_ha, produccion_t, kg_ha]]}}."""
+    import csv
+    import io
+    import httpx
+    get = get or (lambda u: httpx.get(u, headers={"User-Agent": UA}, timeout=120, follow_redirects=True))
+    quiero = {_sin_tildes(p).lower(): re.sub(r"[^a-z0-9]+", "-", _sin_tildes(p).lower()).strip("-") for p in partidos}
+    salida = {}
+    for i, cultivo in enumerate(CULTIVOS_CSV):
+        if i:
+            time.sleep(PAUSA)
+        r = get(CSV_RINDES.format(cultivo))
+        if r.status_code != 200:
+            log(f"rindes de {cultivo}: HTTP {r.status_code}")
+            continue
+        n = 0
+        for f in csv.DictReader(io.StringIO(r.text)):
+            if f.get("provincia") != "Buenos Aires":
+                continue
+            slug = quiero.get(_sin_tildes(f.get("partido") or "").lower())
+            if not slug:
+                continue
+
+            def num(k):
+                try:
+                    return float(f.get(k) or "")
+                except ValueError:
+                    return None
+            salida.setdefault(slug, {}).setdefault(cultivo, []).append(
+                [f["campania"], num("sembrada_ha"), num("cosechada_ha"), num("produccion_t"), num("rinde_kg_ha")])
+            n += 1
+        log(f"rindes de {cultivo}: {n} campañas de la zona")
+    for cult in salida.values():
+        for filas in cult.values():
+            filas.sort(key=lambda x: x[0])
+    return salida
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
@@ -247,6 +292,16 @@ def main():
     DESTINO.parent.mkdir(parents=True, exist_ok=True)
     DESTINO.write_text(json.dumps(previo, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"→ {DESTINO} ({len(previo['partidos'])} partidos)")
+    if not a.solo:
+        nombres = [v.get("partido") or s for s, v in previo["partidos"].items()]
+        rindes = traer_rindes(nombres)
+        if rindes:
+            RINDES.write_text(json.dumps({"traido": previo["traido"], "licencia": "CC BY 4.0",
+                                          "fuente": "ArgenFields, datos abiertos (https://www.argenfields.com/"
+                                                    "datos-abiertos), con datos de Estimaciones Agrícolas del "
+                                                    "Ministerio de Agricultura", "partidos": rindes},
+                                         ensure_ascii=False, indent=0), encoding="utf-8")
+            print(f"→ {RINDES} ({len(rindes)} partidos)")
 
 
 def _sin_tildes(t: str) -> str:
