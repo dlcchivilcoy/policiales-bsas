@@ -18,5 +18,8 @@ def armar(datos: dict, imagen, salida: Path, ia: bool = False, credito: str = ""
     """datos: volanta, portada_seo (o titular). imagen: ruta (o None: solo el bloque, nunca debería pasar).
     Es la MINIATURA: el texto corto con la palabra clave, en letra grande (17/10/2026)."""
     from agro import carrusel as CAR
+    from agro import impacto as I
     origen = origen or ("ia" if ia else "fuente")
+    if I.activo():                                     # 20/11/2026: la grilla con el estilo de los carruseles
+        return I.tapa(imagen, I.datos_tapa(datos), salida, D.texto_leyenda(origen, credito), deslizar=False)
     return CAR.tapa(imagen, datos, D.texto_portada(datos), tema, D.texto_leyenda(origen, credito), salida)

@@ -41,7 +41,11 @@ claro para un productor, con voseo rioplatense. Devolvé EXACTAMENTE este JSON:
   "diapositivas": [
     {"titulo": "MÁXIMO 6 palabras", "texto": "MÁXIMO 32 palabras", "dato": "opcional: UNA cifra con su unidad tal cual está en el material («40%», «US$ 372», «1,2 millones de hectáreas»)", "dato_rotulo": "si hay dato: qué mide, MÁXIMO 7 palabras"}
   ],
-  "pregunta": "MÁXIMO 12 palabras, para que comenten"
+  "pregunta": "MÁXIMO 12 palabras, para que comenten",
+  "destacado": "de 2 a 4 palabras SEGUIDAS del gancho, copiadas tal cual, las más fuertes (van en verde)",
+  "cifra_tapa": "opcional: la cifra MÁS impactante para la tapa, corta y con su unidad, tal cual en el material («60%», «+50.000 ha», «US$ 372»)",
+  "cifra_rotulo": "si hay cifra_tapa: qué es, MÁXIMO 5 palabras («de la soja del mundo»)",
+  "etiqueta": "1 a 3 palabras para la etiqueta de la tapa: «PARA GUARDAR» si es una guía o datos útiles; si no, el tema («MERCADOS», «CLIMA», «MAQUINARIA», «CHIVILCOY», «NUEVA LEY»)"
 }
 
 Entre 3 y 5 diapositivas, en este orden cuando el material lo permite: qué pasó; los números; por
@@ -116,6 +120,14 @@ def contenido(g: dict, rep: dict, cuerpo: str, redactar=None, log=None) -> dict:
         diapos.append(x)
     salida = {"gancho": _limpio(datos.get("gancho"), 12) or g.get("titular", ""), "diapositivas": diapos,
               "pregunta": _limpio(datos.get("pregunta"), 14), "via": via, "quitadas": quitadas}
+    # 20/11/2026, el estilo «impacto» (agro/impacto.py): la cifra de la tapa también tiene que estar en el material.
+    cifra = " ".join(G.texto_ia(datos.get("cifra_tapa")).split())[:16]
+    if cifra and re.search(r"\d", cifra) and not cifras_ajenas(cifra, fuente_cifras):
+        salida["cifra_tapa"], salida["cifra_rotulo"] = cifra, _limpio(datos.get("cifra_rotulo"), 6)
+    elif cifra:
+        quitadas.append(f"cifra de tapa que no está en el material ({cifra})")
+    salida["destacado"] = _limpio(datos.get("destacado"), 5)
+    salida["etiqueta"] = _limpio(datos.get("etiqueta"), 3).upper()[:24]
     # Nada calcado del original: si una diapositiva copia, se descarta todo y va el respaldo.
     original = G._palabras(original_txt)
     copia = G.copia_del_original({"descripcion": "\n\n".join(
@@ -216,6 +228,13 @@ def armar(g: dict, c: dict, imagen, carpeta: Path, base: str, tema: str = "blanc
     carpeta = Path(carpeta)
     n = len(c["diapositivas"]) + 2
     volanta = g.get("volanta") or ""
+    from agro import impacto as I
+    if I.activo():
+        archivos = [I.tapa(imagen, I.datos_tapa(g, c), carpeta / f"{base}_c01.jpg", leyenda)]
+        for i, x in enumerate(c["diapositivas"], 2):
+            archivos.append(I.lamina(x, i, n, carpeta / f"{base}_c{i:02d}.jpg", volanta.split("·")[0].strip()))
+        archivos.append(I.cierre(c.get("pregunta") or "¿Qué opinás?", n, carpeta / f"{base}_c{n:02d}.jpg", imagen))
+        return [str(a) for a in archivos]
     archivos = [tapa(imagen, g, texto_tapa(g, c), tema, leyenda, carpeta / f"{base}_c01.jpg", 1, n)]
     for i, x in enumerate(c["diapositivas"], 2):
         archivos.append(lamina(volanta, x["titulo"], texto_lamina(x), i, n, tema, carpeta / f"{base}_c{i:02d}.jpg"))
