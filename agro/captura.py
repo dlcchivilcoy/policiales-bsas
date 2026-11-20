@@ -171,7 +171,8 @@ def capturar(fuentes: list, ahora: datetime = None, horas_max: int = 48, listar=
         # Los RSS primero; las páginas (`portadas` + `patron`) solo para sitios sin RSS.
         origenes = [(feed, listar) for feed in f.get("rss", [])] + \
                    [(p, lambda u, _p=f["patron"]: listar_portada(u, _p)) for p in f.get("portadas", [])] + \
-                   [(m, lambda u, _p=f["patron"]: listar_sitemap(u, _p)) for m in f.get("sitemaps", [])]
+                   [(m, lambda u, _p=f["patron"], _l=f.get("limite", 12): listar_sitemap(u, _p, _l))
+                    for m in f.get("sitemaps", [])]
         fila = {"fuente": f["nombre"], "feeds": len(origenes), "leidas": 0, "nuevas": 0, "viejas": 0,
                 "errores": []}
         for feed, leer in origenes:

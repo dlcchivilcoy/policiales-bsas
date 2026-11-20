@@ -104,6 +104,11 @@ FUENTES = [
      "tipo": "medio", "activa": True},
     {"nombre": "Maquinac", "base": "https://www.maquinac.com", "rss": ["https://www.maquinac.com/feed/"],
      "tipo": "medio", "activa": True},
+    # 20/11/2026 (el editor: «y este https://agroempresario.com/»): sin RSS, con sitemap de noticias (robots.txt deja
+    # todo). Publica también economía general y política provincial: solo entra lo que es del campo.
+    {"nombre": "Agroempresario", "base": "https://agroempresario.com", "rss": [],
+     "sitemaps": ["https://agroempresario.com/news-sitemap.xml/"], "patron": r"agroempresario\.com/publicacion/\d+/",
+     "limite": 80, "tipo": "medio", "solo_campo": True, "activa": True},
     # 16/11/2026 (pedido del editor: «priorizá videos que tengan que ver con policiales en el campo»): las secciones
     # de policiales de los portales que más seguido alojan su propio video (las mismas de nacionales/prueba.py), solo
     # lo que es del campo (abigeato, robos en campos, silobolsas, incendios rurales, accidentes con maquinaria).
