@@ -55,8 +55,81 @@ XMP_IA = ('<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>'
 
 
 def formato() -> str:
-    """«carrusel» (desde el 24/10/2026) o «reel» (AGRO_DATOS_FORMATO=reel, el de antes)."""
-    return "reel" if (os.environ.get("AGRO_DATOS_FORMATO") or "").strip().lower() == "reel" else "carrusel"
+    """«animado» (desde el 20/11/2026), «carrusel» (24/10 al 20/11: AGRO_DATOS_FORMATO=carrusel) o «reel» (las placas
+    fijas de antes del 24/10: AGRO_DATOS_FORMATO=reel).
+
+    20/11/2026: el carrusel de las 8 era lo de MENOS alcance de la cuenta todos los días (30 a 59 cuentas, contra
+    una mediana de 120 de los carruseles de noticias y 550 de los reels, 15 días de métricas) y arrancaba con una
+    foto de IA, que la regla del editor del 20/11 saca de las piezas de datos. Ahora es un REEL ANIMADO con el motor
+    de los reels de la zona: arranca con el tablero (sin foto), las tarjetas aparecen, el mapa de lluvias, las
+    placas y la placa final."""
+    f = (os.environ.get("AGRO_DATOS_FORMATO") or "").strip().lower()
+    return f if f in ("reel", "carrusel") else "animado"
+
+
+def _quieta(ruta, dur: float):
+    """Una placa fija con un acercamiento lento (que no parezca una foto quieta)."""
+    im = Image.open(ruta).convert("RGB")
+    W, H = im.size
+
+    def fn(t):
+        s = 1 + 0.035 * min(1.0, t / max(dur, 0.1))
+        w, h = round(W / s), round(H / s)
+        x, y = (W - w) // 2, (H - h) // 2
+        return im.crop((x, y, x + w, y + h)).resize((W, H), Image.BILINEAR)
+    return fn
+
+
+def _tapa_animada(datos: dict, mem: dict, lluvia: dict, carpeta: Path, momento: datetime):
+    """La tapa del reel: la cabeza y el gancho desde el primer cuadro; las tarjetas del tablero aparecen de arriba
+    abajo entre 0,3 y 1,6 s (después queda completa: es la portada del reel)."""
+    pie = "SEGUÍ: MAPA DE LLUVIAS, PIZARRA, DÓLAR Y CHICAGO"
+    llena = Image.open(portada(datos, mem, lluvia, carpeta / "tapa_reel.jpg", momento, con_foto=False, pie=pie)).convert("RGB")
+    base = Image.open(portada(datos, mem, lluvia, carpeta / "tapa_reel_base.jpg", momento, con_foto=False,
+                              con_tablero=False)).convert("RGB")
+    W, H = llena.size
+    y0, borde = round(H * 0.25), 90
+
+    def fn(t):
+        p = (t - 0.3) / 1.3
+        if p >= 1:
+            return llena
+        corte = y0 + max(0.0, p) * (H - y0 + borde)
+        mascara = Image.linear_gradient("L").resize((1, 256))
+        alfa = Image.new("L", (W, H), 0)
+        alfa.paste(255, (0, 0, W, max(0, round(corte - borde))))
+        tramo = mascara.transpose(Image.FLIP_TOP_BOTTOM).resize((W, borde))
+        alfa.paste(tramo, (0, round(corte - borde)))
+        return Image.composite(llena, base, alfa)
+    return fn
+
+
+def armar_animado(datos: dict, mem: dict, carpeta: Path, momento: datetime, lluvia=None, log=print) -> tuple:
+    """(lista [{tipo, archivo}], lluvia, {archivo mp4, vista jpg…}): el reel animado de «El campo hoy»."""
+    from agro import historias as HI
+    from agro import mapa_lluvia as ML
+    from agro import reel_zona as RZ
+    carpeta = Path(carpeta)
+    if lluvia is None:
+        try:
+            lluvia = ML.lluvia(log=log)
+        except Exception as e:                             # noqa: BLE001 — sin mapa, el resto sale igual
+            log(f"   mapa de lluvia: no se pudo ({type(e).__name__}: {e})")
+    lista = []
+    if lluvia:
+        for tipo, fn in (("mapa", ML.placa), ("pueblos", ML.placa_pueblos)):
+            r = fn(lluvia, carpeta / f"dato_{tipo}.jpg", momento.date())
+            if r:
+                lista.append({"tipo": tipo, "archivo": str(HI.ruta_45(r))})
+    lista += placas(datos, mem, carpeta, momento)
+    diap = [("propia", {"fn": _tapa_animada(datos, mem, lluvia, carpeta, momento), "dur": 5.0})]
+    for p in lista:
+        dur = 4.5 if p["tipo"] in ("mapa", "alerta") else 3.8
+        diap.append(("propia", {"fn": _quieta(p["archivo"], dur), "dur": dur}))
+    diap.append(("cierre", {"frase": "Todas las mañanas, los datos del campo. Compartilo con otro productor"}))
+    reel = RZ.armar({"diapositivas": diap, "fuente": ""}, carpeta / "reel_datos.mp4")
+    lista = [{"tipo": "portada", "archivo": reel["vista"]}] + lista + [{"tipo": "cierre", "archivo": ""}]
+    return lista, lluvia, reel
 
 
 def _ffmpeg() -> str:
@@ -203,14 +276,17 @@ def _fondo_ia(hoy: date) -> str:
     return ""
 
 
-def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: datetime) -> Path:
-    """La tapa del carrusel (4:5): la frase que engancha, el tablero de 6 datos y «deslizá»."""
+def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: datetime, con_foto: bool = True,
+            pie: str = "DESLIZÁ: MAPA DE LLUVIAS, PIZARRA, DÓLAR Y CHICAGO", con_tablero: bool = True) -> Path:
+    """La tapa del carrusel (4:5): la frase que engancha, el tablero de 6 datos y «deslizá». Para el REEL (20/11/2026)
+    va sin la foto de IA (`con_foto=False`: las piezas de datos arrancan con la info) y `con_tablero=False` da la
+    misma tapa sin las tarjetas, para que el reel las haga aparecer."""
     from agro import diseno as D
     from agro import historias as HI
     hoy = momento.date()
     W, H = HI.W, HI.H45
     im = Image.new("RGBA", (W, H), HI.FONDO + (255,))
-    foto = _fondo_ia(hoy)
+    foto = _fondo_ia(hoy) if con_foto else ""
     if foto:
         im.alpha_composite(D.cubrir(Image.open(foto).convert("RGB"), W, H).convert("RGBA"))
     # Un velo oscuro que crece hacia abajo: la foto se ve arriba y los datos se leen abajo.
@@ -240,29 +316,32 @@ def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: dateti
         y = D.escribir(d, D.X, y, rq, fq, (190, 195, 202))
     y += 24
     # El tablero, en 2 columnas, apoyado abajo.
-    gap, alto = 22, 168
+    gap, alto = (22, 168) if con_foto else (26, 210)      # sin foto, tarjetas más grandes y el bloque centrado
     ancho = (W - 2 * D.X - gap) // 2
     filas = max(1, (len(tab) + 1) // 2)
-    y_tab = max(y, H - 140 - filas * alto - (filas - 1) * gap)
-    for k, t in enumerate(tab):
+    bloque = filas * alto + (filas - 1) * gap
+    y_tab = max(y, H - 140 - bloque) if con_foto else y + max(0, (H - 150 - bloque - y) // 2)
+    for k, t in enumerate(tab if con_tablero else []):
         x = D.X + (k % 2) * (ancho + gap)
         yy = y_tab + (k // 2) * (alto + gap)
         d.rounded_rectangle((x, yy, x + ancho, yy + alto), radius=20, fill=(20, 22, 26, 225))
         d.rectangle((x, yy + 18, x + 6, yy + alto - 18), fill=D.NARANJA)
         d.text((x + 26, yy + 18), t["rotulo"], font=D.fuente("bold", 24), fill=(175, 180, 188))
-        fv = D.fuente("negra", 50 if len(t["valor"]) <= 10 else 42)
-        d.text((x + 26, yy + 54), t["valor"], font=fv, fill=(120, 180, 255) if t["grano"] == "lluvia" else D.NARANJA)
+        g = 1.0 if con_foto else 1.22
+        fv = D.fuente("negra", round((50 if len(t["valor"]) <= 10 else 42) * g))
+        d.text((x + 26, yy + round(54 * g)), t["valor"], font=fv,
+               fill=(120, 180, 255) if t["grano"] == "lluvia" else D.NARANJA)
         if t.get("var") is not None:
-            HI.flecha(d, x + 26, yy + 120, t["var"], 26)
+            HI.flecha(d, x + 26, yy + round(120 * g), t["var"], 26)
         else:
-            d.text((x + 26, yy + 124), t["nota"], font=D.fuente("regular", 24), fill=(175, 180, 188))
+            d.text((x + 26, yy + round(124 * g)), t["nota"], font=D.fuente("regular", 24), fill=(175, 180, 188))
     # «Deslizá» con su flecha (dibujada: la tipografía no trae flechas).
     yd = H - 100
-    fd, rd = D.ajustar(d, "DESLIZÁ: MAPA DE LLUVIAS, PIZARRA, DÓLAR Y CHICAGO", "negra", 32, 22,
-                       W - 2 * D.X - 70, 1)
-    d.text((D.X, yd), rd[0], font=fd, fill=D.BLANCO)
-    xa = D.X + d.textlength(rd[0], font=fd) + 18
-    d.polygon([(xa, yd + 4), (xa + 30, yd + 19), (xa, yd + 34)], fill=D.NARANJA)
+    if pie and con_tablero:
+        fd, rd = D.ajustar(d, pie, "negra", 32, 22, W - 2 * D.X - 70, 1)
+        d.text((D.X, yd), rd[0], font=fd, fill=D.BLANCO)
+        xa = D.X + d.textlength(rd[0], font=fd) + 18
+        d.polygon([(xa, yd + 4), (xa + 30, yd + 19), (xa, yd + 34)], fill=D.NARANJA)
     if foto:
         d.text((D.X, H - 48), "Imagen de fondo generada con IA", font=D.fuente("regular", 20), fill=(160, 165, 172))
     destino = Path(destino)
@@ -313,7 +392,7 @@ def marcar_ia(jpg) -> Path:
     return jpg
 
 
-def caption_carrusel(momento: datetime, datos: dict, tab: list) -> str:
+def caption_carrusel(momento: datetime, datos: dict, tab: list, reel: bool = False) -> str:
     """El texto: arranca con lo que se busca (precio de granos, dólar y lluvia en Chivilcoy), repite los datos
     de la portada, invita a deslizar y a guardar, dice qué es IA y de dónde sale cada dato. Sin links."""
     from agro import historias as HI
@@ -331,11 +410,13 @@ def caption_carrusel(momento: datetime, datos: dict, tab: list) -> str:
         lineas.append(f"{icono} {t['nombre']}: {t['valor']}{nota}{var}")
     if cierres(tab):
         lineas.append(f"🗓️ {cierres(tab)}")
-    lineas += ["", "👉 Deslizá: el mapa de dónde va a llover (con Chivilcoy en el centro), la lluvia pueblo por pueblo, "
-                   "la pizarra de Rosario, el dólar y Chicago.",
-               "📲 Compartilo con otro productor y guardalo para tenerlo a mano.", "",
-               "Portada ilustrada con una imagen generada con IA. Datos: SMN, MET Norway, Cámara Arbitral de "
-               "Cereales de Rosario, BCRA, Banco Nación y CME Group.", "", HASHTAGS_CARRUSEL]
+    lineas += ["", ("👉 En el reel: el mapa de dónde va a llover (con Chivilcoy en el centro), la lluvia pueblo por "
+                    "pueblo, la pizarra de Rosario, el dólar y Chicago.") if reel else
+               ("👉 Deslizá: el mapa de dónde va a llover (con Chivilcoy en el centro), la lluvia pueblo por pueblo, "
+                "la pizarra de Rosario, el dólar y Chicago."),
+               "📲 Compartilo con otro productor y seguí a @diarioyradioagro para tenerlo todas las mañanas.", "",
+               ("" if reel else "Portada ilustrada con una imagen generada con IA. ") + "Datos: SMN, MET Norway, "
+               "Cámara Arbitral de Cereales de Rosario, BCRA, Banco Nación y CME Group.", "", HASHTAGS_CARRUSEL]
     return "\n".join(lineas)[:2200]
 
 
@@ -511,19 +592,30 @@ def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpet
     ruta_mem = PA.MEMORIA_REAL if publicar else PA.MEMORIA
     mem = PA.cargar(ruta_mem)
     es_carrusel = formato() == "carrusel"
-    log(f"[agro] {'CARRUSEL' if es_carrusel else 'REEL'} DE DATOS {'REAL' if publicar else 'SIMULADO'} "
+    animado = formato() == "animado"
+    log(f"[agro] {'CARRUSEL' if es_carrusel else 'REEL ANIMADO' if animado else 'REEL'} DE DATOS {'REAL' if publicar else 'SIMULADO'} "
         f"{ahora:%d/%m %H:%M} → {carpeta}")
     datos = M.leer_todo(mem, momento=ahora, log=log)
+    reel_an = None
     if es_carrusel:
         lista, lluvia = armar_carrusel(datos, mem, carpeta, ahora, lluvia, log)
+        de_datos = [p for p in lista if p["tipo"] not in ("portada", "cierre")]
+    elif animado:
+        lista, lluvia, reel_an = armar_animado(datos, mem, carpeta, ahora, lluvia, log)
         de_datos = [p for p in lista if p["tipo"] not in ("portada", "cierre")]
     else:
         lista = de_datos = placas(datos, mem, carpeta, ahora)
     log(f"   {len(lista)} diapositivas: {', '.join(p['tipo'] for p in lista)}")
     registro = {"dia": ahora.date().isoformat(), "placas": [p["tipo"] for p in lista],
-                "formato": "carrusel" if es_carrusel else "reel"}
+                "formato": formato()}
     if de_datos:
-        if es_carrusel:
+        if animado:
+            tab = tablero(datos, mem, lluvia)
+            texto = caption_carrusel(ahora, datos, tab, reel=True)
+            registro["gancho"] = gancho(datos, tab, lluvia)
+            mp4 = Path(reel_an["archivo"])
+            log(f"   reel animado: {reel_an['duracion']:.1f} s, {reel_an['peso_kb']} KB")
+        elif es_carrusel:
             tab = tablero(datos, mem, lluvia)
             texto = caption_carrusel(ahora, datos, tab)
             registro["gancho"] = gancho(datos, tab, lluvia)
@@ -538,6 +630,8 @@ def pasada(publicar: bool, horario: datetime, log=print, publicador=None, carpet
             PA.guardar(mem, ahora, ruta_mem)
             if es_carrusel:
                 res = (publicador or publicar_carrusel)([p["archivo"] for p in lista], texto, log=log)
+            elif animado:
+                res = (publicador or publicar_reel)(mp4, texto, Path(reel_an["vista"]), log=log)
             else:
                 res = (publicador or publicar_reel)(mp4, texto, Path(lista[0]["archivo"]), log=log)
             registro["publicado"] = res

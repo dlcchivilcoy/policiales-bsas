@@ -71,7 +71,7 @@ f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_scor
                          "carrusel", [])
 chequear("turno de carrusel con un temporal con video: sale reel", f == "reel")
 f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_score=80),
-                          _c("soja", tema_doc="precios", ai_score=86)], "reel", ["reel", "reel"])
+                          _c("soja", tema_doc="precios", ai_score=94)], "reel", ["reel", "reel"])
 chequear("…pero después de dos reels seguidos, si hay un carrusel parejo (80 %), va carrusel", f == "carrusel")
 f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_score=80),
                           _c("soja", tema_doc="precios", ai_score=62)], "reel", ["reel", "reel"])

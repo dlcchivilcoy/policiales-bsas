@@ -30,7 +30,11 @@ subtema, ganadería 134 y mercados 71.
 import math
 import os
 
-MEZCLA_DEFECTO = {"agro": 35, "ganaderia": 25, "maquinaria": 10, "mercados": 10, "agtech": 10, "empresas": 10}
+# 20/11/2026: recalibrada con 15 días de métricas de Instagram (167 posteos, alcance mediano): clima y temporales 383,
+# sucesos del campo (incendios, muertes, robos, lo insólito) 1.187, contra maquinaria/AgTech/empresas 39 y
+# mercados/precios 57. Con 12 por día los topes eran 2 por cada uno de esos cuatro (hasta 8 de los que menos llegan);
+# ahora 1 cada uno, y el resto para el campo y la ganadería.
+MEZCLA_DEFECTO = {"agro": 45, "ganaderia": 30, "maquinaria": 7, "mercados": 6, "agtech": 6, "empresas": 6}
 REFUERZO = 10
 MAX_MISMO_TEMA = 2          # por día: el mismo cultivo, empresa o tema
 MAX_CLIMA = 3               # por día, salvo una urgente: rinde más que el resto, pero 5 de 9 cansan (06/11/2026)
@@ -72,8 +76,9 @@ def pasadas() -> list:
 
 
 # Lo que suma cada tema fundamental al ORDEN (no al puntaje), según las vistas reales (06/11/2026).
-EMPUJE_TEMA = {"clima": 10, "sanidad": 5, "ganaderia": 4, "tecnologia": 3, "costos": 3, "reglas": 2, "dolar": 1,
-               "internacional": 0, "precios": 0, "campana": 0}
+# 20/11/2026: recalibrado (ver MEZCLA_DEFECTO): clima empuja más; precios, campaña y mercados del mundo restan.
+EMPUJE_TEMA = {"clima": 15, "sanidad": 5, "ganaderia": 5, "tecnologia": 0, "costos": 0, "reglas": 0, "dolar": 0,
+               "internacional": -3, "precios": -4, "campana": -2}
 URGENTE_TOLERANCIA = 10     # una urgente entra aunque le falten hasta 10 puntos para el mínimo
 BONO_ZONA = 8               # una nota de un diario de la zona sale antes (ordena; el mínimo se mira igual)
 
@@ -143,7 +148,7 @@ def minimo_de(s: dict, minimo: int, formato: str) -> int:
 #   INNOVACION_TOLERANCIA puntos menos y va adelante (el puntaje de la IA no premia la innovación: sin esto casi
 #   nunca llegaba al mínimo);
 # - el mismo subtema que el último posteo va un poco atrás (VARIEDAD), para que el feed no repita.
-BONO_POLICIAL_RURAL = 12
+BONO_POLICIAL_RURAL = 20    # 20/11/2026: de 12 a 20 (los sucesos del campo, 1.187 de alcance mediano)
 INNOVACION = ("agtech", "maquinaria")
 BONO_INNOVACION = 15
 VARIEDAD = 8

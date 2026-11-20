@@ -208,10 +208,10 @@ def cand(i, score, sub, tema="", com=0):
 
 
 os.environ.pop("AGRO_MEZCLA", None)
-chequear("topes de la mezcla con 10 por día (6/11/2026: más campo y ganadería, menos mercados y AgTech)",
-         SE.topes(10) == {"agro": 4, "ganaderia": 3, "mercados": 1, "agtech": 1, "maquinaria": 1, "empresas": 1})
-chequear("clima adelante y precios sin empuje (6/11/2026: 248 contra 64 vistas)",
-         SE.EMPUJE_TEMA["clima"] > SE.EMPUJE_TEMA["ganaderia"] > SE.EMPUJE_TEMA["precios"] == 0)
+chequear("topes de la mezcla con 12 por día (20/11/2026: 1 por cada subtema de poco alcance)",
+         SE.topes(12) == {"agro": 6, "ganaderia": 4, "mercados": 1, "agtech": 1, "maquinaria": 1, "empresas": 1})
+chequear("clima adelante y precios restan (20/11/2026: alcance mediano 383 contra 57)",
+         SE.EMPUJE_TEMA["clima"] > SE.EMPUJE_TEMA["ganaderia"] > 0 > SE.EMPUJE_TEMA["precios"])
 os.environ["AGRO_MEZCLA"] = "agro:50,mercados:50"
 chequear("AGRO_MEZCLA se puede editar", SE.topes(4) == {"agro": 2, "mercados": 2})
 os.environ.pop("AGRO_MEZCLA")
@@ -916,8 +916,10 @@ for _k, _v0 in _env0.items():
 from agro import mapa_lluvia as ML  # noqa: E402
 from datetime import timezone as _tzu  # noqa: E402
 
-chequear("posteo de datos: de fábrica es carrusel (AGRO_DATOS_FORMATO=reel vuelve al reel)",
-         RD.formato() == "carrusel")
+chequear("posteo de datos: de fábrica es el reel animado (20/11/2026; AGRO_DATOS_FORMATO=carrusel vuelve atrás)",
+         RD.formato() == "animado")
+os.environ["AGRO_DATOS_FORMATO"] = "carrusel"
+chequear("AGRO_DATOS_FORMATO=carrusel", RD.formato() == "carrusel")
 os.environ["AGRO_DATOS_FORMATO"] = "reel"
 chequear("AGRO_DATOS_FORMATO=reel", RD.formato() == "reel")
 os.environ.pop("AGRO_DATOS_FORMATO")
