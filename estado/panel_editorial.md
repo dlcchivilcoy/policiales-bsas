@@ -1,9 +1,9 @@
 # Panel editorial — Diario y Radio
-Actualizado: 19/11/2026 00:18 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 20/11/2026 00:19 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-11-19)
+## Hoy (2026-11-20)
 
 _Todavía no hay pasadas registradas hoy._
 
@@ -11,34 +11,34 @@ _Todavía no hay pasadas registradas hoy._
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram | IG prueba |
 |---|---:|---:|---:|---:|---:|---:|
-| Policiales | 23 | 24 | 24 | 0 | 23 | 0 |
-| Nacionales | 15 | 346 | 0 | 0 | 0 | 35 |
+| Policiales | 27 | 28 | 28 | 0 | 27 | 0 |
+| Nacionales | 13 | 354 | 0 | 0 | 0 | 39 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 40 piezas · mediana vistas 160 · mediana likes 0
+### YouTube — 38 piezas · mediana vistas 197.5 · mediana likes 0
 
-- **Por categoría:** policiales: 27, vistas 126, likes 0 · virales: 13, vistas 192, likes 1
-- **Por franja:** madrugada (0-6): 13, vistas 192, likes 1 · noche (18-24): 27, vistas 126, likes 0
-- **Por día:** domingo: 5, vistas 487, likes 0 · jueves: 10, vistas 39.5, likes 0 · lunes: 5, vistas 679, likes 2 · martes: 7, vistas 36, likes 0 · sábado: 4, vistas 343.5, likes 0 ⚠️muestra chica · viernes: 9, vistas 23, likes 0
-- **Por distancia:** 50 a 100 km: 19, vistas 126, likes 0 · Chivilcoy: 1, vistas 899, likes 2 ⚠️muestra chica · hasta 50 km: 7, vistas 43, likes 0
+- **Por categoría:** policiales: 28, vistas 202, likes 0 · virales: 10, vistas 114, likes 0.5
+- **Por franja:** madrugada (0-6): 10, vistas 212.5, likes 1 · mañana (6-12): 2, vistas 30.5, likes 0 ⚠️muestra chica · noche (18-24): 26, vistas 197.5, likes 0
+- **Por día:** domingo: 5, vistas 487, likes 0 · jueves: 2, vistas 402.5, likes 0.5 ⚠️muestra chica · lunes: 5, vistas 679, likes 2 · martes: 7, vistas 36, likes 0 · miércoles: 6, vistas 182, likes 0.5 · sábado: 4, vistas 343.5, likes 0 ⚠️muestra chica · viernes: 9, vistas 23, likes 0
+- **Por distancia:** 50 a 100 km: 21, vistas 199, likes 0 · Chivilcoy: 1, vistas 899, likes 2 ⚠️muestra chica · hasta 50 km: 6, vistas 350.5, likes 0
 
 ### Instagram — 26 piezas · mediana vistas s/d · mediana likes 5
 
 - **Por categoría:** policiales: 26, likes 5
-- **Por franja:** noche (18-24): 26, likes 5
-- **Por día:** domingo: 2, likes 4.5 ⚠️muestra chica · jueves: 6, likes 3 · lunes: 6, likes 5.5 · martes: 6, likes 7.5 · sábado: 2, likes 5.5 ⚠️muestra chica · viernes: 4, likes 7 ⚠️muestra chica
-- **Por distancia:** 50 a 100 km: 20, likes 4 · hasta 50 km: 6, likes 11.5
+- **Por franja:** madrugada (0-6): 2, likes 8 ⚠️muestra chica · noche (18-24): 24, likes 5
+- **Por día:** domingo: 2, likes 4.5 ⚠️muestra chica · jueves: 2, likes 8 ⚠️muestra chica · lunes: 6, likes 5.5 · martes: 6, likes 7.5 · miércoles: 4, likes 4.5 ⚠️muestra chica · sábado: 2, likes 5.5 ⚠️muestra chica · viernes: 4, likes 7 ⚠️muestra chica
+- **Por distancia:** 50 a 100 km: 21, likes 4 · hasta 50 km: 5, likes 12
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
 
 ## Shorts en Radio del Centro (memoria de 5-7 días)
 
-procesado: 189 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 19
+procesado: 197 · anterior al control: 120 · subido, se verifica en la pasada siguiente: 18
 
 ## Controles (sin tocar código)
 
