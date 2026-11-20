@@ -8,6 +8,8 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from PIL import Image
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -169,6 +171,27 @@ if nino:
     chequear("las barras con negativos (cebada en años de El Niño) se dibujan", im.size == (1080, 1350))
 s = next(d for k, d in disp["trigo_historia"]["diapositivas"] if k == "serie")
 chequear("la serie campaña por campaña se dibuja", RZ.placa_serie(s, 5.0, RZ.FUENTE_CORTA).size == (1080, 1350))
+
+# ── Movimiento y sonido (agro/movimiento.py, 20/11/2026) ──
+from agro import movimiento as MV  # noqa: E402
+from agro import reel as RE  # noqa: E402
+_planes = [(k, d, 4.0, None) for k, d in disp["soja_perdidas"]["diapositivas"]]
+_ev = RZ.eventos_sonido(_planes)
+chequear("sonido: soplido en cada transición, pops del título y de las barras, y la placa final con campanita",
+         sum(1 for e in _ev if e[1].size == MV.brisa().size) >= len(_planes) - 1 and len(_ev) > 30)
+_pista = MV.mezclar(_ev, 16.0)
+chequear("sonido: la pista es estéreo, dura lo que el reel y no satura",
+         _pista.shape == (int(MV.SR * 16.0), 2) and float(abs(_pista).max()) <= 1.0)
+chequear("placa final animada: arranca vacía y termina igual a la fija",
+         RE.cierre("grafito", "x", t=0.0).tobytes() != RE.cierre("grafito", "x").tobytes()
+         and RE.cierre("grafito", "x", t=9.0).tobytes() == RE.cierre("grafito", "x").tobytes())
+_a, _b = Image.new("RGB", (1080, 1350), (0, 0, 0)), Image.new("RGB", (1080, 1350), (255, 255, 255))
+chequear("transición: a mitad de camino se ven las dos; terminada, la nueva",
+         MV.transicion(_a, _b, 0.1).getpixel((540, 1340)) == (255, 255, 255)
+         and MV.transicion(_a, _b, 0.1).getpixel((540, 10)) == (0, 0, 0) and MV.transicion(_a, _b, 1.0) is _b)
+os.environ["AGRO_REEL_MOVIMIENTO"] = "0"
+chequear("AGRO_REEL_MOVIMIENTO=0 vuelve al fundido de antes", not MV.activo())
+os.environ.pop("AGRO_REEL_MOVIMIENTO")
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

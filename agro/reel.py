@@ -19,6 +19,7 @@ videos en reels, de máximo 1 minuto y medio»): el reel dura lo que el video �
 ffmpeg (el de imageio-ffmpeg, el mismo que usa policiales).
 """
 import subprocess
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -99,20 +100,34 @@ def _icono(nombre: str, alto: int, color) -> Image.Image:
     return tinta
 
 
-def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
-    """La placa de cierre 4:5 de agro. 20/11/2026 (el editor: «actualizá el logo e isologo de la placa final»): la
-    misma diagramación que la placa final del diario (estetica_bot/placa_final_4x5.png): arriba el lema, el
-    isologo NUEVO (las C del diario con el brote de agro), DIARIO Y RADIO / A G R O, la rayita naranja, la frase
-    (o «Seguinos en redes»), el usuario grande y los íconos de las redes donde está agro (Instagram y Facebook)."""
+# La placa final animada de los reels de datos (agro/movimiento.py, 20/11/2026): cuándo entra cada parte (segundos).
+CIERRE_ISO, CIERRE_NOMBRE, CIERRE_RAYA, CIERRE_FRASE, CIERRE_USUARIO = 0.0, 0.3, 0.55, 0.65, 0.95
+CIERRE_TECLA = 0.04          # entre letra y letra del usuario
+CIERRE_ICONOS = CIERRE_USUARIO + len(D.USUARIO) * CIERRE_TECLA + 0.1
+CIERRE_DURACION = 3.4
+
+
+@lru_cache(maxsize=16)
+def _partes(tema: str, frase: str, alto: int) -> tuple:
+    """(fondo, [(nombre, sprite RGBA, (x, y))]): cada parte de la placa en su capa, para poder animarlas."""
     t = D.TEMAS[tema]
-    lienzo = Image.new("RGBA", (D.W, alto), t["fondo"] + (255,))
-    d = ImageDraw.Draw(lienzo)
+    partes = []
     cx = D.W / 2
 
-    def centrado(texto, f, yy, c):
+    def capa():
+        lienzo = Image.new("RGBA", (D.W, alto), (0, 0, 0, 0))
+        return lienzo, ImageDraw.Draw(lienzo)
+
+    def guardar(nombre, lienzo):
+        caja = lienzo.getbbox()
+        if caja:
+            partes.append((nombre, lienzo.crop(caja), caja[:2]))
+
+    def centrado(d, texto, f, yy, c):
         d.text((cx - d.textlength(texto, font=f) / 2, yy), texto, font=f, fill=c)
 
     # El lema, con puntos naranjas entre las palabras.
+    lz, d = capa()
     f_l = D.fuente("bold", 36)
     trozos = [(w, d.textlength(w, font=f_l) + 4 * (len(w) - 1)) for w in LEMA]
     sep = 70
@@ -127,19 +142,21 @@ def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
         if i < len(trozos) - 1:
             d.ellipse((x + sep / 2 - 8, y_lema + 14, x + sep / 2 + 8, y_lema + 30), fill=D.NARANJA)
             x += sep
+    guardar("lema", lz)
 
     iso = D.isologo(round(alto * 0.22))
     y = round(alto * 0.205)
-    lienzo.alpha_composite(iso, (round(cx - iso.width / 2), y))
+    partes.append(("iso", iso, (round(cx - iso.width / 2), y)))
     y += iso.height + round(alto * 0.045)
 
     # DIARIO Y RADIO (negra) y abajo A G R O en verde, espaciada al mismo ancho.
+    lz, d = capa()
     f1 = D.fuente("negra", 100)
     ancho1 = d.textlength("DIARIO Y RADIO", font=f1)
     if ancho1 > D.W - 2 * D.X:
         f1 = D.fuente("negra", int(100 * (D.W - 2 * D.X) / ancho1))
         ancho1 = d.textlength("DIARIO Y RADIO", font=f1)
-    centrado("DIARIO Y RADIO", f1, y, t["titular"])
+    centrado(d, "DIARIO Y RADIO", f1, y, t["titular"])
     y += round(f1.size * 1.12)
     f2 = D.fuente("bold", round(f1.size * 0.62))
     anchos, paso = _espaciado(d, "AGRO", f2, ancho1 * 0.46)
@@ -147,16 +164,22 @@ def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
     for c, a in zip("AGRO", anchos):
         d.text((xx, y), c, font=f2, fill=t["verde"])
         xx += a + paso
+    guardar("nombre", lz)
     y += round(f2.size * 1.5)
+    lz, d = capa()
     d.rectangle((cx - 65, y, cx + 65, y + 7), fill=D.NARANJA)
+    guardar("raya", lz)
     y += 45
 
     # La frase (o «Seguinos en redes»), el usuario grande y los íconos.
+    lz, d = capa()
     f, r = D.ajustar(d, frase or "Seguinos en redes", "medium", 46, 32, D.W - 2 * D.X, 2)
     for linea in r:
-        centrado(linea, f, y, t["texto"])
+        centrado(d, linea, f, y, t["texto"])
         y += round(f.size * 1.25)
+    guardar("frase", lz)
     y += 14
+    lz, d = capa()
     try:
         from PIL import ImageFont
         f_u = ImageFont.truetype(str(D.MARCA / "Anton-Regular.ttf"), 104)
@@ -165,18 +188,81 @@ def cierre(tema: str, frase: str = "", alto: int = D.H45) -> Image.Image:
                                      int(104 * (D.W - 2 * D.X) / d.textlength(D.USUARIO, font=f_u)))
     except OSError:
         f_u = D.fuente("negra", 80)
-    centrado(D.USUARIO, f_u, y, t["titular"])
+    x_u = cx - d.textlength(D.USUARIO, font=f_u) / 2
+    d.text((x_u, y), D.USUARIO, font=f_u, fill=t["titular"])
+    # Hasta dónde llega cada letra (para tipearlo): x de corte, relativa al sprite.
+    cortes = [d.textlength(D.USUARIO[:k + 1], font=f_u) for k in range(len(D.USUARIO))]
+    caja = lz.getbbox()
+    if caja:
+        partes.append(("usuario", lz.crop(caja), caja[:2]))
+        partes.append(("cortes", tuple(round(x_u + c - caja[0]) + 4 for c in cortes), (0, 0)))
     y += round(f_u.size * 1.75)
     try:
         iconos = [_icono(n, 66, t["titular"]) for n in ("icono_ig.png", "icono_fb.png")]
         gap = 70
         x = cx - (sum(i.width for i in iconos) + gap * (len(iconos) - 1)) / 2
-        for ic in iconos:
-            lienzo.alpha_composite(ic, (round(x), min(y, alto - 120)))
+        for k, ic in enumerate(iconos):
+            partes.append((f"icono{k}", ic, (round(x), min(y, alto - 120))))
             x += ic.width + gap
     except OSError:
         pass
+    return t["fondo"], tuple(partes)
+
+
+def cierre(tema: str, frase: str = "", alto: int = D.H45, t: float = None) -> Image.Image:
+    """La placa de cierre 4:5 de agro. 20/11/2026 (el editor: «actualizá el logo e isologo de la placa final»): la
+    misma diagramación que la placa final del diario (estetica_bot/placa_final_4x5.png): arriba el lema, el
+    isologo NUEVO (las C del diario con el brote de agro), DIARIO Y RADIO / A G R O, la rayita naranja, la frase
+    (o «Seguinos en redes»), el usuario grande y los íconos de las redes donde está agro (Instagram y Facebook).
+
+    `t` (segundos desde que empieza la placa): la versión ANIMADA de los reels de datos (agro/movimiento.py): el
+    isologo rebota, el nombre sube, la raya crece, el usuario se tipea y los íconos hacen pop. Sin `t`, completa."""
+    from agro import movimiento as MV
+    fondo, partes = _partes(tema, frase or "", alto)
+    lienzo = Image.new("RGBA", (D.W, alto), fondo + (255,))
+    cortes = next((p[1] for p in partes if p[0] == "cortes"), ())
+    for nombre, sp, (x, y) in partes:
+        if nombre == "cortes":
+            continue
+        if t is None:
+            lienzo.alpha_composite(sp, (x, y))
+            continue
+        centro = (x + sp.width / 2, y + sp.height / 2)
+        if nombre == "lema":
+            u = MV.ease_out(t / 0.4)
+            MV.pop_sprite(lienzo, sp, (centro[0], centro[1] - 20 * (1 - u)), 1.0, u)
+        elif nombre == "iso":
+            MV.pop_sprite(lienzo, sp, centro, MV.ease_back((t - CIERRE_ISO) / 0.5) if t > CIERRE_ISO else 0)
+        elif nombre in ("nombre", "frase"):
+            t0 = CIERRE_NOMBRE if nombre == "nombre" else CIERRE_FRASE
+            u = MV.ease_out((t - t0) / 0.35)
+            MV.pop_sprite(lienzo, sp, (centro[0], centro[1] + 30 * (1 - u)), 1.0, u)
+        elif nombre == "raya":
+            u = MV.ease_out((t - CIERRE_RAYA) / 0.3)
+            if u > 0:
+                w = max(1, round(sp.width * u))
+                lienzo.alpha_composite(sp.crop(((sp.width - w) // 2, 0, (sp.width + w) // 2, sp.height)),
+                                       (x + (sp.width - w) // 2, y))
+        elif nombre == "usuario":
+            k = int((t - CIERRE_USUARIO) / CIERRE_TECLA) + 1 if t >= CIERRE_USUARIO else 0
+            if k >= len(cortes):
+                lienzo.alpha_composite(sp, (x, y))
+            elif k > 0:
+                lienzo.alpha_composite(sp.crop((0, 0, min(sp.width, cortes[k - 1]), sp.height)), (x, y))
+        elif nombre.startswith("icono"):
+            t0 = CIERRE_ICONOS + 0.12 * int(nombre[-1])
+            MV.pop_sprite(lienzo, sp, centro, MV.ease_back((t - t0) / 0.35) if t > t0 else 0)
     return lienzo
+
+
+def eventos_cierre(t0: float) -> list:
+    """Los sonidos de la placa final animada, desde el segundo `t0` del reel."""
+    from agro import movimiento as MV
+    ev = [(t0 + CIERRE_ISO + 0.05, MV.pop(0.8), 0.7), (t0 + CIERRE_NOMBRE, MV.brisa(0.3), 0.35)]
+    ev += [(t0 + CIERRE_USUARIO + k * CIERRE_TECLA, MV.tecla(k), 0.5) for k in range(len(D.USUARIO))]
+    ev += [(t0 + CIERRE_ICONOS + 0.12 * k, MV.pop(1.3 + 0.2 * k), 0.5) for k in range(2)]
+    ev.append((t0 + CIERRE_ICONOS + 0.35, MV.campanita(), 0.45))
+    return ev
 
 
 def _cuadros_video(clip, w: int, h: int, total: float):

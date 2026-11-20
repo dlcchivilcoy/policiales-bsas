@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from functools import lru_cache
 import os
 import subprocess
 import sys
@@ -681,7 +682,14 @@ def capa_video(d: dict, t: float, credito: str, fuente: str) -> Image.Image:
         dec = 0 if float(d["numero"]).is_integer() else d.get("dec", 0)
         num = _numero_txt(round(valor, dec) if t < CONTAR else d["numero"], dec, d.get("signo"))
         f = D.fuente("negra", 150)
-        dr.text((D.X - 6, y - 18), num, font=f, fill=D.NARANJA)
+        from agro import movimiento as MV
+        golpe = max(0.0, 1 - abs(t - CONTAR) / 0.2) if MV.activo() else 0.0
+        if golpe > 0:                                      # el pop cuando llega a su valor
+            sp = Image.new("RGBA", (round(dr.textlength(num, font=f)) + 20, 200), (0, 0, 0, 0))
+            ImageDraw.Draw(sp).text((10, 0), num, font=f, fill=D.NARANJA)
+            MV.pop_sprite(im, sp, (D.X - 6 + sp.width / 2 - 10, y - 18 + 100), 1 + 0.12 * golpe)
+        else:
+            dr.text((D.X - 6, y - 18), num, font=f, fill=D.NARANJA)
         if d.get("unidad"):
             fu = D.fuente("bold", 52)
             x = D.X + max(dr.textlength(_numero_txt(d["numero"], dec, d.get("signo")), font=f),
@@ -693,20 +701,62 @@ def capa_video(d: dict, t: float, credito: str, fuente: str) -> Image.Image:
             dr.text((D.X, y), r, font=f, fill=tc["texto"] + (round(255 * aparece),))
             y += round(f.size * 1.25)
     dr.text((D.X, D.H45 - 50), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    _pie(im)
     return im
 
 
-def _encabezado(dr, d: dict, tc: dict) -> int:
+RETRASO = 0.45               # con movimiento: las barras, columnas y filas arrancan cuando ya entró el título
+
+
+def _retraso() -> float:
+    from agro import movimiento as MV
+    return RETRASO if MV.activo() else 0.0
+
+
+@lru_cache(maxsize=32)
+def _plan_titulo(titulo: str) -> dict:
+    from agro import movimiento as MV
+    return MV.plan_titulo(titulo, D.W - 190, 2, 84, 56)      # a la derecha va el isologo chico
+
+
+def _mezcla_color(c1, c2, u: float) -> tuple:
+    return tuple(round(a + (b - a) * u) for a, b in zip(c1[:3], c2[:3]))
+
+
+def _encabezado(im, d: dict, tc: dict, t: float = 99.0) -> int:
+    """El título de la diapositiva. Con movimiento (agro/movimiento.py, 20/11/2026): en Anton, la palabra clave en
+    verde, entrando palabra por palabra; el subtítulo aparece después."""
+    from agro import movimiento as MV
+    dr = ImageDraw.Draw(im)
     dr.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
-    f, renglones = D.ajustar(dr, d["titulo"].upper(), "negra", 64, 44, D.W - 120, 2)
-    y = 60
-    for r in renglones:
-        dr.text((60, y), r, font=f, fill=D.BLANCO)
-        y += round(f.size * 1.1)
+    if not MV.activo():
+        f, renglones = D.ajustar(dr, d["titulo"].upper(), "negra", 64, 44, D.W - 120, 2)
+        y = 60
+        for r in renglones:
+            dr.text((60, y), r, font=f, fill=D.BLANCO)
+            y += round(f.size * 1.1)
+        if d.get("sub"):
+            dr.text((60, y + 6), d["sub"], font=D.fuente("medium", 32), fill=tc["texto"])
+            y += 52
+        return y + 30
+    y = MV.dibujar_titulo(im, 60, 50, _plan_titulo(d["titulo"]), t) + 16
     if d.get("sub"):
-        dr.text((60, y + 6), d["sub"], font=D.fuente("medium", 32), fill=tc["texto"])
+        u = MV.ease_out((t - 0.3) / 0.35)
+        dr = ImageDraw.Draw(im)
+        dr.text((60, y + 6), d["sub"], font=D.fuente("medium", 32), fill=_mezcla_color(tc["fondo"], tc["texto"], u))
         y += 52
     return y + 30
+
+
+def _crecer(x: float) -> float:
+    from agro import movimiento as MV
+    return MV.ease_back(x) if (MV.activo() and x > 0) else _ease(x)
+
+
+def _pie(im):
+    from agro import movimiento as MV
+    if MV.activo():
+        MV.marca_pie(im, 52, 36, 34)
 
 
 def placa_barras(d: dict, t: float, fuente: str) -> Image.Image:
@@ -714,7 +764,8 @@ def placa_barras(d: dict, t: float, fuente: str) -> Image.Image:
     tc = _tema_color()
     im = Image.new("RGB", (D.W, D.H45), tc["fondo"])
     dr = ImageDraw.Draw(im)
-    y = _encabezado(dr, d, tc)
+    y = _encabezado(im, d, tc, t)
+    dr = ImageDraw.Draw(im)
     filas = d["filas"][:10]
     resaltar = d.get("resaltar") or "Chivilcoy"
     alto_fila = min(96, (D.H45 - 90 - y) // max(1, len(filas)))
@@ -730,7 +781,7 @@ def placa_barras(d: dict, t: float, fuente: str) -> Image.Image:
     f_n = D.fuente("bold", min(40, alto_fila - 30))
     f_v = D.fuente("negra", min(44, alto_fila - 26))
     for i, (nombre, v) in enumerate(filas):
-        crec = _ease((t - 0.08 * i) / CRECER)
+        crec = _crecer((t - _retraso() - 0.08 * i) / CRECER)
         yy = y + i * alto_fila
         es = nombre == resaltar
         color = D.NARANJA if es else (CELESTE if v >= 0 else D.ROJO)
@@ -751,6 +802,7 @@ def placa_barras(d: dict, t: float, fuente: str) -> Image.Image:
     if hay_neg:
         dr.line((cero, y, cero, y + len(filas) * alto_fila), fill=tc["tenue"], width=2)
     dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    _pie(im)
     return im
 
 
@@ -759,7 +811,8 @@ def placa_serie(d: dict, t: float, fuente: str) -> Image.Image:
     tc = _tema_color()
     im = Image.new("RGB", (D.W, D.H45), tc["fondo"])
     dr = ImageDraw.Draw(im)
-    y = _encabezado(dr, d, tc)
+    y = _encabezado(im, d, tc, t)
+    dr = ImageDraw.Draw(im)
     serie = d["serie"]
     n = len(serie)
     base, techo = D.H45 - 250, y + 90
@@ -771,7 +824,7 @@ def placa_serie(d: dict, t: float, fuente: str) -> Image.Image:
     f_c = D.fuente("medium", 22 if n > 12 else 26)
     dur = 3.2
     for i, (camp, v) in enumerate(serie):
-        crec = _ease((t - dur * i / n) / 0.5)
+        crec = _ease((t - _retraso() - dur * i / n) / 0.5)
         if crec <= 0:
             continue
         xa = x0 + i * paso + (paso - ancho) / 2
@@ -796,6 +849,7 @@ def placa_serie(d: dict, t: float, fuente: str) -> Image.Image:
         dr.text((x + 36, yl), etq, font=D.fuente("medium", 28), fill=tc["texto"])
         x += 36 + dr.textlength(etq, font=D.fuente("medium", 28)) + 40
     dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    _pie(im)
     return im
 
 
@@ -803,22 +857,26 @@ def placa_lista(d: dict, t: float, fuente: str) -> Image.Image:
     tc = _tema_color()
     im = Image.new("RGB", (D.W, D.H45), tc["fondo"])
     dr = ImageDraw.Draw(im)
-    y = _encabezado(dr, d, tc)
+    y = _encabezado(im, d, tc, t)
+    dr = ImageDraw.Draw(im)
     filas = d["filas"][:7]
     alto = min(130, (D.H45 - 110 - y) // max(1, len(filas)))
     y += max(0, (D.H45 - 110 - y - alto * len(filas)) // 3)      # pocas filas: un poco más abajo, no pegadas arriba
     for i, (izq, der) in enumerate(filas):
-        a = _ease((t - 0.25 * i) / 0.4)
+        a = _ease((t - _retraso() - 0.25 * i) / 0.4)
         if a <= 0:
             continue
+        dx = round(160 * (1 - a))                          # entra desde la derecha
         yy = y + i * alto
-        dr.rounded_rectangle((60, yy, D.W - 60, yy + alto - 18), radius=18, fill=tc["linea"])
+        dr.rounded_rectangle((60 + dx, yy, D.W - 60 + dx, yy + alto - 18), radius=18, fill=tc["linea"])
         f = D.fuente("bold", 40)
-        dr.text((92, yy + (alto - 18) / 2 - 26), izq, font=f, fill=D.BLANCO)
+        dr.text((92 + dx, yy + (alto - 18) / 2 - 26), izq, font=f, fill=D.BLANCO)
         fd = D.fuente("negra", 40)
         color = D.NARANJA if "sequ" in str(der).lower() else CELESTE
-        dr.text((D.W - 92 - dr.textlength(str(der), font=fd), yy + (alto - 18) / 2 - 26), str(der), font=fd, fill=color)
+        dr.text((D.W - 92 + dx - dr.textlength(str(der), font=fd), yy + (alto - 18) / 2 - 26), str(der), font=fd,
+                fill=color)
     dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    _pie(im)
     return im
 
 
@@ -828,13 +886,15 @@ def placa_mapa(d: dict, t: float, fuente: str) -> Image.Image:
     tc = _tema_color()
     im = Image.new("RGBA", (D.W, D.H45), tc["fondo"] + (255,))
     dr = ImageDraw.Draw(im)
-    y = _encabezado(dr, d, tc)
+    y = _encabezado(im, d, tc, t)
+    dr = ImageDraw.Draw(im)
     fmt = (lambda v: _numero_txt(v, d.get("dec", 0), d.get("signo")) + (d.get("unidad") or ""))
     alto = D.H45 - 70 - y
     m = MZ.dibujar(d["valores"], t, 980, alto, fmt=fmt, divergente=d.get("divergente", False), fondo=tc["linea"],
                   paleta=d.get("paleta", "verde"))
     im.alpha_composite(m, ((D.W - m.width) // 2, y))
     dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    _pie(im)
     return im.convert("RGB")
 
 
@@ -891,28 +951,72 @@ def _fondo_sin_video() -> Image.Image:
     return im
 
 
+def eventos_sonido(planes: list) -> list:
+    """Los efectos del reel, en el mismo ritmo que el dibujo (agro/movimiento.py): soplido en cada transición, un
+    pop por palabra del título, por barra y por fila, tics mientras cuenta un número o aparecen columnas y partidos,
+    y la placa final (teclas y campanita)."""
+    from agro import movimiento as MV
+    from agro import reel as RE
+    ev, s0 = [], 0.0
+    for idx, (tipo, d, dur, _vid) in enumerate(planes):
+        if idx:
+            ev.append((s0, MV.brisa(), 0.5))
+        if (tipo in ("barras", "serie", "lista", "mapa") or (tipo == "video" and d.get("titulo"))) and d.get("titulo"):
+            ev += MV.eventos_titulo(s0, MV.palabras_de(_plan_titulo(d["titulo"])))
+        if tipo == "barras":
+            ev += [(s0 + RETRASO + 0.08 * i, MV.pop(1.0 + 0.05 * i), 0.32) for i in range(len(d["filas"][:10]))]
+        elif tipo == "lista":
+            ev += [(s0 + RETRASO + 0.25 * i, MV.pop(1.1 + 0.05 * i), 0.4) for i in range(len(d["filas"][:7]))]
+        elif tipo == "serie":
+            n = len(d["serie"])
+            ev += [(s0 + RETRASO + 3.2 * i / n, MV.tic(1 + 0.02 * i), 0.35) for i in range(n)]
+        elif tipo == "mapa":
+            n = len(d.get("valores") or {})
+            ev += [(s0 + 0.2 + 1.6 * i / max(1, n), MV.tic(0.8 + 0.04 * i), 0.3) for i in range(n)]
+        elif tipo == "video" and d.get("numero") is not None:
+            ev += [(s0 + j * 0.065, MV.tic(0.9 + 0.03 * j), 0.25) for j in range(int(CONTAR / 0.065))]
+            ev.append((s0 + CONTAR, MV.pop(0.9), 0.6))
+        elif tipo == "cierre":
+            ev += RE.eventos_cierre(s0)
+        s0 += dur
+    return ev
+
+
 def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
-    """El .mp4 4:5 (sin sonido, como el reel del clima) y su portada .jpg (la diapositiva del gancho)."""
+    """El .mp4 4:5 y su portada .jpg (la primera diapositiva ya completa). 20/11/2026 (agro/movimiento.py): con
+    transiciones que empujan, barra de progreso, títulos que entran palabra por palabra, la placa final animada y
+    SONIDO (los efectos del reel de entrevistas del diario y una base suave); AGRO_REEL_SONIDO=0 lo deja mudo."""
+    from agro import movimiento as MV
     from agro import reel as RE
     salida = Path(salida)
     salida.parent.mkdir(parents=True, exist_ok=True)
     videos = videos or {}
     fuente = tema.get("fuente") or FUENTE_CORTA
+    animado = MV.activo()
     planes = []
     for i, (tipo, d) in enumerate(tema["diapositivas"]):
         # «propia» (20/11/2026, agro/reel_tiempo.py): la diapositiva la dibuja d["fn"](t) durante d["dur"] segundos.
         dur = d["dur"] if tipo == "propia" else (DURACION_GANCHO if (tipo == "video" and d.get("titulo"))
                                                  else DURACION[tipo])
+        if tipo == "cierre" and animado:
+            dur = RE.CIERRE_DURACION
         planes.append((tipo, d, dur, videos.get(i)))
     total = sum(p[2] for p in planes)
+    wav = salida.with_suffix(".wav")
+    sonido = MV.con_sonido()
+    if sonido:
+        MV.guardar_wav(MV.mezclar(eventos_sonido(planes), total, MV.con_musica()), wav)
+        audio = ["-i", str(wav)]
+    else:
+        audio = ["-f", "lavfi", "-t", f"{total:.2f}", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
     cmd = [_ffmpeg(), "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{D.W}x{D.H45}",
-           "-r", str(FPS), "-i", "-", "-f", "lavfi", "-t", f"{total:.2f}",
-           "-i", "anullsrc=channel_layout=stereo:sample_rate=44100", "-shortest",
+           "-r", str(FPS), "-i", "-", *audio, "-shortest",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "22",
-           "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", str(salida)]
+           "-c:a", "aac", "-b:a", "128k" if sonido else "64k", "-movflags", "+faststart", str(salida)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     portada, previo, fin_anterior = None, None, None
     cierre = RE.cierre("grafito", "").convert("RGB")
+    t_global = 0.0
     try:
         for tipo, d, dur, vid in planes:
             n = round(dur * FPS)
@@ -938,12 +1042,20 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
                     cuadro = d["fn"](t).convert("RGB")
                 elif tipo == "mapa":
                     cuadro = placa_mapa(d, t, fuente)
+                elif animado:
+                    cuadro = RE.cierre("grafito", d.get("frase", ""), t=t).convert("RGB")
                 else:
                     cuadro = cierre
-                if fin_anterior is not None and t < FUNDIDO:
-                    cuadro = Image.blend(fin_anterior, cuadro, t / FUNDIDO)
+                limpio = cuadro
+                if fin_anterior is not None and t < (MV.TRANSICION if animado else FUNDIDO):
+                    cuadro = (MV.transicion(fin_anterior, cuadro, t) if animado
+                              else Image.blend(fin_anterior, cuadro, t / FUNDIDO))
+                if animado:
+                    cuadro = cuadro.copy() if cuadro is limpio else cuadro
+                    MV.progreso(cuadro, (t_global + t) / total)
                 proc.stdin.write(cuadro.tobytes())
-                previo = cuadro
+                previo = limpio
+            t_global += n / FPS
             fin_anterior = previo
             if portada is None:                            # la portada: la primera diapositiva ya completa
                 portada = previo.copy()
@@ -956,10 +1068,15 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
     finally:
         if proc.poll() is None:
             proc.kill()
+        if wav.exists():
+            try:
+                wav.unlink()
+            except OSError:
+                pass
     jpg = salida.with_suffix(".jpg")
     (portada or previo).save(jpg, "JPEG", quality=90)
     return {"archivo": str(salida), "duracion": total, "peso_kb": round(salida.stat().st_size / 1024), "ancho": D.W,
-            "alto": D.H45, "vista": str(jpg), "tema": "grafito", "con_video": bool(videos), "con_sonido": False}
+            "alto": D.H45, "vista": str(jpg), "tema": "grafito", "con_video": bool(videos), "con_sonido": sonido}
 
 
 def caption(tema: dict, videos: dict) -> str:
