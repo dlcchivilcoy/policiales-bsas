@@ -48724,6 +48724,70 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3c3d3929321a9e2d": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 37,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "harina de soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un análisis general de mercados internacionales y precios que no cambia el día a día del productor de la zona.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "46e670fdf9cc36cb": {
+      "conversacion": 6,
+      "historia_concreta": 8,
+      "cercania_pba": 8,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 45,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "mastitis lechera",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aporta datos técnicos útiles para los tamberos de la región, aunque el estudio sea de Santa Fe.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        35
+      ]
+    },
+    "39e7e705e0f01c8a": {
+      "conversacion": 22,
+      "historia_concreta": 18,
+      "cercania_pba": 20,
+      "interes_productores": 10,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 83,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "robo moto",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Chacabuco, genera mucha indignación y comentarios locales rápidos entre vecinos y gente de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -52049,7 +52113,11 @@
       "https://chacabuquero.com.ar/2026/11/intensa-caida-de-granizo-en-municipios.html": "2026-11-20",
       "https://chacabuquero.com.ar/2026/11/una-periodista-de-chacabuco-esta-en.html": "2026-11-20",
       "https://chacabuquero.com.ar/2026/11/alerta-meteorologica-para-chacabuco-y_0399298934.html": "2026-11-20",
-      "https://chacabuquero.com.ar/2026/11/accidente-en-el-centro-de-chacabuco.html": "2026-11-20"
+      "https://chacabuquero.com.ar/2026/11/accidente-en-el-centro-de-chacabuco.html": "2026-11-20",
+      "https://bichosdecampo.com/dale-las-gracias-a-la-harina-de-soja-el-unico-producto-que-logro-zafar-de-la-tendencia-bajista-generalizada": "2026-11-20",
+      "https://lanacion.com.ar/economia/campo/fuera-de-lugar-el-gobierno-de-kicillof-exigira-todos-los-meses-informacion-salarial-y-laboral-de-los-nid20112026": "2026-11-20",
+      "https://agroempresario.com/publicacion/124021/sanidad-lechera-una-investigacion-propone-reducir-antibiotico": "2026-11-20",
+      "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html": "2026-11-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -55373,7 +55441,11 @@
       "intensa caida de granizo en municipios vecinos de chacabuco": "2026-11-20",
       "una periodista de chacabuco esta en carrera para ganar un martin fierro": "2026-11-20",
       "alerta meteorologica para chacabuco y la zona": "2026-11-20",
-      "accidente en el centro de chacabuco": "2026-11-20"
+      "accidente en el centro de chacabuco": "2026-11-20",
+      "dale las gracias a la harina de soja el unico producto que logro zafar de la tendencia bajista generalizada": "2026-11-20",
+      "fuera de lugar el gobierno de kicillof exigira todos los meses informacion salarial y laboral de los empleados y la rural pidio su revision": "2026-11-20",
+      "sanidad lechera una investigacion propone reducir antibiotico": "2026-11-20",
+      "ofrece recompensa por la moto que le robaron en chacabuco": "2026-11-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -58697,7 +58769,11 @@
       "9c844dd7551e8365": "2026-11-20",
       "1b7d0f97ad2e8464": "2026-11-20",
       "511f6217a1dec3a4": "2026-11-20",
-      "c3aff17776b946af": "2026-11-20"
+      "c3aff17776b946af": "2026-11-20",
+      "3c3d3929321a9e2d": "2026-11-20",
+      "47f6fdb67cb656dd": "2026-11-20",
+      "46e670fdf9cc36cb": "2026-11-20",
+      "39e7e705e0f01c8a": "2026-11-20"
     }
   },
   "elegidas": [
@@ -92371,9 +92447,175 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b775144dbe84_portada.jpg"
+    },
+    {
+      "id": "b581880099c4",
+      "cuando": "2026-11-20T19:34-03:00",
+      "titulo_original": "“La Unión” vendió toda la hacienda en Carlos Casares: Agilidad en los negocios y demanda firme pese a la baja del mercado",
+      "descripcion": "La firma “La Unión Negocios Ganaderos” llevó adelante el jueves 19 de noviembre su tradicional remate feria mensual en las instalaciones de la Sociedad Rural de Carlos Casares. Se comercializó la totalidad de la hacienda...",
+      "fuente": "Casares Online",
+      "url": "https://casaresonline.com.ar/la-union-vendio-toda-la-hacienda-en-carlos-casares-agilidad-en-los-negocios-y-demanda-firme-pese-a-la-baja-del-mercado/",
+      "titular": "Hacienda: colocación total y demanda firme en Carlos Casares",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 14,
+        "cercania_pba": 15,
+        "interes_productores": 11,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 65,
+        "commercial_score": 50,
+        "subtema": "ganaderia",
+        "tema": "remate feria",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es un remate ganadero en la vecina Carlos Casares, de interés directo para ganaderos de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          71
+        ],
+        "de_zona": true,
+        "policial_rural": false
+      },
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-20T19:30:00-03:00"
+    },
+    {
+      "id": "30bd6aabf13f",
+      "cuando": "2026-11-20T19:34-03:00",
+      "titulo_original": "Más kilos con animales más jóvenes: recría y feedlot ahora son aliados y cambian el modelo ganadero",
+      "descripcion": "Datos de movimientos de hacienda analizados por el Rosgan confirman que la recría pastoril gana protagonismo, pero lejos de desplazar al engorde a corral, se integra con él para lograr más kilos por animal, mejorar la eficiencia y sostener terminaciones a edades más tempranas.",
+      "fuente": "Infocampo",
+      "url": "https://www.infocampo.com.ar/mas-kilos-con-animales-mas-jovenes-recria-y-feedlot-ahora-son-aliados-y-cambian-el-modelo-ganadero/",
+      "titular": "Recría y feedlot se integran para lograr más kilos de carne",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 13,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 13,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 52,
+        "subtema": "ganaderia",
+        "tema": "recría y feedlot",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Muestra un cambio en el modelo de engorde que le interesa a los ganaderos de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          60,
+          70
+        ],
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-20T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1606b52e-222c-4ff7-a103-22fda97d69df",
+          "slug": "ganaderia-la-recria-y-el-feedlot-se-unen-para-lograr-reses-mas-4d437d",
+          "url": "https://www.diariolacampaña.com.ar/n/ganaderia-la-recria-y-el-feedlot-se-unen-para-lograr-reses-mas-4d437d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18436537903197967",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1768446431953020",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_30bd6aabf13f_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "7a58ad17252a",
+      "rep": {
+        "id": "7a58ad17252a",
+        "fuente": "Chacabuquero",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.chacabuquero.com.ar/feeds/posts/default",
+        "url": "https://www.chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
+        "canonical_url": "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
+        "titulo": "Ofrece recompensa por la moto que le robaron en Chacabuco",
+        "titulo_norm": "ofrece recompensa por la moto que le robaron en chacabuco",
+        "descripcion": "Dato de contacto.El dueño de la moto Rouser Pulsar NS 200 robada esta madrugada de Falucho e Hipólito Yrigoyen ofrece recompensa para recuperarla. Contacto: 2352442082. Volver a Chacabuquero. Video del robo: El Corte Perfecto, en Insiarte 485Contacto por Whatsapp con Chacabuquero: 2352470278Recibir las noticias de Chacabuquero por Whatsapp: Canal de Noticias de Chacabuquero⁸- Últimas noticias- Cómo suscribirse a las noticias de Chacabuquero por WhatsappMás publicaciones del día:- Intensa caída de granizo en municipios vecinos de Chacabuco- Una periodista de Chacabuco está en carrera para ganar un Martín Fierro- Alerta Meteorológica para Chacabuco y la zona- Comunicado sobre controles del agua de Chacabuco- Pide ayuda para volver a su casa en Chacabuco - Accidente en el centro de Chacabuco - Necrológica I- Desalojos en un barrio de Chacabuco- Le robaron antes del amanecer- Este montículo ",
+        "imagen_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO3JemPG8jtUTpOEL7XxdceFfvp6DeoiRys8KCkwzOy4tTkswF4gIkEXo-zDJC-JnE0PdOSGGCu36-qOj89NxODkR81Ta2Fz044PwLrqcWHemQBNsRw3jUzY-j5kWGxC0zsJJkF7G4BOoF4yOTGn7ChU1Dq_0kPMNU2q2bAO8YHeswjVffn_3DXZEQvcg/s1600/1001581206.jpg",
+        "autor": "Cristian Otegui (noreply@blogger.com)",
+        "publicado": "2026-11-20T19:03-03:00",
+        "capturado": "2026-11-20T19:34-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "39e7e705e0f01c8a",
+        "localidad_medio": "Chacabuco"
+      },
+      "grupo": [
+        {
+          "id": "7a58ad17252a",
+          "fuente": "Chacabuquero",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.chacabuquero.com.ar/feeds/posts/default",
+          "url": "https://www.chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
+          "canonical_url": "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
+          "titulo": "Ofrece recompensa por la moto que le robaron en Chacabuco",
+          "titulo_norm": "ofrece recompensa por la moto que le robaron en chacabuco",
+          "descripcion": "Dato de contacto.El dueño de la moto Rouser Pulsar NS 200 robada esta madrugada de Falucho e Hipólito Yrigoyen ofrece recompensa para recuperarla. Contacto: 2352442082. Volver a Chacabuquero. Video del robo: El Corte Perfecto, en Insiarte 485Contacto por Whatsapp con Chacabuquero: 2352470278Recibir las noticias de Chacabuquero por Whatsapp: Canal de Noticias de Chacabuquero⁸- Últimas noticias- Cómo suscribirse a las noticias de Chacabuquero por WhatsappMás publicaciones del día:- Intensa caída de granizo en municipios vecinos de Chacabuco- Una periodista de Chacabuco está en carrera para ganar un Martín Fierro- Alerta Meteorológica para Chacabuco y la zona- Comunicado sobre controles del agua de Chacabuco- Pide ayuda para volver a su casa en Chacabuco - Accidente en el centro de Chacabuco - Necrológica I- Desalojos en un barrio de Chacabuco- Le robaron antes del amanecer- Este montículo ",
+          "imagen_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO3JemPG8jtUTpOEL7XxdceFfvp6DeoiRys8KCkwzOy4tTkswF4gIkEXo-zDJC-JnE0PdOSGGCu36-qOj89NxODkR81Ta2Fz044PwLrqcWHemQBNsRw3jUzY-j5kWGxC0zsJJkF7G4BOoF4yOTGn7ChU1Dq_0kPMNU2q2bAO8YHeswjVffn_3DXZEQvcg/s1600/1001581206.jpg",
+          "autor": "Cristian Otegui (noreply@blogger.com)",
+          "publicado": "2026-11-20T19:03-03:00",
+          "capturado": "2026-11-20T19:34-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "39e7e705e0f01c8a",
+          "localidad_medio": "Chacabuco"
+        }
+      ],
+      "score": {
+        "conversacion": 22,
+        "historia_concreta": 18,
+        "cercania_pba": 20,
+        "interes_productores": 10,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 83,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "robo moto",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Pasa en Chacabuco, genera mucha indignación y comentarios locales rápidos entre vecinos y gente de la zona.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 2,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": true,
+        "policial_rural": true
+      },
+      "cuando": "2026-11-20T19:34-03:00"
+    },
     {
       "id": "cbfec1f1a89d",
       "rep": {
@@ -92641,76 +92883,6 @@
         "policial_rural": false
       },
       "cuando": "2026-11-20T17:30-03:00"
-    },
-    {
-      "id": "30bd6aabf13f",
-      "rep": {
-        "id": "30bd6aabf13f",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/mas-kilos-con-animales-mas-jovenes-recria-y-feedlot-ahora-son-aliados-y-cambian-el-modelo-ganadero/",
-        "canonical_url": "https://infocampo.com.ar/mas-kilos-con-animales-mas-jovenes-recria-y-feedlot-ahora-son-aliados-y-cambian-el-modelo-ganadero",
-        "titulo": "Más kilos con animales más jóvenes: recría y feedlot ahora son aliados y cambian el modelo ganadero",
-        "titulo_norm": "mas kilos con animales mas jovenes recria y feedlot ahora son aliados y cambian el modelo ganadero",
-        "descripcion": "Datos de movimientos de hacienda analizados por el Rosgan confirman que la recría pastoril gana protagonismo, pero lejos de desplazar al engorde a corral, se integra con él para lograr más kilos por animal, mejorar la eficiencia y sostener terminaciones a edades más tempranas.",
-        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/rosgan-2.jpg",
-        "autor": "infocampo",
-        "publicado": "2026-11-20T15:01-03:00",
-        "capturado": "2026-11-20T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "b517ea86fb242723",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "30bd6aabf13f",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/mas-kilos-con-animales-mas-jovenes-recria-y-feedlot-ahora-son-aliados-y-cambian-el-modelo-ganadero/",
-          "canonical_url": "https://infocampo.com.ar/mas-kilos-con-animales-mas-jovenes-recria-y-feedlot-ahora-son-aliados-y-cambian-el-modelo-ganadero",
-          "titulo": "Más kilos con animales más jóvenes: recría y feedlot ahora son aliados y cambian el modelo ganadero",
-          "titulo_norm": "mas kilos con animales mas jovenes recria y feedlot ahora son aliados y cambian el modelo ganadero",
-          "descripcion": "Datos de movimientos de hacienda analizados por el Rosgan confirman que la recría pastoril gana protagonismo, pero lejos de desplazar al engorde a corral, se integra con él para lograr más kilos por animal, mejorar la eficiencia y sostener terminaciones a edades más tempranas.",
-          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/rosgan-2.jpg",
-          "autor": "infocampo",
-          "publicado": "2026-11-20T15:01-03:00",
-          "capturado": "2026-11-20T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "b517ea86fb242723",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 13,
-        "historia_concreta": 10,
-        "cercania_pba": 15,
-        "interes_productores": 13,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 64,
-        "commercial_score": 52,
-        "subtema": "ganaderia",
-        "tema": "recría y feedlot",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Muestra un cambio en el modelo de engorde que le interesa a los ganaderos de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          70
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T16:00-03:00"
     },
     {
       "id": "9c810a97c84e",
@@ -93121,76 +93293,6 @@
       "cuando": "2026-11-20T14:30-03:00"
     },
     {
-      "id": "9dd467ce1634",
-      "rep": {
-        "id": "9dd467ce1634",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/hace-muchos-anos-que-no-veiamos-una-baja-en-plena-primavera-juan-pedro-colombo-asegura-que-la-invernada-ya-retrocedio-hasta-12-desde-los-maximos-del-ano/",
-        "canonical_url": "https://bichosdecampo.com/hace-muchos-anos-que-no-veiamos-una-baja-en-plena-primavera-juan-pedro-colombo-asegura-que-la-invernada-ya-retrocedio-hasta-12-desde-los-maximos-del-ano",
-        "titulo": "“Hace muchos años que no veíamos una baja en plena primavera”: Juan Pedro Colombo asegura que la invernada ya retrocedió hasta 12% desde los máximos del año",
-        "titulo_norm": "hace muchos anos que no veiamos una baja en plena primavera juan pedro colombo asegura que la invernada ya retrocedio hasta 12 desde los maximos del ano",
-        "descripcion": "La euforia que dominó al mercado de invernada durante los primeros meses del año fue perdiendo fuerza y dio paso a un escenario de precios más tranquilos. Según explicó Juan Pedro Colombo, consignatario y titular de la firma Colombo y Magliano, la caída responde a una combinación de factores: una menor firmeza de la hacienda […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2018/08/remate-de-terneros.jpg",
-        "autor": "Nicolas Razzetti",
-        "publicado": "2026-11-20T13:18-03:00",
-        "capturado": "2026-11-20T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8f16e65036d80ebd",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "9dd467ce1634",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/hace-muchos-anos-que-no-veiamos-una-baja-en-plena-primavera-juan-pedro-colombo-asegura-que-la-invernada-ya-retrocedio-hasta-12-desde-los-maximos-del-ano/",
-          "canonical_url": "https://bichosdecampo.com/hace-muchos-anos-que-no-veiamos-una-baja-en-plena-primavera-juan-pedro-colombo-asegura-que-la-invernada-ya-retrocedio-hasta-12-desde-los-maximos-del-ano",
-          "titulo": "“Hace muchos años que no veíamos una baja en plena primavera”: Juan Pedro Colombo asegura que la invernada ya retrocedió hasta 12% desde los máximos del año",
-          "titulo_norm": "hace muchos anos que no veiamos una baja en plena primavera juan pedro colombo asegura que la invernada ya retrocedio hasta 12 desde los maximos del ano",
-          "descripcion": "La euforia que dominó al mercado de invernada durante los primeros meses del año fue perdiendo fuerza y dio paso a un escenario de precios más tranquilos. Según explicó Juan Pedro Colombo, consignatario y titular de la firma Colombo y Magliano, la caída responde a una combinación de factores: una menor firmeza de la hacienda […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2018/08/remate-de-terneros.jpg",
-          "autor": "Nicolas Razzetti",
-          "publicado": "2026-11-20T13:18-03:00",
-          "capturado": "2026-11-20T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8f16e65036d80ebd",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 10,
-        "cercania_pba": 15,
-        "interes_productores": 13,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 69,
-        "commercial_score": 55,
-        "subtema": "ganaderia",
-        "tema": "invernada",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Toca directamente el bolsillo de los ganaderos de la zona al hablar de la baja en la invernada.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          67
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T14:30-03:00"
-    },
-    {
       "id": "849ef6aca650",
       "rep": {
         "id": "849ef6aca650",
@@ -93412,76 +93514,6 @@
       "cuando": "2026-11-20T10:02-03:00"
     },
     {
-      "id": "b581880099c4",
-      "rep": {
-        "id": "b581880099c4",
-        "fuente": "Casares Online",
-        "tipo_fuente": "medio",
-        "source_url": "https://casaresonline.com.ar/feed/",
-        "url": "https://casaresonline.com.ar/la-union-vendio-toda-la-hacienda-en-carlos-casares-agilidad-en-los-negocios-y-demanda-firme-pese-a-la-baja-del-mercado/",
-        "canonical_url": "https://casaresonline.com.ar/la-union-vendio-toda-la-hacienda-en-carlos-casares-agilidad-en-los-negocios-y-demanda-firme-pese-a-la-baja-del-mercado",
-        "titulo": "“La Unión” vendió toda la hacienda en Carlos Casares: Agilidad en los negocios y demanda firme pese a la baja del mercado",
-        "titulo_norm": "la union vendio toda la hacienda en carlos casares agilidad en los negocios y demanda firme pese a la baja del mercado",
-        "descripcion": "La firma “La Unión Negocios Ganaderos” llevó adelante el jueves 19 de noviembre su tradicional remate feria mensual en las instalaciones de la Sociedad Rural de Carlos Casares. Se comercializó la totalidad de la hacienda...",
-        "imagen_url": "https://casaresonline.com.ar/wp-content/uploads/2026/11/IMG_20250424_160235.jpg",
-        "autor": "casares",
-        "publicado": "2026-11-20T08:19-03:00",
-        "capturado": "2026-11-20T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "bc3543360b1d0ba6",
-        "localidad_medio": "Carlos Casares"
-      },
-      "grupo": [
-        {
-          "id": "b581880099c4",
-          "fuente": "Casares Online",
-          "tipo_fuente": "medio",
-          "source_url": "https://casaresonline.com.ar/feed/",
-          "url": "https://casaresonline.com.ar/la-union-vendio-toda-la-hacienda-en-carlos-casares-agilidad-en-los-negocios-y-demanda-firme-pese-a-la-baja-del-mercado/",
-          "canonical_url": "https://casaresonline.com.ar/la-union-vendio-toda-la-hacienda-en-carlos-casares-agilidad-en-los-negocios-y-demanda-firme-pese-a-la-baja-del-mercado",
-          "titulo": "“La Unión” vendió toda la hacienda en Carlos Casares: Agilidad en los negocios y demanda firme pese a la baja del mercado",
-          "titulo_norm": "la union vendio toda la hacienda en carlos casares agilidad en los negocios y demanda firme pese a la baja del mercado",
-          "descripcion": "La firma “La Unión Negocios Ganaderos” llevó adelante el jueves 19 de noviembre su tradicional remate feria mensual en las instalaciones de la Sociedad Rural de Carlos Casares. Se comercializó la totalidad de la hacienda...",
-          "imagen_url": "https://casaresonline.com.ar/wp-content/uploads/2026/11/IMG_20250424_160235.jpg",
-          "autor": "casares",
-          "publicado": "2026-11-20T08:19-03:00",
-          "capturado": "2026-11-20T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "bc3543360b1d0ba6",
-          "localidad_medio": "Carlos Casares"
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 14,
-        "cercania_pba": 15,
-        "interes_productores": 11,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 65,
-        "commercial_score": 50,
-        "subtema": "ganaderia",
-        "tema": "remate feria",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es un remate ganadero en la vecina Carlos Casares, de interés directo para ganaderos de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          71
-        ],
-        "de_zona": true,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T10:02-03:00"
-    },
-    {
       "id": "fce1d3d00bdd",
       "rep": {
         "id": "fce1d3d00bdd",
@@ -93692,8 +93724,8 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T19:00:36-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-20T19:38:52-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -102814,7 +102846,8 @@
     "78e994101a03": "2026-11-20T17:30",
     "acfacd647596": "2026-11-20T17:30",
     "f4907fb57a36": "2026-11-20T18:04",
-    "cbfec1f1a89d": "2026-11-20T18:04"
+    "cbfec1f1a89d": "2026-11-20T18:04",
+    "7a58ad17252a": "2026-11-20T19:34"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
