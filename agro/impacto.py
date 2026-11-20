@@ -35,7 +35,7 @@ GRIS_TENUE = (130, 135, 142)
 M = 72                                   # margen
 ALTO_FOTO = 930
 ANTON = D.MARCA / "Anton-Regular.ttf"           # Google Fonts, licencia OFL (OFL-Anton.txt)
-MESES = re.compile(r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)", re.I)
+MESES = re.compile(r"\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b", re.I)
 
 
 def activo() -> bool:
@@ -302,6 +302,12 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "") -> Path:
             dr.text((M, y), x["dato_rotulo"].upper()[:48], font=f_r, fill=BLANCO)
             y += 64
         y += 16
+    elif dato and MESES.search(dato):                                  # la fecha, en una línea en verde
+        f_r = D.fuente("bold", 36)
+        rot = (x.get("dato_rotulo") or "").strip().rstrip(":.")
+        linea = (f"{rot[0].upper()}{rot[1:]}: {dato}" if rot else dato)[:60]
+        dr.text((M, y), linea, font=f_r, fill=VERDE)
+        y += 76
     if x.get("puntos"):
         f_p = D.fuente("medium", 38)
         for p in x["puntos"][:4]:
