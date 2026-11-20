@@ -259,8 +259,22 @@ def _rayo(d: ImageDraw.ImageDraw, x: float, y: float, h: float, color=AMARILLO) 
 
 def _encabezado(d, titulo: str, sub: str, tc: dict) -> None:
     d.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
-    d.text((60, 44), titulo, font=D.fuente("negra", 60), fill=D.BLANCO)
+    f, r = D.ajustar(d, titulo, "negra", 60, 38, D.W - 120, 1)    # el gancho (SEO) en un renglón
+    d.text((60, 44 + (60 - f.size) // 2), r[0] if r else titulo, font=f, fill=D.BLANCO)
     d.text((60, 120), sub, font=D.fuente("medium", 34), fill=tc["texto"])
+
+
+def placa_pueblos(titulo: str, sub: str, puntos: list, t: float, pie: str) -> Image.Image:
+    """El partido de Chivilcoy con una burbuja por pueblo que crece con los mm (agro/mapa_zona.py)."""
+    from agro import mapa_zona as MZ
+    tc = D.TEMAS["grafito"]
+    im = Image.new("RGBA", (D.W, D.H45), tc["fondo"] + (255,))
+    d = ImageDraw.Draw(im)
+    _encabezado(d, titulo, sub, tc)
+    m = MZ.pueblos(puntos, t, 1000, D.H45 - 300, fondo=tc["linea"])
+    im.alpha_composite(m, ((D.W - m.width) // 2, 200))
+    d.text((60, D.H45 - 56), pie, font=D.fuente("regular", 22), fill=tc["tenue"])
+    return im
 
 
 def cuadros_mapa(datos_: dict, horas: list, titulo: str):
@@ -403,11 +417,10 @@ def tema_lluvia_horas(ahora: datetime, horas: list, datos_: dict) -> dict:
     primera = next((h for h in horas if h["mm"] >= 0.3 or h["tormenta"]), None)
     cuando = _cuando(primera["t"], ahora) if primera else "hoy"
     gancho = (f"Tormenta en Chivilcoy: ¿a qué hora llega?" if tormenta else "¿A qué hora llueve en Chivilcoy?")
-    fn_mapa, dur_mapa = cuadros_mapa(datos_, horas, "¿A QUÉ HORA LLUEVE?")
+    fn_mapa, dur_mapa = cuadros_mapa(datos_, horas, gancho.upper())
     pueblos = ML.lluvia_por_pueblo({"grilla": datos_["total"], "chivilcoy_total": total})
     diap = [
-        ("video", {"volanta": "CHIVILCOY · PRONÓSTICO", "titulo": gancho, "video": "lluvia"}),
-        ("propia", {"fn": fn_mapa, "dur": dur_mapa}),
+        ("propia", {"fn": fn_mapa, "dur": dur_mapa, "titulo": gancho}),     # arranca con el mapa (20/11/2026)
         ("propia", {"fn": lambda t: placa_horas(horas, "CHIVILCOY, HORA POR HORA", "Milímetros previstos en cada hora",
                                                  t), "dur": 5.5}),
     ]
@@ -442,15 +455,17 @@ def tema_llovio(ahora: datetime, mem: dict) -> dict:
     total = sum(h["mm"] for h in horas)
     pueblos = sorted([(n, llovido(mem, ahora, 24, n)[0]) for n, *_ in LUGARES], key=lambda f: -f[1])
     gancho = "¿Cuánto llovió en Chivilcoy?"
+    lugares = {n: (la, lo) for n, la, lo in LUGARES}
+    puntos = [(n, *lugares[n], v) for n, v in pueblos if n in lugares]
     diap = [
-        ("video", {"volanta": "CHIVILCOY · ÚLTIMAS 24 HORAS", "titulo": gancho, "video": "lluvia"}),
+        ("propia", {"fn": lambda t: placa_pueblos(gancho.upper(), "Estimado en las últimas 24 horas, pueblo por pueblo",
+                                                  puntos, t, "Estimado con el pronóstico de MET Norway (ECMWF): no es "
+                                                  "medición."), "dur": 5.0, "titulo": gancho}),
         ("video", {"volanta": "ESTIMADO EN CHIVILCOY", "numero": round(total), "dec": 0, "unidad": "mm",
                    "texto": "en las últimas 24 horas (estimado con el pronóstico; no es una medición).",
                    "video": "lluvia"}),
         ("propia", {"fn": lambda t: placa_horas(horas, "ASÍ LLOVIÓ", "Milímetros estimados en cada hora", t, True),
                     "dur": 5.0}),
-        ("barras", {"titulo": "Pueblo por pueblo", "sub": "mm estimados en las últimas 24 horas",
-                    "filas": [(n, round(v, 1)) for n, v in pueblos], "dec": 0, "unidad": "mm"}),
     ]
     if total >= _num("LLOVIO_CAMINOS_MM", 30):
         diap.append(("video", {"volanta": "CAMINOS RURALES Y LOTES", "titulo": "¿Cómo quedaron los caminos y los "
@@ -478,10 +493,8 @@ def tema_temperatura(ahora: datetime, horas: list, marca: str) -> dict:
         gancho = f"{'Helada' if k['temp'] <= 0 else 'Frío intenso'} en Chivilcoy: {k['temp']:.0f}° {cuando}"
         consejo = "Atención con los cultivos sensibles, las huertas y los animales recién nacidos."
     diap = [
-        ("video", {"volanta": "CHIVILCOY · PRONÓSTICO", "titulo": gancho,
-                   "video": "ganado" if marca == "max" else "campo"}),
-        ("propia", {"fn": lambda t: placa_temperatura(horas, "HORA POR HORA", "Temperatura prevista en Chivilcoy", t,
-                                                      marca), "dur": 5.5}),
+        ("propia", {"fn": lambda t: placa_temperatura(horas, gancho.upper(), "Temperatura prevista hora por hora", t,
+                                                      marca), "dur": 5.5, "titulo": gancho}),
         ("video", {"volanta": "LA MÁXIMA" if marca == "max" else "LA MÍNIMA", "numero": round(k["temp"]), "dec": 0,
                    "unidad": "°C", "texto": f"a las {k['t'].hour} h ({cuando}). {consejo}",
                    "video": "ganado" if marca == "max" else "campo"}),

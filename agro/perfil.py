@@ -243,32 +243,25 @@ def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
     pasos = []
 
     def tapa():
-        im = fondo(foto, 120)
+        # 20/11/2026 (el editor: «no inventes una portada con fotos… directo a la info con el mapa… con el título
+        # con SEO y buen hook»): la tapa es el mapa con el partido resaltado y el título con la palabra clave primero.
+        im = fondo(None)
         d = ImageDraw.Draw(im)
-        _pin(d, W / 2, 470)
-        y = _titulo(im, 510, nombre, "", 170, 90, 2)
-        _centrado(d, y - 6, "Buenos Aires", D.fuente("regular", 42), GRIS)
-        _centrado(d, y + 58, "Perfil productivo", D.fuente("medium", 46), BLANCO)
-        if p.get("hectareas"):
-            _pastilla(d, y + 150, f"{_coma(p['hectareas'], 0)} ha")
-        _marca_pie(im)
-        if credito:
-            _centrado(d, H - 40, f"Imagen ilustrativa: {credito}"[:80], D.fuente("regular", 20), TENUE)
+        y = _titulo(im, 96, f"Campo en {nombre}: lo que tenés que saber", f"Campo en {nombre}", 92, 60, 3)
+        _centrado(d, y + 14, "Suelo, agua, siembra y rindes del partido", D.fuente("medium", 38), GRIS)
+        y += 20
+        alto = H - (y + 60) - 190
+        m = mapa(p["slug"], min(860, alto))
+        im.alpha_composite(m, ((W - m.width) // 2, y + 50))
+        yb = y + 60 + m.height
+        datos = [f"{_coma(p['hectareas'], 0)} ha"] if p.get("hectareas") else []
+        km = km_a_caba(p["slug"])
+        if datos:
+            _pastilla(d, yb, datos[0])
+        if km:
+            _centrado(d, yb + 78, f"A unos {km} km de la Ciudad de Buenos Aires", D.fuente("medium", 32), GRIS)
         return im
     pasos.append(tapa)
-
-    if centroide(p["slug"]):
-        def donde():
-            im = fondo(None)
-            d = ImageDraw.Draw(im)
-            y = _titulo(im, 120, f"Dónde está {nombre}", nombre, 84, 56, 2)
-            m = mapa(p["slug"], 820)
-            im.alpha_composite(m, ((W - m.width) // 2, y + 10))
-            km = km_a_caba(p["slug"])
-            if km:
-                _centrado(d, y + 850, f"A unos {km} km de la Ciudad de Buenos Aires", D.fuente("medium", 38), GRIS)
-            return im
-        pasos.append(donde)
 
     if p.get("productividad"):
         def tierra():
@@ -377,7 +370,7 @@ def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
         pasos.append(nino)
 
     def cierre():
-        im = fondo(foto, 175)
+        im = fondo(None)
         d = ImageDraw.Draw(im)
         y = _titulo(im, 330, f"¿Tenés campo en {nombre}?", nombre, 110, 64, 3)
         _parrafo(d, y + 20, "Contanos cómo viene tu campaña en los comentarios. Guardalo y compartilo.",
@@ -487,7 +480,8 @@ def corrida(publicar: bool, slug: str = "", ahora: datetime = None, ruta_mem=Non
     carpeta = SALIDA / f"perfil_{ahora:%Y-%m-%d_%H%M}_{slug}"
     carpeta.mkdir(parents=True, exist_ok=True)
     usados = mem.setdefault("banco_usados", {})
-    foto, credito = (foto_fn or foto_aerea)(carpeta, usados, ahora, log)
+    # Sin foto de relleno (20/11/2026): todo es mapa y datos.
+    foto, credito = (foto_fn(carpeta, usados, ahora, log) if foto_fn else (None, ""))
     archivos = laminas(p, foto, carpeta, credito)
     texto = caption(p, credito)
     (carpeta / "texto.txt").write_text(texto, encoding="utf-8")

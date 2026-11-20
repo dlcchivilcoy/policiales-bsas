@@ -12,6 +12,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from agro import reel_tiempo as RT  # noqa: E402
 
+RT.SALIDA = Path(tempfile.mkdtemp()) / "salida"   # que la prueba no deje carpetas en salida_agro
+
 fallas, total = [], 0
 
 

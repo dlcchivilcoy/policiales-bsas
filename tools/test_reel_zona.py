@@ -40,8 +40,12 @@ chequear("el trigo: Chivilcoy primero de la zona → el gancho pregunta quién t
 barras = next(d for k, d in t["diapositivas"] if k == "barras")
 chequear("el ranking va de mayor a menor", [v for _, v in barras["filas"]] == sorted([v for _, v in barras["filas"]],
                                                                                     reverse=True))
-chequear("cada tema empieza con el gancho y termina con el cierre",
-         all(x["diapositivas"][0][1].get("titulo") and x["diapositivas"][-1][0] == "cierre" for x in disp.values()))
+chequear("cada tema arranca con la info (mapa, gráfico o lista) con el gancho, sin portada de video",
+         all(x["diapositivas"][0][0] in ("mapa", "barras", "serie", "lista") and x["diapositivas"][0][1].get("titulo")
+             == x["gancho"] for x in disp.values()))
+chequear("…y termina con el cierre", all(x["diapositivas"][-1][0] == "cierre" for x in disp.values()))
+chequear("los rankings de la zona arrancan con el mapa", disp["trigo_zona"]["diapositivas"][0][0] == "mapa"
+         and disp["tierra"]["diapositivas"][0][0] == "mapa")
 viejo = dict(AF, traido="2026-08-01")
 chequear("El Niño no va con datos de hace más de 45 días", RZ.tema_nino(viejo, HOY.date()) is None)
 chequear("los números con coma y sin «,0»", RZ._coma(27.5) == "27,5" and RZ._coma(50.0) == "50"
@@ -82,6 +86,7 @@ def publicador_falso(p, log=print):
 RZ.armar = armar_falso
 with tempfile.TemporaryDirectory() as d:
     ruta = Path(d) / "agro_zona.json"
+    RZ.SALIDA = Path(d) / "salida"
     sin_lluvia = lambda ahora: 0.0
     kw = dict(ruta_mem=ruta, af=AF, lluvia_fn=sin_lluvia, publicador=publicador_falso,
               videos_fn=lambda *a, **k: {}, log=lambda *a: None)

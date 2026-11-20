@@ -222,7 +222,8 @@ def tema_ranking_cultivo(af: dict, cultivo: str) -> dict | None:
     linea_vs = (f"{abs(vs)} % {'arriba' if vs > 0 else 'abajo'} del promedio bonaerense ({_coma(r.get('provincia'))})"
                 if vs else f"en línea con el promedio bonaerense ({_coma(r.get('provincia'))})")
     diap = [
-        ("video", {"volanta": "CHIVILCOY Y LA ZONA", "titulo": gancho, "video": VIDEO_CULTIVO[cultivo]}),
+        ("mapa", {"titulo": gancho, "sub": f"Rinde promedio {del_} {nombre} · qq/ha · últimas cinco campañas",
+                  "valores": {k: _rinde(x, cultivo) for k, x in (af.get("partidos") or {}).items()}, "dec": 1}),
         ("barras", {"titulo": f"Rinde promedio de {nombre}", "sub": "qq/ha · últimas cinco campañas, por partido",
                     "filas": filas, "dec": 1}),
         ("video", {"volanta": remate.upper(), "numero": r["promedio"], "dec": 1, "unidad": "qq/ha",
@@ -255,8 +256,7 @@ def tema_historia(af: dict, cultivo: str) -> dict | None:
     gancho = (f"¡Récord! {el.capitalize()} {nombre} de Chivilcoy, campaña por campaña" if record
               else f"{el.capitalize()} {nombre} de Chivilcoy, campaña por campaña")
     diap = [
-        ("video", {"volanta": "CHIVILCOY", "titulo": gancho, "video": VIDEO_CULTIVO[cultivo]}),
-        ("serie", {"titulo": f"Rinde {del_} {nombre} en Chivilcoy", "sub": "qq/ha, campaña por campaña",
+        ("serie", {"titulo": gancho, "sub": f"Rinde {del_} {nombre} en Chivilcoy · qq/ha, campaña por campaña",
                    "serie": [(s[0], s[1]) for s in serie], "mejor": r["mejor"][0], "peor": r["peor"][0]}),
         ("video", {"volanta": "RÉCORD" if record else "LA MEJOR", "numero": r["mejor"][1], "dec": 1, "unidad": "qq/ha",
                    "texto": f"en la campaña {r['mejor'][0]}" + (": la última, la mejor de la serie." if record else "."),
@@ -282,7 +282,8 @@ def tema_tierra(af: dict) -> dict | None:
         return None
     gancho = "¿Qué partido de la zona tiene la mejor tierra?"
     diap = [
-        ("video", {"volanta": "CHIVILCOY Y LA ZONA", "titulo": gancho, "video": "campo"}),
+        ("mapa", {"titulo": gancho, "sub": "Índice de productividad del suelo (sobre 100, INTA)",
+                  "valores": {k: x.get("productividad") for k, x in (af.get("partidos") or {}).items()}, "dec": 0}),
         ("barras", {"titulo": "Índice de productividad del suelo", "sub": "sobre 100 · carta de suelos del INTA",
                     "filas": filas, "dec": 0}),
         ("video", {"volanta": "CHIVILCOY", "numero": chiv["productividad"], "dec": 0, "unidad": "/100",
@@ -322,7 +323,10 @@ def tema_nino(af: dict, hoy) -> dict | None:
     soja = tabla["soja"][k]
     zona = _ranking(af, lambda p: (((p.get("enso") or {}).get("tabla") or {}).get("soja") or {}).get(k))
     diap = [
-        ("video", {"volanta": "CLIMA", "titulo": gancho, "video": "lluvia"}),
+        ("mapa", {"titulo": gancho, "sub": f"Rinde de la soja en años de {fase}, contra su tendencia (desde 1980)",
+                  "valores": {kk: (((x.get("enso") or {}).get("tabla") or {}).get("soja") or {}).get(k)
+                              for kk, x in (af.get("partidos") or {}).items()},
+                  "dec": 0, "unidad": "%", "signo": True, "divergente": True}),
         ("video", {"volanta": f"{fase.upper()} EN EL PACÍFICO", "numero": e.get("oni"), "dec": 1, "unidad": "°C",
                    "signo": True, "texto": f"el último ONI ({e.get('oni_tramo')}), el índice de NOAA: aviso de "
                                            f"{fase} del {e.get('aviso')}.", "video": "lluvia"}),
@@ -334,9 +338,7 @@ def tema_nino(af: dict, hoy) -> dict | None:
                                if e.get("soja_abajo_de_10") is not None and k == "nino" else "."),
                    "video": "cosecha"}),
     ]
-    if len(zona) >= 5:
-        diap.append(("barras", {"titulo": f"La soja en años de {fase}", "sub": "contra su tendencia, partido por partido",
-                                "filas": zona, "dec": 0, "unidad": "%", "signo": True}))
+    del zona                                               # ya va en el mapa del principio
     diap.append(_cierre("Guardalo y compartilo con alguien del campo"))
     lista = ", ".join(f"{n.lower()} {v:+.0f} %".replace("+0 %", "0 %") for n, v in filas)
     texto = [f"🌊 {gancho} {e.get('texto') or ''}".strip(),
@@ -354,12 +356,11 @@ def tema_suelo(af: dict) -> dict | None:
     gancho = "¿Qué tierra pisás en Chivilcoy?"
     serie, pct = c["series"][0]
     agua = next((v for n, v in c["limitantes"] if n.lower().startswith("exceso de agua")), None)
-    diap = [("video", {"volanta": "CHIVILCOY", "titulo": gancho, "video": "campo"})]
+    diap = [("barras", {"titulo": gancho, "sub": "Las series de suelo: % del partido · carta 1:50.000 del INTA",
+                        "filas": c["series"][:6], "dec": 1, "unidad": "%", "resaltar": serie})]
     if c.get("franco_limosa"):
         diap.append(("video", {"volanta": "LA TEXTURA", "numero": c["franco_limosa"], "dec": 1, "unidad": "%",
                                "texto": "del partido es franco limosa en los primeros 15 cm.", "video": "maquinaria"}))
-    diap.append(("barras", {"titulo": "Las series de suelo", "sub": "% del partido · carta 1:50.000 del INTA",
-                            "filas": c["series"][:6], "dec": 1, "unidad": "%", "resaltar": serie}))
     if agua:
         diap.append(("video", {"volanta": "EL TALÓN DE AQUILES", "numero": agua, "dec": 0, "unidad": "%",
                                "texto": "del partido tiene como limitante el exceso de agua o el anegamiento.",
@@ -385,10 +386,8 @@ def tema_sequias(af: dict) -> dict | None:
     secas = [x for x in lista if "sequ" in x["motivo"]]
     gancho = "Las emergencias del campo de Chivilcoy"
     diap = [
-        ("video", {"volanta": "CHIVILCOY", "titulo": gancho, "video": "campo"}),
-        ("video", {"volanta": "EMERGENCIAS AGROPECUARIAS", "numero": em.get("total") or len(lista), "dec": 0,
-                   "unidad": "", "texto": "declaradas que alcanzaron al partido.", "video": "campo"}),
-        ("lista", {"titulo": "Cuándo y por qué", "sub": "Emergencias agropecuarias declaradas",
+        ("lista", {"titulo": gancho, "sub": f"{em.get('total') or len(lista)} emergencias agropecuarias declaradas: "
+                                            "cuándo y por qué",
                    "filas": [(f"{x['desde']} – {x['hasta']}", x["motivo"].capitalize()) for x in lista]}),
     ]
     if secas:
@@ -418,12 +417,11 @@ def tema_gemelas(af: dict) -> dict | None:
         return None
     gancho = "Chivilcoy tiene gemelas en Estados Unidos"
     diap = [
-        ("video", {"volanta": "CURIOSO", "titulo": gancho, "video": "maiz"}),
+        ("lista", {"titulo": gancho, "sub": "Las zonas de EE.UU. con clima y suelo más parecidos (similitud sobre 100)",
+                   "filas": [(f"{x['condado']}, {x['estado']}", f"{x['similitud']}/100") for x in g]}),
         ("video", {"volanta": f"{g[0]['condado'].upper()}, {g[0]['estado'].upper()}", "numero": g[0]["similitud"],
                    "dec": 0, "unidad": "/100", "texto": "de similitud con Chivilcoy en clima y suelo: de las zonas "
                                                        "de EE.UU., de las que más se le parecen.", "video": "cosecha"}),
-        ("lista", {"titulo": "Sus gemelas", "sub": "Similitud de clima y suelo (sobre 100)",
-                   "filas": [(f"{x['condado']}, {x['estado']}", f"{x['similitud']}/100") for x in g]}),
     ]
     soja = _rinde(c, "soja")
     if soja:
@@ -673,8 +671,23 @@ def placa_lista(d: dict, t: float, fuente: str) -> Image.Image:
     return im
 
 
-DURACION = {"video": 4.2, "barras": 6.0, "serie": 6.5, "lista": 5.0, "cierre": 2.6}
-DURACION_GANCHO = 3.4
+def placa_mapa(d: dict, t: float, fuente: str) -> Image.Image:
+    """El mapa de la zona con el dato del tema (agro/mapa_zona.py): la primera diapositiva, con el gancho arriba."""
+    from agro import mapa_zona as MZ
+    tc = _tema_color()
+    im = Image.new("RGBA", (D.W, D.H45), tc["fondo"] + (255,))
+    dr = ImageDraw.Draw(im)
+    y = _encabezado(dr, d, tc)
+    fmt = (lambda v: _numero_txt(v, d.get("dec", 0), d.get("signo")) + (d.get("unidad") or ""))
+    alto = D.H45 - 70 - y
+    m = MZ.dibujar(d["valores"], t, 980, alto, fmt=fmt, divergente=d.get("divergente", False), fondo=tc["linea"])
+    im.alpha_composite(m, ((D.W - m.width) // 2, y))
+    dr.text((60, D.H45 - 56), fuente, font=D.fuente("regular", 22), fill=tc["tenue"])
+    return im.convert("RGB")
+
+
+DURACION = {"mapa": 5.0, "video": 4.2, "barras": 6.0, "serie": 6.5, "lista": 5.0, "cierre": 2.6}
+DURACION_GANCHO = 3.4                 # (ya no hay gancho con video: los reels arrancan con la info, 20/11/2026)
 
 
 def _ffmpeg() -> str:
@@ -771,15 +784,17 @@ def armar(tema: dict, salida: Path, videos: dict = None) -> dict:
                     cuadro = placa_lista(d, t, fuente)
                 elif tipo == "propia":
                     cuadro = d["fn"](t).convert("RGB")
+                elif tipo == "mapa":
+                    cuadro = placa_mapa(d, t, fuente)
                 else:
                     cuadro = cierre
                 if fin_anterior is not None and t < FUNDIDO:
                     cuadro = Image.blend(fin_anterior, cuadro, t / FUNDIDO)
-                if portada is None and tipo == "video" and t >= 0.6:
-                    portada = cuadro.copy()
                 proc.stdin.write(cuadro.tobytes())
                 previo = cuadro
             fin_anterior = previo
+            if portada is None:                            # la portada: la primera diapositiva ya completa
+                portada = previo.copy()
             if cuadros_vid is not None:
                 cuadros_vid.close()
         proc.stdin.close()
