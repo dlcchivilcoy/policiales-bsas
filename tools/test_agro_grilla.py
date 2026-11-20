@@ -46,10 +46,44 @@ TZ = timezone(timedelta(hours=-3))
 
 # --- la grilla -------------------------------------------------------------------------------------------
 feed = [(f"{h:02d}:{m:02d}", t) for h, m, t in AG.agenda() if t in ("reel", "carrusel", "reel_datos")]
-chequear("grilla: reel 07, datos 08 y después reel y carrusel alternados todo el día",
-         feed == [("07:00", "reel"), ("08:00", "reel_datos"), ("10:00", "reel"), ("11:30", "carrusel"),
-                  ("13:00", "reel"), ("14:30", "carrusel"), ("16:00", "reel"), ("18:00", "carrusel"),
-                  ("19:30", "reel"), ("21:00", "carrusel")])
+chequear("grilla (20/11/2026): 12 noticias, dos por corrida, intercaladas (el formato final lo decide el tema)",
+         feed == [("07:00", "reel"), ("08:00", "reel_datos"), ("08:30", "reel"), ("10:00", "carrusel"),
+                  ("11:30", "reel"), ("13:00", "carrusel"), ("14:30", "reel"), ("16:00", "carrusel"),
+                  ("17:30", "reel"), ("18:00", "carrusel"), ("19:30", "reel"), ("21:00", "carrusel"),
+                  ("22:30", "reel")])
+
+# --- el formato según el tema (20/11/2026) ---------------------------------------------------------------
+from agro import seleccion as SE  # noqa: E402
+
+
+def _c(titulo, **sc):
+    base = {"ai_score": 75, "subtema": "agro", "tema_doc": "", "potencial_carrusel": 5}
+    base.update(sc)
+    return {"id": titulo, "score": dict(base, titulo=titulo)}
+
+
+chequear("formato ideal: clima con video → reel", SE.formato_ideal({"con_video": True, "tema_doc": "clima"}) == "reel")
+chequear("formato ideal: precios con video → carrusel (se explica)",
+         SE.formato_ideal({"con_video": True, "tema_doc": "precios", "potencial_carrusel": 8}) == "carrusel")
+chequear("formato ideal: maquinaria con video → reel", SE.formato_ideal({"con_video": True, "subtema": "maquinaria"}) == "reel")
+chequear("formato ideal: sin video → carrusel", SE.formato_ideal({"tema_doc": "clima"}) == "carrusel")
+f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_score=80), _c("soja", tema_doc="precios")],
+                         "carrusel", [])
+chequear("turno de carrusel con un temporal con video: sale reel", f == "reel")
+f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_score=80),
+                          _c("soja", tema_doc="precios", ai_score=86)], "reel", ["reel", "reel"])
+chequear("…pero después de dos reels seguidos, si hay un carrusel parejo (80 %), va carrusel", f == "carrusel")
+f, _m = SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True, ai_score=80),
+                          _c("soja", tema_doc="precios", ai_score=62)], "reel", ["reel", "reel"])
+chequear("…y si el carrusel es mucho peor, sigue el reel", f == "reel")
+f, _m = SE.formato_turno([_c("ley", tema_doc="reglas", ai_score=78)], "reel", [])
+chequear("una ley sin video en turno de reel: carrusel", f == "carrusel")
+f, _m = SE.formato_turno([_c("floja", ai_score=20)], "reel", [])
+chequear("sin notas que pasen el mínimo: lo que dice la agenda", f == "reel")
+os.environ["AGRO_FORMATO_TEMA"] = "0"
+chequear("AGRO_FORMATO_TEMA=0: alternancia fija", SE.formato_turno([_c("lluvia", tema_doc="clima", con_video=True)],
+                                                                  "carrusel", [])[0] == "carrusel")
+os.environ.pop("AGRO_FORMATO_TEMA")
 chequear("las historias para participar siguen igual", [f"{h:02d}:{m:02d}" for h, m, t in AG.agenda() if t == "participa"]
          == ["11:00", "14:00", "19:00", "21:30"])
 os.environ["AGRO_GRILLA"] = "0"

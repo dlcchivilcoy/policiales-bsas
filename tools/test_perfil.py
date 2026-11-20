@@ -45,15 +45,15 @@ with tempfile.TemporaryDirectory() as d:
     kw = dict(ruta_mem=ruta, af=AF, log=lambda *a: None, publicador=publicador, foto_fn=lambda *a: (None, ""))
     inf = PF.corrida(True, ahora=datetime(2026, 11, 24, 23, 40, tzinfo=TZ), **kw)
     chequear("a las 23:40 (respaldo atrasado) no publica", inf["estado"] == "fuera_de_hora" and not publicados)
-    inf = PF.corrida(True, ahora=datetime(2026, 11, 24, 17, 30, tzinfo=TZ), **kw)
-    chequear("a las 17:30 publica el de Chivilcoy", inf["estado"] == "ok" and inf["partido"] == "chivilcoy")
+    inf = PF.corrida(True, ahora=datetime(2026, 11, 24, 12, 15, tzinfo=TZ), **kw)
+    chequear("a las 12:15 publica el de Chivilcoy", inf["estado"] == "ok" and inf["partido"] == "chivilcoy")
     p = publicados[0]
     chequear("es un carrusel de datos (sin web) con 5 a 7 láminas", p["datos"] and 5 <= len(p["carrusel"]["archivos"]) <= 7)
     chequear("el texto cita la fuente y no lleva link de nota",
              "ArgenFields" in p["carrusel"]["caption"] and "/n/" not in p["carrusel"]["caption"])
-    inf = PF.corrida(True, ahora=datetime(2026, 11, 24, 17, 50, tzinfo=TZ), **kw)
+    inf = PF.corrida(True, ahora=datetime(2026, 11, 24, 12, 40, tzinfo=TZ), **kw)
     chequear("el mismo día no sale otro", inf["estado"] == "ya_salio" and len(publicados) == 1)
-    inf = PF.corrida(True, ahora=datetime(2026, 11, 27, 17, 30, tzinfo=TZ), **kw)
+    inf = PF.corrida(True, ahora=datetime(2026, 11, 27, 12, 15, tzinfo=TZ), **kw)
     chequear("el viernes sale el siguiente (Alberti)", inf.get("partido") == "alberti")
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")

@@ -58,7 +58,10 @@ def historias_datos() -> bool:
     return (os.environ.get("AGRO_HISTORIAS_DATOS") or "0").strip() == "1"
 
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
-CON_DOS_POSTEOS = ((10, 0), (13, 0), (18, 0))     # las demás corridas publican uno (06/11/2026)
+# 20/11/2026 (pedido del editor: «aumentá la cantidad de reels y carruseles por día»): las 6 corridas publican 2, de
+# 9 a 12 noticias por día: 07:00 y 08:30 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 y 17:30 · 18:00 y 19:30 · 21:00 y
+# 22:30. Más los de datos (08:00 datos, 11:10 zona, vigía del tiempo, perfil mar/vie). Antes: ((10, 0), (13, 0), (18, 0)).
+CON_DOS_POSTEOS = ((7, 0), (10, 0), (13, 0), (16, 0), (18, 0), (21, 0))
 INTERVALO_MIN = 90           # entre un posteo y el siguiente de la misma corrida
 TIPOS = ("reel", "carrusel", "historias", "reel_datos", "participa", "viral")
 # 23/10/2026: el REEL DE DATOS de cada mañana (agro/reel_datos.py), con su propia corrida. AGRO_REEL_DATOS

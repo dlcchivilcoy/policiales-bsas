@@ -1,0 +1,57 @@
+name: Agro - datos de ArgenFields (mensual)
+
+# 20/11/2026 (pedido del editor: «fijate si podés sumar argenfields»). Los reels de datos de la zona (agro/reel_zona.py)
+# y los perfiles productivos (agro/perfil.py) usan agro/datos/argenfields.json: suelos, rindes, El Niño y emergencias
+# de Chivilcoy y sus 9 vecinos. ArgenFields pide citar la fuente y permite usar sus datos en notas; El Niño cambia una
+# vez por mes (el aviso de NOAA sale el segundo jueves). Una vez por mes, el 16, se vuelven a leer las 10 fichas (con
+# pausa entre una y otra) y, si algo cambió, se guarda en el repo. Sus NOTICIAS no se leen: su robots.txt bloquea a
+# los programas de IA y nuestras notas se redactan con IA.
+on:
+  schedule:
+    - cron: "0 13 16 * *"     # el 16 de cada mes a las 10:00
+  workflow_dispatch:
+
+concurrency:
+  group: agro-argenfields
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Traer las fichas
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python tools/traer_argenfields.py
+
+      - name: Guardar si cambió
+        run: |
+          if [ -z "$(git status --porcelain agro/datos/argenfields.json)" ]; then
+            echo "Los datos no cambiaron."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agro/datos/argenfields.json
+          git commit -m "Agro: datos de ArgenFields de $(date -u +%Y-%m) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && exit 0
+            sleep $((i * 10))
+          done
+          exit 1

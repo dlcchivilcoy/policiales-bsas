@@ -48,7 +48,7 @@ def score_min() -> int:
 
 
 def max_dia() -> int:
-    return _entero("AGRO_MAX_DIA", 12)
+    return _entero("AGRO_MAX_DIA", 16)                 # 20/11/2026: 12 noticias por día (y margen); antes 12
 
 
 def por_pasada() -> int:
@@ -179,6 +179,62 @@ def topes(cupo_dia: int, m: dict = None) -> dict:
     # Hacia arriba (17/10/2026): con 6 por día, «20 % mercados» daba 1 y una tarde de pendientes de
     # mercados y ganadería dejó el carrusel de las 13:00 sin nada.
     return {k: max(1, math.ceil(cupo_dia * v / total)) for k, v in m.items()}
+
+
+# 20/11/2026 (pedido del editor: «fijate qué formato es más óptimo según la temática y adaptá la temática al formato
+# más adecuado»). El turno ya no es reel o carrusel por alternancia fija: lo decide la mejor nota disponible.
+#   REEL: lo que se MIRA (necesita video propio): clima y temporales (lo que más rinde en la cuenta), ganadería,
+#         maquinaria y tecnología en acción, policiales del campo, lo que no se explica en láminas.
+#   CARRUSEL: lo que se EXPLICA y se GUARDA: precios, dólar, costos, leyes e impuestos, avance de campaña, mercados
+#         del mundo, sanidad (cómo prevenir), guías; y toda nota sin video propio.
+# Para que el feed siga intercalado, nunca más de DOS seguidos del mismo formato si el otro tiene una nota que
+# vale al menos el 80 % de la mejor. AGRO_FORMATO_TEMA=0 vuelve a la alternancia fija.
+TEMAS_REEL = ("clima", "ganaderia", "tecnologia")
+SUBTEMAS_REEL = ("ganaderia", "maquinaria", "agtech")
+TEMAS_CARRUSEL = ("precios", "dolar", "costos", "reglas", "campana", "internacional", "sanidad")
+SEGUIDOS_MAX = 2
+
+
+def formato_tema() -> bool:
+    return (os.environ.get("AGRO_FORMATO_TEMA") or "1").strip() != "0"
+
+
+def formato_ideal(s: dict) -> str:
+    """«reel» o «carrusel» según el tema de la nota (y si trae video propio)."""
+    if s.get("con_video"):
+        if (s.get("tema_doc") in TEMAS_REEL or s.get("subtema") in SUBTEMAS_REEL or s.get("policial_rural")
+                or s.get("urgente") or s.get("potencial_carrusel", 5) < 6):
+            return "reel"
+        if s.get("tema_doc") in TEMAS_CARRUSEL:
+            return "carrusel"
+        return "reel"
+    return "carrusel"
+
+
+def formato_turno(candidatos: list, nominal: str, ultimos: list, minimo: int = None) -> tuple:
+    """(formato, motivo) del turno. `candidatos`: [{"score": {...}}]; `ultimos`: los formatos del feed de hoy, del
+    más viejo al más nuevo. Sin candidatas que pasen el mínimo, el nominal de la agenda."""
+    if not formato_tema():
+        return nominal, "alternancia fija"
+    minimo = score_min() if minimo is None else minimo
+    mejor = {}
+    for c in candidatos:
+        sc = c.get("score") or {}
+        f = formato_ideal(sc)
+        if sc.get("ai_score", 0) < minimo_de(sc, minimo, f) and not (sc.get("urgente") and sc.get("ai_score", 0)
+                                                                     >= minimo - URGENTE_TOLERANCIA):
+            continue
+        v = prioridad(sc, f)
+        if f not in mejor or v > mejor[f][0]:
+            mejor[f] = (v, (sc.get("titulo") or c.get("id") or "")[:50])
+    if not mejor:
+        return nominal, "sin notas que pasen el mínimo"
+    elegido = max(mejor, key=lambda f: mejor[f][0])
+    otro = "carrusel" if elegido == "reel" else "reel"
+    seguidos = len(ultimos) >= SEGUIDOS_MAX and all(u == elegido for u in ultimos[-SEGUIDOS_MAX:])
+    if seguidos and otro in mejor and mejor[otro][0][1] >= 0.8 * mejor[elegido][0][1]:
+        return otro, f"{SEGUIDOS_MAX} {elegido}s seguidos: va {otro}"
+    return elegido, f"la mejor nota es para {elegido}"
 
 
 def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = None, formato: str = "reel",

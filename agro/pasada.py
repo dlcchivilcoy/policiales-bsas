@@ -422,6 +422,17 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
     # esta corrida esperan a la siguiente (siguen pendientes, no se descartan).
     usadas = sitios_de_la_corrida(mem, horario) if un_sitio_por_corrida() else set()
     elegibles = [c for c in candidatos if c["rep"].get("fuente") not in usadas]
+    # 20/11/2026: el formato del turno lo decide el tema de la mejor nota (agro/seleccion.py, formato_turno). Para
+    # saber quién trae video se miran las candidatas también en los turnos de carrusel.
+    if SE.formato_tema() and AG.grilla() and con_reel and not max_piezas:
+        sin_video = mem.setdefault("sin_video", {})
+        marcar_videos(elegibles, carpeta, log, vistas=sin_video)
+        hoy_f = ahora.strftime("%Y-%m-%d")
+        ultimos = [p.get("formato") for p in mem.get("elegidas", []) if (p.get("cuando") or "").startswith(hoy_f)
+                   and p.get("publicado") and p.get("formato") in ("reel", "carrusel") and not p.get("fuera_de_cupo")]
+        nuevo, motivo = SE.formato_turno(elegibles, formato, ultimos)
+        log(f"   formato del turno: {nuevo} ({motivo}; la agenda decía {formato})")
+        formato, carrusel = nuevo, nuevo == "carrusel"
     if formato == "reel" and con_reel:
         sin_video = mem.setdefault("sin_video", {})
         lim_sv = (ahora - timedelta(hours=PENDIENTE_HORAS + 12)).isoformat()[:16]
@@ -826,7 +837,8 @@ def marcar_videos(candidatos: list, carpeta: Path, log=print, completar=None, ba
     # 17/11/2026: los policiales del campo se abren con su tolerancia propia (entran con video aunque puntúen menos).
     minimo_pol = SE.score_min() - max(SE.video_tolerancia(), SE.policial_video_tolerancia())
     vistas = vistas if vistas is not None else {}
-    orden = sorted((c for c in candidatos if c["id"] not in vistas and c["score"].get("ai_score", 0) >= (
+    orden = sorted((c for c in candidatos if c["id"] not in vistas and not c.get("clip")   # ya bajado en este turno
+                    and c["score"].get("ai_score", 0) >= (
                         minimo_pol if c["score"].get("policial_rural") else minimo)),
                    key=lambda c: SE.prioridad(c["score"]), reverse=True)[:videos_a_revisar()]
     con = 0

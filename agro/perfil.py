@@ -19,7 +19,7 @@ palabra clave en dorado, el marcador de ubicación y una etiqueta con las hectá
     7. El Niño (si la copia es reciente).
     8. Cierre: «¿Tenés campo en …?» y la fuente.
 
-Un partido por vez, Chivilcoy primero (estado/agro_perfil.json); martes y viernes a las 17:30 (workflow
+Un partido por vez, Chivilcoy primero (estado/agro_perfil.json); martes y viernes a las 12:15 (workflow
 agro_perfil.yml). Solo @diarioyradioagro, Instagram (carrusel) y Facebook (álbum). AGRO_PERFIL=0 lo apaga.
 
     python -m agro.perfil                     # simula el que toca
@@ -463,8 +463,9 @@ def corrida(publicar: bool, slug: str = "", ahora: datetime = None, ruta_mem=Non
         return inf
     mem = cargar(ruta_mem)
     af = af if af is not None else RZ.datos_argenfields()
-    # Fuera de 17:00-19:30 no publica (el respaldo de GitHub puede llegar con horas de atraso).
-    if publicar and not slug and not (17 <= ahora.hour < 19 or (ahora.hour == 19 and ahora.minute <= 30)):
+    # Fuera de 12:00-13:30 no publica (el respaldo de GitHub puede llegar con horas de atraso). 20/11/2026: de las
+    # 17:30 a las 12:15, porque a las 17:30 ahora sale una noticia.
+    if publicar and not slug and not (ahora.hour == 12 or (ahora.hour == 13 and ahora.minute <= 30)):
         inf["estado"] = "fuera_de_hora"
         return inf
     if publicar and not slug and any(h.get("dia") == ahora.date().isoformat() and h.get("publicado")
