@@ -302,6 +302,81 @@ def dibujar_mapa(datos: dict, lado: int = LADO) -> Image.Image:
     return im
 
 
+def mapa_animado(datos: dict, lado: int = LADO):
+    """fn(avance) → el mapa RGBA lado×lado ARMÁNDOSE (21/11/2026, micro animaciones del reel «El campo hoy»): el mapa
+    base aparece, la lluvia se expande desde Chivilcoy como una onda, los anillos de 50 y 100 km crecen con rebote,
+    los pueblos aparecen del más cercano al más lejano y Chivilcoy late (sigue latiendo con avance > 1)."""
+    import numpy as np
+    from agro import micro as MI
+    base = Image.new("RGBA", (lado, lado), (30, 33, 38, 255))
+    if FONDO_PNG.exists():
+        base.alpha_composite(Image.open(FONDO_PNG).convert("RGBA").resize((lado, lado), Image.LANCZOS))
+    limites = Image.open(LIMITES_PNG).convert("RGBA").resize((lado, lado), Image.LANCZOS) if LIMITES_PNG.exists() else None
+    lluvia_ = capa_lluvia(datos["grilla"], lado)
+    alfa_lluvia = np.asarray(lluvia_.getchannel("A"), dtype=np.float32)
+    cx, cy = _xy(CENTRO[1], CENTRO[0], lado)
+    yy, xx = np.mgrid[0:lado, 0:lado]
+    dist = np.hypot(xx - cx, yy - cy).astype(np.float32)
+    rmax = float(dist.max()) + 90
+    redondeo = Image.new("L", (lado, lado), 0)
+    ImageDraw.Draw(redondeo).rounded_rectangle((0, 0, lado - 1, lado - 1), radius=26, fill=255)
+    pueblos = []
+    for nombre, lat, lon in LOCALIDADES:
+        x, y = _xy(lon, lat, lado)
+        if 12 < x < lado - 12 and 12 < y < lado - 12:
+            pueblos.append((math.hypot(x - cx, y - cy), nombre, x, y))
+    pueblos.sort()
+    f, fk, fc = D.fuente("medium", 23), D.fuente("medium", 22), D.fuente("negra", 34)
+
+    def fn(p: float) -> Image.Image:
+        im = base.copy()
+        r = MI._ease_out((p - 0.06) / 0.5) * rmax
+        if r > 0:
+            k = np.clip((r - dist) / 90.0, 0, 1)
+            capa = lluvia_.copy()
+            capa.putalpha(Image.fromarray((alfa_lluvia * k).astype(np.uint8), "L"))
+            im.alpha_composite(capa)
+        if limites is not None:
+            im.alpha_composite(limites)
+        capa = Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+        d = ImageDraw.Draw(capa)
+        for j, km in enumerate((50, 100)):
+            s = MI._ease_back((p - 0.32 - 0.08 * j) / 0.28)
+            if s <= 0:
+                continue
+            rr = km_a_px(km, lado) * s
+            d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), outline=(255, 255, 255, 110), width=2)
+            if s > 0.85:
+                _rotulo(d, cx - d.textlength(f"{km} km", font=fk) / 2, cy + rr - 13, f"{km} km", fk, (220, 223, 228))
+        for i, (_dd, nombre, x, y) in enumerate(pueblos):
+            q = (p - 0.42 - 0.03 * i) / 0.16
+            if q <= 0:
+                continue
+            rp = 5 * MI._ease_back(q)
+            d.ellipse((x - rp, y - rp, x + rp, y + rp), fill=(240, 242, 245, 255), outline=(24, 26, 30, 255), width=2)
+            if q >= 0.6:
+                ancho = d.textlength(nombre, font=f)
+                tx = x + 9 if x + 9 + ancho < lado - 6 else x - 9 - ancho
+                _rotulo(d, tx, y - 14, nombre, f)
+        q = MI._ease_back((p - 0.12) / 0.3)
+        if q > 0:
+            # El pulso: un anillo naranja que sale de Chivilcoy cada 1,2 s del avance (sigue después de entrar).
+            fase = ((p - 0.3) * 2.4) % 1.0 if p > 0.3 else None
+            if fase is not None:
+                rr = 20 + 70 * fase
+                d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), outline=D.NARANJA + (round(200 * (1 - fase)),), width=4)
+            d.regular_polygon((cx, cy, max(1, 17 * q)), 4, rotation=45, fill=D.NARANJA, outline=D.BLANCO, width=3)
+            if q > 0.6:
+                _rotulo(d, cx - d.textlength("CHIVILCOY", font=fc) / 2, cy - 62, "CHIVILCOY", fc, D.NARANJA)
+        im.alpha_composite(capa)
+        aparece = MI._ease_out(p / 0.12)                   # todo el mapa aparece en el primer 12 %
+        alfa = np.minimum(np.asarray(im.getchannel("A")), np.asarray(redondeo)) * aparece
+        alfa = Image.fromarray(alfa.astype(np.uint8), "L")
+        im.putalpha(alfa)
+        return im
+    return fn
+
+
 def _dia_corto(iso: str) -> str:
     from agro import historias as HI
     d = date.fromisoformat(iso)
@@ -341,6 +416,7 @@ def placa(datos: dict, destino: Path, hoy: date, seccion: str = "EL CAMPO HOY") 
     lado = HI.W - 2 * (D.X - 24)
     mapa = dibujar_mapa(datos, lado)
     im.alpha_composite(mapa, (D.X - 24, y))
+    HI.especial((D.X - 24, y, lado, lado), mapa_animado(datos, lado), dur=2.6, continuo=True)
     y += lado + 22
     # La referencia de colores.
     fl = D.fuente("bold", 22)

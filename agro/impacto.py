@@ -29,6 +29,7 @@ W, H = D.W, D.H45
 FONDO = (27, 29, 32)
 VERDE = (141, 205, 62)
 VERDE_OSCURO = (24, 40, 14)
+NARANJA = D.NARANJA_MARCA                # el naranja del isologo (21/11/2026)
 BLANCO = (255, 255, 255)
 GRIS = (196, 200, 206)
 GRIS_TENUE = (130, 135, 142)
@@ -206,11 +207,13 @@ def _etiqueta(im: Image.Image, texto: str, y: int = 66) -> None:
     tw = d.textlength(txt, font=f) + 4 * len(txt) * 0.0
     w = tw + 40 + 30
     x = W - M - w
-    d.rounded_rectangle((x, y, x + w, y + 50), radius=8, fill=VERDE)
+    # 21/11/2026 (el editor: «usá también el color naranja en diarioyradioagro para mis carruseles»): la etiqueta, la
+    # volanta, la raya de las láminas y «deslizá» van en el naranja del isologo; las cifras y los tildes, en verde.
+    d.rounded_rectangle((x, y, x + w, y + 50), radius=8, fill=NARANJA)
     # El marcador (la cinta de «guardar»).
     bx, by = x + 18, y + 13
-    d.polygon([(bx, by), (bx + 18, by), (bx + 18, by + 25), (bx + 9, by + 18), (bx, by + 25)], fill=VERDE_OSCURO)
-    d.text((x + 50, y + 10), txt, font=f, fill=VERDE_OSCURO)
+    d.polygon([(bx, by), (bx + 18, by), (bx + 18, by + 25), (bx + 9, by + 18), (bx, by + 25)], fill=FONDO)
+    d.text((x + 50, y + 10), txt, font=f, fill=FONDO)
 
 
 def _deslizá(im: Image.Image, y: int, x: int = M) -> None:
@@ -219,9 +222,9 @@ def _deslizá(im: Image.Image, y: int, x: int = M) -> None:
     d.text((x, y), "DESLIZÁ", font=f, fill=BLANCO)
     cx = x + d.textlength("DESLIZÁ", font=f) + 44
     cy = y + 17
-    d.ellipse((cx - 24, cy - 24, cx + 24, cy + 24), outline=VERDE, width=4)
-    d.line((cx - 11, cy, cx + 10, cy), fill=VERDE, width=4)
-    d.polygon([(cx + 13, cy), (cx + 3, cy - 9), (cx + 3, cy + 9)], fill=VERDE)
+    d.ellipse((cx - 24, cy - 24, cx + 24, cy + 24), outline=NARANJA, width=4)
+    d.line((cx - 11, cy, cx + 10, cy), fill=NARANJA, width=4)
+    d.polygon([(cx + 13, cy), (cx + 3, cy - 9), (cx + 3, cy + 9)], fill=NARANJA)
 
 
 def _foto(imagen, alto: int = ALTO_FOTO) -> Image.Image:
@@ -293,7 +296,7 @@ def tapa(imagen, d: dict, destino: Path, leyenda: str = "", deslizar: bool = Tru
         f_v = D.fuente("bold", 30)
         vol = " ".join(d["volanta"].upper().split())
         y_v = (y_c if cifra else y_t) - 58
-        _espaciado(dr, (M, y_v), vol[:40], f_v, VERDE, 4)
+        _espaciado(dr, (M, y_v), vol[:40], f_v, NARANJA, 4)
     escribir(im, M, y_t, r_t, f_t, marca)
     if deslizar:
         _deslizá(im, y_pie)
@@ -320,24 +323,25 @@ def _guardar(im: Image.Image, destino: Path) -> Path:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # Láminas y cierre
 # ─────────────────────────────────────────────────────────────────────────────────────────────
-def _cabeza(im: Image.Image, i: int, n: int) -> None:
+def _cabeza(im: Image.Image, i, n) -> None:
     dr = ImageDraw.Draw(im)
     _marca(im, 56, 60)
-    f = D.fuente("bold", 30)
-    txt = f"{i}/{n}"
-    dr.text((W - M - dr.textlength(txt, font=f), 70), txt, font=f, fill=GRIS_TENUE)
-    dr.rectangle((M, 160, M + 90, 168), fill=VERDE)
+    if i is not None:                                     # en el reel no hay «2/5»
+        f = D.fuente("bold", 30)
+        txt = f"{i}/{n}"
+        dr.text((W - M - dr.textlength(txt, font=f), 70), txt, font=f, fill=GRIS_TENUE)
+    dr.rectangle((M, 160, M + 90, 168), fill=NARANJA)
 
 
-def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "") -> Path:
-    """x: titulo, texto | puntos, dato, dato_rotulo."""
+def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool = False) -> Path:
+    """x: titulo, texto | puntos, dato, dato_rotulo. `reel`: sin «2/5» ni «deslizá» (es una placa de un reel)."""
     im = Image.new("RGBA", (W, H), FONDO + (255,))
-    _cabeza(im, i, n)
+    _cabeza(im, None if reel else i, n)
     dr = ImageDraw.Draw(im)
     ancho = W - 2 * M
     y = 214
     if volanta:
-        _espaciado(dr, (M, y), " ".join(volanta.upper().split())[:40], D.fuente("bold", 28), VERDE, 4)
+        _espaciado(dr, (M, y), " ".join(volanta.upper().split())[:40], D.fuente("bold", 28), NARANJA, 4)
         y += 60
     titulo = (x.get("titulo") or "").rstrip(".")
     f_t, r_t, pal = ajustar(dr, titulo, ancho, 3, 112, 64)
@@ -378,7 +382,7 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "") -> Path:
         for linea in D.renglones(dr, x["texto"], f_x, ancho)[:9]:
             dr.text((M, y), linea, font=f_x, fill=GRIS)
             y += 60
-    if i < n:
+    if i < n and not reel:
         _deslizá(im, H - 92)
     return _guardar(im, destino)
 

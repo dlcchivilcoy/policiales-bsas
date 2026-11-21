@@ -80,13 +80,30 @@ def _quieta(ruta, dur: float):
     return fn
 
 
+def _animada(ruta, dur: float) -> tuple:
+    """(fn(t), tiempos de sonido) de una placa del resumen. 21/11/2026 (el editor: «no simplemente un zoom de toda la
+    placa, sino que la placa tenga micro animaciones»): entra por partes (agro/micro.py) con lo que agro/historias.py
+    anotó al guardarla; si no está anotada (o AGRO_MICRO=0), la placa quieta con acercamiento de antes."""
+    from agro import historias as HI
+    from agro import micro as MI
+    reg = HI.ANIMABLES.get(str(ruta))
+    if not reg or not MI.activo():
+        return _quieta(ruta, dur), []
+    an = MI.Animacion(reg["final"], reg["fondo"], especiales=reg["especiales"])
+    return an, an.tiempos
+
+
 def _tapa_animada(datos: dict, mem: dict, lluvia: dict, carpeta: Path, momento: datetime):
-    """La tapa del reel: la cabeza y el gancho desde el primer cuadro; las tarjetas del tablero aparecen de arriba
-    abajo entre 0,3 y 1,6 s (después queda completa: es la portada del reel)."""
+    """La tapa del reel: la cabeza y el gancho desde el primer cuadro; las tarjetas del tablero aparecen una por una,
+    con rebote (agro/micro.py; después queda completa: es la portada del reel). Devuelve (fn, tiempos)."""
     pie = "SEGUÍ: MAPA DE LLUVIAS, PIZARRA, DÓLAR Y CHICAGO"
     llena = Image.open(portada(datos, mem, lluvia, carpeta / "tapa_reel.jpg", momento, con_foto=False, pie=pie)).convert("RGB")
     base = Image.open(portada(datos, mem, lluvia, carpeta / "tapa_reel_base.jpg", momento, con_foto=False,
                               con_tablero=False)).convert("RGB")
+    from agro import micro as MI
+    if MI.activo():
+        an = MI.Animacion(llena, base, inicio=0.3, presupuesto=1.2)
+        return an, an.tiempos
     W, H = llena.size
     y0, borde = round(H * 0.25), 90
 
@@ -101,7 +118,7 @@ def _tapa_animada(datos: dict, mem: dict, lluvia: dict, carpeta: Path, momento: 
         tramo = mascara.transpose(Image.FLIP_TOP_BOTTOM).resize((W, borde))
         alfa.paste(tramo, (0, round(corte - borde)))
         return Image.composite(llena, base, alfa)
-    return fn
+    return fn, []
 
 
 def armar_animado(datos: dict, mem: dict, carpeta: Path, momento: datetime, lluvia=None, log=print) -> tuple:
@@ -122,10 +139,12 @@ def armar_animado(datos: dict, mem: dict, carpeta: Path, momento: datetime, lluv
             if r:
                 lista.append({"tipo": tipo, "archivo": str(HI.ruta_45(r))})
     lista += placas(datos, mem, carpeta, momento)
-    diap = [("propia", {"fn": _tapa_animada(datos, mem, lluvia, carpeta, momento), "dur": 5.0})]
+    fn, pops = _tapa_animada(datos, mem, lluvia, carpeta, momento)
+    diap = [("propia", {"fn": fn, "dur": 5.0, "pops": pops})]
     for p in lista:
-        dur = 4.5 if p["tipo"] in ("mapa", "alerta") else 3.8
-        diap.append(("propia", {"fn": _quieta(p["archivo"], dur), "dur": dur}))
+        dur = 5.0 if p["tipo"] == "mapa" else 4.5 if p["tipo"] == "alerta" else 4.2
+        fn, pops = _animada(p["archivo"], dur)
+        diap.append(("propia", {"fn": fn, "dur": dur, "pops": pops}))
     diap.append(("cierre", {"frase": "Todas las mañanas, los datos del campo. Compartilo con otro productor"}))
     reel = RZ.armar({"diapositivas": diap, "fuente": ""}, carpeta / "reel_datos.mp4")
     lista = [{"tipo": "portada", "archivo": reel["vista"]}] + lista + [{"tipo": "cierre", "archivo": ""}]

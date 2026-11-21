@@ -75,6 +75,7 @@ def pesos(v, dec: int = 0) -> str:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 def lienzo() -> tuple:
     """El lienzo TRANSPARENTE del bloque: se dibuja desde y=0 y `guardar` lo centra en la zona segura."""
+    _ESPECIAL.clear()
     im = Image.new("RGBA", (W, ALTO_BLOQUE), (0, 0, 0, 0))
     return im, ImageDraw.Draw(im)
 
@@ -164,21 +165,60 @@ H45 = 1350                    # el reel de datos (23/10/2026) va en 4:5
 SEGURA_45 = (70, 1280)
 
 
-def componer_45(bloque: Image.Image) -> Image.Image:
-    """El mismo bloque en 4:5 (1080x1350), centrado y achicado si no entra: las placas del reel de datos."""
-    caja = bloque.getbbox() or (0, 0, W, 1)
-    bloque = bloque.crop((0, 0, W, caja[3]))
-    alto_zona = SEGURA_45[1] - SEGURA_45[0]
-    if bloque.height > alto_zona:
-        k = alto_zona / bloque.height
-        bloque = bloque.resize((round(W * k), alto_zona), Image.LANCZOS)
+def fondo_45() -> Image.Image:
+    """El fondo 4:5 sin el bloque (grafito, la franja naranja y el isologo apenas visible)."""
     im = Image.new("RGBA", (W, H45), FONDO + (255,))
     ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.NARANJA)
     marca = D.isologo(700)
     marca.putalpha(marca.getchannel("A").point(lambda a: round(a * 0.05)))
     im.alpha_composite(marca, (W - marca.width + 200, H45 - marca.height - 60))
-    im.alpha_composite(bloque, ((W - bloque.width) // 2, SEGURA_45[0] + (alto_zona - bloque.height) // 2))
     return im
+
+
+def _ubicar_45(bloque: Image.Image) -> tuple:
+    """(bloque recortado y achicado si no entra, (x, y) donde va, escala)."""
+    caja = bloque.getbbox() or (0, 0, W, 1)
+    bloque = bloque.crop((0, 0, W, caja[3]))
+    alto_zona = SEGURA_45[1] - SEGURA_45[0]
+    k = 1.0
+    if bloque.height > alto_zona:
+        k = alto_zona / bloque.height
+        bloque = bloque.resize((round(W * k), alto_zona), Image.LANCZOS)
+    return bloque, ((W - bloque.width) // 2, SEGURA_45[0] + (alto_zona - bloque.height) // 2), k
+
+
+def componer_45(bloque: Image.Image) -> Image.Image:
+    """El mismo bloque en 4:5 (1080x1350), centrado y achicado si no entra: las placas del reel de datos."""
+    b, pos, _k = _ubicar_45(bloque)
+    im = fondo_45()
+    im.alpha_composite(b, pos)
+    return im
+
+
+# Las MICRO ANIMACIONES del reel (21/11/2026, agro/micro.py): cada placa 4:5 que se guarda en este proceso queda
+# anotada con su fondo, para que el reel la haga entrar por partes. `especial` lo usa el mapa de lluvias, que tiene
+# su propia animación (la caja va en coordenadas del bloque).
+ANIMABLES: dict = {}
+_ESPECIAL: list = []
+
+
+def especial(caja: tuple, fn, dur: float = 2.4, continuo: bool = False) -> None:
+    _ESPECIAL.append({"caja": tuple(caja), "fn": fn, "dur": dur, "continuo": continuo})
+
+
+def _anotar_animable(bloque: Image.Image, ruta: Path) -> None:
+    b, pos, k = _ubicar_45(bloque)
+    fondo_ = fondo_45()
+    final = fondo_.copy()
+    final.alpha_composite(b, pos)
+    esp = []
+    for e in _ESPECIAL:
+        x, y, w, h = e["caja"]
+        esp.append(dict(e, caja=(pos[0] + round(x * k), pos[1] + round(y * k), round(w * k), round(h * k))))
+    _ESPECIAL.clear()
+    while len(ANIMABLES) >= 24:                       # no guardar todas las del día en memoria
+        ANIMABLES.pop(next(iter(ANIMABLES)))
+    ANIMABLES[str(ruta)] = {"final": final.convert("RGB"), "fondo": fondo_.convert("RGB"), "especiales": esp}
 
 
 def ruta_45(destino) -> Path:
@@ -192,6 +232,7 @@ def guardar(im, destino: Path) -> Path:
     destino.parent.mkdir(parents=True, exist_ok=True)
     componer(im).convert("RGB").save(destino, "JPEG", quality=92)
     componer_45(im).convert("RGB").save(ruta_45(destino), "JPEG", quality=92)
+    _anotar_animable(im, ruta_45(destino))
     return destino
 
 

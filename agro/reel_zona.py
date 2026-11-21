@@ -978,6 +978,9 @@ def eventos_sonido(planes: list) -> list:
             ev.append((s0 + CONTAR, MV.pop(0.9), 0.6))
         elif tipo == "cierre":
             ev += RE.eventos_cierre(s0)
+        elif tipo == "propia" and d.get("pops"):           # las placas con micro animaciones (agro/micro.py)
+            from agro import micro as MI
+            ev += MI.eventos(d["pops"], s0)
         s0 += dur
     return ev
 

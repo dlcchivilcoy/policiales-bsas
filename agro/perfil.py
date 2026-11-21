@@ -52,7 +52,9 @@ SALIDA = RAIZ / "salida_agro"
 PARTIDOS = Path(__file__).resolve().parent / "datos" / "partidos.json"
 W, H = D.W, D.H45
 VERDE_NOCHE = (18, 34, 27)
-DORADO = (232, 178, 70)
+# 21/11/2026 (el editor: «usá también el color naranja en diarioyradioagro»): lo que era dorado va en el naranja
+# del isologo. El nombre queda por compatibilidad.
+DORADO = D.NARANJA_MARCA
 BLANCO = (255, 255, 255)
 GRIS = (206, 212, 208)
 TENUE = (140, 156, 148)
@@ -64,6 +66,13 @@ FUENTE = "Fuente: ArgenFields, con datos del INTA, el Ministerio de Agricultura 
 
 def activo() -> bool:
     return (os.environ.get("AGRO_PERFIL") or "1").strip() != "0"
+
+
+def formato() -> str:
+    """«reel» (desde el 21/11/2026, el editor: «si se puede hacer un mapa interactivo, hacelo reel; dejá el carrusel
+    para lo que es noticias»): las mismas láminas entrando por partes y el mapa del partido animado. Con
+    AGRO_PERFIL_FORMATO=carrusel, el carrusel de antes."""
+    return "carrusel" if (os.environ.get("AGRO_PERFIL_FORMATO") or "").strip().lower() == "carrusel" else "reel"
 
 
 def _sin_tildes(t: str) -> str:
@@ -174,7 +183,8 @@ def _pie(im, i, n, fuente: str = FUENTE):
     d = ImageDraw.Draw(im)
     f = D.fuente("regular", 22)
     _centrado(d, H - 54, fuente, f, TENUE)
-    _centrado(d, 60, f"{i}/{n}", D.fuente("bold", 28), TENUE)
+    if i is not None:                                  # en el reel no hay «2/7»
+        _centrado(d, 60, f"{i}/{n}", D.fuente("bold", 28), TENUE)
 
 
 # ─────────────────────────────────────────────────────────────────────────────────────────────
@@ -215,6 +225,73 @@ def mapa(slug: str, lado: int = 860) -> Image.Image:
     return im
 
 
+def mapa_animado(slug: str, lado: int = 860):
+    """fn(avance) → el mapa del partido ARMÁNDOSE (21/11/2026, el reel del perfil): los partidos aparecen desde el
+    elegido hacia afuera, el elegido se pinta de naranja con rebote y su borde late (sigue con avance > 1)."""
+    from agro import micro as MI
+    try:
+        polis = json.loads(PARTIDOS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        polis = {}
+    clave = slug.replace("-", " ")
+    todos = [(k, a) for k, v in polis.items() for a in v["anillos"]]
+    if not todos:
+        return lambda avance: Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+    xs = [x for _, a in todos for x, _ in a]
+    ys = [y for _, a in todos for _, y in a]
+    lon0, lon1, lat0, lat1 = min(xs), max(xs), min(ys), max(ys)
+    k_lon = math.cos(math.radians((lat0 + lat1) / 2))
+    escala = (lado - 60) / max((lon1 - lon0) * k_lon, lat1 - lat0)
+    ox = (lado - (lon1 - lon0) * k_lon * escala) / 2
+    oy = (lado - (lat1 - lat0) * escala) / 2
+
+    def pt(lon, lat):
+        return ox + (lon - lon0) * k_lon * escala, oy + (lat1 - lat) * escala
+    centros = {}
+    for k, v in polis.items():
+        a = max(v["anillos"], key=len)
+        centros[k] = pt(sum(x for x, _ in a) / len(a), sum(y for _, y in a) / len(a))
+    c0 = centros.get(clave, (lado / 2, lado / 2))
+    orden = sorted((k for k in polis if k != clave), key=lambda k: math.dist(centros[k], c0))
+    rango = {k: i for i, k in enumerate(orden)}
+    anillos = [(k, [pt(x, y) for x, y in a]) for k, a in todos]
+    f, f_k = D.fuente("bold", 26), D.fuente("bold", 30)
+
+    def fn(avance: float) -> Image.Image:
+        im = Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        q_el = MI._ease_back((avance - 0.42) / 0.3)
+        for k, a in anillos:
+            if k == clave:
+                continue
+            q = MI._ease_out((avance - 0.05 * rango.get(k, 0)) / 0.3)
+            if q > 0:
+                d.polygon(a, fill=(255, 255, 255, round(22 * q)), outline=(255, 255, 255, round(170 * q)))
+        for k, a in anillos:
+            if k != clave or q_el <= 0:
+                continue
+            cx, cy = c0
+            esc = 0.85 + 0.15 * q_el                       # el partido «cae» en su lugar
+            a2 = [(cx + (x - cx) * esc, cy + (y - cy) * esc) for x, y in a]
+            d.polygon(a2, fill=DORADO + (round(215 * min(1.0, q_el)),), outline=(255, 255, 255, 200))
+            if avance > 0.75:                              # el borde late
+                latido = 0.5 + 0.5 * math.sin((avance - 0.75) * 9.0)
+                d.line(a2 + a2[:1], fill=(255, 255, 255, round(90 + 140 * latido)), width=5, joint="curve")
+        for k, v in polis.items():
+            nombre = v["nombre"]
+            cx, cy = centros[k]
+            if k == clave:
+                if q_el > 0.6:
+                    d.text((cx - d.textlength(nombre, font=f_k) / 2, cy - 16), nombre, font=f_k, fill=VERDE_NOCHE)
+                continue
+            q = (avance - 0.05 * rango.get(k, 0) - 0.15) / 0.25
+            if q > 0:
+                d.text((cx - d.textlength(nombre, font=f) / 2, cy - 16), nombre, font=f,
+                       fill=(235, 238, 236, round(255 * min(1.0, q))))
+        return im
+    return fn
+
+
 def centroide(slug: str) -> tuple | None:
     try:
         v = json.loads(PARTIDOS.read_text(encoding="utf-8"))[slug.replace("-", " ")]
@@ -236,11 +313,14 @@ def km_a_caba(slug: str) -> int | None:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # Las láminas
 # ─────────────────────────────────────────────────────────────────────────────────────────────
-def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
+def laminas(p: dict, foto, carpeta: Path, credito: str = "", reel: bool = False) -> list:
+    """Los .jpg del carrusel. Con `reel` (21/11/2026): sin la lámina de cierre (el reel termina con la placa final
+    animada) ni el «2/7», y devuelve [{archivo, im, especiales}] para animarlas (agro/micro.py)."""
     nombre = p.get("partido") or p["slug"]
     n_partido = nombre.upper()
     archivos = []
     pasos = []
+    especiales_tapa = []
 
     def tapa():
         # 20/11/2026 (el editor: «no inventes una portada con fotos… directo a la info con el mapa… con el título
@@ -253,6 +333,8 @@ def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
         alto = H - (y + 60) - 190
         m = mapa(p["slug"], min(860, alto))
         im.alpha_composite(m, ((W - m.width) // 2, y + 50))
+        especiales_tapa.append({"caja": ((W - m.width) // 2, y + 50, m.width, m.height), "dur": 2.2,
+                                "fn": mapa_animado(p["slug"], m.width), "continuo": True})
         yb = y + 60 + m.height
         datos = [f"{_coma(p['hectareas'], 0)} ha"] if p.get("hectareas") else []
         km = km_a_caba(p["slug"])
@@ -361,7 +443,7 @@ def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
             im = fondo(None)
             d = ImageDraw.Draw(im)
             k = "nino" if e["estado"] == "El Niño" else "nina"
-            y = _titulo(im, 150, f"Hoy hay {e['estado']}", e["estado"], 100, 60, 2)
+            y = _titulo(im, 150, f"Llegó {e['estado']}", e["estado"], 100, 60, 2)
             v = e["tabla"]["soja"][k]
             y = _numero_grande(d, y + 20, f"{v:+.0f}%".replace("-", "−"), "")
             _parrafo(d, y, f"se apartó de su tendencia el rinde de la soja de {nombre} en los años de {e['estado']} "
@@ -378,15 +460,36 @@ def laminas(p: dict, foto, carpeta: Path, credito: str = "") -> list:
         _marca_pie(im, H - 300)
         _centrado(d, H - 210, D.USUARIO, D.fuente("bold", 40), DORADO)
         return im
-    pasos.append(cierre)
+    if not reel:
+        pasos.append(cierre)
 
     n = len(pasos)
     for i, fn in enumerate(pasos, 1):
         im = fn()
         if 1 < i:
-            _pie(im, i, n)
-        archivos.append(_guardar(im, Path(carpeta) / f"perfil_{p['slug']}_c{i:02d}.jpg"))
+            _pie(im, None if reel else i, n)
+        ruta = _guardar(im, Path(carpeta) / f"perfil_{p['slug']}_{'r' if reel else 'c'}{i:02d}.jpg")
+        archivos.append({"archivo": ruta, "im": im.convert("RGB"), "especiales": especiales_tapa if i == 1 else []}
+                        if reel else ruta)
     return archivos
+
+
+def reel(p: dict, carpeta: Path) -> dict:
+    """El reel del perfil (21/11/2026): cada lámina entra por partes, el mapa del partido se arma solo y termina con
+    la placa final animada de agro, con sonido (agro/reel_zona.armar)."""
+    from agro import micro as MI
+    nombre = p.get("partido") or p["slug"]
+    base = fondo(None).convert("RGB")
+    diap = []
+    for k, x in enumerate(laminas(p, None, carpeta, reel=True)):
+        if MI.activo():
+            an = MI.Animacion(x["im"], base, inicio=0.0 if k == 0 else 0.2, especiales=x["especiales"])
+            fn, pops = an, an.tiempos
+        else:
+            fn, pops = (lambda t, im=x["im"]: im), []
+        diap.append(("propia", {"fn": fn, "dur": 5.2 if k == 0 else 4.4, "pops": pops}))
+    diap.append(("cierre", {"frase": f"¿Tenés campo en {nombre}? Contanos en los comentarios"}))
+    return RZ.armar({"diapositivas": diap, "fuente": FUENTE}, Path(carpeta) / f"perfil_{p['slug']}.mp4")
 
 
 def caption(p: dict, credito: str = "") -> str:
@@ -483,11 +586,17 @@ def corrida(publicar: bool, slug: str = "", ahora: datetime = None, ruta_mem=Non
     usados = mem.setdefault("banco_usados", {})
     # Sin foto de relleno (20/11/2026): todo es mapa y datos.
     foto, credito = (foto_fn(carpeta, usados, ahora, log) if foto_fn else (None, ""))
-    archivos = laminas(p, foto, carpeta, credito)
+    es_reel = formato() == "reel"
     texto = caption(p, credito)
+    if es_reel:
+        rl = reel(p, carpeta)
+        archivos = [rl["archivo"]]
+        log(f"Perfil de {p.get('partido')}: reel de {rl['duracion']:.0f} s → {carpeta}")
+    else:
+        archivos = laminas(p, foto, carpeta, credito)
+        log(f"Perfil de {p.get('partido')}: {len(archivos)} láminas → {carpeta}")
     (carpeta / "texto.txt").write_text(texto, encoding="utf-8")
-    inf.update(archivos=archivos, texto=texto)
-    log(f"Perfil de {p.get('partido')}: {len(archivos)} láminas → {carpeta}")
+    inf.update(archivos=archivos, texto=texto, formato="reel" if es_reel else "carrusel")
     if not publicar:
         inf["estado"] = "simulado"
         return inf
@@ -495,13 +604,20 @@ def corrida(publicar: bool, slug: str = "", ahora: datetime = None, ruta_mem=Non
                "publicado": None}
     mem.setdefault("hechos", []).append(anotado)
     guardar(mem, ruta_mem)
-    pieza = {"id": f"perfil-{slug}-{ahora:%Y%m%d}", "datos": True, "formato": "carrusel",
-             "guion": {"titular": f"{p.get('partido')}: perfil productivo", "bajada": "", "descripcion": texto,
-                       "hashtags": [], "volanta": "Perfil productivo"},
-             "carrusel": {"archivos": archivos, "caption": texto}, "portada": archivos[0]}
+    if es_reel:
+        tema = {"tema": f"perfil-{slug}", "gancho": f"Campo en {p.get('partido')}: lo que tenés que saber",
+                "texto": [texto]}
+        pieza = RZ.pieza(tema, rl, texto, ahora)
+        pieza.update(id=f"perfil-{slug}-{ahora:%Y%m%d}", datos=True, colab_diario=False, youtube=False)
+        pieza["guion"]["volanta"] = "Perfil productivo"
+    else:
+        pieza = {"id": f"perfil-{slug}-{ahora:%Y%m%d}", "datos": True, "formato": "carrusel",
+                 "guion": {"titular": f"{p.get('partido')}: perfil productivo", "bajada": "", "descripcion": texto,
+                           "hashtags": [], "volanta": "Perfil productivo"},
+                 "carrusel": {"archivos": archivos, "caption": texto}, "portada": archivos[0]}
     if publicador is None:
         from agro import publicar as PUB
-        publicador = PUB.publicar_carrusel
+        publicador = PUB.publicar if es_reel else PUB.publicar_carrusel
     res = publicador(pieza, log=log)
     ok = [r for r in ("instagram", "facebook") if isinstance(res.get(r), dict) and res[r].get("id")]
     anotado["publicado"] = {r: res[r] for r in ok} or None

@@ -1,7 +1,8 @@
 name: Agro - perfil productivo de los partidos
 
-# 20/11/2026 (pedido del editor): carruseles informativos con el perfil productivo de Chivilcoy y los partidos
-# vecinos (agro/perfil.py), uno por vez, martes y viernes a las 12:15, solo en @diarioyradioagro.
+# 20/11/2026 (pedido del editor): el perfil productivo de Chivilcoy y los partidos vecinos (agro/perfil.py), uno
+# por vez, martes y viernes a las 12:15, solo en @diarioyradioagro. Desde el 21/11 es un REEL animado (el mapa del
+# partido se arma solo y cada lámina entra por partes); la variable AGRO_PERFIL_FORMATO=carrusel vuelve al carrusel.
 #
 # Quién dispara: cron-job.org martes y viernes 12:15. El `schedule:` de abajo es el respaldo (12:30); si ya salió
 # el de hoy no hace nada, y fuera de 12:00-13:30 no publica (GitHub puede atrasarse horas).
@@ -59,6 +60,8 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AGRO_PERFIL: ${{ vars.AGRO_PERFIL }}
+          AGRO_PERFIL_FORMATO: ${{ vars.AGRO_PERFIL_FORMATO }}
+          AGRO_MICRO: ${{ vars.AGRO_MICRO }}
           AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
           PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}

@@ -971,9 +971,12 @@ def pasada_numeros(publicar: bool, horario: datetime, log=print, publicador=None
     log(f"[agro] CARRUSEL «Los números de la semana» {'REAL' if publicar else 'SIMULADO'} {ahora:%d/%m %H:%M}")
     datos = M.leer_todo(mem, momento=ahora, log=log)
     tema = tema_siguiente(mem)
-    # La tapa es una imagen IA del banco: con AGRO_IMAGEN_IA=0 este carrusel no sale y va uno de noticia.
-    imagen = IMG.del_banco("mercados", ahora.date().isoformat()) if IMG.ia_activa() else ""
-    r = CAR.numeros_semana(mem, datos, carpeta, ahora.date(), imagen, tema) if imagen else None
+    # 21/11/2026 (el editor: «dejá el carrusel para lo que es noticias»): es un REEL animado, sin foto (arranca con
+    # los datos). AGRO_SEMANA_FORMATO=carrusel vuelve al carrusel, cuya tapa es una imagen IA del banco (con
+    # AGRO_IMAGEN_IA=0 ese carrusel no sale y va uno de noticia).
+    es_reel = (os.environ.get("AGRO_SEMANA_FORMATO") or "").strip().lower() != "carrusel"
+    imagen = "" if es_reel else (IMG.del_banco("mercados", ahora.date().isoformat()) if IMG.ia_activa() else "")
+    r = CAR.numeros_semana(mem, datos, carpeta, ahora.date(), imagen, tema, reel=es_reel) if (imagen or es_reel) else None
     if not r:
         log("   sin foto real para la tapa o sin datos suficientes: va un carrusel de noticia")
         guardar(mem, ahora, ruta_mem)
@@ -983,13 +986,18 @@ def pasada_numeros(publicar: bool, horario: datetime, log=print, publicador=None
          "hashtags": [], "titulo_web": "", "nota_web": "", "apta": True, "requires_review": False}
     pieza = {"id": f"semana-{ahora:%Y%m%d}", "rep": {"url": "", "fuente": "datos", "titulo": r["titular"]},
              "grupo": [], "score": {"ai_score": "", "subtema": "mercados", "tema": "números de la semana"},
-             "guion": g, "formato": "carrusel", "datos": True, "portada": r["archivos"][0],
+             "guion": g, "formato": "reel" if es_reel else "carrusel", "datos": True,
+             "portada": r["reel"]["vista"] if es_reel else r["archivos"][0],
              "carrusel": {"archivos": r["archivos"], "caption": r["caption"], "contenido": r["contenido"], "tema": tema},
-             "plan": {"Hora": f"{horario:%d/%m %H:%M}", "Instagram": "carrusel de datos",
-                      "Facebook": "las diapositivas como fotos"}}
+             "plan": {"Hora": f"{horario:%d/%m %H:%M}",
+                      "Instagram": "reel de datos animado" if es_reel else "carrusel de datos",
+                      "Facebook": "el reel" if es_reel else "las diapositivas como fotos"}}
+    if es_reel:
+        pieza.update(reel=r["reel"], redes=("facebook", "instagram"), youtube=False)
     anotada = {"id": pieza["id"], "cuando": ahora.isoformat(timespec="minutes"), "titulo_original": r["titular"],
                "fuente": "datos", "url": "", "titular": r["titular"], "volanta": "Los números de la semana",
-               "score": pieza["score"], "apta": True, "revision": False, "fuera_de_cupo": True, "formato": "carrusel",
+               "score": pieza["score"], "apta": True, "revision": False, "fuera_de_cupo": True,
+               "formato": pieza["formato"],
                "turno": horario.isoformat() if publicar else ""}
     mem.setdefault("elegidas", []).append(anotada)
     mem["tema_ultimo"] = tema

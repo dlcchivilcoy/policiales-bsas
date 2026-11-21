@@ -255,8 +255,10 @@ def caption(g: dict) -> str:
 # ─────────────────────────────────────────────────────────────────────────────────────────────
 # «Los números de la semana» (sábados): solo datos
 # ─────────────────────────────────────────────────────────────────────────────────────────────
-def numeros_semana(mem: dict, datos: dict, carpeta: Path, hoy: date, imagen, tema: str = "grafito") -> dict | None:
-    """{archivos, caption, titular} del carrusel de datos, o None si no hay datos."""
+def numeros_semana(mem: dict, datos: dict, carpeta: Path, hoy: date, imagen, tema: str = "grafito",
+                   reel: bool = False) -> dict | None:
+    """{archivos, caption, titular} del carrusel de datos, o None si no hay datos. Con `reel` (21/11/2026) arma un
+    REEL animado (armar_reel) y no necesita foto: devuelve además {reel}."""
     merc = mem.get("mercado") or {}
     diapos = []
 
@@ -305,12 +307,68 @@ def numeros_semana(mem: dict, datos: dict, carpeta: Path, hoy: date, imagen, tem
     g = {"volanta": "Los números de la semana", "titular": titular}
     c = {"gancho": f"Granos, Chicago, dólar y lluvias: la semana del {lunes.day}/{lunes.month} en números",
          "diapositivas": diapos, "pregunta": "¿Qué número te preocupa más para la campaña?"}
-    archivos = armar(g, c, imagen, carpeta, "semana", tema, "")
+    rl = armar_reel(c, carpeta, "semana") if reel else None
+    archivos = rl["laminas"] if rl else armar(g, c, imagen, carpeta, "semana", tema, "")
     texto = ("Los números de la semana en el campo: precios de pizarra en Rosario, Chicago, el dólar mayorista y "
              "las lluvias previstas en la zona. Cada dato con su fecha y su fuente.\n\n"
              + "\n".join(f"• {d['titulo']}" for d in diapos) +
-             "\n\n👉 Deslizá e informate.\n\n#Agro #CampoArgentino #Granos #MercadoDeGranos #Agricultura")
-    return {"archivos": archivos, "caption": texto, "titular": titular, "contenido": c}
+             ("\n\n📲 Guardalo y compartilo con otro productor." if rl else "\n\n👉 Deslizá e informate.") +
+             "\n\n#Agro #CampoArgentino #Granos #MercadoDeGranos #Agricultura")
+    salida = {"archivos": archivos, "caption": texto, "titular": titular, "contenido": c}
+    if rl:
+        salida["reel"] = rl
+    return salida
+
+
+def _centrar(im: Image.Image, fondo: Image.Image, desde: int = 200, margen_abajo: int = 110) -> Image.Image:
+    """La lámina del carrusel deja lugar abajo para «deslizá»: en el reel, el bloque de la volanta para abajo va
+    centrado (un poco arriba del medio) en el alto libre, para que no quede la mitad de la pantalla vacía."""
+    import numpy as np
+    from agro import micro as MI
+    filas = np.flatnonzero(MI.contenido(im, fondo)[desde:].any(axis=1))
+    if not filas.size:
+        return im
+    y0, y1 = desde + int(filas[0]), desde + int(filas[-1]) + 1
+    libre = im.height - margen_abajo - desde
+    if y1 - y0 >= libre:
+        return im
+    nuevo = desde + round((libre - (y1 - y0)) * 0.42)
+    if nuevo <= y0:
+        return im
+    salida = im.copy()
+    salida.paste(fondo.crop((0, desde, im.width, im.height)), (0, desde))
+    salida.paste(im.crop((0, y0, im.width, y1)), (0, nuevo))
+    return salida
+
+
+def armar_reel(c: dict, carpeta: Path, base: str) -> dict:
+    """El REEL de datos (21/11/2026, el editor: «dejá el carrusel para lo que es noticias»): arranca con el gancho y
+    lo que trae (sin foto: las piezas de datos arrancan con la info), una placa por dato entrando por partes
+    (agro/micro.py) y la placa final animada con la pregunta. Devuelve el dict de agro/reel_zona.armar + {laminas}."""
+    from agro import impacto as I
+    from agro import micro as MI
+    from agro import reel_zona as RZ
+    carpeta = Path(carpeta)
+    fondo = Image.new("RGB", (I.W, I.H), I.FONDO)
+    laminas = [{"titulo": c["gancho"], "puntos": [d["titulo"] for d in c["diapositivas"]]}] + list(c["diapositivas"])
+    volanta = "Los números de la semana"
+    diap, rutas = [], []
+    for k, x in enumerate(laminas, 1):
+        ruta = I.lamina(x, k, len(laminas), carpeta / f"{base}_r{k:02d}.jpg", volanta, reel=True)
+        im = _centrar(Image.open(ruta).convert("RGB"), fondo)
+        im.save(ruta, "JPEG", quality=92)
+        rutas.append(str(ruta))
+        if MI.activo():
+            an = MI.Animacion(im, fondo, inicio=0.0 if k == 1 else 0.2)
+            fn, pops = an, an.tiempos
+        else:
+            fn, pops = (lambda t, im=im: im), []
+        diap.append(("propia", {"fn": fn, "dur": 4.6 if k == 1 else 4.4, "pops": pops}))
+    pregunta = (c.get("pregunta") or "¿Qué opinás?").strip()
+    diap.append(("cierre", {"frase": f"{pregunta} Contanos en los comentarios"}))
+    rl = RZ.armar({"diapositivas": diap, "fuente": ""}, carpeta / f"{base}.mp4")
+    rl["laminas"] = rutas
+    return rl
 
 
 def _fmt(v, dec: int = None) -> str:
