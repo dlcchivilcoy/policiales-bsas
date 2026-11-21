@@ -49816,6 +49816,70 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "12b95c9fb19af9a6": {
+      "conversacion": 10,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "inversión campos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de compra de tierras y colonias menonitas pero queda lejos geográficamente de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6463bca2d1ac5740": {
+      "conversacion": 4,
+      "historia_concreta": 3,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "trazabilidad carne",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un anuncio institucional del INTA sobre calidad y carnes, sin impacto directo para el día a día del productor zonal.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2f49072d07ebfd47": {
+      "conversacion": 12,
+      "historia_concreta": 13,
+      "cercania_pba": 5,
+      "interes_productores": 9,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 53,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "sancor",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa por el peso histórico de la marca láctea y la situación de las plantas, aunque pasa en Santa Fe y Córdoba.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        48
+      ]
     }
   },
   "indice": {
@@ -53220,7 +53284,10 @@
       "https://bichosdecampo.com/el-pase-invertido-en-el-mercado-argentino-de-maiz-indica-que-no-se-espera-una-pronta-resolucion-del-conflicto-en-el-mar-negro": "2026-11-21",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249449-ariel-zago-de-basquetbolista-profesional-a-administrador-rural-con-foco-en-la-innovacion-agropecuaria.html": "2026-11-21",
       "https://agrositio.com.ar/noticia/249435-maiz-la-fertilizacion-nitrogenada-mejora-la-rentabilidad.html": "2026-11-21",
-      "https://agrositio.com.ar/noticia/249441-el-gobierno-nacional-autorizo-la-comercializacion-de-una-nueva-levadura-geneticamente-modificada-que-optimiza-la-produccion-de-bioetanol.html": "2026-11-21"
+      "https://agrositio.com.ar/noticia/249441-el-gobierno-nacional-autorizo-la-comercializacion-de-una-nueva-levadura-geneticamente-modificada-que-optimiza-la-produccion-de-bioetanol.html": "2026-11-21",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249450-compra-de-campos-las-colonias-melonitas-adquieren-tierras-y-desarrollan-agroindustrias-integradas.html": "2026-11-21",
+      "https://agrositio.com.ar/noticia/249438-la-demanda-de-carnes-diferenciadas-abre-oportunidades-para-agregar-valor.html": "2026-11-21",
+      "https://lanacion.com.ar/economia/campo/fuerte-interes-por-sancor-tres-empresas-quieren-producir-en-plantas-de-la-iconica-lactea-en-quiebra-nid21112026": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56623,7 +56690,10 @@
       "el pase invertido en el mercado argentino de maiz indica que no se espera una pronta resolucion del conflicto en el mar negro": "2026-11-21",
       "ariel zago de basquetbolista profesional a administrador rural con foco en la innovacion agropecuaria": "2026-11-21",
       "13 de 16 ambientes respondieron al nitrogeno el inta comprobo la rentabilidad en maiz": "2026-11-21",
-      "bioetanol autorizan una nueva levadura geneticamente modificada para elevar la eficiencia industrial": "2026-11-21"
+      "bioetanol autorizan una nueva levadura geneticamente modificada para elevar la eficiencia industrial": "2026-11-21",
+      "quien compra campos en argentina las colonias menonitas invierten y desarrollan agroindustrias integradas": "2026-11-21",
+      "como diferenciar la carne argentina el inta apuesta a calidad trazabilidad y tecnologia": "2026-11-21",
+      "fuerte interes por sancor tres empresas quieren producir en plantas de la iconica lactea en quiebra": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -60026,7 +60096,10 @@
       "469cde5b7ee3acfa": "2026-11-21",
       "6ec8e5e0bf4d3283": "2026-11-21",
       "593aaecf3fb736da": "2026-11-21",
-      "d442f98b7ea12e18": "2026-11-21"
+      "d442f98b7ea12e18": "2026-11-21",
+      "12b95c9fb19af9a6": "2026-11-21",
+      "6463bca2d1ac5740": "2026-11-21",
+      "2f49072d07ebfd47": "2026-11-21"
     }
   },
   "elegidas": [
@@ -94304,7 +94377,7 @@
       "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-21T19:00:25-03:00",
+  "actualizado": "2026-11-21T19:35:05-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -103784,7 +103857,8 @@
     "d2a6a1a2130e": "2026-11-21T09:30",
     "52278c38c150": "2026-11-21T10:03",
     "c710bff4a407": "2026-11-21T11:33",
-    "d3b731e70fd7": "2026-11-21T14:30"
+    "d3b731e70fd7": "2026-11-21T14:30",
+    "c9f362637f73": "2026-11-21T19:31"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
