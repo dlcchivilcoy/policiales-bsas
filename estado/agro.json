@@ -49588,6 +49588,66 @@
         53,
         51
       ]
+    },
+    "5056457011d39d28": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 1,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 17,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "mercado central",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un reconocimiento institucional en Buenos Aires que no le cambia nada al productor de nuestra zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c7e4fe0ff0c822ba": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 27,
+      "commercial_score": 15,
+      "subtema": "ganaderia",
+      "tema": "vicuñas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una crónica interesante y pintoresca de Jujuy pero totalmente alejada del día a día del productor de Chivilcoy.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "17ae15e88ed9ac76": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "ninguno",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un hecho policial urbano sin relación con el campo o la producción agraria.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -52979,7 +53039,12 @@
       "https://infocampo.com.ar/precio-del-sorgo-hoy-21-noviembre-2026": "2026-11-21",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-21-noviembre-2026": "2026-11-21",
       "https://agroempresario.com/publicacion/124024/maiz-ensayos-reabren-el-debate-sobre-dosis-y-tiempos-de-nitrogeno": "2026-11-21",
-      "https://noticiaslasflores.com.ar/interes-general/con-el-nino-activo-la-historia-indica-que-las-flores-rinde-mejor-soja-y-maiz-superaron-su-tendencia-hasta-un-16-en-anos-similares": "2026-11-21"
+      "https://noticiaslasflores.com.ar/interes-general/con-el-nino-activo-la-historia-indica-que-las-flores-rinde-mejor-soja-y-maiz-superaron-su-tendencia-hasta-un-16-en-anos-similares": "2026-11-21",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-21-noviembre-2026": "2026-11-21",
+      "https://bichosdecampo.com/para-que-no-digan-que-no-hay-que-comer-verdura-de-hoja-reconocen-internacionalmente-al-laboratorio-del-mercado-central-encargado-de-controlar-la-inocuidad-de-los-alimentos": "2026-11-21",
+      "https://bichosdecampo.com/en-el-chaku-de-el-condor-en-la-puna-de-jujuy-la-comunidad-pudo-reunir-unas-120-vicunas-para-una-esquila-controlada-y-un-cronista-de-bichos-de-campo-estuvo-alli-para-contarlo": "2026-11-21",
+      "https://chacabuquero.com.ar/2026/11/mas-datos-de-la-salida-de-bomberos-en.html": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56369,7 +56434,12 @@
       "precio del sorgo en rosario hoy 21 noviembre 2026": "2026-11-21",
       "dolar blue a cuanto cotizan hoy en cordoba 21 noviembre 2026": "2026-11-21",
       "maiz ensayos reabren el debate sobre dosis y tiempos de nitrogeno": "2026-11-21",
-      "con el nino activo la historia indica que las flores rinde mejor soja y maiz superaron su tendencia hasta un 16 en anos similares": "2026-11-21"
+      "con el nino activo la historia indica que las flores rinde mejor soja y maiz superaron su tendencia hasta un 16 en anos similares": "2026-11-21",
+      "dolar blue a cuanto cotizan hoy en mendoza 21 noviembre 2026": "2026-11-21",
+      "euro blue hoy precio y cotizacion de este 21 noviembre 2026": "2026-11-21",
+      "para que no digan que no hay que comer verdura de hoja reconocen internacionalmente al laboratorio del mercado central encargado de controlar la inocuidad de los alimentos": "2026-11-21",
+      "en el chaku de el condor en la puna de jujuy la comunidad pudo reunir unas 120 vicunas para una esquila controlada y un cronista de bichos de campo estuvo alli para contarlo": "2026-11-21",
+      "mas datos de la salida de bomberos en chacabuco": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59759,7 +59829,12 @@
       "931feb77cb5958d2": "2026-11-21",
       "73eb7782050c20cc": "2026-11-21",
       "6953b0ee7ae35049": "2026-11-21",
-      "d6829b8362615a4d": "2026-11-21"
+      "d6829b8362615a4d": "2026-11-21",
+      "a1e6662f1babbc51": "2026-11-21",
+      "bce30ccc39226cb8": "2026-11-21",
+      "5056457011d39d28": "2026-11-21",
+      "c7e4fe0ff0c822ba": "2026-11-21",
+      "17ae15e88ed9ac76": "2026-11-21"
     }
   },
   "elegidas": [
@@ -93863,257 +93938,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c11025879c7_portada.jpg"
-    }
-  ],
-  "pendientes": [
-    {
-      "id": "80578ecf879f",
-      "rep": {
-        "id": "80578ecf879f",
-        "fuente": "El Nuevo Rojense",
-        "tipo_fuente": "medio",
-        "source_url": "https://elnuevorojense.com.ar/feed/",
-        "url": "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido/",
-        "canonical_url": "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido",
-        "titulo": "La Cooperativa de Carabelas realizó una importante donación al Taller Protegido",
-        "titulo_norm": "la cooperativa de carabelas realizo una importante donacion al taller protegido",
-        "descripcion": "En el marco de las actividades que tienen como propósito brindar asistencia a diferentes instituciones de la ciudad la Cooperativa Agrícola Limitada de Carabelas realizó esta semana una importante donación al Taller Protegido Grupo Esperanza. El Taller Protegido recibió la... The post La Cooperativa de Carabelas realizó una importante donación al Taller Protegido first appeared on El nuevo rojense.",
-        "imagen_url": "",
-        "autor": "minadeoadrian",
-        "publicado": "2026-11-20T15:07-03:00",
-        "capturado": "2026-11-20T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e48b7a79257b4d31",
-        "localidad_medio": "Rojas"
-      },
-      "grupo": [
-        {
-          "id": "80578ecf879f",
-          "fuente": "El Nuevo Rojense",
-          "tipo_fuente": "medio",
-          "source_url": "https://elnuevorojense.com.ar/feed/",
-          "url": "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido/",
-          "canonical_url": "https://elnuevorojense.com.ar/la-cooperativa-de-carabelas-realizo-una-importante-donacion-al-taller-protegido",
-          "titulo": "La Cooperativa de Carabelas realizó una importante donación al Taller Protegido",
-          "titulo_norm": "la cooperativa de carabelas realizo una importante donacion al taller protegido",
-          "descripcion": "En el marco de las actividades que tienen como propósito brindar asistencia a diferentes instituciones de la ciudad la Cooperativa Agrícola Limitada de Carabelas realizó esta semana una importante donación al Taller Protegido Grupo Esperanza. El Taller Protegido recibió la... The post La Cooperativa de Carabelas realizó una importante donación al Taller Protegido first appeared on El nuevo rojense.",
-          "imagen_url": "",
-          "autor": "minadeoadrian",
-          "publicado": "2026-11-20T15:07-03:00",
-          "capturado": "2026-11-20T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e48b7a79257b4d31",
-          "localidad_medio": "Rojas"
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 18,
-        "cercania_pba": 20,
-        "interes_productores": 10,
-        "impacto_economico": 3,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 74,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "donación cooperativa",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Pasa cerca (Rojas), involucra a la cooperativa local y genera muy buena llegada en la comunidad.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 3,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T16:00-03:00"
-    },
-    {
-      "id": "6bcde0461879",
-      "rep": {
-        "id": "6bcde0461879",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/en-sanogasta-frente-a-los-bajos-precios-de-la-nuez-ana-arias-decidio-agregarle-valor-haciendo-alfajores-y-garrapinadas-si-te-venis-al-campo-es-sacrificado-pero-la-vida-es-mas-linda/",
-        "canonical_url": "https://bichosdecampo.com/en-sanogasta-frente-a-los-bajos-precios-de-la-nuez-ana-arias-decidio-agregarle-valor-haciendo-alfajores-y-garrapinadas-si-te-venis-al-campo-es-sacrificado-pero-la-vida-es-mas-linda",
-        "titulo": "En Sañogasta, frente a los bajos precios de la nuez, Ana Arias decidió agregarle valor haciendo alfajores y garrapiñadas; “Si te venís al campo, es sacrificado, pero la vida es más linda”, dice",
-        "titulo_norm": "en sanogasta frente a los bajos precios de la nuez ana arias decidio agregarle valor haciendo alfajores y garrapinadas si te venis al campo es sacrificado pero la vida es mas linda dice",
-        "descripcion": "A sus 55 años, Ana Paola Arias se percibe como una luchadora incansable y una gran emprendedora, seguramente porque desde niña vio ese modelo de vida en sus padres, a los que ayudó siempre a la par: “Nací en Chilecito y de muy chica anduve con mi papá, agrónomo, entre tractores, herramientas, fertilizantes, semillas, viveros, […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-30-at-10.15.50-1-e1794949932202.jpeg",
-        "autor": "Esteban “El Colorado” López",
-        "publicado": "2026-11-20T14:12-03:00",
-        "capturado": "2026-11-20T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4394e6a7609fc4b4",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "6bcde0461879",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/en-sanogasta-frente-a-los-bajos-precios-de-la-nuez-ana-arias-decidio-agregarle-valor-haciendo-alfajores-y-garrapinadas-si-te-venis-al-campo-es-sacrificado-pero-la-vida-es-mas-linda/",
-          "canonical_url": "https://bichosdecampo.com/en-sanogasta-frente-a-los-bajos-precios-de-la-nuez-ana-arias-decidio-agregarle-valor-haciendo-alfajores-y-garrapinadas-si-te-venis-al-campo-es-sacrificado-pero-la-vida-es-mas-linda",
-          "titulo": "En Sañogasta, frente a los bajos precios de la nuez, Ana Arias decidió agregarle valor haciendo alfajores y garrapiñadas; “Si te venís al campo, es sacrificado, pero la vida es más linda”, dice",
-          "titulo_norm": "en sanogasta frente a los bajos precios de la nuez ana arias decidio agregarle valor haciendo alfajores y garrapinadas si te venis al campo es sacrificado pero la vida es mas linda dice",
-          "descripcion": "A sus 55 años, Ana Paola Arias se percibe como una luchadora incansable y una gran emprendedora, seguramente porque desde niña vio ese modelo de vida en sus padres, a los que ayudó siempre a la par: “Nací en Chilecito y de muy chica anduve con mi papá, agrónomo, entre tractores, herramientas, fertilizantes, semillas, viveros, […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-30-at-10.15.50-1-e1794949932202.jpeg",
-          "autor": "Esteban “El Colorado” López",
-          "publicado": "2026-11-20T14:12-03:00",
-          "capturado": "2026-11-20T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4394e6a7609fc4b4",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 5,
-        "interes_productores": 9,
-        "impacto_economico": 4,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 63,
-        "commercial_score": 52,
-        "subtema": "agro",
-        "tema": "agregado de valor",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Hermosa historia de reconversión y emprendedurismo en el campo que da gusto leer y compartir.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          61
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T14:30-03:00"
-    },
-    {
-      "id": "fce1d3d00bdd",
-      "rep": {
-        "id": "fce1d3d00bdd",
-        "fuente": "ABC Saladillo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.abcsaladillo.com.ar/feed/",
-        "url": "https://www.abcsaladillo.com.ar/general/principio-de-acuerdo-entre-el-municipio-y-la-sociedad-rural-de-saladillo-por-el-cobro-de-la-tasa-de-guias/",
-        "canonical_url": "https://abcsaladillo.com.ar/general/principio-de-acuerdo-entre-el-municipio-y-la-sociedad-rural-de-saladillo-por-el-cobro-de-la-tasa-de-guias",
-        "titulo": "Principio de acuerdo entre el Municipio y la Sociedad Rural de Saladillo por el cobro de la tasa de guías",
-        "titulo_norm": "principio de acuerdo entre el municipio y la sociedad rural de saladillo por el cobro de la tasa de guias",
-        "descripcion": "El intendente José Luis Salomón anunció que “existe un principio de acuerdo” con la Sociedad Rural de Saladillo, con relación al cobro de la tasa de guías. Nota realizada por: ahorasaladillo En concreto, se habló de sostener el precio de las guías durante el año que viene y disminuir de 0,5 a 0,4 el porcentaje […] The post Principio de acuerdo entre el Municipio y la Sociedad Rural de Saladillo por el cobro de la tasa de guías appeared first on ABC Saladilllo.",
-        "imagen_url": "https://www.abcsaladillo.com.ar/wp-content/uploads/2026/11/image-16.webp",
-        "autor": "Julio Brugina",
-        "publicado": "2026-11-20T09:07-03:00",
-        "capturado": "2026-11-20T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3b194a377e84d9ad",
-        "localidad_medio": "Roque Perez"
-      },
-      "grupo": [
-        {
-          "id": "fce1d3d00bdd",
-          "fuente": "ABC Saladillo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.abcsaladillo.com.ar/feed/",
-          "url": "https://www.abcsaladillo.com.ar/general/principio-de-acuerdo-entre-el-municipio-y-la-sociedad-rural-de-saladillo-por-el-cobro-de-la-tasa-de-guias/",
-          "canonical_url": "https://abcsaladillo.com.ar/general/principio-de-acuerdo-entre-el-municipio-y-la-sociedad-rural-de-saladillo-por-el-cobro-de-la-tasa-de-guias",
-          "titulo": "Principio de acuerdo entre el Municipio y la Sociedad Rural de Saladillo por el cobro de la tasa de guías",
-          "titulo_norm": "principio de acuerdo entre el municipio y la sociedad rural de saladillo por el cobro de la tasa de guias",
-          "descripcion": "El intendente José Luis Salomón anunció que “existe un principio de acuerdo” con la Sociedad Rural de Saladillo, con relación al cobro de la tasa de guías. Nota realizada por: ahorasaladillo En concreto, se habló de sostener el precio de las guías durante el año que viene y disminuir de 0,5 a 0,4 el porcentaje […] The post Principio de acuerdo entre el Municipio y la Sociedad Rural de Saladillo por el cobro de la tasa de guías appeared first on ABC Saladilllo.",
-          "imagen_url": "https://www.abcsaladillo.com.ar/wp-content/uploads/2026/11/image-16.webp",
-          "autor": "Julio Brugina",
-          "publicado": "2026-11-20T09:07-03:00",
-          "capturado": "2026-11-20T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3b194a377e84d9ad",
-          "localidad_medio": "Roque Perez"
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 13,
-        "cercania_pba": 12,
-        "interes_productores": 10,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 62,
-        "commercial_score": 48,
-        "subtema": "agro",
-        "tema": "tasa de guias",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Acuerdo entre municipio y rural por tasas en Saladillo, un tema que interesa y genera debate en la región.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          52
-        ],
-        "de_zona": true,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T10:02-03:00"
     },
     {
       "id": "5b3189e82a8f",
-      "rep": {
-        "id": "5b3189e82a8f",
-        "fuente": "El Regional Digital",
-        "tipo_fuente": "medio",
-        "source_url": "https://elregionaldigital.com.ar/feed/",
-        "url": "https://elregionaldigital.com.ar/el-cultivo-de-soja-toma-un-mayor-impulso-en-su-siembra-en-maiz-comenzo-la-siembra-de-segunda/",
-        "canonical_url": "https://elregionaldigital.com.ar/el-cultivo-de-soja-toma-un-mayor-impulso-en-su-siembra-en-maiz-comenzo-la-siembra-de-segunda",
-        "titulo": "El cultivo de Soja toma un mayor impulso en su siembra. En Maiz comenzó la siembra de segunda",
-        "titulo_norm": "el cultivo de soja toma un mayor impulso en su siembra en maiz comenzo la siembra de segunda",
-        "descripcion": "Un nuevo relevamiento semanal de la Bolsa de Cereales de Buenos Aires, sobre la campaña 2026/27 marca que la siembra de soja tomó un nuevo impulso durante la última semana. La soja de primera ya cubre el 80% de su superficie prevista en el Núcleo Norte y el 79% en el Núcleo Sur, mientras que",
-        "imagen_url": "",
-        "autor": "ciri340043",
-        "publicado": "2026-11-20T06:20-03:00",
-        "capturado": "2026-11-20T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "01c3840d00e49866",
-        "localidad_medio": "9 de Julio"
-      },
-      "grupo": [
-        {
-          "id": "5b3189e82a8f",
-          "fuente": "El Regional Digital",
-          "tipo_fuente": "medio",
-          "source_url": "https://elregionaldigital.com.ar/feed/",
-          "url": "https://elregionaldigital.com.ar/el-cultivo-de-soja-toma-un-mayor-impulso-en-su-siembra-en-maiz-comenzo-la-siembra-de-segunda/",
-          "canonical_url": "https://elregionaldigital.com.ar/el-cultivo-de-soja-toma-un-mayor-impulso-en-su-siembra-en-maiz-comenzo-la-siembra-de-segunda",
-          "titulo": "El cultivo de Soja toma un mayor impulso en su siembra. En Maiz comenzó la siembra de segunda",
-          "titulo_norm": "el cultivo de soja toma un mayor impulso en su siembra en maiz comenzo la siembra de segunda",
-          "descripcion": "Un nuevo relevamiento semanal de la Bolsa de Cereales de Buenos Aires, sobre la campaña 2026/27 marca que la siembra de soja tomó un nuevo impulso durante la última semana. La soja de primera ya cubre el 80% de su superficie prevista en el Núcleo Norte y el 79% en el Núcleo Sur, mientras que",
-          "imagen_url": "",
-          "autor": "ciri340043",
-          "publicado": "2026-11-20T06:20-03:00",
-          "capturado": "2026-11-20T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "01c3840d00e49866",
-          "localidad_medio": "9 de Julio"
-        }
-      ],
+      "cuando": "2026-11-21T13:00-03:00",
+      "titulo_original": "El cultivo de Soja toma un mayor impulso en su siembra. En Maiz comenzó la siembra de segunda",
+      "descripcion": "Un nuevo relevamiento semanal de la Bolsa de Cereales de Buenos Aires, sobre la campaña 2026/27 marca que la siembra de soja tomó un nuevo impulso durante la última semana. La soja de primera ya cubre el 80% de su superficie prevista en el Núcleo Norte y el 79% en el Núcleo Sur, mientras que",
+      "fuente": "El Regional Digital",
+      "url": "https://elregionaldigital.com.ar/el-cultivo-de-soja-toma-un-mayor-impulso-en-su-siembra-en-maiz-comenzo-la-siembra-de-segunda/",
+      "titular": "Soja: la siembra cubre el 80% en el Núcleo Norte",
+      "volanta": "Agricultura",
       "score": {
         "conversacion": 14,
         "historia_concreta": 14,
@@ -94140,11 +93974,75 @@
         "de_zona": false,
         "policial_rural": false
       },
-      "cuando": "2026-11-20T07:00-03:00"
+      "apta": false,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-21T13:00:00-03:00"
+    },
+    {
+      "id": "fce1d3d00bdd",
+      "cuando": "2026-11-21T13:00-03:00",
+      "titulo_original": "Principio de acuerdo entre el Municipio y la Sociedad Rural de Saladillo por el cobro de la tasa de guías",
+      "descripcion": "El intendente José Luis Salomón anunció que “existe un principio de acuerdo” con la Sociedad Rural de Saladillo, con relación al cobro de la tasa de guías. Nota realizada por: ahorasaladillo En concreto, se habló de sostener el precio de las guías durante el año que viene y disminuir de 0,5 a 0,4 el",
+      "fuente": "ABC Saladillo",
+      "url": "https://www.abcsaladillo.com.ar/general/principio-de-acuerdo-entre-el-municipio-y-la-sociedad-rural-de-saladillo-por-el-cobro-de-la-tasa-de-guias/",
+      "titular": "Saladillo congela la tasa de guías y baja al 0,4% los remates",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 13,
+        "cercania_pba": 12,
+        "interes_productores": 10,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 62,
+        "commercial_score": 48,
+        "subtema": "agro",
+        "tema": "tasa de guias",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Acuerdo entre municipio y rural por tasas en Saladillo, un tema que interesa y genera debate en la región.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          70,
+          52
+        ],
+        "de_zona": true,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-21T13:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "520d5bc2-9939-4836-9309-7ff7c7535ebc",
+          "slug": "saladillo-principio-de-acuerdo-entre-la-municipalidad-y-la-e53503",
+          "url": "https://www.diariolacampaña.com.ar/n/saladillo-principio-de-acuerdo-entre-la-municipalidad-y-la-e53503",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18652165804034847",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1769281035202893",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fce1d3d00bdd_portada.jpg"
     }
   ],
-  "actualizado": "2026-11-21T11:41:04-03:00",
-  "tema_ultimo": "blanco",
+  "pendientes": [],
+  "actualizado": "2026-11-21T13:09:37-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
