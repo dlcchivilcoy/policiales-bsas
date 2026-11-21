@@ -49544,6 +49544,50 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6953b0ee7ae35049": {
+      "conversacion": 5,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 42,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "nitrógeno",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un tema técnico de manejo de fertilizantes que le importa al productor, pero es muy general.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d6829b8362615a4d": {
+      "conversacion": 11,
+      "historia_concreta": 7,
+      "cercania_pba": 10,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 52,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de rindes y clima, pero es de Las Flores (otra zona de la provincia), no de nuestra región directa.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        51
+      ]
     }
   },
   "indice": {
@@ -52927,7 +52971,15 @@
       "https://bichosdecampo.com/en-el-marco-de-que-mundo-desarrolla-su-actividad-un-productor-argentino-si-no-queres-enterarte-mejor-no-leas-esta-cronica-del-agronomo-luis-villa-sobre-la-encrucijada-actual-del-agro": "2026-11-21",
       "https://bichosdecampo.com/se-demora-la-reaccion-del-mercado-ganadero-el-asesor-ganadero-sebastian-riffel-asegura-que-las-mejoras-en-las-cotizaciones-recien-llegaran-para-marzo-y-abril-del-2027": "2026-11-21",
       "https://clarin.com/rural/propuesta-vacia-sindicato-rechazo-oferta-pauny-pago-salarios-retomar-actividad-fabrica-seguira-ocupada_0_tcV7rDtrmW.html": "2026-11-21",
-      "https://chacabucoenred.com/muy-lejos-el-acuerdo-de-paz-en-ucrania": "2026-11-21"
+      "https://chacabucoenred.com/muy-lejos-el-acuerdo-de-paz-en-ucrania": "2026-11-21",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-21-noviembre-2026": "2026-11-21",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-21-noviembre-2026": "2026-11-21",
+      "https://agroempresario.com/publicacion/124024/maiz-ensayos-reabren-el-debate-sobre-dosis-y-tiempos-de-nitrogeno": "2026-11-21",
+      "https://noticiaslasflores.com.ar/interes-general/con-el-nino-activo-la-historia-indica-que-las-flores-rinde-mejor-soja-y-maiz-superaron-su-tendencia-hasta-un-16-en-anos-similares": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56309,7 +56361,15 @@
       "en el marco de que mundo desarrolla su actividad un productor argentino si no queres enterarte mejor no leas esta cronica del agronomo luis villa sobre la encrucijada actual del agro": "2026-11-21",
       "se demora la reaccion del mercado ganadero el asesor ganadero sebastian riffel asegura que las mejoras en las cotizaciones recien llegaran para marzo y abril del 2027": "2026-11-21",
       "propuesta vacia el sindicato rechazo la oferta de pauny por pago de salarios para retomar la actividad y la fabrica seguira ocupada": "2026-11-21",
-      "muy lejos el acuerdo de paz en ucrania": "2026-11-21"
+      "muy lejos el acuerdo de paz en ucrania": "2026-11-21",
+      "precio del maiz en rosario hoy 21 noviembre 2026": "2026-11-21",
+      "precio del trigo en rosario hoy 21 noviembre 2026": "2026-11-21",
+      "precio del girasol en rosario hoy 21 noviembre 2026": "2026-11-21",
+      "precio de la soja en rosario hoy 21 noviembre 2026": "2026-11-21",
+      "precio del sorgo en rosario hoy 21 noviembre 2026": "2026-11-21",
+      "dolar blue a cuanto cotizan hoy en cordoba 21 noviembre 2026": "2026-11-21",
+      "maiz ensayos reabren el debate sobre dosis y tiempos de nitrogeno": "2026-11-21",
+      "con el nino activo la historia indica que las flores rinde mejor soja y maiz superaron su tendencia hasta un 16 en anos similares": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59691,7 +59751,15 @@
       "b0341f79f03978e9": "2026-11-21",
       "ac47d6b7deb52453": "2026-11-21",
       "b77b78592e66940b": "2026-11-21",
-      "39d27cceb71eed00": "2026-11-21"
+      "39d27cceb71eed00": "2026-11-21",
+      "548c067a8015cf7b": "2026-11-21",
+      "5a0720b4fa7773f2": "2026-11-21",
+      "fe2f9f4db33e688d": "2026-11-21",
+      "fd37394815fa22a2": "2026-11-21",
+      "931feb77cb5958d2": "2026-11-21",
+      "73eb7782050c20cc": "2026-11-21",
+      "6953b0ee7ae35049": "2026-11-21",
+      "d6829b8362615a4d": "2026-11-21"
     }
   },
   "elegidas": [
@@ -93740,145 +93808,64 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d6a24e7d4459_portada.jpg"
-    }
-  ],
-  "pendientes": [
-    {
-      "id": "60b46d3ecc0a",
-      "rep": {
-        "id": "60b46d3ecc0a",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/las-retenciones-siguen-estando-en-el-centro-de-la-escena-nid21112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/las-retenciones-siguen-estando-en-el-centro-de-la-escena-nid21112026",
-        "titulo": "Las retenciones siguen estando en el centro de la escena",
-        "titulo_norm": "las retenciones siguen estando en el centro de la escena",
-        "descripcion": "Mientras el presidente Milei dijo que por ahora no las llevará a cero, las entidades por cadena reclamaron una ley para confirmar el camino de la baja",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BZUFXA6TRBE7ASBPHI563ACYM.png?auth=2ac2bdc2fe134a3a7ab7bbf7c04588948c492ced4a67c0face462698e5e1eabb&smart=true",
-        "autor": "Cristian Mira",
-        "publicado": "2026-11-21T06:00-03:00",
-        "capturado": "2026-11-21T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "471479497ab09b64",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "60b46d3ecc0a",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/las-retenciones-siguen-estando-en-el-centro-de-la-escena-nid21112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/las-retenciones-siguen-estando-en-el-centro-de-la-escena-nid21112026",
-          "titulo": "Las retenciones siguen estando en el centro de la escena",
-          "titulo_norm": "las retenciones siguen estando en el centro de la escena",
-          "descripcion": "Mientras el presidente Milei dijo que por ahora no las llevará a cero, las entidades por cadena reclamaron una ley para confirmar el camino de la baja",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/7BZUFXA6TRBE7ASBPHI563ACYM.png?auth=2ac2bdc2fe134a3a7ab7bbf7c04588948c492ced4a67c0face462698e5e1eabb&smart=true",
-          "autor": "Cristian Mira",
-          "publicado": "2026-11-21T06:00-03:00",
-          "capturado": "2026-11-21T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "471479497ab09b64",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 4,
-        "cercania_pba": 10,
-        "interes_productores": 14,
-        "impacto_economico": 10,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 60,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Las retenciones interesan a todos los productores, pero la nota es un debate político sin novedades concretas.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          57
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-21T07:00-03:00"
     },
     {
-      "id": "048cd687b0c9",
-      "rep": {
-        "id": "048cd687b0c9",
-        "fuente": "Infocampo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.infocampo.com.ar/feed/",
-        "url": "https://www.infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof/",
-        "canonical_url": "https://infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof",
-        "titulo": "“Más burocracia”: la Sociedad Rural apuntó contra una medida laboral del gobierno de Kicillof",
-        "titulo_norm": "mas burocracia la sociedad rural apunto contra una medida laboral del gobierno de kicillof",
-        "descripcion": "La entidad del campo expresó su rechazo a una resolución del Gobierno bonaerense que obliga a presentar de manera mensual información laboral en un sistema denominado FUTURO y que considera incurre en “controles excesivos”.",
-        "imagen_url": "",
-        "autor": "infocampo",
-        "publicado": "2026-11-20T17:17-03:00",
-        "capturado": "2026-11-20T17:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "fe6aac0a7818e18a",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "048cd687b0c9",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof/",
-          "canonical_url": "https://infocampo.com.ar/mas-burocracia-la-sociedad-rural-apunto-contra-una-medida-laboral-del-gobierno-de-kicillof",
-          "titulo": "“Más burocracia”: la Sociedad Rural apuntó contra una medida laboral del gobierno de Kicillof",
-          "titulo_norm": "mas burocracia la sociedad rural apunto contra una medida laboral del gobierno de kicillof",
-          "descripcion": "La entidad del campo expresó su rechazo a una resolución del Gobierno bonaerense que obliga a presentar de manera mensual información laboral en un sistema denominado FUTURO y que considera incurre en “controles excesivos”.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-11-20T17:17-03:00",
-          "capturado": "2026-11-20T17:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "fe6aac0a7818e18a",
-          "localidad_medio": ""
-        }
-      ],
+      "id": "7c11025879c7",
+      "cuando": "2026-11-21T11:33-03:00",
+      "titulo_original": "La siembra de soja se aceleró durante la última semana y ya cubre más del 30% de las 17 millones de hectáreas proyectadas",
+      "descripcion": "",
+      "fuente": "TN Campo",
+      "url": "https://tn.com.ar/campo/2026/11/20/la-siembra-de-soja-se-acelero-durante-la-ultima-semana-y-ya-cubre-mas-del-30-de-las-17-millones-de-hectareas-proyectadas/",
+      "titular": "La siembra de soja cubre el 30,4% de las 17 millones",
+      "volanta": "Agricultura",
       "score": {
-        "conversacion": 18,
+        "conversacion": 16,
         "historia_concreta": 15,
-        "cercania_pba": 20,
+        "cercania_pba": 18,
         "interes_productores": 15,
-        "impacto_economico": 7,
+        "impacto_economico": 8,
         "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 82,
-        "commercial_score": 50,
+        "potencial_reel": 3,
+        "ai_score": 80,
+        "commercial_score": 70,
         "subtema": "agro",
-        "tema": "trámites laborales provincia",
+        "tema": "soja",
         "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta directamente a todos los productores bonaerenses que deben lidiar con más burocracia laboral.",
-        "tema_doc": "reglas",
+        "sensible": false,
+        "explicacion": "El ritmo de la siembra de soja afecta directamente los planes de los productores de toda la zona.",
+        "tema_doc": "campana",
         "urgente": false,
         "potencial_carrusel": 7,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false,
         "policial_rural": false
       },
-      "cuando": "2026-11-20T17:30-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-21T11:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e190f2a7-d507-4a81-b12e-c27aaf39cab8",
+          "slug": "ya-se-implanto-el-30-4-de-las-17-millones-de-hectareas-b826e0",
+          "url": "https://www.diariolacampaña.com.ar/n/ya-se-implanto-el-30-4-de-las-17-millones-de-hectareas-b826e0",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18005594735796655",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1769196871877976",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c11025879c7_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "80578ecf879f",
       "rep": {
@@ -94014,72 +94001,6 @@
         "policial_rural": false
       },
       "cuando": "2026-11-20T14:30-03:00"
-    },
-    {
-      "id": "7c11025879c7",
-      "rep": {
-        "id": "7c11025879c7",
-        "fuente": "TN Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-        "url": "https://tn.com.ar/campo/2026/11/20/la-siembra-de-soja-se-acelero-durante-la-ultima-semana-y-ya-cubre-mas-del-30-de-las-17-millones-de-hectareas-proyectadas/",
-        "canonical_url": "https://tn.com.ar/campo/2026/11/20/la-siembra-de-soja-se-acelero-durante-la-ultima-semana-y-ya-cubre-mas-del-30-de-las-17-millones-de-hectareas-proyectadas",
-        "titulo": "La siembra de soja se aceleró durante la última semana y ya cubre más del 30% de las 17 millones de hectáreas proyectadas",
-        "titulo_norm": "la siembra de soja se acelero durante la ultima semana y ya cubre mas del 30 de las 17 millones de hectareas proyectadas",
-        "descripcion": "",
-        "imagen_url": "https://tn.com.ar/resizer/v2/KPV2A2PCRJBGXALHFC25JL42YU.jpg?auth=445ab34846d11bb241b0741f65129a5c3307b84d07783c4ec3a3dfe3b13a6529",
-        "autor": "",
-        "publicado": "2026-11-20T09:32-03:00",
-        "capturado": "2026-11-20T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "cc4aa0e68e74468b",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "7c11025879c7",
-          "fuente": "TN Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-          "url": "https://tn.com.ar/campo/2026/11/20/la-siembra-de-soja-se-acelero-durante-la-ultima-semana-y-ya-cubre-mas-del-30-de-las-17-millones-de-hectareas-proyectadas/",
-          "canonical_url": "https://tn.com.ar/campo/2026/11/20/la-siembra-de-soja-se-acelero-durante-la-ultima-semana-y-ya-cubre-mas-del-30-de-las-17-millones-de-hectareas-proyectadas",
-          "titulo": "La siembra de soja se aceleró durante la última semana y ya cubre más del 30% de las 17 millones de hectáreas proyectadas",
-          "titulo_norm": "la siembra de soja se acelero durante la ultima semana y ya cubre mas del 30 de las 17 millones de hectareas proyectadas",
-          "descripcion": "",
-          "imagen_url": "https://tn.com.ar/resizer/v2/KPV2A2PCRJBGXALHFC25JL42YU.jpg?auth=445ab34846d11bb241b0741f65129a5c3307b84d07783c4ec3a3dfe3b13a6529",
-          "autor": "",
-          "publicado": "2026-11-20T09:32-03:00",
-          "capturado": "2026-11-20T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "cc4aa0e68e74468b",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 15,
-        "cercania_pba": 18,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 80,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "soja",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El ritmo de la siembra de soja afecta directamente los planes de los productores de toda la zona.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T10:02-03:00"
     },
     {
       "id": "fce1d3d00bdd",
@@ -94222,8 +94143,8 @@
       "cuando": "2026-11-20T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-21T11:00:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-21T11:41:04-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -103591,7 +103512,8 @@
     "4354dabce392": "2026-11-21T07:00",
     "1566edf408a3": "2026-11-21T09:30",
     "d2a6a1a2130e": "2026-11-21T09:30",
-    "52278c38c150": "2026-11-21T10:03"
+    "52278c38c150": "2026-11-21T10:03",
+    "c710bff4a407": "2026-11-21T11:33"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
