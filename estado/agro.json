@@ -49692,6 +49692,26 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2a41c6337bb5cf5f": {
+      "conversacion": 10,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 46,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "venta de campos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Habla de grandes compras de tierras a nivel general, algo lejano al productor chico de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53090,7 +53110,8 @@
       "https://bichosdecampo.com/en-el-chaku-de-el-condor-en-la-puna-de-jujuy-la-comunidad-pudo-reunir-unas-120-vicunas-para-una-esquila-controlada-y-un-cronista-de-bichos-de-campo-estuvo-alli-para-contarlo": "2026-11-21",
       "https://chacabuquero.com.ar/2026/11/mas-datos-de-la-salida-de-bomberos-en.html": "2026-11-21",
       "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026": "2026-11-21",
-      "https://chacabuquero.com.ar/2026/11/emergencia-y-choque-en-chacabuco.html": "2026-11-21"
+      "https://chacabuquero.com.ar/2026/11/emergencia-y-choque-en-chacabuco.html": "2026-11-21",
+      "https://clarin.com/economia/venta-campos-grandes-jugadores-millones-mercado-dormido_0_qksSeXYsMs.html": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56487,7 +56508,8 @@
       "en el chaku de el condor en la puna de jujuy la comunidad pudo reunir unas 120 vicunas para una esquila controlada y un cronista de bichos de campo estuvo alli para contarlo": "2026-11-21",
       "mas datos de la salida de bomberos en chacabuco": "2026-11-21",
       "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030": "2026-11-21",
-      "emergencia y choque en chacabuco": "2026-11-21"
+      "emergencia y choque en chacabuco": "2026-11-21",
+      "venta de campos grandes jugadores y muchos millones para un mercado que estaba dormido": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59884,7 +59906,8 @@
       "c7e4fe0ff0c822ba": "2026-11-21",
       "17ae15e88ed9ac76": "2026-11-21",
       "240cb8149bb9fc02": "2026-11-21",
-      "999f72ef7ffc47ec": "2026-11-21"
+      "999f72ef7ffc47ec": "2026-11-21",
+      "2a41c6337bb5cf5f": "2026-11-21"
     }
   },
   "elegidas": [
@@ -94162,7 +94185,7 @@
       "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-21T14:40:37-03:00",
+  "actualizado": "2026-11-21T16:04:03-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
