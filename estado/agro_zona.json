@@ -33,10 +33,46 @@
         "facebook",
         "facebook_diario"
       ]
+    },
+    {
+      "dia": "2026-11-21",
+      "tema": "trigo_zona",
+      "cuando": "2026-11-21T11:10-03:00",
+      "publicado": {
+        "facebook": {
+          "id": "1165093619312414",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "18382023646242726",
+          "portada": "propia",
+          "colab": "si"
+        },
+        "historia_instagram": {
+          "id": "18102827588430090"
+        },
+        "historia_facebook": {
+          "id": "1748339316897098"
+        },
+        "colab": {
+          "estado": "aceptada"
+        },
+        "facebook_diario": {
+          "id": "1335203952028112",
+          "miniatura": "propia"
+        }
+      },
+      "redes": [
+        "instagram",
+        "facebook",
+        "facebook_diario"
+      ]
     }
   ],
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-20T11:10-03:00",
-    "bv_cosecha_01.mp4": "2026-11-20T11:10-03:00"
+    "bv_cosecha_01.mp4": "2026-11-20T11:10-03:00",
+    "bv_trigo_01.mp4": "2026-11-21T11:10-03:00",
+    "bv_cosecha_02.mp4": "2026-11-21T11:10-03:00"
   }
 }
