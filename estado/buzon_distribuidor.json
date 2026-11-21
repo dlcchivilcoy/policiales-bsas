@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-21T02:46:49.000Z",
+  "actualizado": "2026-11-21T03:02:06.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/nuevo-robo-en-una-zina-particular-de.html",
@@ -283,6 +283,30 @@
       "volanta": "Allanamientos en Luján y la región",
       "categoria": "abuso_sexual",
       "distancia_km": 90.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/le-robaron-temprano-en-chacabuco.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-21T03:02:06.000Z",
+      "titulo": "Le robaron la moto a un vecino al amanecer en Chacabuco",
+      "descripcion": "Delincuentes le sustrajeron el motovehículo a un vecino en las inmediaciones de Hipólito Yrigoyen y Falucho. La víctima radicó la denuncia en la Comisaría local.",
+      "texto_tiktok": "Un vecino de Chacabuco fue víctima de la inseguridad al amanecer, cuando descubrió que le habían sustraído su moto Rouser.\n\nEl hecho ocurrió en la zona de Hipólito Yrigoyen y Falucho, un sector donde se suelen registrar episodios similares que afectan principalmente a trabajadores nocturnos.\n\nTras notar el faltante, la víctima se comunicó con las fuerzas de seguridad y luego se presentó personalmente en la Comisaría para formalizar la denuncia correspondiente.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Inseguridad #RoboDeMoto #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-21_0133_08_chacabuco_le-robaron-la-moto-a-un-vecino.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-le-robaron-la-moto-a-un-vecino-en-inmediaciones-de-f1db4c",
+      "youtube_url": "https://youtube.com/shorts/SCyZFkdZU6E",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo en Chacabuco",
+      "categoria": "robo",
+      "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
         "x",
