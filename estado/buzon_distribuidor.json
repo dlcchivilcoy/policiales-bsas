@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-20T03:18:10.000Z",
+  "actualizado": "2026-11-21T02:03:20.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/incidente-con-demorados-entre-chacabuco.html",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-19T02:02:08.000Z",
-      "titulo": "Demoraron a dos sospechosos tras un robo de moto entre Chacabuco e Irala",
-      "descripcion": "Personal de la Patrulla Rural interceptó a dos hombres en el camino que une Chacabuco con Irala. Uno llevaba un machete y habían intentado escapar tras el llamado de una mujer que denunció el robo de su nieto a su propio padre.",
-      "texto_tiktok": "Un operativo policial culminó con la aprehensión de dos sospechosos en el camino rural que vincula a Chacabuco con la localidad de Irala.\n\nLa intervención se originó tras una alerta telefónica sobre la presencia de personas sospechosas y la denuncia de una mujer que indicó que su nieto le había sustraído una moto Gilera a su padre con intenciones de venderla.\n\nEfectivos de la Patrulla Rural divisaron a los involucrados junto a un automóvil antes del puente sobre el Río Salado.\n\nAl intentar su identificación, los sujetos intentaron fuga hacia un campo cercano pero fueron rápidamente reducidos, incautándose además un arma blanca tipo machete.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #PatrullaRural #Seguridad #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-19_0134_01_chacabuco_demoraron-a-dos-sospechosos-tr.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-demoraron-a-dos-hombres-tras-el-robo-de-una-moto-y-91f54c",
-      "youtube_url": "https://youtube.com/shorts/frctnc1FdMc",
-      "prioridad": 6,
-      "urgente": false,
-      "localidad": "Chacabuco",
-      "volanta": "Incidente en el camino a Irala",
-      "categoria": "otro_policial",
-      "distancia_km": 50.1,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.lamanana.com.ar/detuvieron-a-un-hombre-por-violencia-de-genero-reiterada/",
       "origen": "policiales",
@@ -283,6 +259,30 @@
       "volanta": "Chacabuco",
       "categoria": "robo",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31210/un-motociclista-resulto-herido-tras-chocar-contra-una-camioneta-en-pellegrini-y-combate-de-san-lorenzo.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-21T02:03:20.000Z",
+      "titulo": "Bragado: un motociclista de 35 años herido tras chocar contra una camioneta",
+      "descripcion": "Leandro Del Basto, de 35 años, debió ser llevado de urgencia al hospital tras impactar con su moto contra una camioneta en Pellegrini y Combate de San Lorenzo.",
+      "texto_tiktok": "Un motociclista de 35 años sufrió lesiones de consideración y fue trasladado de urgencia al centro de salud local tras protagonizar un violento choque contra una camioneta.\n\nEl hecho ocurrió en el cruce de las calles Pellegrini y Combate de San Lorenzo, donde por motivos que se investigan colisionaron una moto Keller Crono azul y un utilitario Mercedes-Benz.\n\nEn la escena trabajaron efectivos policiales y peritos de la Policía Científica, mientras que la investigación quedó en manos de la UFI N° 4 de Mercedes.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #SiniestroVial #Transito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-21_0133_04_bragado_bragado-un-motociclista-de-35-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-un-motociclista-de-35-anos-herido-tras-chocar-contra-759f32",
+      "youtube_url": "https://youtube.com/shorts/ZS41QALmm0A",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Siniestro vial en Bragado",
+      "categoria": "accidente_vial",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
