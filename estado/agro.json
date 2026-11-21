@@ -49712,6 +49712,50 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f0782eaf58b9c7cd": {
+      "conversacion": 8,
+      "historia_concreta": 8,
+      "cercania_pba": 18,
+      "interes_productores": 4,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 48,
+      "commercial_score": 32,
+      "subtema": "agro",
+      "tema": "drones",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Pasa en Luján y mezcla tecnología de drones con seguridad, pero queda lejos del día a día del productor común.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        35
+      ]
+    },
+    "469cde5b7ee3acfa": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 10,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 37,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Análisis de mercado internacional y comercialización de maíz que no le cambia la vida al vecino de pueblo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53111,7 +53155,9 @@
       "https://chacabuquero.com.ar/2026/11/mas-datos-de-la-salida-de-bomberos-en.html": "2026-11-21",
       "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026": "2026-11-21",
       "https://chacabuquero.com.ar/2026/11/emergencia-y-choque-en-chacabuco.html": "2026-11-21",
-      "https://clarin.com/economia/venta-campos-grandes-jugadores-millones-mercado-dormido_0_qksSeXYsMs.html": "2026-11-21"
+      "https://clarin.com/economia/venta-campos-grandes-jugadores-millones-mercado-dormido_0_qksSeXYsMs.html": "2026-11-21",
+      "https://bichosdecampo.com/el-secreto-esta-en-la-operacion-el-ex-capitan-que-estuvo-a-cargo-del-operativo-antidrones-para-proteger-al-papa-explica-por-que-la-logica-militar-tambien-sirve-cuando-estas-aeronave": "2026-11-21",
+      "https://bichosdecampo.com/el-pase-invertido-en-el-mercado-argentino-de-maiz-indica-que-no-se-espera-una-pronta-resolucion-del-conflicto-en-el-mar-negro": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56509,7 +56555,9 @@
       "mas datos de la salida de bomberos en chacabuco": "2026-11-21",
       "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030": "2026-11-21",
       "emergencia y choque en chacabuco": "2026-11-21",
-      "venta de campos grandes jugadores y muchos millones para un mercado que estaba dormido": "2026-11-21"
+      "venta de campos grandes jugadores y muchos millones para un mercado que estaba dormido": "2026-11-21",
+      "el secreto esta en la operacion el ex capitan que estuvo a cargo del operativo antidrones para proteger al papa explica por que la logica militar tambien sirve cuando estas aeronaves trabajan en el campo": "2026-11-21",
+      "el pase invertido en el mercado argentino de maiz indica que no se espera una pronta resolucion del conflicto en el mar negro": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59907,7 +59955,9 @@
       "17ae15e88ed9ac76": "2026-11-21",
       "240cb8149bb9fc02": "2026-11-21",
       "999f72ef7ffc47ec": "2026-11-21",
-      "2a41c6337bb5cf5f": "2026-11-21"
+      "2a41c6337bb5cf5f": "2026-11-21",
+      "f0782eaf58b9c7cd": "2026-11-21",
+      "469cde5b7ee3acfa": "2026-11-21"
     }
   },
   "elegidas": [
@@ -94185,7 +94235,7 @@
       "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-21T16:04:03-03:00",
+  "actualizado": "2026-11-21T17:33:52-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
