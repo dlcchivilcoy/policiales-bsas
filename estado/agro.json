@@ -49648,6 +49648,50 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "240cb8149bb9fc02": {
+      "conversacion": 15,
+      "historia_concreta": 10,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 63,
+      "commercial_score": 55,
+      "subtema": "agro",
+      "tema": "clima el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa mucho al productor local por la proyección del clima hasta 2030, aunque es un estudio a largo plazo.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        65,
+        62
+      ]
+    },
+    "999f72ef7ffc47ec": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "policiales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un choque urbano sin relación con el campo ni la producción rural.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53044,7 +53088,9 @@
       "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-21-noviembre-2026": "2026-11-21",
       "https://bichosdecampo.com/para-que-no-digan-que-no-hay-que-comer-verdura-de-hoja-reconocen-internacionalmente-al-laboratorio-del-mercado-central-encargado-de-controlar-la-inocuidad-de-los-alimentos": "2026-11-21",
       "https://bichosdecampo.com/en-el-chaku-de-el-condor-en-la-puna-de-jujuy-la-comunidad-pudo-reunir-unas-120-vicunas-para-una-esquila-controlada-y-un-cronista-de-bichos-de-campo-estuvo-alli-para-contarlo": "2026-11-21",
-      "https://chacabuquero.com.ar/2026/11/mas-datos-de-la-salida-de-bomberos-en.html": "2026-11-21"
+      "https://chacabuquero.com.ar/2026/11/mas-datos-de-la-salida-de-bomberos-en.html": "2026-11-21",
+      "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026": "2026-11-21",
+      "https://chacabuquero.com.ar/2026/11/emergencia-y-choque-en-chacabuco.html": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56439,7 +56485,9 @@
       "euro blue hoy precio y cotizacion de este 21 noviembre 2026": "2026-11-21",
       "para que no digan que no hay que comer verdura de hoja reconocen internacionalmente al laboratorio del mercado central encargado de controlar la inocuidad de los alimentos": "2026-11-21",
       "en el chaku de el condor en la puna de jujuy la comunidad pudo reunir unas 120 vicunas para una esquila controlada y un cronista de bichos de campo estuvo alli para contarlo": "2026-11-21",
-      "mas datos de la salida de bomberos en chacabuco": "2026-11-21"
+      "mas datos de la salida de bomberos en chacabuco": "2026-11-21",
+      "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030": "2026-11-21",
+      "emergencia y choque en chacabuco": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59834,7 +59882,9 @@
       "bce30ccc39226cb8": "2026-11-21",
       "5056457011d39d28": "2026-11-21",
       "c7e4fe0ff0c822ba": "2026-11-21",
-      "17ae15e88ed9ac76": "2026-11-21"
+      "17ae15e88ed9ac76": "2026-11-21",
+      "240cb8149bb9fc02": "2026-11-21",
+      "999f72ef7ffc47ec": "2026-11-21"
     }
   },
   "elegidas": [
@@ -94040,8 +94090,79 @@
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fce1d3d00bdd_portada.jpg"
     }
   ],
-  "pendientes": [],
-  "actualizado": "2026-11-21T14:20:43-03:00",
+  "pendientes": [
+    {
+      "id": "d3b731e70fd7",
+      "rep": {
+        "id": "d3b731e70fd7",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026",
+        "titulo": "El Niño y La Niña: un estudio argentino descubrió patrones de recurrencia y planteó una hipótesis hasta 2030",
+        "titulo_norm": "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030",
+        "descripcion": "Tras analizar 78 años de registros, el investigador Guillermo A. Chinni encontró coincidencias entre la variabilidad de estos fenómenos y la posición de la Tierra respecto del Sol; el trabajo explora una posible predominancia de El Niño en los próximos años",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RBYLIIAH4ZEO3JXQP6NWPKL64I.png?auth=8baf680ac209d93fb9f93ffd51096e2a407a42b82854be969d869eaafb5b1775&smart=true",
+        "autor": "",
+        "publicado": "2026-11-21T13:11-03:00",
+        "capturado": "2026-11-21T14:30-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "240cb8149bb9fc02",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "d3b731e70fd7",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026",
+          "titulo": "El Niño y La Niña: un estudio argentino descubrió patrones de recurrencia y planteó una hipótesis hasta 2030",
+          "titulo_norm": "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030",
+          "descripcion": "Tras analizar 78 años de registros, el investigador Guillermo A. Chinni encontró coincidencias entre la variabilidad de estos fenómenos y la posición de la Tierra respecto del Sol; el trabajo explora una posible predominancia de El Niño en los próximos años",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RBYLIIAH4ZEO3JXQP6NWPKL64I.png?auth=8baf680ac209d93fb9f93ffd51096e2a407a42b82854be969d869eaafb5b1775&smart=true",
+          "autor": "",
+          "publicado": "2026-11-21T13:11-03:00",
+          "capturado": "2026-11-21T14:30-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "240cb8149bb9fc02",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 10,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 63,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "clima el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa mucho al productor local por la proyección del clima hasta 2030, aunque es un estudio a largo plazo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          62
+        ],
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "cuando": "2026-11-21T14:30-03:00"
+    }
+  ],
+  "actualizado": "2026-11-21T14:35:58-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -103455,7 +103576,8 @@
     "1566edf408a3": "2026-11-21T09:30",
     "d2a6a1a2130e": "2026-11-21T09:30",
     "52278c38c150": "2026-11-21T10:03",
-    "c710bff4a407": "2026-11-21T11:33"
+    "c710bff4a407": "2026-11-21T11:33",
+    "d3b731e70fd7": "2026-11-21T14:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
