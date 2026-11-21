@@ -49460,6 +49460,90 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b0341f79f03978e9": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "coyuntura",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una columna de opinión general sobre el agro sin casos concretos ni datos que le cambien el día al productor.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ac47d6b7deb52453": {
+      "conversacion": 14,
+      "historia_concreta": 8,
+      "cercania_pba": 18,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 67,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "precios hacienda",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Interesa mucho a los criadores de la zona que están pensando en la retención o venta de hacienda para los próximos meses.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        67,
+        62
+      ]
+    },
+    "b77b78592e66940b": {
+      "conversacion": 8,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 43,
+      "commercial_score": 30,
+      "subtema": "maquinaria",
+      "tema": "pauny",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un conflicto gremial en una fábrica de Córdoba; aunque toca maquinaria, queda lejos de la zona y no afecta directo.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "39d27cceb71eed00": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 19,
+      "commercial_score": 10,
+      "subtema": "mercados",
+      "tema": "ucrania",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Nota publicada por un diario local sobre geopolítica internacional y Ucrania que no tiene arraigo regional.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -52839,7 +52923,11 @@
       "https://latrochadigital.com.ar/2026/11/21/impactante-granizada-sorprendio-a-chivilcoy": "2026-11-21",
       "https://elregionaldigital.com.ar/la-tormenta-del-lunes-16-en-9-de-julio-dejo-secuelas-por-la-caida-de-piedra-y-granizo-en-varios-lotes-con-cultivos": "2026-11-21",
       "https://elregionaldigital.com.ar/en-argentina-el-peso-de-faena-res-bovina-supero-los-240-kgs": "2026-11-21",
-      "https://elregionaldigital.com.ar/mas-burocracia-y-controles-advierten-de-un-nuevo-mecanismo-en-la-provincia-de-buenos-aires-que-genera-retro-en-el-mundo-laboral-rural": "2026-11-21"
+      "https://elregionaldigital.com.ar/mas-burocracia-y-controles-advierten-de-un-nuevo-mecanismo-en-la-provincia-de-buenos-aires-que-genera-retro-en-el-mundo-laboral-rural": "2026-11-21",
+      "https://bichosdecampo.com/en-el-marco-de-que-mundo-desarrolla-su-actividad-un-productor-argentino-si-no-queres-enterarte-mejor-no-leas-esta-cronica-del-agronomo-luis-villa-sobre-la-encrucijada-actual-del-agro": "2026-11-21",
+      "https://bichosdecampo.com/se-demora-la-reaccion-del-mercado-ganadero-el-asesor-ganadero-sebastian-riffel-asegura-que-las-mejoras-en-las-cotizaciones-recien-llegaran-para-marzo-y-abril-del-2027": "2026-11-21",
+      "https://clarin.com/rural/propuesta-vacia-sindicato-rechazo-oferta-pauny-pago-salarios-retomar-actividad-fabrica-seguira-ocupada_0_tcV7rDtrmW.html": "2026-11-21",
+      "https://chacabucoenred.com/muy-lejos-el-acuerdo-de-paz-en-ucrania": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56217,7 +56305,11 @@
       "impactante granizada sorprendio a chivilcoy": "2026-11-21",
       "la tormenta del lunes 16 en 9 de julio dejo secuelas por la caida de piedra y granizo en varios lotes con cultivos": "2026-11-21",
       "en argentina el peso de faena res bovina supero los 240 kgs": "2026-11-21",
-      "mas burocracia y controles advierten de un nuevo mecanismo en la provincia de buenos aires que genera retro en el mundo laboral rural": "2026-11-21"
+      "mas burocracia y controles advierten de un nuevo mecanismo en la provincia de buenos aires que genera retro en el mundo laboral rural": "2026-11-21",
+      "en el marco de que mundo desarrolla su actividad un productor argentino si no queres enterarte mejor no leas esta cronica del agronomo luis villa sobre la encrucijada actual del agro": "2026-11-21",
+      "se demora la reaccion del mercado ganadero el asesor ganadero sebastian riffel asegura que las mejoras en las cotizaciones recien llegaran para marzo y abril del 2027": "2026-11-21",
+      "propuesta vacia el sindicato rechazo la oferta de pauny por pago de salarios para retomar la actividad y la fabrica seguira ocupada": "2026-11-21",
+      "muy lejos el acuerdo de paz en ucrania": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59595,7 +59687,11 @@
       "cc1483bf596bece0": "2026-11-21",
       "ff6b0635d05a9852": "2026-11-21",
       "da0c11831d10b8b2": "2026-11-21",
-      "14ea84d1e91e960a": "2026-11-21"
+      "14ea84d1e91e960a": "2026-11-21",
+      "b0341f79f03978e9": "2026-11-21",
+      "ac47d6b7deb52453": "2026-11-21",
+      "b77b78592e66940b": "2026-11-21",
+      "39d27cceb71eed00": "2026-11-21"
     }
   },
   "elegidas": [
@@ -93589,6 +93685,61 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d2a6a1a2130e_portada.jpg"
+    },
+    {
+      "id": "d6a24e7d4459",
+      "cuando": "2026-11-21T10:03-03:00",
+      "titulo_original": "El Niño, lluvias y erosión: el doble cultivo puede reducir un 73% la pérdida de suelo según el INTA",
+      "descripcion": "En años Niño, la pérdida de suelo por erosión hídrica puede aumentar un 46 %. Un estudio del Instituto de Suelos del INTA estimó que, con lluvias como las de El Niño 1997/98, considerado muy fuerte, la pérdida de suelo en Buenos Aires alcanzaría los 66 millones de toneladas anuales, frente a 45 mill",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
+      "titular": "El Niño erosiona 66 millones de toneladas de suelo en Buenos Aires",
+      "volanta": "Suelos",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 10,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 76,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "erosión y lluvias",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Trata sobre el impacto de El Niño y la pérdida de suelo en Buenos Aires, algo que le importa y preocupa directamente al productor local.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-21T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "5683d8bc-96f6-4a95-8427-133d226ed977",
+          "slug": "el-nino-en-buenos-aires-inta-advierte-una-erosion-de-hasta-66-daeaac",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-en-buenos-aires-inta-advierte-una-erosion-de-hasta-66-daeaac",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18096315395669742",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1769112988553031",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d6a24e7d4459_portada.jpg"
     }
   ],
   "pendientes": [
@@ -93661,72 +93812,6 @@
         "policial_rural": false
       },
       "cuando": "2026-11-21T07:00-03:00"
-    },
-    {
-      "id": "d6a24e7d4459",
-      "rep": {
-        "id": "d6a24e7d4459",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
-        "titulo": "El Niño, lluvias y erosión: el doble cultivo puede reducir un 73% la pérdida de suelo según el INTA",
-        "titulo_norm": "el nino lluvias y erosion el doble cultivo puede reducir un 73 la perdida de suelo segun el inta",
-        "descripcion": "En años Niño, la pérdida de suelo por erosión hídrica puede aumentar un 46 %. Un estudio del Instituto de Suelos del INTA estimó que, con lluvias como las de El Niño 1997/98, considerado muy fuerte, la pérdida de suelo en Buenos Aires alcanzaría los 66 millones de toneladas anuales, frente a 45 millones en un año Neutro. El dato cobra relevancia ante el evento El Niño en curso, que podría alcanzar esa intensidad durante el verano 2026/27....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249432_38385604.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-20T10:25-03:00",
-        "capturado": "2026-11-20T21:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "461e3fc5566980bc",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "d6a24e7d4459",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
-          "titulo": "El Niño, lluvias y erosión: el doble cultivo puede reducir un 73% la pérdida de suelo según el INTA",
-          "titulo_norm": "el nino lluvias y erosion el doble cultivo puede reducir un 73 la perdida de suelo segun el inta",
-          "descripcion": "En años Niño, la pérdida de suelo por erosión hídrica puede aumentar un 46 %. Un estudio del Instituto de Suelos del INTA estimó que, con lluvias como las de El Niño 1997/98, considerado muy fuerte, la pérdida de suelo en Buenos Aires alcanzaría los 66 millones de toneladas anuales, frente a 45 millones en un año Neutro. El dato cobra relevancia ante el evento El Niño en curso, que podría alcanzar esa intensidad durante el verano 2026/27....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249432_38385604.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-20T10:25-03:00",
-          "capturado": "2026-11-20T21:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "461e3fc5566980bc",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 10,
-        "cercania_pba": 20,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 76,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "erosión y lluvias",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Trata sobre el impacto de El Niño y la pérdida de suelo en Buenos Aires, algo que le importa y preocupa directamente al productor local.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-20T21:00-03:00"
     },
     {
       "id": "048cd687b0c9",
@@ -94137,8 +94222,8 @@
       "cuando": "2026-11-20T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-21T10:03:04-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-21T10:12:54-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -103436,7 +103521,8 @@
     "a67e60298b6d": "2026-11-21T07:00",
     "4354dabce392": "2026-11-21T07:00",
     "1566edf408a3": "2026-11-21T09:30",
-    "d2a6a1a2130e": "2026-11-21T09:30"
+    "d2a6a1a2130e": "2026-11-21T09:30",
+    "52278c38c150": "2026-11-21T10:03"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
