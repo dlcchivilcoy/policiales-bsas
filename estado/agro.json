@@ -49756,6 +49756,66 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6ec8e5e0bf4d3283": {
+      "conversacion": 5,
+      "historia_concreta": 12,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 38,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "transición generacional",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una historia de vida interesante sobre recambio generacional, pero no apunta a los problemas cotidianos de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "593aaecf3fb736da": {
+      "conversacion": 6,
+      "historia_concreta": 10,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 47,
+      "commercial_score": 45,
+      "subtema": "agro",
+      "tema": "fertilización maíz",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Los ensayos del INTA sobre nitrógeno interesan al productor de maíz, aunque los datos sean del NOA.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d442f98b7ea12e18": {
+      "conversacion": 4,
+      "historia_concreta": 8,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 37,
+      "commercial_score": 35,
+      "subtema": "empresas",
+      "tema": "bioetanol",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una autorización oficial para la industria, un dato técnico que no le cambia el día a día al productor local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53157,7 +53217,10 @@
       "https://chacabuquero.com.ar/2026/11/emergencia-y-choque-en-chacabuco.html": "2026-11-21",
       "https://clarin.com/economia/venta-campos-grandes-jugadores-millones-mercado-dormido_0_qksSeXYsMs.html": "2026-11-21",
       "https://bichosdecampo.com/el-secreto-esta-en-la-operacion-el-ex-capitan-que-estuvo-a-cargo-del-operativo-antidrones-para-proteger-al-papa-explica-por-que-la-logica-militar-tambien-sirve-cuando-estas-aeronave": "2026-11-21",
-      "https://bichosdecampo.com/el-pase-invertido-en-el-mercado-argentino-de-maiz-indica-que-no-se-espera-una-pronta-resolucion-del-conflicto-en-el-mar-negro": "2026-11-21"
+      "https://bichosdecampo.com/el-pase-invertido-en-el-mercado-argentino-de-maiz-indica-que-no-se-espera-una-pronta-resolucion-del-conflicto-en-el-mar-negro": "2026-11-21",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249449-ariel-zago-de-basquetbolista-profesional-a-administrador-rural-con-foco-en-la-innovacion-agropecuaria.html": "2026-11-21",
+      "https://agrositio.com.ar/noticia/249435-maiz-la-fertilizacion-nitrogenada-mejora-la-rentabilidad.html": "2026-11-21",
+      "https://agrositio.com.ar/noticia/249441-el-gobierno-nacional-autorizo-la-comercializacion-de-una-nueva-levadura-geneticamente-modificada-que-optimiza-la-produccion-de-bioetanol.html": "2026-11-21"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -56557,7 +56620,10 @@
       "emergencia y choque en chacabuco": "2026-11-21",
       "venta de campos grandes jugadores y muchos millones para un mercado que estaba dormido": "2026-11-21",
       "el secreto esta en la operacion el ex capitan que estuvo a cargo del operativo antidrones para proteger al papa explica por que la logica militar tambien sirve cuando estas aeronaves trabajan en el campo": "2026-11-21",
-      "el pase invertido en el mercado argentino de maiz indica que no se espera una pronta resolucion del conflicto en el mar negro": "2026-11-21"
+      "el pase invertido en el mercado argentino de maiz indica que no se espera una pronta resolucion del conflicto en el mar negro": "2026-11-21",
+      "ariel zago de basquetbolista profesional a administrador rural con foco en la innovacion agropecuaria": "2026-11-21",
+      "13 de 16 ambientes respondieron al nitrogeno el inta comprobo la rentabilidad en maiz": "2026-11-21",
+      "bioetanol autorizan una nueva levadura geneticamente modificada para elevar la eficiencia industrial": "2026-11-21"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -59957,7 +60023,10 @@
       "999f72ef7ffc47ec": "2026-11-21",
       "2a41c6337bb5cf5f": "2026-11-21",
       "f0782eaf58b9c7cd": "2026-11-21",
-      "469cde5b7ee3acfa": "2026-11-21"
+      "469cde5b7ee3acfa": "2026-11-21",
+      "6ec8e5e0bf4d3283": "2026-11-21",
+      "593aaecf3fb736da": "2026-11-21",
+      "d442f98b7ea12e18": "2026-11-21"
     }
   },
   "elegidas": [
@@ -94235,7 +94304,7 @@
       "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-21T18:01:16-03:00",
+  "actualizado": "2026-11-21T18:05:32-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
