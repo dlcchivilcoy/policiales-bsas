@@ -48788,6 +48788,106 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "1c3b9bfbeceacc5e": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 43,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "peso de faena",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un dato estadístico histórico nacional de ganadería, interesante pero sin nombre propio ni cercanía zonal.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "915ab4428f80289d": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 3,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "investigación inta",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una entrevista institucional sobre investigación en el norte del país, muy lejos de nuestra zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "461e3fc5566980bc": {
+      "conversacion": 15,
+      "historia_concreta": 10,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 76,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "erosión y lluvias",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Trata sobre el impacto de El Niño y la pérdida de suelo en Buenos Aires, algo que le importa y preocupa directamente al productor local.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "bb9d03934f3da289": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 38,
+      "commercial_score": 45,
+      "subtema": "ganaderia",
+      "tema": "visec carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Informa sobre la plataforma de trazabilidad para exportar a Europa; relevante para frigoríficos y exportadores pero ajeno al día a día del productor chico.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4b2d917f8f1e6fd5": {
+      "conversacion": 0,
+      "historia_concreta": 0,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 0,
+      "potencial_reel": 0,
+      "ai_score": 0,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "accidente urbano",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un accidente de tránsito urbano en Chacabuco sin relación con el agro ni la producción.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -52117,7 +52217,12 @@
       "https://bichosdecampo.com/dale-las-gracias-a-la-harina-de-soja-el-unico-producto-que-logro-zafar-de-la-tendencia-bajista-generalizada": "2026-11-20",
       "https://lanacion.com.ar/economia/campo/fuera-de-lugar-el-gobierno-de-kicillof-exigira-todos-los-meses-informacion-salarial-y-laboral-de-los-nid20112026": "2026-11-20",
       "https://agroempresario.com/publicacion/124021/sanidad-lechera-una-investigacion-propone-reducir-antibiotico": "2026-11-20",
-      "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html": "2026-11-20"
+      "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html": "2026-11-20",
+      "https://infocampo.com.ar/la-cadena-de-la-carne-cierra-2026-con-un-hito-el-peso-de-faena-mas-alto-en-100-anos": "2026-11-20",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249448-inta-y-la-investigacion-en-campos-de-productores-enfocados-en-sostenibilidad-agropecuaria-con-s-prieto-investigador.html": "2026-11-20",
+      "https://agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html": "2026-11-20",
+      "https://lanacion.com.ar/economia/campo/aumento-dramaticamente-visec-carne-supero-los-50000-usuarios-registrados-y-ya-libero-409-embarques-nid20112026": "2026-11-20",
+      "https://chacabuquero.com.ar/2026/11/accidente-en-la-noche-de-chacabuco.html": "2026-11-20"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -55445,7 +55550,12 @@
       "dale las gracias a la harina de soja el unico producto que logro zafar de la tendencia bajista generalizada": "2026-11-20",
       "fuera de lugar el gobierno de kicillof exigira todos los meses informacion salarial y laboral de los empleados y la rural pidio su revision": "2026-11-20",
       "sanidad lechera una investigacion propone reducir antibiotico": "2026-11-20",
-      "ofrece recompensa por la moto que le robaron en chacabuco": "2026-11-20"
+      "ofrece recompensa por la moto que le robaron en chacabuco": "2026-11-20",
+      "la cadena de la carne cierra 2026 con un hito el peso de faena mas alto en 100 anos": "2026-11-20",
+      "por que la investigacion agropecuaria de inta se hace con y en campos de productores con s prieto investigador": "2026-11-20",
+      "el nino lluvias y erosion el doble cultivo puede reducir un 73 la perdida de suelo segun el inta": "2026-11-20",
+      "aumento dramaticamente visec carne supero los 50 000 usuarios registrados y ya libero 409 embarques": "2026-11-20",
+      "accidente en la noche de chacabuco": "2026-11-20"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -58773,7 +58883,12 @@
       "3c3d3929321a9e2d": "2026-11-20",
       "47f6fdb67cb656dd": "2026-11-20",
       "46e670fdf9cc36cb": "2026-11-20",
-      "39e7e705e0f01c8a": "2026-11-20"
+      "39e7e705e0f01c8a": "2026-11-20",
+      "1c3b9bfbeceacc5e": "2026-11-20",
+      "915ab4428f80289d": "2026-11-20",
+      "461e3fc5566980bc": "2026-11-20",
+      "bb9d03934f3da289": "2026-11-20",
+      "4b2d917f8f1e6fd5": "2026-11-20"
     }
   },
   "elegidas": [
@@ -92547,51 +92662,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_30bd6aabf13f_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "7a58ad17252a",
-      "rep": {
-        "id": "7a58ad17252a",
-        "fuente": "Chacabuquero",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.chacabuquero.com.ar/feeds/posts/default",
-        "url": "https://www.chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
-        "canonical_url": "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
-        "titulo": "Ofrece recompensa por la moto que le robaron en Chacabuco",
-        "titulo_norm": "ofrece recompensa por la moto que le robaron en chacabuco",
-        "descripcion": "Dato de contacto.El dueño de la moto Rouser Pulsar NS 200 robada esta madrugada de Falucho e Hipólito Yrigoyen ofrece recompensa para recuperarla. Contacto: 2352442082. Volver a Chacabuquero. Video del robo: El Corte Perfecto, en Insiarte 485Contacto por Whatsapp con Chacabuquero: 2352470278Recibir las noticias de Chacabuquero por Whatsapp: Canal de Noticias de Chacabuquero⁸- Últimas noticias- Cómo suscribirse a las noticias de Chacabuquero por WhatsappMás publicaciones del día:- Intensa caída de granizo en municipios vecinos de Chacabuco- Una periodista de Chacabuco está en carrera para ganar un Martín Fierro- Alerta Meteorológica para Chacabuco y la zona- Comunicado sobre controles del agua de Chacabuco- Pide ayuda para volver a su casa en Chacabuco - Accidente en el centro de Chacabuco - Necrológica I- Desalojos en un barrio de Chacabuco- Le robaron antes del amanecer- Este montículo ",
-        "imagen_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO3JemPG8jtUTpOEL7XxdceFfvp6DeoiRys8KCkwzOy4tTkswF4gIkEXo-zDJC-JnE0PdOSGGCu36-qOj89NxODkR81Ta2Fz044PwLrqcWHemQBNsRw3jUzY-j5kWGxC0zsJJkF7G4BOoF4yOTGn7ChU1Dq_0kPMNU2q2bAO8YHeswjVffn_3DXZEQvcg/s1600/1001581206.jpg",
-        "autor": "Cristian Otegui (noreply@blogger.com)",
-        "publicado": "2026-11-20T19:03-03:00",
-        "capturado": "2026-11-20T19:34-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "39e7e705e0f01c8a",
-        "localidad_medio": "Chacabuco"
-      },
-      "grupo": [
-        {
-          "id": "7a58ad17252a",
-          "fuente": "Chacabuquero",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.chacabuquero.com.ar/feeds/posts/default",
-          "url": "https://www.chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
-          "canonical_url": "https://chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
-          "titulo": "Ofrece recompensa por la moto que le robaron en Chacabuco",
-          "titulo_norm": "ofrece recompensa por la moto que le robaron en chacabuco",
-          "descripcion": "Dato de contacto.El dueño de la moto Rouser Pulsar NS 200 robada esta madrugada de Falucho e Hipólito Yrigoyen ofrece recompensa para recuperarla. Contacto: 2352442082. Volver a Chacabuquero. Video del robo: El Corte Perfecto, en Insiarte 485Contacto por Whatsapp con Chacabuquero: 2352470278Recibir las noticias de Chacabuquero por Whatsapp: Canal de Noticias de Chacabuquero⁸- Últimas noticias- Cómo suscribirse a las noticias de Chacabuquero por WhatsappMás publicaciones del día:- Intensa caída de granizo en municipios vecinos de Chacabuco- Una periodista de Chacabuco está en carrera para ganar un Martín Fierro- Alerta Meteorológica para Chacabuco y la zona- Comunicado sobre controles del agua de Chacabuco- Pide ayuda para volver a su casa en Chacabuco - Accidente en el centro de Chacabuco - Necrológica I- Desalojos en un barrio de Chacabuco- Le robaron antes del amanecer- Este montículo ",
-          "imagen_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO3JemPG8jtUTpOEL7XxdceFfvp6DeoiRys8KCkwzOy4tTkswF4gIkEXo-zDJC-JnE0PdOSGGCu36-qOj89NxODkR81Ta2Fz044PwLrqcWHemQBNsRw3jUzY-j5kWGxC0zsJJkF7G4BOoF4yOTGn7ChU1Dq_0kPMNU2q2bAO8YHeswjVffn_3DXZEQvcg/s1600/1001581206.jpg",
-          "autor": "Cristian Otegui (noreply@blogger.com)",
-          "publicado": "2026-11-20T19:03-03:00",
-          "capturado": "2026-11-20T19:34-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "39e7e705e0f01c8a",
-          "localidad_medio": "Chacabuco"
-        }
-      ],
+      "cuando": "2026-11-20T21:00-03:00",
+      "titulo_original": "Ofrece recompensa por la moto que le robaron en Chacabuco",
+      "descripcion": "Dato de contacto.El dueño de la moto Rouser Pulsar NS 200 robada esta madrugada de Falucho e Hipólito Yrigoyen ofrece recompensa para recuperarla. Contacto: 2352442082. Volver a Chacabuquero. Video del robo: El Corte Perfecto, en Insiarte 485Contacto por Whatsapp con Chacabuquero: 2352470278Recibir ",
+      "fuente": "Chacabuquero",
+      "url": "https://www.chacabuquero.com.ar/2026/11/ofrece-recompensa-por-la-moto-que-le.html",
+      "titular": "Ofrecen recompensa por una moto Rouser robada esta madrugada",
+      "volanta": "Policiales",
       "score": {
         "conversacion": 22,
         "historia_concreta": 18,
@@ -92614,77 +92694,97 @@
         "de_zona": true,
         "policial_rural": true
       },
-      "cuando": "2026-11-20T19:34-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-20T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "273757e7-64f5-4021-a8cd-d0096a642ab8",
+          "slug": "roban-una-moto-rouser-pulsar-ns-200-en-chacabuco-y-ofrecen-d3e1f7",
+          "url": "https://www.diariolacampaña.com.ar/n/roban-una-moto-rouser-pulsar-ns-200-en-chacabuco-y-ofrecen-d3e1f7",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18127643641928246",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "id": "101271341650483_1768506068613723",
+          "fotos": 5
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7a58ad17252a_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
-      "id": "cbfec1f1a89d",
+      "id": "d6a24e7d4459",
       "rep": {
-        "id": "cbfec1f1a89d",
-        "fuente": "LA NACION Campo",
+        "id": "d6a24e7d4459",
+        "fuente": "Agrositio",
         "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/debe-mas-de-us100-millones-una-empresa-de-los-grobo-ofrece-quitas-de-hasta-el-70-a-sus-acreedores-nid20112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/debe-mas-de-us100-millones-una-empresa-de-los-grobo-ofrece-quitas-de-hasta-el-70-a-sus-acreedores-nid20112026",
-        "titulo": "Debe más de US$100 millones: una empresa de Los Grobo ofrece quitas de hasta el 70% a sus acreedores",
-        "titulo_norm": "debe mas de us 100 millones una empresa de los grobo ofrece quitas de hasta el 70 a sus acreedores",
-        "descripcion": "Agrofina, que está en concurso preventivo desde 2025, presentó tres alternativas para sus 307 acreedores quirografarios: cobrar el 30% a tres años, el 50% en siete cuotas o recuperar la totalidad del crédito en 11 pagos anuales, con cuatro años de gracia",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/626GTFRQEJEFJFFV3KFU6BLY3Y.png?auth=355adf2c17130f5fafd6f9d4f5932218c7c87c0cbaa492d5abc796b435c6b677&smart=true",
-        "autor": "Mariana Reinke",
-        "publicado": "2026-11-20T17:29-03:00",
-        "capturado": "2026-11-20T18:04-03:00",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
+        "canonical_url": "https://agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
+        "titulo": "El Niño, lluvias y erosión: el doble cultivo puede reducir un 73% la pérdida de suelo según el INTA",
+        "titulo_norm": "el nino lluvias y erosion el doble cultivo puede reducir un 73 la perdida de suelo segun el inta",
+        "descripcion": "En años Niño, la pérdida de suelo por erosión hídrica puede aumentar un 46 %. Un estudio del Instituto de Suelos del INTA estimó que, con lluvias como las de El Niño 1997/98, considerado muy fuerte, la pérdida de suelo en Buenos Aires alcanzaría los 66 millones de toneladas anuales, frente a 45 millones en un año Neutro. El dato cobra relevancia ante el evento El Niño en curso, que podría alcanzar esa intensidad durante el verano 2026/27....",
+        "imagen_url": "https:/imagenesweb/contenidos/h_249432_38385604.jpg",
+        "autor": "info@agrositio.com (Agrositio)",
+        "publicado": "2026-11-20T10:25-03:00",
+        "capturado": "2026-11-20T21:00-03:00",
         "idioma": "es",
         "pais": "AR",
-        "hash": "6a672fc56b0c5f96",
+        "hash": "461e3fc5566980bc",
         "localidad_medio": ""
       },
       "grupo": [
         {
-          "id": "cbfec1f1a89d",
-          "fuente": "LA NACION Campo",
+          "id": "d6a24e7d4459",
+          "fuente": "Agrositio",
           "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/debe-mas-de-us100-millones-una-empresa-de-los-grobo-ofrece-quitas-de-hasta-el-70-a-sus-acreedores-nid20112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/debe-mas-de-us100-millones-una-empresa-de-los-grobo-ofrece-quitas-de-hasta-el-70-a-sus-acreedores-nid20112026",
-          "titulo": "Debe más de US$100 millones: una empresa de Los Grobo ofrece quitas de hasta el 70% a sus acreedores",
-          "titulo_norm": "debe mas de us 100 millones una empresa de los grobo ofrece quitas de hasta el 70 a sus acreedores",
-          "descripcion": "Agrofina, que está en concurso preventivo desde 2025, presentó tres alternativas para sus 307 acreedores quirografarios: cobrar el 30% a tres años, el 50% en siete cuotas o recuperar la totalidad del crédito en 11 pagos anuales, con cuatro años de gracia",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/626GTFRQEJEFJFFV3KFU6BLY3Y.png?auth=355adf2c17130f5fafd6f9d4f5932218c7c87c0cbaa492d5abc796b435c6b677&smart=true",
-          "autor": "Mariana Reinke",
-          "publicado": "2026-11-20T17:29-03:00",
-          "capturado": "2026-11-20T18:04-03:00",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
+          "canonical_url": "https://agrositio.com.ar/noticia/249432-en-anos-nino-la-perdida-de-suelo-por-erosion-hidrica-puede-aumentar-un-46-.html",
+          "titulo": "El Niño, lluvias y erosión: el doble cultivo puede reducir un 73% la pérdida de suelo según el INTA",
+          "titulo_norm": "el nino lluvias y erosion el doble cultivo puede reducir un 73 la perdida de suelo segun el inta",
+          "descripcion": "En años Niño, la pérdida de suelo por erosión hídrica puede aumentar un 46 %. Un estudio del Instituto de Suelos del INTA estimó que, con lluvias como las de El Niño 1997/98, considerado muy fuerte, la pérdida de suelo en Buenos Aires alcanzaría los 66 millones de toneladas anuales, frente a 45 millones en un año Neutro. El dato cobra relevancia ante el evento El Niño en curso, que podría alcanzar esa intensidad durante el verano 2026/27....",
+          "imagen_url": "https:/imagenesweb/contenidos/h_249432_38385604.jpg",
+          "autor": "info@agrositio.com (Agrositio)",
+          "publicado": "2026-11-20T10:25-03:00",
+          "capturado": "2026-11-20T21:00-03:00",
           "idioma": "es",
           "pais": "AR",
-          "hash": "6a672fc56b0c5f96",
+          "hash": "461e3fc5566980bc",
           "localidad_medio": ""
         }
       ],
       "score": {
-        "conversacion": 14,
-        "historia_concreta": 16,
-        "cercania_pba": 12,
-        "interes_productores": 11,
+        "conversacion": 15,
+        "historia_concreta": 10,
+        "cercania_pba": 20,
+        "interes_productores": 15,
         "impacto_economico": 8,
         "cercania_argentina": 5,
-        "potencial_reel": 0,
-        "ai_score": 66,
-        "commercial_score": 38,
-        "subtema": "empresas",
-        "tema": "agrofina concurso",
+        "potencial_reel": 3,
+        "ai_score": 76,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "erosión y lluvias",
         "ambito": "argentina",
         "sensible": true,
-        "explicacion": "Concurso millonario de una empresa proveidora de insumos que preocupa a acreedores y distribuidores.",
-        "tema_doc": "costos",
+        "explicacion": "Trata sobre el impacto de El Niño y la pérdida de suelo en Buenos Aires, algo que le importa y preocupa directamente al productor local.",
+        "tema_doc": "clima",
         "urgente": false,
-        "potencial_carrusel": 5,
+        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          70,
-          65
-        ],
         "de_zona": false,
         "policial_rural": false
       },
-      "cuando": "2026-11-20T18:04-03:00"
+      "cuando": "2026-11-20T21:00-03:00"
     },
     {
       "id": "a3cacf3b3124",
@@ -93724,8 +93824,8 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T19:38:52-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-20T21:07:04-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -102847,7 +102947,8 @@
     "acfacd647596": "2026-11-20T17:30",
     "f4907fb57a36": "2026-11-20T18:04",
     "cbfec1f1a89d": "2026-11-20T18:04",
-    "7a58ad17252a": "2026-11-20T19:34"
+    "7a58ad17252a": "2026-11-20T19:34",
+    "d6a24e7d4459": "2026-11-20T21:00"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
