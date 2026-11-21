@@ -93824,7 +93824,7 @@
       "cuando": "2026-11-19T21:00-03:00"
     }
   ],
-  "actualizado": "2026-11-20T21:07:04-03:00",
+  "actualizado": "2026-11-20T21:31:00-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -100500,6 +100500,43 @@
               },
               "facebook": {
                 "id": "1813892709663549"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-20T21:30:00-03:00": {
+      "dia": "2026-11-20",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué tipo de campo se está alquilando más?",
+          "opciones": [],
+          "publico": "inmobiliarias",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18113634575227670"
+            },
+            "facebook": {
+              "id": "2424252241713826"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18113634575227670"
+              },
+              "facebook": {
+                "id": "2424252241713826"
               }
             }
           ]
