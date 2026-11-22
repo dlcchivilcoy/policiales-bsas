@@ -38,6 +38,69 @@ REDES = ("youtube", "web", "facebook", "instagram")
 _CLAVES = ("INSTAGRAM_USER_ID", "INSTAGRAM_ACCESS_TOKEN", "FACEBOOK_PAGE_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")
 
 
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# FACEBOOK DE AGRO: solo videos y con tope (22/11/2026). El editor: «cómo hago para que el facebook de
+# diarioyradioagro comience a tener nuevos seguidores, porque está hiper estancado». Lo medido (últimos 100
+# posteos): los carruseles (álbumes de fotos) tuvieron una mediana de 2 visualizaciones y los videos 15, con uno
+# de 19.013 que trajo 48 seguidores en una semana (de 1.432 en agosto a 1.494). 91 de 100 posteos sin ninguna
+# reacción y hasta 23 posteos por día en una página de 1.500 seguidores: Facebook reparte menos cada posteo de
+# una página a la que casi nadie le reacciona. Ahora:
+#   - los carruseles NO van a Facebook (siguen en Instagram; AGRO_FB_CARRUSEL=1 los vuelve);
+#   - Facebook recibe como máximo AGRO_FB_MAX_DIA videos en 24 h (6; 0 = sin tope), contados en la página;
+#   - los virales de prueba solo entran si quedan AGRO_FB_RESERVA lugares libres (2) para lo propio del campo.
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+def fb_carruseles() -> bool:
+    return (os.environ.get("AGRO_FB_CARRUSEL") or "0").strip() == "1"
+
+
+def _entero(nombre: str, defecto: int) -> int:
+    try:
+        return max(0, int((os.environ.get(nombre) or "").strip() or defecto))
+    except ValueError:
+        return defecto
+
+
+def fb_tope() -> int:
+    return _entero("AGRO_FB_MAX_DIA", 6)
+
+
+def fb_reserva() -> int:
+    return _entero("AGRO_FB_RESERVA", 2)
+
+
+def posteos_facebook_24h(contar=None):
+    """Publicaciones de la página de Facebook ACTIVA (llamar adentro de credenciales_agro) en las últimas 24 h,
+    o None si no se pudo leer (entonces no se frena: mejor publicar de más que perder un posteo)."""
+    if contar is not None:
+        return contar()
+    import time
+    from reels import publicador as PB
+    pid = os.environ.get("FACEBOOK_PAGE_ID", "")
+    tok = os.environ.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    if not pid or not tok:
+        return None
+    try:
+        r = PB._pedir("GET", f"{PB.GRAPH}/{pid}/posts", tok,
+                      params={"since": int(time.time()) - 86400, "fields": "id", "limit": 100})
+        if r.status_code >= 400:
+            return None
+        return len((r.json() or {}).get("data") or [])
+    except Exception:                                      # noqa: BLE001
+        return None
+
+
+def lugar_facebook(reserva: int = 0, contar=None):
+    """None si hay lugar en el Facebook de agro; si no, {"omitido": motivo} (no cuenta como falla)."""
+    tope = fb_tope()
+    if not tope:
+        return None
+    n = posteos_facebook_24h(contar)
+    if n is None or n < tope - reserva:
+        return None
+    extra = f", {reserva} reservados para lo propio" if reserva else ""
+    return {"omitido": f"el Facebook de agro ya tiene {n} posteos en 24 h (tope {tope}{extra})"}
+
+
 class SalvaguardaAgro(RuntimeError):
     """Las credenciales agro faltan o apuntan a la cuenta del diario."""
 
@@ -234,7 +297,11 @@ def publicar_reel(pieza: dict, ya: dict = None, redes=REDES, log=print, portada_
     url_web = (salida.get("web") or {}).get("url", "") if hecho("web") else ""
 
     with credenciales_agro():
-        if "facebook" in redes and not hecho("facebook"):
+        lleno = lugar_facebook() if ("facebook" in redes and not hecho("facebook")) else None
+        if lleno:
+            salida["facebook"] = lleno
+            log(f"   Facebook: {lleno['omitido']}")
+        elif "facebook" in redes and not hecho("facebook"):
             try:
                 salida["facebook"] = PB.publicar_facebook(pp, mp4, url_web)
                 salida["facebook"]["miniatura"] = _miniatura_facebook(salida["facebook"].get("id"), pieza.get("portada"))
@@ -442,7 +509,10 @@ def publicar_carrusel(pieza: dict, ya: dict = None, log=print) -> dict:
             except Exception as e:                         # noqa: BLE001
                 salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
                 log(f"   Instagram FALLÓ: {salida['instagram']['error']}")
-        if not hecho("facebook"):
+        if not hecho("facebook") and not fb_carruseles():
+            salida["facebook"] = {"omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"}
+            log(f"   Facebook: {salida['facebook']['omitido']}")
+        elif not hecho("facebook"):
             try:
                 salida["facebook"] = _fotos_facebook(urls, mensaje)
                 log(f"   Facebook (fotos): {salida['facebook'].get('id')}")

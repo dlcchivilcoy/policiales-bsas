@@ -453,6 +453,11 @@ def publicar_facebook(mp4: Path, caption: str, alto: int = 1350, duracion: float
         hay = (lugar or PB._lugar_en_facebook)()
         if hay and hay[0] >= hay[1]:
             return {"omitido": f"la página ya tiene {hay[0]} reels en 24 h (tope {hay[1]})"}
+        if lugar is None:                                  # 22/11/2026: el tope del Facebook de agro (publicar.py)
+            from agro import publicar as PUB
+            lleno = PUB.lugar_facebook(reserva=PUB.fb_reserva())
+            if lleno:
+                return lleno
         pieza = {"descripcion_tiktok": caption, "formato": "reel", "video": {"alto": alto, "duracion": duracion},
                  "guion": {"titular": titular, "bajada": ""}}
         return dict((publicar_fn or PB.publicar_facebook)(pieza, Path(mp4), "") or {})

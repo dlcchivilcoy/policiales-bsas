@@ -563,8 +563,8 @@ def publicar(mp4: Path, texto: str, portada: Path, log=print) -> dict:
             salida["instagram"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
             log(f"   Instagram FALLÓ: {salida['instagram']['error']}")
         try:
-            salida["facebook"] = PB.publicar_facebook(pp, mp4)
-            log(f"   Facebook agro: {salida['facebook'].get('id')}")
+            salida["facebook"] = PUB.lugar_facebook() or PB.publicar_facebook(pp, mp4)
+            log(f"   Facebook agro: {salida['facebook'].get('id') or salida['facebook'].get('omitido')}")
         except Exception as e:                             # noqa: BLE001
             salida["facebook"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
             log(f"   Facebook agro FALLÓ: {salida['facebook']['error']}")
