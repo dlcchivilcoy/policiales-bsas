@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-22T03:02:59.000Z",
+  "actualizado": "2026-11-22T03:18:05.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.junindigital.com/policiales/2026-11-19-10-15-0-junin-dos-hombres-aprehendidos-tras-esclarecer-un-robo-a-un-comercio",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-20T03:03:34.000Z",
-      "titulo": "Dos aprehendidos por robar en un comercio y agredir a la policía",
-      "descripcion": "Capturaron a un joven de 19 años señalado por sustraer dinero de un negocio tras romper la entrada. En el operativo arrestaron a otro sujeto de 34 por atacar a los efectivos con piedras.",
-      "texto_tiktok": "Personal policial esclareció un ilícito perpetrado en la madrugada contra un local comercial situado en la esquina de Rivadavia y Falucho.\n\nEl dueño descubrió el ataque mediante las cámaras y alertó a emergencias, lo que permitió rastrear al sospechoso con monitoreo municipal.\n\nTras un registro de urgencia en la zona limítrofe entre los barrios Capilla de Loreto y Bicentenario, atraparon al presunto ladrón y a otro individuo que entorpeció el procedimiento.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Robo #Policiales #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-20_0132_08_junin_dos-aprehendidos-por-robar-en-.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-atraparon-a-dos-hombres-tras-robar-un-negocio-y-atacar-a-6c1f2f",
-      "youtube_url": "https://youtube.com/shorts/nv99m5TY1Vs",
-      "prioridad": 7,
-      "urgente": false,
-      "localidad": "Junín",
-      "volanta": "Junín",
-      "categoria": "robo",
-      "distancia_km": 91.2,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/policiales-de-chacabuco-esclarecieron.html",
       "origen": "policiales",
@@ -306,6 +282,30 @@
       "localidad": "Chacabuco",
       "volanta": "Robo en Chacabuco",
       "categoria": "robo",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/llamativo-intento-de-suplantacion-de.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-22T03:18:05.000Z",
+      "titulo": "Usurpando la identidad del sobrino del intendente, intentaron estafar a su padre",
+      "descripcion": "Un estafador se hizo pasar por Nicolás Golía, referente de la Juventud Peronista, y le escribió a su padre por WhatsApp desde un número con característica de Buenos Aires para engañarlo.",
+      "texto_tiktok": "Un delincuente intentó engañar al padre de Nicolás Golía haciéndose pasar por él a través de la aplicación de mensajería WhatsApp.\n\nEl impostor utilizó una línea telefónica con característica de la Ciudad de Buenos Aires para enviar un mensaje simulando ser el joven dirigente político.\n\nAnte la sospecha, el destinatario intentó comunicarse telefónicamente pero no obtuvo respuesta, lo que motivó la alerta pública.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #EstafaVirtual #SuplantacionDeIdentidad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-22_0134_10_chacabuco_usurpando-la-identidad-del-sob.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-intentaron-estafar-al-padre-de-nicolas-golia-ac8ba5",
+      "youtube_url": "https://youtube.com/shorts/U74v0Vn3MfM",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Intento de estafa en Chacabuco",
+      "categoria": "otro_policial",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
