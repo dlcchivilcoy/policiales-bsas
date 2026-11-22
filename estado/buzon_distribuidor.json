@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T02:06:57.000Z",
+  "actualizado": "2026-11-22T02:18:19.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.lamanana.com.ar/perdidas-totales-tras-el-incendio-de-una-vivienda/",
@@ -283,6 +283,30 @@
       "volanta": "Hallazgo en Chacabuco",
       "categoria": "otro_policial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/tragedia-en-una-obra-en-construccion-en.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-22T02:18:19.000Z",
+      "titulo": "Murió un albañil tras recibir una descarga eléctrica y desatarse un incendio",
+      "descripcion": "Un trabajador de nacionalidad paraguaya falleció este sábado tras sufrir una descarga eléctrica y un incendio en una obra en construcción en Junín. Fue asistido por bomberos y personal médico, pero constataron su deceso en el hospital.",
+      "texto_tiktok": "Un trágico accidente laboral sacudió este sábado a la ciudad de Junín, donde un albañil perdió la vida luego de recibir una descarga eléctrica en una obra en construcción ubicada en la calle Lebensohn, entre Arias y 2 de Enero.\n\nLa víctima fue identificada como Diosnel Núñez, de nacionalidad paraguaya, quien además sufrió un principio de incendio en el lugar que debió ser controlado por los bomberos.\n\nA pesar de ser asistido rápidamente por personal de salud y trasladado de urgencia al Hospital Interzonal de Agudos, los profesionales no lograron salvarle la vida y constataron su fallecimiento.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-22_0134_03_chacabuco_muri-un-alba-il-tras-recibir-u.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-murio-un-albanil-tras-recibir-una-descarga-electrica-y-47d395",
+      "youtube_url": "https://youtube.com/shorts/0P7KiZg7X6o",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Accidente laboral en Junín",
+      "categoria": "otro_policial",
+      "distancia_km": 91.2,
       "radio_ok": true,
       "plataformas": [
         "x",
