@@ -50280,6 +50280,26 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2d399a053abe5a2f": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 4,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 24,
+      "commercial_score": 15,
+      "subtema": "maquinaria",
+      "tema": "afat",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una entrevista institucional y general sobre balances y expectativas de cámaras empresarias, sin impacto directo local ni hechos concretos.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53721,7 +53741,8 @@
       "https://clarin.com/rural/trigo-horas-sol-riesgos-calidad_0_CFFumLguPI.html": "2026-11-22",
       "https://tn.com.ar/campo/2026/11/22/una-papa-para-chips-mas-saludables-editada-geneticamente-obtuvo-su-registro-oficial": "2026-11-22",
       "https://tn.com.ar/campo/2026/11/22/es-una-pasion-el-estudiante-que-rescata-vacas-de-las-islas-entre-sus-clases-en-la-escuela-y-tareas-del-campo": "2026-11-22",
-      "https://elregionaldigital.com.ar/6a-expo-loberia-2026-angus-brillo-en-la-pista-y-destaco-el-crecimiento-mundial-de-su-carne-certificada": "2026-11-22"
+      "https://elregionaldigital.com.ar/6a-expo-loberia-2026-angus-brillo-en-la-pista-y-destaco-el-crecimiento-mundial-de-su-carne-certificada": "2026-11-22",
+      "https://infocampo.com.ar/maquinaria-agricola-tenemos-con-que-ser-optimistas-para-que-2027-sea-un-buen-ano": "2026-11-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57161,7 +57182,8 @@
       "trigo menos horas de sol y riesgos para la calidad": "2026-11-22",
       "una papa para chips mas saludables editada geneticamente obtuvo su registro oficial": "2026-11-22",
       "es una pasion el estudiante que rescata vacas de las islas entre sus clases en la escuela y tareas del campo": "2026-11-22",
-      "6 expo loberia 2026 angus brillo en la pista y destaco el crecimiento mundial de su carne certificada": "2026-11-22"
+      "6 expo loberia 2026 angus brillo en la pista y destaco el crecimiento mundial de su carne certificada": "2026-11-22",
+      "maquinaria agricola tenemos con que ser optimistas para que 2027 sea un buen ano": "2026-11-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -60601,7 +60623,8 @@
       "c8f4d82837f2ca0c": "2026-11-22",
       "58a1ad0928050c0e": "2026-11-22",
       "fe2ac57f16652bcc": "2026-11-22",
-      "9dacaa1f63ce6409": "2026-11-22"
+      "9dacaa1f63ce6409": "2026-11-22",
+      "2d399a053abe5a2f": "2026-11-22"
     }
   },
   "elegidas": [
@@ -94915,6 +94938,65 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d31101abc09f_portada.jpg"
+    },
+    {
+      "id": "d3b731e70fd7",
+      "cuando": "2026-11-22T10:01-03:00",
+      "titulo_original": "El Niño y La Niña: un estudio argentino descubrió patrones de recurrencia y planteó una hipótesis hasta 2030",
+      "descripcion": "Tras analizar 78 años de registros, el investigador Guillermo A. Chinni encontró coincidencias entre la variabilidad de estos fenómenos y la posición de la Tierra respecto del Sol; el trabajo explora una posible predominancia de El Niño en los próximos años",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026/",
+      "titular": "Estudio argentino revela patrones astronómicos en El Niño hasta 2030",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 10,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 63,
+        "commercial_score": 55,
+        "subtema": "agro",
+        "tema": "clima el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa mucho al productor local por la proyección del clima hasta 2030, aunque es un estudio a largo plazo.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          65,
+          62
+        ],
+        "de_zona": false,
+        "policial_rural": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-22T10:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "66556152-6590-47ee-bd94-3495f83cb131",
+          "slug": "estudio-argentino-halla-patrones-astronomicos-en-el-nino-y-085fd3",
+          "url": "https://www.diariolacampaña.com.ar/n/estudio-argentino-halla-patrones-astronomicos-en-el-nino-y-085fd3",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18031013369699206",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "id": "101271341650483_1770288498435480",
+          "fotos": 6
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d3b731e70fd7_portada.jpg"
     }
   ],
   "pendientes": [
@@ -94983,80 +95065,10 @@
         "policial_rural": false
       },
       "cuando": "2026-11-22T09:30-03:00"
-    },
-    {
-      "id": "d3b731e70fd7",
-      "rep": {
-        "id": "d3b731e70fd7",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026",
-        "titulo": "El Niño y La Niña: un estudio argentino descubrió patrones de recurrencia y planteó una hipótesis hasta 2030",
-        "titulo_norm": "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030",
-        "descripcion": "Tras analizar 78 años de registros, el investigador Guillermo A. Chinni encontró coincidencias entre la variabilidad de estos fenómenos y la posición de la Tierra respecto del Sol; el trabajo explora una posible predominancia de El Niño en los próximos años",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/RBYLIIAH4ZEO3JXQP6NWPKL64I.png?auth=8baf680ac209d93fb9f93ffd51096e2a407a42b82854be969d869eaafb5b1775&smart=true",
-        "autor": "",
-        "publicado": "2026-11-21T13:11-03:00",
-        "capturado": "2026-11-21T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "240cb8149bb9fc02",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "d3b731e70fd7",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/el-nino-y-la-nina-un-estudio-argentino-descubrio-patrones-de-recurrencia-y-planteo-una-hipotesis-nid21112026",
-          "titulo": "El Niño y La Niña: un estudio argentino descubrió patrones de recurrencia y planteó una hipótesis hasta 2030",
-          "titulo_norm": "el nino y la nina un estudio argentino descubrio patrones de recurrencia y planteo una hipotesis hasta 2030",
-          "descripcion": "Tras analizar 78 años de registros, el investigador Guillermo A. Chinni encontró coincidencias entre la variabilidad de estos fenómenos y la posición de la Tierra respecto del Sol; el trabajo explora una posible predominancia de El Niño en los próximos años",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/RBYLIIAH4ZEO3JXQP6NWPKL64I.png?auth=8baf680ac209d93fb9f93ffd51096e2a407a42b82854be969d869eaafb5b1775&smart=true",
-          "autor": "",
-          "publicado": "2026-11-21T13:11-03:00",
-          "capturado": "2026-11-21T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "240cb8149bb9fc02",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 10,
-        "cercania_pba": 12,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 63,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "clima el niño",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesa mucho al productor local por la proyección del clima hasta 2030, aunque es un estudio a largo plazo.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          65,
-          62
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-22T10:01:12-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-22T10:06:28-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
