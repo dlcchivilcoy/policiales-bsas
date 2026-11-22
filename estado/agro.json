@@ -50340,6 +50340,26 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "040c3e706eae6adc": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 3,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 27,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "biocombustibles",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un reclamo institucional de cámaras que no le cambia el día a día al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53790,7 +53810,10 @@
       "https://infocampo.com.ar/precio-del-sorgo-hoy-22-noviembre-2026": "2026-11-22",
       "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-22-noviembre-2026": "2026-11-22",
       "https://bichosdecampo.com/entre-dos-loteos-para-viviendas-ruben-romero-alquila-5-hectareas-para-producir-verduras-en-neuquen-como-arrendatario-el-necesita-mas-certezas-que-nadie-y-por-eso-apoyo-la-nueva-ley-de-defensa-de-l": "2026-11-22",
-      "https://bichosdecampo.com/y-con-este-dato-que-hacemos-entre-2021-y-2024-la-argentina-registro-la-perdida-de-cobertura-de-bosques-sobre-1-117-256-hectareas-fundamentalmente-en-santiago-chaco-y-formosa": "2026-11-22"
+      "https://bichosdecampo.com/y-con-este-dato-que-hacemos-entre-2021-y-2024-la-argentina-registro-la-perdida-de-cobertura-de-bosques-sobre-1-117-256-hectareas-fundamentalmente-en-santiago-chaco-y-formosa": "2026-11-22",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-22-noviembre-2026": "2026-11-22",
+      "https://agroempresario.com/publicacion/124070/biocombustibles-came-reclama-que-diputados-apruebe-la-nueva-ley": "2026-11-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57239,7 +57262,10 @@
       "precio del sorgo en rosario hoy 22 noviembre 2026": "2026-11-22",
       "dolar blue a cuanto cotizan hoy en cordoba 22 noviembre 2026": "2026-11-22",
       "entre dos loteos para viviendas ruben romero alquila 5 hectareas para producir verduras en neuquen como arrendatario el necesita mas certezas que nadie y por eso apoyo la nueva ley de defensa de las chacras": "2026-11-22",
-      "y con este dato que hacemos entre 2021 y 2024 la argentina registro la perdida de cobertura de bosques sobre 1 117 256 hectareas la mitad en santiago chaco y formosa": "2026-11-22"
+      "y con este dato que hacemos entre 2021 y 2024 la argentina registro la perdida de cobertura de bosques sobre 1 117 256 hectareas la mitad en santiago chaco y formosa": "2026-11-22",
+      "dolar blue a cuanto cotizan hoy en mendoza 22 noviembre 2026": "2026-11-22",
+      "euro blue hoy precio y cotizacion de este 22 noviembre 2026": "2026-11-22",
+      "biocombustibles came reclama que diputados apruebe la nueva ley": "2026-11-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -60688,7 +60714,10 @@
       "45298faee732af5e": "2026-11-22",
       "3ad36392d6139ca0": "2026-11-22",
       "e0865dab1594ed41": "2026-11-22",
-      "9725a1efdcb2745d": "2026-11-22"
+      "9725a1efdcb2745d": "2026-11-22",
+      "c7de1fc96d571937": "2026-11-22",
+      "73c7e7b70ade126c": "2026-11-22",
+      "040c3e706eae6adc": "2026-11-22"
     }
   },
   "elegidas": [
@@ -95064,7 +95093,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-22T11:35:19-03:00",
+  "actualizado": "2026-11-22T13:04:56-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
