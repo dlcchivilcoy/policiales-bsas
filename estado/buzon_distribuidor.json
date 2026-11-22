@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T02:48:18.000Z",
+  "actualizado": "2026-11-22T03:02:59.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.junindigital.com/policiales/2026-11-19-10-15-0-junin-dos-hombres-aprehendidos-tras-esclarecer-un-robo-a-un-comercio",
@@ -282,6 +282,30 @@
       "localidad": "Chacabuco",
       "volanta": "Choque en Chacabuco",
       "categoria": "accidente_vial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/nuevo21112026.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-22T03:02:59.000Z",
+      "titulo": "Robaron una moto a una vecina tras forzar un portón en barrio Alcira de la Peña",
+      "descripcion": "Delincuentes ingresaron a una vivienda durante la madrugada y se llevaron una motocicleta marca Motomel tras dañar el cierre del portón. Ocurrió en la ciudad de Chacabuco.",
+      "texto_tiktok": "Una vecina de Chacabuco sufrió el robo de su motocicleta durante la madrugada.\n\nEl ilícito ocurrió en el interior de una vivienda ubicada en el barrio Alcira de la Peña.\n\nPara ingresar, los ladrones dañaron el sistema de cierre de un portón.\n\nHasta el momento no se informaron novedades sobre el paradero del rodado.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Inseguridad #RoboDeMoto #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-22_0134_08_chacabuco_robaron-una-moto-a-una-vecina-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/robaron-una-moto-a-una-vecina-tras-danar-el-porton-de-una-casa-a528ba",
+      "youtube_url": "",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Robo en Chacabuco",
+      "categoria": "robo",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
