@@ -67,12 +67,45 @@
         "facebook",
         "facebook_diario"
       ]
+    },
+    {
+      "dia": "2026-11-22",
+      "tema": "soja_perdidas",
+      "cuando": "2026-11-22T11:10-03:00",
+      "publicado": {
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 10 posteos en 24 h (tope 6)"
+        },
+        "instagram": {
+          "id": "18138001288776497",
+          "portada": "propia",
+          "colab": "si"
+        },
+        "historia_instagram": {
+          "id": "17920245735496020"
+        },
+        "historia_facebook": {
+          "id": "1481742536741038"
+        },
+        "colab": {
+          "estado": "aceptada"
+        },
+        "facebook_diario": {
+          "id": "1160428456427660",
+          "miniatura": "propia"
+        }
+      },
+      "redes": [
+        "instagram",
+        "facebook_diario"
+      ]
     }
   ],
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-20T11:10-03:00",
     "bv_cosecha_01.mp4": "2026-11-20T11:10-03:00",
     "bv_trigo_01.mp4": "2026-11-21T11:10-03:00",
-    "bv_cosecha_02.mp4": "2026-11-21T11:10-03:00"
+    "bv_cosecha_02.mp4": "2026-11-21T11:10-03:00",
+    "bv_campo_01.mp4": "2026-11-22T11:10-03:00"
   }
 }
