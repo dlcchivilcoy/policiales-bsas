@@ -313,7 +313,7 @@ def placa(pregunta: str, fondo: str, destino: Path, etiqueta: str = "PARTICIPÁ"
         dv.line((0, y, W, y), fill=HI.FONDO + (a,))
     im.alpha_composite(velo)
     d = ImageDraw.Draw(im)
-    d.rectangle((0, 0, W, 8), fill=D.NARANJA)
+    d.rectangle((0, 0, W, 8), fill=D.ACENTO)
     lg = D.lockup("grafito", 60)
     im.alpha_composite(lg, (D.X, HI.SEGURA[0]))
     # El bloque de texto se apoya sobre el final de la zona segura.
@@ -328,7 +328,7 @@ def placa(pregunta: str, fondo: str, destino: Path, etiqueta: str = "PARTICIPÁ"
     alto = (58 + 26 + round(len(rp) * fp.size * 1.14) + 34 + round(len(ri) * fi.size * 1.24) + 26
             + round(len(rw) * fw.size * 1.22) + 34 + 34)
     y = HI.SEGURA[1] - alto
-    d.rectangle((D.X, y, D.X + d.textlength(etiqueta, font=fc) + 36, y + 58), fill=D.NARANJA_CAJA)
+    d.rectangle((D.X, y, D.X + d.textlength(etiqueta, font=fc) + 36, y + 58), fill=D.ACENTO_CAJA)
     d.text((D.X + 18, y + 10), etiqueta, font=fc, fill=D.BLANCO)
     y += 58 + 26
     y = D.escribir(d, D.X, y, rp, fp, D.BLANCO, 1.14) + 34

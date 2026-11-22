@@ -316,13 +316,13 @@ def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: dateti
         dv.line((0, y, W, y), fill=HI.FONDO + (a,))
     im.alpha_composite(velo)
     d = ImageDraw.Draw(im)
-    d.rectangle((0, 0, W, 10), fill=D.NARANJA)
+    d.rectangle((0, 0, W, 10), fill=D.ACENTO)
     lg = D.lockup("grafito", 64)
     im.alpha_composite(lg, (D.X, 48))
     y = 48 + lg.height + 26
     caja = f"EL CAMPO HOY · {HI.fecha_larga(hoy).upper()}"
     fc = D.fuente("bold", 28)
-    d.rectangle((D.X, y, D.X + d.textlength(caja, font=fc) + 32, y + 48), fill=D.NARANJA_CAJA)
+    d.rectangle((D.X, y, D.X + d.textlength(caja, font=fc) + 32, y + 48), fill=D.ACENTO_CAJA)
     d.text((D.X + 16, y + 8), caja, font=fc, fill=D.BLANCO)
     y += 48 + 22
     tab = tablero(datos, mem, lluvia)
@@ -344,7 +344,7 @@ def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: dateti
         x = D.X + (k % 2) * (ancho + gap)
         yy = y_tab + (k // 2) * (alto + gap)
         d.rounded_rectangle((x, yy, x + ancho, yy + alto), radius=20, fill=(20, 22, 26, 225))
-        d.rectangle((x, yy + 18, x + 6, yy + alto - 18), fill=D.NARANJA)
+        d.rectangle((x, yy + 18, x + 6, yy + alto - 18), fill=D.ACENTO)
         d.text((x + 26, yy + 18), t["rotulo"], font=D.fuente("bold", 24), fill=(175, 180, 188))
         g = 1.0 if con_foto else 1.22
         fv = D.fuente("negra", round((50 if len(t["valor"]) <= 10 else 42) * g))
@@ -360,7 +360,7 @@ def portada(datos: dict, mem: dict, lluvia: dict, destino: Path, momento: dateti
         fd, rd = D.ajustar(d, pie, "negra", 32, 22, W - 2 * D.X - 70, 1)
         d.text((D.X, yd), rd[0], font=fd, fill=D.BLANCO)
         xa = D.X + d.textlength(rd[0], font=fd) + 18
-        d.polygon([(xa, yd + 4), (xa + 30, yd + 19), (xa, yd + 34)], fill=D.NARANJA)
+        d.polygon([(xa, yd + 4), (xa + 30, yd + 19), (xa, yd + 34)], fill=D.ACENTO)
     if foto:
         d.text((D.X, H - 48), "Imagen de fondo generada con IA", font=D.fuente("regular", 20), fill=(160, 165, 172))
     destino = Path(destino)
@@ -376,7 +376,7 @@ def cierre(destino: Path, momento: datetime) -> Path:
     W, H = HI.W, HI.H45
     im = Image.new("RGBA", (W, H), HI.FONDO + (255,))
     d = ImageDraw.Draw(im)
-    d.rectangle((0, 0, W, 10), fill=D.NARANJA)
+    d.rectangle((0, 0, W, 10), fill=D.ACENTO)
     marca = D.isologo(320)
     im.alpha_composite(marca, ((W - marca.width) // 2, 160))
     y = 160 + marca.height + 60

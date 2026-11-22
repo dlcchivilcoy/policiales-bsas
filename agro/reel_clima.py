@@ -119,7 +119,7 @@ def _etiqueta(tramo: dict) -> str:
 def _base(tema: dict) -> Image.Image:
     im = Image.new("RGB", (D.W, D.H45), tema["fondo"])
     d = ImageDraw.Draw(im)
-    d.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
+    d.rectangle((0, 0, D.W, 8), fill=D.ACENTO)
     d.text((60, 44), "¿CUÁNDO LLUEVE EN LA ZONA?", font=D.fuente("negra", 60), fill=D.BLANCO)
     d.text((60, 120), "Lluvia prevista cada 6 horas · próximos 3 días", font=D.fuente("medium", 34),
            fill=tema["texto"])
@@ -160,7 +160,7 @@ def cuadro_mapa(datos_: dict, i: int, tema: dict, base: Image.Image, mapas: dict
 def placa_pueblos(datos_: dict, tema: dict) -> Image.Image:
     im = Image.new("RGB", (D.W, D.H45), tema["fondo"])
     d = ImageDraw.Draw(im)
-    d.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
+    d.rectangle((0, 0, D.W, 8), fill=D.ACENTO)
     d.text((60, 70), "LO QUE SE ESPERA", font=D.fuente("negra", 64), fill=D.BLANCO)
     d.text((60, 150), "Milímetros previstos en los próximos 3 días", font=D.fuente("medium", 34), fill=tema["texto"])
     filas = ML.lluvia_por_pueblo(datos_)[:8]

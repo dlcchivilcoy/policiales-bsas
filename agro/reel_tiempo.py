@@ -258,7 +258,7 @@ def _rayo(d: ImageDraw.ImageDraw, x: float, y: float, h: float, color=AMARILLO) 
 
 
 def _encabezado(d, titulo: str, sub: str, tc: dict) -> None:
-    d.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
+    d.rectangle((0, 0, D.W, 8), fill=D.ACENTO)
     f, r = D.ajustar(d, titulo, "negra", 60, 38, D.W - 120, 1)    # el gancho (SEO) en un renglón
     d.text((60, 44 + (60 - f.size) // 2), r[0] if r else titulo, font=f, fill=D.BLANCO)
     d.text((60, 120), sub, font=D.fuente("medium", 34), fill=tc["texto"])

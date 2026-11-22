@@ -30,6 +30,10 @@ FONDO = (27, 29, 32)
 VERDE = (141, 205, 62)
 VERDE_OSCURO = (24, 40, 14)
 NARANJA = D.NARANJA_MARCA                # el naranja del isologo (21/11/2026)
+# 22/11/2026 (el editor: «invertí los colores»): RESALTA = la palabra clave y las cifras (naranja); ACENTO = lo
+# demás que lleva color (el resto del título, la etiqueta, la volanta, la raya, «deslizá», los tildes) en verde.
+RESALTA = NARANJA if D.NARANJA_RESALTA else VERDE
+ACENTO = VERDE if D.NARANJA_RESALTA else NARANJA
 BLANCO = (255, 255, 255)
 GRIS = (196, 200, 206)
 GRIS_TENUE = (130, 135, 142)
@@ -168,7 +172,13 @@ def ajustar(d, texto: str, ancho: int, max_renglones: int, tope: int, piso: int,
     return f, r[:max_renglones], palabras
 
 
-def escribir(im: Image.Image, x: int, y: int, renglones: list, f, marca: list, color=BLANCO, verde=VERDE,
+def color_marca(m, color=BLANCO):
+    """El color de una palabra según su marca: True = la palabra clave (RESALTA); "naranja" = el resto del
+    título que lleva color (ACENTO; el nombre quedó de cuando ese resto iba en naranja); False = `color`."""
+    return ACENTO if m == "naranja" else RESALTA if m else color
+
+
+def escribir(im: Image.Image, x: int, y: int, renglones: list, f, marca: list, color=BLANCO, verde=None,
              salto: float = 1.02) -> int:
     """Escribe los renglones (con las palabras marcadas en verde); devuelve la y de abajo."""
     d = ImageDraw.Draw(im)
@@ -178,7 +188,7 @@ def escribir(im: Image.Image, x: int, y: int, renglones: list, f, marca: list, c
     for linea in renglones:
         xx = x
         for p, i in linea:
-            d.text((xx, y), p, font=f, fill=D.NARANJA_MARCA if marca[i] == "naranja" else verde if marca[i] else color)
+            d.text((xx, y), p, font=f, fill=color_marca(marca[i], color))
             xx += d.textlength(p, font=f) + esp
         ultima = y
         y += alto
@@ -208,8 +218,9 @@ def _etiqueta(im: Image.Image, texto: str, y: int = 66) -> None:
     w = tw + 40 + 30
     x = W - M - w
     # 21/11/2026 (el editor: «usá también el color naranja en diarioyradioagro para mis carruseles»): la etiqueta, la
-    # volanta, la raya de las láminas y «deslizá» van en el naranja del isologo; las cifras y los tildes, en verde.
-    d.rounded_rectangle((x, y, x + w, y + 50), radius=8, fill=NARANJA)
+    # volanta, la raya de las láminas y «deslizá» iban en naranja. 22/11/2026 («invertí los colores»): van en ACENTO
+    # (verde) y el naranja queda para la palabra clave y las cifras (RESALTA).
+    d.rounded_rectangle((x, y, x + w, y + 50), radius=8, fill=ACENTO)
     # El marcador (la cinta de «guardar»).
     bx, by = x + 18, y + 13
     d.polygon([(bx, by), (bx + 18, by), (bx + 18, by + 25), (bx + 9, by + 18), (bx, by + 25)], fill=FONDO)
@@ -222,9 +233,9 @@ def _deslizá(im: Image.Image, y: int, x: int = M) -> None:
     d.text((x, y), "DESLIZÁ", font=f, fill=BLANCO)
     cx = x + d.textlength("DESLIZÁ", font=f) + 44
     cy = y + 17
-    d.ellipse((cx - 24, cy - 24, cx + 24, cy + 24), outline=NARANJA, width=4)
-    d.line((cx - 11, cy, cx + 10, cy), fill=NARANJA, width=4)
-    d.polygon([(cx + 13, cy), (cx + 3, cy - 9), (cx + 3, cy + 9)], fill=NARANJA)
+    d.ellipse((cx - 24, cy - 24, cx + 24, cy + 24), outline=ACENTO, width=4)
+    d.line((cx - 11, cy, cx + 10, cy), fill=ACENTO, width=4)
+    d.polygon([(cx + 13, cy), (cx + 3, cy - 9), (cx + 3, cy + 9)], fill=ACENTO)
 
 
 def _foto(imagen, alto: int = ALTO_FOTO) -> Image.Image:
@@ -280,7 +291,7 @@ def tapa(imagen, d: dict, destino: Path, leyenda: str = "", deslizar: bool = Tru
         alto_c = f_c.size
         y_c = y_t - 18 - round(alto_c * 1.04)
         # Anton tiene aire arriba: se sube un poco para que la cifra apoye en la línea del título.
-        dr.text((M - 4, y_c - round(alto_c * 0.12)), cifra, font=f_c, fill=VERDE)
+        dr.text((M - 4, y_c - round(alto_c * 0.12)), cifra, font=f_c, fill=RESALTA)
         rot = (d.get("cifra_rotulo") or "").upper().split()
         if rot:
             x_r = M + dr.textlength(cifra, font=f_c) + 24
@@ -296,7 +307,7 @@ def tapa(imagen, d: dict, destino: Path, leyenda: str = "", deslizar: bool = Tru
         f_v = D.fuente("bold", 30)
         vol = " ".join(d["volanta"].upper().split())
         y_v = (y_c if cifra else y_t) - 58
-        _espaciado(dr, (M, y_v), vol[:40], f_v, NARANJA, 4)
+        _espaciado(dr, (M, y_v), vol[:40], f_v, ACENTO, 4)
     escribir(im, M, y_t, r_t, f_t, marca)
     if deslizar:
         _deslizá(im, y_pie)
@@ -330,7 +341,7 @@ def _cabeza(im: Image.Image, i, n) -> None:
         f = D.fuente("bold", 30)
         txt = f"{i}/{n}"
         dr.text((W - M - dr.textlength(txt, font=f), 70), txt, font=f, fill=GRIS_TENUE)
-    dr.rectangle((M, 160, M + 90, 168), fill=NARANJA)
+    dr.rectangle((M, 160, M + 90, 168), fill=ACENTO)
 
 
 def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool = False) -> Path:
@@ -341,7 +352,7 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool
     ancho = W - 2 * M
     y = 214
     if volanta:
-        _espaciado(dr, (M, y), " ".join(volanta.upper().split())[:40], D.fuente("bold", 28), NARANJA, 4)
+        _espaciado(dr, (M, y), " ".join(volanta.upper().split())[:40], D.fuente("bold", 28), ACENTO, 4)
         y += 60
     titulo = (x.get("titulo") or "").rstrip(".")
     f_t, r_t, pal = ajustar(dr, titulo, ancho, 3, 112, 64)
@@ -353,7 +364,7 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool
         while dr.textlength(dato, font=f_d) > ancho and f_d.size > 80:
             f_d = anton(f_d.size - 10)
         y_d = y - round(f_d.size * 0.12)
-        dr.text((M - 3, y_d), dato, font=f_d, fill=VERDE)
+        dr.text((M - 3, y_d), dato, font=f_d, fill=RESALTA)
         y = y_d + f_d.getbbox(dato)[3] + 18
         if x.get("dato_rotulo"):
             f_r = D.fuente("bold", 36)
@@ -364,7 +375,7 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool
         f_r = D.fuente("bold", 36)
         rot = (x.get("dato_rotulo") or "").strip().rstrip(":.")
         linea = (f"{rot[0].upper()}{rot[1:]}: {dato}" if rot else dato)[:60]
-        dr.text((M, y), linea, font=f_r, fill=VERDE)
+        dr.text((M, y), linea, font=f_r, fill=RESALTA)
         y += 76
     if x.get("puntos"):
         f_p = D.fuente("medium", 38)
@@ -373,7 +384,7 @@ def lamina(x: dict, i: int, n: int, destino: Path, volanta: str = "", reel: bool
             alto = 36 + len(r) * 50
             dr.rounded_rectangle((M, y, W - M, y + alto), radius=16, fill=(40, 43, 47))
             cx, cy = M + 44, y + 24 + 25
-            dr.line((cx - 13, cy, cx - 4, cy + 10, cx + 14, cy - 12), fill=VERDE, width=6, joint="curve")
+            dr.line((cx - 13, cy, cx - 4, cy + 10, cx + 14, cy - 12), fill=ACENTO, width=6, joint="curve")
             for k, linea in enumerate(r):
                 dr.text((M + 86, y + 18 + k * 50), linea, font=f_p, fill=BLANCO)
             y += alto + 18
@@ -407,14 +418,14 @@ def cierre(pregunta: str, n: int, destino: Path, imagen=None) -> Path:
     f, r, pal = ajustar(dr, pregunta, W - 2 * M, 5, 120, 64)
     y = 330
     y = escribir(im, M, y, r, f, _marcas(pal, destacado_de(pregunta).upper()))
-    dr.text((M, y + 36), "CONTANOS EN LOS COMENTARIOS", font=D.fuente("bold", 34), fill=VERDE)
+    dr.text((M, y + 36), "CONTANOS EN LOS COMENTARIOS", font=D.fuente("bold", 34), fill=ACENTO)
     y0 = H - 330
     dr.rectangle((M, y0, W - M, y0 + 2), fill=(70, 74, 80))
     dr.text((M, y0 + 40), "Guardalo y compartilo con alguien del campo.", font=D.fuente("medium", 38), fill=GRIS)
     lg = D.lockup("grafito", 80)
     im.alpha_composite(lg, (M, y0 + 120))
     f_u = D.fuente("bold", 36)
-    dr.text((W - M - dr.textlength(D.USUARIO, font=f_u), y0 + 142), D.USUARIO, font=f_u, fill=VERDE)
+    dr.text((W - M - dr.textlength(D.USUARIO, font=f_u), y0 + 142), D.USUARIO, font=f_u, fill=ACENTO)
     return _guardar(im, destino)
 
 

@@ -13,6 +13,7 @@ marca, la de agro (el isologo naranja y verde, «DIARIO Y RADIO» + «AGRO»).
 El motor del bot no se usa directo porque lleva la marca del diario en sus archivos; acá se dibuja
 igual con PIL.
 """
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -30,15 +31,23 @@ NARANJA_OSCURO = (222, 112, 26)          # la volanta sobre blanco
 NARANJA_CAJA = (179, 91, 24)             # #B35B18: cajas
 VERDE = (118, 178, 60)                   # el verde de las hojas del isologo
 VERDE_OSCURO = (78, 138, 32)             # el verde sobre blanco
+# 22/11/2026 (el editor: «invertí los colores: el naranja para remarcar palabras clave o importantes y el verde
+# para lo demás»): las líneas, la volanta, las cajas, las rayas y las flechas van en VERDE; el naranja queda para
+# lo que se resalta (la palabra clave del título, las cifras, los precios, Chivilcoy). AGRO_COLORES=antes vuelve.
+NARANJA_RESALTA = (os.environ.get("AGRO_COLORES") or "").strip().lower() != "antes"
+VERDE_CAJA = (62, 112, 28)               # cajas en verde (texto blanco encima)
+ACENTO = VERDE if NARANJA_RESALTA else NARANJA                  # líneas, barras, rayas, flechas
+ACENTO_CAJA = VERDE_CAJA if NARANJA_RESALTA else NARANJA_CAJA   # cajas de sección
 ROJO = (214, 69, 65)
 BLANCO = (255, 255, 255)
 GRIS_CLARO = (236, 237, 240)
 USUARIO = "@diarioyradioagro"
 
 TEMAS = {
-    "blanco": dict(fondo=BLANCO, volanta=NARANJA_OSCURO, titular=GRAFITO, texto=(70, 74, 82), tenue=(140, 145, 152),
+    "blanco": dict(fondo=BLANCO, volanta=VERDE_OSCURO if NARANJA_RESALTA else NARANJA_OSCURO,
+                   clave=NARANJA_OSCURO, titular=GRAFITO, texto=(70, 74, 82), tenue=(140, 145, 152),
                    verde=VERDE_OSCURO, linea=(225, 227, 231)),
-    "grafito": dict(fondo=GRAFITO, volanta=NARANJA, titular=BLANCO, texto=(214, 217, 222), tenue=(150, 155, 163),
+    "grafito": dict(fondo=GRAFITO, volanta=VERDE if NARANJA_RESALTA else NARANJA, clave=NARANJA, titular=BLANCO, texto=(214, 217, 222), tenue=(150, 155, 163),
                     verde=VERDE, linea=(62, 65, 72)),
 }
 ORDEN_TEMAS = ("blanco", "grafito")
@@ -241,7 +250,7 @@ def base_bloque(plan: dict) -> Image.Image:
     lienzo = Image.new("RGBA", (W, plan["alto"]), t["fondo"] + (255,))
     d = ImageDraw.Draw(lienzo)
     hm = plan["alto_imagen"]
-    d.rectangle((0, hm, W, hm + LINEA), fill=NARANJA)
+    d.rectangle((0, hm, W, hm + LINEA), fill=ACENTO)
     lienzo.alpha_composite(lockup(plan["tema"]), (X, plan["y_logo"]))
     return lienzo
 
@@ -266,7 +275,7 @@ def texto_titular(capa: Image.Image, plan: dict, alfa: float = 1.0):
             tramo = renglon[:len(resto)] if resto.startswith(renglon[:len(resto)]) else ""
             if not tramo:
                 break
-            d.text((X, y + round(i * f.size * SALTO)), tramo, font=f, fill=t["volanta"] + (a,))
+            d.text((X, y + round(i * f.size * SALTO)), tramo, font=f, fill=t["clave"] + (a,))
             resto = resto[len(tramo):].lstrip()
 
 

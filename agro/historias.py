@@ -83,7 +83,7 @@ def lienzo() -> tuple:
 def fondo() -> Image.Image:
     """El fondo 9:16: grafito, una franja naranja fina arriba y el isologo grande, apenas visible."""
     im = Image.new("RGBA", (W, H), FONDO + (255,))
-    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.NARANJA)
+    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.ACENTO)
     marca = D.isologo(900)
     marca.putalpha(marca.getchannel("A").point(lambda a: round(a * 0.05)))
     im.alpha_composite(marca, (W - marca.width + 260, H - marca.height - 120))
@@ -97,7 +97,7 @@ def encabezado(im, d, seccion: str, titulo: str, sub: str = "") -> int:
     f = D.fuente("bold", 28)
     w = d.textlength(seccion, font=f)
     y = lg.height + 22
-    d.rectangle((D.X, y, D.X + w + 32, y + 48), fill=D.NARANJA_CAJA)
+    d.rectangle((D.X, y, D.X + w + 32, y + 48), fill=D.ACENTO_CAJA)
     d.text((D.X + 16, y + 8), seccion, font=f, fill=D.BLANCO)
     y += 48 + 18
     ft, rt = D.ajustar(d, titulo, "bold", 70, 48, W - 2 * D.X, 2)
@@ -168,7 +168,7 @@ SEGURA_45 = (70, 1280)
 def fondo_45() -> Image.Image:
     """El fondo 4:5 sin el bloque (grafito, la franja naranja y el isologo apenas visible)."""
     im = Image.new("RGBA", (W, H45), FONDO + (255,))
-    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.NARANJA)
+    ImageDraw.Draw(im).rectangle((0, 0, W, 8), fill=D.ACENTO)
     marca = D.isologo(700)
     marca.putalpha(marca.getchannel("A").point(lambda a: round(a * 0.05)))
     im.alpha_composite(marca, (W - marca.width + 200, H45 - marca.height - 60))
@@ -535,7 +535,7 @@ def placa_titulares(items: list, destino: Path, hoy: date, seccion: str, titulo:
             ImageDraw.Draw(mascara).rounded_rectangle((0, 0, *foto.size), radius=16, fill=255)
             im.paste(foto, (x - 6, y + 16), mascara)
             x += 218
-        d.text((x, y + 18), (it.get("volanta") or "Agro").upper(), font=D.fuente("bold", 24), fill=D.NARANJA)
+        d.text((x, y + 18), (it.get("volanta") or "Agro").upper(), font=D.fuente("bold", 24), fill=D.ACENTO)
         ft, rt = D.ajustar(d, it["titular"], "bold", 38, 28, W - D.X - x, 3, alto_max=130)
         D.escribir(d, x, y + 54, rt, ft, D.BLANCO, 1.12)
         y += 212

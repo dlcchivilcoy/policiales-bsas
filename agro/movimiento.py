@@ -97,9 +97,10 @@ def palabras_de(plan: dict) -> int:
     return sum(len(l) for l in plan["renglones"])
 
 
-def dibujar_titulo(im: Image.Image, x: int, y: int, plan: dict, t: float, color=D.BLANCO, verde=VERDE) -> int:
+def dibujar_titulo(im: Image.Image, x: int, y: int, plan: dict, t: float, color=D.BLANCO, verde=None) -> int:
     """Escribe el título con su entrada (t en segundos desde que empieza la diapositiva; t grande = quieto).
     Devuelve la y de abajo del último renglón."""
+    from agro import impacto as I
     f = plan["f"]
     capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(capa)
@@ -111,7 +112,7 @@ def dibujar_titulo(im: Image.Image, x: int, y: int, plan: dict, t: float, color=
         for p, es_verde in linea:
             u = ease_out((t - k * PALABRA) / SUBIDA) if activo() else 1.0
             if u > 0:
-                c = D.NARANJA_MARCA if es_verde == "naranja" else verde if es_verde else color
+                c = I.color_marca(es_verde, color)
                 d.text((xx, yy + round(28 * (1 - u))), p, font=f, fill=tuple(c[:3]) + (round(255 * u),))
             xx += d.textlength(p, font=f) + esp
             k += 1
@@ -145,7 +146,7 @@ def progreso(im: Image.Image, avance: float, alto: int = 8):
     """La barra de progreso naranja arriba, sobre una pista oscura."""
     d = ImageDraw.Draw(im)
     d.rectangle((0, 0, im.width, alto), fill=(52, 55, 62))
-    d.rectangle((0, 0, round(im.width * max(0.0, min(1.0, avance))), alto), fill=D.NARANJA)
+    d.rectangle((0, 0, round(im.width * max(0.0, min(1.0, avance))), alto), fill=D.ACENTO)
 
 
 def transicion(anterior: Image.Image, nueva: Image.Image, t: float) -> Image.Image:
@@ -163,7 +164,7 @@ def transicion(anterior: Image.Image, nueva: Image.Image, t: float) -> Image.Ima
     cuadro.paste(vieja, (0, -round(H * 0.3 * e)))
     cuadro.paste(nueva, (0, y_nueva))
     if 0 < y_nueva < H:
-        ImageDraw.Draw(cuadro).rectangle((0, y_nueva - 12, W, y_nueva), fill=D.NARANJA)
+        ImageDraw.Draw(cuadro).rectangle((0, y_nueva - 12, W, y_nueva), fill=D.ACENTO)
     return cuadro
 
 

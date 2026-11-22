@@ -140,7 +140,7 @@ def _partes(tema: str, frase: str, alto: int) -> tuple:
             xx += d.textlength(c, font=f_l) + 4
         x += a
         if i < len(trozos) - 1:
-            d.ellipse((x + sep / 2 - 8, y_lema + 14, x + sep / 2 + 8, y_lema + 30), fill=D.NARANJA)
+            d.ellipse((x + sep / 2 - 8, y_lema + 14, x + sep / 2 + 8, y_lema + 30), fill=D.ACENTO)
             x += sep
     guardar("lema", lz)
 
@@ -167,7 +167,7 @@ def _partes(tema: str, frase: str, alto: int) -> tuple:
     guardar("nombre", lz)
     y += round(f2.size * 1.5)
     lz, d = capa()
-    d.rectangle((cx - 65, y, cx + 65, y + 7), fill=D.NARANJA)
+    d.rectangle((cx - 65, y, cx + 65, y + 7), fill=D.ACENTO)
     guardar("raya", lz)
     y += 45
 

@@ -658,7 +658,7 @@ def capa_video(d: dict, t: float, credito: str, fuente: str) -> Image.Image:
     tc = _tema_color()
     im = Image.new("RGBA", (D.W, D.H45), (0, 0, 0, 0))
     dr = ImageDraw.Draw(im)
-    dr.rectangle((0, ALTO_VIDEO, D.W, ALTO_VIDEO + D.LINEA), fill=D.NARANJA)
+    dr.rectangle((0, ALTO_VIDEO, D.W, ALTO_VIDEO + D.LINEA), fill=D.ACENTO)
     dr.rectangle((0, ALTO_VIDEO + D.LINEA, D.W, D.H45), fill=tc["fondo"])
     # Arriba: la marca y el crédito del video.
     _sombra_texto(im, (40, 34), D.USUARIO, D.fuente("bold", 30))
@@ -728,7 +728,7 @@ def _encabezado(im, d: dict, tc: dict, t: float = 99.0) -> int:
     verde, entrando palabra por palabra; el subtítulo aparece después."""
     from agro import movimiento as MV
     dr = ImageDraw.Draw(im)
-    dr.rectangle((0, 0, D.W, 8), fill=D.NARANJA)
+    dr.rectangle((0, 0, D.W, 8), fill=D.ACENTO)
     if not MV.activo():
         f, renglones = D.ajustar(dr, d["titulo"].upper(), "negra", 64, 44, D.W - 120, 2)
         y = 60
