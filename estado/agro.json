@@ -50300,6 +50300,46 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e0865dab1594ed41": {
+      "conversacion": 10,
+      "historia_concreta": 15,
+      "cercania_pba": 0,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 39,
+      "commercial_score": 15,
+      "subtema": "agro",
+      "tema": "producción hortícola",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una buena historia humana, pero pasa en Neuquén y no le cambia nada al productor de Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9725a1efdcb2745d": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 22,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "deforestración",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un informe estadístico nacional sobre bosques en el norte, lejano y sin impacto directo en la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53742,7 +53782,15 @@
       "https://tn.com.ar/campo/2026/11/22/una-papa-para-chips-mas-saludables-editada-geneticamente-obtuvo-su-registro-oficial": "2026-11-22",
       "https://tn.com.ar/campo/2026/11/22/es-una-pasion-el-estudiante-que-rescata-vacas-de-las-islas-entre-sus-clases-en-la-escuela-y-tareas-del-campo": "2026-11-22",
       "https://elregionaldigital.com.ar/6a-expo-loberia-2026-angus-brillo-en-la-pista-y-destaco-el-crecimiento-mundial-de-su-carne-certificada": "2026-11-22",
-      "https://infocampo.com.ar/maquinaria-agricola-tenemos-con-que-ser-optimistas-para-que-2027-sea-un-buen-ano": "2026-11-22"
+      "https://infocampo.com.ar/maquinaria-agricola-tenemos-con-que-ser-optimistas-para-que-2027-sea-un-buen-ano": "2026-11-22",
+      "https://infocampo.com.ar/precio-del-maiz-hoy-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/precio-del-trigo-hoy-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/precio-del-girasol-hoy-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/precio-de-la-soja-hoy-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/precio-del-sorgo-hoy-22-noviembre-2026": "2026-11-22",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-cordoba-22-noviembre-2026": "2026-11-22",
+      "https://bichosdecampo.com/entre-dos-loteos-para-viviendas-ruben-romero-alquila-5-hectareas-para-producir-verduras-en-neuquen-como-arrendatario-el-necesita-mas-certezas-que-nadie-y-por-eso-apoyo-la-nueva-ley-de-defensa-de-l": "2026-11-22",
+      "https://bichosdecampo.com/y-con-este-dato-que-hacemos-entre-2021-y-2024-la-argentina-registro-la-perdida-de-cobertura-de-bosques-sobre-1-117-256-hectareas-fundamentalmente-en-santiago-chaco-y-formosa": "2026-11-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57183,7 +57231,15 @@
       "una papa para chips mas saludables editada geneticamente obtuvo su registro oficial": "2026-11-22",
       "es una pasion el estudiante que rescata vacas de las islas entre sus clases en la escuela y tareas del campo": "2026-11-22",
       "6 expo loberia 2026 angus brillo en la pista y destaco el crecimiento mundial de su carne certificada": "2026-11-22",
-      "maquinaria agricola tenemos con que ser optimistas para que 2027 sea un buen ano": "2026-11-22"
+      "maquinaria agricola tenemos con que ser optimistas para que 2027 sea un buen ano": "2026-11-22",
+      "precio del maiz en rosario hoy 22 noviembre 2026": "2026-11-22",
+      "precio del trigo en rosario hoy 22 noviembre 2026": "2026-11-22",
+      "precio del girasol en rosario hoy 22 noviembre 2026": "2026-11-22",
+      "precio de la soja en rosario hoy 22 noviembre 2026": "2026-11-22",
+      "precio del sorgo en rosario hoy 22 noviembre 2026": "2026-11-22",
+      "dolar blue a cuanto cotizan hoy en cordoba 22 noviembre 2026": "2026-11-22",
+      "entre dos loteos para viviendas ruben romero alquila 5 hectareas para producir verduras en neuquen como arrendatario el necesita mas certezas que nadie y por eso apoyo la nueva ley de defensa de las chacras": "2026-11-22",
+      "y con este dato que hacemos entre 2021 y 2024 la argentina registro la perdida de cobertura de bosques sobre 1 117 256 hectareas la mitad en santiago chaco y formosa": "2026-11-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -60624,7 +60680,15 @@
       "58a1ad0928050c0e": "2026-11-22",
       "fe2ac57f16652bcc": "2026-11-22",
       "9dacaa1f63ce6409": "2026-11-22",
-      "2d399a053abe5a2f": "2026-11-22"
+      "2d399a053abe5a2f": "2026-11-22",
+      "64cffc94c1889fdb": "2026-11-22",
+      "9d6eb188abc28d03": "2026-11-22",
+      "0bfdc2951f57154f": "2026-11-22",
+      "e3960f03a755fd83": "2026-11-22",
+      "45298faee732af5e": "2026-11-22",
+      "3ad36392d6139ca0": "2026-11-22",
+      "e0865dab1594ed41": "2026-11-22",
+      "9725a1efdcb2745d": "2026-11-22"
     }
   },
   "elegidas": [
@@ -94999,75 +95063,8 @@
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d3b731e70fd7_portada.jpg"
     }
   ],
-  "pendientes": [
-    {
-      "id": "12ff933fdefc",
-      "rep": {
-        "id": "12ff933fdefc",
-        "fuente": "Clarín Rural",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.clarin.com/rss/rural/",
-        "url": "https://www.clarin.com/rural/trigo-horas-sol-riesgos-calidad_0_CFFumLguPI.html",
-        "canonical_url": "https://clarin.com/rural/trigo-horas-sol-riesgos-calidad_0_CFFumLguPI.html",
-        "titulo": "Trigo: menos horas de sol y riesgos para la calidad",
-        "titulo_norm": "trigo menos horas de sol y riesgos para la calidad",
-        "descripcion": "En Marcos Juárez, las horas de sol cayeron un 45% en julio y un 30% en agosto. El INTA evaluó el impacto en los rindes y los riesgos hacia la cosecha.",
-        "imagen_url": "https://www.clarin.com/img/2026/11/20/aap0aFj1h_1200x630__1.jpg",
-        "autor": "Clarin.com - Home",
-        "publicado": "2026-11-22T05:41-03:00",
-        "capturado": "2026-11-22T09:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c8f4d82837f2ca0c",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "12ff933fdefc",
-          "fuente": "Clarín Rural",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.clarin.com/rss/rural/",
-          "url": "https://www.clarin.com/rural/trigo-horas-sol-riesgos-calidad_0_CFFumLguPI.html",
-          "canonical_url": "https://clarin.com/rural/trigo-horas-sol-riesgos-calidad_0_CFFumLguPI.html",
-          "titulo": "Trigo: menos horas de sol y riesgos para la calidad",
-          "titulo_norm": "trigo menos horas de sol y riesgos para la calidad",
-          "descripcion": "En Marcos Juárez, las horas de sol cayeron un 45% en julio y un 30% en agosto. El INTA evaluó el impacto en los rindes y los riesgos hacia la cosecha.",
-          "imagen_url": "https://www.clarin.com/img/2026/11/20/aap0aFj1h_1200x630__1.jpg",
-          "autor": "Clarin.com - Home",
-          "publicado": "2026-11-22T05:41-03:00",
-          "capturado": "2026-11-22T09:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c8f4d82837f2ca0c",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 14,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 77,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Pasa en Marcos Juárez (zona núcleo), afecta directo la calidad y rinde del trigo actual.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "cuando": "2026-11-22T09:30-03:00"
-    }
-  ],
-  "actualizado": "2026-11-22T10:41:56-03:00",
+  "pendientes": [],
+  "actualizado": "2026-11-22T11:35:19-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
