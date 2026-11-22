@@ -94423,7 +94423,7 @@
       "cuando": "2026-11-21T14:30-03:00"
     }
   ],
-  "actualizado": "2026-11-21T21:06:37-03:00",
+  "actualizado": "2026-11-21T21:30:22-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -101363,6 +101363,43 @@
               },
               "facebook": {
                 "id": "1829553281501999"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-21T21:30:00-03:00": {
+      "dia": "2026-11-21",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están los caminos para salir a la ruta?",
+          "opciones": [],
+          "publico": "transporte",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "17979758613160940"
+            },
+            "facebook": {
+              "id": "2134821764063854"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17979758613160940"
+              },
+              "facebook": {
+                "id": "2134821764063854"
               }
             }
           ]
