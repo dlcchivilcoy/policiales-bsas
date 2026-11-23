@@ -50664,6 +50664,118 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "22e4b9e2380efcfc": {
+      "conversacion": 10,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 50,
+      "commercial_score": 38,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un tema clave de clima para la zona, pero habla de un satélite de la NASA en general y no de un impacto directo inmediato.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        52
+      ]
+    },
+    "50199384592f2f24": {
+      "conversacion": 15,
+      "historia_concreta": 18,
+      "cercania_pba": 0,
+      "interes_productores": 8,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 52,
+      "commercial_score": 48,
+      "subtema": "agro",
+      "tema": "frutillas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Buena historia de un joven productor, pero queda muy lejos geográficamente de Chivilcoy y la región.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        54,
+        51
+      ]
+    },
+    "b871da374fcead2b": {
+      "conversacion": 12,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 7,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 52,
+      "commercial_score": 45,
+      "subtema": "empresas",
+      "tema": "lácteos",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa por la salvación de una planta y sus empleados, pero pasa en Santa Fe y no afecta directamente al productor de nuestra zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        53,
+        51
+      ]
+    },
+    "339c37c0a2b5c9ca": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 2,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "fiesta del girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una noticia de eventos y espectáculos de un diario local, no tiene valor productivo ni agropecuario directo.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c32f74ed218e2684": {
+      "conversacion": 18,
+      "historia_concreta": 10,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 78,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "control laboral",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta directamente a todos los productores y empleadores rurales bonaerenses con un nuevo trámite obligatorio.",
+      "tema_doc": "reglas",
+      "urgente": true,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -54147,7 +54259,13 @@
       "https://maquinac.com/2026/11/las-grandes-fabricas-de-maquinaria-agricola-del-mundo": "2026-11-23",
       "https://maquinac.com/2026/11/francia-el-mercado-de-tractores-caeria-5-en-2026-y-espera-recuperarse-en-2027": "2026-11-23",
       "https://maquinac.com/2026/11/iveco-lanza-una-nueva-etapa-de-su-estrategia-de-crecimiento-en-latinoamerica": "2026-11-23",
-      "https://maquinac.com/2026/11/cnh-conecta-el-talento-local-con-los-desafios-globales-de-innovacion": "2026-11-23"
+      "https://maquinac.com/2026/11/cnh-conecta-el-talento-local-con-los-desafios-globales-de-innovacion": "2026-11-23",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-23-noviembre-2026": "2026-11-23",
+      "https://bichosdecampo.com/un-ojo-en-el-cielo-para-seguir-a-el-nino-la-nasa-suma-un-satelite-para-medir-el-nivel-del-mar-y-anticipar-los-efectos-del-fenomeno-climatico": "2026-11-23",
+      "https://bichosdecampo.com/tiene-24-anos-aposto-por-el-campo-en-plena-cordillera-neuquina-y-quiere-convertir-un-proyecto-con-frutillas-en-una-posibilidad-de-trabajo-para-otros": "2026-11-23",
+      "https://lanacion.com.ar/economia/campo/nuevo-dueno-un-grupo-argentino-se-quedo-con-una-fabrica-de-quesos-de-un-gigante-frances-que-iba-a-nid23112026": "2026-11-23",
+      "https://latrochadigital.com.ar/2026/11/23/los-caligaris-amar-azul-y-la-konga-seran-parte-de-la-fiesta-nacional-del-girasol": "2026-11-23",
+      "https://latrochadigital.com.ar/2026/11/23/la-sociedad-rural-salio-al-cruce-de-kicillof-por-un-nuevo-control-laboral": "2026-11-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57629,7 +57747,13 @@
       "las grandes fabricas de maquinaria agricola del mundo": "2026-11-23",
       "francia el mercado de tractores caeria 5 en 2026 y espera recuperarse en 2027": "2026-11-23",
       "iveco lanza una nueva etapa de su estrategia de crecimiento en latinoamerica": "2026-11-23",
-      "cnh conecta el talento local con los desafios globales de innovacion": "2026-11-23"
+      "cnh conecta el talento local con los desafios globales de innovacion": "2026-11-23",
+      "dolar blue hoy a cuanto cotiza el 23 noviembre 2026": "2026-11-23",
+      "un ojo en el cielo para seguir a el nino la nasa suma un satelite para medir el nivel del mar y anticipar los efectos del fenomeno climatico": "2026-11-23",
+      "tiene 24 anos aposto por el campo en plena cordillera neuquina y quiere convertir un proyecto con frutillas en una posibilidad de trabajo para otros": "2026-11-23",
+      "nuevo dueno un grupo argentino se quedo con una fabrica de quesos de un gigante frances que iba a cerrarla": "2026-11-23",
+      "los caligaris amar azul y la k onga seran parte de la fiesta nacional del girasol": "2026-11-23",
+      "la sociedad rural salio al cruce de kicillof por un nuevo control laboral": "2026-11-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -61111,7 +61235,13 @@
       "e5bc1bc2a50c34bf": "2026-11-23",
       "67479c2217652f13": "2026-11-23",
       "45f3955afc7ce713": "2026-11-23",
-      "d26cefe377852541": "2026-11-23"
+      "d26cefe377852541": "2026-11-23",
+      "64c293e0e25f9367": "2026-11-23",
+      "22e4b9e2380efcfc": "2026-11-23",
+      "50199384592f2f24": "2026-11-23",
+      "b871da374fcead2b": "2026-11-23",
+      "339c37c0a2b5c9ca": "2026-11-23",
+      "c32f74ed218e2684": "2026-11-23"
     }
   },
   "elegidas": [
@@ -95487,7 +95617,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T08:02:35-03:00",
+  "actualizado": "2026-11-23T09:35:29-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -105348,7 +105478,11 @@
     "33fc148e568d": "2026-11-22T07:00",
     "d31101abc09f": "2026-11-22T09:30",
     "12ff933fdefc": "2026-11-22T09:30",
-    "58b23f261f0e": "2026-11-22T17:30"
+    "58b23f261f0e": "2026-11-22T17:30",
+    "3f646870ecff": "2026-11-23T09:30",
+    "db98c20b888a": "2026-11-23T09:30",
+    "1f73a8f87d18": "2026-11-23T09:30",
+    "697fa8ee3926": "2026-11-23T09:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
