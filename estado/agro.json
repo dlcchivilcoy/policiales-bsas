@@ -51476,6 +51476,66 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "49bd0321e05df068": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un panorama de mercados externos que al productor local de Chivilcoy le queda lejos y no le cambia el día a día.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e311be4f212a7afa": {
+      "conversacion": 2,
+      "historia_concreta": 1,
+      "cercania_pba": 10,
+      "interes_productores": 2,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 22,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "agroecología",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Discusión política institucional y reclamos de cámaras sin una aplicación concreta que mueva el amperaje en la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2664731d11ee54e5": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 40,
+      "commercial_score": 60,
+      "subtema": "maquinaria",
+      "tema": "súper walter",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Lanzamiento de una máquina nueva que interesa a contratistas y productores fierreros de la región.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -55008,7 +55068,10 @@
       "https://croplife.com/crop-inputs/fungicides/enko-and-syngenta-advance-novel-fungicide-chemistry": "2026-11-23",
       "https://croplife.com/smart-tech/software/kahler-automation-names-gerald-reeves-new-vp-of-sales": "2026-11-23",
       "https://croplife.com/smart-tech/software/becks-precision-planting-connect-panorama-and-farmserver": "2026-11-23",
-      "https://croplife.com/management/sustainability/viridis-view-conservation-benchmarking-collaborative-provides-new-data-to-map-monitor-fundamental-management-practices-for-regenerative-agriculture": "2026-11-23"
+      "https://croplife.com/management/sustainability/viridis-view-conservation-benchmarking-collaborative-provides-new-data-to-map-monitor-fundamental-management-practices-for-regenerative-agriculture": "2026-11-23",
+      "https://bichosdecampo.com/doble-comando-para-el-trigo-con-precios-planchados-en-ee-uu-y-valores-en-alza-en-europa": "2026-11-23",
+      "https://tn.com.ar/campo/2026/11/23/agroecologia-el-gobierno-bonaerense-defendio-su-politica-publica-y-reclamo-mas-inversion-en-ciencia-y-tecnologia": "2026-11-23",
+      "https://maquinac.com/2026/11/super-walter-entra-a-la-fertilizacion-con-el-lanzamiento-de-la-incorporadora-alpha": "2026-11-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -58539,7 +58602,10 @@
       "enko and syngenta advance novel fungicide chemistry": "2026-11-23",
       "kahler automation names gerald reeves new vp of sales": "2026-11-23",
       "beck s precision planting connect panorama and farmserver": "2026-11-23",
-      "viridis view conservation benchmarking collaborative provides new data to map monitor fundamental management practices for regenerative agriculture": "2026-11-23"
+      "viridis view conservation benchmarking collaborative provides new data to map monitor fundamental management practices for regenerative agriculture": "2026-11-23",
+      "doble comando para el trigo con precios planchados en ee uu y valores en alza en europa": "2026-11-23",
+      "agroecologia el gobierno bonaerense defendio su politica publica y reclamo mas inversion en ciencia y tecnologia": "2026-11-23",
+      "super walter entra a la fertilizacion con el lanzamiento de la incorporadora alpha": "2026-11-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -62070,7 +62136,10 @@
       "c2cd02eb7949008f": "2026-11-23",
       "eb3deafb77005dea": "2026-11-23",
       "2bc8cafb8547c994": "2026-11-23",
-      "0cf0e5149233e492": "2026-11-23"
+      "0cf0e5149233e492": "2026-11-23",
+      "49bd0321e05df068": "2026-11-23",
+      "e311be4f212a7afa": "2026-11-23",
+      "2664731d11ee54e5": "2026-11-23"
     }
   },
   "elegidas": [
@@ -96554,7 +96623,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T19:00:32-03:00",
+  "actualizado": "2026-11-23T19:35:22-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
