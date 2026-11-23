@@ -51104,6 +51104,110 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c8975a32f39c8c05": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "devaluación real",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un análisis macroeconómico de comercio exterior que no le cambia el día a día al productor de la zona.",
+      "tema_doc": "dolar",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "03e11cdbb690b478": {
+      "conversacion": 4,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 29,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "exportación granos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Proyecciones globales de exportación de granos a nivel país, sin anclaje local ni historias concretas.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7cd25550c109d7fa": {
+      "conversacion": 4,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 31,
+      "commercial_score": 30,
+      "subtema": "empresas",
+      "tema": "sancor",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a la cadena láctea nacional pero pasa en Rafaela, lejos de nuestra zona de influencia.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "480fa09d3e97ebb6": {
+      "conversacion": 6,
+      "historia_concreta": 3,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 40,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "terneros",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "El precio del ternero importa mucho a los criadores de la zona, aunque falta una historia local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "0435723c6623e944": {
+      "conversacion": 14,
+      "historia_concreta": 19,
+      "cercania_pba": 0,
+      "interes_productores": 1,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 40,
+      "commercial_score": 15,
+      "subtema": "ganaderia",
+      "tema": "inseguridad rural",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un crimen tremendo en zona rural pero ocurrió en Corrientes; al vecino de Chivilcoy le queda muy lejos.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 1,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        50,
+        30
+      ]
     }
   },
   "indice": {
@@ -54618,7 +54722,12 @@
       "https://agfundernews.com/aqua-exchange-eyes-40m-revenue-as-shrimp-farming-platform-scales-globally": "2026-11-23",
       "https://tn.com.ar/campo/2026/11/23/la-sociedad-rural-rechazo-las-nuevas-exigencias-laborales-de-la-provincia-de-buenos-aires": "2026-11-23",
       "https://maquinac.com/2026/11/brasil-el-mercado-de-tractores-caeria-113-en-2026-y-acumularia-cuatro-anos-de-retroceso": "2026-11-23",
-      "https://tn.com.ar/policiales/2026/11/23/se-cayo-de-la-moto-por-un-cable-suelto-en-merlo-habia-ganado-una-indemnizacion-de-30570000-y-la-justicia-se-la-quito": "2026-11-23"
+      "https://tn.com.ar/policiales/2026/11/23/se-cayo-de-la-moto-por-un-cable-suelto-en-merlo-habia-ganado-una-indemnizacion-de-30570000-y-la-justicia-se-la-quito": "2026-11-23",
+      "https://bichosdecampo.com/el-real-se-devaluo-mas-de-un-20-en-el-ultimo-mes-que-implica-eso-para-el-sector-agroindustrial": "2026-11-23",
+      "https://lanacion.com.ar/economia/campo/historicamente-muy-bueno-esperan-que-la-agroindustria-aporte-otros-us6000-millones-hasta-fin-de-ano-nid23112026": "2026-11-23",
+      "https://clarin.com/rural/empresas-presentaron-propuestas-reactivar-plantas-lactea-quebrada_0_nH3n3XtI8y.html": "2026-11-23",
+      "https://clarin.com/rural/numeros-negocio-ganadero-ternero-sigue-encima-promedio-historico_0_wIT8Nh33rZ.html": "2026-11-23",
+      "https://clarin.com/policiales/condenado-robo-papa-ahora-acusan-matar-abuelo-montar-falsa-escena-suicida_0_jVYf4wqmwN.html": "2026-11-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -58131,7 +58240,12 @@
       "aqua exchange eyes 40m revenue as shrimp farming platform scales globally": "2026-11-23",
       "la sociedad rural rechazo las nuevas exigencias laborales de la provincia de buenos aires": "2026-11-23",
       "brasil el mercado de tractores caeria 11 3 en 2026 y acumularia cuatro anos de retroceso": "2026-11-23",
-      "se cayo de la moto por un cable suelto en merlo habia ganado una indemnizacion de 30 570 000 y la justicia se la quito": "2026-11-23"
+      "se cayo de la moto por un cable suelto en merlo habia ganado una indemnizacion de 30 570 000 y la justicia se la quito": "2026-11-23",
+      "el real se devaluo mas de un 20 en el ultimo mes que implica eso para el sector agroindustrial": "2026-11-23",
+      "historicamente muy bueno esperan que la exportacion de granos aporte us 6000 millones hasta fin de ano": "2026-11-23",
+      "tres empresas presentaron sus propuestas para reactivar plantas de una lactea quebrada": "2026-11-23",
+      "los numeros del negocio ganadero el ternero sigue por encima de su promedio historico": "2026-11-23",
+      "lo habian condenado por un robo a su papa y ahora lo acusan de matar a su abuelo y montar una falsa escena suicida": "2026-11-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -61644,7 +61758,12 @@
       "0800c4b5db653ed0": "2026-11-23",
       "46c6d37f8e1d8320": "2026-11-23",
       "64562d940d0c4eb0": "2026-11-23",
-      "b86ab318b24a90d1": "2026-11-23"
+      "b86ab318b24a90d1": "2026-11-23",
+      "c8975a32f39c8c05": "2026-11-23",
+      "03e11cdbb690b478": "2026-11-23",
+      "7cd25550c109d7fa": "2026-11-23",
+      "480fa09d3e97ebb6": "2026-11-23",
+      "0435723c6623e944": "2026-11-23"
     }
   },
   "elegidas": [
@@ -96074,7 +96193,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T14:23:26-03:00",
+  "actualizado": "2026-11-23T14:34:20-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -106072,7 +106191,8 @@
     "697fa8ee3926": "2026-11-23T09:30",
     "def776198e2c": "2026-11-23T11:31",
     "417e40a93915": "2026-11-23T13:00",
-    "7867bf71e0c9": "2026-11-23T13:00"
+    "7867bf71e0c9": "2026-11-23T13:00",
+    "83896b60c516": "2026-11-23T14:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
