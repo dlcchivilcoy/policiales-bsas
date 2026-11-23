@@ -50776,6 +50776,66 @@
       "urgente": true,
       "potencial_carrusel": 7,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fb99af8dde52d2ce": {
+      "conversacion": 5,
+      "historia_concreta": 15,
+      "cercania_pba": 0,
+      "interes_productores": 2,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 34,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "tabaco",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Cierra una planta tabacalera en Corrientes, un hecho duro pero muy ajeno a la realidad productiva de nuestra zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "82dc4d8717ee663b": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "metano vacas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un título atractivo sobre lechería y ambiente, pero sin datos concretos en el resumen para nuestra zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "733cb7c0b0d9baba": {
+      "conversacion": 6,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 48,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Habla de cosecha récord de trigo a nivel nacional, un tema que interesa pero queda lejos de ser una noticia local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -54265,7 +54325,10 @@
       "https://bichosdecampo.com/tiene-24-anos-aposto-por-el-campo-en-plena-cordillera-neuquina-y-quiere-convertir-un-proyecto-con-frutillas-en-una-posibilidad-de-trabajo-para-otros": "2026-11-23",
       "https://lanacion.com.ar/economia/campo/nuevo-dueno-un-grupo-argentino-se-quedo-con-una-fabrica-de-quesos-de-un-gigante-frances-que-iba-a-nid23112026": "2026-11-23",
       "https://latrochadigital.com.ar/2026/11/23/los-caligaris-amar-azul-y-la-konga-seran-parte-de-la-fiesta-nacional-del-girasol": "2026-11-23",
-      "https://latrochadigital.com.ar/2026/11/23/la-sociedad-rural-salio-al-cruce-de-kicillof-por-un-nuevo-control-laboral": "2026-11-23"
+      "https://latrochadigital.com.ar/2026/11/23/la-sociedad-rural-salio-al-cruce-de-kicillof-por-un-nuevo-control-laboral": "2026-11-23",
+      "https://bichosdecampo.com/la-dealer-de-tabaco-alliance-one-decidio-cerrar-otra-planta-de-acopio-habia-clausurado-su-filial-en-la-jujena-perico-y-ahora-anuncio-que-tambien-se-va-de-la-correntina-goya": "2026-11-23",
+      "https://tn.com.ar/campo/2026/11/23/redujeron-32-el-metano-de-las-vacas-lecheras-sin-bajar-la-produccion": "2026-11-23",
+      "https://elregionaldigital.com.ar/campana-26-27-cosecha-record-de-trigo-pero-desde-la-cadena-aseguran-que-hay-temas-aun-sin-resolver-en-el-cereal": "2026-11-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57753,7 +57816,10 @@
       "tiene 24 anos aposto por el campo en plena cordillera neuquina y quiere convertir un proyecto con frutillas en una posibilidad de trabajo para otros": "2026-11-23",
       "nuevo dueno un grupo argentino se quedo con una fabrica de quesos de un gigante frances que iba a cerrarla": "2026-11-23",
       "los caligaris amar azul y la k onga seran parte de la fiesta nacional del girasol": "2026-11-23",
-      "la sociedad rural salio al cruce de kicillof por un nuevo control laboral": "2026-11-23"
+      "la sociedad rural salio al cruce de kicillof por un nuevo control laboral": "2026-11-23",
+      "la dealer de tabaco alliance one decidio cerrar otra planta de acopio habia clausurado su filial en la jujena perico y ahora anuncio que tambien se va de la correntina goya": "2026-11-23",
+      "redujeron 32 el metano de las vacas lecheras sin bajar la produccion": "2026-11-23",
+      "campana 26 27 cosecha record de trigo pero desde la cadena aseguran que hay temas aun sin resolver en el cereal": "2026-11-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -61241,7 +61307,10 @@
       "50199384592f2f24": "2026-11-23",
       "b871da374fcead2b": "2026-11-23",
       "339c37c0a2b5c9ca": "2026-11-23",
-      "c32f74ed218e2684": "2026-11-23"
+      "c32f74ed218e2684": "2026-11-23",
+      "fb99af8dde52d2ce": "2026-11-23",
+      "82dc4d8717ee663b": "2026-11-23",
+      "733cb7c0b0d9baba": "2026-11-23"
     }
   },
   "elegidas": [
@@ -95617,7 +95686,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T10:01:21-03:00",
+  "actualizado": "2026-11-23T10:05:46-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
