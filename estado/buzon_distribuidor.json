@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-22T03:18:05.000Z",
+  "actualizado": "2026-11-23T02:02:48.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/31210/un-motociclista-resulto-herido-tras-chocar-contra-una-camioneta-en-pellegrini-y-combate-de-san-lorenzo.html",
@@ -282,6 +282,30 @@
       "localidad": "Chacabuco",
       "volanta": "Intento de estafa en Chacabuco",
       "categoria": "otro_policial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/choque-entre-autos-en-chacabuco.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-23T02:02:48.000Z",
+      "titulo": "Una mujer herida tras un choque entre dos autos en Chacabuco",
+      "descripcion": "Una mujer sufrió una lesión cervical este martes a la tarde tras colisionar dos vehículos Volkswagen en la esquina de Aristóbulo del Valle y diagonal Eva Duarte de Perón. Fue asistida y trasladada al Hospital Municipal en una ambulancia.",
+      "texto_tiktok": "Un violento choque entre dos automóviles se produjo esta tarde en las inmediaciones de la estación ferroviaria de nuestra ciudad.\n\nEl siniestro vial ocurrió en la intersección de la avenida Aristóbulo del Valle y la diagonal Eva Duarte de Perón, donde colisionaron dos unidades de la marca Volkswagen.\n\nComo consecuencia del impacto, una mujer que viajaba como acompañante en uno de los rodados sufrió un traumatismo en la zona cervical y debió ser asistida en el lugar.\n\nUna ambulancia se hizo presente en la escena para trasladar a la herida hacia el nosocomio local con el fin de realizarle los estudios médicos correspondientes.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #SiniestroVial #AccidenteDeTransito #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-23_0134_02_chacabuco_una-mujer-herida-tras-un-choqu.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-una-mujer-hospitalizada-tras-un-choque-entre-dos-autos-876038",
+      "youtube_url": "https://youtube.com/shorts/beaDZKfJWcs",
+      "prioridad": 5,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Choque en Chacabuco",
+      "categoria": "accidente_vial",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
