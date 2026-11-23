@@ -99,6 +99,40 @@
         "instagram",
         "facebook_diario"
       ]
+    },
+    {
+      "dia": "2026-11-23",
+      "tema": "tierra",
+      "cuando": "2026-11-23T11:10-03:00",
+      "publicado": {
+        "facebook": {
+          "id": "2335468947238461",
+          "miniatura": "propia"
+        },
+        "instagram": {
+          "id": "17979809846935072",
+          "portada": "propia",
+          "colab": "si"
+        },
+        "historia_instagram": {
+          "id": "18121804436053875"
+        },
+        "historia_facebook": {
+          "id": "2324973888084036"
+        },
+        "colab": {
+          "estado": "aceptada"
+        },
+        "facebook_diario": {
+          "id": "1495435022482436",
+          "miniatura": "propia"
+        }
+      },
+      "redes": [
+        "instagram",
+        "facebook",
+        "facebook_diario"
+      ]
     }
   ],
   "banco_usados": {
@@ -106,6 +140,8 @@
     "bv_cosecha_01.mp4": "2026-11-20T11:10-03:00",
     "bv_trigo_01.mp4": "2026-11-21T11:10-03:00",
     "bv_cosecha_02.mp4": "2026-11-21T11:10-03:00",
-    "bv_campo_01.mp4": "2026-11-22T11:10-03:00"
+    "bv_campo_01.mp4": "2026-11-22T11:10-03:00",
+    "bv_campo_02.mp4": "2026-11-23T11:10-03:00",
+    "bv_maquinaria_01.mp4": "2026-11-23T11:10-03:00"
   }
 }
