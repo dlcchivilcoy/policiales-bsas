@@ -258,6 +258,10 @@ def _error(r: httpx.Response, paso: str) -> str:
     try:
         err = (r.json() or {}).get("error") or {}
         detalle = err.get("error_user_msg") or err.get("message") or r.text[:300]
+        # El código y el subcódigo de Meta: sin ellos no se sabe si conviene reintentar (23/11/2026).
+        codigos = "/".join(str(err[k]) for k in ("code", "error_subcode") if err.get(k) is not None)
+        if codigos:
+            detalle = f"{detalle} [{codigos}]"
     except ValueError:
         detalle = r.text[:300]
     return _tapar(f"{paso}: HTTP {r.status_code} — {detalle}")
@@ -277,8 +281,13 @@ def _transitorio(r: httpx.Response) -> bool:
     # 9004 / 2207052 = «No se pudo recuperar el contenido multimedia de este URI»: Instagram fue a buscar la
     # foto al Release de GitHub y GitHub no se la dio a tiempo (8/11/2026: dos corridas de agro en rojo, con
     # la misma foto que Facebook bajó bien segundos después). Crear el contenedor de nuevo es inocuo.
+    # 2207003 = «La descarga del archivo multimedia tarda demasiado»: Instagram no terminó de bajar el video del
+    # Release de GitHub (23/11/2026: dos policiales de la corrida de las 22:30 sin Instagram y la corrida en rojo;
+    # Facebook y YouTube, con el mismo archivo, salieron bien). Es lo mismo que el 9004: se crea otro contenedor.
+    texto = f"{err.get('error_user_msg') or ''} {err.get('message') or ''}".lower()
     return (bool(err.get("is_transient")) or err.get("code") in (1, 2, 4, 17, 32, 341, 9004, 9007)
-            or err.get("error_subcode") in (2207027, 2207052))
+            or err.get("error_subcode") in (2207003, 2207027, 2207052)
+            or any(m in texto for m in ("tarda demasiado", "too long", "timed out", "timeout")))
 
 
 # =============================================================================

@@ -1747,6 +1747,13 @@ _r9004 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
 chequear("Instagram «no se pudo recuperar el contenido» (9004) se reintenta", PUB._transitorio(_r9004))
 _r100 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {"code": 100, "message": "x"}}})()
 chequear("un error de parámetros (100) NO se reintenta", not PUB._transitorio(_r100))
+_r2207003 = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
+    "code": 36003, "error_subcode": 2207003, "error_user_msg": "La descarga del archivo multimedia tarda demasiado."}}})()
+chequear("Instagram «la descarga tarda demasiado» (2207003) se reintenta (23/11)", PUB._transitorio(_r2207003))
+_rsolo_texto = type("R", (), {"status_code": 400, "json": lambda self: {"error": {
+    "code": 100, "error_user_msg": "La descarga del archivo multimedia tarda demasiado."}}})()
+chequear("«tarda demasiado» se reintenta aunque Meta cambie el código", PUB._transitorio(_rsolo_texto))
+chequear("el error muestra el código de Meta", "[36003/2207003]" in PUB._error(_r2207003, "crear el contenedor"))
 from reels import web as _WEB  # noqa: E402
 _resp = [503, 504, 200]
 _hechas = []
