@@ -50500,6 +50500,26 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "6adb6e4f022d2a14": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 1,
+      "potencial_reel": 0,
+      "ai_score": 13,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "subsidios eeuu",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es un dato internacional de la OCDE que no le cambia el día a día al productor de Chivilcoy.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -53960,7 +53980,8 @@
       "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/249452-tango-beef-enfrenta-el-desafio-de-introducir-carne-angus-certificada-en-mercados-boutique-de-alto-valor.html": "2026-11-22",
       "https://agrositio.com.ar/canal-agrositio/entrevistas/249451-la-extension-agricola-de-las-empresas-semilleras-donde-el-protagonista-es-el-productor.html": "2026-11-22",
       "https://agroempresario.com/publicacion/124072/agricultura-en-el-noa-fertilizacion-biologicos-y-genetica-de-maiz": "2026-11-22",
-      "https://lanacion.com.ar/economia/campo/de-la-confederacion-diaguita-calchaqui-chalimin-el-lider-indigena-que-defendio-la-tierra-y-la-nid22112026": "2026-11-22"
+      "https://lanacion.com.ar/economia/campo/de-la-confederacion-diaguita-calchaqui-chalimin-el-lider-indigena-que-defendio-la-tierra-y-la-nid22112026": "2026-11-22",
+      "https://bichosdecampo.com/lo-sabias-casi-el-10-de-los-ingresos-de-los-productores-estadounidenses-se-explican-por-subsidios-estatales": "2026-11-22"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -57419,7 +57440,8 @@
       "tango beef enfrenta el desafio de introducir carne angus certificada en mercados boutique de alto valor": "2026-11-22",
       "la extension agricola de las semilleras advanta pone al productor en el centro de la innovacion": "2026-11-22",
       "agricultura en el noa fertilizacion biologicos y genetica de maiz": "2026-11-22",
-      "de la confederacion diaguita calchaqui chalimin el lider indigena que defendio la tierra y la libertad": "2026-11-22"
+      "de la confederacion diaguita calchaqui chalimin el lider indigena que defendio la tierra y la libertad": "2026-11-22",
+      "lo sabias casi el 10 de los ingresos de los productores estadounidenses se explican por subsidios estatales": "2026-11-22"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -60878,7 +60900,8 @@
       "a6efee29e63e0f23": "2026-11-22",
       "6c63d2a34d05215f": "2026-11-22",
       "c7aa1c02686c24cb": "2026-11-22",
-      "420e7ea7a23802b4": "2026-11-22"
+      "420e7ea7a23802b4": "2026-11-22",
+      "6adb6e4f022d2a14": "2026-11-22"
     }
   },
   "elegidas": [
@@ -95254,7 +95277,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-22T22:20:32-03:00",
+  "actualizado": "2026-11-22T22:33:56-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
