@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T03:18:01.000Z",
+  "actualizado": "2026-11-24T02:01:50.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.chacabuquero.com.ar/2026/11/hallazgo-en-un-descampado-de-chacabuco.html",
@@ -282,6 +282,30 @@
       "localidad": "Chacabuco",
       "volanta": "Zona rural de Chacabuco",
       "categoria": "otro_policial",
+      "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/348457-aprehendieron-a-un-menor-de-15-anos-por-el-robo-de",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-24T02:01:50.000Z",
+      "titulo": "Aprehendieron a un menor de 15 años por el robo de una moto y un asalto en la calle",
+      "descripcion": "Un adolescente de 15 años fue aprehendido en un allanamiento en el barrio Fonavi de Chacabuco tras ser vinculado con el robo de una motocicleta y un asalto callejero. La policía recuperó el rodado, el celular y la cartera de las víctimas.",
+      "texto_tiktok": "Un adolescente de 15 años fue aprehendido en un operativo policial realizado en el barrio Fonavi de Chacabuco.\n\nLa investigación se inició tras la denuncia por el robo de una motocicleta Mondial 110 cc que estaba en el pasillo de una vivienda.\n\nA través del análisis de las cámaras del Centro de Monitoreo, los efectivos determinaron que el sospechoso utilizó el rodado para interceptar a una ciclista en Vicente Obligado y Cabrera.\n\nBajo amenazas, le sustrajo la cartera con dinero, un celular y otros elementos personales.\n\nCon las pruebas recabadas, el Grupo Técnico Operativo de la Comisaría Segunda concretó un allanamiento con apoyo del SASU donde detuvieron al joven.\n\nEn el lugar secuestraron la moto, prendas de vestir utilizadas en los hechos y las pertenencias robadas a la ciclista.\n\nEn el caso interviene la UFI Nº 12 del Fuero de Responsabilidad Penal Juvenil del Departamento Judicial Junín, que continúa con las actuaciones correspondientes.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #Inseguridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-24_0132_01_chacabuco_aprehendieron-a-un-menor-de-15.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-aprehendieron-a-un-menor-de-15-anos-por-el-robo-de-cab868",
+      "youtube_url": "https://youtube.com/shorts/kmhoBuOQHlw",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Chacabuco",
+      "volanta": "Operativo policial en Chacabuco",
+      "categoria": "robo",
       "distancia_km": 50.1,
       "radio_ok": true,
       "plataformas": [
