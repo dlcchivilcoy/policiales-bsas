@@ -97,6 +97,8 @@ def bono_video() -> int:
 # el mínimo de puntaje es el mismo. La pasada pone FRANJA según el horario del turno. AGRO_FRANJAS=0 lo apaga.
 FRANJA = ""
 BONO_FRANJA = 12
+BONO_EMPRESA_AGRO = 12      # 24/11/2026: fábricas, empresas y pymes del agro con conflicto, cierre o premio
+EXTRA_EMPRESAS = 2          # y hasta 2 más por día que el tope del subtema «empresas»
 TEMAS_MANANA = ("clima", "precios", "dolar", "reglas", "campana", "sanidad")       # lo que hay que saber hoy
 TEMAS_TARDE = ("costos", "internacional", "campana", "precios", "tecnologia")     # lo que se analiza
 
@@ -119,7 +121,8 @@ def bono_franja(s: dict, franja: str = None) -> int:
         return BONO_FRANJA if (s.get("urgente") or s.get("tema_doc") in TEMAS_MANANA
                                or s.get("subtema") == "mercados") else 0
     if franja == "tarde":                           # análisis: lo que se explica (informes, tendencias, costos)
-        return BONO_FRANJA if (s.get("potencial_carrusel", 5) >= 7 or s.get("tema_doc") in TEMAS_TARDE) else 0
+        return BONO_FRANJA if (s.get("potencial_carrusel", 5) >= 7 or s.get("tema_doc") in TEMAS_TARDE
+                               or s.get("empresa_agro")) else 0
     # noche: estilo policiales, los sucesos del campo (delitos, incendios, accidentes rurales) y lo urgente
     if s.get("policial_rural"):
         return 2 * BONO_FRANJA
@@ -136,6 +139,8 @@ def prioridad(s: dict, formato: str = "reel") -> tuple:
     # suman, esperan como pendientes. Sin franja (o con AGRO_FRANJAS=0), como antes.
     if s.get("policial_rural") and (not FRANJA or FRANJA == "noche" or not franjas_activas()):
         valor += BONO_POLICIAL_RURAL
+    if s.get("empresa_agro"):                       # 24/11/2026: empresas del agro con un hecho (conflicto, cierre, premio)
+        valor += BONO_EMPRESA_AGRO
     if formato == "carrusel":
         valor += 2 * (s.get("potencial_carrusel", 5) - 5)
         if s.get("con_video") and not s.get("urgente") and (os.environ.get("AGRO_GRILLA") or "1").strip() != "0":
@@ -335,7 +340,7 @@ def elegir(candidatos: list, de_hoy: list, cupo_dia: int = None, minimo: int = N
         if lugar <= 0:
             descartados.append((c, f"cupo del día lleno ({cupo_dia})"))
             continue
-        if usados.get(s["subtema"], 0) >= tope.get(s["subtema"], 1):
+        if usados.get(s["subtema"], 0) >= tope.get(s["subtema"], 1) + (EXTRA_EMPRESAS if s.get("empresa_agro") else 0):
             reserva.append(c)
             continue
         elegidos.append(c)

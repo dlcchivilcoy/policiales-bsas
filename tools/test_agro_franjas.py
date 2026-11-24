@@ -93,5 +93,29 @@ chequear("reel de prueba: abigeato → entra como policial del campo",
          VI.nivel({"titulo": "Abigeato: robaron 30 novillos de un campo en Bragado", "resumen": "",
                    "url": "https://x/policiales/abigeato"}) == 0)
 
+# 24/11/2026: empresas, fábricas y pymes del agro con conflicto, cierre o premio
+for t in ("Despidos en un frigorífico de Rosario: 120 trabajadores en la calle",
+          "Cerró una usina láctea en Carlos Casares tras 40 años",
+          "Una cooperativa agrícola de Junín ganó el premio a la innovación",
+          "Inauguraron una nueva planta de silos en Bragado"):
+    chequear(f"empresa del agro: «{t}»", FU.es_empresa_agro(t))
+for t in ("Despidos en una automotriz de Córdoba", "Paro de colectivos en el AMBA", "La cooperativa eléctrica subió la tarifa",
+          "El dólar blue cerró en alza"):
+    chequear(f"no es empresa del agro: «{t}»", not FU.es_empresa_agro(t))
+os.environ["AGRO_EMPRESAS"] = "0"
+chequear("AGRO_EMPRESAS=0 lo apaga", not FU.es_empresa_agro("Despidos en un frigorífico de Rosario"))
+os.environ.pop("AGRO_EMPRESAS")
+SE.FRANJA = ""
+_e = {"ai_score": 55, "subtema": "empresas", "empresa_agro": True}
+_n = {"ai_score": 55, "subtema": "empresas"}
+chequear("la empresa del agro con un hecho va antes", SE.prioridad(_e) > SE.prioridad(_n))
+_hoy = [{"score": {"subtema": "empresas"}}]
+_el, _ = SE.elegir([{"id": "e", "score": dict(_e, tema="frigorifico x")}], _hoy, cupo_dia=16, minimo=50, formato="carrusel")
+chequear("entra aunque el tope de «empresas» del día esté lleno", len(_el) == 1)
+_el, _ = SE.elegir([{"id": "n", "score": dict(_n, tema="empresa y")}], _hoy, cupo_dia=16, minimo=50, formato="carrusel")
+chequear("una de empresas común no pasa el tope lleno", len(_el) == 0)
+fs = [f for f in FU.FUENTES if f.get("solo_empresa")]
+chequear("4 fuentes nuevas de economía y gremiales, solo empresas", len(fs) == 4 and all(f["activa"] for f in fs))
+
 print(f"--- {bien}/{bien + mal} correctos ---")
 sys.exit(1 if mal else 0)

@@ -39,9 +39,13 @@ medios (título y resumen). Puntuá cada una para decidir si esa gente se frenar
 
 Lo que más interesa: hechos que le pasaron a alguien (robos rurales, un pibe que armó una máquina, un
 productor que perdió todo), clima que ya pega o está por pegar (tormentas, granizo, inundaciones, lluvias) y
-lo que pasa en un lugar con nombre y apellido. Lo que no interesa aunque suene importante: premios y
-reconocimientos, reclamos de cámaras, «el ecosistema AgTech», lanzamientos de empresas, balances
-macroeconómicos y frases generales sobre «el sector». Valen mucho los remates, las sociedades y asociaciones
+lo que pasa en un lugar con nombre y apellido. También interesan las EMPRESAS, FÁBRICAS Y PYMES DEL AGRO con nombre
+y lugar (frigoríficos, molinos, aceiteras, acopios, cooperativas, fábricas de maquinaria agrícola, semilleras, usinas
+lácteas, feedlots) cuando les pasa algo concreto: un conflicto laboral, despidos o suspensiones, un cierre, una
+quiebra, una reapertura, una planta nueva, o un premio o reconocimiento que ganaron; más todavía si son de la zona,
+porque ahí trabaja gente que el lector conoce. Lo que no interesa aunque suene importante: premios genéricos de
+cámaras o eventos sin una empresa o una persona concreta, reclamos de cámaras, «el ecosistema AgTech», lanzamientos
+de productos, balances macroeconómicos y frases generales sobre «el sector». Valen mucho los remates, las sociedades y asociaciones
 rurales, las escuelas agrarias y los productores de la zona con nombre y apellido. Algunas notas vienen de
 diarios locales, que publican de todo: si una no tiene que ver con el campo o la producción, ponele 0 en todo.
 La cercanía se mide por DÓNDE PASA el hecho, nunca por dónde está el diario: un diario de la zona también levanta

@@ -120,6 +120,19 @@ FUENTES = [
      "tipo": "medio", "solo_campo": True, "policial": True, "activa": True},
     {"nombre": "Clarín Policiales", "base": "https://www.clarin.com", "rss": ["https://www.clarin.com/rss/policiales/"],
      "tipo": "medio", "solo_campo": True, "policial": True, "activa": True},
+    # 24/11/2026 (pedido del editor: empresas, fábricas y pymes del agro con conflictos, cierres o premios): secciones de
+    # economía y un portal gremial. Publican de todo: SOLO entra lo que es de una empresa del agro con un hecho
+    # (`solo_empresa`, es_empresa_agro). Verificadas el 24/11: Infobae 24 notas, elDiarioAR 20, LN 4, InfoGremiales 10.
+    {"nombre": "Infobae Economía", "base": "https://www.infobae.com",
+     "rss": ["https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml"], "tipo": "medio",
+     "solo_empresa": True, "activa": True},
+    {"nombre": "LA NACION Economía", "base": "https://www.lanacion.com.ar",
+     "rss": ["https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/?outputType=xml"], "tipo": "medio",
+     "solo_empresa": True, "activa": True},
+    {"nombre": "elDiarioAR Economía", "base": "https://www.eldiarioar.com", "rss": ["https://www.eldiarioar.com/rss/economia"],
+     "tipo": "medio", "solo_empresa": True, "activa": True},
+    {"nombre": "InfoGremiales", "base": "https://www.infogremiales.com.ar", "rss": ["https://www.infogremiales.com.ar/feed/"],
+     "tipo": "medio", "solo_empresa": True, "activa": True},
 ]
 
 
@@ -167,6 +180,42 @@ HECHO_RURAL = re.compile(
     r"agroqu[ií]mic\w*|fertilizante\w*|granos?|cereal\w*|productor(?:es)? (?:rural|rurales|agropecuari\w*)|"
     r"pe[oó]n|peones|trabajador(?:es)? rural(?:es)?|quinta\w*|lotes? (?:de|con) (?:soja|ma[ií]z|trigo|girasol))\b",
     re.I)
+
+
+# 24/11/2026 (el editor: «considerá scrappear y armar reels/carruseles sobre fábricas, empresas, pymes ligadas al agro,
+# ya sea porque hay conflictos laborales, cierres, o porque ganaron algún premio, o algo destacado»). Una nota es de
+# una EMPRESA DEL AGRO con algo que contar si nombra una empresa del rubro (frigorífico, molino, aceitera, acopio,
+# cooperativa, fábrica de maquinaria agrícola, semillera, usina láctea, feedlot, agroindustria…) Y un hecho: conflicto
+# laboral, despidos, suspensiones, cierre, quiebra, reapertura, una planta nueva o un premio. AGRO_EMPRESAS=0 apaga.
+EMPRESA_AGRO = re.compile(
+    r"\b(frigor[ií]fic\w*|matadero\w*|molino\w*|molinera\w*|harinera\w*|fideer\w*|aceitera\w*|aceiteros?|"
+    r"acopio\w*|acopiador\w*|cerealera\w*|cooperativa\w* (?:agr[ií]col\w*|agropecuari\w*|tambera\w*|rural\w*)|"
+    r"semillera\w*|usina\w* l[aá]cte\w*|l[aá]cte[oa]s?|lechera\w*|tambo\w*|feedlot\w*|"
+    r"agroindustri\w*|agroexportador\w*|agropecuaria [A-ZÁÉÍÓÚ]\w*|f[aá]brica\w* de (?:maquinaria|implementos|"
+    r"sembradoras|cosechadoras|silos|alimento\w*|balanceado\w*)|fabricante\w* de (?:maquinaria|implementos)|"
+    r"metal[uú]rgica\w* (?:agr[ií]cola\w*|rural\w*)|maquinaria agr[ií]cola|concesionari\w* (?:agr[ií]col\w*|de maquinaria)|"
+    r"av[ií]cola\w*|granja\w* (?:av[ií]cola|porcina)|criadero\w*|planta de (?:silos|acopio|biodi[eé]sel|etanol|"
+    r"bioetanol|alimento\w*|faena)|biodi[eé]sel|bioetanol|curtiembre\w*|yerbater\w*|algodoner\w*|ingenio\w* azucarer\w*|"
+    r"empacador\w*|uatre|renatre|pyme\w* (?:agr\w*|rural\w*|del campo))\b", re.I)
+EVENTO_EMPRESA = re.compile(
+    r"\b(despid\w*|despidos|suspensi[oó]n\w*|suspend\w*|cesant\w*|retiro\w* voluntario\w*|cierr[ea]\w*|cerr[oó]|"
+    r"cerraron|cierre\w*|quiebra\w*|concurso preventivo|vaciamiento|conflicto\w*|paro\w*|huelga\w*|"
+    r"medidas? de fuerza|toma de (?:la )?planta|salarios? adeudad\w*|deuda\w* salarial\w*|crisis|reabri\w*|"
+    r"reapertura|inaugur\w*|nueva planta|ampl[ií]a\w*|ampliaci[oó]n|premi[oa]\w*|galard[oó]n\w*|distinci[oó]n\w*|"
+    r"distinguid\w*|reconocimiento\w*|ganador\w*|gan[oó]|r[eé]cord|certificaci[oó]n\w*|primera vez|"
+    r"exporta por primera|aniversario|cumple \d+ a[nñ]os|\d+ a[nñ]os de historia)\b", re.I)
+
+
+def empresas_activas() -> bool:
+    return (os.environ.get("AGRO_EMPRESAS") or "1").strip() != "0"
+
+
+def es_empresa_agro(texto: str) -> bool:
+    """¿Es una noticia de una empresa, fábrica o pyme del agro con un hecho (conflicto, cierre, premio, planta)?"""
+    if not empresas_activas():
+        return False
+    t = texto or ""
+    return bool(EMPRESA_AGRO.search(t)) and bool(EVENTO_EMPRESA.search(t))
 
 
 def policial_fuera_del_campo(texto: str) -> bool:

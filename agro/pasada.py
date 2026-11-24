@@ -414,7 +414,8 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
         candidatos.append({"id": r["id"], "rep": r, "grupo": g,
                            "score": dict(s, de_zona=FU.nombra_la_zona(texto_r),
                                          policial_rural=FU.es_policial_rural(texto_r),
-                                         suceso=bool(FU.POLICIAL.search(texto_r))),
+                                         suceso=bool(FU.POLICIAL.search(texto_r)),
+                                         empresa_agro=FU.es_empresa_agro(texto_r)),
                            "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
     candidatos += [dict(p, pendiente=True) for p in pendientes

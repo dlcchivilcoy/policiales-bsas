@@ -189,8 +189,11 @@ def capturar(fuentes: list, ahora: datetime = None, horas_max: int = 48, listar=
             for c in crudas:
                 n = normalizar(c, f, feed, ahora)
                 fila["leidas"] += 1
-                if f.get("solo_campo") and not FU.es_del_campo(f"{n['titulo']}. {n['descripcion']}"):
+                texto_n = f"{n['titulo']}. {n['descripcion']}"
+                if f.get("solo_campo") and not (FU.es_del_campo(texto_n) or FU.es_empresa_agro(texto_n)):
                     continue                               # un diario local también publica de todo lo demás
+                if f.get("solo_empresa") and not FU.es_empresa_agro(texto_n):
+                    continue                               # 24/11/2026: de economía, solo las empresas del agro
                 if n["canonical_url"] in vistas:
                     continue                               # la misma nota en dos secciones del sitio
                 vistas.add(n["canonical_url"])
