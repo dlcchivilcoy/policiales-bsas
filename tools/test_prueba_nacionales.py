@@ -49,7 +49,22 @@ _mem_v = lambda n: {"piezas": {f"v{i}": {"prueba": "virales", "dia": _dia, "ig_p
 chequear("11 por día: con 5 virales, los policiales hacen 6", PR.cuantos_de("policiales", _mem_v(5), _dia) == 6)
 chequear("si los virales encontraron 3, los policiales intentan 8",
          PR.cuantos_de("policiales", _mem_v(3), _dia) == 8)
-chequear("los virales siguen en 5", PR.cuantos_de("virales", _mem_v(0), _dia) == 5)
+chequear("24/11/2026: los virales bajan a 3 (rinden 382 de mediana contra 1.329 de los policiales)",
+         PR.cuantos_de("virales", _mem_v(0), _dia) == 3)
+import time as _time  # noqa: E402
+_ts = _time.time()
+_p = lambda t: PR.puntaje_policial({"titulo": t, "resumen": "", "fecha": _ts}, 1, _ts)[0]  # noqa: E731
+chequear("gancho: el hecho filmado por una cámara de seguridad suma",
+         _p("Una cámara de seguridad registró el robo a un kiosco") > _p("Robaron un kiosco"))
+chequear("gancho: una modalidad llamativa (falsos operarios) suma",
+         _p("Detuvieron a falsos operarios que robaban cables") > _p("Detuvieron a operarios que robaban cables"))
+chequear("el trámite judicial resta", _p("Inician los alegatos por el crimen") < _p("Investigan el crimen"))
+import os as _os  # noqa: E402
+_os.environ["NAC_PRUEBA_GANCHOS"] = "0"
+chequear("NAC_PRUEBA_GANCHOS=0 los apaga", _p("Inician los alegatos por el crimen") == _p("Investigan el crimen"))
+_os.environ.pop("NAC_PRUEBA_GANCHOS")
+_v, _ = PR.candidatas_virales(a("17:35"), notas=[])
+chequear("sin internacionales de fábrica (lista vacía no rompe)", _v == [])
 chequear("el sexto policial entra en la franja (22:05)",
          hh(PR.turnos("policiales", a("19:45"), 6, 6)) == ["20:00", "20:25", "20:50", "21:15", "21:40", "22:05"])
 os.environ["NAC_PRUEBA_TOTAL"] = "0"

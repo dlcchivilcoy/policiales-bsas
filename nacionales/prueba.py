@@ -50,7 +50,7 @@ CUANTOS_DEFAULT = 5
 # 17/11/2026 (pedido del editor: «agregá el que falta del que encuentre»): 11 por día entre los dos grupos. Los
 # policiales van después de los virales y completan lo que falta (5 base, hasta 3 más). NAC_PRUEBA_TOTAL=0 apaga.
 TOTAL_DIA_DEFAULT = 11
-EXTRA_MAX = 3
+EXTRA_MAX = 3                 # 24/11/2026: con 3 virales, los policiales llegan a 8
 PASO_MIN_DEFAULT = 25
 PASO_MIN_TARDE = 10           # si la corrida arrancó tarde, lo mínimo entre dos reels
 INTENTOS_MAX = 40             # notas que se miran como mucho (cada una lee su página; la IA, solo con video)
@@ -101,8 +101,25 @@ def total_dia() -> int:
     return _entero("NAC_PRUEBA_TOTAL", TOTAL_DIA_DEFAULT)
 
 
+# 24/11/2026 (el editor: «fijate cuáles fueron los 5 mejores reels de prueba y replicá reels similares para conseguir
+# más seguidores»). Medido en 56 reels de prueba (15 al 23/11): policiales mediana 1.329 vistas, virales 382 y los
+# internacionales unas 120 (Trump, Bukele, universidades de Perú). Los 5 mejores fueron policiales:
+#   1. 170.925 vistas, 228 compartidos — «Detuvieron a doce falsos operarios que robaban cables subterráneos» (LN)
+#   2.  17.420 — «Discutió en la calle, le disparó a un ciclista y pagará una millonaria indemnización» (Infobae)
+#   3.  14.204, 102 compartidos — «Bragado: audios y un video permitieron hallar el cuerpo mutilado de un joven» (Clarín)
+#   4.   2.910, el que más se miró entero (29 s) — «Llamaron al 911 para exigir la liberación del hijo de un narco»
+#   5.   2.644 — «Detuvieron a adolescentes por un robo piraña en una heladería de Quilmes» (TN)
+# Lo que comparten: el hecho filmado (cámara de seguridad, el momento), una modalidad llamativa (falsos operarios,
+# robo piraña), acción (disparo, ataque) o la zona (Bragado). Lo que no anduvo: la causa judicial (alegatos,
+# condenas, peritajes), averías (fugas de gas) y lo internacional. Por eso: los virales pasan de 5 a 3 por día y sin
+# internacionales, los policiales completan el total (hasta 8), y su puntaje suma esos ganchos y resta lo procesal.
+VIRALES_DEFAULT = 3
+
+
 def cuantos_de(grupo: str, mem: dict, dia: str) -> int:
     """Cuántos le tocan hoy al grupo: los policiales completan el total del día con lo que no encontraron los virales."""
+    if grupo == "virales":
+        return _entero("NAC_PRUEBA_VIRALES_CUANTOS", VIRALES_DEFAULT)
     base = cuantos()
     if grupo != "policiales" or not total_dia():
         return base
@@ -162,6 +179,9 @@ def candidatas_virales(ahora: datetime, notas=None) -> tuple:
         avisos += [f"portal {f}" for f in fallas]
     por_cat = CAT.candidatas(notas, ahora.timestamp())
     virales = [dict(c, categoria="virales") for c in por_cat.get("virales") or []]
+    # 24/11/2026: lo internacional rindió unas 120 vistas por reel; queda afuera (NAC_PRUEBA_MUNDO=1 lo vuelve).
+    if (os.environ.get("NAC_PRUEBA_MUNDO") or "0").strip() != "1":
+        return virales, avisos
     mundo = [dict(c, categoria="internacionales") for c in por_cat.get("internacionales") or []
              if not AG.es_mundo(c)]
     return virales + mundo, avisos
@@ -180,7 +200,29 @@ def puntaje_policial(nota: dict, cobertura: int, ahora_ts: float) -> tuple:
         razones.append("de la provincia")
     horas = max(0.0, (ahora_ts - (nota.get("fecha") or 0)) / 3600)
     puntos += max(0, 10 - round(horas))
+    # 24/11/2026: los ganchos de los reels de prueba que más rindieron (ver cuantos_de) y lo que no anduvo.
+    if (os.environ.get("NAC_PRUEBA_GANCHOS") or "1").strip() != "0":
+        for rx, valor, razon in GANCHOS:
+            if rx.search(texto):
+                puntos += valor
+                razones.append(razon)
     return puntos, razones
+
+
+GANCHOS = (
+    (F.rx(["camara de seguridad", "camaras de seguridad", "quedo filmado", "quedo registrado", "quedo grabado",
+           "fue filmado", "lo filmaron", "filmaron", "el video muestra", "se ve en el video", "las imagenes muestran",
+           "el momento exacto", "el momento en que", "en vivo", "video viral"]), 20, "el hecho filmado"),
+    (F.rx(["falsos", "falso operario", "se hacian pasar", "se hacia pasar", "haciendose pasar", "disfrazad",
+           "pirana", "modalidad", "insolito", "increible", "en segundos", "a plena luz del dia", "mecheras",
+           "motochorros", "entradera", "salidera"]), 15, "modalidad llamativa"),
+    (F.rx(["disparo", "disparos", "balazo", "balazos", "baleo", "le disparo", "ataco", "atacaron", "a golpes",
+           "apunalo", "mutilado", "cuerpo", "persecucion", "secuestro", "narco"]), 10, "acción"),
+    (F.rx(["alegatos", "juicio", "condenado", "condena", "condenaron", "peritajes", "peritaje", "causa penal",
+           "nuevas revelaciones", "giro en", "imputado", "indagatoria", "procesado", "elevan a juicio", "debate oral"]),
+     -20, "trámite judicial (rinde poco)"),
+    (F.rx(["fuga de gas", "fugas de gas", "evacuan", "perimetro restringido"]), -15, "avería (rinde poco)"),
+)
 
 
 def candidatas_policiales(ahora: datetime, notas=None) -> tuple:
