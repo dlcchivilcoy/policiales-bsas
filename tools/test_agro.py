@@ -815,8 +815,8 @@ chequear("AGRO_POR_CORRIDA y AGRO_INTERVALO_MIN: 3 reels cada 30 min",
          [x for x in _hm(AG.corrida(_t(10, 0))[2]) if x[1] == "reel"] == _reels("10:00", "10:30", "11:00") and AG.cuantos("reel") == 18)
 os.environ.pop("AGRO_POR_CORRIDA"), os.environ.pop("AGRO_INTERVALO_MIN")
 _smin = os.environ.pop("AGRO_SCORE_MIN")
-chequear("de fábrica: hasta 16 por día (12 y margen, 20/11/2026), mínimo 60, una por horario",
-         SE.max_dia() == 16 and SE.score_min() == 60 and SE.por_pasada() == 1)
+chequear("de fábrica: hasta 16 por día (12 y margen, 20/11/2026), mínimo 50 (24/11/2026), una por horario",
+         SE.max_dia() == 16 and SE.score_min() == 50 and SE.por_pasada() == 1)
 os.environ["AGRO_SCORE_MIN"] = _smin
 
 # --- un sitio distinto por reel dentro de la corrida; el Short, solo del primero -------------------

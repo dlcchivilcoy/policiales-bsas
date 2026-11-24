@@ -408,12 +408,19 @@ def pasada(max_piezas: int = 0, con_reel: bool = True, horas: int = 48, log=prin
                 mem["indice"]["hash"].pop(n["hash"], None)
             continue
         texto_r = f"{r['titulo']}. {r.get('descripcion') or ''}"
+        if FU.policial_fuera_del_campo(texto_r):       # 24/11/2026: un robo de motos o un choque en la ciudad
+            descartar(r, "policial que no pasó en el campo (agro solo publica los del campo)", s)
+            continue
         candidatos.append({"id": r["id"], "rep": r, "grupo": g,
                            "score": dict(s, de_zona=FU.nombra_la_zona(texto_r),
-                                         policial_rural=FU.es_policial_rural(texto_r)),
+                                         policial_rural=FU.es_policial_rural(texto_r),
+                                         suceso=bool(FU.POLICIAL.search(texto_r))),
                            "cuando": ahora.isoformat(timespec="minutes")})
     conteos["Puntuadas"] = len(candidatos)
-    candidatos += [dict(p, pendiente=True) for p in pendientes]
+    candidatos += [dict(p, pendiente=True) for p in pendientes
+                   if not FU.policial_fuera_del_campo(f"{p['rep'].get('titulo', '')}. {p['rep'].get('descripcion') or ''}")]
+    SE.FRANJA = SE.franja_de(horario)                   # 24/11/2026: mañana informativa, tarde análisis, noche sucesos
+    log(f"   franja: {SE.FRANJA}")
     conteos["Pendientes de corridas anteriores"] = len(pendientes)
     conteos[f"Con ≥ {SE.score_min()}"] = sum(1 for c in candidatos if c["score"]["ai_score"] >= SE.score_min())
 

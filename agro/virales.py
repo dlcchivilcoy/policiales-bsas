@@ -188,6 +188,8 @@ def nivel(nota: dict) -> int | None:
         return None
     if not del_campo_firme(texto) and not es_viral_del_campo(nota):
         return None
+    if FU.policial_fuera_del_campo(texto):           # 24/11/2026: un robo de motos, un choque en la ciudad: afuera
+        return None
     if FU.es_policial_rural(texto):
         return 0
     if es_viral_del_campo(nota):
@@ -217,6 +219,9 @@ Buenos Aires, Argentina). Te paso notas de otros medios (título, resumen, URL).
 producción agropecuaria, ganadería, cultivos, cosecha y siembra, maquinaria agrícola, productores y trabajadores
 rurales, tambos, remates, escuelas agrarias, vida en el campo, animales de granja en un ambiente rural, clima que
 afecta campos o cultivos, policiales rurales (abigeato, robos o accidentes en campos y caminos rurales).
+Un policial SOLO es del campo si el hecho pasó en un campo, una chacra, un tambo o un camino rural, o fue contra lo del
+campo (hacienda, maquinaria agrícola, silobolsas): un robo de motos, un caballo robado en un barrio o un choque en la
+ciudad o en una ruta NO son del campo.
 NO es del campo: deportes y clubes, espectáculos y música, la ciudad, mascotas, zoológicos y animales exóticos o
 marinos, ciencia, política general, un temporal en una ciudad que no nombra campos ni cultivos, y lo que pasa en
 otro país (salvo que le cambie algo directo al campo argentino). Ante la duda, NO.

@@ -33,6 +33,11 @@ for texto in ("La productora del festival anunció la grilla", "Mejoró el rendi
               "Diario La Campaña cumple años", "Choque en la ruta 5: dos heridos", "El Gobierno subió las jubilaciones"):
     chequear(f"NO es del campo: «{texto}»", not CA.es_del_campo(texto))
 
+# 24/11/2026: por palabras, APAGADA de fábrica (solo va la nota 6 del Drive, desde social_publisher).
+os.environ.pop("COLAB_AGRO_TEXTO", None)
+chequear("de fábrica, aunque sea del campo → sin colab (solo la nota 6)", CA.colaborador_para("Cosecha de trigo", DIARIO) == "")
+os.environ["COLAB_AGRO_TEXTO"] = "1"                 # lo que sigue prueba la colab por palabras, prendida
+
 # 2. Solo invita la cuenta del diario, y el interruptor la apaga.
 chequear("cuenta del diario + campo → @diarioyradioagro",
          CA.colaborador_para("Cosecha de trigo", DIARIO) == "diarioyradioagro")

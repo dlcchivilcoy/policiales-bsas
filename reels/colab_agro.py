@@ -73,6 +73,11 @@ def colaborador_para(texto: str, uid: str) -> str:
     apagado o no es del campo)."""
     if not activo() or (uid or "").strip() != (os.environ.get("DIARIO_IG_ID") or DIARIO_IG):
         return ""
+    # 24/11/2026 (el editor: «poné en colab solo las de la página 6 de diarioyradio, porque hoy metiste una de un médico
+    # que nada que ver»): la colab por palabras del campo queda APAGADA; solo va la nota 6 del Drive (social_publisher).
+    # COLAB_AGRO_TEXTO=1 la vuelve a prender.
+    if (os.environ.get("COLAB_AGRO_TEXTO") or "0").strip() != "1":
+        return ""
     return CUENTA_AGRO if es_del_campo(texto) else ""
 
 

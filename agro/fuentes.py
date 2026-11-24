@@ -145,7 +145,36 @@ POLICIAL = re.compile(r"\b(rob[oóa]\w*|hurt\w*|delincuent\w*|ladr[oó]n\w*|dete
 
 def es_policial_rural(texto: str) -> bool:
     """¿Es un policial del campo? Un delito, un incendio o un accidente, en una nota del campo."""
-    return bool(POLICIAL.search(texto or "")) and es_del_campo(texto)
+    return bool(POLICIAL.search(texto or "")) and es_del_campo(texto) and not policial_fuera_del_campo(texto)
+
+
+# 24/11/2026 (el editor: «sacá los reels de prueba o carruseles o reels que sean policiales nada que ver con el agro,
+# por ejemplo robo de motos, excepto que haya ocurrido en un campo»): un DELITO o un SINIESTRO solo entra a agro si
+# el hecho pasó en el campo (un campo, una chacra, un tambo, un camino rural) o fue contra lo del campo (hacienda,
+# maquinaria agrícola, silobolsas). Un caballo robado en un barrio, una moto robada o un choque en la ciudad: afuera.
+# Lo que no es policial (una muerte por enfermedad, un incendio de pastizales sin delito) no se mira acá.
+DELITO_O_SINIESTRO = re.compile(
+    r"\b(rob[oóa]\w*|robad\w*|hurt\w*|delincuent\w*|ladr[oó]n\w*|motochorr\w*|asalt\w*|detenid\w*|aprehendid\w*|"
+    r"allanamient\w*|estaf\w*|homicid\w*|asesin\w*|femicid\w*|secuestr\w*|baleado|balead\w*|disparo\w*|apu[nñ]al\w*|"
+    r"choque|choc[oó]|chocaron|vuelc\w*|volc[oó]|accidente\w*|siniestro\w*|atropell\w*|motociclista\w*|"
+    r"usurpaci[oó]n|intrus\w*|abigeato|cuatrer\w*|faena clandestina)\b", re.I)
+HECHO_RURAL = re.compile(
+    r"\b(campos?(?! de (?:deportes?|juegos?|f[uú]tbol|golf))|zona rural|[aá]mbito rural|rural(?:es)?|chacras?|"
+    r"estancias?|establecimientos? (?:rural|rurales|agropecuari\w*|ganader\w*|agr[ií]col\w*)|tambos?|"
+    r"camino(?:s)? (?:rural|rurales|vecinal|vecinales|de tierra)|paraje|abigeato|cuatrer\w*|faena clandestina|"
+    r"hacienda|ganado|vacun\w*|vacas?|novill\w*|ternero\w*|toros?|ovejas?|ovin\w*|porcin\w*|cerdos?|"
+    r"cosechadora\w*|sembradora\w*|pulverizadora\w*|tractor\w*|maquinaria agr[ií]cola|silo ?bolsas?|silos?|"
+    r"agroqu[ií]mic\w*|fertilizante\w*|granos?|cereal\w*|productor(?:es)? (?:rural|rurales|agropecuari\w*)|"
+    r"pe[oó]n|peones|trabajador(?:es)? rural(?:es)?|quinta\w*|lotes? (?:de|con) (?:soja|ma[ií]z|trigo|girasol))\b",
+    re.I)
+
+
+def policial_fuera_del_campo(texto: str) -> bool:
+    """¿Es un delito o un siniestro que NO pasó en el campo? (24/11/2026) AGRO_POLICIAL_SOLO_CAMPO=0 lo apaga."""
+    if (os.environ.get("AGRO_POLICIAL_SOLO_CAMPO") or "1").strip() == "0":
+        return False
+    t = texto or ""
+    return bool(DELITO_O_SINIESTRO.search(t)) and not HECHO_RURAL.search(t)
 
 
 def medios_zona_activos() -> bool:

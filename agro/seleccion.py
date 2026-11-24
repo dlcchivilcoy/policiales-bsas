@@ -48,7 +48,9 @@ def _entero(nombre: str, defecto: int) -> int:
 
 
 def score_min() -> int:
-    return _entero("AGRO_SCORE_MIN", 60)
+    # 24/11/2026: de 60 a 50. Con 60 salían 2 o 3 noticias por día de las 12 de la grilla («sin notas que pasen el
+    # mínimo» en casi todas las corridas); en las últimas 400 puntuadas, 49 llegaban a 60 y 94 a 50.
+    return _entero("AGRO_SCORE_MIN", 50)
 
 
 def max_dia() -> int:
@@ -89,13 +91,50 @@ def bono_video() -> int:
     return _entero("AGRO_BONO_VIDEO", 15)
 
 
+# 24/11/2026 (el editor: «subilo a 12, 4 durante la mañana, 4 durante la tarde, 4 durante la noche; a la noche más
+# estilo policiales, a la mañana más informativo, a la tarde más de análisis de algo»). La grilla ya tiene 12 lugares
+# (07:00 a 11:30 mañana, 13:00 a 17:30 tarde, 18:00 a 22:30 noche); cada franja empuja su estilo. Ordena, no salva:
+# el mínimo de puntaje es el mismo. La pasada pone FRANJA según el horario del turno. AGRO_FRANJAS=0 lo apaga.
+FRANJA = ""
+BONO_FRANJA = 12
+TEMAS_MANANA = ("clima", "precios", "dolar", "reglas", "campana", "sanidad")       # lo que hay que saber hoy
+TEMAS_TARDE = ("costos", "internacional", "campana", "precios", "tecnologia")     # lo que se analiza
+
+
+def franjas_activas() -> bool:
+    return (os.environ.get("AGRO_FRANJAS") or "1").strip() != "0"
+
+
+def franja_de(hora) -> str:
+    """«manana» hasta las 12:29, «tarde» hasta las 17:59, «noche» desde las 18:00."""
+    hm = (hora.hour, hora.minute)
+    return "manana" if hm < (12, 30) else ("tarde" if hm < (18, 0) else "noche")
+
+
+def bono_franja(s: dict, franja: str = None) -> int:
+    franja = FRANJA if franja is None else franja
+    if not franja or not franjas_activas():
+        return 0
+    if franja == "manana":                          # informativo: lo del día, precios, clima, normas, urgentes
+        return BONO_FRANJA if (s.get("urgente") or s.get("tema_doc") in TEMAS_MANANA
+                               or s.get("subtema") == "mercados") else 0
+    if franja == "tarde":                           # análisis: lo que se explica (informes, tendencias, costos)
+        return BONO_FRANJA if (s.get("potencial_carrusel", 5) >= 7 or s.get("tema_doc") in TEMAS_TARDE) else 0
+    # noche: estilo policiales, los sucesos del campo (delitos, incendios, accidentes rurales) y lo urgente
+    if s.get("policial_rural"):
+        return 2 * BONO_FRANJA
+    return BONO_FRANJA if (s.get("suceso") or s.get("urgente")) else 0
+
+
 def prioridad(s: dict, formato: str = "reel") -> tuple:
     """La clave de orden de una candidata: (urgente, puntaje + empuje del tema [+ carrusel] [+ video], comercial).
     El bono del video ordena, no salva: el mínimo de puntaje se sigue mirando sobre ai_score."""
-    valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0)
+    valor = s["ai_score"] + EMPUJE_TEMA.get(s.get("tema_doc") or "", 0) + bono_franja(s)
     if s.get("de_zona"):
         valor += BONO_ZONA
-    if s.get("policial_rural"):
+    # 24/11/2026: los policiales del campo se juntan a la noche (el estilo de esa franja); a la mañana y a la tarde no
+    # suman, esperan como pendientes. Sin franja (o con AGRO_FRANJAS=0), como antes.
+    if s.get("policial_rural") and (not FRANJA or FRANJA == "noche" or not franjas_activas()):
         valor += BONO_POLICIAL_RURAL
     if formato == "carrusel":
         valor += 2 * (s.get("potencial_carrusel", 5) - 5)
@@ -234,6 +273,12 @@ def formato_turno(candidatos: list, nominal: str, ultimos: list, minimo: int = N
             mejor[f] = (v, (sc.get("titulo") or c.get("id") or "")[:50])
     if not mejor:
         return nominal, "sin notas que pasen el mínimo"
+    # 24/11/2026: la tarde (análisis) se inclina al carrusel y la noche (sucesos) al reel.
+    gusto = {"tarde": "carrusel", "noche": "reel"}.get(FRANJA) if franjas_activas() else None
+    if gusto and gusto in mejor and len(mejor) == 2:
+        otro_f = "reel" if gusto == "carrusel" else "carrusel"
+        if mejor[gusto][0][1] + 8 >= mejor[otro_f][0][1]:
+            return gusto, f"la franja de la {FRANJA} prefiere {gusto}"
     elegido = max(mejor, key=lambda f: mejor[f][0])
     otro = "carrusel" if elegido == "reel" else "reel"
     seguidos = len(ultimos) >= SEGUIDOS_MAX and all(u == elegido for u in ultimos[-SEGUIDOS_MAX:])
