@@ -281,8 +281,59 @@ def puntaje(nota: dict, cobertura: int, ts: float) -> int:
         puntos += 10
     if nota.get("categoria") == "virales":
         puntos += 10
+    if ganchos_activos():
+        puntos += sum(valor for rx, valor in GANCHOS if rx.search(texto))
     horas = max(0.0, (ts - (nota.get("fecha") or ts)) / 3600)
     return puntos + max(0, 10 - round(horas))
+
+
+# 24/11/2026 (el editor: «chequeá los reels de prueba de diarioyradioagro» → «ajustalo» para replicar los que anduvieron).
+# Medido en 37 reels de prueba (17 al 24/11), vistas:
+#   - Lo que anduvo, ya dentro de la regla «solo del campo»: el granizo en el trigo con rindes de 60 quintales (1.652 y
+#     1.303), una serpiente con huevos en Santa Fe (1.642, con video), una argentina que ordeña 700 vacas en Australia
+#     (1.455), el temporal que destruyó la escuela agraria de Germania (1.344), la crecida del Paraná con caballos
+#     (1.193). Afuera de la regla quedaron los que más vistas tuvieron (una hipopótama 7.692, el estadio de un club
+#     1.855, un caballo en una peluquería de Colombia 1.517): animales y lo curioso, con video.
+#   - Lo que no: mercados, precios, inversiones, leyes, empresas y emergencias administrativas, entre 57 y 253 (la
+#     mitad de los 23 reels con foto: mediana 144, contra 749 de los que tenían video).
+# Por eso: suman los animales, el clima que golpea al campo, las historias de gente del campo, las escuelas agrarias y
+# los rindes; lo económico y administrativo ya no sale como reel de prueba (sigue en el feed normal).
+# AGRO_PRUEBA_GANCHOS=0 apaga los ganchos; AGRO_PRUEBA_ECONOMIA=1 vuelve a dejar lo económico.
+GANCHOS = (
+    (re.compile(r"\b(serpiente\w*|vibora\w*|yarara\w*|culebra\w*|caballo\w*|yegua\w*|potrillo\w*|vaca\w*|"
+                r"ternero\w*|toro\w*|oveja\w*|cerdo\w*|chancho\w*|perro\w*|carpincho\w*|puma\w*|zorro\w*|"
+                r"aves?|pajaro\w*|langosta\w*|plaga\w*|animal\w*|rescat\w*|nacio|naci(?:eron|miento))\b"), 15),
+    (re.compile(r"\b(granizo|granizada|temporal\w*|tormenta\w*|crecida\w*|inundac\w*|anegad\w*|sequia\w*|"
+                r"helada\w*|tornado\w*|rafaga\w*|arraso|arrasa\w*|destruy\w*|perdid\w*)\b"), 15),
+    (re.compile(r"\b(productora|productor|tamber\w*|peon\w*|familia\w*|jovenes?|abuel\w*|historia|anos de|"
+                r"argentin[oa] que|se fue a|emigr\w*|ordena\w*|vida en el campo)\b"), 10),
+    (re.compile(r"\b(escuela agraria|escuela agrotecnica|escuelas agrarias|alumnos)\b"), 10),
+    (re.compile(r"\b(rinde\w*|quintales|qq|record\w*)\b"), 10),
+)
+ECONOMIA = re.compile(r"\b(precio\w*|cotiza\w*|mercado\w*|inversion\w*|invierte\w*|invierten|millones de|"
+                      r"u\$s|us\$|dolar\w*|export\w*|importa\w*|arancel\w*|retencion\w*|ley|leyes|senado|diputados|"
+                      r"media sancion|decreto|resolucion|concurso preventivo|deudas?|frigorifico\w*|empresa\w*|"
+                      r"metalurgic\w*|homologan|emergencia agropecuaria|postura|conectividad|torre celular|"
+                      r"megainversion\w*|superficie estimada|por ciento de la superficie|cerro la semana)\b|\$ ?\d")
+
+
+def ganchos_activos() -> bool:
+    import os
+    return (os.environ.get("AGRO_PRUEBA_GANCHOS") or "1").strip() != "0"
+
+
+def sin_economia() -> bool:
+    import os
+    return (os.environ.get("AGRO_PRUEBA_ECONOMIA") or "0").strip() != "1"
+
+
+def es_economica(nota: dict) -> bool:
+    """¿Es de mercados, precios, inversiones, leyes o trámites? (rinde poco como reel de prueba). Lo que además trae
+    un gancho de clima o de animales no cuenta como económico (el granizo en el trigo, aunque hable de quintales)."""
+    texto = _norm(f"{nota.get('titulo') or ''} {nota.get('resumen') or ''}")
+    if not ECONOMIA.search(texto):
+        return False
+    return not (GANCHOS[0][0].search(texto) or GANCHOS[1][0].search(texto))
 
 
 def _bajar_todo(log=print) -> list:
@@ -325,6 +376,8 @@ def candidatas(ahora: datetime, notas=None, mem: dict = None, log=print) -> list
         niveles = [nv for nv in (nivel(n) for n in grupo) if nv is not None]
         if not niveles:
             continue
+        if sin_economia() and all(es_economica(n) for n in grupo):
+            continue                                   # 24/11/2026: mercados, precios, leyes: 57 a 253 vistas
         mejor = max(grupo, key=lambda x: (nivel(x) is not None, NP.ORDEN_VIDEO.get(PO.fuente_de(x), 0),
                                           x.get("categoria") == "virales", x.get("fecha") or 0))
         otras = [x["url"] for x in grupo if x is not mejor]

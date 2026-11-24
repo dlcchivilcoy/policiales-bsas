@@ -291,9 +291,18 @@ _np = [{"url": "https://x/1", "titulo": "Récord de exportaciones de soja en Ros
         "fecha": ts - 8000, "fuente": "TN"},
        {"url": "https://x/4", "titulo": "Video: un ternero rescatado de un pozo se volvió viral", "fecha": ts - 300,
         "fuente": "TN", "categoria": "virales"}]
+os.environ["AGRO_PRUEBA_ECONOMIA"] = "1"             # 24/11/2026: lo económico, de fábrica, ya no sale de prueba
 _cp = VI.candidatas(ahora_v, _np, {})
 chequear("niveles: primero el policial del campo, después el viral, después la otra nota del campo",
          [c["nivel"] for c in _cp] == [0, 1, 2])
+os.environ.pop("AGRO_PRUEBA_ECONOMIA")
+_cp = VI.candidatas(ahora_v, _np, {})
+chequear("24/11/2026: de fábrica, las exportaciones de soja (económica) no salen como reel de prueba",
+         [c["nivel"] for c in _cp] == [0, 1] and all("exportaciones" not in c["titulo"] for c in _cp))
+_t = __import__("time").time()
+chequear("24/11/2026: el granizo en el trigo suma más que un acto",
+         VI.puntaje({"titulo": "El granizo arrasó lotes de trigo", "fecha": _t}, 1, _t)
+         > VI.puntaje({"titulo": "Acto en la Sociedad Rural", "fecha": _t}, 1, _t))
 chequear("lo de la sección internacionales no es del campo de acá",
          VI.nivel({"titulo": "Trump hablará sin rodeos con Xi", "categoria": "internacionales"}) is None
          and VI.nivel({"titulo": "Récord de soja en Rosario", "categoria": "economia"}) == 2)
