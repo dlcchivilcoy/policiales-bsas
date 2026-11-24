@@ -53676,6 +53676,30 @@
       "urgente": false,
       "potencial_carrusel": 3,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f1802b44bade6f9d": {
+      "conversacion": 8,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 49,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "sancor",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a los tamberos de la zona por el futuro de la lechería nacional, aunque falta detalle local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        49,
+        49
+      ]
     }
   },
   "indice": {
@@ -57342,7 +57366,8 @@
       "https://news.agrofy.com.ar/noticia/217051/argentina-le-gana-brasil-mercado-maiz-exportaciones-crecen-41-vecino-caen-24": "2026-11-24",
       "https://news.agrofy.com.ar/noticia/217050/dueno-ilolay-milkaut-vendio-planta-quesos-trebol-pasara-trabajadores": "2026-11-24",
       "https://news.agrofy.com.ar/noticia/217049/nestor-kirchner-milei-cuanto-precio-soja-dejo-cobrar-productor-cada-gobierno": "2026-11-24",
-      "https://agroempresario.com/publicacion/124116/poroto-en-el-noa-ensayos-de-agredes-identifican-claves-para-mejorar-el-manejo": "2026-11-24"
+      "https://agroempresario.com/publicacion/124116/poroto-en-el-noa-ensayos-de-agredes-identifican-claves-para-mejorar-el-manejo": "2026-11-24",
+      "https://tn.com.ar/campo/2026/11/24/quesos-leche-en-polvo-y-manteca-el-plan-de-3-empresas-para-reactivar-las-plantas-de-sancor": "2026-11-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -61007,7 +61032,8 @@
       "la argentina le gana a brasil en el mercado del maiz sus exportaciones crecen 41 mientras las de su vecino caen 24": "2026-11-24",
       "el dueno de ilolay y milkaut vendio su planta de quesos de el trebol que pasara con los trabajadores": "2026-11-24",
       "de nestor kirchner a milei cuanto del precio de la soja dejo de cobrar el productor con cada gobierno": "2026-11-24",
-      "poroto en el noa ensayos de agredes identifican claves para mejorar el manejo": "2026-11-24"
+      "poroto en el noa ensayos de agredes identifican claves para mejorar el manejo": "2026-11-24",
+      "quesos leche en polvo y manteca el plan de 3 empresas para reactivar las plantas de sancor": "2026-11-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -64672,7 +64698,8 @@
       "211664b5e631666d": "2026-11-24",
       "80cbbabe5f678cb3": "2026-11-24",
       "0f9315fb5784d09f": "2026-11-24",
-      "24b09c3fe42a132b": "2026-11-24"
+      "24b09c3fe42a132b": "2026-11-24",
+      "f1802b44bade6f9d": "2026-11-24"
     }
   },
   "elegidas": [
@@ -99673,77 +99700,6 @@
       "cuando": "2026-11-24T17:30-03:00"
     },
     {
-      "id": "5840b821b7d6",
-      "rep": {
-        "id": "5840b821b7d6",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/tres-graficos-para-entender-por-que-los-productores-volverian-a-votar-por-milei-o-por-quien-garantice-la-continuidad-del-actual-modelo-economico/",
-        "canonical_url": "https://bichosdecampo.com/tres-graficos-para-entender-por-que-los-productores-volverian-a-votar-por-milei-o-por-quien-garantice-la-continuidad-del-actual-modelo-economico",
-        "titulo": "Tres gráficos para entender por qué los productores volverían a votar por Milei (o por quien garantice la continuidad del actual modelo económico)",
-        "titulo_norm": "tres graficos para entender por que los productores volverian a votar por milei o por quien garantice la continuidad del actual modelo economico",
-        "descripcion": "La mayor parte de los productores agrícolas está furiosa con el presidente Javier Milei porque no cumplió (ni cumplirá) su promesa de eliminar los derechos de exportación. Sin embargo, volverían a votar por él (o por algún otro candidato que asegure la continuidad de la actual política económica). Un informe de la Fundación Mediterránea, publicado […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1-3.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-24T16:25-03:00",
-        "capturado": "2026-11-24T17:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c5c18f4d2298b437",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "5840b821b7d6",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/tres-graficos-para-entender-por-que-los-productores-volverian-a-votar-por-milei-o-por-quien-garantice-la-continuidad-del-actual-modelo-economico/",
-          "canonical_url": "https://bichosdecampo.com/tres-graficos-para-entender-por-que-los-productores-volverian-a-votar-por-milei-o-por-quien-garantice-la-continuidad-del-actual-modelo-economico",
-          "titulo": "Tres gráficos para entender por qué los productores volverían a votar por Milei (o por quien garantice la continuidad del actual modelo económico)",
-          "titulo_norm": "tres graficos para entender por que los productores volverian a votar por milei o por quien garantice la continuidad del actual modelo economico",
-          "descripcion": "La mayor parte de los productores agrícolas está furiosa con el presidente Javier Milei porque no cumplió (ni cumplirá) su promesa de eliminar los derechos de exportación. Sin embargo, volverían a votar por él (o por algún otro candidato que asegure la continuidad de la actual política económica). Un informe de la Fundación Mediterránea, publicado […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/G1-3.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-24T16:25-03:00",
-          "capturado": "2026-11-24T17:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c5c18f4d2298b437",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 19,
-        "historia_concreta": 4,
-        "cercania_pba": 10,
-        "interes_productores": 11,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 57,
-        "commercial_score": 45,
-        "subtema": "agro",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Genera debate político y charla de boliche entre productores sobre el gobierno y las retenciones.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          56
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T17:30-03:00"
-    },
-    {
       "id": "b66293bee00d",
       "rep": {
         "id": "b66293bee00d",
@@ -99903,144 +99859,6 @@
         "suceso": false
       },
       "cuando": "2026-11-24T17:30-03:00"
-    },
-    {
-      "id": "5179cc4e612e",
-      "rep": {
-        "id": "5179cc4e612e",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249478-el-breeder-vicente-trujillo-y-la-revolucion-genetica-del-sorgo-claves-para-una-campana-de-altos-rindes.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249478-el-breeder-vicente-trujillo-y-la-revolucion-genetica-del-sorgo-claves-para-una-campana-de-altos-rindes.html",
-        "titulo": "Pulgón amarillo, genética y China: por qué el sorgo vive una nueva revolución productiva",
-        "titulo_norm": "pulgon amarillo genetica y china por que el sorgo vive una nueva revolucion productiva",
-        "descripcion": "Una verdadera revolución de la genética es la que vive el Sorgo en los últimos 15 años. Una charla con el Ing. Agr. Vicente Trujillo, breeder en ZINMA Seeds desde su Campo experimental en Pergamino. Destaca el mejoramiento genético del sorgo en los últimos años, la tolerancia al pulgón amarillo y el impacto de la demanda China. Además, resalta el sorgo doble propósito como aliado clave para la producción ganadera argentina...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/QVvhaYoxG90.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-11-24T14:33-03:00",
-        "capturado": "2026-11-24T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "64fd1b5769347c45",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "5179cc4e612e",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249478-el-breeder-vicente-trujillo-y-la-revolucion-genetica-del-sorgo-claves-para-una-campana-de-altos-rindes.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249478-el-breeder-vicente-trujillo-y-la-revolucion-genetica-del-sorgo-claves-para-una-campana-de-altos-rindes.html",
-          "titulo": "Pulgón amarillo, genética y China: por qué el sorgo vive una nueva revolución productiva",
-          "titulo_norm": "pulgon amarillo genetica y china por que el sorgo vive una nueva revolucion productiva",
-          "descripcion": "Una verdadera revolución de la genética es la que vive el Sorgo en los últimos 15 años. Una charla con el Ing. Agr. Vicente Trujillo, breeder en ZINMA Seeds desde su Campo experimental en Pergamino. Destaca el mejoramiento genético del sorgo en los últimos años, la tolerancia al pulgón amarillo y el impacto de la demanda China. Además, resalta el sorgo doble propósito como aliado clave para la producción ganadera argentina...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/QVvhaYoxG90.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-11-24T14:33-03:00",
-          "capturado": "2026-11-24T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "64fd1b5769347c45",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 62,
-        "commercial_score": 50,
-        "subtema": "agro",
-        "tema": "sorgo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Habla de genética y se menciona a Pergamino, cerca de la región, pero es más técnico.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          62
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T16:00-03:00"
-    },
-    {
-      "id": "57d04a156930",
-      "rep": {
-        "id": "57d04a156930",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/alivio-los-primeros-analisis-de-calidad-de-trigo-en-la-region-pampeana-argentina-traen-buenas-noticias/",
-        "canonical_url": "https://bichosdecampo.com/alivio-los-primeros-analisis-de-calidad-de-trigo-en-la-region-pampeana-argentina-traen-buenas-noticias",
-        "titulo": "Alivio: los primeros análisis de calidad de trigo en la región pampeana argentina traen buenas noticias",
-        "titulo_norm": "alivio los primeros analisis de calidad de trigo en la region pampeana argentina traen buenas noticias",
-        "descripcion": "Los primeros resultados de la calidad del trigo en la zona norte de la región pampeana argentina son alentadores y contribuyen a despejar dudas sobre un aspecto crítico para el negocio cerealero en el presente ciclo 2026/27. Los técnicos del INTA Marcos Juárez cosecharon manualmente parcelas experimentales de variedades de trigo con presencia en la […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/inta1.png",
-        "autor": "Valor Soja",
-        "publicado": "2026-11-24T15:45-03:00",
-        "capturado": "2026-11-24T16:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "3fecafe6418cc518",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "57d04a156930",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/alivio-los-primeros-analisis-de-calidad-de-trigo-en-la-region-pampeana-argentina-traen-buenas-noticias/",
-          "canonical_url": "https://bichosdecampo.com/alivio-los-primeros-analisis-de-calidad-de-trigo-en-la-region-pampeana-argentina-traen-buenas-noticias",
-          "titulo": "Alivio: los primeros análisis de calidad de trigo en la región pampeana argentina traen buenas noticias",
-          "titulo_norm": "alivio los primeros analisis de calidad de trigo en la region pampeana argentina traen buenas noticias",
-          "descripcion": "Los primeros resultados de la calidad del trigo en la zona norte de la región pampeana argentina son alentadores y contribuyen a despejar dudas sobre un aspecto crítico para el negocio cerealero en el presente ciclo 2026/27. Los técnicos del INTA Marcos Juárez cosecharon manualmente parcelas experimentales de variedades de trigo con presencia en la […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/inta1.png",
-          "autor": "Valor Soja",
-          "publicado": "2026-11-24T15:45-03:00",
-          "capturado": "2026-11-24T16:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "3fecafe6418cc518",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 14,
-        "cercania_pba": 15,
-        "interes_productores": 13,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 68,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Datos concretos del INTA sobre calidad de trigo en la región pampeana norte interesan en plena cosecha.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T16:00-03:00"
     },
     {
       "id": "aff96d118950",
@@ -100394,148 +100212,6 @@
       "cuando": "2026-11-24T13:00-03:00"
     },
     {
-      "id": "947eaa684fac",
-      "rep": {
-        "id": "947eaa684fac",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/con-menos-homicidios-y-balaceras-en-santa-fe-aseguran-que-ahora-pueden-ocuparse-de-la-inseguridad-rural-designaron-a-7-fiscales-que-cubriran-esos-delitos/",
-        "canonical_url": "https://bichosdecampo.com/con-menos-homicidios-y-balaceras-en-santa-fe-aseguran-que-ahora-pueden-ocuparse-de-la-inseguridad-rural-designaron-a-7-fiscales-que-cubriran-esos-delitos",
-        "titulo": "Con menos homicidios y balaceras, en Santa Fe aseguran que ahora pueden ocuparse de la inseguridad rural: Designaron a 7 fiscales que cubrirán esos delitos",
-        "titulo_norm": "con menos homicidios y balaceras en santa fe aseguran que ahora pueden ocuparse de la inseguridad rural designaron a 7 fiscales que cubriran esos delitos",
-        "descripcion": "En los primeros diez meses de 2026, Santa Fe registró 144 víctimas de homicidios dolosos, la cifra más baja para ese período desde que comienza la serie oficial en 2014. Son cifras aportadas por el Observatorio de Seguridad Pública provincial que acreditan que, desde 2023, el número de víctimas se redujo a la mitad. Y […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/mesa-de-inseguridad-rural-santa-fe.jpeg",
-        "autor": "Bichos de campo",
-        "publicado": "2026-11-24T12:12-03:00",
-        "capturado": "2026-11-24T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "e0d290b9a6de028f",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "947eaa684fac",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/con-menos-homicidios-y-balaceras-en-santa-fe-aseguran-que-ahora-pueden-ocuparse-de-la-inseguridad-rural-designaron-a-7-fiscales-que-cubriran-esos-delitos/",
-          "canonical_url": "https://bichosdecampo.com/con-menos-homicidios-y-balaceras-en-santa-fe-aseguran-que-ahora-pueden-ocuparse-de-la-inseguridad-rural-designaron-a-7-fiscales-que-cubriran-esos-delitos",
-          "titulo": "Con menos homicidios y balaceras, en Santa Fe aseguran que ahora pueden ocuparse de la inseguridad rural: Designaron a 7 fiscales que cubrirán esos delitos",
-          "titulo_norm": "con menos homicidios y balaceras en santa fe aseguran que ahora pueden ocuparse de la inseguridad rural designaron a 7 fiscales que cubriran esos delitos",
-          "descripcion": "En los primeros diez meses de 2026, Santa Fe registró 144 víctimas de homicidios dolosos, la cifra más baja para ese período desde que comienza la serie oficial en 2014. Son cifras aportadas por el Observatorio de Seguridad Pública provincial que acreditan que, desde 2023, el número de víctimas se redujo a la mitad. Y […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/mesa-de-inseguridad-rural-santa-fe.jpeg",
-          "autor": "Bichos de campo",
-          "publicado": "2026-11-24T12:12-03:00",
-          "capturado": "2026-11-24T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "e0d290b9a6de028f",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 11,
-        "cercania_pba": 5,
-        "interes_productores": 12,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 56,
-        "commercial_score": 42,
-        "subtema": "agro",
-        "tema": "inseguridad rural",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Habla de fiscales para delitos rurales pero pasa en Santa Fe, queda lejos del productor bonaerense.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          54
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": true
-      },
-      "cuando": "2026-11-24T13:00-03:00"
-    },
-    {
-      "id": "7d0e950936ee",
-      "rep": {
-        "id": "7d0e950936ee",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/retenciones-otro-fallo-judicial-pone-en-discusion-quien-puede-decidir-cuanto-paga-el-campo-nid24112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/retenciones-otro-fallo-judicial-pone-en-discusion-quien-puede-decidir-cuanto-paga-el-campo-nid24112026",
-        "titulo": "Retenciones: otro fallo judicial pone en discusión quién puede decidir cuánto paga el campo",
-        "titulo_norm": "retenciones otro fallo judicial pone en discusion quien puede decidir cuanto paga el campo",
-        "descripcion": "Hace unos días, la Justicia declaró inconstitucional un aumento de los derechos de exportación aplicado en 2022 y reconoció a Aceitera General Deheza el derecho a recuperar lo pagado en exceso; la decisión vuelve a plantear una cuestión central para el agro: la necesidad de reglas tributarias estables y respaldadas por el Congreso",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/XAPUO55WDRHX5J42ZURSFHZN3A.jpg?auth=ebd1b0b119ddeb40b0bbea11041e8c1967c09216964947b82aef3b0ed632642e&smart=true",
-        "autor": "Héctor Tristán",
-        "publicado": "2026-11-24T12:54-03:00",
-        "capturado": "2026-11-24T13:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "82f2a1c2d6c761c8",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "7d0e950936ee",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/retenciones-otro-fallo-judicial-pone-en-discusion-quien-puede-decidir-cuanto-paga-el-campo-nid24112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/retenciones-otro-fallo-judicial-pone-en-discusion-quien-puede-decidir-cuanto-paga-el-campo-nid24112026",
-          "titulo": "Retenciones: otro fallo judicial pone en discusión quién puede decidir cuánto paga el campo",
-          "titulo_norm": "retenciones otro fallo judicial pone en discusion quien puede decidir cuanto paga el campo",
-          "descripcion": "Hace unos días, la Justicia declaró inconstitucional un aumento de los derechos de exportación aplicado en 2022 y reconoció a Aceitera General Deheza el derecho a recuperar lo pagado en exceso; la decisión vuelve a plantear una cuestión central para el agro: la necesidad de reglas tributarias estables y respaldadas por el Congreso",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/XAPUO55WDRHX5J42ZURSFHZN3A.jpg?auth=ebd1b0b119ddeb40b0bbea11041e8c1967c09216964947b82aef3b0ed632642e&smart=true",
-          "autor": "Héctor Tristán",
-          "publicado": "2026-11-24T12:54-03:00",
-          "capturado": "2026-11-24T13:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "82f2a1c2d6c761c8",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 16,
-        "historia_concreta": 12,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 65,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Fallo judicial sobre retenciones que importa por el tema impositivo aunque sea por una cerealera puntual.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          70
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T13:00-03:00"
-    },
-    {
       "id": "55bfb4d3f9f2",
       "rep": {
         "id": "55bfb4d3f9f2",
@@ -100607,7 +100283,7 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-24T18:02:11-03:00",
+  "actualizado": "2026-11-24T18:06:11-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -111033,7 +110709,10 @@
     "4c4c82fed3e2": "2026-11-24T16:00",
     "b66293bee00d": "2026-11-24T17:30",
     "5840b821b7d6": "2026-11-24T17:30",
-    "9b095a5cbd89": "2026-11-24T17:30"
+    "9b095a5cbd89": "2026-11-24T17:30",
+    "a156285678d3": "2026-11-24T18:02",
+    "66646f181821": "2026-11-24T17:30",
+    "93ae229dd431": "2026-11-24T17:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
