@@ -52204,6 +52204,162 @@
       "urgente": false,
       "potencial_carrusel": 0,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aa3c6f07e6ed9b26": {
+      "conversacion": 18,
+      "historia_concreta": 12,
+      "cercania_pba": 15,
+      "interes_productores": 14,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 75,
+      "commercial_score": 60,
+      "subtema": "agro",
+      "tema": "el niño",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Alerta sobre el impacto de El Niño que preocupa a los productores de la región.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "021eca73185ee6fd": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 4,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 30,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "ñandú",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Nota de color sobre el ñandú, poco relevante para la producción diaria.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "ca3457bfe2b0147d": {
+      "conversacion": 12,
+      "historia_concreta": 8,
+      "cercania_pba": 10,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 57,
+      "commercial_score": 50,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Explica cómo la devaluación en Brasil afecta la competitividad del trigo.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        60,
+        54
+      ]
+    },
+    "0b7aab709e86e2be": {
+      "conversacion": 13,
+      "historia_concreta": 10,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 57,
+      "commercial_score": 42,
+      "subtema": "agro",
+      "tema": "río paraná",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Informa sobre la crecida del Paraná que continuará en los próximos meses.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        59,
+        56
+      ]
+    },
+    "b49509797bc6001e": {
+      "conversacion": 4,
+      "historia_concreta": 2,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 29,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "semillas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Declaración institucional sin datos concretos para el productor de a pie.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "632601b6fd7c226f": {
+      "conversacion": 9,
+      "historia_concreta": 13,
+      "cercania_pba": 8,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 52,
+      "commercial_score": 52,
+      "subtema": "ganaderia",
+      "tema": "bienestar animal",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Caso puntual de un feedlot en Santa Fe que certifica normas europeas.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        45
+      ]
+    },
+    "0aa321c3ad096d1e": {
+      "conversacion": 8,
+      "historia_concreta": 6,
+      "cercania_pba": 10,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 46,
+      "commercial_score": 50,
+      "subtema": "maquinaria",
+      "tema": "tractores",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Proyección del mercado de tractores e inscripción de patentamientos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        58,
+        35
+      ]
     }
   },
   "indice": {
@@ -55788,7 +55944,14 @@
       "https://bichosdecampo.com/el-saldo-que-dejo-el-fuego-en-el-ibera-el-conicet-estimo-que-los-incendios-de-2022-mataron-a-mas-de-640-mil-animales-entre-ellos-miles-de-carpinchos-la-principal-presa-del-yaguarete": "2026-11-24",
       "https://bichosdecampo.com/alberto-leboran-se-inicio-fabricando-las-primeras-mangueras-para-riego-cuando-todavia-se-importaban-y-termino-implantando-vides-olivos-y-nogales-en-un-hermoso-valle-despoblado-de-la-rioja": "2026-11-24",
       "https://agroempresario.com/publicacion/124069/la-siembra-de-soja-cubre-el-304-del-area-prevista-para-202627": "2026-11-24",
-      "https://chacabuquero.com.ar/2026/11/nueva-cuadrilla-municipal-para-los.html": "2026-11-24"
+      "https://chacabuquero.com.ar/2026/11/nueva-cuadrilla-municipal-para-los.html": "2026-11-24",
+      "https://infocampo.com.ar/el-nino-la-agencia-federal-de-emergencias-espera-la-etapa-mas-fuerte-de-impacto-en-diciembre": "2026-11-24",
+      "https://infocampo.com.ar/nandu-caracteristicas-habitat-curiosidades": "2026-11-24",
+      "https://bichosdecampo.com/la-macro-impacta-en-la-micro-se-licuo-la-competitividad-del-trigo-argentino-en-brasil-con-la-super-devaluacion-del-real": "2026-11-24",
+      "https://bichosdecampo.com/despues-del-octubre-mas-caudaloso-desde-1971-el-parana-da-un-respiro-en-yacyreta-pero-advierten-que-las-crecidas-podrian-seguiran-hasta-marzo": "2026-11-24",
+      "https://tn.com.ar/campo/2026/11/24/sin-un-estado-presente-es-imposible-garantizar-la-disponibilidad-de-semillas-el-mensaje-desde-agronomia": "2026-11-24",
+      "https://news.agrofy.com.ar/noticia/217043/supermercados-espana-ya-exigen-certificar-bienestar-animal-feedlot-argentino-consiguio-sello": "2026-11-24",
+      "https://maquinac.com/2026/11/argentina-el-mercado-de-tractores-cerraria-2026-con-una-leve-caida-de-1": "2026-11-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -59371,7 +59534,14 @@
       "el saldo que dejo el fuego en el ibera el conicet estimo que los incendios de 2022 mataron a mas de 640 mil animales entre ellos miles de carpinchos la principal presa del yaguarete": "2026-11-24",
       "alberto leboran se inicio fabricando las primeras mangueras para riego cuando todavia se importaban y termino implantando vides olivos y nogales en un hermoso valle despoblado de la rioja": "2026-11-24",
       "la siembra de soja cubre el 30 4 del area prevista para 2026 27": "2026-11-24",
-      "nueva cuadrilla municipal para los barrios de chacabuco": "2026-11-24"
+      "nueva cuadrilla municipal para los barrios de chacabuco": "2026-11-24",
+      "el nino la agencia federal de emergencias espera la etapa mas fuerte de impacto en diciembre": "2026-11-24",
+      "no vuela pero es un velocista los secretos del nandu el gigante de las pampas": "2026-11-24",
+      "la macro impacta en la micro se licuo la competitividad del trigo argentino en brasil con la super devaluacion del real": "2026-11-24",
+      "despues del octubre mas caudaloso desde 1971 el parana da un respiro en yacyreta pero advierten que las crecidas seguiran hasta marzo": "2026-11-24",
+      "sin un estado presente es imposible garantizar la disponibilidad de semillas el mensaje desde agronomia": "2026-11-24",
+      "supermercados de espana ya exigen certificar el bienestar animal el feedlot argentino que consiguio el sello": "2026-11-24",
+      "argentina el mercado de tractores cerraria 2026 con una leve caida de 1": "2026-11-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -62954,7 +63124,14 @@
       "bf1d3528a9049f69": "2026-11-24",
       "4d148efc021842f9": "2026-11-24",
       "2fc43c6f89134775": "2026-11-24",
-      "87dbc74a9f69e7c4": "2026-11-24"
+      "87dbc74a9f69e7c4": "2026-11-24",
+      "aa3c6f07e6ed9b26": "2026-11-24",
+      "021eca73185ee6fd": "2026-11-24",
+      "ca3457bfe2b0147d": "2026-11-24",
+      "0b7aab709e86e2be": "2026-11-24",
+      "b49509797bc6001e": "2026-11-24",
+      "632601b6fd7c226f": "2026-11-24",
+      "0aa321c3ad096d1e": "2026-11-24"
     }
   },
   "elegidas": [
@@ -97533,7 +97710,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-24T10:03:15-03:00",
+  "actualizado": "2026-11-24T10:07:17-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -107780,7 +107957,10 @@
     "d5fe2b7c277b": "2026-11-24T07:00",
     "0ffc7ca97cf1": "2026-11-24T07:00",
     "6c124d14aef5": "2026-11-24T09:30",
-    "fc9fe971aa6a": "2026-11-24T09:30"
+    "fc9fe971aa6a": "2026-11-24T09:30",
+    "cda6dce30b09": "2026-11-24T10:03",
+    "e7fd4e7055ea": "2026-11-24T10:03",
+    "366ab6bd6cd3": "2026-11-24T10:03"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
