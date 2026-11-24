@@ -96673,7 +96673,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T21:04:50-03:00",
+  "actualizado": "2026-11-23T21:30:27-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -104180,6 +104180,43 @@
               },
               "facebook": {
                 "id": "1437411438096818"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2026-11-23T21:30:00-03:00": {
+      "dia": "2026-11-23",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué consulta más el productor por el mostrador?",
+          "opciones": [],
+          "publico": "acopios",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18003215733043972"
+            },
+            "facebook": {
+              "id": "41499480599696300"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18003215733043972"
+              },
+              "facebook": {
+                "id": "41499480599696300"
               }
             }
           ]
