@@ -51536,6 +51536,50 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "8c54335a0e6ae936": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 28,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "reglamento eudr",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es un debate institucional y político que no afecta directamente al día a día del productor de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "9c25dc695d7629cc": {
+      "conversacion": 12,
+      "historia_concreta": 8,
+      "cercania_pba": 2,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 43,
+      "commercial_score": 38,
+      "subtema": "empresas",
+      "tema": "vicentin",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "La recuperación de una agroindustrial tan emblemática importa en toda la cadena de granos aunque sea en Santa Fe.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        31
+      ]
     }
   },
   "indice": {
@@ -55071,7 +55115,9 @@
       "https://croplife.com/management/sustainability/viridis-view-conservation-benchmarking-collaborative-provides-new-data-to-map-monitor-fundamental-management-practices-for-regenerative-agriculture": "2026-11-23",
       "https://bichosdecampo.com/doble-comando-para-el-trigo-con-precios-planchados-en-ee-uu-y-valores-en-alza-en-europa": "2026-11-23",
       "https://tn.com.ar/campo/2026/11/23/agroecologia-el-gobierno-bonaerense-defendio-su-politica-publica-y-reclamo-mas-inversion-en-ciencia-y-tecnologia": "2026-11-23",
-      "https://maquinac.com/2026/11/super-walter-entra-a-la-fertilizacion-con-el-lanzamiento-de-la-incorporadora-alpha": "2026-11-23"
+      "https://maquinac.com/2026/11/super-walter-entra-a-la-fertilizacion-con-el-lanzamiento-de-la-incorporadora-alpha": "2026-11-23",
+      "https://bichosdecampo.com/eudr-santa-fe-sostiene-que-la-validacion-de-la-exigencia-europea-es-una-responsabilidad-indelegable-del-estado-no-un-asunto-entre-privados": "2026-11-23",
+      "https://tn.com.ar/campo/2026/11/23/la-nueva-vicentin-volvio-a-los-niveles-de-produccion-previo-al-default-le-va-pagando-a-los-acreedores-y-aumento-10-los-empleos": "2026-11-23"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -58605,7 +58651,9 @@
       "viridis view conservation benchmarking collaborative provides new data to map monitor fundamental management practices for regenerative agriculture": "2026-11-23",
       "doble comando para el trigo con precios planchados en ee uu y valores en alza en europa": "2026-11-23",
       "agroecologia el gobierno bonaerense defendio su politica publica y reclamo mas inversion en ciencia y tecnologia": "2026-11-23",
-      "super walter entra a la fertilizacion con el lanzamiento de la incorporadora alpha": "2026-11-23"
+      "super walter entra a la fertilizacion con el lanzamiento de la incorporadora alpha": "2026-11-23",
+      "eudr santa fe sostiene que la validacion de la exigencia europea es una responsabilidad indelegable del estado no un asunto entre privados": "2026-11-23",
+      "la nueva vicentin volvio a los niveles de produccion previo al default le va pagando a los acreedores y aumento 10 los empleos": "2026-11-23"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -62139,7 +62187,9 @@
       "0cf0e5149233e492": "2026-11-23",
       "49bd0321e05df068": "2026-11-23",
       "e311be4f212a7afa": "2026-11-23",
-      "2664731d11ee54e5": "2026-11-23"
+      "2664731d11ee54e5": "2026-11-23",
+      "8c54335a0e6ae936": "2026-11-23",
+      "9c25dc695d7629cc": "2026-11-23"
     }
   },
   "elegidas": [
@@ -96623,7 +96673,7 @@
     }
   ],
   "pendientes": [],
-  "actualizado": "2026-11-23T19:35:22-03:00",
+  "actualizado": "2026-11-23T21:04:50-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
