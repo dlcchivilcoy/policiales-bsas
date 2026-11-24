@@ -53700,6 +53700,190 @@
         49,
         49
       ]
+    },
+    "90e1595ab9b16099": {
+      "conversacion": 5,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 33,
+      "commercial_score": 30,
+      "subtema": "mercados",
+      "tema": "precios granos",
+      "ambito": "internacional",
+      "sensible": true,
+      "explicacion": "Es un análisis financiero de Estados Unidos que no le cambia el día a día al productor local.",
+      "tema_doc": "internacional",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "c96dc2c45acea0e2": {
+      "conversacion": 9,
+      "historia_concreta": 11,
+      "cercania_pba": 15,
+      "interes_productores": 10,
+      "impacto_economico": 4,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 58,
+      "commercial_score": 52,
+      "subtema": "ganaderia",
+      "tema": "gallinas",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Consejos prácticos y útiles para cría de aves ante temporales de lluvia.",
+      "tema_doc": "sanidad",
+      "urgente": false,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        56,
+        59
+      ]
+    },
+    "a4957484e6de4710": {
+      "conversacion": 2,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 5,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 24,
+      "commercial_score": 20,
+      "subtema": "mercados",
+      "tema": "harina de soja",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Columna de opinión sobre normativa europea que no genera impacto directo ni cercanía.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "763ebd5e52d79934": {
+      "conversacion": 6,
+      "historia_concreta": 7,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 42,
+      "commercial_score": 35,
+      "subtema": "agro",
+      "tema": "biodiésel",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Tema político y legislativo sobre biocombustibles trabado en Diputados, de interés sectorial.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        48,
+        36
+      ]
+    },
+    "e5cf5078ddcaf752": {
+      "conversacion": 6,
+      "historia_concreta": 9,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 44,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "deforestan",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Gestión provincial de Santa Fe por certificados de exportación ganadera, poco relevante para Chivilcoy.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        46,
+        45
+      ]
+    },
+    "6efd18d79033a684": {
+      "conversacion": 10,
+      "historia_concreta": 8,
+      "cercania_pba": 15,
+      "interes_productores": 11,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 57,
+      "commercial_score": 50,
+      "subtema": "agro",
+      "tema": "calor y clima",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Aviso de altas temperaturas y clima en la región núcleo, interesa a productores locales.",
+      "tema_doc": "clima",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        60
+      ]
+    },
+    "81b7bfcf620916e8": {
+      "conversacion": 8,
+      "historia_concreta": 9,
+      "cercania_pba": 12,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 56,
+      "commercial_score": 52,
+      "subtema": "agro",
+      "tema": "maíz",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos de exportación y avance de siembra de maíz que impactan directo en la campaña local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        57,
+        56
+      ]
+    },
+    "8b703c4936878e22": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 40,
+      "commercial_score": 40,
+      "subtema": "mercados",
+      "tema": "soja",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Cotización de la soja en Rosario, dato cotidiano pero sin desarrollo en el resumen.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        49,
+        32
+      ]
     }
   },
   "indice": {
@@ -57367,7 +57551,16 @@
       "https://news.agrofy.com.ar/noticia/217050/dueno-ilolay-milkaut-vendio-planta-quesos-trebol-pasara-trabajadores": "2026-11-24",
       "https://news.agrofy.com.ar/noticia/217049/nestor-kirchner-milei-cuanto-precio-soja-dejo-cobrar-productor-cada-gobierno": "2026-11-24",
       "https://agroempresario.com/publicacion/124116/poroto-en-el-noa-ensayos-de-agredes-identifican-claves-para-mejorar-el-manejo": "2026-11-24",
-      "https://tn.com.ar/campo/2026/11/24/quesos-leche-en-polvo-y-manteca-el-plan-de-3-empresas-para-reactivar-las-plantas-de-sancor": "2026-11-24"
+      "https://tn.com.ar/campo/2026/11/24/quesos-leche-en-polvo-y-manteca-el-plan-de-3-empresas-para-reactivar-las-plantas-de-sancor": "2026-11-24",
+      "https://infocampo.com.ar/exportaciones-record-la-carne-ya-genera-mas-de-us-500-millones-por-mes-y-china-ya-no-es-la-unica-aspiradora": "2026-11-24",
+      "https://infocampo.com.ar/inflacion-y-tasas-altas-el-momento-financiero-dificil-de-eeuu-pone-un-techo-a-los-precios-de-los-granos": "2026-11-24",
+      "https://infocampo.com.ar/las-gallinas-tambien-necesitan-proteccion-ante-el-nino-como-protegerlas-ante-las-intensas-lluvias": "2026-11-24",
+      "https://agrositio.com.ar/noticia/249489-la-union-europea-viene-a-darnos-una-mano-con-la-soja-por-manuel-alvarado-ledesma.html": "2026-11-24",
+      "https://lanacion.com.ar/economia/campo/biocombustibles-vencio-el-plazo-para-dictaminar-y-la-pelea-por-el-biodiesel-sigue-trabada-en-nid24112026": "2026-11-24",
+      "https://lanacion.com.ar/economia/campo/libre-de-deforestacion-santa-fe-busca-que-los-frigorificos-exportadores-acepten-un-certificado-y-no-nid24112026": "2026-11-24",
+      "https://lacapital.com.ar/agro/clima-y-agro-el-calor-sube-los-34-c-y-el-ina-no-descarta-un-nuevo-repunte-del-parana-n10294003.html": "2026-11-24",
+      "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html": "2026-11-24",
+      "https://tn.com.ar/campo/2026/11/24/la-soja-tuvo-una-rueda-positiva-en-rosario-tras-el-fin-de-semana-largo": "2026-11-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -61033,7 +61226,16 @@
       "el dueno de ilolay y milkaut vendio su planta de quesos de el trebol que pasara con los trabajadores": "2026-11-24",
       "de nestor kirchner a milei cuanto del precio de la soja dejo de cobrar el productor con cada gobierno": "2026-11-24",
       "poroto en el noa ensayos de agredes identifican claves para mejorar el manejo": "2026-11-24",
-      "quesos leche en polvo y manteca el plan de 3 empresas para reactivar las plantas de sancor": "2026-11-24"
+      "quesos leche en polvo y manteca el plan de 3 empresas para reactivar las plantas de sancor": "2026-11-24",
+      "exportaciones record la carne ya genera mas de u s 500 millones por mes y china ya no es la unica aspiradora": "2026-11-24",
+      "inflacion y tasas altas el momento financiero dificil de eeuu pone un techo a los precios de los granos": "2026-11-24",
+      "las gallinas tambien necesitan proteccion ante el nino como blindarlas ante las intensas lluvias": "2026-11-24",
+      "la union europea viene a darnos una mano con la soja por manuel alvarado ledesma": "2026-11-24",
+      "biocombustibles vencio el plazo para dictaminar y la pelea por el biodiesel sigue trabada en diputados": "2026-11-24",
+      "libre de deforestacion santa fe busca que los frigorificos exportadores acepten un certificado y no exijan solo visec": "2026-11-24",
+      "clima y agro el calor sube hasta los 34 c y el ina no descarta un nuevo repunte del parana": "2026-11-24",
+      "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil": "2026-11-24",
+      "la soja tuvo una rueda positiva en rosario tras el fin de semana largo": "2026-11-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -64699,7 +64901,16 @@
       "80cbbabe5f678cb3": "2026-11-24",
       "0f9315fb5784d09f": "2026-11-24",
       "24b09c3fe42a132b": "2026-11-24",
-      "f1802b44bade6f9d": "2026-11-24"
+      "f1802b44bade6f9d": "2026-11-24",
+      "d1d453f103d2aed1": "2026-11-24",
+      "90e1595ab9b16099": "2026-11-24",
+      "c96dc2c45acea0e2": "2026-11-24",
+      "a4957484e6de4710": "2026-11-24",
+      "763ebd5e52d79934": "2026-11-24",
+      "e5cf5078ddcaf752": "2026-11-24",
+      "6efd18d79033a684": "2026-11-24",
+      "81b7bfcf620916e8": "2026-11-24",
+      "8b703c4936878e22": "2026-11-24"
     }
   },
   "elegidas": [
@@ -99554,9 +99765,210 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_71792102001c_portada.jpg"
+    },
+    {
+      "id": "633245719677",
+      "cuando": "2026-11-24T19:32-03:00",
+      "titulo_original": "Clima y agro: el calor sube hasta los 34 °C y el INA no descarta un nuevo repunte del Paraná",
+      "descripcion": "El calor sube a lo largo de la semana en la región núcleo, anticipando la llegada del verano meteorológico el primero de diciembre. Desde el INA no descartan un nuevo repunte del Paraná",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/clima-y-agro-el-calor-sube-los-34-c-y-el-ina-no-descarta-un-nuevo-repunte-del-parana-n10294003.html",
+      "titular": "Temperaturas de hasta 34 °C y posible repunte del Paraná",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 8,
+        "cercania_pba": 15,
+        "interes_productores": 11,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 57,
+        "commercial_score": 50,
+        "subtema": "agro",
+        "tema": "calor y clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Aviso de altas temperaturas y clima en la región núcleo, interesa a productores locales.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          55,
+          60
+        ],
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-24T19:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "26a70073-f5c8-4d2a-be8e-fdd4875b62cd",
+          "slug": "temperaturas-de-hasta-34-c-y-seguimiento-del-ina-ante-un-nuevo-8571ee",
+          "url": "https://www.diariolacampaña.com.ar/n/temperaturas-de-hasta-34-c-y-seguimiento-del-ina-ante-un-nuevo-8571ee",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17914037955306947",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_633245719677_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "10937dadd468",
+      "rep": {
+        "id": "10937dadd468",
+        "fuente": "Infocampo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.infocampo.com.ar/feed/",
+        "url": "https://www.infocampo.com.ar/las-gallinas-tambien-necesitan-proteccion-ante-el-nino-como-protegerlas-ante-las-intensas-lluvias/",
+        "canonical_url": "https://infocampo.com.ar/las-gallinas-tambien-necesitan-proteccion-ante-el-nino-como-protegerlas-ante-las-intensas-lluvias",
+        "titulo": "Las gallinas también necesitan protección ante El Niño: cómo “blindarlas” ante las intensas lluvias",
+        "titulo_norm": "las gallinas tambien necesitan proteccion ante el nino como blindarlas ante las intensas lluvias",
+        "descripcion": "Con la ocurrencia de períodos de lluvias abundantes e inundaciones, un especialistas brindó recomendaciones para reforzar las medidas de manejo en la cría de gallinas, con el fin de proteger a los animales, prevenir problemas sanitarios y sostener la producción.",
+        "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/gallinas.jpg",
+        "autor": "infocampo",
+        "publicado": "2026-11-24T18:15-03:00",
+        "capturado": "2026-11-24T19:32-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "c96dc2c45acea0e2",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "10937dadd468",
+          "fuente": "Infocampo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.infocampo.com.ar/feed/",
+          "url": "https://www.infocampo.com.ar/las-gallinas-tambien-necesitan-proteccion-ante-el-nino-como-protegerlas-ante-las-intensas-lluvias/",
+          "canonical_url": "https://infocampo.com.ar/las-gallinas-tambien-necesitan-proteccion-ante-el-nino-como-protegerlas-ante-las-intensas-lluvias",
+          "titulo": "Las gallinas también necesitan protección ante El Niño: cómo “blindarlas” ante las intensas lluvias",
+          "titulo_norm": "las gallinas tambien necesitan proteccion ante el nino como blindarlas ante las intensas lluvias",
+          "descripcion": "Con la ocurrencia de períodos de lluvias abundantes e inundaciones, un especialistas brindó recomendaciones para reforzar las medidas de manejo en la cría de gallinas, con el fin de proteger a los animales, prevenir problemas sanitarios y sostener la producción.",
+          "imagen_url": "https://www.infocampo.com.ar/wp-content/uploads/2026/11/gallinas.jpg",
+          "autor": "infocampo",
+          "publicado": "2026-11-24T18:15-03:00",
+          "capturado": "2026-11-24T19:32-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "c96dc2c45acea0e2",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 9,
+        "historia_concreta": 11,
+        "cercania_pba": 15,
+        "interes_productores": 10,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 58,
+        "commercial_score": 52,
+        "subtema": "ganaderia",
+        "tema": "gallinas",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Consejos prácticos y útiles para cría de aves ante temporales de lluvia.",
+        "tema_doc": "sanidad",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          56,
+          59
+        ],
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false
+      },
+      "cuando": "2026-11-24T19:32-03:00"
+    },
+    {
+      "id": "44455eaf3c37",
+      "rep": {
+        "id": "44455eaf3c37",
+        "fuente": "Agroclave (La Capital)",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+        "url": "https://www.lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
+        "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
+        "titulo": "Las exportaciones argentinas de maíz crecieron 41% en el año y superaron a Brasil",
+        "titulo_norm": "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil",
+        "descripcion": "La comercialización del cereal mantiene un ritmo adelantado respecto del promedio histórico, aunque la caída de los precios internacionales desaceleró las ventas de los productores. En paralelo, la siembra de maíz temprano alcanza el 39,8% del área prevista",
+        "imagen_url": "https://media.lacapital.com.ar/p/718a74be8a2204928f02470623e5fb8e/adjuntos/305/imagenes/101/990/0101990435/1200x675/838x340:858x360/maizjpg.jpg",
+        "autor": "",
+        "publicado": "2026-11-24T19:15-03:00",
+        "capturado": "2026-11-24T19:32-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "81b7bfcf620916e8",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "44455eaf3c37",
+          "fuente": "Agroclave (La Capital)",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
+          "url": "https://www.lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
+          "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
+          "titulo": "Las exportaciones argentinas de maíz crecieron 41% en el año y superaron a Brasil",
+          "titulo_norm": "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil",
+          "descripcion": "La comercialización del cereal mantiene un ritmo adelantado respecto del promedio histórico, aunque la caída de los precios internacionales desaceleró las ventas de los productores. En paralelo, la siembra de maíz temprano alcanza el 39,8% del área prevista",
+          "imagen_url": "https://media.lacapital.com.ar/p/718a74be8a2204928f02470623e5fb8e/adjuntos/305/imagenes/101/990/0101990435/1200x675/838x340:858x360/maizjpg.jpg",
+          "autor": "",
+          "publicado": "2026-11-24T19:15-03:00",
+          "capturado": "2026-11-24T19:32-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "81b7bfcf620916e8",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 8,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 56,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos de exportación y avance de siembra de maíz que impactan directo en la campaña local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          57,
+          56
+        ],
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false
+      },
+      "cuando": "2026-11-24T19:32-03:00"
+    },
     {
       "id": "66646f181821",
       "rep": {
@@ -100283,8 +100695,8 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-24T19:00:29-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-24T19:40:28-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -110767,7 +111179,13 @@
     "9b095a5cbd89": "2026-11-24T17:30",
     "a156285678d3": "2026-11-24T18:02",
     "66646f181821": "2026-11-24T17:30",
-    "93ae229dd431": "2026-11-24T17:30"
+    "93ae229dd431": "2026-11-24T17:30",
+    "633245719677": "2026-11-24T19:32",
+    "10937dadd468": "2026-11-24T19:32",
+    "44455eaf3c37": "2026-11-24T19:32",
+    "8fb9f350b729": "2026-11-24T19:32",
+    "6b7c261c55ee": "2026-11-24T19:32",
+    "163544bad587": "2026-11-24T19:32"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
