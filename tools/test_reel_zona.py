@@ -13,6 +13,7 @@ from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.stdout.reconfigure(encoding="utf-8")
 
+os.environ["AGRO_MAGYP"] = "0"       # 24/11/2026: sin red; el informe del MAGyP se prueba en tools/test_magyp.py
 from agro import publicar as PUB  # noqa: E402
 from agro import reel_clima as RC  # noqa: E402
 from agro import reel_zona as RZ  # noqa: E402

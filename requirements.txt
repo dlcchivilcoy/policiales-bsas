@@ -28,3 +28,5 @@ opencv-python-headless>=4.8.0,<5
 # Usa el Chrome del sistema (channel="chrome"), no baja Chromium.
 # En la nube no se usa: el workflow corre --sin-navegador.
 playwright>=1.44
+# 24/11/2026: el informe semanal del MAGyP (PDF) para el reel de datos de la zona (agro/magyp.py)
+pypdf>=5.0

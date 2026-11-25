@@ -581,6 +581,72 @@ def tema_siglo(af: dict, dr: dict, cultivo: str) -> dict | None:
             "fuente": FUENTE_ABIERTOS}
 
 
+# 24/11/2026 (el editor: «sumá el informe semanal del MAGyP al reel de datos de la zona»): cómo vienen la siembra y la
+# cosecha en la delegación Bragado (donde está Chivilcoy), con el avance de la semana y el estado de los lotes. Sale
+# cuando hay un informe nuevo (los jueves) que todavía no se usó, antes que El Niño y que los temas de ArgenFields.
+def _miles(n) -> str:
+    return f"{int(n):,}".replace(",", ".")
+
+
+def tema_magyp(info: dict | None, hoy) -> dict | None:
+    from agro import magyp as MG
+    if not MG.vigente(info, hoy):
+        return None
+    filas_av = []
+    for a in info.get("avance") or []:
+        if not a.get("hectareas"):
+            continue
+        nombre = a["cultivo"].capitalize() + (f" de {a['sub']}" if a.get("sub") in ("1ª", "2ª") else "")
+        etiqueta = f"{nombre} · {a['labor']}"
+        if a["pct"] <= 0:
+            valor = "sin arrancar"
+        else:
+            sube = a["pct"] - (a.get("antes") or 0)
+            valor = f"{_coma(a['pct'], 0)} %" + (f" (+{_coma(sube, 0)})" if sube > 0 else "")
+        filas_av.append((etiqueta, valor, a))
+    activos = [f for f in filas_av if 0 < f[2]["pct"] < 100]
+    if not activos and not info.get("estado"):
+        return None
+    fecha = datetime.strptime(info["fecha"], "%Y-%m-%d")
+    al = f"{fecha.day}/{fecha.month}"
+    hay_cosecha = any(f[2]["labor"] == "cosecha" and f[2]["pct"] > 0 for f in filas_av)
+    gancho = "¿Cómo viene la cosecha en la zona?" if hay_cosecha else "¿Cómo viene la siembra en la zona?"
+    # Primero lo que se está moviendo esta semana; después lo terminado y lo que no arrancó.
+    filas_av.sort(key=lambda f: (not (0 < f[2]["pct"] < 100), -(f[2]["pct"] - (f[2].get("antes") or 0))))
+    diap = [("lista", {"titulo": gancho, "sub": f"Zona de Chivilcoy, al {al} · (+) lo que avanzó en la semana",
+                       "filas": [(e, v) for e, v, _ in filas_av[:7]]})]
+    estado = info.get("estado") or []
+    if estado:
+        hum = sorted({e["humedad"] for e in estado if e.get("humedad")})
+        diap.append(("lista", {"titulo": "Cómo están los lotes",
+                               "sub": "Estado y momento del cultivo" + (f" · humedad: {', '.join(hum)}" if hum else ""),
+                               "filas": [(e["cultivo"].capitalize(), f"{e['estado'] or '—'} · {e['estadio'] or '—'}")
+                                         for e in estado[:6]]}))
+    diap.append(_cierre("¿Cómo viene tu lote? Contanos en los comentarios"))
+    resumen = ", ".join(f"{a['cultivo']}{(' de ' + a['sub']) if a.get('sub') in ('1ª', '2ª') else ''} "
+                        f"{_coma(a['pct'], 0)} % {'sembrado' if a['labor'] == 'siembra' else 'cosechado'}"
+                        for _e, _v, a in filas_av if a["pct"] > 0)
+    texto = [f"🌱 {gancho} En la zona de Chivilcoy (delegación Bragado del Ministerio de Agricultura), al {al}: "
+             f"{resumen}.",
+             ("Los lotes: " + ", ".join(f"{e['cultivo']} {e['estado']}" for e in estado if e.get("estado")) + ".")
+             if estado else "",
+             "📲 ¿Cómo viene tu lote? Contanos de qué pueblo sos en los comentarios."]
+    return {"tema": "magyp", "gancho": gancho, "diapositivas": diap, "texto": [t for t in texto if t],
+            "hashtags": ["#Chivilcoy", "#Siembra", "#Campo", "#Agro", "#Bragado"], "fuente": MG.FUENTE,
+            "informe": info["fecha"]}
+
+
+def _info_magyp(log=print):
+    from agro import magyp as MG
+    if not MG.activo():
+        return None
+    try:
+        return MG.traer()
+    except Exception as e:                                 # noqa: BLE001 — sin el informe, los otros temas
+        log(f"   informe del MAGyP: {type(e).__name__}: {e}")
+        return None
+
+
 def temas_disponibles(af: dict, hoy) -> dict:
     """{clave: tema} de los temas de ArgenFields que tienen datos hoy."""
     salida = {}
@@ -600,7 +666,8 @@ def temas_disponibles(af: dict, hoy) -> dict:
                       ("maiz_historia", lambda: tema_historia(af, "maiz")),
                       ("tierra", lambda: tema_tierra(af)), ("nino", lambda: tema_nino(af, hoy)),
                       ("suelo", lambda: tema_suelo(af)), ("sequias", lambda: tema_sequias(af)),
-                      ("gemelas", lambda: tema_gemelas(af))):
+                      ("gemelas", lambda: tema_gemelas(af)),
+                      ("magyp", lambda: tema_magyp(_info_magyp(), hoy))):
         try:
             t = fn()
         except Exception as e:                             # noqa: BLE001 — un tema roto no frena a los demás
@@ -617,6 +684,10 @@ def elegir_tema(mem: dict, disponibles: dict, hoy, lluvia_mm: float | None = Non
     if lluvia_mm is not None and lluvia_mm >= lluvia_min():
         return "lluvia"
     usos = ultimo_uso(mem)
+    # 24/11/2026: un informe semanal del MAGyP que todavía no salió va primero (es la novedad de la semana).
+    mg = disponibles.get("magyp")
+    if mg and usos.get("magyp", "") < mg.get("informe", ""):
+        return "magyp"
     limite = (hoy - timedelta(days=DIAS_SIN_REPETIR)).isoformat()
     libres = [t for t in ("nino",) + ORDEN if t in disponibles and usos.get(t, "") < limite]
     if not libres:
