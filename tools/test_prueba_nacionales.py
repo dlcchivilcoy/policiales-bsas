@@ -49,8 +49,20 @@ _mem_v = lambda n: {"piezas": {f"v{i}": {"prueba": "virales", "dia": _dia, "ig_p
 chequear("11 por día: con 5 virales, los policiales hacen 6", PR.cuantos_de("policiales", _mem_v(5), _dia) == 6)
 chequear("si los virales encontraron 3, los policiales intentan 8",
          PR.cuantos_de("policiales", _mem_v(3), _dia) == 8)
-chequear("24/11/2026: los virales bajan a 3 (rinden 382 de mediana contra 1.329 de los policiales)",
-         PR.cuantos_de("virales", _mem_v(0), _dia) == 3)
+chequear("25/11/2026: los virales quedan apagados (rendían 0,03)", PR.cuantos_de("virales", _mem_v(0), _dia) == 0)
+os.environ["NAC_PRUEBA_VIRALES_CUANTOS"] = "3"
+chequear("...NAC_PRUEBA_VIRALES_CUANTOS los vuelve", PR.cuantos_de("virales", _mem_v(0), _dia) == 3)
+os.environ.pop("NAC_PRUEBA_VIRALES_CUANTOS")
+# 25/11/2026: la corrida de la tarde
+chequear("tarde: arranca 15:35 → 16:00, 16:25 y 16:50", hh(PR.turnos("tarde", a("15:35"), 3)) == ["16:00", "16:25", "16:50"])
+chequear("tarde: 3 por día", PR.cuantos_de("tarde", {"piezas": {}}, _dia) == 3)
+_mem_t = {"piezas": {f"t{i}": {"prueba": "policiales", "prueba_franja": "tarde", "dia": _dia,
+                               "ig_prueba": {"estado": "ok"}} for i in range(3)}}
+chequear("los de la tarde cuentan como tarde, no como los de las 20",
+         PR.hechos_hoy(_mem_t, "tarde", _dia) == 3 and PR.hechos_hoy(_mem_t, "policiales", _dia) == 0)
+chequear("con 3 a la tarde y sin virales, los de las 20 hacen 8 (11 por día)",
+         PR.cuantos_de("policiales", _mem_t, _dia) == 8)
+
 import time as _time  # noqa: E402
 _ts = _time.time()
 _p = lambda t: PR.puntaje_policial({"titulo": t, "resumen": "", "fecha": _ts}, 1, _ts)[0]  # noqa: E731
@@ -184,8 +196,8 @@ chequear("la de las 19:45 (15 min antes) sí corre",
 # Sin video en ninguna: no sale nada y lo avisa.
 mem["piezas"].clear()
 publicados.clear()
-reloj[0] = a("17:35")
-inf4 = PR.corrida("virales", True, notas=[], leer_pagina=lambda u: {},
+reloj[0] = a("15:35")
+inf4 = PR.corrida("tarde", True, notas=[], leer_pagina=lambda u: {},
                   ahora_fn=lambda: reloj[0], dormir=dormir, publicar_fn=publicar_falso, guardia=Guardia())
 chequear("sin candidatas: no publica y queda «sin_piezas»", inf4["estado"] == "sin_piezas" and not publicados)
 
@@ -201,6 +213,26 @@ inf5 = PR.corrida("policiales", True, notas=muchas, leer_pagina=lambda u: {"vide
                   publicar_fn=lambda p, c: llamadas.append(1) or {"estado": "fallo", "error": "tope"},
                   guardia=Guardia())
 chequear("si Instagram dice que llegó al tope de reels de prueba, la corrida para", len(llamadas) == 1)
+
+# 25/11/2026: la corrida de la tarde publica policiales a las 16:00, 16:25 y 16:50, y los de las 20 completan 8.
+mem["piezas"].clear()
+publicados.clear()
+reloj[0] = a("15:35")
+_inf_t = PR.corrida("tarde", True, notas=[dict(n, fecha=a("15:30").timestamp()) for n in muchas],
+                    leer_pagina=lambda u: {"video": "x"}, ahora_fn=lambda: reloj[0], dormir=dormir,
+                    publicar_fn=publicar_falso, guardia=Guardia())
+chequear("tarde: salen 3 policiales a las 16:00, 16:25 y 16:50",
+         [h for h, _ in publicados] == ["16:00", "16:25", "16:50"] and _inf_t["modo"] == "prueba_tarde")
+chequear("tarde: en la memoria quedan como policiales de la tarde (el informe de métricas los suma a policiales)",
+         all(p.get("prueba") == "policiales" and p.get("prueba_franja") == "tarde" for p in mem["piezas"].values()))
+reloj[0] = a("19:45")
+publicados.clear()
+PR.corrida("policiales", True, notas=[dict(n, fecha=a("19:40").timestamp()) for n in muchas],
+           leer_pagina=lambda u: {"video": "x"}, ahora_fn=lambda: reloj[0], dormir=dormir,
+           publicar_fn=publicar_falso, guardia=Guardia())
+chequear("a las 20 no repite lo de la tarde y completa hasta 11 en el día",
+         len(publicados) == 5 and not {u for _, u in publicados} & {u for u, p in mem["piezas"].items()
+                                                                     if p.get("prueba_franja") == "tarde"})
 print("\n" + PR.resumen(inf)[:400])
 
 # ---- 17/11: el reel de prueba también sale en Facebook ----

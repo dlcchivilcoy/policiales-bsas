@@ -8,6 +8,8 @@ name: Noticias nacionales
 #          las 10 generales del día para Chivilcoy, a las 23). Para volver: hora 22 en cron-job.org (job 8677866)
 #          y el respaldo «20 1 * * *» acá abajo.
 #
+#   15:35 / 19:45  (25/11/2026: los virales de las 17:35 se apagaron y a las 15:35 sale la corrida «tarde»: 3
+#          policiales nacionales con video a las 16:00, 16:25 y 16:50; respaldo de GitHub a las 15:50.)
 #   17:35 / 19:45  CORRIDAS PROPIAS DE REELS DE PRUEBA (14/11/2026, nacionales/prueba.py): 5 virales con el video
 #          de la nota a las 18:00, 18:25, 18:50, 19:15 y 19:40 (la de las 17:35) y 5 policiales nacionales con video a
 #          las 20:00, 20:25, 20:50, 21:15 y 21:40 (la de las 19:45). Cada corrida busca, arma y espera sus turnos.
@@ -29,7 +31,8 @@ name: Noticias nacionales
 on:
   schedule:                 # GitHub usa UTC; Argentina es UTC-3 todo el año
     - cron: "20 7 * * *"    # 04:20 Argentina (respaldo de la de las 4, solo web)
-    - cron: "50 20 * * *"   # 17:50 Argentina: respaldo de la corrida de reels de prueba de virales (14/11/2026)
+    - cron: "50 18 * * *"   # 15:50 Argentina: respaldo de la corrida de reels de prueba de la tarde (25/11/2026)
+    # (17:50 Argentina —«50 20 * * *», respaldo de los virales de prueba— se sacó el 25/11/2026: virales apagados)
     - cron: "55 22 * * *"   # 19:55 Argentina: respaldo de la de policiales
     # (22:20 Argentina —«20 1 * * *», respaldo del carrusel de las 22— la sacó el editor el 25/10/2026: carrusel apagado)
   workflow_dispatch:
@@ -41,7 +44,7 @@ on:
         description: '"manual" o "cron" (la dispara cron-job.org a horario)'
         default: "manual"
       modo:
-        description: '"prueba_virales" / "prueba_policiales" = la corrida de 5 reels de prueba (18 y 20). "corresponsales" = la historia de las 10. "ig_prueba" = la fila vieja. Vacío = la agenda'
+        description: '"prueba_tarde" / "prueba_policiales" (y "prueba_virales", apagada) = la corrida de 5 reels de prueba (18 y 20). "corresponsales" = la historia de las 10. "ig_prueba" = la fila vieja. Vacío = la agenda'
         default: ""
 
 # Una corrida detrás de la otra: si la anterior sigue publicando, la que sigue espera y arranca sus turnos al terminar.
@@ -107,6 +110,9 @@ jobs:
           NAC_PRUEBA_TOTAL: ${{ vars.NAC_PRUEBA_TOTAL }}
           NAC_PRUEBA_VIRALES_HORA: ${{ vars.NAC_PRUEBA_VIRALES_HORA }}
           NAC_PRUEBA_POLICIALES_HORA: ${{ vars.NAC_PRUEBA_POLICIALES_HORA }}
+          NAC_PRUEBA_TARDE_HORA: ${{ vars.NAC_PRUEBA_TARDE_HORA }}
+          NAC_PRUEBA_TARDE_CUANTOS: ${{ vars.NAC_PRUEBA_TARDE_CUANTOS }}
+          NAC_PRUEBA_VIRALES_CUANTOS: ${{ vars.NAC_PRUEBA_VIRALES_CUANTOS }}
           IG_PRUEBA_POR_DIA: ${{ vars.IG_PRUEBA_POR_DIA }}
           NAC_IG_PRUEBA_HORA: ${{ vars.NAC_IG_PRUEBA_HORA }}
           NAC_IG_PRUEBA_VIRALES_FIN: ${{ vars.NAC_IG_PRUEBA_VIRALES_FIN }}
@@ -141,7 +147,8 @@ jobs:
           fi
           # Las corridas propias de reels de prueba (14/11/2026): cron-job.org a las 17:35 y 19:45, respaldos 17:50 y 19:55.
           GRUPO=""
-          if [ "$MODO_INPUT" = "prueba_virales" ] || [ "$CRON_GH" = "50 20 * * *" ]; then GRUPO="virales"; fi
+          if [ "$MODO_INPUT" = "prueba_virales" ]; then GRUPO="virales"; fi
+          if [ "$MODO_INPUT" = "prueba_tarde" ] || [ "$CRON_GH" = "50 18 * * *" ]; then GRUPO="tarde"; fi
           if [ "$MODO_INPUT" = "prueba_policiales" ] || [ "$CRON_GH" = "55 22 * * *" ]; then GRUPO="policiales"; fi
           if [ -n "$GRUPO" ]; then
             PARGS="--grupo $GRUPO"

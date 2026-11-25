@@ -22,7 +22,10 @@ arranca tarde, los turnos se corren (10 minutos como mínimo entre uno y otro) s
 Lo publicado queda en la memoria de nacionales (estado/nacionales.json), con «prueba»: el grupo; así no se
 repite ni en estas corridas ni en las de nacionales.
 
-`python -m nacionales.prueba --grupo virales|policiales [--publicar]`. NAC_PRUEBA_CUANTOS (5),
+25/11/2026: los VIRALES quedan en 0 (rendían 0,03) y se suma la corrida TARDE (cron-job.org a las 15:35):
+policiales nacionales con video, turnos 16:00, 16:25 y 16:50.
+
+`python -m nacionales.prueba --grupo virales|policiales|tarde [--publicar]`. NAC_PRUEBA_CUANTOS (5),
 NAC_PRUEBA_PASO_MIN (25), NAC_PRUEBA_VIRALES_HORA (18:00), NAC_PRUEBA_POLICIALES_HORA (20:00).
 """
 from __future__ import annotations
@@ -45,6 +48,9 @@ GRUPOS = {
     # grupo: (variable del primer turno, primer turno de fábrica, fin de la franja)
     "virales": ("NAC_PRUEBA_VIRALES_HORA", "18:00", "19:55"),
     "policiales": ("NAC_PRUEBA_POLICIALES_HORA", "20:00", "21:55"),
+    # 25/11/2026: policiales a la tarde (los virales se apagaron). En la memoria quedan como «policiales» (así el
+    # informe de métricas los suma a «Reels de prueba · policiales») con «prueba_franja»: «tarde».
+    "tarde": ("NAC_PRUEBA_TARDE_HORA", "16:00", "16:55"),
 }
 CUANTOS_DEFAULT = 5
 # 17/11/2026 (pedido del editor: «agregá el que falta del que encuentre»): 11 por día entre los dos grupos. Los
@@ -113,17 +119,26 @@ def total_dia() -> int:
 # robo piraña), acción (disparo, ataque) o la zona (Bragado). Lo que no anduvo: la causa judicial (alegatos,
 # condenas, peritajes), averías (fugas de gas) y lo internacional. Por eso: los virales pasan de 5 a 3 por día y sin
 # internacionales, los policiales completan el total (hasta 8), y su puntaje suma esos ganchos y resta lo procesal.
-VIRALES_DEFAULT = 3
+VIRALES_DEFAULT = 0
+# 25/11/2026 (informe de métricas del 16 al 22/11): los virales de prueba fueron lo peor de la cuenta, unas 117 vistas y
+# 0 me gusta (rendimiento 0,03); los 5 peores de la semana fueron todos de esa corrida. El editor: «apagá los virales y
+# poné una corrida de reels de prueba a las 16 h, sin internacionales, con lo que sabés que funciona, más tirando a
+# policiales». Los virales quedan en 0 (NAC_PRUEBA_VIRALES_CUANTOS los vuelve) y sale la corrida «tarde»: policiales
+# nacionales con video y los mismos ganchos, 3 turnos (16:00, 16:25, 16:50). Las 20:00 completan hasta 8: 11 por día.
+TARDE_DEFAULT = 3
 
 
 def cuantos_de(grupo: str, mem: dict, dia: str) -> int:
     """Cuántos le tocan hoy al grupo: los policiales completan el total del día con lo que no encontraron los virales."""
     if grupo == "virales":
         return _entero("NAC_PRUEBA_VIRALES_CUANTOS", VIRALES_DEFAULT)
+    if grupo == "tarde":
+        return _entero("NAC_PRUEBA_TARDE_CUANTOS", TARDE_DEFAULT)
     base = cuantos()
     if grupo != "policiales" or not total_dia():
         return base
-    return max(base, min(base + EXTRA_MAX, total_dia() - hechos_hoy(mem, "virales", dia)))
+    otros = hechos_hoy(mem, "virales", dia) + hechos_hoy(mem, "tarde", dia)
+    return max(base, min(base + EXTRA_MAX, total_dia() - otros))
 
 
 def anticipo_min() -> int:
@@ -262,9 +277,14 @@ def _tiene_video(c: dict, leer) -> bool:
     return False
 
 
+def grupo_de(pieza: dict) -> str:
+    """El grupo de una pieza de la memoria: los de la tarde se anotan como «policiales» con su franja."""
+    return "tarde" if pieza.get("prueba_franja") == "tarde" else (pieza.get("prueba") or "")
+
+
 def hechos_hoy(mem: dict, grupo: str, dia: str) -> int:
     return sum(1 for p in mem["piezas"].values()
-               if p.get("prueba") == grupo and p.get("dia") == dia
+               if grupo_de(p) == grupo and p.get("dia") == dia
                and (p.get("ig_prueba") or {}).get("estado") in ("ok", "sin_confirmar", "simulado"))
 
 
@@ -398,7 +418,9 @@ def corrida(grupo: str, publicar: bool, notas=None, leer_pagina=None, redactar=N
         res = dict(res, formato="reel de prueba", para=objetivo.strftime("%H:%M"),
                    cuando=res.get("cuando") or ahora_fn().isoformat(timespec="seconds"))
         registro = PA._registro(pieza, {"ig_prueba": res}, dia, objetivo.strftime("%H:%M"))
-        registro["prueba"] = grupo
+        registro["prueba"] = "policiales" if grupo == "tarde" else grupo
+        if grupo == "tarde":
+            registro["prueba_franja"] = "tarde"
         informe["piezas"].append(registro)
         contadas.append({"titulo": pieza["guion"]["titular"], "tema": c.get("tema") or []})
         ultimo = ahora_fn()
