@@ -55444,6 +55444,46 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "aa2c3dd6189a935d": {
+      "conversacion": 2,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 1,
+      "impacto_economico": 1,
+      "cercania_argentina": 0,
+      "potencial_reel": 2,
+      "ai_score": 11,
+      "commercial_score": 10,
+      "subtema": "agtech",
+      "tema": "acuicultura",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una inversión lejana en Irlanda de cría de camarones, no le importa al productor de Chivilcoy.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d8a570e435734636": {
+      "conversacion": 12,
+      "historia_concreta": 10,
+      "cercania_pba": 20,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 67,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "ternero gordo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Importante dato ganadero sobre la relación ternero/gordo que interesa a los criadores de la zona.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -59226,7 +59266,12 @@
       "https://bichosdecampo.com/el-presidente-del-inta-nicolas-bronzovich-predica-que-hay-que-fomentar-la-cooperacipon-publicao-privada-en": "2026-11-25",
       "https://bichosdecampo.com/los-ciervos-les-comen-el-pasto-a-las-vacas-una-investigacion-realizada-en-entre-rios-puso-numeros-a-esa-competencia-y-encontro-que-no-siempre-es-un-problema": "2026-11-25",
       "https://news.agrofy.com.ar/noticia/217055/mover-granos-camion-cuesta-36-mas-estados-unidos-salta-rosario-combinar-tren-camion-baja-flete-46": "2026-11-25",
-      "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas": "2026-11-25"
+      "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas": "2026-11-25",
+      "https://infocampo.com.ar/dolar-blue-dolar-hoy-dolar-mep-en-mendoza-25-noviembre-2026": "2026-11-25",
+      "https://infocampo.com.ar/euro-blue-euro-hoy-euro-oficial-25-noviembre-2026": "2026-11-25",
+      "https://bichosdecampo.com/cosecha-record-la-campana-agricola-alcanzo-las-171-millones-de-toneladas-de-grano-con-el-maiz-y-el-trigo-como-los-principales-aportantes": "2026-11-25",
+      "https://agfundernews.com/vertical-oceans-plans-28m-high-tech-shrimp-farm-in-ireland-as-physical-ai-gains-traction": "2026-11-25",
+      "https://agroempresario.com/publicacion/124156/la-relacion-ternerogordo-vuelve-a-niveles-historicos": "2026-11-25"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -63007,7 +63052,12 @@
       "el presidente del inta nicolas bronzovich predica la cooperacion publico privada para desarrollar nueva tecnologia para el agro pero su gestion mantiene cerca de 90 convenios de vinculacion con empresas cajoneados sin ninguna explicacion": "2026-11-25",
       "los ciervos les comen el pasto a las vacas una investigacion realizada en entre rios puso numeros a esa competencia y encontro que no siempre es un problema": "2026-11-25",
       "mover granos en camion cuesta 36 mas que en estados unidos pero de salta a rosario combinar tren y camion baja el flete un 46": "2026-11-25",
-      "el inta alerto por el impacto de el nino sobre los suelos agricolas": "2026-11-25"
+      "el inta alerto por el impacto de el nino sobre los suelos agricolas": "2026-11-25",
+      "dolar blue a cuanto cotizan hoy en mendoza 25 noviembre 2026": "2026-11-25",
+      "euro blue hoy precio y cotizacion de este 25 noviembre 2026": "2026-11-25",
+      "cosecha record la campana agricola alcanzo las 171 millones de toneladas de grano con el maiz y el trigo como los principales aportantes": "2026-11-25",
+      "vertical oceans plans 28m high tech shrimp farm in ireland as physical ai gains traction": "2026-11-25",
+      "la relacion ternero gordo vuelve a niveles historicos": "2026-11-25"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -66788,7 +66838,12 @@
       "5e709ec02fb6612d": "2026-11-25",
       "99aaa9fc663d7373": "2026-11-25",
       "601bd14b7391e70d": "2026-11-25",
-      "6291e8b5aeccf74d": "2026-11-25"
+      "6291e8b5aeccf74d": "2026-11-25",
+      "5f0c284f15c11908": "2026-11-25",
+      "a443641dcbfcbea8": "2026-11-25",
+      "004b136e62012aae": "2026-11-25",
+      "aa2c3dd6189a935d": "2026-11-25",
+      "d8a570e435734636": "2026-11-25"
     }
   },
   "elegidas": [
@@ -102040,9 +102095,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_1a3948fea9d0_portada.jpg"
+    },
+    {
+      "id": "51d6db306397",
+      "cuando": "2026-11-25T12:06-03:00",
+      "titulo_original": "El INTA alertó por el impacto de El Niño sobre los suelos agrícolas",
+      "descripcion": "Un estudio del INTA estima que las pérdidas podrían alcanzar 66 millones de toneladas anuales en Buenos Aires durante un escenario de El Niño muy fuerte",
+      "fuente": "Agroempresario",
+      "url": "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas/",
+      "titular": "El INTA advierte pérdidas por El Niño en Buenos Aires",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 14,
+        "historia_concreta": 8,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 66,
+        "commercial_score": 60,
+        "subtema": "agro",
+        "tema": "el niño",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Alerta sobre el impacto climático en suelos de Buenos Aires, directo al interés del productor de la zona.",
+        "tema_doc": "clima",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-25T12:05:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "bc47236b-2393-4cb6-bf23-d70bcb40c767",
+          "slug": "el-inta-alerto-por-el-impacto-de-el-nino-y-estimo-perdidas-en-5c5d48",
+          "url": "https://www.diariolacampaña.com.ar/n/el-inta-alerto-por-el-impacto-de-el-nino-y-estimo-perdidas-en-5c5d48",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17958507273322400",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_51d6db306397_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "acf1529bea86",
+      "rep": {
+        "id": "acf1529bea86",
+        "fuente": "Agroempresario",
+        "tipo_fuente": "medio",
+        "source_url": "https://agroempresario.com/news-sitemap.xml/",
+        "url": "https://agroempresario.com/publicacion/124156/la-relacion-ternerogordo-vuelve-a-niveles-historicos/",
+        "canonical_url": "https://agroempresario.com/publicacion/124156/la-relacion-ternerogordo-vuelve-a-niveles-historicos",
+        "titulo": "La relación ternero/gordo vuelve a niveles históricos",
+        "titulo_norm": "la relacion ternero gordo vuelve a niveles historicos",
+        "descripcion": "El indicador se ubicó en 1,30 kilos de ternero por cada kilo de novillito, tras los máximos registrados durante marzo y abril",
+        "imagen_url": "https://cdn.agroempresario.com/images/posts/04017e33d04a7d37ca32513098a87f318c103243e99a2156_840.jpg",
+        "autor": "",
+        "publicado": "2026-11-25T09:00-03:00",
+        "capturado": "2026-11-25T12:06-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d8a570e435734636",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "acf1529bea86",
+          "fuente": "Agroempresario",
+          "tipo_fuente": "medio",
+          "source_url": "https://agroempresario.com/news-sitemap.xml/",
+          "url": "https://agroempresario.com/publicacion/124156/la-relacion-ternerogordo-vuelve-a-niveles-historicos/",
+          "canonical_url": "https://agroempresario.com/publicacion/124156/la-relacion-ternerogordo-vuelve-a-niveles-historicos",
+          "titulo": "La relación ternero/gordo vuelve a niveles históricos",
+          "titulo_norm": "la relacion ternero gordo vuelve a niveles historicos",
+          "descripcion": "El indicador se ubicó en 1,30 kilos de ternero por cada kilo de novillito, tras los máximos registrados durante marzo y abril",
+          "imagen_url": "https://cdn.agroempresario.com/images/posts/04017e33d04a7d37ca32513098a87f318c103243e99a2156_840.jpg",
+          "autor": "",
+          "publicado": "2026-11-25T09:00-03:00",
+          "capturado": "2026-11-25T12:06-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d8a570e435734636",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 10,
+        "cercania_pba": 20,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 67,
+        "commercial_score": 40,
+        "subtema": "ganaderia",
+        "tema": "ternero gordo",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Importante dato ganadero sobre la relación ternero/gordo que interesa a los criadores de la zona.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "cuando": "2026-11-25T12:06-03:00"
+    },
     {
       "id": "f7797ff84fe9",
       "rep": {
@@ -102180,74 +102359,6 @@
           54,
           56
         ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T11:32-03:00"
-    },
-    {
-      "id": "51d6db306397",
-      "rep": {
-        "id": "51d6db306397",
-        "fuente": "Agroempresario",
-        "tipo_fuente": "medio",
-        "source_url": "https://agroempresario.com/news-sitemap.xml/",
-        "url": "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas/",
-        "canonical_url": "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas",
-        "titulo": "El INTA alertó por el impacto de El Niño sobre los suelos agrícolas",
-        "titulo_norm": "el inta alerto por el impacto de el nino sobre los suelos agricolas",
-        "descripcion": "Un estudio del INTA estima que las pérdidas podrían alcanzar 66 millones de toneladas anuales en Buenos Aires durante un escenario de El Niño muy fuerte",
-        "imagen_url": "https://cdn.agroempresario.com/images/posts/52bb43d642c4ce2e9868d44a9178050ee71e9f004e4a6fde_840.jpg",
-        "autor": "",
-        "publicado": "2026-11-25T08:00-03:00",
-        "capturado": "2026-11-25T11:32-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "6291e8b5aeccf74d",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "51d6db306397",
-          "fuente": "Agroempresario",
-          "tipo_fuente": "medio",
-          "source_url": "https://agroempresario.com/news-sitemap.xml/",
-          "url": "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas/",
-          "canonical_url": "https://agroempresario.com/publicacion/124154/el-inta-alerto-por-el-impacto-de-el-nino-sobre-los-suelos-agricolas",
-          "titulo": "El INTA alertó por el impacto de El Niño sobre los suelos agrícolas",
-          "titulo_norm": "el inta alerto por el impacto de el nino sobre los suelos agricolas",
-          "descripcion": "Un estudio del INTA estima que las pérdidas podrían alcanzar 66 millones de toneladas anuales en Buenos Aires durante un escenario de El Niño muy fuerte",
-          "imagen_url": "https://cdn.agroempresario.com/images/posts/52bb43d642c4ce2e9868d44a9178050ee71e9f004e4a6fde_840.jpg",
-          "autor": "",
-          "publicado": "2026-11-25T08:00-03:00",
-          "capturado": "2026-11-25T11:32-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "6291e8b5aeccf74d",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 8,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 66,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "el niño",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Alerta sobre el impacto climático en suelos de Buenos Aires, directo al interés del productor de la zona.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false,
         "policial_rural": false,
         "suceso": false,
@@ -104438,8 +104549,8 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T11:39:23-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-25T12:11:29-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -115216,7 +115327,8 @@
     "51d6db306397": "2026-11-25T11:32",
     "f7797ff84fe9": "2026-11-25T11:32",
     "c251c4e1aeb1": "2026-11-25T11:32",
-    "dfc3125c4b37": "2026-11-25T11:32"
+    "dfc3125c4b37": "2026-11-25T11:32",
+    "acf1529bea86": "2026-11-25T12:06"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
