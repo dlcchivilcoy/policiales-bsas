@@ -109,6 +109,11 @@ FUENTES = [
     {"nombre": "Agroempresario", "base": "https://agroempresario.com", "rss": [],
      "sitemaps": ["https://agroempresario.com/news-sitemap.xml/"], "patron": r"agroempresario\.com/publicacion/\d+/",
      "limite": 80, "tipo": "medio", "solo_campo": True, "activa": True},
+    # 24/11/2026 (el editor: «este https://www.noticiasagropecuarias.com/»): WordPress con RSS al día (~10 notas por
+    # día; robots.txt solo cierra /wp-admin/). Del campo casi todo (lácteos, carne, empresas del agro, cultivos); lo de
+    # economía general lo baja el puntaje.
+    {"nombre": "Noticias AgroPecuarias", "base": "https://www.noticiasagropecuarias.com",
+     "rss": ["https://www.noticiasagropecuarias.com/feed/"], "tipo": "medio", "activa": True},
     # 16/11/2026 (pedido del editor: «priorizá videos que tengan que ver con policiales en el campo»): las secciones
     # de policiales de los portales que más seguido alojan su propio video (las mismas de nacionales/prueba.py), solo
     # lo que es del campo (abigeato, robos en campos, silobolsas, incendios rurales, accidentes con maquinaria).
