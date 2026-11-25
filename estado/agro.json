@@ -24067,61 +24067,6 @@
   },
   "elegidas": [
     {
-      "id": "0555b4015979",
-      "cuando": "2026-11-17T19:30-03:00",
-      "titulo_original": "Productores denuncian que en un municipio bonaerense no se resolvieron el 95% de los delitos rurales denunciados en un año",
-      "descripcion": "La Sociedad Rural de la localidad del norte bonaerense relevó 41 denuncias oficiales desde mayo de 2025, de las cuales solo se resolvieron dos.Los hechos van desde abigeato a robos de plantines de frutales.",
-      "fuente": "Clarín Rural",
-      "url": "https://www.clarin.com/rural/productores-denuncian-municipio-bonaerense-resolvieron-95-delitos-rurales-denunciados-ano_0_NEvCkPJWMf.html",
-      "titular": "Delitos rurales sin resolver en San Pedro alcanzan el 95,1%",
-      "volanta": "Seguridad Rural",
-      "score": {
-        "conversacion": 22,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 85,
-        "commercial_score": 85,
-        "subtema": "ganaderia",
-        "tema": "delitos rurales",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Denuncia fuerte de una Sociedad Rural bonaerense sobre inseguridad rural no resuelta, toca de cerca a la zona.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": true
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-17T19:30:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "ce9f7dde-f11d-4750-ab87-12cbfc03b2b7",
-          "slug": "san-pedro-el-95-1-de-los-delitos-rurales-sigue-sin-resolver-en-6243e5",
-          "url": "https://www.diariolacampaña.com.ar/n/san-pedro-el-95-1-de-los-delitos-rurales-sigue-sin-resolver-en-6243e5",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "18161056711525677",
-          "diapositivas": 6
-        },
-        "facebook": {
-          "id": "101271341650483_1764851032312560",
-          "fotos": 6
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0555b4015979_portada.jpg"
-    },
-    {
       "id": "d2718cc960e1",
       "cuando": "2026-11-17T21:00-03:00",
       "titulo_original": "Persecución y tiroteo en las islas de Victoria: cuatreros escaparon de la policía rural con un vacuno faenado",
@@ -30321,7 +30266,7 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T19:04:09-03:00",
+  "actualizado": "2026-11-25T19:41:09-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-11-17T21:30:00-03:00": {
@@ -32696,6 +32641,13 @@
             }
           ]
         }
+      }
+    },
+    "2026-11-25T19:40:00-03:00": {
+      "bloque": "viral",
+      "items": [],
+      "publicado": {
+        "omitido": "el guion no la dio por apta (nombra al medio de origen (TN))"
       }
     }
   },
