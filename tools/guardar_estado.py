@@ -216,6 +216,57 @@ def combinar_agro(nuestro: dict, remoto: dict) -> dict:
     return out
 
 
+# 25/11/2026: cada módulo recorta su memoria (agro y nacionales 7 días, auditoría 8, índice de agro 10),
+# pero la UNIÓN de acá volvía a meter lo recortado desde la copia de GitHub: agro.json, nacionales.json y
+# auditoria.json tenían datos desde mediados de octubre y crecían ~1 MB por semana cada uno. Después de
+# combinar se recorta con la misma ventana + 1 día de margen (nunca menos que lo que usa el módulo).
+PODA_DIAS = {"nacionales": 8, "agro": 8, "agro_indice": 11, "auditoria": 9}
+
+
+def _desde(dias: int, solo_dia: bool = False) -> str:
+    from datetime import datetime, timedelta, timezone
+    t = datetime.now(timezone(timedelta(hours=-3))) - timedelta(days=dias)
+    return t.date().isoformat() if solo_dia else t.isoformat(timespec="seconds")
+
+
+def podar_nacionales(d: dict) -> dict:
+    lim, dia = _desde(PODA_DIAS["nacionales"]), _desde(PODA_DIAS["nacionales"], True)
+    for sec in ("piezas", "descartadas"):
+        if isinstance(d.get(sec), dict):
+            d[sec] = {k: v for k, v in d[sec].items() if not isinstance(v, dict) or (v.get("cuando") or "9") >= lim}
+    if isinstance(d.get("carruseles"), dict):
+        d["carruseles"] = {k: v for k, v in d["carruseles"].items() if k >= dia}
+    return d
+
+
+def podar_agro(d: dict) -> dict:
+    lim = _desde(PODA_DIAS["agro"])
+    if isinstance(d.get("elegidas"), list):
+        d["elegidas"] = [e for e in d["elegidas"] if (e.get("cuando") or "9") >= lim]
+    if isinstance(d.get("historias"), dict):
+        d["historias"] = {k: v for k, v in d["historias"].items() if k >= lim}
+    dia = _desde(PODA_DIAS["agro_indice"], True)          # como agro.dedup.olvidar_viejas
+    idx = d.get("indice")
+    if isinstance(idx, dict):
+        for clave in ("url", "titulo", "hash"):
+            if isinstance(idx.get(clave), dict):
+                idx[clave] = {k: v for k, v in idx[clave].items()
+                              if not (isinstance(v, str) and v[:2] == "20" and v < dia)}
+        if isinstance(d.get("scores"), dict) and isinstance(idx.get("hash"), dict):
+            d["scores"] = {h: s for h, s in d["scores"].items() if h in idx["hash"]}
+    return d
+
+
+def podar_auditoria(d: dict) -> dict:
+    lim = _desde(PODA_DIAS["auditoria"])[:16]
+    if isinstance(d.get("pasadas"), dict):
+        d["pasadas"] = {k: v for k, v in d["pasadas"].items() if k >= lim}
+    return d
+
+
+PODAR = {"nacionales.json": podar_nacionales, "agro.json": podar_agro, "auditoria.json": podar_auditoria}
+
+
 COMBINAR = {"publicados.json": combinar_publicados, "reels_hechos.json": combinar_hechos,
             "agro.json": combinar_agro,
             "tema_reels.json": combinar_tema,
@@ -278,6 +329,8 @@ def guardar(mensaje: str, raiz: Path = RAIZ, solo=None, dormir=time.sleep) -> st
         for nombre, mio in nuestros.items():
             remoto = _remoto(nombre, raiz)
             final = COMBINAR[nombre](mio, remoto) if (nombre in COMBINAR and remoto) else mio
+            if nombre in PODAR and isinstance(final, dict):
+                final = PODAR[nombre](final)
             (estado / nombre).write_text(json.dumps(final, ensure_ascii=False, indent=2),
                                          encoding="utf-8")
         for nombre, texto in paginas.items():

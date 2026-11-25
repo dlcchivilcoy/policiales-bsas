@@ -117,5 +117,31 @@ _vieja = {"piezas": {"u": {"cuando": "2026-11-12T04:00:00-03:00",
 chequear("nacionales: un reel de prueba publicado no vuelve a «pendiente» por una copia vieja (12/11/2026)",
          GE.combinar_nacionales(_vieja, _remoto)["piezas"]["u"]["ig_prueba"]["estado"] == "ok")
 
+# --- Poda después de combinar (25/11/2026): la unión volvía a meter lo que cada módulo recortaba ---
+from datetime import datetime, timedelta, timezone  # noqa: E402
+
+_ar = timezone(timedelta(hours=-3))
+
+
+def _hace(dias):
+    return (datetime.now(_ar) - timedelta(days=dias)).isoformat(timespec="seconds")
+
+
+n = GE.podar_nacionales({"piezas": {"vieja": {"cuando": _hace(30)}, "nueva": {"cuando": _hace(2)}},
+                         "descartadas": {"d": {"cuando": _hace(20)}},
+                         "carruseles": {_hace(40)[:10]: {}, _hace(1)[:10]: {}}})
+chequear("poda nacionales: fuera lo de más de 8 días, queda lo nuevo",
+         list(n["piezas"]) == ["nueva"] and n["descartadas"] == {} and list(n["carruseles"]) == [_hace(1)[:10]])
+a = GE.podar_agro({"elegidas": [{"id": 1, "cuando": _hace(40)}, {"id": 2, "cuando": _hace(6)}],
+                   "historias": {_hace(30): {}, _hace(1): {}},
+                   "indice": {"url": {"u1": _hace(20)[:10], "u2": _hace(9)[:10]}, "titulo": {},
+                              "hash": {"h1": _hace(20)[:10], "h2": _hace(3)[:10]}},
+                   "scores": {"h1": 1, "h2": 2}, "pendientes": [1]})
+chequear("poda agro: elegidas 8 días, índice 11 días (y sus puntajes), lo demás intacto",
+         [e["id"] for e in a["elegidas"]] == [2] and len(a["historias"]) == 1
+         and list(a["indice"]["url"]) == ["u2"] and a["scores"] == {"h2": 2} and a["pendientes"] == [1])
+au = GE.podar_auditoria({"pasadas": {_hace(20)[:16]: {}, _hace(2)[:16]: {}}})
+chequear("poda auditoría: 9 días", list(au["pasadas"]) == [_hace(2)[:16]])
+
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)
