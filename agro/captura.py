@@ -134,8 +134,20 @@ def _metadatos(link: str, get, titulo: str = "", publicado: str = "") -> dict:
     fecha = _meta(h.text, "article:published_time")
     m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", fecha)
     fecha = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}T12:00:00" if m else fecha
-    return dict(base, titulo=titulo or _meta(h.text, "og:title"), copete=_meta(h.text, "og:description"),
-                imagen=_meta(h.text, "og:image"), publicado=publicado or fecha)
+    titulo_og, copete, imagen = _meta(h.text, "og:title"), _meta(h.text, "og:description"), _meta(h.text, "og:image")
+    # 24/11/2026: páginas SIN og:* (el Ministerio de Desarrollo Agrario bonaerense, Drupal 7): el <title>, la
+    # description, la primera fecha ISO del cuerpo y la primera imagen subida al sitio.
+    if not titulo_og:
+        t = re.search(r"<title>([^<]+)</title>", h.text)
+        titulo_og = htmlmod.unescape(t.group(1)).split("|")[0].strip() if t else ""
+    copete = copete or _meta(h.text, "description")
+    if not fecha:
+        f = re.search(r"(20\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)", h.text)
+        fecha = f.group(1) if f else ""
+    if not imagen:
+        im = re.search(r'<img[^>]+src="([^"]+/sites/default/files/[^"]+\.(?:jpe?g|png|webp)[^"]*)"', h.text, re.I)
+        imagen = urljoin(link, htmlmod.unescape(im.group(1))) if im else ""
+    return dict(base, titulo=titulo or titulo_og, copete=copete, imagen=imagen, publicado=publicado or fecha)
 
 
 def listar_sitemap(url: str, patron: str, limite: int = 12, get=None) -> list:

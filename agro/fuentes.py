@@ -114,6 +114,26 @@ FUENTES = [
     # economía general lo baja el puntaje.
     {"nombre": "Noticias AgroPecuarias", "base": "https://www.noticiasagropecuarias.com",
      "rss": ["https://www.noticiasagropecuarias.com/feed/"], "tipo": "medio", "min_ancho": 480, "activa": True},
+    # 24/11/2026 (el editor: «sumá las 5» que faltaban para el campo de Chivilcoy y su zona). Las oficiales e
+    # institucionales que nombran partidos de la zona:
+    #  - Ministerio de Desarrollo Agrario bonaerense: sin RSS ni og:*; se lee su página de noticias (`portadas`) y de
+    #    cada nota el <title>, la description y la fecha del cuerpo (captura._metadatos). Emergencias, caminos rurales.
+    #  - INTA Centro Regional Buenos Aires Norte (las agencias de la zona, Chivilcoy incluida): RSS propio.
+    #  - Senasa: RSS; mucho es de otras provincias y lo baja el puntaje.
+    #  - Municipalidad de Chivilcoy: RSS de WordPress; publica de todo → solo lo del campo o de una empresa del agro.
+    # Afuera: el Informe Semanal de Estimaciones (MAGyP) es un PDF de datos, no noticias; y la Asociación Rural de
+    # Chivilcoy publica solo en redes sociales (no se leen de forma automática).
+    {"nombre": "Ministerio de Desarrollo Agrario PBA", "base": "https://www.gba.gob.ar", "rss": [],
+     "portadas": ["https://www.gba.gob.ar/desarrollo_agrario/Noticias"],
+     "patron": r"gba\.gob\.ar/desarrollo_agrario/Noticias/[^/?#]+$", "limite": 12, "horas": 168,
+     "tipo": "oficial", "activa": True},
+    {"nombre": "INTA Buenos Aires Norte", "base": "https://www.argentina.gob.ar",
+     "rss": ["https://www.argentina.gob.ar/inta/cr-buenosaires-norte/noticias/rss"], "horas": 168,
+     "tipo": "oficial", "activa": True},
+    {"nombre": "Senasa", "base": "https://www.argentina.gob.ar",
+     "rss": ["https://www.argentina.gob.ar/senasa/noticias/rss"], "horas": 96, "tipo": "oficial", "activa": True},
+    {"nombre": "Municipalidad de Chivilcoy", "base": "https://www.chivilcoy.gov.ar",
+     "rss": ["https://www.chivilcoy.gov.ar/feed/"], "tipo": "oficial", "solo_campo": True, "activa": True},
     # 24/11/2026 (el editor: «esta también https://agrobonaerense.com.ar/»): el campo de la provincia de Buenos Aires
     # (Chacabuco, la Rural, UATRE, seguro de desempleo rural). RSS en /rss (unas 3 notas por día), robots.txt solo
     # cierra /beta/, /banner y /resultados/. Fotos de 780 px: pasan el mínimo.
