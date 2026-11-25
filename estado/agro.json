@@ -102751,7 +102751,7 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T07:06:20-03:00",
+  "actualizado": "2026-11-25T08:02:39-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -111623,6 +111623,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-20": {
+        "fecha": "2026-11-20",
+        "productos": {
+          "trigo": {
+            "ars": 298490.0,
+            "usd": 190.0,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 270212.0,
+            "usd": 172.0,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 754080.0,
+            "usd": 480.0,
+            "estimado": true,
+            "direccion": "sube"
+          },
+          "soja": {
+            "ars": 560000.0,
+            "usd": 356.46,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "sorgo": {
+            "ars": 282780.0,
+            "usd": 180.0,
+            "estimado": true,
+            "direccion": "baja"
+          }
+        },
+        "tc": 1571.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -111947,6 +111987,20 @@
           "compra": 1571.0,
           "venta": 1580.0
         }
+      },
+      "2026-11-24": {
+        "fuente": "Banco Nación",
+        "hora": "17:00",
+        "billete": {
+          "fecha": "2026-11-24",
+          "compra": 1565.0,
+          "venta": 1615.0
+        },
+        "divisa": {
+          "fecha": "2026-11-24",
+          "compra": 1584.0,
+          "venta": 1593.0
+        }
       }
     },
     "a3500": {
@@ -112073,6 +112127,10 @@
       "2026-11-20": {
         "fecha": "2026-11-20",
         "valor": 1575.9572
+      },
+      "2026-11-24": {
+        "fecha": "2026-11-24",
+        "valor": 1592.0227
       }
     },
     "chicago_soja": {
@@ -112270,7 +112328,11 @@
       },
       "2026-11-24": {
         "fecha": "2026-11-24",
-        "usd_t": 453.0
+        "usd_t": 453.4
+      },
+      "2026-11-25": {
+        "fecha": "2026-11-25",
+        "usd_t": 449.1
       }
     },
     "chicago_maiz": {
@@ -112468,7 +112530,11 @@
       },
       "2026-11-24": {
         "fecha": "2026-11-24",
-        "usd_t": 171.2
+        "usd_t": 170.9
+      },
+      "2026-11-25": {
+        "fecha": "2026-11-25",
+        "usd_t": 170.4
       }
     },
     "chicago_trigo": {
@@ -112666,7 +112732,11 @@
       },
       "2026-11-24": {
         "fecha": "2026-11-24",
-        "usd_t": 212.2
+        "usd_t": 209.3
+      },
+      "2026-11-25": {
+        "fecha": "2026-11-25",
+        "usd_t": 207.5
       }
     }
   },
@@ -113128,6 +113198,29 @@
         },
         "facebook": {
           "id": "1508959861187187"
+        }
+      }
+    },
+    "2026-11-25T08:00:00-03:00": {
+      "dia": "2026-11-25",
+      "placas": [
+        "portada",
+        "mapa",
+        "clima",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "animado",
+      "gancho": "La soja subió 1,8% en Rosario",
+      "publicado": {
+        "instagram": {
+          "id": "17872646763661366",
+          "colab": "no"
+        },
+        "facebook": {
+          "id": "2197781107780448"
         }
       }
     }
