@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T02:18:09.000Z",
+  "actualizado": "2026-11-25T02:32:12.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/31215/fin-de-semana-largo-con-dos-aprehendidos-por-resistencia-a-la-autoridad-y-un-hecho-de-dano.html",
@@ -283,6 +283,30 @@
       "volanta": "Operativos en Roque Pérez",
       "categoria": "robo",
       "distancia_km": 83.7,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31220/tension-en-el-acceso-elizondo-redujeron-a-un-automovilista-que-se-resistio-al-secuestro-de-su-vehiculo.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-25T02:32:12.000Z",
+      "titulo": "Demoraron a un automovilista pampeano tras resistirse al secuestro de su auto en Bragado",
+      "descripcion": "Un conductor oriundo de La Pampa fue reducido y demorado este martes en el acceso Elizondo de Bragado tras oponerse al decomiso de su rodado durante un control de tránsito. El test de documentación reveló que circulaba con una fotocopia del carnet.",
+      "texto_tiktok": "Un automovilista oriundo de la provincia de La Pampa protagonizó un violento episodio este martes por la mañana en el acceso Elizondo de Bragado.\n\nEl conflicto comenzó cuando los inspectores de tránsito y los agentes policiales le exigieron la licencia de conducir y el hombre presentó una fotocopia en lugar del plástico original.\n\nAnte la negativa a entregar el rodado para su retención preventiva, las fuerzas de seguridad debieron someterlo en el suelo para neutralizarlo.\n\nDesde la Dirección de Seguridad confirmaron que el coche quedó retenido por infracción a las normativas vigentes y se abrieron actuaciones por resistencia a la autoridad.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Policiales #ResistenciaALaAutoridad #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-25_0132_05_bragado_demoraron-a-un-automovilista-p.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-redujeron-a-un-automovilista-pampeano-que-se-opuso-al-5263bb",
+      "youtube_url": "https://youtube.com/shorts/Qy_PMP9L_d0",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Bragado",
+      "categoria": "otro_policial",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
