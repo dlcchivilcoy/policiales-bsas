@@ -89,6 +89,55 @@ def posteos_facebook_24h(contar=None):
         return None
 
 
+# 25/11/2026 (el editor: «tratá de tener un buen margen óptimo de tiempo entre cada posteo en la totalidad del día»):
+# lo que sale fuera de la grilla del día (agro/agenda.py: el vigía del tiempo, los reels de la zona, de la Provincia y
+# el perfil) mira el último posteo del Instagram de agro y, si salió hace menos de AGRO_MARGEN_MIN (20), espera lo que
+# falte, como mucho AGRO_MARGEN_ESPERA_MAX (20 min). Sin poder leerlo, no frena.
+def margen_min() -> int:
+    return _entero("AGRO_MARGEN_MIN", 20)
+
+
+def ultimo_posteo_instagram(leer=None):
+    """El datetime (UTC) del último posteo del feed de Instagram de agro, o None."""
+    if leer is not None:
+        return leer()
+    from datetime import datetime
+    from reels import publicador as PB
+    try:
+        with credenciales_agro():
+            uid, tok = os.environ.get("INSTAGRAM_USER_ID", ""), os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+            if not uid or not tok:
+                return None
+            r = PB._pedir("GET", f"{PB.GRAPH}/{uid}/media", tok, params={"fields": "timestamp", "limit": 1})
+        if r.status_code >= 400:
+            return None
+        datos = (r.json() or {}).get("data") or []
+        return datetime.strptime(datos[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z") if datos else None
+    except Exception:                                      # noqa: BLE001
+        return None
+
+
+def esperar_margen(log=print, leer=None, dormir=None, ahora=None) -> float:
+    """Espera hasta que pasen margen_min() minutos desde el último posteo de agro. Devuelve los segundos esperados."""
+    import time
+    from datetime import datetime, timezone
+    minimo = margen_min()
+    if not minimo:
+        return 0.0
+    ultimo = ultimo_posteo_instagram(leer)
+    if ultimo is None:
+        return 0.0
+    ahora = ahora or datetime.now(timezone.utc)
+    falta = minimo * 60 - (ahora - ultimo).total_seconds()
+    falta = min(falta, _entero("AGRO_MARGEN_ESPERA_MAX", 20) * 60)
+    if falta <= 0:
+        return 0.0
+    log(f"   margen: el último posteo de agro salió hace {(ahora - ultimo).total_seconds() / 60:.0f} min; "
+        f"espero {falta / 60:.0f} min")
+    (dormir or time.sleep)(falta)
+    return falta
+
+
 def lugar_facebook(reserva: int = 0, contar=None):
     """None si hay lugar en el Facebook de agro; si no, {"omitido": motivo} (no cuenta como falla)."""
     tope = fb_tope()

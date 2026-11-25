@@ -11,6 +11,7 @@ os.environ["AGRO_IMAGEN_IA"] = "1"
 # 16/11/2026: estas pruebas son de la agenda de antes (todos los turnos «reel») y sin red: la grilla intercalada, el
 # reel del clima y el banco de videos ilustrativos tienen las suyas en tools/test_agro_grilla.py.
 os.environ["AGRO_GRILLA"] = "0"
+os.environ["AGRO_GRILLA_DIA"] = "0"   # 25/11/2026: acá se prueba la agenda de antes; la grilla del día, en test_agro_grilla_dia
 os.environ["AGRO_CLIMA_REEL"] = "0"
 os.environ["AGRO_BANCO_VIDEO"] = "0"
 os.environ["AGRO_VIRALES"] = "0"

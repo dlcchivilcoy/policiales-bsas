@@ -8,7 +8,7 @@ name: Agro - perfil productivo de los partidos
 # el de hoy no hace nada, y fuera de 12:00-13:30 no publica (GitHub puede atrasarse horas).
 on:
   schedule:
-    - cron: "30 15 * * 2,5"     # martes y viernes 12:30, respaldo
+    - cron: "55 15 * * 2,5"     # martes y viernes 12:55, respaldo (25/11/2026: cron-job.org a las 12:40)
   workflow_dispatch:
     inputs:
       publicar:

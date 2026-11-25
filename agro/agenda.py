@@ -42,6 +42,30 @@ que publica lo suyo y espera hasta el horario siguiente (agro/pasada.py, correr_
 posteos del feed de la misma corrida hay siempre intervalo_min(): si el primero salió tarde, el segundo
 también se corre. La memoria (estado/agro.json) frena al respaldo: lo que ya salió no se repite.
 
+25/11/2026 — LA GRILLA DEL DÍA (pedido del editor: «tratá de tener un buen margen óptimo de tiempo entre cada posteo en
+la totalidad del día»). Con los virales ya como reels comunes (al feed), un día de agro son 26 posteos: 12 noticias,
+11 virales, «El campo hoy», el reel de la zona y el de la Provincia (o el perfil, martes y viernes). Antes salían
+amontonados (14:21, 14:35 y 14:41) y con huecos de más de una hora. Ahora van en GRILLA_DIA, uno cada 35-40 minutos de
+07:00 a 22:50, noticia y viral alternados; cada corrida lleva 2 o 3 (así nunca espera más de 80 minutos y no la corta
+la máquina), y los que tienen su propio workflow caen en los huecos que les deja la grilla:
+
+    07:00 noticia   07:40 viral                                       corrida 07:00
+    08:15 El campo hoy   08:55 noticia   09:30 viral                  corrida 08:15
+    10:10 noticia   10:50 viral   (11:00 historia)                    corrida 10:10
+    11:25 reel de la zona (agro_zona.yml)
+    12:05 noticia                                                     corrida 12:05
+    12:40 reel de la Provincia (agro_pba.yml) · mar y vie: perfil productivo (agro_perfil.yml)
+    13:20 viral                                                       (corrida 12:05)
+    14:00 noticia   14:35 viral   15:15 noticia                       corrida 14:00
+    15:50 viral   16:30 noticia   17:10 viral                         corrida 15:50
+    17:45 noticia   18:25 viral   19:00 noticia                       corrida 17:45
+    19:40 viral   20:20 noticia   20:55 viral                         corrida 19:40
+    21:35 noticia   22:10 viral   22:50 noticia                       corrida 21:35
+
+Las noticias siguen alternando reel y carrusel y respetan las franjas (4 de mañana, 4 de tarde, 4 de noche). El vigía
+del tiempo sale cuando hay algo y espera a que pasen 20 minutos del último posteo (agro/publicar.esperar_margen).
+AGRO_GRILLA_DIA=0 vuelve a lo de antes (corridas de 2 noticias cada 90 minutos y virales en tandas).
+
 Se cambia sin tocar código con las variables del repo AGRO_AGENDA («07:00 historias, 07:00 reel, …») y
 AGRO_CORRIDAS («07:00,10:00,…»).
 """
@@ -58,6 +82,34 @@ def historias_datos() -> bool:
     return (os.environ.get("AGRO_HISTORIAS_DATOS") or "0").strip() == "1"
 
 CORRIDAS_DEFECTO = "07:00,10:00,13:00,16:00,18:00,21:00"
+# 25/11/2026: la grilla del día (ver arriba). «noticia» = reel o carrusel, alternados.
+GRILLA_DIA = ("07:00 noticia, 07:40 viral, 08:15 reel_datos, 08:55 noticia, 09:30 viral, 10:10 noticia, 10:50 viral, "
+              "12:05 noticia, 13:20 viral, 14:00 noticia, 14:35 viral, 15:15 noticia, 15:50 viral, 16:30 noticia, "
+              "17:10 viral, 17:45 noticia, 18:25 viral, 19:00 noticia, 19:40 viral, 20:20 noticia, 20:55 viral, "
+              "21:35 noticia, 22:10 viral, 22:50 noticia")
+CORRIDAS_GRILLA = "07:00,10:10,12:05,14:00,15:50,17:45,19:40,21:35"
+REEL_DATOS_GRILLA = "08:15"
+PARTICIPA_GRILLA = "11:00,14:00,19:00,21:45"
+INTERVALO_GRILLA = 30        # si un posteo salió tarde, el siguiente de la corrida espera al menos esto
+
+
+def grilla_dia() -> bool:
+    return (os.environ.get("AGRO_GRILLA_DIA") or "1").strip() != "0"
+
+
+def _grilla(tipo: str) -> list:
+    """[(hora, minuto)] de la grilla del día para ese tipo («noticia», «viral», «reel_datos»)."""
+    salida = []
+    for parte in GRILLA_DIA.split(","):
+        hora, _, t = parte.strip().partition(" ")
+        if t == tipo:
+            h, _, m = hora.partition(":")
+            salida.append((int(h), int(m)))
+    return salida
+
+
+def horas_virales_grilla() -> list:
+    return _grilla("viral")
 # 20/11/2026 (pedido del editor: «aumentá la cantidad de reels y carruseles por día»): las 6 corridas publican 2, de
 # 9 a 12 noticias por día: 07:00 y 08:30 · 10:00 y 11:30 · 13:00 y 14:30 · 16:00 y 17:30 · 18:00 y 19:30 · 21:00 y
 # 22:30. Más los de datos (08:00 datos, 11:10 zona, vigía del tiempo, perfil mar/vie). Antes: ((10, 0), (13, 0), (18, 0)).
@@ -93,12 +145,20 @@ def por_corrida(inicio: tuple = None) -> int:
 
 def intervalo_min() -> int:
     """Entre dos posteos del feed de la misma corrida (si el primero salió tarde, el segundo también se corre)."""
-    return _entero("AGRO_INTERVALO_MIN", INTERVALO_MIN)
+    return _entero("AGRO_INTERVALO_MIN", INTERVALO_GRILLA if grilla_dia() else INTERVALO_MIN)
+
+
+def cuenta_para_el_margen(tipo: str) -> bool:
+    """¿Este posteo va al feed (y cuenta para el intervalo entre posteos)? Las historias no; desde el 25/11/2026 los
+    virales sí (salen como reels comunes)."""
+    if tipo in ("historias", "participa"):
+        return False
+    return tipo != "viral" or grilla_dia()
 
 
 def horas_participa() -> list:
     """[(hora, minuto), …] de las historias para participar, ordenadas. AGRO_PARTICIPA="0" las apaga."""
-    crudo = (os.environ.get("AGRO_PARTICIPA") or PARTICIPA_DEFECTO).strip()
+    crudo = (os.environ.get("AGRO_PARTICIPA") or (PARTICIPA_GRILLA if grilla_dia() else PARTICIPA_DEFECTO)).strip()
     if crudo.lower() in ("0", "no", "off"):
         return []
     salida = []
@@ -117,6 +177,17 @@ def agenda_texto_defecto() -> str:
     más las historias de siempre."""
     inicios = [h * 60 + m for h, m in corridas_noticias()]
     partes = [f"{h:02d}:{m:02d} historias" for h, m in HISTORIAS_DEFECTO] if historias_datos() else []
+    if grilla_dia() and not os.environ.get("AGRO_CORRIDAS"):
+        datos = hora_reel_datos()
+        if datos:
+            partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
+        partes += [f"{h:02d}:{m:02d} participa" for h, m in horas_participa()]
+        from agro import virales as VI
+        partes += [f"{h:02d}:{m:02d} viral" for h, m in VI.horas_virales()]
+        noticias = [h * 60 + m for h, m in _grilla("noticia")]
+        partes += [f"{t // 60:02d}:{t % 60:02d} {tipo}" for t, tipo in tipos_intercalados(
+            noticias, datos[0] * 60 + datos[1] if datos else None)]
+        return ", ".join(partes)
     datos = hora_reel_datos()
     if datos:
         partes.append(f"{datos[0]:02d}:{datos[1]:02d} reel_datos")
@@ -183,7 +254,7 @@ def agenda_defecto() -> list:
 
 def hora_reel_datos():
     """(hora, minuto) del reel de datos, o None si está apagado (AGRO_REEL_DATOS="0")."""
-    crudo = (os.environ.get("AGRO_REEL_DATOS") or REEL_DATOS_DEFECTO).strip()
+    crudo = (os.environ.get("AGRO_REEL_DATOS") or (REEL_DATOS_GRILLA if grilla_dia() else REEL_DATOS_DEFECTO)).strip()
     if crudo.lower() in ("0", "no", "off"):
         return None
     h, _, m = crudo.partition(":")
@@ -204,7 +275,7 @@ def corridas() -> list:
 def corridas_noticias() -> list:
     """[(hora, minuto), …] de AGRO_CORRIDAS, ordenadas. Lo que no se entiende se saltea."""
     salida = []
-    for parte in (os.environ.get("AGRO_CORRIDAS") or CORRIDAS_DEFECTO).split(","):
+    for parte in (os.environ.get("AGRO_CORRIDAS") or (CORRIDAS_GRILLA if grilla_dia() else CORRIDAS_DEFECTO)).split(","):
         h, _, m = parte.strip().partition(":")
         try:
             if 0 <= int(h) < 24 and 0 <= int(m or 0) < 60:

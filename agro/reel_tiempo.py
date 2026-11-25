@@ -608,6 +608,7 @@ def corrida(publicar: bool, forzar: str = "", ahora: datetime = None, ruta_mem: 
     guardar(mem, ruta_mem, ahora)
     if publicador is None:
         from agro import publicar as PUB
+        PUB.esperar_margen(log=log)                       # 25/11/2026: que no caiga pegado a un posteo de la grilla
         publicador = lambda pz, log=print: PUB.publicar_reel(pz, None, ("facebook", "instagram"), log=log,  # noqa: E731
                                                             portada_url=PUB._subir_portada(pz))
     res = publicador(p, log=log)

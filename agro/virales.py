@@ -154,6 +154,9 @@ def horas_virales() -> list:
         return []
     if crudo:
         return sorted(set(_horas(crudo)))
+    from agro import agenda as AG
+    if AG.grilla_dia() and not os.environ.get("AGRO_PRUEBA_TANDAS"):
+        return AG.horas_virales_grilla()                  # 25/11/2026: intercalados en la grilla del día
     try:
         paso = max(5, int(os.environ.get("AGRO_PRUEBA_PASO") or PASO_DEFECTO))
     except ValueError:

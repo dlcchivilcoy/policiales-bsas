@@ -250,16 +250,16 @@ def correr_corrida(log=print, publicador=None, ahora: datetime = None, max_pieza
         if ya:
             que = ya.get("titular") or f"{len(ya.get('items') or [])} historias"
             log(f"{horario:%H:%M} {tipo}: ya publicó ({que})")
-            if tipo not in AG.FUERA_DEL_FEED:
+            if AG.cuenta_para_el_margen(tipo):
                 ultimo_feed = horario
             continue
         objetivo = horario
-        if tipo not in AG.FUERA_DEL_FEED and ultimo_feed:
+        if AG.cuenta_para_el_margen(tipo) and ultimo_feed:
             # El intervalo entre posteo y posteo del feed (20 min), aunque el primero haya salido tarde.
             objetivo = max(objetivo, ultimo_feed + timedelta(minutes=AG.intervalo_min()))
         _esperar(objetivo, log)
         momento = _ahora()
-        if tipo not in AG.FUERA_DEL_FEED:
+        if AG.cuenta_para_el_margen(tipo):
             ultimo_feed = momento
         carpeta = SALIDA / f"{momento:%Y-%m-%d_%H%M}_{tipo}"
         carpeta.mkdir(parents=True, exist_ok=True)

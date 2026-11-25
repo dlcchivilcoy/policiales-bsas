@@ -10,7 +10,7 @@ name: Agro - reel de datos de la zona
 # Publica si la variable del repo AGRO_PUBLICAR es 1 (la misma de agro) y AGRO_ZONA no es 0.
 on:
   schedule:                 # UTC; Argentina es UTC-3 todo el año.
-    - cron: "25 14 * * *"   # 11:25, respaldo
+    - cron: "40 14 * * *"   # 11:40, respaldo (25/11/2026: cron-job.org a las 11:25, en la grilla del día)
   workflow_dispatch:
     inputs:
       publicar:

@@ -17,6 +17,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 for k in ("AGRO_GRILLA", "AGRO_CLIMA_REEL", "AGRO_BANCO_VIDEO", "AGRO_AGENDA", "AGRO_POR_CORRIDA", "AGRO_INTERVALO_MIN"):
     os.environ.pop(k, None)
 os.environ["AGRO_SCORE_MIN"] = "60"
+os.environ["AGRO_GRILLA_DIA"] = "0"   # 25/11/2026: la agenda de antes; la grilla del día en test_agro_grilla_dia
 os.environ.setdefault("VIDEO_CONTROL", "0")   # los videos de las pruebas son falsos (el control: test_control_video)
 from agro import banco_video as _BV0  # noqa: E402
 assert not _BV0.activo(), "el banco de video ilustrativo viene apagado (17/11)"
