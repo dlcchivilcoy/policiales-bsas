@@ -107,8 +107,8 @@ with tempfile.TemporaryDirectory() as d:
     inf = RZ.corrida(True, ahora=HOY, **kw)
     chequear("a las 11:10 publica un reel", inf["estado"] == "ok" and len(publicados) == 1)
     p = publicados[0]
-    chequear("la pieza pide la colab con el diario y va solo a Facebook e Instagram",
-             p.get("colab_diario") is True and tuple(p["redes"]) == ("facebook", "instagram") and p["youtube"] is False)
+    chequear("25/11: sin colab con el diario, solo Facebook e Instagram de agro",
+             p.get("colab_diario") is False and not RZ.fb_diario() and tuple(p["redes"]) == ("facebook", "instagram") and p["youtube"] is False)
     chequear("el texto cita la fuente y no lleva link de nota",
              "ArgenFields" in p["guion"]["descripcion"] and "/n/" not in p["guion"]["descripcion"])
     inf2 = RZ.corrida(True, ahora=HOY + timedelta(minutes=15), **kw)

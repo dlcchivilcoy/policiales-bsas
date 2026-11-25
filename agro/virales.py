@@ -469,10 +469,17 @@ def a_facebook() -> bool:
     return (os.environ.get("AGRO_VIRALES_FB") or "1").strip() != "0"
 
 
+# 25/11/2026 (el editor: «pasá los reels de prueba como reels comunes»): en Instagram salen como reel NORMAL (al
+# feed y a la pestaña de reels, también para los seguidores). AGRO_VIRALES_PRUEBA=1 los vuelve a reel de prueba.
+def como_prueba() -> bool:
+    import os
+    return (os.environ.get("AGRO_VIRALES_PRUEBA") or "0").strip() == "1"
+
+
 def publicar_prueba(mp4: Path, caption: str, portada: str, marca: str, alto: int = 1350, duracion: float = 0,
                     titular: str = "") -> dict:
-    """El reel de PRUEBA en el Instagram de agro (solo lo ven los que no siguen la cuenta) y el mismo reel en la
-    página de Facebook de agro. Una falla en una red no frena la otra."""
+    """El reel en el Instagram de agro (común; de prueba si AGRO_VIRALES_PRUEBA=1) y el mismo reel en la página de
+    Facebook de agro. Una falla en una red no frena la otra."""
     import os
     from agro import publicar as PUB
     from reels import instagram as IG
@@ -488,15 +495,18 @@ def publicar_prueba(mp4: Path, caption: str, portada: str, marca: str, alto: int
     with PUB.credenciales_agro():
         uid, tok = os.environ.get("INSTAGRAM_USER_ID", ""), os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
         try:
-            params = IG.contenedor_reel(url, caption, prueba=True, portada=portada_url)
+            prueba = como_prueba()
+            params = IG.contenedor_reel(url, caption, prueba=prueba, portada=portada_url)
             try:
                 cid = PB._contenedor_listo(uid, tok, params)
             except PB.FalloRed:
                 params.pop("cover_url", None)
                 cid = PB._contenedor_listo(uid, tok, params)
-            salida["instagram_prueba"] = {"id": PB._publicar_contenedor(uid, tok, cid, caption) or None}
+            salida["instagram_prueba" if prueba else "instagram"] = {
+                "id": PB._publicar_contenedor(uid, tok, cid, caption) or None}
         except Exception as e:                             # noqa: BLE001
-            salida["instagram_prueba"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+            salida["instagram_prueba" if como_prueba() else "instagram"] = {
+                "error": f"{type(e).__name__}: {str(e)[:200]}"}
         if a_facebook():
             salida["facebook"] = publicar_facebook(Path(mp4), caption, alto, duracion, titular)
     return salida

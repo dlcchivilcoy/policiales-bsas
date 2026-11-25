@@ -46,7 +46,8 @@ FIRMES = (
 
 
 def activo() -> bool:
-    return (os.environ.get("COLAB_AGRO") or "1").strip().lower() not in ("0", "false", "no", "off")
+    # 25/11/2026 (el editor: «sacá las colaboraciones automatizadas con la otra cuenta»): apagada; COLAB_AGRO=1.
+    return (os.environ.get("COLAB_AGRO") or "0").strip().lower() in ("1", "true", "si", "sí", "on")
 
 
 def _norm(texto: str) -> str:

@@ -21,6 +21,11 @@ def chequear(nombre, condicion):
 
 DIARIO = CA.DIARIO_IG
 os.environ.pop("COLAB_AGRO", None)
+os.environ["COLAB_AGRO_TEXTO"] = "1"
+chequear("25/11: de fábrica, sin colab (ni aunque sea del campo)",
+         not CA.activo() and CA.colaborador_para("Cosecha de trigo", DIARIO) == "")
+os.environ.pop("COLAB_AGRO_TEXTO")
+os.environ["COLAB_AGRO"] = "1"                       # lo que sigue prueba la colab prendida (COLAB_AGRO=1)
 
 # 1. ¿Qué es del campo?
 for texto in ("Récord de cosecha de soja en el partido", "Senasa controló un tambo de la zona",
@@ -44,7 +49,7 @@ chequear("cuenta del diario + campo → @diarioyradioagro",
 chequear("otra cuenta (agro, la radio) → sin colab", CA.colaborador_para("Cosecha de trigo", "999") == "")
 os.environ["COLAB_AGRO"] = "0"
 chequear("COLAB_AGRO=0 → sin colab", CA.colaborador_para("Cosecha de trigo", DIARIO) == "")
-os.environ.pop("COLAB_AGRO")
+os.environ["COLAB_AGRO"] = "1"
 
 # 3. El contenedor lleva la colab y, si Instagram la rechaza, sale igual sin ella.
 vistos = []

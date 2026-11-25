@@ -87,12 +87,15 @@ def activo() -> bool:
     return _var("AGRO_ZONA", "1") != "0"
 
 
+# 25/11/2026 (el editor: «sacá las colaboraciones automatizadas con la otra cuenta»): el reel de la zona sale solo en
+# @diarioyradioagro, sin @diarioyradio de colaborador y sin la copia en la página de Facebook del diario.
+# AGRO_ZONA_COLAB=1 y AGRO_ZONA_FB_DIARIO=1 los vuelven.
 def con_colab() -> bool:
-    return _var("AGRO_ZONA_COLAB", "1") != "0"
+    return _var("AGRO_ZONA_COLAB", "0") == "1"
 
 
 def fb_diario() -> bool:
-    return _var("AGRO_ZONA_FB_DIARIO", "1") != "0"
+    return _var("AGRO_ZONA_FB_DIARIO", "0") == "1"
 
 
 def lluvia_min() -> float:
