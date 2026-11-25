@@ -117,5 +117,9 @@ chequear("una de empresas común no pasa el tope lleno", len(_el) == 0)
 fs = [f for f in FU.FUENTES if f.get("solo_empresa")]
 chequear("4 fuentes nuevas de economía y gremiales, solo empresas", len(fs) == 4 and all(f["activa"] for f in fs))
 
+from agro import imagen as IMG  # noqa: E402
+chequear("Noticias AgroPecuarias: fotos desde 480 px (24/11/2026)", IMG.min_ancho({"fuente": "Noticias AgroPecuarias"}) == 480)
+chequear("las demás fuentes siguen en 720 px", IMG.min_ancho({"fuente": "Infocampo"}) == 720 and IMG.min_ancho({}) == 720)
+
 print(f"--- {bien}/{bien + mal} correctos ---")
 sys.exit(1 if mal else 0)

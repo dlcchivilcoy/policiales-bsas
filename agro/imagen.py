@@ -96,6 +96,17 @@ def recrear(foto, destino: Path, contexto: str = "", pedir=None, variante: int =
 
 
 MIN_ANCHO = 720         # 17/11/2026: antes 900; la foto ORIGINAL vale más que una más nítida (pedido del editor)
+
+
+def min_ancho(rep: dict) -> int:
+    """El ancho mínimo de la foto original para ESA fuente: MIN_ANCHO, salvo que la fuente diga otro
+    («min_ancho» en agro/fuentes.py; 24/11/2026, Noticias AgroPecuarias publica fotos de 500 a 670 px y el editor
+    aceptó que se vean algo menos nítidas)."""
+    from agro import fuentes as F
+    try:
+        return int(F.por_nombre((rep or {}).get("fuente", "")).get("min_ancho") or MIN_ANCHO)
+    except (TypeError, ValueError):
+        return MIN_ANCHO
 BANCO = Path(__file__).resolve().parent / "marca" / "banco"
 
 # Escenas sin nada que suela traer letras (máquinas de cerca, carteles, envases, edificios).
@@ -146,7 +157,7 @@ def foto_original(rep: dict, url: str, destino: Path, bajar, mirar) -> dict:
     foto = destino.with_name(destino.stem + "_original.jpg")
     if not bajar(url, foto):
         return {"motivo": "la foto original no se pudo bajar"}
-    if _ancho(foto) < MIN_ANCHO:
+    if _ancho(foto) < min_ancho(rep):
         return {"motivo": f"la foto original es chica ({_ancho(foto)} px)"}
     if mirar(str(foto)):
         return {"motivo": "la foto original tiene letras (placa o gráfico)"}
@@ -200,7 +211,7 @@ def elegir(rep: dict, cuerpo_imagen: str, prompt: str, destino: Path, generar=No
         foto = destino.with_name(destino.stem + "_fuente.jpg")
         if not bajar(url, foto):
             salida["motivo"] = "la foto de la fuente no se pudo bajar"
-        elif _ancho(foto) < MIN_ANCHO:
+        elif _ancho(foto) < min_ancho(rep):
             salida["motivo"] = f"la foto de la fuente es chica ({_ancho(foto)} px)"
         elif mirar(str(foto)):
             salida["motivo"] = "la foto de la fuente tiene letras (placa o gráfico)"
