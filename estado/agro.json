@@ -104143,7 +104143,7 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T10:40:28-03:00",
+  "actualizado": "2026-11-25T11:00:21-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
@@ -112060,6 +112060,47 @@
       "items": [],
       "publicado": {
         "omitido": "ninguna del campo trae video ni foto original usable"
+      }
+    },
+    "2026-11-25T11:00:00-03:00": {
+      "dia": "2026-11-25",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están las pasturas por tu zona?",
+          "opciones": [
+            "Bien",
+            "Regular",
+            "Mal"
+          ],
+          "publico": "ganaderia",
+          "via": "lista",
+          "publicado": {
+            "instagram": {
+              "id": "17923716654461100"
+            },
+            "facebook": {
+              "id": "1882774349383620"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "17923716654461100"
+              },
+              "facebook": {
+                "id": "1882774349383620"
+              }
+            }
+          ]
+        }
       }
     }
   },
