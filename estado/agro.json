@@ -53884,6 +53884,106 @@
         49,
         32
       ]
+    },
+    "d62f3d7bab69427c": {
+      "conversacion": 10,
+      "historia_concreta": 15,
+      "cercania_pba": 15,
+      "interes_productores": 10,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 63,
+      "commercial_score": 40,
+      "subtema": "empresas",
+      "tema": "tropfen",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una empresa nacional de biológicos que cumple 10 años y abre planta en Pergamino, zona norte de Buenos Aires.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "d017f2444239ebe3": {
+      "conversacion": 5,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 32,
+      "commercial_score": 20,
+      "subtema": "ganaderia",
+      "tema": "visec carnes",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Debate político gremial sobre trazabilidad y carne, muy alejado del día a día del productor chico de la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "f68626300dbfc1de": {
+      "conversacion": 15,
+      "historia_concreta": 18,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 75,
+      "commercial_score": 50,
+      "subtema": "empresas",
+      "tema": "tropfen",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "La historia de esfuerzo de los fundadores que arrancaron con dos camionetas en deuda y armaron una fábrica nueva en Pergamino.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2b0c205ddefba739": {
+      "conversacion": 2,
+      "historia_concreta": 8,
+      "cercania_pba": 0,
+      "interes_productores": 3,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 20,
+      "commercial_score": 10,
+      "subtema": "agro",
+      "tema": "legumbres",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Tema de legumbres y Prograno, enfocado pura y exclusivamente en el norte argentino, sin impacto en la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "2c5e3ea2eb5ee5ab": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 5,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 37,
+      "commercial_score": 25,
+      "subtema": "mercados",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Datos macroeconómicos de exportaciones agroindustriales; maneja mucha plata pero al productor local no le cambia su realidad inmediata.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -57560,7 +57660,12 @@
       "https://lanacion.com.ar/economia/campo/libre-de-deforestacion-santa-fe-busca-que-los-frigorificos-exportadores-acepten-un-certificado-y-no-nid24112026": "2026-11-24",
       "https://lacapital.com.ar/agro/clima-y-agro-el-calor-sube-los-34-c-y-el-ina-no-descarta-un-nuevo-repunte-del-parana-n10294003.html": "2026-11-24",
       "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html": "2026-11-24",
-      "https://tn.com.ar/campo/2026/11/24/la-soja-tuvo-una-rueda-positiva-en-rosario-tras-el-fin-de-semana-largo": "2026-11-24"
+      "https://tn.com.ar/campo/2026/11/24/la-soja-tuvo-una-rueda-positiva-en-rosario-tras-el-fin-de-semana-largo": "2026-11-24",
+      "https://agrositio.com.ar/canal-agrositio/entrevistas/249501-emprendedores-del-agro-el-caso-tropfen-10-anos-invirtiendo-en-tecnologia-de-biologicos.html": "2026-11-24",
+      "https://bichosdecampo.com/la-paranoia-no-siempre-es-buena-consejera-cual-es-el-verdadero-papel-del-empresario-macrista-david-lacroze-dentro-del-visec-carnes": "2026-11-24",
+      "https://lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026": "2026-11-24",
+      "https://agroempresario.com/publicacion/124115/legumbres-prograno-busca-acuerdos-para-recuperar-variedades-y-desarrollar-genetica": "2026-11-24",
+      "https://infobae.com/economia/2026/11/24/las-exportaciones-agroindustriales-superaron-los-usd-47800-millones-hasta-octubre-cuales-fueron-los-productos-ganadores": "2026-11-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -61235,7 +61340,12 @@
       "libre de deforestacion santa fe busca que los frigorificos exportadores acepten un certificado y no exijan solo visec": "2026-11-24",
       "clima y agro el calor sube hasta los 34 c y el ina no descarta un nuevo repunte del parana": "2026-11-24",
       "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil": "2026-11-24",
-      "la soja tuvo una rueda positiva en rosario tras el fin de semana largo": "2026-11-24"
+      "la soja tuvo una rueda positiva en rosario tras el fin de semana largo": "2026-11-24",
+      "emprendedores del agro el caso tropfen 10 anos invirtiendo en tecnologia de biologicos": "2026-11-24",
+      "la paranoia no siempre es buena consejera cual es el verdadero papel del empresario macrista david lacroze dentro del visec carnes": "2026-11-24",
+      "comenzaron sin oficinas con dos camionetas que debian y acaban de inaugurar una fabrica de us 1 5 millones": "2026-11-24",
+      "legumbres prograno busca acuerdos para recuperar variedades y desarrollar genetica": "2026-11-24",
+      "las exportaciones agroindustriales superaron los usd 47 800 millones hasta octubre cuales fueron los productos ganadores": "2026-11-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -64910,7 +65020,12 @@
       "e5cf5078ddcaf752": "2026-11-24",
       "6efd18d79033a684": "2026-11-24",
       "81b7bfcf620916e8": "2026-11-24",
-      "8b703c4936878e22": "2026-11-24"
+      "8b703c4936878e22": "2026-11-24",
+      "d62f3d7bab69427c": "2026-11-24",
+      "d017f2444239ebe3": "2026-11-24",
+      "f68626300dbfc1de": "2026-11-24",
+      "2b0c205ddefba739": "2026-11-24",
+      "2c5e3ea2eb5ee5ab": "2026-11-24"
     }
   },
   "elegidas": [
@@ -99824,9 +99939,200 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_633245719677_portada.jpg"
+    },
+    {
+      "id": "3b8353aca511",
+      "cuando": "2026-11-24T21:00-03:00",
+      "titulo_original": "Importante logro en un tambo cordobés: redujeron 31 por ciento la emisión de metano",
+      "descripcion": "Lo lograron sin afectar el volumen de producción de leche y con mejoras en los sólidos. La diferencia la hizo un suplemento natural elaborado a base de compuestos bioactivos vegetales, como polifenoles y saponinas.",
+      "fuente": "Clarín Rural",
+      "url": "https://www.clarin.com/rural/importante-logro-tambo-cordobes-redujeron-31-ciento-emision-metano_0_kJackwTsos.html",
+      "titular": "Tambo cordobés bajó 31% metano con suplemento natural durante 51 días",
+      "volanta": "Ganadería",
+      "score": {
+        "conversacion": 12,
+        "historia_concreta": 14,
+        "cercania_pba": 10,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 62,
+        "commercial_score": 55,
+        "subtema": "ganaderia",
+        "tema": "metano en tambos",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Innovación práctica en un tambo cordobés que reduce metano sin perder leche; interesa a tamberos.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-24T21:00:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "8ae94af2-959b-429d-b333-e00ee442baad",
+          "slug": "tambo-cordobes-logro-reducir-31-por-ciento-de-metano-con-6e82cd",
+          "url": "https://www.diariolacampaña.com.ar/n/tambo-cordobes-logro-reducir-31-por-ciento-de-metano-con-6e82cd",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18140428096655522",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3b8353aca511_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "9ac469b144b4",
+      "rep": {
+        "id": "9ac469b144b4",
+        "fuente": "Agrositio",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+        "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249501-emprendedores-del-agro-el-caso-tropfen-10-anos-invirtiendo-en-tecnologia-de-biologicos.html",
+        "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249501-emprendedores-del-agro-el-caso-tropfen-10-anos-invirtiendo-en-tecnologia-de-biologicos.html",
+        "titulo": "Emprendedores del agro: el Caso Tropfen 10 años invirtiendo en tecnología de biológicos",
+        "titulo_norm": "emprendedores del agro el caso tropfen 10 anos invirtiendo en tecnologia de biologicos",
+        "descripcion": "¿Qué es necesario para invertir en un país tan cambiante como la Argentin? Una pregunta que se responde entrevistando a emprendedores que se animan con sus ideqaqs e innovaciones. Una charla con el Ing. Agr. Alejandro Capridi, Co-fundador y Dir. comercial deTroffen. Una empresa argentina de biológicos agropecuarios, cumple 10 años y apuesta a la innovación con una nueva planta en Pergamino. además la expansión internacional en mercados como Uruguay, Paraguay, Brasil, Perú, Chile...",
+        "imagen_url": "https://agrotv.agrositio.com/placas/PdJN9Uy86zc.jpg",
+        "autor": "info@agrositio.com (Canal Agrositio)",
+        "publicado": "2026-11-24T20:23-03:00",
+        "capturado": "2026-11-24T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "d62f3d7bab69427c",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "9ac469b144b4",
+          "fuente": "Agrositio",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+          "url": "https://www.agrositio.com.ar/canal-agrositio/entrevistas/249501-emprendedores-del-agro-el-caso-tropfen-10-anos-invirtiendo-en-tecnologia-de-biologicos.html",
+          "canonical_url": "https://agrositio.com.ar/canal-agrositio/entrevistas/249501-emprendedores-del-agro-el-caso-tropfen-10-anos-invirtiendo-en-tecnologia-de-biologicos.html",
+          "titulo": "Emprendedores del agro: el Caso Tropfen 10 años invirtiendo en tecnología de biológicos",
+          "titulo_norm": "emprendedores del agro el caso tropfen 10 anos invirtiendo en tecnologia de biologicos",
+          "descripcion": "¿Qué es necesario para invertir en un país tan cambiante como la Argentin? Una pregunta que se responde entrevistando a emprendedores que se animan con sus ideqaqs e innovaciones. Una charla con el Ing. Agr. Alejandro Capridi, Co-fundador y Dir. comercial deTroffen. Una empresa argentina de biológicos agropecuarios, cumple 10 años y apuesta a la innovación con una nueva planta en Pergamino. además la expansión internacional en mercados como Uruguay, Paraguay, Brasil, Perú, Chile...",
+          "imagen_url": "https://agrotv.agrositio.com/placas/PdJN9Uy86zc.jpg",
+          "autor": "info@agrositio.com (Canal Agrositio)",
+          "publicado": "2026-11-24T20:23-03:00",
+          "capturado": "2026-11-24T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "d62f3d7bab69427c",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 15,
+        "cercania_pba": 15,
+        "interes_productores": 10,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 63,
+        "commercial_score": 40,
+        "subtema": "empresas",
+        "tema": "tropfen",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una empresa nacional de biológicos que cumple 10 años y abre planta en Pergamino, zona norte de Buenos Aires.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 4,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "cuando": "2026-11-24T21:00-03:00"
+    },
+    {
+      "id": "f2c70558a91a",
+      "rep": {
+        "id": "f2c70558a91a",
+        "fuente": "LA NACION Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+        "url": "https://www.lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026/",
+        "canonical_url": "https://lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026",
+        "titulo": "Comenzaron sin oficinas, con dos camionetas que debían y acaban de inaugurar una fábrica de US$1,5 millones",
+        "titulo_norm": "comenzaron sin oficinas con dos camionetas que debian y acaban de inaugurar una fabrica de us 1 5 millones",
+        "descripcion": "Alejandro Capridi, Julián Etchegoyen y Rafael Curia, fundadores de una empresa especializada en el desarrollo y producción de coadyuvantes, bioestimulantes, fertilizantes y biológicos, construyó en Pergamino un nuevo establecimiento de fraccionamiento y producción",
+        "imagen_url": "https://resizer.glanacion.com/resizer/v2/IED4LP6CDVCBFHN7KPQZARLN7Q.jpg?auth=46fcbd7d0e3cd6e55227a485b2269f87ef28dd2a9e5874213d70db3998a70cf5&smart=true",
+        "autor": "",
+        "publicado": "2026-11-24T20:55-03:00",
+        "capturado": "2026-11-24T21:00-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "f68626300dbfc1de",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "f2c70558a91a",
+          "fuente": "LA NACION Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
+          "url": "https://www.lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026/",
+          "canonical_url": "https://lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026",
+          "titulo": "Comenzaron sin oficinas, con dos camionetas que debían y acaban de inaugurar una fábrica de US$1,5 millones",
+          "titulo_norm": "comenzaron sin oficinas con dos camionetas que debian y acaban de inaugurar una fabrica de us 1 5 millones",
+          "descripcion": "Alejandro Capridi, Julián Etchegoyen y Rafael Curia, fundadores de una empresa especializada en el desarrollo y producción de coadyuvantes, bioestimulantes, fertilizantes y biológicos, construyó en Pergamino un nuevo establecimiento de fraccionamiento y producción",
+          "imagen_url": "https://resizer.glanacion.com/resizer/v2/IED4LP6CDVCBFHN7KPQZARLN7Q.jpg?auth=46fcbd7d0e3cd6e55227a485b2269f87ef28dd2a9e5874213d70db3998a70cf5&smart=true",
+          "autor": "",
+          "publicado": "2026-11-24T20:55-03:00",
+          "capturado": "2026-11-24T21:00-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "f68626300dbfc1de",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 3,
+        "ai_score": 75,
+        "commercial_score": 50,
+        "subtema": "empresas",
+        "tema": "tropfen",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "La historia de esfuerzo de los fundadores que arrancaron con dos camionetas en deuda y armaron una fábrica nueva en Pergamino.",
+        "tema_doc": "tecnologia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "cuando": "2026-11-24T21:00-03:00"
+    },
     {
       "id": "10937dadd468",
       "rep": {
@@ -100415,73 +100721,6 @@
       "cuando": "2026-11-24T14:30-03:00"
     },
     {
-      "id": "3b8353aca511",
-      "rep": {
-        "id": "3b8353aca511",
-        "fuente": "Clarín Rural",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.clarin.com/rss/rural/",
-        "url": "https://www.clarin.com/rural/importante-logro-tambo-cordobes-redujeron-31-ciento-emision-metano_0_kJackwTsos.html",
-        "canonical_url": "https://clarin.com/rural/importante-logro-tambo-cordobes-redujeron-31-ciento-emision-metano_0_kJackwTsos.html",
-        "titulo": "Importante logro en un tambo cordobés: redujeron 31 por ciento la emisión de metano",
-        "titulo_norm": "importante logro en un tambo cordobes redujeron 31 por ciento la emision de metano",
-        "descripcion": "Lo lograron sin afectar el volumen de producción de leche y con mejoras en los sólidos. La diferencia la hizo un suplemento natural elaborado a base de compuestos bioactivos vegetales, como polifenoles y saponinas.",
-        "imagen_url": "https://www.clarin.com/img/2026/11/24/asclj4yxX_1200x630__1.jpg",
-        "autor": "Clarin.com - Home",
-        "publicado": "2026-11-24T13:56-03:00",
-        "capturado": "2026-11-24T14:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "ec0506b1940e5262",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "3b8353aca511",
-          "fuente": "Clarín Rural",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.clarin.com/rss/rural/",
-          "url": "https://www.clarin.com/rural/importante-logro-tambo-cordobes-redujeron-31-ciento-emision-metano_0_kJackwTsos.html",
-          "canonical_url": "https://clarin.com/rural/importante-logro-tambo-cordobes-redujeron-31-ciento-emision-metano_0_kJackwTsos.html",
-          "titulo": "Importante logro en un tambo cordobés: redujeron 31 por ciento la emisión de metano",
-          "titulo_norm": "importante logro en un tambo cordobes redujeron 31 por ciento la emision de metano",
-          "descripcion": "Lo lograron sin afectar el volumen de producción de leche y con mejoras en los sólidos. La diferencia la hizo un suplemento natural elaborado a base de compuestos bioactivos vegetales, como polifenoles y saponinas.",
-          "imagen_url": "https://www.clarin.com/img/2026/11/24/asclj4yxX_1200x630__1.jpg",
-          "autor": "Clarin.com - Home",
-          "publicado": "2026-11-24T13:56-03:00",
-          "capturado": "2026-11-24T14:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ec0506b1940e5262",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 14,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 62,
-        "commercial_score": 55,
-        "subtema": "ganaderia",
-        "tema": "metano en tambos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Innovación práctica en un tambo cordobés que reduce metano sin perder leche; interesa a tamberos.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T14:30-03:00"
-    },
-    {
       "id": "3141580064f9",
       "rep": {
         "id": "3141580064f9",
@@ -100695,8 +100934,8 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-24T19:40:28-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-24T21:08:43-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -111185,7 +111424,9 @@
     "44455eaf3c37": "2026-11-24T19:32",
     "8fb9f350b729": "2026-11-24T19:32",
     "6b7c261c55ee": "2026-11-24T19:32",
-    "163544bad587": "2026-11-24T19:32"
+    "163544bad587": "2026-11-24T19:32",
+    "f2c70558a91a": "2026-11-24T21:00",
+    "9ac469b144b4": "2026-11-24T21:00"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
