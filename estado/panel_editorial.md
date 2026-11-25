@@ -1,9 +1,9 @@
 # Panel editorial — Diario y Radio
-Actualizado: 24/11/2026 00:18 (hora AR). Se rehace al final de cada pasada.
+Actualizado: 25/11/2026 00:02 (hora AR). Se rehace al final de cada pasada.
 
 Íconos: ✅ salió · ⏳ esperando otra temática · 🚫 cupo · — no le tocaba · ❌ falló · ⛔ rechazado · ❔ sin confirmar
 
-## Hoy (2026-11-24)
+## Hoy (2026-11-25)
 
 _Todavía no hay pasadas registradas hoy._
 
@@ -11,27 +11,27 @@ _Todavía no hay pasadas registradas hoy._
 
 | Origen | YouTube | Web | Facebook (reel/posteo) | FB enlace | Instagram | IG prueba |
 |---|---:|---:|---:|---:|---:|---:|
-| Policiales | 35 | 36 | 36 | 0 | 33 | 0 |
-| Nacionales | 13 | 349 | 0 | 0 | 0 | 39 |
+| Policiales | 34 | 35 | 35 | 0 | 32 | 0 |
+| Nacionales | 13 | 348 | 0 | 0 | 0 | 38 |
 
 Topes vigentes: policiales 3 hechos por pasada (6 pasadas); nacionales 3 por pasada y 12 por día (1 de las categorías nuevas); X y TikTok en el [panel del distribuidor](https://github.com/dlcchivilcoy/social_publisher/blob/main/state/distribuidor_panel.md).
 Ajuste semanal: con esto y las métricas de abajo se decide a mano; nada sube solo.
 
 ## Métricas a 24-72 h de publicadas (últimos 7 días)
 
-### YouTube — 48 piezas · mediana vistas 289.5 · mediana likes 1
+### YouTube — 46 piezas · mediana vistas 343 · mediana likes 1
 
-- **Por categoría:** policiales: 35, vistas 279, likes 1 · virales: 13, vistas 531, likes 1
-- **Por franja:** madrugada (0-6): 14, vistas 529.5, likes 1.5 · mañana (6-12): 8, vistas 594, likes 2 · noche (18-24): 26, vistas 235, likes 0
-- **Por día:** domingo: 6, vistas 236.5, likes 1 · jueves: 9, vistas 531, likes 1 · lunes: 2, vistas 483, likes 2.5 ⚠️muestra chica · martes: 7, vistas 36, likes 0 · miércoles: 6, vistas 182, likes 0.5 · sábado: 8, vistas 534.5, likes 1 · viernes: 10, vistas 455, likes 2
-- **Por distancia:** 50 a 100 km: 29, vistas 300, likes 1 · Chivilcoy: 1, vistas 173, likes 1 ⚠️muestra chica · hasta 50 km: 5, vistas 86, likes 0
+- **Por categoría:** policiales: 34, vistas 324.5, likes 1 · virales: 12, vistas 594, likes 2
+- **Por franja:** madrugada (0-6): 14, vistas 529.5, likes 1.5 · mañana (6-12): 8, vistas 594, likes 2 · noche (18-24): 24, vistas 305, likes 1
+- **Por día:** domingo: 6, vistas 236.5, likes 1 · jueves: 9, vistas 531, likes 1 · lunes: 6, vistas 261.5, likes 0.5 · martes: 1, vistas 98, likes 1 ⚠️muestra chica · miércoles: 6, vistas 182, likes 0.5 · sábado: 8, vistas 534.5, likes 1 · viernes: 10, vistas 455, likes 2
+- **Por distancia:** 50 a 100 km: 29, vistas 347, likes 1 · Chivilcoy: 1, vistas 173, likes 1 ⚠️muestra chica · hasta 50 km: 4, vistas 212.5, likes 0 ⚠️muestra chica
 
-### Instagram — 32 piezas · mediana vistas s/d · mediana likes 5.5
+### Instagram — 31 piezas · mediana vistas s/d · mediana likes 5
 
-- **Por categoría:** policiales: 32, likes 5.5
-- **Por franja:** madrugada (0-6): 9, likes 4 · noche (18-24): 23, likes 6
-- **Por día:** domingo: 3, likes 1 ⚠️muestra chica · jueves: 6, likes 6.5 · lunes: 1, likes 12 ⚠️muestra chica · martes: 6, likes 7.5 · miércoles: 4, likes 4.5 ⚠️muestra chica · sábado: 6, likes 11.5 · viernes: 6, likes 4.5
-- **Por distancia:** 50 a 100 km: 27, likes 6 · hasta 50 km: 5, likes 5
+- **Por categoría:** policiales: 31, likes 5
+- **Por franja:** madrugada (0-6): 10, likes 3 · noche (18-24): 21, likes 6
+- **Por día:** domingo: 3, likes 1 ⚠️muestra chica · jueves: 6, likes 6.5 · lunes: 5, likes 12 · martes: 1, likes 2 ⚠️muestra chica · miércoles: 4, likes 4.5 ⚠️muestra chica · sábado: 6, likes 11.5 · viernes: 6, likes 4.5
+- **Por distancia:** 50 a 100 km: 27, likes 6 · hasta 50 km: 4, likes 4.5 ⚠️muestra chica
 
 _No disponible: Instagram: alcance, reproducciones, guardados, compartidos y retención — falta el permiso instagram_manage_insights en el token. Facebook: alcance (falta read_insights) y los posteos con placa de nacionales (falta pages_read_user_content). Web: vistas por nota — sin integración en este sistema._
 _Con menos de 5 piezas por grupo no se saca conclusión (franja, día o categoría)._
