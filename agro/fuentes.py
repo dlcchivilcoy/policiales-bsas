@@ -114,6 +114,11 @@ FUENTES = [
     # economía general lo baja el puntaje.
     {"nombre": "Noticias AgroPecuarias", "base": "https://www.noticiasagropecuarias.com",
      "rss": ["https://www.noticiasagropecuarias.com/feed/"], "tipo": "medio", "min_ancho": 480, "activa": True},
+    # 24/11/2026 (el editor: «esta también https://agrobonaerense.com.ar/»): el campo de la provincia de Buenos Aires
+    # (Chacabuco, la Rural, UATRE, seguro de desempleo rural). RSS en /rss (unas 3 notas por día), robots.txt solo
+    # cierra /beta/, /banner y /resultados/. Fotos de 780 px: pasan el mínimo.
+    {"nombre": "Agro Bonaerense", "base": "https://agrobonaerense.com.ar",
+     "rss": ["https://agrobonaerense.com.ar/rss"], "tipo": "medio", "activa": True},
     # 16/11/2026 (pedido del editor: «priorizá videos que tengan que ver con policiales en el campo»): las secciones
     # de policiales de los portales que más seguido alojan su propio video (las mismas de nacionales/prueba.py), solo
     # lo que es del campo (abigeato, robos en campos, silobolsas, incendios rurales, accidentes con maquinaria).
