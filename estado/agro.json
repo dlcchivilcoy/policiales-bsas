@@ -53984,6 +53984,30 @@
       "urgente": false,
       "potencial_carrusel": 5,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "700ccc7ba49d2047": {
+      "conversacion": 8,
+      "historia_concreta": 2,
+      "cercania_pba": 15,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 45,
+      "commercial_score": 30,
+      "subtema": "ganaderia",
+      "tema": "costos ganaderos",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una nota de análisis general sobre costos y precios que no menciona un caso puntual ni una localidad específica.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        48,
+        41
+      ]
     }
   },
   "indice": {
@@ -57665,7 +57689,8 @@
       "https://bichosdecampo.com/la-paranoia-no-siempre-es-buena-consejera-cual-es-el-verdadero-papel-del-empresario-macrista-david-lacroze-dentro-del-visec-carnes": "2026-11-24",
       "https://lanacion.com.ar/economia/campo/comenzaron-sin-oficinas-con-dos-camionetas-que-debian-y-acaban-de-inaugurar-una-fabrica-de-us15-nid24112026": "2026-11-24",
       "https://agroempresario.com/publicacion/124115/legumbres-prograno-busca-acuerdos-para-recuperar-variedades-y-desarrollar-genetica": "2026-11-24",
-      "https://infobae.com/economia/2026/11/24/las-exportaciones-agroindustriales-superaron-los-usd-47800-millones-hasta-octubre-cuales-fueron-los-productos-ganadores": "2026-11-24"
+      "https://infobae.com/economia/2026/11/24/las-exportaciones-agroindustriales-superaron-los-usd-47800-millones-hasta-octubre-cuales-fueron-los-productos-ganadores": "2026-11-24",
+      "https://lamarcadelincoln.com.ar/la-situacion-financiera-de-la-ganaderia-argentina-costos-que-suben-y-precios-que-caen": "2026-11-24"
     },
     "titulo": {
       "el negocio de la papa esta verde y goza de buena salud un alivio dentro de las economias regionales": "2026-10-13",
@@ -61345,7 +61370,8 @@
       "la paranoia no siempre es buena consejera cual es el verdadero papel del empresario macrista david lacroze dentro del visec carnes": "2026-11-24",
       "comenzaron sin oficinas con dos camionetas que debian y acaban de inaugurar una fabrica de us 1 5 millones": "2026-11-24",
       "legumbres prograno busca acuerdos para recuperar variedades y desarrollar genetica": "2026-11-24",
-      "las exportaciones agroindustriales superaron los usd 47 800 millones hasta octubre cuales fueron los productos ganadores": "2026-11-24"
+      "las exportaciones agroindustriales superaron los usd 47 800 millones hasta octubre cuales fueron los productos ganadores": "2026-11-24",
+      "la situacion financiera de la ganaderia argentina costos que suben y precios que caen": "2026-11-24"
     },
     "hash": {
       "fa26a9f5a33bfa49": "2026-10-13",
@@ -65025,7 +65051,8 @@
       "d017f2444239ebe3": "2026-11-24",
       "f68626300dbfc1de": "2026-11-24",
       "2b0c205ddefba739": "2026-11-24",
-      "2c5e3ea2eb5ee5ab": "2026-11-24"
+      "2c5e3ea2eb5ee5ab": "2026-11-24",
+      "700ccc7ba49d2047": "2026-11-24"
     }
   },
   "elegidas": [
@@ -99994,6 +100021,65 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3b8353aca511_portada.jpg"
+    },
+    {
+      "id": "44455eaf3c37",
+      "cuando": "2026-11-24T22:30-03:00",
+      "titulo_original": "Las exportaciones argentinas de maíz crecieron 41% en el año y superaron a Brasil",
+      "descripcion": "La comercialización del cereal mantiene un ritmo adelantado respecto del promedio histórico, aunque la caída de los precios internacionales desaceleró las ventas de los productores. En paralelo, la siembra de maíz temprano alcanza el 39,8% del área prevista",
+      "fuente": "Agroclave (La Capital)",
+      "url": "https://www.lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
+      "titular": "Maíz: exportaciones suben 41% y superan a Brasil",
+      "volanta": "Mercados",
+      "score": {
+        "conversacion": 8,
+        "historia_concreta": 9,
+        "cercania_pba": 12,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 56,
+        "commercial_score": 52,
+        "subtema": "agro",
+        "tema": "maíz",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos de exportación y avance de siembra de maíz que impactan directo en la campaña local.",
+        "tema_doc": "campana",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          57,
+          56
+        ],
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-24T22:30:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "2cba0c03-39a4-4058-a2c5-95f18479c9f8",
+          "slug": "maiz-exportaciones-suben-41-y-superan-a-brasil-en-una-campana-0e8ea3",
+          "url": "https://www.diariolacampaña.com.ar/n/maiz-exportaciones-suben-41-y-superan-a-brasil-en-una-campana-0e8ea3",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18159421498524667",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_44455eaf3c37_portada.jpg"
     }
   ],
   "pendientes": [
@@ -100197,77 +100283,6 @@
         "dobles": [
           56,
           59
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false
-      },
-      "cuando": "2026-11-24T19:32-03:00"
-    },
-    {
-      "id": "44455eaf3c37",
-      "rep": {
-        "id": "44455eaf3c37",
-        "fuente": "Agroclave (La Capital)",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-        "url": "https://www.lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
-        "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
-        "titulo": "Las exportaciones argentinas de maíz crecieron 41% en el año y superaron a Brasil",
-        "titulo_norm": "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil",
-        "descripcion": "La comercialización del cereal mantiene un ritmo adelantado respecto del promedio histórico, aunque la caída de los precios internacionales desaceleró las ventas de los productores. En paralelo, la siembra de maíz temprano alcanza el 39,8% del área prevista",
-        "imagen_url": "https://media.lacapital.com.ar/p/718a74be8a2204928f02470623e5fb8e/adjuntos/305/imagenes/101/990/0101990435/1200x675/838x340:858x360/maizjpg.jpg",
-        "autor": "",
-        "publicado": "2026-11-24T19:15-03:00",
-        "capturado": "2026-11-24T19:32-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "81b7bfcf620916e8",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "44455eaf3c37",
-          "fuente": "Agroclave (La Capital)",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lacapital.com.ar/sitemap-news.xml",
-          "url": "https://www.lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
-          "canonical_url": "https://lacapital.com.ar/agro/las-exportaciones-argentinas-maiz-crecieron-41-el-ano-y-superaron-brasil-n10293964.html",
-          "titulo": "Las exportaciones argentinas de maíz crecieron 41% en el año y superaron a Brasil",
-          "titulo_norm": "las exportaciones argentinas de maiz crecieron 41 en el ano y superaron a brasil",
-          "descripcion": "La comercialización del cereal mantiene un ritmo adelantado respecto del promedio histórico, aunque la caída de los precios internacionales desaceleró las ventas de los productores. En paralelo, la siembra de maíz temprano alcanza el 39,8% del área prevista",
-          "imagen_url": "https://media.lacapital.com.ar/p/718a74be8a2204928f02470623e5fb8e/adjuntos/305/imagenes/101/990/0101990435/1200x675/838x340:858x360/maizjpg.jpg",
-          "autor": "",
-          "publicado": "2026-11-24T19:15-03:00",
-          "capturado": "2026-11-24T19:32-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "81b7bfcf620916e8",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 8,
-        "historia_concreta": 9,
-        "cercania_pba": 12,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 56,
-        "commercial_score": 52,
-        "subtema": "agro",
-        "tema": "maíz",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos de exportación y avance de siembra de maíz que impactan directo en la campaña local.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          57,
-          56
         ],
         "de_zona": false,
         "policial_rural": false,
@@ -100934,8 +100949,8 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-24T22:20:41-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-24T22:34:57-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-10-17T14:00:00-03:00": {
       "dia": "2026-10-17",
@@ -111491,7 +111506,8 @@
     "6b7c261c55ee": "2026-11-24T19:32",
     "163544bad587": "2026-11-24T19:32",
     "f2c70558a91a": "2026-11-24T21:00",
-    "9ac469b144b4": "2026-11-24T21:00"
+    "9ac469b144b4": "2026-11-24T21:00",
+    "cfdf44aad439": "2026-11-24T22:30"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
