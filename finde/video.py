@@ -181,6 +181,18 @@ def pastilla(d, x, y, texto: str, f, fondo, color, anchor="l", borde=None, punto
     return (x0, y, x0 + w, y + h)
 
 
+def anton_que_entra(texto: str, tam: int, alto_max: int, ancho: int = X1 - X0, piso: int = 56):
+    """La Anton más grande (hasta `tam`) con la que `texto` entra en `alto_max` píxeles de alto (26/11/2026: un gancho
+    largo de FADA se metía en los subtítulos)."""
+    medir = ImageDraw.Draw(Image.new("L", (1, 1)))
+    while tam > piso:
+        f = MV.anton(tam)
+        if len(D.renglones(medir, texto, f, ancho)) * f.size * 1.06 <= alto_max:
+            return f
+        tam -= 6
+    return MV.anton(piso)
+
+
 def palabras_entran(im, texto: str, f, y: int, t: float, color, acento, resaltar=(), centrado=True, x=X0,
                     ancho=X1 - X0, paso=0.07, salto=1.06, sombra=False) -> int:
     """Escribe palabra por palabra (cada una sube y aparece); las de `resaltar` en el color de acento. Devuelve la y
@@ -473,7 +485,8 @@ def escena_gancho(im, t, f, pl):
     pastilla(d, X0, 520, "LA PREGUNTA DEL " + ("SÁBADO" if f.get("dia") == "sabado" else "DOMINGO"),
              sans(28, "bold"), None, BLANCO, borde=NARANJA, punto=True, alfa=u)
     im.alpha_composite(ov)
-    palabras_entran(im, f["narracion"]["gancho"].upper(), MV.anton(118), 610, t - 0.15, BLANCO, NARANJA,
+    gancho = f["narracion"]["gancho"].upper()
+    palabras_entran(im, gancho, anton_que_entra(gancho, 118, Y_SUB - 60 - 610), 610, t - 0.15, BLANCO, NARANJA,
                     pl["clave_gancho"], centrado=False, sombra=True)
 
 
@@ -698,8 +711,10 @@ def escena_bloque(im, t, f, pl):
              punto=True, alfa=ease(t / 0.3))
     im.alpha_composite(ov)
     if b.get("filas"):
-        palabras_entran(im, b.get("titulo") or "", MV.anton(80), 400, t, BLANCO, NARANJA, (), centrado=False,
-                        sombra=True)
+        titulo = b.get("titulo") or ""
+        y_fin = palabras_entran(im, titulo, anton_que_entra(titulo, 80, 190), 400, t, BLANCO, NARANJA, (),
+                                centrado=False, sombra=True)
+        y_filas = max(640, y_fin + 100)
         for i, (etiqueta, valor) in enumerate(b["filas"][:5]):
             k = rebote((t - 0.5 - 0.35 * i) / 0.45)
             if k <= 0:
@@ -709,7 +724,7 @@ def escena_bloque(im, t, f, pl):
             dt.rounded_rectangle((0, 0, 919, 149), 28, fill=(14, 15, 18, 215), outline=(255, 255, 255, 255), width=3)
             dt.text((36, 75), str(etiqueta)[:30], font=sans(40, "bold"), fill=BLANCO, anchor="lm")
             dt.text((884, 75), str(valor)[:14], font=MV.anton(80), fill=NARANJA, anchor="rm")
-            MV.pop_sprite(im, tar, (W / 2, 640 + i * 170), k)
+            MV.pop_sprite(im, tar, (W / 2, y_filas + i * 170), k)
         return
     num = b.get("numero")
     if num is None:
@@ -752,7 +767,8 @@ def escena_cierre(im, t, f, pl):
     if papel:
         yy = palabras_entran(im, f["cierre"], serif(96), 570, t - 0.2, NEGRO, NARANJA_OSC, pl["clave_cierre"])
     else:
-        yy = palabras_entran(im, f["cierre"].upper(), MV.anton(104), 570, t - 0.2, BLANCO, NARANJA,
+        cierre = f["cierre"].upper()
+        yy = palabras_entran(im, cierre, anton_que_entra(cierre, 104, 420), 570, t - 0.2, BLANCO, NARANJA,
                              pl["clave_cierre"], centrado=False, sombra=True)
     k = ease((t - 1.1) / 0.4)
     if k > 0:

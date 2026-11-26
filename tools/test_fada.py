@@ -31,6 +31,10 @@ chequear("números: $58, 23%, 4,5 y 1.234", F.numeros("$58 de cada $100, 23% y 4
 fuente = "9 de cada 10 cargas viajan por ruta. Transportar granos es 36% más caro que en EEUU y 10% más que en Brasil."
 chequear("un número que está pasa", F.numeros_ausentes(["El 36% más caro"], fuente) == [])
 chequear("un número inventado no pasa", len(F.numeros_ausentes(["Es 45% más caro"], fuente)) == 1)
+chequear("una comparación dada vuelta no pasa («EEUU 36% más barato» por «36% más caro»)",
+         len(F._sentido_dado_vuelta(["Estados Unidos: 36% más barato"], fuente)) == 1
+         and not F._sentido_dado_vuelta(["36% más caro que en Estados Unidos"], fuente))
+chequear("la unidad «+» se limpia y « %» queda «%»", F._unidad("+") == "" and F._unidad(" %") == "%")
 
 # --- lectura de páginas --------------------------------------------------------------------------------
 PAGINA = ('<html><title>Logística agroindustrial – Fundación FADA</title><body>Sumate Informe Logística '

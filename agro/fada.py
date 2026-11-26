@@ -282,6 +282,9 @@ respuesta y después los datos más fuertes del informe, para productores y gent
 REGLAS DURAS:
 - Usá SOLO números que aparezcan TAL CUAL en el material. No calcules, no redondees, no conviertas, no inventes.
 - Lo que es estimación, proyección, propuesta u opinión de FADA va atribuido («según FADA», «FADA estima»).
+- Las comparaciones van con el MISMO sentido y las mismas palabras del material: si dice «36% más caro que en EEUU»,
+  es «36% más caro»; NUNCA la des vuelta («EEUU 36% más barato» es FALSO: no es la misma cuenta).
+- "unidad" es solo "%", "" o una palabra («millones», «toneladas»); nunca signos sueltos como "+".
 - Español rioplatense, claro y periodístico. Sin emojis.
 - Si el material no trae números útiles, devolvé "apta": false con el motivo.
 
@@ -308,12 +311,36 @@ cuando el informe compara cosas). Ordenalos para contar una historia: el problem
 propone FADA."""
 
 
+def _sentido_dado_vuelta(textos: list, fuente: str) -> list:
+    """Las frases que dicen «más barato/menos» con un número que el material usa con «más caro/más» (o al revés):
+    una comparación dada vuelta no es la misma cuenta (26/11/2026: «EEUU 36% más barato» por «36% más caro»)."""
+    from finde import datos as DA
+    src = DA.plano(fuente)
+    malos = []
+    opuestos = (("mas barato", "mas caro"), ("mas caro", "mas barato"), ("menos", "mas"))
+    for t in textos:
+        tt = DA.plano(t)
+        for n in re.findall(r"\d+(?:[.,]\d+)?", tt):
+            for dice, original in opuestos:
+                if re.search(rf"{re.escape(n)}\s*%?\s*{dice}", tt) and not re.search(rf"{re.escape(n)}\s*%?\s*{dice}", src) \
+                        and re.search(rf"{re.escape(n)}\s*%?\s*{original}", src):
+                    malos.append(f"«{t[:60]}» da vuelta «{n} {original}»")
+    return malos
+
+
+def _unidad(u) -> str:
+    u = str(u or "").strip()
+    if "%" in u:
+        return "%"
+    return u.strip("+-*").strip()
+
+
 def _controlar_bloque(b: dict, fuente: str) -> list:
     textos = [b.get("texto", ""), b.get("narracion", ""), b.get("titulo", "")]
     if b.get("numero") is not None:
         textos.append(str(b["numero"]))
     textos += [f"{e} {v}" for e, v in (b.get("filas") or [])]
-    return numeros_ausentes(textos, fuente)
+    return numeros_ausentes(textos, fuente) + _sentido_dado_vuelta(textos, fuente)
 
 
 def ficha(g: dict, redactar=None, log=print) -> dict:
@@ -334,8 +361,8 @@ def ficha(g: dict, redactar=None, log=print) -> dict:
         numero, dec = float(r["numero"]), int(r.get("dec") or 0)
     except (KeyError, TypeError, ValueError):
         return {"error": "la respuesta no es un número"}
-    unidad = r.get("unidad") or ""
-    pct = unidad.strip() == "%"
+    unidad = _unidad(r.get("unidad"))
+    pct = unidad == "%"
     op, ok = T.opciones_de(numero, dec, unidad=" %" if pct else unidad, tope=100.0 if pct else max(numero * 3, 10),
                            paso=max(1.0, round(abs(numero) * 0.35, dec)), pos=T.posicion(g["slug"]))
     narr = {"gancho": j.get("gancho") or j.get("pregunta"),
@@ -343,7 +370,7 @@ def ficha(g: dict, redactar=None, log=print) -> dict:
             "revelacion": j.get("revelacion") or "",
             "cierre": (j.get("cierre") or "") + " Contanos en los comentarios."}
     principal = [str(numero), r.get("texto", ""), narr["gancho"], narr["revelacion"], j.get("pregunta", "")]
-    faltan = numeros_ausentes(principal, fuente)
+    faltan = numeros_ausentes(principal, fuente) + _sentido_dado_vuelta(principal, fuente)
     if faltan:
         return {"error": "la respuesta trae números que no están en el informe: " + "; ".join(faltan[:3])}
     bloques = []
@@ -354,6 +381,7 @@ def ficha(g: dict, redactar=None, log=print) -> dict:
         if mal:
             log(f"   bloque afuera ({b.get('volanta')}): números que no están en el informe: {'; '.join(mal[:2])}")
             continue
+        b["unidad"] = _unidad(b.get("unidad"))
         if b.get("numero") is not None:
             try:
                 b["numero"] = float(b["numero"])
