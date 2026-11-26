@@ -30494,7 +30494,7 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T21:41:29-03:00",
+  "actualizado": "2026-11-25T21:45:28-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-11-17T22:00:00-03:00": {
@@ -32859,6 +32859,47 @@
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-25T21:45:00-03:00": {
+      "dia": "2026-11-25",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo están los caminos para cargar?",
+          "opciones": [
+            "Buenos",
+            "Feos",
+            "Cortados"
+          ],
+          "publico": "transporte",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18658476574013090"
+            },
+            "facebook": {
+              "id": "2138415837040519"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18658476574013090"
+              },
+              "facebook": {
+                "id": "2138415837040519"
+              }
+            }
+          ]
         }
       }
     }
