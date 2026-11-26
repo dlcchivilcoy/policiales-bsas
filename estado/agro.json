@@ -25458,61 +25458,6 @@
   },
   "elegidas": [
     {
-      "id": "982df701bfd1",
-      "cuando": "2026-11-18T18:03-03:00",
-      "titulo_original": "Temperaturas bajo lo normal, seguidas por un marcado ascenso térmico, finalizando con precipitaciones de muy variada intensidad",
-      "descripcion": "Según lo informado por la Bolsa de Cereales de Buenos Aires, dicho pronostico será alternado por focos de tormentas con áreas de escasa actividad....",
-      "fuente": "Agrositio",
-      "url": "https://www.agrositio.com.ar/noticia/249412-temperaturas-bajo-lo-normal-seguidas-por-un-marcado-ascenso-termico-finalizando-con-precipitaciones-de-muy-variada-intensidad.html",
-      "titular": "Pronóstico anticipa heladas matinales, fuerte subida térmica y lluvias dispares",
-      "volanta": "Clima",
-      "score": {
-        "conversacion": 20,
-        "historia_concreta": 15,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 82,
-        "commercial_score": 70,
-        "subtema": "agro",
-        "tema": "pronóstico del tiempo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El pronóstico y las tormentas siempre interesan y preocupan directamente a los productores de la región.",
-        "tema_doc": "clima",
-        "urgente": true,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-18T18:00:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "57aa05d7-24c1-4fbb-a615-c839e64ed3dd",
-          "slug": "el-clima-anticipa-heladas-matinales-rapido-repunte-termico-y-9608aa",
-          "url": "https://www.diariolacampaña.com.ar/n/el-clima-anticipa-heladas-matinales-rapido-repunte-termico-y-9608aa",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "17881424271633857",
-          "diapositivas": 5
-        },
-        "facebook": {
-          "id": "101271341650483_1765927365538260",
-          "fotos": 5
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_982df701bfd1_portada.jpg"
-    },
-    {
       "id": "b3e962b0fce3",
       "cuando": "2026-11-18T19:33-03:00",
       "titulo_original": "Tasas viales: la Justicia le puso límites a un municipio bonaerense por cobrar sin una contraprestación comprobada",
@@ -31549,49 +31494,9 @@
       "cuando": "2026-11-25T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-26T17:49:41-03:00",
+  "actualizado": "2026-11-26T18:27:13-03:00",
   "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-18T18:00:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Temporal con granizo y ráfagas afecta localidades del AMBA",
-          "url": "https://tn.com.ar/sociedad/2026/11/18/granizo-rafagas-de-viento-y-lluvias-intensas-las-impactantes-imagenes-del-temporal-en-el-amba/",
-          "fuente": "TN",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-18_1800_viral/viral.mp4",
-          "duracion": 22.0
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "18118969502109667"
-        },
-        "facebook": {
-          "id": "2472251203263502"
-        }
-      }
-    },
-    "2026-11-18T18:20:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Temporal con granizo sorprende al AMBA y deja alerta naranja",
-          "url": "https://www.infobae.com/sociedad/2026/11/18/fotos-y-videos-de-la-tormenta-con-granizo-que-sorprendio-al-amba-durante-el-mediodia/",
-          "fuente": "Infobae",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-18_1820_viral/viral.mp4",
-          "duracion": 37.44
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "18122620606965799"
-        },
-        "facebook": {
-          "id": "1145523394595707"
-        }
-      }
-    },
     "2026-11-18T18:40:00-03:00": {
       "bloque": "viral",
       "items": [
@@ -33981,6 +33886,27 @@
       "publicado": {
         "instagram": {
           "id": "17995064916026063"
+        },
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-26T18:25:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "La tucura sapo arrasa campos en Santa Cruz desde 2005",
+          "url": "https://www.lanacion.com.ar/economia/campo/como-si-le-hubieran-dado-vitaminas-la-tucura-sapo-avanza-en-los-campos-de-la-patagonia-y-donde-pasa-nid26112026/",
+          "fuente": "La Nación",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-26_1825_viral/viral.mp4",
+          "duracion": 22.0,
+          "con": "video"
+        }
+      ],
+      "publicado": {
+        "instagram": {
+          "id": "18122487259964330"
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
@@ -37020,6 +36946,7 @@
     "https://sinmordaza.com/noticia/526755-preocupa-el-avance-del-abigeato-y-la-faena-clandestina-en-el-departamento-vera.html": "2026-11-26T13:20-03:00",
     "https://www.ellitoral.com/campolitoral/bolsadecerealesdebuenosaires-regionpampeana-frentedetormenta-perspectivaagroclimatica-calorintenso-heladas-regionchaquena-cuyo-noa-precipitaciones_0_AlptmfUVPq.html": "2026-11-26T14:35-03:00",
     "https://www.clarin.com/rural/provincia-busca-unificar-nacion-estrategia-acreditar-produccion-libre-deforestacion-ue-impulsa-coordinacion-region-centro_0_oOwEYO1Id8.html": "2026-11-26T15:50-03:00",
-    "https://tn.com.ar/campo/2026/11/26/como-viene-la-calidad-del-trigo-un-primer-analisis-evalua-aceptables-el-peso-del-grano-y-el-nivel-de-proteina/": "2026-11-26T17:10-03:00"
+    "https://tn.com.ar/campo/2026/11/26/como-viene-la-calidad-del-trigo-un-primer-analisis-evalua-aceptables-el-peso-del-grano-y-el-nivel-de-proteina/": "2026-11-26T17:10-03:00",
+    "https://www.lanacion.com.ar/economia/campo/como-si-le-hubieran-dado-vitaminas-la-tucura-sapo-avanza-en-los-campos-de-la-patagonia-y-donde-pasa-nid26112026/": "2026-11-26T18:25-03:00"
   }
 }
