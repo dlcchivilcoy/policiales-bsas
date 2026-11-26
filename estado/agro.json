@@ -25607,61 +25607,6 @@
   },
   "elegidas": [
     {
-      "id": "b3e962b0fce3",
-      "cuando": "2026-11-18T19:33-03:00",
-      "titulo_original": "Tasas viales: la Justicia le puso límites a un municipio bonaerense por cobrar sin una contraprestación comprobada",
-      "descripcion": "La Cámara de San Martín confirmó un fallo favorable a productores de Daireaux que cuestionaron el tributo; la resolución ratificó que el Estado es quien debe demostrar que presta el servicio de mantenimiento de la red vial y que los fondos recaudados se destinan a ese fin",
-      "fuente": "LA NACION Campo",
-      "url": "https://www.lanacion.com.ar/economia/campo/tasas-viales-la-justicia-le-puso-limites-a-un-municipio-bonaerense-por-cobrar-sin-una-nid18112026/",
-      "titular": "Justicia limita tasa vial municipal por falta de contraprestación",
-      "volanta": "Impuestos",
-      "score": {
-        "conversacion": 22,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 15,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 85,
-        "commercial_score": 60,
-        "subtema": "agro",
-        "tema": "tasas viales",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El fallo judicial sobre tasas viales toca un tema caliente y de interés directo para cualquier productor.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-18T19:30:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "f3d68905-3012-4c27-8dc5-68c1c5034b42",
-          "slug": "la-justicia-frena-tasa-vial-municipal-en-daireaux-por-falta-de-037cd6",
-          "url": "https://www.diariolacampaña.com.ar/n/la-justicia-frena-tasa-vial-municipal-en-daireaux-por-falta-de-037cd6",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "17998353540103975",
-          "diapositivas": 6
-        },
-        "facebook": {
-          "id": "101271341650483_1765982148866115",
-          "fotos": 6
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b3e962b0fce3_portada.jpg"
-    },
-    {
       "id": "3198c5386c33",
       "cuando": "2026-11-18T21:00-03:00",
       "titulo_original": "Los Grobo presentó su oferta de pago a sus acreedores, con quitas que llegan al 85%",
@@ -31308,7 +31253,7 @@
       "cuando": "2026-11-25T09:30-03:00"
     }
   ],
-  "actualizado": "2026-11-26T19:06:34-03:00",
+  "actualizado": "2026-11-26T19:42:08-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-11-18T21:30:00-03:00": {
@@ -33704,6 +33649,27 @@
               }
             }
           ]
+        }
+      }
+    },
+    "2026-11-26T19:40:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "Estancia correntina pasó de la ganadería a ser refugio del yaguareté",
+          "url": "https://tn.com.ar/sociedad/2026/11/26/una-estancia-ganadera-de-corrientes-tenia-11400-hectareas-en-1997-21-anos-despues-es-un-refugio-para-especies-en-extincion/",
+          "fuente": "TN",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-26_1940_viral/viral.mp4",
+          "duracion": 22.0,
+          "con": "foto"
+        }
+      ],
+      "publicado": {
+        "instagram": {
+          "id": "17886653400527153"
+        },
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
         }
       }
     }
@@ -36745,6 +36711,7 @@
     "https://www.ellitoral.com/campolitoral/bolsadecerealesdebuenosaires-regionpampeana-frentedetormenta-perspectivaagroclimatica-calorintenso-heladas-regionchaquena-cuyo-noa-precipitaciones_0_AlptmfUVPq.html": "2026-11-26T14:35-03:00",
     "https://www.clarin.com/rural/provincia-busca-unificar-nacion-estrategia-acreditar-produccion-libre-deforestacion-ue-impulsa-coordinacion-region-centro_0_oOwEYO1Id8.html": "2026-11-26T15:50-03:00",
     "https://tn.com.ar/campo/2026/11/26/como-viene-la-calidad-del-trigo-un-primer-analisis-evalua-aceptables-el-peso-del-grano-y-el-nivel-de-proteina/": "2026-11-26T17:10-03:00",
-    "https://www.lanacion.com.ar/economia/campo/como-si-le-hubieran-dado-vitaminas-la-tucura-sapo-avanza-en-los-campos-de-la-patagonia-y-donde-pasa-nid26112026/": "2026-11-26T18:25-03:00"
+    "https://www.lanacion.com.ar/economia/campo/como-si-le-hubieran-dado-vitaminas-la-tucura-sapo-avanza-en-los-campos-de-la-patagonia-y-donde-pasa-nid26112026/": "2026-11-26T18:25-03:00",
+    "https://tn.com.ar/sociedad/2026/11/26/una-estancia-ganadera-de-corrientes-tenia-11400-hectareas-en-1997-21-anos-despues-es-un-refugio-para-especies-en-extincion/": "2026-11-26T19:40-03:00"
   }
 }
