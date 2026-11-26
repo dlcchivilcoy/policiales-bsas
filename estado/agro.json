@@ -20171,6 +20171,74 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "31bedaab170d72f8": {
+      "conversacion": 10,
+      "historia_concreta": 5,
+      "cercania_pba": 5,
+      "interes_productores": 9,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 1,
+      "ai_score": 41,
+      "commercial_score": 40,
+      "subtema": "ganaderia",
+      "tema": "exportación carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Es una charla de análisis general sobre la exportación y el consumo, sin una situación concreta o local.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        40,
+        42
+      ]
+    },
+    "6bbfe669a07afa64": {
+      "conversacion": 22,
+      "historia_concreta": 18,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 79,
+      "commercial_score": 60,
+      "subtema": "ganaderia",
+      "tema": "abigeato",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Un robo de animales en la zona vecina de Lincoln genera alerta directa entre los productores locales.",
+      "tema_doc": "sanidad",
+      "urgente": true,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "fd33f6f848055f99": {
+      "conversacion": 5,
+      "historia_concreta": 4,
+      "cercania_pba": 10,
+      "interes_productores": 6,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 32,
+      "commercial_score": 20,
+      "subtema": "agro",
+      "tema": "caminos rurales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un taller institucional sobre caminos rurales en Lincoln, un tema importante pero de convocatoria formal.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        42,
+        23
+      ]
     }
   },
   "indice": {
@@ -21529,7 +21597,10 @@
       "https://clarin.com/rural/hito-historico-campana-agricola-20252026-alcanzo-171-millones-toneladas-granos_0_tJBQH0tJ8V.html": "2026-11-25",
       "https://clarin.com/rural/grobo-vende-molino-harinero-planta-acopio-us-55-millones-pagar-deuda-bancos_0_uDjpSEcFgt.html": "2026-11-25",
       "https://maquinac.com/2026/11/mainero-y-plantium-ganaron-las-medallas-de-oro-en-el-premio-ternium-expoagro": "2026-11-25",
-      "https://maquinac.com/2026/11/todos-los-ganadores-del-premio-ternium-expoagro-2027": "2026-11-25"
+      "https://maquinac.com/2026/11/todos-los-ganadores-del-premio-ternium-expoagro-2027": "2026-11-25",
+      "https://bichosdecampo.com/todo-lo-que-el-hombre-produzca-en-carne-lo-va-a-poder-vender-celebra-raul-milano-del-rosgan-de-todos-modos-luego-aclara-que-sera-para-exportar-porque-en-el-mercado-interno-no-h": "2026-11-25",
+      "https://lapostadelnoroeste.com.ar/productores-del-cuartel-ii-en-alerta-por-un-nuevo-caso-de-abigeato": "2026-11-25",
+      "https://lapostadelnoroeste.com.ar/llega-a-lincoln-el-duodecimo-taller-de-caminos-rurales": "2026-11-25"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 14 noviembre 2026": "2026-11-14",
@@ -22886,7 +22957,10 @@
       "hito historico la campana agricola 2025 2026 alcanzo las 171 millones de toneladas de granos": "2026-11-25",
       "los grobo vende un molino harinero y una planta de acopio por us 5 5 millones para pagar una deuda a los bancos": "2026-11-25",
       "mainero y plantium ganaron las medallas de oro en el premio ternium expoagro": "2026-11-25",
-      "todos los ganadores del premio ternium expoagro 2027": "2026-11-25"
+      "todos los ganadores del premio ternium expoagro 2027": "2026-11-25",
+      "todo lo que el hombre produzca en carne lo va a poder vender celebra raul milano del rosgan de todos modos luego aclara que sera para exportar porque en el mercado interno no hay plata": "2026-11-25",
+      "productores del cuartel ii en alerta por un nuevo caso de abigeato": "2026-11-25",
+      "llega a lincoln el duodecimo taller de caminos rurales": "2026-11-25"
     },
     "hash": {
       "18df5dacc9a86c62": "2026-11-14",
@@ -24243,65 +24317,13 @@
       "d489fb2614cb99b5": "2026-11-25",
       "13c7789805bd1487": "2026-11-25",
       "94941facc6e68b0d": "2026-11-25",
-      "7834ec6e0d0a2c9f": "2026-11-25"
+      "7834ec6e0d0a2c9f": "2026-11-25",
+      "31bedaab170d72f8": "2026-11-25",
+      "6bbfe669a07afa64": "2026-11-25",
+      "fd33f6f848055f99": "2026-11-25"
     }
   },
   "elegidas": [
-    {
-      "id": "d2718cc960e1",
-      "cuando": "2026-11-17T21:00-03:00",
-      "titulo_original": "Persecución y tiroteo en las islas de Victoria: cuatreros escaparon de la policía rural con un vacuno faenado",
-      "descripcion": "",
-      "fuente": "TN Campo",
-      "url": "https://tn.com.ar/campo/2026/11/17/persecucion-y-tiroteo-en-las-islas-de-victoria-cuatreros-escaparon-de-la-policia-rural-con-un-vacuno-faenado/",
-      "titular": "Persecución y tiroteo en Victoria tras robar un vacuno faenado",
-      "volanta": "Ganadería",
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 18,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 72,
-        "commercial_score": 70,
-        "subtema": "ganaderia",
-        "tema": "cuatreros",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Persecución policial a cuatreros con vacuno faenado, un clásico delito rural que genera indignación.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": true
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-17T21:00:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "1c260492-afa2-4b20-842e-0b96c7782b03",
-          "slug": "tiroteo-y-persecucion-en-las-islas-de-victoria-cuatreros-fff3b6",
-          "url": "https://www.diariolacampaña.com.ar/n/tiroteo-y-persecucion-en-las-islas-de-victoria-cuatreros-fff3b6",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "17921699904464708",
-          "diapositivas": 5
-        },
-        "facebook": {
-          "id": "101271341650483_1764906118973718",
-          "fotos": 5
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_d2718cc960e1_portada.jpg"
-    },
     {
       "id": "fa0dfafdaeed",
       "cuando": "2026-11-18T07:00-03:00",
@@ -27598,51 +27620,16 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_976723efc959_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
       "id": "33247c2b3237",
-      "rep": {
-        "id": "33247c2b3237",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/vacunos-comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid24112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid24112026",
-        "titulo": "Vacunos: comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
-        "titulo_norm": "vacunos comenzo la semana con subas en el mercado agroganadero de canuelas",
-        "descripcion": "Con una entrada de 5622 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4091,349",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/5GBLPNMHNVCVRL6OIOIM5AOMDE.JPG?auth=1acb479a53c1a3c99aed0f148c49c1edf4868736c603af3d4378a0e70cd49c69&smart=true",
-        "autor": "",
-        "publicado": "2026-11-24T19:45-03:00",
-        "capturado": "2026-11-25T20:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7985f525862e1b7b",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "33247c2b3237",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/vacunos-comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid24112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/vacunos-comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid24112026",
-          "titulo": "Vacunos: comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
-          "titulo_norm": "vacunos comenzo la semana con subas en el mercado agroganadero de canuelas",
-          "descripcion": "Con una entrada de 5622 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4091,349",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/5GBLPNMHNVCVRL6OIOIM5AOMDE.JPG?auth=1acb479a53c1a3c99aed0f148c49c1edf4868736c603af3d4378a0e70cd49c69&smart=true",
-          "autor": "",
-          "publicado": "2026-11-24T19:45-03:00",
-          "capturado": "2026-11-25T20:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7985f525862e1b7b",
-          "localidad_medio": ""
-        }
-      ],
+      "cuando": "2026-11-25T21:35-03:00",
+      "titulo_original": "Vacunos: comenzó la semana con subas en el Mercado Agroganadero de Cañuelas",
+      "descripcion": "Con una entrada de 5622 cabezas, se pagó $4500 por novillos; el Índice Novillo del Mercado Agroganadero quedó en $4091,349",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/vacunos-comenzo-la-semana-con-subas-en-el-mercado-agroganadero-de-canuelas-nid24112026/",
+      "titular": "Hacienda: subas y 5622 animales en Cañuelas",
+      "volanta": "Ganadería",
       "score": {
         "conversacion": 18,
         "historia_concreta": 15,
@@ -27667,8 +27654,31 @@
         "suceso": false,
         "empresa_agro": false
       },
-      "cuando": "2026-11-25T20:20-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-25T21:35:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "15c544e4-3382-4de8-94db-8ffd91a0e537",
+          "slug": "hacienda-en-canuelas-subas-del-indice-novillo-y-5622-vacunos-604b6a",
+          "url": "https://www.diariolacampaña.com.ar/n/hacienda-en-canuelas-subas-del-indice-novillo-y-5622-vacunos-604b6a",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17869126719679558",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_33247c2b3237_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "0c1a4b1fc777",
       "rep": {
@@ -30484,46 +30494,9 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T20:56:39-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-25T21:41:29-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
-    "2026-11-17T21:30:00-03:00": {
-      "dia": "2026-11-17",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Cuánto te tocó esperar para descargar?",
-          "opciones": [],
-          "publico": "transporte",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "18203425840379500"
-            },
-            "facebook": {
-              "id": "1580444203886992"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "18203425840379500"
-              },
-              "facebook": {
-                "id": "1580444203886992"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-17T22:00:00-03:00": {
       "bloque": "viral",
       "items": [
@@ -35735,7 +35708,9 @@
     "0c1a4b1fc777": "2026-11-25T17:45",
     "33247c2b3237": "2026-11-25T20:20",
     "35e3c07c3ca9": "2026-11-25T20:20",
-    "d7ec42fd7ece": "2026-11-25T20:20"
+    "d7ec42fd7ece": "2026-11-25T20:20",
+    "17a31d57cce5": "2026-11-25T21:35",
+    "6f1ea5df3830": "2026-11-25T21:35"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
