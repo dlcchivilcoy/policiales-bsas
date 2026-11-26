@@ -80,6 +80,7 @@ jobs:
           FINDE_COLAB: ${{ vars.FINDE_COLAB }}
           FINDE_FB_DIARIO: ${{ vars.FINDE_FB_DIARIO }}
           FINDE_VOZ: ${{ vars.FINDE_VOZ }}
+          FINDE_CON_VOZ: ${{ vars.FINDE_CON_VOZ }}
           FINDE_VOZ_VELOCIDAD: ${{ vars.FINDE_VOZ_VELOCIDAD }}
           PUBLICAR_VAR: ${{ vars.FINDE_PUBLICAR }}
           PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}

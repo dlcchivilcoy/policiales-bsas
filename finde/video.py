@@ -51,7 +51,7 @@ MARCA = Path(__file__).resolve().parent / "marca"
 PLACA_FINAL = Path(__file__).resolve().parent.parent / "estetica_bot" / "placa_final.png"
 ENTRADA_VOZ = 0.3
 MINIMOS = {"gancho": 3.0, "opciones": 5.0, "revelacion": 4.0, "mapa": 5.5, "contexto": 4.4, "cierre": 3.6,
-           "placa": 1.8}
+           "placa": 1.8, "bloque": 4.5}
 CUENTA = 2.4
 CARTAS_Y = (600, 820, 1040)          # las tres opciones
 
@@ -335,7 +335,8 @@ def video_del_campo(ficha: dict, carpeta: Path, log=print):
 
         from agro import banco_video as BVI
         from agro import reel_zona as RZ
-        tag = {"soja_peor": "cosecha", "anegamiento": "lluvia", "emergencias": "cosecha"}.get(ficha["clave"], "campo")
+        tag = ficha.get("video_tag") or {"soja_peor": "cosecha", "anegamiento": "lluvia",
+                                          "emergencias": "cosecha"}.get(ficha["clave"], "campo")
         v = RZ.elegir_video(tag, {}, datetime.now())
         if not v:
             return None, ""
@@ -347,20 +348,21 @@ def video_del_campo(ficha: dict, carpeta: Path, log=print):
 
 
 @lru_cache(maxsize=4)
-def _cabecera(estilo: str, fuente: str, credito: str = "") -> Image.Image:
+def _cabecera(estilo: str, fuente: str, credito: str = "", marca: tuple = ("Chivilcoy", "en datos"),
+              chip: str = "CHIVILCOY") -> Image.Image:
     s = ESTILOS[estilo]
     ov, d = capa(Image.new("RGBA", (W, H)))
     iso = isologo(58)
     ov.alpha_composite(iso, (X0, 64))
     f = sans(36, "bold")
-    d.text((X0 + iso.width + 16, 93), "Chivilcoy", font=f, fill=s["texto"], anchor="lm")
-    x = X0 + iso.width + 16 + d.textlength("Chivilcoy ", font=f)
-    d.text((x, 93), "en datos", font=f, fill=s["acento"], anchor="lm")
+    d.text((X0 + iso.width + 16, 93), marca[0], font=f, fill=s["texto"], anchor="lm")
+    x = X0 + iso.width + 16 + d.textlength(marca[0] + " ", font=f)
+    d.text((x, 93), marca[1], font=f, fill=s["acento"], anchor="lm")
     d.text((X0, 150), fuente, font=sans(25, "medium"), fill=s["tenue"])
     if credito:
         d.text((W - X0, 150), credito, font=sans(22, "regular"), fill=s["tenue"], anchor="ra")
     if estilo == "campo":
-        pastilla(d, W - X0, 66, "CHIVILCOY", sans(24, "bold"), None, BLANCO, anchor="r", borde=BLANCO)
+        pastilla(d, W - X0, 66, chip, sans(24, "bold"), None, BLANCO, anchor="r", borde=BLANCO)
     return ov
 
 
@@ -621,10 +623,35 @@ def comparacion(f: dict) -> list:
     return salida
 
 
+def _tarjetas_contexto(im, t, f, pl):
+    """Sin mapa (los informes nacionales, agro/fada.py): hasta tres cifras en tarjetas que entran escalonadas."""
+    ov, d = capa(im)
+    pastilla(d, X0, 300, "PARA ENTENDERLO", sans(28, "bold"), None, BLANCO, borde=NARANJA, punto=True,
+             alfa=ease(t / 0.3))
+    im.alpha_composite(ov)
+    for i, c in enumerate(f["contexto"][:3]):
+        k = rebote((t - 0.3 - 0.45 * i) / 0.5)
+        if k <= 0:
+            continue
+        tar = Image.new("RGBA", (920, 270), (0, 0, 0, 0))
+        dt = ImageDraw.Draw(tar)
+        dt.rounded_rectangle((0, 0, 919, 269), 32, fill=(14, 15, 18, 215), outline=(255, 255, 255, 255), width=3)
+        dt.rectangle((0, 34, 10, 235), fill=NARANJA)
+        fn = MV.anton(104 if len(c["numero"]) <= 10 else 80)
+        caja = dt.textbbox((44, 24), c["numero"], font=fn)
+        dt.text((44, 24), c["numero"], font=fn, fill=NARANJA)
+        for j, linea in enumerate(D.renglones(dt, c["texto"], sans(36, "bold"), 830)[:2]):
+            dt.text((46, caja[3] + 14 + j * 44), linea, font=sans(36, "bold"), fill=(232, 234, 238))
+        MV.pop_sprite(im, tar, (W / 2, 520 + i * 300), k)
+
+
 def escena_contexto(im, t, f, pl):
     """«Chivilcoy frente a…» (dos tarjetas, como la comparación de la referencia) y las cifras de contexto."""
     papel = pl["estilo"] == "papel"
     acento = NARANJA_OSC if papel else NARANJA
+    if not f.get("mapa"):
+        _tarjetas_contexto(im, t, f, pl)
+        return
     comp = comparacion(f)
     y = 330
     for i, (nombre, valor) in enumerate(comp):
@@ -662,6 +689,57 @@ def escena_contexto(im, t, f, pl):
         im.alpha_composite(ov)
 
 
+def escena_bloque(im, t, f, pl):
+    """Un dato más del informe (los reels largos de agro/fada.py): como la respuesta del estilo campo —pastilla con
+    punto, número gigante que cuenta, unidad en naranja, texto— o una lista de filas (etiqueta y valor)."""
+    b = pl["bloque"]
+    ov, d = capa(im)
+    pastilla(d, X0, 300, (b.get("volanta") or "EL DATO").upper()[:40], sans(26, "bold"), None, BLANCO, borde=NARANJA,
+             punto=True, alfa=ease(t / 0.3))
+    im.alpha_composite(ov)
+    if b.get("filas"):
+        palabras_entran(im, b.get("titulo") or "", MV.anton(80), 400, t, BLANCO, NARANJA, (), centrado=False,
+                        sombra=True)
+        for i, (etiqueta, valor) in enumerate(b["filas"][:5]):
+            k = rebote((t - 0.5 - 0.35 * i) / 0.45)
+            if k <= 0:
+                continue
+            tar = Image.new("RGBA", (920, 150), (0, 0, 0, 0))
+            dt = ImageDraw.Draw(tar)
+            dt.rounded_rectangle((0, 0, 919, 149), 28, fill=(14, 15, 18, 215), outline=(255, 255, 255, 255), width=3)
+            dt.text((36, 75), str(etiqueta)[:30], font=sans(40, "bold"), fill=BLANCO, anchor="lm")
+            dt.text((884, 75), str(valor)[:14], font=MV.anton(80), fill=NARANJA, anchor="rm")
+            MV.pop_sprite(im, tar, (W / 2, 640 + i * 170), k)
+        return
+    num = b.get("numero")
+    if num is None:
+        palabras_entran(im, b.get("texto") or "", MV.anton(96), 420, t, BLANCO, NARANJA, (), centrado=False,
+                        sombra=True)
+        return
+    dec, unidad = int(b.get("dec") or 0), (b.get("unidad") or "").strip()
+    final = numero_txt(float(num), dec)
+    actual = numero_txt(float(num) * ease(t / 0.9), dec)
+    fn = gigante(300 if len(final) <= 3 else 250 if len(final) <= 5 else 200)
+    sprite = Image.new("RGBA", (W, 340), (0, 0, 0, 0))
+    ds = ImageDraw.Draw(sprite)
+    ds.text((X0 - 8 + 4, 306), actual, font=fn, fill=(0, 0, 0, 150), anchor="ls")
+    ds.text((X0 - 8, 300), actual, font=fn, fill=BLANCO + (255,), anchor="ls")
+    if unidad == "%":
+        ds.text((X0 - 8 + ds.textlength(final, font=fn) + 10, 300), "%", font=gigante(round(fn.size * 0.55)),
+                fill=NARANJA + (255,), anchor="ls")
+        unidad = ""
+    u = ease(t / 0.35)
+    sprite.putalpha(sprite.getchannel("A").point(lambda v: round(v * u)))
+    im.alpha_composite(sprite, (round(-30 * (1 - u)), 380))
+    yy = 740
+    if unidad:
+        palabras_entran(im, unidad.upper(), MV.anton(100), yy - 20, t - 0.3, NARANJA, NARANJA, (), centrado=False,
+                        sombra=True)
+        yy += 110
+    palabras_entran(im, (b.get("texto") or "").upper(), sans(38, "bold"), yy + 20, t - 0.5, (215, 218, 222), NARANJA,
+                    (), centrado=False, paso=0.035)
+
+
 def escena_cierre(im, t, f, pl):
     papel = pl["estilo"] == "papel"
     u = ease(t / 0.35)
@@ -681,13 +759,20 @@ def escena_cierre(im, t, f, pl):
         ov, d = capa(im)
         pastilla(d, W / 2 if papel else X0, yy + 60, "Contanos en los comentarios", sans(40, "bold"),
                  NARANJA_OSC if papel else NARANJA, BLANCO if papel else NEGRO, anchor="m" if papel else "l", alfa=k)
-        d.text((W / 2 if papel else X0, yy + 210), "@diarioyradio  ·  @diarioyradioagro", font=sans(32, "medium"),
+        d.text((W / 2 if papel else X0, yy + 210), f.get("cuentas") or "@diarioyradio  ·  @diarioyradioagro",
+               font=sans(32, "medium"),
                fill=con_alfa(pl["s"]["tenue"], k), anchor="mm" if papel else "lm")
         im.alpha_composite(ov)
 
 
-@lru_cache(maxsize=1)
-def _placa() -> Image.Image:
+@lru_cache(maxsize=2)
+def _placa(tipo: str = "diario") -> Image.Image:
+    if tipo == "agro":                              # la placa final de agro (4:5) sobre el negro del 9:16
+        from agro import reel as RE
+        im = Image.new("RGBA", (W, H), (32, 34, 38, 255))
+        cierre = RE.cierre("grafito", "").convert("RGBA")
+        im.alpha_composite(cierre, (0, (H - cierre.height) // 2))
+        return im
     if PLACA_FINAL.exists():
         return Image.open(PLACA_FINAL).convert("RGBA").resize((W, H), Image.LANCZOS)
     im = Image.new("RGBA", (W, H), NEGRO + (255,))
@@ -697,11 +782,12 @@ def _placa() -> Image.Image:
 
 
 def escena_placa(im, t, f, pl):
-    MV.pop_sprite(im, _placa(), (W / 2, H / 2), 1.04 - 0.04 * ease(t / 1.2))
+    MV.pop_sprite(im, _placa(f.get("placa") or "diario"), (W / 2, H / 2), 1.04 - 0.04 * ease(t / 1.2))
 
 
 ESCENAS = {"gancho": escena_gancho, "opciones": escena_opciones, "revelacion": escena_revelacion,
-           "mapa": escena_mapa, "contexto": escena_contexto, "cierre": escena_cierre, "placa": escena_placa}
+           "mapa": escena_mapa, "contexto": escena_contexto, "cierre": escena_cierre, "placa": escena_placa,
+           "bloque": escena_bloque}
 ORDEN = ("gancho", "opciones", "revelacion", "mapa", "contexto", "cierre", "placa")
 PANEL = {"mapa": 1.0, "contexto": 0.6, "opciones": 0.4, "revelacion": 0.2}
 
@@ -787,6 +873,9 @@ def efectos(planes: list, ficha: dict) -> list:
             ev += [(t0 + 0.2 + 1.4 * i / 10, MV.tic(0.8 + 0.04 * i), 0.3) for i in range(10)]
         elif nombre == "contexto":
             ev += [(t0 + 0.2 + 0.5 * i, MV.pop(1.1 + 0.05 * i), 0.55) for i in range(2)]
+        elif nombre == "bloque":
+            ev += [(t0 + j * 0.06, MV.tic(0.9 + 0.03 * j), 0.18) for j in range(14)]
+            ev.append((t0 + 0.9, MV.pop(0.9), 0.5))
         elif nombre == "cierre":
             ev.append((t0 + 0.1, MV.pop(1.2), 0.5))
         elif nombre == "placa":
@@ -844,6 +933,8 @@ def resaltables(texto: str) -> tuple:
 
 
 def _volanta(f: dict) -> str:
+    if f.get("volanta"):
+        return f["volanta"]
     return {"gas_red": "GAS DE RED · CENSO 2022", "cloacas": "CLOACAS · CENSO 2022", "agua": "AGUA DE RED · CENSO 2022",
             "internet": "INTERNET EN CASA · CENSO 2022", "alquiler": "HOGARES INQUILINOS · CENSO 2022",
             "crecimiento": "POBLACIÓN 2010-2022 · INDEC", "mayores": "65 AÑOS O MÁS · CENSO 2022",
@@ -852,25 +943,53 @@ def _volanta(f: dict) -> str:
             "emergencias": "EMERGENCIAS AGROPECUARIAS"}.get(f["clave"], "EL DATO")
 
 
+def sin_voz(texto: str, carpeta: Path, nombre: str) -> dict:
+    """Sin narración (26/11/2026, los reels de FADA: «hacelo sin voz»): el texto va en los subtítulos, a ritmo de
+    lectura (un poco más lento que la voz), con la música y los efectos."""
+    texto = " ".join((texto or "").split())
+    if not texto:
+        return {"audio": None, "dur": 0.0, "palabras": [], "voz": "sin texto"}
+    palabras, t = [], 0.0
+    for p in texto.split():
+        palabras.append((t, t + 0.4, p.strip("¿¡")))
+        t += 0.42 + (0.25 if p[-1:] in ".,;:?!" else 0)
+    return {"audio": None, "dur": t + 0.5, "palabras": palabras, "voz": "sin voz (a pedido)"}
+
+
 def armar(ficha: dict, carpeta: Path, log=print, narrar=None, clip_fn=None) -> dict:
     """El reel completo: voz por escena, cuadros, sonido, MP4, portada JPG y subtítulos SRT."""
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
-    narrar = narrar or VZ.narrar
+    # 26/11/2026, el editor: «todos sin voz» → de fábrica sin narración; FINDE_CON_VOZ=1 la vuelve (salvo que la ficha
+    # pida «sin_voz»).
+    import os
+    con_voz = (os.environ.get("FINDE_CON_VOZ") or "0").strip() == "1" and not ficha.get("sin_voz")
+    narrar = narrar or (VZ.narrar if con_voz else sin_voz)
     estilo = estilo_de(ficha)
     s = ESTILOS[estilo]
     fu0 = ficha["fuentes"][0]
-    fuente = ("Fuente: INDEC · Censo 2022" if ficha["dia"] == "sabado"
-              else f"Fuente: ArgenFields · {fu0.get('anio_dato')}")
+    fuente = ficha.get("fuente_txt") or ("Fuente: INDEC · Censo 2022" if ficha["dia"] == "sabado"
+                                         else f"Fuente: ArgenFields · {fu0.get('anio_dato')}")
     pl_base = {"s": s, "estilo": estilo, "clave_gancho": resaltables(ficha["narracion"]["gancho"]),
                "clave_cierre": resaltables(ficha["cierre"]), "volanta": _volanta(ficha),
                "fuente_corta": "Censo 2022 · INDEC" if ficha["dia"] == "sabado" else "ArgenFields",
-               "anio_txt": ("Censo 2022 · partido de Chivilcoy" if ficha["dia"] == "sabado"
-                            else str(fu0.get("anio_dato") or "")).strip()}
+               "anio_txt": (ficha.get("anio_txt") or ("Censo 2022 · partido de Chivilcoy" if ficha["dia"] == "sabado"
+                                                      else str(fu0.get("anio_dato") or ""))).strip()}
     planes, voces, subs, t, info_voz = [], [], [], 0.0, []
-    for nombre in ORDEN:
-        texto = ficha["narracion"].get(nombre, "") if nombre != "placa" else ""
-        nv = narrar(texto, carpeta / "voz", nombre) if texto else {"audio": None, "dur": 0.0, "palabras": [],
+    escenas = []
+    for n in ORDEN:
+        if n == "mapa" and not ficha.get("mapa"):
+            continue
+        if n == "contexto":                          # los bloques (reels largos) van antes del contexto
+            escenas += [("bloque", b) for b in ficha.get("bloques") or []]
+            if not ficha.get("contexto"):
+                continue
+        escenas.append((n, None))
+    bloque_de = []
+    for nombre, bloque in escenas:
+        texto = (bloque or {}).get("narracion", "") if nombre == "bloque" else (
+            ficha["narracion"].get(nombre, "") if nombre != "placa" else "")
+        nv = narrar(texto, carpeta / "voz", f"{nombre}_{len(planes):02d}") if texto else {"audio": None, "dur": 0.0, "palabras": [],
                                                                     "voz": "—"}
         info_voz.append(nv["voz"])
         corrido = 1.0 if nombre == "revelacion" else 0.0      # la voz de la respuesta, después de pintar la tarjeta
@@ -878,13 +997,14 @@ def armar(ficha: dict, carpeta: Path, log=print, narrar=None, clip_fn=None) -> d
         if nombre == "opciones":
             dur = max(MINIMOS["opciones"], ENTRADA_VOZ + nv["dur"] + 0.3 + CUENTA)
         planes.append((nombre, t, dur))
+        bloque_de.append(bloque)
         voces.append((t + ENTRADA_VOZ + corrido, nv["audio"]))
         subs += bloques(nv["palabras"], t + ENTRADA_VOZ + corrido)
         t += dur
     total = t
     log(f"   voz: {sorted(set(info_voz) - {'—'})}; estilo {estilo}; duración {total:.1f} s")
     clip, credito = (None, "")
-    if estilo == "campo" and ficha.get("dia") == "domingo":      # el banco es de campo: el sábado va sin video
+    if estilo == "campo" and (ficha.get("dia") == "domingo" or ficha.get("video_tag")):  # el sábado, sin video
         clip, credito = (clip_fn or video_del_campo)(ficha, carpeta, log)
     wav = carpeta / "_mezcla.wav"
     MV.guardar_wav(mezcla(total, voces, efectos(planes, ficha)), wav)
@@ -895,12 +1015,13 @@ def armar(ficha: dict, carpeta: Path, log=print, narrar=None, clip_fn=None) -> d
            "-preset", "medium", "-crf", "21", "-profile:v", "high", "-c:a", "aac", "-b:a", "160k",
            "-movflags", "+faststart", str(mp4)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-    cabecera = _cabecera(estilo, fuente, "Video ilustrativo" if clip else "")
+    cabecera = _cabecera(estilo, fuente, "Video ilustrativo" if clip else "",
+                         tuple(ficha.get("marca") or ("Chivilcoy", "en datos")), ficha.get("chip") or "CHIVILCOY")
     fondo = Fondo(estilo, clip, total)
     anterior = None
     try:
-        for nombre, t0, dur in planes:
-            pl = dict(pl_base, dur=dur)
+        for (nombre, t0, dur), bloque in zip(planes, bloque_de):
+            pl = dict(pl_base, dur=dur, bloque=bloque)
             ultimo = None
             for k in range(round(dur * FPS)):
                 tl = k / FPS
@@ -946,15 +1067,18 @@ def portada(ficha: dict, destino: Path, cabecera=None) -> Path:
     estilo = estilo_de(ficha)
     s = ESTILOS[estilo]
     im = _papel().copy() if estilo == "papel" else Image.new("RGBA", (W, H), (20, 21, 25, 255))
-    m = ficha["mapa"]
-    fmt = lambda v: numero_txt(v, m.get("dec", 0), m.get("signo")) + (m.get("unidad") or "")  # noqa: E731
-    mp = mapa(m["valores"], 99, s, fmt)
-    mp.putalpha(mp.getchannel("A").point(lambda v: round(v * 0.5)))
-    im.alpha_composite(mp, ((W - 1000) // 2, 880))
+    m = ficha.get("mapa")
+    if m:
+        fmt = lambda v: numero_txt(v, m.get("dec", 0), m.get("signo")) + (m.get("unidad") or "")  # noqa: E731
+        mp = mapa(m["valores"], 99, s, fmt)
+        mp.putalpha(mp.getchannel("A").point(lambda v: round(v * 0.5)))
+        im.alpha_composite(mp, ((W - 1000) // 2, 880))
+    elif estilo == "campo":
+        im = _oscuro(2.0)
     if cabecera is not None:
         im.alpha_composite(cabecera)
     ov, d = capa(im)
-    pastilla(d, W / 2, 440, "CHIVILCOY EN DATOS", sans(32, "bold"), NARANJA_OSC if estilo == "papel" else NARANJA,
+    pastilla(d, W / 2, 440, " ".join(ficha.get("marca") or ("Chivilcoy", "en datos")).upper(), sans(32, "bold"), NARANJA_OSC if estilo == "papel" else NARANJA,
              BLANCO if estilo == "papel" else NEGRO, anchor="m")
     im.alpha_composite(ov)
     if estilo == "papel":

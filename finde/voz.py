@@ -20,6 +20,7 @@ SR = 44100
 VOZ_DEFECTO = "es-AR-TomasNeural"
 VELOCIDAD_DEFECTO = "+8%"
 SEG_POR_PALABRA = 0.36            # para estimar cuando no hay voz
+TOPE_SEG = 45                     # lo máximo que se espera una respuesta del servicio de voz
 
 
 def voz() -> str:
@@ -103,7 +104,16 @@ def narrar(texto: str, carpeta: Path, nombre: str, hablar=None) -> dict:
     carpeta.mkdir(parents=True, exist_ok=True)
     mp3, wav = carpeta / f"{nombre}.mp3", carpeta / f"{nombre}.wav"
     try:
-        marcas = (hablar or (lambda t, d: asyncio.run(_hablar(t, d))))(texto, mp3)
+        marcas = None
+        for intento in (1, 2):
+            try:
+                # 26/11/2026: un pedido de voz quedó colgado 38 min sin responder; ahora cada uno tiene un tope y
+                # se reintenta una vez. Si tampoco anda, la escena va sin voz (con los tiempos estimados).
+                marcas = (hablar or (lambda t, d: asyncio.run(asyncio.wait_for(_hablar(t, d), TOPE_SEG))))(texto, mp3)
+                break
+            except (asyncio.TimeoutError, TimeoutError):
+                if intento == 2:
+                    raise
         subprocess.run([_ffmpeg(), "-y", "-loglevel", "error", "-i", str(mp3), "-ac", "1", "-ar", str(SR), str(wav)],
                        check=True)
         audio = leer_wav(wav)

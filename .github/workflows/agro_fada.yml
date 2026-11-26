@@ -1,0 +1,128 @@
+name: Agro - reels de los informes de FADA
+
+# 26/11/2026 (pedido del editor): cada informe nuevo de la Fundación FADA (https://fundacionfada.org/informes/, uno
+# cada 4 o 5 días) sale como un reel largo (hasta ~3 min) en @diarioyradioagro, con pregunta, respuesta, los datos del
+# informe, voz y subtítulos (agro/fada.py + el motor de finde/video.py).
+#
+# Quién dispara: cron-job.org todos los días a las 16:45 con {"ref":"main","inputs":{"origen":"cron"}}; sale a las 16:50
+# (después de esperar el margen con el último posteo). Los días sin informe nuevo termina sin hacer nada. El `schedule:`
+# es el RESPALDO (17:05): la memoria (estado/agro_fada.json) frena el segundo intento.
+#
+# Publica si la variable del repo AGRO_PUBLICAR es 1 (la misma de agro) y AGRO_FADA no es 0.
+
+on:
+  schedule:                 # UTC; Argentina es UTC-3 todo el año.
+    - cron: "5 20 * * *"    # 17:05, respaldo
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: '"si" publica aunque AGRO_PUBLICAR no esté en 1; "no" solo simula'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+
+concurrency:
+  group: agro-fada
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # estado/agro_fada.json y el video al Release temporal
+  issues: write
+
+jobs:
+  fada:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Reel del informe de FADA
+        timeout-minutes: 40
+        env:
+          PYTHONUNBUFFERED: "1"
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          AGRO_FADA: ${{ vars.AGRO_FADA }}
+          AGRO_FADA_VENTANA: ${{ vars.AGRO_FADA_VENTANA }}
+          FADA_DIAS: ${{ vars.FADA_DIAS }}
+          AGRO_MARGEN_MIN: ${{ vars.AGRO_MARGEN_MIN }}
+          AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
+          FINDE_VOZ: ${{ vars.FINDE_VOZ }}
+          FINDE_CON_VOZ: ${{ vars.FINDE_CON_VOZ }}
+          AGRO_FADA_VOZ: ${{ vars.AGRO_FADA_VOZ }}
+          PUBLICAR_VAR: ${{ vars.AGRO_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+        run: |
+          set -o pipefail
+          ARGS=""
+          if { [ "$PUBLICAR_VAR" = "1" ] || [ "$PUBLICAR_INPUT" = "si" ]; } && [ "$PUBLICAR_INPUT" != "no" ]; then
+            ARGS="--publicar"
+          fi
+          echo "python -m agro.fada $ARGS"
+          python -m agro.fada $ARGS | tee informe_fada.md
+
+      - name: Guardar la pieza
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agro-fada-${{ github.run_number }}
+          path: |
+            salida_agro/fada_*/*.mp4
+            salida_agro/fada_*/*.jpg
+            salida_agro/fada_*/*.txt
+            salida_agro/fada_*/*.json
+            salida_agro/fada_*/*.srt
+          retention-days: 7
+          compression-level: 0
+          if-no-files-found: ignore
+
+      - name: Recordar qué salió
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/agro_fada.json)" ]; then
+            echo "La memoria no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo agro_fada.json
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="El reel del informe de FADA falló"
+          CUERPO="$( [ -f informe_fada.md ] && tail -40 informe_fada.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
