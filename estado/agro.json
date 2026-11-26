@@ -20239,6 +20239,66 @@
         42,
         23
       ]
+    },
+    "5b2d767b70e06987": {
+      "conversacion": 5,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 8,
+      "impacto_economico": 5,
+      "cercania_argentina": 5,
+      "potencial_reel": 3,
+      "ai_score": 36,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "john deere",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "Es una compra corporativa internacional de tecnología que no impacta de forma directa ni urgente en el día a día de la zona.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "e54cf115b4a327ac": {
+      "conversacion": 4,
+      "historia_concreta": 10,
+      "cercania_pba": 0,
+      "interes_productores": 6,
+      "impacto_economico": 6,
+      "cercania_argentina": 3,
+      "potencial_reel": 1,
+      "ai_score": 30,
+      "commercial_score": 30,
+      "subtema": "maquinaria",
+      "tema": "componentes",
+      "ambito": "internacional",
+      "sensible": false,
+      "explicacion": "El posible cierre de una fábrica en Alemania es una noticia muy lejana que apenas roza la cadena global de insumos.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b251a46b4ac3c39c": {
+      "conversacion": 10,
+      "historia_concreta": 12,
+      "cercania_pba": 15,
+      "interes_productores": 12,
+      "impacto_economico": 6,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 64,
+      "commercial_score": 50,
+      "subtema": "ganaderia",
+      "tema": "tambos y feedlots",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Interesa a tamberos y productores con feedlots de la región por el dato concreto de aumento de peso.",
+      "tema_doc": "ganaderia",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -21600,7 +21660,10 @@
       "https://maquinac.com/2026/11/todos-los-ganadores-del-premio-ternium-expoagro-2027": "2026-11-25",
       "https://bichosdecampo.com/todo-lo-que-el-hombre-produzca-en-carne-lo-va-a-poder-vender-celebra-raul-milano-del-rosgan-de-todos-modos-luego-aclara-que-sera-para-exportar-porque-en-el-mercado-interno-no-h": "2026-11-25",
       "https://lapostadelnoroeste.com.ar/productores-del-cuartel-ii-en-alerta-por-un-nuevo-caso-de-abigeato": "2026-11-25",
-      "https://lapostadelnoroeste.com.ar/llega-a-lincoln-el-duodecimo-taller-de-caminos-rurales": "2026-11-25"
+      "https://lapostadelnoroeste.com.ar/llega-a-lincoln-el-duodecimo-taller-de-caminos-rurales": "2026-11-25",
+      "https://maquinac.com/2026/11/john-deere-compra-tecnologia-de-inteligencia-artificial-para-analizar-los-cultivos-planta-por-planta": "2026-11-25",
+      "https://maquinac.com/2026/11/un-proveedor-estrategico-de-agco-cnh-claas-y-john-deere-podria-cerrar-su-fabrica-en-alemania": "2026-11-25",
+      "https://noticiasagropecuarias.com/2026/11/25/agropharma-apuesta-a-la-inmunidad-entrenada-para-reducir-perdidas-por-estres-en-tambos-y-feedlots": "2026-11-25"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 14 noviembre 2026": "2026-11-14",
@@ -22960,7 +23023,10 @@
       "todos los ganadores del premio ternium expoagro 2027": "2026-11-25",
       "todo lo que el hombre produzca en carne lo va a poder vender celebra raul milano del rosgan de todos modos luego aclara que sera para exportar porque en el mercado interno no hay plata": "2026-11-25",
       "productores del cuartel ii en alerta por un nuevo caso de abigeato": "2026-11-25",
-      "llega a lincoln el duodecimo taller de caminos rurales": "2026-11-25"
+      "llega a lincoln el duodecimo taller de caminos rurales": "2026-11-25",
+      "john deere compra tecnologia de inteligencia artificial para analizar los cultivos planta por planta": "2026-11-25",
+      "un proveedor estrategico de agco cnh claas y john deere podria cerrar su fabrica en alemania": "2026-11-25",
+      "agropharma apuesta a la inmunidad entrenada para reducir perdidas por estres en tambos y feedlots": "2026-11-25"
     },
     "hash": {
       "18df5dacc9a86c62": "2026-11-14",
@@ -24320,7 +24386,10 @@
       "7834ec6e0d0a2c9f": "2026-11-25",
       "31bedaab170d72f8": "2026-11-25",
       "6bbfe669a07afa64": "2026-11-25",
-      "fd33f6f848055f99": "2026-11-25"
+      "fd33f6f848055f99": "2026-11-25",
+      "5b2d767b70e06987": "2026-11-25",
+      "e54cf115b4a327ac": "2026-11-25",
+      "b251a46b4ac3c39c": "2026-11-25"
     }
   },
   "elegidas": [
@@ -27676,9 +27745,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_33247c2b3237_portada.jpg"
+    },
+    {
+      "id": "65139acc77ef",
+      "cuando": "2026-11-25T22:50-03:00",
+      "titulo_original": "¿Cuánto han disminuido las distorsiones que penalizan al productor agrícola?",
+      "descripcion": "En los primeros nueve meses de 2026, la retención equivalente total —el porcentaje del precio FOB que el productor deja de percibir como consecuencia de distorsiones comerciales y cambiarias— se ubicó en 23,9% en la soja y en 12,6% en el maíz, frente a 55,5% y 50,7%, respectivamente, en 2023....",
+      "fuente": "Agrositio",
+      "url": "https://www.agrositio.com.ar/noticia/249485-cuanto-han-disminuido-las-distorsiones-que-penalizan-al-productor-agricola.html",
+      "titular": "Soja y maíz reducen su carga impositiva y cambiaria en 2026",
+      "volanta": "Mercados",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 8,
+        "cercania_pba": 10,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 64,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "retenciones",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Datos concretos sobre la baja de la carga efectiva en soja y maíz; genera debate inmediato en el campo.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-25T22:50:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "ffceba08-41d2-4846-b622-fd054ca668b8",
+          "slug": "soja-y-maiz-caen-las-distorsiones-y-retenciones-equivalentes-en-3b96d6",
+          "url": "https://www.diariolacampaña.com.ar/n/soja-y-maiz-caen-las-distorsiones-y-retenciones-equivalentes-en-3b96d6",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17891678622652829",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_65139acc77ef_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "fdd9198b6774",
+      "rep": {
+        "id": "fdd9198b6774",
+        "fuente": "Noticias AgroPecuarias",
+        "tipo_fuente": "medio",
+        "source_url": "https://www.noticiasagropecuarias.com/feed/",
+        "url": "https://www.noticiasagropecuarias.com/2026/11/25/agropharma-apuesta-a-la-inmunidad-entrenada-para-reducir-perdidas-por-estres-en-tambos-y-feedlots/",
+        "canonical_url": "https://noticiasagropecuarias.com/2026/11/25/agropharma-apuesta-a-la-inmunidad-entrenada-para-reducir-perdidas-por-estres-en-tambos-y-feedlots",
+        "titulo": "Agropharma apuesta a la ‘inmunidad entrenada’ para reducir pérdidas por estrés en tambos y feedlots",
+        "titulo_norm": "agropharma apuesta a la inmunidad entrenada para reducir perdidas por estres en tambos y feedlots",
+        "descripcion": "El laboratorio desarrolló Protech, un producto que fortalece las defensas, aporta energía y brinda protección antioxidante. En feedlots, se registraron entre 200 y 300 gr de ganancia de peso diaria...",
+        "imagen_url": "https://www.noticiasagropecuarias.com/wp-content/uploads/2026/11/protech-e1795653062908.jpeg",
+        "autor": "Gabriel Quaizel",
+        "publicado": "2026-11-25T21:39-03:00",
+        "capturado": "2026-11-25T22:50-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b251a46b4ac3c39c",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "fdd9198b6774",
+          "fuente": "Noticias AgroPecuarias",
+          "tipo_fuente": "medio",
+          "source_url": "https://www.noticiasagropecuarias.com/feed/",
+          "url": "https://www.noticiasagropecuarias.com/2026/11/25/agropharma-apuesta-a-la-inmunidad-entrenada-para-reducir-perdidas-por-estres-en-tambos-y-feedlots/",
+          "canonical_url": "https://noticiasagropecuarias.com/2026/11/25/agropharma-apuesta-a-la-inmunidad-entrenada-para-reducir-perdidas-por-estres-en-tambos-y-feedlots",
+          "titulo": "Agropharma apuesta a la ‘inmunidad entrenada’ para reducir pérdidas por estrés en tambos y feedlots",
+          "titulo_norm": "agropharma apuesta a la inmunidad entrenada para reducir perdidas por estres en tambos y feedlots",
+          "descripcion": "El laboratorio desarrolló Protech, un producto que fortalece las defensas, aporta energía y brinda protección antioxidante. En feedlots, se registraron entre 200 y 300 gr de ganancia de peso diaria...",
+          "imagen_url": "https://www.noticiasagropecuarias.com/wp-content/uploads/2026/11/protech-e1795653062908.jpeg",
+          "autor": "Gabriel Quaizel",
+          "publicado": "2026-11-25T21:39-03:00",
+          "capturado": "2026-11-25T22:50-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b251a46b4ac3c39c",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 10,
+        "historia_concreta": 12,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 6,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 64,
+        "commercial_score": 50,
+        "subtema": "ganaderia",
+        "tema": "tambos y feedlots",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Interesa a tamberos y productores con feedlots de la región por el dato concreto de aumento de peso.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "cuando": "2026-11-25T22:50-03:00"
+    },
     {
       "id": "0c1a4b1fc777",
       "rep": {
@@ -29084,74 +29277,6 @@
       "cuando": "2026-11-25T09:30-03:00"
     },
     {
-      "id": "e6c4e7dc0871",
-      "rep": {
-        "id": "e6c4e7dc0871",
-        "fuente": "La Trocha Digital",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.latrochadigital.com.ar/feed/",
-        "url": "https://www.latrochadigital.com.ar/2026/11/25/la-tragedia-de-pirovano-reavivo-la-preocupacion-regional-por-las-fumigaciones/",
-        "canonical_url": "https://latrochadigital.com.ar/2026/11/25/la-tragedia-de-pirovano-reavivo-la-preocupacion-regional-por-las-fumigaciones",
-        "titulo": "La tragedia de Pirovano reavivó la preocupación regional por las fumigaciones",
-        "titulo_norm": "la tragedia de pirovano reavivo la preocupacion regional por las fumigaciones",
-        "descripcion": "Los tres fallecimientos ocurridos en una vivienda rural de Pirovano, el pasado 29 de octubre, volvieron a poner en agenda una preocupación que atraviesa a buena parte de la región: las condiciones en las que se realizan las aplicaciones de agroquímicos y las medidas de protección para quienes viven cerca de los campos. En […]",
-        "imagen_url": "https://www.latrochadigital.com.ar/wp-content/uploads/2026/11/md-6.webp",
-        "autor": "CTS",
-        "publicado": "2026-11-25T06:28-03:00",
-        "capturado": "2026-11-25T09:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "84e6677727931cff",
-        "localidad_medio": "9 de Julio"
-      },
-      "grupo": [
-        {
-          "id": "e6c4e7dc0871",
-          "fuente": "La Trocha Digital",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.latrochadigital.com.ar/feed/",
-          "url": "https://www.latrochadigital.com.ar/2026/11/25/la-tragedia-de-pirovano-reavivo-la-preocupacion-regional-por-las-fumigaciones/",
-          "canonical_url": "https://latrochadigital.com.ar/2026/11/25/la-tragedia-de-pirovano-reavivo-la-preocupacion-regional-por-las-fumigaciones",
-          "titulo": "La tragedia de Pirovano reavivó la preocupación regional por las fumigaciones",
-          "titulo_norm": "la tragedia de pirovano reavivo la preocupacion regional por las fumigaciones",
-          "descripcion": "Los tres fallecimientos ocurridos en una vivienda rural de Pirovano, el pasado 29 de octubre, volvieron a poner en agenda una preocupación que atraviesa a buena parte de la región: las condiciones en las que se realizan las aplicaciones de agroquímicos y las medidas de protección para quienes viven cerca de los campos. En […]",
-          "imagen_url": "https://www.latrochadigital.com.ar/wp-content/uploads/2026/11/md-6.webp",
-          "autor": "CTS",
-          "publicado": "2026-11-25T06:28-03:00",
-          "capturado": "2026-11-25T09:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "84e6677727931cff",
-          "localidad_medio": "9 de Julio"
-        }
-      ],
-      "score": {
-        "conversacion": 18,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 5,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 69,
-        "commercial_score": 55,
-        "subtema": "agro",
-        "tema": "fumigaciones",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Tragedia por agroquímicos en Pirovano reabre un debate muy sensible en toda la provincia.",
-        "tema_doc": "sanidad",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T09:30-03:00"
-    },
-    {
       "id": "45deeaa6697c",
       "rep": {
         "id": "45deeaa6697c",
@@ -29408,74 +29533,6 @@
         "tema_doc": "precios",
         "urgente": false,
         "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T07:00-03:00"
-    },
-    {
-      "id": "65139acc77ef",
-      "rep": {
-        "id": "65139acc77ef",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/noticia/249485-cuanto-han-disminuido-las-distorsiones-que-penalizan-al-productor-agricola.html",
-        "canonical_url": "https://agrositio.com.ar/noticia/249485-cuanto-han-disminuido-las-distorsiones-que-penalizan-al-productor-agricola.html",
-        "titulo": "¿Cuánto han disminuido las distorsiones que penalizan al productor agrícola?",
-        "titulo_norm": "cuanto han disminuido las distorsiones que penalizan al productor agricola",
-        "descripcion": "En los primeros nueve meses de 2026, la retención equivalente total —el porcentaje del precio FOB que el productor deja de percibir como consecuencia de distorsiones comerciales y cambiarias— se ubicó en 23,9% en la soja y en 12,6% en el maíz, frente a 55,5% y 50,7%, respectivamente, en 2023....",
-        "imagen_url": "https:/imagenesweb/contenidos/h_249485_10397644.jpg",
-        "autor": "info@agrositio.com (Agrositio)",
-        "publicado": "2026-11-24T18:40-03:00",
-        "capturado": "2026-11-25T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "1f4e7885a0a3cf30",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "65139acc77ef",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249485-cuanto-han-disminuido-las-distorsiones-que-penalizan-al-productor-agricola.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249485-cuanto-han-disminuido-las-distorsiones-que-penalizan-al-productor-agricola.html",
-          "titulo": "¿Cuánto han disminuido las distorsiones que penalizan al productor agrícola?",
-          "titulo_norm": "cuanto han disminuido las distorsiones que penalizan al productor agricola",
-          "descripcion": "En los primeros nueve meses de 2026, la retención equivalente total —el porcentaje del precio FOB que el productor deja de percibir como consecuencia de distorsiones comerciales y cambiarias— se ubicó en 23,9% en la soja y en 12,6% en el maíz, frente a 55,5% y 50,7%, respectivamente, en 2023....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249485_10397644.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-24T18:40-03:00",
-          "capturado": "2026-11-25T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "1f4e7885a0a3cf30",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 8,
-        "cercania_pba": 10,
-        "interes_productores": 15,
-        "impacto_economico": 9,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 64,
-        "commercial_score": 75,
-        "subtema": "agro",
-        "tema": "retenciones",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Datos concretos sobre la baja de la carga efectiva en soja y maíz; genera debate inmediato en el campo.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 8,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false,
         "policial_rural": false,
@@ -30494,29 +30551,9 @@
       "cuando": "2026-11-24T11:33-03:00"
     }
   ],
-  "actualizado": "2026-11-25T22:10:42-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-25T22:55:23-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-17T22:20:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Temporal con granizo y lluvias golpea provincias del centro",
-          "url": "https://www.clarin.com/sociedad/granizo-fuertes-tormentas-golpearon-varias-provincias-alertas-amarilla-naranja-tormentas-martes_0_qnhGuiLnLE.html",
-          "fuente": "Clarín",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-17_2220_viral/viral.mp4",
-          "duracion": 57.96
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "18038388200908128"
-        },
-        "facebook": {
-          "id": "1008470558974894"
-        }
-      }
-    },
     "2026-11-18T10:00:00-03:00": {
       "bloque": "viral",
       "items": [
@@ -35738,7 +35775,8 @@
     "35e3c07c3ca9": "2026-11-25T20:20",
     "d7ec42fd7ece": "2026-11-25T20:20",
     "17a31d57cce5": "2026-11-25T21:35",
-    "6f1ea5df3830": "2026-11-25T21:35"
+    "6f1ea5df3830": "2026-11-25T21:35",
+    "fdd9198b6774": "2026-11-25T22:50"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
