@@ -24544,65 +24544,6 @@
   },
   "elegidas": [
     {
-      "id": "7be0871f9d11",
-      "cuando": "2026-11-18T13:00-03:00",
-      "titulo_original": "Mundo Gallinas: Cuando a Fernando Cortes se le enfermaron las pocas ponedoras que tenía en General Rodríguez, se puso a estudiar, y aprendió tanto que creó una web especial para quienes las crían en el patio",
-      "descripcion": "Compartimos un texto de Fernando Cortes, que de modo muy coloquial contó a Bichos de Campo como pasó de criar unas pocas gallinas en su casa de General Rodríguez a diseñar y montar una página web especialmente pensada para quienes desean tener su propio gallinero, en la que pone especial énfasis en ",
-      "fuente": "Bichos de Campo",
-      "url": "https://bichosdecampo.com/mundo-gallinas-cuando-a-fernando-cortes-se-le-enfermaron-las-pocas-ponedoras-que-tenia-en-general-rodriguez-se-puso-a-estudiar-y-aprendio-tanto-que-creo-una-web-especial-para-quienes-las-crian-en-e/",
-      "titular": "Creó una web sobre gallinas tras criar Plymouth Rock barrados",
-      "volanta": "Avicultura",
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 18,
-        "cercania_pba": 16,
-        "interes_productores": 9,
-        "impacto_economico": 2,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 69,
-        "commercial_score": 52,
-        "subtema": "ganaderia",
-        "tema": "gallinas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Historia de cercanía en General Rodríguez sobre producción casera y aves; genera simpatía y lectura.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          69,
-          71
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-18T13:00:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "628c1aef-d596-4541-9b3e-46d45bd55ff6",
-          "slug": "creo-una-web-sobre-gallinas-tras-criar-plymouth-rock-barrados-609ef2",
-          "url": "https://www.diariolacampaña.com.ar/n/creo-una-web-sobre-gallinas-tras-criar-plymouth-rock-barrados-609ef2",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "18220439842354878",
-          "diapositivas": 5
-        },
-        "facebook": {
-          "id": "101271341650483_1765690555561941",
-          "fotos": 5
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7be0871f9d11_portada.jpg"
-    },
-    {
       "id": "982df701bfd1",
       "cuando": "2026-11-18T18:03-03:00",
       "titulo_original": "Temperaturas bajo lo normal, seguidas por un marcado ascenso térmico, finalizando con precipitaciones de muy variada intensidad",
@@ -30486,7 +30427,7 @@
       "cuando": "2026-11-25T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-26T12:11:11-03:00",
+  "actualizado": "2026-11-26T13:21:47-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-11-18T14:00:00-03:00": {
@@ -32851,6 +32792,27 @@
               }
             }
           ]
+        }
+      }
+    },
+    "2026-11-26T13:20:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "Alarma en el Departamento Vera por robos y faena ilegal",
+          "url": "https://sinmordaza.com/noticia/526755-preocupa-el-avance-del-abigeato-y-la-faena-clandestina-en-el-departamento-vera.html",
+          "fuente": "Sin Mordaza",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-26_1320_viral/viral.mp4",
+          "duracion": 22.0,
+          "con": "foto"
+        }
+      ],
+      "publicado": {
+        "instagram": {
+          "id": "18094166855300592"
+        },
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
         }
       }
     }
@@ -35867,6 +35829,7 @@
     "https://www.lanacion.com.ar/economia/campo/mover-granos-en-camion-cuesta-en-la-argentina-un-36-mas-que-en-estados-unidos-y-un-10-por-encima-de-nid25112026/": "2026-11-25T14:35-03:00",
     "https://www.lanacion.com.ar/economia/campo/no-lo-podiamos-creer-un-temporal-con-vientos-de-140-kilometros-por-hora-destrozo-una-planta-de-nid25112026/": "2026-11-25T18:25-03:00",
     "https://www.infopico.com/2026/11/25/destruccion-total-se-incendio-una-camioneta-en-el-camino-a-la-puma-pero-lograron-salvar-un-carro-con-maquinaria-agricola/": "2026-11-25T20:55-03:00",
-    "https://www.infobae.com/sociedad/2026/11/25/inauguraron-siete-salas-de-internacion-en-chubut-gracias-a-los-aportes-de-una-subasta-del-ejercito-argentino/": "2026-11-26T10:50-03:00"
+    "https://www.infobae.com/sociedad/2026/11/25/inauguraron-siete-salas-de-internacion-en-chubut-gracias-a-los-aportes-de-una-subasta-del-ejercito-argentino/": "2026-11-26T10:50-03:00",
+    "https://sinmordaza.com/noticia/526755-preocupa-el-avance-del-abigeato-y-la-faena-clandestina-en-el-departamento-vera.html": "2026-11-26T13:20-03:00"
   }
 }
