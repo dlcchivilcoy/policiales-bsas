@@ -30427,46 +30427,9 @@
       "cuando": "2026-11-25T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-26T13:21:47-03:00",
+  "actualizado": "2026-11-26T14:01:10-03:00",
   "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-18T14:00:00-03:00": {
-      "dia": "2026-11-18",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Qué te tocó revisar en el campo?",
-          "opciones": [],
-          "publico": "veterinarios",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "18038734193851321"
-            },
-            "facebook": {
-              "id": "4842758866009669"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "18038734193851321"
-              },
-              "facebook": {
-                "id": "4842758866009669"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-18T14:20:00-03:00": {
       "bloque": "viral",
       "items": [],
@@ -32813,6 +32776,43 @@
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-26T14:00:00-03:00": {
+      "dia": "2026-11-26",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué te tocó atender en el campo?",
+          "opciones": [],
+          "publico": "veterinarios",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18101111726538891"
+            },
+            "facebook": {
+              "id": "1892568008588441"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18101111726538891"
+              },
+              "facebook": {
+                "id": "1892568008588441"
+              }
+            }
+          ]
         }
       }
     }
