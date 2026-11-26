@@ -31494,66 +31494,9 @@
       "cuando": "2026-11-25T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-26T18:27:13-03:00",
+  "actualizado": "2026-11-26T19:00:21-03:00",
   "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-18T18:40:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Un temporal destruyó la escuela agraria de Germania y evacuaron alumnos",
-          "url": "https://www.infobae.com/sociedad/2026/11/18/un-impactante-temporal-destruyo-una-escuela-agraria-en-una-localidad-bonaerense-y-mas-de-100-alumnos-fueron-evacuados/",
-          "fuente": "Infobae",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-18_1840_viral/viral.mp4",
-          "duracion": 22.0
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "17926125789221347"
-        },
-        "facebook": {
-          "id": "1601730015319278"
-        }
-      }
-    },
-    "2026-11-18T19:00:00-03:00": {
-      "dia": "2026-11-18",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Qué dulce de leche se está envasando?",
-          "opciones": [],
-          "publico": "lacteos",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "17960666991278332"
-            },
-            "facebook": {
-              "id": "2136352417757452"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "17960666991278332"
-              },
-              "facebook": {
-                "id": "2136352417757452"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-18T21:30:00-03:00": {
       "dia": "2026-11-18",
       "bloque": "participa",
@@ -33910,6 +33853,43 @@
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-26T19:00:00-03:00": {
+      "dia": "2026-11-26",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Qué tanda de quesos estás estacionando?",
+          "opciones": [],
+          "publico": "lacteos",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18129010684907494"
+            },
+            "facebook": {
+              "id": "30091209363819491"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18129010684907494"
+              },
+              "facebook": {
+                "id": "30091209363819491"
+              }
+            }
+          ]
         }
       }
     }
