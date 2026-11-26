@@ -21,7 +21,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 SALIDA = RAIZ / "salida_finde"
 CACHE = SALIDA / "cache"
 CACHE_DIAS = 30
-UA = {"User-Agent": "Mozilla/5.0 (compatible; DiarioLaCampana-datos/1.0; +https://diariolacampaña.com.ar)"}
+UA = {"User-Agent": "Mozilla/5.0 (compatible; DiarioLaCampana-datos/1.0; +https://www.xn--diariolacampaa-2nb.com.ar)"}
 BASE_INDEC = "https://www.indec.gob.ar/ftp/cuadros/poblacion/c2022_bsas_{}.xlsx"
 PAGINA_CENSO = "https://www.indec.gob.ar/indec/web/Nivel4-Tema-2-41-165"
 CENSO = "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022 (resultados definitivos)"
@@ -66,10 +66,11 @@ def bajar(clave: str, get=None, carpeta: Path = None, hoy: date = None) -> Path:
     if destino.exists() and time.time() - destino.stat().st_mtime < CACHE_DIAS * 86400:
         return destino
     if get is None:
-        import requests
-        get = requests.get
+        import httpx                                 # el de requirements.txt (en la nube no hay `requests`)
+        get = lambda u, **k: httpx.get(u, follow_redirects=True, **k)  # noqa: E731
     r = get(url_cuadro(clave), headers=UA, timeout=90)
-    r.raise_for_status()
+    if r.status_code != 200:
+        raise ValueError(f"{clave}: el INDEC respondió {r.status_code}")
     if not r.content.startswith(b"PK"):
         raise ValueError(f"{clave}: el INDEC no devolvió un Excel")
     destino.write_bytes(r.content)

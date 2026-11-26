@@ -324,7 +324,8 @@ def main():
         dias = ["sabado", "domingo"] if a.dia == "finde" else [a.dia]
         inf = generar(dias, ahora.date(), a.tema)
     print(informe(inf))
-    if inf.get("estado") == "fallo":
+    # 26/11/2026: un día que no se pudo armar es una falla (abre el aviso de error, no el de «para revisar»).
+    if inf.get("estado") in ("fallo", "sin_tema") or any(p.get("error") for p in inf.get("piezas") or []):
         sys.exit(1)
 
 
