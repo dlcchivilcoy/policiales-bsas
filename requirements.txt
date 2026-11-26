@@ -30,3 +30,8 @@ opencv-python-headless>=4.8.0,<5
 playwright>=1.44
 # 24/11/2026: el informe semanal del MAGyP (PDF) para el reel de datos de la zona (agro/magyp.py)
 pypdf>=5.0
+
+# 26/11/2026: los reels del finde (finde/): los cuadros del Censo 2022 del INDEC vienen en Excel y la voz
+# es edge-tts (voces neurales es-AR, sin clave).
+openpyxl>=3.1
+edge-tts>=7.0

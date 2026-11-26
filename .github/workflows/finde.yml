@@ -1,0 +1,160 @@
+name: Reels del finde (Chivilcoy en datos)
+
+# 26/11/2026 (pedido del editor): dos reels por semana con datos de Chivilcoy, en colaboración @diarioyradioagro +
+# @diarioyradio (finde/). Sábado: la ciudad (Censo 2022). Domingo: el territorio y el campo (ArgenFields).
+#
+# Quién dispara (cron-job.org, con {"ref":"main","inputs":{"origen":"cron","modo":"..."}}):
+#   - viernes 20:00, modo «generar»: arma los dos reels del fin de semana, los deja como artefacto y abre un aviso
+#     (issue) para revisarlos. No publica.
+#   - sábado y domingo 18:40, modo «publicar»: vuelve a armar el del día y lo publica a las 19:00 (FINDE_HORA).
+# El `schedule:` de abajo es el RESPALDO de la publicación (18:55): la memoria (estado/finde.json) frena el segundo
+# intento y fuera de 18:30-20:30 no publica.
+#
+# La publicación se habilita APARTE: variable del repo FINDE_PUBLICAR=1 (o publicar=si a mano). FINDE=0 apaga todo.
+
+on:
+  schedule:                 # UTC; Argentina es UTC-3 todo el año.
+    - cron: "55 21 * * 6,0"   # 18:55 sábado y domingo, respaldo de la publicación
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: '"generar" (los dos del próximo finde, para revisar) o "publicar" (el de hoy)'
+        default: "generar"
+      dia:
+        description: 'generar: "finde", "sabado" o "domingo"'
+        default: "finde"
+      tema:
+        description: "un tema a elección (gas_red, cloacas, alquiler, crecimiento, internet, agua, mayores / tierra, soja_peor, anegamiento, aptitud, emergencias); vacío = el que toca"
+        default: ""
+      publicar:
+        description: '"si" publica aunque FINDE_PUBLICAR no esté en 1'
+        default: ""
+      origen:
+        description: "quién la dispara (cron = cron-job.org)"
+        default: "manual"
+
+concurrency:
+  group: finde
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # estado/finde.json y el video al Release temporal
+  issues: write
+
+jobs:
+  finde:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Reels del finde
+        timeout-minutes: 50
+        env:
+          PYTHONUNBUFFERED: "1"
+          AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
+          AGRO_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.AGRO_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          AGRO_INSTAGRAM_USER_ID: ${{ secrets.AGRO_INSTAGRAM_USER_ID }}
+          # Las del diario: la salvaguarda compara, se acepta la colab y sale en la página de Facebook del diario.
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IG_RESERVA_BOT: ${{ vars.IG_RESERVA_BOT }}
+          AGRO_MARGEN_MIN: ${{ vars.AGRO_MARGEN_MIN }}
+          AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
+          FINDE: ${{ vars.FINDE }}
+          FINDE_HORA: ${{ vars.FINDE_HORA }}
+          FINDE_VENTANA: ${{ vars.FINDE_VENTANA }}
+          FINDE_COLAB: ${{ vars.FINDE_COLAB }}
+          FINDE_FB_DIARIO: ${{ vars.FINDE_FB_DIARIO }}
+          FINDE_VOZ: ${{ vars.FINDE_VOZ }}
+          FINDE_VOZ_VELOCIDAD: ${{ vars.FINDE_VOZ_VELOCIDAD }}
+          PUBLICAR_VAR: ${{ vars.FINDE_PUBLICAR }}
+          PUBLICAR_INPUT: ${{ github.event.inputs.publicar }}
+          MODO_INPUT: ${{ github.event.inputs.modo }}
+          DIA_INPUT: ${{ github.event.inputs.dia }}
+          TEMA_INPUT: ${{ github.event.inputs.tema }}
+          EVENTO: ${{ github.event_name }}
+        run: |
+          set -o pipefail
+          MODO="${MODO_INPUT:-generar}"
+          if [ "$EVENTO" = "schedule" ]; then MODO="publicar"; fi
+          if [ "$MODO" = "publicar" ]; then
+            if [ "$PUBLICAR_VAR" != "1" ] && [ "$PUBLICAR_INPUT" != "si" ]; then
+              echo "La publicación no está habilitada (variable FINDE_PUBLICAR); solo se genera el de hoy."
+              ARGS="--generar --dia $( [ "$(TZ=America/Argentina/Buenos_Aires date +%u)" = "7" ] && echo domingo || echo sabado )"
+            else
+              ARGS="--publicar"
+            fi
+          else
+            ARGS="--generar --dia ${DIA_INPUT:-finde}"
+          fi
+          if [ -n "$TEMA_INPUT" ]; then ARGS="$ARGS --tema $TEMA_INPUT"; fi
+          echo "python -m finde.corrida $ARGS"
+          python -m finde.corrida $ARGS | tee informe_finde.md
+          echo "MODO=$MODO" >> "$GITHUB_ENV"
+
+      - name: Guardar los entregables
+        id: artefacto
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: finde-${{ github.run_number }}
+          path: |
+            salida_finde/20*/*
+            !salida_finde/20*/voz
+            salida_finde/registro.log
+          retention-days: 14
+          compression-level: 0
+
+      - name: Recordar qué salió
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain estado/finde.json)" ]; then
+            echo "La memoria no cambió."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python tools/guardar_estado.py --solo finde.json
+
+      - name: Aviso para revisar
+        if: success() && env.MODO == 'generar'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ARTEFACTO: ${{ steps.artefacto.outputs.artifact-url }}
+        run: |
+          TITULO="Reels del finde para revisar ($(TZ=America/Argentina/Buenos_Aires date +%d/%m))"
+          CUERPO="$(cat informe_finde.md)"
+          CUERPO="$(printf '%s\n\n**Descargar los reels y sus archivos:** %s\n\nSalen solos el sábado y el domingo a las 19:00 si la variable FINDE_PUBLICAR está en 1. Para frenar uno: variable FINDE=0.\n\n[Ver la corrida](%s)' "$CUERPO" "$ARTEFACTO" "$CORRIDA")"
+          gh issue create --title "$TITULO" --body "$CUERPO"
+
+      - name: Avisar en un issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CORRIDA: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITULO="Los reels del finde fallaron"
+          CUERPO="$( [ -f informe_finde.md ] && tail -40 informe_finde.md || echo 'La corrida falló antes del informe.')"
+          CUERPO="$(printf '%s\n\n[Ver la corrida](%s)' "$CUERPO" "$CORRIDA")"
+          EXISTENTE="$(gh issue list --state open --search "$TITULO" --json number,title \
+            --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)"
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO"
+          fi

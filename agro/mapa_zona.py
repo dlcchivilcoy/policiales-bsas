@@ -22,6 +22,7 @@ from agro import diseno as D
 PARTIDOS = Path(__file__).resolve().parent / "datos" / "partidos.json"
 NARANJA = D.NARANJA
 BLANCO = (255, 255, 255)
+PALETA_NARANJA = ((84, 62, 48), (253, 150, 40))     # de menos a más (la escala de la leyenda usa los mismos)
 
 
 @lru_cache(maxsize=1)
@@ -60,6 +61,9 @@ def color_de(v: float, lo: float, hi: float, divergente: bool = False, paleta: s
     if paleta == "rojo":                               # pérdidas: más rojo cuanto más se perdió
         t = 0.0 if hi == lo else (v - lo) / (hi - lo)
         return _mezcla((96, 70, 62), (232, 72, 58), t)
+    if paleta == "naranja":                            # 26/11/2026: los reels del diario (finde/), marca naranja
+        t = 0.0 if hi == lo else (v - lo) / (hi - lo)
+        return _mezcla(PALETA_NARANJA[0], PALETA_NARANJA[1], t)
     if divergente:
         tope = max(abs(lo), abs(hi)) or 1
         t = min(1.0, abs(v) / tope)
@@ -70,7 +74,7 @@ def color_de(v: float, lo: float, hi: float, divergente: bool = False, paleta: s
 
 def dibujar(valores: dict, t: float, lado_x: int = 960, lado_y: int = 900, fmt=lambda v: f"{v:g}",
             divergente: bool = False, resaltar: str = "chivilcoy", durar: float = 1.6, fondo=(44, 47, 53),
-            paleta: str = "verde") -> Image.Image:
+            paleta: str = "verde", borde=None) -> Image.Image:
     """El mapa con los partidos de `valores` ({slug: número}) pintados en orden, del menor al mayor, durante
     `durar` segundos; los que no tienen dato, grises. Devuelve RGBA lado_x × lado_y."""
     im = Image.new("RGBA", (lado_x, lado_y), (0, 0, 0, 0))
@@ -96,7 +100,7 @@ def dibujar(valores: dict, t: float, lado_x: int = 960, lado_y: int = 900, fmt=l
     if resaltar in polis:
         for a in polis[resaltar]["anillos"]:
             pts = [p(x, y) for x, y in a]
-            d.line(pts + [pts[0]], fill=NARANJA + (255,), width=7, joint="curve")
+            d.line(pts + [pts[0]], fill=(borde or NARANJA) + (255,), width=7, joint="curve")
     for k, v in polis.items():
         a = max(v["anillos"], key=len)
         cx, cy = p(*centro(a))
