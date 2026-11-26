@@ -81,31 +81,39 @@ chequear("marca de agro, sin colaboración y cinco hashtags", f["placa"] == "agr
 mala = dict(BUENA, respuesta={"numero": 8, "dec": 0, "unidad": "", "texto": "x"}, revelacion="Ocho de cada 10.")
 chequear("una respuesta que no está en el informe lo descarta", "error" in F.ficha(g, redactar=lambda s, m: mala))
 
-# --- la corrida ----------------------------------------------------------------------------------------------
+# --- la corrida (26/11/2026: solo los domingos, hasta 2 informes de la semana) -----------------------------
 tmp = Path(tempfile.mkdtemp())
 mem = tmp / "fada.json"
-publicados = []
+publicados, dormido = [], []
 informes = [dict(g, slug="logistica", fecha=date(2026, 11, 25), url="https://fundacionfada.org/informes/logistica/"),
+            dict(g, slug="ganadero", fecha=date(2026, 11, 27), url="https://fundacionfada.org/informes/ganadero/"),
+            dict(g, slug="tributario", fecha=date(2026, 11, 24), url="https://fundacionfada.org/informes/tributario/"),
             dict(g, slug="viejo", fecha=date(2026, 10, 1), url="https://fundacionfada.org/informes/viejo/")]
 leer_fn = lambda u: next(x for x in informes if x["url"] == u)  # noqa: E731
 kw = dict(ruta_mem=mem, log=lambda *a: None, listar_fn=lambda: [x["url"] for x in informes], leer_fn=leer_fn,
-          material_fn=lambda x: x["material"], redactar=lambda s, m: BUENA,
+          material_fn=lambda x: x["material"], redactar=lambda s, m: BUENA, dormir=dormido.append,
           armar_video=lambda f_, c, log=print: (c.mkdir(parents=True, exist_ok=True) or
                                                 {"archivo": "r.mp4", "portada": "p.jpg", "duracion": 120.0,
                                                  "ancho": 1080, "alto": 1920}),
           publicador=lambda p, log=print: publicados.append(p) or {"instagram": {"id": "1"}, "facebook": {"id": "2"}})
-ahora = datetime(2026, 11, 26, 16, 45, tzinfo=F.TZ_AR)
-chequear("fuera de la franja no hace nada", F.corrida(True, datetime(2026, 11, 26, 10, 0, tzinfo=F.TZ_AR), **kw)["estado"]
-         == "fuera_de_hora")
-inf = F.corrida(True, ahora, **kw)
-chequear("publica el informe nuevo, en agro y sin colab", inf["estado"] == "ok" and len(publicados) == 1
-         and publicados[0]["colab_diario"] is False and publicados[0]["reel"]["duracion"] == 120.0)
+domingo = datetime(2026, 11, 29, 16, 45, tzinfo=F.TZ_AR)
+chequear("un jueves no se fija", F.corrida(True, datetime(2026, 11, 26, 16, 45, tzinfo=F.TZ_AR), **kw)["estado"]
+         == "otro_dia" and not publicados)
+chequear("el domingo fuera de la franja no hace nada",
+         F.corrida(True, domingo.replace(hour=10), **kw)["estado"] == "fuera_de_hora")
+inf = F.corrida(True, domingo, **kw)
+chequear("el domingo publica los dos más nuevos de la semana, en agro y sin colab",
+         inf["estado"] == "ok" and [p["id"].split("_")[1].split("-")[0] for p in publicados] == ["ganadero", "logistica"]
+         and all(p["colab_diario"] is False for p in publicados))
+chequear("entre los dos espera su margen", len(dormido) == 1 and dormido[0] > 0)
 m = F.cargar(mem)
-chequear("el viejo queda anotado como viejo y no se publica", m["informes"]["viejo"]["estado"] == "viejo")
-chequear("un segundo intento el mismo día no repite", F.corrida(True, ahora.replace(minute=59), **kw)["estado"]
-         == "ya_salio_hoy" and len(publicados) == 1)
-chequear("al otro día, sin informes nuevos, no publica nada",
-         F.corrida(True, ahora.replace(day=27), **kw)["estado"] == "sin_novedades" and len(publicados) == 1)
+chequear("el viejo queda anotado como viejo", m["informes"]["viejo"]["estado"] == "viejo")
+chequear("el tercero no sale ese día (tope de 2)", "tributario" not in m["informes"])
+chequear("el respaldo del mismo domingo no repite", F.corrida(True, domingo.replace(minute=59), **kw)["estado"]
+         == "ya_salio_hoy" and len(publicados) == 2)
+os.environ["FADA_DIAS_SEMANA"] = "3"
+chequear("FADA_DIAS_SEMANA cambia el día", F.dias_semana() == {3})
+os.environ.pop("FADA_DIAS_SEMANA")
 
 print(f"\n--- {total - len(fallas)}/{total} correctos ---")
 sys.exit(1 if fallas else 0)

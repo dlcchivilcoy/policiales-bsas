@@ -4,7 +4,8 @@ name: Agro - reels de los informes de FADA
 # cada 4 o 5 días) sale como un reel largo (hasta ~3 min) en @diarioyradioagro, con pregunta, respuesta, los datos del
 # informe, voz y subtítulos (agro/fada.py + el motor de finde/video.py).
 #
-# Quién dispara: cron-job.org todos los días a las 16:45 con {"ref":"main","inputs":{"origen":"cron"}}; sale a las 16:50
+# 26/11/2026 (el editor: «que se fije los domingos»): solo los DOMINGOS, con los informes de la semana (hasta 2,
+# separados 35 min). Quién dispara: cron-job.org los domingos a las 16:45 con {"ref":"main","inputs":{"origen":"cron"}}; sale a las 16:50
 # (después de esperar el margen con el último posteo). Los días sin informe nuevo termina sin hacer nada. El `schedule:`
 # es el RESPALDO (17:05): la memoria (estado/agro_fada.json) frena el segundo intento.
 #
@@ -12,7 +13,7 @@ name: Agro - reels de los informes de FADA
 
 on:
   schedule:                 # UTC; Argentina es UTC-3 todo el año.
-    - cron: "5 20 * * *"    # 17:05, respaldo
+    - cron: "5 20 * * 0"    # domingo 17:05, respaldo
   workflow_dispatch:
     inputs:
       publicar:
@@ -33,7 +34,7 @@ permissions:
 jobs:
   fada:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,7 +49,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Reel del informe de FADA
-        timeout-minutes: 40
+        timeout-minutes: 110
         env:
           PYTHONUNBUFFERED: "1"
           AGRO_FACEBOOK_PAGE_ID: ${{ secrets.AGRO_FACEBOOK_PAGE_ID }}
@@ -68,6 +69,8 @@ jobs:
           AGRO_FADA: ${{ vars.AGRO_FADA }}
           AGRO_FADA_VENTANA: ${{ vars.AGRO_FADA_VENTANA }}
           FADA_DIAS: ${{ vars.FADA_DIAS }}
+          FADA_DIAS_SEMANA: ${{ vars.FADA_DIAS_SEMANA }}
+          FADA_POR_DIA: ${{ vars.FADA_POR_DIA }}
           AGRO_MARGEN_MIN: ${{ vars.AGRO_MARGEN_MIN }}
           AGRO_REEL_HISTORIA: ${{ vars.AGRO_REEL_HISTORIA }}
           FINDE_VOZ: ${{ vars.FINDE_VOZ }}

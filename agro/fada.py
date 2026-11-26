@@ -23,9 +23,8 @@ de la narración y del texto del posteo tiene que estar en el material (`numeros
 saca y, si no queda lo mínimo, el informe se descarta y queda anotado. Las estimaciones y propuestas de FADA se
 atribuyen («según FADA»).
 
-Dónde y cuándo: Instagram y Facebook de @diarioyradioagro (sin colaboración), a las 16:50 (entre los posteos de las
-16:30 y las 17:10 de la grilla), solo los días que hay un informe nuevo (de los últimos FADA_DIAS días, 10); uno por
-día como mucho. AGRO_FADA=0 lo apaga; AGRO_FADA_VENTANA («16:30-18:00»). Memoria: estado/agro_fada.json. Workflow:
+Dónde y cuándo: Instagram y Facebook de @diarioyradioagro (sin colaboración), los DOMINGOS (FADA_DIAS_SEMANA) desde las
+16:50: los informes de la semana (FADA_DIAS, 7), hasta FADA_POR_DIA (2), separados por ESPACIO_MIN (35) minutos. AGRO_FADA=0 lo apaga; AGRO_FADA_VENTANA («16:30-18:00»). Memoria: estado/agro_fada.json. Workflow:
 .github/workflows/agro_fada.yml.
 """
 from __future__ import annotations
@@ -65,13 +64,31 @@ def activo() -> bool:
 
 def dias_max() -> int:
     try:
-        return int(_var("FADA_DIAS", "10"))
+        return int(_var("FADA_DIAS", "7"))
     except ValueError:
-        return 10
+        return 7
+
+
+def dias_semana() -> set:
+    """Los días que se fija si hay informes (0 = lunes … 6 = domingo). FADA_DIAS_SEMANA, de fábrica «6»."""
+    try:
+        return {int(x) for x in _var("FADA_DIAS_SEMANA", "6").split(",") if x.strip()}
+    except ValueError:
+        return {6}
+
+
+def por_dia() -> int:
+    try:
+        return max(1, int(_var("FADA_POR_DIA", "2")))
+    except ValueError:
+        return 2
+
+
+ESPACIO_MIN = 35              # entre dos informes del mismo domingo
 
 
 def ventana(dia: date) -> tuple:
-    a, b = _var("AGRO_FADA_VENTANA", "16:30-18:00").split("-")
+    a, b = _var("AGRO_FADA_VENTANA", "16:30-18:30").split("-")
     f = lambda s: datetime.combine(dia, datetime.strptime(s.strip(), "%H:%M").time(), TZ_AR)  # noqa: E731
     return f(a), f(b)
 
@@ -430,24 +447,36 @@ def pendientes(mem: dict, hoy: date, listar_fn=None, leer_fn=None, log=print) ->
 
 def corrida(publicar_: bool, ahora: datetime = None, ruta_mem: Path = None, log=print, listar_fn=None,
             leer_fn=None, material_fn=None, redactar=None, armar_video=None, publicador=None,
-            forzar: bool = False) -> dict:
+            forzar: bool = False, dormir=None) -> dict:
+    """26/11/2026, el editor: «el de FADA que se fije los domingos»: corre los días de FADA_DIAS_SEMANA (domingo) y
+    publica los informes de la semana (FADA_DIAS, 7), hasta FADA_POR_DIA (2), separados por ESPACIO_MIN."""
+    import time
+    dormir = dormir or time.sleep
     ahora = ahora or datetime.now(TZ_AR)
-    inf = {"cuando": ahora.isoformat(timespec="minutes"), "publicar": publicar_, "estado": ""}
+    inf = {"cuando": ahora.isoformat(timespec="minutes"), "publicar": publicar_, "estado": "", "piezas": []}
     if not activo():
         inf["estado"] = "apagado"
         return inf
     if publicar_ and not forzar:
+        if ahora.weekday() not in dias_semana():
+            inf["estado"] = "otro_dia"
+            return inf
         desde, hasta = ventana(ahora.date())
         if not (desde - timedelta(minutes=20) <= ahora <= hasta):
             inf["estado"] = "fuera_de_hora"
             return inf
     mem = cargar(ruta_mem)
     hoy = ahora.date().isoformat()
-    if publicar_ and any(v.get("estado") in ("publicado", "publicando") and (v.get("cuando") or "")[:10] == hoy
-                         for v in mem["informes"].values()):
+    hechos = sum(1 for v in mem["informes"].values()
+                 if v.get("estado") in ("publicado", "publicando") and (v.get("cuando") or "")[:10] == hoy)
+    if publicar_ and hechos >= por_dia():
         inf["estado"] = "ya_salio_hoy"
         return inf
+    ultimo = None
     for g in pendientes(mem, ahora.date(), listar_fn, leer_fn, log):
+        if publicar_ and hechos >= por_dia():
+            log(f"   «{g['titulo']}» queda para otro día (tope de {por_dia()} por día)")
+            break
         log(f"FADA: «{g['titulo']}» ({g['fecha']}) — PDF: {'sí' if g.get('pdf') else 'no'}")
         (material_fn or material)(g)
         log(f"   material: {len(g['material'])} caracteres (PDF {len(g.get('texto_pdf') or '')}, gacetilla "
@@ -465,25 +494,39 @@ def corrida(publicar_: bool, ahora: datetime = None, ruta_mem: Path = None, log=
         reel = armar_video(f, carpeta, log=log)
         (carpeta / "texto.txt").write_text(caption(f), encoding="utf-8")
         (carpeta / "ficha.json").write_text(json.dumps(f, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
-        inf.update(clave=f["clave"], titulo=f["titulo"], carpeta=str(carpeta), duracion=reel["duracion"],
-                   bloques=len(f["bloques"]))
+        pz = {"clave": f["clave"], "titulo": f["titulo"], "carpeta": str(carpeta), "duracion": reel["duracion"],
+              "bloques": len(f["bloques"])}
+        inf["piezas"].append(pz)
         if not publicar_:
+            pz["texto"] = caption(f)
             inf["estado"] = "simulado"
-            inf["texto"] = caption(f)
             return inf
+        if ultimo is not None:                        # entre dos informes del mismo día, al menos ESPACIO_MIN
+            falta = ESPACIO_MIN * 60 - (time.monotonic() - ultimo)
+            if falta > 0:
+                log(f"   esperando {falta / 60:.0f} min para el siguiente…")
+                dormir(falta)
         registro = {"estado": "publicando", "fecha": str(g["fecha"]), "titulo": f["titulo"],
-                    "cuando": ahora.isoformat(timespec="minutes"), "duracion": reel["duracion"]}
+                    "cuando": datetime.now(TZ_AR).isoformat(timespec="minutes") if not forzar
+                    else ahora.isoformat(timespec="minutes"), "duracion": reel["duracion"]}
+        registro["cuando"] = hoy + registro["cuando"][10:]
         mem["informes"][g["slug"]] = registro           # ANTES de publicar: un reintento no lo repite
         guardar(mem, ruta_mem)
         res = (publicador or publicar)(pieza(f, reel, ahora), log=log)
+        ultimo = time.monotonic()
         ok = [r for r in ("instagram", "facebook") if isinstance(res.get(r), dict) and res[r].get("id")]
         registro.update(estado="publicado" if ok else "fallo", redes=ok,
                         resultado={k: v for k, v in res.items() if k != "portada_url"})
         guardar(mem, ruta_mem)
-        inf.update(estado="ok" if ok else "fallo", redes=ok)
-        return inf
+        pz["redes"] = ok
+        hechos += 1
     guardar(mem, ruta_mem)
-    inf["estado"] = "sin_novedades"
+    if not inf["piezas"]:
+        inf["estado"] = "sin_novedades"
+    elif any(not p.get("redes") for p in inf["piezas"]):
+        inf["estado"] = "fallo"
+    else:
+        inf["estado"] = "ok"
     return inf
 
 
@@ -495,9 +538,9 @@ def main():
     a = ap.parse_args()
     inf = corrida(a.publicar, forzar=a.ya)
     print(f"## Reel de FADA — {inf.get('estado')}\n")
-    for k in ("titulo", "clave", "duracion", "bloques", "redes", "carpeta"):
-        if inf.get(k):
-            print(f"- {k}: {inf[k]}")
+    for pz in inf.get("piezas") or []:
+        print(f"- «{pz['titulo']}» ({pz['clave']}): {pz['duracion']} s, {pz['bloques']} bloques, redes "
+              f"{pz.get('redes', '—')} → {pz['carpeta']}")
     if inf.get("estado") == "fallo":
         sys.exit(1)
 
