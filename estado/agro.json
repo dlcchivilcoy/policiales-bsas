@@ -29862,46 +29862,9 @@
       "cuando": "2026-11-25T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-26T10:52:30-03:00",
+  "actualizado": "2026-11-26T11:00:25-03:00",
   "tema_ultimo": "blanco",
   "historias": {
-    "2026-11-18T11:00:00-03:00": {
-      "dia": "2026-11-18",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Cómo están los lotes para meterle a la siembra?",
-          "opciones": [],
-          "publico": "agricultura",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "18101624624097287"
-            },
-            "facebook": {
-              "id": "1715049023556681"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "18101624624097287"
-              },
-              "facebook": {
-                "id": "1715049023556681"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-18T14:00:00-03:00": {
       "dia": "2026-11-18",
       "bloque": "participa",
@@ -32223,6 +32186,47 @@
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-26T11:00:00-03:00": {
+      "dia": "2026-11-26",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo viene la siembra en tu zona?",
+          "opciones": [
+            "Adelantada",
+            "Normal",
+            "Atrasada"
+          ],
+          "publico": "agricultura",
+          "via": "lista",
+          "publicado": {
+            "instagram": {
+              "id": "18091152815324274"
+            },
+            "facebook": {
+              "id": "2342218483236210"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18091152815324274"
+              },
+              "facebook": {
+                "id": "2342218483236210"
+              }
+            }
+          ]
         }
       }
     }
