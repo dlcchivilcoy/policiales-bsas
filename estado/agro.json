@@ -21531,6 +21531,26 @@
       "urgente": false,
       "potencial_carrusel": 2,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "3145d024e4439208": {
+      "conversacion": 0,
+      "historia_concreta": 5,
+      "cercania_pba": 0,
+      "interes_productores": 0,
+      "impacto_economico": 0,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 10,
+      "commercial_score": 0,
+      "subtema": "agro",
+      "tema": "policiales",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un hecho policial urbano sin ninguna relación con el campo ni la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 0,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -22975,7 +22995,9 @@
       "https://diarionoticiaspehuajo.com/2026-11-26/cuarta-edicion-del-torneo-hermanos-lamanna-en-calaveras-44004": "2026-11-26",
       "https://bichosdecampo.com/mercosur-a-pleno-mas-del-19-del-volumen-de-molienda-de-soja-argentina-se-explica-por-el-poroto-importado": "2026-11-26",
       "https://clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html": "2026-11-26",
-      "https://agroempresario.com/publicacion/124233/fiesta-de-la-yerba-mate-mas-de-40-marcas-en-apostoles": "2026-11-26"
+      "https://agroempresario.com/publicacion/124233/fiesta-de-la-yerba-mate-mas-de-40-marcas-en-apostoles": "2026-11-26",
+      "https://agrobonaerense.com.ar/nota/4323/agroquimicos-desarollo-agrario-prorrogo-otra-vez-la-suspension-y-sigue-sin-definir-un-protocolo": "2026-11-26",
+      "https://clarin.com/policiales/ataque-escuela-danza-conocera-fallo-juicio-acusado-apunalar-bailarinas_0_3M3zD5kSaT.html": "2026-11-26"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 15 noviembre 2026": "2026-11-15",
@@ -24418,7 +24440,9 @@
       "cuarta edicion del torneo hermanos lamanna en calaveras": "2026-11-26",
       "mercosur a pleno mas del 19 del volumen de molienda de soja argentina se explica por el poroto importado": "2026-11-26",
       "estamos saliendo del estancamiento la cosecha de granos record trae un aluvion de dolares a la argentina": "2026-11-26",
-      "fiesta de la yerba mate mas de 40 marcas en apostoles": "2026-11-26"
+      "fiesta de la yerba mate mas de 40 marcas en apostoles": "2026-11-26",
+      "agroquimicos desarollo agrario prorrogo otra vez la suspension y sigue sin definir un protocolo": "2026-11-26",
+      "ataque en la escuela de danza cuando se conocera el fallo del juicio al acusado de apunalar a dos bailarinas": "2026-11-26"
     },
     "hash": {
       "4a927d5fb0a22ac9": "2026-11-15",
@@ -25861,7 +25885,9 @@
       "43718e9fc894e669": "2026-11-26",
       "17dfe8ed95b2d436": "2026-11-26",
       "33dab19f3fcb354b": "2026-11-26",
-      "0333db0780485c45": "2026-11-26"
+      "0333db0780485c45": "2026-11-26",
+      "a6ff5fa038692ec8": "2026-11-26",
+      "3145d024e4439208": "2026-11-26"
     }
   },
   "elegidas": [
@@ -29593,6 +29619,62 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_fdd9198b6774_portada.jpg"
+    },
+    {
+      "id": "0aa4d3f093f0",
+      "cuando": "2026-11-26T22:50-03:00",
+      "titulo_original": "La Provincia prorrogó la regulación de fitosanitarios hasta 2027",
+      "descripcion": "La medida extiende una nueva prórroga sobre la Resolución 24/19 —vinculada a la Resolución 246/18— sin que entre en plena vigencia, mientras continúa el debate por los criterios en zonas sensibles y municipios.",
+      "fuente": "Agro Bonaerense",
+      "url": "https://agrobonaerense.com.ar/nota/4320/la-provincia-prorrogo-la-regulacion-de-fitosanitarios-hasta-2027",
+      "titular": "Buenos Aires posterga la regulación de fitosanitarios rurales hasta 2027",
+      "volanta": "Agroecología y Normas",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 10,
+        "cercania_pba": 20,
+        "interes_productores": 15,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 74,
+        "commercial_score": 40,
+        "subtema": "agro",
+        "tema": "fitosanitarios",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta directamente a los productores de la provincia por las reglas de aplicación.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 5,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-26T22:50:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1958fa90-89d7-4358-9509-77f4998f76b0",
+          "slug": "buenos-aires-prorroga-la-normativa-de-fitosanitarios-y-0aa4d3",
+          "url": "https://www.diariolacampaña.com.ar/n/buenos-aires-prorroga-la-normativa-de-fitosanitarios-y-0aa4d3",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "17886983148524830",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0aa4d3f093f0_portada.jpg"
     }
   ],
   "pendientes": [
@@ -30433,74 +30515,6 @@
       "cuando": "2026-11-26T10:10-03:00"
     },
     {
-      "id": "0aa4d3f093f0",
-      "rep": {
-        "id": "0aa4d3f093f0",
-        "fuente": "Agro Bonaerense",
-        "tipo_fuente": "medio",
-        "source_url": "https://agrobonaerense.com.ar/rss",
-        "url": "https://agrobonaerense.com.ar/nota/4320/la-provincia-prorrogo-la-regulacion-de-fitosanitarios-hasta-2027",
-        "canonical_url": "https://agrobonaerense.com.ar/nota/4320/la-provincia-prorrogo-la-regulacion-de-fitosanitarios-hasta-2027",
-        "titulo": "La Provincia prorrogó la regulación de fitosanitarios hasta 2027",
-        "titulo_norm": "la provincia prorrogo la regulacion de fitosanitarios hasta 2027",
-        "descripcion": "La medida extiende una nueva prórroga sobre la Resolución 24/19 —vinculada a la Resolución 246/18— sin que entre en plena vigencia, mientras continúa el debate por los criterios en zonas sensibles y municipios.",
-        "imagen_url": "http://agrobonaerense.com.ar/uploads/noticias/5/2026/11/20261126091331_20240531150054-tratamientos-fitosanitarios-terceros-aepla.jpg",
-        "autor": "agrobonaerenseweb@gmail.com (Agro Bonaerense)",
-        "publicado": "2026-11-26T09:11-03:00",
-        "capturado": "2026-11-26T10:10-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7f8daf0bd9b7d812",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "0aa4d3f093f0",
-          "fuente": "Agro Bonaerense",
-          "tipo_fuente": "medio",
-          "source_url": "https://agrobonaerense.com.ar/rss",
-          "url": "https://agrobonaerense.com.ar/nota/4320/la-provincia-prorrogo-la-regulacion-de-fitosanitarios-hasta-2027",
-          "canonical_url": "https://agrobonaerense.com.ar/nota/4320/la-provincia-prorrogo-la-regulacion-de-fitosanitarios-hasta-2027",
-          "titulo": "La Provincia prorrogó la regulación de fitosanitarios hasta 2027",
-          "titulo_norm": "la provincia prorrogo la regulacion de fitosanitarios hasta 2027",
-          "descripcion": "La medida extiende una nueva prórroga sobre la Resolución 24/19 —vinculada a la Resolución 246/18— sin que entre en plena vigencia, mientras continúa el debate por los criterios en zonas sensibles y municipios.",
-          "imagen_url": "http://agrobonaerense.com.ar/uploads/noticias/5/2026/11/20261126091331_20240531150054-tratamientos-fitosanitarios-terceros-aepla.jpg",
-          "autor": "agrobonaerenseweb@gmail.com (Agro Bonaerense)",
-          "publicado": "2026-11-26T09:11-03:00",
-          "capturado": "2026-11-26T10:10-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7f8daf0bd9b7d812",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 10,
-        "cercania_pba": 20,
-        "interes_productores": 15,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 74,
-        "commercial_score": 40,
-        "subtema": "agro",
-        "tema": "fitosanitarios",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta directamente a los productores de la provincia por las reglas de aplicación.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-26T10:10-03:00"
-    },
-    {
       "id": "ff41d724c91d",
       "rep": {
         "id": "ff41d724c91d",
@@ -31131,234 +31145,11 @@
         "empresa_agro": false
       },
       "cuando": "2026-11-25T11:32-03:00"
-    },
-    {
-      "id": "04b45008527c",
-      "rep": {
-        "id": "04b45008527c",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/corrientes-hace-historia-con-el-bufalo-1-570-animales-en-un-remate-record-mundial/",
-        "canonical_url": "https://todoagro.com.ar/corrientes-hace-historia-con-el-bufalo-1-570-animales-en-un-remate-record-mundial",
-        "titulo": "Corrientes hace historia con el búfalo: 1.570 animales en un remate récord mundial",
-        "titulo_norm": "corrientes hace historia con el bufalo 1 570 animales en un remate record mundial",
-        "descripcion": "La 10° Fiesta Provincial del Búfalo, realizada en Caá Catí, reunió a productores de distintos puntos de Corrientes y alcanzó una concentración comercial inédita para la especie. Con 1.570 cabezas, 32 remitentes y 35 compradores, la subasta fue presentada por la Asociación Argentina de Criadores de Búfalos como la más grande del mundo. La entrada Corrientes hace historia con el búfalo: 1.570 animales en un remate récord mundial pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-25T10:00-03:00",
-        "capturado": "2026-11-25T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "8f6830cb5813fd45",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "04b45008527c",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/corrientes-hace-historia-con-el-bufalo-1-570-animales-en-un-remate-record-mundial/",
-          "canonical_url": "https://todoagro.com.ar/corrientes-hace-historia-con-el-bufalo-1-570-animales-en-un-remate-record-mundial",
-          "titulo": "Corrientes hace historia con el búfalo: 1.570 animales en un remate récord mundial",
-          "titulo_norm": "corrientes hace historia con el bufalo 1 570 animales en un remate record mundial",
-          "descripcion": "La 10° Fiesta Provincial del Búfalo, realizada en Caá Catí, reunió a productores de distintos puntos de Corrientes y alcanzó una concentración comercial inédita para la especie. Con 1.570 cabezas, 32 remitentes y 35 compradores, la subasta fue presentada por la Asociación Argentina de Criadores de Búfalos como la más grande del mundo. La entrada Corrientes hace historia con el búfalo: 1.570 animales en un remate récord mundial pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-25T10:00-03:00",
-          "capturado": "2026-11-25T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "8f6830cb5813fd45",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 15,
-        "cercania_pba": 2,
-        "interes_productores": 8,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 4,
-        "ai_score": 50,
-        "commercial_score": 40,
-        "subtema": "ganaderia",
-        "tema": "remate búfalos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es un récord llamativo de búfalos en Corrientes, pero queda muy lejos de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          40,
-          60
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T10:02-03:00"
-    },
-    {
-      "id": "1dbe78598211",
-      "rep": {
-        "id": "1dbe78598211",
-        "fuente": "Secretaría de Agricultura",
-        "tipo_fuente": "oficial",
-        "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-        "url": "https://www.argentina.gob.ar/noticias/hito-historico-la-campana-agricola-20252026-alcanzo-171-millones-de-toneladas-de-granos-y",
-        "canonical_url": "https://argentina.gob.ar/noticias/hito-historico-la-campana-agricola-20252026-alcanzo-171-millones-de-toneladas-de-granos-y",
-        "titulo": "Hito histórico: La campaña agrícola 2025/2026 alcanzó 171 millones de toneladas de granos y 44,6 millones de hectáreas sembradas",
-        "titulo_norm": "hito historico la campana agricola 2025 2026 alcanzo 171 millones de toneladas de granos y 44 6 millones de hectareas sembradas",
-        "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación indicó que en la campaña 2025/2026 se registraron 171 millones de toneladas producidas desde el sector agrícola, lo que representa un hito histórico que también incluye a la superficie sembrada con 44,6 millones de hectáreas. Este dato surge del análisis de las series históricas que produce y publica la Secretaría a través de la Dirección Nacional de Agricultura. En ese marco, es destacable el salto productivo observado entre las campañas 2024/2025 y 2025/2026: de 141 millones a 171 millones de toneladas. Este incremento es multicausal; obedece a mejoras en las variables macroeconómicas impulsadas por el Gobierno Nacional, buenas condiciones de mercado y de inserción internacional de la Argentina, así como la inversión y el paquete tecnológico utilizado por los productores y buen acompañamiento del cl",
-        "imagen_url": "https://www.argentina.gob.ar/sites/default/files/_mg_1533_trigo.jpg",
-        "autor": "apremazzi",
-        "publicado": "2026-11-25T09:10-03:00",
-        "capturado": "2026-11-25T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "994a38f6c22a696b",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "1dbe78598211",
-          "fuente": "Secretaría de Agricultura",
-          "tipo_fuente": "oficial",
-          "source_url": "https://www.argentina.gob.ar/economia/agricultura/noticias/rss",
-          "url": "https://www.argentina.gob.ar/noticias/hito-historico-la-campana-agricola-20252026-alcanzo-171-millones-de-toneladas-de-granos-y",
-          "canonical_url": "https://argentina.gob.ar/noticias/hito-historico-la-campana-agricola-20252026-alcanzo-171-millones-de-toneladas-de-granos-y",
-          "titulo": "Hito histórico: La campaña agrícola 2025/2026 alcanzó 171 millones de toneladas de granos y 44,6 millones de hectáreas sembradas",
-          "titulo_norm": "hito historico la campana agricola 2025 2026 alcanzo 171 millones de toneladas de granos y 44 6 millones de hectareas sembradas",
-          "descripcion": "La Secretaría de Agricultura, Ganadería y Pesca del Ministerio de Economía de la Nación indicó que en la campaña 2025/2026 se registraron 171 millones de toneladas producidas desde el sector agrícola, lo que representa un hito histórico que también incluye a la superficie sembrada con 44,6 millones de hectáreas. Este dato surge del análisis de las series históricas que produce y publica la Secretaría a través de la Dirección Nacional de Agricultura. En ese marco, es destacable el salto productivo observado entre las campañas 2024/2025 y 2025/2026: de 141 millones a 171 millones de toneladas. Este incremento es multicausal; obedece a mejoras en las variables macroeconómicas impulsadas por el Gobierno Nacional, buenas condiciones de mercado y de inserción internacional de la Argentina, así como la inversión y el paquete tecnológico utilizado por los productores y buen acompañamiento del cl",
-          "imagen_url": "https://www.argentina.gob.ar/sites/default/files/_mg_1533_trigo.jpg",
-          "autor": "apremazzi",
-          "publicado": "2026-11-25T09:10-03:00",
-          "capturado": "2026-11-25T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "994a38f6c22a696b",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 8,
-        "cercania_pba": 10,
-        "interes_productores": 10,
-        "impacto_economico": 10,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 56,
-        "commercial_score": 40,
-        "subtema": "agro",
-        "tema": "cosecha récord 171 mill",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Es un dato estadístico nacional oficial muy importante pero macro.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          57,
-          53
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T10:02-03:00"
-    },
-    {
-      "id": "f7f023d8d2f1",
-      "rep": {
-        "id": "f7f023d8d2f1",
-        "fuente": "TN Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-        "url": "https://tn.com.ar/campo/2026/11/25/afirman-que-las-exportaciones-del-agro-crecieron-14-este-ano-pero-alertan-que-el-dolar-esta-3-atrasado-respecto-al-2025/",
-        "canonical_url": "https://tn.com.ar/campo/2026/11/25/afirman-que-las-exportaciones-del-agro-crecieron-14-este-ano-pero-alertan-que-el-dolar-esta-3-atrasado-respecto-al-2025",
-        "titulo": "Afirman que las exportaciones del agro crecieron 14% este año, pero alertan que el dólar está 3% atrasado respecto al 2025",
-        "titulo_norm": "afirman que las exportaciones del agro crecieron 14 este ano pero alertan que el dolar esta 3 atrasado respecto al 2025",
-        "descripcion": "",
-        "imagen_url": "https://tn.com.ar/resizer/v2/PCPC5XENKJGIDJRCVXCBHQNRUA.jpg?auth=29df15bf278ae5c1e399ed19a21cce357e80c6aeed98dde003dae91b25f7f60d",
-        "autor": "",
-        "publicado": "2026-11-25T09:39-03:00",
-        "capturado": "2026-11-25T10:02-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c4904811b034644b",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "f7f023d8d2f1",
-          "fuente": "TN Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://tn.com.ar/arc/outboundfeeds/rss/category/campo/?outputType=xml",
-          "url": "https://tn.com.ar/campo/2026/11/25/afirman-que-las-exportaciones-del-agro-crecieron-14-este-ano-pero-alertan-que-el-dolar-esta-3-atrasado-respecto-al-2025/",
-          "canonical_url": "https://tn.com.ar/campo/2026/11/25/afirman-que-las-exportaciones-del-agro-crecieron-14-este-ano-pero-alertan-que-el-dolar-esta-3-atrasado-respecto-al-2025",
-          "titulo": "Afirman que las exportaciones del agro crecieron 14% este año, pero alertan que el dólar está 3% atrasado respecto al 2025",
-          "titulo_norm": "afirman que las exportaciones del agro crecieron 14 este ano pero alertan que el dolar esta 3 atrasado respecto al 2025",
-          "descripcion": "",
-          "imagen_url": "https://tn.com.ar/resizer/v2/PCPC5XENKJGIDJRCVXCBHQNRUA.jpg?auth=29df15bf278ae5c1e399ed19a21cce357e80c6aeed98dde003dae91b25f7f60d",
-          "autor": "",
-          "publicado": "2026-11-25T09:39-03:00",
-          "capturado": "2026-11-25T10:02-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c4904811b034644b",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 4,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 51,
-        "commercial_score": 40,
-        "subtema": "mercados",
-        "tema": "tipo de cambio",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Habla del dólar atrasado y las exportaciones, un tema recurrente de charla en el pueblo.",
-        "tema_doc": "dolar",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          42
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-25T10:02-03:00"
     }
   ],
-  "actualizado": "2026-11-26T22:10:50-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-26T22:54:26-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-18T22:20:00-03:00": {
-      "bloque": "viral",
-      "items": [],
-      "publicado": {
-        "omitido": "ninguna trae video propio corto"
-      }
-    },
     "2026-11-19T10:00:00-03:00": {
       "bloque": "viral",
       "items": [],
