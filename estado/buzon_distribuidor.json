@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T02:18:21.000Z",
+  "actualizado": "2026-11-27T02:31:39.000Z",
   "eventos": [
     {
       "id": "policiales:https://www.bragadoinforma.com.ar/nota/31220/tension-en-el-acceso-elizondo-redujeron-a-un-automovilista-que-se-resistio-al-secuestro-de-su-vehiculo.html",
@@ -187,6 +187,30 @@
       "volanta": "Robo en Chacabuco",
       "categoria": "robo",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.diariodemocracia.com/policiales/348582-dos-aprehendidos-por-tenencia-de-marihuana-y-una-m",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-27T02:31:39.000Z",
+      "titulo": "Dos aprehendidos por tenencia de marihuana y una moto incautada a las 4:47 PM",
+      "descripcion": "Dos personas resultaron aprehendidas por tenencia de marihuana y una moto fue incautada durante procedimientos realizados este jueves a las 4:47 PM en distintos puntos de la ciudad por personal de prevención y seguridad urbana.",
+      "texto_tiktok": "Personal policial llevó a cabo dos procedimientos este jueves a las 4:47 PM que culminaron con dos aprehensiones por tenencia de marihuana.\n\nEl primer operativo se concretó en avenida San Martín y Rivadavia, donde efectivos de la UPPL interceptaron a un mayor con cannabis sativa.\n\nOtra intervención estuvo a cargo de agentes de la sección de apoyo urbano en República y Soria, hallando estupefacientes y reteniendo un rodado sin papeles.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Narcotrafico #Operativo #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-27_0132_03_chacabuco_dos-aprehendidos-por-tenencia-.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-dos-aprehendidos-por-tenencia-de-marihuana-y-una-moto-5df7bd",
+      "youtube_url": "https://youtube.com/shorts/GuRZYh7cRnY",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Junín",
+      "volanta": "Operativos policiales en Junín",
+      "categoria": "narcotrafico",
+      "distancia_km": 91.2,
       "radio_ok": true,
       "plataformas": [
         "x",
