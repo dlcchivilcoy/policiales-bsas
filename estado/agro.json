@@ -30676,7 +30676,7 @@
       "cuando": "2026-11-26T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-27T07:41:48-03:00",
+  "actualizado": "2026-11-27T08:17:15-03:00",
   "tema_ultimo": "blanco",
   "historias": {
     "2026-11-19T10:00:00-03:00": {
@@ -34186,6 +34186,46 @@
         "mercado": "Rosario",
         "unidad": "por tonelada",
         "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
+      },
+      "2026-11-25": {
+        "fecha": "2026-11-25",
+        "productos": {
+          "trigo": {
+            "ars": 303000.0,
+            "usd": 189.97,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "maiz": {
+            "ars": 271000.0,
+            "usd": 169.91,
+            "estimado": false,
+            "direccion": "baja"
+          },
+          "girasol": {
+            "ars": 765600.0,
+            "usd": 480.0,
+            "estimado": true,
+            "direccion": "sube"
+          },
+          "soja": {
+            "ars": 574700.0,
+            "usd": 360.31,
+            "estimado": false,
+            "direccion": "sube"
+          },
+          "sorgo": {
+            "ars": 290000.0,
+            "usd": 181.82,
+            "estimado": true,
+            "direccion": "sube"
+          }
+        },
+        "tc": 1595.0,
+        "fuente": "Cámara Arbitral de Cereales de Rosario",
+        "mercado": "Rosario",
+        "unidad": "por tonelada",
+        "condicion": "pizarra: entrega inmediata, pago contado, zona Rosario"
       }
     },
     "bna": {
@@ -34538,6 +34578,20 @@
           "compra": 1595.0,
           "venta": 1604.0
         }
+      },
+      "2026-11-26": {
+        "fuente": "Banco Nación",
+        "hora": "17:02",
+        "billete": {
+          "fecha": "2026-11-26",
+          "compra": 1575.0,
+          "venta": 1625.0
+        },
+        "divisa": {
+          "fecha": "2026-11-26",
+          "compra": 1592.5,
+          "venta": 1601.5
+        }
       }
     },
     "a3500": {
@@ -34672,6 +34726,10 @@
       "2026-11-25": {
         "fecha": "2026-11-25",
         "valor": 1608.6204
+      },
+      "2026-11-26": {
+        "fecha": "2026-11-26",
+        "valor": 1600.6872
       }
     },
     "chicago_soja": {
@@ -35785,6 +35843,28 @@
         },
         "facebook": {
           "id": "2940139603028467"
+        }
+      }
+    },
+    "2026-11-27T08:15:00-03:00": {
+      "dia": "2026-11-27",
+      "placas": [
+        "portada",
+        "mapa",
+        "granos",
+        "dolar",
+        "chicago",
+        "cierre"
+      ],
+      "formato": "animado",
+      "gancho": "El trigo subió 3,4% en Rosario",
+      "publicado": {
+        "instagram": {
+          "id": "18102046841691145",
+          "colab": "no"
+        },
+        "facebook": {
+          "id": "1092161937157360"
         }
       }
     }
