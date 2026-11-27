@@ -22307,6 +22307,74 @@
       "urgente": false,
       "potencial_carrusel": 1,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "cd4dc982e447b5a2": {
+      "conversacion": 4,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 35,
+      "commercial_score": 32,
+      "subtema": "empresas",
+      "tema": "exportaciones carne",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Afecta a la exportación cárnica nacional pero es una discusión comercial y técnica muy lejana para el productor local.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        40,
+        30
+      ]
+    },
+    "d30c7c445f386f32": {
+      "conversacion": 18,
+      "historia_concreta": 10,
+      "cercania_pba": 15,
+      "interes_productores": 15,
+      "impacto_economico": 9,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 76,
+      "commercial_score": 75,
+      "subtema": "agro",
+      "tema": "el niño clima",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "El pronóstico de El Niño y sus excesos directos interesa y preocupa a todos los productores de la zona.",
+      "tema_doc": "clima",
+      "urgente": true,
+      "potencial_carrusel": 8,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "14994c2a30825f19": {
+      "conversacion": 8,
+      "historia_concreta": 4,
+      "cercania_pba": 5,
+      "interes_productores": 8,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 40,
+      "commercial_score": 35,
+      "subtema": "mercados",
+      "tema": "exportaciones dólares",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Maneja datos macroeconómicos generales sobre la campaña sin un correlato directo en el día a dia local.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 4,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        47,
+        28
+      ]
     }
   },
   "indice": {
@@ -23801,7 +23869,12 @@
       "https://news.agrofy.com.ar/noticia/217074/aprueban-soja-transgenica-empresa-china-no-podra-venderse-autorice-union-europea": "2026-11-27",
       "https://news.agrofy.com.ar/noticia/217076/adopte-elefantito-hoy-crecio-tiene-nuevo-local-concesionario-es-n-1-ventas-sembradoras-apache-argent": "2026-11-27",
       "https://agroempresario.com/publicacion/124262/gustavo-puccini-destaco-el-potencial-de-la-cadena-lactea": "2026-11-27",
-      "https://argentina.gob.ar/noticias/se-registro-una-nueva-terminal-de-cargas-en-entre-rios-para-la-exportacion-de-productos-de": "2026-11-27"
+      "https://argentina.gob.ar/noticias/se-registro-una-nueva-terminal-de-cargas-en-entre-rios-para-la-exportacion-de-productos-de": "2026-11-27",
+      "https://lanacion.com.ar/economia/campo/policia-de-frontera-los-importadores-europeos-admiten-que-tendran-un-rol-sin-precedentes-por-una-nid27112026": "2026-11-27",
+      "https://lanacion.com.ar/economia/campo/vandalismo-rural-asi-son-las-penas-de-hasta-10-anos-de-prision-y-multas-que-pueden-ser-millonarias-nid27112026": "2026-11-27",
+      "https://intainforma.inta.gob.ar/el-nino-se-consolida-perspectivas-para-los-cultivos-y-la-ganaderia": "2026-11-27",
+      "https://tn.com.ar/campo/2026/11/27/impulsado-por-una-cosecha-record-el-campo-aportara-casi-35-mas-de-dolares-en-esta-campana": "2026-11-27",
+      "https://noticiasagropecuarias.com/2026/11/27/autorizaron-una-soja-transgenica-chinapero-su-comercializacion-espera-el-aval-europeo": "2026-11-27"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 16 noviembre 2026": "2026-11-16",
@@ -25294,7 +25367,12 @@
       "aprueban una soja transgenica de una empresa china pero no podra venderse hasta que la autorice la union europea": "2026-11-27",
       "adopte un elefantito y hoy crecio tiene nuevo local el concesionario que es el n 1 en ventas de sembradoras apache en argentina": "2026-11-27",
       "gustavo puccini destaco el potencial de la cadena lactea": "2026-11-27",
-      "se registro una nueva terminal de cargas en entre rios para la exportacion de productos de origen vegetal": "2026-11-27"
+      "se registro una nueva terminal de cargas en entre rios para la exportacion de productos de origen vegetal": "2026-11-27",
+      "policia de frontera los importadores europeos admiten que tendran un rol sin precedentes por una norma que impacta sobre las exportaciones": "2026-11-27",
+      "vandalismo rural asi son las penas de hasta 10 anos de prision y multas que pueden ser millonarias": "2026-11-27",
+      "el nino se consolida perspectivas para los cultivos y la ganaderia": "2026-11-27",
+      "impulsado por una cosecha record el campo aportara casi 35 mas de dolares en esta campana": "2026-11-27",
+      "autorizaron una soja transgenica china pero su comercializacion espera el aval europeo": "2026-11-27"
     },
     "hash": {
       "bf1468a3b6576089": "2026-11-16",
@@ -26787,7 +26865,12 @@
       "106f6c782ac04ab4": "2026-11-27",
       "dd636f2a96c3a19f": "2026-11-27",
       "78c77db331d9db2d": "2026-11-27",
-      "d03d4c6669d71a70": "2026-11-27"
+      "d03d4c6669d71a70": "2026-11-27",
+      "cd4dc982e447b5a2": "2026-11-27",
+      "b074b44228c586e0": "2026-11-27",
+      "d30c7c445f386f32": "2026-11-27",
+      "14994c2a30825f19": "2026-11-27",
+      "8b15b392f7b21c9b": "2026-11-27"
     }
   },
   "elegidas": [
@@ -30553,6 +30636,62 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c72753c46b68_portada.jpg"
+    },
+    {
+      "id": "3f375ae06eda",
+      "cuando": "2026-11-27T15:15-03:00",
+      "titulo_original": "El Niño se consolida: perspectivas para los cultivos y la ganadería",
+      "descripcion": "Si bien el fenómeno climático evoluciona como se lo pronosticó, algunos de sus impactos presentan diferencias respecto de eventos anteriores y podrían intensificarse durante el verano y el otoño. Desde el INTA destacan la importancia del monitoreo climático y de los pronósticos de corto plazo para a",
+      "fuente": "INTA",
+      "url": "https://intainforma.inta.gob.ar/el-nino-se-consolida-perspectivas-para-los-cultivos-y-la-ganaderia/",
+      "titular": "El Niño 2026/27 avanza hacia su pico con impacto dispar",
+      "volanta": "Clima",
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 10,
+        "cercania_pba": 15,
+        "interes_productores": 15,
+        "impacto_economico": 9,
+        "cercania_argentina": 5,
+        "potencial_reel": 4,
+        "ai_score": 76,
+        "commercial_score": 75,
+        "subtema": "agro",
+        "tema": "el niño clima",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "El pronóstico de El Niño y sus excesos directos interesa y preocupa a todos los productores de la zona.",
+        "tema_doc": "clima",
+        "urgente": true,
+        "potencial_carrusel": 8,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-27T15:15:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "e9ab7d36-9d64-453e-8040-a93680d1d0e3",
+          "slug": "el-nino-2026-27-avanza-hacia-su-pico-maximo-y-el-inta-advierte-f29ebf",
+          "url": "https://www.diariolacampaña.com.ar/n/el-nino-2026-27-avanza-hacia-su-pico-maximo-y-el-inta-advierte-f29ebf",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18130946170921981",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_3f375ae06eda_portada.jpg"
     }
   ],
   "pendientes": [
@@ -32499,16 +32638,9 @@
       "cuando": "2026-11-26T08:55-03:00"
     }
   ],
-  "actualizado": "2026-11-27T14:36:38-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-27T15:21:44-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-19T14:40:00-03:00": {
-      "bloque": "viral",
-      "items": [],
-      "publicado": {
-        "omitido": "ninguna trae video propio corto"
-      }
-    },
     "2026-11-19T18:00:00-03:00": {
       "bloque": "viral",
       "items": [
@@ -38037,7 +38169,9 @@
     "c72753c46b68": "2026-11-27T14:01",
     "459ba9119f44": "2026-11-27T14:01",
     "9606da9d3036": "2026-11-27T14:01",
-    "ebd42317abf5": "2026-11-27T14:01"
+    "ebd42317abf5": "2026-11-27T14:01",
+    "3f375ae06eda": "2026-11-27T15:15",
+    "aaeda6af47e1": "2026-11-27T15:15"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
