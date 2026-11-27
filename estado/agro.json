@@ -26792,65 +26792,6 @@
   },
   "elegidas": [
     {
-      "id": "7c10f4ad95f7",
-      "cuando": "2026-11-19T14:30-03:00",
-      "titulo_original": "Con el “Súper Niño” encima, Nación pone la firma para obras hídricas en Santa Fe y Córdoba, mientras el Salado sigue esperando",
-      "descripcion": "En medio de una fuerte crecida del río Paraná, que ya golpea incluso a las zonas de mayor densidad poblacional de Santa Fe, el gobierno nacional autorizó una nueva operación con garantía del Tesoro para que la provincia pueda tomar un préstamo y financiar obras hídricas. La operación fue oficializad",
-      "fuente": "Bichos de Campo",
-      "url": "https://bichosdecampo.com/con-el-super-nino-encima-nacion-pone-la-firma-para-obras-hidricas-en-santa-fe-y-cordoba-mientras-el-salado-sigue-esperando/",
-      "titular": "Nación avala préstamos para obras hídricas en Santa Fe y Córdoba",
-      "volanta": "Clima",
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 10,
-        "cercania_pba": 15,
-        "interes_productores": 11,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 3,
-        "ai_score": 62,
-        "commercial_score": 42,
-        "subtema": "agro",
-        "tema": "obras hídricas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Toca el tema del Súper Niño y las obras en provincias vecinas, mencionando el reclamo por el río Salado que cruza nuestra zona.",
-        "tema_doc": "clima",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          64,
-          61
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-19T14:30:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "4f045ee3-5d6a-4289-b908-77ee87f0052a",
-          "slug": "nacion-avala-prestamos-para-obras-hidricas-en-santa-fe-y-67c953",
-          "url": "https://www.diariolacampaña.com.ar/n/nacion-avala-prestamos-para-obras-hidricas-en-santa-fe-y-67c953",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "18496703329111268",
-          "diapositivas": 6
-        },
-        "facebook": {
-          "id": "101271341650483_1766957118768618",
-          "fotos": 6
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_7c10f4ad95f7_portada.jpg"
-    },
-    {
       "id": "e4fb5782d3f1",
       "cuando": "2026-11-19T16:31-03:00",
       "titulo_original": "El Niño evoluciona: claves para decidir en la campaña",
@@ -32558,29 +32499,9 @@
       "cuando": "2026-11-26T08:55-03:00"
     }
   ],
-  "actualizado": "2026-11-27T14:08:02-03:00",
+  "actualizado": "2026-11-27T14:36:38-03:00",
   "tema_ultimo": "blanco",
   "historias": {
-    "2026-11-19T14:20:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Emiten alertas naranjas y amarillas por tormentas severas en diez provincias",
-          "url": "https://www.lanacion.com.ar/sociedad/hay-alerta-naranja-y-amarilla-por-tormentas-y-lluvias-para-este-miercoles-18-de-noviembre-las-nid18112026/",
-          "fuente": "La Nación",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-19_1420_viral/viral.mp4",
-          "duracion": 22.0
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "18097849205177921"
-        },
-        "facebook": {
-          "id": "1158176763589432"
-        }
-      }
-    },
     "2026-11-19T14:40:00-03:00": {
       "bloque": "viral",
       "items": [],
@@ -35012,6 +34933,27 @@
               }
             }
           ]
+        }
+      }
+    },
+    "2026-11-27T14:35:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "Autorizan nueva soja transgénica en Argentina sujeta a Europa",
+          "url": "https://www.ellitoral.com/campolitoral/soja-transgenica-biotecnologia-secretaria-de-agricultura-semillas-union-europea-senasa-inase-conabia_0_t9ajzTL04H.html",
+          "fuente": "El Litoral",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-27_1435_viral/viral.mp4",
+          "duracion": 22.0,
+          "con": "foto"
+        }
+      ],
+      "publicado": {
+        "instagram": {
+          "id": "18139841713660910"
+        },
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 5 posteos en 24 h (tope 6, 2 reservados para lo propio)"
         }
       }
     }
@@ -38166,6 +38108,7 @@
     "https://www.infobae.com/sociedad/2026/11/26/masacre-de-punta-tombo-confirmaron-la-condena-contra-el-productor-rural-que-mato-a-un-centenar-de-pinguinos/": "2026-11-27T07:40-03:00",
     "https://hoydia.com.ar/ambiente/la-mancha-amarilla-fue-la-enfermedad-dominante-en-el-trigo-del-centro-del-pais/": "2026-11-27T09:30-03:00",
     "https://tn.com.ar/campo/2026/11/27/la-cosecha-de-trigo-finalizo-en-el-norte-del-pais-y-avanza-sobre-el-centro-con-rindes-alentadores/": "2026-11-27T10:50-03:00",
-    "https://www.ellitoral.com/campolitoral/bolsadecomercioderosario-girasol-chaco-primerlotedegirasol-rosario-asagir-rematedelprimerlotedegirasol_0_dSrHbhOfEM.html": "2026-11-27T13:20-03:00"
+    "https://www.ellitoral.com/campolitoral/bolsadecomercioderosario-girasol-chaco-primerlotedegirasol-rosario-asagir-rematedelprimerlotedegirasol_0_dSrHbhOfEM.html": "2026-11-27T13:20-03:00",
+    "https://www.ellitoral.com/campolitoral/soja-transgenica-biotecnologia-secretaria-de-agricultura-semillas-union-europea-senasa-inase-conabia_0_t9ajzTL04H.html": "2026-11-27T14:35-03:00"
   }
 }
