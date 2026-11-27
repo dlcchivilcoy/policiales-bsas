@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-26T02:33:17.000Z",
+  "actualizado": "2026-11-27T02:01:19.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://junin24.com/locales/malestar-y-preocupacion-en-el-barrio-foetra-por-los-reiterados-intentos-de-robo-de-motos",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-25T02:01:17.000Z",
-      "titulo": "Vecinos de Junín denuncian reiterados intentos de robo de motos",
-      "descripcion": "Habitantes del complejo habitacional reclaman mayor seguridad tras una nueva madrugada de intentos de robo de motovehículos. Aseguran que el sospechoso está identificado.",
-      "texto_tiktok": "Un nuevo episodio de inseguridad afectó a los residentes del barrio FOETRA durante la madrugada de este martes.\n\nUn delincuente intentó sustraer motocicletas en las torres 1 y 2 del complejo habitacional.\n\nLos vecinos exigen respuestas a las autoridades y denuncian que el sospechoso ya fue identificado.\n\n📲 Más noticias de Junín en www.diariolacampaña.com.ar\n\n#Junin #Inseguridad #RoboDeMotos #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-25_0132_01_junin_vecinos-de-jun-n-denuncian-rei.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/junin-denuncian-reiterados-intentos-de-robo-de-motos-en-el-dd621d",
-      "youtube_url": "https://youtube.com/shorts/5ApLbovcthA",
-      "prioridad": 6,
-      "urgente": false,
-      "localidad": "Junín",
-      "volanta": "Inseguridad en barrio FOETRA",
-      "categoria": "robo",
-      "distancia_km": 91.2,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://www.roqueperezhoy.com.ar/noticias/2026/11/24/252-operativos-en-roque-prez-recuperaron-motos-robadas-y-aprehendieron-a-dos-personas",
       "origen": "policiales",
@@ -187,6 +163,30 @@
       "volanta": "Accidente en Chacabuco",
       "categoria": "otro_policial",
       "distancia_km": 50.1,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://junin24.com/noticias/violento-choque-entre-un-camion-y-un-automovil-en-la-ruta-5-dejo-el-saldo-de-una-victima-fatal",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-27T02:01:19.000Z",
+      "titulo": "Nueve de Julio: automovilista de 30 años murió en un violento choque en la Ruta 5",
+      "descripcion": "Un conductor de 30 años falleció este martes tras un violento impacto frontal contra un camión en la Ruta Nacional 5, a la altura del partido de Nueve de Julio. El camionero resultó sin lesiones y la policía científica trabaja en el lugar para esclarecer el trágico suceso.",
+      "texto_tiktok": "Un automovilista de 30 años perdió la vida este martes por la mañana tras chocar contra un camión en la Ruta Nacional 5.\n\nEl fatal siniestro se produjo cerca de las 06:30 a la altura del partido de Nueve de Julio, cuando un transporte de carga invadió el carril contrario por motivos que se investigan.\n\nComo consecuencia del violento impacto frontal contra un Volkswagen Bora gris, el conductor del rodado menor falleció en el acto en el lugar del hecho.\n\nPor su parte, el chofer del camión, oriundo de Río Negro, resultó ileso mientras personal policial y de emergencias realizaba las peritajes correspondientes.\n\n📲 Más noticias de Nueve de Julio en www.diariolacampaña.com.ar\n\n#NueveDeJulio #SiniestroVial #Ruta5 #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-27_0132_01_junin_nueve-de-julio-automovilista-d.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/nueve-de-julio-un-automovilista-de-30-anos-murio-en-un-choque-d3b344",
+      "youtube_url": "https://youtube.com/shorts/zKzY67oHZaQ",
+      "prioridad": 9,
+      "urgente": false,
+      "localidad": "Nueve de Julio",
+      "volanta": "Choque en Nueve de Julio",
+      "categoria": "accidente_vial",
+      "distancia_km": 99.4,
       "radio_ok": true,
       "plataformas": [
         "x",
