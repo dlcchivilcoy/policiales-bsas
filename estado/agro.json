@@ -27760,65 +27760,6 @@
   },
   "elegidas": [
     {
-      "id": "b2b6f6d4d83a",
-      "cuando": "2026-11-19T19:32-03:00",
-      "titulo_original": "El nuevo dueño de Vicentin espera un récord de producción y prepara nuevos negocios",
-      "descripcion": "El Grupo Grassi, que se quedó con la compañía tras un proceso de cramdown, prevé superar los cuatro millones de toneladas procesadas en su planta de San Lorenzo y alcanzar las 700.000 toneladas de girasol en Ricardone; Mariano Grassi explicó que buscan asociarse con acopiadores y empresarios del int",
-      "fuente": "LA NACION Campo",
-      "url": "https://www.lanacion.com.ar/economia/campo/el-nuevo-dueno-de-vicentin-espera-un-record-de-produccion-y-prepara-nuevos-negocios-nid19112026/",
-      "titular": "Grupo Grassi proyecta récord en Vicentin y acelera nuevas inversiones",
-      "volanta": "Empresas",
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 13,
-        "cercania_pba": 10,
-        "interes_productores": 11,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 61,
-        "commercial_score": 52,
-        "subtema": "empresas",
-        "tema": "vicentin",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "El nuevo rumbo de Vicentin y su planta mueve volúmenes importantes y resuena en el negocio cerealero.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          61,
-          62
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-19T19:30:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "a0d2d6e0-38bb-4b10-b81f-381a0303dda4",
-          "slug": "el-grupo-grassi-proyecta-record-industrial-en-vicentin-e-2dde31",
-          "url": "https://www.diariolacampaña.com.ar/n/el-grupo-grassi-proyecta-record-industrial-en-vicentin-e-2dde31",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "17900928378406034",
-          "diapositivas": 5
-        },
-        "facebook": {
-          "id": "101271341650483_1767202608744069",
-          "fotos": 5
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_b2b6f6d4d83a_portada.jpg"
-    },
-    {
       "id": "0bd6ebe3020b",
       "cuando": "2026-11-19T21:00-03:00",
       "titulo_original": "Vacunos: jueves de remates especiales en el Mercado Agroganadero de Cañuelas",
@@ -33540,7 +33481,7 @@
       "cuando": "2026-11-26T10:10-03:00"
     }
   ],
-  "actualizado": "2026-11-27T19:08:26-03:00",
+  "actualizado": "2026-11-27T19:41:05-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-11-19T21:30:00-03:00": {
@@ -35990,6 +35931,13 @@
             }
           ]
         }
+      }
+    },
+    "2026-11-27T19:40:00-03:00": {
+      "bloque": "viral",
+      "items": [],
+      "publicado": {
+        "omitido": "ninguna del campo trae video ni foto original usable"
       }
     }
   },
