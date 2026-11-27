@@ -31613,46 +31613,9 @@
       "cuando": "2026-11-26T08:55-03:00"
     }
   ],
-  "actualizado": "2026-11-27T10:51:57-03:00",
+  "actualizado": "2026-11-27T11:00:21-03:00",
   "tema_ultimo": "blanco",
   "historias": {
-    "2026-11-19T11:00:00-03:00": {
-      "dia": "2026-11-19",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Cómo están respondiendo las pasturas?",
-          "opciones": [],
-          "publico": "ganaderia",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "18122524966751499"
-            },
-            "facebook": {
-              "id": "2246515836077769"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "18122524966751499"
-              },
-              "facebook": {
-                "id": "2246515836077769"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-19T14:00:00-03:00": {
       "dia": "2026-11-19",
       "bloque": "participa",
@@ -34046,6 +34009,43 @@
         },
         "facebook": {
           "omitido": "el Facebook de agro ya tiene 4 posteos en 24 h (tope 6, 2 reservados para lo propio)"
+        }
+      }
+    },
+    "2026-11-27T11:00:00-03:00": {
+      "dia": "2026-11-27",
+      "bloque": "participa",
+      "items": [
+        {
+          "tipo": "participa",
+          "clave": "participa",
+          "pregunta": "¿Cómo arrancó el servicio este año?",
+          "opciones": [],
+          "publico": "ganaderia",
+          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+          "publicado": {
+            "instagram": {
+              "id": "18080480933732612"
+            },
+            "facebook": {
+              "id": "4539564589597317"
+            }
+          }
+        }
+      ],
+      "publicado": {
+        "estado": "listo",
+        "resultado": {
+          "items": [
+            {
+              "instagram": {
+                "id": "18080480933732612"
+              },
+              "facebook": {
+                "id": "4539564589597317"
+              }
+            }
+          ]
         }
       }
     }
