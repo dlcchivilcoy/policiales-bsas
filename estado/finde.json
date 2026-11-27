@@ -23,6 +23,30 @@
         "es-AR-TomasNeural"
       ],
       "cuando": "2026-11-26T11:57-03:00"
+    },
+    {
+      "fecha": "2026-11-28",
+      "dia": "sabado",
+      "clave": "gas_red",
+      "estado": "generado",
+      "carpeta": "salida_finde/2026-11-28_gas_red",
+      "duracion": 52.7,
+      "voz": [
+        "sin voz (a pedido)"
+      ],
+      "cuando": "2026-11-27T20:02-03:00"
+    },
+    {
+      "fecha": "2026-11-29",
+      "dia": "domingo",
+      "clave": "tierra",
+      "estado": "generado",
+      "carpeta": "salida_finde/2026-11-29_tierra",
+      "duracion": 46.5,
+      "voz": [
+        "sin voz (a pedido)"
+      ],
+      "cuando": "2026-11-27T20:05-03:00"
     }
   ],
   "plan": {
