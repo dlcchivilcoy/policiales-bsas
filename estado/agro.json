@@ -26494,43 +26494,6 @@
   },
   "elegidas": [
     {
-      "id": "clima-202611191300",
-      "cuando": "2026-11-19T13:00-03:00",
-      "titulo_original": "¿Cuándo llueve en la zona?",
-      "descripcion": "",
-      "fuente": "MET Norway",
-      "url": "",
-      "titular": "¿Cuándo llueve en la zona?",
-      "volanta": "Clima",
-      "score": {
-        "subtema": "agro",
-        "tema_doc": "clima",
-        "ai_score": 0
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": true,
-      "formato": "clima",
-      "turno": "2026-11-19T13:00:00-03:00",
-      "publicado": {
-        "facebook": {
-          "id": "1447981857446560",
-          "miniatura": "propia"
-        },
-        "instagram": {
-          "id": "18101989637561484",
-          "portada": "propia"
-        },
-        "historia_instagram": {
-          "id": "17934234927162948"
-        },
-        "historia_facebook": {
-          "id": "1150215800738872"
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_clima-202611191300_portada.jpg"
-    },
-    {
       "id": "7c10f4ad95f7",
       "cuando": "2026-11-19T14:30-03:00",
       "titulo_original": "Con el “Súper Niño” encima, Nación pone la firma para obras hídricas en Santa Fe y Córdoba, mientras el Salado sigue esperando",
@@ -32029,7 +31992,7 @@
       "cuando": "2026-11-26T08:55-03:00"
     }
   ],
-  "actualizado": "2026-11-27T12:09:22-03:00",
+  "actualizado": "2026-11-27T13:22:28-03:00",
   "tema_ultimo": "grafito",
   "historias": {
     "2026-11-19T14:00:00-03:00": {
@@ -34462,6 +34425,27 @@
               }
             }
           ]
+        }
+      }
+    },
+    "2026-11-27T13:20:00-03:00": {
+      "bloque": "viral",
+      "items": [
+        {
+          "titular": "Girasol: llega a Rosario el primer lote chaqueño de la campaña 2026/27",
+          "url": "https://www.ellitoral.com/campolitoral/bolsadecomercioderosario-girasol-chaco-primerlotedegirasol-rosario-asagir-rematedelprimerlotedegirasol_0_dSrHbhOfEM.html",
+          "fuente": "El Litoral",
+          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-27_1320_viral/viral.mp4",
+          "duracion": 22.0,
+          "con": "foto"
+        }
+      ],
+      "publicado": {
+        "instagram": {
+          "id": "17912319174669214"
+        },
+        "facebook": {
+          "omitido": "el Facebook de agro ya tiene 5 posteos en 24 h (tope 6, 2 reservados para lo propio)"
         }
       }
     }
@@ -37611,6 +37595,7 @@
     "https://tn.com.ar/sociedad/2026/11/26/una-estancia-ganadera-de-corrientes-tenia-11400-hectareas-en-1997-21-anos-despues-es-un-refugio-para-especies-en-extincion/": "2026-11-26T19:40-03:00",
     "https://www.infobae.com/sociedad/2026/11/26/masacre-de-punta-tombo-confirmaron-la-condena-contra-el-productor-rural-que-mato-a-un-centenar-de-pinguinos/": "2026-11-27T07:40-03:00",
     "https://hoydia.com.ar/ambiente/la-mancha-amarilla-fue-la-enfermedad-dominante-en-el-trigo-del-centro-del-pais/": "2026-11-27T09:30-03:00",
-    "https://tn.com.ar/campo/2026/11/27/la-cosecha-de-trigo-finalizo-en-el-norte-del-pais-y-avanza-sobre-el-centro-con-rindes-alentadores/": "2026-11-27T10:50-03:00"
+    "https://tn.com.ar/campo/2026/11/27/la-cosecha-de-trigo-finalizo-en-el-norte-del-pais-y-avanza-sobre-el-centro-con-rindes-alentadores/": "2026-11-27T10:50-03:00",
+    "https://www.ellitoral.com/campolitoral/bolsadecomercioderosario-girasol-chaco-primerlotedegirasol-rosario-asagir-rematedelprimerlotedegirasol_0_dSrHbhOfEM.html": "2026-11-27T13:20-03:00"
   }
 }
