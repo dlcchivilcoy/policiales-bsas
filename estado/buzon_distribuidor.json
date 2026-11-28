@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-28T02:46:41.000Z",
+  "actualizado": "2026-11-28T03:01:54.000Z",
   "eventos": [
     {
       "id": "policiales:https://junin24.com/noticias/violento-choque-entre-un-camion-y-un-automovil-en-la-ruta-5-dejo-el-saldo-de-una-victima-fatal",
@@ -186,6 +186,30 @@
       "localidad": "Bragado",
       "volanta": "Operativo policial en Bragado",
       "categoria": "operativo_policial",
+      "distancia_km": 49.3,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31240/volvio-el-calor-y-regreso-el-humo-nuevo-incendio-en-el-basural-municipal-en-medio-de-la-polemica-por-los-fondos-para-obras.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-28T03:01:54.000Z",
+      "titulo": "Nuevo incendio en el basural municipal de Bragado en medio del calor",
+      "descripcion": "Bomberos voluntarios combatieron un foco ígneo en el predio municipal debido al aumento de temperatura. Vecinos reclaman soluciones definitivas ante la falta de avances en las tareas de saneamiento.",
+      "texto_tiktok": "Un nuevo foco ígneo se desató en el basural a cielo abierto de Bragado durante la mañana de este viernes.\n\nBomberos voluntarios acudieron al predio municipal tras la suba de la temperatura que reactivó las llamas.\n\nLa situación genera preocupación vecinal por el humo tóxico y cuestionamientos sobre el uso de recursos comunales.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #Incendio #Bomberos #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-28_0132_06_bragado_nuevo-incendio-en-el-basural-m.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-nuevo-incendio-en-el-basural-municipal-con-266c7f",
+      "youtube_url": "https://youtube.com/shorts/5oyTH-51Zn0",
+      "prioridad": 8,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Incendio en Bragado",
+      "categoria": "incendio",
       "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
