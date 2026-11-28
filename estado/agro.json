@@ -31734,81 +31734,69 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ea6588e1a440_portada.jpg"
-    }
-  ],
-  "pendientes": [
+    },
     {
-      "id": "a18397ea3c3c",
-      "rep": {
-        "id": "a18397ea3c3c",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/249545-ganaderia-como-afecta-el-tipo-de-cambio-y-el-consumo-interno-a-los-feedlots-segun-fernando-storni.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/249545-ganaderia-como-afecta-el-tipo-de-cambio-y-el-consumo-interno-a-los-feedlots-segun-fernando-storni.html",
-        "titulo": "¿Por qué pierde margen el feedlot? Fernando Storni analiza precios, consumo y tipo de cambio",
-        "titulo_norm": "por que pierde margen el feedlot fernando storni analiza precios consumo y tipo de cambio",
-        "descripcion": "Carne, precios, demanda interna, externa y perspectivas. Una nota con el Ing. P. Agr. Fernando Storni, presidente de la Cámara de Feedlot, explicando las dificultades actuales en la ganadería por la caída del precio del gordo. Además ell descalce entre la invernada y el consumo, y las limitaciones que impone el tipo de cambio a la exportación...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/0qNHWYp9GBc.jpg",
-        "autor": "info@agrositio.com (Ricardo Bindi)",
-        "publicado": "2026-11-27T20:01-03:00",
-        "capturado": "2026-11-27T20:20-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7c99ebde737e16b7",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "a18397ea3c3c",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/ganaderia-tv/249545-ganaderia-como-afecta-el-tipo-de-cambio-y-el-consumo-interno-a-los-feedlots-segun-fernando-storni.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/ganaderia-tv/249545-ganaderia-como-afecta-el-tipo-de-cambio-y-el-consumo-interno-a-los-feedlots-segun-fernando-storni.html",
-          "titulo": "¿Por qué pierde margen el feedlot? Fernando Storni analiza precios, consumo y tipo de cambio",
-          "titulo_norm": "por que pierde margen el feedlot fernando storni analiza precios consumo y tipo de cambio",
-          "descripcion": "Carne, precios, demanda interna, externa y perspectivas. Una nota con el Ing. P. Agr. Fernando Storni, presidente de la Cámara de Feedlot, explicando las dificultades actuales en la ganadería por la caída del precio del gordo. Además ell descalce entre la invernada y el consumo, y las limitaciones que impone el tipo de cambio a la exportación...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/0qNHWYp9GBc.jpg",
-          "autor": "info@agrositio.com (Ricardo Bindi)",
-          "publicado": "2026-11-27T20:01-03:00",
-          "capturado": "2026-11-27T20:20-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7c99ebde737e16b7",
-          "localidad_medio": ""
-        }
-      ],
+      "id": "c41af4ac41ee",
+      "cuando": "2026-11-27T22:50-03:00",
+      "titulo_original": "“Carne dopada”: la frase de Emmanuel Macron que generó un revuelo en el Mercosur y una contundente respuesta",
+      "descripcion": "El presidente francés apuntó en particular contra el producto brasileño y celebró que la Unión Europea restringiera su ingreso; la Federación de Asociaciones Rurales del Mercosur (FARM) sostuvo que sus dichos carecen de sustento científico y dañan la reputación de la producción del vecino país",
+      "fuente": "LA NACION Campo",
+      "url": "https://www.lanacion.com.ar/economia/campo/carne-dopada-la-frase-de-emmanuel-macron-que-genero-un-revuelo-en-el-mercosur-y-una-contundente-nid27112026/",
+      "titular": "Francia frena carne bovina de Brasil y genera rechazo del Mercosur",
+      "volanta": "Ganadería",
       "score": {
-        "conversacion": 11,
-        "historia_concreta": 6,
-        "cercania_pba": 10,
-        "interes_productores": 11,
-        "impacto_economico": 6,
+        "conversacion": 14,
+        "historia_concreta": 9,
+        "cercania_pba": 5,
+        "interes_productores": 8,
+        "impacto_economico": 7,
         "cercania_argentina": 5,
         "potencial_reel": 2,
-        "ai_score": 51,
-        "commercial_score": 38,
+        "ai_score": 50,
+        "commercial_score": 35,
         "subtema": "ganaderia",
-        "tema": "feedlot",
+        "tema": "exportacion carne",
         "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Es un análisis técnico general sobre la ganadería que no afecta de forma directa a un productor puntual de la zona hoy.",
-        "tema_doc": "ganaderia",
+        "sensible": false,
+        "explicacion": "Los dichos de Macron sobre la carne del Mercosur generan debate en el sector exportador.",
+        "tema_doc": "internacional",
         "urgente": false,
-        "potencial_carrusel": 6,
+        "potencial_carrusel": 4,
         "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "dobles": [
-          48,
-          54
+          49,
+          50
         ],
         "de_zona": false,
         "policial_rural": false,
         "suceso": false,
         "empresa_agro": false
       },
-      "cuando": "2026-11-27T20:20-03:00"
-    },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-27T22:50:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "eb06543a-d995-4a42-a930-ee1ee675c19b",
+          "slug": "repudio-del-mercosur-a-macron-tras-las-restricciones-a-la-carne-5a2e1d",
+          "url": "https://www.diariolacampaña.com.ar/n/repudio-del-mercosur-a-macron-tras-las-restricciones-a-la-carne-5a2e1d",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18120473111328324",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_c41af4ac41ee_portada.jpg"
+    }
+  ],
+  "pendientes": [
     {
       "id": "6da462fb7143",
       "rep": {
@@ -31873,78 +31861,6 @@
         "dobles": [
           60,
           56
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-27T19:00-03:00"
-    },
-    {
-      "id": "c41af4ac41ee",
-      "rep": {
-        "id": "c41af4ac41ee",
-        "fuente": "LA NACION Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-        "url": "https://www.lanacion.com.ar/economia/campo/carne-dopada-la-frase-de-emmanuel-macron-que-genero-un-revuelo-en-el-mercosur-y-una-contundente-nid27112026/",
-        "canonical_url": "https://lanacion.com.ar/economia/campo/carne-dopada-la-frase-de-emmanuel-macron-que-genero-un-revuelo-en-el-mercosur-y-una-contundente-nid27112026",
-        "titulo": "“Carne dopada”: la frase de Emmanuel Macron que generó un revuelo en el Mercosur y una contundente respuesta",
-        "titulo_norm": "carne dopada la frase de emmanuel macron que genero un revuelo en el mercosur y una contundente respuesta",
-        "descripcion": "El presidente francés apuntó en particular contra el producto brasileño y celebró que la Unión Europea restringiera su ingreso; la Federación de Asociaciones Rurales del Mercosur (FARM) sostuvo que sus dichos carecen de sustento científico y dañan la reputación de la producción del vecino país",
-        "imagen_url": "https://resizer.glanacion.com/resizer/v2/XS4SIP7EORFGTLNJLY67TEMKHU.png?auth=4d61ace8c2325b62a7b8486e74cc6d0f94b6feb028eb901462236f4063936343&smart=true",
-        "autor": "",
-        "publicado": "2026-11-27T18:44-03:00",
-        "capturado": "2026-11-27T19:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "516b0f1e08dd0df7",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "c41af4ac41ee",
-          "fuente": "LA NACION Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/campo/?outputType=xml",
-          "url": "https://www.lanacion.com.ar/economia/campo/carne-dopada-la-frase-de-emmanuel-macron-que-genero-un-revuelo-en-el-mercosur-y-una-contundente-nid27112026/",
-          "canonical_url": "https://lanacion.com.ar/economia/campo/carne-dopada-la-frase-de-emmanuel-macron-que-genero-un-revuelo-en-el-mercosur-y-una-contundente-nid27112026",
-          "titulo": "“Carne dopada”: la frase de Emmanuel Macron que generó un revuelo en el Mercosur y una contundente respuesta",
-          "titulo_norm": "carne dopada la frase de emmanuel macron que genero un revuelo en el mercosur y una contundente respuesta",
-          "descripcion": "El presidente francés apuntó en particular contra el producto brasileño y celebró que la Unión Europea restringiera su ingreso; la Federación de Asociaciones Rurales del Mercosur (FARM) sostuvo que sus dichos carecen de sustento científico y dañan la reputación de la producción del vecino país",
-          "imagen_url": "https://resizer.glanacion.com/resizer/v2/XS4SIP7EORFGTLNJLY67TEMKHU.png?auth=4d61ace8c2325b62a7b8486e74cc6d0f94b6feb028eb901462236f4063936343&smart=true",
-          "autor": "",
-          "publicado": "2026-11-27T18:44-03:00",
-          "capturado": "2026-11-27T19:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "516b0f1e08dd0df7",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 14,
-        "historia_concreta": 9,
-        "cercania_pba": 5,
-        "interes_productores": 8,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 50,
-        "commercial_score": 35,
-        "subtema": "ganaderia",
-        "tema": "exportacion carne",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Los dichos de Macron sobre la carne del Mercosur generan debate en el sector exportador.",
-        "tema_doc": "internacional",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          49,
-          50
         ],
         "de_zona": false,
         "policial_rural": false,
@@ -32160,78 +32076,6 @@
         "empresa_agro": false
       },
       "cuando": "2026-11-27T16:30-03:00"
-    },
-    {
-      "id": "ebd42317abf5",
-      "rep": {
-        "id": "ebd42317abf5",
-        "fuente": "Agrositio",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-        "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249538-diego-ponti-y-la-ganaderia-40-como-afectan-el-visec-y-la-trazabilidad-a-productores-y-mercados.html",
-        "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249538-diego-ponti-y-la-ganaderia-40-como-afectan-el-visec-y-la-trazabilidad-a-productores-y-mercados.html",
-        "titulo": "Ganadería 4.0: Diego Ponti explica cómo el Visec y la trazabilidad impactan en los Productores",
-        "titulo_norm": "ganaderia 4 0 diego ponti explica como el visec y la trazabilidad impactan en los productores",
-        "descripcion": "¿Qué está pasando con la ganedaría a lo largo de los últimos meses? Precios que dejaron de subir, categorías que bajaro, y una exportación ajustada por los precios con dólare estables. Una nota con el Lic. Diego Ponti, consultor ganadero de AZ Group, explicando las exigencias internacionales, como el Visec de carnes y la trazabilidad impactan en la ganadería argentina. Además, analizamos la inversión en tecnologías, y la tendencia al aumento del peso de faena en un contexto de precios ajustados y mercados cambiantes...",
-        "imagen_url": "https://agrotv.agrositio.com/placas/3U2euu6S7MI.jpg",
-        "autor": "info@agrositio.com (Canal Agrositio)",
-        "publicado": "2026-11-27T13:15-03:00",
-        "capturado": "2026-11-27T14:01-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "46103f3e8a649ef2",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "ebd42317abf5",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/canal-agrositio/30-online/249538-diego-ponti-y-la-ganaderia-40-como-afectan-el-visec-y-la-trazabilidad-a-productores-y-mercados.html",
-          "canonical_url": "https://agrositio.com.ar/canal-agrositio/30-online/249538-diego-ponti-y-la-ganaderia-40-como-afectan-el-visec-y-la-trazabilidad-a-productores-y-mercados.html",
-          "titulo": "Ganadería 4.0: Diego Ponti explica cómo el Visec y la trazabilidad impactan en los Productores",
-          "titulo_norm": "ganaderia 4 0 diego ponti explica como el visec y la trazabilidad impactan en los productores",
-          "descripcion": "¿Qué está pasando con la ganedaría a lo largo de los últimos meses? Precios que dejaron de subir, categorías que bajaro, y una exportación ajustada por los precios con dólare estables. Una nota con el Lic. Diego Ponti, consultor ganadero de AZ Group, explicando las exigencias internacionales, como el Visec de carnes y la trazabilidad impactan en la ganadería argentina. Además, analizamos la inversión en tecnologías, y la tendencia al aumento del peso de faena en un contexto de precios ajustados y mercados cambiantes...",
-          "imagen_url": "https://agrotv.agrositio.com/placas/3U2euu6S7MI.jpg",
-          "autor": "info@agrositio.com (Canal Agrositio)",
-          "publicado": "2026-11-27T13:15-03:00",
-          "capturado": "2026-11-27T14:01-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "46103f3e8a649ef2",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 9,
-        "historia_concreta": 5,
-        "cercania_pba": 12,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 53,
-        "commercial_score": 45,
-        "subtema": "ganaderia",
-        "tema": "visec",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Análisis ganadero sobre trazabilidad, tema de consulta para criadores.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          54,
-          52
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-27T14:01-03:00"
     },
     {
       "id": "9606da9d3036",
@@ -33088,244 +32932,11 @@
         "empresa_agro": false
       },
       "cuando": "2026-11-26T14:01-03:00"
-    },
-    {
-      "id": "b3611c2fc0ef",
-      "rep": {
-        "id": "b3611c2fc0ef",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-palanca-es-el-pasto-el-especialista-jose-jauregui-esta-convencido-de-que-todavia-queda-mucho-para-mejorar-en-el-manejo-forrajero-de-los-tambos-para-poder-asi-enfrentar-la-su/",
-        "canonical_url": "https://bichosdecampo.com/la-palanca-es-el-pasto-el-especialista-jose-jauregui-esta-convencido-de-que-todavia-queda-mucho-para-mejorar-en-el-manejo-forrajero-de-los-tambos-para-poder-asi-enfrentar-la-su",
-        "titulo": "“La palanca es el pasto”: El especialista José Jáuregui está convencido de que “todavía queda mucho para mejorar” en el manejo forrajero de los tambos, para poder así enfrentar la suba de otros costos",
-        "titulo_norm": "la palanca es el pasto el especialista jose jauregui esta convencido de que todavia queda mucho para mejorar en el manejo forrajero de los tambos para poder asi enfrentar la suba de otros costos",
-        "descripcion": "La lechería argentina atraviesa un momento de contrastes. Mientras la producción se encamina hacia un año de fuerte crecimiento, lo que se verifica ya bien entrada la primavera, cuando las condiciones para los sistemas pastoriles vuelven a mostrar su potencial, la rentabilidad de muchos tambos sigue presionada por costos crecientes y precios de la leche […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/01/vacas-lecheras-2.jpg",
-        "autor": "Elida Thiery",
-        "publicado": "2026-11-26T10:34-03:00",
-        "capturado": "2026-11-26T12:05-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "4137ee4554f0c8d6",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "b3611c2fc0ef",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-palanca-es-el-pasto-el-especialista-jose-jauregui-esta-convencido-de-que-todavia-queda-mucho-para-mejorar-en-el-manejo-forrajero-de-los-tambos-para-poder-asi-enfrentar-la-su/",
-          "canonical_url": "https://bichosdecampo.com/la-palanca-es-el-pasto-el-especialista-jose-jauregui-esta-convencido-de-que-todavia-queda-mucho-para-mejorar-en-el-manejo-forrajero-de-los-tambos-para-poder-asi-enfrentar-la-su",
-          "titulo": "“La palanca es el pasto”: El especialista José Jáuregui está convencido de que “todavía queda mucho para mejorar” en el manejo forrajero de los tambos, para poder así enfrentar la suba de otros costos",
-          "titulo_norm": "la palanca es el pasto el especialista jose jauregui esta convencido de que todavia queda mucho para mejorar en el manejo forrajero de los tambos para poder asi enfrentar la suba de otros costos",
-          "descripcion": "La lechería argentina atraviesa un momento de contrastes. Mientras la producción se encamina hacia un año de fuerte crecimiento, lo que se verifica ya bien entrada la primavera, cuando las condiciones para los sistemas pastoriles vuelven a mostrar su potencial, la rentabilidad de muchos tambos sigue presionada por costos crecientes y precios de la leche […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2024/01/vacas-lecheras-2.jpg",
-          "autor": "Elida Thiery",
-          "publicado": "2026-11-26T10:34-03:00",
-          "capturado": "2026-11-26T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "4137ee4554f0c8d6",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 9,
-        "historia_concreta": 10,
-        "cercania_pba": 11,
-        "interes_productores": 13,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 56,
-        "commercial_score": 50,
-        "subtema": "ganaderia",
-        "tema": "pastoras y tambos",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Nota técnica muy práctica sobre manejo forrajero en tambos, de gran utilidad para los productores lecheros de Suipacha y zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          58,
-          55
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-26T12:05-03:00"
-    },
-    {
-      "id": "4b23b7cbf44e",
-      "rep": {
-        "id": "4b23b7cbf44e",
-        "fuente": "Agrofy News",
-        "tipo_fuente": "medio",
-        "source_url": "https://news.agrofy.com.ar/rss.xml",
-        "url": "https://news.agrofy.com.ar/noticia/217063/colombo-magliano-empresa-87-anos-se-acerca-800000-cabezas-ano-hoy-podemos-producir-exportar-libremen",
-        "canonical_url": "https://news.agrofy.com.ar/noticia/217063/colombo-magliano-empresa-87-anos-se-acerca-800000-cabezas-ano-hoy-podemos-producir-exportar-libremen",
-        "titulo": "Colombo y Magliano, la empresa de 87 años que se acerca a las 800.000 cabezas al año: \"Hoy podemos producir y exportar libremente\"",
-        "titulo_norm": "colombo y magliano la empresa de 87 anos que se acerca a las 800 000 cabezas al ano hoy podemos producir y exportar libremente",
-        "descripcion": "En el remate de Pampa Húmeda de Colombo y Magliano, en Cañuelas, participaron 124 vendedores y 89 compradores; los directivos de la firma destacaron un año con más ventas, pero advirtieron que los precios ajustaron a la baja y que los márgenes ganaderos están muy justos",
-        "imagen_url": "https://news.agrofystatic.com/portadas/remate_de_fin_de_a_o_de_colombo_y_magliano-k09jt.jpg",
-        "autor": "",
-        "publicado": "2026-11-26T10:35-03:00",
-        "capturado": "2026-11-26T12:05-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "f908999f708134ae",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "4b23b7cbf44e",
-          "fuente": "Agrofy News",
-          "tipo_fuente": "medio",
-          "source_url": "https://news.agrofy.com.ar/rss.xml",
-          "url": "https://news.agrofy.com.ar/noticia/217063/colombo-magliano-empresa-87-anos-se-acerca-800000-cabezas-ano-hoy-podemos-producir-exportar-libremen",
-          "canonical_url": "https://news.agrofy.com.ar/noticia/217063/colombo-magliano-empresa-87-anos-se-acerca-800000-cabezas-ano-hoy-podemos-producir-exportar-libremen",
-          "titulo": "Colombo y Magliano, la empresa de 87 años que se acerca a las 800.000 cabezas al año: \"Hoy podemos producir y exportar libremente\"",
-          "titulo_norm": "colombo y magliano la empresa de 87 anos que se acerca a las 800 000 cabezas al ano hoy podemos producir y exportar libremente",
-          "descripcion": "En el remate de Pampa Húmeda de Colombo y Magliano, en Cañuelas, participaron 124 vendedores y 89 compradores; los directivos de la firma destacaron un año con más ventas, pero advirtieron que los precios ajustaron a la baja y que los márgenes ganaderos están muy justos",
-          "imagen_url": "https://news.agrofystatic.com/portadas/remate_de_fin_de_a_o_de_colombo_y_magliano-k09jt.jpg",
-          "autor": "",
-          "publicado": "2026-11-26T10:35-03:00",
-          "capturado": "2026-11-26T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "f908999f708134ae",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 10,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 61,
-        "commercial_score": 52,
-        "subtema": "ganaderia",
-        "tema": "colombo y magliano",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Muestra el movimiento de una gran consignataria de hacienda y los márgenes actuales de la ganadería.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          55,
-          69
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-26T12:05-03:00"
-    },
-    {
-      "id": "751d19e0e157",
-      "rep": {
-        "id": "751d19e0e157",
-        "fuente": "Agro Bonaerense",
-        "tipo_fuente": "medio",
-        "source_url": "https://agrobonaerense.com.ar/rss",
-        "url": "https://agrobonaerense.com.ar/nota/4321/licitacion-del-belgrano-cargas-cerealeras-piden-retoques-en-los-pliegos-tras-la-baja-de-grupo-mexico",
-        "canonical_url": "https://agrobonaerense.com.ar/nota/4321/licitacion-del-belgrano-cargas-cerealeras-piden-retoques-en-los-pliegos-tras-la-baja-de-grupo-mexico",
-        "titulo": "Licitación del Belgrano Cargas: cerealeras piden retoques en los pliegos tras la baja de Grupo México",
-        "titulo_norm": "licitacion del belgrano cargas cerealeras piden retoques en los pliegos tras la baja de grupo mexico",
-        "descripcion": "El titular de CIARA, Gustavo Idígoras, planteó adecuar las condiciones del proceso para que prospere la concesión a 50 años, en un escenario marcado por el debate sobre el modelo de acceso abierto",
-        "imagen_url": "http://agrobonaerense.com.ar/uploads/noticias/5/2026/11/20261126092603_belgrano-cargas-privatizacion-2.jpg",
-        "autor": "agrobonaerenseweb@gmail.com (Agro Bonaerense)",
-        "publicado": "2026-11-26T09:23-03:00",
-        "capturado": "2026-11-26T10:10-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "c637e194c94064eb",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "751d19e0e157",
-          "fuente": "Agro Bonaerense",
-          "tipo_fuente": "medio",
-          "source_url": "https://agrobonaerense.com.ar/rss",
-          "url": "https://agrobonaerense.com.ar/nota/4321/licitacion-del-belgrano-cargas-cerealeras-piden-retoques-en-los-pliegos-tras-la-baja-de-grupo-mexico",
-          "canonical_url": "https://agrobonaerense.com.ar/nota/4321/licitacion-del-belgrano-cargas-cerealeras-piden-retoques-en-los-pliegos-tras-la-baja-de-grupo-mexico",
-          "titulo": "Licitación del Belgrano Cargas: cerealeras piden retoques en los pliegos tras la baja de Grupo México",
-          "titulo_norm": "licitacion del belgrano cargas cerealeras piden retoques en los pliegos tras la baja de grupo mexico",
-          "descripcion": "El titular de CIARA, Gustavo Idígoras, planteó adecuar las condiciones del proceso para que prospere la concesión a 50 años, en un escenario marcado por el debate sobre el modelo de acceso abierto",
-          "imagen_url": "http://agrobonaerense.com.ar/uploads/noticias/5/2026/11/20261126092603_belgrano-cargas-privatizacion-2.jpg",
-          "autor": "agrobonaerenseweb@gmail.com (Agro Bonaerense)",
-          "publicado": "2026-11-26T09:23-03:00",
-          "capturado": "2026-11-26T10:10-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "c637e194c94064eb",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 12,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 8,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 64,
-        "commercial_score": 50,
-        "subtema": "mercados",
-        "tema": "belgrano cargas",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Cerealeras piden cambios en la licitación del Belgrano Cargas; afecta costos logísticos de granos.",
-        "tema_doc": "costos",
-        "urgente": false,
-        "potencial_carrusel": 5,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-26T10:10-03:00"
     }
   ],
-  "actualizado": "2026-11-27T22:10:29-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-27T22:53:49-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
-    "2026-11-19T22:20:00-03:00": {
-      "bloque": "viral",
-      "items": [
-        {
-          "titular": "Santa Fe retiró unas 600 mil cabezas por la crecida del Paraná",
-          "url": "https://www.infobae.com/sociedad/2026/11/19/el-nino-casi-un-millon-de-cabezas-de-ganado-debieron-ser-evacuadas-de-islas-y-tierras-bajas-por-la-crecida-del-parana/",
-          "fuente": "Infobae",
-          "reel": "/home/runner/work/policiales-bsas/policiales-bsas/salida_agro/2026-11-19_2220_viral/viral.mp4",
-          "duracion": 22.0,
-          "con": "foto"
-        }
-      ],
-      "publicado": {
-        "instagram_prueba": {
-          "id": "18344814730279116"
-        },
-        "facebook": {
-          "id": "1761184318761647"
-        }
-      }
-    },
     "2026-11-20T10:00:00-03:00": {
       "bloque": "viral",
       "items": [
