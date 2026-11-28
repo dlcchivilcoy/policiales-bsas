@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T02:46:40.000Z",
+  "actualizado": "2026-11-28T02:01:26.000Z",
   "eventos": [
     {
       "id": "policiales:https://junin24.com/policiales/operativos-en-junin-recuperaron-una-motocicleta-robada-en-el-barrio-foetra-y-una-bicicleta-sustraida-tras-un-allanamiento",
@@ -163,6 +163,30 @@
       "volanta": "Incendio en Junín",
       "categoria": "incendio",
       "distancia_km": 91.2,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://elregionaldigital.com.ar/un-nuevo-hecho-de-abigeato-en-un-campo-de-9-de-julio-mataron-dos-terneros-de-240-kilos/",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-28T02:01:26.000Z",
+      "titulo": "Mataron dos terneros de 240 kilos en un campo ubicado sobre el camino Fantasma",
+      "descripcion": "Delincuentes faenaron un animal y mataron a otro de un disparo en un establecimiento rural ubicado a unos 2.000 metros de la ruta nacional 5. El propietario alertó que la zona se convirtió en tierra de nadie.",
+      "texto_tiktok": "Un nuevo caso de abigeato generó gran preocupación entre los productores rurales del partido de 9 de Julio.\n\nEl episodio ocurrió este último jueves en un establecimiento ubicado sobre el camino Fantasma, a unos 2.000 metros de la ruta nacional 5.\n\nLos delincuentes mataron a dos terneros de aproximadamente 240 kilos cada uno, utilizando un disparo de arma de fuego en uno de los casos y faenando por completo al segundo ejemplar.\n\nEl productor damnificado, identificado como N.R., radicó la denuncia en el Comando de Patrulla Rural y advirtió que la zona es tierra de nadie debido a los reiterados delitos similares.\n\n📲 Más noticias de 9 de Julio en www.diariolacampaña.com.ar\n\n#9DeJulio #Abigeato #InseguridadRural #Policiales #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-28_0132_02_9-de-julio_mataron-dos-terneros-de-240-ki.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "",
+      "youtube_url": "",
+      "prioridad": 6,
+      "urgente": false,
+      "localidad": "9 de Julio",
+      "volanta": "Abigeato en 9 de Julio",
+      "categoria": "robo",
+      "distancia_km": 99.4,
       "radio_ok": true,
       "plataformas": [
         "x",
