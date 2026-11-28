@@ -22143,6 +22143,66 @@
       "urgente": false,
       "potencial_carrusel": 6,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "b614614d22ae8067": {
+      "conversacion": 18,
+      "historia_concreta": 15,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 65,
+      "commercial_score": 50,
+      "subtema": "maquinaria",
+      "tema": "metalfor",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Afecta a una gran fábrica de maquinaria agrícola muy conocida por los productores de la zona.",
+      "tema_doc": "costos",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "dffeda67af03dd4d": {
+      "conversacion": 5,
+      "historia_concreta": 12,
+      "cercania_pba": 0,
+      "interes_productores": 8,
+      "impacto_economico": 2,
+      "cercania_argentina": 5,
+      "potencial_reel": 4,
+      "ai_score": 36,
+      "commercial_score": 30,
+      "subtema": "agro",
+      "tema": "girasol",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una anécdota lejana de Chaco que no cambia en nada la realidad del productor local.",
+      "tema_doc": "campana",
+      "urgente": false,
+      "potencial_carrusel": 3,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "eb78d944f0d19de0": {
+      "conversacion": 22,
+      "historia_concreta": 20,
+      "cercania_pba": 20,
+      "interes_productores": 15,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 5,
+      "ai_score": 94,
+      "commercial_score": 85,
+      "subtema": "agtech",
+      "tema": "dron robado",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es un robo millonario de tecnología agrícola en una zona vecina que preocupa directamente a los productores.",
+      "tema_doc": "tecnologia",
+      "urgente": false,
+      "potencial_carrusel": 7,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
     }
   },
   "indice": {
@@ -23619,7 +23679,16 @@
       "https://noticiasagropecuarias.com/2026/11/28/trazabilidad-argentina-busca-garantizar-el-acceso-de-sus-exportaciones-al-mercado-europeo": "2026-11-28",
       "https://argentina.gob.ar/noticias/se-detectaron-irregularidades-en-el-transporte-de-mas-de-3200-kilos-de-alimentos-en-la": "2026-11-28",
       "https://argentina.gob.ar/noticias/capacitacion-veterinarios-privados-para-acreditarse-como-vacunadores-contra-fiebre-aftosa-y": "2026-11-28",
-      "https://infogremiales.com.ar/la-justicia-frena-el-ingreso-de-58-trabajadores-a-la-planta-de-cerealera-3-arroyos-ahora-operada-por-better-food-debido-a-deudas-salariales": "2026-11-28"
+      "https://infogremiales.com.ar/la-justicia-frena-el-ingreso-de-58-trabajadores-a-la-planta-de-cerealera-3-arroyos-ahora-operada-por-better-food-debido-a-deudas-salariales": "2026-11-28",
+      "https://infocampo.com.ar/a-un-mes-de-la-norma-antideforestacion-el-visec-ya-suma-15-000-campos-de-soja-y-50-000-ganaderos-inscriptos": "2026-11-28",
+      "https://infocampo.com.ar/clima-hoy-en-mendoza-el-pronostico-del-tiempo-para-este-28-noviembre-2026": "2026-11-28",
+      "https://infocampo.com.ar/clima-hoy-en-tucuman-el-pronostico-del-tiempo-para-este-28-noviembre-2026": "2026-11-28",
+      "https://infocampo.com.ar/dolar-blue-hoy-a-cuanto-cotiza-el-28-noviembre-2026": "2026-11-28",
+      "https://bichosdecampo.com/metalfor-asegura-que-cayo-en-cesasion-de-pagos-por-la-suba-de-costos-en-dolares-y-la-flexibilizacion-de-la-normativa-para-el-ingreso-de-maquinaria-importada-nueva-y-usada": "2026-11-28",
+      "https://news.agrofy.com.ar/noticia/217081/sembro-jugado-1-julio-llego-primero-productor-chaqueno-entrego-primer-girasol-campana": "2026-11-28",
+      "https://latrochadigital.com.ar/2026/11/28/denuncian-que-faenaron-un-ternero-y-mataron-otro-a-tiros": "2026-11-28",
+      "https://latrochadigital.com.ar/2026/11/28/la-provincia-vuelve-a-postergar-una-regulacion-sobre-el-uso-de-agroquimicos": "2026-11-28",
+      "https://chacabuquero.com.ar/2026/11/recuperaron-cerca-de-chacabuco-un.html": "2026-11-28"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 17 noviembre 2026": "2026-11-17",
@@ -25094,7 +25163,16 @@
       "trazabilidad argentina busca garantizar el acceso de sus exportaciones al mercado europeo": "2026-11-28",
       "se detectaron irregularidades en el transporte de mas de 3 200 kilos de alimentos en la patagonia": "2026-11-28",
       "capacitacion a veterinarios privados para acreditarse como vacunadores contra fiebre aftosa y brucelosis": "2026-11-28",
-      "la justicia frena el ingreso de 58 trabajadores a la planta de cerealera 3 arroyos ahora operada por better food debido a deudas salariales": "2026-11-28"
+      "la justicia frena el ingreso de 58 trabajadores a la planta de cerealera 3 arroyos ahora operada por better food debido a deudas salariales": "2026-11-28",
+      "a un mes de la norma antideforestacion el visec ya suma 15 000 campos de soja y 50 000 ganaderos inscriptos": "2026-11-28",
+      "clima hoy en mendoza el pronostico del tiempo para este 28 noviembre 2026": "2026-11-28",
+      "clima hoy en tucuman el pronostico del tiempo para este 28 noviembre 2026": "2026-11-28",
+      "dolar blue hoy a cuanto cotiza el 28 noviembre 2026": "2026-11-28",
+      "metalfor asegura que cayo en cesasion de pagos por la suba de costos en dolares y la flexibilizacion de la normativa para el ingreso de maquinaria importada nueva y usada": "2026-11-28",
+      "sembro jugado el 1 de julio y llego primero el productor chaqueno que entrego el primer girasol de la campana": "2026-11-28",
+      "denuncian que faenaron un ternero y mataron otro a tiros": "2026-11-28",
+      "la provincia vuelve a postergar una regulacion sobre el uso de agroquimicos": "2026-11-28",
+      "recuperaron cerca de chacabuco un costoso dron gigante robado": "2026-11-28"
     },
     "hash": {
       "d217b96fd9226847": "2026-11-17",
@@ -26569,7 +26647,16 @@
       "febf021b0431e68d": "2026-11-28",
       "9b0e99ed32d30102": "2026-11-28",
       "bc83bb78a97313a1": "2026-11-28",
-      "205883ae9978aa1c": "2026-11-28"
+      "205883ae9978aa1c": "2026-11-28",
+      "b9bf53853e0ab90f": "2026-11-28",
+      "773d7ad8e80e1208": "2026-11-28",
+      "b0297632abdaf091": "2026-11-28",
+      "2e4c4c182626e2b5": "2026-11-28",
+      "b614614d22ae8067": "2026-11-28",
+      "dffeda67af03dd4d": "2026-11-28",
+      "46554bd57809b624": "2026-11-28",
+      "f5370823115cf468": "2026-11-28",
+      "eb78d944f0d19de0": "2026-11-28"
     }
   },
   "elegidas": [
@@ -30403,9 +30490,133 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_95c5fb605a72_portada.jpg"
+    },
+    {
+      "id": "31c5ea7bfcd9",
+      "cuando": "2026-11-28T08:55-03:00",
+      "titulo_original": "De tractorista a compartir el campo con sus hijos: la historia de Nechi Bonardo junto a Case IH",
+      "descripcion": "Con el paso de los años, sus hijos Germán y Alexis se sumaron al proyecto familiar, que hoy cuenta con tres cosechadoras y un tractor Case IH para realizar servicios...",
+      "fuente": "Noticias AgroPecuarias",
+      "url": "https://www.noticiasagropecuarias.com/2026/11/28/de-tractorista-a-compartir-el-campo-con-sus-hijos-la-historia-de-nechi-bonardo-junto-a-case-ih/",
+      "titular": "Familia Bonardo consolida flota de tres cosechadoras en Río Tercero",
+      "volanta": "Maquinaria",
+      "score": {
+        "conversacion": 15,
+        "historia_concreta": 18,
+        "cercania_pba": 15,
+        "interes_productores": 12,
+        "impacto_economico": 4,
+        "cercania_argentina": 5,
+        "potencial_reel": 5,
+        "ai_score": 74,
+        "commercial_score": 60,
+        "subtema": "maquinaria",
+        "tema": "productor local",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Es una linda historia de familia rural y contratistas que siempre engancha al lector.",
+        "tema_doc": "ganaderia",
+        "urgente": false,
+        "potencial_carrusel": 7,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-28T08:55:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "1a29ec31-01ba-4c2b-98b7-c4a47945bd75",
+          "slug": "familia-bonardo-consolida-flota-de-tres-cosechadoras-y-un-7f5554",
+          "url": "https://www.diariolacampaña.com.ar/n/familia-bonardo-consolida-flota-de-tres-cosechadoras-y-un-7f5554",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18067046390795128",
+          "diapositivas": 5
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_31c5ea7bfcd9_portada.jpg"
     }
   ],
   "pendientes": [
+    {
+      "id": "e63d64b63b73",
+      "rep": {
+        "id": "e63d64b63b73",
+        "fuente": "Bichos de Campo",
+        "tipo_fuente": "medio",
+        "source_url": "https://bichosdecampo.com/feed/",
+        "url": "https://bichosdecampo.com/metalfor-asegura-que-cayo-en-cesasion-de-pagos-por-la-suba-de-costos-en-dolares-y-la-flexibilizacion-de-la-normativa-para-el-ingreso-de-maquinaria-importada-nueva-y-usada/",
+        "canonical_url": "https://bichosdecampo.com/metalfor-asegura-que-cayo-en-cesasion-de-pagos-por-la-suba-de-costos-en-dolares-y-la-flexibilizacion-de-la-normativa-para-el-ingreso-de-maquinaria-importada-nueva-y-usada",
+        "titulo": "Metalfor asegura que cayó en cesasión de pagos por la suba de costos en dólares y “la flexibilización de la normativa para el ingreso de maquinaria importada nueva y usada”",
+        "titulo_norm": "metalfor asegura que cayo en cesasion de pagos por la suba de costos en dolares y la flexibilizacion de la normativa para el ingreso de maquinaria importada nueva y usada",
+        "descripcion": "El Juzgado de Primera Instancia en lo Civil, Comercial, Conciliación y Familia de Segunda Nominación de Marcos Juárez, a cargo de Edgar Amigó Aliaga, declaró esta semana la apertura del concurso preventivo de la fábrica de maquinaria agrícola Metalfor S.A. El documento inicial del concurso contiene en sus 36 páginas la versión de los hechos […]",
+        "imagen_url": "",
+        "autor": "Bichos de campo",
+        "publicado": "2026-11-28T08:08-03:00",
+        "capturado": "2026-11-28T08:55-03:00",
+        "idioma": "es",
+        "pais": "AR",
+        "hash": "b614614d22ae8067",
+        "localidad_medio": ""
+      },
+      "grupo": [
+        {
+          "id": "e63d64b63b73",
+          "fuente": "Bichos de Campo",
+          "tipo_fuente": "medio",
+          "source_url": "https://bichosdecampo.com/feed/",
+          "url": "https://bichosdecampo.com/metalfor-asegura-que-cayo-en-cesasion-de-pagos-por-la-suba-de-costos-en-dolares-y-la-flexibilizacion-de-la-normativa-para-el-ingreso-de-maquinaria-importada-nueva-y-usada/",
+          "canonical_url": "https://bichosdecampo.com/metalfor-asegura-que-cayo-en-cesasion-de-pagos-por-la-suba-de-costos-en-dolares-y-la-flexibilizacion-de-la-normativa-para-el-ingreso-de-maquinaria-importada-nueva-y-usada",
+          "titulo": "Metalfor asegura que cayó en cesasión de pagos por la suba de costos en dólares y “la flexibilización de la normativa para el ingreso de maquinaria importada nueva y usada”",
+          "titulo_norm": "metalfor asegura que cayo en cesasion de pagos por la suba de costos en dolares y la flexibilizacion de la normativa para el ingreso de maquinaria importada nueva y usada",
+          "descripcion": "El Juzgado de Primera Instancia en lo Civil, Comercial, Conciliación y Familia de Segunda Nominación de Marcos Juárez, a cargo de Edgar Amigó Aliaga, declaró esta semana la apertura del concurso preventivo de la fábrica de maquinaria agrícola Metalfor S.A. El documento inicial del concurso contiene en sus 36 páginas la versión de los hechos […]",
+          "imagen_url": "",
+          "autor": "Bichos de campo",
+          "publicado": "2026-11-28T08:08-03:00",
+          "capturado": "2026-11-28T08:55-03:00",
+          "idioma": "es",
+          "pais": "AR",
+          "hash": "b614614d22ae8067",
+          "localidad_medio": ""
+        }
+      ],
+      "score": {
+        "conversacion": 18,
+        "historia_concreta": 15,
+        "cercania_pba": 5,
+        "interes_productores": 12,
+        "impacto_economico": 8,
+        "cercania_argentina": 5,
+        "potencial_reel": 2,
+        "ai_score": 65,
+        "commercial_score": 50,
+        "subtema": "maquinaria",
+        "tema": "metalfor",
+        "ambito": "argentina",
+        "sensible": false,
+        "explicacion": "Afecta a una gran fábrica de maquinaria agrícola muy conocida por los productores de la zona.",
+        "tema_doc": "costos",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": true
+      },
+      "cuando": "2026-11-28T08:55-03:00"
+    },
     {
       "id": "72cd9cfeefd6",
       "rep": {
@@ -30823,74 +31034,6 @@
           50,
           55
         ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-28T07:00-03:00"
-    },
-    {
-      "id": "31c5ea7bfcd9",
-      "rep": {
-        "id": "31c5ea7bfcd9",
-        "fuente": "Noticias AgroPecuarias",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.noticiasagropecuarias.com/feed/",
-        "url": "https://www.noticiasagropecuarias.com/2026/11/28/de-tractorista-a-compartir-el-campo-con-sus-hijos-la-historia-de-nechi-bonardo-junto-a-case-ih/",
-        "canonical_url": "https://noticiasagropecuarias.com/2026/11/28/de-tractorista-a-compartir-el-campo-con-sus-hijos-la-historia-de-nechi-bonardo-junto-a-case-ih",
-        "titulo": "De tractorista a compartir el campo con sus hijos: la historia de Nechi Bonardo junto a Case IH",
-        "titulo_norm": "de tractorista a compartir el campo con sus hijos la historia de nechi bonardo junto a case ih",
-        "descripcion": "Con el paso de los años, sus hijos Germán y Alexis se sumaron al proyecto familiar, que hoy cuenta con tres cosechadoras y un tractor Case IH para realizar servicios...",
-        "imagen_url": "",
-        "autor": "Eduardo Bustos",
-        "publicado": "2026-11-28T06:24-03:00",
-        "capturado": "2026-11-28T07:00-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "7bc2a6341e2b9867",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "31c5ea7bfcd9",
-          "fuente": "Noticias AgroPecuarias",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.noticiasagropecuarias.com/feed/",
-          "url": "https://www.noticiasagropecuarias.com/2026/11/28/de-tractorista-a-compartir-el-campo-con-sus-hijos-la-historia-de-nechi-bonardo-junto-a-case-ih/",
-          "canonical_url": "https://noticiasagropecuarias.com/2026/11/28/de-tractorista-a-compartir-el-campo-con-sus-hijos-la-historia-de-nechi-bonardo-junto-a-case-ih",
-          "titulo": "De tractorista a compartir el campo con sus hijos: la historia de Nechi Bonardo junto a Case IH",
-          "titulo_norm": "de tractorista a compartir el campo con sus hijos la historia de nechi bonardo junto a case ih",
-          "descripcion": "Con el paso de los años, sus hijos Germán y Alexis se sumaron al proyecto familiar, que hoy cuenta con tres cosechadoras y un tractor Case IH para realizar servicios...",
-          "imagen_url": "",
-          "autor": "Eduardo Bustos",
-          "publicado": "2026-11-28T06:24-03:00",
-          "capturado": "2026-11-28T07:00-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "7bc2a6341e2b9867",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 18,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 4,
-        "cercania_argentina": 5,
-        "potencial_reel": 5,
-        "ai_score": 74,
-        "commercial_score": 60,
-        "subtema": "maquinaria",
-        "tema": "productor local",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Es una linda historia de familia rural y contratistas que siempre engancha al lector.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 7,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
         "de_zona": false,
         "policial_rural": false,
         "suceso": false,
@@ -31823,8 +31966,8 @@
       "cuando": "2026-11-27T07:00-03:00"
     }
   ],
-  "actualizado": "2026-11-28T08:18:08-03:00",
-  "tema_ultimo": "blanco",
+  "actualizado": "2026-11-28T09:00:02-03:00",
+  "tema_ultimo": "grafito",
   "historias": {
     "2026-11-20T10:00:00-03:00": {
       "bloque": "viral",
@@ -37478,7 +37621,9 @@
     "72cd9cfeefd6": "2026-11-28T07:00",
     "c6283e5f9e2a": "2026-11-28T07:00",
     "2011f2290227": "2026-11-28T07:00",
-    "8c82d17ebb37": "2026-11-28T07:00"
+    "8c82d17ebb37": "2026-11-28T07:00",
+    "0f7132f39a5e": "2026-11-28T08:55",
+    "e63d64b63b73": "2026-11-28T08:55"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
