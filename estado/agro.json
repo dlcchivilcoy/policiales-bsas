@@ -23239,6 +23239,74 @@
       "urgente": false,
       "potencial_carrusel": 4,
       "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "7cd0937841fb4910": {
+      "conversacion": 3,
+      "historia_concreta": 2,
+      "cercania_pba": 5,
+      "interes_productores": 3,
+      "impacto_economico": 1,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 21,
+      "commercial_score": 10,
+      "subtema": "empresas",
+      "tema": "jóvenes agro",
+      "ambito": "argentina",
+      "sensible": false,
+      "explicacion": "Es una charla de jóvenes profesionales sobre el futuro, sin un hecho concreto que afecte a la zona.",
+      "tema_doc": "reglas",
+      "urgente": false,
+      "potencial_carrusel": 2,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)"
+    },
+    "4e01c405a30c376f": {
+      "conversacion": 6,
+      "historia_concreta": 6,
+      "cercania_pba": 5,
+      "interes_productores": 12,
+      "impacto_economico": 7,
+      "cercania_argentina": 5,
+      "potencial_reel": 0,
+      "ai_score": 41,
+      "commercial_score": 38,
+      "subtema": "mercados",
+      "tema": "trigo",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Compara precios del trigo entre Argentina y Brasil, útil para productores trigueros pero muy macro.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 6,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        41,
+        43
+      ]
+    },
+    "dc9f0c7bc4826da8": {
+      "conversacion": 8,
+      "historia_concreta": 5,
+      "cercania_pba": 10,
+      "interes_productores": 8,
+      "impacto_economico": 8,
+      "cercania_argentina": 5,
+      "potencial_reel": 2,
+      "ai_score": 46,
+      "commercial_score": 40,
+      "subtema": "agro",
+      "tema": "exportaciones",
+      "ambito": "argentina",
+      "sensible": true,
+      "explicacion": "Anuncia récord histórico de exportaciones del agro, dato oficial nacional de alto impacto económico.",
+      "tema_doc": "precios",
+      "urgente": false,
+      "potencial_carrusel": 5,
+      "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+      "dobles": [
+        55,
+        36
+      ]
     }
   },
   "indice": {
@@ -24788,7 +24856,10 @@
       "https://tn.com.ar/campo/2026/11/27/el-precio-de-la-soja-pico-en-punta-y-concluyo-la-semana-en-475000-por-tonelada-en-rosario": "2026-11-27",
       "https://maquinac.com/2026/11/el-indec-confirmo-la-fuerte-caida-en-las-ventas-de-maquinaria-en-el-tercer-trimestre": "2026-11-27",
       "https://9dejulio.diariotiempodigital.com/Policiales/actualidad/95898_mataron-dos-terneros-de-240-kilos": "2026-11-27",
-      "https://diariojunin.com/noticias/103297_recuperaron-un-dron-agrcola-valuado-en-55-millones.html": "2026-11-27"
+      "https://diariojunin.com/noticias/103297_recuperaron-un-dron-agrcola-valuado-en-55-millones.html": "2026-11-27",
+      "https://agrositio.com.ar/canal-agrositio/manoamano/249546-como-ven-los-menores-de-30-el-futuro-del-agro-y-del-pais-y-como-piensan-hacerlo-crecer.html": "2026-11-27",
+      "https://bichosdecampo.com/paridad-de-importacion-con-una-cosecha-que-aun-no-finalizo-en-brasil-el-precio-del-trigo-es-hasta-un-50-mas-elevado-que-en-la-argentina": "2026-11-27",
+      "https://clarin.com/rural/luis-caputo-destaco-exportaciones-agro-alcanzaron-octubre-nuevo-record-historico-us-5717-millones_0_2jH8djV6wG.html": "2026-11-27"
     },
     "titulo": {
       "clima hoy en mendoza el pronostico del tiempo para este 16 noviembre 2026": "2026-11-16",
@@ -26336,7 +26407,10 @@
       "el precio de la soja pico en punta y concluyo la semana en 475 000 por tonelada en rosario": "2026-11-27",
       "el indec confirmo la fuerte caida de las ventas de maquinaria en el tercer trimestre": "2026-11-27",
       "mataron dos terneros de 240 kilos": "2026-11-27",
-      "recuperaron un dron agricola valuado en 55 millones": "2026-11-27"
+      "recuperaron un dron agricola valuado en 55 millones": "2026-11-27",
+      "como ven los sub 30 el futuro del agro y del pais y como piensan hacerlo crecer": "2026-11-27",
+      "paridad de importacion con una cosecha que aun no finalizo en brasil el precio del trigo es hasta un 50 mas elevado que en la argentina": "2026-11-27",
+      "luis caputo destaco que las exportaciones del agro alcanzaron en octubre un nuevo record historico de us 5 717 millones": "2026-11-27"
     },
     "hash": {
       "bf1468a3b6576089": "2026-11-16",
@@ -27884,69 +27958,13 @@
       "73b233f08a0273fe": "2026-11-27",
       "aaa423038215ec2f": "2026-11-27",
       "76a00dd652b9ca50": "2026-11-27",
-      "cde07e5df9c9798f": "2026-11-27"
+      "cde07e5df9c9798f": "2026-11-27",
+      "7cd0937841fb4910": "2026-11-27",
+      "4e01c405a30c376f": "2026-11-27",
+      "dc9f0c7bc4826da8": "2026-11-27"
     }
   },
   "elegidas": [
-    {
-      "id": "0bd6ebe3020b",
-      "cuando": "2026-11-19T21:00-03:00",
-      "titulo_original": "Vacunos: jueves de remates especiales en el Mercado Agroganadero de Cañuelas",
-      "descripcion": "Con una entrada de 2013 animales, se pagó $5150 por un lote de novillitos de 304 kilos; el Índice General de Mercado Agroganadero fue de $3747,716",
-      "fuente": "LA NACION Campo",
-      "url": "https://www.lanacion.com.ar/economia/campo/vacunos-jueves-de-remates-especiales-en-el-mercado-agroganadero-de-canuelas-nid19112026/",
-      "titular": "Hacienda: novillitos a $5150 y firmeza en remates de Cañuelas",
-      "volanta": "Ganadería",
-      "score": {
-        "conversacion": 10,
-        "historia_concreta": 11,
-        "cercania_pba": 15,
-        "interes_productores": 12,
-        "impacto_economico": 6,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 61,
-        "commercial_score": 45,
-        "subtema": "ganaderia",
-        "tema": "cañuelas",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Precios de remates en Cañuelas, un clásico dato de referencia para la hacienda de la zona.",
-        "tema_doc": "ganaderia",
-        "urgente": false,
-        "potencial_carrusel": 4,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          60,
-          62
-        ],
-        "de_zona": false,
-        "policial_rural": false
-      },
-      "apta": true,
-      "revision": false,
-      "fuera_de_cupo": false,
-      "formato": "carrusel",
-      "turno": "2026-11-19T21:00:00-03:00",
-      "publicado": {
-        "web": {
-          "id": "59c57698-2f25-462b-9354-819fb371847c",
-          "slug": "hacienda-en-canuelas-novillitos-a-5150-y-firmeza-en-los-remates-135a24",
-          "url": "https://www.diariolacampaña.com.ar/n/hacienda-en-canuelas-novillitos-a-5150-y-firmeza-en-los-remates-135a24",
-          "foto": true,
-          "video": false
-        },
-        "instagram": {
-          "id": "18210495607376429",
-          "diapositivas": 5
-        },
-        "facebook": {
-          "id": "101271341650483_1767263328737997",
-          "fotos": 5
-        }
-      },
-      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_0bd6ebe3020b_portada.jpg"
-    },
     {
       "id": "3cfa8087cf66",
       "cuando": "2026-11-20T07:00-03:00",
@@ -31656,6 +31674,66 @@
         }
       },
       "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_480cd6205669_portada.jpg"
+    },
+    {
+      "id": "ea6588e1a440",
+      "cuando": "2026-11-27T21:35-03:00",
+      "titulo_original": "Argentina autorizó una nueva soja transgénica, pero su comercialización quedó condicionada a la aprobación europea",
+      "descripcion": "La variedad combina tolerancia a glifosato y glufosinato de amonio con protección contra insectos lepidópteros. La Resolución 239/2026 habilitó su comercialización para todo uso, aunque estableció una condición clave: la empresa desarrolladora no podrá comercializar variedades que contengan esta tec",
+      "fuente": "TodoAgro",
+      "url": "https://www.todoagro.com.ar/argentina-autorizo-una-nueva-soja-transgenica-pero-su-comercializacion-quedo-condicionada-a-la-aprobacion-europea/",
+      "titular": "Soja: autorizan nueva variedad transgénica atada al aval europeo",
+      "volanta": "Agricultura",
+      "score": {
+        "conversacion": 11,
+        "historia_concreta": 12,
+        "cercania_pba": 10,
+        "interes_productores": 12,
+        "impacto_economico": 7,
+        "cercania_argentina": 5,
+        "potencial_reel": 1,
+        "ai_score": 58,
+        "commercial_score": 40,
+        "subtema": "agro",
+        "tema": "soja transgénica",
+        "ambito": "argentina",
+        "sensible": true,
+        "explicacion": "Afecta la disponibilidad de tecnología para los productores, aunque la restricción europea frena su uso inmediato.",
+        "tema_doc": "reglas",
+        "urgente": false,
+        "potencial_carrusel": 6,
+        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
+        "dobles": [
+          56,
+          60
+        ],
+        "de_zona": false,
+        "policial_rural": false,
+        "suceso": false,
+        "empresa_agro": false
+      },
+      "apta": true,
+      "revision": false,
+      "fuera_de_cupo": false,
+      "formato": "carrusel",
+      "turno": "2026-11-27T21:35:00-03:00",
+      "publicado": {
+        "web": {
+          "id": "40f114b0-b84a-4c33-b4d5-123361450dd5",
+          "slug": "autorizan-nueva-soja-transgenica-en-argentina-pero-condicionan-4e5a41",
+          "url": "https://www.diariolacampaña.com.ar/n/autorizan-nueva-soja-transgenica-en-argentina-pero-condicionan-4e5a41",
+          "foto": true,
+          "video": false
+        },
+        "instagram": {
+          "id": "18118398899519201",
+          "diapositivas": 6
+        },
+        "facebook": {
+          "omitido": "los carruseles no van al Facebook de agro (AGRO_FB_CARRUSEL=1 los vuelve)"
+        }
+      },
+      "portada_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/agro_ea6588e1a440_portada.jpg"
     }
   ],
   "pendientes": [
@@ -32016,78 +32094,6 @@
       "cuando": "2026-11-27T17:45-03:00"
     },
     {
-      "id": "777245fd7aa0",
-      "rep": {
-        "id": "777245fd7aa0",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/el-trigo-empieza-a-mostrar-sus-cartas-los-primeros-rindes-sorprenden-en-la-region-nucleo/",
-        "canonical_url": "https://todoagro.com.ar/el-trigo-empieza-a-mostrar-sus-cartas-los-primeros-rindes-sorprenden-en-la-region-nucleo",
-        "titulo": "El trigo empieza a mostrar sus cartas: los primeros rindes sorprenden en la región núcleo",
-        "titulo_norm": "el trigo empieza a mostrar sus cartas los primeros rindes sorprenden en la region nucleo",
-        "descripcion": "La cosecha ya cubrió el 55% del área en el centro-sur santafesino, mientras que en el resto de la región núcleo las máquinas recién comienzan a trabajar. Los primeros resultados superan las expectativas y alimentan el optimismo, aunque no se espera repetir los rindes extraordinarios del año pasado. La entrada El trigo empieza a mostrar sus cartas: los primeros rindes sorprenden en la región núcleo pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-27T15:34-03:00",
-        "capturado": "2026-11-27T16:30-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "65071bed2dafe714",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "777245fd7aa0",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/el-trigo-empieza-a-mostrar-sus-cartas-los-primeros-rindes-sorprenden-en-la-region-nucleo/",
-          "canonical_url": "https://todoagro.com.ar/el-trigo-empieza-a-mostrar-sus-cartas-los-primeros-rindes-sorprenden-en-la-region-nucleo",
-          "titulo": "El trigo empieza a mostrar sus cartas: los primeros rindes sorprenden en la región núcleo",
-          "titulo_norm": "el trigo empieza a mostrar sus cartas los primeros rindes sorprenden en la region nucleo",
-          "descripcion": "La cosecha ya cubrió el 55% del área en el centro-sur santafesino, mientras que en el resto de la región núcleo las máquinas recién comienzan a trabajar. Los primeros resultados superan las expectativas y alimentan el optimismo, aunque no se espera repetir los rindes extraordinarios del año pasado. La entrada El trigo empieza a mostrar sus cartas: los primeros rindes sorprenden en la región núcleo pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-27T15:34-03:00",
-          "capturado": "2026-11-27T16:30-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "65071bed2dafe714",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 12,
-        "historia_concreta": 12,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 2,
-        "ai_score": 60,
-        "commercial_score": 52,
-        "subtema": "agro",
-        "tema": "trigo",
-        "ambito": "argentina",
-        "sensible": false,
-        "explicacion": "Interesa a los productores locales porque marca cómo viene el trigo, aunque pasa en Santa Fe.",
-        "tema_doc": "campana",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          57,
-          65
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-27T16:30-03:00"
-    },
-    {
       "id": "e7731a4aa6b0",
       "rep": {
         "id": "e7731a4aa6b0",
@@ -32298,188 +32304,6 @@
         "empresa_agro": false
       },
       "cuando": "2026-11-27T14:01-03:00"
-    },
-    {
-      "id": "ea6588e1a440",
-      "rep": {
-        "id": "ea6588e1a440",
-        "fuente": "TodoAgro",
-        "tipo_fuente": "medio",
-        "source_url": "https://www.todoagro.com.ar/feed/",
-        "url": "https://www.todoagro.com.ar/argentina-autorizo-una-nueva-soja-transgenica-pero-su-comercializacion-quedo-condicionada-a-la-aprobacion-europea/",
-        "canonical_url": "https://todoagro.com.ar/argentina-autorizo-una-nueva-soja-transgenica-pero-su-comercializacion-quedo-condicionada-a-la-aprobacion-europea",
-        "titulo": "Argentina autorizó una nueva soja transgénica, pero su comercialización quedó condicionada a la aprobación europea",
-        "titulo_norm": "argentina autorizo una nueva soja transgenica pero su comercializacion quedo condicionada a la aprobacion europea",
-        "descripcion": "La variedad combina tolerancia a glifosato y glufosinato de amonio con protección contra insectos lepidópteros. La Resolución 239/2026 habilitó su comercialización para todo uso, aunque estableció una condición clave: la empresa desarrolladora no podrá comercializar variedades que contengan esta tecnología hasta obtener la aprobación de la Unión Europea. La entrada Argentina autorizó una nueva soja transgénica, pero su comercialización quedó condicionada a la aprobación europea pertenece a Todo Agro.",
-        "imagen_url": "",
-        "autor": "TodoAgro",
-        "publicado": "2026-11-27T11:32-03:00",
-        "capturado": "2026-11-27T12:05-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "a279335fbd4837bb",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "ea6588e1a440",
-          "fuente": "TodoAgro",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.todoagro.com.ar/feed/",
-          "url": "https://www.todoagro.com.ar/argentina-autorizo-una-nueva-soja-transgenica-pero-su-comercializacion-quedo-condicionada-a-la-aprobacion-europea/",
-          "canonical_url": "https://todoagro.com.ar/argentina-autorizo-una-nueva-soja-transgenica-pero-su-comercializacion-quedo-condicionada-a-la-aprobacion-europea",
-          "titulo": "Argentina autorizó una nueva soja transgénica, pero su comercialización quedó condicionada a la aprobación europea",
-          "titulo_norm": "argentina autorizo una nueva soja transgenica pero su comercializacion quedo condicionada a la aprobacion europea",
-          "descripcion": "La variedad combina tolerancia a glifosato y glufosinato de amonio con protección contra insectos lepidópteros. La Resolución 239/2026 habilitó su comercialización para todo uso, aunque estableció una condición clave: la empresa desarrolladora no podrá comercializar variedades que contengan esta tecnología hasta obtener la aprobación de la Unión Europea. La entrada Argentina autorizó una nueva soja transgénica, pero su comercialización quedó condicionada a la aprobación europea pertenece a Todo Agro.",
-          "imagen_url": "",
-          "autor": "TodoAgro",
-          "publicado": "2026-11-27T11:32-03:00",
-          "capturado": "2026-11-27T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a279335fbd4837bb",
-          "localidad_medio": ""
-        },
-        {
-          "id": "0da70fb2699f",
-          "fuente": "Infocampo",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.infocampo.com.ar/feed/",
-          "url": "https://www.infocampo.com.ar/biotecnologia-aprueban-una-nueva-soja-ogm-resistente-a-herbicidas-e-insectos/",
-          "canonical_url": "https://infocampo.com.ar/biotecnologia-aprueban-una-nueva-soja-ogm-resistente-a-herbicidas-e-insectos",
-          "titulo": "Biotecnología: aprueban una nueva soja OGM resistente a herbicidas e insectos",
-          "titulo_norm": "biotecnologia aprueban una nueva soja ogm resistente a herbicidas e insectos",
-          "descripcion": "El Gobierno nacional autorizó la comercialización de una nueva variedad de soja que tolera glifosato y glufosinato de amonio, y tiene protección contra lepidópteros. Pero solo se podrá vender cuando tenga aval también de la Unión Europea.",
-          "imagen_url": "",
-          "autor": "infocampo",
-          "publicado": "2026-11-27T11:57-03:00",
-          "capturado": "2026-11-27T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "ebbf014101e4955b",
-          "localidad_medio": ""
-        },
-        {
-          "id": "5894d40d544b",
-          "fuente": "Agrositio",
-          "tipo_fuente": "medio",
-          "source_url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
-          "url": "https://www.agrositio.com.ar/noticia/249537-argentina-autorizo-una-nueva-soja-geneticamente-modificada-con-tolerancia-a-herbicidas-y-proteccion-contra-insectos.html",
-          "canonical_url": "https://agrositio.com.ar/noticia/249537-argentina-autorizo-una-nueva-soja-geneticamente-modificada-con-tolerancia-a-herbicidas-y-proteccion-contra-insectos.html",
-          "titulo": "Argentina autorizó una nueva soja genéticamente modificada con tolerancia a herbicidas y protección contra insectos",
-          "titulo_norm": "argentina autorizo una nueva soja geneticamente modificada con tolerancia a herbicidas y proteccion contra insectos",
-          "descripcion": "Los resultados de las evaluaciones realizadas respaldaron la autorización comercial de este cultivo....",
-          "imagen_url": "https:/imagenesweb/contenidos/h_249537_36346163.jpg",
-          "autor": "info@agrositio.com (Agrositio)",
-          "publicado": "2026-11-27T12:02-03:00",
-          "capturado": "2026-11-27T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "a978d0704ab8a1e8",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 11,
-        "historia_concreta": 12,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 58,
-        "commercial_score": 40,
-        "subtema": "agro",
-        "tema": "soja transgénica",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "Afecta la disponibilidad de tecnología para los productores, aunque la restricción europea frena su uso inmediato.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          56,
-          60
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-27T12:05-03:00"
-    },
-    {
-      "id": "a8b49164b5d7",
-      "rep": {
-        "id": "a8b49164b5d7",
-        "fuente": "Bichos de Campo",
-        "tipo_fuente": "medio",
-        "source_url": "https://bichosdecampo.com/feed/",
-        "url": "https://bichosdecampo.com/la-motosierra-se-trabo-en-diputados-contra-los-planes-de-ajuste-del-gobierno-el-inta-preserva-su-historica-fuente-de-financiamiento-y-se-votaron-mas-recursos-para-el-senasa-y-el-conicet/",
-        "canonical_url": "https://bichosdecampo.com/la-motosierra-se-trabo-en-diputados-contra-los-planes-de-ajuste-del-gobierno-el-inta-preserva-su-historica-fuente-de-financiamiento-y-se-votaron-mas-recursos-para-el-senasa-y-el-conicet",
-        "titulo": "La motosierra se trabó en Diputados: Contra los planes de ajuste del gobierno, el INTA preserva su histórica fuente de financiamiento y se votaron más recursos para el Senasa y el Conicet",
-        "titulo_norm": "la motosierra se trabo en diputados contra los planes de ajuste del gobierno el inta preserva su historica fuente de financiamiento y se votaron mas recursos para el senasa y el conicet",
-        "descripcion": "El proyecto de Presupuesto 2027 obtuvo esta madrugada media sanción en Diputados y el gobierno se encamina ahora a la Cámara Alta para convertirlo en ley. Pero, ciertamente, tendrá que moverse de sus planes originales, porque el dictamen aprobado introdujo cambios en las partidas para los organismos de investigación y las universidades. Tras aprobarlo en […]",
-        "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/aprobacion-diputados-presupuesto-2027.webp",
-        "autor": "Lucas Torsiglieri",
-        "publicado": "2026-11-27T10:47-03:00",
-        "capturado": "2026-11-27T12:05-03:00",
-        "idioma": "es",
-        "pais": "AR",
-        "hash": "0b2eac7c17f7da85",
-        "localidad_medio": ""
-      },
-      "grupo": [
-        {
-          "id": "a8b49164b5d7",
-          "fuente": "Bichos de Campo",
-          "tipo_fuente": "medio",
-          "source_url": "https://bichosdecampo.com/feed/",
-          "url": "https://bichosdecampo.com/la-motosierra-se-trabo-en-diputados-contra-los-planes-de-ajuste-del-gobierno-el-inta-preserva-su-historica-fuente-de-financiamiento-y-se-votaron-mas-recursos-para-el-senasa-y-el-conicet/",
-          "canonical_url": "https://bichosdecampo.com/la-motosierra-se-trabo-en-diputados-contra-los-planes-de-ajuste-del-gobierno-el-inta-preserva-su-historica-fuente-de-financiamiento-y-se-votaron-mas-recursos-para-el-senasa-y-el-conicet",
-          "titulo": "La motosierra se trabó en Diputados: Contra los planes de ajuste del gobierno, el INTA preserva su histórica fuente de financiamiento y se votaron más recursos para el Senasa y el Conicet",
-          "titulo_norm": "la motosierra se trabo en diputados contra los planes de ajuste del gobierno el inta preserva su historica fuente de financiamiento y se votaron mas recursos para el senasa y el conicet",
-          "descripcion": "El proyecto de Presupuesto 2027 obtuvo esta madrugada media sanción en Diputados y el gobierno se encamina ahora a la Cámara Alta para convertirlo en ley. Pero, ciertamente, tendrá que moverse de sus planes originales, porque el dictamen aprobado introdujo cambios en las partidas para los organismos de investigación y las universidades. Tras aprobarlo en […]",
-          "imagen_url": "https://bichosdecampo.com/wp-content/uploads/2026/11/aprobacion-diputados-presupuesto-2027.webp",
-          "autor": "Lucas Torsiglieri",
-          "publicado": "2026-11-27T10:47-03:00",
-          "capturado": "2026-11-27T12:05-03:00",
-          "idioma": "es",
-          "pais": "AR",
-          "hash": "0b2eac7c17f7da85",
-          "localidad_medio": ""
-        }
-      ],
-      "score": {
-        "conversacion": 15,
-        "historia_concreta": 10,
-        "cercania_pba": 10,
-        "interes_productores": 12,
-        "impacto_economico": 7,
-        "cercania_argentina": 5,
-        "potencial_reel": 1,
-        "ai_score": 60,
-        "commercial_score": 35,
-        "subtema": "agro",
-        "tema": "inta",
-        "ambito": "argentina",
-        "sensible": true,
-        "explicacion": "El financiamiento del INTA y Senasa importa mucho en la zona por la vinculación con las agencias locales.",
-        "tema_doc": "reglas",
-        "urgente": false,
-        "potencial_carrusel": 6,
-        "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-        "dobles": [
-          59,
-          61
-        ],
-        "de_zona": false,
-        "policial_rural": false,
-        "suceso": false,
-        "empresa_agro": false
-      },
-      "cuando": "2026-11-27T12:05-03:00"
     },
     {
       "id": "f2538abd7eaa",
@@ -33478,46 +33302,9 @@
       "cuando": "2026-11-26T10:10-03:00"
     }
   ],
-  "actualizado": "2026-11-27T20:55:42-03:00",
-  "tema_ultimo": "grafito",
+  "actualizado": "2026-11-27T21:39:33-03:00",
+  "tema_ultimo": "blanco",
   "historias": {
-    "2026-11-19T21:30:00-03:00": {
-      "dia": "2026-11-19",
-      "bloque": "participa",
-      "items": [
-        {
-          "tipo": "participa",
-          "clave": "participa",
-          "pregunta": "¿Qué insumo se está llevando más el productor?",
-          "opciones": [],
-          "publico": "acopios",
-          "via": "gemini:gemini-3.5-flash-lite (clave 1/1)",
-          "publicado": {
-            "instagram": {
-              "id": "18138504007659333"
-            },
-            "facebook": {
-              "id": "1554324586502807"
-            }
-          }
-        }
-      ],
-      "publicado": {
-        "estado": "listo",
-        "resultado": {
-          "items": [
-            {
-              "instagram": {
-                "id": "18138504007659333"
-              },
-              "facebook": {
-                "id": "1554324586502807"
-              }
-            }
-          ]
-        }
-      }
-    },
     "2026-11-19T22:00:00-03:00": {
       "bloque": "viral",
       "items": [
@@ -39041,7 +38828,9 @@
     "2a0e93a6bd88": "2026-11-27T19:00",
     "e1a5943bf696": "2026-11-27T20:20",
     "a18397ea3c3c": "2026-11-27T20:20",
-    "6ef77f055252": "2026-11-27T20:20"
+    "6ef77f055252": "2026-11-27T20:20",
+    "402c5c2cf4b1": "2026-11-27T21:35",
+    "7b0bd4641329": "2026-11-27T21:35"
   },
   "banco_usados": {
     "bv_lluvia_01.mp4": "2026-11-17T07:00-03:00",
