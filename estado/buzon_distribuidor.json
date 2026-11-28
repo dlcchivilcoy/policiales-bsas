@@ -1,30 +1,6 @@
 {
-  "actualizado": "2026-11-28T02:32:46.000Z",
+  "actualizado": "2026-11-28T02:46:41.000Z",
   "eventos": [
-    {
-      "id": "policiales:https://www.chacabuquero.com.ar/2026/11/mas-datos-de-un-accidente-ocurrido-en.html",
-      "origen": "policiales",
-      "tipo": "video",
-      "generado": "2026-11-26T02:33:17.000Z",
-      "titulo": "Una mujer y un niño en moto cayeron tras rozar con un auto",
-      "descripcion": "Una mujer y un menor que circulaban en moto sufrieron lesiones y debieron ser trasladados al Hospital en ambulancia tras caer al pavimento en la esquina de Villegas y Entre Ríos.",
-      "texto_tiktok": "Una mujer y un niño sufrieron heridas al caer de su moto en la esquina de Villegas y Entre Ríos, en Chacabuco.\n\nEl siniestro ocurrió este miércoles por la mañana tras un roce con el auto de un vecino.\n\nAmbos heridos fueron trasladados en ambulancia al Hospital municipal para su atención.\n\n📲 Más noticias de Chacabuco en www.diariolacampaña.com.ar\n\n#Chacabuco #Policiales #BuenosAires",
-      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-26_0134_08_chacabuco_una-mujer-y-un-ni-o-en-moto-ca.mp4",
-      "duracion_seg": 13.0,
-      "nota_url": "https://www.diariolacampaña.com.ar/n/chacabuco-una-mujer-y-un-nino-heridos-tras-caer-de-una-moto-en-ac67af",
-      "youtube_url": "https://youtube.com/shorts/p0mBbJPuwI8",
-      "prioridad": 6,
-      "urgente": false,
-      "localidad": "Chacabuco",
-      "volanta": "Accidente en Chacabuco",
-      "categoria": "otro_policial",
-      "distancia_km": 50.1,
-      "radio_ok": true,
-      "plataformas": [
-        "x",
-        "tiktok"
-      ]
-    },
     {
       "id": "policiales:https://junin24.com/noticias/violento-choque-entre-un-camion-y-un-automovil-en-la-ruta-5-dejo-el-saldo-de-una-victima-fatal",
       "origen": "policiales",
@@ -187,6 +163,30 @@
       "volanta": "Operativo policial en Lobos",
       "categoria": "robo",
       "distancia_km": 89.8,
+      "radio_ok": true,
+      "plataformas": [
+        "x",
+        "tiktok"
+      ]
+    },
+    {
+      "id": "policiales:https://www.bragadoinforma.com.ar/nota/31241/fuerte-descargo-del-automovilista-aprehendido-denuncio-maltratos-una-multa-de-702-mil-pesos-y-acusaciones-falsas.html",
+      "origen": "policiales",
+      "tipo": "video",
+      "generado": "2026-11-28T02:46:41.000Z",
+      "titulo": "Denunció agresiones y una multa millonaria tras un control en Bragado",
+      "descripcion": "Un hombre de 59 años que viajó desde La Pampa acusó a inspectores de tránsito de sacarlo a la fuerza del auto durante un operativo en el acceso Bernardo Elizondo. Aseguró que sufrió lesiones y debió pagar casi un millón de pesos entre multa y gastos.",
+      "texto_tiktok": "José Luis Saracco relató el violento episodio que vivió en un control vehicular sobre el acceso Bernardo Elizondo de Bragado.\n\nEl conductor de 59 años aseguró que inspectores lo sacaron a la fuerza del habitáculo y le provocaron lesiones que requiriero atención médica.\n\nAdemás de rechazar las acusaciones en su contra, indicó que debió abonar una infracción de 702 mil pesos para recuperar su automóvil.\n\n📲 Más noticias de Bragado en www.diariolacampaña.com.ar\n\n#Bragado #OperativoPolicial #Denuncia #BuenosAires",
+      "video_url": "https://github.com/dlcchivilcoy/policiales-bsas/releases/download/reels-policiales/2026-11-28_0132_05_bragado_denunci-agresiones-y-una-multa.mp4",
+      "duracion_seg": 13.0,
+      "nota_url": "https://www.diariolacampaña.com.ar/n/bragado-automovilista-denuncio-agresiones-maltratos-y-una-multa-3415ea",
+      "youtube_url": "https://youtube.com/shorts/xIpyr-2Sk0w",
+      "prioridad": 7,
+      "urgente": false,
+      "localidad": "Bragado",
+      "volanta": "Operativo policial en Bragado",
+      "categoria": "operativo_policial",
+      "distancia_km": 49.3,
       "radio_ok": true,
       "plataformas": [
         "x",
